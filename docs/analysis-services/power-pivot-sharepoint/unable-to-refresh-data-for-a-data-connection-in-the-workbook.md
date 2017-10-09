@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **Scénario 1 : le service n'est pas démarré**  
   
- L’instance de SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) n’est pas démarrée. Un mot de passe périmé arrête l'exécution du service. Pour plus d'informations sur la modification du mot de passe, consultez [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) et [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
+ L’instance de SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) n’est pas démarrée. Un mot de passe périmé arrête l'exécution du service. Pour plus d'informations sur la modification du mot de passe, consultez [Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) et [Démarrer ou arrêter un serveur PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
  **Scénario 2a : Ouverture d'un classeur de version antérieure sur le serveur**  
   

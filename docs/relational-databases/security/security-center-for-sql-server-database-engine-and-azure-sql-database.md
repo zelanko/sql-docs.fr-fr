@@ -3,7 +3,7 @@ title: "Centre de sécurité pour le moteur de base de données SQL Server et Az
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/28/2017
+ms.date: 09/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**Qui effectue l'authentification ?**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Authentification Windows<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification|Qui effectue l'authentification ? (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Choisir un mode d'authentification](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
+|**Qui effectue l'authentification ?**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Authentification Windows<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Active Directory|Qui effectue l'authentification ? (Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [Choisir un mode d'authentification](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
 |**Où est effectuée l’authentification ?**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Auprès de la base de données MASTER : connexions et utilisateurs de base de données<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Auprès de la base de données utilisateur : utilisateurs de base de données à relation contenant-contenu|S’authentifier auprès de la base de données MASTER (connexions et utilisateurs de base de données)<br /><br /> [Créer une connexion SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Gestion des bases de données et des connexions dans Azure SQL Database](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [Créer un utilisateur de base de données](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> S'authentifier auprès d'une base de données utilisateur<br /><br /> [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**Utilisation d'autres identités**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Informations d’identification<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Exécuter en tant qu’autre connexion<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Exécuter en tant qu’autre utilisateur de base de données|[Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [Exécuter en tant qu'autre connexion](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [Exécuter en tant qu'autre utilisateur de base de données](../../t-sql/statements/execute-as-transact-sql.md)|  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**Audit automatisé**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (au niveau du serveur et de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (au niveau de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Détection des menaces|[SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Audit SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Prise en main de la fonction de détection des menaces de la base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**Audit automatisé**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit (au niveau du serveur et de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Audit (au niveau de la base de données)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Détection des menaces| <br /><br /> [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Audit SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Prise en main de la fonction de détection des menaces de la base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database Vulnerability Assessment](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**Audit personnalisé**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Déclencheurs|Implémentation d’un audit personnalisé : création de [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md) et de [déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)|  
 |**Conformité**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Conformité|SQL Server :<br />                        [Critères courants](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> Base de données SQL :<br />                        [Microsoft Azure Trust Center : Conformité par fonctionnalité](http://azure.microsoft.com/support/trust-center/services/)|  
   

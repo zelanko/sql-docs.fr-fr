@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 22b8b23b9bbee402de83a5327ea7fb8b7ec734e2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Index columnstore - Guide de conception
@@ -113,7 +113,7 @@ Pour les tables volumineuses, le seul moyen pratique de gérer les plages de don
 
 Par exemple, les tables rowstore et columnstore utilisent des partitions pour :
 
-- Contrôler la taille des sauvegardes incrémentielles. Vous pouvez sauvegarder des partitions dans des groupes de fichiers distincts, et les marquer comme étant en lecture seule. Ainsi, les sauvegardes ultérieures ignoreront les groupes de fichiers en lecture seule. 
+- Contrôler la taille des sauvegardes incrémentielles. Vous pouvez sauvegarder des partitions dans des groupes de fichiers distincts, puis les marquer comme étant en lecture seule. Ainsi, les sauvegardes ultérieures ignoreront les groupes de fichiers en lecture seule. 
 - Réduisez les coûts de stockage en déplaçant une partition plus ancienne vers un stockage moins coûteux. Par exemple, vous pouvez utiliser le basculement de partition pour déplacer une partition vers un emplacement de stockage moins coûteux.
 - Optimisez l’efficacité des opérations en les limitant à une partition. Par exemple, vous pouvez cibler uniquement les partitions fragmentées pour la maintenance d’index.
 
@@ -127,7 +127,7 @@ Grâce aux partitions, vous pouvez limiter vos requêtes pour analyser uniquemen
 
 ### <a name="use-fewer-partitions-for-a-columnstore-index"></a>Utiliser moins de partitions pour un index columnstore
 
-À moins d’avoir une taille de données suffisamment élevée, un index columnstore offre de meilleures performances avec moins de partitions que pour un index rowstore. Si vous n’avez pas au moins un million de lignes par partition, la plupart de vos lignes risquent d’aller dans le deltastore où elles ne bénéficient pas de l’amélioration des performances de compression de columnstore. Par exemple, si vous chargez un million de lignes dans une table avec 10 partitions et que chaque partition reçoit 100 000 lignes, toutes les lignes iront dans des rowgroups delta. 
+À moins d’avoir une taille de données suffisamment importante, un index columnstore offre de meilleures performances avec moins de partitions que pour un index rowstore. Si vous n’avez pas au moins un million de lignes par partition, la plupart de vos lignes risquent d’aller dans le deltastore où elles ne bénéficient pas de l’amélioration des performances de compression de columnstore. Par exemple, si vous chargez un million de lignes dans une table avec 10 partitions et que chaque partition reçoit 100 000 lignes, toutes les lignes iront dans des rowgroups delta. 
 
 Exemple :
 * Chargez 1 000 000 lignes dans une partition ou une table non partitionnée. Vous obtenez un rowgroup compressé avec 1 000 000 lignes. C’est parfait pour bénéficier d’une compression des données et de performances de requête élevées.
@@ -166,7 +166,7 @@ Pour conserver l’ordre de tri pendant la conversion :
     ```sql
     CREATE CLUSTERED COLUMNSTORE INDEX ClusteredIndex_d473567f7ea04d7aafcac5364c241e09  
     ON MyFactTable  
-    WITH DROP_EXISTING = ON;  
+    WITH (DROP_EXISTING = ON);  
     ```
 
 ## <a name="related-tasks"></a>Tâches associées  

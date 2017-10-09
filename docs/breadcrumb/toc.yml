@@ -342,12 +342,15 @@
                 - name: Installer sur Windows
                   href: /sql/integration-services/install-windows/
                   homepage: /sql/integration-services/install-windows/install-integration-services
-                - name: Packages
+                - name: .
                   href: /sql/integration-services/packages/
                   homepage: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
                 - name: Performance
                   href: /sql/integration-services/performance/
                   homepage: /sql/integration-services/performance/monitor-running-packages-and-other-operations
+                - name: Scale out
+                  href: /sql/integration-services/scale-out/
+                  homepage: /sql/integration-services/scale-out/integration-services-ssis-scale-out
                 - name: Sécurité
                   href: /sql/integration-services/security/
                   homepage: /sql/integration-services/security/security-overview-integration-services

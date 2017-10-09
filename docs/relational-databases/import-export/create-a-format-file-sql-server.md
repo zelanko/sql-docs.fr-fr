@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
@@ -73,7 +73,7 @@ ms.lasthandoff: 07/31/2017
   
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-n.fmt  
 ```  
   
@@ -103,7 +103,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.fmt -T  
 ```  
   
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Pour plus d’informations sur l’utilisation des données de caractères Unicode, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Utilisation d’un fichier de format avec l’option de page de code  
- Si vous créez un fichier de format à l’aide de la commande bcp (c’est-à-dire, en utilisant «`bcp forma`t … » ), des informations sur la page de code/classement sont écrites dans le fichier de format.   
+ Si vous créez un fichier de format à l’aide de la commande bcp (c’est-à-dire en utilisant « `bcp forma`t... » ), des informations sur la page de code/classement sont écrites dans le fichier de format.   
 L’exemple de fichier de format pour table avec 5 colonnes suivant inclut le classement.  
   
 ```  
@@ -203,13 +203,13 @@ Voici un exemple de fichier de format sans les informations de classement.
   
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml –t, -T  
 ```  
   
  Le fichier de format généré `Department-c.xml`contient les éléments XML suivants :  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -242,13 +242,13 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
 ```  
   
  Le fichier de format généré `Department-n.xml`contient les éléments XML suivants :  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  

@@ -16,16 +16,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="temporal-tables"></a>Tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduit la prise en charge des tables temporelles avec gestion de version par le système en tant que fonctionnalité de base de données qui fournit une prise en charge intégrée pour l’apport d’informations sur les données stockées dans la table à tout moment, et non uniquement les données correctes au moment actuel. La fonctionnalité temporelle est une fonctionnalité de base de données introduite dans ANSI SQL 2011, et désormais prise en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  SQL Server 2016 introduit la prise en charge des tables temporelles avec version contrôlée par le système en tant que fonctionnalité de base de données, qui offre une prise en charge intégrée de la fourniture d’informations sur les données stockées dans la table à tout moment, et non pas seulement les données correctes au moment présent. La fonctionnalité temporelle est une fonctionnalité de base de données introduite dans la norme ANSI SQL 2011.  
   
  **Démarrage rapide**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 07/31/2017
 -   **Vidéo :** pour une discussion de 20 minutes sur la fonctionnalité temporelle, consultez [Temporal in SQL Server 2016](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Qu’est-ce qu’une table temporelle avec version gérée par le système ?  
- Une table temporelle avec version gérée par le système est un nouveau type de table utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], conçu pour conserver un historique complet des modifications apportées aux données et permettre l’analyse à un point dans le temps. Ce type de table temporelle est appelée table temporelle avec version gérée par le système, car la période de validité de chaque ligne est gérée par le système (c’est-à-dire le moteur de base de données).  
+ Une table temporelle avec version contrôlée par le système est un type de table utilisateur conçu pour conserver un historique complet des modifications apportées aux données et permettre l’analyse à un point dans le temps. Ce type de table temporelle est appelée table temporelle avec version gérée par le système, car la période de validité de chaque ligne est gérée par le système (c’est-à-dire le moteur de base de données).  
   
  Chaque table temporelle contient deux colonnes définies explicitement, chacune d’elles contenant un type de données **datetime2** . Ces colonnes sont appelées colonnes de période. Ces colonnes de période sont utilisées de manière exclusive par le système pour enregistrer la période de validité de chaque ligne lorsqu’une ligne est modifiée.  
   

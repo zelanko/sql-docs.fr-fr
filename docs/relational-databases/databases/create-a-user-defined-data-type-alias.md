@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **Type de données**  
      Sélectionnez le type de données de base dans la zone de liste. La zone de liste affiche tous les types de données à l’exception des types de données **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** et **xml** . Le type de données d'un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
-     **Par défaut**  
-     (Facultatif) Sélectionnez une règle ou une valeur par défaut pour la liaison à l'alias de type de données défini par l'utilisateur.  
+     **Default**  
+     (Facultatif) Sélectionnez une valeur par défaut pour la liaison à l’alias de type de données défini par l’utilisateur.  
   
      **Longueur/Précision**  
      Affiche la longueur ou la précision du type de données. **Longueur** s’applique aux types de données définis par l’utilisateur basés sur les caractères ; **Précision** s’applique uniquement aux types de données définis par l’utilisateur qui sont numériques. Le nom change en fonction du type de données sélectionné précédemment. Cette zone ne peut pas être modifiée si la longueur ou la précision du type de données sélectionné est fixe.  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

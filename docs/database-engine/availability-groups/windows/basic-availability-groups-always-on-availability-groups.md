@@ -1,8 +1,10 @@
 ---
 title: "Groupes de disponibilité de base (Groupes de disponibilité Always On) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Groupes de disponibilité de base (Groupes de disponibilité Always On)
@@ -30,25 +32,27 @@ ms.lasthandoff: 09/25/2017
  Les groupes de disponibilité Always On de base remplacent la fonctionnalité de mise en miroir de bases de données déconseillée et fournissent un niveau de prise en charge des fonctionnalités similaire. Les groupes de disponibilité de base permettent à une base de données principale de conserver un réplica unique. Ce réplica peut utiliser le mode de validation synchrone ou asynchrone. Pour plus d’informations sur les modes de disponibilité, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). Le réplica secondaire reste inactif, à moins qu’un basculement soit requis. Ce basculement inverse les affectations de rôle principal et secondaire, ce qui implique la transformation du réplica secondaire en base de données active principale. Pour plus d’informations sur le basculement, consultez [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md). Les groupes de disponibilité de base peuvent fonctionner dans un environnement hybride qui s’étend sur site et couvre Microsoft Azure.  
   
 ## <a name="limitations"></a>Limitations  
- Les groupes de disponibilité de base utilisent un sous-ensemble de fonctionnalités si on les compare aux groupes de disponibilité avancés sur SQL Server 2016 Enterprise Edition. Les groupes de disponibilité de base incluent les limitations suivantes :  
+ Les groupes de disponibilité de base utilisent un sous-ensemble de fonctionnalités si on les compare aux groupes de disponibilité avancés sur SQL Server 2016 Enterprise Edition. Les groupes de disponibilité de base incluent les limitations suivantes :  
   
--   Limite de deux réplicas (principal et secondaire).  
+- Limite de deux réplicas (principal et secondaire).  
   
--   Aucun accès en lecture sur le réplica secondaire.  
+- Aucun accès en lecture sur le réplica secondaire.  
   
--   Aucune sauvegarde sur le réplica secondaire.  
-  
--   Aucune prise en charge des réplicas hébergés sur les serveurs exécutant une version de SQL Server antérieure à SQL Server 2016 Community Technology Preview 3 (CTP3).  
-  
--   Aucune prise en charge de l’ajout ou de la suppression d’un réplica sur un groupe de disponibilité de base existant.  
-  
--   Prise en charge d’une base de données de disponibilité.  
-  
--   Mise à niveau de groupes de disponibilité de base vers des groupes de disponibilité avancés impossible. Le groupe doit être supprimé et rajouté à un groupe qui contient des serveurs exécutant uniquement SQL Server 2016 Enterprise Edition.  
-  
--   Les groupes de disponibilité de base sont pris en charge uniquement pour les serveurs Standard Edition. 
+- Aucune sauvegarde sur le réplica secondaire.  
 
--   Les groupes de disponibilité de base ne peuvent pas faire partie d’un groupe de disponibilité distribué. 
+- Aucune vérification de l’intégrité sur les réplicas secondaires. 
+
+- Aucune prise en charge des réplicas hébergés sur les serveurs exécutant une version de SQL Server antérieure à SQL Server 2016 Community Technology Preview 3 (CTP3).  
+  
+- Aucune prise en charge de l’ajout ou de la suppression d’un réplica sur un groupe de disponibilité de base existant.  
+  
+- Prise en charge d’une base de données de disponibilité.  
+  
+- Mise à niveau de groupes de disponibilité de base vers des groupes de disponibilité avancés impossible. Le groupe doit être supprimé et rajouté à un groupe qui contient des serveurs exécutant uniquement SQL Server 2016 Enterprise Edition.  
+  
+- Les groupes de disponibilité de base sont pris en charge uniquement pour les serveurs Standard Edition. 
+
+- Les groupes de disponibilité de base ne peuvent pas faire partie d’un groupe de disponibilité distribué. 
   
 ## <a name="configuration"></a>Configuration  
  Un groupe de disponibilité de base Always On peut être créé sur deux serveurs SQL Server 2016 Standard Edition. Lorsque vous créez un groupe de disponibilité de base, vous devez spécifier les deux réplicas lors de la création.  

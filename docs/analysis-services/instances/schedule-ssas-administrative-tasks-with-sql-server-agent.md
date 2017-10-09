@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  Par défaut, les travaux s'exécutent sous le compte de service. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le compte par défaut de SQL Server Agent est NT Service\SQLAgent$\<nom_instance >. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md).  
+ Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemple 1 : traitement d'une dimension dans une tâche planifiée  
  Cet exemple montre comment créer et planifier un travail qui traite une dimension.  

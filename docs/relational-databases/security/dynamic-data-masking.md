@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2a16a7b0399a696c670887e49b4cf5c32012afb1
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 6ea14b40f988028a714323bc4e35fcd7a357e27c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dynamic-data-masking"></a>Masquage dynamique des données
@@ -30,10 +30,10 @@ Le masquage dynamique des données (DDM) limite l’exposition des données sens
 
 Le masquage dynamique des données permet d’empêcher les accès non autorisés à des données sensibles. Pour cela, les clients peuvent indiquer la quantité de données sensibles à exposer avec un impact minimal sur la couche Application. Il peut être configuré sur la base de données pour masquer les données sensibles dans les jeux de résultats de requêtes sur des champs de base de données désignés. Les données de la base de données ne sont pas modifiées. Le masquage dynamique des données est facile à utiliser avec des applications existantes, car les règles de masquage sont appliquées dans les résultats de la requête. De nombreuses applications peuvent masquer des données sensibles sans modifier les requêtes existantes.
 
-*  Une stratégie de masquage des données centrales agit directement sur les champs sensibles dans la base de données.
-*  Désignez les utilisateurs ou les rôles privilégiés qui n’ont pas accès aux données sensibles.
-*  DDM est doté de fonctions de masquage complètes et partielles, ainsi que d’un masque aléatoire pour les données numériques.
-*  Des commandes [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples définissent et gèrent les masques.
+* Une stratégie de masquage des données centrale agit directement sur les champs sensibles de la base de données.
+* Désignez les utilisateurs ou les rôles privilégiés qui ont accès aux données sensibles.
+* Le masquage dynamique des données a des fonctions de masquage complet et partiel, ainsi qu’un masque aléatoire pour les données numériques.
+* Des commandes [!INCLUDE[tsql_md](../../includes/tsql-md.md)] simples définissent et gèrent les masques.
 
 Par exemple, si une personne assurant le support technique au sein d’un centre d’appels peut identifier des appelants à l’aide de quelques chiffres de leur numéro de sécurité sociale ou de carte de crédit, ces données ne doivent pas lui être entièrement révélées. Il est ainsi possible de définir une règle de masquage qui cache tout, sauf les quatre derniers chiffres d’un numéro de sécurité sociale ou de carte de crédit, dans le jeu de résultats de toute requête. Autre exemple, en utilisant un masque de données approprié pour protéger les informations d’identification personnelle (PII), un développeur peut interroger des environnements de production à des fins de dépannage sans violer les réglementations de conformité.
 

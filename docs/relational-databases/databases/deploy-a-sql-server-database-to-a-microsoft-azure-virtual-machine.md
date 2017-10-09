@@ -38,14 +38,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: d571407c52dd11d7fec6a8077f1eb5a2837c013d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
-  Utilisez l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Microsoft Azure. L’Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d’une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
+  Utilisez l’Assistant **Déployer une base de données sur une machine virtuelle Microsoft Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Microsoft Azure. L’Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d’une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
   
  Vous ne pouvez pas utiliser l’Assistant pour effectuer des sauvegardes différentielles. L’Assistant ne remplacera pas une base de données existante qui porte le même nom de base de données. Pour remplacer une base de données existante sur la machine virtuelle, vous devez d'abord supprimer la base de données existante ou modifier le nom de la base de données. S'il existe un conflit de noms entre le nom de la base de données d'une opération de déploiement en cours et d'une base de données existante sur la machine virtuelle, l'Assistant suggère un nom de base de données avec suffixe pour la base de données en cours pour vous permettre d'effectuer cette opération.  
   
@@ -93,17 +93,17 @@ ms.lasthandoff: 09/14/2017
   
 -   Vous devez disposer d'un emplacement de stockage temporaire disponible sur l'ordinateur sur lequel la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est hébergée. L'emplacement de stockage temporaire doit également être disponible sur l'ordinateur sur lequel s'exécute l'Assistant.  
   
--   Si vous déployez la base de données sur un ordinateur virtuel existant, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être configurée pour écouter sur un port TCP/IP.  
+-   Si vous déployez la base de données sur une machine virtuelle existante, l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être configurée pour écouter sur un port TCP/IP.  
   
--   [L’adaptateur de cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) doit être configuré et en cours d’exécution sur l’image de machine virtuelle Microsoft Azure ou de galerie que vous prévoyez d’utiliser pour créer la machine virtuelle.  
+-   [L’adaptateur cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) doit être configuré et en cours d’exécution sur l’image de machine virtuelle Microsoft Azure ou de galerie que vous prévoyez d’utiliser pour créer la machine virtuelle.  
   
--   Vous devez configurer un point de terminaison ouvert pour votre [adaptateur de cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) sur la passerelle Microsoft Azure avec le port privé 11435.  
+-   Vous devez configurer un point de terminaison ouvert pour votre [adaptateur cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) sur la passerelle Microsoft Azure avec le port privé 11435.  
   
- De plus, si vous projetez de déployer votre base de données dans un ordinateur virtuel Windows Azure existant, vous devez également fournir :  
+ De plus, si vous projetez de déployer votre base de données sur une machine virtuelle Microsoft Azure existant, vous devez également fournir :  
   
--   Nom DNS du service de cloud computing qui héberge votre ordinateur virtuel.  
+-   Nom DNS du service cloud qui héberge votre machine virtuelle.  
   
--   Informations d'identification de l'administrateur pour l'ordinateur virtuel.  
+-   Informations d'identification de l'administrateur de la machine virtuelle.  
   
 -   Informations d'identifications avec privilèges d'opérateur Backup sur la base de données que vous prévoyez de déployer, à partir de l'instance source de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -158,7 +158,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
 ###  <a name="geography"></a> Éléments à prendre en considération pour la répartition géographique des actifs  
  Notez que les actifs suivants doivent se trouver dans la même région géographique :  
   
--   Service de cloud computing  
+-   Service cloud  
   
 -   Emplacement de la machine virtuelle  
   
@@ -183,7 +183,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
   
             -   CleanupDisabled = False /> \<!-- L’Assistant ne supprimera pas les fichiers intermédiaires et les objets Windows Azure (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! -- Dernières informations de profil de publication utilisées. -->  
+        -   \<PublishProfile \< ! -- Dernières informations de profil de publication utilisées. -->  
   
             -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- Certificat à utiliser dans l’Assistant. -->  
   
@@ -200,7 +200,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
 ###  <a name="permissions"></a> Autorisations  
  La base de données déployée doit avoir un état normal, doit être accessible au compte d'utilisateur qui exécute l'Assistant, et le compte d'utilisateur doit avoir les autorisations requises pour exécuter une opération de sauvegarde.  
   
-##  <a name="launch_wizard"></a> Utilisation de l’Assistant Déployer une base de données sur un ordinateur virtuel Microsoft Azure  
+##  <a name="launch_wizard"></a> Utilisation de l’Assistant Déployer une base de données sur une machine virtuelle Microsoft Azure  
  **Pour lancer l'Assistant, suivez les étapes suivantes :**  
   
 1.  Utilisez SQL Server Management Studio pour vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la base de données que vous souhaitez déployer.  
@@ -225,7 +225,7 @@ Cette fonctionnalité de déploiement ne peut être utilisée qu’avec un compt
 -   [Résultats](#Results)  
   
 ##  <a name="Introduction"></a> Introduction 
- Cette page décrit l’Assistant **Déployer une base de données sur un ordinateur virtuel Microsoft Azure** .  
+ Cette page décrit l’Assistant **Déployer une base de données sur une machine virtuelle Microsoft Azure**.  
   
 -   **Ne plus afficher cette page.**  
   Activez cette case à cocher pour ne plus afficher la page Introduction à l’avenir.  
@@ -240,7 +240,7 @@ Passer à la page **Paramètres de la source** .
 Ouvrir la rubrique d’aide MSDN de l’Assistant.  
   
 ##  <a name="Source_settings"></a> Paramètres de la source  
- Utilisez cette page pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données que vous souhaitez déployer dans la machine virtuelle Microsoft Azure. Vous spécifierez également un emplacement temporaire pour les fichiers que vous stockez sur l’ordinateur local avant de les transférer vers Microsoft Azure. Il peut s'agir d'un emplacement réseau partagé.  
+ Utilisez cette page pour vous connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données que vous souhaitez déployer dans la machine virtuelle Microsoft Azure. Spécifiez également un emplacement temporaire pour les fichiers que vous stockez sur l’ordinateur local avant de les transférer vers Microsoft Azure. Il peut s'agir d'un emplacement réseau partagé.  
  
 - **SQL Server**    
 Cliquez sur **Connecter** et spécifiez les informations de connexion pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données à déployer.  
@@ -260,9 +260,9 @@ Dans le champ, spécifiez un dossier partagé qui sera accessible au service de 
  **Machine virtuelle Microsoft Azure**  
   
 -   **Nom du service cloud**  
-Spécifiez le nom du service qui héberge la machine virtuelle. Pour créer un service de cloud computing, spécifiez un nom.  
+Spécifiez le nom du service qui héberge la machine virtuelle. Pour créer un service cloud, spécifiez un nom.  
   
--   **Nom de l’ordinateur virtuel** Spécifiez le nom de la machine virtuelle qui hébergera la base de données SQL Server. Pour créer une machine virtuelle Microsoft Azure, spécifiez un nom pour cette nouvelle machine virtuelle.  
+-   **Nom de la machine virtuelle** Spécifiez le nom de la machine virtuelle qui hébergera la base de données SQL Server. Pour créer une machine virtuelle Microsoft Azure, spécifiez un nom pour cette nouvelle machine virtuelle.  
   
 -   **Compte de stockage**  
 Sélectionnez le compte de stockage dans la liste déroulante. Pour créer un compte de stockage, spécifiez un nom. Notez que les comptes de stockage associés à un groupe d'affinités ne seront pas disponibles dans la liste déroulante.  
@@ -281,7 +281,7 @@ Spécifiez ou confirmez le nom d’une nouvelle base de données. Si le nom de l
 ##  <a name="Summary"></a> Résumé
  Utilisez cette page pour passer en revue les paramètres spécifiés pour l'opération. Pour terminer le déploiement à l'aide des paramètres spécifiés, cliquez sur **Terminer**. Pour annuler le déploiement et quitter l'Assistant, cliquez sur **Annuler**.  Lorsque vous cliquez sur **Terminer** , la page **État d’avancement du déploiement** s’ouvre.  Vous pouvez également afficher l’avancement à partir du fichier journal situé dans `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`.
   
- Des étapes manuelles peuvent être nécessaires pour déployer les détails de la base de données sur la base de données SQL Server dans un ordinateur virtuel Windows Azure. Ces étapes seront décrites de façon détaillée.  
+ Des étapes manuelles peuvent être nécessaires pour déployer les détails de la base de données sur la base de données SQL Server dans une machine virtuelle Microsoft Azure. Ces étapes seront décrites de façon détaillée.  
   
 ##  <a name="Results"></a> Résultats 
  Cette page signale la réussite ou l'échec de l'opération de déploiement, affichant les résultats de chaque action. Toute action pour laquelle une erreur s'est produite comportera une indication dans la colonne **Résultat** . Cliquez sur le lien pour consulter le rapport d'erreur de cette action.  
@@ -289,13 +289,13 @@ Spécifiez ou confirmez le nom d’une nouvelle base de données. Si le nom de l
  Cliquez sur **Terminer** pour fermer l'Assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’adaptateur de cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
+ [Adaptateur cloud pour SQL Server](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [Gestion du cycle de vie de base de données](../../relational-databases/database-lifecycle-management.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Sauvegarde et restauration Base de données SQL Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Déploiement de SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133141.aspx)   
- [Préparation à la migration vers SQL Server dans Windows Azure Virtual Machines](http://msdn.microsoft.com/library/dn133142.aspx)  
+ [Sauvegarde et restauration avec Azure SQL Database](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [Déploiement de SQL Server dans Machines virtuelles Microsoft Azure](http://msdn.microsoft.com/library/dn133141.aspx)   
+ [Préparation à la migration vers SQL Server dans Machines virtuelles Microsoft Azure](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
 

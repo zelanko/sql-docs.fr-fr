@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.translationtype: HT
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 8a5a44c3da9c34cf3bc64b632ce8cb8f86ff53e9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
  L’accès aux données au niveau des lignes dans une table est restreint par un prédicat de sécurité défini en tant que fonction table incluse. La fonction est ensuite appelée et appliquée par une stratégie de sécurité. Pour les prédicats de filtre, rien n’indique à l’application que des lignes ont été filtrées du jeu de résultats. Si toutes les lignes sont filtrées, un jeu de valeurs null est retourné. Pour les prédicats BLOCK, toutes les opérations qui violent le prédicat échouent avec une erreur.  
   
- Les prédicats de filtre sont appliqués lors de la lecture des données de la table de base, et toutes les opérations get sont affectées : **SELECT**, **DELETE** (c.-à-d. que l’utilisateur ne peut pas supprimer des lignes qui sont filtrées) et **UPDATE** (autrement dit, l'utilisateur ne peut pas mettre à jour les lignes filtrées, bien qu'il soit possible de mettre à jour les lignes de telle sorte qu'elles soient ensuite filtrées). Les prédicats BLOCK affectent toutes les opérations d’écriture.  
+ Les prédicats de filtre sont appliqués lors de la lecture des données de la table de base, et toutes les opérations get sont affectées : **SELECT**, **DELETE** (l’utilisateur ne peut pas supprimer des lignes filtrées) et **UPDATE** (l’utilisateur ne peut pas mettre à jour les lignes filtrées, bien qu’il soit possible de mettre à jour les lignes de sorte qu’elles soient filtrées par la suite). Les prédicats BLOCK affectent toutes les opérations d’écriture.  
   
 -   Les prédicats AFTER INSERT et AFTER UPDATE peuvent empêcher les utilisateurs de mettre à jour des lignes avec des valeurs qui violent le prédicat.  
   
@@ -63,9 +63,7 @@ ms.lasthandoff: 06/22/2017
   
  Les prédicats de filtre et BLOCK, ainsi que les stratégies de sécurité, se comportent comme suit :  
   
--   Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. Si la stratégie de sécurité est créée avec `SCHEMABINDING = ON`, alors la jointure ou la fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d’autorisation supplémentaire. Si la stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors les utilisateurs ont besoin d’autorisations **SELECT** ou **EXECUTE** sur ces tables et fonctions supplémentaires pour interroger la table cible.  
-  
-     Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. La jointure/fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d'autorisation supplémentaire.  
+-   Vous pouvez définir une fonction de prédicat qui crée une jointure avec une autre table et/ou appelle une fonction. Si la stratégie de sécurité est créée avec `SCHEMABINDING = ON`, alors la jointure ou la fonction est accessible à partir de la requête et fonctionne comme prévu, sans aucun contrôle d’autorisation supplémentaire. Si la stratégie de sécurité est créée avec `SCHEMABINDING = OFF`, alors les utilisateurs ont besoin d’autorisations **SELECT** ou **EXECUTE** sur ces tables et fonctions supplémentaires pour interroger la table cible.
   
 -   Vous pouvez émettre une requête sur une table pour laquelle un prédicat de sécurité est défini, mais désactivé. Les lignes qui auraient été filtrées ou bloquées ne sont pas affectées.  
   
