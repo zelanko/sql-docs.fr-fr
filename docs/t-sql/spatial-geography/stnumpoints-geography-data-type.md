@@ -71,9 +71,10 @@ SELECT @g.STNumPoints();
 ### <a name="c-returning-the-number-of-points-in-a-compoundcurve"></a>C. Retour du nombre de points dans un CompoundCurve  
  L'exemple suivant retourne le nombre de points dans une instance CompoundCurve. La requête retourne 5 au lieu de 6 car STNumPoints() compte le point de connexion entre les segments une fois seulement.  
   
- `DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658),( -122.348 47.658, -121.56 48.12, -122.358 47.653))'`  
-  
- `SELECT @g.STNumPoints();`  
+```
+ DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658),( -122.348 47.658, -121.56 48.12, -122.358 47.653))'  
+ SELECT @g.STNumPoints();
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur les Instances géographiques](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

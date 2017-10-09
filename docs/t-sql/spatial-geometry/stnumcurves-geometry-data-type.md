@@ -50,20 +50,20 @@ Cette méthode retourne le nombre de courbes dans une **geometry** instance lors
 ### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>A. Utilisation de STNumCurves() sur une instance CircularString  
  L'exemple suivant indique comment obtenir le nombre de courbes dans une instance `CircularString` :  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>B. Utilisation de STNumCurves() sur une instance CompoundCurve  
  L'exemple suivant utilise `STNumCurves()` pour retourner le nombre de courbes dans une instance `CompoundCurve`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SELECT @g.STNumCurves();`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');  
+ SELECT @g.STNumCurves();
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   

@@ -102,11 +102,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------------------------------------------------`  
-  
- `The order is due on 04/23/2007`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------------------------------------------------  
+ The order is due on 04/23/2007  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="c-using-multiple-string-concatenation"></a>C. Utilisation de la concaténation de plusieurs chaînes  
  L'exemple suivant concatène plusieurs chaînes pour constituer une chaîne longue et afficher le nom de famille et l'initiale des vice-présidents [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  
@@ -125,17 +125,15 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Name               Title`  
-  
- `-------------      ---------------`  
-  
- `Duffy, T.          Vice President of Engineering`  
-  
- `Hamilton, J.       Vice President of Production`  
-  
- `Welcker, B.        Vice President of Sales`  
-  
- `(3 row(s) affected)`  
+ ```
+ Name               Title  
+ -------------      ---------------`  
+ Duffy, T.          Vice President of Engineering  
+ Hamilton, J.       Vice President of Production  
+ Welcker, B.        Vice President of Sales  
+
+ (3 row(s) affected)
+ ```  
  
 ### <a name="d-using-large-strings-in-concatenation"></a>D. À l’aide de chaînes de grande taille dans la concaténation
 L’exemple suivant concatène plusieurs chaînes pour former une chaîne longue et tente ensuite de calculer la longueur de la chaîne finale. La longueur finale du jeu de résultats est 16000, car l’expression d’évaluation commence gauche qui plus est, @x + @z + @y = > (@x + @z) + @y. Dans ce cas, le résultat de (@x + @z) est tronquée à 8 000 octets, puis @y est ajouté au jeu de résultats, ce qui rend la longueur de la chaîne finale 16000. Étant donné que @y est une chaîne de type de valeur élevée, la troncation n’a pas lieu.
@@ -151,13 +149,13 @@ GO
 ```
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `y      `  
+ ```
+ y        
+ -------  
+ 16000  
   
- `-------`  
-  
- `16000`  
-  
-  `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-string-concatenation"></a>E. Utilisation de la concaténation de chaîne  

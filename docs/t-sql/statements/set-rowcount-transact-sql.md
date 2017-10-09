@@ -84,13 +84,13 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Count`  
-  
- `-----------`  
-  
- `537`  
-  
- `(1 row(s) affected)`  
+ ```
+ Count 
+ ----------- 
+ 537 
+ 
+ (1 row(s) affected)
+ ```  
   
  Définissez maintenant `ROWCOUNT` sur `4` et retournez toutes les lignes pour démontrer que seules 4 lignes sont retournées.  
   
@@ -100,9 +100,9 @@ SELECT *
 FROM Production.ProductInventory  
 WHERE Quantity < 300;  
 GO  
-```  
   
- `(4 row(s) affected)`  
+(4 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  SET ROWCOUNT arrête le traitement après le nombre de lignes spécifié. Dans l’exemple suivant, notez que plus de 20 lignes répondent aux critères de `AccountType = 'Assets'`. Toutefois, après avoir appliqué SET ROWCOUNT, vous pouvez remarquer que toutes les lignes n'ont pas été retournées.  

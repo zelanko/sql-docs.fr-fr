@@ -57,30 +57,20 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne l’union d’un ensemble de **geometry** objets dans une variable de table.  
-  
- `-- Setup table variable for UnionAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `);`  
-  
- `INSERT INTO @Geom(shape,shapeType)`  
-  
- `VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform UnionAggregate on @Geom.shape column`  
-  
- `SELECT geometry::UnionAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for UnionAggregate example 
+ DECLARE @Geom TABLE 
+ ( 
+ shape geometry, 
+ shapeType nvarchar(50) 
+ ); 
+ INSERT INTO @Geom(shape,shapeType) 
+ VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'), 
+ ('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle'); 
+ -- Perform UnionAggregate on @Geom.shape column 
+ SELECT geometry::UnionAggregate(shape).ToString() 
+ FROM @Geom;
+``` 
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes de géométrie statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

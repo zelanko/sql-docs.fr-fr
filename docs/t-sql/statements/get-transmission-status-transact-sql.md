@@ -75,11 +75,11 @@ SELECT Status =
   
  Voici un exemple d'ensemble de résultats, modifié pour la longueur de ligne :  
   
- `Status`  
-  
- `-------------------------------`  
-  
- `The Service Broker protocol transport is disabled or not configured.`  
+ ```
+ Status  
+ ------------------------------- 
+ The Service Broker protocol transport is disabled or not configured.
+ ```  
   
  Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas configuré pour permettre à [!INCLUDE[ssSB](../../includes/sssb-md.md)] de communiquer sur le réseau.  
   

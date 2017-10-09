@@ -62,11 +62,11 @@ SELECT @g.STArea();
 ### <a name="b-computing-the-area-of-a-curvepolygon-instance"></a>B. Calcul de la surface d'une instance CurvePolygon  
  L'exemple suivant calcule la surface d'une instance `CurvePolygon`.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');`  
-  
- `SELECT @g.STArea() AS Area;`  
+```
+ DECLARE @g geometry;  
+ SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 2, 2 0, 4 2, 4 2, 0 2))');  
+ SELECT @g.STArea() AS Area;
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur les Instances géométriques](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

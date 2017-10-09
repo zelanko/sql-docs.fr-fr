@@ -548,11 +548,11 @@ GO
   
  Voici l'ensemble de résultats généré le 12 avril 2004 ('`2004-04-12'`). Notez que les colonnes `ScrapReasonIDActual` et `ModifiedDate` illustrent les valeurs générées par l'opération du déclencheur plutôt que les valeurs fournies dans l'instruction `INSERT`.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>I. Utilisation de OUTPUT INTO avec des colonnes d'identité et des colonnes calculées  
  L'exemple suivant crée la table `EmployeeSales`, puis y insère plusieurs lignes à l'aide d'une instruction `INSERT`, avec une instruction `SELECT` pour récupérer les données des tables sources. La table `EmployeeSales` contient une colonne d'identité (`EmployeeID`) et une colonne calculée (`ProjectedSales`).  

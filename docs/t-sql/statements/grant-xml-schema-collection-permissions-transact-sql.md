@@ -128,11 +128,11 @@ GRANT permission  [ ,...n ] ON
 ## <a name="examples"></a>Exemples  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la collection de schémas XML `Invoices4` est accordée à l'utilisateur `Wanida`. La collection de schémas XML `Invoices4` se trouve à l'intérieur du schéma `Sales` de la base de données `AdventureWorks2012`.  
   
- `USE AdventureWorks2012;`  
-  
- `GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;`  
-  
- `GO`  
+ ```
+ USE AdventureWorks2012;  
+ GRANT EXECUTE ON XML SCHEMA COLLECTION::Sales.Invoices4 TO Wanida;  
+ GO
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [REFUSER des autorisations de Collection de schémas XML &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   

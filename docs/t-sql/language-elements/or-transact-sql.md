@@ -76,13 +76,12 @@ WHERE Department = 'Quality Assurance'
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName    LastName         Shift`  
-  
- `------------ ---------------- -------`  
-  
- `Andreas      Berglund         Evening`  
-  
- `Sootha       Charncherngkha   Night`  
+ ```
+ FirstName    LastName         Shift 
+ ------------ ---------------- ------- 
+ Andreas      Berglund         Evening 
+ Sootha       Charncherngkha   Night
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant récupère les noms des employés qui soit gagner un `BaseRate` moins de 20 ou avoir un `HireDate` le 1er janvier 2001 ou version ultérieure.  

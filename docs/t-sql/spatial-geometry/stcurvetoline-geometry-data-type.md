@@ -60,50 +60,44 @@ Retourne une approximation polygonale d’une **geometry** instance qui contient
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>A. Utilisation d'une variable Geometry non initialisée et d'une instance vide  
  Dans l’exemple suivant, la première **sélectionnez** instruction utilise un sans être initialisé **geometry** instance pour appeler le `STCurveToLine` (méthode) et le second **sélectionnez** instruction utilise vide **geometry** instance. Par conséquent, la méthode retourne **NULL** à la première instruction et un **GeometryCollection** collection de la deuxième instruction.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
-  
- `SET @g = geometry::Parse('LINESTRING EMPTY');`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType(); 
+ SET @g = geometry::Parse('LINESTRING EMPTY'); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="b-using-a-linestring-instance"></a>B. Utilisation d'une instance LineString  
  Le **sélectionnez** instruction dans l’exemple suivant utilise un **LineString** instance pour appeler la méthode STCurveToLine. Par conséquent, la méthode retourne un **LineString** instance.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>C. Utilisation d'une instance CircularString  
  La première **sélectionnez** instruction dans l’exemple suivant utilise un **CircularString** instance pour appeler la méthode STCurveToLine. Par conséquent, la méthode retourne un **LineString** instance. Cela **sélectionnez** instruction compare également les longueurs des deux instances, qui sont approximativement identiques.  Enfin, la seconde **sélectionnez** instruction renvoie le nombre de points pour chaque instance.  Elle retourne uniquement 5 points pour la **CircularString** instance, mais 65 points pour les **LineString**instance.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def];`  
-  
- `SELECT @g1.STNumPoints(), @g2.STNumPoints();`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def]; 
+ SELECT @g1.STNumPoints(), @g2.STNumPoints();
+ ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>D. Utilisation d'une instance CurvePolygon  
  Le **sélectionnez** instruction dans l’exemple suivant utilise un **CurvePolygon** instance pour appeler la méthode STCurveToLine. Par conséquent, la méthode retourne un **polygone** instance.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
+ ```  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   

@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  Lorsque vous créez des tables temporaires locales ou globales, la syntaxe CREATE TABLE prend en charge les définitions de contraintes à l'exception des contraintes FOREIGN KEY. Si vous spécifiez une contrainte FOREIGN KEY dans une table temporaire, l'instruction retourne un message d'avertissement précisant que la contrainte a été ignorée. La table est toujours créée mais sans les contraintes FOREIGN KEY. Les tables temporaires ne peuvent pas être référencées dans des contraintes FOREIGN KEY.  
   
