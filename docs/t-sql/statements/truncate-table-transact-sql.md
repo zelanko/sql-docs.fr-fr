@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7ee541357482633787726addb17434dbd59b82d9
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 1d393c67c8489765aa92c861bc28c8e4d0e2eea4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -122,7 +122,13 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Utilisez plutôt l'instruction DELETE pour les tables ayant au moins une de ces caractéristiques.  
   
- L'instruction TRUNCATE TABLE ne peut pas activer un déclencheur car l'opération ne consigne pas les suppressions de lignes dans le journal. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ L'instruction TRUNCATE TABLE ne peut pas activer un déclencheur car l'opération ne consigne pas les suppressions de lignes dans le journal. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md). 
+ 
+ Dans [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
+
+- L’instruction TRUNCATE TABLE n’est pas autorisée dans l’instruction d’explication.
+
+- L’instruction TRUNCATE TABLE ne peut pas être exécuté à l’intérieur d’une transaction.
   
 ## <a name="truncating-large-tables"></a>Troncation de grandes tables  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la possibilité de supprimer ou tronquer des tables qui ont plus de 128 étendues sans maintenir de verrous simultanés sur toutes les extensions requises pour la suppression.  

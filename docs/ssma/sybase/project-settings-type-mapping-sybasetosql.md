@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77c02b875a22fefec54c59518f4972cbd7aefd4b
+ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
+ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Paramètres (Type de mappage) du projet (SybaseToSQL)
@@ -68,8 +68,8 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**char varying**|**varchar**|  
 |**char varying [\*... 8000]**|**varchar [\*]**|  
 |**char varying [8001..\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**Char [8001..\& #42 ;]**|**varchar(max)**|  
+|**char[\*.. 8000]**|**char[\*]**|  
+|**Char [8001..\*;]**|**varchar(max)**|  
 |**caractère**|**char**|  
 |**variable de caractère**|**varchar**|  
 |**variable de caractères [\*... 8000]**|**varchar [\*]**|  
@@ -79,11 +79,11 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**DEC**|**decimal**|  
-|**dec[\*..\*]**|**Decimal [\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**dec[\*.. \*]**|**Decimal [\*]**|  
+|**dec[\*.. \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
 |**Decimal [\*... \*]**|**Decimal [\*]**|  
-|**Decimal [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**Decimal [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**double précision**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*... 15]**|**float [24]**|  
@@ -116,7 +116,7 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**NCHAR [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
 |**numérique [\*... \*]**|**numérique [\*]**|  
-|**numérique [\*..\*][\*..\*]**|**numeric[\*][\*]**|  
+|**numérique [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*... 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
@@ -126,7 +126,7 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*... \*]**|**nvarchar [255]**|  
-|**texte**|**texte**|  
+|**text**|**text**|  
 |**time**|**heure [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
