@@ -57,6 +57,7 @@
 ### [Copie en bloc avec bcp](sql-server-linux-migrate-bcp.md)
 
 ## [Extraire, transformer, charger](sql-server-linux-migrate-ssis.md)
+### [Limitations et problèmes connus](sql-server-linux-ssis-known-issues.md)
 ### [Configurer SSIS](sql-server-linux-configure-ssis.md)
 ### [Planifier des packages SSIS](sql-server-linux-schedule-ssis-packages.md)
 

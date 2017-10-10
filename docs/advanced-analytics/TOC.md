@@ -104,15 +104,24 @@
 
 # [Procédure](r/sql-server-machine-learning-tasks.md)
 
-## [Gestion des packages R](r/r-package-management-for-sql-server-r-services.md)
+## [Gestion des packages R pour SQL Server](r/r-package-management-for-sql-server-r-services.md)
+
+### [Installer de nouveaux packages R sur SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
 ### [Activer la gestion des packages R pour une instance SQL Server](r/r-package-how-to-enable-or-disable.md)
-### [Où obtenir des packages R](r/installing-and-managing-r-packages.md)
-### [Installer des packages Machine Learning supplémentaires sur SQL Server](r/install-additional-r-packages-on-sql-server.md)
-### [Créer un référentiel de packages local à l’aide de miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+
 ### [Identifier les packages installés sur SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
-### [Bibliothèques de packages utilisateur](r/packages-installed-in-user-libraries.md)
-### [Synchroniser des packages R utilisés par SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [Utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server](r/use-revoscaler-to-manage-r-packages.md)
+
+### [Synchroniser des packages R installés sur SQL Server](r/package-install-uninstall-and-sync.md)
+
+### [Packages R installés avec SQL Server](r/installing-and-managing-r-packages.md)
+
+### [Utiliser miniCRAN pour créer un référentiel de packages local](r/create-a-local-package-repository-using-minicran.md)
+
+### [Éviter les erreurs avec les bibliothèques de packages utilisateur pour R](r/packages-installed-in-user-libraries.md)
+
 
 ## Exploration et modélisation des données
 
