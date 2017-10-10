@@ -1,7 +1,7 @@
 ---
 title: "Configurer Reporting Services pour utiliser un autre nom d’objet | Documents Microsoft"
 ms.custom: 
-ms.date: 03/20/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,34 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurer Reporting Services pour utiliser un autre nom de l'objet
-  Cette rubrique explique comment configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) pour utiliser un autre nom de l’objet (SAN, Subject Alternative Name) en modifiant le fichier rsreportserver.config et en utilisant l’outil Netsh.exe.  
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurer Reporting Services pour utiliser un autre nom d’objet
+
+Cette rubrique explique comment configurer Reporting Services (SSRS) pour utiliser un autre nom d’objet (SAN) en modifiant le fichier rsreportserver.config et à l’aide de l’outil Netsh.exe.
+
+Les instructions s'appliquent à l'URL Reporting Services, ainsi qu'à une URL de service web.
+
+Pour utiliser un nom SAN, le certificat SSL doit être inscrit sur le serveur, être signé et posséder la clé privée. Vous ne pouvez pas utiliser un certificat auto-signé.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif|  
+ URL dans Reporting Services peuvent être configurés pour utiliser un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le réseau SAN est un champ supplémentaire dans le certificat qui permet à un service SSL écoute pour plusieurs URL et pour partager le port SSL avec d’autres applications. Le réseau SAN ressemble à `www.s2.com`.  
   
- Les instructions s'appliquent à l'URL Reporting Services, ainsi qu'à une URL de service web.  
+ Pour plus d’informations sur les paramètres SSL pour Reporting Services, consultez [configurer des connexions SSL sur un serveur de rapports en Mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
- Pour utiliser un nom SAN, le certificat SSL doit être inscrit sur le serveur, être signé et posséder la clé privée. Vous ne pouvez pas utiliser un certificat auto-signé.  
-  
- Vous pouvez configurer les URL dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour utiliser un certificat SSL. Normalement, un certificat a juste un nom d'objet qui n'autorise qu'une seule URL pour une session SSL (Secure Sockets Layer). Le nom SAN est un champ supplémentaire dans le certificat qui permet à un service SSL d'être à l'écoute et d'être valide pour plusieurs URL. Il permet également au service SSL de partager le port SSL avec d'autres applications. Le nom du SAN ressemble à ceci : www.s2.com.  
-  
- Pour plus d’informations sur l’activation de SSL pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
-  
-### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurer SSRS pour utiliser un autre nom de l'objet pour l'URL d'un service web  
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurer SSRS pour utiliser un autre nom du sujet pour l’URL du service web
   
 1.  Démarrez le Gestionnaire de configuration de Reporting Services.  
   
@@ -51,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Ouvrez le fichier rsreportserver.config.  
   
-     Pour SSRS en mode natif, le fichier se trouve par défaut dans le dossier suivant.  
+     En mode natif SSRS, le fichier se trouve par défaut dans le dossier suivant :  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -59,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Copiez la section URL de l'application du service web Report Server.  
   
-     Par exemple, voici la section URL d'origine.  
+     Par exemple, la section suivante de URL d’origine est :  
   
     ```  
         <URL>  
@@ -70,7 +65,7 @@ ms.lasthandoff: 08/09/2017
   
     ```  
   
-     Ce qui suit est la section URL, une fois changée.  
+     La section URL modifiée suivante est la suivante :
   
     ```  
     <URL>  
@@ -100,7 +95,7 @@ ms.lasthandoff: 08/09/2017
     Netsh>http  
     ```  
   
-8.  Affichez les urlacl existantes en tapant ce qui suit.  
+8.  Affichez les urlacl existantes en tapant la commande suivante :
   
     ```  
     Netsh http>show urlacl  
@@ -128,10 +123,11 @@ ms.lasthandoff: 08/09/2017
   
 10. Dans la page **État de Report Server** du Gestionnaire de configuration de Reporting Services, cliquez sur **Arrêter** , puis sur **Démarrer** pour redémarrer le serveur de rapports.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services Configuration Manager &#40; En Mode natif &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Modifier un fichier de Configuration Reporting Services &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configurer des URL de Report Server &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+ [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Gestionnaire de Configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Modifier un fichier de configuration de Reporting Services](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Configurer des URL de serveur de rapports](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
+
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8b6972868c221ec0368b689164eff740ae6f1a7
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="select-clause-transact-sql"></a>Clause SELECT (Transact-SQL)
@@ -140,13 +140,12 @@ FROM Cities;
   
  Les alias sont également utilisés pour spécifier les noms des résultats d'expressions, par exemple :  
   
- `USE AdventureWorks2012`;  
-  
- `GO`  
-  
- `SELECT AVG(UnitPrice) AS [Average Price]`  
-  
- `FROM Sales.SalesOrderDetail;`  
+ ```sql
+ USE AdventureWorks2012;  
+ GO  
+ SELECT AVG(UnitPrice) AS [Average Price]  
+ FROM Sales.SalesOrderDetail;
+ ```  
   
  *column_alias* peut être utilisé dans une clause ORDER BY. Il ne peut toutefois pas être utilisé dans une clause WHERE, GROUP BY ou HAVING. Si l’expression de requête fait partie d’une instruction DECLARE CURSOR, *column_alias* ne peut pas être utilisé dans la clause FOR UPDATE.  
   

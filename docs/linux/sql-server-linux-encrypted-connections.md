@@ -2,8 +2,8 @@
 title: "Chiffrement des connexions à SQL Server sur Linux | Documents Microsoft"
 description: "Cette rubrique décrit le chiffrement des connexions à SQL Server sur Linux."
 author: tmullaney
-ms.date: 06/14/2017
-ms.author: thmullan;rickbyh
+ms.date: 10/02/2017
+ms.author: meetb;rickbyh
 manager: jhubbard
 ms.topic: article
 ms.prod: sql-linux
@@ -12,10 +12,10 @@ ms.assetid:
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 47a15701730019aaf166743c47c606aa2059b7fe
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Chiffrement des connexions à SQL Server sur Linux
@@ -23,88 +23,107 @@ ms.lasthandoff: 08/28/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sur Linux peuvent utiliser sécurité TLS (Transport Layer) pour chiffrer les données transmises sur un réseau entre une application cliente et une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]prend en charge les mêmes protocoles TLS sur Windows et Linux : TLS 1.0, 1.1 et 1.2. Toutefois, les étapes de configuration TLS sont spécifiques au système d’exploitation sur lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est en cours d’exécution.  
- 
-## <a name="typical-scenario"></a>Scénario typique 
-TLS est utilisé pour chiffrer les connexions à partir d’une application cliente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En cas de correctement configuré, TLS fournit la confidentialité et l’intégrité des données pour les communications entre le client et le serveur.  
-Les étapes suivantes décrivent un scénario classique :  
 
-1. Administrateur de base de données génère une clé privée et un certificat (CSR) de demande de signature. Nom commun du conseiller du service clientèle doit correspondre au nom de serveur qui spécifient des clients dans leur chaîne de connexion SQL Server. Ce nom commun est généralement le nom de domaine complet de le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte. Pour utiliser le même certificat pour plusieurs serveurs, vous pouvez utiliser un caractère générique dans le nom commun (par exemple, `"*.contoso.com"` au lieu de `"node1.contoso.com"`).   
-2. La signature de certificat est envoyé à une autorité de certification (CA) pour la signature. L’autorité de certification doit être approuvée par tous les ordinateurs clients qui se connectent à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L’autorité de certification renvoie un certificat signé à l’administrateur de base de données.   
-3. Administrateur de base de données configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à utiliser la clé privée et le certificat signé pour les connexions TLS.   
-4. Les clients spécifier `"Encrypt=True"` et `"TrustServerCertificate=False"` dans leurs chaînes de connexion. (Les noms de paramètre spécifique peuvent être différentes selon le pilote est utilisé). Les clients essaient de maintenant chiffrer les connexions à SQL Server et vérifier la validité du certificat du serveur SQL pour empêcher les attaques de man-in-the-middle.  
- 
-## <a name="configuring-tls-on-linux"></a>Configuration du protocole TLS sur Linux  
+## <a name="requirements-for-certificates"></a>Exigences relatives aux certificats 
+Avant de commencer, vous devez vous assurer que vos certificats de respecter les règles suivantes :
+- L’heure système actuelle doit être après le valide à partir de la propriété du certificat et avant le valide à la propriété du certificat.
+- Le certificat doit être destiné à une authentification serveur. Cela nécessite la propriété utilisation améliorée de la clé du certificat pour spécifier l’authentification du serveur (1.3.6.1.5.5.7.3.1).
+- Le certificat doit être créé à l’aide de l’option KeySpec de AT_KEYEXCHANGE. En règle générale, propriété d’utilisation de la clé du certificat (KEY_USAGE) inclut également le chiffrage de clés (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- La propriété de sujet du certificat doit indiquer que le nom commun (CN) est le même que le nom d’hôte ou le nom de domaine complet (FQDN) de l’ordinateur serveur. Remarque : les certificats génériques sont pris en charge. 
 
-Utilisez `mssql-conf` pour configurer le protocole TLS pour une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en cours d’exécution sur Linux. Les options suivantes sont prises en charge :  
+## <a name="overview"></a>Vue d'ensemble
+TLS est utilisé pour chiffrer les connexions à partir d’une application cliente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En cas de correctement configuré, TLS fournit la confidentialité et l’intégrité des données pour les communications entre le client et le serveur.  Les connexions TLS peuvent être initited intiated ou un serveur de client. 
 
-|Option | Description |
-|--- |--- |
-|`network.forceencryption` |La valeur 1, puis [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] force toutes les connexions à chiffrer. Par défaut, cette option est 0. |  
-|`network.tlscert` |Le chemin d’accès absolu pour le certificat du fichier qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise pour TLS. Exemple : `/etc/ssl/certs/mssql.pem` le fichier de certificat doit être accessible par le compte mssql. Microsoft vous recommande de restreindre l’accès au fichier à l’aide de `chown mssql:mssql <file>; chmod 400 <file>`. |  
-|`network.tlskey` |Le chemin d’accès absolu à la clé privée du fichier qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise pour TLS. Exemple : `/etc/ssl/private/mssql.key` le fichier de certificat doit être accessible par le compte mssql. Microsoft vous recommande de restreindre l’accès au fichier à l’aide de `chown mssql:mssql <file>; chmod 400 <file>`. | 
-|`network.tlsprotocols` |Une liste séparée par des virgules de quels TLS protocoles sont autorisés par SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tente toujours de négocier le protocole autorisé les plus fortes. Si un client ne prend pas en charge n’importe quel protocole autorisé, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejette la tentative de connexion.  Pour la compatibilité, tous les protocoles pris en charge sont autorisés par défaut (1.2, 1.1, 1.0).  Si vos clients prennent en charge TLS 1.2, Microsoft vous recommande d’autoriser uniquement TLS 1.2. |  
-|`network.tlsciphers` |Spécifie les chiffrements autorisés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour TLS. Cette chaîne doit être mise en forme par [format de liste de chiffrement d’OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En règle générale, vous ne devez pas modifier cette option. <br /> Par défaut, les chiffrements suivants sont autorisés : <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
-| | |
- 
-## <a name="example"></a>Exemple 
-Cet exemple utilise un certificat auto-signé. Dans les scénarios de production normale, le certificat serait être signé par une autorité de certification approuvée par tous les clients.  
- 
-### <a name="step-1-generate-private-key-and-certificate"></a>Étape 1 : Générer le certificat et la clé privée 
-Ouvrez une commande de Terminal Server sur l’ordinateur Linux où [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est en cours d’exécution. Exécutez les commandes suivantes :  
 
-- Générez un certificat auto-signé. Assurez-vous que le CN correspond à votre nom de domaine complet d’hôte SQL Server. Vous pouvez éventuellement utiliser des caractères génériques, par exemple `'/CN=*.contoso.com'`.    
-   ```  
-   openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-   ```  
+## <a name="client-initiated-encryption"></a>Chiffrement initiée par le client 
+- **Générer le certificat** (CN doit correspondre à votre nom de domaine complet d’hôte SQL Server)
 
-- Restreindre l’accès à`mssql`  
-   ```  
-   sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 600 mssql.pem mssql.key 
-   ```  
- 
-- Déplacer vers les répertoires du système SSL (facultatifs)  
-   ```  
-   sudo mv mssql.pem /etc/ssl/certs/ 
-   sudo mv mssql.key /etc/ssl/private/ 
-   ```  
- 
-### <a name="step-2-configure--includessnoversionincludesssnoversion-mdmd"></a>Étape 2 : configurer[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
-Utilisez `mssql-conf` pour configurer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour utiliser le certificat et la clé pour le protocole TLS. Pour une sécurité accrue, vous pouvez également définir TLS 1.2 comme le seul protocole autorisé et forcer les clients à utiliser des connexions chiffrées.  
+> [!NOTE]
+> Pour cet exemple, nous utilisons un certificat auto-signé, cela ne doit pas utilisé pour les scénarios de production. Vous devez utiliser des certificats d’autorité de certification. 
 
-```  
-sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
-```
- 
-### <a name="step-3-restart-includessnoversionincludesssnoversion-mdmd"></a>Étape 3 : redémarrer[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]doit être redémarré pour que ces modifications prennent effet.  
-`sudo systemctl restart mssql-server`  
- 
-### <a name="step-4-copy-self-signed-certificate-to-client-machines"></a>Étape 4 : Copie le certificat auto-signé pour les ordinateurs clients 
-Étant donné que cet exemple utilise un certificat auto-signé par le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte, le certificat (pas la clé privée) doit être copié et installé comme certificat racine approuvé sur tous les ordinateurs clients qui se connectent à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si le certificat est signé par une autorité de certification déjà approuvée par tous les clients, cette étape n’est pas nécessaire. 
- 
-### <a name="step-5-connect-from-clients-using-tls"></a>Étape 5 : Se connecter à partir de clients à l’aide de TLS 
-Se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d’un client avec le chiffrement activé et `TrustServerCertificate` la valeur `False` dans la chaîne de connexion. Voici quelques exemples montrant comment spécifier ces paramètres à l’aide de différents outils et des pilotes. 
+        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+        sudo chown mssql:mssql mssql.pem mssql.key 
+        sudo chmod 600 mssql.pem mssql.key   
+        sudo mv mssql.pem /etc/ssl/certs/ 
+        sudo mv mssql.key /etc/ssl/private/ 
 
-sqlcmd  
-`sqlcmd -N -C -S mssql.contoso.com -U sa -P '<YourPassword>'`  
+- **Configurer SQL Server**
 
-[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]   
+        systemctl stop mssql-server 
+        cat /var/opt/mssql/mssql.conf 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+
+- **Inscrire le certificat sur votre ordinateur client (Windows, Linux ou macOS)**
+
+    -   Si vous utilisez un certificat signé d’autorité de certification, vous devez copier le certificat d’autorité de certification (CA) au lieu du certificat de l’utilisateur sur l’ordinateur client. 
+    -   Si vous utilisez un certificat autosigné simplement copier le fichier .pem dans les dossiers suivants correspondant à la distribution et exécutez les commandes pour leur permettre de 
+        - **Ubuntu** : certificat copie à ```/usr/share/ca-certificates/``` renommer extension .crt utiliser des certificats d’autorité de certification dpkg-reconfigure pour l’activer en tant que certificat de système d’autorité de certification. 
+        - **RHEL** : certificat copie à ```/etc/pki/ca-trust/source/anchors/``` utiliser ```update-ca-trust``` pour l’activer en tant que certificat de système d’autorité de certification.
+        - **SUSE** : cert copie à ```/usr/share/pki/trust/anchors/``` utiliser ```update-ca-certificates``` pour permettre que le certificat du système d’autorité de certification.
+        - **Windows**: importer le fichier .pem en tant que certificat sous utilisateur actuel -> approuvé autorités de certification racine -> certificats
+        - **macOS**: 
+           - Copiez le certificat à```/usr/local/etc/openssl/certs```
+           - Exécutez la commande suivante pour obtenir la valeur de hachage :```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Renommer le certificat à la valeur. Par exemple : ```mv mssql.pem dc2dd900.0```. Assurez-vous que dc2dd900.0 se trouve dans```/usr/local/etc/openssl/certs```
+    
+-   **Exemples de chaîne de connexion** 
+
+    - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
   ![Boîte de dialogue de connexion SSMS](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "boîte de dialogue de connexion SSMS")  
   
-ADO.NET  
-`"Encrypt=true; TrustServerCertificate=true;"`  
+    - **SQLCMD** 
 
-ODBC   
-`"Encrypt=yes; TrustServerCertificate=no;"`  
+            sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
+    - **ADO.NET** 
 
-JDBC  
-`"encrypt=true; trustServerCertificate=false;" `
+            "Encrypt=True; TrustServerCertificate=False;" 
+    - **ODBC** 
 
- 
+            "Encrypt=Yes; TrustServerCertificate=no;" 
+    - **JDBC** 
+    
+            "encrypt=true; trustServerCertificate=false;" 
+
+## <a name="server-initiated-encryption"></a>Chiffrement occasionnés par le serveur 
+
+- **Générer le certificat** (CN doit correspondre à votre nom de domaine complet d’hôte SQL Server)
+        
+        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+        sudo chown mssql:mssql mssql.pem mssql.key 
+        sudo chmod 600 mssql.pem mssql.key   
+        sudo mv mssql.pem /etc/ssl/certs/ 
+        sudo mv mssql.key /etc/ssl/private/ 
+
+- **Configurer SQL Server**
+
+        systemctl stop mssql-server 
+        cat /var/opt/mssql/mssql.conf 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+        
+-   **Exemples de chaîne de connexion** 
+
+    - **SQLCMD**
+
+            sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
+    - **ADO.NET** 
+
+            "Encrypt=False; TrustServerCertificate=False;" 
+    - **ODBC** 
+
+            "Encrypt=no; TrustServerCertificate=no;"  
+    - **JDBC** 
+    
+            "encrypt=false; trustServerCertificate=false;" 
+            
+> [!NOTE]
+> Définissez **TrustServerCertificate** à la valeur True si le client ne peut pas se connecter à valider l’authenticité du certificat de l’autorité de certification
+
 ## <a name="common-connection-errors"></a>Erreurs de connexion courantes  
 
 |Message d'erreur |Fix |
@@ -113,5 +132,4 @@ JDBC
 |Le nom du principal cible est incorrect.  |Vérifiez que champ de nom commun de certificat SQL Server correspond au nom de serveur spécifié dans la chaîne de connexion du client. |  
 |Une connexion existante a dû être fermée par l’hôte distant. |Cette erreur peut se produire lorsque le client ne prend pas en charge la version du protocole TLS requise par SQL Server. Par exemple, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est configuré pour exiger le protocole TLS 1.2, assurez-vous que vos clients prennent également en charge le protocole TLS 1.2. |
 | | |   
-
 

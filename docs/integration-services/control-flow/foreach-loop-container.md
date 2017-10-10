@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 709fd98f48764c19b4e358812c20cbf1dc52b8e4
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 21fdac9e8c4fffa0a87eee72e3587c2a3378ad66
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Foreach ADO Enumerator, pour l'énumération des lignes des tables. Par exemple, vous pouvez obtenir les lignes d'un ensemble d'enregistrements ADO.  
   
-     La destination de l'ensemble d'enregistrements enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package de type **Object** . Vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. La variable spécifiée pour l'énumérateur ADO Foreach doit être de type Object. Pour plus d'informations sur la destination d'un ensemble d'enregistrements, consultez [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
+     La destination de l'ensemble d'enregistrements enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package de type **Object** . Vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. La variable spécifiée pour l'énumérateur ADO Foreach doit être de type Object. Pour plus d’informations sur la destination du jeu d’enregistrements, consultez [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
 -   Énumérateur de l'ensemble de lignes du schéma Foreach ADO.NET, pour l'énumération des informations de schéma relatives à une source de données. Par exemple, vous pouvez énumérer les tables de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et en obtenir la liste.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 08/29/2017
   
 -   Énumérateur d’objets blob Azure Foreach pour énumérer les objets blob dans un conteneur d’objets blob dans Azure Storage.  
 
--   Énumérateur ForEach ADLS File pour énumérer les fichiers dans un répertoire ADLS.
+-   Énumérateur ForEach ADLS File pour énumérer les fichiers dans un répertoire dans Azure Data Lake Store.
   
  Le schéma suivant montre un conteneur de boucles Foreach ayant une tâche de système de fichiers. La boucle Foreach utilise l'énumérateur de fichier Foreach, tandis que la tâche de système de fichiers est configurée pour copier un fichier. Si le dossier spécifié par l'énumérateur contient quatre fichiers, la boucle se répète quatre fois et copie quatre fichiers.  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/29/2017
 |Foreach SMO|Spécifiez la connexion à une base de données et les objets SMO à énumérer.|  
 |Énumérateur Foreach File HDFS|Spécifiez un dossier et les fichiers à énumérer, le format du nom des fichiers extraits, et indiquez si l'opération doit parcourir les sous-dossiers.|  
 |Objet blob Azure foreach|Spécifiez le conteneur d'objets blob Azure qui contient les objets blob à énumérer.|  
-|Fichier de ADLS de foreach|Spécifiez le répertoire ADLS qui contient les fichiers à énumérer, ainsi que certains filtres.|
+|Fichier de ADLS de foreach|Spécifiez le répertoire Azure Data Lake Store qui contient les fichiers à énumérer.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Ajouter une énumération à un flux de contrôle avec un conteneur de boucles Foreach
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]inclut le conteneur de boucles Foreach, un élément de flux de contrôle qui facilite l’inclure une construction en boucle qui énumère les fichiers et les objets dans le flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -129,7 +129,7 @@ Cette procédure décrit comment configurer un conteneur de boucles Foreach, not
   
 5.  Indiquez un énumérateur et définissez ses options de la manière suivante :  
   
-    -   Pour utiliser l’énumérateur Foreach File, indiquez le dossier contenant les fichiers à énumérer, spécifiez un filtre pour le nom et le type de fichier, et indiquez si le nom de fichier complet doit être retourné. Indiquez enfin si les fichiers des sous-dossiers doivent également être énumérés.  
+    -   Pour utiliser l’énumérateur Foreach File, indiquez le dossier qui contient les fichiers à énumérer, spécifiez un filtre pour le type et le nom de fichier et indiquez si le nom de fichier qualifié complet doit être retourné. Indiquez enfin si les fichiers des sous-dossiers doivent également être énumérés.  
   
     -   Pour utiliser l’énumérateur Foreach Item, cliquez sur **Colonnes**et, dans la boîte de dialogue **Colonnes For Each Item** , cliquez sur **Ajouter** pour ajouter des colonnes. Sélectionnez un type de données dans la liste **Type de données** pour chaque colonne, puis cliquez sur **OK**.  
   
@@ -155,16 +155,16 @@ Cette procédure décrit comment configurer un conteneur de boucles Foreach, not
   
          Cliquez ensuite sur EnumerationType et sélectionnez un type d’énumération dans la liste. Si la valeur pour EnumerationType est **Navigator, Node ou NodeText**, cliquez sur OuterXPathStringSourceType et sélectionnez le type de source, puis cliquez sur OuterXPathStringSourceType. En fonction de la valeur définie pour OuterXPathStringSourceType, sélectionnez une variable ou une connexion de fichier dans la liste, créez une variable ou une connexion de fichier, ou tapez la chaîne de l’expression XPath (XML Path Language) externe.  
   
-         Si la valeur pour EnumerationType est **ElementCollection**, définissez OuterXPathStringSourceType et OuterXPathString conformément aux instructions ci-dessus. Cliquez ensuite sur InnerElementType, sélectionnez un type d’énumération pour les éléments internes, puis cliquez sur InnerXPathStringSourceType. En fonction de la valeur définie pour InnerXPathStringSourceType, sélectionnez une variable ou une connexion de fichier, créez une variable ou une connexion de fichier, ou tapez la chaîne de l’expression XPath interne.  
+         Si EnumerationType est **ElementCollection**, définissez OuterXPathStringSourceType et OuterXPathString comme décrit ci-dessus. Cliquez ensuite sur InnerElementType, sélectionnez un type d’énumération pour les éléments internes, puis cliquez sur InnerXPathStringSourceType. En fonction de la valeur définie pour InnerXPathStringSourceType, sélectionnez une variable ou une connexion de fichier, créez une variable ou une connexion de fichier, ou tapez la chaîne de l’expression XPath interne.  
   
     -   Pour utiliser l’énumérateur SMO Foreach, sélectionnez une connexion ADO.NET existante ou cliquez sur **Nouvelle connexion** dans la liste **Connexion** , puis tapez la chaîne à utiliser ou cliquez sur **Parcourir**. Si vous cliquez sur **Parcourir**, dans la boîte de dialogue **Sélectionner l’énumération SMO** , sélectionnez le type d’objet à énumérer et le type d’énumération, puis cliquez sur **OK**.  
   
-6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(…)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Si vous le souhaitez, cliquez sur le bouton Parcourir **(…)** dans la zone de texte **Expressions** de la page **Collection** pour créer des expressions qui mettent à jour les valeurs des propriétés. Pour plus d’informations, consultez [Ajouter ou modifier une Expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  Les propriétés énumérées dans la liste **Propriété** varient en fonction de l’énumérateur.  
+    >  Les propriétés répertoriées dans le **propriété** liste varient par l’énumérateur.  
   
-7.  Si vous le souhaitez, cliquez sur **Mappage de variables** pour mapper des propriétés d’objets à la valeur de la collection, puis procédez comme suit :  
+7.  Si vous le souhaitez, cliquez sur **mappages de variables** pour mapper les propriétés de l’objet à la valeur de la collection, puis procédez comme suit :  
   
     1.  Dans le **Variables** liste, sélectionnez une variable ou cliquez sur  **\<nouvelle Variable >** pour créer une nouvelle variable.  
   
@@ -195,15 +195,15 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Tapez la description du conteneur de boucle Foreach.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Page de la collection - éditeur de boucle Foreach
- La page **Collection** de la boîte de dialogue **Éditeur de boucle Foreach** permet de spécifier le type d’énumérateur et de configurer ce dernier.  
+ Utilisez le **Collection** page de la **éditeur de boucle Foreach** boîte de dialogue pour spécifier le type d’énumérateur et configurer ce dernier.  
   
  Pour en savoir plus sur le conteneur de boucles Foreach et sa configuration, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) et [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### <a name="static-options"></a>Options statiques  
  **Énumérateur**  
- Sélectionnez le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Sélectionnez le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value| Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |**Énumérateur ForEach File**|Permet d'énumérer les fichiers. Si cette valeur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach File**.|  
 |**Énumérateur ForEach Item**|Permet d'énumérer les valeurs issues d'un élément. Si cette valeur d'énumérateur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach Item**.|  
@@ -214,7 +214,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 |**Énumérateur ForEach SMO**|Permet d'énumérer un objet SMO. Si cette valeur d'énumérateur est sélectionnée, les options dynamiques s'affichent dans la section **Énumérateur Foreach SMO**.|  
 |**Énumérateur Foreach File HDFS**|Énumérez les fichiers HDFS dans l’emplacement HDFS spécifié. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur de fichiers HDFS Foreach**.|  
 |**Énumérateur d’objets Blob Azure foreach**|Énumérez les fichiers d’objets blob à l’emplacement spécifié des objets blob. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur d’objets blob Azure Foreach**.|  
-|**Énumérateur de fichier foreach ADLS**|Énumérez les fichiers sur ADLS avec des filtres. Cette valeur affiche les options dynamiques dans la section, **énumérateur Foreach ADLS File**.|
+|**Énumérateur de fichier foreach ADLS**|Énumérer les fichiers dans le répertoire Data Lake Store spécifié. Cette valeur affiche les options dynamiques dans la section, **énumérateur Foreach ADLS File**.|
   
  **Expressions**  
  Cliquez sur **Expressions** ou développez ce groupe pour afficher la liste des expressions de propriété existantes. Cliquez sur le bouton représentant des points de suspension **(…)** pour ajouter une expression de propriété à une propriété d’énumérateur, ou modifiez et évaluez une expression de propriété existante.  
@@ -226,13 +226,13 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 #### <a name="enumerator--foreach-file-enumerator"></a>Enumerator = Foreach File Enumerator  
  Vous utilisez l'énumérateur Foreach File pour énumérer les fichiers d'un dossier. Par exemple, si la boucle Foreach inclut une tâche SQL, vous pouvez utiliser l'énumérateur Foreach File pour énumérer les fichiers qui contiennent les instructions SQL que la tâche SQL exécute. L'énumérateur peut être configuré pour inclure les sous-dossiers.  
   
- Le contenu des dossiers et des sous-dossiers que l'énumérateur Foreach File énumère peut changer pendant l'exécution de la boucle, car les processus externes ou les tâches de la boucle ajoutent, renomment ou suppriment les fichiers pendant l'exécution de la boucle. Cela signifie qu'un certain nombre de situations inattendues peuvent se produire :  
+ Le contenu des dossiers et des sous-dossiers que l'énumérateur Foreach File énumère peut changer pendant l'exécution de la boucle, car les processus externes ou les tâches de la boucle ajoutent, renomment ou suppriment les fichiers pendant l'exécution de la boucle. Ces modifications peuvent provoquer un nombre de situations inattendues :  
   
--   si des fichiers sont supprimés, une tâche de la boucle Foreach peut travailler sur un jeu de fichiers différent des fichiers utilisés par les tâches à venir ;  
+-   Si des fichiers sont supprimés, les actions d’une tâche dans la boucle Foreach peuvent affecter un autre ensemble de fichiers que les fichiers utilisés par les tâches suivantes.  
   
--   si des fichiers sont renommés et qu'un processus externe ajoute automatiquement des fichiers pour remplacer les fichiers renommés, la boucle Foreach peut travailler deux fois sur le même contenu de fichier ;  
+-   Si les fichiers sont renommés et un processus externe ajoute automatiquement des fichiers pour remplacer les fichiers renommés, les actions de tâches dans la boucle Foreach peuvent affecter les mêmes fichiers à deux reprises.  
   
--   si des fichiers sont ajoutés, il peut être difficile de déterminer pour quels fichiers la boucle Foreach a effectué le travail.  
+-   Si les fichiers sont ajoutés, il peut être difficile de déterminer pour lequel les fichiers la boucle Foreach affectés.  
   
  **Dossier**  
  Permet d'indiquer le chemin du dossier racine à énumérer.  
@@ -246,12 +246,12 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 > [!NOTE]  
 >  Utilisez le caractère étoile (*) pour indiquer les fichiers à inclure à la collection. Par exemple, pour inclure des fichiers dont le nom contient « abc », utilisez le filtre suivant : \*abc\*.  
 >   
->  Lorsque vous spécifiez une extension de nom de fichier, l'énumérateur retourne également des fichiers qui ont la même extension avec des caractères supplémentaires ajoutés. (Ce comportement est identique à celui de la commande **dir** dans le système d’exploitation, qui compare aussi les noms de fichiers 8.3 à des fins de compatibilité descendante.) Ce comportement de l'énumérateur peut générer des résultats inattendus. Par exemple, vous souhaitez énumérer uniquement des fichiers Excel 2003 et vous spécifiez "*.xls". Toutefois, l'énumérateur retournera également des fichiers Excel 2007 parce que ces fichiers ont l'extension ".xlsx".  
+>  Lorsque vous spécifiez une extension de nom de fichier, l'énumérateur retourne également des fichiers qui ont la même extension avec des caractères supplémentaires ajoutés. (Ce comportement est identique à celui de la commande **dir** dans le système d’exploitation, qui compare aussi les noms de fichiers 8.3 à des fins de compatibilité descendante.) Ce comportement de l'énumérateur peut générer des résultats inattendus. Par exemple, vous souhaitez énumérer uniquement des fichiers Excel 2003 et vous spécifiez "*.xls". Toutefois, l’énumérateur retourne également les fichiers Excel 2007, car ces fichiers ont l’extension « .xlsx ».  
 >   
 >  Vous pouvez utiliser une expression pour spécifier les fichiers à inclure dans une collection. Pour cela, développez **Expressions** dans la page **Collection** , sélectionnez la propriété **FileSpec** , puis cliquez sur le bouton de sélection (…) pour ajouter l’expression de propriété.  
   
  **Complet**  
- Permet de récupérer les chemins d'accès complets des noms de fichiers indiqués. Si des caractères étoile (*) sont mentionnés dans l'option Fichiers, les chemins d'accès complets retournés par la fonction sont ceux correspondant au filtre spécifié.  
+ Permet de récupérer les chemins d'accès complets des noms de fichiers indiqués. Si les caractères génériques sont spécifiés dans l’option fichiers, les chemins d’accès qualifiés complet qui sont retournées correspondent au filtre.  
   
  **Nom uniquement**  
  Permet de ne récupérer que les noms de fichiers. Si des caractères étoile (*) sont mentionnés dans l'option Fichiers, les noms de fichiers retournés par la fonction sont ceux correspondant au filtre spécifié.  
@@ -342,9 +342,9 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Pour en savoir plus sur l'utilisation de documents et de données XML, consultez «[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)» (en anglais) dans MSDN Library.  
   
  **DocumentSourceType**  
- Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type de source correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -362,9 +362,9 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
- Permet de sélectionner le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value| Description|  
+|Valeur| Description|  
 |-----------|-----------------|  
 |**Navigateur**|Permet d'énumérer par le biais d'un XPathNavigator.|  
 |**Nœud**|Permet d'énumérer les nœuds retournés par une opération XPath.|  
@@ -372,9 +372,9 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 |**ElementCollection**|Permet d'énumérer les nœuds des éléments retournés par une opération XPath.|  
   
  **OuterXPathStringSourceType**  
- Permet de sélectionner le type source correspondant à une chaîne XPath. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type source correspondant à une chaîne XPath. Cette propriété dispose des options répertoriées dans le tableau suivant : 
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -395,9 +395,9 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Si **EnumerationType** est défini sur **ElementCollection**, sélectionnez le type d’élément interne dans la liste.  
   
  **InnerXPathStringSourceType**  
- Permet de sélectionner le type source correspondant à une chaîne XPath interne. Cette propriété dispose des options répertoriées dans le tableau suivant.  
+ Permet de sélectionner le type source correspondant à une chaîne XPath interne. Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Entrée directe**|Permet de définir la source sur un document XML.|  
 |**Connexion de fichiers**|Permet de sélectionner un fichier contenant le document XML.|  
@@ -415,7 +415,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO Enumerator  
- L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur Foreach SMO pour énumérer les tables de la base de données **AdventureWorks** et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
+ L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d’exécution SQL, vous pouvez utiliser l’énumérateur Foreach SMO pour énumérer les tables dans le **AdventureWorks** de base de données et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
   
  **Connexion**  
  Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
@@ -440,14 +440,14 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Indiquez le nom du répertoire HDFS contenant les fichiers HDFS à énumérer.  
   
  **Filtre de nom de fichier**  
- Indiquez un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par exemple, MaFeuille*.xls\* inclut les fichiers MaFeuille001.xls et MaFeuilleABC.xlsx.  
+ Indiquez un filtre de nom pour sélectionner des fichiers dont le nom répond à certains critères. Par exemple, Monclasseur*.xls\* inclut les fichiers MySheet001.xls et MySheetABC.xlsx.  
   
  **Récupérer le nom de fichier**  
  Indiquez le type de nom de fichier récupéré par SSIS.  
   
--   **Nom qualifié complet** correspond au nom complet avec le nom du fichier et le chemin d’accès au répertoire.  
+-   **Nom qualifié complet** correspond au nom complet, qui contient le nom de fichier et le chemin du répertoire.  
   
--   **Nom uniquement** correspond au nom de fichier récupéré.  
+-   **Nom uniquement** signifie que le nom de fichier est récupéré sans le chemin d’accès.  
   
  **Parcourir les sous-dossiers**  
  Indiquez si vous souhaitez parcourir les sous-dossiers de manière récursive.  
@@ -455,7 +455,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Dans la page **Mappage de variables** de l’éditeur, sélectionnez ou créez une variable pour stocker le nom du fichier HDFS énuméré.  
   
 ####  <a name="ForeachAzureBlob"></a>Énumérateur = énumérateur d’objets Blob Azure Foreach  
- L’  **Énumérateur d’objets blob Azure** permet à un package SSIS d’énumérer les fichiers d’objets blob à l’emplacement d’objets blob spécifié. Le nom du fichier d’objet blob énuméré peut être stocké dans une variable et utilisé dans des tâches dans le conteneur de boucle Foreach.  
+ L’  **Énumérateur d’objets blob Azure** permet à un package SSIS d’énumérer les fichiers d’objets blob à l’emplacement d’objets blob spécifié. Vous pouvez stocker le nom du fichier de l’objet blob énuméré dans une variable et l’utiliser dans des tâches dans le conteneur de boucle Foreach.  
   
  **L’Énumérateur d’objets Blob Azure** est un composant de SQL Server Integration Services (SSIS) Feature Pack pour Azure pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Le Feature Pack est disponible en téléchargement [ici](http://go.microsoft.com/fwlink/?LinkID=626967).  
   
@@ -465,28 +465,28 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Rubriques connexes : [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Nom du conteneur d’objets blob**  
- Spécifiez le nom du conteneur d’objets blob qui contient les fichiers d’objets blob à énumérer...  
+ Spécifiez le nom du conteneur d’objets blob qui contient les fichiers d’objets blob à énumérer.
   
  **Répertoire d’objets BLOB**  
- Spécifiez le nom du répertoire d’objets blob qui contient les fichiers d’objets blob à énumérer. Le répertoire d’objets blob est une structure hiérarchique virtuelle.  
+ Spécifiez le répertoire d’objets blob qui contient les fichiers d’objets blob à énumérer. Le répertoire d’objets blob est une structure hiérarchique virtuelle.  
   
  **Filtre de nom d’objet BLOB**  
- Spécifier un filtre de noms pour énumérer les fichiers avec un certain modèle de nom. Par ex. MaFeuille*.xls\* inclut les fichiers MaFeuille001.xls et MaFeuilleABC.xlsx.  
+ Spécifier un filtre de noms pour énumérer les fichiers avec un certain modèle de nom. Par exemple, `MySheet*.xls\*` inclut les fichiers MySheet001.xls et MySheetABC.xlsx.  
   
  **Plage de temps d’objet BLOB de/à un filtre**  
- Spécifiez un filtre de plage de temps. Les fichiers modifiés après **TimeRangeFrom** et avant **TimeRangeTo** seront énumérés. 
+ Spécifiez un filtre de plage de temps. Fichiers modifiés après **TimeRangeFrom** et avant **TimeRangeTo** sont énumérées. 
 
 ####  <a name="ForeachAdlsFile"></a>Énumérateur = énumérateur de fichier Foreach ADLS 
-Le **ADLS fichier énumérateur** permet à un package SSIS d’énumérer les fichiers sur ADLS avec des filtres. La barre oblique (`/`)-avec préfixe de chemin d’accès complet des fichiers énumérés peut être stocké dans une variable et utilisé dans des tâches dans le conteneur de boucle Foreach.
+Le **ADLS fichier énumérateur** permet à un package SSIS d’énumérer les fichiers dans Azure Data Lake Store. Vous pouvez stocker le chemin d’accès complet du fichier énuméré (précédés d’une barre oblique - `/`) dans une variable et utilisez le chemin d’accès de fichier dans les tâches à l’intérieur du conteneur de boucles Foreach.
   
 **AzureDataLakeConnection**  
 Spécifie un gestionnaire de connexions Azure Data Lake ou crée un nouveau qui fait référence à un compte ADLS.   
   
 **AzureDataLakeDirectory**  
-Spécifie le répertoire ADLS à rechercher.
+Spécifie le répertoire ADLS qui contient les fichiers à énumérer.
   
 **FileNamePattern**  
-Spécifie un filtre de nom de fichier. Seuls les fichiers dont le nom correspond au modèle spécifié seront énumérés. Les caractères génériques `*` et `?` sont pris en charge. 
+Spécifie un filtre de nom de fichier. Seuls les fichiers dont les noms correspondent au modèle spécifié sont énumérées. Les caractères génériques `*` et `?` sont pris en charge. 
   
 **SearchRecursively**  
 Spécifie s’il faut rechercher de manière récursive dans le répertoire spécifié.  
@@ -494,13 +494,13 @@ Spécifie s’il faut rechercher de manière récursive dans le répertoire spé
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Page de mappage de variables - éditeur de boucle Foreach
  Utilisez la page **Mappage de variables** de la boîte de dialogue **Éditeur de boucle Foreach** pour mapper les variables à la valeur de la collection. La valeur de cette variable est mise à jour avec les valeurs de la collection à chaque itération de la boucle.  
   
- Pour en savoir plus sur l’utilisation du conteneur de boucles Foreach dans un package Integration Services, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md) . Pour en savoir plus sur la façon de le configurer, consultez [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ Pour en savoir plus sur l’utilisation du conteneur de boucles Foreach dans un package Integration Services, consultez [conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md). Pour en savoir plus sur la façon de le configurer, consultez [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  Le didacticiel « Création d’un package ETL simple » de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut une leçon sur l’ajout et la configuration d’une boucle Foreach.  
   
 ### <a name="options"></a>Options  
  **Variable**  
- Sélectionnez une variable existante ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
+ Sélectionnez une variable existante ou cliquez sur **nouvelle variable...**  pour créer une nouvelle variable.  
   
 > [!NOTE]  
 >  Après avoir mappé une variable, une nouvelle ligne s’ajoute automatiquement à la liste **Variable**.  
@@ -535,7 +535,7 @@ Utilisez la boîte de dialogue **Restrictions de schéma** pour définir les res
 Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colonnes des éléments énumérés par l'énumérateur Foreach Item.  
   
 ### <a name="options"></a>Options  
- **Column**  
+ **Colonne**  
  Répertorie les colonnes.  
   
  **Type de données**  
@@ -548,7 +548,7 @@ Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colo
  Sélectionnez une colonne, puis cliquez sur **Supprimer**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>Sélectionner l'énumération SMO, boîte de dialogue
-Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  
+Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spécifier l’objet SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object) sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à énumérer et pour sélectionner le type d’énumération.  
   
 ### <a name="options"></a>Options  
  **Énumérer**  

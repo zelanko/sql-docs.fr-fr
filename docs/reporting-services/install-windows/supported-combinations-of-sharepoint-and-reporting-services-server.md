@@ -1,5 +1,5 @@
 ---
-title: Combinaisons de SharePoint et le serveur Reporting Services prises en charge | Documents Microsoft
+title: Combinaisons de serveur SharePoint et Reporting Services prises en charge | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaisons prises en charge de SharePoint et le serveur Reporting Services
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaisons prises en charge du serveur SharePoint et Reporting Services
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -38,7 +38,7 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
 > [!NOTE]
 > Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinaisons de composants SharePoint et Reporting Services prises en charge
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>Combinaisons prises en charge des composants SharePoint et Reporting Services
 
  Le tableau suivant résume les combinaisons prises en charge de serveur de rapports, complément Reporting Services pour les produits SharePoint et produits SharePoint. Les associations qui ne sont pas répertoriées dans le tableau suivant ne sont pas prises en charge
 
@@ -48,25 +48,25 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
-|3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
-|4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
+|3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
+|4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
 |5|SQL Server 2012 SP3|SQL Server 2014 et SQL Server 2012 SP3|SharePoint 2013|
 |6|SQL Server 2012 SP2|SQL Server 2014 et SQL Server 2012 SP2|SharePoint 2013|
 |7|SQL Server 2012 SP1|SQL Server 2014 et SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 et SQL Server 2012 SP1 *|SQL Server 2014|SharePoint 2010|
+|8|SQL Server 2012 et SQL Server 2012 SP1 *|SQL Server 2014|SharePoint 2010|
 |9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 et SQL Server 2012 SP1 ou version ultérieure|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
-|14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
+|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2012 et SQL Server 2012 SP1 ou version ultérieure|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
+|14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
 |15|SQL Server 2008 SP2|SQL Server 2008 et SQL Server 2008 SP2|SharePoint 2007|
 
  *Exception : l’intégration de Power View n’est pas prise en charge.
 
  Pour obtenir des liens vers les pages de téléchargement des compléments, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
 
- **Remarques supplémentaires :**
+ **Considérations supplémentaires :**
 
 - N’oubliez pas de mettre à niveau tous les serveurs SharePoint de la batterie de serveurs. Cela comprend les serveurs d’applications et les serveurs web frontaux.
 
@@ -86,4 +86,4 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

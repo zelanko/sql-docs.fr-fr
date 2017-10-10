@@ -2,7 +2,7 @@
 title: Quel &#39; est nouvelle dans Machine Learning Services | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Quelles sont les nouveautés dans Machine Learning Services dans SQL Server
@@ -37,6 +37,16 @@ Intercepter la dernière annonce ici ! [Python dans SQL Server 2017 : amélior
 
 Microsoft Machine Learning Server dans SQL Server fournit désormais une prise en charge complète pour créer et déployer des solutions d’apprentissage machine dans R ou Python. Voici les principales fonctionnalités de cette version :
 
+> [!IMPORTANT]
+> 
+> Services de formation d’ordinateur, y compris l’utilisation de R ou Python, ne sont actuellement pas pris en charge lors de l’exécution de SQL Server sur Linux, ou dans la base de données SQL Azure. Recherchez les modifications apportées à une version ultérieure.
+> 
+> Calculer les scores natif à l’aide de la fonction PREDICT sont actuellement pris en charge dans l’édition de Linux.
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Nouveautés à jour Cumulative 1 pour SQL Server 2017
+
+Vous pouvez maintenant mettre à niveau vos composants de Python et R au serveur d’apprentissage Machine 9.2.1. Cette version propose de nombreuses améliorations **revoscalepy** et **RevoScaleR**, y compris les améliorations des performances.
+ 
 ### <a name="in-database-python-integration"></a>Intégration de Python dans base de données
 
 Vous pouvez exécuter les Python dans les procédures stockées, ou exécutez Python à distance à l’aide de l’ordinateur SQL Server en tant que le contexte de calcul. Cette intégration ouvre de nouvelles voies pour la grande Communauté des développeurs de Python et des chercheurs de données à utiliser la puissance de SQL Server. 

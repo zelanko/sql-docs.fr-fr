@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 437ec62abb0107e8a70926fd60d0c54cc6064122
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>Générer un modèle R et l’enregistrer dans SQL Server
@@ -146,8 +146,9 @@ Dans cette section, vous allez faire des essais avec ces deux techniques.
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
-3. Generate a local plot, based on the values stored in the output variable `pred`.
+3. Générer un diagramme en local, selon les valeurs stockées dans la variable de sortie `pred`.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -232,10 +233,10 @@ Dans la leçon suivante et finale, vous apprenez à effectuer sur le modèle enr
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Déployer le modèle R et à utiliser dans SQL](/walkthrough-deploy-and-use-the-model.md)
+[Déployer le modèle R et à utiliser dans SQL](walkthrough-deploy-and-use-the-model.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Créer des fonctionnalités de données à l’aide de R et SQL](/walkthrough-create-data-features.md)
+[Créer des fonctionnalités de données à l’aide de R et SQL](walkthrough-create-data-features.md)
 
 

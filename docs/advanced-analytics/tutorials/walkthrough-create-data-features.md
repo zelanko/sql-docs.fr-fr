@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ccdcc20a9bb66ba18f74975f725f24deb7028265
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 4f3f5463e6a0117780add65feb9916ff78dad68d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL (procédure pas à pas)
@@ -244,10 +244,10 @@ Vos heures peuvent varier considérablement, selon la vitesse de votre réseau e
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Générez un modèle R et enregistrez à SQL](/walkthrough-build-and-save-the-model.md)
+[Générez un modèle R et enregistrez à SQL](walkthrough-build-and-save-the-model.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Afficher et synthétiser des données à l’aide de R](/walkthrough-view-and-summarize-data-using-r.md)
+[Afficher et synthétiser des données à l’aide de R](walkthrough-view-and-summarize-data-using-r.md)
 
 

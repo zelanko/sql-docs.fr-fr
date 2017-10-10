@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f79bc1df77566540cdce25e12e7ed20c6836e122
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/01/2017
   
 |Propriété|Valeur|  
 |--------------|-----------|  
-|Syntaxe|**temps** [(*précision à la deuxième fraction*)]|  
+|Syntaxe|**temps** [(*fractionnaire deuxième échelle*)]|  
 |Utilisation|DÉCLARER @MyTime **Time (7)**<br /><br /> CRÉER la TABLE Table1 (Column1 **Time (7)** )|  
-|*précision de fractions de seconde*|Spécifie le nombre de chiffres pour la partie fractionnaire des secondes.<br /><br /> Il peut s'agir d'un entier compris entre 0 et 7. Pour Informatica, cela peut être un entier compris entre 0 et 3.<br /><br /> La précision fractionnaire par défaut est 7 (100 ns).|  
+|*échelle de fractions de seconde*|Spécifie le nombre de chiffres pour la partie fractionnaire des secondes.<br /><br /> Il peut s'agir d'un entier compris entre 0 et 7. Pour Informatica, cela peut être un entier compris entre 0 et 3.<br /><br /> L’échelle de fractions de seconde par défaut est 7 (100 NS).|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh : mm : [.nnnnnnn] (hh : mm : [.nnn] pour Informatica)<br /><br /> Pour plus d'informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » qui suit.|  
 |Plage|00:00:00.0000000 via 23:59:59.9999999 (00:00:00.000 via 23:59:59.999 pour Informatica)|  
-|Plages d'éléments|hh comprend deux chiffres, entre 0 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 0 et 59, qui représentent la seconde.<br /><br /> n* comprend entre zéro et sept chiffres, entre 0 et 9999999, qui représentent les fractions de seconde. Pour Informatica, n\* est égal à zéro et trois chiffres, entre 0 et 999.|  
+|Plages d'éléments|hh comprend deux chiffres, entre 0 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 0 et 59, qui représentent la seconde.<br /><br /> n\*est égal à zéro et sept chiffres, entre 0 et 9999999, qui représentent les fractions de seconde. Pour Informatica, n\* est égal à zéro et trois chiffres, entre 0 et 999.|  
 |Longueur de caractère|8 positions au minimum (HH) à 16 au maximum (.nnnnnnn). Pour Informatica, la valeur maximale est de 12 (hh:mm:ss.nnn).|  
 |Précision, échelle<br /><br /> (l'utilisateur spécifie l'échelle uniquement)|Consultez le tableau ci-dessous.|  
 |Taille de stockage|5 octets, fixes, sont la valeur par défaut avec une précision à la fraction de seconde de 100 ns par défaut. Dans Informatica, la valeur par défaut est de 4 octets, fixés, avec la valeur par défaut de 1 MS fractionnaire deuxième précision.|  

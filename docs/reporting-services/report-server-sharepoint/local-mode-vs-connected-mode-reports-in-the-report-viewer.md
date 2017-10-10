@@ -1,7 +1,7 @@
 ---
-title: "Rapports en mode local et Mode rapports connecté dans la visionneuse de rapports | Documents Microsoft"
+title: "En mode local et rapports en mode connecté dans la visionneuse de rapports | Documents Microsoft"
 ms.custom: 
-ms.date: 03/17/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,45 +10,40 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ca6519365ae81c5a7875825fb976c163dbb588f3
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5f8342550dc105fb6d3544e1d8bd65fcd660ff64
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]les rapports peuvent être configurés pour être exécutés en *en mode local* ou *en mode connecté*, qui utilise un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] serveur de rapports. À la place, vous pouvez utiliser la Visionneuse de rapports pour effectuer le rendu des rapports directement à partir de SharePoint lorsque l'extension de données prend en charge la création de rapports en mode local. Cette approche est appelée *mode local*. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la batterie de serveurs SharePoint devait être connectée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré en mode SharePoint pour que le contrôle Visionneuse de rapports puisse effectuer le rendu des rapports. Cette approche est appelée *mode distant* ou *mode connecté*.  
-  
+# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>En mode local et rapports en mode connecté dans la visionneuse de rapports
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être configurés pour être exécutés en *mode local* ou en *mode connecté*, qui utilise un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] repou ent server. À la place, vous pouvez utiliser la Visionneuse de rapports pour effectuer le rendu des rapports directement à partir de SharePoint lorsque l'extension de données prend en charge la création de rapports en mode local. Cette approche est appelée *mode local*. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la batterie de serveurs SharePoint devait être connectée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré en mode SharePoint pour que le contrôle Visionneuse de rapports puisse effectuer le rendu des rapports. Cette approche est appelée *mode distant* ou *mode connecté*.  
+
+> [!NOTE]
+> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+
  En *mode local* , il n'y a aucun serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous devez installer le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Toutefois, aucun serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est requis. En mode local, les utilisateurs peuvent afficher des rapports mais n'ont pas accès aux fonctionnalités côté serveur telles que les abonnements et les alertes de données.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint|  
-  
- **Dans cette rubrique :**  
-  
--   [Comparaison entre mode local et mode connecté, et extensions prises en charge](#bkmk_local_vs_connected)  
-  
--   [Configurer le mode local et Access Services avec SharePoint 2013](#bkmk_local_mode_sharepoint2013)  
-  
--   [Configurer la création de rapports en mode local avec SharePoint 2010](#bkmk_local_mode_sharepoint2010)  
-  
-##  <a name="bkmk_local_vs_connected"></a> Comparaison entre mode local et mode connecté, et extensions prises en charge  
+
+## <a name="local-mode-vs-connected-mode-and-supported-extensions"></a>Comparaison entre mode local et mode connecté, et extensions prises en charge
+
  **Mode local :** quand une extension de données prend en charge le mode local, la Visionneuse de rapports affiche directement les rapports depuis SharePoint. En *mode local* , il n'y a aucun serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous devez installer le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Toutefois, aucun serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’est requis. En mode local, les utilisateurs peuvent afficher des rapports, mais ils **n'ont pas** accès aux fonctionnalités côté serveur, telles que les abonnements et les alertes de données.  
   
  Le**mode connecté**, également appelé *mode distant* nécessite qu'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] soit en mode SharePoint et soit connecté à une batterie de serveurs SharePoint pour que le contrôle Visionneuse de rapports puisse effectuer le rendu des rapports.  
   
  Voici une liste des extensions pour le traitement des données qui prennent en charge la création de rapports en mode local :  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Extension de création de rapports Access 2010. Pour plus d’informations sur les services Access, consultez [Utiliser Access Services avec SQL Reporting Services : installation du complément SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010. Pour plus d’informations sur les services Access, consultez [Utiliser Access Services avec SQL Reporting Services : installation du complément SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686).  
   
--   Extension de données Liste SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur l’extension de données Liste SharePoint, consultez [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+-   Extension de données Liste SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations sur l’extension de données Liste SharePoint, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
  Les extensions pour le traitement des données personnalisées peuvent également être développées pour prendre en charge le mode local. Pour plus d’informations, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
@@ -57,7 +52,8 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Comme avec les versions précédentes, vous ne pouvez pas incorporer des noms d'utilisateurs et des mots de passe dans le fichier .rsds.  
   
-##  <a name="bkmk_local_mode_sharepoint2013"></a> Configurer le mode local et Access Services avec SharePoint 2013  
+## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Configurer les services de mode et l’accès locales avec SharePoint 2013
+
  Vous pouvez configurer votre batterie de serveurs SharePoint 2013 afin de prendre en charge les bases de données existantes Web Access 2010 et le mode local [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [Installer et configurer Access Services 2010 pour les bases de données Web sur le serveur SharePoint 2013](http://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
  Il n'est pas possible de créer de nouvelles bases de données Web Access pour SharePoint 2013. Access 2013 utilise un nouveau type de base de données, l' *application Web Access* , que vous créez dans Access, puis que vous utilisez et partagez en tant qu'application SharePoint dans un navigateur Web.  
@@ -68,7 +64,8 @@ ms.lasthandoff: 08/09/2017
   
 -   [Tâches de base pour une application Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
-##  <a name="bkmk_local_mode_sharepoint2010"></a> Configurer la création de rapports en mode local avec SharePoint 2010  
+## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Configurer le mode local de création de rapports avec SharePoint 2010
+
  Le mode local requiert l'état de session ASP.NET. L'installation des services Access activera l'état de session ASP.NET. Vous pouvez également l'activer à l'aide de PowerShell.  
   
 1.  Ouvrez SharePoint 2010 Management Shell.  
@@ -85,10 +82,12 @@ ms.lasthandoff: 08/09/2017
   
  Pour plus d’informations, consultez [Utiliser Access Services avec SQL Reporting Services : installation du complément SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) et [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
-## <a name="connected-mode"></a>mode connecté  
+## <a name="connected-mode"></a>mode connecté
+
  Pour obtenir les dernières informations concernant l'utilisation de l'extension ADS avec le mode connecté de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Access Services Report in SharePoint Site shows error in data extension "ADS"](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
-## <a name="see-also"></a>Voir aussi  
- [Sources de données pris en charge par Reporting Services &#40; SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+ [Sources de données pris en charge par Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

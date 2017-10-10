@@ -1,7 +1,7 @@
 ---
-title: "Déployer le composant WebPart Visionneuse de rapports sur un site SharePoint | Documents Microsoft"
+title: "Déployer le composant WebPart Visionneuse de rapports SQL Server Reporting Services sur un site SharePoint | Documents Microsoft"
 ms.custom: 
-ms.date: 09/15/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,27 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: ed93b0fd5161686becb4cca05c005fd281f2c176
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="deploy-the-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports sur un site SharePoint
+# <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports SQL Server Reporting Services sur un site SharePoint
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
 
-Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui peut être utilisé pour afficher des rapports de SQL Server Reporting Services (mode natif) au sein de votre site SharePoint. Vous pouvez utiliser le composant WebPart pour afficher, naviguer, imprimer et exporter des rapports sur un serveur de rapports. Le composant WebPart Visionneuse de rapports est associé à des fichiers de définition (.rdl) de rapport qui sont traitées par un serveur de rapports SQL Server Reporting Services ou un serveur de rapports Power BI. Ce composant WebPart Visionneuse de rapports ne peut pas être utilisé avec les rapports Power BI hébergés dans le serveur de rapports Power BI.
+Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui peut être utilisé pour afficher des rapports SQL Server Reporting Services (mode natif) au sein de votre site SharePoint. Vous pouvez utiliser le composant WebPart pour afficher, naviguer, imprimer et exporter des rapports sur un serveur de rapports. Le composant WebPart Visionneuse de rapports est associé à des fichiers de définition (.rdl) de rapport qui sont traitées par un serveur de rapports SQL Server Reporting Services ou un serveur de rapports Power BI. Ce composant WebPart Visionneuse de rapports ne peut pas être utilisé avec les rapports Power BI hébergés dans le serveur de rapports Power BI.
 
 Utilisez les instructions suivantes pour déployer manuellement le package de solution qui ajoutent le composant WebPart Visionneuse de rapports dans un environnement SharePoint Server 2013 ou SharePoint Server 2016. Déploiement de la solution est une étape indispensable pour configurer le composant WebPart.
 
 **Le composant WebPart Visionneuse de rapports est un package de solution autonome et n’est pas associé avec le mode intégré SharePoint pour SQL Server Reporting Services.**
 
 ## <a name="requirements"></a>Spécifications
-
-**Systèmes d’exploitation pris en charge :**  
-* Windows Server 2008 R2 SP1 et versions ultérieures
 
 **Prend en charge les versions de SharePoint Server :**  
 * SharePoint Server 2016
@@ -48,7 +45,7 @@ Utilisez les instructions suivantes pour déployer manuellement le package de so
 
 Le composant WebPart Visionneuse de rapports est disponible sur du Microsoft Download Center.
 
-[Télécharger le package solution du composant WebPart Visionneuse de rapports](https://www.microsoft.com/en-us/download/details.aspx?id=55949)
+[Télécharger le package solution du composant WebPart Visionneuse de rapports](https://www.microsoft.com/download/details.aspx?id=55949)
 
 ## <a name="deploy-the-farm-solution"></a>Déployer la solution de batterie de serveurs
 
@@ -84,7 +81,7 @@ Cette section vous montre comment déployer le package de solution à votre batt
 
     ![Paramètres de site à partir de l’icône d’engrenage.](media/sharepoint-site-settings.png)
 
-    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name> * pour ouvrir la collection de sites racine.
+    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>*  pour ouvrir la collection de sites racine.
 
 3. Dans **Administration de Collection de sites**, sélectionnez **les fonctionnalités de collection de sites**.
 
@@ -124,7 +121,7 @@ Retrait de la solution ne supprime pas le composant WebPart Visionneuse de rappo
 
     ![Paramètres de site à partir de l’icône d’engrenage.](media/sharepoint-site-settings.png)
 
-    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name> * pour ouvrir la collection de sites racine.
+    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>*  pour ouvrir la collection de sites racine.
 
 2. Sous **galeries du Concepteur Web**, sélectionnez **WebPart**.
 
@@ -135,6 +132,22 @@ Retrait de la solution ne supprime pas le composant WebPart Visionneuse de rappo
     ![Modifier et supprimer le composant WebPart en Mode natif de visionneuse de rapports](media/report-viewer-native-mode-edit-delete.png)
 
 Tentative de suppression du composant WebPart à l’aide de PowerShell, mais il n’est pas une commande directe pour celle-ci. Pour obtenir un exemple de script, consultez [comment supprimer des composants WebPart de la galerie de composants WebPart](https://gallery.technet.microsoft.com/office/How-to-delete-Web-Parts-1132701f).
+
+## <a name="supported-languages"></a>Langues prises en charge
+
+Les langues suivantes sont prises en charge avec le composant WebPart :
+
+* Anglais (en)
+* Allemand (Allemagne)
+* Espagnol (sp)
+* Français (fr)
+* Italien (it)
+* Japonais (ja)
+* Coréen (ko)
+* Portugais (pt)
+* Russe (ru)
+* Chinois (simplifié - zh-HANS et zh-CHS)
+* Chinois (traditionnel - zh-HANT et zh-CHT)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

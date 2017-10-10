@@ -2,7 +2,7 @@
 title: Authentification Active Directory avec SQL Server sur Linux | Documents Microsoft
 description: "Ce didacticiel fournit les étapes de configuration pour l’authentification AAD pour SQL Server sur Linux."
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Authentification Active Directory avec SQL Server sur Linux
@@ -50,13 +50,15 @@ Avant de configurer l’authentification Active Directory, vous devez :
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> À ce stade, la seule méthode d’authentification pris en charge pour le point de terminaison de mise en miroir de base de données est le certificat. Méthode d’authentification WINDOWS est activée dans une version ultérieure.
+> Limitations :
+> - À ce stade, la seule méthode d’authentification pris en charge pour le point de terminaison de mise en miroir de base de données est le certificat. Méthode d’authentification WINDOWS est activée dans une version ultérieure.
+> - les outils tiers AD 3e comme Centrify, Powerbroker et Vintela ne sont pas pris en charge. 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte de domaine Active Directory.
 
 Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte à un domaine Active Directory :
 
-1. Utilisez ** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) ** pour joindre votre ordinateur hôte pour votre domaine Active Directory. Si vous n’avez pas encore, installer les packages du client Kerberos et realmd sur la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte à l’aide du Gestionnaire de package de votre distribution Linux :
+1. Utilisez  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  pour joindre votre ordinateur hôte pour votre domaine Active Directory. Si vous n’avez pas encore, installer les packages du client Kerberos et realmd sur la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ordinateur hôte à l’aide du Gestionnaire de package de votre distribution Linux :
 
    ```bash
    # RHEL
@@ -170,7 +172,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Créer un utilisateur Active Directory pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et définissez le nom principal de service
 
   > [!NOTE]
-  > Dans les étapes suivantes, nous allons utiliser votre [nom de domaine complet](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si vous êtes sur **Azure**, vous devrez ** [créer un](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn) ** avant de continuer.
+  > Dans les étapes suivantes, nous allons utiliser votre [nom de domaine complet](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Si vous êtes sur **Azure**, vous devrez  **[créer un](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  avant de continuer.
 
 1. Sur votre contrôleur de domaine, exécutez le [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) commande PowerShell pour créer un nouvel utilisateur AD avec un mot de passe n’expire jamais. Cet exemple montre comment le nom du compte « mssql », mais le nom du compte peut être comme vous le souhaitez. Vous devrez entrer un mot de passe pour le compte :
 
@@ -206,7 +208,7 @@ Pour plus d’informations, consultez la documentation de Red Hat pour [découve
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. Créez un fichier keytab pour l’utilisateur Active Directory que vous avez créé à l’étape précédente. Pour ce faire, nous utiliserons ** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Lorsque vous y êtes invité, entrez le mot de passe pour ce compte Active Directory.
+2. Créez un fichier keytab pour l’utilisateur Active Directory que vous avez créé à l’étape précédente. Pour ce faire, nous utiliserons  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**. Lorsque vous y êtes invité, entrez le mot de passe pour ce compte Active Directory.
 
    ```bash
    sudo ktutil

@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 5083458d015783a0bc82fcc328c7573eb62520c2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/08/2017
   
 -   **Séparateurs** Par défaut, la liste des séparateurs contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
--   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'~=&/@!?()<>[]{}|#*^%`. Par exemple, si les symboles sont "`()-`", la valeur "(425) 123-4567" est marquée sous forme de jeton de la manière suivante : ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symboles** par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'~=&/@!?()<>[]{}|#*^%` , ainsi que de la graduation. Par exemple, si les symboles sont "`()-`", la valeur "(425) 123-4567" est marquée sous forme de jeton de la manière suivante : ["(", "425", ")", "123", "-", "4567", ")"].  
   
  Un caractère ne peut pas être à la fois un séparateur et un symbole.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 09/08/2017
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
   
  **Symboles**  
- Répertoriez les symboles à conserver dans le cadre des modèles. Les exemples peuvent inclure « / » pour les dates, « : » pour les heures et « @ » pour les adresses de messagerie. Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ Répertoriez les symboles à conserver dans le cadre des modèles. Les exemples peuvent inclure « / » pour les dates, « : » pour les heures et « @ » pour les adresses de messagerie. Par défaut, la liste des **symboles** contient les caractères suivants : `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  
   

@@ -1,6 +1,6 @@
 ---
 title: "Extraire, transformer et charger des données sur Linux avec SSIS | Documents Microsoft"
-description: 
+description: "Cet article décrit de SQL Server Integration Services (SSIS) pour les ordinateurs Linux"
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -9,12 +9,11 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
-ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: aa4ac0cca739ea57a28beb399325d55b38502217
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 04b294aafb8019a44d2bb7fa05a4e6092a9a490f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
@@ -57,110 +56,7 @@ Pour exécuter un package SSIS sur un ordinateur Linux, procédez comme suit :
 
 ## <a name="limitations-and-known-issues"></a>Limitations et problèmes connus
 
-### <a name="general-limitations-and-known-issues"></a>Limitations générales et les problèmes connus
-
-Les fonctionnalités suivantes ne sont pas pris en charge dans cette version de SSIS sur Linux :
-  - Base de données du catalogue SSIS
-  - Exécution du package planifiés par l’Agent SQL
-  - Authentification Windows
-  - Les composants tiers
-  - Capture de données modifiées (CDC)
-  - Avec montée en puissance SSIS
-  - Azure Feature Pack pour SSIS
-  - Prise en charge de Hadoop et HDFS
-  - Microsoft Connector pour SAP BW
-
-Pour les autres limitations et problèmes connus avec SSIS sur Linux, consultez le [Notes de publication](sql-server-linux-release-notes.md#ssis).
-
-### <a name="components"></a>Composants pris en charge et non pris en charge
-
-Les composants Integration Services intégrés suivants sont pris en charge sous Linux. Certaines d'entre elles ont des limitations sur la plate-forme Linux, comme décrit dans les tableaux suivants.
-
-Les composants intégrés qui ne sont pas répertoriés ici ne sont pas pris en charge sous Linux.
-
-#### <a name="supported-control-flow-tasks"></a>Prise en charge des tâches de flux de contrôle
-- tâche d'insertion en bloc
-- tâche de flux de données
-- Tâche de profilage des données
-- Tache d'exécution de requêtes SQL
-- Tâche Exécuter l'instruction T-SQL
-- Tâche d'expression
-- Tâche FTP
-- Tâche de service Web
-- Tâche XML
-
-#### <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle pris en charge avec les limitations
-
-| Tâche | Limitations |
-|------------|---|
-| Exécuter la tâche de processus | Prend uniquement en charge le mode in-process. |
-| Tâche de système de fichiers | Le *répertoire de déplacement* et *définir les attributs de fichier* actions ne sont pas prises en charge. |
-| tâche de script | Prend uniquement en charge les API .NET Framework standard. |
-| tache Envoyer un message | Prend en charge uniquement en mode utilisateur anonyme. |
-| Tâche de transfert de base de données | Les chemins d'accès UNC ne sont pas pris en charge. |
-| | |
-
-#### <a name="supported-control-flow-containers"></a>Prise en charge des conteneurs de flux de contrôle
-- conteneur de séquences
-- Conteneur de boucles For
-- Conteneur de boucles Foreach
-
-#### <a name="supported-data-flow-sources-and-destinations"></a>Sources de flux de données pris en charge et des destinations
-- Destination et source de fichier brut
-- Source XML
-
-#### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Sources de flux de données et des destinations prises en charge avec les limitations
-
-| Composant | Limitations |
-|------------|---|
-| ADO.NET source et destination | Prennent uniquement en charge le fournisseur de données SQLClient. |
-| Source de fichier plat et de destination | Prend en charge uniquement les chemins de fichier Windows de style, auquel la règle de mappage du chemin d’accès par défaut est appliquée. Par exemple `D:\home\ssis\travel.csv` devient `/home/ssis/travel.csv`. |
-| Source OData | Prend uniquement en charge l’authentification de base. |
-| ODBC source et destination | Prend en charge des pilotes ODBC Unicode de 64 bits sur Linux. Varie selon le Gestionnaire de pilotes UnixODBC sur Linux. |
-| OLE DB source et destination | Prennent uniquement en charge SQL Server Native Client 11.0 et le fournisseur Microsoft OLE DB pour SQL Server. |
-| | |
-
-#### <a name="supported-data-flow-transformations"></a>Prise en charge les transformations du flux de données
-- Agrégat
-- Audit
-- Distributeur de données équilibrées
-- Table des caractères
-- Fractionnement conditionnel
-- Copie de colonnes
-- Conversion de données
-- Colonne dérivée
-- Exportation de colonne
-- Regroupement probable
-- Recherche floue
-- Importation de colonne
-- Lookup
-- Fusion
-- Merge Join
-- Multidiffusion
-- Tableau croisé dynamique
-- Nombre de lignes
-- Dimension à variation lente
-- Trier
-- Recherche de terme
-- Union All
-- Supprimer le tableau croisé dynamique
-
-#### <a name="data-flow-transformations-supported-with-limitations"></a>Transformations du flux de données pris en charge avec les limitations
-
-| Composant | Limitations |
-|------------|---|
-| transformation de commande OLE DB | Mêmes limitations que OLE DB source et de destination. |
-| composant Script | Prend uniquement en charge les API .NET Framework standard. |
-| | |
-
-### <a name="supported-and-unsupported-log-providers"></a>Modules fournisseurs d’informations de prise en charge et non pris en charge
-Tous les modules fournisseurs d’informations SSIS intégrées sont prises en charge sous Linux, sauf le fournisseur du journal des événements Windows.
-
-Le fournisseur de journaux SQL Server prend en charge uniquement l’authentification SQL ; Il ne prend pas en charge l’authentification Windows.
-
-Les fournisseurs de journal SSIS pour SQL Server Profiler pour les fichiers texte et pour les fichiers XML enregistrent leur sortie dans un fichier que vous spécifiez. Les considérations suivantes s’appliquent au chemin de fichier :
--   Si vous ne fournissez pas un chemin d’accès, le fournisseur de journaux est écrit dans le répertoire actuel de l’hôte. Si l’utilisateur actuel n’est pas autorisé à écrire dans le répertoire actuel de l’hôte, le fournisseur de journaux génère une erreur.
--   Vous ne pouvez pas utiliser une variable d’environnement dans un chemin d’accès de fichier. Si vous spécifiez une variable d’environnement, le texte littéral que vous spécifiez s’affiche dans le chemin d’accès de fichier. Par exemple, si vous spécifiez `%TMP%/log.txt`, le fournisseur de journaux ajoute le texte littéral `/%TMP%/log.txt` vers le répertoire actuel de l’hôte.
+Pour obtenir des informations détaillées sur les limitations et problèmes connus de SSIS sur Linux, consultez [Limitations et problèmes connus pour SSIS sur Linux](sql-server-linux-ssis-known-issues.md).
 
 ## <a name="more-info-about-ssis-on-linux"></a>Plus d’informations sur SSIS sur Linux
 
@@ -171,7 +67,7 @@ Pour plus d’informations sur SSIS sur Linux, consultez les billets de blog sui
 
 ## <a name="more-info-about-ssis"></a>Plus d’informations sur SSIS
 
-Microsoft SQL Server Integration Services (SSIS) est une plate-forme de création de solutions d’intégration de données hautes performances, y compris l’extraction, transformation et chargement (ETL) de packages pour l’entreposage des données. Pour plus d’informations, consultez [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services.md).
+Microsoft SQL Server Integration Services (SSIS) est une plate-forme de création de solutions d’intégration de données hautes performances, y compris l’extraction, transformation et chargement (ETL) de packages pour l’entreposage des données. Pour plus d’informations, consultez [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
 
 SSIS inclut les fonctionnalités suivantes :
 - outils graphiques et des Assistants pour générer et déboguer des packages sur Windows

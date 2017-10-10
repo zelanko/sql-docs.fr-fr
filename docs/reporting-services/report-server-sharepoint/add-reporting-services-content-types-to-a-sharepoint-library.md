@@ -1,7 +1,7 @@
 ---
-title: "Ajouter Reporting Services les Types de contenu dans une bibliothèque SharePoint | Documents Microsoft"
+title: "Ajouter des types de contenu Reporting Services dans une bibliothèque SharePoint | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,24 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ecb38b65092e15139b0a7c969903105c88a88aa
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 77b7a28486715b0583fb64a8ae6da169a27507da
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint  
-  
+# <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Ajouter des types de contenu Reporting Services dans une bibliothèque SharePoint
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des types de contenu prédéfinis SharePoint qui sont utilisés pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définitions de rapports (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type.
+
+> [!NOTE]
+> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+
  Pour ajouter des types de contenu à une bibliothèque, vous devez être administrateur de site ou bénéficier du niveau d'autorisation Contrôle total.  
   
  Les types de contenu et la gestion des types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] seront automatiquement activés dans toutes les bibliothèques de documents pour les collections de sites existantes créées à partir des types de modèle de site suivants :  
@@ -112,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  Lorsque vous avez terminé d'ajouter les types de contenu, cliquez sur **OK**.  
   
-9. > [!NOTE]  
+    > [!NOTE]  
     >  Si le groupe de types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Types de contenu SQL Server Reporting Services** n’est pas visible dans la page **Ajouter des types de contenu** , l’une des conditions suivantes est remplie :  
   
     -   Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint n'est pas installé. Pour plus d’informations, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Cette rubrique contient des informations sur l'installation du complément et les étapes de l'installation uniquement des fichiers du complément afin de contourner les problèmes.  
@@ -155,7 +161,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  Lorsque vous avez terminé d'ajouter les types de contenu, cliquez sur **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a> Pour activer les types de contenu et la gestion du contenu pour plusieurs sites BI  
+##  <a name="bkmk_enable_multiple_sites"></a>Pour activer les types de contenu et de gestion de contenu pour plusieurs sites BI  
   
 1.  Pour les serveurs de rapports SQL Server Reporting Services 2008 et 2008 R2, vous pouvez activer les types de contenu et la gestion du contenu pour plusieurs sites Business Intelligence Center :  
   

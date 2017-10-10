@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: c6018dbd63e9762b974ddc05995d5d2e3622ee26
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Déployer, exécuter et surveiller un package SSIS sur Azure
@@ -22,7 +22,7 @@ Ce didacticiel vous montre comment déployer un projet SQL Server Integration Se
 
 Avant de commencer, assurez-vous que vous avez 17,2 ou version ultérieure de SQL Server Management Studio. Pour télécharger la dernière version de SSMS, consultez [télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Assurez-vous également que vous disposez de configurer la base de données SSISDB et de mise en service de l’exécution d’intégration Azure-SSIS. Pour plus d’informations sur la façon de configurer SSIS sur Azure, consultez [courbes d’élévation et MAJ des packages SQL Server Integration Services (SSIS) pour Azure](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md).
+Assurez-vous également que vous disposez de configurer la base de données SSISDB et de mise en service de l’exécution d’intégration Azure-SSIS. Pour plus d’informations sur la façon de configurer SSIS sur Azure, consultez [courbes d’élévation et MAJ des packages SQL Server Integration Services (SSIS) pour Azure](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure).
 
 ## <a name="connect-to-the-ssisdb-database"></a>Se connecter à la base de données SSISDB
 
@@ -77,7 +77,7 @@ Utilisez SQL Server Management Studio pour se connecter au catalogue SSIS sur vo
   
 5.  Une fois le processus de déploiement terminé, le **résultats** ouvrir la page. Cette page indique la réussite ou l’échec de chaque action.
     -   Si l’action a échoué, sélectionnez **n’a pas pu** dans les **résultat** colonne pour afficher une explication de l’erreur.
-    -   Si vous le souhaitez, sélectionnez **enregistrer le rapport... ** pour enregistrer les résultats dans un fichier XML.
+    -   Si vous le souhaitez, sélectionnez **enregistrer le rapport...**  pour enregistrer les résultats dans un fichier XML.
     -   Sélectionnez **fermer** pour quitter l’Assistant.
 
 ## <a name="run-a-package"></a>Exécuter un package
@@ -86,7 +86,7 @@ Utilisez SQL Server Management Studio pour se connecter au catalogue SSIS sur vo
 
 2. Avec le bouton droit et sélectionnez **Execute** pour ouvrir le **exécuter le Package** boîte de dialogue.
 
-3.  Dans le **exécuter le Package** boîte de dialogue zone, configurez l’exécution du package en utilisant les paramètres sur le **paramètres**, **gestionnaires de connexions**, et **avancé ** onglets.
+3.  Dans le **exécuter le Package** boîte de dialogue zone, configurez l’exécution du package en utilisant les paramètres sur le **paramètres**, **gestionnaires de connexions**, et **avancé**  onglets.
 
 4.  Sélectionnez **OK** pour exécuter le package.
 

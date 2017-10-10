@@ -1,7 +1,7 @@
 ---
-title: "Dépanner une Installation Reporting Services | Documents Microsoft"
+title: "Dépanner une installation Reporting Services | Documents Microsoft"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 08/09/2017
   
  Pour plus d'informations sur d'autres erreurs et problèmes liés à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Résoudre les problèmes et erreurs de SSRS.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Examinez les [notes de publication en ligne](http://go.microsoft.com/fwlink/?linkid=236893) si le problème que vous rencontrez est décrit dans les notes de mise à jour.  
+ Examinez le [notes de publication en ligne](http://go.microsoft.com/fwlink/?linkid=236893) si le problème que vous rencontrez est décrit dans les notes de publication.  
   
-##  <a name="bkmk_setuplogs"></a> Vérification des journaux d'installation  
+##  <a name="bkmk_setuplogs"></a>Vérifiez les journaux d’installation  
  Les erreurs d’installation sont enregistrées dans des fichiers journaux dans le dossier **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** . Un sous-dossier est créé chaque fois que vous exécutez le programme d'installation. Le nom du sous-dossier est l'heure et la date d'exécution du programme d'installation. Pour obtenir des instructions sur la manière d’afficher les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 -   Les fichiers journaux incluent une collection de fichiers.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Ouvrez le fichier *_RS\_\*_ComponentUpdateSetup.log pour consulter les informations de l’installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-##  <a name="bkmk_prereq"></a> Vérification de la configuration requise  
+##  <a name="bkmk_prereq"></a>Vérification des conditions préalables  
  Le programme d'installation vérifie automatiquement les conditions préalables. Toutefois, si vous tentez de résoudre des problèmes d'installation, il est utile de connaître les vérifications effectuées par le programme d'installation.  
   
 -   Les spécifications relatives aux comptes pour l'exécution du programme d'installation incluent l'appartenance au groupe Administrateurs local. Le programme d'installation doit avoir l'autorisation d'ajouter des fichiers et des paramètres du Registre, de créer des groupes de sécurité locaux et de définir des autorisations. Si vous installez une configuration par défaut, le programme d'installation doit avoir l'autorisation de créer une base de données du serveur de rapports sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle vous effectuez l'installation.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  Le programme d'installation ne recherche plus les services Internet (IIS) ou [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nécessite MDAC 2.0 et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0. Le programme d'installation installe ces composants s'ils ne le sont pas déjà.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> Dépannage des problèmes liés aux installations en mode SharePoint  
+##  <a name="bkmk_tshoot_sharepoint"></a>Résoudre les problèmes d’oroblems avec les installations en mode SharePoint  
   
 -   [Le gestionnaire de configuration de Reporting Services ne démarre pas](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Un message d'erreur indiquant que RS_SHP n'est pas pris en charge avec PREPAREIMAGE s'affiche](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Le gestionnaire de configuration de Reporting Services ne démarre pas
+### <a name="bkmk_configmanager_notstart"></a>Reporting Services Configuration Manager ne démarre pas
 
  **Description :** ce problème est inhérent dans SQL Server 2012 et versions ultérieures. Reporting Services est conçue pour l’architecture de service SharePoint. Le Gestionnaire de configuration n'est plus nécessaire pour configurer et administrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Installez le mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir du support d'installation SQL Server.  
   
- **Remarque :** si **SharePoint 2013/2016 Management Shell** est ouvert lorsque vous appliquez l’une des solutions de contournement, fermez et ouvrez de nouveau le shell de gestion.  
+ Si le **SharePoint 2013/2016 Management Shell** est ouvert lorsque vous effectuez l’une des solutions de contournement, fermez et rouvrez le shell de gestion.  
   
  Pour plus d'informations, consultez les documents suivants :  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![Icône de flèche utilisée avec différée lien en haut](../../analysis-services/instances/media/uparrow16x16.gif "icône de flèche utilisée avec différée lien en haut") [résolution des problèmes liés aux installations en Mode de SharePoint](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> Dépannage de problèmes dans les installations en mode natif  
+##  <a name="bkmk_tshoot_native"></a>Résoudre les problèmes avec les installations en mode natif  
   
 ###  <a name="PerfCounters"></a> Les compteurs de performance ne sont pas visibles après une mise à niveau vers Windows Vista ou Windows Server 2008  
  Si vous mettez à niveau le système d'exploitation vers [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] ou [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] sur un ordinateur qui exécute [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les compteurs de performance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne seront pas définis après la mise à niveau.  

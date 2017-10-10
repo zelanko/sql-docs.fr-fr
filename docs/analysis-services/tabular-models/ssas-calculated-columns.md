@@ -1,7 +1,7 @@
 ---
 title: "Colonnes (SSAS tabulaire) calculées | Documents Microsoft"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>Colonnes calculées
   Dans les modèles tabulaires, les colonnes calculées permettent d’ajouter de nouvelles données à votre modèle. Au lieu de coller ou importer des valeurs dans la colonne, vous créez une formule DAX qui définit les valeurs de niveau de ligne de la colonne. La colonne calculée peut alors être utilisée dans un rapport, un tableau croisé dynamique ou un graphique croisé dynamique comme toute autre colonne.  
-  
-> [!NOTE]  
->  Les colonnes calculées ne sont pas prises en charge pour les modèles tabulaires en mode DirectQuery. Pour plus d’informations, consultez [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> Avantages  
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [Calculs](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 Ce didacticiel de démarrage rapide montre comment déployer un projet SSIS à partir de l’invite de commandes en exécutant l’Assistant Déploiement d’Integration Services, `ISDeploymentWizard.exe`.
 
-Pour plus d’informations sur l’Assistant Déploiement d’Integration Services, consultez [Assistant Déploiement d’Integration Services](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
+Pour plus d’informations sur l’Assistant Déploiement d’Integration Services, consultez [Assistant Déploiement d’Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Démarrer l’Assistant Déploiement d’Integration Services
 1. Ouvrez une fenêtre d'invite de commandes.
@@ -46,7 +46,7 @@ Pour plus d’informations sur l’Assistant Déploiement d’Integration Servic
   
 5.  Une fois le processus de déploiement terminé, le **résultats** ouvrir la page. Cette page indique la réussite ou l’échec de chaque action.
     -   Si l’action a échoué, cliquez sur **n’a pas pu** dans les **résultat** colonne pour afficher une explication de l’erreur.
-    -   Si vous le souhaitez, cliquez sur **enregistrer le rapport... ** pour enregistrer les résultats dans un fichier XML.
+    -   Si vous le souhaitez, cliquez sur **enregistrer le rapport...**  pour enregistrer les résultats dans un fichier XML.
     -   Cliquez sur **fermer** pour quitter l’Assistant.
 
 ## <a name="next-steps"></a>Étapes suivantes

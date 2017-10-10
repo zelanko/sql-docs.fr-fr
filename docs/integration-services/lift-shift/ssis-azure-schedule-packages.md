@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planifier l’exécution d’un package SSIS sur Azure
@@ -58,13 +58,13 @@ Pour planifier un package avec l’Agent SQL Server sur site, de créer une tâc
 
 ## <a name="elastic"></a>Planifier un package avec des travaux élastique de base de données SQL
 
-Pour plus d’informations sur les tâches élastiques de base de données SQL, consultez [bases de données de gestion à grande échelle cloud](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Pour plus d’informations sur les tâches élastiques de base de données SQL, consultez [bases de données de gestion à grande échelle cloud](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Conditions préalables
 
 Avant de pouvoir utiliser les travaux élastiques pour planifier les packages SSIS stockés dans la base de données de catalogue SSISDB sur un serveur de base de données SQL Azure, vous devez effectuer les opérations suivantes :
 
-1.  Installer et configurer les composants de tâches de base de données élastique. Pour plus d’informations, consultez [vue d’ensemble des travaux de l’installation de la base de données élastique](/azure/sql-database/sql-database-elastic-jobs-service-installation.md).
+1.  Installer et configurer les composants de tâches de base de données élastique. Pour plus d’informations, consultez [vue d’ensemble des travaux de l’installation de la base de données élastique](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Créer une étendue de base de données d’informations d’identification que travaux peuvent utiliser pour envoyer des commandes à la base de données du catalogue SSIS. Pour plus d’informations, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -110,7 +110,7 @@ Pour planifier un package avec l’activité de procédure stockée Azure donné
 3.  Créez un dataset de sortie qui gère la planification.
 4.  Créer un pipeline de fabrique de données qui utilise l’activité de procédure stockée SQL Server pour exécuter le package SSIS.
 
-Cette section fournit une vue d’ensemble de ces étapes. Un didacticiel complet de la fabrique de données est dépasse le cadre de cet article. Pour plus d’informations, consultez [activité de la procédure stockée SQL Server](/azure/data-factory/data-factory-stored-proc-activity.md).
+Cette section fournit une vue d’ensemble de ces étapes. Un didacticiel complet de la fabrique de données est dépasse le cadre de cet article. Pour plus d’informations, consultez [activité de la procédure stockée SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Création d’un service lié pour la base de données SQL qui héberge SSISDB
 Service lié Data Factory permet de se connecter à SSISDB.
@@ -221,4 +221,4 @@ Pour plus d’informations sur le code de ce script, consultez [déployer et ex�
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur l’Agent SQL Server, consultez [travaux de l’Agent SQL Server pour les Packages](../packages/sql-server-agent-jobs-for-packages.md).
 
-Pour plus d’informations sur les tâches élastiques de base de données SQL, consultez [bases de données de gestion à grande échelle cloud](/azure/sql-database/sql-database-elastic-jobs-overview.md).
+Pour plus d’informations sur les tâches élastiques de base de données SQL, consultez [bases de données de gestion à grande échelle cloud](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

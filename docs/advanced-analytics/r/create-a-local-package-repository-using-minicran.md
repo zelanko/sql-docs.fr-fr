@@ -1,7 +1,7 @@
 ---
-title: "Créer un référentiel de package local à l’aide de miniCRAN | Microsoft Docs"
+title: "Créer un référentiel de package local à l’aide de miniCRAN | Documents Microsoft"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,112 +15,187 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8af93b3e132290eef4b43da568b9381ff8e5a04
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 1dd7e8f1a0054818849b3b9672a5df6286bdabce
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>Créer un référentiel de package local à l’aide de miniCRAN
-Cette rubrique explique comment créer un référentiel de package R local en utilisant le package R **miniCRAN**. 
 
-Étant donné que les instances [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] se trouvent généralement sur un serveur sans connectivité Internet, la méthode standard d’installation des packages R (la commande R `install.packages()`) peut ne pas fonctionner, car le programme d’installation de package ne peut alors pas accéder au CRAN ou à un autre site miroir.
+Il existe deux façons dont vous pouvez préparer les packages R pour une installation sur un serveur sans accès à internet.
 
-Il existe deux façons d’installer des packages à partir d’un partage ou référentiel local :
+-   [Le package miniCRAN permet de créer un référentiel local unique](#bkmk_miniCRAN)
 
-+ Utilisez le package miniCRAN pour créer un référentiel local des packages dont vous avez besoin, puis installez les packages à partir de ce référentiel. Cette rubrique décrit la méthode miniCRAN.
+    Le [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) crée un référentiel cohérent en interne, composé de packages sélectionnés à partir de dépôts de CRAN de type. L’utilisateur spécifie un ensemble de packages souhaitées, et de façon récursive miniCRAN lit l’arborescence des dépendances pour ces packages et qu’il télécharge uniquement les packages répertoriés et leurs dépendances.
 
-+ Téléchargez les packages, et leurs dépendances, dont vous avez besoin sous forme de fichiers zip, enregistrez-les dans un dossier local, puis copiez ce dossier sur l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la méthode de copie manuelle, consultez [Installer des packages supplémentaires sur SQL Server](../../advanced-analytics/r-services/install-additional-r-packages-on-sql-server.md).
+    Vous pouvez ensuite déplacer ce référentiel local vers le serveur et continuer à installer les packages sans l’aide d’internet.
 
+-   [Télécharger et copier les packages un par un manuellement](#bkmk_manual)
 
-## <a name="step-1-install-minicran-and-download-packages"></a>Étape 1. Installer miniCRAN et télécharger les packages 
+Cet article décrit comment vous pouvez créer un référentiel de packages R à l’aide de ces deux méthodes, et recommande d’utiliser le **miniCRAN** package.
 
+## <a name="prepare-packages-using-minicran"></a>Préparer les packages à l’aide de miniCRAN
 
-1. Installez le package miniCRAN sur un ordinateur ayant accès à Internet.
+La création d’un référentiel de package local vise à fournir un emplacement unique par un administrateur de serveur ou d’autres utilisateurs de l’organisation peuvent utiliser pour installer de nouveaux packages R sur un serveur qui n’a pas accès à internet.
 
-   ~~~~
-   # Install miniCRAN and igraph
+Le [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) le package pour R a été écrit par [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html) pour le rendre plus facile de créer une cohérence gérés ensemble de packages R pour une organisation. 
 
-   if(!require("miniCRAN")) install.packages("miniCRAN")
-   if(!require("igraph")) install.packages("igraph")
-   library(miniCRAN)
+Il existe de nombreux avantages à l’utilisation de miniCRAN pour créer le référentiel :
 
-   # Define the package source: a CRAN mirror, or an MRAN snapshot
-   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2016-04-01")
+-   **Sécurité**: les utilisateurs de R sont habitués à télécharger et installer de nouveaux packages R à volonté, de CRAN ou l’un de ses sites de mise en miroir. Toutefois, pour des raisons de sécurité, les serveurs de production en cours d’exécution [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] n’ont généralement pas de connectivité internet.
 
-   # Define the local download location
-   local_repo <- "~/miniCRAN"
-   ~~~~
+-   **Simplifie l’installation hors connexion**: pour installer le package à un serveur en mode hors connexion nécessite que vous téléchargez également toutes les dépendances du package, à l’aide miniCRAN plus facilement obtenir toutes les dépendances dans le format correct.
 
-2. Téléchargez ou installez les packages souhaités sur cet ordinateur à l’aide du script R suivant. Ce script crée la structure de dossier nécessaire pour pouvoir ensuite copier les packages sur l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+-   **Amélioration de la gestion de version**: dans un environnement multi-utilisateur, il existe de bonnes raisons d’éviter sans restriction de l’installation de plusieurs versions de package sur le serveur.
 
-   ~~~~
-   # List the packages to get. Do not specify dependencies.
-   pkgs_needed <- c("ggplot2", "ggdendro")
-   # Plot the dependency graph 
-   plot(makeDepGraph(pkgs_needed)) 
-   
-   # Create the local repo 
-   pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror) 
-   makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.2") 
+Après avoir créé le référentiel, vous pouvez le modifier en ajoutant de nouveaux packages ou de la mise à niveau la version des packages existants.
 
-   # List local packages 
-   pdb <- as.data.frame( 
-     pkgAvail(local_repo, type = "win.binary", Rversion = "3.2"),  
-     stringsAsFactors = FALSE) 
-   head(pdb) 
-   pdb$Package 
-   pdb[, c("Package", "Version", "License")] 
-   ~~~~
+### <a name="step-1-install-the-minicran-package"></a>Étape 1. Installez le package miniCRAN
 
+Vous commencez par créer un référentiel miniCRAN à utiliser en tant que source. Vous devez créer ce référentiel sur un ordinateur qui a accès à internet.
 
-## <a name="step-2-copy-the-minicran-repository-to-the-sql-server-computer"></a>Étape 2. Copier le référentiel miniCRAN sur l’ordinateur SQL Server 
+1.  Installer le package miniCRAN et requis **igraph** package.
 
-Copiez le référentiel miniCRAN dans la bibliothèque R_SERVICES sur l’instance [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+    ```R
+    if(!require("miniCRAN")) install.packages("miniCRAN") if(!require("igraph"))
+    install.packages("igraph") library(miniCRAN)
+    ```
 
-+ Pour SQL Server 2016, le dossier par défaut est `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library1`.
-+ Pour SQL Server 2017, le dossier par défaut est `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library1`.
+### <a name="step-2-define-a-package-source-a-cran-mirror-or-an-mran-snapshot"></a>Étape 2. Définir une source de package : un miroir CRAN, ou un instantané MRAN
 
-Si vous avez installé R Services à l’aide d’une instance nommée, n’oubliez pas d’inclure le nom de l’instance dans le chemin pour vous assurer que les bibliothèques seront installées sur l’instance correcte. Par exemple, le chemin par défaut d’une instance nommée RTEST02 est `C:\Program Files\Microsoft SQL Server\MSSQL13.RTEST02\R_SERVICES\library`.
+1. Spécifiez un site miroir à utiliser lors de l’obtention de packages.
 
-Si vous avez installé SQL Server sur un lecteur différent, ou modifié d’autres éléments du chemin d’installation, veillez également à répercuter ces modifications.
+    ```R
+    CRAN_mirror \<- c(CRAN = "https://mran.microsoft.com/snapshot/2017-08-01")
+    ```
 
-## <a name="step-3-install-the-packages-on-sql-server-using-the-minicran-repository"></a>Étape 3. Installer les packages sur SQL Server en utilisant le référentiel miniCRAN
+2.  Indiquer un dossier local dans lequel stocker les packages collectées. Vous pas besoin de nommer le dossier miniCRAN ; Cela peut être un nom plus descriptif, tel que « GeneticsPackages » ou « ClientRPackages1.0.2 ».
 
-Sur l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], ouvrez une ligne de commande R ou une interface RGUI en tant qu’administrateur. 
-  
-> [!TIP]
-> Vous pouvez avoir plusieurs bibliothèques R sur l’ordinateur. Par conséquent, pour vous assurer que les packages seront installés sur l’instance correcte, utilisez la copie de RGUI ou de RTerm qui est installée avec l’instance spécifique sur laquelle vous souhaitez installer les packages.
-  
-Quand vous êtes invité à spécifier un référentiel, sélectionnez le dossier contenant les fichiers que vous venez de copier, c’est-à-dire le référentiel miniCRAN local.
+    Veillez à créer le dossier à l’avance. Une erreur est générée si le `local_repo` dossier n’existe pas lorsque vous exécutez le code R ultérieurement.
 
-   ~~~~
-   # Run this R code as administrator on the SQL Server computer 
-   pkgs_needed <- c("ggplot2", "ggdendro") 
-   local_repo  <- "~/miniCRAN" 
+    ```R
+    local_repo <- "~/miniCRAN"
+    ```
 
-   # OPTIONAL: If you are not running R from the instance library as recommended, you must specify the path
-   #   .libPaths()[1] 
-   # "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library " 
-   # lib <- .libPaths()[1]
-   
-   install.packages(pkgs_needed,  
-                    repos = file.path("file://", normalizePath(local_repo, winslash = "/")), 
-                    lib = lib, 
-                    type = "win.binary", 
-                    dependencies = TRUE 
-                    ) 
-   installed.packages() 
-   ~~~~
+    L’opérateur d’expansion tilde retourne une variable d’environnement, avec des résultats équivalents à `Sys.getenv("R_USER")`.
 
-Vérifiez que les packages ont bien été installés.
-   ~~~~
-   installed.packages()
-   ~~~~
+### <a name="step-3-add-packages-to-the-repository"></a>Étape 3. Ajouter des packages dans le référentiel
 
+1.  Une fois miniCRAN est installé, créez une liste qui spécifie les packages supplémentaires que vous souhaitez télécharger.
 
+    N’ajoutez pas de dépendances à cette liste initiale ; le **igraph** package utilisé par miniCRAN génère la liste des dépendances pour vous. Pour plus d’informations sur l’utilisation de ce graphique, consultez [pour identifier les dépendances du package à l’aide de miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
 
-## <a name="acknowledgements"></a>Remerciements
+    Le script R suivant montre comment obtenir les packages de la cible, « zoo » et « prévision ».
 
-Ces informations sont tirées de l’article écrit par Andre de Vries, le développeur du package miniCRAN. Pour obtenir plus d’informations et la procédure pas à pas complète, consultez l’article [How to install R packages on an off-line SQL Server 2016 instance](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html)
+    ```R
+    pkgs_needed <- c("zoo", "forecast")
+
+2. Optionally, plot the dependency graph, which can be informative and looks cool.
+    
+    ```R
+    plot(makeDepGraph(pkgs_needed))
+    ```
+
+3. Créer le référentiel local. Veillez à modifier la version de R si nécessaire
+
+    ```R
+    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror)
+    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3")
+    ```
+
+    À partir de ces informations, le package miniCRAN crée la structure de dossiers, vous devez copier les packages à la [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] plus tard.
+
+4. À ce stade, vous devez avoir un dossier contenant les packages que vous avez besoin, et tous les packages supplémentaires qui étaient requis.
+
+    Vous pouvez exécuter le code suivant pour répertorier les packages contenus dans le référentiel miniCRAN.
+
+    ```R
+    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE)
+    head(pdb)
+    pdb$Package
+    pdb[, c("Package", "Version", "License")]
+    ```
+
+### <a name="step-4-use-the-repository-to-add-r-packages-to-the-instance-library"></a>Étape 4. L’espace de stockage permet d’ajouter des packages R à la bibliothèque de l’instance
+
+Après avoir créé le référentiel et ajouté les packages que vous avez besoin, vous devez déplacer le référentiel de packages à l’ordinateur du serveur et assurez-vous que les packages R sont installés dans la bibliothèque appropriée à utiliser à partir de SQL Server.
+
+Selon la version de SQL Server, il existe deux options pour l’ajout de nouveaux packages dans la bibliothèque R associée à l’instance de SQL Server :
+
+-   Installer à la bibliothèque de l’instance à l’aide de la miniCRAN référentiel et outils R.
+
+-   Télécharger des packages à une base de données SQL et installer des packages sur une base par base de données, à l’aide de l’instruction de créer une bibliothèque externe. Consultez [installer des packages R supplémentaires sur SQL Server](install-additional-r-packages-on-sql-server.md).
+
+La procédure suivante décrit comment installer les packages à l’aide des outils R.
+
+1.  Copiez le dossier contenant le référentiel miniCRAN, dans son intégralité, sur le serveur où vous allez installer les packages.
+
+2.  Ouvrez une invite de commandes R à l’aide de l’outil de R associé à l’instance.
+
+    - Pour SQL Server 2017, le dossier par défaut est `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`.
+
+    - Pour SQL Server 2016, le dossier par défaut est `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library`.
+
+    - Pour une instance nommée, le chemin d’accès par défaut serait quelque chose comme : `<instance_path>.RTEST/R_SERVICES/library`.
+
+    -  Si vous avez installé SQL Server sur un lecteur différent, ou modifié d’autres éléments du chemin d’installation, veillez également à répercuter ces modifications.
+
+3.  Obtenir le chemin d’accès de la bibliothèque de l’instance (dans le cas, que vous êtes dans un répertoire de l’utilisateur) et l’ajouter à la liste des chemins d’accès de la bibliothèque.
+
+    ```R
+    .libPaths()[1]  
+    lib \<- .libPaths()[1]
+    ```
+
+    Cela doit retourner le chemin d’accès de l’instance, « C:/Program Files/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/bibliothèque »
+
+2.  Spécifiez l’emplacement sur le serveur où vous avez copié le référentiel mininCRAN dans `server_repo`.
+
+    Dans cet exemple, nous supposons que vous avez copié le référentiel dans votre dossier utilisateur sur le serveur.
+
+    ```R
+    R server_repo <- "C:\\Users\\MyUserName\\miniCRAN"
+    ```
+
+3.  Étant donné que vous travaillez dans un nouvel espace de travail R sur le serveur, vous devez également entrer la liste des packages à installer.
+
+    ```R
+    tspackages <- c("zoo", "forecast")
+    ```
+
+4.  Installer les packages, en utilisant le chemin d’accès à la copie locale du référentiel miniCRAN.
+
+    ```R
+    install.packages(tspackages, repos = file.path("file://", normalizePath(server_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE)
+    ```
+
+5.  Permet désormais d’afficher les packages installés.
+
+    ```R
+    installed.packages()
+    ```
+
+> [!NOTE] 
+> 
+> Dans SQL Server 2017, les instructions T-SQL et les rôles de base de données supplémentaires sont fournies pour aider les administrateurs de serveurs à gérer les autorisations sur les packages. L’administrateur de base de données peut posséder la tâche d’installation des packages, à l’aide de R ou T-SQL, si vous le souhaitez. Toutefois, l’administrateur peut également utiliser des rôles pour accorder aux utilisateurs la possibilité d’installer leurs propres packages. Pour plus d’informations, consultez [gestion des packages R pour SQL Server](r-package-management-for-sql-server-r-services.md).
+> 
+> Dans SQL Server 2016, un administrateur de serveur doit installer des packages à partir du référentiel miniCRAN dans la bibliothèque par défaut utilisée par l’instance. Pour ce faire, utilisez les outils R, comme décrit dans la [précédant la section](#bkmk_Rtools).
+
+## <a name="manually-download-single-packages"></a>Télécharger manuellement les packages uniques
+
+Si vous ne souhaitez pas utiliser miniCRAN, vous pouvez télécharger également manuellement les packages que vous avez besoin et leurs dépendances. Cela nécessite que vous êtes un administrateur ou un seul propriétaire d’un serveur.
+
+Après avoir téléchargé les packages, vous installez les packages R à partir de l’emplacement du fichier compressé.
+
+1.  Télécharger les fichiers zip de packages et les enregistrer dans un dossier local
+
+2.  Copiez ce dossier à la [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] ordinateur.
+
+3.  Installez les packages dans la bibliothèque d’instance de SQL Server.
+
+> [!NOTE]
+> Lorsque vous utilisez des outils R pour installer des packages, ils sont installés pour l’instance dans sa globalité. 
+> 
+> Si vous souhaitez installer le package dans une base de données et de partager le package avec les utilisateurs à l’aide de rôles de base de données, vous devez télécharger la bibliothèque à l’aide de l’instruction de créer une bibliothèque externe. Consultez [installer des packages R supplémentaires dans SQL Server](install-additional-r-packages-on-sql-server.md)
 

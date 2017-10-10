@@ -1,7 +1,7 @@
 ---
 title: "Activer le serveur de rapports et les fonctionnalités d’intégration Power View dans SharePoint | Documents Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,38 +10,38 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
-caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bca4115307f7bf9dab5ffc9d2ab02ababb209d65
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: e97378914a59fab938fc3e4c7926847effcffc94
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
-# <a name="site-collection-features---report-server-and-power-view"></a>Fonctionnalités de Collection de sites - serveur de rapports et de Power View
-  Les fonctionnalités de collection de sites de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont généralement activées par défaut après l’installation du complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] pour les produits SharePoint. Dans certaines circonstances, vous devrez activer les fonctionnalités manuellement.  
+# <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activer le serveur de rapports et les fonctionnalités d’intégration Power View dans SharePoint
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  Les fonctionnalités de collection de site de Reporting Services sont activées par défaut après avoir installé le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] complément pour les produits SharePoint. Dans certaines situations, vous devez activer manuellement les fonctionnalités.  
+
+> [!NOTE]
+> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+
+ Si vous installez le complément Reporting Services pour les produits SharePoint 2010 après l’installation du produit SharePoint, puis la fonctionnalité d’intégration de serveur de rapports et la fonctionnalité d’intégration Power View sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, vous devez activer manuellement les fonctionnalités. Par exemple, si vous avez une collection de sites **http://[my nom du serveur] /sites/ [nom de collection de site]** vous devez activer manuellement les fonctionnalités de collection de site de Reporting Services.  
   
- Si vous installez le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint 2010 après l'installation du produit SharePoint, la fonctionnalité d'intégration du serveur de rapports et la fonctionnalité d'intégration de vue de remplissage sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, vous devez activer manuellement les fonctionnalités. Par exemple, si vous avez une collection de sites **http://[nom de mon serveur]/sites/[nom de collection de sites]** vous devez activer manuellement les fonctionnalités de collection de sites [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
- S’il n’y a pas de collection de sites racine, le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enregistre un message semblable au suivant.  
+ Lorsqu’il n’existe aucune collection de sites racine, le complément Reporting Services consignera un message semblable au suivant.  
   
  « L'application Web SharePoint 80 n'a pas de collection de sites racine »  
   
- Le message se trouve dans le journal d'installation du complément, nommé « RS_SP_#.log » où # est un nombre incrémenté. Le fichier journal se trouve dans le dossier Temp de l’utilisateur actuel, par exemple C:\Users\\[nom utilisateur]\AppData\Local\Temp. Pour plus d’informations sur les options de journalisation du complément, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Le message se trouve dans le journal d’installation du complément, nommé « RS_SP_ # .log » où # est un numéro à incrémentation. Le fichier journal se trouve dans le dossier Temp les utilisateurs en cours, par exemple C:\Users\\[nom utilisateur] \AppData\Local\Temp. Pour plus d’informations sur les options de journalisation du complément, consultez [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+
+## <a name="activate-the-report-server-and-power-view-integration-site-collection-features"></a>Activer les fonctionnalités de collection de site intégration Report Server et Power View
   
- Dans cette rubrique :  
-  
--   [Pour activer les fonctionnalités d'intégration de collections de sites Report Server et Power View :](#bkmk_features)  
-  
--   [Pour activer ou désactiver la fonctionnalité de collection de sites dans l'Administration centrale de Reporting Services :](#bkmk_centraladmin)  
-  
-##  <a name="bkmk_features"></a> Pour activer les fonctionnalités d'intégration de collections de sites Report Server et Power View :  
-  
-1.  Ouvrez votre navigateur sur le site où vous souhaitez activer les fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+1.  Ouvrez votre navigateur sur le site où vous souhaitez les fonctionnalités de Reporting Services active.  
   
 2.  Cliquez sur **Actions du site**.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  Pour désactiver les fonctionnalités, vous pouvez utiliser la même procédure en cliquant sur **Désactiver** au lieu d' **Activer**.  
   
-##  <a name="bkmk_centraladmin"></a> Pour activer ou désactiver la fonctionnalité de collection de sites dans l'Administration centrale de Reporting Services :  
+## <a name="activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a>Activer ou la fonctionnalité de collection de site administration centrale de désactiver les Services de création de rapports
   
 1.  Ouvrez votre navigateur dans l'Administration centrale de SharePoint.  
   
@@ -71,10 +71,8 @@ ms.lasthandoff: 08/09/2017
   
  Pour désactiver la fonctionnalité, vous pouvez utiliser la même procédure en cliquant sur **Désactiver** au lieu d' **Activer**.  
   
-## <a name="next-steps"></a>Étapes suivantes  
- Une fois la fonctionnalité activée, vous pouvez continuer l'intégration de serveur.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-  
-  
+## <a name="next-steps"></a>Étapes suivantes
+
+Une fois la fonctionnalité activée, vous pouvez continuer l'intégration de serveur.
+
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,7 +1,7 @@
 ---
-title: Applets de commande PowerShell pour Reporting Services SharePoint Mode | Documents Microsoft
+title: Applets de commande PowerShell pour Reporting Services en mode SharePoint | Documents Microsoft
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,30 +10,36 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
-caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 5ab2078266bb130e80b0919c2a4f19e8cf45a671
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
 
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
 Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les applets de commande PowerShell sont installés pour prendre en charge des serveurs de rapports en mode SharePoint. Les applets de commande couvrent trois catégories de fonctionnalités.  
   
--   Installation du service partagé et du proxy SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   Installation de Reporting Services SharePoint service partagé et du proxy.  
   
--   Configuration et gestion des applications de service et des proxys associés d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   Configuration et gestion de Reporting Services applications de service et proxys associés.  
   
--   Gestion des fonctionnalités d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , par exemple extensions et clés de chiffrement.  
+-   Gestion des fonctionnalités de Reporting Services, pour les clés de chiffrement et les extensions d’exemple.  
 
-##  <a name="bkmk_cmdlet_sum"></a> Résumé des applets de commande  
- Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Dans les résumés suivants d'applets de commande, les références à l'application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+> [!NOTE]
+> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+
+## <a name="cmdlet-summary"></a>Résumé des applets de commande
+
+ Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](http://technet.microsoft.com/library/hh847814.aspx). Dans les résumés d’applet de commande suivante, le service application « bases de données » fait référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
   
@@ -42,7 +48,7 @@ Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les a
   
  Un des problèmes suivants se produit :  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas installé et par conséquent, les applets de commande [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne sont pas installées.  
+-   Reporting Services SharePoint mode n’est pas installé, et par conséquent, les applets de commande de Reporting Services ne sont pas installés.  
   
 -   Vous avez exécuté la commande PowerShell dans Windows PowerShell ou Windows PowerShell ISE au lieu de SharePoint Management Shell. Utilisez SharePoint Management Shell ou ajoutez le composant logiciel enfichable SharePoint à la fenêtre Windows PowerShell à l'aide de la commande suivante :  
   
@@ -52,7 +58,7 @@ Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les a
   
  Pour plus d’informations, consultez [Utiliser Windows PowerShell pour administrer SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
-#### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>Pour ouvrir SharePoint Management Shell et exécuter les applets de commande  
+### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Ouvrez SharePoint Management Shell et exécuter des applets de commande
   
 1.  Cliquez sur le bouton **Démarrer** .  
   
@@ -60,42 +66,44 @@ Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les a
   
 3.  Cliquez sur **SharePoint Management Shell**.  
   
- Pour consulter l'aide sur la ligne de commande pour une applet de commande utilisez la commande « GET-HELP » de PowerShell à l'invite de commandes de PowerShell. Par exemple :  
+ Pour consulter l'aide sur la ligne de commande pour une applet de commande utilisez la commande « GET-HELP » de PowerShell à l'invite de commandes de PowerShell. Exemple :  
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
-###  <a name="bkmk_sharedservice_cmdlets"></a> Applets de commande de service partagé et de proxy  
- Le tableau suivant contient les applets de commande PowerShell pour le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint.  
+##  <a name="shared-service-and-proxy-cmdlets"></a>Applets de commande de proxy et le service partagé
+
+ Le tableau suivant contient les applets de commande PowerShell pour le service partagé Reporting Services SharePoint.  
   
 |Applet de commande|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Installe et enregistre, ou désinstalle, le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cette opération peut être effectuée uniquement sur l'ordinateur qui dispose d'une installation de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Pour l'installation, deux opérations ont lieu :<br /><br /> - Le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé dans la batterie.<br /><br /> - L’instance du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installée sur l’ordinateur actuel.<br /><br /> Pour la désinstallation, deux opérations ont lieu :<br /><br /> - Le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est désinstallé de l’ordinateur actuel.<br /><br /> - Le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est désinstallé de la batterie.<br /><br /> <br /><br /> Remarque : si d'autres ordinateurs dans la batterie de serveurs ont le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installée ou, si des applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent toujours dans la batterie de serveurs, un avertissement s'affiche.|  
+|Install-SPRSService|Installe et enregistre ou désinstalle, le service partagé Reporting Services. Cela est possible uniquement sur l’ordinateur qui dispose d’une installation de SQL Server Reporting Services en mode SharePoint. Pour l'installation, deux opérations ont lieu :<br /><br /> -Le service Reporting Services est installé dans la batterie de serveurs.<br /><br /> -L’instance de service Reporting Services est installé sur l’ordinateur actuel.<br /><br /> Pour la désinstallation, deux opérations ont lieu :<br /><br /> -Le service Reporting Services est désinstallé de l’ordinateur actuel.<br /><br /> -Le service Reporting Services est désinstallé de la batterie de serveurs.<br /><br /> <br /><br /> Si autres d'ordinateurs dans la batterie de serveurs qui ont le service Reporting Services est installé, ou s’il existe encore des applications de service Reporting Services en cours d’exécution dans la batterie de serveurs, un message d’avertissement s’affiche.|  
 |Install-SPRSServiceProxy|Installe et enregistre, ou désinstalle, le proxy du service Reporting Services dans la batterie de serveurs SharePoint.|  
-|Get-SPRSProxyUrl|Obtient les URL pour accéder au service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
-|Get-SPRSServiceApplicationServers|Obtient tous les serveurs dans la batterie SharePoint locale qui contiennent une installation du service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cette applet de commande est utile pour les mises à niveau de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , car elle permet de déterminer quels serveurs exécutent le service partagé et doivent, par conséquent, être mis à niveau.|  
+|Get-SPRSProxyUrl|Obtient la ou les URL d'accès au service Reporting Services.|  
+|Get-SPRSServiceApplicationServers|Obtient tous les serveurs dans la batterie SharePoint locale qui contiennent une installation du service partagé Reporting Services. Cette applet de commande est utile pour les mises à niveau de Reporting Services, afin de déterminer quels serveurs exécutent le service partagé et par conséquent, doivent être mis à niveau.|  
   
-###  <a name="bkmk_serviceapp_cmdlets"></a> Applets de commande d'application de service et de proxy  
- Le tableau suivant contient les applets de commande PowerShell pour les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et leurs proxys associés.  
+## <a name="service-application-and-proxy-cmdlets"></a>Applets de commande d’application et proxy de service
+
+ Le tableau suivant contient les applets de commande PowerShell pour les applications de service Reporting Services et leurs proxys associés.  
   
 |Applet de commande|Description|  
 |------------|-----------------|  
-|Get-SPRSServiceApplication|Obtient un ou plusieurs objets d'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|Get-SPRSServiceApplication|Obtient un ou plusieurs objets d’application de service Reporting Services.|  
 |New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : spécifie si le serveur de rapports utilise le compte de pool d'applications SSRS ou un compte de connexion SQL Server pour accéder à la base de données du serveur de rapports. Les valeurs valides sont :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2. Compte du pool d'applications (valeur par défaut)|  
 |Remove-SPRSServiceApplication|Supprime l'application de service Reporting Services spécifiée. Cela supprimera également les bases de données associées.|  
 |Set-SPRSServiceApplication|Modifie les propriétés d'une base de données d'application de service Reporting Services existante.|  
 |New-SPRSServiceApplicationProxy|Crée un nouveau proxy d'application de service Reporting Services.|  
-|Get-SPRSServiceApplicationProxy|Obtient un ou plusieurs proxys d'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
-|Dismount-SPRSDatabase|Démonte les bases de données d'application de service pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
-|Remove-SPRSDatabase|Supprime les bases de données d'application de service pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
-|Set-SPRSDatabase|Définit les propriétés des bases de données associées à une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
-|Mount-SPRSDatabase|Monte les bases de données pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
-|New-SPRSDatabase|Crée les nouvelles bases de données d'application de service pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] spécifiée.|  
-|Get-SPRSDatabaseCreationScript|Génère le script de création de base de données à l'écran pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez ensuite exécuter le script dans SQL Server Management Studio.|  
-|Get-SPRSDatabase|Obtient une ou plusieurs bases de données d'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilisez la commande pour obtenir l'ID de la base de données d'application de service afin d'utiliser l'applet de commande Set-SPRSDatabase pour modifier les propriétés, par exemple `querytimeout`. Consultez l’exemple de cette rubrique, [Propriétés Get et Set de la base de données d’application Reporting Service](#bkmk_example_db_properties).|  
-|Get-SPRSDatabaseRightsScript|Génère le script des droits de la base de données à l'écran pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Invite à entrer l'utilisateur et la base de données souhaités, puis retourne un script Transact-SQL que vous pouvez exécuter pour modifier des autorisations. Vous pouvez ensuite exécuter ce script dans SQL Server Management Studio.|  
-|Get-SPRSDatabaseUpgradeScript|Génère un script de mise à niveau de base de données à l'écran. Le script met à niveau les bases de données d'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers la version de la base de données de l'installation actuelle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|Get-SPRSServiceApplicationProxy|Obtient un ou plusieurs proxys d'application de service Reporting Services existante.|  
+|Dismount-SPRSDatabase|Démonte les bases de données service pour une application de service Reporting Services.|  
+|Remove-SPRSDatabase|Supprimer les bases de données service pour une application de service Reporting Services.|  
+|Set-SPRSDatabase|Définit les propriétés des bases de données associées à une application de service Reporting Services.|  
+|Mount-SPRSDatabase|Monte les bases de données pour une application de service Reporting Services.|  
+|New-SPRSDatabase|Créer un nouveau service bases de données de l’application de service Reporting Services spécifiée.|  
+|Get-SPRSDatabaseCreationScript|Génère le script de création de base de données à l’écran pour une application de service Reporting Services. Vous pouvez ensuite exécuter le script dans SQL Server Management Studio.|  
+|Get-SPRSDatabase|Obtient une ou plusieurs bases de données d'application de service Reporting Services. Utilisez la commande pour obtenir l'ID de la base de données d'application de service afin d'utiliser l'applet de commande Set-SPRSDatabase pour modifier les propriétés, par exemple `querytimeout`. Consultez l’exemple de cette rubrique, [Propriétés Get et Set de la base de données d’application Reporting Service](#bkmk_example_db_properties).|  
+|Get-SPRSDatabaseRightsScript|Génère le script de droits de base de données à l’écran pour une application de service Reporting Services. Invite à entrer l'utilisateur et la base de données souhaités, puis retourne un script Transact-SQL que vous pouvez exécuter pour modifier des autorisations. Vous pouvez ensuite exécuter ce script dans SQL Server Management Studio.|  
+|Get-SPRSDatabaseUpgradeScript|Génère un script de mise à niveau de base de données à l'écran. Le script met à niveau les bases de données Reporting Services service application vers la version de base de données de l’installation de Reporting Services en cours.|  
   
-###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Applets de commande personnalisés de la fonctionnalité « Reporting Services »  
+## <a name="reporting-services-custom-runctionality-cmdlets"></a>Applets de commande de Reporting Services personnalisés runctionality
   
 |Applet de commande|Description|  
 |------------|-----------------|  
@@ -106,11 +114,12 @@ Lorsque vous installez SQL Server 2016 Reporting Services SharePoint mode, les a
 |New-SPRSExtension|Enregistre une nouvelle extension avec une application de service Reporting Services.|  
 |Set-SPRSExtension|Définit les propriétés d'une extension Reporting Services existante.|  
 |Remove-SPRSExtension|Supprime une extension d'une application de service Reporting Services.|  
-|Get-SPRSExtension|Obtient une ou plusieurs extensions d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Les valeurs valides sont :<br /><br /> <br /><br /> Remise<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Données<br /><br /> Sécurité<br /><br /> Authentification<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Concepteur<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Obtient une ou plusieurs extensions Reporting Services pour une application de service Reporting Services.<br /><br /> Les valeurs valides sont :<br /><br /> <br /><br /> Remise<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Données<br /><br /> Sécurité<br /><br /> Authentification<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Concepteur<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Obtient les sites SharePoint en fonction de l'activation de la fonction « ReportingService ». Par défaut, les sites qui activent la fonction « ReportingService » sont retournés.|  
   
-##  <a name="bkmk_basic_samples"></a> Exemples de base de PowerShell pour Reporting Services  
- Retournez la liste des applets de commande qui contiennent « SPRS » dans le nom. Ce sera la liste complète des applets de commande de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+## <a name="basic-samples"></a>Exemples de base
+
+ Retournez la liste des applets de commande qui contiennent « SPRS » dans le nom. Il s’agit de la liste complète des applets de commande de Reporting Services.  
   
 ```  
 Get-command –noun *SPRS*  
@@ -122,7 +131,7 @@ Get-command –noun *SPRS*
 Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
- Installez le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint et le proxy de service.  
+ Installer le service Reporting Services SharePoint et le proxy de service.  
   
 ```  
 Install-SPRSService  
@@ -132,7 +141,7 @@ Install-SPRSService
 Install-SPRSServiceProxy  
 ```  
   
- Démarrer le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ Démarrer le service Reporting Services  
   
 ```  
 get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
@@ -144,10 +153,12 @@ get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | 
 Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
 ```  
   
-##  <a name="bkmk_detailedsamples"></a> Exemples détaillés de PowerShell pour Reporting Services  
+## <a name="detailed-samples"></a>Exemples détaillés
+
  Outre les exemples suivants, consultez la section « Script Windows PowerShell » dans la rubrique [Windows PowerShell script for Steps 1–4](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_full_script).  
   
-###  <a name="bkmk_example_create_service_application"></a> Créer une application de service Reporting Services et un proxy  
+### <a name="create-a-reporting-services-service-application-and-proxy"></a>Créer une application de service Reporting Services et un proxy
+
  Cet exemple de script effectue les tâches suivantes :  
   
 1.  Création d'une application de service Reporting Services et d'un proxy. Le script suppose que le pool d'applications « My App Pool » existe déjà.  
@@ -172,7 +183,8 @@ $webApp.GrantAccessToProcessIdentity($appPoolAccountName)
   
 ```  
   
-###  <a name="bkmk_example_delivery_extension"></a> Examiner et mettre à jour une extension de remise Reporting Services  
+### <a name="review-and-update-a-reporting-services-delivery-extension"></a>Examiner et mettre à jour une extension de remise Reporting Services
+
  L’exemple de script PowerShell suivant met à jour la configuration de l’extension de remise du courrier électronique par le serveur de rapports pour l’application de service nommée `My RS Service App`. Mettez à jour les valeurs du serveur SMTP (`<email server name>`) et de l’alias de messagerie électronique FROM (`<your FROM email address>`).  
   
 ```  
@@ -207,7 +219,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
-###  <a name="bkmk_example_db_properties"></a> Obtenir et définir les propriétés de la base de données d’application Reporting Services  
+### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>Obtenir et définir les propriétés de la base de données des applications de Service Reporting
+
  L'exemple suivant renvoie d'abord une liste des bases de données et propriétés afin de déterminer le guid (ID) de base de données que vous fournissez à la commande. Pour obtenir une liste complète des propriétés, utilisez `Get-SPRSDatabase | format-list`.  
   
 ```  
@@ -238,8 +251,9 @@ Set-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 
 Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
-###  <a name="bkmk_example_list_data_extensions"></a> Répertorier les extensions de données Reporting Services  
- L'exemple suivant effectue une itération sur chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et répertorie les extensions de données actuelles.  
+### <a name="list-reporting-services-data-extensions"></a>Répertorier les extensions de données Reporting Services
+
+ L’exemple suivant effectue une itération sur chaque application de service Reporting Services et répertorie les extensions de données en cours de chaque.  
   
 ```  
 $apps = Get-SPRSServiceApplication  
@@ -274,14 +288,14 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
      `SHAREPOINTLIST          Data`  
   
-###  <a name="bkmk_change_subscription_owner"></a> Modifier et répertorier les propriétaires d’abonnements Reporting Services  
- Consultez [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+### <a name="change-and-list-reporting-services-subscription-owners"></a>Modifier et répertorier les propriétaires d’abonnements Reporting Services
+
+ Consultez [utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Liste de vérification : utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[Obtenir de l'aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
-[Scripts PowerShell de gestion CodePlex SharePoint](http://sharepointpsscripts.codeplex.com/)   
+[Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[Liste de vérification : Utiliser PowerShell pour vérifier Power Pivot pour SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Get help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

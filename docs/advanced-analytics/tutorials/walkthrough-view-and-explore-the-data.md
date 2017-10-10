@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>Afficher et Explorer les données à l’aide de SQL (procédure pas à pas)
@@ -53,7 +53,7 @@ Tout d’abord, prenez le temps de vérifier que vos données ont été chargée
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    Si la table ne contient aucune donnée, consultez la section [Dépannage](/walkthrough-prepare-the-data.md) de la rubrique précédente.
+    Si la table ne contient aucune donnée, consultez la section [Dépannage](walkthrough-prepare-the-data.md) de la rubrique précédente.
 
 4. Pour optimiser cette table de données pour les calculs basés sur les jeux, un [index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) a été ajouté. Exécutez cette instruction pour générer un résumé de la table.
 
@@ -69,9 +69,9 @@ Tout d’abord, prenez le temps de vérifier que vos données ont été chargée
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Résumer les données à l’aide de R](/walkthrough-view-and-summarize-data-using-r.md)
+[Résumer les données à l’aide de R](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Préparer les données à l’aide de PowerShell](/walkthrough-prepare-the-data.md)
+[Préparer les données à l’aide de PowerShell](walkthrough-prepare-the-data.md)
 
