@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Page d’accueil de la programmation avec Microsoft SQL Server du client
@@ -52,9 +52,9 @@ Dans le tableau suivant, chaque image de la langue est un lien vers les détails
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[! [Logo c#] [image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[! [ORM Entity Framework, du .NET Framework] [image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[! [Logo Java] [image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[! [Logo Node.js] [image-ref-340-nœud]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[! [Logo PHP] [image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[! [Logo Python] [image-ref-370-python]](#an-180-python-docu) | &nbsp;[! [Logo ruby] [image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![Logo c#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework, du .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Logo Java][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Logo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF a des relations directes ou indirectes avec les technologies suivantes :
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), ou [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- Améliorations de syntaxe du langage, telles que la ** => ** opérateur en c#.
+- Améliorations de syntaxe du langage, telles que la  **=>**  opérateur en c#.
 - Programmes pratiques qui génèrent du code source pour les classes qui mappent aux tables de votre base de données SQL. Par exemple, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
@@ -152,7 +152,7 @@ La documentation de JDBC inclut les principaux domaines suivantes :
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Racine de notre documentation JDBC. |
 | [Référence](./jdbc/reference/index.md) | Interfaces, classes et membres. |
-| [Guide de programmation pour le pilote SQL JDBC](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Informations de configuration, ainsi que des exemples de code. |
+| [Guide de programmation pour le pilote JDBC SQL](./jdbc/programming-guide-for-jdbc-sql-driver.md) | Informations de configuration, ainsi que des exemples de code. |
 | &nbsp; | <br /> |
 
 
