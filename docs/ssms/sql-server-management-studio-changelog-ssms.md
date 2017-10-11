@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Journal des modifications (SSMS) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,113 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 9b477c4c755e98d5aaae6ba92f4a67ff4d02d190
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 
 Cet article fournit des détails sur les mises à jour, les améliorations et les correctifs de bogues des versions actuelles et précédentes de SSMS. Téléchargez les [versions précédentes de SSMS ci-dessous](#previous-ssms-releases).
 
-## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
 
+## <a name="ssms-173download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.3](download-sql-server-management-studio-ssms.md)
+Disponibilité générale | Numéro de build : 14.0.17199.0
+
+### <a name="enhancements"></a>Améliorations
+
+- Ajout du nouvel Assistant « Importer un fichier plat » pour simplifier l’importation des fichiers CSV avec une infrastructure intelligente, nécessitant une intervention de l’utilisateur ou des connaissances techniques minimes. Pour plus d’informations, consultez [Assistant Importer un fichier plat dans SQL](../relational-databases/import-export/import-flat-file-wizard.md).
+- Ajout du nœud « XEvent Profiler » à l’Explorateur d’objets. Pour plus d’informations, consultez [Utiliser SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+- Mise à jour du filtrage et de la catégorisation des attentes dans le rapport des attentes historiques du Tableau de bord Performances.
+- Ajout de la vérification syntaxique de la fonction « Predict ».
+- Ajout de la vérification syntaxique des requêtes External Library Management.
+- Ajout de la prise en charge SMO pour External Library Management.
+- Ajout de la prise en charge de « Démarrer PowerShell » dans la fenêtre « Serveurs inscrits » (nécessite un nouveau module SQL PowerShell).
+- AlwaysOn : ajout de la [prise en charge du routage en lecture seule](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md) pour les groupes de disponibilité.
+- Ajout d’une option pour envoyer les informations de trace dans la fenêtre Sortie pour les connexions « Active Directory - Authentification universelle avec prise en charge de MFA » (option désactivée par défaut ; doit être activée dans les paramètres utilisateur sous « Outils > Options > Services Azure > Azure Cloud > Niveau de trace dans la fenêtre Sortie ADAL »). 
+- Magasin des requêtes : 
+  - L’interface utilisateur Magasin des requêtes est maintenant accessible même quand QDS est désactivé, si QDS a enregistré des données.
+  - L’interface utilisateur Magasin des requêtes expose maintenant les attentes par catégorie dans tous les rapports existants. Cela permet aux clients de gérer les scénarios avec des requêtes principales en attente, par exemple.
+- Ajout des en-têtes de paramètres de script rendu facultatif (désactivé par défaut ; peut être activé dans les paramètres utilisateur sous « Outils > Options > Explorateur d’objets SQL Server > Scripts > Inclure l’en-tête des paramètres de script ») - [Article Connect 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199).
+- Suppression de la personnalisation « RC ».
+
+### <a name="bug-fixes"></a>Correctifs de bogues
+
+**SSMS général**
+
+- XEvent : 
+   - Correction d’un problème où SSMS ouvrait uniquement une partie des événements dans le fichier .xel.
+   - Amélioration de l’expérience « Observer les données actives » quand la base de données par défaut n’est pas définie à 'master' - [Article Connect 1222582](https://connect.microsoft.com/SQLServer/feedback/details/1222582).
+- AlwaysOn : correction du problème pouvant provoquer l’échec de la restauration des sauvegardes de journaux avec l’erreur « Le journal dans ce jeu de sauvegarde se termine au numéro de séquence d’enregistrement x, ce qui est trop tôt pour une application à la base de données ».
+- Moniteur d’activité des travaux : correction des icônes incohérentes - [Article Connect 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100).
+- Magasin des requêtes : correction du problème qui empêchait l’utilisateur de choisir une plage de dates « personnalisée » pour les rapports du magasin des requêtes. Consultez les articles Connect suivants :
+   - [Article Connect 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [Article Connect 3139399](http://connect.microsoft.com/SQLServer/feedback/details/3139399)
+- Correction du problème où la boîte de dialogue de connexion n’« effaçait » pas la dernière base de données utilisée quand les informations enregistrées contenaient une base de données nommée et que l’utilisateur sélectionnait <default>.
+- Scripts d’objets :
+    - Correction d’un problème qui empêchait la commande « Générer le script de la base de données » de fonctionner et générait une erreur quand l’utilisateur avait une base de données DW suspendue sur le serveur, mais qu’il sélectionnait une autre base de données non DW et tentait de créer un script de cette dernière.
+    - Correction du problème de non-correspondance entre l’en-tête des procédures stockées faisant l’objet d’un script et les paramètres du script, ce qui donnait un script équivoque - [Article Connect 3139784](http://connect.microsoft.com/SQLServer/feedback/details/3139784).
+    - Réactivation du bouton « Script » lors du ciblage d’objets SQL Azure.
+    - Correction du problème où SSMS ne permettait pas de créer un script pour les opérations « Modifier » ou « Exécuter » sur certains objets (UDF, View, SP, Trigger) avec une connexion à une base de données SQL Azure - [Article Connect 3136386](https://connect.microsoft.com/SQLServer/feedback/details/3136386).
+- Éditeur de requête :
+  - Amélioration d’Intellisense lors du ciblage de bases de données SQL Azure.
+  - Correction d’un problème qui faisait échouer les requêtes en raison de l’expiration d’un jeton d’authentification (authentification universelle).
+  - Amélioration d’Intellisense avec les bases de données Azure SQL. En particulier, dans le cas d’une connexion à Azure SQL Database, la dernière grammaire de T-SQL (140) est maintenant utilisée.
+  - Correction d’un problème où l’ouverture d’une fenêtre de requête avec une connexion à une base de données autre que DataWarehouse sur un serveur générait différentes erreurs liées aux types/options non pris en charge pour toutes les fenêtres de requête ouvertes postérieurement sur ce serveur.
+- AlwaysOn :
+   - Ajout d’une colonne en mode amorçage au tableau de bord AlwaysOn et à la page de propriétés des groupes de disponibilité.
+   - Correction d’un problème qui empêchait la création d’un groupe de disponibilité Linux quand le groupe de disponibilité principal était sur Windows - [Article Connect 3139856](https://connect.microsoft.com/SQLServer/feedback/details/3139856).
+- Correction de plusieurs problèmes de « mémoire insuffisante » dans SSMS lors de l’exécution de requêtes - [Article Connect 2845190](https://connect.microsoft.com/SQLServer/feedback/details/2845190) et [Article Connect 3123864](https://connect.microsoft.com/SQLServer/feedback/details/3123864).
+- Profiler : 
+   - Correction du problème qui empêchait Profiler de fonctionner lors du ciblage de SQL 2005.
+   - Correction du problème où Profiler ne respectait pas l’option de connexion « Faire confiance au certificat de serveur ».
+- Moniteur d’activité : correction d’un problème qui empêchait le Moniteur d’activité de fonctionner quand il ciblait une instance SQL Server exécutée sur Linux.
+- Correction d’un problème avec la classe de transfert SMO qui ne transférait pas les objets source de données externe ou les objets format de fichier externe. Les objets de ces types sont maintenant inclus dans le transfert.
+- Serveurs inscrits :
+   - Activation de la requête multiserveur pour les serveurs de l’agent utilisateur (elle essaie d’utiliser le même jeton pour chaque serveur de l’agent utilisateur dans le groupe).
+- Authentification universelle AD :
+   - Correction du problème de non-prise en charge de l’authentification Azure AD.
+   - Correction d’un problème qui empêchait le concepteur de tables ou de vues de fonctionner.
+   - Correction d’un problème qui empêchait le fonctionnement des commandes « Sélectionner les 1 000 premières lignes » et « Modifier les 200 premières lignes ».
+- Restauration de base de données : correction d’un problème où la restauration ne prenait pas en compte le dernier dossier du chemin d’accès lors du déplacement de fichiers vers un autre emplacement.
+- Assistant Compression :
+   - Correction d’un problème avec l’Assistant Gestion de la compression pour les index. Correction du problème empêchant les Assistants Compression des données de fonctionner sur SQL 2016 et versions antérieures.
+        https://connect.microsoft.com/SQLServer/feedback/details/3139342
+   - Ajout d’un Assistant Compression pour les tables et index Azure.
+- Plan d’exécution de requêtes : 
+   - Correction d’un problème où les opérateurs PDW n’étaient pas reconnus.
+- Propriétés du serveur :
+   - Correction d’un problème qui empêchait la modification de l’affinité des processeurs de serveur.
+
+
+**Analysis Services (AS)**
+
+- Correction de plusieurs problèmes avec l’Assistant Déploiement pour prendre en charge les modèles tabulaires de niveau de compatibilité 1400 et les sources de données Power Query.
+- L’Assistant Déploiement peut maintenant être déployé sur Azure AS lors de l’exécution à partir de la ligne de commande.
+- S’il a choisi l’authentification Windows dans Azure AS, l’utilisateur voit désormais le nom de son compte d’utilisateur correctement affiché dans l’Explorateur d’objets.
+
+
+### <a name="known-issues-in-this-173-release"></a>Problèmes connus dans cette version 17.3 :
+
+**SSMS général**
+
+- Les fonctionnalités SSMS suivantes ne sont pas prises en charge pour l’authentification Azure AD qui utilise l’agent utilisateur avec MFA :
+   - L’Assistant Paramétrage du moteur de base de données n’est pas pris en charge pour l’authentification Azure AD. Il existe un problème connu où le message d’erreur présenté à l’utilisateur n’est pas très clair : « Impossible de charger le fichier ou l’assembly 'Microsoft.IdentityModel.Clients.ActiveDirectory,... » au lieu du message attendu : « L’Assistant Paramétrage du moteur de base de données ne prend pas en charge Microsoft Azure SQL Database. (DTAClient) ».
+- La tentative d’analyse d’une requête dans les résultats DTA provoque une erreur : « L’objet doit implémenter IConvertible. mscorlib ».
+- L’option *Requêtes régressées* ne figure pas dans la liste Magasin des requêtes des rapports affichés dans l’Explorateur d’objets.
+   - Solution de contournement : cliquez avec le bouton droit sur le nœud **Magasin des requêtes** et sélectionnez **Afficher les requêtes régressées**.
+
+**Integration Services (IS)**
+
+- Le paramètre [execution_path] dans [catalog].[event_message] n’est pas correct pour les exécutions de package dans Scale Out. [execution_path] commence par « \Package » au lieu du nom d’objet du package exécutable. Quand vous affichez le rapport Vue d’ensemble des exécutions de package dans SSMS, le lien « Chemin d’accès de l’exécution » dans Vue d’ensemble de l’exécution ne fonctionne pas. Solution de contournement : cliquez sur « Afficher les messages » dans le rapport Vue d’ensemble pour vérifier tous les messages d’événement.
+
+
+## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
+
+Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes.
+
+## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponibilité générale | Numéro de build : 14.0.17177.0
 
 ### <a name="enhancements"></a>Améliorations
@@ -77,11 +172,11 @@ Disponibilité générale | Numéro de build : 14.0.17177.0
   - Utiliser Ctrl+F
 
 
-### <a name="analysis-services-as"></a>Analysis Services (AS)
+**Analysis Services (AS)**
 
 - Une nouvelle sélection de membre du rôle AAD a été ajoutée pour les utilisateurs sans adresse e-mail dans les modèles Azure AS dans SSMS
 
-### <a name="integration-services-is"></a>Integration Services (IS)
+**Integration Services (IS)**
 
 - Ajout d’une nouvelle colonne (« Nombre d’exécutions ») dans le rapport d’exécution de SSIS
 
@@ -100,7 +195,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - Le composant **Serveur inscrit** ne prend pas en charge l’authentification Azure AD.
   - L’**Assistant Paramétrage du moteur de base de données** n’est pas pris en charge pour l’authentification Azure AD. Il existe un problème connu où le message d’erreur présenté à l’utilisateur est loin d’être utile : *Impossible de charger le fichier ou l’assembly ’Microsoft.IdentityModel.Clients.ActiveDirectory,...* au lieu du message attendu : *L’Assistant Paramétrage du moteur de base de données ne prend pas en charge Microsoft Azure SQL Database. (DTAClient)* .
 
-**AS**
+**Analysis Services (AS)**
 
 - L’Explorateur d’objets dans SSAS n’affiche pas le nom d’utilisateur de l’authentification Windows dans les propriétés de connexion d’Azure AS.
 
@@ -140,7 +235,8 @@ The connection is broken and recovery is not possible. The client driver attempt
 - DTA : Correction d’un problème où DTAEngine.exe se terminait avec une altération du tas lors de l’évaluation de la fonction de partition avec certaines valeurs limites.
 
 
-Analysis Services (AS)
+**Analysis Services (AS)**
+
 - Correction d’un problème où la commande AS Restaurer la base de données échouait avec une erreur si la base de données avait un nom différent de l’ID
 - Correction d’un problème où la fenêtre de requête DAX ignorait l’option de menu permettant d’activer/désactiver IntelliSense activé
 - Correction d’un problème qui empêchait de se connecter à SSAS avec des adresses http/https msmdpump IIS
@@ -149,14 +245,9 @@ Analysis Services (AS)
 - Correction d’un problème très rare où la boîte de dialogue de suppression de base de données levait une erreur lors du chargement
 - Correction d’un problème qui pouvait se produire quand vous tentiez d’afficher des partitions dans le modèle de niveau de compatibilité 1400 contenant un mélange de définitions de requête SQL et de partition M
 
-Integration Services (IS)
+**Integration Services (IS)**
 - Correction d’un problème où il était impossible d’afficher les rapports d’informations sur l’exécution du catalogue SSISDB
 - Correction de problèmes dans SSMS relatifs aux performances médiocres liées à un grand nombre de projets/packages
-
-
-## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
-
-Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Disponibilité générale | Numéro de build : 14.0.17119.0
