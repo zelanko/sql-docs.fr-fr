@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez le Code de Visual Studio pour créer et exécuter des scripts Transact-SQL pour SQL Server
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 Cette rubrique montre comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
 
-Code Visual Studio est un éditeur de code graphique pour Linux et Windows qui prend en charge les extensions macOS. Le [**mssql** extension VS Code] vous permet de se connecter à SQL Server, la requête avec Transact-SQL (T-SQL) et afficher les résultats.
+Code Visual Studio est un éditeur de code graphique pour Linux et Windows qui prend en charge les extensions macOS. Le [ **mssql** extension VS Code] vous permet de se connecter à SQL Server, la requête avec Transact-SQL (T-SQL) et afficher les résultats.
 
 ## <a name="install-vs-code"></a>Installer Visual Studio Code
 1. Si vous n’avez pas déjà installé Visual Studio Code, [télécharger et installer VS Code] sur votre ordinateur.
@@ -256,7 +256,7 @@ Pour plus d’informations sur l’utilisation ou qui ont contribué à l’exte
 
 Pour plus d’informations sur l’utilisation de Code de Visual Studio, consultez le [documentation de Visual Studio Code](https://code.visualstudio.com/docs).
 
-[** mssql ** extension VS Code]:https://aka.ms/mssql-marketplace
+[** mssql ** extension pour le Code de Visual Studio]:https://aka.ms/mssql-marketplace
 [télécharger et installer VS Code]:https://code.visualstudio.com/Download
 [.Net des instructions de base]:https://www.microsoft.com/net/core
 [gérer les profils de connexion]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles

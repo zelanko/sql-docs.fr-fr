@@ -17,11 +17,11 @@ caps.latest.revision: 50
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1de1c7d6881885035eaa3537ff287a7b45857485
+ms.translationtype: HT
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: d933bccabc8db140dd3807741cdb044f8a1f87ff
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="sample-table-and-data-file"></a>Exemples de table et de fichier de données  
  Les exemples suivants nécessitent une table nommée `myTestSkipCol` dans la base de données exemple [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sous le schéma **dbo** . Créez cette table comme suit :  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTestSkipCol   
@@ -48,7 +48,6 @@ GO
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
-  
 ```  
   
  Pour importer des données en bloc depuis `myTestSkipCol2.dat` dans la table `myTestSkipCol` , le fichier de format doit mapper le premier champ de données à `Col1`, le deuxième champ à `Col3`, en ignorant `Col2`.  
@@ -59,7 +58,7 @@ GO
 ### <a name="creating-a-default-non-xml-format-file"></a>Création d'un fichier de format non XML par défaut  
  Cette rubrique utilise le fichier de format non-XML par défaut créé pour l’exemple de table `myTestSkipCol` en faisant appel à la commande **bcp** suivante :  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c -T  
 ```  
   
@@ -109,7 +108,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
 #### <a name="using-bulk-insert"></a>Utilisation de BULK INSERT  
  Cet exemple décrit l'utilisation de l'un ou l'autre des fichiers de format non XML modifiés et créés dans la section « Méthodes de modification d'un fichier de format non XML », plus haut dans cette rubrique. Dans cet exemple, le fichier de format modifié est intitulé `C:\myTestSkipCol2.fmt`. Pour utiliser `BULK INSERT` afin d'importer en bloc le fichier de données `myTestSkipCol2.dat` , exécutez le code suivant dans l'éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BULK INSERT myTestSkipCol   
@@ -123,20 +122,20 @@ GO
 ## <a name="using-an-xml-format-file"></a>Utilisation d'un fichier de format XML  
  Avec un fichier de format XML, vous ne pouvez pas ignorer une colonne lorsque vous procédez à une importation directement dans une table à l’aide d’une commande **bcp** ou d’une instruction BULK INSERT. Néanmoins, vous pouvez importer toutes les colonnes d'une table hormis la dernière. Pour ignorer toutes les colonnes à l'exception de la dernière, vous devez créer une vue de la table cible contenant uniquement les colonnes figurant dans le fichier de données. Vous pouvez ensuite importer en bloc les données de ce fichier dans la vue.  
   
- Pour utiliser un fichier de format XML afin d'ignorer une colonne de table à l'aide de OPENROWSET(BULK...), vous devez fournir une liste explicite des colonnes dans la liste de sélection mais aussi dans la table cible, comme ci-dessous :  
+ Pour utiliser un fichier de format XML afin d'ignorer une colonne de table à l'aide de OPENROWSET(BULK...), vous devez fournir une liste explicite des colonnes dans la liste de sélection mais aussi dans la table cible, comme ci-dessous :  
   
  INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)  
   
 ### <a name="creating-a-default-xml-format-file"></a>Création d'un fichier de format XML par défaut  
  Les exemples de fichiers de format modifiés sont basés sur l'exemple de table `myTestSkipCol` et de fichier de données créés dans la section « Exemple de table et de fichier de données », plus haut dans cette rubrique. La commande **bcp** suivante crée un fichier de format XML par défaut pour la table `myTestSkipCol` :  
   
-```  
+```cmd
 bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c -x -T  
 ```  
   
  Le fichier de format non XML par défaut résultant décrit une correspondance unique entre les champs données-fichier et les colonnes de table de la manière suivante :  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -158,7 +157,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 ### <a name="examples"></a>Exemples  
  Les exemples de cette section utilisent l'exemple de table `myTestSkipCol` et l'exemple de fichier de données `myTestSkipCol2.dat` de la section « Exemple de table et de fichier de données », plus haut dans cette rubrique. Pour effectuer l'importation de `myTestSkipCol2.dat` dans la table `myTestSkipCol` , les exemples font appel au fichier de format XML modifié, `myTestSkipCol2-x.xml`. Ces exemples sont basés sur le fichier de format créé dans la section « Création d'un fichier de format XML par défaut », plus haut dans cette rubrique.  
   
-```  
+```xml
 \<?xml version="1.0"?>  
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
@@ -177,7 +176,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 INSERT INTO myTestSkipCol  
@@ -194,7 +193,7 @@ GO
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
-```tsql  
+```sql  
 CREATE VIEW v_myTestSkipCol AS  
     SELECT Col1,Col3  
     FROM myTestSkipCol;  
