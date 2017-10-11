@@ -81,7 +81,7 @@ Pour plus d'informations sur la création d'abonnements à Oracle et IBM DB2, co
   
     -   Sur Oracle, un serveur a au plus une base de données, il n'est donc pas nécessaire de la spécifier.  
   
-    -   Pour IBM DB2, la base de données est spécifiée dans la chaîne de connexion DB2. Pour plus d’informations, voir [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+    -   Pour IBM DB2, la base de données est spécifiée dans la chaîne de connexion DB2. Pour plus d’informations, voir [Créer un abonnement pour un Abonné non-SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 -   Si le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est exécuté sur une plateforme 64 bits, vous devez utiliser la version 64 bits du fournisseur OLE DB approprié.  
   
