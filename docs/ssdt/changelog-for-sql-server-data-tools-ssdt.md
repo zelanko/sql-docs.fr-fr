@@ -1,7 +1,7 @@
 ---
 title: Journal des modifications de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
-ms.date: 08/23/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,107 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
-Ce journal des modification est pour [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
+Ce journal des modifications concerne [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 pour Visual Studio 2015
+Numéro de build : 14.0.61709.290
+
+### <a name="whats-new"></a>Nouveautés
+
+**Analysis Services (AS)**
+
+- Cosmos DB et HDI Spark sont activés dans les modèles 1400.
+- Propriétés des sources de données tabulaires.
+- L’option « Requête vide » est maintenant disponible quand vous créez une requête dans l’éditeur de requête pour les modèles de niveau de compatibilité 1400.
+- L’éditeur de requête pour les modèles 1400 permet désormais d’enregistrer des requêtes sans nouvelles tables traitées automatiquement.
+
+**Reporting Services (RS)**
+
+- Maintenant, les projets affichent à l’ouverture une invite de mise à niveau du format pour prendre en charge les opérations de génération et de déploiement à l’aide de MSBuild.
+
+### <a name="known-issues"></a>Problèmes connus
+
+**Analysis Services (AS)**
+
+- Les modèles de niveau de compatibilité 1400 en mode Direct Query qui ont des perspectives échouent lors de l’interrogation ou la découverte des métadonnées.
+
+**Reporting Services (RS)**
+
+- Le nouveau format de projet de rapport ne conserve pas la liaison du contrôle de code source et génère une erreur semblable à ce message :
+
+   *Le fichier projet C:\path n’est pas lié au contrôle de code source, mais la solution contient des informations de liaison du contrôle de code source.*
+ 
+   Pour contourner ce problème, cliquez sur **Utiliser la liaison de solution** à chaque ouverture de la solution.
+
+- Après la mise à niveau de votre projet au nouveau format MSBuild, la sauvegarde peut échouer avec un message semblable à celui-ci :
+
+   *« Le paramètre 'unevaluatedValue' ne peut pas être Null. »*
+
+   Pour contourner ce problème, mettez à jour vos *Configurations de projet* et définissez la propriété *Plateforme*.
+
+### <a name="bug-fixes"></a>Correctifs de bogues
+
+**Analysis Services (AS)**
+
+- Nette amélioration des performances lors du chargement de la vue de diagramme du modèle tabulaire.
+- Correction de certains problèmes pour améliorer l’intégration et l’utilisation de Power Query dans les modèles de niveau de compatibilité 1400.
+   - Correction d’un problème qui empêchait la modification des autorisations pour les sources de fichiers.
+   - Correction d’un problème qui empêchait le changement de source de fichiers.
+   - Correction d’un problème qui provoquait l’affichage d’une interface utilisateur incorrecte pour les sources de fichiers.
+- Correction d’un problème qui provoquait la suppression de la propriété « JoinOnDate » quand une relation « Joindre sur la date » était rendue inactive.
+- L’option Nouvelle requête dans le Générateur de requêtes permet maintenant de créer une requête vide.
+- Correction d’un problème qui empêchait la mise à jour de la définition du modèle de la table de niveau de compatibilité 1400 quand une requête de source de données existante était modifiée.
+- Correction de problèmes liés aux expressions de contexte personnalisé qui pouvaient déclencher des exceptions.
+- Quand une nouvelle table est importée avec un nom dupliqué dans des modèles tabulaires 1400, l’utilisateur est maintenant averti qu’un conflit de noms a été détecté et que le nom a été modifié pour être unique.
+- Le mode d’emprunt d’identité de l’utilisateur actuel a été supprimé dans les modèles en mode Importation, car ce scénario n’est pas pris en charge.
+- L’intégration de Power Query prend maintenant en charge les options pour les sources de données supplémentaires (OData.Feed, Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
+- Les chaînes des options Power Query pour les sources de données affichent maintenant correctement le texte localisé selon les paramètres régionaux du client.
+- La vue de diagramme affiche maintenant les colonnes venant d’être créées à partir de l’éditeur de requête M dans les modèles de niveau de compatibilité 1400.
+- L’éditeur Power Query comporte à présent une option pour ne pas importer les données.
+- Correction d’un problème avec l’installation d’une cartouche de données utilisée pour importer des tables Oracle dans des modèles multidimensionnels dans Visual Studio 2017.
+- Correction d’un problème qui pouvait exceptionnellement provoquer un incident quand le curseur de la souris quittait la barre de formule tabulaire.
+- Correction d’un problème dans la boîte de dialogue Modifier les propriétés de la table qui entraînait la modification incorrecte du nom de la table source à la suite de la modification du nom de table, ce qui générait une erreur inattendue.
+- Correction d’un incident qui pouvait se produire dans Visual Studio 2017 lors d’une tentative d’appel de Tester la sécurité du cube dans le concepteur de l’onglet Données des cellules du concepteur de rôles dans les projets multidimensionnels.
+- Les propriétés SSDT ne sont pas modifiables pour les sources de données tabulaires.
+- Correction d’un problème qui pouvait empêcher le bon fonctionnement des builds MSBuild et DevEnv dans certains cas avec des fichiers de solution.
+- Nette amélioration des performances au moment de la validation des modifications de modèle (modifications DAX pour les mesures, les colonnes calculées) pour les modèles tabulaires contenant des métadonnées volumineuses.
+- Correction de plusieurs problèmes avec l’utilisation de Power Query pour importer des données dans des modèles tabulaires de niveau de compatibilité 1400.
+   - L’importation prend beaucoup de temps après que l’utilisateur a cliqué sur Importer, et l’interface utilisateur n’affiche pas d’état.
+   - Affichage d’une grande liste de tables dans la vue du navigateur quand vous tentez de sélectionner des tables très longues à importer.
+   - Diminution des performances de l’éditeur de requête lors de l’utilisation d’une liste de 35 requêtes dans la vue de l’éditeur de requête (problème également rencontré dans Power BI Desktop).
+   - L’importation de plusieurs tables entraînait la désactivation de la barre d’outils et ne finissait jamais dans certaines situations. 
+   - Le concepteur de modèle apparaissait désactivé et n’affichait pas de données après l’importation d’une table à l’aide de Power Query.
+   - Quand l’option « Créer une table » était désélectionnée dans l’interface utilisateur de Power Query, une nouvelle table était quand même créée.
+   - La source de données du dossier n’affichait pas d’invite d’informations d’identification. 
+   - Une exception « La référence d’objet n’est pas définie » pouvait être déclenchée lors d’une tentative d’obtention des informations d’identification mises à jour sur la source de données structurées.
+   - L’ouverture du Gestionnaire de partition avec une expression M était très lente.
+   - La sélection de l’option Propriétés de la table dans l’éditeur Power Query n’affichait pas les propriétés.
+- Amélioration de la robustesse dans l’intégration de l’interface utilisateur Power Query pour intercepter les exceptions de premier niveau et les afficher dans la fenêtre Sortie.
+- Correction d’un problème avec ChangeSource sur la source de données structurées qui ne conservait pas les changements avec l’expression de contexte.
+- Correction d’un problème où les erreurs d’expression M pouvaient entraîner des échecs de mise à jour du modèle sans message d’erreur.
+- Correction d’un problème à la fermeture de SSDT qui provoquait l’erreur « La génération doit être arrêtée avant la fermeture de la solution ».
+- Correction d’un problème où Visual Studio peut sembler ne plus répondre lors de la définition d’un mode d’emprunt d’identité incorrect dans un modèle de niveau de compatibilité 1400. 
+- La propriété de lignes de détails est désormais uniquement sérialisée dans JSON quand elle n’est pas vide (changement de la valeur par défaut)
+- Le pilote Oracle OLEDB est maintenant proposé dans la liste pour le mode Direct Query tabulaire.
+- Les expressions M ajoutées dans les modèles tabulaires de niveau de compatibilité 1400 sont maintenant affichées et actualisées dans l’Explorateur de modèles tabulaires.
+- Correction d’un problème qui empêchait l’affichage du fournisseur MSOLAP dans Visual Studio 2017 lors d’une tentative d’importation avec une source de données « Autre » dans des modèles de niveau de compatibilité antérieur à 1400.
+- Correction d’un problème où l’ajout d’une translation via l’Explorateur de modèles tabulaires pouvait provoquer des erreurs. 
+- Correction d’un problème dans l’interface de la sécurité au niveau des objets qui provoquait l’affichage ou le masquage incorrect de l’onglet dans certains cas.
+- Correction d’un problème qui pouvait provoquer l’échec des tentatives d’ouverture d’un modèle multidimensionnel précédemment chargé à l’aide de la boîte de dialogue Connexion à une base de données.
+- Correction d’un problème qui provoquait une erreur lors de l’ajout d’assemblys personnalisés à un modèle multidimensionnel.
+
+**Reporting Services (RS)**
+
+- Correction d’un problème avec la compilation et la build de RDLC dans Visual Studio 2017.
 
 ## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>SSDT pour Visual Studio 2017 (15.3.0 en préversion)
 Numéro de build : 14.0.16121.0
@@ -169,7 +260,7 @@ Numéro de build : 14.0.61704.140
 - Tabulaire : Améliorations et correctifs de performances pour l’analyse et la barre de formules DAX.
 - Tabulaire : L’Explorateur de modèles tabulaires ne sera plus visible si aucun projet tabulaire SSAS n’est ouvert.
 - Multidimensionnel : Résolution d’un problème où la boîte de dialogue de traitement était inutilisable sur les machines avec écran haute résolution.
-- Tabulaire : Résolution d’un problème d’erreur de SSDT à l’ouverture de projets BI quand SSMS est déjà ouvert. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabulaire : Résolution d’un problème d’erreur de SSDT à l’ouverture de projets BI quand SSMS est déjà ouvert. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabulaire : Résolution d’un problème où les hiérarchies n’étaient pas correctement enregistrées dans le fichier BIM dans un modèle 1103. [Article de Microsoft Connect](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabulaire : Résolution d’un problème où le mode Espace de travail intégré était autorisé sur les ordinateurs 32 bits alors qu’il n’est pas pris en charge.
 - Tabulaire : Résolution d’un problème où le fait de cliquer sur quoi que ce soit en mode de semi-sélection (par exemple en tapant une expression DAX mais en cliquant sur une mesure) peut provoquer des blocages.

@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
@@ -111,7 +111,7 @@ Les développeurs SQL Server ont désormais accès aux bibliothèques Python ML 
 - **microsoftml** : ce package de pointe d’algorithmes et de transformations Machine Learning avec des liaisons Python inclut des réseaux neuronaux profonds, des arbres de décision et des forêts d’arbres décisionnels rapides, ainsi que des algorithmes optimisés pour les régressions linéaires et logistiques. Vous disposez également de modèles dont l’apprentissage a déjà été effectué. Basés sur les modèles ResNet, ils sont utiles pour l’extraction d’images ou l’analyse des sentiments.
 - **Mise en œuvre de Python avec T-SQL** : déployez facilement du code Python à l’aide de la procédure stockée `sp_execute_external_script`. Bénéficiez d’excellentes performances en diffusant par streaming des données provenant de SQL à destination de processus Python et en utilisant la parallélisation des anneaux MPI.
 - **Python dans les contextes de calcul SQL Server** : les scientifiques des données et les développeurs peuvent exécuter du code Python à distance à partir de leurs environnements de développement pour explorer des données et développer des modèles sans déplacer les données.
-- **Calcul de score en natif** : la fonction PREDICT dans Transact-SQL peut être utilisée pour effectuer le calcul de score dans n’importe quelle instance de SQL Server 2017, même si R n’est pas installé. Il vous suffit d’effectuer l’apprentissage du modèle à l’aide d’un des algorithmes RevoScaleR et revoscalepy pris en charge et d’enregistrer le modèle dans un nouveau format binaire compact.
+- **Calcul de score en natif** : la fonction PREDICT dans Transact-SQL peut être utilisée pour effectuer le calcul de score dans n’importe quelle instance de SQL Server 2017, même si R n’est pas installé. Il vous suffit d’effectuer l’apprentissage du modèle à l’aide d’un des algorithmes RevoScaleR et revoscalepy pris en charge, et d’enregistrer le modèle dans un nouveau format binaire compact.
 - **Gestion des packages** : T-SQL prend désormais en charge l’instruction CREATE EXTERNAL LIBRARY pour permettre aux administrateurs de base de données de mieux gérer les packages R. Utilisez les rôles pour contrôler l’accès à un package privé ou partagé, stocker des packages R dans la base de données et les partager entre les utilisateurs.
 - **Améliorations des performances** : la procédure stockée `sp_execute_external_script` a été optimisée pour prendre en charge l’exécution en mode de traitement par lots pour les données columnstore.
 
