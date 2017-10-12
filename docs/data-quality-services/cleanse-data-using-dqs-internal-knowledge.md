@@ -49,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Create"></a> Créer un projet de qualité des données pour le nettoyage  
  Vous devez utiliser un projet de qualité des données pour effectuer une opération de nettoyage des données. Pour créer un projet de qualité des données pour le nettoyage :  
   
-1.  Suivez les étapes 1 à 3 dans la rubrique [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
+1.  Suivez les étapes 1 à 3 dans la rubrique [Créer un projet de qualité des données](../data-quality-services/create-a-data-quality-project.md).  
   
 2.  À l'étape 3.d, sélectionnez l'activité **Nettoyage** .  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/09/2017
 2.  Sous **Mappages**, mappez les colonnes de données de vos données sources avec les domaines appropriés dans la base de connaissances en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** , puis en sélectionnant un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne. Répétez cette étape pour mapper toutes les colonnes de vos données sources avec les domaines appropriés dans la base de connaissances. Si nécessaire, vous pouvez cliquer sur l'icône **Ajouter un mappage de colonnes** pour ajouter des lignes à la table de mappage.  
   
     > [!NOTE]  
-    >  Vous pouvez mapper vos données source à un domaine DQS pour effectuer un nettoyage des données uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données source pris en charge, consultez [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Vous pouvez mapper vos données source à un domaine DQS pour effectuer un nettoyage des données uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données source pris en charge, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 3.  Cliquez sur l'icône **Aperçu de la source de données** pour afficher les données de la table ou vue SQL Server que vous avez sélectionnée, ou la feuille de calcul Excel que vous avez sélectionnée.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 09/09/2017
     >   
     >      Dans les deux cas, cliquez sur **Oui** pour utiliser la base de connaissances mise à jour pour le nettoyage assisté par ordinateur. En outre, s'il y a des conflits entre les mappages actuels et la base de connaissances mise à jour (tels que des domaines supprimés ou un type de données de domaine modifié), le message vous demande également de corriger les mappages actuels pour utiliser la base de connaissances mise à jour. Le fait de cliquer sur **Oui** permet d'accéder à la page **Mapper** où vous pouvez corriger les mappages avant de poursuivre le nettoyage assisté par ordinateur.  
   
-2.  Au cours de l'étape de nettoyage assisté par ordinateur, vous pouvez basculer vers le Générateur de profils en cliquant sur l'onglet **Générateur de profils** pour afficher les notifications et le profilage des données en temps réel. Pour plus d’informations, consultez [Profiler Statistics](#Profiler).  
+2.  Au cours de l'étape de nettoyage assisté par ordinateur, vous pouvez basculer vers le Générateur de profils en cliquant sur l'onglet **Générateur de profils** pour afficher les notifications et le profilage des données en temps réel. Pour plus d’informations, consultez [Statistiques du Générateur de profils](#Profiler).  
   
 3.  Si vous n'êtes pas satisfait des résultats obtenus, cliquez sur **Précédent** pour revenir à la page **Mapper** , modifiez un ou plusieurs mappages en fonction des besoins, retournez à la page **Nettoyer** , puis cliquez sur **Redémarrer**.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  La fonctionnalité de vérificateur d'orthographe est disponible uniquement dans le volet supérieur (valeurs de domaine). De plus, vous ne pouvez pas activer ou désactiver le vérificateur d'orthographe pour les domaines composites. Les domaines enfants d'un domaine composite qui sont de type chaîne, et pour lesquels la fonctionnalité de vérificateur d'orthographe est activée, ont la fonctionnalité de vérificateur d'orthographe activée par défaut à l'étape de nettoyage interactif.  
   
-4.  Au cours de l'étape de nettoyage interactif, vous pouvez basculer vers le Générateur de profils en cliquant sur l'onglet **Générateur de profils** pour afficher les notifications et le profilage des données en temps réel. Pour plus d’informations, consultez [Profiler Statistics](#Profiler).  
+4.  Au cours de l'étape de nettoyage interactif, vous pouvez basculer vers le Générateur de profils en cliquant sur l'onglet **Générateur de profils** pour afficher les notifications et le profilage des données en temps réel. Pour plus d’informations, consultez [Statistiques du Générateur de profils](#Profiler).  
   
 5.  Après avoir examiné toutes les valeurs de domaine, cliquez sur **Suivant** à passer à l'étape d'exportation.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 09/09/2017
   
     3.  **Fichier Excel**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier Excel où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
-2.  Activez la case à cocher **Normaliser la sortie** pour normaliser la sortie en fonction du format de sortie sélectionné pour le domaine. Par exemple, mettez la valeur de chaîne en majuscules ou mettez une majuscule à la première lettre du mot. Pour plus d'informations sur la spécification du format de sortie d'un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+2.  Activez la case à cocher **Normaliser la sortie** pour normaliser la sortie en fonction du format de sortie sélectionné pour le domaine. Par exemple, mettez la valeur de chaîne en majuscules ou mettez une majuscule à la première lettre du mot. Pour plus d'informations sur la spécification du format de sortie d'un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
   
 3.  Ensuite, sélectionnez la sortie de données : exportez uniquement les données nettoyées ou exportez les données nettoyées ainsi que les informations relatives au nettoyage.  
   
@@ -228,6 +228,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Le niveau de précision du champ est très faible. Vous pouvez vérifier le mappage, ou envisager d'exécuter d'abord une découverte des connaissances.  
   
- Pour plus d'informations sur le profilage, consultez [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Pour plus d'informations sur le profilage, consultez [Profilage des données et notifications dans DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   

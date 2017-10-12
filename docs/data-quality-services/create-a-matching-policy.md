@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  Sous **Mappages**, sélectionnez un champ de la source de données pour **Colonne source**, puis sélectionnez le domaine correspondant. Répétez ces étapes pour tous les domaines que vous utilisez dans le processus de correspondance. Créez des domaines, si nécessaire, en cliquant sur **Créer un domaine** ou sur **Créer un domaine composite**.  
   
     > [!NOTE]  
-    >  Vous pouvez mapper vos données source à un domaine DQS lors de la création d'une stratégie de correspondance uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Vous pouvez mapper vos données source à un domaine DQS lors de la création d'une stratégie de correspondance uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 5.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (–)** pour en supprimer une.  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. Cliquez sur **Annuler** pour mettre fin à l'activité Stratégie de correspondance, auquel cas vous perdrez votre travail, et revenir à la page d'accueil de DQS.  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir créé une stratégie de correspondance  
- Après avoir créé une stratégie de correspondance, vous pouvez exécuter un projet de correspondance basé sur la base de connaissances qui contient la stratégie de correspondance. Pour plus d’informations, consultez [Run a Matching Project](../data-quality-services/run-a-matching-project.md).  
+ Après avoir créé une stratégie de correspondance, vous pouvez exécuter un projet de correspondance basé sur la base de connaissances qui contient la stratégie de correspondance. Pour plus d’informations, consultez [Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Onglets Générateur de profils et Résultats  
  Les onglets Générateur de profils et Résultats contiennent des statistiques pour les pages Stratégie de correspondance et Résultats de correspondance.  
