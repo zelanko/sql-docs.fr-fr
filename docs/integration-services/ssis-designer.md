@@ -1,5 +1,5 @@
 ---
-title: Le concepteur SSIS | Documents Microsoft
+title: Concepteur SSIS | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -32,27 +32,27 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] est un outil graphique permettant de créer et de gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , en tant que projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] est un outil graphique permettant de créer et de gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , en tant que projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Vous pouvez utiliser le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour effectuer les tâches suivantes :  
   
--   construire le flux de contrôle dans un package ;  
+-   Construire le flux de contrôle dans un package.  
   
--   construire les flux de données dans un package ;  
+-   Construire les flux de données dans un package.  
   
--   ajouter des gestionnaires d'événements au package et aux objets du package ;  
+-   Ajouter des gestionnaires d'événements au package et aux objets du package.  
   
--   afficher le contenu du package ;  
+-   Afficher le contenu du package.  
   
--   au moment de l'exécution, afficher la progression de l'exécution du package.  
+-   Au moment de l’exécution, afficher la progression de l’exécution du package.  
   
- Le diagramme qui suit montre le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et la fenêtre **Boîte à outils** .  
+ Le diagramme qui suit montre le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et la fenêtre **Boîte à outils**.  
   
- ![Capture d’écran de SSIS Designer et la boîte à outils](../integration-services/media/denali-designerandtoolbox.gif "capture d’écran de SSIS Designer et la boîte à outils")  
+ ![Capture d’écran du concepteur SSIS et de la boîte à outils](../integration-services/media/denali-designerandtoolbox.gif "Capture d’écran du concepteur SSIS et de la boîte à outils")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des boîtes de dialogue et des fenêtres supplémentaires permettant d'ajouter des fonctionnalités aux packages, tandis que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en propose d'autres pour configurer l'environnement de développement et l'utilisation de packages. Pour plus d’informations, consultez [Interface utilisateur d’Integration Services](../integration-services/integration-services-user-interface.md).  
   
@@ -158,7 +158,7 @@ Utilisez l'onglet **Flux de données** du concepteur [!INCLUDE[ssIS](../includes
  **Delete**  
  Sélectionnez un gestionnaire d’événements et supprimez-le du package en cliquant sur **Supprimer**.  
   
- **Cliquez ici pour créer un \<nom du Gestionnaire d’événements\> pour le fichier exécutable \<nom de l’exécutable\>**  
+ **Cliquez ici pour créer un \<nom de gestionnaire d’événements\> pour le fichier exécutable \<nom du fichier exécutable\>**  
  Cliquez pour créer le gestionnaire d'événements.  
   
  Pour créer le flux de contrôle, faites glisser les objets graphiques qui représentent les tâches et les conteneurs [!INCLUDE[ssIS](../includes/ssis-md.md)] de la **Boîte à outils** vers l’onglet **Gestionnaires d’événements** , puis connectez-les en utilisant des contraintes de priorité pour définir leur ordre d’exécution.  
@@ -170,7 +170,7 @@ Utilisez l'onglet **Explorateur de package** du Concepteur [!INCLUDE[ssIS](../in
   
  Cliquez avec le bouton droit sur un élément du package, puis cliquez sur **Propriétés** pour afficher les propriétés de l’élément dans la fenêtre **Propriétés** , ou cliquez sur **Supprimer** pour supprimer l’élément. 
  
-## <a name="progress-tab"></a>Onglet progression
+## <a name="progress-tab"></a>Onglet Progression
 Utilisez l'onglet **Progression** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour afficher la progression d'un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] exécuté dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. L'onglet **Progression** répertorie l'heure de début, l'heure de fin et le temps écoulé pour la validation et l'exécution du package et de ses exécutables, les informations ou les avertissements éventuels pour le package, les notifications sur la progression, la réussite ou l'échec du package et les messages d'erreur éventuels générés pendant l'exécution du package.  
   
  Pour activer ou désactiver l'affichage de messages sous l'onglet **Progression** , basculez l'option **Création de rapports de progression de débogage** dans le menu **SSIS** . La désactivation du rapport de progression peut aider à améliorer les performances lors de l'exécution d'un package complexe dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  

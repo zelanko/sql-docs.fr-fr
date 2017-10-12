@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **Magasin de requêtes**: Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, le magasin de requêtes est un outil pratique pour l’examen des performances de vos requêtes.  Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] (SSMS.exe), dans l’**Explorateur d’objets** situé sous le nœud de votre base de données, le nœud **Magasin de requêtes** s’affiche quand le magasin des requêtes est activé.  
+ **Magasin des requêtes** : Si vous utilisez [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le Magasin des requêtes est un outil pratique pour examiner les performances de vos requêtes. Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], dans l’**Explorateur d’objets** situé sous le nœud de votre base de données, le nœud **Magasin des requêtes** s’affiche quand le Magasin des requêtes est activé.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > Nous vous recommandons d’installer la dernière version de [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx) tous les mois.  
+ > Nous vous recommandons d’installer la dernière version de [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) et de la mettre souvent à jour.  
   
- Pour effectuer le suivi du processus de l’estimation de la cardinalité, vous pouvez utiliser l’événement étendu nommé **query_optimizer_estimate_cardinality**.  L’exemple de code T-SQL suivant s’exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un fichier .xel est écrit dans C:\Temp\ (vous pouvez modifier ce chemin). Lorsque vous ouvrez le fichier .xel dans SSMS, vous voyez des informations détaillées le concernant.  
+ Pour effectuer le suivi du processus de l’estimation de la cardinalité, vous pouvez utiliser l’événement étendu nommé **query_optimizer_estimate_cardinality**. L’exemple de code T-SQL suivant s’exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un fichier .xel est écrit dans C:\Temp\ (vous pouvez modifier ce chemin). Lorsque vous ouvrez le fichier .xel dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], vous voyez ses informations détaillées dans un affichage convivial.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Pour plus d’informations sur les événements étendus adaptés à Azure SQL Database, consultez [Événements étendus dans la base de données SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
+ Pour plus d’informations sur les événements étendus adaptés à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Événements étendus dans la base de données SQL](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>Étapes d’évaluation de la version d’estimation de la cardinalité  
@@ -151,7 +151,7 @@ go
   
     3.  Vérifiez dans votre base de données que la configuration `LEGACY_CARDINALITY_ESTIMATION` est désactivée.  
   
-    4.  Supprimez le contenu de votre magasin de requêtes. Vérifiez bien entendu que votre magasin de requêtes est activé.  
+    4.  Supprimez le contenu de votre Magasin des requêtes. Vérifiez bien entendu que votre Magasin des requêtes est activé.  
   
     5.  Exécutez l’instruction suivante : `SET NOCOUNT OFF;`  
   
@@ -215,13 +215,13 @@ Pour un plus grand contrôle, vous pouvez *forcer* le système SQL à utiliser l
   
 ### <a name="how-to-force-a-particular-query-plan"></a>Comment forcer un plan de requête  
   
-Le magasin de requêtes vous propose différentes façons de forcer le système à utiliser un plan de requête :  
+Le Magasin des requêtes vous propose différentes façons de forcer le système à utiliser un plan de requête :  
   
 - Exécutez **sp_query_store_force_plan**.  
   
-- Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], développez le nœud de votre **Magasin de requêtes**, cliquez avec le bouton droit sur **Principaux nœuds consommateurs de ressources**, puis cliquez sur **Afficher les principaux nœuds consommateurs de ressources**. L’affichage montre les boutons **Forcer le plan** et **Annuler l’obligation d’utiliser le plan**.  
+- Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], développez le nœud de votre **Magasin des requêtes**, cliquez avec le bouton droit sur **Principaux nœuds consommateurs de ressources**, puis cliquez sur **Afficher les principaux nœuds consommateurs de ressources**. L’affichage montre les boutons **Forcer le plan** et **Annuler l’obligation d’utiliser le plan**.  
   
- Pour plus d’informations sur le magasin de requêtes, consultez [Analyse des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+ Pour plus d’informations sur le Magasin des requêtes, consultez [Analyse des performances à l’aide du Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
   
 ## <a name="examples-of-ce-improvements"></a>Exemples d’améliorations apportées à l’estimation de la cardinalité  
@@ -271,6 +271,6 @@ SELECT s.ticket, s.customer, r.store
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)  
  [Indicateurs de requête](../../t-sql/queries/hints-transact-sql-query.md)  
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Analyse des performances à l'aide du Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)
 

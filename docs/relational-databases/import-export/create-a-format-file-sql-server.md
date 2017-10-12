@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  Pour plus d’informations sur l’utilisation des données de caractères Unicode, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>F. Utilisation d’un fichier de format avec l’option de page de code  
- Si vous créez un fichier de format à l’aide de la commande bcp (c’est-à-dire en utilisant « `bcp forma`t... » ), des informations sur la page de code/classement sont écrites dans le fichier de format.   
+Si vous créez un fichier de format à l’aide de la commande bcp (c’est-à-dire, en utilisant `bcp format`), les informations sur la page de code/classement sont écrites dans le fichier de format.   
 L’exemple de fichier de format pour table avec 5 colonnes suivant inclut le classement.  
   
 ```  

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guide d’architecture et gestion du journal des transactions SQL Server
@@ -67,7 +67,14 @@ ms.lasthandoff: 08/09/2017
  Le journal des transactions d'une base de données s'étend sur un ou plusieurs fichiers physiques. D'un point de vue conceptuel, le fichier journal est une chaîne d'enregistrements. D'un point de vue physique, la séquence des enregistrements du journal est stockée de façon efficace dans l'ensemble de fichiers physiques qui implémente le journal des transactions. Chaque base de données doit posséder au moins un fichier journal.  
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] divise chaque fichier journal physique en un certain nombre de fichiers journaux virtuels. La taille et le nombre de ces fichiers journaux virtuels sont variables. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] choisit dynamiquement la taille des fichiers journaux virtuels en créant ou en étendant des fichiers journaux. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] essaie de ne conserver qu’un petit nombre de fichiers virtuels. Après une extension du fichier journal, la taille des fichiers virtuels est la somme de la taille du journal existant et de la taille du nouvel incrément de fichier. La taille et le nombre des fichiers journaux virtuels ne peuvent être ni configurés, ni définis par les administrateurs.  
-  
+
+> [!NOTE]
+> La création du fichier journal virtuel suit cette méthode :
+> - Si la croissance suivante est inférieure à 1/8 de la taille physique actuelle du journal, 1 fichier journal virtuel qui couvre la taille de croissance est créé (à partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)])
+> - Si la croissance est inférieure à 64 Mo, 4 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 1 Mo, quatre fichiers journaux virtuels de 256 Ko sont créés)
+> - Si la croissance se situe entre 64 Mo et 1 Go, 8 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 512 Mo, huit fichiers journaux virtuels de 64 Mo sont créés)
+> - Si la croissance est supérieure à 1 Go, 16 fichiers journaux virtuels qui couvrent la taille de croissance sont créés (par exemple, pour une croissance de 8 Go, seize fichiers journaux virtuels de 512 Ko sont créés)
+
  Le seul moment où les fichiers journaux virtuels ont une incidence sur les performances du système est lorsque les valeurs *size* et *growth_increment* des fichiers journaux physiques sont faibles. La valeur *size* correspond à la taille initiale du fichier journal et la valeur *growth_increment* correspond à la quantité d’espace ajoutée au fichier chaque fois qu’un espace supplémentaire s’avère nécessaire. Si la taille des fichiers journaux s'accroît par de petits incréments, de nombreux fichiers journaux virtuels vont être créés, ce qui peut ralentir le démarrage de la base de données ainsi que les opérations de sauvegarde et de restauration. Il est conseillé d’affecter aux fichiers journaux une valeur *size* proche de la taille finale souhaitée et une valeur *growth_increment* relativement importante. Pour plus d’informations sur ces paramètres, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
  Le journal des transactions est un fichier cumulatif. Considérons, par exemple, une base de données possédant un fichier journal physique divisé en quatre fichiers journaux virtuels. Lors de la création de la base de données, le fichier journal logique commence au début du fichier journal physique. Les nouveaux enregistrements du journal sont ajoutés à la fin du journal logique, qui s'étend vers la fin du journal physique. Le fait de tronquer le journal permet de libérer tous les journaux virtuels dont les enregistrements précèdent tous le MinLSN (numéro séquentiel dans le journal minimum). Le *MinLSN* est le numéro séquentiel dans le journal du plus ancien enregistrement du journal requis pour une opération de restauration réussie de l’ensemble de la base de données. Le journal des transactions de la base de données exemple ressemblerait à celui de l'illustration suivante :  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Si le paramètre FILEGROWTH est activé pour le journal et que l’espace disque est suffisant, le fichier s’étend en fonction de la taille spécifiée dans le paramètre *growth_increment*, les nouveaux enregistrements du journal étant ajoutés à l’extension. Pour plus d’informations sur le paramètre FILEGROWTH, consultez [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
--   Si le paramètre FILEGROWTH n’est pas activé ou si l’espace disque réservé au fichier journal est inférieur à la taille spécifiée dans le paramètre *growth_increment*, l’erreur 9002 est générée.  
+-   Si le paramètre FILEGROWTH n’est pas activé ou si l’espace disque réservé au fichier journal est inférieur à la taille spécifiée dans le paramètre *growth_increment*, l’erreur 9002 est générée. Pour plus d’informations, consultez [Résoudre les problèmes liés à un journal des transactions saturé](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
  Si le journal contient plusieurs fichiers journaux physiques, le journal logique va se déplacer dans tous les fichiers journaux physiques avant de revenir au début du premier fichier journal physique.  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  La troncation du journal peut être retardée pour différents motifs. En cas de retard prolongé de la troncation du journal, le journal des transactions peut se remplir complètement. Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) et [Résoudre les problèmes liés à un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
 ##  <a name="WAL"></a> Journal des transactions à écriture anticipée  
- Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un journal WAL (write-ahead log) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
+ Cette section décrit le rôle que joue le journal des transactions à écriture anticipée (journal WAL) au niveau de l'enregistrement sur disque des modifications apportées aux données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un algorithme WAL (write-ahead logging) qui garantit qu’aucune modification de données n’est écrite sur le disque avant l’écriture du journal associé sur celui-ci. Ainsi, les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) d'une transaction sont conservées.  
   
  Pour comprendre le fonctionnement du journal à écriture anticipée, il est important que vous sachiez comment les données modifiées sont écrites sur le disque. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gère un cache des tampons dans lequel il lit les pages de données lorsque celles-ci doivent être extraites. Lorsqu’une page est modifiée dans le cache des tampons, elle n’est pas réécrite immédiatement sur le disque, mais elle est marquée comme *erronée*. Une page peut avoir plusieurs écritures logiques avant son écriture physique sur le disque. Pour chaque écriture logique, un enregistrement du journal des transactions est inséré dans le cache du journal qui enregistre la modification. L'enregistrement doit être écrit sur le disque avant que la page de modifications associée n'ait été supprimée du cache et écrite sur le disque. Le processus de point de contrôle analyse régulièrement le cache à la recherche de tampons contenant des pages issues d'une base de données spécifiée et écrit toutes les pages de modifications sur le disque. Les points de contrôle permettent une récupération ultérieure du système en créant un point où toutes les pages de modifications sont effectivement écrites sur le disque.  
   
@@ -217,8 +224,11 @@ L'Agent de lecture du journal surveille le journal des transactions de chaque ba
 ## <a name="additional-reading"></a>Lecture supplémentaire  
  Pour plus d'informations sur le journal des transactions, nous vous recommandons de lire les articles et les ouvrages suivants.  
   
- [Fonctionnement de la journalisation et de la récupération dans SQL Server, par Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [Gérer la taille du fichier journal des transactions](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [Journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [Fonctionnement de la journalisation et de la récupération dans SQL Server, par Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [Gestion du journal des transactions SQL Server de Tony Davis et Gail Shaw](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
