@@ -33,16 +33,16 @@ ms.lasthandoff: 09/09/2017
  Cette liste affiche tous les domaines dans la base de connaissances. Les opérations que vous effectuez dans les pages à onglets dans le volet droit sont exécutées sur le domaine sélectionné dans la liste. Pour plus d'informations, consultez  
   
  **Créer un domaine composite**  
- Créez un nouveau domaine composite dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine composite** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
+ Créez un nouveau domaine composite dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine composite** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Créer un domaine composite](../data-quality-services/create-a-composite-domain.md).  
   
  **Créer un domaine**  
- Créez un nouveau domaine dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Create a Domain](../data-quality-services/create-a-domain.md).  
+ Créez un nouveau domaine dans la base de connaissances. Cette commande affiche la boîte de dialogue **Créer un domaine** . Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Créer un domaine](../data-quality-services/create-a-domain.md).  
   
  **Créer une copie du domaine sélectionné**  
  Créez une copie exacte du domaine sélectionné, puis ajoutez-la à la base de connaissances. Son nom est le nom du domaine à partir duquel elle a été créée, avec « – Copie » ajouté à la fin du nom. Cette commande est disponible en cliquant avec le bouton droit sur un domaine, puis en cliquant sur **Créer une copie**, ou en cliquant sur l'icône au-dessus de la liste des domaines. Elle n'est pas disponible pour un domaine composite.  
   
  **Importer un domaine à partir d'un fichier de données**  
- Importez un domaine à partir d'un fichier .dqs. Cette commande affiche la boîte de dialogue **Importer à partir d'un fichier de données** qui vous permet de parcourir le système de fichiers et de sélectionner un fichier .dqs pour un seul domaine ou un domaine composite. Cette commande est disponible en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Importer un domaine à partir d’un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md).  
+ Importez un domaine à partir d'un fichier .dqs. Cette commande affiche la boîte de dialogue **Importer à partir d'un fichier de données** qui vous permet de parcourir le système de fichiers et de sélectionner un fichier .dqs pour un seul domaine ou un domaine composite. Cette commande est disponible en cliquant sur l'icône au-dessus de la liste des domaines. Pour plus d’informations, consultez [Importez un domaine à partir d'un fichier .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md).  
   
  **Supprimer le domaine**  
  Supprimez le domaine sélectionné de la base de connaissances. Cette commande affiche la boîte de dialogue **SQL Server Data Quality Services** . Si vous cliquez sur **Oui**, le domaine et toutes ses données seront supprimés définitivement. Cette commande est disponible en cliquant avec le bouton droit sur un domaine ou en cliquant sur l'icône au-dessus de la liste des domaines.  
