@@ -93,7 +93,9 @@ Si vous souhaitez fournir vos informations de connexion avec une chaîne de conn
 
 Cet exemple va utiliser la chaîne de connexion suivante, qui se connecte à Microsoft SQL Server.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 Entrez la chaîne de connexion dans le **ConnectionString** champ sur la **choisir une Source de données** ou **choisir une Destination** page. Après avoir entré la chaîne de connexion, l’Assistant analyse la chaîne et affiche les propriétés et leurs valeurs dans la liste.
 
@@ -138,20 +140,24 @@ Pour générer et tester la chaîne de connexion pour votre pilote ODBC sur votr
 
 10. Ouvrez le fichier enregistré avec le bloc-notes ou un autre éditeur de texte. Voici le contenu de notre exemple de SQL Server.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. Copiez et collez les valeurs nécessaires dans une chaîne de connexion dans lequel les paires nom-valeur sont séparées par des points-virgules.
 
     Une fois que vous assemblez les valeurs requises à partir de l’exemple de fichier source de données, vous disposez de la chaîne de connexion.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     Vous ne devez généralement tous les paramètres dans une source de données créés par l’administrateur de Source de données ODBC pour créer une chaîne de connexion qui fonctionne.  
     -   Vous devez toujours spécifier le pilote ODBC.

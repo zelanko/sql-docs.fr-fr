@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  Pour importer des données en bloc à partir d'un fichier de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez utiliser les méthodes suivantes :  
   
 -   utilitaire**bcp**   
- Vous pouvez aussi faire appel à l’utilitaire **bcp** pour exporter des données à partir de n’importe quel emplacement d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  
+    Vous pouvez aussi faire appel à l’utilitaire **bcp** pour exporter des données à partir de n’importe quel emplacement d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  
   
 -   BULK INSERT  
   

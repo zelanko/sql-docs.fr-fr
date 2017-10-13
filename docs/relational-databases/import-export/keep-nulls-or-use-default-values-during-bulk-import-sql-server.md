@@ -123,7 +123,7 @@ Invoke-Item $bcpFile;
 ### **Exemple de fichier de format non XML**<a name="nonxml_format_file"></a>
 SQL Server prend en charge deux types de fichier de format : format XML et format non XML.  Le format non XML est le format d’origine pris en charge dans les versions précédentes de SQL Server.  Veuillez consulter [Fichiers de format non XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise [l’utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non xml `myNulls.fmt`basé sur le schéma de `myNulls`.  Pour utiliser une commande [bcp](../../tools/bcp-utility.md) pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données.  L’option format nécessite également l’option **-f** .  Pour cet exemple, le qualificateur **c** est utilisé pour spécifier les données de caractère, **t** est utilisé pour spécifier une virgule comme [délimiteur de champ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), et **T** est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
 
- ```cmd
+```cmd
 bcp TestDatabase.dbo.myNulls format nul -c -f D:\BCP\myNulls.fmt -t, -T
 
 REM Review file

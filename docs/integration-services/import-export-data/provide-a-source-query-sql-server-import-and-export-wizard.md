@@ -65,19 +65,19 @@ Si votre source de données est Excel, consultez [Fournir une requête source po
 Il existe trois types d’objets Excel que vous pouvez interroger.
 -   **Feuille de calcul.** Pour interroger une feuille de calcul, ajoutez le caractère $ à la fin du nom de la feuille et ajoutez des délimiteurs autour de la chaîne, par exemple, **[Sheet1$]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$]
     ```
 
 -   **Plage nommée.** Pour interroger une plage nommée, utilisez simplement le nom de la plage. Par exemple, **MyDataRange**.
     
-    ```
+    ```sql
     SELECT * FROM MyDataRange
     ```
 
 -   **Plage sans nom.** Pour spécifier une plage de cellules que vous n’avez pas nommée, ajoutez le caractère $ à la fin du nom de la feuille, ajoutez la spécification de plage ainsi que des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$A1:B4]**.
 
-    ```
+    ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
 

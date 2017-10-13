@@ -49,7 +49,7 @@ Les fichiers de format pris en exemple dans cette rubrique sont fondés sur la t
 
 ### **Exemple de table**<a name="sample_table"></a>
 Le script ci-dessous crée une base de données de test et une table nommée `myFirstImport`.  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -104,7 +104,7 @@ SQL Server prend en charge deux types de fichier de format : format XML et forma
 ### **Création d’un fichier de format non-XML**<a name="nonxml_format_file"></a>
 Veuillez consulter [Fichiers de format non-XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise [l’utilitaire bcp](../../tools/bcp-utility.md) pour générer un fichier de format non xml `myFirstImport.fmt`basé sur le schéma de `myFirstImport`.  Pour utiliser une commande bcp pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données.  L’option format nécessite également l’option **-f** .  Pour cet exemple, le qualificateur **c** est utilisé pour spécifier les données de caractère, **t** est utilisé pour spécifier une virgule comme [délimiteur de champ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), et **T** est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
 
-```
+```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -f D:\BCP\myFirstImport.fmt -t, -T
 
 REM Review file
@@ -129,7 +129,7 @@ Votre fichier de format non XML `D:\BCP\myFirstImport.fmt` doit se présenter co
 
 ### **Création d’un fichier de format XML**<a name="xml_format_file"></a>  
 Veuillez consulter [Fichiers de format XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise l’ [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format xml `myFirstImport.xml`basé sur le schéma de `myFirstImport`. Pour utiliser une commande bcp pour créer un fichier de format, spécifiez l’argument **format** et utilisez **nul** à la place d’un chemin de fichier de données.  L’option de format nécessite toujours l’option **-f** . De plus, pour créer un fichier de format XML, vous devez spécifier l’option **-x** .  Pour cet exemple, le qualificateur **c** est utilisé pour spécifier les données de caractère, **t** est utilisé pour spécifier une virgule comme [délimiteur de champ](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md), et **T** est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  À partir d'une invite de commandes, entrez la commande suivante :
-```
+```cmd
 bcp TestDatabase.dbo.myFirstImport format nul -c -x -f D:\BCP\myFirstImport.xml -t, -T
 
 REM Review file
@@ -137,7 +137,7 @@ Notepad D:\BCP\myFirstImport.xml
 ```
 
 Votre fichier de format XML `D:\BCP\myFirstImport.xml` doit se présenter comme suit :
-```
+```xml
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
@@ -160,7 +160,7 @@ Les exemples ci-dessous utilisent la base de données, le fichier de données et
 
 ### **Utilisation de [bcp](../../tools/bcp-utility.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_nonxml"></a>
 À partir d'une invite de commandes, entrez la commande suivante :
-```
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.MyFirstImport;"
 
@@ -174,7 +174,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 
 ### **Utilisation de [bcp](../../tools/bcp-utility.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bcp_xml"></a>
 À partir d'une invite de commandes, entrez la commande suivante :
-```
+```cmd
 REM Truncate table (for testing)
 SQLCMD -Q "TRUNCATE TABLE TestDatabase.dbo.MyFirstImport;"
 
@@ -188,7 +188,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 
 ### **Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_nonxml"></a>
 Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -204,7 +204,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bulk_xml"></a>
 Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -220,7 +220,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **Utilisation d’ [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"></a>    
 Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -239,7 +239,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
 
 ### **[Utilisation d’OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="openrowset_xml"></a>
 Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

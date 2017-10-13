@@ -72,14 +72,18 @@ Le **Uid** (id utilisateur) et **Pwd** (mot de passe) pour vous connecter.
 ### <a name="connection-string-format"></a>Format de chaîne de connexion
 Voici le format d’une chaîne de connexion par défaut. 
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>Entrez la chaîne de connexion
 Entrez la chaîne de connexion dans le **ConnectionString** champ, ou entrez le nom de source de données dans le **Dsn** champ sur la **choisir une Source de données** ou **choisir une Destination** page. Après avoir entré la chaîne de connexion, l’Assistant analyse la chaîne et affiche les propriétés et leurs valeurs dans la liste.
 
 L’exemple suivant utilise cette chaîne de connexion.
 
+    ```
     Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+    ```
 
 Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
 

@@ -71,7 +71,9 @@ L’id utilisateur et un mot de passe pour se connecter.
 ### <a name="connection-string-format"></a>Format de chaîne de connexion
 Voici le format d’une chaîne de connexion par défaut.
 
+    ```
     Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+    ```
 
 ### <a name="enter-the-connection-string"></a>Entrez la chaîne de connexion
 Entrez la chaîne de connexion dans le **ConnectionString** champ, ou entrez le nom de source de données dans le **Dsn** champ sur la **choisir une Source de données** ou **choisir une Destination** page. Après avoir entré la chaîne de connexion, l’Assistant analyse la chaîne et affiche les propriétés et leurs valeurs dans la liste.
