@@ -64,7 +64,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  La gestion de domaine est exécutée dans une page du client Data Quality Service qui contient cinq onglets pour les opérations distinctes de gestion de domaine. Ce n'est pas un processus piloté par l'Assistant ; toute opération de gestion peut être exécutée séparément.  
   
-3.  Dans la **Liste des domaines** de la page **Gestion de l'arborescence du domaine** , sélectionnez le domaine dans lequel vous souhaitez modifier des valeurs, ou créez un domaine. Si vous devez créer un domaine, consultez [Create a Domain](../data-quality-services/create-a-domain.md). Cliquez sur l'onglet **Valeurs du domaine** .  
+3.  Dans la **Liste des domaines** de la page **Gestion de l'arborescence du domaine** , sélectionnez le domaine dans lequel vous souhaitez modifier des valeurs, ou créez un domaine. Si vous devez créer un domaine, consultez [Créer un domaine](../data-quality-services/create-a-domain.md). Cliquez sur l'onglet **Valeurs du domaine** .  
   
 4.  Affichez les valeurs que vous devez modifier dans la table **Valeur** . Pour plus d'informations, consultez [Comment afficher les valeurs appropriées](#Display) ci-dessous.  
   
