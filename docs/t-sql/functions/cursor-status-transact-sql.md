@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e88dd4f14d8bd6fc90c40df101bfd9b2895bf229
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 764198ef1fd0f5b18985d985be894fcadf8fa3ce
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
@@ -131,7 +131,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Fonctions de curseur & #40 ; Transact-SQL & #41 ;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Fonctions de curseur &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
