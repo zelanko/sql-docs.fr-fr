@@ -107,7 +107,7 @@ ListPrice == 500
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [! = &#40; Différent de &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [\! = &#40; Différent de &#41; &#40; Expression SSIS &#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
  [Opérateurs et associativité](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40; Expression SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
