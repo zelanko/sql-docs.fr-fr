@@ -102,10 +102,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  Si une table source SQL Server ou Sybase inclut une colonne d’identité, vous devez utiliser des tâches d’exécution SQL pour activer l’option IDENTITY_INSERT avant la destination ADO NET et de les désactiver à nouveau par la suite. (La propriété de colonne d’identité spécifie une valeur incrémentielle pour la colonne. L’instruction SET IDENTITY_INSERT permet de valeurs explicites de la table source être insérées dans la colonne d’identité dans la table de destination.)  
 >   
->   Pour exécuter les instructions SET IDENTITY_INSERT et les chargement de données, vous devez effectuer les opérations suivantes.
->       1. Utilisez le Gestionnaire de connexions ADO.NET même pour les tâches d’exécution SQL et pour la destination ADO.NET.
->       2. Dans le Gestionnaire de connexions, définissez la **RetainSameConnection** propriété et la **MultipleActiveResultSets** True à la propriété.
->       3. Sur la destination ADO.NET, définissez la **UseBulkInsertWhenPossible** propriété sur False.
+>   Pour exécuter les instructions SET IDENTITY_INSERT et les chargement de données, vous devez effectuer les opérations suivantes. 
+>       1. Utilisez le Gestionnaire de connexions ADO.NET même pour les tâches d’exécution SQL et pour la destination ADO.NET. 
+>       2. Dans le Gestionnaire de connexions, définissez la **RetainSameConnection** propriété et la **MultipleActiveResultSets** True à la propriété. 
+>       3. Sur la destination ADO.NET, définissez la **UseBulkInsertWhenPossible** propriété sur False. 
 >
 >  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -172,3 +172,4 @@ ms.lasthandoff: 08/17/2017
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
   
+
