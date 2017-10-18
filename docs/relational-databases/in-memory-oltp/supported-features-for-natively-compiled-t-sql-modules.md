@@ -220,7 +220,7 @@ Les instructions DML suivantes sont prises en charge.
 
 -   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
 
--   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
+-   Fonctions système : @@rowcount.  Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
 
 -   Fonctions de sécurité : IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal’]), IS_SRVROLEMEMBER ('role' [, 'login’]), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login’]), SUSER_SID(['login’] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
