@@ -2,7 +2,7 @@
 title: "Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database."
 ms.custom: 
-ms.date: 08/02/2017
+ms.date: 10/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
-ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 
@@ -225,9 +225,10 @@ L’utilisation des plans qui utilisent l’exécution entrelacée peut être fo
 
 ## <a name="see-also"></a>Voir aussi
 
-[Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](https://docs.microsoft.com/en-us/sql/relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database)   
+[Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+[Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)
 
 [Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 
 

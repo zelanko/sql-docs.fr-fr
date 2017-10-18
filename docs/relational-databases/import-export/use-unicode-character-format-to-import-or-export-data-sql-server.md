@@ -17,11 +17,11 @@ caps.latest.revision: 37
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63fb68860ade1e0bd64ce87ca98ec4439bf238fa
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: b38f5585ffa79fbfa5ba702d4fdc8acee9924c7c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)
@@ -98,7 +98,7 @@ Les exemples de cette rubrique sont fondés sur la table et le fichier de format
 
 ### **Exemple de table**<a name="sample_table"></a>
 Le script ci-dessous crée une base de données test, une table nommée `myWidechar` et remplit la table avec des valeurs initiales.  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -187,7 +187,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
   
 ### **Utilisation de BULK INSERT et du format caractère Unicode sans un fichier de format**<a name="bulk_widechar"></a>
 Argument**DATAFILETYPE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
     FROM 'D:\BCP\myWidechar.bcp'
@@ -201,7 +201,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Utilisation de BULK INSERT et du format caractère Unicode avec un fichier de format non XML**<a name="bulk_widechar_fmt"></a>
 Argument**FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
    FROM 'D:\BCP\myWidechar.bcp'
@@ -215,7 +215,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **Utilisation d’OPENROWSET et du format caractère Unicode avec un fichier de format non XML**<a name="openrowset_widechar_fmt"></a>
 Argument**FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar
     SELECT *

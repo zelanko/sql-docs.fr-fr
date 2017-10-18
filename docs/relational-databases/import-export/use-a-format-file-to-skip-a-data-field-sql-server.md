@@ -17,11 +17,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41484cb9478231533d5d48fb445582f08e5762f9
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 07658ca2dbba706c7355220349f78b3703fe988e
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utiliser un fichier de format pour ignorer un champ de données (SQL Server)
@@ -40,7 +40,7 @@ Les fichiers de format modifiés pris en exemple dans cette rubrique sont fondé
 ### Exemple de table<a name="sample_table"></a>
 Le script ci-dessous crée une base de données de test et une table nommée `myTestSkipField`.  Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
  
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -184,7 +184,7 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 
 ### Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -200,7 +200,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -216,7 +216,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Utilisation d’ [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format non-XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>    
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -235,7 +235,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### [Utilisation d’OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et d’un [fichier de format XML](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Exécutez l’instruction Transact-SQL suivant dans Microsoft SQL Server Management Studio (SSMS) :
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

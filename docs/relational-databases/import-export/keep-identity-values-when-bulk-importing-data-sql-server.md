@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2a20a9d0b7b8cc5aa32863bc687f7095ce33623a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d'identité lors de l'importation de données en bloc (SQL Server)
@@ -53,7 +53,7 @@ Les exemples de cette rubrique sont fondés sur la table, le fichier de données
 
 ### **Exemple de table**<a name="sample_table"></a>
 Le script ci-dessous crée une base de données de test et une table nommée `myIdentity`.  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -177,7 +177,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
   
 ### **Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et conservation des valeurs d’identité sans fichier de format**<a name="bulk_identity"></a>
 Argument**KEEPIDENTITY** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et conservation des valeurs d’identité avec un [fichier de format non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
 Arguments**KEEPIDENTITY** et **FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -214,7 +214,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et de valeurs d’identité générées sans fichier de format**<a name="bulk_default"></a>
 Utilisation des valeurs par défaut.  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -232,7 +232,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Utilisation de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et de valeurs d’identité générées avec un [fichier de format non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
 Utilisation des valeurs par défaut et de l’argument **FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -249,7 +249,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ### **Utilisation d’ [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et conservation des valeurs d’identité avec un [fichier de format non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
 Indicateur de table**KEEPIDENTITY** et argument **FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -269,7 +269,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
  
 ### **Utilisation d’ [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) et de valeurs d’identité générées avec un [fichier de format non XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
 Utilisation des valeurs par défaut et de l’argument **FORMATFILE** .  Exécutez l’instruction Transact-SQL suivante dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) :
-```tsql
+```sql
 USE TestDatabase;
 GO
 
