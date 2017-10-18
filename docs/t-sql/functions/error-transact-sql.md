@@ -30,7 +30,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/01/2017
 
 ---
-# <a name="x40x40error-transact-sql"></a>& #x 40 ; & #x 40 ; ERREUR (Transact-SQL)
+# <a name="x40x40error-transact-sql"></a>&#x40;&#x40; ERREUR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne le numéro d'erreur pour la dernière instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutée.  
@@ -53,11 +53,11 @@ ms.lasthandoff: 09/01/2017
   
  Étant donné que @@ERROR est effacé et réinitialisé à chaque instruction exécutée, vérifiez cette valeur immédiatement après l’instruction en cours de vérification ou enregistrez-la dans une variable locale qui peut être vérifiée ultérieurement.  
   
- Utilisez la construction TRY...CATCH pour la gestion des erreurs. Le bloc TRY... CATCH construire également prend en charge supplémentaires fonctions système (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE) qui retournent plus d’informations d’erreur que @@ERROR. TRY...CATCH prend également en charge une fonction ERROR_NUMBER qui ne se limite pas à retourner le numéro d'erreur dans l'instruction qui suit immédiatement l'instruction qui a généré l'erreur. Pour plus d’informations, consultez [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
+ Utilisez la construction TRY...CATCH pour la gestion des erreurs. Le bloc TRY... CATCH construire également prend en charge supplémentaires fonctions système (ERROR_LINE, ERROR_MESSAGE, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE) qui retournent plus d’informations d’erreur que @@ERROR . TRY...CATCH prend également en charge une fonction ERROR_NUMBER qui ne se limite pas à retourner le numéro d'erreur dans l'instruction qui suit immédiatement l'instruction qui a généré l'erreur. Pour plus d’informations, consultez [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>A. À l’aide de@ERROR pour détecter une erreur spécifique  
+### <a name="a-using-error-to-detect-a-specific-error"></a>A. À l’aide de @@ERROR pour détecter une erreur spécifique  
  L'exemple suivant utilise `@@ERROR` pour rechercher une violation de contrainte de vérification (erreur n° 547) dans une instruction `UPDATE`.  
   
 ```  
@@ -71,7 +71,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. À l’aide de@ERROR pour quitter une procédure de façon conditionnelle  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. À l’aide de @@ERROR pour quitter une procédure de façon conditionnelle  
  L’exemple suivant utilise `IF...ELSE` pour tester les instructions `@@ERROR` après une `INSERT` instruction dans une procédure stockée. La valeur de la variable `@@ERROR` détermine le code de retour envoyé au programme appelant pour indiquer la réussite ou l'échec de la procédure.  
   
 ```  
@@ -106,7 +106,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>C. À l’aide de@ERROR avec @@ROWCOUNT  
+### <a name="c-using-error-with-rowcount"></a>C. À l’aide de @@ERROR avec @@ROWCOUNT   
  L'exemple suivant utilise `@@ERROR` avec `@@ROWCOUNT` pour valider l'opération d'une instruction `UPDATE`. La valeur de `@@ERROR` permet de déterminer la présence d'une erreur et `@@ROWCOUNT` permet de s'assurer que la mise à jour d'une ligne de la table a bien eu lieu.  
   
 ```  
