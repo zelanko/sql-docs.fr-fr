@@ -18,10 +18,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5acf2de3fccc2f5180358f87bd02591811c59c72
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestionnaire de connexions Azure Data Lake Store
@@ -60,7 +60,8 @@ Le Gestionnaire de connexions Azure Data Lake Store est un composant de la [SQL 
         4. Pour tester la connexion, sélectionnez **tester la connexion**.  
   
 6.  Sélectionnez **OK** pour fermer la **éditeur de gestionnaire de connexions Azure données Lake Store** boîte de dialogue.  
-  
+
+## <a name="view-the-properties-of-the-connection-manager"></a>Afficher les propriétés du Gestionnaire de connexions
 Les propriétés du gestionnaire de connexions que vous avez créées apparaissent dans la fenêtre **Propriétés** .  
   
   

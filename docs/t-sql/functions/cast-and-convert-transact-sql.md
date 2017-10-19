@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
@@ -212,7 +212,7 @@ Lorsque vous explicitement ou implicitement converti le **xml** type de données
 Conversion automatique n’est pas pris en charge pour le **texte** et **image** des types de données. Vous pouvez convertir explicitement **texte** données en données caractères, et **image** données **binaire** ou **varbinary**, mais la longueur maximale est de 8 000 octets. Si vous essayez d’une conversion incorrecte, par exemple une expression de caractères contenant des lettres pour un **int**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie un message d’erreur.
   
 ## <a name="output-collation"></a>Classement des résultats  
-Lorsque l'entrée et la sortie de CAST ou CONVERT sont des chaînes de caractères, l'entrée et la sortie présentent les mêmes classement et étiquette de classement. Si l'entrée n'est pas une chaîne de caractères, la sortie présente le classement par défaut de la base de données et une étiquette de classement de contrainte par défaut. Pour plus d’informations, consultez [priorité de classement &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).
+Lorsque l'entrée et la sortie de CAST ou CONVERT sont des chaînes de caractères, l'entrée et la sortie présentent les mêmes classement et étiquette de classement. Si l'entrée n'est pas une chaîne de caractères, la sortie présente le classement par défaut de la base de données et une étiquette de classement de contrainte par défaut. Pour plus d’informations, consultez [priorité de classement & #40 ; Transact-SQL & #41 ; ](../../t-sql/statements/collation-precedence-transact-sql.md).
   
 Pour attribuer un classement différent à la sortie, appliquez la clause COLLATE à l'expression de résultat de la fonction CAST ou CONVERT. Exemple :
   
@@ -391,54 +391,44 @@ Computed
 ```  
   
 ### <a name="c-using-cast-to-concatenate"></a>C. Utilisation de CAST pour la concaténation d'expressions  
-L'exemple suivant illustre la concaténation d'expressions de type non caractère et non binaire par le biais de `CAST`.
+L’exemple suivant concatène les expressions à l’aide de CAST. Utilise AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM Production.Product  
+FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 ListPrice
-------------------
+------------------------
 The list price is 357.06
 The list price is 364.09
 The list price is 364.09
 The list price is 364.09
-The list price is 364.09
-(5 row(s) affected)  
-```
+The list price is 364.09  
+```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Utilisation de CAST pour faciliter la lecture des résultats  
-L'exemple suivant s'appuie sur `CAST` dans la liste de sélection afin de convertir la colonne `Name` en colonne de type `char(10)`.
+L’exemple suivant utilise le CAST dans la liste de sélection pour convertir le `Name` colonne à un **char (10)** colonne. Utilise AdventureWorksDW.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
-FROM Sales.SalesOrderDetail AS s   
-JOIN Production.Product AS p   
-    ON s.ProductID = p.ProductID  
-WHERE Name LIKE 'Long-Sleeve Logo Jersey, M';  
-GO  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name       UnitPrice
----------- -----------
-Long-Sleev 31.2437
-Long-Sleev 32.4935
-Long-Sleev 49.99
-(3 row(s) affected)  
-```
+Name        UnitPrice
+----------  ---------
+Long-Sleev  31.2437
+Long-Sleev  32.4935
+Long-Sleev  49.99  
+```  
   
 ### <a name="e-using-cast-with-the-like-clause"></a>E. Utilisation de CAST avec la clause LIKE  
 L'exemple suivant convertit la colonne `money` de type `SalesYTD` en colonne de type `int`, puis en colonne de type `char(20)` de façon à pouvoir l'utiliser avec la clause `LIKE`.
@@ -466,7 +456,7 @@ Rachel           Valdez              2241204.0424      289
 ```
   
 ### <a name="f-using-convert-or-cast-with-typed-xml"></a>F. Utilisation de CONVERT ou de CAST avec des données au format XML typé  
-Voici plusieurs exemples qui illustrent l’utilisation de CONVERT pour convertir en XML typé à l’aide de la [Type de données XML et les colonnes &#40; SQL Server &#41; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).
+Voici plusieurs exemples qui illustrent l’utilisation de CONVERT pour convertir en XML typé à l’aide de la [Type de données XML et les colonnes & #40 ; SQL Server & #41 ; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).
   
 Cet exemple convertit une chaîne incluant des espaces, du texte et des balises en XML typé, puis supprime tous les espaces non significatifs (correspondant aux espaces délimitant les nœuds) :
   
@@ -673,47 +663,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-to-concatenate"></a>L. Utilisation de CAST pour la concaténation d'expressions  
-L’exemple suivant concatène les expressions à l’aide de CAST. Utilise AdventureWorksDW.
-  
-```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM dbo.DimProduct  
-WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09  
-```  
-  
-### <a name="m-using-cast-to-produce-more-readable-text"></a>M. Utilisation de CAST pour faciliter la lecture des résultats  
-L’exemple suivant utilise le CAST dans la liste de sélection pour convertir le `Name` colonne à un **char (10)** colonne. Utilise AdventureWorksDW.
-  
-```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
-FROM dbo.DimProduct  
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-Name        UnitPrice
-----------  ---------
-Long-Sleev  31.2437
-Long-Sleev  32.4935
-Long-Sleev  49.99  
-```  
-  
-### <a name="n-using-cast-with-the-like-clause"></a>N. Utilisation de CAST avec la clause LIKE  
+### <a name="l-using-cast-with-the-like-clause"></a>L. Utilisation de CAST avec la clause LIKE  
 L’exemple suivant convertit le **money** colonne `ListPrice` à un **int** type puis un **char (20)** type afin qu’il peut être utilisé avec la clause LIKE. Utilise AdventureWorksDW.
   
 ```sql
@@ -722,7 +672,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. Utilisation de CAST et de CONVERT avec des données de type datetime  
+### <a name="m-using-cast-and-convert-with-datetime-data"></a>M. Utilisation de CAST et de CONVERT avec des données de type datetime  
 L’exemple suivant affiche la date et heure actuelles, utilise CAST pour modifier la date et l’heure à un type de données caractère, et puis utilise CONVERT affiche la date et l’heure au format ISO 8601. Utilise AdventureWorksDW.
   
 ```sql
@@ -760,9 +710,9 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Conversion de Type de données & #40 ; moteur de base de données & #41 ;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Fonctions système & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
 

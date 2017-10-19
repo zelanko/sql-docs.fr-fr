@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: be6c730a4f7f6a280cd54e0f01b52a5579267c80
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b9c361e304bac38b51b31c65c029d5719aa8f006
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
@@ -50,23 +50,6 @@ DEGREES ( numeric_expression )
  Retourne le même type que *numeric_expression*.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant renvoie la valeur en degrés d'un angle de PI/2 radians.  
-  
-```  
-SELECT 'The number of degrees in PI/2 radians is: ' +   
-CONVERT(varchar, DEGREES((PI()/2)));  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-The number of degrees in PI/2 radians is 90         
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant renvoie la valeur en degrés d'un angle de PI/2 radians.  
   
 ```  

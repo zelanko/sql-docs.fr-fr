@@ -1,7 +1,7 @@
 ---
 title: DBCC INPUTBUFFER (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
@@ -49,22 +49,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *session_id*  
- ID de la session associé à chaque connexion principale active.  
+*session_id*  
+ID de la session associé à chaque connexion principale active.  
   
- *request_id*  
- Demande exacte (traitement) de recherche dans la session active.  
- La requête suivante renvoie *request_id*:  
+*request_id*  
+Demande exacte (traitement) de recherche dans la session active.  
+
+La requête suivante renvoie *request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- par  
- Permet de spécifier des options.  
+par  
+Permet de spécifier des options.  
   
- NO_INFOMSGS  
- Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
+NO_INFOMSGS  
+Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
 DBCC INPUTBUFFER retourne un jeu de lignes comportant les colonnes suivantes.
@@ -77,7 +78,7 @@ DBCC INPUTBUFFER retourne un jeu de lignes comportant les colonnes suivantes.
   
 Par exemple, DBCC INPUTBUFFER retourne le jeu de résultats suivant lorsque le dernier événement dans le tampon est DBCC INPUTBUFFER(11) :
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +87,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> En commençant par [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, utilisez [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) pour retourner des informations sur les instructions envoyées à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ## <a name="permissions"></a>Permissions  
 Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’une des opérations suivantes :
 -   Utilisateur doit être un membre de la **sysadmin** rôle serveur fixe.  
@@ -120,7 +124,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[Sys.dm_exec_input_buffer &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

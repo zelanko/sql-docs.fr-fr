@@ -2,7 +2,7 @@
 title: "Services d’apprentissage Microsoft | Documents Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/31/2017
+ms.date: 10/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: ae040907dcf767f7b1f95922fa1fed35cc14efc9
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: ddc9b3f17afe1f9d4c811e4a5871f48a3a08de7f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="microsoft-machine-learning-services"></a>Services Microsoft Machine Learning
@@ -75,7 +75,7 @@ Ce système de serveur autonome prend en charge des solutions R évolutives et d
 
 Si vous installez Microsoft Machine Learning Server à l’aide du programme d’installation de SQL Server 2017, vous pouvez également déployer et utiliser les applications Python.
 
-Pour plus d’informations, consultez [Microsoft R Server](https://docs.microsoft.com/r-server/index).
+Pour plus d’informations, consultez [Microsoft Machine Learning Server](https://docs.microsoft.com/r-server/index).
 
 ## <a name="related-technologies"></a>Technologies connexes
 

@@ -28,10 +28,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 8055c9410631f303c9f8633fd332e5f7d6f6d763
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b01ce3327bbedb114df93e89fb7c5ee94f5ec58a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME (Transact-SQL)
@@ -71,19 +71,23 @@ SYSUTCDATETIME ( )
   
 ```  
 SELECT SYSDATETIME() AS SYSDATETIME  
-    , SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    , SYSUTCDATETIME() AS SYSUTCDATETIME  
-    , CURRENT_TIMESTAMP AS [CURRENT_TIMESTAMP]
-    , GETDATE() AS GETDATE  
-    , GETUTCDATE() AS GETUTCDATE;  
+    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
+    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
+    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
+    ,GETDATE() AS GETDATE  
+    ,GETUTCDATE() AS GETUTCDATE;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-| SYSDATETIME | SYSDATETIMEOFFSET | SYSUTCDATETIME | CURRENT_TIMESTAMP | GETDATE | GETUTCDATE |
-| --- | --- | --- | --- | --- | --- |
-| 2007-04-30 13:10:02.0474381 | 2007-04-30 13:10:02.0474381 -07:00 | 2007-04-30 20:10:02.0474381 | 2007-04-30 13:10:02.047 | 2007-04-30 13:10:02.047 | 2007-04-30 20:10:02.047 |
-
+ ```
+SYSDATETIME()      2007-04-30 13:10:02.0474381
+SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
+SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
+CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
+GETDATE()          2007-04-30 13:10:02.047
+GETUTCDATE()       2007-04-30 20:10:02.047
+```  
   
 ### <a name="b-converting-date-and-time-to-date"></a>B. Conversion de date et d'heure en date  
  L'exemple suivant indique comment convertir des valeurs de date et heure en `date`.  
@@ -109,72 +113,6 @@ SELECT CONVERT (date, SYSDATETIME())
 ```  
   
 ### <a name="c-converting-date-and-time-values-to-time"></a>C. Conversion des valeurs de date et d'heure en heure  
- L'exemple suivant indique comment convertir des valeurs de date et heure en `time`.  
-  
- ```
-DECLARE @DATETIME DATETIME = GetDate();
-DECLARE @TIME TIME
-SELECT @TIME = CONVERT(time, @DATETIME)
-SELECT @TIME AS 'Time', @DATETIME AS 'Date Time'
-```
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-Time             Date Time  
-13:49:33.6330000 2009-04-22 13:49:33.633
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Les exemples suivants utilisent les six fonctions système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui retournent les date et heure actuelles pour retourner la date, l'heure ou les deux. Les valeurs sont retournées en séries ; par conséquent, leurs fractions de seconde peuvent être différentes.  
-  
-### <a name="d-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>D. Affichage des formats qui sont retournés par les fonctions de date et d'heure  
- L'exemple suivant illustre les différents formats qui sont retournés par les fonctions de date et d'heure.  
-  
-```  
-SELECT SYSDATETIME() AS SYSDATETIME  
-    ,SYSDATETIMEOFFSET() AS SYSDATETIMEOFFSET  
-    ,SYSUTCDATETIME() AS SYSUTCDATETIME  
-    ,CURRENT_TIMESTAMP AS CURRENT_TIMESTAMP  
-    ,GETDATE() AS GETDATE  
-    ,GETUTCDATE() AS GETUTCDATE;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-SYSDATETIME()      2007-04-30 13:10:02.0474381
-SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
-SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
-CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
-GETDATE()          2007-04-30 13:10:02.047
-GETUTCDATE()       2007-04-30 20:10:02.047
-```  
-  
-### <a name="e-converting-date-and-time-to-date"></a>E. Conversion de date et d'heure en date  
- L'exemple suivant indique comment convertir des valeurs de date et heure en `date`.  
-  
-```  
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-2007-04-30
-```  
-  
-### <a name="f-converting-date-and-time-values-to-time"></a>F. Conversion des valeurs de date et d'heure en heure  
  L'exemple suivant indique comment convertir des valeurs de date et heure en `time`.  
   
  ```

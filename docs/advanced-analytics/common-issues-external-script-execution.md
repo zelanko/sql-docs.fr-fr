@@ -2,7 +2,7 @@
 title: "Problèmes courants liés à l’exécution du script externe dans SQL Server | Documents Microsoft"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/20/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
@@ -92,7 +92,7 @@ Pour résoudre ce problème, vous pouvez activer la notation de modèle 8.3 sur 
 > [!NOTE] 
 > Cette restriction a été supprimée dans les versions suivantes. Si vous rencontrez ce problème, installez un des éléments suivants :
 > * SQL Server 2016 SP1 et CU1 : [mise à jour Cumulative 1 pour SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
-> * SQL Server 2016 RTM, Service Pack 3 et cela [correctif](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), qui est disponible à la demande.
+> * SQL Server 2016 RTM, Cumulative Update 3 et cela [correctif](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), qui est disponible à la demande.
 
 #### <a name="the-user-group-for-launchpad-cannot-log-on-locally"></a>Le groupe d’utilisateurs pour Launchpad ne peut pas ouvrir une session localement
 
@@ -102,7 +102,7 @@ Toutefois, dans les organisations où les stratégies de sécurité restrictives
 
 Pour corriger ce problème, vérifiez que le groupe **SQLRUserGroup** dispose du droit système **Permettre l’ouverture d’une session locale**.
 
-Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
+Pour plus d’informations, consultez [Windows de configurer les comptes de service et autorisations](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
 #### <a name="improper-setup-leading-to-mismatched-dlls"></a>Programme d’installation incorrecte à l’origine d’une DLL ne correspondent pas
 
@@ -110,19 +110,19 @@ Si vous installez le moteur de base de données avec d’autres fonctionnalités
 
 Pour éviter ce problème, veillez à installer les nouvelles fonctionnalités au même niveau de correctif logiciel en tant que l’instance de serveur.
 
-**La mauvaise méthode pour mettre à niveau**:
+**Mauvaise méthode pour mettre à niveau :**
 
 1. Installer SQL Server 2016 sans R Services.
 2. Mise à niveau de la mise à jour Cumulative de SQL Server 2016 2.
 3. Installer R Services (de-de base de données) à l’aide du support RTM.
 
-**La méthode correcte pour mettre à niveau**:
+**La méthode correcte pour mettre à niveau :**
 
 1. Installer SQL Server 2016 sans R Services.
 2. Mise à niveau de SQL Server 2016 vers le niveau de correctif souhaité. Par exemple, installer le Service Pack 1, puis Cumulative Update 2.
 3. Pour ajouter la fonctionnalité au niveau du correctif approprié, réexécutez le programme d’installation de SP1 et CU2 et appuyez sur R Services (de-de base de données). 
 
-#### <a name="check-to-see-whether-a-user-has-rights-to-run-external-scripts"></a>Vérifiez si un utilisateur dispose des droits pour exécuter des scripts externes
+#### <a name="check-whether-a-user-has-rights-to-run-external-scripts"></a>Vérifiez si un utilisateur dispose des droits pour exécuter des scripts externes
 
 Même si le Launchpad est correctement configuré, il retourne une erreur si l’utilisateur n’est pas autorisé à exécuter des scripts R ou Python.
 
@@ -131,8 +131,10 @@ Si vous avez installé SQL Server en tant qu’un administrateur de base de donn
 Pour corriger le problème, dans SQL Server Management Studio, un administrateur de sécurité peut modifier le compte de connexion SQL ou un compte d’utilisateur Windows en exécutant le script suivant :
 
 ```SQL
-GRANT EXECUTE ANY EXTERNAL SCRIPT
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
+
+Pour plus d’informations, consultez [GRANT (Transact-SQL](../t-sql/statements/grant-transact-sql.md).
 
 ### <a name="common-launchpad-errors"></a>Erreurs courantes de Launchpad
 
@@ -212,17 +214,17 @@ Pour résoudre ce problème, assurez-vous que le groupe a *autoriser la connexio
 
 ## <a name="r-script-issues"></a>Problèmes de script R
 
-Cette section contient certains problèmes courants qui sont spécifiques à l’exécution du script R et les erreurs de script R. La liste n’est pas exhaustive, car il existe de nombreux packages R et erreurs peuvent différer entre les versions du même package R. Nous vous conseillons de valider les erreurs de script R sur le [forum Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR), qui prend en charge tous les produits : R Services (de-de base de données), la Machine Learning Services avec Microsoft R Server, le Client Microsoft R et Python.
+Cette section contient certains problèmes courants qui sont spécifiques à l’exécution du script R et les erreurs de script R. La liste n’est pas exhaustive, car il existe de nombreux packages R et erreurs peuvent différer entre les versions du même package R. Nous vous conseillons de valider les erreurs de script R sur le [forum Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR), qui prend en charge les composants utilisés dans R Services (de-de base de données), Machine Learning Services avec Microsoft R, Python et le Client Microsoft R d’apprentissage automatique Serveur.
 
 ### <a name="multiple-r-instances-on-the-same-computer"></a>Plusieurs instances de R sur le même ordinateur
 
-Il est facile à installer plusieurs distributions de R sur le même ordinateur, ou pour installer plusieurs copies du même package R dans les différentes versions. Par exemple, si vous installez Machine Learning Server (autonome) et Machine Learning Services (de-de base de données), les programmes d’installation de créer des versions distinctes des bibliothèques R. 
+Il est facile de vous retrouver avec plusieurs distributions de R sur le même ordinateur, ainsi que plusieurs copies du même package R dans des versions différentes. Par exemple, si vous installez Machine Learning Server (autonome) et Machine Learning Services (de-de base de données), les programmes d’installation de créer des versions distinctes des bibliothèques R. 
 
-La duplication peut devenir à confusion lorsque vous essayez d’exécuter un script à partir d’une ligne de commande et que vous ne savez pas les bibliothèques que vous utilisez. Il peut également être source de confusion si vous installez un package à la bibliothèque incorrecte et ne peut pas trouver le package lorsque vous essayez d’exécuter à partir de SQL Server.
+Cette duplication devient un problème lorsque vous essayez d’exécuter un script à partir d’une ligne de commande et que vous ne savez pas les bibliothèques que vous utilisez. Ou bien, vous pouvez installer un package à la bibliothèque incorrecte et demandez plus tard pourquoi vous ne trouvez pas le package à partir de SQL Server.
 
 + Éviter l’utilisation directe des bibliothèques R et des outils qui sont installés pour l’utilisation de l’instance de SQL Server, sauf dans certains cas limités telles que le dépannage ou l’installation de nouveaux packages. 
-+ Si vous devez utiliser un outil de ligne de commande R, vous pouvez installer [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client).
-+ SQL Server fournit une gestion de base de données de packages R. Il s’agit de la façon la plus simple pour créer des bibliothèques de package de R peuvent être partagés entre les utilisateurs. Pour plus d’informations, consultez [installation et la gestion des Packages R](r/installing-and-managing-r-packages.md).
++ Si vous devez utiliser un outil de ligne de commande R, vous pouvez installer [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client). 
++ SQL Server fournit une gestion de base de données de packages R. Il s’agit de la façon la plus simple pour créer des bibliothèques de package de R peuvent être partagés entre les utilisateurs. Pour plus d’informations, consultez [gestion des packages R pour SQL Server](r/r-package-management-for-sql-server-r-services.md).
 
 ### <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>Évitez de désactiver l’espace de travail en cours d’exécution R dans un contexte de calcul SQL
 
@@ -325,7 +327,7 @@ Pour résoudre ce problème, vous devez réinstaller le package à la bibliothè
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Problèmes connus et dépannage d’apprentissage](machine-learning-troubleshooting-faq.md)
+[Problèmes connus et dépannage de machine Learning Services](machine-learning-troubleshooting-faq.md)
 
 [Collecte de données pour la résolution des problèmes d’apprentissage](data-collection-ml-troubleshooting-process.md)
 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 78778dd3f43872fd6d97ae042cc337a68b6bab2c
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurer une base de données SQL Server dans un conteneur Linux Docker
@@ -59,17 +59,22 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-       --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name 'sql1' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql \
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-       --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name "sql1" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql `
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    Cette commande crée un conteneur de SQL Server 2017 avec la **développeur** Edition. Port SQL Server **1433** est exposée sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` paramètre crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
+    Cette commande crée un conteneur de SQL Server 2017 avec l’édition développeur (par défaut). Port SQL Server **1433** est exposée sur l’ordinateur hôte en tant que port **1401**. Le paramètre facultatif `-v sql1data:/var/opt/mssql` paramètre crée un conteneur de volume de données nommé **sql1ddata**. Cela permet de conserver les données créées par SQL Server.
+
+   > [!NOTE]
+   > Le processus d’exécution des éditions de SQL Server de production dans des conteneurs est légèrement différent. Pour plus d’informations, consultez [exécuter des images de conteneur de production](sql-server-linux-configure-docker.md#production). Si vous utilisez les mêmes noms de conteneur et ports, le reste de cette procédure pas à pas fonctionne toujours avec des conteneurs de production.
 
 1. Pour afficher vos conteneurs Docker, utilisez le `docker ps` commande.
 

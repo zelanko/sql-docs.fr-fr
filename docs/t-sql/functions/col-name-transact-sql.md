@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3028e409a8218b35bbf7cd4773e80ca27e8db8be
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
@@ -65,29 +65,6 @@ Le *table_id* et *column_id* paramètres produisent une chaîne de nom de colonn
 Pour plus d’informations sur l’obtention des numéros d’identification de table et de colonne, consultez [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
-L'exemple suivant renvoie le nom de la première colonne de la table `Employee` de la base de données `AdventureWorks2012`.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SET NOCOUNT OFF;  
-GO  
-SELECT COL_NAME(OBJECT_ID('HumanResources.Employee'), 1) AS 'Column Name';  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-Column Name
-------------------
-BusinessEntityID
-```
-  
-## <a name="examples"></a>Exemples
-
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
 L’exemple suivant retourne le nom de la première colonne dans un exemple `Employee` table.
   
 ```sql

@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15ed174d3f16a70f63973c586a15759afad72565
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4fe1477de1f1aa087d622d687249ee4a10ad2524
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR-Transact-SQL
@@ -270,57 +270,6 @@ GO
 ```  
   
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. Utilisation d'une variable locale pour fournir un texte de message  
- L'exemple de code ci-après montre comment utiliser une variable locale pour fournir un texte de message pour une instruction `RAISERROR`.  
-  
-```  
-DECLARE @StringVariable NVARCHAR(50);  
-SET @StringVariable = N'<\<%7.3s>>';  
-  
-RAISERROR (@StringVariable, -- Message text.  
-           10, -- Severity,  
-           1, -- State,  
-           N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <<    abc>>.  
-GO  
-```  
-  
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-returning-error-information-from-a-catch-block"></a>D. Renvoi d'informations d'erreur depuis un bloc CATCH  
- L'exemple de code ci-dessous indique comment utiliser `RAISERROR` à l'intérieur d'un bloc `TRY` pour que l'exécution passe au bloc `CATCH` associé. Il explique également comment utiliser `RAISERROR` pour retourner des informations sur l'erreur qui a appelé le bloc `CATCH`.  
-  
-> [!NOTE]  
->  RAISERROR génère uniquement des erreurs dont l’état comprise entre 1 et 18. Car le moteur PDW peut déclencher des erreurs avec l’état 0, nous vous recommandons de vérifier l’état d’erreur retourné par ERROR_STATE avant de le transmettre en tant que valeur de paramètre d’état de RAISERROR.  
-  
-```  
-BEGIN TRY  
-    -- RAISERROR with severity 11-18 will cause execution to   
-    -- jump to the CATCH block.  
-    RAISERROR ('Error raised in TRY block.', -- Message text.  
-               16, -- Severity.  
-               1 -- State.  
-               );  
-END TRY  
-BEGIN CATCH  
-    DECLARE @ErrorMessage NVARCHAR(4000);  
-    DECLARE @ErrorSeverity INT;  
-    DECLARE @ErrorState INT;  
-  
-    SET @ErrorMessage = ERROR_MESSAGE();  
-    SET @ErrorSeverity = ERROR_SEVERITY();  
-    SET @ErrorState = ERROR_STATE();  
-  
-    -- Use RAISERROR inside the CATCH block to return error  
-    -- information about the original error that caused  
-    -- execution to jump to the CATCH block.  
-    RAISERROR (@ErrorMessage, -- Message text.  
-               @ErrorSeverity, -- Severity.  
-               @ErrorState -- State.  
-               );  
-END CATCH;  
-```  
-  
-### <a name="e-using-a-local-variable-to-supply-the-message-text"></a>E. Utilisation d'une variable locale pour fournir un texte de message  
  L'exemple de code ci-après montre comment utiliser une variable locale pour fournir un texte de message pour une instruction `RAISERROR`.  
   
 ```  

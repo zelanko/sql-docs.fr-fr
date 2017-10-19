@@ -1,7 +1,7 @@
 ---
 title: "Importer à partir d’une Source de données relationnelles (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>Importer des données - Source de données relationnelle
-  Vous pouvez importer des données provenant de diverses bases de données relationnelles à l’aide de l’Assistant Importation de table. L’assistant est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le menu **Modèle** . Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur. Pour plus d’informations sur les fournisseurs et les sources de données pris en charge, consultez [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
-  
+  Pour les modèles tabulaires 1200 et les niveaux de compatibilité inférieurs, vous pouvez importer des données provenant de plusieurs bases de données relationnelles à l’aide de l’Assistant Importation de Table. L’assistant est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans le menu **Modèle** . Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur. Pour plus d’informations sur les fournisseurs et les sources de données pris en charge, consultez [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md). 
+ 
  L'Assistant Importation de table prend en charge l'importation des données à partir des sources de données suivantes :  
   
  **Bases de données relationnelles**  
@@ -69,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>Sécurisation des applications de pilote JDBC
@@ -32,13 +32,14 @@ ms.lasthandoff: 09/09/2017
   
 |Rubrique| Description|  
 |-----------|-----------------|  
-|[Sécurisation des chaînes de connexion](../../connect/jdbc/securing-connection-strings.md)|Décrit des techniques permettant d'aider à protéger les informations utilisées pour se connecter à une source de données.|  
+|[Sécurisation de chaînes de connexion](../../connect/jdbc/securing-connection-strings.md)|Décrit des techniques permettant d'aider à protéger les informations utilisées pour se connecter à une source de données.|  
 |[Validation des entrées utilisateur](../../connect/jdbc/validating-user-input.md)|Décrit des techniques permettant de valider l'entrée utilisateur.|  
 |[Sécurité des applications](../../connect/jdbc/application-security.md)|Décrit comment utiliser des autorisations de stratégie Java afin d'aider à sécuriser une application de pilote JDBC.|  
-|[À l’aide du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)|Décrit comment établir un canal de communication sécurisé avec un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] de base de données à l’aide de la couche de Sockets sécurisée (SSL).|  
-|[En Mode FIPS](../../connect/jdbc/fips-mode.md)|Décrit comment utiliser le pilote JDBC en mode de plaignant FIPS.| 
+|[Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)|Décrit comment établir un canal de communication sécurisé avec un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] de base de données à l’aide de la couche de Sockets sécurisée (SSL).|  
+|[Mode FIPS](../../connect/jdbc/fips-mode.md)|Décrit comment utiliser le pilote JDBC en mode conforme FIPS.| 
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

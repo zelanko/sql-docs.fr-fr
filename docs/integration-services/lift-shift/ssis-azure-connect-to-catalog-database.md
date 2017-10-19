@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 646999095957abb4e615b59b316b6ca59155dea3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Se connecter à la base de données de catalogue SSISDB sur Azure
@@ -48,6 +48,9 @@ Avant de commencer, assurez-vous que vous avez 17,2 ou version ultérieure de SQ
    | **Mot de passe** | Le mot de passe pour votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié lorsque vous avez créé le serveur. |
 
 3. **Se connecter à la base de données SSISDB**. Sélectionnez **Options** pour développer le **se connecter au serveur** boîte de dialogue. Dans l’étendue **se connecter au serveur** boîte de dialogue, sélectionnez le **propriétés de connexion** onglet. Dans le **se connecter à la base de données** champ, sélectionnez ou entrez `SSISDB`.
+
+    > [!IMPORTANT]
+    > Si vous ne sélectionnez pas `SSISDB` lorsque vous vous connectez, vous ne pouvez pas voir le catalogue SSIS dans l’Explorateur d’objets.
 
 4. Puis sélectionnez **connexion**.
 

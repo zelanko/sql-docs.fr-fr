@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec170c756fd207c648e210de15df9d18024ea718
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a31ab0658470cb614e1b9d633f19fbb1d8fe4a29
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -71,57 +71,6 @@ SOUNDEX ( character_expression )
 -   Les index (y compris les vues indexées) qui contiennent une colonne calculée persistante définie avec SOUNDEX ne peuvent pas être interrogés tant qu'ils n'ont pas été reconstruits en exécutant l'instruction `ALTER INDEX ALL ON <object> REBUILD`.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant illustre la fonction SOUNDEX et la fonction associée DIFFERENCE. Dans le premier exemple, les valeurs standard `SOUNDEX` sont retournées pour toutes les consonnes. La fonction `SOUNDEX` exécutée sur `Smith` et `Smythe` retourne le même résultat SOUNDEX parce que toutes les voyelles, la lettre « `y` », les lettres doubles et la lettre « `h` » ne sont pas comprises.  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valide pour un classement Latin1_General.  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- La fonction `DIFFERENCE` calcule la différence des résultats du modèle `SOUNDEX`. L'exemple suivant illustre deux chaînes de caractères qui ne diffèrent que par les voyelles. La différence retournée est `4`, soit la plus petite différence possible.  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valide pour un classement Latin1_General.  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- Dans l'exemple suivant, les chaînes de caractères diffèrent par leurs consonnes ; la valeur retournée est donc `2`, soit la différence la plus importante.  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valide pour un classement Latin1_General.  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L'exemple suivant illustre la fonction SOUNDEX et la fonction associée DIFFERENCE. Dans le premier exemple, les valeurs standard `SOUNDEX` sont retournées pour toutes les consonnes. La fonction `SOUNDEX` exécutée sur `Smith` et `Smythe` retourne le même résultat SOUNDEX parce que toutes les voyelles, la lettre « `y` », les lettres doubles et la lettre « `h` » ne sont pas comprises.  
   
 ```  

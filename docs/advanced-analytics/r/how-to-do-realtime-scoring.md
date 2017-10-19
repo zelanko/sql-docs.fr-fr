@@ -1,7 +1,7 @@
 ---
 title: "Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a72ac24f681d562adc7b43f02a4e91cdeb80bbc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server
 
-Cette rubrique fournit des exemples de code et des instructions pour l’exécution du calcul de score en temps réel et des fonctionnalités natives de score dans SQL Server 2016 et SQL Server 2017. L’objectif de calculer les scores en temps réel et de calcul de score natif est afin d’améliorer les performances des opérations de calcul de score par petits lots.
+Cette rubrique fournit des exemples de code et des instructions pour l’exécution du calcul de score en temps réel et des fonctionnalités natives de score dans SQL Server 2017 et SQL Server 2016. L’objectif de calculer les scores en temps réel et de calcul de score natif est afin d’améliorer les performances des opérations de calcul de score par petits lots.
 
 À la fois en temps réel de calcul de score et le score natif sont conçus pour vous permettre d’utiliser un modèle d’apprentissage sans devoir installer R. Il vous souhaitez est d’obtenir un modèle préformé dans un format compatible et l’enregistrer dans une base de données SQL Server.
 
@@ -30,11 +30,11 @@ Cette rubrique fournit des exemples de code et des instructions pour l’exécut
 Les options suivantes sont prises en charge pour la prédiction de lot rapide :
 
 + **Calcul de score native**: fonction de prédire de T-SQL dans SQL Server 2017
-+ **Calculer les scores en temps réel**: à l’aide de la sp_rxPredict de procédure stockée dans SQL Server 2016 ou SQL Server 2017.
++ **Calculer les scores en temps réel**: à l’aide de la procédure stockée\_rxPredict de procédure stockée dans SQL Server 2016 ou SQL Server 2017.
 
 > [!NOTE]
 > Utilisation de la fonction de prédiction est recommandée dans SQL Server 2017.
-> Pour utiliser sp_rxPredict nécessite l’activation de l’intégration SQLCLR. Prendre en compte les implications de sécurité avant d’activer cette option.
+> Pour utiliser sp\_rxPredict nécessite l’activation de l’intégration SQLCLR. Prendre en compte les implications de sécurité avant d’activer cette option.
 
 Le processus global de la préparation du modèle et générer des scores est très similaire :
 
@@ -49,7 +49,7 @@ Le processus global de la préparation du modèle et générer des scores est tr
 
 + Si vous utilisez sp\_rxPredict, quelques étapes supplémentaires sont nécessaires. Consultez [permettent de calculer les scores en temps réel](#bkmk_enableRtScoring).
 
-+ Au moment de la rédaction, uniquement RevoScaleR et MicrosoftML peuvent créer des modèles compatibles. Types de modèle supplémentaires peuvent être disponibles dans les futures. Pour obtenir la liste des algorithmes pris en charge, consultez [en temps réel de calcul de score](../real-time-scoring.md).
++ À ce stade, seuls RevoScaleR et MicrosoftML peuvent créer des modèles compatibles. Types de modèle supplémentaires peuvent être disponibles dans les futures. Pour obtenir la liste des algorithmes pris en charge, consultez [en temps réel de calcul de score](../real-time-scoring.md).
 
 ### <a name="serialization-and-storage"></a>Sérialisation et stockage
 
@@ -80,7 +80,7 @@ Pour obtenir un exemple simple, consultez [ce didacticiel](../tutorials/rtsql-cr
 
 ## <a name="native-scoring-with-predict"></a>Natif avec PREDICT de calcul de score
 
-Dans cet exemple, vous allez créer un modèle, puis appelez la fonction de prédiction en temps réel de T-SQL.
+Dans cet exemple, vous créez un modèle et puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
 
@@ -159,7 +159,7 @@ L’instruction de prédiction simple suivante obtient une classification du mod
 DECLARE @model varbinary(max) = (
   SELECT native_model_object
   FROM ml_models
-  WHERE model_name = 'iris.dtree.model'
+  WHERE model_name = 'iris.dtree'
   AND model_version = 'v1');
 SELECT d.*, p.*
   FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
@@ -181,7 +181,7 @@ Cette section décrit les étapes requises pour configurer **en temps réel** pr
 Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour calculer les scores. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt.exe, qui est inclus dans le package RevoScaleR.
 
 > [!NOTE]
-> Dans l’ordre de calcul de score de travail et en temps réel, des fonctionnalités CLR SQL doivent être activé dans l’instance et la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, vous devez considérer les implications de sécurité supplémentaire d’effectuer cette opération.
+> Dans l’ordre de calcul de score de travail et en temps réel, des fonctionnalités CLR SQL doivent être activé dans l’instance et la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, vous devez envisager les implications de sécurité supplémentaires.
 
 1. Ouvrez une invite de commandes avec élévation de privilèges et accédez au dossier où se trouve RegisterRExt.exe. Le chemin d’accès suivant peut être utilisé dans une installation par défaut :
     
@@ -209,12 +209,9 @@ Vous devez activer cette fonctionnalité pour chaque base de données que vous s
 > 
 > Dans SQL Server 2017, des mesures de sécurité sont en place pour éviter des problèmes avec l’intégration du CLR. Ces mesures imposent des restrictions supplémentaires sur l’utilisation de cette procédure stockée ainsi.
 
-
 ### <a name="step-2-prepare-and-save-the-model"></a>Étape 2. Préparer et enregistrer le modèle
 
-Le format binaire requis par sp\_rxPredict est la même que celle pour prédire.
-
-Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)et veillez à spécifier _realtimeScoringOnly_ = TRUE, comme dans cet exemple :
+Le format binaire requis par sp\_rxPredict est la même que celle pour prédire. Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)et veillez à spécifier _realtimeScoringOnly_ = TRUE, comme dans cet exemple :
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -222,7 +219,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Étape 3. Appel sp_rxPredict
 
-Vous appelez sp_rxPredict comme vous le feriez pour une autre procédure stockée. Dans la version actuelle, la procédure stockée accepte uniquement deux paramètres :  _@model_  pour le modèle au format binaire, et  _@inputData_  pour les données à utiliser dans le calcul de score, défini comme une requête SQL valide.
+Vous appelez sp\_rxPredict en tant que vous feriez avec un autre procédure stockée. Dans la version actuelle, la procédure stockée accepte uniquement deux paramètres :  _@model_  pour le modèle au format binaire, et  _@inputData_  pour les données à utiliser dans le calcul de score, défini comme une requête SQL valide.
 
 Étant donné que le format binaire est celui qui est utilisé par la fonction de prédiction, vous pouvez utiliser le tableau de modèles et des données à partir de l’exemple précédent.
 
@@ -238,17 +235,22 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> L’appel à `sp_rxPredict` échoue si les données d’entrée pour calculer les scores n’incluant pas les colonnes qui correspondent aux exigences du modèle. Actuellement, seuls les types de données de .NET suivants sont pris en charge : double, float, short, ushort, long, ulong et chaîne.
+> L’appel à sp\_rxPredict échoue si les données d’entrée pour calculer les scores n’incluant pas les colonnes qui correspondent aux exigences du modèle. Actuellement, seuls les types de données de .NET suivants sont pris en charge : double, float, short, ushort, long, ulong et chaîne.
 > 
 > Par conséquent, vous devrez peut-être filtrer les types non pris en charge dans vos données d’entrée avant de l’utiliser pour calculer les scores en temps réel.
 > 
 > Pour plus d’informations sur les types SQL correspondants, consultez [le mappage de Type SQL-CLR](https://msdn.microsoft.com/library/bb386947.aspx) ou [de mappage de données de paramètre CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-### <a name="disable-realtime-scoring"></a>Désactiver le calcul de score en temps réel
+## <a name="disable-realtime-scoring"></a>Désactiver le calcul de score en temps réel
 
 Pour désactiver la fonctionnalité de calcul de score en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante :`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-### <a name="realtime-scoring-in-microsoft-r-server"></a>En temps réel de calcul de score dans Microsoft R Server
+## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>En temps réel de calcul de score dans Microsoft R Server ou serveur de Machine Learning
 
-Pour plus d’informations concernant en temps réel de calcul de score dans un environnement distribué basé sur Microsoft R Server, reportez-vous à la [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) fonction disponible dans le [mrsDeploy package](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), qui prend en charge les modèles de publication en temps réel de calcul de score en tant que nouvelle un service web en cours d’exécution sur le serveur de R.
+Machine Learning prend en charge distribuée en temps réel à partir de modèles publiés sous la forme d’un service web de calcul de score. Pour plus d’informations, consultez ces articles :
 
++ [Quels sont les services web dans Machine Learning Server ?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Qu’est à l’Opérationnalisation ?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [Déployer un modèle de Python comme un service web avec le Kit de développement logiciel modèle azureml gestion](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Publier un bloc de code R ou d’un modèle en temps réel sous la forme d’un service web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [package mrsdeploy pour R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

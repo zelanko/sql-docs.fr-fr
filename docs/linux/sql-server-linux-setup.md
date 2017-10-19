@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
@@ -97,7 +97,7 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 > [!IMPORTANT]
 > Vers une version antérieure est uniquement prise en charge entre RC1, RC2 et RTM pour l’instant.
 
-## <a id="repositories"></a>Modifier les référentiels sources
+## <a id="repositories"></a>Configurer des référentiels de code source
 
 Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server à partir de votre référentiel de Microsoft. Il est important de noter qu’il existe deux principaux types de référentiels pour chaque point de distribution :
 
@@ -110,9 +110,9 @@ Chaque version de CU et correctif logiciel grand public contient le package SQL 
 > [!NOTE]
 > Mise à jour à partir d’une CU version à une version de correctif logiciel grand public n’est pas pris en charge.
 
-Pour modifier à partir du référentiel GDR vers le référentiel CU procédez comme suit :
+Pour configurer les référentiels CU ou GDR, procédez comme suit :
 
-1. Supprimer le référentiel d’aperçu précédemment configurés.
+1. Si nécessaire, supprimez l’espace de stockage configuré précédemment.
 
    | Plateforme | Commande de suppression de référentiel |
    |-----|-----|
