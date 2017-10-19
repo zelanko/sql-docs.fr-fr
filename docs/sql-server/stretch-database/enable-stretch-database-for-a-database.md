@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  Pour activer Stretch Database sur le serveur manuellement, exécutez **sp_configure** et activez l’option **Archive de données distante** . L’exemple suivant active l’option **remote data archive** en définissant sa valeur sur 1.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
