@@ -1,7 +1,7 @@
 ---
 title: "Guide d’architecture de traitement des requêtes | Microsoft Docs"
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
@@ -64,7 +64,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] choisit non seulement le plan d’exécution dont le coût en ressources est le plus faible, mais également celui qui retourne le plus rapidement les résultats à l’utilisateur moyennant un coût en ressources raisonnable. Par exemple, le traitement d'une requête en parallèle monopolise généralement davantage de ressources qu'un traitement en série, mais il est plus rapide. L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise un plan d’exécution en parallèle pour retourner les résultats si la charge du serveur n’en est pas affectée de façon rédhibitoire.
 
-L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se base sur les statistiques de distribution lors de l’estimation du coût en ressources des différentes méthodes d’extraction d’informations à partir d’une table ou d’un index. Les statistiques de distribution sont conservées pour les colonnes et les index. Elles indiquent la sélectivité des valeurs dans un index ou une colonne en particulier. Par exemple, dans une table représentant des voitures, plusieurs voitures proviennent du même constructeur mais chacune a un numéro d'identification unique. Un index sur le numéro d'identification du véhicule est plus sélectif qu'un index sur le constructeur. Si les statistiques d'index ne sont pas à jour, l'optimiseur de requêtes peut ne pas effectuer le meilleur choix pour l'état actuel de la table. Pour plus d’informations sur la conservation de statistiques d’index à jour, consultez Utiliser les statistiques pour améliorer les performances des requêtes. 
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se base sur les statistiques de distribution lors de l’estimation du coût en ressources des différentes méthodes d’extraction d’informations à partir d’une table ou d’un index. Les statistiques de distribution sont conservées pour les colonnes et les index. Elles indiquent la sélectivité des valeurs dans un index ou une colonne en particulier. Par exemple, dans une table représentant des voitures, plusieurs voitures proviennent du même constructeur mais chacune a un numéro d'identification unique. Un index sur le numéro d'identification du véhicule est plus sélectif qu'un index sur le constructeur. Si les statistiques d'index ne sont pas à jour, l'optimiseur de requêtes peut ne pas effectuer le meilleur choix pour l'état actuel de la table. Pour plus d'informations sur la tenue à jour des statistiques d'index, consultez [Statistiques](../relational-databases/statistics/statistics.md). 
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est important, car il permet l’ajustement dynamique du serveur de base de données au fur et à mesure que la base de données évolue sans recourir à l’intervention d’un programmeur ou d’un administrateur de bases de données. Cela permet aux programmeurs de se concentrer sur la description du résultat final de la requête. Ils peuvent faire confiance à l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans son choix d’un plan d’exécution efficace pour l’état de la base de données à chaque exécution de l’instruction.
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [Événements étendus](../relational-databases/extended-events/extended-events.md)  
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)
 

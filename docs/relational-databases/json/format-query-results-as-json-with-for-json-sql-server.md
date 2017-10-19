@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Mettre les résultats de requête au format JSON avec FOR JSON (SQL Server)
@@ -39,14 +39,14 @@ Mettez les résultats de la requête au format JSON ou exportez les données à 
   
 Voici l’exemple d’une instruction **SELECT** avec la clause **FOR JSON** et sa sortie.
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>Option 1 : Vous contrôlez la sortie avec FOR JSON PATH
 En mode **PATH** , vous pouvez utiliser la syntaxe à point (par exemple `'Item.Price'` ) pour mettre en forme la sortie imbriquée.  
 
 Voici un exemple de requête qui utilise le mode **PATH** avec la clause **FOR JSON** . L’exemple suivant utilise également l’option **ROOT** pour spécifier un élément racine nommé. 
   
- ![Diagramme de flux de la sortie FOR JSON](../../relational-databases/json/media/forjson-example1.png "Diagramme de flux de la sortie FOR JSON")  
+ ![Diagramme du flux de sortie FOR JSON](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>Plus d’informations sur FOR JSON PATH
 Pour plus d’informations et pour obtenir des exemples détaillés, consultez [Mettre en forme la sortie JSON imbriquée avec le mode PATH &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
@@ -102,7 +102,7 @@ La sortie de la clause **FOR JSON** présente les caractéristiques suivantes :
         -   Par défaut, SQL Server Management Studio (SSMS) concatène les résultats en une seule ligne quand la valeur du paramètre de sortie est **Résultats dans des grilles**. La barre d’état SSMS affiche le nombre de lignes réel.
         -   D’autres applications clientes peuvent nécessiter du code qui recombine des résultats longs en une seule chaîne JSON valide en concaténant le contenu de plusieurs lignes. Pour obtenir un exemple de ce code dans une application C#, consultez [Utiliser la sortie de FOR JSON dans une application cliente C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
   
-     ![Exemple de sortie FOR JSON](../../relational-databases/json/media/forjson-example2.png "Exemple de sortie FOR JSON")  
+     ![Exemple de sortie FOR JSON](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  Les résultats sont présentés sous la forme de tableau d’objets JSON.  
   
@@ -148,11 +148,12 @@ Voici un exemple qui montre comment la clause **FOR JSON** met en forme la sorti
 ```  
 
  Pour obtenir plus d’informations sur ce que vous voyez dans la sortie de la clause **FOR JSON**, consultez les rubriques suivantes.  
+
 -   [Conversion par FOR JSON des types de données SQL Server en types de données JSON &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-La clause **FOR JSON** utilise les règles décrites dans cette rubrique pour convertir les types de données SQL en types JSON dans la sortie JSON.  
+    La clause **FOR JSON** utilise les règles décrites dans cette rubrique pour convertir les types de données SQL en types JSON dans la sortie JSON.  
 
 -   [Comment FOR JSON place dans une séquence d’échappement les caractères spéciaux et les caractères de contrôle &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- La clause **FOR JSON** échappe les caractères spéciaux et représente les caractères de contrôle dans la sortie JSON comme le décrit cette rubrique.  
+    La clause **FOR JSON** échappe les caractères spéciaux et représente les caractères de contrôle dans la sortie JSON comme le décrit cette rubrique.  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).

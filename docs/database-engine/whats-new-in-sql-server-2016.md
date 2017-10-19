@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
@@ -303,13 +303,13 @@ Dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la gestion de sauvegarde SQ
 ####  <a name="multipleTempDB"></a> Base de données tempdb
  Plusieurs améliorations ont été apportées à tempdb :
 
--   Les indicateurs de trace 1117 et 1118 ne sont plus nécessaires pour tempdb. Si vous avez plusieurs fichiers de base de données tempdb, ils continuent tous de croître en même temps en fonction des paramètres de croissance. En outre, toutes les allocations dans tempdb utilisent des extensions uniformes.
+-   Les indicateurs de trace 1117 et 1118 ne sont plus nécessaires pour tempdb. Si vous avez plusieurs fichiers de base de données tempdb, ils continuent tous de croître en même temps en fonction des paramètres de croissance. En outre, toutes les allocations dans tempdb utilisent des extensions uniformes.
 
--   Par défaut, le programme d’installation ajoute autant 8 fichiers tempdb ou autant que le nombre de processeurs, la valeur la plus petite étant retenue.
+-   Par défaut, le programme d’installation ajoute autant 8 fichiers tempdb ou autant que le nombre de processeurs, la valeur la plus petite étant retenue.
 
 -   Pendant l’installation, vous pouvez configurer le nombre de fichiers de base de données tempdb, la taille initiale, la croissance automatique et le positionnement des répertoires à l’aide du nouveau contrôle d’entrée de l’interface utilisateur figurant dans la section Configuration du moteur de base de données - TempDB de l’Assistant Installation de SQL Server.
 
--   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
+-   La taille initiale par défaut est de 8 Mo et la croissance automatique par défaut est de 64 Mo.
 
 -   Vous pouvez spécifier plusieurs volumes pour les fichiers de base de données tempdb. Si plusieurs répertoires sont spécifiés, les fichiers de données tempdb sont répartis entre les répertoires selon le principe du tourniquet (round robin).
 
@@ -349,7 +349,8 @@ De nombreuses améliorations ont été apportées pour prendre en charge les fon
 - [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) permet désormais d’effectuer de nombreuses actions de modification de colonne pendant que la table reste disponible.
 - La vue de gestion dynamique (DMV) de l’index de recherche en texte intégral [sys.dm_fts_index_keywords_position_by_document &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md) retourne l’emplacement des mots clés dans des documents. Cette DMV a également été ajoutée dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 et [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1.
 - Un nouvel indicateur de requête **NO_PERFORMANCE_SPOOL** peut empêcher l’ajout d’un opérateur spool à des plans de requête. Les performances peuvent s’en trouver améliorées quand plusieurs requêtes simultanées sont exécutées avec des opérations spool. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md).
-- L’instruction [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) accepte désormais un argument msg_string. La taille de clé d’index maximale pour les index NONCLUSTERED a été augmentée à 1 700 octets.
+- L’instruction [FORMATMESSAGE &#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) a été améliorée pour accepter un argument msg_string.
+- La taille maximale de la clé d’index pour les index NON CLUSTER a été augmentée à 1 700 octets.
 - Une nouvelle syntaxe DROP IF a été ajoutée pour les instructions DROP liées à AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER et VIEW. Pour plus de détails, consultez les rubriques correspondant à chaque syntaxe.
 - L’option MAXDOP a été ajoutée à [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) et [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md) pour spécifier le degré de parallélisme.
 - SESSION_CONTEXT peut désormais être défini. Inclut la fonction [SESSION_CONTEXT &#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md), la fonction [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) et la procédure [sp_set_session_context &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).

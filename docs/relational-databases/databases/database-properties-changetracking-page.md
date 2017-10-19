@@ -16,11 +16,11 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aab898a267244d585d1d09bc66eaca4814895a1
+ms.translationtype: HT
+ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
+ms.openlocfilehash: 6edc4a6d0a4a72e8cec739b78419ce8ce3b4f6cc
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="database-properties-changetracking-page"></a>Propriétés de la base de données (page Suivi des modifications)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  Vous pouvez également configurer le suivi des modifications en utilisant [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Période de rétention**  
- Spécifie la période minimale de conservation des informations de suivi des modifications dans la base de données. Les données sont supprimées uniquement si la valeur **Nettoyage automatique**a la valeur **True**.  
+ Spécifie la période minimale de conservation des informations de suivi des modifications dans la base de données. Les données sont supprimées uniquement si la valeur **Nettoyage automatique** a la valeur **True**.  
   
  La valeur par défaut est 2.  
   

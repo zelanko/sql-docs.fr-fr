@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -135,13 +135,13 @@ Pour corriger cela, utilisez l’applet de commande [Get-AzureRmSqlServerKeyVaul
    ```
 Pour en savoir plus sur la récupération d’une sauvegarde pour SQL Database, consultez [Récupérer une base de données Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Pour en savoir plus sur la récupération d’une sauvegarde pour SQL Data Warehouse, consultez [Récupérer un entrepôt de données Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
 
-## <a name="best-practices"></a>Bonnes pratiques
+## <a name="best-practices"></a>Meilleures pratiques
 
 ### <a name="key-management"></a>Gestion des clés 
 
 Pour garantir la récupération rapide des clés et avoir accès à vos données en dehors d’Azure, suivez ces conseils :
-- Créez votre clé de chiffrement localement sur un appareil HSM local. (Assurez-vous qu’il s’agit d’une clé RSA 2048 bits asymétrique, et donc stockable dans Azure Key Vault.)
-- Importez le fichier de clé de chiffrement (.pfx, .byok ou .backup) dans Azure Key Vault. 
+- Créer votre clé de chiffrement localement sur un appareil HSM local. (Assurez-vous qu’il s’agit d’une clé RSA 2048 bits asymétrique, et donc stockable dans Azure Key Vault.)
+- Importez le fichier de clé de chiffrement (.pfx, .byok ou .backup) dans Azure Key Vault. Vous pouvez utiliser un coffre de clés en activant [soft-suppression](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) pour bénéficier d’une protection de récupération contre une suppression accidentelle de la clé.
 - Avant d’utiliser la clé dans le coffre de clés Azure pour la première fois, sauvegardez une clé Azure Key Vault. En savoir plus sur la commande [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
 - Chaque fois que des modifications sont apportées à la clé (par exemple, ajout de listes de contrôle d’accès, ajout de balises, ajout d’attributs clé), veillez à sauvegarder une autre clé Azure Key Vault.
 - Si vous effectuez une substitution de clé, n’oubliez pas de **conserver les versions précédentes de la clé** dans le coffre de clés pour pouvoir restaurer d’anciennes sauvegardes de la base de données en cas de besoin. 
