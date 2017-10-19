@@ -63,7 +63,7 @@ ms.lasthandoff: 06/22/2017
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
  **Autorisations au niveau des colonnes**  
- Pour les objets qui contiennent des colonnes (tels que les tables, les vues ou les fonctions table), le bouton **Autorisations au niveau des colonnes** ouvre la boîte de dialogue du même nom **** . Dans cette boîte de dialogue, vous pouvez définir les autorisations **Octroyer**, **Autoriser**ou **Refuser** sur des colonnes individuelles d'une table ou d'une vue. Cette option n'est pas disponible pour tous les types d'objets ou autorisations.  
+ Pour les objets qui contiennent des colonnes (tels que les tables, les vues ou les fonctions table), le bouton **Autorisations au niveau des colonnes** ouvre la **Autorisations au niveau des colonnes** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez définir les autorisations **Octroyer**, **Autoriser**ou **Refuser** sur des colonnes individuelles d'une table ou d'une vue. Cette option n'est pas disponible pour tous les types d'objets ou autorisations.  
   
 ## <a name="effective-tab"></a>Onglet Autorisations effectives  
  Les autorisations qu'un principal a mises en rapport avec un élément sécurisable peuvent provenir des autorisations définies pour plusieurs principaux différents. Par exemple, une connexion peut recevoir des autorisations individuellement, et également comme membre d'un groupe. L'onglet **Autorisations effectives** affiche le résultat de la combinaison d'autorisations explicites et des autorisations provenant d'appartenances de groupe ou de rôle. Les autorisations Octroyer sont agrégées. Une autorisation Refuser remplace toutes les autorisations Octroyer.  

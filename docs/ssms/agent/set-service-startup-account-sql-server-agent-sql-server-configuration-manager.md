@@ -77,9 +77,9 @@ Pour plus d’informations sur les autorisations Windows requises pour le compte
   
 6.  Dans le volet d’informations, cliquez avec le bouton droit sur **Agent SQL Server***(nom_serveur)*, où *nom_serveur* représente le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent pour laquelle vous voulez modifier le compte de démarrage du service, puis sélectionnez **Propriétés**.  
   
-7.  Dans la boîte de dialogue **Propriétés de l’Agent SQL Server***(nom_serveur)*****, sous l’onglet **Ouvrir une session**, sélectionnez l’une des options suivantes sous **Ouvrir une session en tant que** :  
+7.  Dans la boîte de dialogue **Propriétés** de *l’Agent SQL Server***(nom_serveur)**, sous l’onglet **Ouvrir une session**, sélectionnez l’une des options suivantes sous **Ouvrir une session en tant que** :  
   
-    -   **Compte intégré** : sélectionnez cette option si vos travaux nécessitent des ressources du serveur local uniquement. Pour plus d’informations sur la façon de choisir un type de compte intégré Windows, consultez [Sélection d’un compte pour le service SQL Server Agent](http://msdn.microsoft.com/library/ms191543.aspx).  
+    -   **Compte intégré** : sélectionnez cette option si vos travaux nécessitent des ressources du serveur local uniquement. Pour plus d’informations sur la façon de choisir un type de compte intégré Windows, consultez [Sélection d’un compte pour le service SQL Server Agent.](http://msdn.microsoft.com/library/ms191543.aspx)  
   
         > [!IMPORTANT]  
         > Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ne prend pas en charge le compte **Service local** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -94,6 +94,6 @@ Pour plus d’informations sur les autorisations Windows requises pour le compte
   
 8.  Cliquez sur **OK**.  
   
-9. Cliquez sur le bouton Fermer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans le Gestionnaire de configuration **** .  
+9. Cliquez sur le bouton **Fermer** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gestionnaire de configuration.  
   
 
