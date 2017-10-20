@@ -29,7 +29,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql  
-create_execution_dump [ @execution_id = ] execution_id  
+catalog.create_execution_dump [ @execution_id = ] execution_id  
   
 ```  
   
@@ -40,10 +40,8 @@ create_execution_dump [ @execution_id = ] execution_id
 ## <a name="example"></a>Exemple  
  Dans l'exemple suivant, le package en cours d'exécution dont l'ID d'exécution est 88 est invité à créer un fichier de vidage.  
   
-```  
-  
+```sql
 EXEC create_execution_dump @execution_id = 88  
-  
 ```  
   
 ## <a name="return-codes"></a>Codes de retour  

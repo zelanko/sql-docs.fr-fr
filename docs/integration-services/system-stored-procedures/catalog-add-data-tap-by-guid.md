@@ -29,12 +29,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql  
-add_data_tap_by_guid [ @execution_id = ] execution_id  
-[ @dataflow_task_guid = ] dataflow_task_guid   
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
+catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+, [ @dataflow_task_guid = ] dataflow_task_guid   
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -63,12 +63,11 @@ add_data_tap_by_guid [ @execution_id = ] execution_id
 ## <a name="example"></a>Exemple  
  Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `Paths[SRC DimDCVentor.OLE DB Source Output]`, dans le flux de données tâche `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Les données drainées sont stockées dans le fichier DCVendorOutput.csv.  
   
-```  
+```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
 '{D978A2E4-E05D-4374-9B05-50178A8817E8}',   
 'Paths[SRC DimDCVentor.OLE DB Source Output]',   
 'D:\demos\datafiles\DCVendorOutput.csv'  
-  
 ```  
   
 ## <a name="remarks"></a>Notes  

@@ -31,11 +31,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```sql  
-set_execution_parameter_value [ @execution_id = execution_id  
+catalog.set_execution_parameter_value [ @execution_id = execution_id  
     , [ @object_type = ] object_type  
     , [ @parameter_name = ] parameter_name  
     , [ @parameter_value = ] parameter_value  
-  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -117,16 +116,15 @@ set_execution_parameter_value [ @execution_id = execution_id
 ## <a name="example"></a>Exemple  
  L'exemple suivant spécifie que le serveur Integration Services doit générer des fichiers de vidage lorsqu'une erreur se produit pendant une exécution de package.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
-  
 ```  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant spécifie que le serveur Integration Services doit générer des fichiers de vidage lorsque des événements se produisent pendant une exécution de package, et identifie l'événement qui provoque la génération des fichiers par le serveur.  
   
-```  
+```sql
 exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 0,@execution_id out  
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_EVENT',1  
   
