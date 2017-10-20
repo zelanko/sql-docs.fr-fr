@@ -1,5 +1,5 @@
 ---
-title: Quel &#39; s de SSMA pour Access(AccessToSQL) | Documents Microsoft
+title: "Quel &#39 ; s de SSMA pour Access(AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -24,7 +24,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>Quel &#39; s de SSMA pour Access (AccessToSQL)
+# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>Quel &#39 ; s de SSMA pour Access (AccessToSQL)
 Cette rubrique répertorie SSMA pour les modifications d’accès dans chaque version.  
 
 ## <a name="ssma-v76"></a>SSMA v7.6

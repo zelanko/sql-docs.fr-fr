@@ -1,5 +1,5 @@
 ---
-title: Quel &#39; s de SSMA pour SAP ASE (SybaseToSQL) | Documents Microsoft
+title: "Quel &#39 ; s de SSMA pour SAP ASE (SybaseToSQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
@@ -24,7 +24,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>Quel &#39; s de SSMA pour SAP ASE (SybaseToSQL)
+# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>Quel &#39 ; s de SSMA pour SAP ASE (SybaseToSQL)
 Cette rubrique répertorie SSMA pour SAP ASE (anciennement SSMA pour Sybase) les modifications dans chaque version. 
 
 ## <a name="ssma-v76"></a>SSMA v7.6

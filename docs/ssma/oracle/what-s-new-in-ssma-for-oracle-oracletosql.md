@@ -1,5 +1,5 @@
 ---
-title: Quel &#39; s de SSMA pour Oracle (OracleToSQL) | Documents Microsoft
+title: "Quel &#39 ; s de SSMA pour Oracle (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -21,7 +21,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>Quel &#39; s de SSMA pour Oracle (OracleToSQL)
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>Quel &#39 ; s de SSMA pour Oracle (OracleToSQL)
 Cette rubrique répertorie SSMA pour les modifications d’Oracle dans chaque version.  
 
 ## <a name="ssma-v76"></a>SSMA v7.6

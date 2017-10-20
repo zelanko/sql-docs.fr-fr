@@ -1,5 +1,5 @@
 ---
-title: Quel &#39; s de SSMA pour MySQL (MySQLToSql) | Documents Microsoft
+title: "Quel &#39 ; s de SSMA pour MySQL (MySQLToSql) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017
@@ -24,7 +24,7 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/30/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>Quel &#39; s de SSMA pour MySQL (MySQLToSql)
+# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>Quel &#39 ; s de SSMA pour MySQL (MySQLToSql)
 Cette rubrique répertorie SSMA pour que les modifications de MySQL dans chaque version. 
 
 ## <a name="ssma-v76"></a>SSMA v7.6
