@@ -91,7 +91,7 @@ Configuration et du paramétrage des performances requiert la création d’une 
 
 + [Réglage des performances pour R dans SQL Server - matériel](..\r\sql-server-configuration-r-services.md)
 
-    Fournit des conseils pour la configuration du matériel qui [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md) ] est installé et pour la configuration de l’instance de SQL Server pour mieux prendre en charge de scripts externes. Il est particulièrement utile pour **les administrateurs de base de données**.
+    Fournit des conseils pour la configuration du matériel qui [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] est installé et pour la configuration de l’instance de SQL Server pour mieux prendre en charge de scripts externes. Il est particulièrement utile pour **les administrateurs de base de données**.
 
 + [Réglage des performances pour R dans SQL Server - code et les données optimisation](..\r\r-and-data-optimization-r-services.md)
 
