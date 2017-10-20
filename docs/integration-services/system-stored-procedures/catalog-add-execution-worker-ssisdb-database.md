@@ -28,7 +28,7 @@ Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] montée 
 
 ## <a name="syntax"></a>Syntaxe
 
-```tsql
+```sql
 add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
 ```
 

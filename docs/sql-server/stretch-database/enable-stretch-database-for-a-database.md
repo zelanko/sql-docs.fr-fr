@@ -84,7 +84,7 @@ GO
   
 3.  Pour configurer une base de données SQL Server pour Stretch Database, la base de données doit avoir une clé principale de base de données. La clé principale de base de données permet de sécuriser les informations d’identification que Stretch Database utilise pour se connecter à la base de données distante. Voici un exemple qui crée une clé principale de base de données.  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         Voici un exemple qui crée des informations d’identification.
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  Fournissez les informations d’identification d’un administrateur existant avec l’argument CREDENTIAL ou spécifiez FEDERATED_SERVICE_ACCOUNT = ON. L’exemple suivant fournit des informations d’identification existantes.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

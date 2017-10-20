@@ -34,7 +34,7 @@ Pour obtenir des instructions de jointure d’un rôle de base de données, cons
 Appelez la procédure stockée [catalogue]. [update_logdb_info] avec la chaîne de nom et une connexion Sql Server en tant que paramètres.
 
 #### <a name="example"></a>Exemple
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

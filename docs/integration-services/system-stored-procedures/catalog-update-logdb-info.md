@@ -27,7 +27,7 @@ Mise Ã  jour le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lâ
 
 ## <a name="syntax"></a>Syntaxe
 
-```tsql
+```sql
 update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
 ```
 

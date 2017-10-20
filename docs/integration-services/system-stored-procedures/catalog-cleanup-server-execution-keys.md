@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>Exemple  
  L’exemple suivant appelle la procédure stockée de cleanup_server_execution_keys.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

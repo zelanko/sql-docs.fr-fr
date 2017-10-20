@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  Pour afficher la quantité d’espace qu’utilise une table compatible Stretch dans SQL Server, exécutez l’instruction suivante.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Pour afficher la quantité d’espace qu’utilise une table compatible Stretch dans Azure, exécutez l’instruction suivante.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ Si vous avez accidentellement supprimé des colonnes de la table distante, exéc
   
 Par exemple, la requête suivante retourne uniquement des résultats locaux.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;

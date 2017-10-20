@@ -73,7 +73,7 @@ Pour restaurer une base de données Azure supprimée au point où elle a été s
   
     -   Indiquez si vous souhaitez effectuer une copie des données distantes et vous connecter à la copie (recommandée).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db
