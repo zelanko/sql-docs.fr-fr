@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (base de données SSISDB)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
+ [@folder_name =] *nom_dossier*  
  Nom du dossier qui contient l'environnement. Le *nom_dossier* est **nvarchar (128)**.  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  Nom de l'environnement. Le *environment_name* est **nvarchar (128)**.  
   
- [ @variable_name =] *nom_variable*  
+ [@variable_name =] *nom_variable*  
  Nom de la variable d'environnement. Le *nom_variable* est **nvarchar (128)**.  
   
- [ @data_type =] *data_type*  
+ [@data_type =] *data_type*  
  Type de données de la variable. Prise en charge des données de variable d’environnement types incluent **booléenne**, **octets**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **unique**, **chaîne**, **UInt32**, et **UInt64**. Types de données de la variable d’environnement non pris en charge incluent **Char**, **DBNull**, **objet**, et **Sbyte**. Type de données de la *data_type* paramètre est **nvarchar (128)**.  
   
- [ @sensitive =] *sensibles*  
+ [@sensitive =] *sensibles*  
  Indique si la variable contient une valeur sensible ou pas. Utilisez une valeur de `1` pour indiquer que la valeur de la variable d'environnement est sensible ou une valeur de `0` pour indiquer qu'elle n'est pas sensible. Une valeur sensible est chiffrée lorsqu'elle est stockée. Une valeur qui n’est pas sensible est stockée en texte clair. *Sensibles* est **bits**.  
   
- [ @value =] *valeur*  
+ [@value =] *valeur*  
  Valeur de la variable d'environnement. Le *valeur* est **sql_variant**.  
   
- [ @description =] *description*  
+ [@description =] *description*  
  Description de la variable d'environnement. Le *valeur* est **nvarchar (1024)**.  
   
 ## <a name="return-code-value"></a>Valeur de Code de retour  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  Envisagez d’utiliser le **Int16** de type de données dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] au lieu de la non prise en charge **Sbyte** type de données.  
   
- La valeur passée à cette procédure stockée avec la *valeur* paramètre sera converti d’une [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] type de données à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données conformément au tableau suivant :  
+ La valeur passée à cette procédure stockée avec la *valeur* paramètre est converti en un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] type de données à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données conformément au tableau suivant :  
   
 |Type de données Integration Services|Type de données de SQL Server|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**Unique**|Valeur numérique exacte : **décimal**, **numérique**; Numérique approché : **float**, **réel**|  
 |**Chaîne**|**varchar**, **nvarchar**, **char**|  
-|**UInt32**|**int** (c’est le mappage le plus proche pour **Uint32**.)|  
-|**UInt64**|**bigint** (c’est le mappage le plus proche pour **Uint64**.)|  
+|**UInt32**|**int** (**int** est le mappage le plus proche pour **Uint32**.)|  
+|**UInt64**|**bigint** (**int** est le mappage le plus proche pour **Uint64**.)|  
   
   

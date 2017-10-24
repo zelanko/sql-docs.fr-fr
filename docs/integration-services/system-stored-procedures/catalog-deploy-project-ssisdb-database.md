@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
-ms.openlocfilehash: 9871d26467a300119c742d398ff88f87825d930c
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (base de données SSISDB)
@@ -28,37 +28,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
-deploy_project [ @folder_name = ] folder_name   
-      , [ @project_name = ] project_name   
-      , [ @project_stream = ] projectstream   
+```sql  
+catalog.deploy_project [@folder_name =] folder_name   
+      , [@project_name =] project_name   
+      , [@project_stream =] projectstream   
     [ , [@operation_id ] = operation_id OUTPUT ]   
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
- Nom du dossier où le projet sera déployé. Le *nom_dossier* est **nvarchar (128)**.  
+ [@folder_name =] *nom_dossier*  
+ Le nom du dossier où le projet est déployé. Le *nom_dossier* est **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Nom du nouveau projet ou du projet mis à jour dans le dossier. Le *project_name* est **nvarchar (128)**.  
   
- [ @projectstream =] *projectstream*  
+ [@projectstream =] *projectstream*  
  Contenu binaire du fichier de déploiement d'un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (extension .ispac).  
   
  Vous pouvez utiliser une instruction SELECT avec la fonction OPENROWSET et le fournisseur d'ensembles de lignes BULK pour récupérer le contenu binaire du fichier. Pour obtenir un exemple, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md). Pour plus d’informations sur OPENROWSET, consultez [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
   
  Le *projectstream* est **varbinary (max)**  
   
- [ @operation_id =] *identifiant_opération*  
+ [@operation_id =] *identifiant_opération*  
  Retourne l'identificateur unique de l'opération de déploiement. Le *identifiant_opération* est **bigint**.  
   
 ## <a name="return-code-value"></a>Valeur de Code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ Aucune  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations CREATE_OBJECTS sur le dossier pour déployer un nouveau projet ou des autorisations MODIFY sur le projet pour mettre à jour un projet  

@@ -20,11 +20,12 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0b86b019de9a767402814afa4d2f6f2903c983b2
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0a1047fbccf3e9437c3160891f502f9e2838c34a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="adomdnet-client-functionality"></a>Fonctionnalités clientes ADOMD.NET
@@ -35,7 +36,7 @@ ms.lasthandoff: 09/01/2017
   
  Pour plus d’informations : [la récupération des métadonnées à partir d’une Source de données analytiques](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md).  
   
- **La récupération des données**  
+ **Récupération de données**  
  La récupération de données consiste en la récupération effective des informations stockées dans la source de données. La récupération de données est la fonction principale des applications « statiques », qui connaissent la structure de la source de données. La récupération de données représente également le résultat final des applications « dynamiques ». La valeur de l'indicateur de performance clé à une heure donnée de la journée, le nombre de vélos vendus au cours de la dernière heure dans chaque magasin, et les éléments qui conditionnent les performances annuelles des employés sont autant d'exemples de données susceptibles d'être récupérées. La récupération de données est vitale pour les applications d'interrogation.  
   
  Pour plus d’informations : [la récupération des données à partir d’une Source de données analytiques](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md).  
@@ -69,6 +70,7 @@ ms.lasthandoff: 09/01/2017
  [!code-cs[Adomd.NetClient#ReturnCommandUsingCellSet](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/adomd-net-client-functio_1.cs)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation du Client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
+ [Programmation du client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
+

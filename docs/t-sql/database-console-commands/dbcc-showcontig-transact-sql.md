@@ -28,11 +28,12 @@ caps.latest.revision: 78
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 770b21498e0159c1ac30eb4ea8a192b6597b4ebe
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -204,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Utilisation de OBJECT_ID pour obtenir l'ID de table et sys.indexes pour obtenir l'ID d'index  
-L’exemple suivant utilise `OBJECT`_`ID` et `sys.indexes` affichage pour obtenir l’ID de table et l’ID d’index de catalogue le `AK_Product_Name` index de la `Production.Product` table le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.
+L’exemple suivant utilise `OBJECT_ID` et `sys.indexes` affichage pour obtenir l’ID de table et l’ID d’index de catalogue le `AK_Product_Name` index de la `Production.Product` table le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.
   
 ```sql  
 USE AdventureWorks2012;  

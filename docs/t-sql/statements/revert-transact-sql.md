@@ -26,11 +26,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2074ef0a9e434ac5c427c5438633c61ead0eb25a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 033442da3e10fd834963df30ea071a220464de6f
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -76,7 +77,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- L'instruction `REVERT` définie dans `usp`_`myproc` change le contexte d'exécution défini dans le module, mais elle n'affecte pas le contexte d'exécution défini à l'extérieur du module. Autrement dit, le contexte d'exécution de la session reste `login1`.  
+ Le `REVERT` instruction définie dans `usp_myproc` change le contexte d’exécution défini dans le module, mais n’affecte pas le contexte d’exécution définie en dehors du module. Autrement dit, le contexte d'exécution de la session reste `login1`.  
   
  Lorsque REVERT est une instruction autonome, elle s'applique aux instructions EXECUTE AS définies dans un traitement ou une session. REVERT n'a aucun effet si l'instruction EXECUTE AS correspondante contient la clause WITH NO REVERT. Dans ce cas, le contexte d'exécution reste en vigueur jusqu'à la suppression de la session.  
   

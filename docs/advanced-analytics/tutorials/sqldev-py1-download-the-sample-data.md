@@ -1,7 +1,7 @@
 ---
 title: "Étape 1 : Télécharger les exemples de données | Documents Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,50 +20,59 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 147860e9af8cce86d1a7ccbd3e53f20d240fcd49
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: b2ac1eeb53ba9f9a0dcbf86ee772db9c8b2d3553
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-1-download-the-sample-data"></a>Étape 1 : Télécharger les exemples de données
+# <a name="step-1-download-the-sample-data"></a>Étape 1 : Télécharger les exemples de données
 
-Dans cette étape, vous allez télécharger l’exemple de dataset et les scripts. Les données et les fichiers de script sont partagés sur Github, mais le script PowerShell télécharge les fichiers de script et de données dans le répertoire local de votre choix.
+Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-## <a name="download-the-data-and-scripts"></a>Télécharger les données et les scripts
+Les données et les scripts de ce didacticiel sont partagés sur Github. Dans cette étape, vous utilisez un script PowerShell pour télécharger les fichiers de script et de données dans un répertoire local de votre choix.
+
+## <a name="run-the-script"></a>Exécutez le script
 
 1. Ouvrez une console de commande Windows PowerShell.
 
     Utilisez l’option, **exécuter en tant qu’administrateur**, si des privilèges d’administrateur sont nécessaires pour créer le répertoire de destination ou pour écrire des fichiers vers la destination spécifiée.
 
-2. Exécutez les commandes PowerShell suivantes, en définissant la valeur du paramètre *DestDir* sur un répertoire local.  La valeur par défaut, nous avons utilisé ici est **TempPythonSQL**.
+2. Exécutez les commandes PowerShell suivantes, en définissant la valeur du paramètre *DestDir* sur un répertoire local.  La valeur par défaut, nous avons utilisé ici est `C:\temp\pysql`.
 
-    ```
+    ```ps
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/PythonSQL/Download_Scripts_SQL_Walkthrough.ps1'
     $ps1_dest = "$pwd\Download_Scripts_SQL_Walkthrough.ps1"
     $wc = New-Object System.Net.WebClient
     $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\tempPythonSQL'
+    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir 'C:\temp\pysql'
     ```
     
     Si le dossier que vous spécifiez dans *DestDir* n’existe pas, il est créé par le script PowerShell.
     
-    Si vous obtenez une erreur, vous pouvez temporairement définir la stratégie d’exécution des scripts PowerShell pour **illimitée** uniquement pour cette procédure pas à pas, à l’aide de la **contournement** argument et les modifications apportées à la session active de portée. L’exécution de cette commande n’a pas d’incidence sur la configuration.
+    Si vous obtenez une erreur, définissez temporairement la stratégie d’exécution des scripts PowerShell pour **illimitée** pour cette procédure pas à pas, à l’aide de la **contournement** argument et les modifications apportées à la session active de portée. L’exécution de cette commande n’a pas d’incidence sur la configuration.
     
-    `Set\-ExecutionPolicy Bypass \-Scope Process`
-
-3. Selon votre connexion Internet, le téléchargement peut prendre un certain temps. Une fois tous les fichiers téléchargés, le script PowerShell s’ouvre sur le dossier spécifié par  *DestDir*. Dans l’invite de commandes PowerShell, exécutez la commande suivante et examinez les fichiers qui ont été téléchargés.
-
+    ```ps
+    Set-ExecutionPolicy Bypass -Scope Process
     ```
+
+3. En fonction de votre connexion internet, le téléchargement peut prendre un certain temps. 
+
+## <a name="view-the-results"></a>Afficher les résultats
+
+Une fois tous les fichiers téléchargés, le script PowerShell s’ouvre sur le dossier spécifié par  *DestDir*. 
+
++ Dans l’invite de commandes PowerShell, exécutez la commande suivante, pour répertorier les fichiers qui ont été téléchargés.
+
+    ```ps
     ls
     ```
-**Résultats :**
 
 ![liste des fichiers téléchargés par le script PowerShell](media/sqldev-python-filelist.png "liste des fichiers téléchargés par le script PowerShell")
 
 ## <a name="next-step"></a>Étape suivante
 
-[Étape 2 : Importer des données dans SQL Server à l’aide de PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Étape 2 : Importer des données dans SQL Server à l’aide de PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-step"></a>Étape précédente
 

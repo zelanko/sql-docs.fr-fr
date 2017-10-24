@@ -1,7 +1,7 @@
 ---
-title: "Étape 3 : explorer et visualiser les données | Microsoft Docs"
+title: "Étape 3 : Explorer et visualiser les données | Documents Microsoft"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,60 +20,76 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dfb80fcd3241b22f0ac72c2cf4cd8a18d1add857
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 31fa666c98948dc18f7aad988de795809594d2dd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
-# <a name="step-3-explore-and-visualize-the-data"></a>Étape 3 : Explorer et visualiser les données
+# <a name="step-3-explore-and-visualize-the-data"></a>Étape 3 : Explorer et visualiser les données
 
-Le développement d’une solution de science des données comprend généralement l’exploration et la visualisation des données. Dans cette étape, vous allez explorer les exemples de données et générer des graphiques. Une version ultérieure, vous allez apprendre à sérialiser des objets graphics dans Python, puis désérialiser ces objets et rendre des graphiques.
+Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-> [!NOTE]
-> Cette procédure pas à pas ne montre que la tâche de classification binaire ; vous êtes invité à réessayer de générer des modèles distincts pour les autres tâches d’apprentissage deux, régression et classification multiclasse.
+Dans cette étape, vous explorez les exemples de données et générez des graphiques. Une version ultérieure, vous apprenez à sérialiser des objets graphics dans Python, puis désérialiser ces objets et rendre des graphiques.
 
-## <a name="review-the-data"></a>Examiner les données
+## <a name="review-the-data"></a>Passez en revue les données
 
-Dans le dataset d’origine, les identificateurs de taxis et les enregistrements de trajets ont été fournis dans des fichiers distincts. Toutefois, pour simplifier l’utilisation des exemples de données, les deux datasets d’origine ont été joints sur les colonnes _medallion_, _hack_license_et _pickup_datetime_.  Les enregistrements ont aussi été échantillonnés pour obtenir seulement 1 % du nombre d’enregistrements d’origine. Le dataset échantillonné obtenu compte 1 703 957 lignes et 23 colonnes.
+Tout d’abord, prenez une minute pour parcourir le schéma de données, comme nous avons apporté des modifications pour le rendre plus facile d’utiliser les données NYC Taxi
+
++ Le jeu de données d’origine utilisé des fichiers distincts pour les identificateurs de taxi et les enregistrements de voyage. Nous avons joint deux jeux de données d’origine sur les colonnes _medallion_, _hack_license_, et _pickup_datetime_.  
++ Le jeu de données d’origine sur lesquelles s’étend de fichiers et a été très volumineux. Nous avons sous-échantillonnée pour obtenir uniquement 1 % du nombre d’enregistrements d’origine. La table de données en cours a 1,703,957 lignes et 23 colonnes.
 
 **Identificateurs de taxis**
 
-- La colonne _medallion_ représente le numéro d’ID unique du taxi.
-- La colonne _hack_license_ contient le numéro de licence du conducteur du taxi (anonyme).
+Le _medallion_ colonne représente le numéro d’identification unique du taxi.
+
+Le _hack_license_ colonne contient le numéro de licence du pilote taxi (anonyme).
 
 **Enregistrements de trajets et de prix**
 
-- Chaque enregistrement de trajet comprend les lieux de prise en charge et de dépose, ainsi que la durée et la distance du trajet.
-- Chaque enregistrement de prix inclut des informations telles que le type de paiement, le montant total du paiement et le montant du pourboire.
-- Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique.  La colonne _tip_amount_ contient des valeurs numériques continues et peut être utilisée comme colonne **étiquette** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. La colonne _tip_class_ a plusieurs **étiquettes de classes** , et peut donc être utilisée comme étiquette pour les tâches de classification multiclasse.
-- Les valeurs utilisées pour les colonnes d’étiquettes sont basées sur la colonne _tip_amount_ , à l’aide de ces règles d’entreprise :
-  
-    |Nom de la colonne dérivée|Règle|
-    |-|-|
-     |tipped|Si tip_amount > 0, tipped = 1, sinon tipped = 0|
-    |tip_class|Classe 0 : tip_amount = 0 $<br /><br />Classe 1 : tip_amount > 0 $ et tip_amount <= 5 $<br /><br />Classe 2 : tip_amount > 5 $ et tip_amount <= 10 $<br /><br />Classe 3 : tip_amount > 10 $ et tip_amount <= 20 $<br /><br />Classe 4 : tip_amount > 20 $|
+Chaque enregistrement de trajet comprend les lieux de prise en charge et de dépose, ainsi que la durée et la distance du trajet.
+
+Chaque enregistrement de prix inclut des informations telles que le type de paiement, le montant total du paiement et le montant du pourboire.
+
+Les trois dernières colonnes peuvent être utilisées pour différentes tâches d’apprentissage automatique.  La colonne _tip_amount_ contient des valeurs numériques continues et peut être utilisée comme colonne **étiquette** pour l’analyse de régression. La colonne _tipped_ contient seulement des valeurs oui/non. Elle sert à la classification binaire. La colonne _tip_class_ a plusieurs **étiquettes de classes** , et peut donc être utilisée comme étiquette pour les tâches de classification multiclasse.
+
+Les valeurs utilisées pour les colonnes d’étiquette sont toutes basées sur la `tip_amount` colonne, à l’aide de ces règles d’entreprise :
+
++ Colonne d’étiquette `tipped` a des valeurs possibles, 0 et 1
+
+    Si `tip_amount` > 0, `tipped` = 1 ; sinon `tipped` = 0
+
++ Colonne d’étiquette `tip_class` a des valeurs possibles de classe 0-4
+
+    Classe 0 : `tip_amount` = 0 $
+
+    Classe 1 : `tip_amount` > $0 et `tip_amount` < = 5 $
+    
+    Classe 2 : `tip_amount` > $5 et `tip_amount` < = $10
+    
+    Classe 3 : `tip_amount` > $10 et `tip_amount` < = 20
+    
+    Classe 4 : `tip_amount` 20 >
 
 ## <a name="create-plots-using-python-in-t-sql"></a>Créer des graphiques à l’aide de Python dans T-SQL
 
-Étant donné que la visualisation est un outil puissant permettant de comprendre la distribution des données et des valeurs hors norme, Python fournit de nombreux packages de visualisation de données. Le **matplotlib** module est une bibliothèque populaire qui inclut de nombreuses fonctions pour la création d’histogrammes, nuages de points, des graphiques de zone et autres graphiques d’exploration de données.
+Le développement d’une solution de science des données comprend généralement l’exploration et la visualisation des données. Étant donné que la visualisation est un outil puissant permettant de comprendre la distribution des données et des valeurs hors norme, Python fournit de nombreux packages de visualisation de données. Le **matplotlib** module est une des bibliothèques de visualisation les plus populaires et inclut de nombreuses fonctions pour la création d’histogrammes, nuages de points, des graphiques de zone et autres graphiques d’exploration de données.
 
-Dans cette section, vous allez apprendre comment utiliser des graphiques à l’aide de procédures stockées. Vous allez stocker les `plot` Python de l’objet en un **varbinary** données tapez et enregistrez les graphiques générés sur le serveur.
+Dans cette section, vous allez apprendre à travailler avec des graphiques à l’aide de procédures stockées. Au lieu d’ouvrir l’image sur le serveur, vous stockez l’objet Python `plot` en tant que **varbinary** données, puis écrire que dans un fichier qui peut être partagé ou affichées ailleurs.
 
-### <a name="storing-plots-as-varbinary-data-type"></a>Stockage de tracés en tant que type de données varbinary
+### <a name="create-a-plot-as-varbinary-data"></a>Créer un graphique en tant que données varbinary
 
-Le **revoscalepy** module inclus avec SQL Server 2017 Machine Learning Services contient les bibliothèques analogues aux bibliothèques R dans le package RevoScaleR. Dans cet exemple, vous allez utiliser l’équivalent de Python de `rxHistogram` pour tracer un histogramme basé sur des données d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Pour simplifier, vous l’encapsule dans une procédure stockée, _PlotHistogram_.
+Le **revoscalepy** module inclus avec SQL Server 2017 Machine Learning Services prend en charge des fonctionnalités similaires à celles de la **RevoScaleR** package de R.  Cet exemple utilise l’équivalent de Python de `rxHistogram` pour tracer un histogramme basé sur des données d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. 
 
 La procédure stockée retourne une Python sérialisée `figure` objet sous forme de flux de **varbinary** données. Vous ne pouvez pas afficher directement les données binaires, mais vous pouvez utiliser du code Python à désérialiser et afficher les chiffres sur le client et puis enregistrez le fichier image sur un ordinateur client.
 
-### <a name="create-the-stored-procedure-plotspython"></a>Créez la procédure stockée Plots_Python
+1. Créez la procédure stockée _SerializePlots_, si le script PowerShell s’est pas déjà fait.
 
-1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ouvrez une nouvelle **requête** fenêtre.
-
-2.  Sélectionnez la base de données pour la procédure pas à pas, puis créez la procédure à l’aide de cette instruction. N’oubliez pas de modifier le code pour utiliser le nom de table approprié, si nécessaire.
+    - La variable `@query` définit le texte de requête `SELECT tipped FROM nyctaxi_sample`, qui est passé au bloc de code Python comme argument à la variable d’entrée du script, `@input_data_1`.
+    - Le script Python est relativement simple : **matplotlib** `figure` objets sont utilisés pour effectuer le traçage de l’histogramme et à nuages de points, et ces objets sont sérialisés puis à l’aide de la `pickle` bibliothèque.
+    - L’objet graphics Python est sérialisée vers un **pandas** trame de données pour la sortie.
   
     ```SQL
-    
     CREATE PROCEDURE [dbo].[SerializePlots]
     AS
     BEGIN
@@ -120,90 +136,79 @@ La procédure stockée retourne une Python sérialisée `figure` objet sous form
 
     OutputDataSet = plot0.append(plot1, ignore_index=True).append(plot2, ignore_index=True).append(plot3, ignore_index=True)
     ',
-                                     @input_data_1 = @query
-      WITH RESULT SETS ((plot varbinary(max)))
+    @input_data_1 = @query
+    WITH RESULT SETS ((plot varbinary(max)))
     END
-
     GO
-  
     ```
-**Remarques :**
 
-- La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est passé au bloc de code Python comme argument à la variable d’entrée du script, `@input_data_1`.
-- Le script Python est relativement simple : **matplotlib** `figure` objets sont utilisés pour effectuer le traçage de l’histogramme et à nuages de points, et ces objets sont sérialisés puis à l’aide de la `pickle` bibliothèque.
-- L’objet graphics Python est sérialisée vers un Python **pandas** trame de données pour la sortie.
+2. Maintenant, exécutez la procédure stockée sans arguments pour générer un graphique à partir des données codées en dur en tant que requête d’entrée.
 
-### <a name="output-varbinary-data-to-viewable-graphics-file"></a>Données varbinary de sortie à un fichier graphique visible
-
-1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], exécutez la commande suivante :
-  
     ```
     EXEC [dbo].[SerializePlots]
     ```
+
+3. Les résultats doivent être quelque chose comme ceci :
   
-    **Résultats**
-  
-    *traçage*
-    *0xFFD8FFE000104A4649... * 
-     *0xFFD8FFE000104A4649... * 
-     *0xFFD8FFE000104A4649... * 
-     *0xFFD8FFE000104A4649...*
+    ```
+    plot
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    0xFFD8FFE000104A4649...
+    ```
 
   
-2.  Sur l’ordinateur client, exécutez le code Python suivant, en remplaçant le nom du serveur, nom de la base de données et les informations d’identification comme il convient.
+4. À partir d’un client Python, vous pouvez maintenant vous connecter à l’instance de SQL Server qui a généré les objets binaires de traçage et afficher les graphiques. 
+
+    Pour ce faire, exécutez le code Python suivant, en remplaçant le nom du serveur, nom de la base de données et les informations d’identification comme il convient. Assurez-vous que la version Python est le même sur le client et le serveur. Assurez-vous également que vous utilisez la version identique ou ultérieure par rapport aux bibliothèques sont installées sur le serveur dans les bibliothèques Python sur votre client (par exemple, matplotlib).
   
-    **Pour l’authentification SQL server :**
+    **À l’aide de l’authentification SQL Server :**
     
-        ```python
-        import pyodbc
-        import pickle
-        import os
-        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSOWRD}')
-        cursor = cnxn.cursor()
-        cursor.execute("EXECUTE [dbo].[SerializePlots]")
-        tables = cursor.fetchall()
-        for i in range(0, len(tables)):
-            fig = pickle.loads(tables[i][0])
-            fig.savefig(str(i)+'.png')
-        print("The plots are saved in directory: ",os.getcwd())
-        ```  
-    **Pour l’authentification Windows :**
+    ```python
+    import pyodbc
+    import pickle
+    import os
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
+    cursor = cnxn.cursor()
+    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    tables = cursor.fetchall()
+    for i in range(0, len(tables)):
+        fig = pickle.loads(tables[i][0])
+        fig.savefig(str(i)+'.png')
+    print("The plots are saved in directory: ",os.getcwd())
+    ```
 
-        ```python
-        import pyodbc
-        import pickle
-        import os
-        cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
-        cursor = cnxn.cursor()
-        cursor.execute("EXECUTE [dbo].[SerializePlots]")
-        tables = cursor.fetchall()
-        for i in range(0, len(tables)):
-            fig = pickle.loads(tables[i][0])
-            fig.savefig(str(i)+'.png')
-        print("The plots are saved in directory: ",os.getcwd())
-        ```
+    **À l’aide de l’authentification Windows :**
 
-    > [!NOTE]
-    > Assurez-vous que la version Python est le même sur le client et le serveur. En outre, assurez-vous que les bibliothèques de Python que vous utilisez sur votre client (par exemple, matplotlib) sont de la version identique ou ultérieure par rapport aux bibliothèques sont installées sur le serveur.
+    ```python
+    import pyodbc
+    import pickle
+    import os
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cursor = cnxn.cursor()
+    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    tables = cursor.fetchall()
+    for i in range(0, len(tables)):
+        fig = pickle.loads(tables[i][0])
+        fig.savefig(str(i)+'.png')
+    print("The plots are saved in directory: ",os.getcwd())
+    ```
 
-
-3.  Si la connexion est établie, vous voyez les résultats ci-dessous
+5.  Si la connexion est établie, vous devez voir un message comme suit :
   
     *Les graphiques sont enregistrés dans le répertoire : xxxx*
   
-4.  Le fichier de sortie sera créé dans le répertoire de travail Python. Pour afficher le tracé, ouvrez simplement le répertoire de travail Python. L’illustration suivante montre un exemple de tracé enregistré sur l’ordinateur client.
+6.  Le fichier de sortie est créé dans le répertoire de travail Python. Pour afficher le tracé, recherchez le répertoire de travail de Python et ouvrez le fichier. L’illustration suivante montre un graphique enregistré sur l’ordinateur client.
   
     ![Conseil le montant de frais vs](media/sqldev-python-sample-plot.png "Conseil, montant de frais de vs") 
 
 ## <a name="next-step"></a>Étape suivante
 
-[Étape 4 : Créer des fonctionnalités de données à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Étape 4 : Créer des caractéristiques de données à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Étape 2 : Importer des données dans SQL Server à l’aide de PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
+[Étape 2 : Importer des données dans SQL Server à l’aide de PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
-## <a name="see-also"></a>Voir aussi
-
-[Machine Learning Services avec Python](../python/sql-server-python-services.md)
 

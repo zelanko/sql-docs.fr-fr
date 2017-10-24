@@ -22,11 +22,12 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94cbf96a25a84af1eddce9d94555be9c558c3470
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 166a85e5fe33a95cd8a36f221c2a774e4a0a9fb2
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Fonctions de classement - commande COLLATIONPROPERTY (Transact-SQL)
@@ -51,10 +52,10 @@ Propriété du classement. *propriété* est **varchar (128)**, et peut prendre 
   
 |Nom de la propriété| Description|  
 |---|---|
-|**CodePage**|Page de codes non-Unicode du classement.|  
-|**LCID**|Indicateur LCID Windows du classement.|  
-|**ComparisonStyle**|Style de comparaison Windows du classement. Renvoie la valeur 0 pour tous les classements binaires.|  
-|**Version**|Version du classement, dérivée du champ de version de l'ID du classement. Retourne 2, 1 ou 0.<br /><br /> Classements avec le nom « 100 ») retournent 2.<br /><br /> Les classements dont le nom contient « 90 » retournent 1<br /><br /> Tous les autres classements retournent 0.|  
+|**CodePage**|Page de codes non-Unicode du classement. Consultez [annexe G DBCS/Unicode mappage des Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) et [Pages de codes annexe H](https://msdn.microsoft.com/en-us/library/cc195051.aspx) pour convertir ces valeurs et voir leurs mappages de caractères.|  
+|**LCID**|Indicateur LCID Windows du classement. Consultez [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) pour convertir ces valeurs (vous devrez convertir `VARBINARY` premier).|  
+|**ComparisonStyle**|Style de comparaison Windows du classement. Retourne 0 pour tous les classements binaires (à la fois `_BIN` et `_BIN2`) ainsi que lorsque toutes les propriétés sont sensibles. Valeurs de masque de bits :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer les caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072|  
+|**Version**|Version du classement, dérivée du champ de version de l'ID du classement. Retourne une valeur entière comprise entre 0 et 3.<br /><br /> Classements avec « 140 » dans le nom de retour 3.<br /><br /> Classements avec le nom « 100 » retournent 2.<br /><br /> Classements avec le nom « 90 » retournent 1.<br /><br /> Tous les autres classements retournent 0.|  
   
 ## <a name="return-types"></a>Types de retour
 **sql_variant**

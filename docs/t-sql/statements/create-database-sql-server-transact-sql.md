@@ -39,11 +39,12 @@ caps.latest.revision: 212
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4e80db92abd988b86b1224f07c92ecb2b20bb883
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de8574d6d4f2322c63743828b7b8a03d4e6fa576
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
@@ -535,9 +536,9 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Création d'une base de données qui spécifie les fichiers de données et les fichiers journaux de transactions  
- L'exemple suivant crée la base de données `Sales`. Le mot clé PRIMARY n'étant pas utilisé, le premier fichier (`Sales`_`dat`) devient le fichier principal. Le paramètre SIZE n'étant spécifié ni en Mo ni en Ko pour le fichier `Sales`\_`dat` , la valeur par défaut est Mo et il est alloué en mégaoctets. La base de données `Sales`\_`log` est alloué en mégaoctets car le suffixe `MB` est défini explicitement dans le paramètre `SIZE` .  
+ L'exemple suivant crée la base de données `Sales`. Étant donné que le mot clé primaire n’est pas utilisé, le premier fichier (`Sales_dat`) devient le fichier primaire. Le paramètre SIZE n'étant spécifié ni en Mo ni en Ko pour le fichier `Sales_dat` , la valeur par défaut est Mo et il est alloué en mégaoctets. La base de données `Sales_log` est alloué en mégaoctets car le suffixe `MB` est défini explicitement dans le paramètre `SIZE` .  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -559,7 +560,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>C. Création d'une base de données en spécifiant plusieurs fichiers de données et plusieurs fichiers journaux de transactions  
  Cet exemple crée une base de données appelée `Archive` qui comprend trois fichiers de données de `100-MB` et deux fichiers du journal des transactions de `100-MB`. Le fichier primaire est le premier fichier dans la liste et il est spécifié de manière explicite à l'aide du mot clé `PRIMARY`. Les fichiers du journal des transactions sont spécifiés à la suite des mots clés `LOG ON`. Notez les extensions utilisées pour les fichiers dans l'option `FILENAME` : `.mdf` pour les fichiers de données primaires, `.ndf` pour les fichiers de données secondaires et `.ldf` pour les fichiers journaux de transactions. Cet exemple place la base de données sur le lecteur `D:` plutôt qu'avec la base de données `master`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -597,7 +598,7 @@ GO
 ### <a name="d-creating-a-database-that-has-filegroups"></a>D. Création d'une base de données possédant des groupes de fichiers  
  L'exemple suivant crée la base de données `Sales` qui possède les groupes de fichiers suivants :  
   
--   Le groupe de fichiers primaire avec les fichiers `Spri1`_`dat` et `Spri2` \_ `dat`. Les incréments FILEGROWTH de ces fichiers sont spécifiés à `15%`.  
+-   Le groupe de fichiers primaire avec les fichiers `Spri1_dat` et `Spri2_dat`. Les incréments FILEGROWTH de ces fichiers sont spécifiés à `15%`.  
   
 -   Un groupe de fichiers nommé `SalesGroup1` avec les fichiers `SGrp1Fi1` et `SGrp1Fi2`.  
   
@@ -605,7 +606,7 @@ GO
   
  Cet exemple place les fichiers de données et les fichiers journaux sur des disques différents afin d'améliorer les performances.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -654,7 +655,7 @@ GO
 ### <a name="e-attaching-a-database"></a>E. Attachement d'une base de données  
  L'exemple ci-dessous détache la base de données `Archive` créée dans l'exemple D, puis l'attache à l'aide de la clause `FOR ATTACH`. `Archive` a été défini de manière à posséder plusieurs fichiers de données et fichiers journaux. Cependant, l'emplacement des fichiers n'ayant pas été modifié depuis leur création, seuls les fichiers primaires doivent être spécifiés dans la clause `FOR ATTACH`. À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tout fichier de texte intégral appartenant à la base de données qui est attachée est attaché avec la base de données.  
   
-```  
+```tsql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -666,11 +667,11 @@ GO
 ```  
   
 ### <a name="f-creating-a-database-snapshot"></a>F. Création d'un instantané de base de données  
- L'exemple suivant crée l'instantané de base de données `sales`_`snapshot0600`. Un instantané de base de données étant en lecture seule, un fichier journal ne peut pas être spécifié. Conformément à la syntaxe, chaque fichier de la base de données source est spécifié et les groupes de fichiers ne sont pas spécifiés.  
+ L’exemple suivant crée l’instantané de base de données `sales_snapshot0600`. Un instantané de base de données étant en lecture seule, un fichier journal ne peut pas être spécifié. Conformément à la syntaxe, chaque fichier de la base de données source est spécifié et les groupes de fichiers ne sont pas spécifiés.  
   
  La base de données source dans cet exemple est la base de données `Sales` créée dans l'exemple D.  
   
-```  
+```tsql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -687,7 +688,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>G. Création d'une base de données et spécification d'un nom de classement et d'options  
  L'exemple suivant crée la base de données `MyOptionsTest`. Un nom de classement est spécifié et les options `TRUSTYWORTHY` et `DB_CHAINING` ont la valeur `ON`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -708,7 +709,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>H. Attachement d'un catalogue de texte intégral qui a été déplacé  
  L'exemple suivant attache le catalogue de texte intégral `AdvWksFtCat` ainsi que les fichiers de données et fichiers journaux de `AdventureWorks2012`. Dans cet exemple, le catalogue de texte intégral est déplacé de son emplacement par défaut vers un nouvel emplacement `c:\myFTCatalogs`. Les fichiers de données et les fichiers journaux restent dans leurs emplacements par défaut.  
   
-```  
+```tsql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -733,7 +734,7 @@ GO
   
 -   `FileStreamResumes` contient des données FILESTREAM. Il contient un seul conteneur de données FILESTREAM, `FSResumes`, qui se trouve dans `C:\MyFSfolder\Resumes`.  
   
-```  
+```tsql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  

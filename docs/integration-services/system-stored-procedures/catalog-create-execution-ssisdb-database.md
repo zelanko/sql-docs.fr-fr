@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (base de données SSISDB)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
+ [@folder_name =] *nom_dossier*  
  Nom du dossier qui contient le package qui sera exécuté. Le *nom_dossier* est **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Le nom du projet qui contient le package doit être exécutée. Le *project_name* est **nvarchar (128)**.  
   
- [ @package_name =] *package_name*  
+ [@package_name =] *package_name*  
  Nom du package qui sera exécuté. Le *package_name* est **nvarchar (260)**.  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  Identificateur unique d'une référence environnementale. Ce paramètre est facultatif. Le *reference_id* est **bigint**.  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  Indique si l'exécution 32 bits doit être utilisée pour exécuter le package sur un système d'exploitation 64 bits. Utilisez la valeur 1 pour exécuter le package avec le runtime 32 bits lors de l’exécution sur un système d’exploitation de 64 bits. Utilisez la valeur 0 pour exécuter le package avec l'exécution 64 bits lorsqu'un système d'exploitation 64 bits est exécuté. Ce paramètre est facultatif. Le *Use32bitruntime* est **bits**.  
  
- [ @runinscaleout =] *runinscaleout*  
- Indique si l’exécution est de monter en charge. Utilisez la valeur 1 pour exécuter le package de monter en charge. Utilisez la valeur 0 pour exécuter le package sans monter en charge. Ce paramètre est facultatif. Il est défini sur DEFAULT_EXECUTION_MODE dans [SSISDB]. [catalogue]. [catalog_properties] si non spécifié. Le *runinscaleout* est **bits**. 
+ [@runinscaleout =] *runinscaleout*  
+ Indique si l’exécution est de monter en charge. Utilisez la valeur 1 pour exécuter le package de monter en charge. Utilisez la valeur 0 pour exécuter le package sans monter en charge. Ce paramètre est facultatif. Si non spécifié, sa valeur est définie à DEFAULT_EXECUTION_MODE dans [SSISDB]. [catalogue]. [catalog_properties]. Le *runinscaleout* est **bits**. 
  
- [ @useanyworker =] *useanyworker*  
-  Indiquez si tout montée en puissance des processus de travail est autorisée à effectuer l’exécution. Utilisez la valeur 1 pour exécuter le package avec tout montée en puissance des processus de travail. Utilisez la valeur 0 pour indiquer que la mise à l’échelle pas toutes des travailleurs sont autorisés pour exécuter le package. Ce paramètre est facultatif. Il est défini sur 1, si n’est pas spécifié. Le *useanyworker* est **bits**. 
+ [@useanyworker =] *useanyworker*  
+  Indiquez si tout montée en puissance des processus de travail est autorisée à effectuer l’exécution. Utilisez la valeur 1 pour exécuter le package avec tout montée en puissance des processus de travail. Utilisez la valeur 0 pour indiquer que la mise à l’échelle pas toutes des travailleurs sont autorisés pour exécuter le package. Ce paramètre est facultatif. Si non spécifié, sa valeur est définie sur 1. Le *useanyworker* est **bits**. 
   
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  Retourne l'identificateur unique d'une instance d'exécution. Le *execution_id* est **bigint**.  
 
   
@@ -77,7 +77,7 @@ create_execution [ @folder_name = folder_name
 ## <a name="example"></a>Exemple  
  L’exemple suivant appelle catalog.create_execution pour créer une instance d’exécution pour le package Child1.dtsx, ce qui n’est pas monter en charge. Project1 Integration Services contient le package. L'exemple appelle catalog.set_execution_parameter_value afin de définir des valeurs pour les paramètres Parameter1, Parameter2 et LOGGING_LEVEL. L'exemple appelle catalog.start_execution pour démarrer une instance d'exécution.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,16 +89,15 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>Valeur de Code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ Aucune  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et EXECUTE sur le projet et, si applicable, autorisations READ sur les environnements référencés  

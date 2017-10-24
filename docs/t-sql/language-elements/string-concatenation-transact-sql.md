@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1fd13b0b05dcb3b15d37d5a642a734b99ad004e5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
@@ -158,18 +159,7 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-string-concatenation"></a>E. Utilisation de la concaténation de chaîne  
- L’exemple suivant crée une seule colonne sous l’en-tête de colonne `Name` à partir de colonnes de plusieurs caractères, avec le nom de famille du contact suivi par une virgule, un espace, puis le prénom du contact. Le jeu de résultats est classé par ordre alphabétique croissant sur le nom de famille puis sur le prénom.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### <a name="f-using-multiple-string-concatenation"></a>F. Utilisation de la concaténation de plusieurs chaînes  
+### <a name="e-using-multiple-string-concatenation"></a>E. Utilisation de la concaténation de plusieurs chaînes  
  L’exemple suivant concatène plusieurs chaînes pour former une chaîne longue pour afficher le nom et l’initiale des vice-présidents au sein d’une base de données exemple. Le nom de famille est suivi d'une virgule ; l'initiale est suivie d'un point.  
   
 ```  

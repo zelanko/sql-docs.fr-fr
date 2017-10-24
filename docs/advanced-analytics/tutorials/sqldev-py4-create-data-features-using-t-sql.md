@@ -1,7 +1,7 @@
 ---
 title: "Étape 4 : créer des caractéristiques de données à l’aide de T-SQL | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>Étape 4 : Créer des fonctionnalités de données à l’aide de T-SQL
 
 Après l’exploration de données et avoir collecté des informations à partir des données et êtes prêt à passer à *l’équipe d’ingénierie de fonctionnalité*. Ce processus de création de fonctionnalités à partir des données brutes peut être essentiel d’analytique avancée de modélisation.
+
+Cet article fait partie d’un didacticiel, [analytique Python de la base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Lors de cette étape, vous allez découvrir comment créer des caractéristiques à partir de données brutes en utilisant une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ensuite, vous appellerez cette fonction à partir d’une procédure stockée pour créer une table qui contient les valeurs des caractéristiques.
 
@@ -121,14 +123,11 @@ Dans l’étape suivante, vous allez apprendre à utiliser ces fonctionnalités 
 
 ## <a name="next-step"></a>Étape suivante
 
-[Step 5 : Former et enregistrer un modèle à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Étape 5 : L’apprentissage et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Étape 3 : Explorer et visualiser les données](sqldev-py3-explore-and-visualize-the-data.md)
+[Étape 3 : Explorer et visualiser les données](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>Voir aussi
-
-[Machine Learning Services avec Python](../python/sql-server-python-services.md)
 
 

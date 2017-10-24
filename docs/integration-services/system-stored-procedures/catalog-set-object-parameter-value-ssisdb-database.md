@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Définit la valeur d'un paramètre dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associe la valeur à une variable d'environnement ou affecte une valeur littérale qui sera utilisée par défaut si aucune autre valeur n'est affectée.  
+  Définit la valeur d'un paramètre dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Associe la valeur à une variable d’environnement ou affecte une valeur littérale qui est utilisée par défaut lorsque aucune autre valeur n’est affectés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  Le type de paramètre. Utilisez la valeur `20` pour indiquer un paramètre du projet ou la valeur `30` pour indiquer un paramètre du package. Le *object_type* est **smallInt**.  
   
- [ @folder_name =] *nom_dossier*  
+ [@folder_name =] *nom_dossier*  
  Nom du dossier qui contient le paramètre. Le *nom_dossier* est **nvarchar (128)**.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  Nom du projet qui contient le paramètre. Le *project_name* est **nvarchar (128)**.  
   
- [ @parameter_name =] *nom_paramètre*  
+ [@parameter_name =] *nom_paramètre*  
  Nom du paramètre. Le *nom_paramètre* est **nvarchar (128)**.  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  Valeur du paramètre. Le *parameter_value* est **sql_variant**.  
   
- [ @object_name =] *nom_objet*  
+ [@object_name =] *nom_objet*  
  Nom du package. Cet argument est obligatoire lorsque le paramètre est un paramètre du package. Le *nom_objet* est **nvarchar (260)**.  
   
- [ @value_type =] *value_type*  
- Type de valeur du paramètre. Utilisez le caractère `V` pour indiquer que *parameter_value* est une valeur littérale qui sera utilisée par défaut si aucune autre valeur n’est affecté avant l’exécution. Utilisez le caractère `R` pour indiquer que *parameter_value* est une valeur référencée et a été défini sur le nom d’une variable d’environnement. Cet argument est facultatif, le caractère `V` est utilisé par défaut. Le *value_type* est **char (1)**.  
+ [@value_type =] *value_type*  
+ Type de valeur du paramètre. Utilisez le caractère `V` pour indiquer que *parameter_value* est une valeur littérale qui est utilisée par défaut lorsque aucune autre valeur n’est affecté avant l’exécution. Utilisez le caractère `R` pour indiquer que *parameter_value* est une valeur référencée et a été défini sur le nom d’une variable d’environnement. Cet argument est facultatif, le caractère `V` est utilisé par défaut. Le *value_type* est **char (1)**.  
   
 ## <a name="return-code-value"></a>Valeur de Code de retour  
  0 (succès)  

@@ -1,6 +1,6 @@
 ---
-title: "Générateur de modèles tabulaires (SSAS) | Documents Microsoft"
-ms.date: 03/14/2017
+title: "Générateur de modèles tabulaires | Documents Microsoft"
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>Générateur de modèles tabulaires (SSAS)
@@ -32,13 +32,11 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
   
  Outres de nouveaux modèles et outils permettant de créer des solutions professionnelles de modèles multidimensionnels et tabulaires, l'environnement [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] fournit des fonctionnalités de débogage et de cycle de vie de projet qui vous permettent de créer des solutions décisionnelles les plus puissantes possibles pour votre organisation. Pour plus d'informations sur [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consultez [Mise en route de Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Modèles de projets  
+##  <a name="bkmk_proj_temp"></a>Modèles de projet  
  Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], les modèles de projet de modèles tabulaires suivants sont ajoutés aux types de projets Business Intelligence :  
   
  **Projet tabulaire Analysis Services**  
- Ce modèle peut être utilisé pour créer un projet de modèle tabulaire vide. Les niveaux de compatibilité sont spécifiés lorsque vous créez le projet. Choisissez la valeur par défaut, **SQL Server 2016 RTM (1200)**, pour utiliser toutes les fonctionnalités intégrées à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ Ce modèle peut être utilisé pour créer un projet de modèle tabulaire vide. Les niveaux de compatibilité sont spécifiés lorsque vous créez le projet.
   
  **Importer à partir du serveur (tabulaire)**  
  Ce modèle peut être utilisé pour créer un projet de modèle tabulaire en extrayant les métadonnées d'un modèle tabulaire existant dans Analysis Services.  
@@ -51,18 +49,18 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
 ##  <a name="bkmk_wind_men"></a> Fenêtres et menus  
  L'environnement de création de modèles tabulaires de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut ce qui suit :  
   
-### <a name="designer-window"></a>Fenêtre de concepteur  
+### <a name="designer-window"></a>Fenêtre du Concepteur  
  La fenêtre du concepteur permet de créer des modèles tabulaires en fournissant une représentation visuelle du modèle. Lorsque vous ouvrez le fichier Model.bim, le modèle s'ouvre dans la fenêtre du concepteur. Vous pouvez créer un modèle dans la fenêtre du concepteur à l'aide de deux modes d'affichage différents :  
   
  **Vue de données**  
  La vue de données affiche les tables dans un format de grille tabulaire. Vous pouvez également définir des mesures à l'aide de la grille de mesures, qui peut être affichée pour chaque table dans la vue de données uniquement.  
   
- **Vue du diagramme**  
+ **Vue de diagramme**  
  La vue de diagramme affiche les tables, avec les relations entre celles-ci, dans un format graphique. Les colonnes, les mesures, les hiérarchies et les indicateurs de performance clés peuvent être filtrés, et vous pouvez choisir d'afficher le modèle à l'aide d'une perspective définie.  
   
  La plupart des tâches de création de modèles peuvent être effectuées dans l'une ou l'autre vue.  
   
-### <a name="view-code-window"></a>Fenêtre Afficher le code  
+### <a name="view-code-window"></a>Afficher la fenêtre de Code  
  Vous pouvez visualiser le code associé à un fichier Model.bim en cliquant avec le bouton droit sur le fichier dans l’Explorateur de solutions et en sélectionnant **Afficher le code** . Pour les modèles tabulaires au niveau de compatibilité 1200 et versions ultérieur, la définition du modèle est exprimée en JSON.  
   
  Notez que vous devrez disposer d’une version complète de Visual Studio qui fournit l’éditeur JSON. Vous pouvez télécharger et installer l’ [édition gratuite Visual Studio Community](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) si vous n’avez pas besoin des fonctions supplémentaires disponibles dans les éditions commerciales.  
@@ -128,8 +126,8 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
 ### <a name="toolbar"></a>Barre d'outils  
  La barre d'outils Analysis Services fournit un accès rapide et aisé aux commandes de création de modèles utilisées les plus fréquemment.  
   
-##  <a name="bkmk_vsint"></a> Intégration à Visual Studio  
- **contrôle de code source ;**  
+##  <a name="bkmk_vsint"></a>Intégration de Visual Studio  
+ **Contrôle de code source**  
  Les projets Analysis Services s'intègrent au plug-in sélectionné du contrôle de code source. Si vous avez configuré Visual Studio pour utiliser le contrôle de code source, vous pouvez utiliser l'insertion/l'extraction à partir de l'Explorateur de solutions. Pour configurer l'utilisation de Team Foundation Server, consultez [Configurer Visual Studio avec le contrôle de version de Team Foundation](http://msdn.microsoft.com/library/ms253064.aspx). De nombreux plug-ins de contrôle de code source tiers sont également pris en charge.  
   
  **Polices**  
@@ -143,3 +141,4 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
  [Propriétés &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

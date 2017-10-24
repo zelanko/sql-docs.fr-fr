@@ -36,11 +36,12 @@ caps.latest.revision: 99
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8755a7463eca39c7002075d12f91b8626b76c2b4
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 59f78a8c62e8257eb09327d4b629ad678d9c0e69
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -279,7 +280,7 @@ Lorsqu'un index cluster est supprimé HORS CONNEXION, seuls les niveaux supérie
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-dropping-an-index"></a>A. Suppression d'un index  
- L'exemple suivant supprime l'index `IX_ProductVendor`_`VendorID` sur la table `ProductVendor` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+ L’exemple suivant supprime l’index `IX_ProductVendor_VendorID` sur la `ProductVendor` de table dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
   
 ```  
 DROP INDEX IX_ProductVendor_BusinessEntityID   

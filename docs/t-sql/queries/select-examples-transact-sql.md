@@ -34,11 +34,12 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 432739177dee13fcd474b081509e0c34ab8ba504
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: de0fa67cba4ce12426c2eab58121dbde0bd83852
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="select-examples-transact-sql"></a>Exemples SELECT (Transact-SQL)
@@ -49,89 +50,89 @@ ms.lasthandoff: 09/01/2017
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilisation de SELECT pour extraire des lignes et des colonnes  
  L'exemple suivant présente trois exemples de code. Le premier exemple de code retourne toutes les lignes (aucune clause WHERE n'est définie) et toutes les colonnes (en utilisant `*`) de la table `Product` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
- [!code-sql[Sélectionnez #SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
+ [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
   
  Cet exemple retourne toutes les lignes (aucune clause WHERE n'est définie) et uniquement un sous-ensemble des colonnes (`Name`, `ProductNumber`, `ListPrice`) de la table `Product` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. En outre, un en-tête de colonne est ajouté.  
   
- [!code-sql[Sélectionnez #SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
+ [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   
  Cet exemple retourne uniquement les lignes de `Product` dont la ligne de produits a pour valeur `R` et dont le nombre de jours nécessaires à la fabrication est inférieur à `4`.  
   
- [!code-sql[Sélectionnez #SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
+ [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
 ## <a name="b-using-select-with-column-headings-and-calculations"></a>B. Utilisation de SELECT avec des en-têtes de colonne et des calculs  
  Les exemples suivants retournent toutes les lignes de la table `Product`. Le premier exemple retourne le total des ventes et les remises pour chaque produit. Dans le second exemple, le gain est calculé pour chaque produit.  
   
- [!code-sql[Sélectionnez #SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  
+ [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  
   
  Voici la requête qui calcule le gain pour chaque produit dans chaque commande.  
   
- [!code-sql[Sélectionnez #SelectExamples5](../../t-sql/queries/codesnippet/tsql/select-examples-transact_5.sql)]  
+ [!code-sql[Select#SelectExamples5](../../t-sql/queries/codesnippet/tsql/select-examples-transact_5.sql)]  
   
 ## <a name="c-using-distinct-with-select"></a>C. Utilisation de DISTINCT avec SELECT  
  L'exemple suivant utilise `DISTINCT` afin d'éviter l'extraction de titres en double.  
   
- [!code-sql[Sélectionnez #SelectExamples6](../../t-sql/queries/codesnippet/tsql/select-examples-transact_6.sql)]  
+ [!code-sql[Select#SelectExamples6](../../t-sql/queries/codesnippet/tsql/select-examples-transact_6.sql)]  
   
 ## <a name="d-creating-tables-with-select-into"></a>D. Création de tables avec SELECT INTO  
  Le premier exemple suivant crée une table temporaire nommée `#Bicycles` dans `tempdb`.  
   
- [!code-sql[Sélectionnez #SelectExamples7](../../t-sql/queries/codesnippet/tsql/select-examples-transact_7.sql)]  
+ [!code-sql[Select#SelectExamples7](../../t-sql/queries/codesnippet/tsql/select-examples-transact_7.sql)]  
   
  Ce second exemple crée la table permanente `NewProducts`.  
   
- [!code-sql[Sélectionnez #SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
+ [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
 ## <a name="e-using-correlated-subqueries"></a>E. Utilisation de sous-requêtes corrélées  
  L'exemple suivant montre des requêtes sémantiquement équivalentes et illustre la différence entre l'utilisation du mot clé `EXISTS` et celle du mot clé `IN`. Les deux exemples illustrent une sous-requête valide qui extrait une instance de chaque nom de produit dont le modèle est un pull-over à manches longues (« long sleeve logo jersey »), et dont le numéro `ProductModelID` se trouve dans les tables `Product` et `ProductModel`.  
   
- [!code-sql[Sélectionnez #SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
+ [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
  L'exemple suivant utilise `IN` dans une sous-requête en corrélation ou répétitive. Il s'agit d'une requête dont les valeurs dépendent de la requête externe. La requête est exécutée de manière répétitive, une fois pour chaque ligne que la requête externe pourrait sélectionner. Cette requête extrait une instance du prénom et du nom de chaque employé dont la prime dans la table `SalesPerson` est égale à `5000.00` et dont le numéro d'identification d'employé se trouve dans les tables `Employee` et `SalesPerson`.  
   
- [!code-sql[Sélectionnez #SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
+ [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   
  La sous-requête précédente de cette instruction ne peut pas être évaluée indépendamment de la requête externe. Elle requiert en effet une valeur pour `Employee.EmployeeID`, mais cette valeur change à mesure que le moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] examine les différentes lignes de la table `Employee`.  
   
  Une sous-requête en corrélation peut également s'employer dans la clause `HAVING` d'une requête externe. Cet exemple recherche les modèles de produit dont le tarif maximum est supérieur au double du tarif moyen du modèle concerné.  
   
- [!code-sql[Sélectionnez #SelectExamples11](../../t-sql/queries/codesnippet/tsql/select-examples-transact_11.sql)]  
+ [!code-sql[Select#SelectExamples11](../../t-sql/queries/codesnippet/tsql/select-examples-transact_11.sql)]  
   
  Cet exemple utilise deux sous-requêtes corrélées pour rechercher les noms des employés ayant vendu un produit spécifique.  
   
- [!code-sql[Sélectionnez #SelectExamples12](../../t-sql/queries/codesnippet/tsql/select-examples-transact_12.sql)]  
+ [!code-sql[Select#SelectExamples12](../../t-sql/queries/codesnippet/tsql/select-examples-transact_12.sql)]  
   
 ## <a name="f-using-group-by"></a>F. Utilisation de GROUP BY  
  L'exemple suivant calcule le total de chaque commande dans la base de données.  
   
- [!code-sql[Sélectionnez #SelectExamples13](../../t-sql/queries/codesnippet/tsql/select-examples-transact_13.sql)]  
+ [!code-sql[Select#SelectExamples13](../../t-sql/queries/codesnippet/tsql/select-examples-transact_13.sql)]  
   
  Du fait de la clause `GROUP BY`, une seule ligne est retournée pour chaque commande et elle contient la somme de toutes les ventes de cette dernière.  
   
 ## <a name="g-using-group-by-with-multiple-groups"></a>G. Utilisation de GROUP BY avec plusieurs groupes  
  L'exemple suivant affiche le prix moyen et la somme des ventes annuelles cumulées, regroupés par ID de produit et ID d'offre spéciale :  
   
- [!code-sql[Sélectionnez #SelectExamples14](../../t-sql/queries/codesnippet/tsql/select-examples-transact_14.sql)]  
+ [!code-sql[Select#SelectExamples14](../../t-sql/queries/codesnippet/tsql/select-examples-transact_14.sql)]  
   
 ## <a name="h-using-group-by-and-where"></a>H. Utilisation de GROUP BY et WHERE  
  L'exemple suivant présente les résultats en groupes après n'avoir extrait que les lignes avec des tarifs supérieurs à `$1000`.  
   
- [!code-sql[Sélectionnez #SelectExamples15](../../t-sql/queries/codesnippet/tsql/select-examples-transact_15.sql)]  
+ [!code-sql[Select#SelectExamples15](../../t-sql/queries/codesnippet/tsql/select-examples-transact_15.sql)]  
   
 ## <a name="i-using-group-by-with-an-expression"></a>I. Utilisation de GROUP BY avec une expression  
  L'exemple suivant effectue un regroupement en fonction d'une expression. Vous pouvez spécifier un regroupement en fonction d'une expression à condition qu'elle ne contienne pas de fonction d'agrégation.  
   
- [!code-sql[Sélectionnez #SelectExamples16](../../t-sql/queries/codesnippet/tsql/select-examples-transact_16.sql)]  
+ [!code-sql[Select#SelectExamples16](../../t-sql/queries/codesnippet/tsql/select-examples-transact_16.sql)]  
   
 ## <a name="j-using-group-by-with-order-by"></a>J. Utilisation de GROUP BY avec ORDER BY  
  L'exemple suivant calcule le prix moyen de chaque type de produit et trie les résultats en conséquence :  
   
- [!code-sql[Sélectionnez #SelectExamples18](../../t-sql/queries/codesnippet/tsql/select-examples-transact_17.sql)]  
+ [!code-sql[Select#SelectExamples18](../../t-sql/queries/codesnippet/tsql/select-examples-transact_17.sql)]  
   
 ## <a name="k-using-the-having-clause"></a>K. Utilisation de la clause HAVING  
  Le premier exemple suivant illustre une clause `HAVING` utilisée avec une fonction d'agrégation. Il regroupe les lignes de la `SalesOrderDetail` de table par ID de produit et élimine les produits dont les quantités moyenne soient inférieur ou égal à cinq. Le second exemple illustre une clause `HAVING` sans fonction d'agrégation.  
   
- [!code-sql[Sélectionnez #SelectExamples19](../../t-sql/queries/codesnippet/tsql/select-examples-transact_18.sql)]  
+ [!code-sql[Select#SelectExamples19](../../t-sql/queries/codesnippet/tsql/select-examples-transact_18.sql)]  
   
  La requête suivante utilise la clause `LIKE` dans la clause `HAVING`.  
   
@@ -149,57 +150,57 @@ GO
 ## <a name="l-using-having-and-group-by"></a>L. Utilisation de HAVING et de GROUP BY  
  L'exemple suivant illustre l'utilisation des clauses `GROUP BY`, `HAVING`, `WHERE` et `ORDER BY` dans une instruction `SELECT`. Il génère des groupes et des valeurs résumées mais uniquement après avoir éliminé les produits dont le prix est supérieur à 25 $ et dont la quantité moyenne commandée est inférieure à 5. Il trie également les résultats par `ProductID`.  
   
- [!code-sql[Sélectionnez #SelectExamples21](../../t-sql/queries/codesnippet/tsql/select-examples-transact_19.sql)]  
+ [!code-sql[Select#SelectExamples21](../../t-sql/queries/codesnippet/tsql/select-examples-transact_19.sql)]  
   
 ## <a name="m-using-having-with-sum-and-avg"></a>M. Utilisation de HAVING avec SUM et AVG  
  L'exemple suivant regroupe la table `SalesOrderDetail` par ID de produit et ne comprend que les groupes de produits dont les commandes s'élèvent à plus de `$1000000.00` et dont la quantité moyenne d'articles achetés est inférieure à `3`.  
   
- [!code-sql[Sélectionnez #SelectExamples22](../../t-sql/queries/codesnippet/tsql/select-examples-transact_20.sql)]  
+ [!code-sql[Select#SelectExamples22](../../t-sql/queries/codesnippet/tsql/select-examples-transact_20.sql)]  
   
  Pour visualiser les produits dont le total des ventes est supérieur à `$2000000.00`, utilisez la requête suivante :  
   
- [!code-sql[Sélectionnez #SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
+ [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
  Si vous souhaitez vous assurer qu'au moins mille cinq cents articles sont impliqués dans le calcul de chaque produit, utilisez l'instruction `HAVING COUNT(*) > 1500` pour éliminer les produits dont le total renvoyé correspond à moins de `1500` articles vendus. La requête est la suivante :  
   
- [!code-sql[Sélectionnez #SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
+ [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   
 ## <a name="n-using-the-index-optimizer-hint"></a>N. Utilisation de l'indicateur d'optimiseur INDEX  
  L'exemple suivant illustre deux manières d'utiliser l'indicateur d'optimiseur `INDEX`. Le premier exemple illustre la façon d'obliger l'optimiseur à utiliser un index non cluster pour extraire des lignes d'une table, tandis que le second exemple génère l'analyse d'une table à l'aide d'un index 0.  
   
- [!code-sql[Sélectionnez #SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  
+ [!code-sql[Select#SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  
   
 ## <a name="m-using-option-and-the-group-hints"></a>M. Utilisation de la clause OPTION avec les indicateurs GROUP  
  L'exemple suivant montre comment la clause `OPTION (GROUP)` est utilisée avec une clause `GROUP BY`.  
   
- [!code-sql[Sélectionnez #SelectExamples46](../../t-sql/queries/codesnippet/tsql/select-examples-transact_24.sql)]  
+ [!code-sql[Select#SelectExamples46](../../t-sql/queries/codesnippet/tsql/select-examples-transact_24.sql)]  
   
 ## <a name="o-using-the-union-query-hint"></a>O. Utilisation de l'indicateur de requête UNION  
  L'exemple suivant utilise l'indicateur de requête `MERGE UNION`.  
   
- [!code-sql[Sélectionnez #SelectExamples47](../../t-sql/queries/codesnippet/tsql/select-examples-transact_25.sql)]  
+ [!code-sql[Select#SelectExamples47](../../t-sql/queries/codesnippet/tsql/select-examples-transact_25.sql)]  
   
 ## <a name="p-using-a-simple-union"></a>P. Utilisation de l'opérateur UNION simple  
  Dans l'exemple suivant, le jeu de résultats comprend le contenu des colonnes `ProductModelID` et `Name` des deux tables `ProductModel` et `Gloves`.  
   
- [!code-sql[Sélectionnez #SelectExamples48](../../t-sql/queries/codesnippet/tsql/select-examples-transact_26.sql)]  
+ [!code-sql[Select#SelectExamples48](../../t-sql/queries/codesnippet/tsql/select-examples-transact_26.sql)]  
   
 ## <a name="q-using-select-into-with-union"></a>Q. Utilisation de SELECT INTO avec UNION  
  Dans l'exemple suivant, la clause `INTO` de la seconde instruction `SELECT` indique que la table nommée `ProductResults` contient le jeu de résultats final de l'union des colonnes désignées des tables `ProductModel` et `Gloves`. Notez que la table `Gloves` est créée dans la première instruction `SELECT`.  
   
- [!code-sql[Sélectionnez #SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  
+ [!code-sql[Select#SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  
   
 ## <a name="r-using-union-of-two-select-statements-with-order-by"></a>R. Utilisation de l'opérateur UNION dans deux instructions SELECT avec ORDER BY  
  L'ordre de certains paramètres utilisés avec la clause UNION est important. L'exemple suivant illustre l'utilisation incorrecte et correcte de `UNION` dans deux instructions `SELECT` où une colonne doit être renommée dans le résultat.  
   
- [!code-sql[Sélectionnez #SelectExamples50](../../t-sql/queries/codesnippet/tsql/select-examples-transact_28.sql)]  
+ [!code-sql[Select#SelectExamples50](../../t-sql/queries/codesnippet/tsql/select-examples-transact_28.sql)]  
   
 ## <a name="s-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>S. Utilisation de l'opérateur UNION dans trois instructions SELECT pour illustrer les effets de ALL et des parenthèses  
  Les exemples suivants utilisent `UNION` pour combiner les résultats de trois tables, ayant chacune les 5 lignes de données identiques. Le premier exemple utilise `UNION ALL` pour montrer les doublons d'enregistrement et retourne l'ensemble des 15 lignes. Le deuxième exemple utilise `UNION` sans `ALL` pour éliminer les doublons de ligne des résultats combinés des trois instructions `SELECT` et retourne 5 lignes.  
   
  Le troisième exemple utilise `ALL` avec la première clause `UNION` et met entre parenthèses la seconde clause `UNION` qui n'utilise pas `ALL`. La seconde clause `UNION` est traitée en premier, car elle est entre parenthèses. Elle retourne 5 lignes car l'option `ALL` n'est pas utilisée et les doublons sont supprimés. Ces 5 lignes sont combinées avec les résultats de la première instruction `SELECT` à l'aide des mots clés `UNION ALL`. Cela ne supprime pas les doublons entre les deux ensembles de 5 lignes. Le résultat final contient 10 lignes.  
   
- [!code-sql[Sélectionnez #SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
+ [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
@@ -217,3 +218,4 @@ GO
  [DANS la clause for &#40; Transact-SQL &#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   
+

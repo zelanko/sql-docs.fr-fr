@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: aab83dd2f179c8e6b90ad9ff7a212597a51038de
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8f4a8cd24278742ffb13d16791ce5f1f3a95f301
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>Catalog.disable_worker_agent (base de données SSISDB)
@@ -28,15 +28,16 @@ Désactiver un montée en puissance des processus de travail pour travailler ave
 
 ## <a name="syntax"></a>Syntaxe
 
-```tsql
-disable_worker_agent [@WorkerAgentId = ] WorkerAgentId
+```sql
+catalog.disable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ```
 ## <a name="arguments"></a>Arguments
-[ @WorkerAgentId =] *WorkerAgentId* l’id de l’agent de travailleur de montée en puissance des processus de travail. Le *WorkerAgentId* est **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId* l’agent de travailleur ID de montée en puissance des processus de travail. Le *WorkerAgentId* est **uniqueidentifier**.
 
 ## <a name="example"></a>Exemple
 Cet exemple désactive le montée en puissance des processus de travail sur VMwareun.
-```tsql
+
+```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]
 GO
 -- Result: --
@@ -61,5 +62,5 @@ GO
 -   L’appartenance à la **sysadmin** rôle de serveur 
 
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements
-La procédure stockée renvoie une erreur si l’ID de l’agent de travailleur n’est pas valide.
+Si l’ID de l’agent de travailleur n’est pas valide, la procédure stockée renvoie une erreur.
 

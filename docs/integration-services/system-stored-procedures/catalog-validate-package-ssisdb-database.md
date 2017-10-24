@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (base de données SSISDB)
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  Indique si l'exécution 32 bits doit être utilisée pour exécuter le package sur un système d'exploitation 64 bits. Utilisez la valeur de `1` pour exécuter le package avec le runtime 32 bits lors de l’exécution sur un système d’exploitation de 64 bits. Utilisez la valeur `0` pour exécuter le package avec l'exécution 64 bits lorsqu'un système d'exploitation 64 bits est exécuté. Ce paramètre est facultatif. Le *use32bitruntime* est **bits**.  
   
  [ @environment_scope =] *environment_scope*  
- Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif, le caractère `D` sera utilisé par défaut. Le *environment_scope* est **char (1)**.  
+ Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif. Le caractère `D` est utilisé par défaut. Le *environment_scope* est **char (1)**.  
   
  [ @reference_id =] *reference_id*  
  ID unique de la référence environnementale. Ce paramètre est obligatoire uniquement quand une référence environnementale unique est incluse dans la validation, lors de la *environment_scope* est `S`. Le *reference_id* est **bigint**.  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   Les variables sont référencées dans les paramètres du package, mais aucun environnement référencé n'a été inclus dans la validation  
   
 ## <a name="remarks"></a>Notes  
- La validation aide à identifier les problèmes qui empêchent le package de s'exécuter avec succès. Utilisez le [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) ou [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) vues pour surveiller l’état de validation.  
+ La validation aide à identifier les problèmes qui peuvent empêcher le package à partir de l’exécution avec succès. Utilisez le [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) ou [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) vues pour surveiller l’état de validation.  
   
   

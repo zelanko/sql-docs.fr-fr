@@ -18,11 +18,12 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 0f43310dfd52210d23bae3a34f22b52845a41706
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler
@@ -52,6 +53,7 @@ ms.lasthandoff: 08/02/2017
 |**Showplan XML Statistics Profile**|Affiche le plan de requête avec le détail complet des informations d'exécution au format XML. Par exemple, cette classe d'événements capture le nombre de lignes traitées par chaque opérateur de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutée. Pour plus d’informations, consultez [Classe d’événements Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Performance, catégorie d’événement](../../relational-databases/event-classes/performance-event-category.md)  
+ [Catégorie d'événements Performance](../../relational-databases/event-classes/performance-event-category.md)  
   
   
+

@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>Condition de recherche (Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Utilisation de WHERE avec la syntaxe LIKE et ESCAPE  
- L'exemple suivant recherche les lignes dans lesquelles la colonne `LargePhotoFileName` comprend les caractères `green_` et utilise l'option `ESCAPE`, car `_` est un caractère générique. Sans l'option `ESCAPE`, la requête recherche toutes les valeurs de description contenant le mot `green` suivi de n'importe quel caractère autre que le caractère `_`.  
+ L’exemple suivant recherche les lignes dans lesquelles la `LargePhotoFileName` colonne comprend les caractères `green_`et utilise le `ESCAPE` option _ étant un caractère générique. Sans spécifier le `ESCAPE` option, la requête rechercherait toutes les valeurs de description contenant le mot `green` suivie de n’importe quel caractère unique autre que le caractère _.  
   
 ```  
 USE AdventureWorks2012 ;  

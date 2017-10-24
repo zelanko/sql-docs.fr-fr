@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une Source de données de fichier plat (SQL Server Assistant Importation et exportation)
-Cette rubrique vous montre comment se connecter à un **fichier plat** de source de données (fichier texte) à partir de la **choisir une Source de données** ou **choisir une Destination** page de l’importation de SQL Server et l’Assistant Exportation. Pour les fichiers plats, ces deux pages de l’Assistant présentent différents jeux d’options, afin de cette rubrique décrit la source de fichier plat et la destination séparément.
+Cette rubrique vous montre comment se connecter à un **fichier plat** de source de données (fichier texte) à partir de la **choisir une Source de données** ou **choisir une Destination** page de l’importation de SQL Server et l’Assistant Exportation. Pour les fichiers plats, ces deux pages de l’Assistant présentent différents jeux d’options, afin de cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.
+
+## <a name="an-alternative-for-simple-text-import"></a>Une autre solution pour l’importation de texte simple
+Si vous devez importer un fichier texte dans SQL Server, et vous ne devez pas toutes les options de configuration disponibles dans l’Assistant Importation et exportation, envisagez d’utiliser le **Assistant Importation de fichier plat** dans SQL Server Management Studio (SSMS). Pour plus d’informations, consultez les articles suivants :
+- [Nouveautés de SQL Server Management Studio 17.3 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [Présentation du nouvel Assistant Importation de fichier plat dans SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>Se connecter à une source de fichier plat
  
@@ -202,10 +207,10 @@ Dans la capture d’écran, notez que le **id** colonne, qui contient des nombre
   
 |Propriété| Description|  
 |--------------|-----------------|  
-|**Nom**|Précisez un nom de colonne descriptif. Si vous n'entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
+|**Nom**|Précisez un nom de colonne descriptif. Si vous n’entrez pas un nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom dans le format colonne 0, colonne 1 et ainsi de suite.|
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**. Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}**. Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}**. Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}**. Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}**. Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}**. Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}**. Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}**. Les colonnes sont séparées par une barre verticale.|
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
-|**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|
+|**InputColumnWidth**|Spécifiez une valeur à stocker en tant que nombre d’octets ; pour les fichiers Unicode, cette valeur est un nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres.|
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales.|
 |**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles.<br/>Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
@@ -229,7 +234,7 @@ Dans la capture d’écran, notez que le **id** colonne, qui contient des nombre
  
 Cliquez sur **Suggérer les types** pour afficher la boîte de dialogue **Suggérer les types de colonnes**. 
 
-![Suggérer les types de colonnes dans le cadre de la connexion à un fichier plat](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![Connexions de fichiers plats suggérer la boîte de dialogue types](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 Une fois que vous choisissez les options dans le **suggérer les Types de colonne** boîte de dialogue et cliquez sur **OK**, l’Assistant peut modifier les types de données de certaines colonnes.
 
@@ -293,7 +298,7 @@ Pour une destination de fichier plat, il existe une seule page d’options, comm
  Spécifiez le qualificateur de texte, utilisée par le fichier. Par exemple, vous pouvez spécifier que les champs de texte soient placés entre guillemets. (Cette propriété s’applique uniquement aux fichiers de délimité.) 
   
 > [!NOTE] 
-> Après avoir sélectionné un délimiteur de texte, vous ne pouvez pas resélectionnez le **aucun** option. Tapez **Aucun** pour désélectionner l’identificateur de texte.  
+> Après avoir sélectionné un délimiteur de texte, vous ne pouvez pas sélectionner à nouveau la **aucun** option. Tapez **Aucun** pour désélectionner l’identificateur de texte.  
 
 ## <a name="see-also"></a>Voir aussi
 [Choisissez une Source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

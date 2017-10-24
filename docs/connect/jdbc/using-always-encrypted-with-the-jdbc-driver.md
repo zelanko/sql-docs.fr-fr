@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation du chiffrement intégral avec le pilote JDBC
@@ -268,34 +268,12 @@ Tous ces fournisseurs de magasin de clés sont décrits plus en détail ci-desso
 ### <a name="using-azure-key-vault-provider"></a>Utilisation du fournisseur Azure Key Vault
 Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. Le pilote JDBC Microsoft pour SQL Server inclut un fournisseur intégré, SQLServerColumnEncryptionAzureKeyVaultProvider, pour les applications qui ont des clés stockées dans le coffre de clés Azure. Le nom de ce fournisseur est AZURE_KEY_VAULT. Pour pouvoir utiliser le fournisseur de magasins d’Azure Key Vault, un développeur d’applications a besoin créer l’archivage et les clés dans Azure et configurer l’application pour accéder aux clés. Pour plus d’informations sur la façon de configurer le coffre de clés et de créer la clé principale de colonne, reportez-vous à [Azure Key Vault – étape par étape pour plus d’informations sur la configuration de l’archivage de clé](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) et [création des clés de principales de colonne dans le coffre de clés Azure](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Pour utiliser le coffre de clés Azure, les applications clientes doivent instancier le SQLServerColumnEncryptionAzureKeyVaultProvider et l’inscrire avec le pilote. L’authentification de délégués du pilote JDBC pour l’application via une interface appelée SQLServerKeyVaultAuthenticationCallback qui a une méthode pour récupérer un jeton d’accès du coffre de clés. Pour instancier le fournisseur de magasins de coffre de clés Azure, le développeur doit fournir une implémentation de la seule méthode appelée **getAccessToken** qui extrait le jeton d’accès de la clé stockée dans Azure Key Vault.  
-  
-Voici un exemple d’initialisation SQLServerKeyVaultAuthenticationCallback et SQLServerColumnEncryptionAzureKeyVaultProvider :  
+Pour utiliser le coffre de clés Azure, les applications clientes doivent instancier le SQLServerColumnEncryptionAzureKeyVaultProvider et l’inscrire avec le pilote.
+
+Voici un exemple d’initialisation SQLServerColumnEncryptionAzureKeyVaultProvider :  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 Une fois que l’application crée une instance de SQLServerColumnEncryptionAzureKeyVaultProvider, l’application doit inscrire l’instance dans le pilote JDBC Microsoft pour SQL Server à l’aide de la Méthode Sqlserverconnection.registercolumnencryptionkeystoreproviders (). Il est fortement recommandé, l’instance est inscrite en utilisant le nom de recherche par défaut, AZURE_KEY_VAULT, ce qui peut être obtenu en appelant l’API SQLServerColumnEncryptionAzureKeyVaultProvider.getName(). En utilisant le nom par défaut, vous permettra d’utiliser les outils, tels que SQL Server Management Studio ou PowerShell, à configurer et gérer des clés Always Encrypted (les outils permet d’utiliser le nom par défaut pour générer l’objet de métadonnées pour la clé principale de colonne). L’exemple ci-dessous illustre l’inscription du fournisseur Azure Key Vault. Pour plus d’informations sur la méthode sqlserverconnection.registercolumnencryptionkeystoreproviders (), consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md). 
@@ -653,3 +631,4 @@ Remarque : Faites attention lorsque vous spécifiez AllowEncryptedValueModifica
  [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

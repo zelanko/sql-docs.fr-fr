@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 25113093ccd068a9afe661e160ae3319025b7534
+ms.sourcegitcommit: 1e3d9736612211038991489a4bd858d1ff89d333
+ms.openlocfilehash: 1b60d877c6c75a77dd16fa8cb1704e10baf36bdb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="connect-to-on-premises-data-sources-with-windows-authentication"></a>Se connecter aux sources de données locale avec l’authentification Windows
@@ -21,17 +21,34 @@ Cet article décrit comment configurer le catalogue SSIS sur une base de donnée
 Les informations d’identification de domaine que vous fournissez lorsque vous suivez les étapes décrites dans cet article s’appliquent à toutes les exécutions de package sur l’instance de base de données SQL jusqu'à ce que vous modifiez ou supprimez les informations d’identification.
 
 ## <a name="prerequisite"></a>Condition préalable
-Avant de configurer les informations d’identification de domaine pour l’authentification Windows, vérifiez si un ordinateur non joint à un domaine peut se connecter à vos sources de données locale dans `runas` mode. Par exemple, pour vérifier si vous pouvez vous connecter à un ordinateur local SQL Server, procédez comme suit :
+Avant de configurer les informations d’identification de domaine pour l’authentification Windows, vérifiez si un ordinateur non joint à un domaine peut se connecter à votre source de données locale dans `runas` mode.
 
-1.  Pour exécuter ce test, fFind un ordinateur non joint au domaine.
+### <a name="connecting-to-sql-server"></a>Connexion à SQL Server
+Pour vérifier si vous pouvez vous connecter à un ordinateur local SQL Server, procédez comme suit :
+
+1.  Pour exécuter ce test, rechercher un ordinateur non joint au domaine.
 
 2.  Sur l’ordinateur non joint au domaine, exécutez la commande suivante pour démarrer SQL Server Management Studio (SSMS) avec les informations d’identification de domaine que vous souhaitez utiliser :
 
-   ```cmd
-   runas.exe /netonly /user:<domain>\<username> SSMS.exe
-   ```
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> SSMS.exe
+    ```
 
 3.  À partir de SSMS, vérifiez si vous pouvez vous connecter au serveur SQL local que vous souhaitez utiliser.
+
+### <a name="connecting-to-a-file-share"></a>Connexion à un partage de fichiers
+Pour vérifier si vous pouvez vous connecter à un partage de fichiers local, procédez comme suit :
+
+1.  Pour exécuter ce test, rechercher un ordinateur non joint au domaine.
+
+2.  Sur l’ordinateur non joint au domaine, exécutez la commande suivante. Cette commande ouvre une prommpt de commande avec les informations d’identification de domaine que vous souhaitez utiliser, puis teste la connectivité au partage de fichiers en obtenant une liste de répertoires.
+
+    ```cmd
+    runas.exe /netonly /user:<domain>\<username> cmd.exe
+    dir \\fileshare
+    ```
+
+3.  Vérifiez si la liste des répertoires est retournée pour localement le fichier de partage que vous souhaitez utiliser.
 
 ## <a name="provide-domain-credentials"></a>Fournir des informations d’identification de domaine
 Pour fournir des informations d’identification de domaine qui vous permettent de packages d’utiliser l’authentification Windows pour se connecter aux sources de données locale, procédez comme suit :
@@ -73,6 +90,21 @@ Pour effacer et supprimer les informations d’identification que vous avez four
 
     ```sql
     catalog.set_execution_credential @user='', @domain='', @password=''
+    ```
+
+## <a name="connect-to-file-shares"></a>Se connecter aux partages de fichiers
+Vous pouvez utiliser l’authentification Windows pour se connecter aux partages de fichiers dans le même réseau virtuel en tant que le Runtime d’intégration Azure SSIS à la fois localement et sur les machines virtuelles.
+
+Pour vous connecter à un partage de fichiers sur une machine virtuelle Azure, procédez comme suit :
+
+1.  Avec SQL Server Management Studio (SSMS) ou un autre outil, connectez-vous à la base de données SQL qui héberge la base de données du catalogue SSIS (SSISDB).
+
+2.  Avec SSISDB en tant que base de données active, ouvrez une fenêtre de requête.
+
+3.  Exécutez la procédure stockée suivante :
+
+    ```sql
+    catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
     ```
 
 ## <a name="next-steps"></a>Étapes suivantes

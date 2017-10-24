@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (base de données SSISDB)
@@ -28,19 +28,19 @@ Définit la propriété d’un [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
 ## <a name="syntax"></a>Syntaxe
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>Arguments
-[ @WorkerAgentId =] *WorkerAgentId*  
-L’id de l’agent de travailleur de montée en puissance des processus de travail. Le *WorkerAgentId* est **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId*  
+L’agent de travailleur ID de montée en puissance des processus de travail. Le *WorkerAgentId* est **uniqueidentifier**.
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 Nom de la propriété. Le *PropertyName* est **nvarchar (256)**.
 
-[ @PropertyValue =] *PropertyValue*  
-La valeur de la propriété. Le *PropertyValue* est **nvarchar (max)**.
+[@PropertyValue =] *PropertyValue*  
+Valeur de la propriété. Le *PropertyValue* est **nvarchar (max)**.
 
 ## <a name="remarks"></a>Notes
 Les noms de propriétés valides sont **DisplayName**, **Description**, **balises**.
@@ -58,13 +58,13 @@ Les noms de propriétés valides sont **DisplayName**, **Description**, **balise
   
 -   L’appartenance à la **sysadmin** rôle de serveur
 
-## <a name="erros-and-warnings"></a>Erreurs et avertissements
+## <a name="errors-and-warnings"></a>Erreurs et avertissements
   La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
   
 -   L’utilisateur ne dispose pas des autorisations appropriées 
 
--   L’id de l’agent de travailleur n’est pas valide.
+-   L’ID de l’agent de travailleur n’est pas valide.
 
 -   Le nom de propriété n’est pas valide.
 
--   La valeur de propriété n’est pas vilid.  
+-   La valeur de propriété n’est pas valide.  

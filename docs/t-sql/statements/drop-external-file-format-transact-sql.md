@@ -16,11 +16,12 @@ caps.latest.revision: 12
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 25719f7617cbb75b1b9467a00c392f703a9710ac
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 9c30ce4ee5d28cb55b824827de6c89f8d673640c
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-external-file-format-transact-sql"></a>SUPPRIMER le FORMAT de fichier externe (Transact-SQL)
@@ -61,14 +62,6 @@ SELECT * FROM sys.external_file_formats;
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-basic-syntax"></a>A. À l’aide de la syntaxe de base  
-  
-```  
-DROP EXTERNAL FILE FORMAT myfileformat;  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="b-using-basic-syntax"></a>B. À l’aide de la syntaxe de base  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  

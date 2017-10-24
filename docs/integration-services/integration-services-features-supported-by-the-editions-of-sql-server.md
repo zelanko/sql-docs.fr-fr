@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Fonctionnalités Integration Services pris en charge par les éditions de SQL Server
@@ -29,9 +29,9 @@ Pour les fonctionnalités prises en charge par les éditions Evaluation et Devel
 Pour les dernières notes et informations sur les nouveautés, consultez les articles suivants :
 -   [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)
 -   [Nouveautés d’Integration Services dans SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [Quelles sont les nouveautés dans Integration Services dans SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [Nouveautés d’Integration Services dans SQL Server 2017](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
-**Essayer SQL Server 2016**    
+**Essayez SQL Server 2016 !**    
 
 La version d’évaluation de SQL Server est disponible pendant une période d’évaluation de 180 jours.  
     
@@ -70,8 +70,8 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Destination Oracle de haute performance par Attunity|Oui|||||  
-|Destination de hautes performances Teradata par Attunity|Oui|||||  
+|Source d’Oracle de haute performance et de destination par Attunity|Oui|||||  
+|Source Teradata de haute performance et de destination par Attunity|Oui|||||  
 |Source et destination SAP BW|Oui|||||  
 |Destination d’apprentissage du modèle données d’exploration de données|Oui|||||  
 |Destination de traitement de dimension|Oui|||||  
@@ -81,7 +81,6 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Recherches persistants (hautes performances)|Oui|||||  
 |Modification des composants de Capture de données par Attunity <sup>1</sup>|Oui|||||  
 |Transformation de requête d'exploration de données|Oui|||||  
 |Regroupement probable et transformations de recherche floue|Oui|||||  

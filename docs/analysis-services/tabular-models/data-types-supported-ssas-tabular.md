@@ -1,7 +1,7 @@
 ---
-title: "Types de données pris en charge (SSAS tabulaire) | Documents Microsoft"
+title: "Types de données pris en charge dans les modèles tabulaires Analysis Services | Documents Microsoft"
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,25 +17,21 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a60cc3c2782abed53a8064f80bcdbe01921826cc
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/21/2017
 
 ---
-# <a name="data-types-supported-ssas-tabular"></a>Types de données pris en charge (SSAS Tabulaire)
+# <a name="data-types-supported-in-tabular-models"></a>Types de données pris en charge dans les modèles tabulaires
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
+
   
- Cet article contient les sections suivantes :  
-  
--   [Types de données utilisés dans les modèles tabulaires](#bkmk_data_types)  
-  
--   [Conversion implicite et explicite de types de données dans les formules DAX](#bkmk_implicit)  
-  
--   [Gestion des valeurs vides, des chaînes vides et des valeurs zéro](#bkmk_hand_blanks)  
-  
-##  <a name="bkmk_data_types"></a> Types de données utilisés dans les modèles tabulaires  
- Les types de données suivants sont pris en charge. Lorsque vous importez des données ou utilisez une valeur dans une formule, même si la source de données d'origine contient un type de données différent, les données sont converties dans l'un des types de données suivants. Les valeurs issues des formules utilisent également ces types de données.  
+##  <a name="bkmk_data_types"></a>Types de données utilisés dans les modèles tabulaires  
+Lorsque vous importez des données ou utilisez une valeur dans une formule, même si la source de données d'origine contient un type de données différent, les données sont converties dans l'un des types de données suivants. Les valeurs issues des formules utilisent également ces types de données.  
   
  En règle générale, ces types de données sont implémentés pour permettre des calculs exacts dans les colonnes calculées, et les mêmes restrictions s'appliquent au reste des données dans les modèles à des fins de cohérence.  
   
@@ -47,14 +43,14 @@ ms.lasthandoff: 09/01/2017
 |Nombre entier|Valeur entière de 64 bits (huit octets)*<br /><br /> Remarque :<br />         Les formules DAX ne prennent pas en charge les types de données qui sont trop petits pour contenir la valeur minimale indiquée dans la description.|Nombres qui n'ont pas de décimales. Les entiers peuvent être des nombres positifs ou négatifs, mais doivent être compris entre -9 223 372 036 854 775 808 (-2^63) et 9 223 372 036 854 775 807 (2^63-1).|  
 |Nombre décimal|Nombre réel de 64 bits (huit octets)*<br /><br /> Remarque :<br />         Les formules DAX ne prennent pas en charge les types de données qui sont trop petits pour contenir la valeur minimale indiquée dans la description.|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
 |Booléen|Booléen|Valeur True ou valeur False.|  
-|Texte|Chaîne|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
+|Texte|Chaîne|Chaîne de données caractères au format Unicode. Peut être des chaînes, des nombres ou dates représentés dans un format texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |Néant|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
- \* Si vous tentez d’importer des données présentant de très grandes valeurs numériques, l’importation peut échouer avec l’erreur suivante :  
+ \*Si vous essayez d’importer des données qui ont des valeurs numériques élevées, l’importation peut échouer avec l’erreur suivante :  
   
- Erreur de base de données en mémoire : le '\<nom de la colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L'opération a été annulée.  
+ Erreur de base de données en mémoire : le '\<nom de la colonne >' colonne de la «\<nom de la table >' table contient une valeur, ' 1.7976931348623157E + 308', qui n’est pas pris en charge. L’opération a été annulée.  
   
  Cette erreur se produit parce que le générateur de modèles utilise cette valeur pour représenter des valeurs Null. Les valeurs de la liste suivante sont des synonymes de la valeur NULL indiquée précédemment :  
   
@@ -66,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 |1.7976931348623158e+308|  
 |2.2250738585072014e-308|  
   
- Vous devez supprimer la valeur de vos données et réessayer d'importer.  
+ Supprimer la valeur de vos données, puis réessayez d’importer.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas importer à partir d’une colonne **varchar(max)** qui contient une chaîne de plus de 131 072 caractères.  
@@ -74,27 +70,27 @@ ms.lasthandoff: 09/01/2017
 ### <a name="table-data-type"></a>Type de données table  
  En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
-##  <a name="bkmk_implicit"></a> Conversion implicite et explicite de types de données dans les formules DAX
+##  <a name="bkmk_implicit"></a>Conversion de type de données implicites et explicites dans les formules DAX
   
  Chaque fonction DAX a des exigences spécifiques en ce qui concerne les types des données utilisés comme entrées et sorties. Par exemple, certaines fonctions requièrent des entiers pour certains arguments et des dates pour les autres ; d'autres fonctions requièrent du texte ou des tables.  
   
- Si les données de la colonne que vous spécifiez comme argument sont incompatibles avec le type de données requis par la fonction, DAX, dans de nombreux cas, retourne une erreur. Toutefois, DAX essaie chaque fois que possible de convertir implicitement les données dans le type de données requis. Par exemple :  
+ Si les données dans la colonne que vous spécifiez en tant qu’argument sont incompatibles avec le type de données requis par la fonction, dans de nombreux cas DAX retourne une erreur. Toutefois, dans la mesure du possible DAX essaie implicitement convertir les données pour le type de données requis. Exemple :  
   
--   Vous pouvez taper un nombre, par exemple « 123 », comme une chaîne. DAX analysera la chaîne et tentera pour la spécifier comme un type de données de nombre.  
+-   Vous pouvez taper un nombre, par exemple « 123 », comme une chaîne. DAX analyse la chaîne et tentera pour la spécifier comme un type de données numérique.  
   
 -   Vous pouvez ajouter TRUE + 1 et obtenir le résultat 2, parce que TRUE est converti implicitement en nombre 1 et que l'opération 1+1 est effectuée.  
   
 -   Si vous additionnez les valeurs de deux colonnes, et qu'une valeur se trouve être représentée par du texte ("12") alors que l'autre est un nombre (12), DAX convertit implicitement la chaîne en nombre, puis fait l'addition pour produire un résultat numérique. L'expression suivante retourne 44 : = "22" + 22  
   
--   Si vous essayez de concaténer deux nombres, le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] les présente sous forme de chaînes, puis effectue la concaténation. L'expression suivante retourne  "1234" : = 12 & 34  
+-   Si vous essayez de concaténer deux nombres, ils sont présentés sous forme de chaînes et ensuite concaténés. L'expression suivante retourne  "1234" : = 12 & 34  
   
  Le tableau suivant résume les conversions de types de données implicites effectuées dans les formules. En règle générale, le générateur de modèles sémantiques se comporte comme Microsoft Excel et effectue des conversions implicites chaque fois que possible lorsque nécessaire pour l'opération spécifiée.  
   
-### <a name="table-of-implicit-data-conversions"></a>Tableau de conversions de données implicites  
+### <a name="table-of-implicit-data-conversions"></a>Tableau des conversions de données implicites  
  Le type de conversion effectué est déterminé par l'opérateur, qui convertit les valeurs dont il a besoin avant d'effectuer l'opération demandée. Ces tableaux répertorient les opérateurs et indiquent la conversion effectuée sur chaque type de données dans la colonne lorsqu'il est couplé avec le type de données de la ligne d'intersection.  
   
 > [!NOTE]  
->  Les types de données textuels ne sont pas inclus dans ces tableaux. Lorsqu'un nombre est représenté dans un format texte, le générateur de modèles tente dans certains cas de déterminer le type de nombre dont il s'agit et de le représenter comme un nombre.  
+>  Les types de données textuels ne sont pas inclus dans ces tableaux. Lorsqu’un nombre est représenté dans un format texte, dans certains cas, le Générateur de modèles tente de déterminer le type de nombre et le représente sous forme de nombre.  
   
 #### <a name="addition-"></a>Addition (+)  
   
@@ -109,7 +105,7 @@ ms.lasthandoff: 09/01/2017
  Par exemple, si un nombre réel est utilisé dans une opération d'addition en association avec des données de devise, les deux valeurs sont converties en REAL, et le résultat retourné est de type REAL.  
   
 #### <a name="subtraction--"></a>Soustraction (-)  
- Dans le tableau suivant l'en-tête de ligne est le diminuende (côté gauche) et l'en-tête de colonne est le diminuteur (côté droit).  
+ Dans le tableau suivant, l’en-tête de ligne est le diminuende (côté gauche) et l’en-tête de colonne est le diminuteur (côté droit) :  
   
 ||||||  
 |-|-|-|-|-|  
@@ -151,8 +147,8 @@ ms.lasthandoff: 09/01/2017
 #### <a name="comparison-operators"></a>Opérateurs de comparaison  
 Seul un jeu limité de combinaisons de type de données mixte pour les opérations de comparaison est pris en charge. Pour plus d’informations, consultez [Référence des opérateurs DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
   
-## <a name="bkmk_hand_blanks"></a> Gestion des valeurs vides, des chaînes vides et des valeurs zéro  
- Le tableau suivant résume les différences entre DAX et Microsoft Excel quant à la façon dont les valeurs vides (blank) sont gérées.  
+## <a name="bkmk_hand_blanks"></a>Gestion des espaces, des chaînes vides et des valeurs zéro  
+ Le tableau suivant résume les différences entre DAX et Microsoft Excel, dans la façon dont les valeurs vides sont traitées :  
   
 ||||  
 |-|-|-|  
@@ -171,9 +167,4 @@ Seul un jeu limité de combinaisons de type de données mixte pour les opératio
 |BLANK AND BLANK|Vide|Erreur|  
   
  Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Sources de données &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [Importer des données &#40;SSAS Tabulaire&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
-  
   

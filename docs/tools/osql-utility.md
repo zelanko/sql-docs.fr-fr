@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>Utilitaire osql
@@ -74,7 +75,7 @@ osql
  **-U** *login_id*  
  ID de connexion de l'utilisateur. Les ID de connexion respectent la casse.  
   
- **-P** *password*  
+ **-P** *mot de passe*  
  Spécifie le mot de passe pour l'utilisateur. Si l’option **-P** n’est pas utilisée, **osql** invite à entrer un mot de passe. Si l’option **-P** est utilisée à la fin de la ligne de commande sans spécifier de mot de passe, **osql** emploie le mot de passe par défaut (NULL).  
   
 > [!IMPORTANT]  
@@ -116,13 +117,13 @@ C:\>osql
  Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si vous utilisez –1, ne laissez aucun espace entre le paramètre et sa valeur (**-h-1**, et non **-h -1**).  
   
  **-s** *col_separator*  
- Spécification du caractère de séparation des colonnes, qui est par défaut un espace. Pour utiliser des caractères qui présentent une signification particulière pour le système d'exploitation (par exemple, | ; & < >), mettez-les entre guillemets doubles (").  
+ Spécification du caractère de séparation des colonnes, qui est par défaut un espace. Pour utiliser des caractères qui présentent une signification particulière pour le système d'exploitation (par exemple, | ; & < >), mettez-les entre guillemets doubles (").  
   
  **-w** *column_width*  
  Permet à l'utilisateur de définir la largeur d'écran des sorties. La valeur par défaut est de 80 caractères. Lorsqu'une ligne de sortie a atteint la largeur d'écran maximale, elle est scindée en plusieurs lignes.  
   
  **-a** *packet_size*  
- Spécifie le taille des paquets. Les valeurs correctes pour *packet_size* sont comprises entre 512 et 65535. La valeur **osql** par défaut est la valeur par défaut du serveur. Une plus grande taille de paquet permet d'améliorer les performances lors de l'exécution de scripts plus volumineux, où la quantité d'instructions SQL entre les commandes GO est substantielle. Les tests [!INCLUDE[msCoName](../includes/msconame-md.md)] indiquent que la valeur 8192 représente généralement le réglage le plus rapide pour les opérations de copie en bloc. Une taille de paquet supérieure peut être demandée, mais **osql** prend la valeur par défaut du serveur si la requête ne peut pas être satisfaite.  
+ Spécifie le taille des paquets. Les valeurs correctes pour *packet_size* sont comprises entre 512 et 65535. La valeur **osql** par défaut est la valeur par défaut du serveur. Une plus grande taille de paquet permet d'améliorer les performances lors de l'exécution de scripts plus volumineux, où la quantité d'instructions SQL entre les commandes GO est substantielle. [!INCLUDE[msCoName](../includes/msconame-md.md)] indiquent que la valeur 8192 représente généralement le réglage le plus rapide pour les opérations de copie en bloc. Une taille de paquet supérieure peut être demandée, mais **osql** prend la valeur par défaut du serveur si la requête ne peut pas être satisfaite.  
   
  **-e**  
  Retourne les données d'entrée.  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  Affiche les statistiques sur les performances.  
   
  **-b**  
- Spécifie que **osql** prend fin et retourne une valeur DOS ERRORLEVEL quand une erreur se produit. La valeur retournée à la variable DOS ERRORLEVEL est 1 lorsque le message d'erreur de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une gravité égale ou supérieure à 11, sinon la valeur retournée est 0. [!INCLUDE[msCoName](../includes/msconame-md.md)]Les fichiers de commandes MS-DOS peuvent tester la valeur de DOS ERRORLEVEL et traiter l’erreur de manière appropriée.  
+ Spécifie que **osql** prend fin et retourne une valeur DOS ERRORLEVEL quand une erreur se produit. La valeur retournée à la variable DOS ERRORLEVEL est 1 lorsque le message d'erreur de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède une gravité égale ou supérieure à 11, sinon la valeur retournée est 0. [!INCLUDE[msCoName](../includes/msconame-md.md)] Les fichiers de commande MS-DOS peuvent tester la valeur de DOS ERRORLEVEL et traiter l’erreur d’une manière appropriée.  
   
  **-u**  
  Spécifie qu’ *output_file* est stocké au format Unicode, quel que soit le format d’ *input_file*.  
@@ -193,7 +194,7 @@ osql -E -q "select name, object_id from %table%"
  Il attribue aussi la valeur par défaut -1 à DOS ERRORLEVEL.  
   
 > [!NOTE]  
->  Le  **-n** , **- O** et **-D** options ne sont plus prises en charge par **osql**.  
+>  L'utilitaire **-n**, **-O** et **-D** ne sont plus prises en charge par **osql**.  
   
 ## <a name="remarks"></a>Notes  
  L’utilitaire **osql** doit être exécuté directement à partir du système d’exploitation à l’aide des options respectant la casse énumérées ici. Une fois **osql**démarré, il accepte les instructions SQL et les envoie de manière interactive à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les résultats sont mis en forme et affichés à l’écran (**stdout**). Pour quitter **osql**, utilisez QUIT ou EXIT.  
@@ -339,9 +340,9 @@ GO
  Cette instruction produit le résultat `10.3496`, ce qui indique que la valeur est bien stockée avec toutes ses décimales.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commentaire &#40; MDX &#41;](../mdx/comment-mdx.md)   
+ [Commentaire &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [--&#40; Commentaire &#41; &#40; MDX &#41;](../mdx/comment-mdx-operator-reference.md)   
- [CAST et CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST et CONVERT &#40; Transact-SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [RAISERROR &#40; Transact-SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

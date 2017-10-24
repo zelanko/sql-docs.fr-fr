@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e86935bc6eef3ea1e709cd27c916d972dd13b9f
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>L’exécution de la Console SSMA (OracleToSQL)
@@ -33,7 +33,7 @@ Microsoft vous fournit un ensemble robuste de script de commandes du fichier à 
 ## <a name="project-script-file-commands"></a>Commandes de Script de fichier projet  
 Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et les projets en cours de fermeture.  
   
-**Command**  
+**Commande**  
   
 créer à nouveau projet  
                   : Crée un projet SSMA.  
@@ -67,7 +67,7 @@ Est de l’attribut 'Remplacer-if-exists' **false** par défaut.
   
 Est de l’attribut 'type de projet' **sql-server-2008** par défaut.  
   
-**Command**  
+**Commande**  
   
 projet ouvert : ouvre un projet existant.  
   
@@ -90,7 +90,7 @@ projet ouvert : ouvre un projet existant.
 ```  
 SSMA pour l’Application de Console Oracle prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
   
-**Command**  
+**Commande**  
   
 enregistrer le projet  
   
@@ -103,7 +103,7 @@ Enregistre le projet de migration.
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**Commande**  
   
 projet de fermer  
   
@@ -128,7 +128,7 @@ Les commandes de connexion de base de données aident à vous connecter à la ba
   
 -   Pour plus d’informations sur « Créer des fichiers de Script », consultez [création de fichiers de Script &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
   
-**Command**  
+**Commande**  
   
 se connecter--base de données source  
   
@@ -145,7 +145,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 force-charge-source/cible-base de données  
   
@@ -175,7 +175,7 @@ ou
   
 </force-load>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données source  
   
@@ -190,7 +190,7 @@ reconnecter--base de données source
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 se connecter--base de données cible  
   
@@ -207,7 +207,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données cible  
   
@@ -226,7 +226,7 @@ reconnecter--base de données cible
 ## <a name="report-script-file--commands"></a>Commandes de fichier de Script de rapport  
 Les commandes de rapports génèrent des rapports sur les performances de diverses activités de la Console de SSMA.  
   
-**Command**  
+**Commande**  
   
 Générer--rapport d’évaluation  
   
@@ -302,7 +302,7 @@ Les commandes de Migration de convertir le schéma de base de données cible au 
   
 La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 convertir le schéma  
   
@@ -368,7 +368,7 @@ ou
   
 </convert-schema>  
 ```  
-**Command**  
+**Commande**  
   
 migrer des données  
   
@@ -440,7 +440,7 @@ ou
 ## <a name="migration-preparation-script-file-commands"></a>Commandes de fichier de Script de préparation migration  
 La commande de préparation de Migration lance un mappage de schéma entre les bases de données source et cible.  
   
-**Command**  
+**Commande**  
   
 schéma de mappage  
   
@@ -467,7 +467,7 @@ Migre les données source à la cible.
 ## <a name="manageability-script-file-commands"></a>Commandes de fichier de Script de facilité de gestion  
 Les commandes de la facilité de gestion permettent de synchroniser les objets de base de données cible avec la base de données source. La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 synchroniser la cible  
   
@@ -532,7 +532,7 @@ ou
   
 </synchronize-target>  
 ```  
-**Command**  
+**Commande**  
   
 actualisation de base de données  
   
@@ -597,7 +597,7 @@ ou
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
 Les commandes de génération du Script effectuent deux tâches : ils permettent d’enregistrer la console de sortie dans un fichier de script ; et enregistrez la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
-**Command**  
+**Commande**  
   
 en tant que script de sauvegarde  
   
@@ -649,7 +649,7 @@ ou
   
 </save-as-script>  
 ```  
-**Command**  
+**Commande**  
   
 instruction CONVERT-sql  
   
@@ -673,7 +673,7 @@ instruction CONVERT-sql
   
 -   `write-summary-report-to`Spécifie le chemin d’accès où le rapport sera généré. Si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **ConvertSQLReport.XML** est créé. (attribut facultatif)  
   
-    La création a 2 autres sous-catégories, notamment des rapports.., :  
+    La création a 2 autres sous-catégories, notamment des rapports. :  
   
     -   erreurs de rapport (= « true/false », la valeur par défaut en tant que « false » (attributs facultatifs)).  
   

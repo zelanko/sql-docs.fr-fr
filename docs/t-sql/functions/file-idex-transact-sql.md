@@ -26,24 +26,24 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df818b30ca850fbb3b7cb0df816aacb6afa12a76
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 9a65a49a1e6d8c23a28b117fc90b0276ce185556
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne le numéro d'identification (ID) du nom du fichier logique spécifié (journal, de données ou de texte intégral) dans la base de données active.  
+Retourne le numéro d'identification (ID) du nom du fichier logique spécifié (journal, de données ou de texte intégral) dans la base de données active.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 FILE_IDEX ( file_name )  
 ```  
   
@@ -64,12 +64,12 @@ FILE_IDEX ( file_name )
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Extraction de l'ID d'un fichier spécifié  
- L'exemple suivant retourne l'ID du fichier `AdventureWorks_Data`.  
+L'exemple suivant retourne l'ID du fichier `AdventureWorks_Data`.  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX('AdventureWorks2012_Data')AS 'File ID';  
+SELECT FILE_IDEX('AdventureWorks2012_Data') AS 'File ID';  
 GO  
 ```  
   
@@ -83,13 +83,12 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Extraction de l'ID d'un fichier dont le nom est inconnu  
- L'exemple suivant retourne l'ID du fichier journal `AdventureWorks` en sélectionnant le nom de fichier logique dans l'affichage catalogue `sys.database`_`files` où le type de fichier a pour valeur `1` (journal).  
+L’exemple suivant retourne l’ID de la `AdventureWorks` fichier journal en sélectionnant le nom de fichier logique à partir de la `sys.database_files` catalogue vue où le type de fichier est égal à `1` (journal).  
   
 ```tsql  
 USE AdventureWorks2012;  
 GO  
-SELECT FILE_IDEX((SELECT TOP(1)name FROM sys.database_files   
-WHERE type = 1))AS 'File ID';  
+SELECT FILE_IDEX((SELECT TOP (1) name FROM sys.database_files WHERE type = 1)) AS 'File ID';  
 GO  
 ```  
   
@@ -102,7 +101,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Extraction de l'ID d'un fichier de catalogue de texte intégral  
- L'exemple suivant retourne l'ID d'un fichier de texte intégral en sélectionnant le nom de fichier logique dans l'affichage catalogue `sys.database`_`files` où le type de fichier a pour valeur `4` (texte intégral). Cet exemple retourne NULL s'il n'existe pas de catalogue de texte intégral.  
+L’exemple suivant retourne l’ID de fichier d’un fichier de recherche en texte intégral en sélectionnant le nom de fichier logique à partir de la `sys.database_files` affichage où le type de fichier est égal à catalogue `4` (recherche en texte intégral). Cet exemple retourne NULL s'il n'existe pas de catalogue de texte intégral.  
   
 ```tsql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
@@ -115,3 +114,4 @@ AS 'File_ID';
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
+

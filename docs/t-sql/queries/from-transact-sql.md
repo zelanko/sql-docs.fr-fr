@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>N. Utilisation d'une clause FROM simple  
- L’exemple suivant récupère la `SalesTerritoryID` et `SalesTerritoryRegion` colonnes à partir de la `DimSalesTerritory` table.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>O. À l’aide de la syntaxe INNER JOIN  
+### <a name="n-using-the-inner-join-syntax"></a>N. À l’aide de la syntaxe INNER JOIN  
  L’exemple suivant retourne le `SalesOrderNumber`, `ProductKey`, et `EnglishProductName` colonnes à partir de la `FactInternetSales` et `DimProduct` tables où la clé de jointure, `ProductKey`, correspond à dans les deux tables. Le `SalesOrderNumber` et `EnglishProductName` colonnes chaque existent dans une des tables uniquement, donc il n’est pas nécessaire de spécifier l’alias de table avec ces colonnes, comme le montre ; ces alias sont inclus pour une meilleure lisibilité. Le mot **AS** avant un alias de nom n’est pas obligatoire, mais est recommandé pour une meilleure lisibilité et pour se conformer à la norme ANSI.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>P. À l’aide de la syntaxe LEFT OUTER JOIN et RIGHT OUTER JOIN  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. À l’aide de la syntaxe LEFT OUTER JOIN et RIGHT OUTER JOIN  
  L’exemple suivant joint le `FactInternetSales` et `DimProduct` des tables sur la `ProductKey` colonnes. La syntaxe de jointure externe gauche conserve les lignes sans correspondance à partir de la gauche (`FactInternetSales`) table. Étant donné que la `FactInternetSales` table ne contient pas de `ProductKey` les valeurs qui ne correspondent pas à la `DimProduct` table, cette requête renvoie les mêmes lignes que le premier exemple de jointure interne ci-dessus.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>Q. À l’aide de la syntaxe FULL OUTER JOIN  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. À l’aide de la syntaxe FULL OUTER JOIN  
  L’exemple suivant montre une jointure externe complète, qui retourne toutes les lignes des deux tables jointes, mais retourne la valeur NULL pour les valeurs qui ne correspondent pas à partir de l’autre table.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>R. À l’aide de la syntaxe CROSS JOIN  
+### <a name="q-using-the-cross-join-syntax"></a>Q. À l’aide de la syntaxe CROSS JOIN  
  L’exemple suivant retourne le produit croisé de la `FactInternetSales` et `DimSalesTerritory` tables. Une liste de toutes les combinaisons possibles des `SalesOrderNumber` et `SalesTerritoryKey` sont retournées. Notez l’absence de la `ON` clause dans la requête de jointure croisée.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S. Utilisation d'une table dérivée  
+### <a name="r-using-a-derived-table"></a>R. Utilisation d'une table dérivée  
  L’exemple suivant utilise une table dérivée (un `SELECT` instruction après le `FROM` clause) pour retourner le `CustomerKey` et `LastName` colonnes de tous les clients dans le `DimCustomer` table avec `BirthDate` valeurs au plus tard le 1er janvier 1970 et le dernier nom de « Smith ».  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>T. RÉDUIRE l’exemple d’indicateur de jointure  
+### <a name="s-reduce-join-hint-example"></a>S. RÉDUIRE l’exemple d’indicateur de jointure  
  L’exemple suivant utilise le `REDUCE` indicateur de jointure à modifier le traitement de la table dérivée dans la requête. Lorsque vous utilisez la `REDUCE` indicateur de jointure dans cette requête, le `fis.ProductKey` est projetée, répliquées et apportées distinctes, puis attachées à `DimProduct` lors de la lecture aléatoire de `DimProduct` sur `ProductKey`. La table dérivée qui en résulte est distribuée sur `fis.ProductKey`.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>U. Exemple d’indicateur de jointure de réplication  
+### <a name="t-replicate-join-hint-example"></a>T. Exemple d’indicateur de jointure de réplication  
  L’exemple suivant montre la même requête que l’exemple précédent, à ceci près qu’un `REPLICATE` indicateur de jointure est utilisée au lieu du `REDUCE` indicateur de jointure. Utiliser le `REPLICATE` indicateur entraîne les valeurs dans le `ProductKey` colonne (jointure) à partir de la `FactInternetSales` table être répliquée vers tous les nœuds. Le `DimProduct` table est jointe à la version dupliquée de ces valeurs.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>V. À l’aide de l’indicateur REDISTRIBUTE afin de garantir un déplacement de la réorganisation d’une jointure incompatible de distribution  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. À l’aide de l’indicateur REDISTRIBUTE afin de garantir un déplacement de la réorganisation d’une jointure incompatible de distribution  
  La requête suivante utilise l’indicateur de requête redistribuer sur une jointure incompatible de distribution. Cela garantit que l’optimiseur de requête utilise un déplacement de lire de façon aléatoire dans le plan de requête. Cela garantit également que le plan de requête n’utilise pas un déplacement de diffusion qui déplace une table distribuée à une table répliquée.  
   
  Dans l’exemple suivant, l’indicateur REDISTRIBUTE force un déplacement aléatoire sur la table FactInternetSales car ProductKey est la colonne de distribution pour DimProduct et n’est pas la colonne de distribution pour FactInternetSales.  
