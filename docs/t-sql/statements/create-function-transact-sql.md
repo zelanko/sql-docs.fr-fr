@@ -39,11 +39,12 @@ caps.latest.revision: 162
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 80708ece5b84d5e8477e2c6cc8ab5c0618bdc2a5
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -365,9 +366,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [,... *n*  ]) Définit les données de table de type pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonction). La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
+ *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,...*n*  ]) Définit les données de table de type pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonction). La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
   
- \<clr_table_type_definition > ({ *column_name**data_type* } [,... *n*  ]) **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \<clr_table_type_definition > ({ *column_name**data_type* } [ ,...*n*  ]) **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne. La table est toujours placée dans le groupe de fichiers primaire.  
   
@@ -537,7 +538,7 @@ RETURNS return_data_type
   
  Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour faire référence à la méthode adéquate surchargée dans une classe, la méthode indiquée dans \<method_specifier > doit présenter les caractéristiques suivantes : 
   
--   Recevoir le même nombre de paramètres que ceux spécifiés dans [,...*n* ].  
+-   Recevoir le même nombre de paramètres que ceux spécifiés dans [ ,...*n* ].  
   
 -   Recevoir tous les paramètres par valeur, non par référence.  
   
@@ -774,7 +775,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-clr-function"></a>D. Création d'une fonction CLR  
- L'exemple crée la fonction CLR `len`_`s`. Avant que la fonction ne soit créée, l'assembly `SurrogateStringFunction.dll` est inscrit dans la base de données locale.  
+ L’exemple crée la fonction CLR `len_s`. Avant que la fonction ne soit créée, l'assembly `SurrogateStringFunction.dll` est inscrit dans la base de données locale.  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
