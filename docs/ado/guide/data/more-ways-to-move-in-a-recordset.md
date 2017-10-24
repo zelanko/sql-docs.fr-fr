@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  Autre exemple, si vous êtes positionné sur une ligne particulière au milieu d’un **Recordset** et que vous appelez **supprimer** , puis appelez **MoveNext**, vous êtes maintenant sur l’enregistrement immédiatement après l’enregistrement supprimé. Contrairement à l’appel **MovePrevious** rend l’enregistrement précédant celle que vous avez supprimé l’enregistrement en cours, car l’enregistrement supprimé n’est plus comptabilisé dans l’abonnement actif de la **Recordset**.  
   
  Il est particulièrement difficile de définir une sémantique de déplacement cohérente entre tous les fournisseurs pour les méthodes qui passent par rapport à l’enregistrement actif : **MovePrevious**, **MoveNext**, et **déplacer** : en cas de modification de données dans l’enregistrement actif. Par exemple, si vous travaillez avec un triées, filtrées **Recordset**et vous modifiez les données dans l’enregistrement actif afin qu’elle précède toutes les autres enregistrements, mais vos données modifiées également n’est plus correspond au filtre, il est difficile de déterminer où un **MoveNext** opération devrait vous prendre. La conclusion plus sûre est mouvement relatif au sein d’un **Recordset** est plus de risques que le déplacement des absolu (telles que l’utilisation **MoveFirst** ou **MoveLast**) lorsque les données sont la modification pendant que les enregistrements modifiés, ajoutés ou supprimés. Tri et filtrage doivent reposer sur une clé primaire ou l’ID, car vous ne devez pas modifier ce type de valeur.
+

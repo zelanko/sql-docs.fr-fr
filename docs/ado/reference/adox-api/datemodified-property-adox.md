@@ -21,6 +21,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f76f2f250ae7a40cdb2184ce29c5e20772f7ccaf
@@ -46,3 +47,4 @@ Indique la date de que dernière modification de l’objet.
 ## <a name="see-also"></a>Voir aussi  
  [DateCreated et DateModified, propriétés-exemple (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateCreated, propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)
+

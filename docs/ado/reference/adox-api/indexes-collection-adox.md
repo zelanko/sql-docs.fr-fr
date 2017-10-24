@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66cc6532a626ee65b8f152eb9bca57dc2a6468ec
@@ -52,3 +53,4 @@ Contient tous les [Index](../../../ado/reference/adox-api/index-object-adox.md) 
 ## <a name="see-also"></a>Voir aussi  
  [Indexes Append, méthode-exemple (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Objet index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+

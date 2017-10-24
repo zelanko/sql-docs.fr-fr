@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8dfa880e78bdeccf722723a7d05f2f0ca1938ed6
@@ -43,3 +44,4 @@ Indique si les enfants suivent immédiatement la [membre](../../../ado/reference
   
 ## <a name="see-also"></a>Voir aussi  
  [ParentSameAsPrev, propriété (ADO MD)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)
+

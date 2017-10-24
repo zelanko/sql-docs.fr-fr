@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
@@ -33,3 +34,4 @@ Fournisseurs de services sont des composants qui étendent les fonctionnalités 
  Par exemple, un curseur de moteur, tel que [le Service de curseur pour OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), est un composant de service qui peut utiliser des données à partir d’un magasin de données séquentielles et en avant uniquement pour produire des données permettant le défilement. Incluent d’autres fournisseurs de services généralement utilisés par ADO le [Microsoft OLE DB fournisseur de persistance (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (pour l’enregistrement de données dans un fichier,) le [Service de mise en forme des données Microsoft pour OLE DB (fournisseur de services ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (pour hiérarchique **jeux d’enregistrements**) et le [fournisseur Microsoft OLE DB la communication à distance (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (pour l’appel des fournisseurs de données sur un ordinateur distant).  
   
  Pour plus d’informations sur les fournisseurs de services et de données, consultez [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).
+

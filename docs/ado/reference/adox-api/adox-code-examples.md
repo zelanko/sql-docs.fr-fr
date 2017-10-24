@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
@@ -52,3 +53,4 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les objets, m�
  [Collection de vues, exemple de propriété CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Exemple de méthode (VB) de suppression de vues](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Actualiser les vues, méthode-exemple (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
+

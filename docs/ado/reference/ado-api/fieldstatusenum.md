@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 33ea3379808e818b1afd723ce9223858896ea709
@@ -69,3 +70,4 @@ Spécifie le [état](../../../ado/reference/ado-api/status-property-ado-field.md
   
 ## <a name="applies-to"></a>S'applique à  
  [Propriété d’état (champ ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
+

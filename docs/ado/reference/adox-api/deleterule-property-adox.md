@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 84fdcc05f2f7bcc531b3d40e2312ede5d79f55c2
@@ -44,3 +45,4 @@ Indique l’action effectuée lorsqu’une clé primaire est supprimée.
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété DeleteRule (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+

@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ Le diagramme suivant résume le flux de travail global lorsque les scripts sont 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Présentation de l’architecture pour Python dans SQL Server](architecture-overview-sql-server-python.md)
+

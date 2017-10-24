@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 844ccb8f4970bf4147cedfcd05d185a54ab8b6b7
@@ -37,3 +38,4 @@ Les figures suivantes montrent les objets ADO et leurs collections.
  [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
+

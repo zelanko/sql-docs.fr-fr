@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
@@ -76,3 +77,4 @@ Dans le cadre de l’installation des Services d’apprentissage Machine avec Py
 ## <a name="see-also"></a>Voir aussi
 
 [Les Types de données et les bibliothèques de Python](python-libraries-and-data-types.md)
+

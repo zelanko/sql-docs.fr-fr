@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/01/2017
     >  Vous pouvez utiliser le Concepteur de cube une fois l'exécution de l'Assistant Cube terminée pour définir le cube. Vous pouvez également utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans les dimensions que vous avez créées.  
   
   
+

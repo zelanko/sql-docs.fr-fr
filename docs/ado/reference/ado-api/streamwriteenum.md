@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 586920fc4f7673f9c5e25c92f252013920acaa8d
@@ -39,3 +40,4 @@ Indique si un séparateur de ligne est ajouté à la chaîne écrite dans un [fl
   
 ## <a name="applies-to"></a>S'applique à  
  [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)
+

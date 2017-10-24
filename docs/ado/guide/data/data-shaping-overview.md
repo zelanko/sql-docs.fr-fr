@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f885a8585d3665efcc39bfe979b501d779c35c00
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  En outre, les données de mise en forme dans ADO vous permettent de créer de nouveaux **Recordset** objets sans source de données sous-jacente à l’aide de la **nouveau** mot clé pour décrire les champs du parent et enfant ** Jeux d’enregistrements**. La nouvelle **Recordset** objet peut ensuite être rempli avec des données et stocké de manière permanente. Les développeurs peuvent également effectuer des calculs ou des agrégations différentes (par exemple, **somme**, **AVG**, et **MAX**) sur les champs enfants. Mise en forme des données peut créer également un parent **Recordset** à partir d’un enfant **Recordset** en regroupant les enregistrements de l’enfant et en plaçant une ligne dans le parent de chaque groupe dans l’enfant.  
   
  Régulière SQL vous permet de récupérer les données à l’aide de **joindre** syntaxe, mais cela peut être inefficace et complexe, car les données redondantes parent sont répétées dans chaque enregistrement renvoyé pour une relation parent-enfant donnée. Mise en forme des données peut associer un enregistrement de parent unique dans le parent **Recordset** à plusieurs enregistrements enfants de l’enfant **Recordset**, ce qui évite la redondance d’un **joindre**. La plupart des utilisateurs de trouver le parent-enfant multiples **Recordset** modèle de programmation plus naturel et plus facile à utiliser que le seul **Recordset joindre** modèle.
+

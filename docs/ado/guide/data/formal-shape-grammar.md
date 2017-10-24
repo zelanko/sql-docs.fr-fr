@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
@@ -79,3 +80,4 @@ Il s’agit de la grammaire formelle pour la création de n’importe quelle com
  [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)   
  [Clause COMPUTE de forme](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic pour Applications functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

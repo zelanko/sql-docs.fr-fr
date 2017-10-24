@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef92cbf72ad8a8aa3a8076be7ccaf3761f51ab0
@@ -64,3 +65,4 @@ End Sub
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
  [Étape 4 : Remplir la zone de texte de détails](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+

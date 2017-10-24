@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f5639a1e86ce6b9e46b3583c8e092e389dfa422e
@@ -38,3 +39,4 @@ Spécifie à quel moment le [MSDataShape](../../../ado/guide/appendixes/microsof
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
  Ces constantes n’ont pas d’équivalents ADO/WFC.
+

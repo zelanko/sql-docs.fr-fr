@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
@@ -48,3 +49,4 @@ Les commandes sont émises pour un fournisseur des instructions pour effectuer c
 -   [Commandes nommées](../../../ado/guide/data/named-commands.md)  
   
 -   [Passage de paramètres à une commande nommée](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
+

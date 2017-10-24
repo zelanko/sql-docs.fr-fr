@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 225a864f43c9da7d67de58482f632b914822bd1b
@@ -50,3 +51,4 @@ Représente une procédure stockée. Lorsqu’il est utilisé conjointement avec
  [Procédures ajouter l’exemple de méthode (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Exemple de méthode (VB) de suppression de procédures](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Collection de procédures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+

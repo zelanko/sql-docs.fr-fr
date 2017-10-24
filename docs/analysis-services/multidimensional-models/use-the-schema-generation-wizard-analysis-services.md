@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  Vous pouvez définir les conventions de nom que l’Assistant Génération de schéma utilise quand vous générez certains objets dans la base de données de la zone de sujet dans la page **Spécifier les conventions de nom** de l’assistant. Pour plus d’informations sur les options disponibles dans la page **Spécifier les conventions de nom**, consultez [Spécifier les conventions de nom &#40;Assistant Génération de schéma&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   
+

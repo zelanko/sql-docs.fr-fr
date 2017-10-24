@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  Cet exemple crée une application de service. La base de données d’application de service est créée sur un serveur de base de données nommé AdvWorks-SRV01 qui a été installé en tant qu’instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , configuration commune à de nombreuses installations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Vous devez disposer d'autorisations dbcreator sur l'instance de SQL Server pour créer la base de données. Vous devez être db_owner sur la base de données de configuration SharePoint. Étant donné qu’il s’agit de la première application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie de serveurs, celle-ci doit être membre du groupe de proxys par défaut.  
   
   
+

@@ -24,6 +24,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 524845f59338a483df89586847157e6d9eaa598c
@@ -57,3 +58,4 @@ Indique la source de données ou l’objet représenté par le [enregistrement](
 ## <a name="see-also"></a>Voir aussi  
  [Source, propriété (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source, propriété (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+

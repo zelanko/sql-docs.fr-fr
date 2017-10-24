@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: befa7b0bd4a42391440d63ef4314337c91bedb88
@@ -46,3 +47,4 @@ Indique le type de données d’une colonne.
  [Exemple de propriété ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Propriété de type (clé) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Type, propriété (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 311d18547421d327a8d1af3f85d9995ddfa8f5c6
@@ -124,3 +125,4 @@ Cet exemple utilise le [Clone](../../../ado/reference/ado-api/clone-method-ado.m
 ## <a name="see-also"></a>Voir aussi  
  [Clone, méthode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

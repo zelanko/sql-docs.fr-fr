@@ -27,6 +27,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  Pour supprimer un calcul existant, dans le volet **Organisateur de script** de l’onglet **Calculs** , sélectionnez le calcul à supprimer, puis cliquez sur **Supprimer** dans le menu **Edition** ou cliquez sur l’icône **Supprimer** de la barre d’outils. Vous pouvez aussi cliquer avec le bouton droit sur le calcul dans le volet **Organisateur de script** et sélectionner **Supprimer** dans le menu contextuel.  
   
   
+

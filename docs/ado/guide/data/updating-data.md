@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8138aeea7e5ea40e659a6fed5f5d5f551b1c69d
@@ -40,3 +41,4 @@ Comportement de mise à jour et fonctionnalités dépend en grande partie mettre
 -   [En Mode Batch](../../../ado/guide/data/batch-mode.md)  
   
 -   [Traitement des transactions](../../../ado/guide/data/transaction-processing.md)
+

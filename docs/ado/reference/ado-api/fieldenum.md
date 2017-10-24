@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a8533cd43964bf7bd2a456ff2cadce1be00b223
@@ -36,3 +37,4 @@ Spécifie les champs spéciaux référencés dans un [enregistrement](../../../a
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|Fait référence au champ contenant la valeur par défaut [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet associé à un **enregistrement**.|  
 |**adRecordURL**|-2|Fait référence au champ contenant la chaîne URL absolue pour actuel **enregistrement**.|
+

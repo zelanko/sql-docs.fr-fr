@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
@@ -91,3 +92,4 @@ Pour faciliter le débogage, les énumérations ADO comportent une valeur pour c
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
+

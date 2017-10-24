@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530926a4d207cc4c1595539b1d5af1fe96cbd492
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]L’agent est un [!INCLUDE[msCoName](../../includes/msconame-md.md)] service Windows qui exécute des tâches administratives planifiées appelé *travaux*. Pour plus d'informations sur l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez « À propos de l'Agent SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
+

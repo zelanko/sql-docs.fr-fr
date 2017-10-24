@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cda6ab3b4609ef4295240050fd1e204845637b02
@@ -35,3 +36,4 @@ Les curseurs dynamiques détectent toutes les modifications apportées aux ligne
  [Curseurs avant uniquement](../../../ado/guide/data/forward-only-cursors.md)   
  [Curseurs statiques](../../../ado/guide/data/static-cursors.md)   
  [Curseurs keyset](../../../ado/guide/data/keyset-cursors.md)
+

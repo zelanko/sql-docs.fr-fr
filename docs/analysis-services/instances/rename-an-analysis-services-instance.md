@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      Comme vous pouvez le voir, les autorisations d'accès à la base de données et aux fichiers précédemment accordées au service « NT Service\ MSOLAP$TABULAR » ne sont plus valides. Pour vous assurer que les tâches et les opérations effectuées par le service s'exécutent comme précédemment, vous devez maintenant accorder au service « NT Service\ MSOLAP$TAB2 » les autorisations d'accès à la nouvelle base de données et aux fichiers.  
   
   
+

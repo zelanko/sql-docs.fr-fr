@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5be08b4202cc5f9ba4974b794e29b96f536d934e
@@ -42,3 +43,4 @@ Indique l’état actuel de l’ensemble de cellules.
 ## <a name="see-also"></a>Voir aussi  
  [Close (méthode) (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open (méthode) (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+

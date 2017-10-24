@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  Le **erreur** objet est également utilisé lorsque des erreurs liées aux événements se produisent. Vous pouvez déterminer si une erreur s’est produite dans le processus qui a déclenché un événement ADO en vérifiant la **erreur** objet passé comme paramètre d’événement.  
   
  Si l’opération qui provoque un événement se termine avec succès, le *ne* paramètre du Gestionnaire d’événements est défini *adStatusOK*. En revanche, si l’opération qui a déclenché l’événement a échoué, le *ne* paramètre est défini sur *contraire*. Dans ce cas, le *pError* paramètre contiendra un **erreur** objet qui décrit l’erreur.
+

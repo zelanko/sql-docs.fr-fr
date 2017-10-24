@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ace385c89003d7b528643c5047337eb32ed0847e
@@ -57,3 +58,4 @@ Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Vis
 ## <a name="see-also"></a>Voir aussi  
  [ADO pour les Index de la syntaxe Visual C++ avec #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
+

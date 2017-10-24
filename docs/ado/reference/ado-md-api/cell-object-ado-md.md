@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6ef6e4e3cf888b60050bfd297863568d8112a57
@@ -64,3 +65,4 @@ Représente les données à l’intersection des coordonnées des axes d’un en
  [Cellset, objet (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Collection de positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

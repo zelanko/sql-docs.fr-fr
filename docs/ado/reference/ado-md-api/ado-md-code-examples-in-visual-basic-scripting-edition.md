@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c4cc27d7ff62af6746516ab190772e99304e4b74
@@ -36,3 +37,4 @@ Les exemples suivants nécessitent Microsoft Active Server Pages (ASP) pour Micr
 -   [Exemple de membres](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
   
 -   [CubeDef, exemple](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)
+

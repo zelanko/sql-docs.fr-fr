@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b633f10b4bac5ec6347879510e1867e7d5d14741
@@ -60,3 +61,4 @@ Avant d’invoquer UpdateBatch, vous pouvez utiliser la propriété de filtre de
   
 ## <a name="see-also"></a>Voir aussi  
  [En Mode Batch](../../../ado/guide/data/batch-mode.md)
+

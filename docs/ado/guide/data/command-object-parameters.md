@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  Tous les fournisseurs prennent en charge les commandes préparées. Si le fournisseur ne prend pas en charge la préparation des commandes, il peut retourner une erreur dès que cette propriété est définie sur **True**. Si elle ne retourne pas d’erreur, il ignore la demande de préparation de la commande et le définit le **Prepared** propriété **false**.
+

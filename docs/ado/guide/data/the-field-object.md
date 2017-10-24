@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ Chaque **champ** objet correspond généralement à une colonne dans une table d
  S’il n’existe aucun enregistrement actif lorsque vous utilisez la **GetChunk** ou **AppendChunk** méthode sur un **champ** de l’objet, l’erreur 3021 (aucun enregistrement actif) survient.  
   
  Pour obtenir un exemple de l’utilisation de ces méthodes pour manipuler des données binaires, consultez la [AppendChunk, méthode](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [méthode GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) exemples dans le *de référence du programmeur ADO*.
+

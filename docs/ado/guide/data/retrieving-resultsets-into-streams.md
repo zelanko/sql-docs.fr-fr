@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>Notes  
  À ce stade, XML a été transmis au navigateur client et il est prêt à être affiché. Cela permet à l’aide de code VBScript côté client pour lier le document XML à une instance de DOM et exécuter une boucle dans chaque nœud enfant pour générer une liste de produits au format HTML.
+

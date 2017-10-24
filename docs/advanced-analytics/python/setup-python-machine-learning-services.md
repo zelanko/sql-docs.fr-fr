@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
@@ -290,3 +291,4 @@ Reportez-vous aux didacticiels suivants pour obtenir des exemples de la façon d
 [À l’aide de Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
 
 [Créer un modèle de Python à l’aide de revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
+

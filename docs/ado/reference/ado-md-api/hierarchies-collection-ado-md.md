@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b589d3f31e73bbf6b92cbd81b85392a45f21e26e
@@ -47,3 +48,4 @@ Contient l’ensemble de [hiérarchie](../../../ado/reference/ado-md-api/hierarc
  [Exemple de catalogue (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Objet de dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Objet de hiérarchie (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  Si vous passez un signet dans le *Démarrer* argument, le déplacement est relatif à l’enregistrement de ce signet, en supposant que le **Recordset** objet prend en charge les signets. Un signet est obtenu à l’aide de la [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété. Si non spécifié, le déplacement est relatif à l’enregistrement actif.  
   
  Si vous utilisez la **CacheSize** propriété à mettre en cache localement les enregistrements à partir du fournisseur, passant un *NbEnregistrements* argument qui déplace la position actuelle en dehors du groupe actuel d’enregistrements mis en cache force ADO à récupérer un nouveau groupe d’enregistrements, à partir de l’enregistrement de destination. Le **CacheSize** propriété détermine la taille du groupe qui vient d’être extrait et l’enregistrement de destination est le premier enregistrement récupéré.
+

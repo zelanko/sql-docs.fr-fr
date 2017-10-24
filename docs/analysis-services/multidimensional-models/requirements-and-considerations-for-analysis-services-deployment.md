@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   Si les performances des requêtes sont dégradées et que vous ne pouvez pas augmenter les ressources de traitement et mémoire de l'ordinateur local, déployez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur au moins deux serveurs de production. Ainsi, vous pouvez utiliser l'équilibrage de la charge réseau pour placer les serveurs dans un cluster. Dans un cluster avec équilibrage de la charge réseau, les requêtes sont distribuées automatiquement vers tous les serveurs du cluster avec équilibrage de la charge réseau.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9c981037637b85e23e6b871116291aa8eb607c99
@@ -46,3 +47,4 @@ Spécifie le format dans lequel enregistrer un [Recordset](../../../ado/referenc
   
 ## <a name="applies-to"></a>S'applique à  
  [Save (méthode)](../../../ado/reference/ado-api/save-method.md)
+

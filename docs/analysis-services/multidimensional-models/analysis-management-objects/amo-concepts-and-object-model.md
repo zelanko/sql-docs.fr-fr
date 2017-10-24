@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  AMO ne peut pas être utilisé pour interroger les données. Pour interroger des données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], y compris les cubes et les modèles d'exploration de données, utilisez ADOMD.NET à partir d'une application utilisateur. Pour plus d’informations, consultez [développement avec ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
+

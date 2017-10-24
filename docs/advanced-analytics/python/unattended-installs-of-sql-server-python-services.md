@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ L’exemple suivant illustre la **minimale** requise des fonctionnalités à sp�
 3.  Redémarrez le service SQL Server pour l’instance reconfiguré. Cette opération redémarre automatiquement le [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] ainsi le service.
 
 3. D’autres étapes peuvent être nécessaires si vous avez une configuration de sécurité personnalisée ou si vous prévoyez d’utiliser SQL Server pour prendre en charge des contextes de calcul à distance. Pour plus d’informations, consultez [résolution des problèmes d’installation de la machine learning](../machine-learning-troubleshooting-faq.md).
+

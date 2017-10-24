@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
@@ -88,3 +89,4 @@ WHERE(
  Comme indiqué précédemment, l'utilisation d'un jeu dans la clause WHERE effectue implicitement un agrégat des valeurs pour tous les membres du jeu. Dans le cas présent, la requête affiche les valeurs agrégées pour les États-Unis et le Royaume-Uni dans chaque cellule.  
   
   
+

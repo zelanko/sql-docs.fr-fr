@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   Vous ne pouvez pas utiliser **sur erreur goto \<étiquette >** dans VBScript.  
   
 -   VBScript prend en charge les certaines fonctions Visual Basic intégrées telles que **Msgbox**, **Date**, et **IsNumeric**. Toutefois, étant donné que VBScript est un sous-ensemble de Visual Basic, pas toutes les fonctions intégrées sont prises en charge. Par exemple, VBScript ne prend pas en charge la **Format** fonction et les fonctions d’e/s de fichier.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ Les opérations réalisées dans une base de données relationnelle s'exécutent
   
 ## <a name="scrollability"></a>Capacité de défilement  
  Le type de curseur utilisé par votre application affecte également la possibilité de déplacer vers l’avant et vers l’arrière dans les lignes d’un jeu de résultats ; Cela est parfois appelée la capacité de défilement. La possibilité d’avancer *et* revenir en arrière dans un résultat de jeu augmente la complexité du curseur et n’est donc plus coûteux à implémenter. Pour cette raison, vous devez demander un curseur avec cette fonctionnalité uniquement lorsque cela est nécessaire.
+

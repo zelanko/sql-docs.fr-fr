@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   Ouvrez la dimension à laquelle vous voulez ajouter une fonctionnalité Business Intelligence, puis dans la barre d'outils, cliquez sur le bouton **Ajouter Business Intelligence** . Vous pouvez également cliquer avec le bouton droit sur la dimension dans l’Explorateur d’objets ou l’Explorateur de solutions, puis cliquer sur **Ajouter Business Intelligence**.  
   
   
+

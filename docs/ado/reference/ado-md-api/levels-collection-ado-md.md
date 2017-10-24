@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b1b075869179c8a786dc62085646352b73d1826c
@@ -47,3 +48,4 @@ Contient le [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) o
  [Exemple de catalogue (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Objet de hiérarchie (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Objet de niveau (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+

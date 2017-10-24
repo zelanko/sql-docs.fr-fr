@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  Un élément supplémentaire autorisé dans un élément **Binding** qui n'existe pas directement dans le DDL est **ParentColumnID**, utilisé pour les tables imbriquées pour l'exploration de données. Dans ce cas, il est nécessaire d'identifier la colonne parente dans la table imbriquée pour laquelle la liaison est fournie.  
   
   
+

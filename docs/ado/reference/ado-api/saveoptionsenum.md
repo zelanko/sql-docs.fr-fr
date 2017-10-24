@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 97f3d76d9fed33de5ba79d84a062891316c70ae0
@@ -39,3 +40,4 @@ Spécifie si un fichier doit être créé ou remplacé lors de l’enregistremen
   
 ## <a name="applies-to"></a>S'applique à  
  [SaveToFile, méthode](../../../ado/reference/ado-api/savetofile-method.md)
+

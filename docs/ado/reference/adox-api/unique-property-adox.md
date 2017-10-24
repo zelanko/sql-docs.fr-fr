@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 042426f4fc9f31f0553daa01919d4a338060baed
@@ -45,3 +46,4 @@ Indique si les clés d’index doivent être uniques.
 ## <a name="see-also"></a>Voir aussi  
  [PrimaryKey et Unique, propriétés-exemple (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Objet clé (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+

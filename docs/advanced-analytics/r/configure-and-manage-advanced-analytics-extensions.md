@@ -15,6 +15,7 @@ caps.latest.revision: 21
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 872acf107d72989b4623a9d5f4ccb85c44d1f2f9
@@ -99,3 +100,4 @@ Pour plus d’informations sur les autorisations requises pour exécuter les ser
 ## <a name="see-also"></a>Voir aussi
 
 [Considérations sur la sécurité](security-considerations-for-the-r-runtime-in-sql-server.md)
+

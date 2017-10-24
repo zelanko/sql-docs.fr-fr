@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
@@ -62,3 +63,4 @@ En appliquant la sécurité au niveau de la table, la base de données et le niv
 [Interopérabilité de R](r-interoperability-in-sql-server.md)
 
 [Vue d’ensemble de la sécurité](security-overview-sql-server-r.md)
+

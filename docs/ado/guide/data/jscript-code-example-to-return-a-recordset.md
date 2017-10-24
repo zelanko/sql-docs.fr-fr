@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
@@ -90,3 +91,4 @@ function alert(str)
 2.  Ouvrez une invite de commandes et d’un cd dans le répertoire où vous avez enregistré le fichier JScript (rs.js).  
   
 3.  Type `CScript rs.js` à partir de l’invite de commandes.
+

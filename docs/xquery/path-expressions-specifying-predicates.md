@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a5b417b2bfe5d995657ad86cf44b650b751f6a30
@@ -229,3 +230,4 @@ WHERE CatalogDescription.exist('
  Les prédicats peuvent également affecter le type déduit statiquement d'une expression. Valeurs littérales entières et la **last()** fonction réduisent la cardinalité de l’expression d’étape filtrée pour au plus un.  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
@@ -39,3 +40,4 @@ Le mode immédiat est activé lorsque la **LockType** est définie sur **adLockO
  Si vous ajoutez une nouvelle ligne lorsque vous appelez le **CancelUpdate** (méthode), la ligne actuelle devient la ligne qui était active avant la **AddNew** appeler.  
   
  Si vous n’avez pas modifié la ligne active ou ajouté une nouvelle ligne, l’appel du **CancelUpdate** méthode génère une erreur.
+

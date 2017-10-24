@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  Sur la page **Fin de l'Assistant** de l'Assistant, vous pouvez afficher les groupes de mesures, les mesures et les dimensions du nouveau cube. Dans la zone **Nom du cube** , entrez un nom pour le cube. Ensuite, si vous êtes satisfait du cube, cliquez sur **Terminer**. Cliquez sur **Précédent** pour revenir à toute page précédente de l'Assistant et apporter des modifications.  
   
   
+

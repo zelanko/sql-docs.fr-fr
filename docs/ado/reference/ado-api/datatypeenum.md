@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 289d11f586fc1bd583baeb615ce3cff491949ccc
@@ -124,3 +125,4 @@ Spécifie le type de données d’une [champ](../../../ado/reference/ado-api/fie
 |-|-|  
 |[Append (méthode) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
 |[CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+

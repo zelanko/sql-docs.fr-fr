@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ Chaque curseur utilise des ressources temporaires pour contenir ses données. Ce
  Toutefois, il est important de souligner qu’un curseur côté serveur, au moins temporairement — consomme d’importantes ressources du serveur pour chaque client actif. Vous devez planifier en conséquence pour vous assurer que votre matériel de serveur est capable de gérer tous les curseurs côté serveur demandées par les clients actifs. En outre, un curseur côté serveur peut être lent, car elle fournit uniquement un accès ligne unique, aucun curseur de lot n’est disponible.  
   
  Les curseurs côté serveur sont utiles lors de l’insertion, la mise à jour ou supprimer des enregistrements. Avec les curseurs côté serveur, vous pouvez avoir plusieurs instructions actives sur la même connexion.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  Le **connexion** objet est déclaré au niveau de la **formulaire** niveau à l’aide de la **WithEvents** (mot clé) pour activer la gestion des événements. Le Gestionnaire d’événements Form_Load crée l’objet en affectant une nouvelle **connexion** objet *connEvent* et ouvre la connexion. Bien entendu, une application réelle est nécessaire d’un traitement supplémentaire dans le Gestionnaire d’événements Form_Load qu’est illustrée ici.
+

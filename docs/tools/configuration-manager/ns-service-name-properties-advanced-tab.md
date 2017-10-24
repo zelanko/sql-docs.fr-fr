@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 27087e668f2456a28b7b2fe831a4e3312c2d8479
@@ -25,3 +26,4 @@ ms.lasthandoff: 08/02/2017
   [!INCLUDE[ssNS](../../includes/ssns-md.md)]est implémenté en tant que service nommé au format **NS$***< nom configuré_utilisateur >*. Si des propriétés personnalisées sont définies, elles apparaissent dans cet onglet, avec les valeurs correspondantes. Il est possible qu'aucune propriété ne soit répertoriée dans cet onglet.  
   
   
+

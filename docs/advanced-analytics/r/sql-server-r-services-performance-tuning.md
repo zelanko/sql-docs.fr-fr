@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ Configuration et du paramétrage des performances requiert la création d’une 
 + [Réglage des performances pour R dans SQL Server - méthodes et les résultats](..\r\performance-case-study-r-services.md)
 
     Résume les données qui a été utilisée deux études de cas, comment les performances ont été testées, et l’impact des résultats dans les optimisations.
+

@@ -25,6 +25,7 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2fb3d1fa6ae92ba6dd23f9295428d696834ee8d4
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/01/2017
  Vous pouvez utiliser des fonctions MDX pour extraire des sections d'un KPI, telles que la valeur ou l'objectif, pour les utiliser dans des expressions, instructions et scripts MDX.  
   
   
+

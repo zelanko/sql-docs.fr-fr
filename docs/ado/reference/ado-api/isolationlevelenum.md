@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f6f18a4cd10c70369d2e0aceb226310d7a5f4ae
@@ -58,3 +59,4 @@ Spécifie le niveau d’isolation des transactions pour un [connexion](../../../
   
 ## <a name="applies-to"></a>S'applique à  
  [Propriété IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)
+

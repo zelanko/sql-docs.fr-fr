@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
@@ -37,3 +38,4 @@ ADO gère un tampon d’édition associé à l’enregistrement actif. Le **Edit
 |**adEditDelete**|Indique que l’enregistrement en cours a été supprimé.|  
   
  **EditMode** peut retourner une valeur valide uniquement si un enregistrement actif. **EditMode** retournera une erreur si **BOF** ou **EOF** est **True** ou si l’enregistrement actif a été supprimé.
+

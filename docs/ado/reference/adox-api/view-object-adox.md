@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a9b3b61a1874528ab6bf649bc62a0c5114148691
@@ -50,3 +51,4 @@ Représente un ensemble filtré d’enregistrements ou une table virtuelle. Lors
  [Collection de vues, exemple de propriété CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Exemple de méthode (VB) de suppression de vues](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Collection de vues (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+

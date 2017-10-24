@@ -15,6 +15,7 @@ caps.latest.revision: 38
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
@@ -46,3 +47,4 @@ Vous pouvez installer tout ce dont vous avez besoin pour commencer avec Python v
 [Configurer les Services de base de données d’apprentissage Python](setup-python-machine-learning-services.md)
 
 [Didacticiels de Python](../tutorials/sql-server-python-tutorials.md)
+

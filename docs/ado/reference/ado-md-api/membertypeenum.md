@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5a8335dcc0f713859f72971a699438b2535550ac
@@ -36,3 +37,4 @@ Spécifie le paramètre pour le [Type](../../../ado/reference/ado-md-api/type-pr
 |**adMemberMeasure**|2|Indique que le **membre** objet appartient à la dimension de mesures et représente un attribut quantitatif.|  
 |**adMemberRegular**|1|Valeur par défaut. Indique que le **membre** objet représente une instance d’une entité commerciale.|  
 |**adMemberUnknown**|0|Impossible de déterminer le type du membre.|
+

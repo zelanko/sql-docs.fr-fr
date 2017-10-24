@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
@@ -74,3 +75,4 @@ else
  Ce modèle fonctionne pour tous les types de curseur et est indépendant des fournisseurs sous-jacents. Si vous essayez de déterminer l’emptiness d’un **Recordset** objet en vérifiant si sa **RecordCount** valeur de propriété est zéro (0) ou non, vous devez prendre des précautions pour utiliser un curseur approprié et le fournisseur qui prend en charge le retour du nombre d’enregistrements dans le résultat.  
   
  Si vous supprimez le dernier enregistrement restant dans le **Recordset** de l’objet, le curseur reste dans un état indéterminé. Le **BOF** et **EOF** propriétés peuvent rester **False** jusqu'à ce que vous tentiez de repositionner l’enregistrement en cours, en fonction du fournisseur. Pour plus d’informations, consultez [les enregistrements de suppression à l’aide de la méthode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+

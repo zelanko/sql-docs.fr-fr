@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2298a403bcee09e5ea8854cdc1527c1e3c804ad3
@@ -45,3 +46,4 @@ Pour plus d’informations sur l’utilisation d’ADO avec Visual C++, consulte
  [À l’aide d’ADO avec Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Utilisation d’ADO avec des langages de script](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [Extensions Visual C++ pour ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)
+

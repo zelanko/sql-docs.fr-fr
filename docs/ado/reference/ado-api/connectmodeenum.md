@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc9a29f1f46ab56a87b318761b4b0809fd76e6fd
@@ -62,3 +63,4 @@ Spécifie les autorisations disponibles pour la modification des données dans u
 |-|-|  
 |[Mode, propriété (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open (méthode) (enregistrement ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Open (méthode) (flux ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+
