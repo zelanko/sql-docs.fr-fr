@@ -105,9 +105,9 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     Par défaut, si votre compte d'utilisateur est membre du rôle serveur fixe sysadmin, vous pouvez ouvrir une session sur le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à l'aide du [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] même si aucun des rôles DQS n'est accordé à votre compte d'utilisateur. Pour plus d'informations sur les trois rôles DQS, consultez [DQS Security](../../data-quality-services/dqs-security.md).  
+     Par défaut, si votre compte d'utilisateur est membre du rôle serveur fixe sysadmin, vous pouvez ouvrir une session sur le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] à l'aide du [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] même si aucun des rôles DQS n'est accordé à votre compte d'utilisateur. Pour plus d'informations sur les trois rôles DQS, consultez [Sécurité DQS](../../data-quality-services/dqs-security.md).  
   
-     Pour plus d'informations, consultez [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
+     Pour plus d'informations, consultez [Affecter des rôles DQS aux utilisateurs](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
     > [!NOTE]  
     >  Les trois rôles DQS ne sont pas disponibles pour les bases de données DQS_PROJECTS et DQS_STAGING_DATA.  
