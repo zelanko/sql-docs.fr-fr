@@ -66,7 +66,7 @@ SQLRETURN SQLNativeSql(
  Si *OutStatementText* est NULL, *TextLength2Ptr* retourne toujours le nombre total de caractères (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *OutStatementText*.  
   
  *BufferLength*  
- [Entrée] Nombre de caractères dans le \* *OutStatementText* mémoire tampon. Si la valeur retournée dans * \*InStatementText* est une chaîne Unicode (lors de l’appel **SQLNativeSqlW**), la *BufferLength* l’argument doit être un nombre pair.  
+ [Entrée] Nombre de caractères dans le \* *OutStatementText* mémoire tampon. Si la valeur retournée dans  *\*InStatementText* est une chaîne Unicode (lors de l’appel **SQLNativeSqlW**), la *BufferLength* l’argument doit être un nombre pair.  
   
  *TextLength2Ptr*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total de caractères (à l’exclusion des arrêts de null) disponibles à renvoyer dans \* *OutStatementText*. Si le nombre de caractères à retourner est supérieur ou égal à *BufferLength*, traduit la chaîne SQL dans \* *OutStatementText* est tronqué à *BufferLength* moins la longueur d’un caractère de fin de la valeur null.  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
 |22007|Format datetime non valide|**InStatementText* contenu d’une clause d’échappement avec une valeur de date, heure ou timestamp non valide.|  
 |24000|État de curseur non valide|Le curseur dans l’instruction a été positionné avant le début du jeu de résultats ou après la fin du jeu de résultats. Cette erreur ne peut pas être retournée par un pilote ayant une implémentation de curseur SGBD native.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les * \*MessageText* tampon décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY009|Utilisation non valide d’un pointeur null|(DM) **InStatementText* était un pointeur null.|  
 |HY010|Erreur de séquence de fonction|(DM), une fonction de façon asynchrone en cours d’exécution a été appelée pour le *handle de connexion* et toujours en cours d’exécution lorsque cette fonction a été appelée.|  

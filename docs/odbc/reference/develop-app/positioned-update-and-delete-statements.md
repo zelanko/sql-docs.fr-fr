@@ -43,9 +43,9 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  **Mise à jour** *-nom de la table*  
   
- **Définissez** *identificateur de la colonne* ** = ** {*expression* &#124; **NULL**}  
+ **Définissez** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}  
   
- [**,** *identificateur de la colonne* ** = ** {*expression* &#124; **NULL**}]...  
+ [**,** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nom de curseur*  
   

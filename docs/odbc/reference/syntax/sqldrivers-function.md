@@ -76,7 +76,7 @@ SQLRETURN SQLDrivers(
  Si *DriverAttributes* est NULL, *AttributesLengthPtr* retourne toujours le nombre total d’octets (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *DriverAttributes*.  
   
  *BufferLength2*  
- [Entrée] Longueur de la \* *DriverAttributes* mémoire tampon, en caractères. Si le * \*DriverDescription* valeur est une chaîne Unicode (lors de l’appel **SQLDriversW**), la *BufferLength* l’argument doit être un nombre pair.  
+ [Entrée] Longueur de la \* *DriverAttributes* mémoire tampon, en caractères. Si le  *\*DriverDescription* valeur est une chaîne Unicode (lors de l’appel **SQLDriversW**), la *BufferLength* l’argument doit être un nombre pair.  
   
  *AttributesLengthPtr*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (à l’exception de l’octet de valeur null) disponibles à renvoyer dans \* *DriverAttributes*. Si le nombre d’octets à retourner est supérieur ou égal à *BufferLength2*, la liste de paires de valeur d’attribut dans \* *DriverAttributes* est tronqué à *BufferLength2* moins la longueur du caractère de fin de null.  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|(DM) message d’information du Gestionnaire de pilotes spécifiques. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |01004|Données de type chaîne, droite tronquées|(DM) la mémoire tampon \* *DriverDescription* n’est pas suffisamment grande pour retourner la description complète de pilote. Par conséquent, la description a été tronquée. La longueur de la description du pilote complète est retournée dans \* *DescriptionLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) la mémoire tampon \* *DriverAttributes* n’est pas suffisamment grande pour retourner la liste complète des paires de valeur d’attribut. Par conséquent, la liste a été tronquée. La longueur de la liste non tronquée de paires de valeur d’attribut est retournée dans **AttributesLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les * \*MessageText* tampon décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le Gestionnaire de pilotes (DM) n’a pas pu allouer de la mémoire qui est requis pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *au paramètre StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant la récupération des données pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, éventuellement en raison d’une mémoire insuffisante.|  
