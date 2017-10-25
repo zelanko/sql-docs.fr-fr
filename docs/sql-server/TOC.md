@@ -19,16 +19,15 @@
 
 # Notes de publication
 
-## [Notes de publication de SQL Server](sql-server-release-notes.md)
-## [Notes de publication de SQL Server 2017](sql-server-2017-release-notes.md)
-## [Notes de publication de SQL Server 2016](sql-server-2016-release-notes.md)
-## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-## [Notes de publication de SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
-## [Notes de publication de SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-## [Notes de publication de SQL Server 2012](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+## [Notes SQL Server 2017](sql-server-2017-release-notes.md)
+## [Notes SQL Server 2016](sql-server-2016-release-notes.md)
+## [Notes SQL Server 2014](sql-server-2014-release-notes.md)
+## [Notes SQL Server 2012 SP4](sql-server-2012-sp4-release-notes.md)
+## [Notes SQL Server 2012 SP3](sql-server-2012-sp3-release-notes.md)
+## [Notes SQL Server 2012 SP2](sql-server-2012-sp2-release-notes.md)
+## [Notes SQL Server 2012 SP1](sql-server-2012-sp1-release-notes.md)
+## [Notes SQL Server 2012](sql-server-2012-release-notes.md)
+## [Notes SQL Server 2008 R2 SP2](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [Moteur de base de données](../database-engine/sql-server-database-engine-overview.md)
@@ -42,4 +41,17 @@
 # [ Assistant Migration de données](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [Didacticiels pour SQL Server](tutorials-for-sql-server-2016.md)
-# [Contenu local avec la visionneuse d’aide](sql-server-help-installation.md)
+
+# Ressources
+## Blogs
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [Moteur de base de données SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [Sécurité SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+## Commentaires et aide
+### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+### [Forums MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+## [Contenu local avec la visionneuse d’aide](sql-server-help-installation.md)
