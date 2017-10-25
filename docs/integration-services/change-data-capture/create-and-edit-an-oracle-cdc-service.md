@@ -60,7 +60,7 @@ ms.lasthandoff: 09/26/2017
   
      Vous pouvez utiliser un compte Windows local ou de domaine pour le compte de service. Dans ce cas, vous devez entrer le **Mot de passe** pour ce compte. Ce compte peut correspondre à l'hôte local ou à un compte de domaine. Veillez à mettre à jour le mot de passe lorsqu'il est modifié à l'aide du composant Services locaux dans le Panneau de configuration Windows.  
   
- **Nom du serveur**: sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance pour se connecter à (par exemple, ** \\ \\< nom_ordinateur >\\< nom_instance >**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
+ **Nom du serveur**: sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance pour se connecter à (par exemple,  **\\ \\< nom_ordinateur >\\< nom_instance >**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
  **Authentification**  
  Sélectionnez l'une des options suivantes :  

@@ -39,11 +39,11 @@ Cette section fournit les étapes pour ajouter une nouvelle source à l’aide d
   
 3.  Sélectionnez le type de la destination dans la liste **Types** .  
   
-4.  Sélectionnez un gestionnaire de connexions existant dans le **gestionnaires de connexions** liste ou sélectionnez ** \<Nouveau >** pour créer une nouvelle connexion gestionnaire.  
+4.  Sélectionnez un gestionnaire de connexions existant dans le **gestionnaires de connexions** liste ou sélectionnez  **\<Nouveau >** pour créer une nouvelle connexion gestionnaire.  
   
 5.  Si vous sélectionnez un gestionnaire de connexions existant, cliquez sur **OK** pour fermer la boîte de dialogue **Ajouter une nouvelle destination** . Vous devez constater que la destination et les gestionnaires de connexions ont été ajoutés au flux de données.  
   
-6.  Si vous cliquez sur ** \<Nouveau >** pour créer une nouvelle connexion manager, vous devez voir un **Gestionnaire de connexions** boîte de dialogue qui vous permet de spécifier des paramètres pour la connexion. Une fois que vous avez fini de créer le gestionnaire de connexions, vous constatez que la destination et le gestionnaire de connexions figurent dans le concepteur SSIS.  
+6.  Si vous cliquez sur  **\<Nouveau >** pour créer une nouvelle connexion manager, vous devez voir un **Gestionnaire de connexions** boîte de dialogue qui vous permet de spécifier des paramètres pour la connexion. Une fois que vous avez fini de créer le gestionnaire de connexions, vous constatez que la destination et le gestionnaire de connexions figurent dans le concepteur SSIS.  
 
 ## <a name="add-new-source-dialog-box"></a>Boîte de dialogue Nouvelle Source ajouter
 Le tableau suivant répertorie les options disponibles dans le **ajouter une nouvelle Source** boîte de dialogue.  
@@ -51,7 +51,7 @@ Le tableau suivant répertorie les options disponibles dans le **ajouter une nou
 |Option|Description|  
 |------------|-----------------|  
 |Types|Sélectionnez le type de source auquel vous voulez vous connecter.|  
-|Gestionnaires de connexions|Sélectionnez un gestionnaire de connexions existant ou cliquez sur ** \<Nouveau >** pour créer une nouvelle connexion gestionnaire.|  
+|Gestionnaires de connexions|Sélectionnez un gestionnaire de connexions existant ou cliquez sur  **\<Nouveau >** pour créer une nouvelle connexion gestionnaire.|  
 |Afficher les éléments installés uniquement|Spécifiez s'il faut afficher uniquement les sources installées.|  
 |OK|Cliquez pour enregistrer vos modifications et ouvrir les boîtes de dialogue suivantes permettant de configurer des options supplémentaires.| 
   

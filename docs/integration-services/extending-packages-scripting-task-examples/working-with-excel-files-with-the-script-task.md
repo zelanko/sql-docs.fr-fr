@@ -93,7 +93,7 @@ ms.lasthandoff: 09/26/2017
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelFile** variable.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelFile** variable.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide d’une des méthodes suivantes :  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 09/26/2017
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelFileExists** variable.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelFileExists** variable.  
   
 4.  Cliquez sur **modifier le Script** pour ouvrir l’éditeur de script.  
   
@@ -163,7 +163,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelTable** et **ExcelFile** variables.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelTable** et **ExcelFile** variables.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide d’une des méthodes suivantes :  
   
@@ -171,7 +171,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelTableExists** variable.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le **ExcelTableExists** variable.  
   
 4.  Cliquez sur **modifier le Script** pour ouvrir l’éditeur de script.  
   
@@ -270,7 +270,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez la variable ExcelFolder.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez la variable ExcelFolder.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide d’une des méthodes suivantes :  
   
@@ -278,7 +278,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez la variable ExcelFiles.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez la variable ExcelFiles.  
   
 4.  Cliquez sur **modifier le Script** pour ouvrir l’éditeur de script.  
   
@@ -345,7 +345,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez la variable ExcelFile.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez la variable ExcelFile.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide d’une des méthodes suivantes :  
   
@@ -353,7 +353,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le ExcelTablesvariable.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le ExcelTablesvariable.  
   
 4.  Cliquez sur **modifier le Script** pour ouvrir l’éditeur de script.  
   
@@ -458,7 +458,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**... **) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez les variables.  
+    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez les variables.  
   
 5.  Cliquez sur **modifier le Script** pour ouvrir l’éditeur de script.  
   

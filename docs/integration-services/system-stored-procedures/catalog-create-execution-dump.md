@@ -24,7 +24,7 @@ ms.lasthandoff: 09/26/2017
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Provoque la suspension d'un package en cours d'exécution et la création d'un fichier de vidage par ce dernier. Le fichier est stocké dans le * \<lecteur >*: dossier \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Provoque la suspension d'un package en cours d'exécution et la création d'un fichier de vidage par ce dernier. Le fichier est stocké dans le  *\<lecteur >*: dossier \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Syntaxe  
   

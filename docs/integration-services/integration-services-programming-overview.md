@@ -64,9 +64,9 @@ ms.lasthandoff: 09/26/2017
 >  Les interfaces de programmation d'applications [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont incompatibles avec les langages de script COM, tels que VBScript.  
   
 ## <a name="locating-assemblies"></a>Recherche d'assemblys  
- Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un global assembly cache distinct pour .NET 4, situé dans * \<lecteur >*: \Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
+ Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un global assembly cache distinct pour .NET 4, situé dans  *\<lecteur >*: \Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
   
- Comme dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le cœur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichiers .dll d’extensibilité se trouvent également dans * \<lecteur >*: \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Comme dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le cœur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fichiers .dll d’extensibilité se trouvent également dans  *\<lecteur >*: \Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assemblys couramment utilisés  
  Le tableau suivant répertorie les assemblys fréquemment utilisés lors de la programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l'aide du [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

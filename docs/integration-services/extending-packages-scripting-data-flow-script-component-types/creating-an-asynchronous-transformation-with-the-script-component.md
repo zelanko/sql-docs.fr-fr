@@ -76,7 +76,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Ajout de variables  
  S’il existe des variables les valeurs dont vous souhaitez utiliser dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables dans les **Script** page de la **éditeur de Transformation de Script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**... **) situé en regard du **ReadOnlyVariables** et **ReadWriteVariables** champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**...** ) situé en regard du **ReadOnlyVariables** et **ReadWriteVariables** champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [à l’aide de Variables dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

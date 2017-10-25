@@ -202,7 +202,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |ID|Entier|Valeur qui identifie la sortie de façon unique.|  
 |IdentificationString|Chaîne|Chaîne qui identifie la sortie.|  
 |IsErrorOut|Booléen|Indique si la sortie est une sortie d'erreur.|  
-|IsSorted|Booléen|Indique si la sortie est triée. La valeur par défaut est **False**.<br /><br /> **\*\*Important \* \* ** définissant la valeur de la **IsSorted** propriété **True** ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Booléen|Indique si la sortie est triée. La valeur par défaut est **False**.<br /><br /> **\*\*Important \* \***  définissant la valeur de la **IsSorted** propriété **True** ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nom|Chaîne|Nom de la sortie.|  
 |SynchronousInputID|Entier|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont **Fail component**, **Ignore failure**et **Redirect row**.|  

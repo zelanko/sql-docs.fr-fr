@@ -74,7 +74,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>Ajout de variables  
  Si vous souhaitez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans le **ReadOnlyVariables** et **ReadWriteVariables** des champs de propriété sur le **Script** page de la **éditeur de Transformation de Script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**... **) situé en regard du **ReadOnlyVariables** et **ReadWriteVariables** champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**...** ) situé en regard du **ReadOnlyVariables** et **ReadWriteVariables** champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [à l’aide de Variables dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 09/26/2017
  Les exemples suivants montrent un code qui est requise dans le **ScriptMain** classe pour créer un composant de destination.  
   
 > [!NOTE]  
->  Ces exemples utilisent la **Person.Address** de table dans le **AdventureWorks** exemple de base de données et transmettent ses première et quatrième colonnes, le * *int*AddressID*** et **nvarchar (30) Ville** colonnes, dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
+>  Ces exemples utilisent la **Person.Address** de table dans le **AdventureWorks** exemple de base de données et transmettent ses première et quatrième colonnes, le  **int*AddressID*** et **nvarchar (30) Ville** colonnes, dans le flux de données. Les mêmes données sont utilisées dans les exemples de source, transformation et destination de cette section. Des conditions préalables et des hypothèses supplémentaires sont documentées pour chaque exemple.  
   
 ### <a name="adonet-destination-example"></a>Exemple de destination ADO.NET  
  Cet exemple montre un composant de destination qui utilise un fichier [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Gestionnaire de connexions pour enregistrer les données du flux de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  
