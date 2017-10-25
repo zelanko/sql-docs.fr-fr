@@ -218,7 +218,7 @@ Dans la capture d’écran, notez que le **id** colonne, qui contient des nombre
 |**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont pas qualifiées.|  
   
 **Nouveau**  
- Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce bouton **** ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
+ Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, **ce bouton** ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
 |Value|Description|  
 |-----------|-----------------|  
