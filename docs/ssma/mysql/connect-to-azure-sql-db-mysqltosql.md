@@ -62,7 +62,7 @@ Pour créer une nouvelle base de données pour la première fois, suivez les ét
   
 2.  S’il n’y a aucune base de données, les deux options suivantes s’affichent.  
   
-    1.  **(bases de données introuvables) ** qui est désactivé et grisé tout le temps  
+    1.  **(bases de données introuvables)**  qui est désactivé et grisé tout le temps  
   
     2.  **Créer la nouvelle base de données** qui est activé uniquement lorsqu’il n’y aucune base de données sur le compte SQL Azure. Lorsque vous cliquez sur cet élément de menu, la boîte de dialogue Créer une base de données Azure est présent avec la taille et le nom de la base de données.  
   
