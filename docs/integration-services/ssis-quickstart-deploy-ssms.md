@@ -73,7 +73,7 @@ Utilisez SQL Server Management Studio pour établir une connexion dans le catalo
   
 5.  Une fois le processus de déploiement terminé, le **résultats** ouvrir la page. Cette page indique la réussite ou l’échec de chaque action.
     -   Si l’action a échoué, cliquez sur **n’a pas pu** dans les **résultat** colonne pour afficher une explication de l’erreur.
-    -   Si vous le souhaitez, cliquez sur **enregistrer le rapport... ** pour enregistrer les résultats dans un fichier XML.
+    -   Si vous le souhaitez, cliquez sur **enregistrer le rapport...**  pour enregistrer les résultats dans un fichier XML.
     -   Cliquez sur **fermer** pour quitter l’Assistant.
 
 ## <a name="next-steps"></a>Étapes suivantes
