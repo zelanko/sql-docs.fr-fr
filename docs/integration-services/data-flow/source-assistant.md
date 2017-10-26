@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b7406edf9f7234db739730473772d77c42399ec
@@ -55,3 +56,4 @@ Le tableau suivant répertorie les options disponibles dans le **ajouter une nou
 |Afficher les éléments installés uniquement|Spécifiez s'il faut afficher uniquement les sources installées.|  
 |OK|Cliquez pour enregistrer vos modifications et ouvrir les boîtes de dialogue suivantes permettant de configurer des options supplémentaires.| 
   
+

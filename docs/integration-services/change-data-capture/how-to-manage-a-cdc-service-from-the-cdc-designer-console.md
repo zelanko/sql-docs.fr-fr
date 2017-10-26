@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  D'autres tâches de service de capture de données modifiées s'effectuent à l'aide de la console de configuration du service de capture de données modifiées. Pour plus d'informations sur les tâches que vous pouvez effectuer dans la console de configuration du service, consultez l'aide en ligne fournie avec la console de configuration du service.  
   
   
+

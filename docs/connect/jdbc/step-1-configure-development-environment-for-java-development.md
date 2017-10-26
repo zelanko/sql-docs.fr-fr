@@ -14,6 +14,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6811fe90d64374769e858787a879231140a4e925
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 * Identifier la version du pilote JDBC que vous souhaitez utiliser, en fonction de votre environnement, comme indiqué ici : [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
 * Télécharger et installer les pilotes JDBC applicable ici : [télécharger Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
 * Chemin d’accès de la classe jeu en fonction de la version du pilote, comme indiqué ici : [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md)
+

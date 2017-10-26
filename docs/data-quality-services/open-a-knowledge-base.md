@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
@@ -98,3 +99,4 @@ ms.lasthandoff: 09/09/2017
 -   **Stratégie de correspondance - Résultats de correspondance**: la base de connaissances a été fermée sur la page **Stratégie de correspondance - Résultats de correspondance** . La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
   
   
+

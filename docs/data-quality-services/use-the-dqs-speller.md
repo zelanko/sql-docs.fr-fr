@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
@@ -77,3 +78,4 @@ ms.lasthandoff: 09/09/2017
  DQS fournit des suggestions pour les valeurs de la colonne **Valeur** et de la colonne **Corriger vers** de la table **Valeur** . Lorsque vous sélectionnez une suggestion dans la colonne **Valeur** , le type de la valeur est défini sur **Erreur**et la suggestion est copiée dans la colonne **Corriger vers** , comme si vous l'aviez insérée manuellement. S'il y avait une correction existante, elle devient une suggestion. Dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , lorsque vous sélectionnez une suggestion dans la colonne **Corriger vers** , DQS remplace la valeur actuellement sélectionnée par la sélection, et la valeur actuellement sélectionnée devient une suggestion. Dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , aucune suggestion n'est effectuée au niveau enregistrement (grille inférieure).  
   
   
+

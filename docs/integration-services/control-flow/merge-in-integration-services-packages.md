@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  La base de données Inventory possède une table ProductsInventory qui inclut les colonnes ProductID et StockOnHand. Une table Shipments dotée des colonnes ProductID, CustomerID et Quantity établit le suivi des livraisons de produits aux clients. La table ProductInventory doit être mise à jour quotidiennement en fonction des informations de la table Shipments. Une instruction MERGE unique peut réduire l'inventaire dans la table ProductInventory en fonction des livraisons effectuées. Si l'inventaire d'un produit a été réduit à 0, cette instruction MERGE peut également supprimer cette ligne de produit de la table ProductInventory.  
   
   
+

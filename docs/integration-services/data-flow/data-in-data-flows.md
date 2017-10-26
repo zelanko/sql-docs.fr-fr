@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  Une fois que vous avez déployé un package sur le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez analyser le flux de données dans le package au moment de l’exécution pour vérifier les performances ou pour détecter d’autres problèmes. Des rapports standard sont disponibles et vous permettent de consulter l'état et l'historique du package. Vous pouvez interroger les vues de base de données qui fournissent des informations détaillées sur l'exécution du package. De plus, vous pouvez ajouter et supprimer dynamiquement des drainages de données au moment de l'exécution pour cibler des éléments spécifiques de votre package. Pour plus d’informations, consultez [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
+

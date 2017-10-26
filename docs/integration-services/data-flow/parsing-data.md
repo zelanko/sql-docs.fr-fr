@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ L'analyse standard est un ensemble de routines d'analyse spécifique à un pays 
   
  L'analyse standard assure la prise en charge de la conversion de type de données pour les données internationales et doit être utilisée si le format de données n'est pas pris en charge par l'analyse rapide. Pour plus d'informations sur l'API de conversion de type de données Automation, consultez « API de conversion de type de données » dans [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427). 
  
+

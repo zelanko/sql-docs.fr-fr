@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50af4d0d22d6042230fed2ee6b989fb7c53408d
@@ -40,3 +41,4 @@ Il existe certaines limitations lors de l’utilisation de la classe SQLServerPa
  [La gestion des métadonnées avec le pilote JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)  
   
   
+

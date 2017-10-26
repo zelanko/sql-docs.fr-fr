@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7da07e66203c9bcfb4a690ccb747ff9180df8db
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 Microsoft a déplacé la documentation de ce produit en ligne afin de mettre à disposition de nos clients les informations les plus récentes. Consultez le [pilotes SQL Server sur Microsoft Developer Network (MSDN)](https://msdn.microsoft.com/library/mt654049.aspx) pour plus d’informations.  
   
 © 2016 Microsoft. Tous droits réservés. 
+

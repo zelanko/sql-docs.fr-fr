@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  Le service de capture de données modifiées Oracle et ses instances Oracle CDC enfants ne peuvent communiquer qu'avec la ou les bases de données Oracle sources et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible comme clients. Ils n'écoutent pas activement le réseau et d'autres protocoles. Le service de capture de données modifiées Oracle surveille les modifications de configuration apportées aux bases de données CDC et met à jour son exécution selon la configuration mise à jour.  
   
   
+

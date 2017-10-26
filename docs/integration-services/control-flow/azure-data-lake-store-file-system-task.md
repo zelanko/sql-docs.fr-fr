@@ -15,6 +15,7 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
@@ -53,3 +54,4 @@ Voici les propriétés spécifiques à chaque opération :
 - **AzureDataLakeDirectory :** Spécifie le répertoire source ADLS qui contient les fichiers à télécharger.
 - **SearchRecursively :** Spécifie s’il faut rechercher de manière récursive dans le répertoire source pour les fichiers à télécharger.
 - **LocalDirectory :** Spécifie le répertoire de destination pour stocker les fichiers téléchargés.
+

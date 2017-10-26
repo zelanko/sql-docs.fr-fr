@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  Si le type de données est **Chaîne**, activez cette case à cocher pour spécifier que les erreurs de syntaxe ne sont pas identifiées par DQS dans le domaine lors du nettoyage. Activez cette case à cocher lorsque l'identification des erreurs de syntaxe pour ce domaine n'est pas nécessaire. Par exemple, l'identification des erreurs de syntaxe peut ne pas être importante pour un numéro de série. Ce contrôle est uniquement disponible pour le type de données chaîne. DQS ne recherche pas les erreurs de syntaxe dans les types de données autres que chaîne.  
   
   
+

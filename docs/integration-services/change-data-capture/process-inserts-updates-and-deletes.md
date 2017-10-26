@@ -16,6 +16,7 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: da3350dc91dff2547ca683f8c69a7160640e37da
@@ -78,3 +79,4 @@ select
  [Fractionner un jeu de données à l’aide de la Transformation de fractionnement conditionnel](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   
+

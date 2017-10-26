@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/09/2017
 -   Lorsque vous double-cliquez sur un domaine lié sous n'importe lequel des onglets Gestion de l'arborescence du domaine, le domaine s'ouvre pour modification, avec la chaîne de nom indiquant qu'il s'agit d'un domaine lié.  
   
   
+

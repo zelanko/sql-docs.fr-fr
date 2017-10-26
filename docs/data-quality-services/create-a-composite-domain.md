@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  Lorsque vous utilisez l'analyse basée sur les connaissances et qu'il y a moins de valeurs dans les données sources que de domaines dans le domaine composite, DQS placera une valeur Null dans le domaine manquant. Lorsqu'il y a plus de valeurs dans les données sources que de domaines dans le domaine composite, DQS ajoutera les données supplémentaires à l'une des colonnes. Si plusieurs domaines ont les mêmes valeurs, la source de données sera analysée sur le premier domaine correspondant.  
   
   
+
