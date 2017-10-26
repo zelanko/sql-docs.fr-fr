@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ La taille de l’ensemble de lignes à utiliser dépend de l’application. Appl
 -   **SQLSetPos** utilise la taille de l’ensemble de lignes qui est en vigueur à partir de l’appel précédent à **SQLFetch** ou **SQLFetchScroll**, car **SQLSetPos** opère sur un ensemble de lignes qui a déjà été défini. **SQLSetPos** également prennent en charge la nouvelle taille de l’ensemble de lignes si **SQLBulkOperations** a été appelée après la modification de la taille de l’ensemble de lignes.  
   
 -   **SQLBulkOperations** utilise la taille de l’ensemble de lignes en vigueur au moment de l’appel, car elle effectue des opérations sur une table indépendante de tout ensemble de lignes extraite.
+

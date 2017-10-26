@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db98c1cee3b31615ee515fd197427724a39c9433
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  Pour récupérer des données à partir d’une colonne indépendante, l’application appelle **SQLSetPos** pour positionner le curseur sur la ligne de votre choix. Il appelle ensuite **SQLGetData** pour récupérer les données.  
   
  Pour déterminer le nombre de lignes qui ont été récupérées à partir de la source de données, l’application appelle **SQLRowCount**.
+

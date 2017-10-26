@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678f2f8f720823ef5658ba7ee1e1391bbebc1c50
@@ -46,3 +47,4 @@ ODBC utilise les séquences d’échappement pour la clause LIKE. La syntaxe de 
  *Terminateur d’ÉCHAP ODBC* :: =}  
   
  Pour déterminer si le pilote prend en charge la séquence d’échappement LIKE séquence, une application peut appeler **SQLGetInfo** avec le type d’informations SQL_LIKE_ESCAPE_CLAUSE.
+

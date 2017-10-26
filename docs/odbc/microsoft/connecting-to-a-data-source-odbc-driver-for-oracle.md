@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 054c274bc65c0f4ecf149607216f62e9e15df225
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 2.  Renseignez les informations appropriées pour la boîte de dialogue se connecter, puis cliquez sur OK.  
   
  Une fois la connexion le cas échéant, votre application peut utiliser le pilote ODBC pour Oracle pour accéder aux informations de la source de données contient.
+

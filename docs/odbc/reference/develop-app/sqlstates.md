@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ SQLSTATE fournit des informations détaillées sur la cause d’un avertissement
  SQLSTATE HYC00 (fonctionnalité facultative non implémentée) est particulièrement importante, car il est le seul moyen de dans laquelle une application peut déterminer si un pilote prend en charge un attribut d’instruction ou une connexion particulière.  
   
  Pour obtenir une liste complète de SQLSTATE et les fonctions qui retournent les, consultez [annexe a : les Codes d’erreur ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Pour obtenir une explication détaillée des conditions dans lesquelles chaque fonction peut retourner un SQLSTATE particulier, consultez cette fonction.
+

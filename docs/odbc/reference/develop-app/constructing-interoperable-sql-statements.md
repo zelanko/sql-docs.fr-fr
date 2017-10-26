@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
@@ -48,3 +49,4 @@ Comme indiqué dans les sections précédentes, les applications interopérables
 -   [Marqueurs de paramètre dans les appels de procédure](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [Instructions DDL](../../../odbc/reference/develop-app/ddl-statements.md)
+

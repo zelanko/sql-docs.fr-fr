@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ Pour définir la valeur d’un paramètre, l’application définit simplement l
  [d] pilotes doivent toujours vérifier cette valeur pour déterminer s’il est une valeur spéciale, comme SQL_NULL_DATA.  
   
  Ce que fait par un pilote avec une valeur de paramètre au moment de l’exécution dépend du pilote. Si nécessaire, le pilote convertit la valeur de la C codés et type de longueur des données de la variable liée pour le type de données SQL, la précision et l’échelle du paramètre. Dans la plupart des cas, le pilote envoie ensuite la valeur de la source de données. Dans certains cas, il met en forme la valeur sous forme de texte et l’insère dans l’instruction SQL avant d’envoyer l’instruction à la source de données.
+

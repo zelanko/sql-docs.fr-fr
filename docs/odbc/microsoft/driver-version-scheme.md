@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Avec la version 2.573.2973, la convention d’affectation de noms a conduit à une certaine confusion 2.573 est une version antérieure à celle de 2,73 que chaque section du numéro de build doit être considérée comme individuellement. Le nombre 573 est supérieur à 73, par conséquent, il est une version plus récente. « 2.5 » indique également, numéro de version du pilote.
+

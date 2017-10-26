@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ Avant d’aborder les techniques d’utilisation de SQL par programme, il est n�
 5.  Le SGBD exécute l’instruction par le plan d’accès en cours d’exécution.  
   
  Les étapes utilisées pour traiter une instruction SQL varient dans l’accès de base de données que dont ils ont besoin et le temps qu’ils prennent. L’analyse d’une instruction SQL ne nécessite pas d’accès à la base de données et peut être très rapide. L’optimisation, est en revanche, un processeur beaucoup de traiter et requiert l’accès pour le catalogue système. Pour une requête complexe, contenant plusieurs tables, l’optimiseur peut Explorer des milliers de différentes façons de procéder à la même requête. Toutefois, le coût de l’exécution de la requête mal est généralement très élevé regagnée plus de la durée de l’optimisation de la vitesse d’exécution de requête. C’est encore plus important si le même plan d’optimiser l’accès peut être utilisé plusieurs fois pour effectuer des requêtes répétitives.
+

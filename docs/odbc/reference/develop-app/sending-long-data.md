@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ Définir des SGBD *données longues* sous forme de n’importe quel caractère o
  Après avoir **SQLExecute** ou **SQLExecDirect** retourne SQL_NEED_DATA et avant l’envoi de données pour le dernier paramètre de data-at-execution a complètement, l’instruction est dans un état besoin des données. Alors qu’une instruction est dans un état besoin des données, l’application peut uniquement appeler **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; toutes les autres fonctions retournent la valeur SQLSTATE HY010 (erreur de séquence de fonction). Appel de **SQLCancel** annule l’exécution de l’instruction et le retourne à son état précédent. Pour plus d’informations, consultez [Tables de Transition d’état annexe b : ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Pour obtenir un exemple d’envoi de données au moment de l’exécution, consultez la [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) description de fonction.
+

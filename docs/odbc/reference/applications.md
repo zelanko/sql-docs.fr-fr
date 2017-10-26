@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
@@ -59,3 +60,4 @@ Un *application* est un programme qui appelle l’API ODBC pour accéder aux don
 -   Déconnexion de la source de données.  
   
  Étant donné que la plupart du travail accès aux données s’effectue avec SQL, la tâche principale pour les applications qui utilisent ODBC consiste à envoyer des instructions SQL et récupérer les résultats (le cas échéant) générées par ces instructions. Autres tâches pour les applications qui utilisent ODBC comprennent déterminer et de réglage pour les fonctionnalités du pilote et parcourent le catalogue de base de données.
+

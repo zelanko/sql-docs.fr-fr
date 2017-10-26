@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaa110a6a62ca91535e790a267ef714675719bf4
@@ -50,3 +51,4 @@ ODBC spécifie les types suivants de fonctions scalaires, des informations déta
  ODBC et SQL-92 classent leurs fonctions scalaires différemment. ODBC classifie les fonctions scalaires par type d’argument ; SQL-92 les classe par valeur de retour. Par exemple, la fonction EXTRACT est classée comme une fonction expose par ODBC, car le champ de l’extraction est un mot clé datetime et l’argument de la source de l’extraction est une expression datetime ou interval. SQL-92, classe quant à eux, extraction comme une fonction scalaire numérique, car la valeur de retour est une valeur numérique.  
   
  Une application peut déterminer les fonctions scalaires, un pilote prend en charge en appelant **SQLGetInfo**. Types d’informations sont incluses pour ODBC et les classifications de SQL-92 de fonctions scalaires. Étant donné que ces classifications sont différentes, la prise en charge pour certaines fonctions scalaires peut-être être indiqué dans les types d’informations qui ne correspondent pas à ODBC et SQL-92. Par exemple, la prise en charge pour l’extraction dans ODBC est indiquée par le type d’informations SQL_TIMEDATE_FUNCTIONS ; prise en charge pour l’extraction dans SQL-92, quant à lui, est indiqué par le type d’informations SQL_SQL92_NUMERIC_VALUE_FUNCTIONS.
+

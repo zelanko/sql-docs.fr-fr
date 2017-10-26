@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Oracle résout les bogues dans les versions actuelles et puis de les retrofits à des versions antérieures à l’aide de correctifs logiciels, il est recommandé que vous téléchargez le dernier correctif disponible. Cela est particulièrement vrai pour les composants clients de serveur Oracle. Si vous avez des questions sur l’installation de ces correctifs, contactez le Support de Oracle.
+

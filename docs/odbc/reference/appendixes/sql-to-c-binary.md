@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ccb6114eab57030d6555931f0bfcdbe469326442
@@ -49,3 +50,4 @@ Les identificateurs pour les types de données ODBC SQL binaires sont :
   
 > [!NOTE]  
 >  Les développeurs d’applications sont déconseillés à partir de la liaison de données SQL binaire à un type de données caractère C. Cette conversion est généralement inefficace et lente.
+

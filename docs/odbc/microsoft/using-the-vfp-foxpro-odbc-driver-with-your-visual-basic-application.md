@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
@@ -70,3 +71,4 @@ Application de votre Microsoft® Visual Basic® peut communiquer avec les donné
     ```  
   
 8.  Exécutez le formulaire et utilisez le contrôle de données à ignorer dans les champs d’id de client à partir de la base de données Visual FoxPro TasTrade.
+

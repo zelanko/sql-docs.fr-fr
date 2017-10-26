@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c95d4c4519b420324e9ec1364d2ac9f352ba346
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Le nom du type (TYPE_NAME) renvoyé dans la table générée par **SQLGetTypeInfo** sera le nom plus couramment utilisé par la source de données.  
   
  SQL_ALL_EXCEPT_LIKE s’affichera dans la colonne de recherche pour l’octet, compteur, Double, les types de données unique, longue et courte. (La fonction similaire peut être obtenue en convertissant la valeur à un caractère en utilisant les fonctions de conversion canonique ODBC, puis en effectuant la comparaison.)
+

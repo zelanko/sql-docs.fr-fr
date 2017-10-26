@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22bbb28f42f7bd3c1ec32e01c3451944315861a0
@@ -32,3 +33,4 @@ La DLL qui effectue le suivi est un des composants ODBC. La trace de la DLL est 
  Lorsqu’une application appelle une fonction, le Gestionnaire de pilotes appelle une fonction de trace dans la DLL avant l’appel de la fonction dans le pilote ou le traitement de l’appel de la trace. Chaque fonction ODBC a une fonction de trace correspondante (avec le préfixe *Trace*) qui est identique à la fonction ODBC à l’exception du nom. Lorsque la fonction de trace est appelée, la DLL de trace capture les arguments d’entrée et retourne un code de retour. Étant donné que la trace de la DLL est appelée avant que le Gestionnaire de pilote valide les arguments, les appels de fonction non valide sont suivis, afin d’erreurs de transition d’état et des arguments non valides sont enregistrés.  
   
  Après avoir appelé la fonction de trace dans la trace de la DLL, le Gestionnaire de pilotes appelle la fonction ODBC dans le pilote. Il appelle ensuite **TraceReturn** dans la trace de la DLL. Cette fonction accepte deux arguments : la valeur retournée par la DLL de trace pour la fonction de trace et le code de retour renvoyé par le pilote pour le Gestionnaire de pilote pour la fonction ODBC (ou la valeur retournée par le Gestionnaire de pilote proprement dit, si elle a traité la fonction). La fonction utilise la valeur retournée pour la fonction de trace pour manipuler les valeurs d’argument d’entrée capturée. Il écrit le code retourné pour la fonction ODBC dans le fichier journal (ou affiche de façon dynamique, si activée). Il déréférence les pointeurs d’argument de sortie et enregistre les valeurs d’argument de sortie.
+

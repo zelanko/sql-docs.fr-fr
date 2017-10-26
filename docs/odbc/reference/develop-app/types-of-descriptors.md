@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ Un descripteur est utilisé pour décrire l’un des éléments suivants :
  Un descripteur permettre exécuter différents rôles. Instructions différentes peuvent partager le descripteur de l’application alloue explicitement. Un descripteur de ligne dans une seule instruction peut servir d’un descripteur de paramètre dans une autre instruction.  
   
  Il est toujours connue si un descripteur donné est un descripteur de l’application ou un descripteur d’implémentation, même si le descripteur n’a pas encore été utilisé dans une opération de base de données. Pour les descripteurs implicitement alloue de l’implémentation, l’implémentation enregistre la ligne prédéfinie par rapport au handle d’instruction. Un descripteur qui alloue de l’application en appelant **SQLAllocHandle** est un descripteur de l’application.
+

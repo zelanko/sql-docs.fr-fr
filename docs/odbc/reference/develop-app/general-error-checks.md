@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 63734f5986c10c1ae3d175e3f1f37ef39c865ce4
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="general-error-checks"></a>Vérifications des erreurs générales
 Le Gestionnaire de pilotes vérifie une erreur générale. Cette propriété retourne toujours SQL_ERROR lorsqu’il rencontre l’erreur suivante : la fonction doit être pris en charge par le pilote.
+

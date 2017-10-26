@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
@@ -42,3 +43,4 @@ A *instruction* est plus facilement considérée comme une instruction SQL, tel 
  Descripteurs d’instruction sont utilisés dans la plupart des fonctions ODBC. Notamment, ils sont utilisés dans les fonctions pour lier les paramètres et colonnes du jeu de résultats (**SQLBindParameter** et **SQLBindCol**), préparer et exécuter des instructions (**SQLPrepare**, **SQLExecute**, et **SQLExecDirect**), de récupérer les métadonnées (**SQLColAttribute** et **SQLDescribeCol**), extraire les résultats (**SQLFetch**) et récupérer les diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**). Ils sont également utilisés dans les fonctions de catalogue (**SQLColumns**, **SQLTables**, et ainsi de suite) et un nombre d’autres fonctions.  
   
  Descripteurs d’instruction sont allouées avec **SQLAllocHandle** et libérée avec **SQLFreeHandle**.
+

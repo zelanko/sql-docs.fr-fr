@@ -23,6 +23,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
@@ -88,3 +89,4 @@ EXEC sp_create_plan_guide
 >  Les repères de plan TEMPLATE font correspondre les instructions aux requêtes envoyées par traitements qui sont composées d'une seule instruction. Les instructions à l'intérieur de traitements à instructions multiples ne peuvent pas être mises en correspondance avec les repères de plan TEMPLATE.  
   
   
+

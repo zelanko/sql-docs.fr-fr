@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
@@ -62,3 +63,4 @@ Les règles suivantes régissent la gestion de diagnostic dans **SQLGetDiagRec**
  Pour un composant ODBC autre que le Gestionnaire de pilotes :  
   
 -   Doit définir la valeur SQLSTATE en fonction de l’erreur. Pour les pilotes basés sur des fichiers et pilotes basés sur SGBD qui n’utilisent pas une passerelle, le pilote doit définir la valeur SQLSTATE. Pour les pilotes basés sur SGBD qui utilisent une passerelle, le pilote ou une passerelle qui prend en charge ODBC peut-être définir la valeur SQLSTATE.
+

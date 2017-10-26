@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ Pour utiliser les tableaux de paramètres, l’application appelle **SQLSetStmtA
 -   Étant donné que le pilote n’interprète pas la valeur de la *ParameterValuePtr* argument de **SQLBindParameter** pour les paramètres de data-at-execution, si l’application fournit un pointeur vers un tableau, **SQLParamData** n’a pas été extrait et retourner un élément de ce tableau à l’application. Au lieu de cela, il retourne que la valeur scalaire de l’application avait fourni. Cela signifie que la valeur retournée par **SQLParamData** est insuffisant spécifier le paramètre pour lequel l’application a besoin pour envoyer des données ; l’application doit également prendre en compte le nombre actuel de la ligne.  
   
      Lorsque seulement certains des éléments du tableau de paramètres sont des paramètres de data-at-execution, l’application doit passer l’adresse d’un tableau dans *ParameterValuePtr* qui contient les éléments pour tous les paramètres. Ce tableau est interprété normalement pour les paramètres qui ne sont pas des paramètres de données en cours d’exécution. Pour les paramètres de données d’exécution, la valeur qui **SQLParamData** fournit à l’application normalement peut être utilisé pour identifier les données qui demande le pilote à cette occasion, est toujours l’adresse du tableau.
+

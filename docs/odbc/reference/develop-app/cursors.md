@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ Une application extrait les données avec un *curseur*. Un curseur est différen
   
 > [!IMPORTANT]  
 >  Validation ou la restauration d’une transaction en appelant explicitement **SQLEndTran** ou par fonctionne en mode de validation automatique, fait que certaines sources de données fermer tous les curseurs sur toutes les instructions sur une connexion. Pour plus d’informations, consultez les attributs SQL_CURSOR_COMMIT_BEHAVIOR et SQL_CURSOR_ROLLBACK_BEHAVIOR dans les [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description de fonction.
+

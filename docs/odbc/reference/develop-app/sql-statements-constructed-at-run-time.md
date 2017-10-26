@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  Les applications qui génèrent des instructions SQL en cours d’exécution peuvent fournir une grande flexibilité pour l’utilisateur. Comme le montre l’exemple précédent, qui ne prend pas encore en charge des opérations courantes telles que **où** clauses, **ORDER BY** clauses ou des jointures, construction d’instructions SQL en cours d’exécution est considérablement plus complexe que les instructions de codage en dur. En outre, ces applications de test est problématique, car ils peuvent construire un nombre arbitraire d’instructions SQL.  
   
  Un inconvénient potentiel de construction d’instructions SQL en cours d’exécution est qu’il prend beaucoup plus de temps pour construire une instruction d’utiliser une instruction codé en dur. Heureusement, il est rarement un problème. Ces applications sont susceptibles d’être beaucoup d’interface utilisateur et le temps que l’application consacre à construire des instructions SQL est généralement faible par rapport à l’heure de l’utilisateur est occupé à entrer des critères.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5668f03e785c0d27133965f16af40ce69c2a2567
@@ -32,3 +33,4 @@ Si les données d’une colonne sont supérieure à 255 caractères, la comparai
  Utilisation d’une clause d’échappement dans un prédicat LIKE n’est pas prise en charge.  
   
  Une comparaison LIKE ne doit pas être effectuée sur une colonne contenant les données d’un type de données numériques ou float. Les résultats peuvent être imprévisibles. Pour plus d’informations, consultez la *Guide du programmeur moteur Microsoft Jet de base de données*.
+

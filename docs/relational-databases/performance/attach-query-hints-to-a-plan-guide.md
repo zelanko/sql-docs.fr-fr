@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  Vous pouvez aussi spécifier les indicateurs de table INDEX, FORCESCAN et FORCESEEK en tant qu'indicateurs de requête. Lorsqu'ils sont spécifiés en tant qu'indicateurs de requête, ces indicateurs se comportent comme une table inline ou une astuce de vue. L'indicateur INDEX force l'optimiseur de requête à utiliser uniquement les index spécifiés pour accéder aux données dans la table ou la vue référencée. L'indicateur FORCESEEK force l'optimiseur à utiliser uniquement une opération de recherche d'index pour accéder aux données dans la table ou la vue référencée. Ces indicateurs fournissent des fonctionnalités de repère de plan supplémentaires et vous permettent de mieux contrôler l'optimisation des requêtes qui utilisent le repère de plan.  
   
   
+

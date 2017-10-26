@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ Un curseur keyset réside entre statique et d’un curseur dynamique dans sa cap
  Curseurs sont souvent implémentées en créant une table temporaire qui contient les clés pour chaque ligne du jeu de résultats. Étant donné que le curseur doit également déterminer si les lignes ont été mis à jour, cette table contient généralement une colonne avec les informations de contrôle de version de ligne.  
   
  Pour faire défiler sur le jeu de résultats d’origine, le curseur keyset ouvre un curseur statique sur la table temporaire. Pour récupérer une ligne dans le jeu de résultats d’origine, le curseur récupère d’abord la clé appropriée de la table temporaire, puis récupère les valeurs actuelles de la ligne. Si les curseurs de bloc sont utilisés, le curseur doit récupérer plusieurs lignes et les clés.
+

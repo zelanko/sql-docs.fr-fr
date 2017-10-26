@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
@@ -83,3 +84,4 @@ ODBC est alignée avec les spécifications et les normes qui traitent avec l’I
 -   Prise en charge de la procédure stockée, y compris les séquences d’échappement, les mécanismes de liaison de paramètre de sortie et des fonctions de catalogue  
   
 -   Améliorations de la connexion, y compris la prise en charge pour les attributs de connexion et de navigation de l’attribut
+

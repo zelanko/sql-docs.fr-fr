@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ Une chaîne de connexion contient des informations utilisées pour établir une 
 -   **SQLBrowseConnect**, qui termine de manière itérative avec la source de données, la chaîne de connexion.  
   
  **SQLConnect** n’utilise pas une chaîne de connexion ; à l’aide de **SQLConnect** est analogue à la connexion à l’aide d’une chaîne de connexion avec des paires mot clé/valeur exactement trois (pour le nom de source de données et, éventuellement, utilisateur ID et mot de passe).
+

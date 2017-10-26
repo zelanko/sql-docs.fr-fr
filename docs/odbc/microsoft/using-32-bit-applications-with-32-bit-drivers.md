@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e37da481e8068edb966b8f8ace4f129989cce990
@@ -48,3 +49,4 @@ Vous pouvez exécuter des applications 32 bits avec les pilotes 32 bits. Les app
 |Odbcad32.exe|programme de l’administrateur ODBC 32 bits|  
 |ODBCINST.hlp|Fichier d’aide du programme d’installation|  
 |Msvcrt40.dll|Bibliothèque C run-time|
+

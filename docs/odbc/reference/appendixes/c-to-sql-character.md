@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
@@ -68,3 +69,4 @@ Les identificateurs pour le caractère de type de données ODBC C sont :
   
 > [!NOTE]  
 >  Les développeurs d’applications sont déconseillés à partir de la liaison de données de caractères C à un type de données SQL binaire. Cette conversion est généralement inefficace et lente.
+

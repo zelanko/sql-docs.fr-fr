@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
@@ -36,3 +37,4 @@ La syntaxe de l’instruction CREATE INDEX est :
  Lorsque le pilote Paradox est utilisé, l’instruction CREATE INDEX crée les fichiers de clé primaires de Corel et les fichiers secondaires.  
   
  Cette instruction n’est pas prise en charge par les pilotes Microsoft Excel ou texte.
+

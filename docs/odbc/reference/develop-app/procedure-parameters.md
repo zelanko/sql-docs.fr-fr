@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
@@ -57,3 +58,4 @@ Paramètres dans les appels de procédure peuvent utiliser en entrée, d’entr�
  Une fois que l’instruction a été exécutée, pilotes de stocker les valeurs retournées d’entrée/sortie et les paramètres de sortie dans les variables liées à ces paramètres. Ces retourné ne sont pas garantis que les valeurs pour définir jusqu'à ce que tous les résultats retournés par la procédure qui ont été extraites et **SQLMoreResults** a retourné SQL_NO_DATA. Si l’exécution de l’instruction entraîne une erreur, le contenu de la mémoire tampon de paramètre d’entrée/sortie ou de la mémoire tampon de paramètre de sortie n’est pas défini.  
   
  Une application appelle **SQLProcedure** pour déterminer si une procédure a une valeur de retour. Il appelle **SQLProcedureColumns** pour déterminer le type (valeur de retour, d’entrée, d’entrée/sortie ou de sortie) de chaque paramètre de procédure.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3c5440b6cfc25665156986a0aed99a1fa05e16be
@@ -126,3 +127,4 @@ Le *de référence du programmeur ODBC* contient les sections suivantes.
 -   Welch, Keith : *à l’aide de ODBC 2* (File, 1994).  
   
 -   Merlan, facture : *rement ODBC dans les 21 jours* (Howard W. Sams & société, 1994).
+

@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ Le pilote peut sélectionner une source de données, appelée la source de donn�
 -   Dans un appel à **SQLDriverConnect** où *InConnectionString* soit spécifie **DSN**= valeur par défaut ou spécifie avec la **DSN** mot-clé une source de données qui ne figure pas dans les informations système.  
   
  Elle est définie par le pilote comment la source de données par défaut est spécifiée. Cela peut impliquer l’action d’administration et peut dépendre de l’utilisateur.
+

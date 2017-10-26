@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd42836285c29e36e6bb64ebe594df570876ff6e
@@ -30,3 +31,4 @@ Lorsque le pilote Microsoft Access est utilisé, les procédures peuvent être a
  Si un nom de procédure comprend un tiret, le nom doit être délimité avec guillemets précédent (').  
   
  Une requête paramétrable peut être appelée à l’aide de l’instruction précédente.
+

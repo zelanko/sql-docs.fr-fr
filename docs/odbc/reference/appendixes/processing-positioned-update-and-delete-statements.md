@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   Si le pilote prend en charge qu’une seule instruction active, les extractions de bibliothèque de curseurs le reste du résultat défini et réextrait ensuite l’ensemble de lignes en cours à partir de son cache avant d’exécuter un positionnées mettre à jour ou supprimer l’instruction. Si l’application appelle ensuite une fonction qui retourne des métadonnées dans un jeu de résultats (par exemple, **SQLNumResultCols** ou **SQLDescribeCol**), la bibliothèque de curseurs retourne une erreur.  
   
 -   Si une mise à jour positionnée ou une instruction delete est effectuée sur une colonne d’une table qui comprend une colonne horodateur est mis à jour automatiquement chaque fois qu’une mise à jour est exécutée, toutes les mise à jour positionnée ou des instructions delete échoue si la colonne horodateur est liée. Cela se produit car la mise à jour ou supprime instruction qui crée de la bibliothèque de curseurs n’identifie pas avec précision la ligne à mettre à jour. La valeur de l’instruction de recherche pour la colonne timestamp n’a pas correspondra à la valeur mise à jour automatique de la colonne timestamp.
+

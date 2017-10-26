@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 678ba0fa4e256402e9fc25e2e4e60ba4877c6c44
@@ -47,3 +48,4 @@ Avant de l’application peut se connecter à une source de données ou d’un p
  Il est important de noter qu’allouer un handle de connexion n’est pas le même que le chargement d’un pilote. Le pilote n’est pas chargé tant qu’une connexion est appelée. Par conséquent, après avoir alloué un handle de connexion et avant de vous connecter à la source de données ou le pilote, les seules fonctions de l’application peut appeler avec le handle de connexion sont **SQLSetConnectAttr**, **SQLGetConnectAttr**, ou **SQLGetInfo** avec l’option SQL_ODBC_VER. Appel d’autres fonctions avec le handle de connexion, telle que **SQLEndTran**, retourne SQLSTATE 08003 (connexion non ouverte). Pour plus d’informations, consultez [Tables de Transition d’état annexe b : ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Pour plus d’informations sur les handles de connexion, consultez [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 345bd008268be6781a5f778a603d60e0a584fcd6
@@ -35,3 +36,4 @@ Les exemples suivants montrent comment divers composants dans une connexion ODBC
 -   [Exemple de Diagnostic de passerelles](../../../odbc/reference/develop-app/gateways-diagnostic-example.md)  
   
 -   [Exemple de Diagnostic du Gestionnaire de pilotes](../../../odbc/reference/develop-app/driver-manager-diagnostic-example.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a925896250a307c7d256232377ec6d9325c8db77
@@ -49,3 +50,4 @@ Les pilotes de base de données ODBC Desktop et le moteur Microsoft Jet sous-jac
   
 > [!NOTE]  
 >  Les pilotes de la base de données Desktop prend en charge la syntaxe ANSI standard (pourcentage) et _ (trait de soulignement), pas * (astérisque) et ? (point d’interrogation).
+

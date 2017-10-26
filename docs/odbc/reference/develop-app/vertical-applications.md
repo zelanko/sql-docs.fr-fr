@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a3f4f8eca8309cb40b6ef9d2a7f9baac77c05f84
@@ -31,3 +32,4 @@ Généralement, les applications verticales effectuent une tâche bien définie 
  Les applications verticales nécessitent généralement certaines fonctionnalités, telles que les curseurs de défilement ou les transactions, ils rarement prend en charge tous les SGBD. Au lieu de cela, ils ont tendance à être très interopérables entre un ensemble limité de SGBD. En règle générale, les développeurs d’applications verticales choisissent prendre en charge les SGBD qui représente une grande partie du marché et ignore le reste. Ils peuvent même choisir prendre en charge des pilotes spécifiques pour les SGBD pour réduire leurs tests et les coûts de support produit.  
   
  Étant donné que les applications verticales peuvent prendre en charge un jeu connu de SGBD, ils contiennent parfois des code spécifique au pilote ou propres au SGBD. Toutefois, ce code est préférable de conserver au minimum, car elle nécessite plus de temps pour mettre à jour.
+

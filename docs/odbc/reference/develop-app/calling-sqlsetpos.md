@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 434031a496faae19ee37b8273341cc0ede6d0313
@@ -46,3 +47,4 @@ SQLSetPos(hstmt, iRow, fOption, fLock);
 3.  Lorsque l’application appelle **SQLSetStmtAttr** pour définir SQL_ATTR_ROW_STATUS_PTR, définit le Gestionnaire de pilotes *fSetPosError* toTRUE égale.  
   
 4.  Lorsque l’application appelle **SQLSetPos**, avec *fSetPosError* égale à TRUE, le Gestionnaire de pilotes déclenche SQL_ERROR avec SQLSTATE HY011 (attribut ne peut pas être défini maintenant) pour indiquer que l’application a tenté d’appeler **SQLSetPos** après avoir modifié le pointeur d’état de ligne, mais avant d’appeler **SQLFetchScroll**.
+

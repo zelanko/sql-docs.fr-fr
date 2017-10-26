@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2a56fee03c4e839324ffe958031861f0e71bdeb
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 5.  Cliquez sur OK pour enregistrer les modifications et fermer la boîte de dialogue Administrateur de sources de données ODBC.  
   
  Vos modifications prendront effet la prochaine fois que vous accéder à la source de données à partir de votre application.
+

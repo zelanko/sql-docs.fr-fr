@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d75a8985feff2ddfe26d3e19e8bafd91f228d30e
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTranslator**. Inviter l’utilisateur à un nom de la traduction et une option. Cette fonction appelle **ConfigTranslator** DLL d’installation dans le convertisseur.  
   
  Le programme d’installation du pilote DLL est écrite par le développeur. Il peut faire partie du pilote DLL ou une DLL distincte.
+

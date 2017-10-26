@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ Le tableau suivant répertorie les fonctions de manipulation de chaîne. Une app
 |**ESPACE (** *nombre* **)** (ODBC 2.0)|Retourne une chaîne de caractères composée de *nombre* des espaces.|  
 |**SUBSTRING (** *exp_chaîne*, *Démarrer*, longueur**)** (ODBC version 1.0)|Retourne une chaîne de caractères qui est dérivée de *exp_chaîne*, en commençant à la position de caractère spécifiée par *Démarrer* pour *longueur* caractères.|  
 |**UCASE (** *exp_chaîne* **)** (ODBC version 1.0)|Retourne une chaîne égale à celle de *exp_chaîne*, avec toutes les minuscules en majuscules.|
+

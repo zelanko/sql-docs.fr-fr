@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6bd2400d4c81147a2537c9a68eb4714bc2c66e0
@@ -36,3 +37,4 @@ Cette section fournit un bref historique de Structured Query Language et ODBC et
 -   [Architecture ODBC](../../odbc/reference/odbc-architecture.md)  
   
 -   [Obtenir des informations ODBC 64 bits](../../odbc/reference/odbc-64-bit-information.md)
+

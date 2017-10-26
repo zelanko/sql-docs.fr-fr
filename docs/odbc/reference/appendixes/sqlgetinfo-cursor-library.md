@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  La bibliothèque de curseurs implémente le comportement du curseur même lorsque les transactions sont validées ou annulées en tant que la source de données. Autrement dit, de validation ou de restauration d’une transaction en appelant **SQLEndTran** ou à l’aide de l’attribut de connexion SQL_ATTR_AUTOCOMMIT, peut provoquer la source de données supprimer les plans d’accès et de fermer les curseurs pour toutes les instructions sur une connexion. Pour plus d’informations, consultez les types d’informations SQL_CURSOR_COMMIT_BEHAVIOR et SQL_CURSOR_ROLLBACK_BEHAVIOR dans [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).
+

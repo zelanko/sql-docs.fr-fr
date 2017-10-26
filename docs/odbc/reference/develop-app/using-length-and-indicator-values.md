@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Une procédure consiste à utiliser la valeur par défaut d’un paramètre d’entrée dans une procédure au lieu de la valeur dans la mémoire tampon de données correspondante.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** ou **SQLSetPos** consiste à ignorer la valeur dans la mémoire tampon de données. Lors de la mise à jour d’une ligne de données par un appel à **SQLBulkOperations** ou **SQLSetPos,** la valeur de la colonne n’est pas modifiée. Lors de l’insertion d’une nouvelle ligne de données par un appel à **SQLBulkOperations**, la valeur de colonne est définie à sa valeur par défaut ou, si la colonne n’a pas de valeur par défaut, null.
+

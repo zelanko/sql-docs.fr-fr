@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ Vous pouvez importer des données Visual FoxPro dans votre feuille de calcul Mic
 5.  Sélectionnez les champs de votre requête en les faisant glisser à partir de la table vers le bas la moitié du concepteur.  
   
 6.  Fermez Microsoft Query. Les données que vous avez sélectionné sont importées dans votre feuille de calcul Microsoft Excel.
+

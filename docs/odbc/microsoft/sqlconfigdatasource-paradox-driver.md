@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |PWD|Mot de passe.<br /><br /> Ce mot clé facultatif et ne sera jamais être écrites dans le fichier par le pilote. Il est utilisé dans un appel à **SQLDriverConnect** mot de passe sécurisé de fichiers de Corel. Le mot de passe sera valide chaque fois qu’une table est ouvert. Si aucun mot de passe n’est transmis dans la chaîne de connexion, aucun mot de passe n’est générée pour cette table. Si les tables ont des mots de passe différents, plusieurs ne peut pas être ouvert dans la même session, ni si les tables peuvent être jointes.|  
 |READONLY|TRUE pour rendre le fichier en lecture seule ; Valeur FALSE à rendre le fichier pas en lecture seule.<br /><br /> L’option est définie en tant que même **en lecture seule** dans la boîte de dialogue d’installation.|  
 |THREADS|Le nombre de threads d’arrière-plan pour le moteur à utiliser. Cette valeur est 3 et ne peut pas être modifiée.<br /><br /> L’option est définie en tant que même **Threads** dans la boîte de dialogue d’installation.|
+

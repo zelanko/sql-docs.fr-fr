@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e326abbc0a10899028bf93d27f219fadd8d7dd29
@@ -35,3 +36,4 @@ Cette annexe contient des informations pour les rédacteurs de pilotes vous trav
 -   [Mappage des fonctions de déconseillée](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) — dupliqué fonctionnalités sont des fonctionnalités qui sont implémentées différemment dans ODBC 3.* x* et ODBC 2.* x*. ODBC 3. *x* pilotes n’ont pas à vous soucier de la compatibilité descendante avec les fonctionnalités en double, car le Gestionnaire de pilotes est toujours mappée ODBC 2.* x* fonctions ODBC 3.* x* fonctionnalités lors de l’appel d’un ODBC 3.* x* pilote. Par conséquent, une application ODBC 3. *x* pilote ne voit que ODBC 3.* x* fonctionnalités. Pour plus d’informations sur ces mappages, consultez, plus loin dans cette annexe.  
   
 -   [Changements de comportement et les pilotes ODBC 3.x](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) , changements de comportement sont des fonctionnalités qui sont gérées différemment dans ODBC 3.* x* et ODBC 2.* x*. ODBC 3. *x* pilotes ont soucier des changements de comportement et d’agir en réponse à l’attribut d’environnement SQL_ATTR_ODBC_VERSION définie par l’application.
+

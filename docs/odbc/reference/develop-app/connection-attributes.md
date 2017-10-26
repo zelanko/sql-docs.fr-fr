@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
@@ -41,3 +42,4 @@ Attributs de connexion sont des caractéristiques de la connexion. Par exemple, 
  Les attributs de connexion de traduction (SQL_ATTR_TRANSLATE_DLL et SQL_ATTR_TRANSLATE_OPTION) doivent être définis après la connexion.  
   
  Tous les autres attributs de connexion peuvent être définies à tout moment. Pour plus d’informations, consultez la [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) description de fonction. (Attributs de connexion ne peut pas être définis au niveau de l’environnement par un appel à **SQLSetEnvAttr**.)
+

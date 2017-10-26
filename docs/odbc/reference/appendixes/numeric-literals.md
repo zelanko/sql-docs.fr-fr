@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 91f9b1fe25772c464877fff38b0eb4fc73155828
@@ -36,3 +37,4 @@ Littéraux numériques sont utilisés lorsque les valeurs de données numérique
 -   [Règles pour les Conversions](../../../odbc/reference/appendixes/rules-for-conversions.md)  
   
 -   [Substitution de précision par défaut et l’échelle pour les Types de données numériques](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
+

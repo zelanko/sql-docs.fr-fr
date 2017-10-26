@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
@@ -41,3 +42,4 @@ ODBC définit discrètes *états* pour chaque environnement, chaque connexion et
  Du point de vue de l’application, les transitions d’état sont généralement simples : transitions d’état autorisées ont tendance à aller de pair avec le flux d’une application bien écrite. Transitions d’état sont plus complexes pour le Gestionnaire de pilotes et les pilotes, car ils doivent suivre l’état de l’environnement, chaque connexion et chaque instruction. La plupart de ce travail est effectuée par le Gestionnaire de pilotes ; la plupart du travail qui doit être effectuée par les pilotes se produit avec les instructions avec des résultats en attente.  
   
  Les parties 1 et 2 de ce manuel (« Introduction to ODBC » et « Développement des Applications et des pilotes ») sont généralement ne pas mentionner explicitement les transitions d’état. Au lieu de cela, elles décrivent l’ordre dans lequel les fonctions doivent être appelées. Par exemple, « L’exécution des instructions » indique qu’une instruction doit être préparée avec **SQLPrepare** avant de pouvoir être exécuté avec **SQLExecute**. Pour obtenir une description complète des États et transitions d’état, ainsi que les transitions sont vérifiées par le Gestionnaire de pilotes qui doivent être vérifié par les pilotes, consultez [Tables de Transition d’état annexe b : ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+

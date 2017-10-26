@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1aded6b8187fd2e6c05e61662edc3dce8e1b7b04
@@ -61,3 +62,4 @@ Vous pouvez utiliser des données Visual FoxPro dans Microsoft Word pour les doc
 14. Dans l’application d’assistance de fusion et publipostage, sous le fusionner les données avec le Document, cliquez sur Fusionner.  
   
 15. Dans cette boîte de dialogue, sélectionnez les options souhaitées, puis cliquez sur Fusionner.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
@@ -46,3 +47,4 @@ L’identificateur pour le type de données ODBC C date est :
  Lorsque des données de date C sont converties en données SQL de type caractère, les données de caractères résultant sont dans le «*aaaa*-*mm*-*jj*« format.  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données à partir du type de données date C et suppose que la taille du tampon de données est la taille du type de données date C. La valeur de l’indicateur/longueur est passée dans le *StrLen_or_Ind* argument dans **SQLPutData** et dans la mémoire tampon spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindParameter**. Le tampon de données est spécifié avec la *DataPtr* argument dans **SQLPutData** et *ParameterValuePtr* argument dans **SQLBindParameter**.
+

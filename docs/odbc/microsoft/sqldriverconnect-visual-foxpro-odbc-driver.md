@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 363a727cd209f7ed3a5994f353f1e21922fe00ca
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  Si le nom de source de données n’est pas spécifié, le Gestionnaire de pilote invite l’utilisateur pour obtenir les informations (selon le paramètre de la *fDriverCompletion* argument), puis continue. Si plus d’informations est nécessaire, le pilote ODBC Visual FoxPro affiche la boîte de dialogue invite de commandes.  
   
  Pour plus d’informations, consultez [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) dans les *de référence du programmeur ODBC*.
+

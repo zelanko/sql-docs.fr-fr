@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c0a20af8dc2a35ba451890472ad1af73e01d8688
@@ -48,3 +49,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
 ```  
   
  Étant donné que l’erreur s’est produite dans la source de données, le pilote ajouté un préfixe de l’identificateur de source de données ([Rdb]) pour le message de diagnostic. Étant donné que le pilote a été le composant à la source de données, il ajouté préfixes pour son fournisseur ([Microsoft]) et un identificateur ([Rdb le pilote ODBC]) pour le message de diagnostic.
+

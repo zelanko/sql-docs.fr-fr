@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b899cda97d68801d03e1b5cc9655df0eaeaf8ad
@@ -31,3 +32,4 @@ Applications personnalisées effectuent une tâche spécifique pour quelques SGB
  Par conséquent, l’application personnalisée requiert peu ou pas de l’interopérabilité. Le développeur peut choisir un pilote unique pour chaque SGBD et le code directement à ces pilotes. L’application peut contenir en toute sécurité de code spécifiques au pilote pour exploiter les fonctions de ces pilotes et peut même effectuer des appels à l’API de base de données native pour utiliser les fonctionnalités non prises en charge par ODBC.  
   
  La préoccupation majeure de l’interopérabilité de la plupart des applications personnalisées est si la SGBD cible sera changer à l’avenir. Dans ce cas, ce processus peut être simplifié en écrivant du code plus interopérable pour commencer. Toutefois, cette modification de SGBD est rare et généralement implique une grande quantité de travail. Pour cette raison, les développeurs d’applications personnalisées rarement choisir d’augmenter l’interopérabilité au détriment de la fonctionnalité ; généralement choisissent de réécrire ces fonctionnalités quand ils changent le SGBD.
+

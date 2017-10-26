@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0e7fda4fa942519384b2837f6f3f70a880dee74f
@@ -31,3 +32,4 @@ L’application peut spécifier le type de curseur avant l’exécution d’une 
  Pour les curseurs pilotés par jeu de clés et mixtes, l’application peut également spécifier la taille du jeu de clés. Il effectue cette opération avec l’attribut d’instruction SQL_ATTR_KEYSET_SIZE. Si la taille du jeu de clés est définie sur 0, ce qui est la valeur par défaut, la taille du jeu de clés est définie à la taille du jeu de résultats et un curseur keyset est utilisé. La taille de jeu de clés peut être modifiée une fois que le curseur a été ouvert.  
   
  L’application peut également définir la taille de l’ensemble de lignes ; Pour plus d’informations, consultez [à l’aide de curseurs de bloc](../../../odbc/reference/develop-app/using-block-cursors.md), plus haut dans cette section.
+

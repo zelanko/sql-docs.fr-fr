@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34b9221b117819988e44196cee0f04578e85d436
@@ -38,3 +39,4 @@ Unicode est une méthode d’encodage de caractères logiciel traite tous les ca
  Quand une application ANSI utilise le pilote de base de données ODBC Desktop 4.0 et accède à Microsoft Access 4.0 ou une version ultérieure, le pilote présente le type de données en tant que SQL_CHAR, SQL_VARCHAR ou SQL_LONGVARCHAR bien Jet 4.0 prend en charge la version large. Des versions antérieures de Jet ne prennent pas en charge SQL_WCHAR, SQL_WVARCHAR et SQL_WLONGVARCHAR. Cette restriction s’applique également dans les cas où les anciens formats sont utilisés avec le moteur de base de données Jet 4.0.  
   
  Pour plus d’informations concernant les problèmes d’Unicode avec ODBC, consultez [Unicode](../../odbc/reference/develop-app/unicode.md) dans les considérations relatives à la programmation.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6c50ea6550e9dfb255c87886e4e0375240bcd2ae
@@ -31,3 +32,4 @@ Lorsque le pilote dBASE ou Paradox est utilisé, une fois qu’un index a été 
   
 > [!NOTE]  
 >  Lorsque vous utilisez le pilote Paradox sans implémenter le moteur de base de données Borland, les instructions ALTER TABLE ne sont pas pris en charge ; uniquement lire et ajoutez les instructions sont autorisées.
+

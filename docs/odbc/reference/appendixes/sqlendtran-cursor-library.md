@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   Pour les sources de données qui ferment les curseurs des limites de transaction, la bibliothèque de curseurs ferme le curseur et supprime le met en cache pour toutes les instructions sur la connexion.  
   
 -   Pour les sources de données supprimer les instructions préparées au niveau des limites de transaction, l’application doit reprepare toutes les instructions préparées sur la connexion avant de les réexécuter.
+

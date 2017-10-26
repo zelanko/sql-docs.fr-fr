@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ Pilotes basés sur des fichiers sont utilisés avec des sources de données tell
  L’illustration suivante montre les deux configurations de pilotes basés sur des fichiers, dans lequel les données résident localement et l’autre dans lequel il réside sur un serveur de fichiers réseau.  
   
  ![Deux configurations du fichier &#45; pilotes en fonction](../../odbc/reference/media/pr06.gif "pr06")
+

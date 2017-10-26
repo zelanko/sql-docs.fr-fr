@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
@@ -71,3 +72,4 @@ Le tableau suivant décrit les compteurs **Bases de données SQL Server XTP** .
 
 ## <a name="see-also"></a>Voir aussi  
 [SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+

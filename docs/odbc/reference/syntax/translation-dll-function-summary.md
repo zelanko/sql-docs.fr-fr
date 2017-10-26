@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b5035faace47e33eae7f0c3d425d1dbd40267974
@@ -31,3 +32,4 @@ Le tableau suivant décrit les fonctions des DLL de traduction. Pour plus d’in
 |----------|-------------------|-------------|  
 |Traduction de données|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Convertit toutes les données circulent à partir de la source de données pour le pilote.|  
 ||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Convertit toutes les données transitant par le pilote à la source de données.|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c225ab76f4c67938590bd19f21bfafafa20742d8
@@ -94,3 +95,4 @@ Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en cha
 -   [Types de données de paramètre](../../../odbc/reference/appendixes/parameter-data-types.md)  
   
 -   [Marqueurs de paramètres](../../../odbc/reference/appendixes/parameter-markers.md)
+

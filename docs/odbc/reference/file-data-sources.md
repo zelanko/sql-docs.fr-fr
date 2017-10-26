@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  Un fichier .dsn peut également être partageable. Un fichier .dsn partageable réside sur un seul ordinateur et pointe vers une source de données d’ordinateur. Sources de données fichier partageable existent principalement pour autorise la conversion de facile de sources de données aux sources de données de fichier afin qu’une application peut être conçue pour fonctionner uniquement avec les sources de données fichier. Lorsque le Gestionnaire de pilotes est envoyé les informations dans une source de données fichier partageable, il se connecte que nécessaire pour la source de données machine qui pointe le fichier .dsn.  
   
  Pour plus d’informations sur les sources de données de fichier, consultez [la connexion à l’aide de Sources de données](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), ou [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) description de fonction.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  La bibliothèque de curseurs retourne incorrectement SQLSTATE 34000 (nom de curseur non valide) si le nom du curseur n’est pas valide dans une mise à jour positionnée ou d’une instruction delete qui est passée dans le *InStatementText* argument de **SQLNativeSql**. **SQLNativeSql** n’est pas destinée à retourner des erreurs de syntaxe, qui sont retournées uniquement lors de la préparation ou de l’exécution.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3a826dbe1bb1d2900f787f72a725aa984b844a2
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
   
  La bibliothèque de curseurs ne prend pas en charge l’appel **SQLBulkOperations**. Pour des informations générales sur **SQLBulkOperations**, consultez [fonction SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md).
+

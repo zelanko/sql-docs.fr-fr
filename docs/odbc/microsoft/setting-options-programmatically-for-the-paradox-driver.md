@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 |Sélectionnez le répertoire|Affiche une boîte de dialogue où vous pouvez sélectionner un répertoire contenant les fichiers que vous souhaitez accéder.<br /><br /> Lorsque la définition d’un répertoire de source de données spécifiez le répertoire où les plus couramment utilisées fichiers se trouvent. Le pilote ODBC utilise ce répertoire comme répertoire par défaut. Copier d’autres fichiers dans ce répertoire s’ils sont utilisés fréquemment. Ou bien, vous pouvez qualifier les noms de fichiers dans une instruction SELECT avec le nom du répertoire :<br /><br /> SÉLECTIONNEZ \* DE C:\MYDIR\EMP<br /><br /> Ou bien, vous pouvez spécifier un nouveau répertoire par défaut à l’aide de la **SQLSetConnectOption** fonction avec l’option SQL_CURRENT_QUALIFIER.|Pour définir cette option dynamiquement, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Sélectionnez le répertoire réseau|Le chemin d’accès complet du répertoire contenant une base de données de verrou Paradox, car il contient le fichier Pdoxusrs.net (dans Paradox 4.* x*) ou le fichier Paradox.net (dans Paradox 5.* x*). Si le répertoire ne contient pas un de ces fichiers, le pilote Paradox en crée un. Pour plus d’informations sur ces fichiers, consultez la documentation de Corel.<br /><br /> Avant de pouvoir sélectionner un répertoire réseau, vous devez entrer votre nom d’utilisateur Paradox dans le **nom d’utilisateur** zone de texte. Cliquez sur **sélectionner un répertoire réseau** pour sélectionner un répertoire réseau.|Pour définir cette option dynamiquement, utilisez le **PARADOXNETPATH** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Nom d'utilisateur|Le nom d’utilisateur de Corel. Il s’agit du nom affiché à d’autres utilisateurs des fichiers Paradox lorsqu’un verrou est rencontré.|Pour définir cette option dynamiquement, utilisez le **PARADOXUSERNAME** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
+

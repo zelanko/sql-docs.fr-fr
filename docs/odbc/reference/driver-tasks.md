@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
@@ -38,3 +39,4 @@ Les tâches spécifiques effectuées par les pilotes sont les suivantes :
 -   Envoie des données et la récupération des données à partir de la source de données, notamment la conversion des types de données comme spécifié par l’application.  
   
 -   Mappage des erreurs spécifiques au SGBD sur SQLSTATE de ODBC.
+

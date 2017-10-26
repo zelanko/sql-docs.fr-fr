@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
@@ -98,3 +99,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{INTERVALLE '223.16' DEUXIÈME}<br /><br /> {INTERVALLE '223' YEAR}|Étant donné que la précision de début n’est pas spécifiée, la valeur par défaut 2, qui est trop petit pour contenir le littéral spécifié.|  
 |{INTERVALLE '22.1234567' DEUXIÈME}|La précision en secondes n’est pas spécifiée, afin de la valeur par défaut est 6. Le littéral a sept chiffres après la virgule décimale.|  
 |{INTERVALLE ' 163-13' ANNÉE (3) MOIS}<br /><br /> {INTERVALLE 163 ' DAY (3) À L’HEURE DE 65'}<br /><br /> {INTERVALLE '163 62:39' DAY (3) À LA MINUTE}<br /><br /> {INTERVALLE '163 12:125:59.163' DAY (3) À SECOND(3)}<br /><br /> {INTERVALLE '163:144' HOUR(3) MINUTE}<br /><br /> {INTERVALLE '163:567:234.163' HOUR(3) À SECOND(4)}<br /><br /> {INTERVALLE '163:591.163' MINUTE(3) À SECOND(5)}|Le champ de fin ne suit pas les règles du calendrier grégorien.|
+

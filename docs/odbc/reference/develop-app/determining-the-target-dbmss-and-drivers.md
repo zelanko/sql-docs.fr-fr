@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ La question suivante à prendre en compte est, quelles sont la SGBD cible pour l
  Bases de données de serveur telles que Oracle, DB2 et SQL Server prennent en charge complète des transactions prend en charge de nombreux utilisateurs simultanés et ont SQL riche. Elles sont beaucoup plus onéreuse et disposer d’une plus petite base installée. En revanche, prix du logiciel ont tendance à être plus élevée, quelque peu compensation un marché potentiel plus petit.  
   
  Par conséquent, vous pouvez choisir cible SGBD parfois selon les fonctionnalités requises par l’application et de marché de l’application cible. Par exemple, un système d’entrée de commande pour les grandes entreprises peuvent ne pas cible des bases de données bureautiques, car ceux-ci ne disposent pas de prise en charge des transactions adéquates. Un système semblable conçu pour les petites entreprises exclut peut-être la plupart des bases de données de serveur en fonction du coût. Et les développeurs d’applications génériques peuvent cibler à la fois, mais évitez d’utiliser les fonctionnalités avancées de bases de données de serveur.
+

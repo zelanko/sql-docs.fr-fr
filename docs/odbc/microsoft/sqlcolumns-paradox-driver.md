@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13aae437ce3cbd930babed257b69d1ec70b3cfad
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |TABLE_QUALIFIER|Le chemin d’accès à un répertoire est retournée.|  
 |TABLE_OWNER|Valeur NULL est retournée dans cette colonne, car le nom du propriétaire n’est pas pris en charge.|  
 |NULLABLE|SQL_NO_NULLS est retourné pour les colonnes qui participent dans une clé primaire ou un index unique.|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7204f0e0185373d88606fb01a5d3382a23dd91a1
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  Dans Visual FoxPro, les enregistrements sont stockés dans une table. Chaque ligne d’une table représente un enregistrement, et les colonnes du tableau représentent les champs de l’enregistrement. Chaque table de Visual FoxPro est stockée dans son propre fichier portant une extension .dbf. Tables Visual FoxPro peuvent être associés à une base de données.  
   
  FoxPro version 2. *x* tables ne sont pas associées à une base de données.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56fa0c8ea21d4cfb620acfb633b3a4297ccd27fd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|Le seul argument valide pour *szTableOwner* a la valeur NULL, car aucun des pilotes prend en charge les noms de propriétaire. Avec *szTableOwner* la valeur NULL, toutes les tables sont retournées. NULL est retourné dans la colonne TABLE_OWNER.|  
 |*szTableQualifier*|Dans la colonne TABLE_QUALIFIER, **SQLTables** retourne le chemin d’accès à un répertoire.|  
 |*SzTableType*|« TABLE » est le seul type de table pris en charge.<br /><br /> Lorsque le pilote de texte est utilisé, la liste des fichiers retournées par **SQLTables** est déterminée par les extensions de fichier dans le **liste d’Extensions** zone le **le programme d’installation de ODBC texte** boîte de dialogue.|
+

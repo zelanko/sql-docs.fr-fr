@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
@@ -37,3 +38,4 @@ Les noms de table peuvent contenir des caractères valides (par exemple, des esp
  Lorsque le pilote Microsoft Access est utilisé, le nom de table est limité à 64 caractères.  
   
  Lorsque dBASE, le pilote Microsoft Excel 3.0 ou 4.0, Paradox, ou du texte est utilisé, MS-DOS des mots clés spéciaux CON, AUX, LPT1, LPT2 et ne doivent pas être utilisés comme noms de table.
+

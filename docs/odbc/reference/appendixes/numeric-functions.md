@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ Le tableau suivant décrit les fonctions numériques qui sont incluses dans l’
 |**SQRT (** *exp_float* **)** (ODBC version 1.0)|Retourne la racine carrée de *exp_float*.|  
 |**TAN (** *exp_float* **)** (ODBC version 1.0)|Retourne la tangente de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
 |**TRUNCATE (** *positions numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retourne *positions numeric_exp* tronqué à *integer_exp* place à droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est tronqué à &#124;* integer_exp*&#124; chiffres à gauche de la virgule décimale.|
+

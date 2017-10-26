@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
@@ -59,3 +60,4 @@ La configuration requise pour l’installation fournit la configuration minimale
  Le pilote ODBC Visual FoxPro prend en charge les jeux de caractères à deux octets (DBCS). Pour plus d’informations, consultez [prise en charge internationale](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
  Le pilote ne prend pas en charge les applications de Microsoft Windows 3.1 16 bits.
+

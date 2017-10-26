@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d255f3c1eac9b46548f10c5c4ef3bf2bc31cafbe
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Définit la position du curseur dans un ensemble de lignes. Vous pouvez utiliser **SQLSetPos** avec [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) pour extraire des lignes à partir des colonnes indépendantes après le curseur sur une ligne spécifique dans l’ensemble de lignes.  
   
  Pour plus d’informations, consultez [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) dans les *de référence du programmeur ODBC*.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f37ab932ef230d29a5db23aec920230de0443e37
@@ -33,3 +34,4 @@ La seconde technique pour l’envoi d’instructions SQL au SGBD est via les mod
  Un module peut être considéré comme une bibliothèque d’objets qui est liée au code d’application. Toutefois, exactement comment les procédures et le reste de l’application sont liés sont dépendant de l’implémentation. Par exemple, les procédures peuvent être compilés en code objet et directement liés au code de l’application, peut être compilés et stockés dans le SGBD et les appels pour accéder aux identificateurs de plan placés dans le code d’application, ou ils pourraient être interprétés au moment de l’exécution.  
   
  Le principal avantage des modules est séparer correctement les instructions SQL à partir du langage de programmation. En théorie, il doit être possible de modifier une sans modifier l’autre et simplement les réassocier.
+

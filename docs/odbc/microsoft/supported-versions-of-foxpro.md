@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ Vous pouvez utiliser le pilote ODBC Microsoft® Visual FoxPro®, pour accéder a
  Pour plus d’informations sur la façon de se connecter à une source de données, consultez [Ajout d’une Source de données Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
  Pour télécharger le pilote, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318).
+

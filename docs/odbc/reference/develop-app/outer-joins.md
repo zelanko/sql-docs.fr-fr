@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  Pour déterminer les types de jointures externes utilisant une source de données et le pilote prend en charge, une application appelle **SQLGetInfo** avec la SQL_OJ_CAPABILITIES indicateur. Les types de jointures externes peuvent être pris en charge sont gauche, droite, complète ou des jointures externes ; imbriquées jointures externes dans laquelle la colonne des noms dans le **ON** clause n’ont pas le même ordre que leurs noms de table correspondante dans le **OUTER JOIN** clause ; les jointures internes conjointement avec les jointures externes et des jointures externes à l’aide de n’importe quel opérateur de comparaison ODBC. Si le type d’informations SQL_OJ_CAPABILITIES renvoie la valeur 0, aucune clause de jointure externe n’est prise en charge.
+

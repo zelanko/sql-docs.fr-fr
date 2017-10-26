@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ Pour modifier les champs d’un descripteur, une application peut appeler **SQLS
  Lors de la définition des champs individuellement, l’application doit suivre l’ordre défini dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Définition de certains champs entraîne le pilote définir d’autres champs. Cela garantit que le descripteur est toujours prêt à utiliser une fois que l’application a spécifié un type de données. Lorsque l’application définit le champ SQL_DESC_TYPE, le pilote vérifie que les autres champs qui spécifient le type sont valides et cohérents.  
   
  Si un appel de fonction qui est définie à un champ de descripteur échoue, le contenu du champ de descripteur n’est pas défini après l’appel de fonction qui a échoué.
+

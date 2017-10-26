@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ Le *longueur des données* est la longueur en octets des données telles qu’el
  Par exemple, qu'une application alloue de 50 octets pour une mémoire tampon de données binaires. Si le pilote a 10 octets de données binaires à retourner, il retourne les 10 octets dans la mémoire tampon. La longueur en octets des données est 10 et la longueur d’octet de la mémoire tampon est 50. Si le pilote a 60 octets de données binaires à retourner, elle tronque les données à 50 octets retourne ces octets dans la mémoire tampon et retourne SQL_SUCCESS_WITH_INFO. La longueur en octets des données est de 60 (longueur avant la troncature), et la longueur d’octet de la mémoire tampon reste encore 50.  
   
  Un enregistrement de diagnostic est créé pour chaque colonne est tronquée. Étant donné que de temps pour le pilote créer ces enregistrements et de l’application pour les traiter, la troncation peut dégrader les performances. En règle générale, une application peut éviter ce problème en allouant des tampons de grande taille suffisamment, bien que cela est peut-être pas possible lorsque vous travaillez avec des données de type long. En cas de troncation de données, l’application peut parfois allouer une mémoire tampon plus importante et extraire les données ; Cela n’est pas vrai dans tous les cas. Si une troncation se produit lors de l’obtention des données avec des appels à **SQLGetData**, l’application ne doive pas appeler **SQLGetData** pour les données qui ont déjà été retournées ; pour plus d’informations, consultez [obtention de données de type Long](../../../odbc/reference/develop-app/getting-long-data.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b3526d1aad0475cb487f9c1fba6822604286834
@@ -33,3 +34,4 @@ L’étape suivante consiste à extraire le nombre de lignes, comme indiqué dan
  Si l’instruction d’exécution à l’étape 3 a été un **mise à jour**, **supprimer**, ou **insérer** instruction, l’application récupère le nombre de lignes affectées avec **SQLRowCount**. Pour plus d’informations, consultez [déterminer le nombre de lignes affectées](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
  Maintenant, l’application retourne à l’étape 3 pour exécuter une autre instruction dans la même transaction ou passe à l’étape 5 pour valider ou annuler la transaction.
+

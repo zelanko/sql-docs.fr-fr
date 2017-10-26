@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aad9b74b9813c0526df87437999b66f27e95414
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|Le seul argument valide pour *szTableOwner* a la valeur NULL, car aucun des pilotes prend en charge les noms de propriétaire. Avec *szTableOwner* la valeur NULL, toutes les tables sont retournées. NULL est retourné dans la colonne TABLE_OWNER.|  
 |*szTableQualifier*|Lorsque Microsoft Excel 3.0 ou 4.0 pilote sert, si vous appelez **SQLTables** avec une valeur pour *szTableQualifier* qui n’est pas le nom d’une table existante, le pilote crée une table portant ce nom.<br /><br /> Dans la colonne TABLE_QUALIFIER, **SQLTables** retourne le chemin d’accès à un répertoire.|  
 |*SzTableType*|Pour Microsoft Excel 3.0 ou 4.0, « TABLE » est le seul type de table pris en charge.<br /><br /> Pour les versions ultérieures des fichiers Microsoft Excel, « TABLE système » est retournée pour les noms de feuille (tables avec un « $» à la fin) et « TABLE » est retournée pour les tables dans des feuilles de calcul.|
+

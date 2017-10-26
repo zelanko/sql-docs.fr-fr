@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e091bf31e034eaabb9c87931bc6b128f5bdeba84
@@ -28,3 +29,4 @@ Cette fonction peut récupérer des données à partir de n’importe quelle col
   
 > [!NOTE]  
 >  \*pcbValue dans **SQLGetData** peut retourner deux fois plus de caractères comme réellement disponibles lors de la liaison aux données ANSI plues de 510 caractères sur une base de données Jet 4.0. Les valeurs de caractères inférieur ou égal à 510 retournera le cbValue réel.
+

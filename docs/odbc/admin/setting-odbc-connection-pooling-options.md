@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
 |Pools créés|Le nombre de pools actives, y compris les pools actifs et supprimés. Ce compteur a été ajouté dans Windows 8, pour les pilotes qui gèrent les connexions dans le pool de connexions. Pour plus d’informations, consultez [le regroupement de connexions prenant en charge les pilotes](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
  Vous devez spécifier vos propres paramètres d’analyse. Exemples pour l’analyse des performances ont été inclus avec cette version d’ODBC.
+

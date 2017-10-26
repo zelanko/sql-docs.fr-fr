@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|Option de traduction.|  
 |TxnCap|2|""|A/N|Compatible avec la transaction. Si 0, le pilote signale qu’il ne prend pas en charge les transactions. La valeur 1, le pilote signale qu’il est capable d’effectuer des transactions.|  
 |UID|30|""|A/N|Nom d’utilisateur.|
+

@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ Validation ou la restauration d’une transaction a l’effet suivant sur les pl
  Les applications, en particulier sur un écran dans lequel l’utilisateur parcourt le jeu de résultats et les mises à jour ou supprime des lignes, doivent être prudent coder autour de ce comportement.  
   
  Pour déterminer le comportement d’une source de données lorsqu’une transaction est validée ou restaurée, une application appelle **SQLGetInfo** avec les options SQL_CURSOR_COMMIT_BEHAVIOR et SQL_CURSOR_ROLLBACK_BEHAVIOR.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 645ff6dc68fec7cf332face2fe53a43555887a48
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Si la bibliothèque de curseurs dans Microsoft® WindowsNT®/Windows2000 tente de cache des données dans un fichier temporaire dans le répertoire actif pendant l’exécution de l’application à partir d’un partage en lecture seule ou un disque compact (par exemple, un exemple de bibliothèque Microsoft Foundation Class), valeur SQLSTATE HY000 (général Error-Unable pour créer une mémoire tampon de fichier) est retourné.
+

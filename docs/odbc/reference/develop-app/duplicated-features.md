@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ ODBC 2 suivante. *x* fonctions ont été dupliquées par ODBC 3.* x* fonctions. 
   
 > [!NOTE]  
 >  La fonction **SQLBindParam** est un cas spécial. **SQLBindParam** est une fonctionnalité en double. Ce n’est pas un ODBC 2*.x* fonction, mais une fonction qui est présente dans les normes Open Group et ISO. La fonctionnalité fournie par cette fonction est entièrement utilisée par des **SQLBindParameter**. Par conséquent, le Gestionnaire de pilotes est mappé à un appel à **SQLBindParam** à **SQLBindParameter** lorsque le pilote sous-jacent est un ODBC 3.* x* pilote. Toutefois, lorsque le pilote sous-jacent est une API ODBC 2*.x* pilote, le Gestionnaire de pilotes n’effectue pas de ce mappage.
+

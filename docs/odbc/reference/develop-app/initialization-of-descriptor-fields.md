@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a42ff3940f5d1620c7ee310df24016dfa39a4cd
@@ -33,3 +34,4 @@ Lors de l’allocation de descripteur de ligne d’une application, ses champs r
  Le concept d’une valeur par défaut n’est pas valide pour les champs d’un IRD. Une application peut accéder aux champs d’un IRD uniquement s’il existe une instruction préparée ou exécutée associée.  
   
  Certains champs d’un IPD sont définies uniquement après que l’IPD a été rempli automatiquement par le pilote. Dans le cas contraire, ils ne sont pas définis. Ces champs sont SQL_DESC_CASE_SENSITIVE, SQL_DESC_FIXED_PREC_SCALE, SQL_DESC_TYPE_NAME, SQL_DESC_UNSIGNED et SQL_DESC_LOCAL_TYPE_NAME.
+

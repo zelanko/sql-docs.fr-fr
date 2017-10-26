@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  La bibliothèque de curseurs ne prend pas en charge la modification du champ SQL_DESC_BIND_TYPE dans un APD ou un ARD lorsqu’un curseur est ouvert. Le champ SQL_DESC_BIND_TYPE peut être modifié uniquement une fois que le curseur est fermé et avant l’ouverture d’un nouveau curseur. Les seuls champs de descripteur que la bibliothèque de curseurs prend en charge la modification lorsque le curseur est ouvert sont SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR et SQL_DESC_ROWS_PROCESSED_PTR.  
   
  La bibliothèque de curseurs ne prend pas en charge la modification du champ SQL_DESC_COUNT de la ARD après **SQLExtendedFetch** ou **SQLFetchScroll** a été appelée et avant que le curseur a été fermé.
+

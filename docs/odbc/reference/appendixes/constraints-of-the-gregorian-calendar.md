@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1b149b1e9df8338b5502d57e6e7eb355b66bcc3f
@@ -38,3 +39,4 @@ Types de données date et datetime et que les champs à droite de types de donn�
 -   Pour la fin du champ des secondes de types de données interval, la valeur du champ secondes doit être comprise entre 0 et 59,9 (*n*), inclusivement, où * n * est le nombre de chiffres de précision en fractions de seconde.  
   
 -   Pour la fin du champ des secondes de types de données datetime, la valeur du champ secondes doit être comprise entre 0 et 61.9 (*n*), inclusivement, où * n * Spécifie le nombre de chiffres « 9 » et la valeur de * n * précision en fractions de seconde. (La plage des secondes permet à deux secondes intercalaires maintenir la synchronisation de temps de sidereal.)
+

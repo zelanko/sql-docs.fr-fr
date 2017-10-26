@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Les fonctions de catalogue sont basées sur un modèle d’autorisation de type SQL dans laquelle une connexion est effectuée en fonction d’un nom d’utilisateur et un mot de passe, et uniquement les données pour laquelle l’utilisateur a un privilège qui sont retournées. Mot de passe de fichiers individuels, qui ne tient pas dans ce modèle, est définie par le pilote.  
   
  Les jeux de résultats retournés par les fonctions de catalogue sont presque jamais être mise à jour, et les applications ne doivent pas s’attendre à être en mesure de modifier la structure de la base de données en modifiant les données dans ces jeux de résultats.
+

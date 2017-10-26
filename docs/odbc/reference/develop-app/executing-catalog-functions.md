@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 489cd057a15e90794c71cfb433931cd9bc687016
@@ -30,3 +31,4 @@ Une fonction de catalogue crée un jeu de résultats, il est équivalent à l’
  Pour exécuter une fonction de catalogue, une application appelle simplement la fonction.  
   
  Pour plus d’informations sur les fonctions de catalogue, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).
+

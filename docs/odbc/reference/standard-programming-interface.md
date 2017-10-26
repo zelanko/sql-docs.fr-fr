@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 235d61849f28b29af7ec0b9ba67fe86b38bf8239
@@ -33,3 +34,4 @@ L’interface de programmation est peut-être le plus évident candidat pour la 
  L’une des exigences pour ODBC était qu’une seule application binaire devait travailler avec plusieurs SGBD. C’est pour cette raison que ODBC n’utilise pas les langues SQL ou le module incorporés. Bien que la langue dans les langues SQL et le module incorporés est normalisée, chacun est lié à precompilers des SGBD spécifiques. Par conséquent, les applications doivent être recompilées chaque SGBD et les fichiers binaires qui en résulte fonctionnent uniquement avec un SGBD unique. Bien que cela soit acceptable pour les applications dans des environnements de macroordinateur et de ses faible volume, il est interdit dans le monde de l’ordinateur personnel. Tout d’abord, il s’agit d’un cauchemar logistique pour fournir plusieurs versions de logiciels volumineux, emballées à des clients ; en second lieu, les applications doivent souvent accéder simultanément à plusieurs systèmes SGBD.  
   
  En revanche, une interface de niveau d’appel peut être implémentée par le biais des bibliothèques ou les pilotes de base de données qui résident sur chaque ordinateur local ; un autre pilote est requis pour chaque SGBD. Étant donné que les systèmes d’exploitation modernes peut charger ces bibliothèques (tels que les bibliothèques de liens dynamiques sur le système d’exploitation Microsoft® Windows®) au moment de l’exécution, une seule application peut accéder aux données à partir de différents SGBD sans recompilation et permettre également accéder aux données à partir de plusieurs bases de données simultanément. Comme les nouveaux pilotes de base de données deviennent disponibles, les utilisateurs peuvent installer uniquement ces sur leurs ordinateurs sans avoir à modifier, de recompiler ou de rétablir les liens de leurs applications de base de données. En outre, une interface de niveau d’appel est un bon candidat pour ODBC, car Windows : la plateforme pour laquelle ODBC a été initialement développé — déjà effectuées utilisent beaucoup de ces bibliothèques.
+

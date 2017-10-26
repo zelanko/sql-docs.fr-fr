@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ Une application spécifie le fichier de trace en définissant le **TraceFile** m
  Le fichier de trace fournit un journal de chaque appel de fonction ODBC avec les types de données et les valeurs de tous les arguments. Il enregistre l’entrée de toutes les fonctions et enregistre toutes les fonctions retournées avec les codes de retour et les États d’erreur.  
   
  Dans ODBC 3*.x*, les paramètres à des fonctions de connexion ne sont pas fournies à la DLL de trace.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd3e59437eae02a94353a6205e567fde208f4b97
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  Le pilote ODBC Visual FoxPro établit la distinction entre [tables de base de données](../../odbc/microsoft/visual-foxpro-terminology.md) et [libre tables](../../odbc/microsoft/visual-foxpro-terminology.md), même si les deux types de tables sont stockées dans le même répertoire sur votre système. Si votre source de données est un répertoire de tables indépendantes, le pilote ODBC Visual FoxPro ne pas de catalogue ou retourner les noms de toutes les tables qui sont associés à une base de données.  
   
  Pour plus d’informations, consultez [SQLTables](../../odbc/reference/syntax/sqltables-function.md) dans les *de référence du programmeur ODBC*.
+

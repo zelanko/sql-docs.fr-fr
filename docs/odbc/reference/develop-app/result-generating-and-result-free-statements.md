@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a99ea01cbd5a00ea4aa12e4b1461ca7f1ce9afa5
@@ -41,3 +42,4 @@ Instructions SQL peuvent être faiblement divisées en cinq catégories :
 -   **Instructions d’administration** il s’agit d’instructions SQL utilisées pour effectuer des tâches administratives dans une base de données. Par exemple, **GRANT** et **RÉVOQUER**.  
   
  Les instructions SQL dans les deux premières catégories sont désignés collectivement par *instructions de génération de résultat*. Instructions SQL dans les trois dernières catégories sont désignés collectivement par *instructions exempt résultat*. ODBC définit les sémantiques de lots contenant des instructions de génération uniquement de résultat. Ces sémantiques peuvent varier et sont donc spécifiques à la source de données. Par exemple, le pilote SQL Server ne prend pas en charge la suppression d’un objet, puis en faisant référence à ou recréer le même objet dans le même lot. Par conséquent, le terme *lot* dans ce manuel se réfère à des lots de générer des résultats instructions.
+

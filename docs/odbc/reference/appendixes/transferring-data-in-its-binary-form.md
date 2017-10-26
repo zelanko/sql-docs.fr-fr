@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c54b61ec668e9282d723e48f1c50d1005740ac1
@@ -34,3 +35,4 @@ Une application peut transférer en toute sécurité des données (sous la forme
 >  Les applications qui transfèrent des données (à l’exception des données binaires) de cette manière ne sont pas interopérables entre SGBD.  
   
  **SQLCopyDesc** peut être utilisé pour copier les liaisons de lignes de la source SGBD aux liaisons de paramètre dans le SGBD cible.
+

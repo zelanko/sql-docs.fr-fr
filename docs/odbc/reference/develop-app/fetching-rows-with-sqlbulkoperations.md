@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ Peuvent récupérer des données dans un ensemble de lignes à l’aide de signe
 4.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_FETCH_BY_BOOKMARK.  
   
  Il n’est pas nécessaire pour l’application pour utiliser le tableau d’opération de ligne pour empêcher l’opération à réaliser sur certaines colonnes. L’application sélectionne les lignes qu’il souhaite extraire en copiant uniquement les signets pour les lignes dans le tableau de signet lié.
+

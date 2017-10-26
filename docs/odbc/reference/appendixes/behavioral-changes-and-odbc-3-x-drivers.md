@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
@@ -52,3 +53,4 @@ L’attribut d’environnement SQL_ATTR_ODBC_VERSION indique au pilote si elle d
 -   [L’appel de SQLSetPos pour insérer des données](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
 -   [Chargement par Ordinal](../../../odbc/reference/appendixes/loading-by-ordinal.md)
+

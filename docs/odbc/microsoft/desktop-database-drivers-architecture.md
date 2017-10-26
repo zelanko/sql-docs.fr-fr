@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ Ces pilotes sont conçues pour utiliser Microsoft Windows 95 ou version ultérie
  Odbcjt32.dll implémente des fonctions API Microsoft Jet ODBC. Il n’est cependant pas de mappage direct entre les fonctions ODBC et Microsoft Jet. De nombreux facteurs, tels que les modèles de curseurs et le mappage de SQL, empêchent une corrélation directe des fonctions.  
   
  Le pilote ODBC se trouve entre le moteur Microsoft Jet et le Gestionnaire de pilotes ODBC. Certaines fonctions ODBC appelées par une application sont gérées par le Gestionnaire de pilotes et pas passées au pilote. Pour ces fonctions, Microsoft Jet voit jamais la fonction appeler car il ne dispose pas d’une connexion directe au Gestionnaire de pilote.
+

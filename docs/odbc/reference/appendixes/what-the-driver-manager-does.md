@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
@@ -42,3 +43,4 @@ Le tableau suivant résume comment la ODBC 3*.x* du Gestionnaire de pilotes mapp
 |**SQLFetchScroll**|Retourne l’ensemble de lignes spécifié. Détails d’implémentation sont les suivantes :<br /><br /> -Lorsqu’une application appelle **SQLFetchScroll** dans une API ODBC 2.* x* pilote, la version 3 ODBC*.x* du Gestionnaire de pilotes mappe à **SQLExtendedFetch**. Il utilise la valeur mise en cache de l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR pour le *RowStatusArray* argument et la valeur mise en cache de l’attribut d’instruction SQL_ATTR_ROWS_FETCHED_PTR pour le *RowCountPtr* argument. Si le *FetchOrientation* argument dans **SQLFetchScroll** est SQL_FETCH_BOOKMARK, il utilise la valeur mise en cache de l’attribut d’instruction SQL_ATTR_FETCH_BOOKMARK_PTR pour la *FetchOffset* argument et retourne une erreur si le *FetchOffset* argument de **SQLFetchScroll** est pas égal à 0.<br />-Lorsqu’une application appelle cela dans un ODBC 3*.x* pilote, la version 3 ODBC*.x* du Gestionnaire de pilotes passe l’appel au pilote.|  
 |**SQLSetPos**|Effectue des opérations positionnées différents. La version 3 ODBC*.x* du Gestionnaire de pilotes passe des appels à **SQLSetPos** au pilote, quelle que soit la version du pilote.|  
 |**SQLSetScrollOptions**|Lorsque le Gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application utilisant une ODBC 3*.x* pilote qui ne prend pas en charge **SQLSetScrollOptions**, le Gestionnaire de pilotes définit l’option d’instruction SQL_ROWSET_SIZE, pas l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE, à la *la RowsetSize* argument dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être utilisé uniquement lors de l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.|
+

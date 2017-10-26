@@ -22,6 +22,7 @@ caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aa5ed1fce3b03b601618e1b74b37b8d81895eccc
@@ -52,3 +53,4 @@ ms.lasthandoff: 06/22/2017
 1.  Sur le serveur de publication de la base de données de publication ou sur le serveur de distribution de la base de données de distribution, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Spécifiez la valeur **sync with backup** pour **@optname** et **false** pour **@value**.  
   
   
+

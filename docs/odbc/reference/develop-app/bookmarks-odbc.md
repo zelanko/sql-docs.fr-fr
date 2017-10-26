@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 791350c93e2570ad8615e5b378e9979870e02acf
@@ -40,3 +41,4 @@ Un signet est une valeur utilisée pour identifier une ligne de données. La sig
 -   [Mise à jour, la suppression ou l’extraction par le signet](../../../odbc/reference/develop-app/updating-deleting-or-fetching-by-bookmark.md)  
   
 -   [Comparaison des signets](../../../odbc/reference/develop-app/comparing-bookmarks.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41a1e5e42de608f1a67de40d8071af6d3b395f9
@@ -40,3 +41,4 @@ Les pilotes de base de données de bureau Microsoft ODBC prennent en charge les 
 |DAYOFWEEK|MONTH||  
   
  Pour plus d’informations sur les arguments et les valeurs de retour des fonctions scalaires, consultez l’annexe F de la *de référence du programmeur ODBC.*
+

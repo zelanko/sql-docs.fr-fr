@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f3348850a76bb831c236fd1c1ee49fb89b97504
@@ -35,3 +36,4 @@ Prend en charge par le pilote ODBC Visual FoxPro *concurrence en lecture seule*.
   
 ## <a name="row-versioning"></a>contrôle de version de ligne  
  Essentiellement timestamp prise en charge, dans la ligne qui les versions sont comparées au moment de la mise à jour.
+

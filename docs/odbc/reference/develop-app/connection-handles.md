@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ A *connexion* se compose d’un pilote et une source de données. Un handle de c
  Handles de connexion sont principalement utilisées lors de la connexion à la source de données (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**), déconnexion à partir de la source de données (**SQLDisconnect**), obtention d’informations sur la source de données et de pilote (**SQLGetInfo**), la récupération de diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**) et l’exécution de transactions (**SQLEndTran**). Ils sont également utilisées lors de la définition et l’obtention des attributs de connexion (**SQLSetConnectAttr** et **SQLGetConnectAttr**) et lors de l’obtention du format natif d’une instruction SQL (**SQLNativeSql**).  
   
  Handles de connexion sont allouées avec **SQLAllocHandle** et libérée avec **SQLFreeHandle**.
+

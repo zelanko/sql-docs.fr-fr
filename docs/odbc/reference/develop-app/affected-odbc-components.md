@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a316cf7760534530b5663782532ada9fd6990662
@@ -40,3 +41,4 @@ Compatibilité descendante décrit comment les applications, le Gestionnaire de 
   
 > [!NOTE]  
 >  Une application conforme aux normes, par exemple, une application qui a été écrit conformément aux normes Open Group ou ISO CLI — est garantie pour travailler avec un ODBC 3*.x* pilote par le biais du ODBC 3*.x* du Gestionnaire de pilotes. Il est supposé que la fonctionnalité à l’aide de l’application est disponible dans le pilote. Il est également supposé que l’application conforme aux normes a été compilée avec ODBC 3*.x* fichiers d’en-tête.
+

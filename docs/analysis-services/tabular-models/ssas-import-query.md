@@ -1,7 +1,7 @@
 ---
 title: "Importer des données à l’aide d’une requête native (Analysis Services) | Documents Microsoft"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importer des données à l’aide d’une requête native
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 Pour les modèles tabulaires 1400, la nouvelle expérience d’obtenir des données dans les projets Visual Studio Analysis Services fournit une flexibilité considérable dans la manière dont vous pouvez combiner vos données pendant l’importation. Cet article décrit la création d’une connexion à une source de données et puis en créant une requête SQL native pour spécifier l’importation de données.
 

@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39477161fd3eac02912fd371a873b94ea9f51828
@@ -60,3 +61,4 @@ Les rédacteurs de pilotes doivent être conscients que l’architecture du pilo
   
 ## <a name="see-also"></a>Voir aussi  
  [Développement d’un pilote ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 417603891bee2561c35485b09b6e52648c99cbb8
@@ -39,3 +40,4 @@ Les applications ODBC effectuent presque tous les accès de base de données en 
 -   [Exécution asynchrone (méthode de Notification)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [La libération d’un descripteur d’instruction](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)
+

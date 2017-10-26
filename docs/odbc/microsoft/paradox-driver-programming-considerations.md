@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0cca9bd8c08815c98a3aba6e9c92c3bfc9674e7e
@@ -39,3 +40,4 @@ Cette section contient les rubriques suivantes :
   
 > [!NOTE]  
 >  L’accès aux fichiers Paradox ISAM via les pilotes de base de données de bureau ODBC nécessite l’installation du moteur de base de données Borland.
+

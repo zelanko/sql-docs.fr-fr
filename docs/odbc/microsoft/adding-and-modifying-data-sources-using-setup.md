@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd665c63873ba8331290ddeae4ad91137ef1e3c7
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/09/2017
 3.  Modifiez les champs de source de données applicable, puis cliquez sur OK.  
   
  Lorsque vous avez terminé de modifier les informations contenues dans cette boîte de dialogue, l’administrateur ODBC met à jour les informations du Registre.
+

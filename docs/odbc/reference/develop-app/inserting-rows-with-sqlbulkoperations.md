@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ Insertion de données avec **SQLBulkOperations** est similaire à la mise à jou
 3.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_ADD.  
   
  Après avoir **SQLBulkOperations** est retournée, la ligne actuelle est inchangée. Si la signet colonne (0) est liée, **SQLBulkOperations** retourne les signets des lignes insérées dans la mémoire tampon d’ensemble de lignes est liées à cette colonne.
+

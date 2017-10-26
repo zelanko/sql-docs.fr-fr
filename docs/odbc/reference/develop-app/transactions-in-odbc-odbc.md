@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b3bc3d656d9083d4bcfc47365f294233bedc581
@@ -35,3 +36,4 @@ Les transactions dans ODBC sont exécutées au niveau de la connexion ; Autreme
 -   [Validation et annulation de Transactions](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)  
   
 -   [Effet des Transactions sur les curseurs et les instructions préparées](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)
+

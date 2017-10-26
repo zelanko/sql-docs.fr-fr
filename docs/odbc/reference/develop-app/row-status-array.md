@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ En plus des données, **SQLFetch** et **SQLFetchScroll** peut retourner un table
 |SQL_ROW_DELETED|La ligne a été supprimée depuis sa dernière extraction.|  
 |SQL_ROW_ADDED|La ligne a été insérée par **SQLBulkOperations**. Si la ligne est extraite à nouveau ou qu’il est actualisée par **SQLSetPos**, son état est SQL_ROW_SUCCESS.<br /><br /> Cette valeur n’est pas définie **SQLFetch** ou **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|L’ensemble de lignes avec chevauchement de la fin du jeu de résultats, et aucune ligne n’a été retourné qui correspondait à cet élément du tableau d’état de ligne.|
+

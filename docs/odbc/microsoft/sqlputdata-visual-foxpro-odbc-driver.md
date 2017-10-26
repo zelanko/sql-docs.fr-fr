@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b2e32b20ebf9ac5f4fdcded41df6e7d14f3bf3f9
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Permet à une application envoyer des données d’un paramètre ou une colonne pour le pilote au moment de l’exécution d’instruction.  
   
  Pour plus d’informations, consultez [SQLPutData](../../odbc/reference/syntax/sqlputdata-function.md) dans les *de référence du programmeur ODBC*.
+

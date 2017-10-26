@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ Les règles de cette section s’appliquent pour les conversions de littéraux n
          (2) le pilote arrondit la chaîne dans Y à une échelle appropriée (qui peut être pas également de zéro) et écrit le résultat dans CT  
   
          (3) le pilote ni tronque ni arrondit, mais copie tout simplement les premiers caractères LT de Y dans CT
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c08fab3b713e1f1a57d7a81f53ed29b1678893cd
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  Cette rubrique décrit l’utilisation de la **SQLSetEnvAttr** fonction avec la bibliothèque de curseurs. Pour des informations générales sur **SQLSetEnvAttr**, consultez [fonction SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md).  
   
  La bibliothèque de curseurs n’est pas affectée par le paramètre de l’attribut d’environnement SQL_ATTR_ODBC_VERSION, quelle que soit la version du pilote ou une version de l’application.
+

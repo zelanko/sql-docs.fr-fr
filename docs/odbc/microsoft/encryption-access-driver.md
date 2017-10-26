@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 991f555cb1cc1428b182b306e60c82703a33745d
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (Ce contrôle est disponible uniquement lorsque Version 4. *x* format est sélectionné.)  
   
  Avec la version de la version 4.0 du moteur de base de données Microsoft Jet, le chiffrement de base de données est autorisé lors de la création de bases de données Access. Consultez le *de référence du programmeur de moteur de base de données Jet* pour plus d’informations.
+

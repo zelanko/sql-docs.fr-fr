@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2545fba508ef3862834743ddaa8dd74183123b30
@@ -58,3 +59,4 @@ Cette rubrique répertorie les conditions requises pour utiliser les pilotes de 
 ## <a name="driver-specific-hardware-and-software-requirements"></a>Spécifiques au pilote matérielle et logicielle requise  
   
 -   Les dBASEdrivers MicrosoftAccess peuvent nécessiter des modifications dans les fichiers Autoexec.bat ou Config.sys.
+

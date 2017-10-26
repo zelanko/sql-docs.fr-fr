@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
@@ -60,3 +61,4 @@ Ensuite, la question est comment ODBC normaliser les accès de base de données�
      Afin qu’une application peut déterminer quelles fonctionnalités d’un pilote et SGBD prennent en charge, ODBC fournit deux fonctions (**SQLGetInfo** et **SQLGetFunctions**) qui retournent des informations générales sur le pilote et les fonctionnalités du SGBD et une liste des fonctions le pilote prend en charge. ODBC définit également des API et SQL grammaire niveaux de conformité, qui spécifient les grandes plages de fonctionnalités prises en charge par le pilote. Pour plus d’informations, consultez [niveaux de conformité](../../odbc/reference/develop-app/conformance-levels.md).  
   
      Il est important de se rappeler qu’ODBC définit une interface commune pour toutes les fonctionnalités qu’il expose. Pour cette raison, les applications contient du code spécifique à la fonctionnalité, pas de code propres au SGBD et peuvent utiliser les pilotes qui exposent ces fonctionnalités. Sont de l’un des avantages de ce que les applications n’avez pas besoin d’être mis à jour lorsque les fonctionnalités prises en charge par un SGBD ont été améliorées ; au lieu de cela, lorsqu’un pilote mis à jour est installé, l’application utilise automatiquement les fonctionnalités, car son code spécifique aux fonctions ni spécifiques au pilote ni propres au SGBD.
+

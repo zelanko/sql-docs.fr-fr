@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire 
 -   **Avertissements** enregistrements d’état qui décrivent les avertissements (classe 01) ont le rang le plus bas. Si deux ou plusieurs enregistrements décrivent la même condition d’avertissement, avertissement SQLSTATE définis par la spécification CLI de groupe ouvert outrank SQLSTATE définies par ODBC et définies par le pilote.  
   
  S’il existe deux ou plusieurs enregistrements avec le rang le plus élevé, il n’est pas l’enregistrement est le premier enregistrement. L’ordre de tous les autres enregistrements n’est pas défini. En particulier, étant donné que les avertissements peuvent apparaître avant les erreurs, les applications doivent vérifier tous les enregistrements d’état lorsqu’une fonction retourne une valeur autre que SQL_SUCCESS.
+

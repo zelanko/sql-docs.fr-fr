@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ Le tableau suivant indique le niveau de conformité de chaque attribut d’envir
  [2] pour la conformité d’interface de niveau 2, le pilote doit prendre en charge SQL_CONCUR_READ_ONLY et au moins une autre valeur.  
   
  [3] pour la conformité d’interface de niveau 1, le pilote doit prendre en charge SQL_CURSOR_FORWARD_ONLY et au moins une autre valeur. Pour la conformité d’interface de niveau 2, le pilote doit prendre en charge toutes les valeurs définies dans ce document.
+

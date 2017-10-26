@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ Dans ODBC 3. *x*, les identificateurs de date, heure et types de données timest
  [1] en raison de cela, un ODBC 3. *x* application utilisant une API ODBC 2.* x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.  
   
  [2] en raison de cela, un ODBC 3. *x* application utilisant une ODBC 3.* x* pilote peut utiliser les codes de date, heure ou timestamp renvoyés dans les jeux de résultats retournés par les fonctions de catalogue.
+

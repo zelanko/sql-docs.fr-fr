@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Identificateurs entre guillemets sont utilisés pour distinguer un nom de colonne true une pseudo-colonne du même nom, tels que le ROWID dans Oracle. Si « ROWID » est passée dans un argument d’une fonction de catalogue, la fonction fonctionnera avec la pseudo-colonne ROWID si elle existe. Si la colonne pseudo-aléatoire n’existe pas, la fonction fonctionnera avec la colonne « ROWID ». Si le ROWID est passée dans un argument d’une fonction de catalogue, la fonction fonctionnera avec la colonne de ligne ROWID.  
   
  Pour plus d’informations sur les identificateurs entre guillemets, consultez [identificateurs entre guillemets](../../../odbc/reference/develop-app/quoted-identifiers.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [Niveau 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conformité fournit les fonctionnalités de l’Interface de niveau de base, ainsi que d’autres fonctionnalités telles que les transactions.  
   
 -   [Niveau 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) conformité fournit les fonctionnalités de niveau 1 ainsi que d’autres fonctionnalités telles que les signets, les paramètres dynamiques et l’exécution asynchrone de fonctions ODBC.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
@@ -40,3 +41,4 @@ ODBC définit une séquence d’échappement standard pour l’exécution de pro
     -   Appelle la procédure dans la source de données et l’envoie les valeurs de paramètre converti. Comment le pilote appelle la procédure est spécifique au pilote. Par exemple, il peut modifier l’instruction SQL pour utiliser la grammaire SQL de la source de données et d’envoyer cette instruction pour l’exécution, ou il peut appeler la procédure directement à l’aide d’un mécanisme d’appel de procédure distante (RPC) qui est défini dans le protocole de flux de données du SGBD.  
   
     -   Retourne les valeurs de toutes les entrées/sorties ou paramètres de sortie ou la valeur de retour de procédure, en supposant que la procédure réussit. Ces valeurs ne soient pas disponibles tant qu’après le traitement de tous les autres résultats (nombre de lignes et de jeux de résultats) générés par la procédure. Si la procédure échoue, le pilote retourne toutes les erreurs.
+

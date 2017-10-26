@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
@@ -33,3 +34,4 @@ Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de bas
  Un problème similaire confrontée à des éditeurs de logiciels indépendants (ISV). Éditeurs de logiciel de base de données pour mini-ordinateurs et grands systèmes d’écriture ont été généralement contraints d’écrire une seule version d’une application pour chaque SGBD ou écrire du code de propres au SGBD pour chaque SGBD qu’ils veulent accéder. Écriture de logiciels pour ordinateurs personnels des fournisseurs eu à écrire des routines d’accès aux données pour chaque SGBD différent avec lequel ils voulaient utiliser. Cela signifie souvent une grande quantité de ressources ont été passé à l’écriture et la gestion d’accès aux données routines plutôt que les applications et les applications ont été vendues souvent pas sur leur qualité, mais si elles Impossible d’accès aux données dans un SGBD donné.  
   
  Si nécessaire par les deux ensembles de développeurs était un moyen d’accéder aux données dans le SGBD différents. Le groupe de macroordinateur et ses besoin d’une méthode pour fusionner les données de SGBD différents dans une application unique, alors que le groupe d’ordinateurs personnels si nécessaire, cette possibilité, ainsi que d’écrire une application unique qui est indépendante de tout un SGBD. En bref, les deux groupes nécessaires un moyen interopérable pour accéder aux données ; ils nécessitent ouvrir la connectivité de base de données.
+

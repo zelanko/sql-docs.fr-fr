@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 17a82974d8531d0524f4bac89701d6c97a05198d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Permet à une application spécifier plusieurs valeurs pour l’ensemble de paramètres affectés par [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md). La possibilité de spécifier plusieurs valeurs pour un ensemble de paramètres est utile pour les insertions en bloc et d’autres tâches qui nécessite que la source de données pour traiter la même instruction SQL plusieurs fois avec différentes valeurs de paramètre. Par exemple, une application peut spécifier trois jeux de valeurs pour le jeu de paramètres associés à un **insérer** instruction, puis exécutez le **insérer** instruction une fois pour effectuer les trois opérations d’insertion.  
   
  Pour plus d’informations, consultez [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md) dans les *de référence du programmeur ODBC*.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
@@ -37,3 +38,4 @@ Applications utilisent les données du catalogue de plusieurs façons. Voici que
      Ces environnements peuvent également utiliser **SQLTables** et **SQLColumns** pour créer des listes à partir de laquelle le programmeur peut effectuer des sélections. Ces environnements peuvent également utiliser **SQLPrimaryKeys** et **SQLForeignKeys** à déterminer automatiquement et afficher les relations entre les tables sélectionnées et utilisez **SQLStatistics** pour déterminer et mettre en surbrillance les champs indexés afin que le programmeur puisse créer des requêtes efficaces.  
   
 -   **Les curseurs à construire.** Une application, un pilote ou un intergiciel (middleware) qui fournit un moteur de curseur de défilement utilise **SQLSpecialColumns** pour déterminer l’ou les colonnes qui identifient une ligne. Le programme peut générer un *keyset* contenant les valeurs de ces colonnes pour chaque ligne qui a été extrait. Lorsque l’application fait défiler vers la ligne, il est ensuite utiliser ces valeurs pour extraire les données les plus récentes pour la ligne. Pour plus d’informations sur les curseurs de défilement et des jeux de clés, consultez [curseurs permettant le défilement](../../../odbc/reference/develop-app/scrollable-cursors.md).
+

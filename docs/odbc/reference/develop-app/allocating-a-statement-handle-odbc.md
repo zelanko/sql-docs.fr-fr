@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96868755475c6fd72b2dd977375fbe0d88c22df
@@ -44,3 +45,4 @@ Avant de l’application peut exécuter une instruction, elle doit allouer un de
 4.  Le Gestionnaire de pilotes retourne le handle d’instruction du Gestionnaire de pilotes à l’application dans la variable d’application.  
   
  Le handle d’instruction identifie l’instruction à utiliser lors de l’appel de fonctions ODBC. Pour plus d’informations sur les descripteurs d’instruction, consultez [descripteurs d’instruction](../../../odbc/reference/develop-app/statement-handles.md).
+

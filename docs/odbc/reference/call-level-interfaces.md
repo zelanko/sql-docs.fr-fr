@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ La dernière technique pour l’envoi d’instructions SQL au SGBD est via une i
 3.  Si l’instruction est une instruction SELECT, l’application appelle une fonction CLI pour retourner les résultats dans les mémoires tampon d’application. En règle générale, cette fonction retourne une ligne ou une colonne de données à la fois.  
   
 4.  L’application appelle une fonction CLI pour vous déconnecter du SGBD.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
@@ -40,3 +41,4 @@ Le *du Gestionnaire de pilotes* est une bibliothèque qui gère la communication
  Le rôle principal final du Gestionnaire de pilotes est le chargement et déchargement de pilotes. L’application charge et décharge uniquement le Gestionnaire de pilotes. Quand il souhaite utiliser un pilote spécifique, il appelle une fonction de connexion (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**) dans le Gestionnaire de pilotes et spécifie le nom de source de données particulière ou de pilote, tels que « Comptabilité » ou « SQL Server ». À l’aide de ce nom, le Gestionnaire de pilote recherche les informations de source de données pour le nom de fichier du pilote, telles que Sqlsrvr.dll. Il charge le pilote (en supposant qu’il n’est pas déjà chargé), stocke l’adresse de chaque fonction dans le pilote et appelle la fonction de connexion dans le pilote, puis s’initialise et se connecte à la source de données.  
   
  Lorsque l’application est terminée à l’aide du pilote, il appelle **SQLDisconnect** dans le Gestionnaire de pilotes. Le Gestionnaire de pilotes appelle cette fonction dans le pilote, se déconnecte de la source de données. Toutefois, le Gestionnaire de pilotes conserve le pilote en mémoire dans le cas où l’application se reconnecte à celui-ci. Il décharge le pilote uniquement lorsque l’application libère la connexion utilisée par le pilote utilise la connexion pour un autre pilote, et aucune autre connexion n’utilisent le pilote. Pour obtenir une description complète du rôle de gestionnaire de pilotes dans le chargement et déchargement de pilotes, consultez [rôle du Gestionnaire de pilotes dans le processus de connexion](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
+

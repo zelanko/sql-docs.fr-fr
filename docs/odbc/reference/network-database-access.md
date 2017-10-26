@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
@@ -43,3 +44,4 @@ L’accès à une base de données sur un réseau requiert un nombre de composan
 -   **Mécanisme de Communication d’interprocessus** le mécanisme de communication interprocessus (IPC) est le processus par lequel un processus communique avec un autre. Exemples DECnet sockets, sockets TCP/IP et canaux nommés. Le choix du mécanisme IPC est limité par le système d’exploitation et le réseau utilisé.  
   
 -   **Protocole réseau** le protocole de réseau est utilisé pour transporter le flux de données sur un réseau. Il peut être considéré comme la structure que prend en charge les mécanismes IPC permettant d’implémenter les données de flux du protocole, ainsi que les opérations de réseau de base telles que les transferts de fichiers de prise en charge et de partage d’impression. Protocoles réseau incluent NetBEUI, TCP/IP, DECnet et SPX/IPX et sont spécifiques à chaque réseau.
+

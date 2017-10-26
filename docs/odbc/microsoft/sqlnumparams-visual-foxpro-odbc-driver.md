@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dde6591396630690960d517be646039f893d821e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Retourne le nombre de paramètres dans une instruction SQL. Le nombre de paramètres doit égal au nombre de points d’interrogation dans l’instruction SQL transmise à [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   
  Pour plus d’informations sur la grammaire SQL, consultez [prise en charge de grammaire de SQL ODBC](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md). Pour plus d’informations sur cette fonction, consultez [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) dans les *de référence du programmeur ODBC*.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
@@ -31,3 +32,4 @@ Dans la plupart des cas, les programmeurs d’applications savent si les instruc
  L’application peut appeler **SQLNumResultCols** à tout moment après l’instruction est préparée ou exécutée. Toutefois, étant donné que certaines sources de données ne peut pas décrire facilement les jeux de résultats qui seront créés par les instructions préparées, performances en souffriront si **SQLNumResultCols** est appelée après une instruction est préparée mais avant son exécution.  
   
  Certaines sources de données prennent également en charge la détermination du nombre de lignes qui une instruction SQL retourne un jeu de résultats. Pour ce faire, l’application appelle **SQLRowCount**. Exactement ce que représente le nombre de lignes est indiqué par le paramètre de l’option SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 ou SQL_STATIC_CURSOR_ATTRIBUTES2 (selon le type du curseur) retourné par un appel à **SQLGetInfo**. Ce masque de bits indique pour chaque type de curseur si le nombre de lignes retourné est exacte et approximative ou n’est pas du tout disponible. Si le nombre de lignes pour statique ou les curseurs pilotés par jeu de clés sont affectées par les modifications apportées dans **SQLBulkOperations** ou **SQLSetPos**, ou par mise à jour positionnée ou les instructions delete, dépend des autres bits retournés par les mêmes arguments option répertoriées précédemment. Pour plus d’informations, consultez la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description de fonction.
+

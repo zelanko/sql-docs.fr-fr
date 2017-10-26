@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
@@ -34,3 +35,4 @@ Le pilote ODBC Visual FoxPro est thread-safe. Accès aux handles d’environneme
  Le pilote utilise un thread séparé pour extraire des données lorsque vous utilisez l’extraction de progressif. Pour utiliser l’extraction progressive pour une source de données, sélectionnez le **extraire les données en arrière-plan** case à cocher sur la [boîte de dialogue d’installation de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) ou utilisez le mot clé d’attribut BackgroundFetch dans votre chaîne de connexion. Évitez d’utiliser l’extraction en arrière-plan lorsque vous appelez le pilote à partir d’applications multithreads. Pour plus d’informations sur les mots clés attribut de chaîne de connexion, consultez [à l’aide de chaînes de connexion](../../odbc/microsoft/using-connection-strings.md).  
   
  Pour plus d’informations sur les threads et **SQLCancel**, consultez [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) dans les *de référence du programmeur ODBC*.
+

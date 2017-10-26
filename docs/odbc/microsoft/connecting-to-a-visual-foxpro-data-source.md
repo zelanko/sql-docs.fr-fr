@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26d4afc99e13e8abd5579a01b461eb6df2a05571
@@ -32,3 +33,4 @@ Vous pouvez vous connecter à une source de données Visual FoxPro à l’aide d
 |Microsoft Access, Microsoft Excel ou Microsoft Word|[L’accès aux données Visual FoxPro à partir de Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
 |Votre application C ou C++|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
 |Votre application Visual Basic|[À l’aide du pilote ODBC Visual FoxPro avec votre Application Visual Basic](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|
+

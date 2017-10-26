@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fcc680ec815afa700c00c9d8a69c5826944153a4
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  Cette rubrique décrit l’utilisation de la **SQLCloseCursor** fonction dans la bibliothèque de curseurs. Pour des informations générales sur **SQLCloseCursor**, consultez [SQLCloseCursor, fonction](../../../odbc/reference/syntax/sqlclosecursor-function.md).  
   
  La bibliothèque de curseurs ne prend pas en charge l’appel **SQLCloseCursor** sans un curseur ouvert. Cette tentative retourne SQLSTATE 24000 (état de curseur non valide). Appel de **SQLFreeStmt** avec un *Option* de SQL_CLOSE lorsque aucun curseur n’est ouvert est pris en charge par la bibliothèque de curseurs.
+

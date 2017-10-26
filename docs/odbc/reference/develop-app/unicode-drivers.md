@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52afd6864229173b699df74410349b0cac482c98
@@ -36,3 +37,4 @@ Si un pilote doit être un pilote Unicode ou un pilote de ANSI dépend entièrem
   
 > [!NOTE]  
 >  Lorsque vous déterminez le type de pilote, le Gestionnaire de pilotes appellera **SQLSetConnectAttr** et définir l’attribut SQL_ATTR_ANSI_APP au moment de la connexion. Si l’application est à l’aide des API ANSI, SQL_ATTR_ANSI_APP est fixé à SQL_AA_TRUE, et si elle est à l’aide d’Unicode, elle sera définie sur la valeur SQL_AA_FALSE. Cet attribut est utilisé afin que le pilote peut présenter un comportement différent selon le type d’application. L’attribut ne peut pas être définie directement par l’application, et il n’est pas pris en charge par **SQLGetConnectAttr**. Si un pilote présente le même comportement pour les applications ANSI et Unicode, elle doit retourner SQL_ERROR pour cet attribut. Si le pilote retourne SQL_SUCCESS, le Gestionnaire de pilotes séparer les connexions ANSI et Unicode lorsque le regroupement de connexions est utilisé.
+

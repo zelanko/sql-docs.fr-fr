@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93218b72a5522e4c8bff047a16e0f7441b54930d
@@ -34,3 +35,4 @@ Le processus d’extraction de lignes du jeu de résultats et les retourner à l
 -   [Extraction d’une ligne de données](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)  
   
 -   [Obtention de données de type Long](../../../odbc/reference/develop-app/getting-long-data.md)
+

@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ La première tâche pour une application ODBC consiste à charger le Gestionnair
  Lorsque **SQLFreeHandle** est appelée, les versions de pilote la structure utilisée pour stocker des informations sur l’environnement. Notez que **SQLFreeHandle** ne peut pas être appelée pour un handle d’environnement jusqu'à ce qu’une fois que tous les handles de connexion sur le handle d’environnement ont été libérées.  
   
  Pour plus d’informations sur le handle d’environnement, consultez [environnement gère](../../../odbc/reference/develop-app/environment-handles.md).
+

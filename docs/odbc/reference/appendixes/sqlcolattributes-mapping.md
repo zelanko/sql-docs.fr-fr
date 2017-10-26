@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d21d1a9a9565ad2c0accbebb716d0b24f18f854d
@@ -37,3 +38,4 @@ Lorsqu’une application appelle **SQLColAttributes** via un ODBC 3*.x* pilote, 
  Un ODBC 3*.x* pilote doit prendre en charge tous les ODBC 3*.x* *FieldIdentifiers* répertoriés pour **SQLColAttribute**.  
   
  Un ODBC 3*.x* pilote doit prendre en charge SQL_COLUMN_PRECISION et SQL_DESC_PRECISION, SQL_COLUMN_SCALE et SQL_DESC_SCALE et SQL_COLUMN_LENGTH et SQL_DESC_LENGTH. Ces valeurs sont différentes, car la précision, échelle et longueur sont définis différemment dans ODBC 3*.x* qu’ils étaient dans ODBC 2.* x*. Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) annexe d : Types de données.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ddd78f90927378fd0a7f8dbd78a5c66abb01f4a
@@ -29,3 +30,4 @@ Un index unique est retourné (le cas échéant) pour l’indicateur SQL_BEST_RO
  Tous les ID de ligne ont une portée de SQL_SCOPE_CURROW.  
   
  Recherche de correspondance n’est pas prise en charge pour une le *szTableQualifier* ou *szTableName* argument.
+

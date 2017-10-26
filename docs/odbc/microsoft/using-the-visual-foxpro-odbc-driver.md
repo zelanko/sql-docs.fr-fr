@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c9392f5ccc17497b6f2c185b22d7cdd9c4873120
@@ -42,3 +43,4 @@ Dans cette section, les rubriques suivantes expliquent comment utiliser le pilot
 -   [À l’aide du pilote ODBC Visual FoxPro avec votre C ou d’une Application C++](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [L’accès aux données Visual FoxPro à partir de Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)
+

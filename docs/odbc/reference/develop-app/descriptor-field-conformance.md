@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
@@ -80,3 +81,4 @@ Le tableau suivant indique le niveau de conformité de chaque champ d’en-tête
  [1] prise en charge pour ces champs d’enregistrement est requis uniquement si le pilote prend en charge les types de données applicable.  
   
  [2] pour la mise en conformité au niveau du noyau, le pilote doit prendre en charge SQL_PARAM_INPUT. Pour la conformité d’interface de niveau 2, le pilote doit également prendre en charge SQL_PARAM_INPUT_OUTPUT et SQL_PARAM_OUTPUT.
+

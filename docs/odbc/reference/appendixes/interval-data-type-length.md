@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ Les règles suivantes sont utilisées pour déterminer la longueur d’un type d
 -   Un, plus la précision en secondes expresse ou implicite. Si la précision en secondes n’est pas spécifiée, la valeur par défaut est 6.  
   
  Valeurs de longueur de colonne spécifique pour chaque type de données d’intervalle sont contenues dans [taille de la colonne](../../../odbc/reference/appendixes/column-size.md).
+

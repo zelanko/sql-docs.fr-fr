@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6eb418fd3c116745ada1034ae8526a7455b1343
@@ -31,3 +32,4 @@ Les fichiers de pilote ODBC sont requis par chaque composant de ODBC Desktop Dat
  Certains fichiers sont requis par plusieurs composants. Ces fichiers doivent être redistribués si vous souhaitez redistribuer tous les pilotes de base de données de bureau ODBC avec vos applications commerciales.  
   
  Ces fichiers sont installés dans le répertoire \Windows\System pour Windows 95 ou version ultérieure, ou dans le répertoire \Windows\System32 pour Windows NT 3.51 ou version ultérieure et Windows 2000. Si les fichiers ODBC ont été précédemment installés dans un répertoire différent, assurez-vous que vous utilisez le répertoire des fichiers \Windows\System (ou System32) plus récente.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Détermine si plusieurs résultats sont en attente sur un descripteur d’instruction, *hstmt*, contenant des instructions SELECT, UPDATE, INSERT ou DELETE et si tel est le cas, initialise le traitement de ces résultats.  
   
  Pour plus d’informations, consultez [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) dans les *de référence du programmeur ODBC*.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Retourne un entier de 32 bits spécifiant la position de la ligne actuelle dans le jeu de résultats. Obtenir uniquement ; Impossible de définir.|  
 |SQL_ROWSET_SIZE|Ne peut pas dépasser 4 294 967 296 lignes ; Toutefois, vous devez disposer de suffisamment de mémoire virtuelle sur votre ordinateur pour traiter votre demande.|  
 |SQL_USE_BOOKMARKS|Prend en charge la définition de SQL_USE_BOOKMARKS à SQL_UB_ON et expose des signets de longueur fixe.|
+

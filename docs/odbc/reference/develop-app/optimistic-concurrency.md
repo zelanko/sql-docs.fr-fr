@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  Si l’application elle-même implémente l’accès concurrentiel optimiste, il définit l’attribut d’instruction SQL_ATTR_CONCURRENCY à SQL_CONCUR_READ_ONLY pour lire une ligne. Si elle compare les versions de ligne et que vous ne connaissez pas la colonne de version de ligne, il appelle **SQLSpecialColumns** avec l’option SQL_ROWVER pour déterminer le nom de cette colonne.  
   
  L’application met à jour ou supprime la ligne en augmentant la concurrence pour SQL_CONCUR_LOCK (pour accéder en écriture à la ligne) et l’exécution d’une **mise à jour** ou **supprimer** instruction avec un **où** clause qui spécifie la version ou les valeurs de la ligne avait lors de l’application de la lecture. Si la ligne a changé depuis, l’instruction échoue. Si le **où** clause n’identifie pas la ligne, l’instruction peut également mettre à jour ou supprimer des autres lignes ; les versions de ligne soit toujours identifient des lignes, mais les valeurs de ligne identifient lignes uniquement si elles incluent la clé primaire.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d80f7e70915c11a3a45f90d2821b9c1bd137d9dd
@@ -31,3 +32,4 @@ Le suivi peut être activé dans le code suivant trois façons :
 -   Appelez **SQLSetConnectAttr** pour définir l’attribut de connexion SQL_ATTR_TRACE à SQL_OPT_TRACE_ON. Cela active ou désactive le suivi pour la durée de la connexion. Pour plus d’informations, consultez la [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) description de fonction.  
   
 -   Utilisez **ODBCSharedTraceFlag** pour activer ou désactiver le traçage dynamiquement. (Pour plus d’informations, consultez la rubrique suivante, [suivi dynamique](../../../odbc/reference/develop-app/dynamic-tracing.md).)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b195ca1dbb138b21fcf107150832288df8317196
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  La bibliothèque de curseurs ne prend pas en charge les opérations SQL_UPDATE et SQL_DELETE dans un appel à **SQLSetPos**. Le curseur bibliothèque met en œuvre un positionnées mettre à jour ou supprimez l’instruction SQL en créant une recherche mettre à jour ou supprimez l’instruction avec une clause WHERE qui énumère les valeurs stockées dans son cache pour chaque colonne dépendante. Pour plus d’informations, consultez [traitement positionné instructions Update et Delete](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
   
  Si le pilote ne prend pas en charge les curseurs statiques, une application utilisant la bibliothèque de curseurs doit appeler **SQLSetPos** uniquement sur un ensemble de lignes extraite en **SQLExtendedFetch** ou **SQLFetchScroll**, et non par **SQLFetch**. La bibliothèque de curseurs implémente **SQLExtendedFetch** et **SQLFetchScroll** en effectuant des appels répétés de **SQLFetch** (avec une taille d’ensemble de lignes de 1) dans le pilote. La bibliothèque de curseurs passe des appels à **SQLFetch**, et sur l’autre par ailleurs, par le biais du pilote. Si **SQLSetPos** est appelée sur un ensemble de lignes de plusieurs ligne extraite en **SQLFetch** lorsque le pilote ne prend pas en charge les curseurs statiques, l’appel échoue car **SQLSetPos** ne fonctionne pas avec les curseurs avant uniquement. Cela se produit même si une application a été appelé **SQLSetStmtAttr** à la valeur SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, qui prend en charge de la bibliothèque de curseurs même si le pilote ne prend pas en charge les curseurs statiques.
+

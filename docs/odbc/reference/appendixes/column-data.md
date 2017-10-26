@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 >  La bibliothèque de curseurs ne met pas à jour son cache pour une colonne si **StrLen_or_IndPtr* dans l’ensemble de lignes correspondante mémoire tampon est SQL_DATA_AT_EXEC ou le résultat de la macro SQL_LEN_DATA_AT_EXEC.  
   
  Lorsqu’il met à jour une colonne, une source vide-remplit caractères de longueur fixe de données et les données binaires de longueur fixe remplit de zéro si nécessaire. Par exemple, une source de données stocke « Smith » dans une colonne char (10) en tant que « Smith ». La bibliothèque de curseurs n’effectue pas blancs ou zéro-remplissage des données dans les mémoires tampons de lignes lorsqu’il copie ces données à son cache après l’exécution d’une instruction de mise à jour positionnée. Par conséquent, si une application requiert que les valeurs dans le cache de la bibliothèque de curseurs sont complétées par des blancs ou de zéros, il doit blancs ou remplissage de zéro les valeurs dans les tampons de l’ensemble de lignes avant d’exécuter une instruction de mise à jour positionnée.
+

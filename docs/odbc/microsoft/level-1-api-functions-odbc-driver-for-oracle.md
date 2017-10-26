@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Récupère le jeu optimal de colonnes qui identifie de façon unique une ligne dans la table.|  
 |**SQLStatistics**|Récupère une liste des statistiques sur une seule table et les index ou les noms de balise associés à la table. Le pilote retourne les informations comme jeu de résultats.|  
 |**SQLTables**|Retourne la liste des noms de table spécifié par le paramètre dans le **SQLTables** instruction. Si aucun paramètre n’est spécifié, retourne les noms de table stockées dans la source de données actuelle. Le pilote retourne les informations comme jeu de résultats.<br /><br /> Appels de type énumération ne reçoivent pas une entrée de jeu de résultats pour des vues paramétrées locales ou distant. Toutefois, un appel à **SQLTables** avec une table unique spécificateur de nom trouver une correspondance pour cette vue, le cas échéant, portant ce nom ; Cela permet à l’API de recherche de conflits de nom avant la création d’une nouvelle table.<br /><br /> Synonymes publiques sont retournées avec la valeur TABLE_OWNER « ».<br /><br /> VUES appartenant à SYS ou système sont identifiés en tant que vue système.|
+

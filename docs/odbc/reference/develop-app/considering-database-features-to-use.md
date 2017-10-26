@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
@@ -51,3 +52,4 @@ Une fois le niveau de base d’interopérabilité est connu, les fonctionnalité
 -   **Prend en charge plusieurs requêtes uniquement si le pilote ne.** Après la connexion à un pilote, l’application vérifie le nombre d’instructions actives. L’application permet à l’utilisateur démarrer une nouvelle instruction lorsque l’une est déjà active uniquement si le pilote prend en charge plusieurs instructions actives. L’application a des fonctionnalités plus élevées et interopérabilité, mais est plus difficile à implémenter.  
   
 -   **Toujours prendre en charge plusieurs requêtes et émuler les lorsque cela est nécessaire.** Après la connexion à un pilote, l’application vérifie le nombre d’instructions actives. Toujours l’application permet à l’utilisateur démarrer une nouvelle instruction lorsque l’une est déjà active. Si le pilote prend en charge qu’une seule instruction active, l’application ouvre une connexion supplémentaire à ce pilote et exécute l’instruction de nouveau sur cette connexion. L’application a toutes les fonctionnalités et l’interopérabilité haute mais est plus difficile à implémenter.
+

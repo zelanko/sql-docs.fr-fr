@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4b7b0b2282d287f012272e9d34a4fbf3e23f7e0
@@ -31,3 +32,4 @@ Le degré de prise en charge des transactions est définie par le pilote. ODBC e
  Si le pilote ne prend pas en charge les transactions, mais que l’application a la possibilité (à l’aide d’une API que ODBC) pour verrouiller et déverrouiller des données, les applications peuvent obtenir prise en charge de la transaction par verrouillage et déverrouillage des enregistrements et les tables en fonction des besoins. Pour implémenter l’exemple de transfert de compte, l’application serait verrouiller les enregistrements pour les deux comptes, copier les valeurs actuelles, le premier compte de débit, le deuxième compte du crédit et déverrouiller les enregistrements. En cas d’échec de toutes les étapes, l’application serait réinitialiser les comptes à l’aide de la copie.  
   
  Sources même les données qui prennent en charge des transactions n’est peut-être pas en mesure de prendre en charge de plusieurs transactions à la fois dans un environnement particulier. Appel d’applications **SQLGetInfo** avec l’option SQL_MULTIPLE_ACTIVE_TXN pour déterminer si une source de données peut prendre en charge les transactions actives simultanées sur plusieurs connexions dans le même environnement. Étant donné qu’une seule transaction par connexion, cela n’est plus intéressant pour les applications qui ont plusieurs connexions à la même source de données.
+

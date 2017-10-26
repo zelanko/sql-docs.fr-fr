@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Cette instruction crée un deuxième jeu de résultats, le premier ensemble de lignes qui est l’ensemble de lignes suivant dans le jeu de résultats d’origine : dans ce cas, l’ensemble de lignes dans la table Customers. Le curseur retourne cet ensemble de lignes à l’application.  
   
  Il est intéressant de noter qu’un curseur dynamique est implémenté de cette manière crée plusieurs jeux de résultats, qui permet de détecter des modifications au jeu de résultats d’origine. L’application jamais apprend l’existence de ces jeux de résultats auxiliaire ; Il s’affiche simplement comme si le curseur est en mesure de détecter les modifications apportées à l’ensemble de résultats d’origine.
+

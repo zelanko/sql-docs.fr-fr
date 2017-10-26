@@ -21,6 +21,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Retourne une liste des procédures dans la source de données. Pour les procédures de packages, la colonne nom de la procédure est en *packagename.procedurename* format.<br /><br /> Étant donné que Oracle ne fournit pas de permet de distinguer les procédures de packages à partir de fonctions empaquetées, le pilote retourne SQL_PT_UNKNOWN pour la colonne PROCEDURE_TYPE.|  
 |**SQLSetPos**|Définit la position du curseur dans un ensemble de lignes. Vous pouvez utiliser **SQLSetPos** avec **SQLGetData** pour extraire des lignes à partir des colonnes indépendantes après le curseur sur une ligne spécifique dans l’ensemble de lignes. Lignes ajoutées dans le jeu de résultats *fOption* SQL_ADD sont ajoutés après la dernière ligne du jeu de résultats.|  
 |**SQLSetScrollOptions**|Définit les options qui contrôlent le comportement des curseurs associé à un descripteur d’instruction, hstmt. Pour plus d’informations, consultez [Type de curseur et les combinaisons d’accès concurrentiel](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
+

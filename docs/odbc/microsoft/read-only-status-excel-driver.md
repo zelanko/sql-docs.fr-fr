@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 641c6b6324ccb0f12cb5b28bd25b06dc0fcc5029
@@ -30,3 +31,4 @@ Lorsque le pilote Microsoft Excel est utilisé, les tables de source de données
  Lorsqu’une application exécute une commande Enregistrer en tant que données de Microsoft Excel via le pilote Microsoft Excel, l’application doit créer une table et insérez les données à enregistrer dans la nouvelle table. Insertions entraîner un ajout à la table. Aucune autre opération ne peut être effectuée sur la table jusqu'à ce qu’elle est fermée et rouverte. Une fois que la table est fermée, aucune insertion ultérieure ne peut être effectuée, car la table est ensuite une table en lecture seule.  
   
  Il est possible de mettre à jour les valeurs lorsque vous utilisez le pilote Microsoft Excel, mais une ligne ne peut pas être supprimée à partir d’une table basée sur une feuille de calcul Microsoft Excel, les mises à jour sont considérées comme pas officiellement pris en charge par le pilote Microsoft Excel.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 637439dfbf7d9d787253d95734996923739df023
@@ -54,3 +55,4 @@ Cette section de la documentation du pilote ODBC Visual FoxPro contient les rubr
 -   [Messages d’erreur](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)  
   
 -   [Dépannage](../../odbc/microsoft/troubleshooting-visual-foxpro-odbc-driver.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
@@ -53,3 +54,4 @@ Le Gestionnaire de pilote prend en charge les deux points d’entrée pour les f
  Le Gestionnaire de pilote prend en charge Unicode en interne. Par conséquent, les performances optimales sont obtenu par une application Unicode opère avec un pilote Unicode, car le Gestionnaire de pilotes transmet simplement fonctions Unicode via le pilote. Lorsqu’une application ANSI fonctionne avec un pilote ANSI, le Gestionnaire de pilotes doit convertir des chaînes d’ANSI en Unicode lors du traitement de certaines fonctions, telles que **SQLDriverConnect**. Après le traitement de la fonction, le Gestionnaire de pilotes doit puis convertir la chaîne Unicode en ANSI avant l’envoi de la fonction au pilote ANSI.  
   
  Une application ne doit pas modifier ou lire ses tampons de paramètres liés, lorsque le pilote retourne SQL_NEED_DATA ou SQL_STILL_EXECUTING. Le Gestionnaire de pilotes laisse les mémoires tampons liés à la norme ANSI jusqu'à ce que le pilote retourne SQL_SUCCESS, SQL_SUCCESS_WITH_INFO ou SQL_ERROR. Une application multithread ne doit pas accéder à toutes les valeurs de paramètre lié un autre thread s’exécute une instruction SQL. Le Gestionnaire de pilote convertit les données Unicode en ANSI « sur place », et l’autre thread peut voir les données ANSI dans ces mémoires tampons pendant que le pilote traite toujours l’instruction SQL. Applications qui lient des données Unicode à un pilote ANSI ne doivent pas lier deux colonnes différentes à la même adresse.
+

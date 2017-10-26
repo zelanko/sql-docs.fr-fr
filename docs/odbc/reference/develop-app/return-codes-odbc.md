@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
@@ -57,3 +58,4 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|Aucune donnée n’était disponible. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Un ou plusieurs enregistrements de statut définies par le pilote de classe 02xxx peuvent être renvoyés. **Remarque :** dans ODBC 2.* x*, ce code a été nommé SQL_NO_DATA_FOUND de retour.|  
 |SQL_NEED_DATA|Plus de données est nécessaire, par exemple lorsque les données du paramètre sont envoyées au moment de l’exécution, ou les informations de connexion supplémentaires sont requises. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|  
 |SQL_STILL_EXECUTING|Une fonction qui a été démarrée en mode asynchrone est en cours d’exécution. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|
+

@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ddcc26d47c640562b66fc321c6cd8424e955412a
@@ -39,3 +40,4 @@ Cette section contient les rubriques suivantes.
   
 > [!NOTE]  
 >  L’accès aux fichiers de dBASE ISAM via les pilotes de base de données de bureau ODBC nécessite l’installation du moteur de base de données Borland.
+

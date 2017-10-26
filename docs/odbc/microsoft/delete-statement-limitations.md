@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ L’instruction DELETE n’est pas prise en charge pour le pilote Microsoft Exce
  Le pilote dBASE ne prend pas en charge la compression d’une table pour supprimer les valeurs de « supprimé ».  
   
  Pour le pilote Paradox supprimer une ligne d’une table, la table doit avoir un index unique (clé primaire).
+

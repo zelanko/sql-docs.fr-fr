@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49fb588f5793eb3ee2fce7417632301794a65a22
@@ -62,3 +63,4 @@ Le tableau suivant montre comment les types de données dBASE sont mappées aux 
 |MÉMO|La longueur maximale d’une colonne de type MEMO est 65 500 octets.|  
   
  Vous trouverez davantage de contraintes sur les types de données dans [Limitations du Type de données](../../odbc/microsoft/data-type-limitations.md).
+

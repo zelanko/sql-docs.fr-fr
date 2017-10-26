@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  Certains pilotes n’appliquent pas ces restrictions. Applications interopérables soit partez du principe qu’ils existent ou déterminent les restrictions ne sont pas appliquées en appelant **SQLGetInfo** avec l’option SQL_GETDATA_EXTENSIONS.  
   
  Si l’application ne doit pas toutes les données dans un caractère ou d’une colonne de données binary, elle peut réduire le trafic réseau dans les pilotes basés sur SGBD en définissant l’attribut d’instruction SQL_ATTR_MAX_LENGTH avant d’exécuter l’instruction. Cela limite le nombre d’octets de données qui seront retournées pour tout caractère ou d’une colonne binaire. Par exemple, qu'une colonne contient des documents de texte long. Une application qui parcourt la table contenant cette colonne peut avoir afficher uniquement la première page de chaque document. Bien que cet attribut d’instruction peut être simulé dans le pilote, il n’existe aucune raison à cela. En particulier, si une application souhaite tronquer binaire ou caractère, il doit lier une petite mémoire tampon à la colonne avec **SQLBindCol** et laisser le pilote tronquer les données.
+

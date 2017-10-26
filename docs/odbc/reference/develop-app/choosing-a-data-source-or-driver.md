@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ La source de données ou le pilote utilisé par une application est parfois cod�
 -   **L’accès à un SGBD particulier une seule fois.** Par exemple, une feuille de calcul qui Récupère des données en appelant les fonctions ODBC peut contenir le **pilote** mot clé pour identifier un pilote spécifique. Étant donné que le nom du pilote est significatif pour les utilisateurs qui disposent de ce pilote, la feuille de calcul peut être passée entre les utilisateurs. Si la feuille de calcul contenue un nom de source de données, chaque utilisateur devra créer la même source de données pour utiliser la feuille de calcul.  
   
 -   **Parcourir le système pour toutes les bases de données accessibles à un pilote spécifique.** Pour plus d’informations, consultez [connexion avec SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), plus loin dans cette section.
+

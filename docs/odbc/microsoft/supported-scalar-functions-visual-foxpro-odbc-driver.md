@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d664d15e359070b33f5fb9f7ac2c4737ee900351
@@ -35,3 +36,4 @@ Le pilote ODBC Visual FoxPro prend en charge trois types de fonctions scalaires 
 -   [Fonctions numériques (le pilote ODBC Visual FoxPro)](../../odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver.md)  
   
 -   [Fonctions d’heure et Date (le pilote ODBC Visual FoxPro)](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)
+

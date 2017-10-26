@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff461881ea10c904ceefd1c51a364984ca10971b
@@ -78,3 +79,4 @@ Le Gestionnaire de pilotes ODBC 3.5 (ou version ultérieure) prend en charge les
 -   [Pilotes d’Unicode](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
 -   [Mappage de fonction dans le Gestionnaire de pilotes](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)
+

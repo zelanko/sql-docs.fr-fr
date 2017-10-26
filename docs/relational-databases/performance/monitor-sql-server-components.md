@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      La relecture d'événements permet d'établir une copie de test de l'environnement de base de données à partir duquel les données ont été capturées, puis de répéter les événements capturés tels qu'ils se sont initialement produits sur le système réel. Cette fonction n'est disponible qu'avec Distributed Replay Utility ou le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Ces événements peuvent être relus à la vitesse à laquelle ils se sont produits, aussi rapidement que possible (pour contraindre le système) ou, plus vraisemblablement, pas à pas (pour analyser le système après chaque événement). L'analyse des événements exacts dans un environnement de test empêche tout effet nuisible sur le système de production. Pour plus d’informations, consultez [Relire des traces](../../tools/sql-server-profiler/replay-traces.md).  
   
   
+

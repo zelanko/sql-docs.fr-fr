@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   **Spécifiez des tampons de longueur de non null pour les données binaires de C.** La bibliothèque de curseurs alloue des tampons de longueur dans son cache que si la *StrLen_or_IndPtr* argument dans **SQLBindCol** n’est pas null. Lorsque le *TargetType* argument est SQL_C_BINARY, la bibliothèque de curseurs nécessite la longueur des données binaires pour construire un **où** clause à partir des données. S’il n’existe aucune mémoire tampon de longueur pour une colonne SQL_C_BINARY et l’application appelle **SQLGetData** ou tente d’exécuter une mise à jour positionnée ou la bibliothèque de curseurs, l’instruction delete retourne SQL_ERROR et SL014 SQLSTATE (une requête positionnée était le nombre de colonnes d’émis et pas tous les champs ont été mis en mémoire tampon).  
   
 -   **Spécifiez des tampons de longueur de non null pour les colonnes autorisant des valeurs NULL.** La bibliothèque de curseurs alloue des tampons de longueur dans son cache que si la *StrLen_or_IndPtr* argument dans **SQLBindCol** n’est pas null. Dans la mesure où les SQL_NULL_DATA est stocké dans la mémoire tampon de longueur, la bibliothèque de curseurs suppose que n’importe quelle colonne pour l’aucune longueur tampon est indiquée est non nullable. Si aucune colonne de longueur n’est spécifiée pour une colonne acceptant les valeurs NULL, la bibliothèque de curseurs construit un **où** clause qui utilise la valeur de données pour la colonne. Cette clause ne peut pas identifier correctement la ligne.
+

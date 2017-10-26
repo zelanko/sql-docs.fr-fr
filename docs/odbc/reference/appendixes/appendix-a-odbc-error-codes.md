@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
@@ -154,3 +155,4 @@ Cette rubrique décrit les valeurs SQLSTATE pour ODBC 3. *x*. Pour plus d’info
 |IM013|Erreur de fichier de trace|Toutes les fonctions ODBC.|  
 |IM014|Nom non valide de fichier DSN|**SQLDriverConnect**|  
 |IM015|Source de données de fichier endommagé|**SQLDriverConnect**|
+

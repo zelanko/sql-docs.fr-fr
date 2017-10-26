@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ Les valeurs de *différée champs* ne sont pas utilisés lorsqu’ils sont défi
 -   Si le champ SQL_DESC_OCTET_LENGTH_PTR d’un APD a une valeur null et que le paramètre est une chaîne de caractères, le pilote part du principe que la chaîne est terminée par null. Paramètres de sortie dynamique, une valeur null dans ce champ empêche le pilote de retourner des informations de longueur. (Si le champ SQL_DESC_TYPE n’indique pas un paramètre de chaîne de caractères, le champ SQL_DESC_OCTET_LENGTH_PTR est ignoré.)  
   
  L’application ne doit pas libérer ou ignorer les variables utilisées pour les champs différés entre l’heure que les associe aux champs et l’heure, le pilote lit ou écrit les.
+

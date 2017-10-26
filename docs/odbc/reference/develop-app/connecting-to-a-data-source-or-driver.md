@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 040e68738c189ce4711cb94e0d7c5dad258f3994
@@ -43,3 +44,4 @@ Une application peut être connectée à n’importe quel nombre de pilotes et l
 -   [Déconnecter les données Source ou pilote](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
 -   [Rôle du Gestionnaire de pilotes dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+

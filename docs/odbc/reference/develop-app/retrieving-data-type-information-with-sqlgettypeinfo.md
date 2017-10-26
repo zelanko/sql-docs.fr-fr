@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   ODBC ne définit pas de noms de types de données pour une utilisation dans **CREATE TABLE** et **ALTER TABLE** instructions. Au lieu de cela, l’application doit utiliser le nom retourné dans la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**. La raison en est que bien que la plupart des SQL ne change pas en grande partie sur SGBD, les noms de types de données varient considérablement. Au lieu d’obliger les pilotes pour analyser des instructions SQL et remplacez les noms de types de données standard avec des noms de type de données propres au SGBD, ODBC exige des applications pour utiliser les noms propres au SGBD en premier lieu.  
   
  Notez que **SQLGetTypeInfo** ne décrit pas nécessairement tous les types de données une application peut rencontrer. En particulier, les jeux de résultats peuvent contenir des types de données pas directement pris en charge par la source de données. Par exemple, les types de données des colonnes dans les jeux de résultats retournés par les fonctions de catalogue sont définies par ODBC, et ces types de données ne peuvent pas être pris en charge par la source de données. Pour déterminer les caractéristiques des types de données dans un jeu de résultats, une application appelle **SQLColAttribute**.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
@@ -35,3 +36,4 @@ Si l’application utilise des signets, il doit définir l’attribut d’instru
 -   Appelez **SQLSetPos** pour vous positionner sur une ligne dans l’ensemble de lignes, puis appelez **SQLGetData** pour la colonne 0. Si un pilote prend en charge les signets, il doit toujours prendre en charge la possibilité d’appeler **SQLGetData** pour la colonne 0, même si elle n’autorise pas les applications d’appeler **SQLGetData** pour d’autres colonnes avant la dernière colonne dépendante.  
   
 -   Appelez **SQLBulkOperations** avec la *opération* SQL_ADD à l’argument et lié à la colonne 0. Le curseur insère la ligne et retourne le signet pour la ligne dans la mémoire tampon liée.
+

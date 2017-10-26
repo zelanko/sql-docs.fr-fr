@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ Pour plus d’informations sur le téléchargement et installation du pilote ODB
 -   Supprimez tous les composants installés précédemment.  
   
  Après avoir installé le pilote sur votre système, le programme d’installation reconnaît les composants de pilote installé et présente des boîtes de dialogue supplémentaires qui vous permettent de modifier la configuration de votre pilote.
+

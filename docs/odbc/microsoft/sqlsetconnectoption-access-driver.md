@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b8f7497cb6b36602908443ab4fd9bdeb592ce8af
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION est toujours SQL_TXN_READ_COMMITTED.|  
   
  [1] transactions atomiques ne sont pas pris en charge par le pilote Microsoft Access. Lors de la validation d’une transaction en utilisant le pilote Microsoft Access, un délai fini existe entre l’heure de la transaction est validée et le temps que les valeurs sont écrites sur le disque. Ce délai est déterminé par un délai inhérent dans le moteur Microsoft Jet. Le délai d’expiration de la page ne sera pas être inférieure à une valeur minimale, même si l’option PageTimeout a la valeur inférieure à cette valeur. Par conséquent, il est aucune garantie que la validation des données n’est stable, étant donné que les modifications peuvent être effectuées pendant le délai d’attente.
+

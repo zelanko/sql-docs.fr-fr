@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
@@ -40,3 +41,4 @@ Pour extraire une ligne de données, une application appelle **SQLFetch**. **SQL
  Données de caractères doivent être terminée par le pilote avant d’être retournée à l’application, même si elle a été tronquée. Le caractère de fin de la valeur null n’est pas inclus dans la longueur d’octet retourné mais requiert d’espace dans la mémoire tampon liée. Par exemple, une application utilise des chaînes composées de données de caractères dans le jeu de caractères ASCII, un pilote a 50 caractères des données à renvoyer, et la mémoire tampon de l’application est 25 octets de long. Dans la mémoire tampon de l’application, le pilote retourne les premier 24 caractères suivis d’un caractère de fin de la valeur null. Dans la mémoire tampon de longueur / d’indicateur, il retourne une longueur d’octet de 50.  
   
  L’application peut restreindre le nombre de lignes du jeu de résultats en définissant l’attribut d’instruction SQL_ATTR_MAX_ROWS avant l’exécution de l’instruction qui crée le résultat. Par exemple, le mode Aperçu dans une application qui permet de formater des rapports doit uniquement suffisamment de données pour afficher la première page du rapport. En limitant la taille du jeu de résultats, une telle fonctionnalité s’exécute plus rapidement. Cet attribut d’instruction vise à réduire le trafic réseau et ne peut pas être pris en charge par tous les pilotes.
+

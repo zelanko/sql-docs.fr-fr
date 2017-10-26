@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79ae9e95ce31df371366e9073cb36f88c5bd9ece
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Sources de données utilisateur et système sont désignés collectivement par *machine* des sources de données, car elles sont locales sur un ordinateur.  
   
  Chacune de ces sources de données possède un onglet dans le **administrateur de sources de données ODBC** boîte de dialogue. Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../../odbc/reference/data-sources.md).
+

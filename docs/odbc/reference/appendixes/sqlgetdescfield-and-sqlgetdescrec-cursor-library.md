@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff32edcc14799980c1d8ec9e05bd27456d71a132
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournées pour toute ligne, et pas seulement la ligne du signet.  
   
  Si une application appelle **SQLGetDescField** pour retourner la valeur de n’importe quel champ autres que celles mentionnées précédemment, la bibliothèque de curseurs passe l’appel au pilote.
+

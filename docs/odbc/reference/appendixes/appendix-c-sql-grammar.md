@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bacae4777fa0b39c7bdbf576d82403fa731d9be5
@@ -33,3 +34,4 @@ Cette annexe contient les rubriques suivantes.
 -   [Littéraux dans ODBC](../../../odbc/reference/appendixes/literals-in-odbc.md)  
   
 -   [Mots clés réservés](../../../odbc/reference/appendixes/reserved-keywords.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ Pour définir le niveau d’isolation de transaction, une application utilise l�
 -   Quand la vitesse est plus importante que la précision et les erreurs sont susceptibles d’être petit. Par exemple, supposons qu’une société fait petit nombre de ventes et que les ventes de grande taille sont rares. Une transaction qui détermine la valeur totale de toutes les ventes peut utiliser en toute sécurité le niveau d’isolation Read Uncommitted. Bien que la transaction inclut les commandes qui sont en cours ouvert ou fermé et sont par la suite de restauration, il seraient généralement annulent et la transaction serait beaucoup plus rapide, car il n’est pas bloquée chaque fois qu’il rencontre un ordre.  
   
  Pour plus d’informations, consultez [d’accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+

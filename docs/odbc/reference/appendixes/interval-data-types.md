@@ -29,6 +29,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f1e19ac3f7c14326524ab7cbaa60f499c5d81e91
@@ -72,3 +73,4 @@ Un intervalle est défini comme la différence entre deux dates et heures. Inter
 -   [Littéraux de l’intervalle](../../../odbc/reference/appendixes/interval-literals.md)  
   
 -   [Substitution de début de la valeur par défaut et la précision en secondes pour les Types d’intervalle](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
+

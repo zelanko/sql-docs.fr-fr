@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ L’instruction CREATE INDEX n’est pas prise en charge pour les pilotes Micros
  Lorsque le pilote dBASE est utilisé, l’index créé par une instruction CREATE UNIQUE INDEX n’est pas réellement non unique, et des valeurs en double peuvent être insérées dans la colonne indexée. Qu’un seul enregistrement d’un ensemble de valeurs clés identiques peut être ajouté à l’index.  
   
  Lorsque le pilote Paradox est utilisé, un index unique doit être défini sur un sous-ensemble contigu de colonnes dans une table, y compris la première colonne. Une table ne peut pas être mis à jour par le pilote Paradox si un index unique n’est pas défini sur la table ou le pilote Paradox est utilisée sans l’implémentation du moteur de base de données Borland.
+

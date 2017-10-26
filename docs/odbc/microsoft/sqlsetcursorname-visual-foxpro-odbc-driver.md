@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74410e39c16c2239471f3f2d328bf29a39dc7cec
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Associe un nom de curseur avec un handle d’instruction active, *hstmt*. **SQLSetCursorName** est inclus dans l’API du pilote Visual FoxPro ODBC, car il fait partie de la fonctionnalité de l’API d’ODBC niveau principale ; il ne peut pas être utilisé avec d’autres fonctions d’API, car le pilote ne prend pas en charge les mises à jour positionnées.  
   
  Pour plus d’informations, consultez [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) dans les *de référence du programmeur ODBC*.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9b6d354657578f7188481a2e7ff7566f725c80
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Si le SGBD sous-jacent ne prend pas en charge les transactions en mode de validation automatique, le pilote peut émuler les en validant manuellement chaque instruction SQL qu’elle est exécutée.  
   
  Si un lot d’instructions SQL est exécuté en mode de validation automatique, il est spécifique à la source de données lorsque les instructions dans le lot sont validées. Ils peuvent être validées quand elles sont exécutées ou un ensemble d’après l’exécution de l’ensemble du lot. Certaines sources de données peuvent prendre en charge les deux de ces comportements et peuvent fournir un moyen de sélectionner une ou les autres. En particulier, si une erreur se produit au milieu du lot, il est spécifique à la source de données si les instructions déjà exécutées soient validées ou annulées. Par conséquent, les applications interopérables qui utilisent des lots et leur demander d’être validée ou restaurée en tant qu’ensemble doivent s’exécuter lots uniquement en mode de validation manuelle.
+

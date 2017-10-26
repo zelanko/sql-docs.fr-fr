@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49c71ee77178b71ed67fbdddf955af1f14643199
@@ -337,3 +338,4 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |988|Valeur monétaire est hors limites.|  
 |990|Annuler.|  
 |999|Fonction n’est pas implémentée.|
+

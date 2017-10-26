@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
@@ -32,3 +33,4 @@ Un curseur statique est un dans lequel le jeu de résultats semble être statiqu
  Le tableau d’état de ligne spécifié par l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR peut contenir SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR pour n’importe quelle ligne. Elle retourne SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED pour les lignes mises à jour, supprimées ou insérées par le curseur, en supposant que le curseur peut détecter ces modifications.  
   
  Les curseurs statiques sont généralement implémentées en verrouillant les lignes du jeu de résultats ou en effectuant une copie, ou instantané, du résultat définies. Bien que le verrouillage de lignes est relativement facile à faire, il a l’inconvénient de ce qui réduit considérablement la concurrence. Copie permet une plus grande concurrence et permet le curseur effectuer le suivi de ses propres mises à jour, suppressions et insère en modifiant la copie. Toutefois, une copie est plus onéreuse à effectuer et les données sous-jacentes peuvent diverger que ces données sont modifiées par d’autres.
+

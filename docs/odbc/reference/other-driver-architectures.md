@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
@@ -54,3 +55,4 @@ Certains pilotes ODBC ne sont pas strictement conformes à l’architecture déc
  L’un des avantages de cette architecture sont la configuration et maintenance logicielle efficace. Pilotes doivent uniquement être mis à jour dans un seul endroit : sur le serveur. À l’aide de sources de données système, les sources de données peuvent être définies sur le serveur pour une utilisation par tous les clients. Les sources de données ne doivent pas être définies sur le client. Le regroupement de connexions peut être utilisé pour simplifier le processus par lequel les clients se connectent aux sources de données.  
   
  Le pilote sur le client est généralement une très faible qui transfère l’appel du Gestionnaire de pilotes au serveur. Son empreinte peut être beaucoup plus petite que les pilotes ODBC entièrement fonctionnels sur le serveur. Dans cette architecture, les ressources client peuvent être libérées si le serveur dispose de plus de puissance de calcul. En outre, vous peuvent améliorer l’efficacité et la sécurité de l’ensemble du système en installant des serveurs de sauvegarde et exécution de l’équilibrage de charge pour optimiser l’utilisation du serveur.
+

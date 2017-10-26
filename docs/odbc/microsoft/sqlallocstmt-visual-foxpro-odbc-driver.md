@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Alloue de la mémoire pour un descripteur d’instruction et associe le handle d’instruction de la connexion spécifiée par *pas*. Le Gestionnaire de pilotes passe cet appel au pilote, qui alloue la mémoire pour le *hstmt* structure.  
   
  Pour plus d’informations, consultez [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) dans les *de référence du programmeur ODBC*.
+

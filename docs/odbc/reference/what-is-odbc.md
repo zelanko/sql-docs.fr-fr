@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5aaa2a57f9439eb1588a30c362118af9b5355a8d
@@ -37,3 +38,4 @@ Nombreuses idées sur ODBC existent dans le monde informatique. À l’utilisate
  Il est important de comprendre que ODBC est conçu pour exposer les fonctionnalités de base de données, pas les compléter. Par conséquent, créateurs d’applications ne doivent pas attendre que l’utilisation d’ODBC soudainement transforme une base de données simple dans un moteur de base de données relationnelle complet. Ni sont les rédacteurs de pilotes attendus pour implémenter la fonctionnalité introuvable dans la base de données sous-jacente. Une exception à cela est que les développeurs qui écrivent des pilotes qui accèdent directement aux données de fichier (par exemple, les données dans un fichier Xbase) sont requis pour écrire un moteur de base de données qui prend en charge des fonctionnalités SQL au moins minimales. Une autre exception qui est le composant ODBC du SDK Windows, précédemment inclus dans le Kit de développement logiciel Microsoft données Access Components (MDAC), fournit une bibliothèque de curseurs qui simule les curseurs de défilement pour les pilotes qui implémentent un certain niveau de fonctionnalité.  
   
  Les applications qui utilisent ODBC sont responsables de toutes les fonctionnalités de bases de données croisées. Par exemple, ODBC n’est pas un moteur de jointure hétérogène, ni est-il un processeur de transaction distribuée. Toutefois, comme il est indépendant du SGBD, il peut être utilisé pour construire des outils de ces bases de données croisées.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ Identificateur de la date est de type de données SQL ODBC :
  [c] Il s’agit de la taille du type de données C correspondante.  
   
  Lors de la date de données SQL est convertie en données de type caractère C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj*« format. Ce format n’est pas affecté par le paramètre de pays Windows®.
+

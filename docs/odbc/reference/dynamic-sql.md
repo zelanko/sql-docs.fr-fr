@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ Bien que SQL statique fonctionne dans de nombreuses situations, il est une class
 3.  Le programme peut utiliser l’instruction EXECUTE à plusieurs reprises, en fournissant des valeurs de paramètre différentes chaque fois que cette instruction est exécutée.  
   
  L’exécution préparée n’est toujours pas le même que SQL statique. Dans les instructions SQL statiques, les quatre premières étapes de traitement d’une instruction SQL lieu au moment de la compilation. Dans l’exécution préparée, ces étapes ont toujours lieu au moment de l’exécution, mais elles sont exécutées une seule fois ; exécution du plan a lieu uniquement lorsque EXECUTE est appelée. Cela permet d’éliminer certains inconvénients de performances inhérentes à l’architecture d’instructions SQL dynamiques. L’illustration suivante montre les différences entre SQL statique, SQL dynamique avec l’exécution immédiate et SQL dynamique avec l’exécution préparée.
+

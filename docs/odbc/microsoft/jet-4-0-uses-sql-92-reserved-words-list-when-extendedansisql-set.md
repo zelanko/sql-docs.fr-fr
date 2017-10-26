@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: adc457cee71093222b102fad15e4a47042758ac9
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Liste des mots réservés de Jet 4.0 utilise SQL-92 lorsque ExtendedAnsiSQL_Set
 Lorsque l’indicateur ExtendedAnsiSQL est activée, Jet 4.0 utilise la liste de mots réservés SQL-92. Essayez d’utiliser un SQL-92 des mot réservé comme nom de l’objet sans guillemets entraîne une erreur de syntaxe. Lorsque l’indicateur ExtendedAnsiSQL est désactivée, les nouveaux mots réservés utilisable comme noms d’objet qu’auparavant.
+

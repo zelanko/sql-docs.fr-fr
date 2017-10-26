@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 657d0324132b279300e2a61151c790f066e4a3f5
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Lorsque le pilote Microsoft Access est utilisé, SQL_COMMIT et SQL_ROLLBACK sont pris en charge pour le *fType* argument dans un appel à **SQLTransact**.  
   
  Si une défaillance se produit pendant le processus de validation, la base de données concernée peut être réparé à l’aide de l’option de base de données dans le programme d’installation du pilote Microsoft Access, ou via l’utilisation du mot clé REPAIR_DB dans le **SQLConfigDataSource** (fonction).
+

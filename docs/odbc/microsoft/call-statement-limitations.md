@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e2920dce877c3775269bc063234125e2780943a5
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (Cette limitation concerne uniquement le pilote Microsoft Access).  
   
  Les expressions ne sont pas pris en charge en tant que paramètres à une procédure appelée.
+

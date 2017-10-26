@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
@@ -34,3 +35,4 @@ Dans l’idéal, les transactions doivent être *sérialisable*. Les transaction
  Par conséquent, pourquoi est renouvelable souhaitable ? En d’autres termes, pourquoi est-ce important qu’il apparaît qu’une transaction se termine avant le démarrage de la transaction suivante ? Prenez le problème suivant. Un représentant commercial est saisie de commandes en même temps qu'un employé envoie des factures. Supposons que le représentant commercial entre une commande à partir de la société X, mais ne la valide pas ; le représentant commercial toujours communique avec le représentant à partir de la société X. Le régisseur de demande une liste de toutes les commandes ouvertes et détecte l’ordre de la société X et les envoie une facture. Maintenant le représentant de la société X décide qu'ils souhaitent modifier leur ordre, de sorte que si le représentant commercial il change avant de valider la transaction. Société X Obtient une facture incorrecte.  
   
  Si du représentant commercial et du régisseur de transactions ont été sérialisables, ce problème ne serait jamais survenus. Soit les transactions entre le commercial sont terminés avant le début de la transaction de l’employé, auquel cas le régisseur sera donc avoir envoyé la facture de façon correcte, ou les transactions de l’employé sont terminés avant la transaction entre le commercial démarré, auquel cas le régisseur n'aurait pas envoyé une facture à la société X tout.
+

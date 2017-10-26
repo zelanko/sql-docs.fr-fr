@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e781871cc8507d10617e1a147fa6d5a7c06ac756
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 |FORMAT|Pour le pilote de texte, peuvent être FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (par une virgule) ou DELIMITED() (par le caractère spécial spécifié dans les parenthèses). Le caractère spécial est un caractère et peut être au format décimal ou hexadécimal de caractère.|  
 |MAXSCANROWS|Le nombre de lignes à analyser lors de la définition du type de données d’une colonne en fonction des données existantes.<br /><br /> Pour le pilote de texte, vous pouvez entrer un nombre compris entre 1 et 32 767 pour le nombre de lignes à analyser ; Toutefois, la valeur toujours par défaut est 25. (Un nombre en dehors de la limite retournera une erreur).<br /><br /> L’option est définie en tant que même **lignes à analyser** dans la boîte de dialogue d’installation.|  
 |READONLY|TRUE pour rendre le fichier en lecture seule ; Valeur FALSE à rendre le fichier pas en lecture seule.<br /><br /> L’option est définie en tant que même **en lecture seule** dans la boîte de dialogue d’installation.|
+

@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ Le tableau suivant montre l’historique de version des pilotes de base de donn�
   
 > [!NOTE]  
 >  Les pilotes version3.5 ont été conçus pour fonctionner avec ODBC2. *x*. Bien qu’ils fonctionnent également avec ODBC 3.0, ils ne gèrent pas toutes les fonctions ODBC 3.0. Pour plus d’informations sur le fonctionnement de ces pilotes ODBC 3.0, consultez [la compatibilité descendante et la conformité aux normes](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **Gestion des erreurs** le SGBD signale des erreurs d’exécution du programme d’applications via une zone de communication SQL ou SQLCA. Dans l’exemple de code précédent, la première instruction SQL incorporée est INCLUDE SQLCA. Cela indique la précompilés pour inclure la structure SQLCA dans le programme. Cela est nécessaire chaque fois que le programme traite les erreurs retournées par le SGBD. Le WHENEVER... GOTO (instruction) indique le précompilés pour générer le code de gestion des erreurs qui effectue un branchement vers une étiquette spécifique lorsqu’une erreur se produit.  
   
 -   **SELECT unique** l’instruction utilisée pour renvoyer les données est une instruction SELECT singleton ; autrement dit, il retourne une seule ligne de données. Par conséquent, l’exemple de code ne déclarez pas ou utiliser des curseurs.
+

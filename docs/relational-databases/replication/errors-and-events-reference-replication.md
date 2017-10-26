@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
@@ -87,3 +88,4 @@ ms.lasthandoff: 06/22/2017
 |[MSSQL_REPL027183](../../relational-databases/replication/mssql-repl027183.md)|Le processus de fusion n'a pas pu énumérer les modifications apportées aux articles via le filtre de lignes paramétrable. Si le problème persiste, augmentez le délai de requête du processus, réduisez la période de rétention de la publication, puis améliorez les index des tables publiées.|  
   
   
+

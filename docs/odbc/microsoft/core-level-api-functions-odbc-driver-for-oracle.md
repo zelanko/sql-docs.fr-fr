@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Associe un nom de curseur avec un handle d’instruction active, *hstmt*.|  
 |**SQLSetParam**|Remplacé par SQLBindParameter dans ODBC 2. *x*.|  
 |**SQLTransact**|Demande une opération de validation ou de restauration pour toutes les opérations actives sur tous les descripteurs d’instruction (hstmts) associés à une connexion, ou pour toutes les connexions associées au handle d’environnement, *henv*. Si une validation échoue en mode manuel, la transaction reste active ; Vous pouvez choisir de restaurer la transaction ou recommencez l’opération de validation. Si une opération de validation échoue en mode de transaction automatique, la transaction est restaurée automatiquement ; la transaction ne peut pas être inactive.|
+

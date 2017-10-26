@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67f656acd349419d7fc3d1c264985beeb36298ce
@@ -75,3 +76,4 @@ Un descripteur est une structure de données qui conserve des informations sur l
 |SQL_DESC_UNNAMED|Pris en charge|  
 |SQL_DESC_UNSIGNED|Pris en charge|  
 |SQL_DESC_UPDATABLE|Pris en charge|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 67bad57e201d10c5eb29aafb19fa9f513c43b172
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  szErrorMsg = « [Microsoft] [pilote ODBC pour Oracle] syntaxe ou violation d’accès »  
   
  L’appel à la fonction Oracle OCI Odessp() échoue dans ce scénario, mais est nécessaire pour implémenter les paramètres par défaut. Une fois les autorisations de la table sous-jacente sont modifiées, la procédure stockée doit être recompilée avant d’exécuter à nouveau.
+

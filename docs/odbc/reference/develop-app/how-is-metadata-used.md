@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ Les applications requièrent des métadonnées pour la plupart des opérations d
  Applications génériques, en particulier ceux qui prennent en charge les requêtes ad hoc, presque jamais de connaître les métadonnées, les jeux de résultats qu’ils créent. Par conséquent, ils doivent découvrir les métadonnées au moment de l’exécution en utilisant les fonctions **SQLNumResultCols**, **SQLDescribeCol**, et **SQLColAttribute**, qui sont décrites dans la section suivante, [SQLDescribeCol et SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Toutes les applications, quel que soit leur type, peuvent coder en dur les métadonnées pour les jeux de résultats retournés par les fonctions de catalogue. Ces jeux de résultats est définis dans la section de référence de ce manuel.
+

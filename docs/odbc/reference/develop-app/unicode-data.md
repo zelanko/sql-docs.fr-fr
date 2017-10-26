@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 407a67c6c4d641366b1ffabef10b22a6931a2212
@@ -52,3 +53,4 @@ SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, Na
  Les pilotes Unicode doivent toujours prendre en charge ANSI les types de données SQL_CHAR. Si une application utilisant un pilote Unicode lie à SQL_CHAR, le Gestionnaire de pilotes ne mappera pas les données SQL_CHAR à SQL_WCHAR. Le pilote Unicode doit accepter les données SQL_CHAR.  
   
  Le Gestionnaire de pilotes stocke le pilote et les noms de source de données au format Unicode et les mappe à la norme ANSI en fonction des besoins. Si un caractère Unicode ne peut pas être mappé à un caractère ANSI (tel qu’il peut se produire si les caractères à partir d’une page de codes qui n’est pas la page de code natif de l’ordinateur sont utilisés dans le pilote et les noms de source de données), les caractères qui ne peuvent pas être convertis sont représentés par un caractère par défaut fourni par le système.
+

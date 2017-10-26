@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dad1b34551ae96587fafdf3f232ce96b33a96846
@@ -40,3 +41,4 @@ Ce tableau décrit les compteurs **Administrateur d’E/S SQL Server XTP** .
 
 ## <a name="see-also"></a>Voir aussi  
 [SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+

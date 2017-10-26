@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ Pour valider ou restaurer une transaction en mode de validation manuelle, une ap
  Si une application passe le handle d’environnement pour **SQLEndTran** mais ne pas passe un handle de connexion, le Gestionnaire de pilotes appelle conceptuellement **SQLEndTran** avec le handle d’environnement pour chaque pilote qui a une ou plusieurs connexions actives dans l’environnement. Le pilote puis valide les transactions sur chaque connexion dans l’environnement. Toutefois, il est important de savoir que le pilote, ni le Gestionnaire de pilotes effectue une validation en deux phases sur les connexions dans l’environnement. Il s’agit simplement une facilité de programmation d’appeler simultanément **SQLEndTran** pour toutes les connexions dans l’environnement.  
   
  (A *validation en deux phases* est généralement utilisé pour valider des transactions qui sont réparties sur plusieurs sources de données. Dans la première phase, les sources de données sont interrogées à s’ils peuvent valider au cours de la transaction. Dans la deuxième phase, la transaction est effectivement validée sur toutes les sources de données. Si toutes les sources de données de réponse dans la première phase qu’ils ne peuvent pas valider la transaction, la deuxième phase n’a pas lieu.)
+

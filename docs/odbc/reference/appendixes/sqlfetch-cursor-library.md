@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Si la bibliothèque de curseurs est utilisée avec une API ODBC 2. *x* pilote, une liaison de décalage (comme défini par l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR) n’est pas utilisée lorsque **SQLFetch** est appelée.  
   
  Lors du chargée de la bibliothèque de curseurs, une application ne peut pas appeler **SQLFetch** pour extraire des colonnes de signet. La bibliothèque de curseurs passe l’appel à **SQLFetch** via le pilote, mais la fonction appelle pour activer des signets et lier la colonne de signet est interceptés par la bibliothèque de curseurs.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ Pilotes basés sur SGBD sont utilisées avec des sources de données telles que 
  L’illustration suivante montre trois différentes configurations de pilotes basés sur SGBD. Dans la première configuration, le pilote et la source de données résident sur le même ordinateur. Dans la seconde, le pilote et la source de données résident sur des ordinateurs différents. Dans la troisième, le pilote et la source de données résident sur des ordinateurs différents et une passerelle se situe entre eux, résidant sur un autre ordinateur.  
   
  ![Trois configurations de SGBD &#45; pilotes en fonction](../../odbc/reference/media/pr07.gif "pr07")
+

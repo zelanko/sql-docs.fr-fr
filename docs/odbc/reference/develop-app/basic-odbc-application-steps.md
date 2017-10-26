@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fbafffd1922dabbb49bec1cae59d6bce099bd5d7
@@ -44,3 +45,4 @@ Cette section décrit le flux général des applications ODBC. Il est peu probab
 -   [Étape 5 : Valider la Transaction](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
 -   [Étape 6 : Vous déconnecter de la Source de données](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
+

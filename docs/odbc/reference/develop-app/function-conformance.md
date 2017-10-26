@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ Le tableau suivant indique le niveau de conformité de chaque fonction ODBC, où
  [1] fonctionnalités d’importantes de cette fonction sont disponibles uniquement à des niveaux de conformité plus élevés.  
   
  [2] définition de certains attributs pour les valeurs par défaut dépend du niveau de conformité. Pour plus d’informations, consultez la section suivante, [mise en conformité de l’attribut](../../../odbc/reference/develop-app/attribute-conformance.md).
+

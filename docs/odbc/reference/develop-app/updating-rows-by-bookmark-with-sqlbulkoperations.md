@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ Lors de la mise à jour d’une ligne par un signet, **SQLBulkOperations** rend 
 6.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_UPDATE_BY_BOOKMARK.  
   
  Pour chaque ligne est envoyée à la source de données en tant qu’une mise à jour, les tampons de l’application doivent avoir des données de ligne valide. Si les mémoires tampons d’application ont été remplies par extraction, si un tableau d’état de ligne a été maintenu, et si la valeur d’état d’une ligne est SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW, les données non valides par inadvertance pu être envoyées que pour la source de données.
+

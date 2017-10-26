@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 24154cb8cf4f07699385f773608b929a9a4ed4a3
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 |THREADS|Le nombre de threads d’arrière-plan pour le moteur à utiliser. Cette valeur par défaut est 3, mais peut être modifiée.<br /><br /> L’option est définie en tant que même **Threads** dans la boîte de dialogue d’installation.|  
 |UID|Pour le pilote Microsoft Access, le nom d’ID utilisateur utilisé pour la connexion.|  
 |USERCOMMITSYNC|Détermine si le pilote Microsoft Access effectuera les transactions définies par l’utilisateur en mode asynchrone. Cette valeur est initialement définie sur « Oui », ce qui signifie que le pilote Microsoft Access attendra les validations dans une transaction définie par l’utilisateur doit être terminé.<br /><br /> La valeur de cette option ne doit pas être modifiée sans tenez compte des conséquences. Pour plus d’informations sur l’option, consultez la *Guide du programmeur moteur Microsoft Jet de base de données*.<br /><br /> L’option est définie en tant que même **UserCommitSync** dans la boîte de dialogue d’installation.|
+

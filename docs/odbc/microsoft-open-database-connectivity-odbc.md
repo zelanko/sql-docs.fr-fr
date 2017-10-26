@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
@@ -53,3 +54,4 @@ L’interface de Microsoft ODBC Open Database Connectivity () est l’interface 
   
 ## <a name="support"></a>Support technique  
  Vous trouverez des informations sur les options de prise en charge sur le [Microsoft Help and Support](http://go.microsoft.com/fwlink?linkid=5521) site Web.
+

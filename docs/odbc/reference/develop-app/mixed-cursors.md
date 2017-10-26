@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 16369d96931bd2b01d644756ab7e1e22fd325a85
@@ -38,3 +39,4 @@ Un curseur mixte est une combinaison d’un curseur keyset et curseur dynamique.
  Supposons à présent qu’une autre application supprime les lignes 11 et 101. Si le curseur tente de récupérer la ligne 11, il se produit un trou, car il a une clé pour cette ligne, mais la ligne n’existe pas ; Il s’agit de curseurs pilotés par un comportement. Si le curseur tente de récupérer la ligne 101, le curseur ne détecte pas que la ligne est manquante, car il n’a pas de clé pour la ligne. Il récupère à la place, ce qui a été précédemment ligne 102. Il s’agit du comportement des curseurs dynamiques.  
   
  Un curseur mixte est équivalent à un curseur keyset lorsque la taille du jeu de clés est égale à la taille du jeu de résultats. Un curseur mixte est équivalent à un curseur dynamique lorsque la taille du jeu de clés est égale à 1.
+

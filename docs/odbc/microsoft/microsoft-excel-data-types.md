@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
@@ -53,3 +54,4 @@ Le tableau suivant montre comment les types de données du pilote Microsoft Exce
 |TEXT|Lorsque les lignes d’une colonne contient plusieurs types de données Microsoft Excel, le pilote ODBC Microsoft Excel affecte le type de données SQL_VARCHAR à la colonne. Il existe une exception à cela : si la colonne contient uniquement deux ou trois des types de données datetime (DATE, TIME et DATETIME), le pilote ODBC Microsoft Excel affecte le type de données SQL_TIMESTAMP à la colonne.<br /><br /> Création d’une colonne de texte de zéro ou de longueur non spécifiée retourne en fait une colonne de 255 octets.<br /><br /> Un littéral de chaîne de caractères peut contenir n’importe quel caractère ANSI (décimal 1-255). Utilisez deux consécutifs apostrophes accolées ('') pour représenter un guillemet simple (').<br /><br /> Insertion d’une valeur NULL dans une colonne avec un type de données autre que SQL_VARCHAR entraîne le type de données de la colonne à modifier pour SQL_VARCHAR.|  
   
  Vous trouverez davantage de contraintes sur les types de données dans [Limitations du Type de données](../../odbc/microsoft/data-type-limitations.md).
+

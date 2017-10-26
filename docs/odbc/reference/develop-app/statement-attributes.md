@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
@@ -39,3 +40,4 @@ Les attributs d’instruction sont caractéristiques de l’instruction. Par exe
 >  Aucun des attributs d’instruction introduites dans ODBC 3. *x* (à l’exception de SQL_ATTR_METADATA_ID) peut être définie au niveau de la connexion.  
   
  Pour plus d’informations, consultez la [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) description de fonction.
+

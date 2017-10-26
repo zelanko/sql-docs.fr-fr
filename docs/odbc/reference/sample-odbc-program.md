@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4b78fa2c79cae4c80b81bd002e19e07024417d3b
@@ -23,3 +24,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sample-odbc-program"></a>Exemple de programme ODBC
 Le [exemple de code ODBC](http://go.microsoft.com/fwlink/?LinkId=244831) vous demande un nom de source de données ODBC.  Vous êtes ensuite invité à entrer une requête et l’exemple affiche les résultats de la requête.
+

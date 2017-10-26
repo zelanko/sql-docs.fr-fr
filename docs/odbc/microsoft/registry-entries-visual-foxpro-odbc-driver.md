@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
@@ -61,3 +62,4 @@ Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installati
  Vous ne devez pas accéder à ces informations directement. toute administration du Registre est gérée par l’administrateur ODBC lorsque vous ajoutez, modifiez ou supprimez une source de données.  
   
  Vous pouvez utiliser certains de ces mots clés et les valeurs en tant que paramètres dans le [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) fonction d’API ODBC.
+

@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ Les paramètres d’entrée qui font référence à des données de caractères 
  Bien que les applications et les pilotes utilisent couramment des chaînes C (se terminant par null des tableaux de caractères) pour contenir les données de type caractère, il n’est pas nécessaire pour ce faire. En C, les données de caractères peuvent également être traitées comme un tableau de caractères (sans fin-null) et sa longueur en octets passé séparément dans la mémoire tampon de longueur / d’indicateur.  
   
  Car les données de caractères peuvent être contenues dans un tableau non – terminant par null et sa longueur en octets passé séparément, il est possible d’incorporer des caractères null dans les données de type caractère. Toutefois, le comportement des fonctions ODBC dans ce cas n’est pas défini et qu’il est spécifique au pilote si un pilote gère cela correctement. Par conséquent, les applications interopérables doivent gérer les données de type caractère qui peuvent contenir des caractères null incorporés en tant que données binaires.
+

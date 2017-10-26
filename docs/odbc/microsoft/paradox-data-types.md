@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ Le pilote ODBC Paradox mappe les types de données de Corel aux types de donnée
 |timestamp|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis extraites par la suite de la colonne, la valeur récupérée peut différer de la valeur insérée par autant que 1 seconde en raison de l’arrondi.|  
   
  Vous trouverez davantage de contraintes sur les types de données dans [Limitations du Type de données](../../odbc/microsoft/data-type-limitations.md).
+

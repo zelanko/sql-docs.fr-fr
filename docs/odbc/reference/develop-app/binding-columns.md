@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5903070b8918baa9734e5d188d90861322b57986
@@ -32,3 +33,4 @@ Les données lues à partir de la source de données sont retournées à l’app
 -   [Définie les colonnes de résultat de la liaison](../../../odbc/reference/develop-app/binding-result-set-columns.md)  
   
 -   [À l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)
+

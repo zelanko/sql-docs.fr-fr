@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3e79fec9836fb7a6528bea63c78a8e6479dac8e1
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 Si l’attribut SQL_ATTR_ROWS_FETCHED_PTR d’instruction a été définie, elle spécifie une mémoire tampon qui retourne le nombre de lignes lues par l’appel à **SQLFetch** ou **SQLFetchScroll**et les lignes d’erreur. (Ce nombre est un nombre de toutes les lignes qui n’ont pas l’état SQL_ROW_NO_ROWS.) Après un appel à **SQLBulkOperations** ou **SQLSetPos**, la mémoire tampon contient le nombre de lignes affectées par une opération en bloc effectuée par la fonction. Si l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR a été défini, **SQLFetch** ou **SQLFetchScroll** retourne le *tableau d’état de ligne,* qui fournit l’état de chaque ligne retournée. À la fois de la mémoire tampon pointée par ces champs sont allouées par l’application et remplies par le pilote. Une application doit s’assurer que ces pointeurs restent valides jusqu'à ce que le curseur est fermé.  
   
  Entrées dans l’état de tableau de statut de la ligne si chaque ligne a été extraite avec succès, si elle a été mise à jour, ajouté ou supprimé depuis sa dernière extraction, et si une erreur s’est produite lors de l’extraction de la ligne. Si **SQLFetch** ou **SQLFetchScroll** rencontre une erreur lors de la récupération d’une ligne d’un ensemble de lignes de plusieurs ligne, ou si **SQLBulkOperations** avec un *opération* argument de SQL_FETCH_BY_BOOKMARK rencontre une erreur lors de l’exécution d’une extraction en bloc, il définit la valeur correspondante dans le tableau d’état de ligne à SQL_ROW_ERROR continue d’extraction de lignes et retourne SQL_SUCCESS_WITH_INFO. Pour plus d’informations sur la gestion des erreurs et le tableau d’état de ligne, consultez la [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) et [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) des descriptions de fonction.
+

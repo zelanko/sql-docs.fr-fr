@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
@@ -37,3 +38,4 @@ La première décision à prendre lors de la construction d’instructions SQL e
  Par conséquent, il existe réellement deux choix de grammaire à utiliser : la grammaire SQL-92 (et les séquences d’échappement ODBC) et une grammaire propres au SGBD. Des deux, uniquement la grammaire SQL-92 est interopérable, par conséquent, toutes les applications interopérables doivent l’utiliser. Les applications qui ne sont pas interopérables peuvent utiliser la grammaire SQL-92 ou une grammaire propres au SGBD. Propres au SGBD grammaires ont deux avantages : ils peuvent exploiter les fonctionnalités non traitées par SQL-92, et ils sont légèrement plus rapides, car le pilote n’a pas de les modifier. La fonctionnalité de ce dernier peut être partiellement appliquée en définissant l’attribut d’instruction SQL_ATTR_NOSCAN, qui arrête le pilote à partir de la recherche et remplacement de séquences d’échappement.  
   
  Si la grammaire SQL-92 est utilisée, l’application peut découvrir comment il est modifié par le pilote en appelant **SQLNativeSql**. Cela est souvent utile lors du débogage d’applications. **SQLNativeSql** accepte une instruction SQL et la retourne, une fois que le pilote a modifié. Cette fonction se trouve dans le niveau de conformité de l’interface de cœur, il est pris en charge par tous les pilotes.
+

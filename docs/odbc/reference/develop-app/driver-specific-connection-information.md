@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Dans des paires mot clé-valeur **SQLDriverConnect** doivent suivre certaines règles de syntaxe. Les mots clés et leurs valeurs ne doivent pas contenir le **[] {} (), ? \*= ! @** caractères. La valeur de la **DSN** mot clé ne peut pas se composer uniquement d’espaces et ne doit pas contenir des espaces. En raison de la grammaire du Registre, les noms de sources de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères. Les espaces ne sont pas autorisés autour du signe égal dans la paire mot clé-valeur.  
   
  Le **FILEDSN** mot clé peut être utilisé dans un appel à **SQLDriverConnect** pour spécifier le nom d’un fichier qui contient des informations de source de données (voir [la connexion à l’aide de Sources de données](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), plus loin dans cette section). Le **SAVEFILE** mot clé peut être utilisé pour spécifier le nom d’un fichier .dsn dans lequel les paires mot clé-valeur d’une connexion est effectuée par l’appel à **SQLDriverConnect** sera enregistré. Pour plus d’informations sur les sources de données de fichier, consultez le [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) description de fonction.
+

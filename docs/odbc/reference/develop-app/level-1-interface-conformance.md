@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ Niveau de conformité de l’interface de niveau 1 inclut les fonctionnalités a
 |107|Utiliser les fonctions ODBC au lieu d’instructions SQL pour effectuer certaines opérations de base de données : **SQLSetPos** avec SQL_POSITION et SQL_REFRESH.|  
 |108|Accéder au contenu de plusieurs jeux de résultats générés par lots et procédures stockées, en appelant **SQLMoreResults**.|  
 |109|Délimiter les transactions couvrant plusieurs fonctions ODBC, avec l’atomicité et la possibilité de spécifier SQL_ROLLBACK dans **SQLEndTran**.|
+

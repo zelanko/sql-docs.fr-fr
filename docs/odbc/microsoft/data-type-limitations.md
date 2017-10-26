@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 558789a4f435e9fc54176b1423d71369f6b4cc22
@@ -39,3 +40,4 @@ Les pilotes de base de données Microsoft ODBC Desktop impose des limitations su
 |timestamp|Impossible de convertir le type de données TIMESTAMP à elle-même par la fonction CONVERT.|  
 |TINYINT|Les valeurs TINYINT sont toujours non signés.|  
 |Chaînes de longueur nulle|Lorsqu’un fichier dBASE, Microsoft Excel, Paradox ou Textdriver est utilisé, l’insertion d’une chaîne de longueur zéro dans une colonne insère en fait une valeur NULL à la place.|
+

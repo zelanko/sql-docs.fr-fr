@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfe477bf0ca518d4f4e83d141a24bcb4c2640ed2
@@ -37,3 +38,4 @@ ODBC définit un nombre d’attributs qui sont associés à des environnements, 
  Outre les attributs définis par ODBC, un pilote peut définir sa propre connexion et les attributs d’instruction. Attributs définis par le pilote doivent être enregistrés avec Open Group pour vous assurer que deux fournisseurs de pilote n’affectez pas la même valeur d’entier à des attributs différents propriétaires. Pour plus d’informations, consultez [les Types de données spécifiques au pilote, Types de descripteur, Types d’informations, Types de diagnostics et attributs](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Pour obtenir une liste complète des attributs, consultez [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md). La plupart des attributs sont également décrits dans la description de la fonction ODBC qu’elles affectent.
+

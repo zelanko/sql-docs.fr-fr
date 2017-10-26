@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b234123c01d4bdf4590c000b996a4febe4ad485e
@@ -53,3 +54,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 ```  
   
  Cette approche simplifie le codage de l’application ; l’application s’appuie sur l’utilisateur pour générer l’instruction SQL et sur la source de données pour vérifier la validité de l’instruction. Il est difficile d’écrire une interface utilisateur graphique qui expose de manière adéquate les complexités de SQL, simplement invite l’utilisateur à entrer le texte de l’instruction SQL peut-être ne pas être une alternative préférable. Toutefois, cela oblige l’utilisateur de savoir SQL, mais également le schéma de la source de données qui est interrogée. Certaines applications fournissent une interface utilisateur graphique à laquelle l’utilisateur peut créer une instruction SQL de base et également fournir une interface de texte avec lequel l’utilisateur peut modifier.
+

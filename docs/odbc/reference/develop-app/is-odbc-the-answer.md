@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ada446a96ecb6fd81d05380c8a29707eb41f8ee
@@ -29,3 +30,4 @@ Avant d’aborder la question de l’interopérabilité, envisagez la question s
  Applications personnalisées sont des candidats idéaux pour l’API de bases de données natif. La principale raison est que les applications personnalisées souvent travailler avec un SGBD unique et n’ont pas besoin pour fonctionner. Base de données native API peut préférables à ODBC d’exposer les fonctionnalités d’un SGBD particulier et peut exposer des fonctionnalités non exposées par ODBC. En outre, étant donné que les développeurs d’applications personnalisées sont généralement familiarisés avec la base de données native API pour leurs SGBD, il est recommandé pour en savoir plus ODBC. Toutefois, il est intéressant de noter que pour certains SGBD, ODBC est l’API de base de données native.  
   
  Par conséquent, les applications qui sont des candidats pour ODBC ? Les meilleures candidates sont des applications qui fonctionnent avec plusieurs SGBD. Cela inclut pratiquement toutes les applications génériques et verticales. Il inclut également un nombre d’applications personnalisées. Par exemple, les applications personnalisées qui utilisent plusieurs SGBD différents sont beaucoup plus facile et plus clair d’écrire avec ODBC à avec plusieurs API natives. Et les applications personnalisées écrites avec ODBC sont beaucoup plus faciles de migrer une société déplace d’un SGBD à l’autre ou déploie la même application sur différents SGBD.
+

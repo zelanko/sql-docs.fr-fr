@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ Le tableau suivant présente la prise en charge de la fonction dans une ODBC 3. 
  [5] dans certaines circonstances, les pilotes peut-être prendre en charge cette fonction. Pour plus d’informations, consultez la page de référence de cette fonction.  
   
  [6], le pilote peut choisir de prendre en charge **SQLGetFunctions** si l’ensemble de fonctions que le pilote prend en charge varie en fonction de la connexion à la connexion.
+

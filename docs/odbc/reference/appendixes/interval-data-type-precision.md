@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc397e2aade6d016a647f1caf00a91fad48ad8e1
@@ -39,3 +40,4 @@ Précision pour un type de données d’intervalle inclut l’en-tête de préci
  N’importe quel type de données d’intervalle qui a un deuxième champ a un *précision à la seconde*. Ceci est le nombre de chiffres autorisés dans la partie fractionnaire de la valeur des secondes. Cela est différent de celui d’autres types de données, où la précision indique le nombre de chiffres avant la virgule décimale. La précision d’un type de données d’intervalle en secondes est le nombre de chiffres après la virgule décimale. Par exemple, si la précision en secondes est définie sur 6, le 123456 dans le champ de fraction serait interprété comme.123456 et le numéro 1230 sont interprétés en tant que.001230. Pour les autres types de données, il est appelé mise à l’échelle. Précision de secondes d’intervalle est contenue dans le champ SQL_DESC_PRECISION du descripteur. Si la précision du composant fractions de secondes de la valeur d’intervalle SQL est supérieure à ce qui peuvent être contenu dans la structure d’intervalle C, il est définies par le pilote si la valeur de fraction de seconde dans l’intervalle SQL est arrondie ou tronquée lorsque converti à la structure d’intervalle C.  
   
  Lorsque le champ SQL_DESC_CONCISE_TYPE est défini pour un type de données d’intervalle, le champ SQL_DESC_TYPE a la valeur SQL_INTERVAL et la valeur SQL_DESC_DATETIME_INTERVAL_CODE est définie sur le code pour le type de données d’intervalle. Le champ SQL_DESC_DATETIME_INTERVAL_PRECISION est automatiquement défini sur la précision de début intervalle par défaut de 2, et le champ SQL_DESC_PRECISION est automatiquement défini sur la précision de secondes d’intervalle par défaut de 6. Si une de ces valeurs n’est pas approprié, l’application doit définir explicitement le champ de descripteur via un appel à **SQLSetDescField**.
+

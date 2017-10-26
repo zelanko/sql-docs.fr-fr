@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ Le tableau suivant montre comment les types de données texte sont mappées aux 
 |LONGCHAR|Limite la théorique de la largeur d’une colonne LONGCHAR, que ce soit de longueur fixe ou délimité est 65500K. L’ISAM texte est plus probable prendre en charge fiable jusqu'à 32 Ko environ.|  
   
  Vous trouverez davantage de contraintes sur les types de données dans [Limitations du Type de données](../../odbc/microsoft/data-type-limitations.md).
+

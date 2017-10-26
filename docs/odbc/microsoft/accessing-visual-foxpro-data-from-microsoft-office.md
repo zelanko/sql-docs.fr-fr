@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3b509830bbba4405269a766e95ce7fa585ff7a4
@@ -36,3 +37,4 @@ Vous pouvez utiliser le pilote ODBC Microsoft Visual FoxPro pour accéder aux do
 |Utiliser Microsoft Access|[Interrogation et la mise à jour de données Visual FoxPro à partir d’Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [L’importation de données Visual FoxPro dans Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |Utilisez Microsoft Excel|[L’accès à une Source de données Visual FoxPro à partir de Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [Importation de données dans Microsoft Excel à partir d’une base de données Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
 |Utilisez Microsoft Word|[Création d’étiquettes de publipostage dans Microsoft Word à l’aide de données Visual FoxPro](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+

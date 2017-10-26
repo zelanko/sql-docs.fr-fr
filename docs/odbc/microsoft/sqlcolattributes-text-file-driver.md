@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 811ccdff731e006d1ee112674b47531573778354
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_OWNER_NAME|Une chaîne vide (« ») est retourné dans cette colonne, car le nom du propriétaire n’est pas pris en charge.|  
 |SQL_QUALIFIER_NAME|Le chemin d’accès à un répertoire est retournée.|  
 |SQL_COLUMN_SEARCHABLE|Colonnes LONGVARBINARY et LONGVARCHAR sont signalés comme SQL_UNSEARCHABLE.<br /><br /> Binaire de longueur fixe et de longueur variable et les types de données caractères sont interrogeables, même si LONGVARBINARY et LONGVARCHAR ne sont pas.|
+

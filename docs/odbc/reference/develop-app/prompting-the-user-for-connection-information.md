@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  Une fois que l’utilisateur sélectionne une source de données, le Gestionnaire de pilotes construit une chaîne de connexion en spécifiant cette source de données et les transmet au pilote. Le pilote peut inviter l’utilisateur pour des informations supplémentaires dont il a besoin.  
   
  Les conditions dans lesquelles le pilote invite l’utilisateur sont contrôlées par le *DriverCompletion* indicateur ; il existe des options toujours demander, invite si nécessaire ou pour ne jamais demander. Pour obtenir une description complète de cet indicateur, consultez la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) description de fonction.
+

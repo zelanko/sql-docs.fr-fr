@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Récupère une ligne à partir d’un jeu de résultats dans les emplacements spécifiés par les appels précédents à [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md). Prépare le pilote pour un appel à [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) pour les colonnes indépendantes.  
   
  Pour plus d’informations, consultez [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) dans les *de référence du programmeur ODBC*.
+

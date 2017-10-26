@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a493a53b736ef5a2606cca1fca710957e30616f1
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
 Le niveau de prise en charge par un pilote de la grammaire SQL-92 est indiqué par la valeur retournée par un appel à **SQLGetInfo** avec le type d’informations SQL_SQL_CONFORMANCE. Cela indique si le pilote est conforme aux niveaux de saisie, FIPS transitoires, intermédiaire ou intégral définis dans SQL-92.  
   
  Tous les pilotes ODBC doivent prendre en charge la grammaire SQL minimale décrite dans [grammaire minimale SQL](../../../odbc/reference/appendixes/sql-minimum-grammar.md) dans l’annexe c : SQL grammaire. Cette grammaire est un sous-ensemble du niveau d’entrée de SQL-92. Pilotes peuvent prendre en charge SQL supplémentaires et être conforme au niveau d’entrée SQL-92, intermédiaire ou intégral ou à la norme FIPS 127-2 au niveau de transition. Les pilotes qui sont conformes à un niveau donné de SQL-92 ou la norme FIPS 127-2 peuvent prendre en charge des fonctionnalités supplémentaires dans un des niveaux plus élevés mais non entièrement conforme à ce niveau. Pour déterminer si une fonctionnalité est prise en charge, une application doit appeler **SQLGetInfo** avec le type d’informations. Le niveau de conformité d’une fonction SQL est décrite dans le type d’information. (Consultez la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description de fonction.)
+

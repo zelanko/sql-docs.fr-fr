@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ La plupart des options de défilement dans **SQLFetchScroll** positionnez le cur
  Le nombre de lignes dans le curseur, ce qui est la taille du résultat défini, il est disponible en tant que le champ SQL_DIAG_CURSOR_ROW_COUNT de l’en-tête de diagnostic. La valeur de ce champ est définie uniquement après avoir **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResult** a été appelée. Ce nombre peut être un nombre approximatif d’ou d’un nombre exact, en fonction des capacités du pilote. Prise en charge du pilote peut être déterminé en appelant **SQLGetInfo** avec les types d’informations de curseur attributs et en vérifiant si le bit SQL_CA2_CRC_APPROXIMATE ou SQL_CA2_CRC_EXACT est retourné pour le type de curseur.  
   
  Un nombre exact de lignes n’est jamais pris en charge pour un curseur dynamique. Pour les autres types de curseurs, le pilote peut prendre en charge des nombres de lignes exact ou approximatif, mais pas les deux. Si le pilote prend en charge ni exacte ni approximative du nombre de lignes pour un type de curseur spécifique, le champ SQL_DIAG_CURSOR_ROW_COUNT contient le nombre de lignes qui ont été extraites jusqu'à présent. Quelle que soit la définition du pilote prend en charge, **SQLFetchScroll** avec un *opération* de SQL_FETCH_LAST entraînera le champ SQL_DIAG_CURSOR_ROW_COUNT contenir le nombre exact de lignes.
+

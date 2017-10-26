@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1675f70b67f5c600aada546f8caf8eb8b99df99a
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 Embedded SQL illustré [Embedded SQL exemple](../../odbc/reference/embedded-sql-example.md) SQL statique est appelée. Il est appelé SQL statique, car les instructions SQL dans le programme sont statiques ; Autrement dit, ils changent chaque fois que le programme est exécuté. Comme décrit dans la section précédente, ces instructions sont compilées lors de la compilation du reste du programme.  
   
  SQL statique fonctionne dans de nombreuses situations et peut être utilisé dans n’importe quelle application pour laquelle l’accès aux données peut être déterminée au moment du design programme. Par exemple, un programme de saisie de commandes utilise toujours la même instruction pour insérer une nouvelle commande et un système de réservation des compagnies aériennes utilise toujours la même instruction pour modifier l’état d’un siège disponibles pour réservé. Chacune de ces instructions est généralisé via l’utilisation de variables d’hôte ; des valeurs différentes peuvent être insérés dans une commande client, et sièges différents peuvent être réservées. Étant donné que ces instructions peuvent être codées en dur dans le programme, ces programmes présentent l’avantage que les instructions doivent être analysée, validé et optimisé qu’une seule fois, au moment de la compilation. Cela entraîne un code relativement rapide.
+

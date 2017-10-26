@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  elle peut appeler **SQLColumns** pour la colonne OrderID.  
   
  Le seul cas dans lequel l’application ne peut pas déterminer facilement les métadonnées de paramètre est lorsque l’utilisateur entre une instruction paramétrable. Dans ce cas, l’application appelle **SQLPrepare** pour préparer l’instruction, **SQLNumParams** pour déterminer le nombre de paramètres, et **SQLDescribeParam** pour décrire chaque paramètre. Toutefois, comme indiqué précédemment, la plupart des sources de données ne fournissent pas un moyen pour le pilote découvrir les métadonnées de paramètre, donc **SQLDescribeParam** n’est pas largement pris en charge.
+

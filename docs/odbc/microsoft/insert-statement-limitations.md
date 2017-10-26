@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
@@ -47,3 +48,4 @@ Les données insérées sont tronquées à droite sans avertissement si elle est
 ```  
   
  Lorsque le pilote de texte est utilisé, toutes les valeurs de colonne peuvent être remplis avec des espaces de début. La longueur de n’importe quelle ligne doit être inférieur ou égal à 65,543 octets.
+

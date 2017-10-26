@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ Bien que chaque paramètre spécifié avec **SQLBindParameter** est définie à 
 |Une valeur utilisée avec **IN**|Identique à l’expression ou la première valeur s’il existe un marqueur de paramètre dans l’expression|  
 |Une valeur de modèle utilisée avec **comme**|VARCHAR|  
 |Une valeur de mise à jour utilisée avec **mettre à jour**|La colonne de la mise à jour|
+

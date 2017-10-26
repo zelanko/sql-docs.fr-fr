@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06e496e3999904a019f481374598a9a774729ab3
@@ -31,3 +32,4 @@ L’application et la source de données stockent souvent des données dans plus
  L’option de traduction est une valeur qui peut être interprétée uniquement par une DLL de traduction particulière. Par exemple, si la traduction DLL traduit entre les pages de codes différentes, l’option peut donner les numéros des pages de codes utilisées par l’application et la source de données. Il n’existe aucune spécification pour une DLL de traduction d’utiliser une option de traduction.  
   
  Après une traduction que DLL a été spécifié, le pilote charge et appelle pour convertir toutes les données transitant entre l’application et la source de données. Cela inclut toutes les instructions SQL et les paramètres de caractères envoyés à la source de données et tous les résultats de caractères, les métadonnées de caractères tels que les noms de colonnes et les messages d’erreur sont récupérées à partir de la source de données. Données de connexion ne sont pas traduites, étant donné que la DLL de traduction n’est pas chargée tant qu’après que l’application est connectée à la source de données.
+

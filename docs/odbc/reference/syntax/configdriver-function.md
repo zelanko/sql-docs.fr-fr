@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Messages  
  Une routine d’installation de pilote peut envoyer un message texte à une application sous forme de chaîne se terminant par null dans le *lpszMsg* mémoire tampon. Le message est tronqué à *cbMsgMax* moins le caractère de fin de la valeur null par le **ConfigDriver** fonctionner s’il est supérieur ou égal à *cbMsgMax* caractères.
+

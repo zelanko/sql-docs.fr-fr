@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
@@ -44,3 +45,4 @@ Le pilote dBASE s’ouvre automatiquement et met à jour les fichiers d’index 
 -   Le nom d’index doit correspondre à la convention d’affectation de noms d’index dBASE. dBASE III nécessite que chaque index soit dans un fichier distinct, ayant chacun une extension .ndx. Dans dBASE IV, les index sont créés en tant que noms de balise sont stockés dans un fichier .mdx unique. Le fichier .mdx a le même nom que le fichier de base de données (par exemple, emp.MDX est le fichier d’index pour la base de données Emp.dbf).  
   
 -   dBASE définit un index unique comme un où un seul enregistrement d’un ensemble de valeurs clés identiques est ajouté à l’index.
+

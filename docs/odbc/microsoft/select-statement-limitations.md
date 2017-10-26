@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 53b3e18a07e14e6059a9d193d8659a09b87e6c65
@@ -38,3 +39,4 @@ Une colonne de la fonction d’agrégation ne peut pas être combinée avec une 
  Si un nom de colonne incorrect est entré dans une instruction SELECT, une erreur SQLSTATE 07001, « Nombre de paramètres erronés, » est retournée au lieu d’une erreur SQLSTATE S0022, « colonne introuvable. »  
   
  Lorsque le pilote Microsoft Excel est utilisé, si une chaîne vide est insérée dans une colonne, une chaîne vide est convertie en une valeur NULL ; une instruction SELECT recherche qui est exécutée avec une chaîne vide dans la clause WHERE ne réussira pas sur cette colonne.
+

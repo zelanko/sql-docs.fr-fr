@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ La longueur d’octet de transfert d’une colonne est le nombre maximal d’oct
 |SQL_GUID|16 (la taille de la structure GUID).|  
   
  [a] si le pilote ne peut pas déterminer la longueur de colonne ou de paramètre pour les types de variable, elle retourne SQL_NO_TOTAL.
+

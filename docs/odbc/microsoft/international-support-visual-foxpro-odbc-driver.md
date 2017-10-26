@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
@@ -45,3 +46,4 @@ Le pilote ODBC Microsoft Visual FoxPro prend en charge :
   
 ## <a name="sort-order"></a>ordre de tri  
  Ordres de tri intègrent les règles de tri de différentes *paramètres régionaux*s, ce qui vous permet de trier correctement les données dans ces langues. Dans Visual FoxPro, l’ordre de tri actuelle détermine les résultats des comparaisons d’expression de caractères et l’ordre dans lequel les enregistrements apparaissent dans indexée ou du tri des tables.
+

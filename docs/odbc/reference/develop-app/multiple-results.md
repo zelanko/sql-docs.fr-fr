@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  Il est spécifique au pilote, si l’instruction du lot entier est exécutée avant que les résultats soient disponibles. Dans certaines implémentations, c’est le cas ; dans d’autres, en appelant **SQLMoreResults** entraîne l’exécution de l’instruction suivante dans le lot.  
   
  Si une des instructions dans un lot échoue, **SQLMoreResults** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO. Si le lot a été abandonné lors de l’échec de l’instruction ou l’instruction a échoué était la dernière instruction du lot, **SQLMoreResults** retourne SQL_ERROR. Si le lot n’a pas été abandonné lors de l’échec de l’instruction et l’échec de l’instruction n’a pas la dernière instruction du lot, **SQLMoreResults** retourne SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO indique qu’au moins un jeu de résultats ou de nombre a été générée et que le lot n’a pas été abandonné.
+

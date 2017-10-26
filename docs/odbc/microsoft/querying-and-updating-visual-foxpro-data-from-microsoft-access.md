@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef01b8c5a21d65fb99f5f190fd159d90f3ac78b2
@@ -48,3 +49,4 @@ Vous pouvez interroger et mettre à jour les données stockées dans une base de
  Vous pouvez désormais utiliser Microsoft Access pour interroger et mettre à jour des données dans les tables Visual FoxPro liés. Modifications apportées aux données liées sont renvoyées à la source de données Visual FoxPro.  
   
  Si vous ne souhaitez pas que les modifications que vous apportez dans Microsoft Access pour affecter les données sur la source de données Visual FoxPro, consultez [l’importation de données dans Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md).
+

@@ -16,6 +16,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
@@ -158,3 +159,4 @@ GO
 -   Lorsque vous supprimez une base de données activée pour les FileTables, le répertoire de niveau base de données et toutes les structures de répertoires de tous les FileTables situés au niveau inférieur sont supprimés.  
   
   
+

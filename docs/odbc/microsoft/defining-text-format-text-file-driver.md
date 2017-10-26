@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
@@ -48,3 +49,4 @@ Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition d
 |**Lignes à analyser**|Le nombre de lignes que le programme d’installation ou le pilote analysera lors de la définition des colonnes et types de données de colonne en fonction des données existantes.<br /><br /> Vous pouvez entrer un nombre compris entre 1 et 32 767 pour le nombre de lignes à analyser. Par défaut, cette fonction 25 si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue. (Un nombre en dehors de la limite retournera une erreur).|  
 |**Tables**|Contient une liste de tous les fichiers dans le répertoire sélectionné dans le **le programme d’installation de texte** boîte de dialogue qui correspondent à la liste des extensions spécifiées.<br /><br /> Lorsque \<par défaut > est sélectionnée, et une des conditions suivantes est true, les valeurs des attributs de table dans le **Tables** groupe sont écrits dans Schema.ini (sans les autres entrées dans Schema.ini sont couvertes) :<br /><br /> -Il n’existe aucun Schema.ini dans le répertoire spécifié.<br />-Le fichier Schema.ini existe, mais il n’existe pas dans Schema.ini pour un des fichiers texte (avec l’extension spécifiée) dans le répertoire.<br />-La section d’un fichier texte existe dans Schema.ini, mais le corps est vide.<br /><br /> Lorsque \<par défaut > est sélectionnée, le **colonnes** groupe est désactivé.|  
 |**Largeur**|La largeur de la colonne peut être modifiée pour les colonnes CHAR ou LONGCHAR. La largeur par défaut est 1, si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue.<br /><br /> Pour les autres types de données, la largeur du contrôle est désactivé et aucune valeur affichée.|
+

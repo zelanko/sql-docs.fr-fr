@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ Lorsqu’une erreur se produit, le pilote Visual FoxPro renvoie les informations
  Par exemple, si le pilote ODBC Visual FoxPro n’a pas trouvé le fichier employee.dbf, elle peut retourner le message d’erreur suivant :  
   
  « [*Microsoft*] [*le pilote ODBC Visual FoxPro*] fichier 'employee.dbf' n’existe pas »
+

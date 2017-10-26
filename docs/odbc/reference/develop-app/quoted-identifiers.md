@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 07a0c8299fc4063e72353025465309c426a3a251
@@ -35,3 +36,4 @@ SELECT * FROM "Accounts Payable"
  Les identificateurs fait pour que l’instruction analysable. Par exemple, si les comptes fournisseurs pas de guillemets dans l’instruction précédente, l’analyseur supposent la présence de deux tables, les comptes et les fournisseurs et retourner une erreur de syntaxe qui ils n’étaient pas séparés par une virgule. L’identificateur de guillemet est spécifique au pilote et sont récupérée avec l’option SQL_IDENTIFIER_QUOTE_CHAR dans **SQLGetInfo**. Les listes des caractères spéciaux et des mots clés sont récupérés avec les options SQL_SPECIAL_CHARACTERS et SQL_KEYWORDS **SQLGetInfo**.  
   
  Pour plus de sécurité, les applications interopérables devis souvent tous les identificateurs à l’exception de celles des pseudo colonnes, telles que la colonne ROWID dans Oracle. **SQLSpecialColumns** retourne une liste des pseudo colonnes. En outre, s’il existe des restrictions spécifiques à l’application sur où les caractères spéciaux peuvent apparaître dans un nom d’objet, il est préférable pour les applications interopérables ne doit ne pas utiliser de caractères spéciaux dans les positions.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
@@ -46,3 +47,4 @@ Comme un programme SQL incorporé contient une combinaison d’instructions de l
 5.  Le module de demande de base de données généré par le précompilé est soumis à un utilitaire de liaison spéciale. Cet utilitaire examine les instructions SQL, analyse, valide et optimise les, puis génère un plan d’accès pour chaque instruction. Le résultat est un plan d’accès pour l’ensemble du programme, qui représente une version exécutable des instructions SQL incorporées. L’utilitaire de liaison stocke le plan dans la base de données, en lui assignant généralement le nom de l’application qui l’utilise. Indique si cette étape a lieu au moment de l’exécution ou de temps de compilation dépend du SGBD.  
   
  Notez que les étapes permettant de compiler un programme SQL incorporé correspondent très proche de la procédure décrite précédemment dans [le traitement d’une instruction SQL](../../odbc/reference/processing-a-sql-statement.md). En particulier, notez que le précompilés sépare les instructions SQL à partir du code de langage hôte et l’utilitaire de liaison analyse et valide les instructions SQL et crée les plans d’accès. Dans le SGBD où l’étape 5 a lieu au moment de la compilation, les quatre premières étapes de traitement d’une instruction SQL lieu au moment de la compilation, tandis que la dernière étape (exécution) a lieu au moment de l’exécution. Cela a pour effet de rendre l’exécution des requêtes dans ces SGBD très rapide.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d637ddfebc0563ed2591740498d519f91e34321e
@@ -35,3 +36,4 @@ Certains pilotes sont capables de définir les champs de l’IPD après qu’une
  Lorsque le remplissage automatique est pris en charge et activé, le pilote renseigne les champs de l’IPD après une instruction SQL contenant des marqueurs de paramètres a été préparée par un appel à **SQLPrepare**. Une application peut récupérer ces informations en appelant **SQLGetDescField** ou **SQLGetDescRec**, ou **SQLDescribeParam**. L’application peut utiliser les informations pour lier la mémoire tampon d’application plus approprié pour un paramètre ou pour spécifier une conversion de données pour celui-ci.  
   
  Le remplissage automatique de l’IPD risque de produire une altération des performances. Une application peut désactiver en rétablissant l’attribut d’instruction SQL_ATTR_ENABLE_AUTO_IPD SQL_FALSE (la valeur par défaut).
+

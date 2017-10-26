@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
@@ -39,3 +40,4 @@ Le Gestionnaire de pilotes vérifie les types suivants d’arguments. Sauf indic
 -   Numéros de colonne et de paramètre doivent être supérieur à 0 ou supérieur ou égal à 0, selon la fonction. Le pilote doit vérifier la limite supérieure de ces valeurs d’argument selon le jeu de résultats actuel ou d’une instruction SQL.  
   
 -   Arguments de longueur / d’indicateur et les arguments de longueur de mémoire tampon de données doivent contenir des valeurs appropriées. Par exemple, l’argument qui spécifie la longueur d’un nom de table dans **SQLColumns** (*NameLength3*) doit être SQL_NTS ou une valeur supérieure à 0 ; *BufferLength* dans **SQLDescribeCol** doit être supérieur ou égal à 0. Le pilote devrez peut-être également vérifier ces arguments. Par exemple, il peut vérifier que *NameLength3* est inférieur ou égal à la longueur maximale d’un nom de table dans la source de données.
+

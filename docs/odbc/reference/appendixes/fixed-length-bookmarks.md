@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 279b6a3c1f8eb2f1eea5bba35ee10f0a6643fb49
@@ -32,3 +33,4 @@ Si un ODBC 3*.x* pilote doit fonctionner avec une API ODBC 2.* x* application qu
 -   SQL_UB_ON en tant que valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillé dans ODBC 3*.x*.)  
   
 -   L’option d’instruction SQL_GET_BOOKMARK.
+

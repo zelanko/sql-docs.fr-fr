@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ Les pilotes de base de données de bureau ODBC sont utilisés avec le moteur de 
 |Fichiers utilisés par chaque pilote de base de données de bureau|Fichiers de pilote ODBC|  
 |Fichiers Microsoft Jet utilisés par chaque pilote de base de données de bureau|Fichiers Microsoft Jet|  
 |Fichiers de pilote IISAM qui fournissent l’accès aux données entre Microsoft Jet et autres SGBD|Fichiers de pilote ISAM installable|
+

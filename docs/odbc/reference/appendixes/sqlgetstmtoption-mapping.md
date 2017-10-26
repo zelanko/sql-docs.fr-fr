@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 503af3ea0dbac61cee506b932f79eccab5dedcf8
@@ -58,3 +59,4 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
  L’option d’instruction SQL_GET_BOOKMARK a été déconseillée dans ODBC 3*.x*. Pour un ODBC 3*.x* pilote pour fonctionner avec ODBC 2.* x* les applications qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge SQL_GET_BOOKMARK. Pour un ODBC 3*.x* pilote pour fonctionner avec ODBC 2.* x* applications, il doit prendre en charge affectant SQL_USE_BOOKMARKS SQL_UB_ON et doit exposer des signets de longueur fixe. Si un ODBC 3*.x* pilote prend en charge uniquement des signets de longueur variable, les signets pas à longueur fixe, elle doit retourner la valeur SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si un ODBC 2.* x* application tente de la valeur SQL_USE_BOOKMARKS SQL_UB_ON.  
   
  Pour un ODBC 3*.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier.
+

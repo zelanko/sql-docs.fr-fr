@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
@@ -51,3 +52,4 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
 >  ODBC 2. *x* pilotes ne prennent pas en charge les modèles de recherche dans les *CatalogName* argument dans **SQLTables**. ODBC 3*.x* pilotes accepte les modèles de recherche dans cet argument si l’attribut d’environnement le paramètre version_odbc SQL_ATTR_ est défini à SQL_OV_ODBC3 ; ils n’acceptent pas les modèles de recherche dans cet argument si elle est définie sur SQL_OV_ODBC2.  
   
  En passant un pointeur null à un argument de modèle de recherche ne limite pas la recherche pour cet argument ; Autrement dit, un pointeur null et que le pourcentage de modèle de recherche (caractères) sont équivalentes. Cependant, une longueur nulle rechercher le modèle : autrement dit, un pointeur valide vers une chaîne de longueur zéro — correspond uniquement à la chaîne vide (« »).
+

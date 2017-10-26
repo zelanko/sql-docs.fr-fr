@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 598f047d1ae18e2c37587df270001b49d1b15831
@@ -41,3 +42,4 @@ Associé à chaque environnement, connexion, l’instruction et handle de descri
 -   [Enregistrement d’en-tête](../../../odbc/reference/develop-app/header-record.md)  
   
 -   [Enregistrements d’état](../../../odbc/reference/develop-app/status-records.md)
+

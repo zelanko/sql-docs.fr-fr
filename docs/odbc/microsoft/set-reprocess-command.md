@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Notes  
  La première tentative de verrouillage d’un enregistrement ou un fichier n’est pas toujours réussie. Souvent, un enregistrement ou un fichier est verrouillé par un autre utilisateur sur le réseau. DÉFINIR le RETRAITER détermine si Visual FoxPro effectue des tentatives supplémentaires pour l’enregistrement ou le fichier de verrouillage lors de la tentative initiale a échoué. Vous pouvez spécifier la fréquence des tentatives supplémentaires sont effectuées ou pour la durée pendant laquelle les tentatives sont effectuées. Une routine ON ERROR affecte verrou comment échoue tentatives sont gérées.
+

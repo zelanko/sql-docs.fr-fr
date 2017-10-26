@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
@@ -42,3 +43,4 @@ Chaque fois qu’une application utilise le même code sur plusieurs pilotes, ce
 -   [Vérification de la prise en charge de la fonctionnalité et la variabilité](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
 -   [Fonctionnalités à surveiller](../../../odbc/reference/develop-app/features-to-watch-for.md)
+

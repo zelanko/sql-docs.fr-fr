@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ Les noms de colonne peuvent contenir des caractères valides (par exemple, des e
  La barre verticale (&#124;) ne peut pas être utilisé dans un nom de colonne, si le nom est entouré de guillemets précédent ou non.  
   
  Lorsque le pilote de texte est utilisé, le pilote fournit un nom par défaut, si un nom de colonne n’est pas spécifié. Par exemple, le pilote appelle la première colonne (F1), la seconde colonne F2 et ainsi de suite.
+

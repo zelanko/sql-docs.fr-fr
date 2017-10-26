@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ Une application alloue une connexion, il doit au préalable l’attribut d’env
   
 > [!IMPORTANT]  
 >  Applications qui suivent l’ODBC 3. *x* spécification doit utiliser le code conditionnel pour éviter d’utiliser la fonctionnalité nouvelle ODBC 3.* x* lorsque vous travaillez avec ODBC 2.* x* pilotes. ODBC 2. *x* pilotes ne prennent pas en charge les fonctionnalités nouvelles ODBC 3.* x* parce que l’application déclare qu’il suit la ODBC 3.* x* spécification. En outre, ODBC 3. *x* pilotes cesse pas en charge des fonctionnalités nouvelles ODBC 3.* x* parce que l’application déclare qu’il suit ODBC 2.* x* spécification.
+
