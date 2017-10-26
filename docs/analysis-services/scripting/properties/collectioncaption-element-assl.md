@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 03540ac5858144e8d986494318dde5cf1a938dec
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/01/2017
  L’élément qui correspond au parent de **CollectionCaption** dans l’objets AMO (Analysis Management) modèle objet est : Microsoft.AnalysisServices.relationshipendtranslation.  
   
   
+

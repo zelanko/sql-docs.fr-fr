@@ -14,6 +14,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: afd76c4ecd2fa1d2d85cb659896b68e2bc139c16
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 * [Étape 1 : Configurer l’environnement de développement pour Java](../../connect/jdbc/step-1-configure-development-environment-for-java-development.md)  
 * [Étape 2 : Créer une base de données SQL pour le développement de Java](../../connect/jdbc/step-2-create-a-sql-database-for-java-development.md)  
 * [Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java](../../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md)
+

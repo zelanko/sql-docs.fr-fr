@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  Il est important de noter qu'en général l'identificateur de langue et l'ordre de classement dans la base de données source ont peu d'effet, si ce n'est aucun, sur la façon dont les valeurs sont stockées dans la colonne du modèle tabulaire. L'exception indique si la base de données source transforme ou filtre les valeurs demandées.  
   
   
+

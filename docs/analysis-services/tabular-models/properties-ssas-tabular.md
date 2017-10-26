@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[Configurer les propriétés par défaut de modélisation des données et de déploiement &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Fournit des descriptions et les étapes de configuration pour les propriétés de modélisation et de déploiement par défaut. Les propriétés par défaut s'appliquent aux nouveaux projets de modèles tabulaires. Après qu'un projet a été créé, ces propriétés peuvent être modifiées pour un projet de modèle particulier, selon vos besoins.|  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
@@ -140,3 +141,4 @@ private void updatePerspective_Click(
  Toutefois, pour connaître la façon d'utiliser AMO pour créer et manipuler des représentations de perspective consultez le code source de l'exemple Objets AMO vers objets tabulaires. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[Configurer les propriétés de comportement de table pour les rapports Power View &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|Explique comment configurer les propriétés de comportement de table qui exposent les lignes de détails à un niveau plus granulaire. La définition des propriétés de comportement de table modifie le comportement de regroupement des lignes de détails et produit un meilleur placement par défaut des informations d'identification dans les mises en page de mosaïque, de carte et de graphique.|  
   
   
+
