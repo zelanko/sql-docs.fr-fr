@@ -1,7 +1,7 @@
 ---
 title: Pool de ressources du gouverneur de ressources | Microsoft Docs
 ms.custom: 
-ms.date: 03/17/2016
+ms.date: 10/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.translationtype: HT
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: e016d57148d09109f894269007d613774c4e8263
 ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
@@ -53,11 +53,19 @@ ms.lasthandoff: 06/22/2017
   
      Ces paramètres correspondent aux valeurs minimale et maximale d'opérations d'E/S physiques par seconde (IOPS) par volume disque pour un pool de ressources. Vous pouvez utiliser ces paramètres pour contrôler les entrées/sorties physiques pour les threads utilisateur d'un pool de ressources donné. Par exemple, le service des ventes génère plusieurs rapports de fin de mois par lots de grande taille. Les requêtes de ces lots peuvent générer des E/S susceptibles de saturer le volume disque et avoir un impact sur les performances d'autres charges de travail de priorité plus élevée dans la base de données. Pour isoler cette charge de travail, MIN_IOPS_PER_VOLUME est défini sur la valeur 20, tandis que MAX_IOPS_PER_VOLUME est défini sur la valeur 100 pour le pool de ressources du service des ventes, qui contrôle le niveau d'entrées/sorties qui est émis pour la charge de travail.  
   
- Lors de la configuration de l'UC ou de la mémoire, la somme des valeurs MIN pour l'ensemble des pools ne peut pas dépasser 100 pour cent des ressources de serveur. En outre, les valeurs MAX et CAP définies doivent être comprises entre MIN et 100 % inclus.  
+Lors de la configuration de l'UC ou de la mémoire, la somme des valeurs MIN pour l'ensemble des pools ne peut pas dépasser 100 pour cent des ressources de serveur. En outre, les valeurs MAX et CAP définies doivent être comprises entre MIN et 100 % inclus.  
   
- Si un pool est défini avec une valeur MIN différente de zéro, la valeur MAX effective des autres pools est réajustée. La valeur minimale de la valeur MAX d'un pool et de la somme des valeurs MIN des autres pools est soustraite de 100 %.  
+Si un pool est défini avec une valeur MIN différente de zéro, la valeur MAX effective des autres pools est réajustée. La valeur minimale de la valeur MAX d'un pool et de la somme des valeurs MIN des autres pools est soustraite de 100 %.  
   
- Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau présente les paramètres définis pour le pool interne, le pool par défaut et deux pools définis par l'utilisateur. Les formules suivantes calculent le pourcentage MAX (% MAX) effectif et le pourcentage (%) partagé.  
+Le tableau suivant illustre quelques-uns des concepts précédents. Le tableau présente les paramètres définis pour le pool interne, le pool par défaut et deux pools définis par l'utilisateur. 
+  
+|Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
+|par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
+|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
+Les formules suivantes calculent le pourcentage MAX (% MAX) effectif et le pourcentage (%) partagé dans la table ci-dessus :  
   
 -   Min(X,Y) représente la valeur plus petite de X et Y.  
   
@@ -68,15 +76,8 @@ ms.lasthandoff: 06/22/2017
 -   % MAX effectif = min(X,Y).  
   
 -   % partagé = % MAX effectif - % MIN.  
-  
-|Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interne|0|100|100|0|Les valeurs % MAX effectif et % partagé ne sont pas applicables au pool interne.|  
-|par défaut|0|100|30|30|La valeur MAX effectif est calculée comme suit : min(100,100-(20+50)) = 30. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 1|20|100|50|30|La valeur MAX effectif est calculée comme suit : min(100,100-50) = 50. Le % partagé est calculé comme suit : MAX effectif - MIN = 30.|  
-|Pool 2|50|70|70|20|La valeur MAX effectif est calculée comme suit : min(70,100-20) = 70. Le % partagé est calculé comme suit : MAX effectif - MIN = 20.|  
-  
- Sur la base du tableau précédent donné en exemple, détaillons les ajustements qui sont effectués à la création d'un pool supplémentaire. Ce pool (Pool 3) a un paramètre % MIN égal à 5.  
+
+Sur la base du tableau précédent donné en exemple, détaillons les ajustements qui sont effectués lors de la création d’un pool supplémentaire. Ce pool (Pool 3) a un paramètre % MIN égal à 5.  
   
 |Nom du pool|Paramètre % MIN|Paramètre % MAX|% MAX effectif calculé|% partagé calculé|Commentaire|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
@@ -94,29 +95,29 @@ ms.lasthandoff: 06/22/2017
   
 -   Tous les pools ont des valeurs minimales nulles. Tous les pools sont en concurrence pour les ressources disponibles et leurs tailles finales sont basées sur la consommation des ressources dans chaque pool. D'autres facteurs tels que les stratégies jouent un rôle dans la définition de la taille finale du pool.  
   
- Le gouverneur de ressources prédéfinit deux pools de ressources, le pool interne et le pool par défaut. Vous pouvez ajouter des pools supplémentaires.  
+Le gouverneur de ressources prédéfinit deux pools de ressources, le pool interne et le pool par défaut. Vous pouvez ajouter des pools supplémentaires.  
   
- **Pool interne**  
+**Pool interne**  
   
- Le pool interne représente les ressources consommées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce pool contient toujours uniquement le groupe interne, et il est impossible de le modifier. La consommation des ressources par le pool interne n'est pas restreinte. Toutes les charges de travail dans le pool sont considérées comme critiques pour la fonction de serveur, et le gouverneur de ressources permet au pool interne de contraindre d'autres pools même si cela implique le non-respect des limites définies pour les autres pools.  
+Le pool interne représente les ressources consommées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce pool contient toujours uniquement le groupe interne, et il est impossible de le modifier. La consommation des ressources par le pool interne n'est pas restreinte. Toutes les charges de travail dans le pool sont considérées comme critiques pour la fonction de serveur, et le gouverneur de ressources permet au pool interne de contraindre d'autres pools même si cela implique le non-respect des limites définies pour les autres pools.  
   
 > [!NOTE]  
 >  L'utilisation des ressources de pool interne et de groupe interne n'est pas soustraite de l'utilisation des ressources totales. Les pourcentages sont calculés à partir des ressources totales disponibles.  
   
- **Pool par défaut**  
+**Pool par défaut**  
   
- Le pool par défaut est le premier pool d'utilisateur prédéfini. Avant toute configuration, le pool par défaut contient seulement le groupe par défaut. Le pool par défaut ne peut pas être créé ni supprimé, mais il peut être modifié. Il peut contenir des groupes définis par l'utilisateur en plus du groupe par défaut. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , il existe un pool de ressources par défaut pour les opérations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] courantes et un pool de ressources externes par défaut pour les processus externes, tels que l’exécution de scripts R.  
+Le pool par défaut est le premier pool d'utilisateur prédéfini. Avant toute configuration, le pool par défaut contient seulement le groupe par défaut. Le pool par défaut ne peut pas être créé ni supprimé, mais il peut être modifié. Il peut contenir des groupes définis par l'utilisateur en plus du groupe par défaut. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , il existe un pool de ressources par défaut pour les opérations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] courantes et un pool de ressources externes par défaut pour les processus externes, tels que l’exécution de scripts R.  
   
 > [!NOTE]  
 >  Le groupe par défaut est modifiable, mais il ne peut pas être déplacé hors du pool par défaut.  
   
- **Pool externe**  
+**Pool externe**  
   
- Les utilisateurs peuvent définir un pool externe pour définir des ressources pour les processus externes. Pour R Services, il gouverne plus particulièrement `rterm.exe`, `BxlServer.exe` et les autres processus engendrés par ces derniers.  
+Les utilisateurs peuvent définir un pool externe pour définir des ressources pour les processus externes. Pour R Services, il gouverne plus particulièrement `rterm.exe`, `BxlServer.exe` et les autres processus engendrés par ces derniers.  
   
- **Pools de ressources définis par l'utilisateur**  
+**Pools de ressources définis par l'utilisateur**  
   
- Les pools de ressources définis par l'utilisateur sont ceux que vous créez pour les charges de travail spécifiques dans votre environnement. Le gouverneur de ressources fournit des instructions DDL pour créer, modifier et supprimer des pools de ressources.  
+Les pools de ressources définis par l'utilisateur sont ceux que vous créez pour les charges de travail spécifiques dans votre environnement. Le gouverneur de ressources fournit des instructions DDL pour créer, modifier et supprimer des pools de ressources.  
   
 ## <a name="resource-pool-tasks"></a>Tâches du pool de ressources  
   

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
@@ -111,7 +111,7 @@ GO
     >  L'état fermé n'a d'importance qu'au moment du retour. Par exemple, vous pouvez fermer un curseur au cours de l'exécution de la procédure, le rouvrir plus tard dans la procédure et renvoyer le jeu de résultats de ce curseur au traitement d'instructions, à la procédure ou au déclencheur appelant.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Exemples de paramètres de sortie de curseur  
- L’exemple ci-dessous crée une procédure avec un paramètre de sortie `@currency`_`cursor` utilisant le type de données **cursor** . La procédure stockée est ensuite appelée dans un traitement.  
+ L’exemple ci-dessous crée une procédure avec un paramètre de sortie `@currency_cursor` utilisant le type de données **cursor**. La procédure stockée est ensuite appelée dans un traitement.  
   
  Commencez par créer la procédure qui déclare puis ouvre un curseur dans la table Currency.  
   
