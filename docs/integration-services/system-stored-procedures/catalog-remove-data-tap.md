@@ -48,7 +48,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  Aucune  
   
 ## <a name="remarks"></a>Notes  
- Pour supprimer les données appuie, l’instance de l’exécution doit être dans l’état créé (une valeur de 1 dans le **état** colonne de la [catalog.operations & #40 ; Base de données SSISDB & #41 ; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)affichage).  
+ Pour supprimer les données appuie, l’instance de l’exécution doit être dans l’état créé (une valeur de 1 dans le **état** colonne de la [catalog.operations &#40; Base de données SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)affichage).  
   
 ## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'une des autorisations suivantes :  

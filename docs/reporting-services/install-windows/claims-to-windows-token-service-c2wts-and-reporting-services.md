@@ -70,7 +70,7 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
 
     * Sélectionnez **Ajouter** pour ajouter un service auquel déléguer.
 
-    * Sélectionnez **utilisateurs ou ordinateurs... *** et entrez le compte qui héberge le service. Par exemple, si un serveur SQL Server s’exécute sous un compte nommé *sqlservice*, entrez `sqlservice`. 
+    * Sélectionnez **utilisateurs ou ordinateurs...** * et entrez le compte qui héberge le service. Par exemple, si un serveur SQL Server s’exécute sous un compte nommé *sqlservice*, entrez `sqlservice`. 
 
     * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN.
 

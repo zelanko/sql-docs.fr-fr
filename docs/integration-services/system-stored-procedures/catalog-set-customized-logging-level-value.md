@@ -24,7 +24,7 @@ ms.lasthandoff: 09/26/2017
 # <a name="catalogsetcustomizedlogginglevelvalue"></a>Catalog.set_customized_logging_level_value
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Modifie les statistiques ou les événements enregistrés par un niveau de journalisation personnalisé existant. Pour plus d’informations sur les niveaux de journalisation personnalisés, consultez [Integration Services & #40 ; SSIS & #41 ; Journalisation](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Modifie les statistiques ou les événements enregistrés par un niveau de journalisation personnalisé existant. Pour plus d’informations sur les niveaux de journalisation personnalisés, consultez [Integration Services &#40; SSIS &#41; Journalisation](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

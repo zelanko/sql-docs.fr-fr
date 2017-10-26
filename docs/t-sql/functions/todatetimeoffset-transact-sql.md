@@ -98,7 +98,7 @@ SELECT TODATETIMEOFFSET (@dateTime, '+13:00');
 ## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Données de date et heure les fonctions et Types de &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [FUSEAU horaire &AMP; #40 ; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [FUSEAU horaire &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 
