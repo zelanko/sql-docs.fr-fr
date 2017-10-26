@@ -25,7 +25,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Aide (F1) de l'Assistant Dimension à variation lente
-  Utilisez l' **Assistant Dimension à variation lente** pour configurer le chargement des données dans divers types de dimensions à variation lente. Cette section fournit l'aide (accessible à l'aide de la touche F1) relative aux pages de cet Assistant ****. Le tableau suivant décrit les rubriques de cette section.  
+  Utilisez l' **Assistant Dimension à variation lente** pour configurer le chargement des données dans divers types de dimensions à variation lente. Cette section fournit l'aide (accessible à l'aide de la touche F1) **relative aux pages de cet Assistant**. Le tableau suivant décrit les rubriques de cette section.  
   
  Pour en savoir plus sur cet Assistant, consultez [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
