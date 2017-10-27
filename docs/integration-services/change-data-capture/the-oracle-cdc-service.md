@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  Lorsque vous utilisez la console du concepteur de capture de données modifiées Oracle, les modifications sont automatiquement détectées. Lors de la mise à jour de la configuration de capture de données modifiées Oracle directement à l'aide de SQL, la procédure suivante doit être appelée pour que le service de capture de données modifiées Oracle remarque la modification de configuration :  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  Le mot de passe d'exploration de données de journaux est stocké chiffré à l'aide d'une clé asymétrique avec le nom fixe `xdbcdc_asym_key` qui est automatiquement créé avec la commande suivante :  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

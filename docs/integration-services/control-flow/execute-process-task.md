@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Si vous utilisez Microsoft Visual Basic pour écrire l’application, définissez la propriété **My.Application.CommandLineArgs** . L’exemple suivant définit la propriété **My.Application.CommandLineArgs** pour extraire deux arguments :  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

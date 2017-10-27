@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>Utilisez ce script pour isoler les problèmes et les reproduire dans SQL Server Management Studio  
  L'opération de la source CDC est régie par l'opération de la tâche de contrôle de capture de données modifiées exécutée avant d'appeler la source CDC. La tâche de contrôle de capture de données modifiées prépare la valeur de la variable de package d'état de capture de données modifiées de sorte qu'elle contienne le NSE de début et le NSE de fin. Elle exécute une fonction équivalente au script suivant :  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  

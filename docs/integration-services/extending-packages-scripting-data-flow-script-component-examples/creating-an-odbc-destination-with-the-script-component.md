@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  Créer une table de destination en exécutant la commande Transact-SQL suivante dans le **AdventureWorks** base de données :  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
