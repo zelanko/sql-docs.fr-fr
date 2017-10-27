@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
 4. Démarrez les revendications vers Windows Token Service via l’Administration centrale de SharePoint sur le **gérer les Services sur le serveur** page. Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple, si vous avez un serveur qui est un serveur Web frontal et un autre serveur est un serveur d’applications qui possède le service partagé de SQL Server Reporting Services en cours d’exécution, seulement vous devront démarrer C2WTS sur le serveur d’applications. C2WTS est nécessaire uniquement sur un serveur Web frontal, si vous utilisez le composant WebPart Visionneuse de rapports.
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

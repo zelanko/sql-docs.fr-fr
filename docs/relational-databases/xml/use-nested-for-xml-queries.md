@@ -18,6 +18,7 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af44fc3250f620dcaad219e67b0e414cd76974a7
@@ -133,3 +134,4 @@ FOR XML AUTO, TYPE;
  Montre comment utiliser des requêtes FOR XML imbriquées pour contrôler la structure d'un document XML créé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
+

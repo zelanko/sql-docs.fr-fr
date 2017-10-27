@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Sélectionnez une base de données de destination et ouvrez une nouvelle fenêtre de requête. Dans la fenêtre de requête, exécutez le script suivant pour créer la table de destination :  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  Sélectionnez une base de données de destination et ouvrez une nouvelle fenêtre de requête. Dans la fenêtre de requête, exécutez le script suivant pour créer les tables de destination :  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

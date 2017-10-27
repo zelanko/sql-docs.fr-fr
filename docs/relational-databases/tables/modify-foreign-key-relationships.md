@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
@@ -153,3 +154,4 @@ ms.lasthandoff: 06/22/2017
  Pour modifier une contrainte FOREIGN KEY à l'aide de Transact-SQL, vous devez d'abord supprimer la contrainte FOREIGN KEY existante, puis la recréer avec sa nouvelle définition. Pour plus d'informations, consultez [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) et [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  
   
 ###  <a name="TsqlExample"></a>  
+

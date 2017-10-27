@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 98ebdbf63808c31b1e1fc5b9b2bcde91ebe2e33d
-ms.openlocfilehash: 8d7bb0e524b90ac621570da5c2653db6e0a4cb6a
+ms.workload: Inactive
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Mettre en cache les datasets partagés (SSRS)
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Vous devez avoir des autorisations ReadPolicy et UpdatePolicy sur le dataset partagé.  
   
- Les plans d'actualisation du cache s'appliquent aux datasets partagés et aux rapports. Pour plus d’informations, consultez [Options d’actualisation du Cache &#40; Le Gestionnaire de rapports &#41; ](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Les plans d'actualisation du cache s'appliquent aux datasets partagés et aux rapports. Pour plus d’informations, consultez [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Conditions entraînant l'expiration du cache  
  Les conditions suivantes peuvent provoquer le fait qu'un cache de dataset partagé devienne non valide.  
@@ -101,6 +102,7 @@ ms.lasthandoff: 08/09/2017
  Les mises à jour apportées aux plans d'actualisation du cache pour les datasets partagés n'affectent pas les rapports qui sont déjà traités. La mise à jour d'un plan d'actualisation du cache affecte uniquement les futurs lancements de rapports qui font référence au dataset partagé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer des jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
+ [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
+

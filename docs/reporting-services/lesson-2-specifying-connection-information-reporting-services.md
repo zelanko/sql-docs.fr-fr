@@ -16,7 +16,8 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d0667dec1b59d5560ca24176634dddc5d6d8d18
 ms.contentlocale: fr-fr
@@ -62,7 +63,7 @@ Si le volet **Données du rapport** n’est pas visible, cliquez sur **Données 
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] La source de données **AdventureWorks2014** est ajoutée au volet **Données du rapport** .  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>Tâche suivante  
-Vous avez défini avec succès une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Vous allez ensuite créer un rapport. Consultez [leçon 3 : définition d’un Dataset pour le rapport de Table &#40; Reporting Services &#41; ](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+Vous avez défini avec succès une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Vous allez ensuite créer un rapport. Voir [Leçon 3 : Définition d’un dataset destiné à un rapport de table &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

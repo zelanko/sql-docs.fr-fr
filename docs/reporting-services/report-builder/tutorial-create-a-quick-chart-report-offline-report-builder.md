@@ -19,7 +19,8 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: fr-fr
@@ -35,7 +36,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
  ![Graphique à secteurs rapide de générateur de rapports](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "graphique à secteurs rapide de générateur de rapports")  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Conditions préalables  
  Si vous utilisez des données XML ou un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête, vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
@@ -66,7 +67,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
      ![Démarrer le Générateur de rapports](../../reporting-services/media/rb-getstarted.png "démarrer le Générateur de rapports")  
   
-     Si la boîte de dialogue **Mise en route** n’apparaît pas, cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** .  
+     If the **Getting Started** dialog box does not appear, click **File** >**New**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** .  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -82,7 +83,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
 7.  Dans la zone **Sélectionner un type de connexion** , cliquez sur **XML**.  
   
-8.  Cliquez sur le **informations d’identification** onglet, sélectionnez **utiliser l’utilisateur Windows actuel. Délégation Kerberos peut être nécessaire**, puis cliquez sur **OK**.  
+8.  Cliquez sur l’onglet **Informations d’identification**, sélectionnez **Utiliser l’utilisateur Windows actuel. Une délégation Kerberos peut être nécessaire**, puis cliquez sur **OK**.  
   
 9. Dans la page **Choisir une connexion à une source de données** , cliquez sur **MonGraphiqueàSecteurs**, puis sur **Suivant**.  
   
@@ -152,7 +153,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
      La boîte de dialogue **Mise en route** s'affiche.  
   
     > [!NOTE]  
-    >  Si la boîte de dialogue **Mise en route** n’apparaît pas, cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** .  
+    >  If the **Getting Started** dialog box does not appear, click **File** >**New**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** .  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -234,7 +235,7 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
   
  Pour finir, afin d'enregistrer vos rapports sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports, il vous faut posséder l'URL et les autorisations nécessaires. Vous pouvez créer les rapports que vous créez directement à partir de votre ordinateur, mais les rapports procurent davantage de fonctionnalités lorsqu'ils sont exécutés à partir du serveur de rapports ou d'un site SharePoint. Vous devez disposer des autorisations nécessaires pour exécuter vos rapports (ou d'autres rapports) à partir du serveur de rapports ou du site SharePoint sur lequel ils sont publiés. Pour obtenir ces autorisations, contactez votre administrateur système.  
   
- Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Consultez [Concepts &#40; de la création de rapports Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Voir [Planification d’un rapport (Générateur de rapports)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Voir [Concepts de création de rapport (Générateur de rapports et SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Voir [Planification d’un rapport (Générateur de rapports)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -242,3 +243,4 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
 [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -17,6 +17,7 @@ helpviewer_keywords:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
 ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
@@ -102,3 +103,4 @@ Le Gestionnaire de Configuration de Reporting Services est installé automatique
 [Configurer et administrer un serveur de rapports](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

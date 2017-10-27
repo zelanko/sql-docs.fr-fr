@@ -14,7 +14,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ca14104f9dd60fda20d723290789733f0a9f4a
 ms.contentlocale: fr-fr
@@ -24,7 +25,7 @@ ms.lasthandoff: 08/09/2017
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   Lors de la création de rapports paginés avec des paramètres dans le Générateur de rapports, vous pouvez personnaliser le volet Paramètres. Dans la vue Conception de rapport, vous pouvez faire glisser un paramètre vers une colonne et une ligne spécifiques du volet Paramètres. Vous pouvez ajouter et supprimer des colonnes pour modifier la disposition du volet.  
   
- Quand vous faites glisser un paramètre vers une nouvelle colonne et une nouvelle ligne du volet, l’ordre des paramètres change dans le volet **Données du rapport** . Quand vous modifiez l’ordre du paramètre dans le volet **Données du rapport** , ce paramètre change d’emplacement dans le volet. Pour plus d’informations sur la raison pour laquelle l’ordre des paramètres est important, consultez [modifier l’ordre d’un paramètre de rapport &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
+ Quand vous faites glisser un paramètre vers une nouvelle colonne et une nouvelle ligne du volet, l’ordre des paramètres change dans le volet **Données du rapport** . Quand vous modifiez l’ordre du paramètre dans le volet **Données du rapport**, ce paramètre change d’emplacement dans le volet. Pour plus d’informations sur les raisons pour lesquelles l’ordre des paramètres est important, consultez [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 ## <a name="to-customize-the-parameters-pane"></a>Pour personnaliser le volet Paramètres  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Pour déplacer un paramètre au sein du volet Paramètres, faites glisser le paramètre vers une autre cellule du volet.  
   
-     Lorsque vous modifiez l’emplacement du paramètre dans le volet, l’ordre de ce paramètre dans la liste **Paramètres** du volet **Données du rapport** change automatiquement. Pour plus d’informations sur l’impact de l’ordre des paramètres, consultez [modifier l’ordre d’un paramètre de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+     Lorsque vous modifiez l’emplacement du paramètre dans le volet, l’ordre de ce paramètre dans la liste **Paramètres** du volet **Données du rapport** change automatiquement. Pour plus d’informations sur l’impact de l’ordre des paramètres, consultez [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 4.  Pour accéder aux propriétés d’un paramètre, effectuez l’une des opérations suivantes.  
   
@@ -70,6 +71,7 @@ ms.lasthandoff: 08/09/2017
     -   Cliquez avec le bouton droit sur le paramètre dans le volet **Données du rapport** et sélectionnez **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
+

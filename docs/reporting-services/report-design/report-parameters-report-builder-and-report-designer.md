@@ -22,7 +22,8 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: fr-fr
@@ -55,13 +56,13 @@ ms.lasthandoff: 08/09/2017
   
 -   Utilisez des paramètres pour associer des rapports principaux à des rapports d'extraction, des sous-rapports et des rapports liés. Lorsque vous concevez un ensemble de rapports, vous pouvez élaborer chaque rapport pour obtenir des réponses à certaines questions. Chaque rapport peut offrir une vue différente ou un niveau de détail différent pour des informations connexes. Pour fournir un ensemble de rapports reliés entre eux, créez des paramètres pour les données associées sur les rapports cibles.  
   
-     Pour plus d’informations, consultez [rapports d’extraction &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Sous-rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), et [créer un rapport lié](../../reporting-services/reports/create-a-linked-report.md).  
+     Pour plus d’informations, consultez [Rapports d’extraction &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) et [Créer un rapport lié](../../reporting-services/reports/create-a-linked-report.md).  
   
 -   Personnalisez des ensembles de paramètres pour plusieurs utilisateurs. Créez deux rapports liés basés sur un état des ventes sur le serveur de rapports. L'un des rapports liés utilise des valeurs de paramètres prédéfinies pour les commerciaux et l'autre rapport lié utilise des valeurs de paramètres prédéfinies pour les responsables commerciaux. Les deux rapports utilisent la même définition de rapport.  
   
  **Varier la présentation des rapports**  
   
--   Envoyez des commandes à un serveur de rapports via une demande d'URL, pour personnaliser l'affichage d'un rapport. Pour plus d’informations, consultez [accès URL &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md) et [passer un paramètre de rapport dans une URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+-   Envoyez des commandes à un serveur de rapports via une demande d'URL, pour personnaliser l'affichage d'un rapport. Pour plus d’informations, consultez [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) et [Passer un paramètre de rapport dans une URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
 -   Permettez aux utilisateurs de spécifier des valeurs pour contribuer à la personnalisation de l'apparence d'un rapport. Par exemple, fournissez un paramètre booléen pour indiquer s'il faut développer ou réduire tous les groupes de lignes imbriqués dans une table.  
   
@@ -123,10 +124,10 @@ ms.lasthandoff: 08/09/2017
   
  Ajoutez une partie de rapport qui contient des références à un paramètre ou à un dataset partagé contenant des variables.  
   
- Les parties de rapports sont stockées sur le serveur de rapports et sont à la disposition des autres utilisateurs qui souhaitent s'en servir dans leurs rapports. Les parties de rapports qui sont des paramètres ne peuvent pas être gérées à partir du serveur de rapports. Vous pouvez rechercher des paramètres dans la bibliothèque de parties de rapports et les configurer une fois que vous les avez ajoutés à votre rapport. Pour plus d’informations, consultez [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Les parties de rapports sont stockées sur le serveur de rapports et sont à la disposition des autres utilisateurs qui souhaitent s'en servir dans leurs rapports. Les parties de rapports qui sont des paramètres ne peuvent pas être gérées à partir du serveur de rapports. Vous pouvez rechercher des paramètres dans la bibliothèque de parties de rapports et les configurer une fois que vous les avez ajoutés à votre rapport. Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Les paramètres peuvent être publiés en tant que partie de rapport distincte pour les régions de données qui ont des datasets dépendants avec des paramètres. Bien que les paramètres apparaissent sous la forme d'une partie de rapport, vous ne pouvez pas ajouter directement un paramètre de partie de rapport à un rapport. À la place, ajoutez la partie de rapport pour que tous les paramètres de rapport nécessaires soient générés automatiquement à partir des requêtes de dataset qui sont contenues ou référencées par la partie de rapport. Pour plus d’informations sur les parties de rapports, consultez [parties de rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) et [parties de rapports dans le Concepteur de rapports &#40; SSRS &#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  Les paramètres peuvent être publiés en tant que partie de rapport distincte pour les régions de données qui ont des datasets dépendants avec des paramètres. Bien que les paramètres apparaissent sous la forme d'une partie de rapport, vous ne pouvez pas ajouter directement un paramètre de partie de rapport à un rapport. À la place, ajoutez la partie de rapport pour que tous les paramètres de rapport nécessaires soient générés automatiquement à partir des requêtes de dataset qui sont contenues ou référencées par la partie de rapport. Pour plus d’informations sur les parties de rapport, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) et [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>Valeurs des paramètres  
  Utilisez les options suivantes pour sélectionner les valeurs de paramètre dans le rapport.  
@@ -164,7 +165,7 @@ ms.lasthandoff: 08/09/2017
   
  Utilisez le concepteur de requêtes pour la source de données pour générer plus facilement une requête paramétrable.  
   
--   Pour les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , différentes sources de données prennent en charge différentes syntaxes pour les paramètres. La prise en charge comprend les paramètres identifiés dans la requête par position ou par nom. Pour plus d’informations, consultez les rubriques pour les types de sources de données externes spécifiques dans [Datasets de rapport &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md). Dans le concepteur de requêtes relationnelles, vous devez sélectionner l'option de paramètre pour un filtre afin de créer une requête paramétrable. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
+-   Pour les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , différentes sources de données prennent en charge différentes syntaxes pour les paramètres. La prise en charge comprend les paramètres identifiés dans la requête par position ou par nom. Pour plus d'informations, consultez les rubriques relatives aux types de sources de données externes spécifiques dans [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). Dans le concepteur de requêtes relationnelles, vous devez sélectionner l'option de paramètre pour un filtre afin de créer une requête paramétrable. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
 -   Pour les requêtes basées sur une source de données multidimensionnelle telle que Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, vous pouvez définir s'il faut créer un paramètre en fonction d'un filtre que vous spécifiez dans le concepteur de requêtes. Pour plus d’informations, consultez la rubrique relative au concepteur de requêtes dans [Concepteurs de requêtes &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) qui correspond à l’extension de données.  
   
@@ -183,7 +184,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Abonnements aux rapports.** Vous pouvez spécifier des valeurs de paramètres pour filtrer les données et remettre des rapports par le biais d’abonnements. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
--   **Accès URL.** Vous pouvez spécifier des valeurs de paramètres dans une URL pointant vers un rapport. Vous pouvez également exécuter des rapports et spécifier des valeurs de paramètres à l'aide de l'accès URL. Pour plus d’informations, consultez [accès URL &#40; SSRS &#41; ](../../reporting-services/url-access-ssrs.md).  
+-   **Accès URL.** Vous pouvez spécifier des valeurs de paramètres dans une URL pointant vers un rapport. Vous pouvez également exécuter des rapports et spécifier des valeurs de paramètres à l'aide de l'accès URL. Pour plus d’informations, consultez [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
  Les propriétés de paramètres que vous définissez pour un rapport publié sont généralement conservées si vous republiez la définition du rapport. Si la définition du rapport est republiée dans le même rapport, et si les noms des paramètres et les types de données restent les mêmes, vos valeurs de propriétés sont conservées. Si vous ajoutez ou supprimez des paramètres dans la définition de rapport, ou si vous modifiez le type de données ou le nom d'un paramètre existant, il peut être nécessaire de modifier les propriétés des paramètres dans le rapport publié.  
   

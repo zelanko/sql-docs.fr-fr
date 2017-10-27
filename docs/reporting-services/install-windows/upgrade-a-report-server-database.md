@@ -19,7 +19,8 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 89bb5de5f669d033dd18bc63e11ef5bd29644542
 ms.contentlocale: fr-fr
@@ -39,7 +40,7 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
 
  La liste suivante identifie toutes les conditions selon lesquelles une base de données du serveur de rapports est mise à niveau :  
   
--   Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met à niveau une instance unique d'un serveur de rapports. Le schéma de base de données du serveur de rapports est mis à niveau automatiquement après le démarrage de service et le serveur de rapports détermine que la version du schéma de base de données ne correspond pas à la version du serveur.  
   
      Au démarrage du service, le serveur de rapports vérifie la version du schéma de base de données pour s'assurer qu'elle correspond à la version du serveur. Si la version du schéma de base de données est antérieure, elle est automatiquement mise à niveau vers la version du schéma requise par le serveur de rapports. La mise à niveau automatique est particulièrement utile si vous avez restauré ou joint une base de données du serveur de rapports plus ancienne. Un message est entré dans le fichier journal de suivi du serveur de rapports, indiquant que la version du schéma de base de données a été mise à niveau.  
   
@@ -81,3 +82,4 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
 [Migrer une Installation Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

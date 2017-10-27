@@ -15,7 +15,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e37adf58a9b3c953eedb9b1815d980addbe4b4d1
 ms.contentlocale: fr-fr
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Activer les séparateurs d'échelle**. Si vos données représentent plusieurs jeux de plages de données, utilisez un séparateur d'échelle pour supprimer l'écart entre les plages. Un séparateur d'échelle est une ligne dessinée sur la zone de traçage pour indiquer une rupture entre les valeurs haute et basse d'une série.  
   
--   **Filtrer les valeurs inutiles**. Si des points de données masquent la plage de données importante à afficher sur le graphique, supprimez les points inutiles à l'aide d'un filtre de rapport. Pour plus d’informations sur l’ajout d’un filtre au graphique dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [ajouter des filtres de Dataset, filtres de régions de données et les filtres de groupe &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
+-   **Filtrer les valeurs inutiles**. Si des points de données masquent la plage de données importante à afficher sur le graphique, supprimez les points inutiles à l'aide d'un filtre de rapport. Pour plus d’informations sur la façon d’ajouter un filtre au graphique dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
 -   **Tracer chaque plage de données comme une série séparée pour la comparaison de plusieurs séries**. Si vous disposez de plusieurs plages de données, envisagez de les répartir en séries distinctes. Pour plus d’informations, consultez [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Vous ne pouvez pas spécifier où placer un séparateur d'échelle sur un graphique. Toutefois, vous pouvez modifier le mode de calcul du séparateur d'échelle, décrit plus loin dans cette rubrique.  
   
- Si vous activez un séparateur d’échelle, mais qu’il n’apparaît pas, bien que la distance soit suffisante entre les plages de données, vous pouvez affecter à la propriété CollapsibleSpaceThreshold une valeur inférieure à 25. La propriété CollapsibleSpaceThreshold spécifie le pourcentage d’espace réductible nécessaire entre les plages de données. Pour plus d’informations, consultez [ajouter un séparateur d’échelle à un graphique &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
+ Si vous activez un séparateur d’échelle, mais qu’il n’apparaît pas, bien que la distance soit suffisante entre les plages de données, vous pouvez affecter à la propriété CollapsibleSpaceThreshold une valeur inférieure à 25. La propriété CollapsibleSpaceThreshold spécifie le pourcentage d’espace réductible nécessaire entre les plages de données. Pour plus d’informations, consultez [Ajouter des séparations d’échelle à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md).  
   
  Les graphiques prennent en charge jusqu'à cinq séparateurs d'échelle par graphique ; toutefois, en affichant plusieurs séparateurs, le graphique peut devenir illisible. Si vous disposez de plusieurs plages de données, envisagez d'utiliser une méthode différente pour afficher ces données. Pour plus d’informations, consultez [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Le type de graphique est polaire, en radar, à secteurs, en anneau, en entonnoir, en pyramide ou tout graphique empilé.  
   
- Un exemple de graphique avec séparations d'échelle est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique avec séparations d'échelle est disponible sous forme d'exemple de rapport. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -77,3 +78,4 @@ ms.lasthandoff: 08/09/2017
 [Regrouper des petits secteurs sur un graphique à secteurs](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

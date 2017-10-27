@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
@@ -56,3 +57,4 @@ Les éléments répertoriés sont spécifiques au composant WebPart Visionneuse 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour commencer à utiliser le composant WebPart Visionneuse de rapports mis à jour, consultez [déployer le composant WebPart Visionneuse de rapports sur un site SharePoint](deploy-report-viewer-web-part.md).
+

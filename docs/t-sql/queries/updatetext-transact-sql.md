@@ -1,7 +1,7 @@
 ---
 title: UPDATETEXT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Des mises à jour existant **texte**, **ntext**, ou **image** champ. Utilisez UPDATETEXT pour modifier uniquement une partie d’un **texte**, **ntext**, ou **image** colonne en place. Utilisez WRITETEXT pour mettre à jour et remplacer dans son ensemble **texte**, **ntext**, ou **image** champ.  
   

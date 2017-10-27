@@ -15,7 +15,8 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
 ms.contentlocale: fr-fr
@@ -131,3 +132,4 @@ Le nouveau portail et reportserver communiquent à l’aide de soap interne API 
 [Configurer le Gestionnaire de rapports pour transmettre des Cookies d’authentification personnalisée](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

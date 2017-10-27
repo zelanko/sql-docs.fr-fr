@@ -21,7 +21,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1433e2532fc1deeb8abe5ac0ca71de69956730e0
 ms.contentlocale: fr-fr
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>Les clés de chiffrement SSRS - gérer les clés de chiffrement
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]utilise des clés de chiffrement pour sécuriser les informations d’identification et les informations de connexion qui sont stockées dans une base de données du serveur de rapports. Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le chiffrement est pris en charge par la combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. La clé symétrique est créée au cours de l'initialisation du serveur de rapports lorsque vous installez ou configurez le serveur de rapports. Elle est utilisée par le serveur de rapports pour chiffrer les données sensibles stockées sur le serveur de rapports. Les clés publiques et privées sont créées par le système d'exploitation et servent à protéger la clé symétrique. Une paire de clés privée et publique est créée pour chaque instance du serveur de rapports qui stocke des données sensibles dans une base de données de serveur de rapports.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des clés de chiffrement pour protéger les informations de connexion et d’identification stockées dans la base de données du serveur de rapports. Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le chiffrement est pris en charge par la combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. La clé symétrique est créée au cours de l'initialisation du serveur de rapports lorsque vous installez ou configurez le serveur de rapports. Elle est utilisée par le serveur de rapports pour chiffrer les données sensibles stockées sur le serveur de rapports. Les clés publiques et privées sont créées par le système d'exploitation et servent à protéger la clé symétrique. Une paire de clés privée et publique est créée pour chaque instance du serveur de rapports qui stocke des données sensibles dans une base de données de serveur de rapports.  
   
  La gestion des clés de chiffrement consiste à créer une copie de sauvegarde de la clé symétrique et à savoir quand et comment restaurer, supprimer ou modifier les clés. Si vous migrez une installation de serveur de rapports ou que vous configurez un déploiement avec montée en puissance parallèle, vous devez disposer d'une copie de sauvegarde de la clé symétrique pour pouvoir l'appliquer à la nouvelle installation.  
   
@@ -49,19 +50,19 @@ ms.lasthandoff: 08/09/2017
 -   Ajout ou suppression d'une instance de serveur de rapports dans un déploiement avec montée en puissance parallèle où plusieurs serveurs de rapports partagent une base de données du serveur de rapports unique ainsi que la clé symétrique assurant le chiffrement réversible de cette dernière.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Initialiser un serveur de rapports &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
  Explique la procédure de création des clés de chiffrement.  
   
  [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Explique la procédure de sauvegarde des clés de chiffrement et la façon de restaurer ces clés afin de récupérer l'installation d'un serveur de rapports ou de procéder à sa migration.  
   
- [Stocker les données chiffrées de rapports Server &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Décrit le chiffrement sur un serveur de rapports.  
   
- [Supprimez et recréez les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
+ [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  Explique comment remplacer une clé symétrique par une nouvelle version de cette dernière et comment recommencer l'opération de chiffrement depuis le début, si la validation des clés symétriques est impossible.  
   
- [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  Explique la procédure de création et d'ajout des clés de chiffrement pour contrôler l'intégration des serveurs de rapports à un déploiement évolutif.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
@@ -186,3 +187,4 @@ Vous pouvez modifier la fonctionnalité Sandboxing RDL afin d'aider à gérer le
  [Journal des traces de Service du serveur de rapports](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

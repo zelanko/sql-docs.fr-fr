@@ -25,11 +25,12 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 10769f49396bcf32d437e4bee9b04cbc2a3c8d9c
+ms.workload: On Demand
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5fd4d415e452549e80aa12b9eb1397bf83ce6557
 ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="report-server-web-service"></a>service Web Report Server
@@ -44,17 +45,17 @@ ms.lasthandoff: 08/09/2017
 -   Développer des applications à l'aide de n'importe quel jeu SOAP d'outils de développement. Pour plus d’informations, consultez [The Role of SOAP dans Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md).  
   
 ## <a name="programming-diagram"></a>Diagramme de programmation  
- ![Options de développement du service Web du serveur de rapports](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "options de développement du service Web Report Server")  
+ ![Options de développement du service Web du serveur de rapports](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Report Server Web service development options")  
 Options de développement de service Web disponibles dans Reporting Services  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Méthodes du service web du serveur de rapports](../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)  
+ [Méthodes de Service Web Report Server](../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)  
  Décrit les fonctionnalités et les méthodes de chaque service Web Report Server.  
   
  [Le rôle de SOAP dans Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)  
  Fournit une vue d'ensemble du protocole SOAP et de la manière dont il est utilisé dans les services Web Report Server.  
   
- [Accès à l’API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
+ [L’accès à l’API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)  
  Décrit le langage WSDL (Web Service Description Language) et fournit des URL pour accéder à un fichier WSDL Reporting Services.  
   
  [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
@@ -63,7 +64,7 @@ Options de développement de service Web disponibles dans Reporting Services
  [Script avec l’utilitaire rs.exe et le Service Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
  Fournit une vue d'ensemble de l'environnement de script [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Informations techniques de référence &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Informations techniques de référence &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
  Contient les documents de référence spécifiques aux méthodes des services Web Report Server et aux types complexes correspondants.  
   
 ## <a name="user-requirements-for-web-service-development"></a>Conditions requises liées à l'utilisateur pour le développement du service Web  
@@ -83,3 +84,4 @@ Options de développement de service Web disponibles dans Reporting Services
  [Service Web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
+

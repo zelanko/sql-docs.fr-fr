@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  L'instruction SQL suivante montre l'instruction CREATE TABLE par défaut fournie par l'Assistant Configuration de package.  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

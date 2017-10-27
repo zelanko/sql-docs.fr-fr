@@ -18,7 +18,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: fr-fr
@@ -54,6 +55,7 @@ ms.lasthandoff: 08/09/2017
      Pour afficher le rapport avant de l’imprimer, cliquez sur le bouton **Aperçu** . Cela entraîne l’ouverture de la première page du rapport dans une fenêtre d’aperçu distincte. Les pages supplémentaires sont disponibles lors du rendu du rapport sur le serveur de rapports. L'aperçu d'un rapport est rendu au format EMF. Vous pouvez accéder aux pages précédentes ou suivantes tant que la dernière page n'est pas atteinte et que le bouton **Suivant** n'est pas désactivé. Pour modifier les marges d’impression de la page d’aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue **Marges** s’affiche. Configurez les marges supérieure, inférieure, gauche et droite selon vos besoins, puis cliquez sur **OK**. La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activer et désactiver l’impression côté Client pour Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Activer et désactiver l'impression côté client pour Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
+

@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: fr-fr
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
   
  Si vous ne connaissez pas l'adresse Web d'un rapport, vous pouvez ouvrir l'adresse Web du serveur de rapports puis parcourir l'arborescence des dossiers du serveur de rapports pour sélectionner le rapport vous souhaitez afficher. Le diagramme qui suit représente une arborescence des dossiers telle qu'elle apparaît dans la fenêtre d'un navigateur.  
   
- ![Dossiers dans un navigateur](../../reporting-services/report-builder/media/rs-browserfolder.GIF "dossiers dans un navigateur")  
+ ![Dossiers dans un navigateur](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
 Dossiers dans un navigateur  
   
 > [!NOTE]  
@@ -63,3 +64,4 @@ Dossiers dans un navigateur
  Pour plus d'informations sur l'accès à un rapport via une URL, notamment des informations sur la construction d'une URL, consultez « Accès URL » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
   
+

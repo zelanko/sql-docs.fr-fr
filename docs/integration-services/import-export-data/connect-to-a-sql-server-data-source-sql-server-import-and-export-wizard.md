@@ -98,18 +98,18 @@ Spécifiez **Trusted_Connection = Yes** pour se connecter avec l’authentificat
 ### <a name="connection-string-format"></a>Format de chaîne de connexion
 Voici le format de chaîne de connexion qui utilise l’authentification intégrée de Windows.
 
-    Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Voici le format de chaîne de connexion qui utilise l’authentification SQL Server au lieu de l’authentification intégrée Windows.
 
-     Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;
+     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>Entrez la chaîne de connexion
 Entrez la chaîne de connexion dans le **ConnectionString** champ, ou entrez le nom de source de données dans le **Dsn** champ sur la **choisir une Source de données** ou **choisir une Destination** page. Après avoir entré la chaîne de connexion, l’Assistant analyse la chaîne et affiche les propriétés et leurs valeurs dans la liste.
 
 L’exemple suivant utilise cette chaîne de connexion.
 
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
 

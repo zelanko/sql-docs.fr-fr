@@ -15,7 +15,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
 ms.contentlocale: fr-fr
@@ -82,7 +83,7 @@ Les champs de date étant indispensables à de nombreux rapports mobiles, vous d
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-Après avoir converti les cellules, vous devez les formater en tant que dates en sélectionnant, ou que la colonne entière > **contexte** menu > **Format de cellules** > **Date** à partir de la **catégorie** liste. Vous pouvez également utiliser l’assistant Excel Convertir Texte en Colonne afin de convertir les cellules texte en dates correctement formatées.  
+Après avoir converti les cellules, vous devez les mettre en forme en tant que dates en les sélectionnant ou en sélectionnant toute la colonne, puis > menu **contextuel** > **Format de cellule** > **Date** dans la liste **Catégorie**. Vous pouvez également utiliser l’assistant Excel Convertir Texte en Colonne afin de convertir les cellules texte en dates correctement formatées.  
   
 ## <a name="unsupported"></a>Non pris en charge  
   

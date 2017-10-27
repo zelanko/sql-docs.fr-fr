@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
@@ -154,3 +155,4 @@ Les langues suivantes sont prises en charge avec le composant WebPart :
 La visionneuse de rapports du composant WebPart a été déployé et l’activée, vous pouvez ajouter le composant WebPart à une page SharePoint. Pour plus d’informations, consultez [composant WebPart Visionneuse de rapports ajouter à une page SharePoint](add-report-viewer-web-part-to-page.md).
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

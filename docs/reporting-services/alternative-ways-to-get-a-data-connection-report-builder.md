@@ -16,7 +16,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
 ms.contentlocale: fr-fr
@@ -67,7 +68,7 @@ Pour utiliser une source de données partagée, accédez à un serveur de rappor
   
     Vous revenez à la page **Choisir une connexion à une source de données** .  
   
-6.  Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
+6.  Pour vérifier vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
   
     Le message « La connexion a été correctement créée » s'affiche. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e3c601f497bd6abf4a27a6ce8dd5f0762687526
@@ -73,3 +74,4 @@ ms.lasthandoff: 06/22/2017
  Pour modifier une contrainte PRIMARY KEY à l'aide de Transact-SQL, vous devez supprimer auparavant la contrainte PRIMARY KEY existante, puis la créer à nouveau en précisant sa nouvelle définition. Pour plus d'informations, consultez [Delete Primary Keys](../../relational-databases/tables/delete-primary-keys.md) et [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md).  
   
 ###  <a name="TsqlExample"></a>  
+

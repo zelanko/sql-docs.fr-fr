@@ -15,7 +15,8 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: fr-fr
@@ -328,3 +329,4 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
 [Alerte de données pour les utilisateurs de SharePoint](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

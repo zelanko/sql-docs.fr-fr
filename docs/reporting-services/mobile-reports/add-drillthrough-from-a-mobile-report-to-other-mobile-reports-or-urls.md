@@ -14,7 +14,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
 ms.contentlocale: fr-fr
@@ -86,6 +87,6 @@ Les éléments masqués sont affichés dans une couleur plus claire.
  
 * [Ajouter des paramètres à un rapport mobile Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Portail web (SSRS en mode natif)](../../reporting-services/web-portal-ssrs-native-mode.md)
+* [Portail Web (SSRS en Mode natif)](../../reporting-services/web-portal-ssrs-native-mode.md)
 
 

@@ -20,6 +20,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 2cbf3f1a1ffeb702551a2aa0ff94134867cb1786
@@ -42,3 +43,4 @@ ms.lasthandoff: 08/12/2017
  [À l’aide de la classe RenderedOutputFile pour une Extension de remise](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
   
   
+

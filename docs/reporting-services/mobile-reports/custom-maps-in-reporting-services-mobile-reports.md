@@ -14,14 +14,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
 ms.contentlocale: fr-fr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>cartes personnalisées dans les rapports pour mobiles Reporting Services
 Dans SQL Server Mobile Report Publisher des cartes géographiques sont définies dans un format appelé *fichiers de forme ESRI*.  
   
 Ce format semi-ouvert étendu initialement conçu par une société privée est utilisé dans une grande partie des applications GIS. Conformément à ce format, éditeur de rapports mobiles requiert deux fichiers doivent être fournies lors de la définition d’une carte :  
@@ -38,7 +39,7 @@ Découvrez comment [ajouter des mappages personnalisés aux rapports mobiles](..
 ## <a name="technical-information"></a>Informations techniques  
   
 - La spécification officielle : [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- L’article de Wikipédia sur le fichier de forme : [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- L’article de Wikipédia sur le fichier de forme : [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>Création et modification d’une géométrie de carte  
   

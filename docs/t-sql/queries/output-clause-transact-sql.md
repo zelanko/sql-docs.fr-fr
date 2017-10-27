@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Avoir des contraintes CHECK ou des règles activées.  
   
- *column_list*  
+*column_list*  
  Liste facultative de noms de colonne sur la table cible de la clause INTO. Elle est analogue à la liste de colonnes autorisée dans le [insérer](../../t-sql/statements/insert-transact-sql.md) instruction.  
   
  *scalar_expression*  

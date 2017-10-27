@@ -1,7 +1,7 @@
 ---
 title: HAS_DBACCESS (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Renvoie des informations indiquant si l'utilisateur a accès à la base de données spécifiée.  
   

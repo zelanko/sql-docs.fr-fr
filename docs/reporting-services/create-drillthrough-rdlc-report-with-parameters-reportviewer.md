@@ -16,7 +16,8 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
 ms.contentlocale: fr-fr
@@ -38,9 +39,9 @@ Utilisez Visual Studio 2015 et l’application web ASP.NET pour créer une page 
 [Leçon 2 : définir une connexion de données et une table de données pour le rapport parent](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
 [Leçon 3 : concevoir le rapport parent à l'aide de l'Assistant Rapport](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
 [Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-[Leçon 5 : concevoir le rapport enfant à l’aide de l’Assistant Rapport](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
-[Leçon 6 : ajouter un contrôle ReportViewer à l'application](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
-[Leçon 7 : ajouter une action d’extraction dans le rapport parent](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
+[Leçon 5 : concevoir le rapport enfant à l'aide de l'Assistant Rapport](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
+[Leçon 6 : Ajouter un contrôle ReportViewer à l'application](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
+[Leçon 7 : ajouter l'action d'extraction dans le rapport parent](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [Leçon 8 : créer un filtre de données](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Leçon 9 : générer et exécuter l'application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   

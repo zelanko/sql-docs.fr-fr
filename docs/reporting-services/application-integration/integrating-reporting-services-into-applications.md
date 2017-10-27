@@ -15,6 +15,7 @@ applies_to:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 26e1da5a720aab965d014cada16f85086e0f70a0
@@ -62,3 +63,4 @@ Pour choisir à l’aide de l’accès URL ou l’API SOAP, consultez [choix ent
 Pour plus d’informations sur le REST API des Services de création de rapports 2017 SQL Server, consultez [développer avec les API REST pour Reporting Services](../developer/rest-api.md).
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

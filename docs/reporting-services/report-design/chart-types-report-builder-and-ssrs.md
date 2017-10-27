@@ -17,7 +17,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7b23da886ccf8fc76cbe8e86a722e4e9a8f3e656
 ms.contentlocale: fr-fr
@@ -35,9 +36,9 @@ Il est important de choisir un type de graphique approprié au type des données
 ## <a name="choosing-a-chart-type"></a>Choix d'un type de graphique  
  Chaque type de graphique a des caractéristiques uniques pour vous aider à visualiser votre dataset. Vous pouvez utiliser n'importe quel type de graphique pour afficher vos données, mais vos données seront plus faciles à lire lorsque vous utilisez un type de graphique qui est approprié à vos données, en fonction de ce que vous essayez de montrer dans votre rapport. Le tableau suivant résume les fonctionnalités de graphique qui affectent l'adéquation d'un graphique à votre dataset particulier.  
   
- Vous pouvez modifier le type de graphique après l'avoir créé. Pour plus d’informations, consultez [modifier un Type de graphique &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
+ Vous pouvez modifier le type de graphique après l'avoir créé. Pour plus d’informations, consultez [ &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Des exemples de bon nombre de ces types de graphiques sont disponibles sous forme d'exemples de rapports. Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Des exemples de bon nombre de ces types de graphiques sont disponibles sous forme d'exemples de rapports. Pour plus d’informations sur le téléchargement des exemples de rapports, consultez [exemples Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Type de graphique|Afficher des données de ratio|Afficher des données de cotation boursière|Afficher des données linéaires|Afficher des données à valeurs multiples|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -45,8 +46,8 @@ Il est important de choisir un type de graphique approprié au type des données
 |[Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
 |[Barres de données](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
 |[Histogrammes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
-|[Graphiques en courbes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
-|[Les graphiques en secteurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||||  
+|[Graphiques en courbes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
+|[Graphiques à secteurs (Générateur de rapports et SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||||  
 |[Graphiques polaires &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||||  
 |[Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)|||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
 |[Graphiques à nuages de points &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md)|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
@@ -61,3 +62,4 @@ Il est important de choisir un type de graphique approprié au type des données
 [Ajouter un graphique à un rapport](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+
