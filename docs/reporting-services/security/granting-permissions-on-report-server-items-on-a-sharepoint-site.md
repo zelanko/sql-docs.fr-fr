@@ -20,7 +20,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
 ms.contentlocale: fr-fr
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit les fonctionnalités de sécurité intégrée qui vous permet d’octroyer l’accès à des éléments de serveur de rapports à partir des sites et bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées qui vous permettent d’accéder aux éléments de serveur de rapports à partir des sites et des bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
   
  Si vous n'avez pas attribué d'autorisations ou si vous ne connaissez pas les fonctionnalités de sécurité dans [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], suivez les instructions suivantes :  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Les objets sécurisables comprennent des sites, des listes, des bibliothèques, des dossiers et des documents.  
   
--   Une autorisation permet d'effectuer une tâche spécifique. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit 33 autorisations prédéfinies que vous pouvez associer dans un niveau d'autorisations.  
+-   Une autorisation permet d'effectuer une tâche spécifique. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit 33 autorisations prédéfinies que vous pouvez associer dans un niveau d'autorisations.  
   
 -   Un niveau d'autorisation est un ensemble d'autorisations qui peuvent être accordées à des utilisateurs ou à des groupes SharePoint sur un objet sécurisable tel qu'un site, une bibliothèque, une liste, un dossier, un élément ou un document. Il correspond à une définition de rôle dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe cinq niveaux d'autorisation prédéfinis. Vous pouvez les personnaliser ou en créer de nouveaux si nécessaire.  
   
@@ -80,22 +81,23 @@ ms.lasthandoff: 08/09/2017
  Pour faire appel aux fonctionnalités de sécurité intégrée, vous devez affecter des comptes d'utilisateur ou de groupes Windows aux groupes SharePoint. Hormis l'administrateur du serveur et le propriétaire du site portail qui ont un accès automatique à [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] lors de l'installation du logiciel, tous les autres utilisateurs doivent recevoir les autorisations pour accéder au serveur.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Utiliser la sécurité intégrée de Windows SharePoint Services pour les éléments de serveur de rapports](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Explique comment utiliser les groupes et les niveaux d'autorisation SharePoint prédéfinis pour accéder aux éléments de serveur de rapports.  
   
- [Site SharePoint et List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Fournit une référence de l'ensemble des autorisations de produit SharePoint permettant d'accéder aux opérations de serveur de rapports.  
   
- [Définir des autorisations pour les opérations de serveur de rapports dans une Application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Décrit les autorisations requises pour la génération d'états ad hoc et offre des stratégies de mise à disposition des fonctionnalités.  
   
  [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Fournit une brève comparaison des groupes SharePoint avec les définitions de rôles prédéfinis dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Définir des autorisations pour les éléments de serveur de rapports sur un Site SharePoint &#40; Reporting Services dans SharePoint intégré en Mode &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Contient des instructions pour la création de nouveaux groupes SharePoint autorisés à démarrer le Générateur de rapports et à définir la sécurité des éléments d'un modèle. Cette rubrique contient aussi des instructions générales sur la définition d'autorisations personnalisées pour des opérations ou des éléments de serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: TEXTPTR (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et Image - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne le pointeur de texte la valeur qui correspond à un **texte**, **ntext**, ou **image** colonne **varbinary** format. La valeur du pointeur de texte obtenue peut être utilisée dans les instructions READTEXT, WRITETEXT et UPDATETEXT.  
   

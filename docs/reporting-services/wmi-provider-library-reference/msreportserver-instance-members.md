@@ -22,7 +22,8 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4858da330363297a88c6bcde441b26e5eb384a57
 ms.contentlocale: fr-fr
@@ -36,9 +37,9 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Propriété EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Retourne l'édition du serveur de rapports.|  
+|[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Retourne l'édition du serveur de rapports.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Retourne le nom explicite de l'édition du serveur de rapports.|  
-|[ID d’instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Cet objet prend en charge l'infrastructure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et ne doit pas être utilisé directement à partir de votre code.|  
+|[InstanceID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md)|Cet objet prend en charge l'infrastructure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et ne doit pas être utilisé directement à partir de votre code.|  
 |[InstanceName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md)|Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. En lecture seule.|  
 |[IsSharePointIntegrated](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md)|Indique si le serveur de rapports est configuré pour le mode intégré SharePoint.|  
 |[Version](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Retourne la version du serveur de rapports.|  
@@ -47,6 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|[Méthode GetReportServerUrls &#40; WMI MSReportServer_Instance &#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Répertorie les URL que les utilisateurs peuvent employer pour accéder au serveur de rapports et au Gestionnaire de rapports.|  
+|[Méthode GetReportServerUrls &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Répertorie les URL que les utilisateurs peuvent employer pour accéder au serveur de rapports et au Gestionnaire de rapports.|  
   
   
+

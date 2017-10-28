@@ -15,7 +15,8 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
 ms.contentlocale: fr-fr
@@ -48,7 +49,7 @@ Les champs intégrés [&PageNumber] et [&TotalPages] sont uniquement valides dan
 Pour ajouter [&PageNumber] ou [&TotalPages] à un rapport, vous devez d'abord ajouter un en-tête de page ou un pied de page. Pour plus d’informations, voir [Ajouter ou supprimer un en-tête de page](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Le fait d'inclure [&TotalPages] dans l'en-tête de page ou le pied de page peut avoir des conséquences sur le traitement du rapport. Pour plus d’informations, voir « Dépannage de rapports : rapports exportés dans un format de fichier spécifique».  
+> Le fait d'inclure [&TotalPages] dans l'en-tête de page ou le pied de page peut avoir des conséquences sur le traitement du rapport. Pour plus d’informations, voir « Dépannage de rapports : rapports exportés dans un format de fichier spécifique».  
 [Résoudre les problèmes de traitement des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>Comment concevoir deux tables ou un graphique et une table affichés côte à côte ?  

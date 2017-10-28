@@ -16,7 +16,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
 ms.contentlocale: fr-fr
@@ -38,7 +39,7 @@ L’illustration suivante montre le graphique à barres que vous allez créer, a
   
  
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour des instructions détaillées sur l’accès à un serveur de rapports, créer un jeu de données et choisissez une source de données, consultez le premier didacticiel de cette série : [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, la création d’un dataset et le choix d’une source de données, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
@@ -70,7 +71,7 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
     > [!NOTE]  
     > La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
+6.  Dans la page **Créer une requête**, cliquez sur **Modifier en tant que texte**.  
   
 7.  Collez la requête suivante dans le volet de requête :  
   
@@ -97,7 +98,7 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
   
 ## <a name="ChartType"></a>2. Créer un graphique à barres  
  
-1.  Dans la page **Choisir un type de graphique** , l’histogramme est le type de graphique par défaut.  
+1.  Dans la page **Choisir un type de graphique**, l’histogramme est le type de graphique par défaut.  
   
 2.  Cliquez sur **Barre**, puis sur **Suivant**.  
   
@@ -220,7 +221,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 2.  Cliquez sur l'axe horizontal en bas du graphique pour le sélectionner.  
   
-3.  Sur le **accueil** onglet > **nombre** groupe > **devise**. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
+3.  Sous l’onglet **Accueil** > groupe **Nombre** > **Devise**. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
   
 3.  (Facultatif) Supprimez les chiffres décimaux. Près du bouton **Devise** , cliquez deux fois sur le bouton **Réduire les décimales** .  
   

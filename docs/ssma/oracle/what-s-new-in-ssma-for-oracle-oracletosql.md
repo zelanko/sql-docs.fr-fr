@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
@@ -205,3 +206,4 @@ La version d’août 2007 de SSMA pour Oracle contient les modifications suivant
   
 ## <a name="april-2007"></a>Avril 2007  
 La version d’avril 2007 de SSMA pour Oracle était la version initiale.
+

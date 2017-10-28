@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: fr-fr
@@ -56,7 +57,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  Valeur **booléenne** indiquant l’état souhaité du Gestionnaire de rapports.
  
  > [!NOTE] 
- > Ce paramètre est déprécié à compter de SQL Server 2016 Reporting Services Cumulative Update 2. Le portail web sera toujours activé. La valeur sera ignorée.
+ > Ce paramètre est déconseillé à compter de SQL Server 2016 Reporting Services Cumulative Update 2. Le portail web est toujours activé. La valeur sera ignorée.
   
  *HRESULT*  
  [out] Valeur indiquant si l'appel a réussi ou échoué.  
@@ -67,7 +68,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Notes  
   
 ## <a name="requirements"></a>Spécifications  
- **Namespace :**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

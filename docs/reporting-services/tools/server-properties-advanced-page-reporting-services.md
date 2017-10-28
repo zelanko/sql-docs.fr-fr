@@ -17,6 +17,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 0626dc829e6ae2cd4212dc05deb406740592dc40
@@ -149,3 +150,4 @@ Indique si la réponse à la demande du client peut être exposée lorsque l’i
 [Activer et désactiver Mes rapports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+

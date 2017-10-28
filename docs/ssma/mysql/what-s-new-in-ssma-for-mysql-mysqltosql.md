@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
@@ -182,3 +183,4 @@ La version de janvier 2010 de SSMA pour MySQL était la version initiale. Il con
 -   Prise en charge pour la migration vers les deux local SQL Server et SQL Azure.  
   
 -   **Instantané de la fonctionnalité :** migration des schémas et des données de Tables/index/contraintes MySQL.
+

@@ -1,7 +1,7 @@
 ---
 title: WRITETEXT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Autorise la mise à jour journalisées et interactive d’un objet **texte**, **ntext**, ou **image** colonne. WRITETEXT remplace totalement les données existantes de la colonne qu'elle affecte. WRITETEXT ne peut pas être utilisé sur **texte**, **ntext**, et **image** colonnes des vues.  
   

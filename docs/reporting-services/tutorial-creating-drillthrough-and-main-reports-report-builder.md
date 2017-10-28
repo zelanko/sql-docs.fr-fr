@@ -16,7 +16,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: fr-fr
@@ -52,14 +53,14 @@ Dans la boîte de dialogue Prise en main, créez un rapport de matrice à l’ai
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
 ## <a name="DConnection"></a>1a. Spécifier une connexion de données  
-Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'un cube Analysis Services ou une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport. Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation d’une source de données partagée, consultez [comme Alternative pour obtenir une connexion de données &#40; Le Générateur de rapports &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'un cube Analysis Services ou une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport. Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation des sources de données partagées, consultez [Autres procédures pour l’obtention d’une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
   
@@ -90,7 +91,7 @@ Une connexion de données contient les informations nécessaires pour se connect
 10. Cliquez sur **Type d’informations d’identification**.  
   
     > [!NOTE]  
-    > Selon le mode de configuration des autorisations sur la source de données, vous devrez peut-être modifier les options d'authentification par défaut. Pour plus d’informations, consultez [Security &#40;Report Builder&#41;](../reporting-services/report-builder/security-report-builder.md).  
+    > Selon le mode de configuration des autorisations sur la source de données, vous devrez peut-être modifier les options d'authentification par défaut. Pour plus d’informations, consultez [Sécurité &#40;Générateur de rapports&#41;](../reporting-services/report-builder/security-report-builder.md).  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -114,7 +115,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
     > [!TIP]  
-    > Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur le ![basculer en mode Design](../reporting-services/media/rsqdicon-designmode.gif "basculer en mode Design") icône, basculez le Concepteur de requêtes en mode requête, collez la MDX complète dans le Concepteur de requêtes, puis passez à l’étape 6 de [pour créer le dataset](#DSkip).  
+    > Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur le ![basculer en mode Design](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icône, basculez le Concepteur de requêtes en mode requête, collez la MDX complète dans le Concepteur de requêtes, puis passez à l’étape 6 de [pour créer le dataset](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -344,7 +345,7 @@ Vous pouvez enregistrer le rapport dans une bibliothèque SharePoint, sur un ser
 7.  Cliquez sur **Enregistrer**.  
   
 ## <a name="MMatrixAndDataset"></a>1. Créer le rapport principal à partir de l’Assistant Tableau ou matrice  
-Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**.  
+Dans la boîte de dialogue **Prise en main**, créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**.  
   
 #### <a name="to-create-the-main-report"></a>Pour créer le rapport principal  
   
@@ -352,7 +353,7 @@ Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
  
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
@@ -405,7 +406,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
     > [!TIP]  
-    > Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur le ![basculer en mode Design](../reporting-services/media/rsqdicon-designmode.gif "basculer en mode Design") icône, basculez le Concepteur de requêtes en mode requête, collez la MDX complète dans le Concepteur de requêtes, puis passez à l’étape 5 de [pour créer le dataset](#MSkip).  
+    > Si vous ne souhaitez pas générer la requête MDX manuellement, cliquez sur le ![basculer en mode Design](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") icône, basculez le Concepteur de requêtes en mode requête, collez la MDX complète dans le Concepteur de requêtes, puis passez à l’étape 5 de [pour créer le dataset](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

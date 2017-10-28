@@ -16,7 +16,8 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: fr-fr
@@ -35,9 +36,9 @@ Cette illustration montre le graphique à secteurs que vous allez créer.
 Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez de combiner plusieurs petits secteurs en un secteur plus grand. Les graphiques à secteurs gagnent en lisibilité quand vos données sont agrégées en quelques points de données.  
  
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions sur la façon d’accéder à un serveur de rapports, ajouter une source de données et ajouter un dataset, consultez le premier didacticiel de cette série : [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, l’ajout d’une source de données et l’ajout d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer le didacticiel : 10 minutes.  
+Durée estimée pour effectuer le didacticiel : 10 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -50,7 +51,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -123,7 +124,7 @@ Sur chaque secteur du graphique, vous pouvez afficher le pourcentage de ce secte
   
 4.  Dans la zone **Données de l’étiquette** , sélectionnez **#PERCENT**.  
     
-5.  (Facultatif) Pour indiquer le nombre de décimales affichées sur l’étiquette, dans la zone **Données de l’étiquette** après **#PERCENT**, tapez **{Pn}** , où *n* correspond au nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}**.  
+5.  (Facultatif) Pour spécifier le nombre de décimales l’étiquette affiche, dans le **étiqueter des données** zone après **#PERCENT**, type **{Pn}** où  *n*  est le nombre de décimales à afficher. Par exemple, pour ne pas afficher de décimale, tapez **#PERCENT{P0}**.  
 
 6.  Pour afficher les valeurs sous forme de pourcentages, la propriété UseValueAsLabel doit avoir la valeur false. Si vous êtes invité à définir cette valeur dans la boîte de dialogue **Confirmer l’action** , cliquez sur **Oui**.  
   
@@ -143,7 +144,7 @@ Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combi
 
 1.  Basculez en mode création de rapport.  
   
-2.  Si le volet Propriétés n’est pas visible, dans le **vue** onglet > **afficher/masquer** groupe > sélectionnez **propriétés**.  
+2.  Si le volet Propriétés n’est pas visible, sous l’onglet **Affichage**, dans le groupe **Afficher/Masquer**, sélectionnez **Propriétés**.  
   
 3.  Dans l'aire de conception, cliquez sur un secteur du graphique. Les propriétés de la série sont affichées dans le volet Propriétés.  
   
@@ -197,7 +198,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 3.  Sélectionnez **Ventes d’appareils photo et de caméscopes** puis, sous l’onglet **Accueil**, dans la section **Police**, cliquez sur **Gras**.  
   
-4.  Sélectionnez **en tant que pourcentage du Total des ventes**, puis, dans le **accueil** onglet > **police** section > définir la taille de police à **10**.  
+4.  Sélectionnez **En pourcentage du total des ventes** puis, sous l’onglet **Accueil**, dans la section **Police**, affectez la valeur **10** à la taille de la police.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre pour contenir les deux lignes de texte.  
   
@@ -220,7 +221,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
 Votre rapport est enregistré sur le serveur de rapports.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [graphiques &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [graphiques sparkline et barres de données &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  

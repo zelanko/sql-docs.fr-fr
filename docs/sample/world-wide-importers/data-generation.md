@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
@@ -84,3 +85,4 @@ La procédure `Application.Configuration_PopulateLargeSaleTable` peut être util
 Approximativement le nombre de lignes requis est inséré dans le `Fact.Sale` table dans l’année 2012. La procédure limite artificiellement le nombre de lignes par jour à 50 000. Cela a pu être modifiée mais il afin d’éviter overinflations accidentelle de la table.
 
 En outre, la procédure s’applique l’indexation de columnstore en cluster, si elle n’a pas déjà été appliqué.
+
