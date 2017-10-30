@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  Sous **Mappages**, sélectionnez un champ de la source de données pour **Colonne source**, puis sélectionnez le domaine correspondant. Répétez ces étapes pour tous les domaines que vous utilisez dans le processus de correspondance. Chaque domaine qui est défini dans la stratégie de correspondance doit être mappé à la colonne source appropriée. La page Mapper affiche les domaines définis dans la stratégie de correspondance et les règles dans la stratégie de correspondance dans le volet droit.  
   
     > [!NOTE]  
-    >  Vous pouvez mapper vos données source à un domaine DQS uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+    >  Vous pouvez mapper vos données source à un domaine DQS uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS. Pour plus d'informations sur les types de données pris en charge dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 4.  Cliquez sur le contrôle **plus (+)** pour ajouter une ligne à la table Mappages ou sur le contrôle **moins (–)** pour en supprimer une.  
   
