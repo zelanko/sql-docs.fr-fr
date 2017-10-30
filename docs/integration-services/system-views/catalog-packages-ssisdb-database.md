@@ -17,6 +17,7 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f836c2b1bdf59f157f10abb708ed55f99dfc9f0f
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/26/2017
 >  Si vous avez l'autorisation READ sur un projet, vous avez également l'autorisation READ sur toutes les packages et les références environnementales associés à ce projet. La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  
   
   
+

@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
 ms.openlocfilehash: 1c656661f645ac9f5d1659800893290819525f39
@@ -85,3 +86,4 @@ GO
     - [Exécutez un package SSIS à partir de l’invite de commandes](./ssis-quickstart-run-cmdline.md)
     - [Exécuter un package SSIS avec PowerShell](ssis-quickstart-run-powershell.md)
     - [Exécutez un package SSIS avec c#](./ssis-quickstart-run-dotnet.md) 
+

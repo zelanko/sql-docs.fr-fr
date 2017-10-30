@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
@@ -135,3 +136,4 @@ Pour les clients concluant que les avantages de la configuration du service [!IN
 -   Dans **l’Administrateur de clusters**, sélectionnez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , cliquez avec le bouton droit et sélectionnez **Mettre en ligne** dans le menu contextuel. Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est maintenant en ligne en tant que ressource de cluster.  
   
   
+

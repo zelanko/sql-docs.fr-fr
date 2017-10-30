@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2970b2b2cc7cf30c18a203ebbb92b5418bfc9be5
@@ -120,3 +121,4 @@ Fichier de configuration de service de mise à l’échelle des processus de tra
 #### <a name="5-install-the-client-certificate-to-the-root-store-of-local-machine-on-master-node"></a>5. Installez le certificat de client dans le magasin racine de l’ordinateur local sur Master nœud
 
 #### <a name="6-restart-scale-out-worker-service"></a>6. Redémarrez le service de mise à l’échelle des processus de travail
+

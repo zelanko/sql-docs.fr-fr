@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ La version d’évaluation de SQL Server est disponible pendant une période d�
 |Extraction de terme et les transformations de recherche de terme|Oui|||||  
 
 <sup>1</sup> le de Capture de données modifiées par Attunity nécessitent Enterprise edition. Le Service de Capture de données modifiées et le Concepteur de Capture de données modifiées, toutefois, ne requièrent pas Enterprise edition. Vous pouvez utiliser le concepteur et le Service sur un ordinateur où SSIS n’est pas installé.
+

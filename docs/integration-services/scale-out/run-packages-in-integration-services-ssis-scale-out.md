@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ Pour basculer le mode d’exécution par défaut en mode non - monter en charge,
 
 ## <a name="run-package-in-sql-agent-job"></a>Exécutez le package dans le travail de l’agent SQL
 Dans le travail de l’agent Sql, vous pouvez choisir exécuter un package SSIS en tant qu’une étape du travail. Pour exécuter le package de monter en charge, vous pouvez tirer parti du mode d’exécution par défaut ci-dessus. Après la définition du mode d’exécution par défaut pour « Monter en charge », les packages dans les travaux de l’agent Sql seront exécutés dans monter en charge.
+

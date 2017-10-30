@@ -25,6 +25,7 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
@@ -136,3 +137,4 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
  Pour plus d’informations sur l’ajout d’un gestionnaire d’événements à un package, consultez [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   
+

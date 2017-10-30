@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  La validation complète confirme que toutes les variables d'environnement référencées sont recherchées dans les environnements référencés inclus dans la validation. Les résultats de la validation complète répertorient des références environnementales qui ne sont pas des variables d'environnement valides et référencées et qui sont introuvables dans les environnements référencés inclus dans la validation.  
   
   
+

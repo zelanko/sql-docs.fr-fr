@@ -20,6 +20,7 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 193fc8958826ac2bc382d5717a4f72690607a217
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  [Développement d’un composant de flux de données personnalisées](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Explique comment programmer des sources, des transformations et des destinations de flux de données personnalisées.  
  
+

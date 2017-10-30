@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
@@ -99,3 +100,4 @@ catalog.set_object_parameter_value [@object_type =] object_type
 -   La valeur `30` peuvent être utilisés pour *object_type* pour dénoter un paramètre de package. Dans ce cas, une valeur pour *nom_objet* sert à désigner le package correspondant. Si *nom_objet* n’est pas spécifié, la procédure stockée renvoie une erreur et s’arrête.  
   
   
+

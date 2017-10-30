@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
@@ -60,3 +61,4 @@ Le fichier journal du service de mise à l’échelle des processus de travail e
 L’emplacement du journal de chaque tâche est configuré dans le fichier WorkerSettings.config par TasksRootFolder. S’il n’est pas spécifié, le journal est dans le \<pilote\>: \Users\\*[compte]*chemin d’accès du dossier \AppData\Local\SSIS\ScaleOut\Tasks. 
 
 Le *[compte]* est le compte de service de mise à l’échelle des processus de travail en cours d’exécution. Par défaut, le compte est SSISScaleOutWorker140.
+

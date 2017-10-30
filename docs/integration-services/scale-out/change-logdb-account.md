@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: ec785459e5f9585776d83cde3f460c1e79367e46
@@ -45,3 +46,4 @@ GO
 
 > [!NOTE]
 > Si vous utilisez un compte d’utilisateur Windows pour la journalisation, elle doit être le même compte de service de mise à l’échelle des processus de travail en cours d’exécution. Sinon, la connexion à SQL Server échoue.
+
