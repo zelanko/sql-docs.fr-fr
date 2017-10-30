@@ -34,7 +34,7 @@ Pour obtenir la documentation la plus récente, consultez [Microsoft PHP Driver 
   
 Pour la prise en charge de pair à pair, visitez le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqldriverforphp).  
   
-Pour fournir des commentaires, poser des questions ou en savoir plus sur le travail de l’équipe de développement, accédez au [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [[!INCLUDE[ssDriverPHP](../Token/ssDriverPHP_md.md)]](http://go.microsoft.com/fwlink/?LinkID=108675).  
+Pour fournir des commentaires, poser des questions ou en savoir plus sur le travail de l’équipe de développement, accédez au [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [Team Blog](http://go.microsoft.com/fwlink/?LinkID=108675).  
   
 [Code source du pilote Microsoft PHP pour SQL Server sur GitHub](https://github.com/azure/msphpsql)  
   
