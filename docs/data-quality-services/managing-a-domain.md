@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  Vous pouvez également créer un domaine composite qui est constitué de plusieurs domaines individuels qui contiennent chacun des connaissances sur des données communes. Pour plus d’informations, consultez [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md).  
   
 ## <a name="domain-properties"></a>Propriétés du domaine  
- Lorsque vous créez un domaine, vous disposez des options suivantes pour remplir le domaine à partir des données sources et générer les valeurs de domaine. Pour plus d’informations, voir [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+ Lorsque vous créez un domaine, vous disposez des options suivantes pour remplir le domaine à partir des données sources et générer les valeurs de domaine. Pour plus d’informations, voir [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
   
--   Sélectionnez le type des données avec lesquelles vous remplissez le domaine. Pour plus d'informations sur les types de données pris en charge pour chaque type de données de domaine, consultez [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+-   Sélectionnez le type des données avec lesquelles vous remplissez le domaine. Pour plus d'informations sur les types de données pris en charge pour chaque type de données de domaine, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 -   Spécifiez que seules les valeurs de début, et non leurs synonymes, seront sorties du domaine.  
   
