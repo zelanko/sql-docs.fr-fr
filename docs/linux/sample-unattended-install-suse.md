@@ -8,6 +8,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: e181fb02497f1673a8993687d159f6636aca4959
@@ -225,3 +226,4 @@ Puis exécutez le script de l’interpréteur de commandes comme suit :
 ```
 
 Pour plus d’informations sur SQL Server sur Linux, consultez [SQL Server sur une vue d’ensemble de Linux](sql-server-linux-overview.md).
+

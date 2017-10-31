@@ -1,5 +1,5 @@
 ---
-title: Graphiques de compartimentage et en rayons de soleil dans Reporting Services | Microsoft Docs
+title: Graphiques TreeMap et en rayons de soleil dans SQL Server Reporting Services | Documents Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,141 +15,144 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
-ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: 50224e926c08951887a6423ab1c95eb7ac23a944
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/30/2017
 
 ---
-# <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
+# <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques TreeMap et en rayons de soleil dans Reporting Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  Les visualisations sous la forme de compartimentage et de rayons de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont parfaites pour représenter visuellement des données hiérarchiques.   Cette rubrique présente une vue d’ensemble de l’ajout d’un graphique de compartimentage ou d’un graphique en rayon de soleil à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Elle inclut également un exemple de requête Adventureworks pour vous aider à commencer.  
+Le serveur SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] treemap et en rayons de soleil les visualisations sont parfaites pour représenter visuellement des données hiérarchiques. Cet article est une vue d’ensemble de l’ajout d’un graphique en treemap ou en rayons de soleil à un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rapport. Il inclut également un exemple de requête AdventureWorks pour vous aider à démarrer.  
   
-##  <a name="bkmk_treemap_chart"></a> Graphique de compartimentage  
- ![icône_graphique_compartimentage_ssrs](../../reporting-services/media/ssrs-treemap-icon.png "icône_graphique_compartimentage_ssrs")  
+##  <a name="bkmk_treemap_chart"></a>Graphique de TreeMap  
+
+Un graphique en treemap divise la zone de graphique en rectangles qui représentent les différents niveaux et les tailles relatives de la hiérarchie de données. Le mappage ressemble à arbre, avec un tronc, des branches et des ramifications de plus en plus petites. Chaque rectangle est subdivisé en rectangles plus petits qui représentent le niveau suivant dans la hiérarchie. Les rectangles de niveau supérieur treemap sont disposés avec le plus grand rectangle dans le coin supérieur gauche du graphique et le plus petit dans l’angle inférieur droit.  À l’intérieur d’un rectangle, le niveau suivant dans la hiérarchie est également organisé en rectangles allant de l’angle supérieur gauche à l’angle inférieur droit.  
+
+Par exemple, dans l’image suivante de l’exemple treemap, le territoire « Southwest » est le plus grand, et « Germany » est le plus petit. Dans le territoire« Southwest », les « Road Bikes » sont plus importants que les « Mountain Bikes ».  
+ 
+![exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example.png "exemple_graphique_compartimentage_ssrs")  
   
- Un graphique de compartimentage divise la zone de graphique en rectangles représentant les niveaux et les tailles relatives de la hiérarchie de données. Le mappage ressemble à arbre, avec un tronc, des branches et des ramifications de plus en plus petites. Chaque rectangle est subdivisé en rectangles plus petits représentant un niveau inférieur dans la hiérarchie. Les rectangles de niveau supérieur du graphique de compartimentage sont disposés avec le plus grand rectangle dans l’angle supérieur gauche du graphique et le plus petit dans l’angle inférieur droit.  À l’intérieur d’un rectangle, le niveau suivant dans la hiérarchie est également organisé en rectangles allant de l’angle supérieur gauche à l’angle inférieur droit.  
-  
- Par exemple, dans l’image suivante de l’exemple de mappage d’arborescence, le territoire « Southwest » est le plus grand et Allemagne est le plus petit. Dans le territoire« Southwest », les « Road Bikes » sont plus importants que les « Mountain Bikes ».  
-  
- ![exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example.png "exemple_graphique_compartimentage_ssrs")  
-  
-### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>Pour insérer un graphique de compartimentage et configurer l’échantillon de données Adventureworks  
+### <a name="to-insert-a-treemap-chart-and-set-up-the-sample-adventureworks-data"></a>Pour insérer un graphique treemap et installer les exemples de données AdventureWorks  
    
-[!NOTE] Avant d’ajouter un graphique à votre rapport, créez une source de données et le jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
+> [!NOTE]
+> Avant d’ajouter un graphique à votre rapport, créez une source de données et le jeu de données.  Pour plus d’exemples de données et un exemple de requête, consultez [de données exemple AdventureWorks](#bkmk_sample_data).  
   
-1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique** .  
-  
-     Sélectionnez Tree Map (Graphique de compartimentage) ![icône_graphique_compartimentage_ssrs](../../reporting-services/media/ssrs-treemap-icon.png "icône_graphique_compartimentage_ssrs").  
-  
-     ![insérer_graphique_compartimentage_rayons_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "insérer_graphique_compartimentage_rayons_de_soleil_ssrs")  
-  
-2.  Repositionnez et redimensionnez le graphique.   Pour l’échantillon de données, un graphique de 5 pouces de large est un bon début.  
+1.  Cliquez sur l’aire de conception, puis sélectionnez **insérer** > **graphique**. Sélectionnez le **Treemap** icône.
+
+    ![icône_graphique_compartimentage_ssrs](../../reporting-services/media/ssrs-treemap-icon.png "icône_graphique_compartimentage_ssrs")  
+   
+2.  Repositionnez et redimensionnez le graphique. Pour utiliser avec les exemples de données, un graphique de 5 pouces de large est un bon début.  
   
 3.  Ajoutez les champs suivants à partir de l’échantillon de données :  
   
-    |||  
-    |-|-|  
-    |![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")|**Values :** (Valeurs) LineTotal (Total de la ligne)<br /><br /> **Category Groups :** (Groupes de catégories ) ajoutez-les dans l’ordre suivant :<br /><br /> 1) CategoryName (Nom de catégorie)<br /><br /> 2) SubcategoryName (Nom de sous-catégorie)<br /><br /> **Series Groups :** (Groupes de séries) TerritoryName (Nom de territoire)|  
+    * **Valeurs**: LineTotal
+    * **Groupes de catégories** (dans l’ordre suivant) :
+        1. Nom de catégorie
+        2. SubcategoryName
+    * **Groupes de séries**: TerritoryName  
+
+    ![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")
   
-4.  Pour optimiser la taille de page pour la forme générale d’un graphique de compartimentage, positionnez la légende en bas.  
+4.  Pour optimiser la taille de page pour la forme générale d’un treemap, définir la position de la légende en bas.  
   
-5.  Pour ajouter des info-bulles qui affichent la sous-catégorie et le total de la ligne, cliquez sur **LineTotal** (Total de la ligne), puis sur **Propriétés de la série**.  
+5.  Pour ajouter des info-bulles qui affichent la sous-catégorie et le total de ligne, cliquez sur **LineTotal**, puis sélectionnez **propriétés de la série**.  
   
      ![propriétés_série_visualisation_ssrs](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "propriétés_série_visualisation_ssrs")  
   
-     Définissez la propriété **Tooltip** (Info-bulle) comme suit :  
+     Définir le **info-bulle** valeur à la propriété suivante :  
   
     ```  
     =Fields!SubcategoryName.Value &": " &Format(Sum(Fields!LineTotal.Value),"C")  
     ```  
   
-     Pour plus d’informations, consultez [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
+    Pour plus d’informations, consultez [afficher des info-bulles sur une série &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md).  
   
-6.  Modifiez le titre par défaut du graphique en « Categorized Sales by Territory » (Ventes classées par territoire).  
+6.  Modifier le titre du graphique par défaut à **classés de ventes par secteur**.  
   
-7.  Le nombre de valeurs d’étiquette qui s’affichent est affecté par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la propriété de police de l’étiquette LineTotal (Total de la ligne) sur 10 pt au lieu de la valeur par défaut de 8 pt.  
+7.  Le nombre de valeurs d’étiquette qui s’affichent est affecté par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles. Pour afficher d’autres étiquettes, définissez la **police de l’étiquette** propriété du **LineTotal** à **10 pt** à partir de la valeur par défaut de **8pt**.  
   
   
-##  <a name="bkmk_sunburst_chart"></a> Graphique en rayons de soleil  
- ![icône_graphique_rayons_de_soleil_ssrs](../../reporting-services/media/ssrs-sunburst-icon.png "icône_graphique_rayons_de_soleil_ssrs")  
+##  <a name="bkmk_sunburst_chart"></a>Graphique à rayon  
+ 
+Dans un graphique en rayons de soleil, la hiérarchie est représentée par une série de cercles. Le plus haut niveau de la hiérarchie est dans le centre et des niveaux inférieurs de la hiérarchie sont à l’extérieur du centre.  Le niveau le plus bas de la hiérarchie est l’anneau extérieur.  
   
- Dans un graphique en rayons, la hiérarchie est représentée par une série de cercles, avec le plus haut niveau de la hiérarchie au centre et les niveaux inférieurs à l’extérieur du centre.  Le niveau le plus bas de la hiérarchie est l’anneau extérieur.  
+![exemple_graphique_rayons_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-example.png "exemple_graphique_rayons_de_soleil_ssrs")  
   
- ![exemple_graphique_rayons_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-example.png "exemple_graphique_rayons_de_soleil_ssrs")  
+### <a name="to-insert-a-sunburst-chart-and-set-up-the-sample-adventureworks-data"></a>Pour insérer un graphique en rayons de soleil et de configurer les exemples de données AdventureWorks  
+> [!NOTE] 
+> Avant d’ajouter un graphique à votre rapport, créez une source de données et le jeu de données. Pour plus d’exemples de données et un exemple de requête, consultez [de données exemple AdventureWorks](#bkmk_sample_data).  
   
-### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>Pour insérer un graphique à rayon et configurer l’échantillon de données Adventureworks  
- [!NOTE] Avant d’ajouter un graphique à votre rapport, créez une source de données et le jeu de données.  Pour des exemples de données et de requête, voir la section [Échantillon de données Adventureworks](#bkmk_sample_data) dans cette rubrique.  
+1.  Cliquez sur l’aire de conception, puis sélectionnez **insérer** > **graphique**. Sélectionnez le **en rayons de soleil** icône.
+     
+     ![icône_graphique_rayons_de_soleil_ssrs](../../reporting-services/media/ssrs-sunburst-icon.png "icône_graphique_rayons_de_soleil_ssrs")  
   
-1.  Cliquez avec le bouton droit sur l’aire de conception, cliquez sur **Insérer**, puis sur **Graphique** .  
-  
-     Sélectionnez Sunburst (graphique en rayons de soleil) ![icône_graphique_compartimentage_ssrs](../../reporting-services/media/ssrs-treemap-icon.png "icône_graphique_compartimentage_ssrs").  
-  
-     ![insérer_graphique_compartimentage_rayons_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "insérer_graphique_compartimentage_rayons_de_soleil_ssrs")  
-  
-2.  Repositionnez et redimensionnez le graphique.   Pour l’échantillon de données, un graphique de 5 pouces de large est un bon début.  
+2.  Repositionnez et redimensionnez le graphique. Pour utiliser avec les exemples de données, un graphique de 5 pouces de large est un bon début.  
   
 3.  Ajoutez les champs suivants à partir de l’échantillon de données :  
+
+    * **Valeurs**: LineTotal
+    * **Groupes de catégories** (dans l’ordre suivant) :
+        1. Nom de catégorie
+        2. SubcategoryName
+        3. SalesReasonName
+    * **Groupes de séries**: TerritoryName  
+
+    ![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")
   
-    |||  
-    |-|-|  
-    |![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")|**Values :** (Valeurs) LineTotal (Total de la ligne)<br /><br /> **Category Groups :** (Groupes de catégories ) ajoutez-les dans l’ordre suivant :<br /><br /> 1) CategoryName (Nom de catégorie)<br /><br /> 2) SubcategoryName (Nom de sous-catégorie)<br /><br /> 3) SalesReasonName (Nom du motif de vente)<br /><br /> **Series Groups :** (Groupes de séries) TerritoryName (Nom de territoire)|  
+4.  Pour optimiser la taille de page pour la forme générale d’un graphique en rayons de soleil, positionnez la légende vers le bas.  
   
-4.  Pour optimiser la taille de page pour la forme générale d’un graphique en rayons de soleil, positionnez la légende en bas.  
+5.  Modifier le titre du graphique par défaut à **classés ventes par territoire, avec motif de vente**.  
   
-5.  Modifiez le titre par défaut du graphique en « Categorized Sales by Territory » (Ventes classées par territoire, avec motif de vente).  
-  
-6.
-    |||  
-    |-|-|  
-    |![propriétés_total_ligne_rayon_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "propriétés_total_ligne_rayon_de_soleil_ssrs")|Pour ajouter les valeurs des groupes de catégories au graphique en rayons de soleil en tant qu’étiquettes, définissez la propriété d’étiquette comme suit : **Visible** = true et **UseValueAsLabel**=False.<br /><br /> Les valeurs d’étiquette qui s’affichent sont affectées par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la propriété de police de l’étiquette LineTotal (Total de la ligne) sur 8 pt au lieu de la valeur par défaut de 10 pt.|
+6. Pour ajouter les valeurs des groupes de catégorie pour les rayons comme étiquettes, définissez les propriétés de l’étiquette **Visible = true** et **UseValueAsLabel = false**.<br /><br /> Les valeurs d’étiquette qui s’affichent sont affectées par la taille de la police, la taille de la zone de graphique et la taille des différents rectangles.  Pour afficher d’autres étiquettes, définissez la **police de l’étiquette** propriété du **LineTotal** à **10 pt** à partir de la valeur par défaut de **8pt**.
+
+    ![propriétés_total_ligne_rayon_de_soleil_ssrs](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "propriétés_total_ligne_rayon_de_soleil_ssrs")
   
 7.  Si vous voulez utiliser une autre plage de couleurs, modifiez la propriété **Palette** du graphique.  
-  
-  
+    
      ![palette_visualisation_ssrs](../../reporting-services/report-design/media/ssrs-visualization-palette.png "palette_visualisation_ssrs")  
   
   
-##  <a name="bkmk_sample_data"></a> Échantillon de données Adventureworks  
- Cette section présente un exemple de requête et les étapes de base pour la création d’une source de données et d’un jeu de données dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si votre rapport contient déjà une source de données et le jeu de données, vous pouvez ignorer cette section.  
+##  <a name="bkmk_sample_data"></a>Exemples de données AdventureWorks  
+ Cette section comprend un exemple de requête et les étapes de base pour la création d’une source de données et le jeu de données dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si votre rapport contient déjà une source de données et le jeu de données, vous pouvez ignorer cette section.  
   
- La requête retourne des données de détail des ventes d’Adventureworks par secteur de vente, catégorie de produit, sous-catégorie de produit et motif de vente.  
+ La requête retourne des données de détail de vente AdventureWorks par secteur de vente, catégorie de produit, sous-catégorie de produit et motif de vente.  
   
-1.  **Obtenir les données :**  
+1.  **Obtenir les données**.  
   
-     La requête de cette section porte sur la base de données Adventureworks disponible en téléchargement  [Adventure Works 2014 Full Database Backup](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
+     La requête de cette section est basée sur la base de données AdventureWorks, qui est disponible pour téléchargement à partir de GitHub : [sauvegarde de base de données complète AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
   
-     Pour plus d’informations sur l’installation de la base de données, voir [How to install Adventure Works 2014 Sample Databases.pdf](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Comment installer les échantillons de base de données Adventure Works 2014) (en anglais).  
   
-2.  **Créer une source de données :**  
+2.  **Créer une source de données**.  
   
-    1.  Dans le volet **Données du rapport** , cliquez avec le bouton droit sur **Sources de données** , puis cliquez sur **Ajouter une source de données**.  
+    1.  Sous **les données de rapport**, avec le bouton droit **des Sources de données**, puis sélectionnez **ajouter une source de données**.  
   
     2.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-    3.  Sélectionnez le type de connexion **Microsoft SQL Server**.  
+    3.  Pour le type de connexion, sélectionnez **Microsoft SQL Server**.  
   
-    4.  Tapez la chaîne de connexion à votre serveur et à la base de données, par exemple :  
+    4.  Entrez la chaîne de connexion à votre serveur et de la base de données. Exemple :  
   
         ```  
-        Data Source=[server name];Initial Catalog=AdventureWorks2014  
+        Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
-    5.  Il est judicieux de vérifier avec le bouton **Tester la connexion** , puis de cliquer sur **OK**.  
+    5.  Pour vérifier la connexion, sélectionnez le **tester la connexion** , puis **OK**.  
   
-     Pour plus d’informations, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+     Pour plus d’informations sur la création d’une source de données, consultez [ajouter et vérifier une connexion de données &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-3.  **Créer un jeu de données :**  
+3.  **Créer un jeu de données**.  
   
-    -   Dans le volet **Données du rapport** , cliquez avec le bouton droit sur **Datasets** , puis cliquez sur **Ajouter un dataset**.  
+    1. Sous **les données de rapport**, avec le bouton droit **Datasets**, puis sélectionnez **ajouter dataset**.  
   
-    -   Cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
+    2. Cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
   
-    -   Sélectionnez la source de données que vous avez créée aux étapes précédentes.  
+    3. Sélectionnez la source de données que vous avez créé.  
   
-    -   Sélectionnez le type de requête **Texte** , puis copiez et collez la requête suivante dans la zone de texte **Requête** :  
+    4. Sélectionnez le **texte** requête de type, puis copiez et collez la requête suivante dans le **requête** zone de texte :  
   
         ```  
         SELECT    Sales.SalesOrderHeader.SalesOrderID, Sales.SalesOrderHeader.OrderDate, Sales.SalesOrderDetail.SalesOrderDetailID, Sales.SalesOrderDetail.ProductID, Sales.SalesOrderDetail.LineTotal,   
@@ -174,18 +177,17 @@ ms.lasthandoff: 10/02/2017
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    -   Cliquez sur **OK**.  
+    5. Sélectionnez **OK**.  
   
-     Pour plus d’informations sur la création d’un dataset, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+     Pour plus d’informations sur la création d’un jeu de données, consultez [créer un dataset partagé ou dataset incorporé &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Mode création de dataset partagé &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)   
- [Didacticiel : graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)   
- [Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
-  
-  
+* [Partagé de mode de création de jeu de données &#40; Le Générateur de rapports &#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
+* [Afficher les info-bulles sur une série &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
+* [Didacticiel : Treemaps dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office](http://research.microsoft.com/en-us/projects/msrdatavis/treemap.aspx)  
+<br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
