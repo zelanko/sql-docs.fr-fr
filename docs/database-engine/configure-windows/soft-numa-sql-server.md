@@ -138,7 +138,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sys.dm_os_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-nodes-transact-sql.md) : la colonne node_state_desc pour chaque nœud NUMA indique si le nœud a été créé par soft-NUMA ou non.  
   
--   [Sys.dm_os_sys_info & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) : les colonnes softnuma et softnuma_desc affichent les valeurs de configuration.  
+-   [Sys.dm_os_sys_info &#40;; Transact-SQL &#41;;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) : les colonnes softnuma et softnuma_desc affichent les valeurs de configuration.  
   
 > [!NOTE]
 > Même si vous pouvez afficher la valeur d’exécution du soft-NUMA automatique avec [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), vous ne pouvez pas modifier sa valeur avec **sp_configure**. Vous devez utiliser l’instruction [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) avec l’argument SET SOFTNUMA.  
