@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: acc67d54c387097785317456b70a5936abf05d43
 ms.contentlocale: fr-fr
@@ -63,4 +62,3 @@ Les valeurs Null sont affichées sur un graphique sous la forme d'espaces ou d'i
  [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

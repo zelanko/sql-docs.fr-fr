@@ -15,8 +15,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd7b2f812481abbe3bf541322582804a6a415236
 ms.contentlocale: fr-fr
@@ -28,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
  ![rs_DrillThru](../../reporting-services/report-design/media/rs-drillthru.gif "rs_DrillThru")  
   
- Les données du rapport d'extraction ne sont récupérées que lorsque l'utilisateur clique sur le lien situé dans le rapport principal qui ouvre le rapport d'extraction. Si les données du rapport principal et du rapport d'extraction doivent être récupérées en même temps, envisagez d'utiliser un sous-rapport. Pour plus d’informations, consultez [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+ Les données du rapport d'extraction ne sont récupérées que lorsque l'utilisateur clique sur le lien situé dans le rapport principal qui ouvre le rapport d'extraction. Si les données du rapport principal et du rapport d'extraction doivent être récupérées en même temps, envisagez d'utiliser un sous-rapport. Pour plus d’informations, consultez [sous-rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Lorsque vous utilisez le Générateur de rapports, vous devez être connecté à un serveur de rapports afin d'afficher le rapport d'extraction qui s'ouvre lorsque vous cliquez sur le lien d'extraction dans le rapport principal.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
  Pour commencer à utiliser rapidement les rapports d’extraction, consultez [Didacticiel : création d’un rapport principal et d’un rapport d’extraction &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Paramètres des rapports d'extraction  
- Un rapport d'extraction comprend généralement des paramètres qui lui sont passés par le rapport de synthèse. Dans l'exemple de rapport de résumé sur les ventes, le rapport de résumé inclut le champ [OrderNumber] dans une zone de texte dans une cellule de table. Le rapport d'extraction comporte un paramètre qui prend le numéro de commande en tant que valeur. Lorsque vous définissez le lien de rapport d'extraction sur la zone de texte pour [OrderNumber], vous affectez également au paramètre du rapport cible la valeur [OrderNumber]. Lorsque l'utilisateur clique sur le numéro de commande dans le rapport de synthèse, le rapport détaillé cible s'ouvre et affiche les informations concernant le numéro commande en question. Pour voir des instructions sur la personnalisation des rapports d’extraction en fonction des valeurs de paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) et [Fonction InScope &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
+ Un rapport d'extraction comprend généralement des paramètres qui lui sont passés par le rapport de synthèse. Dans l'exemple de rapport de résumé sur les ventes, le rapport de résumé inclut le champ [OrderNumber] dans une zone de texte dans une cellule de table. Le rapport d'extraction comporte un paramètre qui prend le numéro de commande en tant que valeur. Lorsque vous définissez le lien de rapport d'extraction sur la zone de texte pour [OrderNumber], vous affectez également au paramètre du rapport cible la valeur [OrderNumber]. Lorsque l'utilisateur clique sur le numéro de commande dans le rapport de synthèse, le rapport détaillé cible s'ouvre et affiche les informations concernant le numéro commande en question. Pour afficher les instructions sur la personnalisation des rapports d’extraction en fonction des valeurs de paramètre, consultez [les paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) et [fonction InScope &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
   
 ## <a name="designing-the-drillthrough-report"></a>Conception du rapport d'extraction  
  Pour créer un rapport d'extraction, vous devez d'abord concevoir le rapport d'extraction avant de créer l'action d'extraction dans le rapport principal.  
@@ -54,7 +53,6 @@ ms.lasthandoff: 08/09/2017
  Pour afficher un rapport de résumé doté de liens d'extraction après sa publication, vous devez vérifier que les rapports d'extraction résident sur le même serveur de rapports que le rapport de résumé. Dans tous les cas, l'utilisateur doit être autorisé à consulter le rapport d'extraction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [L’extraction, exploration, sous-rapports et les régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

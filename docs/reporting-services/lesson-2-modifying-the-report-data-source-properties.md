@@ -16,8 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: fr-fr
@@ -25,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-Dans cette leçon du didacticiel sur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez le portail web pour sélectionner un rapport qui doit être remis à des destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [&#40;SSRS Didacticiel&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
+Dans cette leçon du didacticiel sur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez le portail web pour sélectionner un rapport qui doit être remis à des destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
   
 Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un paramètre permettant de filtrer le rapport sur `[Order]` de sorte que l'abonnement puisse générer plusieurs instances différentes du rapport pour des commandes et des formats de rendu spécifiques.  
   
@@ -114,7 +113,7 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
   
 ## <a name="bkmk_redeploy"></a>Redéployer le rapport  
   
-1.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés de projet utilisées dans le didacticiel de création d’une table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de la [Leçon 6 : Ajout d’un regroupement et de totaux &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Redéployez le rapport afin que la configuration de l'abonnement dans la leçon suivante puisse utiliser les modifications que vous avez apportées dans cette leçon. Pour plus d’informations sur les propriétés du projet utilisé dans le didacticiel de la table, consultez la section « Pour publier le rapport sur le serveur de rapports (facultatif) » de [Leçon 6 : ajout d’un regroupement et des totaux &#40; Reporting Services &#41; ](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  Dans la barre d'outils, cliquez sur **Générer** , puis sur **Déployer le didacticiel**.  
   

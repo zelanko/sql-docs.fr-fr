@@ -16,8 +16,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: fr-fr
@@ -29,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 L’utilisation des didacticiels du Générateur de rapports suppose que vous pouvez afficher et enregistrer des rapports paginés [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports. Pour les données, tous les didacticiels utilisent des requêtes littérales qui doivent être traités par une instance de SQL Server.  
   
-Si vous n'avez pas accès à un serveur de rapports, un site de serveur de rapports ou une source de données, vous pouvez en apprendre plus sur le Générateur de rapports en générant un rapport hors connexion. Consultez [Didacticiel : créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Si vous n'avez pas accès à un serveur de rapports, un site de serveur de rapports ou une source de données, vous pouvez en apprendre plus sur le Générateur de rapports en générant un rapport hors connexion. Consultez [didacticiel : créer un rapport de graphique rapide en mode hors connexion &#40; Le Générateur de rapports &#41; ](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Spécifications
 
@@ -56,4 +55,3 @@ L’administrateur du serveur de rapports doit vous accorder les autorisations n
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 
 D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
