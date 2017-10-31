@@ -91,7 +91,7 @@ Définition de serveur peut être une partie du fichier de connexion de serveur 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Option de sortie XML : - x / xmloutput [xmloutputfile]  
 Cette commande est utilisée pour la sortie des messages de sortie de commande au format xml à la console ou dans un fichier xml.  
   
-Il existe deux options pour xmloutput, notamment.., :  
+Il existe deux options pour xmloutput, notamment..,:  
   
 -   Si le chemin d’accès est fourni après le commutateur xmloutput la sortie est redirigée vers le fichier.  
   
