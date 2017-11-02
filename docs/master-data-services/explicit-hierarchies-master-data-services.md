@@ -1,5 +1,5 @@
 ---
-title: "Hiérarchies explicites (Master Data Services) | Documents Microsoft"
+title: "Hiérarchies explicites (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -15,17 +15,18 @@ helpviewer_keywords:
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ca0d83ac41efca3c9a0c1a71f87e9176bfd34553
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="explicit-hierarchies-master-data-services"></a>Hiérarchies explicites (services de données de référence)
+# <a name="explicit-hierarchies-master-data-services"></a>Hiérarchies explicites (Master Data Servicese)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une hiérarchie explicite organise les membres d'une seule entité comme vous le souhaitez. La structure peut être déséquilibrée et contrairement aux hiérarchies dérivées, les hiérarchies explicites ne sont pas basées sur des relations d'attributs basés sur un domaine.  
   
 > [!NOTE]  
@@ -80,7 +81,7 @@ ms.lasthandoff: 09/01/2017
   
  Pour synthétiser ces membres feuille à des points de consolidation spécifiques, vous pouvez créer des membres consolidés dans l'entité Product. Insérez les membres consolidés à des niveaux de l'arborescence hiérarchique où vous souhaitez synthétiser les membres feuille. Il n'existe aucune limitation quant à l'emplacement où vous insérez vos membres consolidés ; toutefois, chaque membre (feuille ou consolidé) ne peut être utilisé qu'une fois.  
   
- ![Exemple de hiérarchie explicite Mountain Bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "exemple de hiérarchie explicite Mountain Bike")  
+ ![Exemple de hiérarchie explicite Mountain Bike](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Exemple de hiérarchie explicite Mountain Bike")  
   
  Les membres consolidés peuvent être utilisés pour regrouper des membres à tout niveau, et les membres feuille et consolidés sont triés dans l'ordre que vous déterminez.  
   
@@ -88,16 +89,16 @@ ms.lasthandoff: 09/01/2017
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Créer une hiérarchie explicite.|[Créer une hiérarchie explicite &#40; Master Data Services &#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Modifier le nom d'une hiérarchie explicite existante.|[Modifier le nom d’une hiérarchie explicite &#40; Master Data Services &#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|Supprimer une hiérarchie explicite existante.|[Supprimer une hiérarchie explicite &#40; Master Data Services &#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|Créer une hiérarchie explicite.|[Créer une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Modifier le nom d'une hiérarchie explicite existante.|[Modifier le nom d’une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Supprimer une hiérarchie explicite existante.|[Supprimer une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>Contenu connexe  
   
--   [Hiérarchies dérivées &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [Collections de &#40; Master Data Services &#41;](../master-data-services/collections-master-data-services.md)  
+-   [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
 
