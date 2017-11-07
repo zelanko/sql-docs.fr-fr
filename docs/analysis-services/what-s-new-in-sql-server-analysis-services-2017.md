@@ -32,7 +32,7 @@ S’il est important pour en savoir plus sur les nouvelles fonctionnalités, il 
 
 Examinons quelques-unes des principales des nouvelles fonctionnalités dans cette version.
 
-## <a name="1400-compatibility-level-for-tabular-models"></a>Niveau de compatibilité&1400; pour les modèles tabulaires
+## <a name="1400-compatibility-level-for-tabular-models"></a>Niveau de compatibilité 1400 pour les modèles tabulaires
   Pour tirer parti d’un grand nombre des nouvelles fonctionnalités et des fonctionnalités décrites ici, les modèles tabulaires nouveau ou existants doivent être définies ou mise à niveau vers le niveau de compatibilité 1400. Les modèles au niveau de compatibilité 1400 ne peuvent pas être déployés vers SQL Server 2016 SP1 ou version antérieure, ni passés à une version antérieure pour réduire les niveaux de compatibilité. Pour plus d’informations, consultez [au niveau de compatibilité pour les modèles tabulaires Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).
   
 Dans SSDT, vous pouvez sélectionner le nouveau niveau de compatibilité 1400 lors de la création de projets de modèles tabulaires. 
