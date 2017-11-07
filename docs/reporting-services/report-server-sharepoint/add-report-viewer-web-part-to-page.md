@@ -50,7 +50,7 @@ Afficher un rapport, à partir de SQL Server Reporting Services ou le serveur de
 
     ![Insérer un composant WebPart à partir du ruban office.](media/sharepoint-insert-web-part.png)
 
-4. Sous **catégories**, sélectionnez ** SQL Server Reporting Services (mode natif). Sous **parties**, sélectionnez **visionneuse de rapports**. Puis sélectionnez **ajouter**.
+4. Sous **catégories**, sélectionnez **SQL Server Reporting Services (mode natif). Sous **parties**, sélectionnez **visionneuse de rapports**. Puis sélectionnez **ajouter**.
 
     ![Ajouter le composant WebPart Visionneuse de rapports.](media/sharepoint-report-viewer-web-part.png)
 
