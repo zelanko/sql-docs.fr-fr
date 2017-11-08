@@ -1,6 +1,6 @@
 ---
 title: "Nouveautés de SQL Server 2017 Analysis Services | Documents Microsoft"
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: fr-fr
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Nouveautés de SQL Server 2017 Analysis Services
@@ -47,9 +47,9 @@ Pour mettre à niveau un modèle tabulaire existant dans SSDT, dans l’Explorat
 Il est important de garder à l’esprit, une fois que vous mettez à niveau un modèle existant à 1400, vous ne pouvez pas rétrograder. Veillez à conserver une sauvegarde de votre base de données du modèle 1200.
 
 ## <a name="modern-get-data-experience"></a>Expérience moderne d’obtention des données
-Lorsqu’il s’agit de la réception de données à partir de sources de données dans vos modèles tabulaires, SQL Server Data Tools (SSDT) introduit le moderne **obtenir des données** expérience pour les modèles au niveau de compatibilité 1400. Cette nouvelle fonctionnalité est basée sur des fonctionnalités similaires de Power BI Desktop et de Microsoft Excel 2016. L’expérience obtenir des données moderne fournit la transformation de données considérable et des fonctionnalités de l’application Web hybride de données en utilisant le Générateur de requêtes d’obtenir des données et les expressions de M.
+Lorsqu’il s’agit de l’importation de données à partir de sources de données dans vos modèles tabulaires, SQL Server Data Tools (SSDT) introduit le moderne **obtenir des données** expérience pour les modèles au niveau de compatibilité 1400. Cette nouvelle fonctionnalité est basée sur des fonctionnalités similaires de Power BI Desktop et de Microsoft Excel 2016. L’expérience obtenir des données moderne fournit la transformation de données considérable et des fonctionnalités de l’application Web hybride de données en utilisant le Générateur de requêtes d’obtenir des données et les expressions de M.
 
-Moderne Get Data expérience prennent en charge un large éventail de sources de données supplémentaires. Mises à jour ultérieures prend en charge les sources de données supplémentaires.
+L’expérience d’obtenir des données moderne prend en charge un large éventail de sources de données. À l’avenir, mises à jour inclut la prise en charge pour encore plus d’informations.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

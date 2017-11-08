@@ -1,5 +1,5 @@
 ---
-title: "Quel &#39 ; s de SSMA pour MySQL (MySQLToSql) | Documents Microsoft"
+title: "Nouveautés de SSMA pour MySQL (MySQLToSql) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/30/2017
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: f895aee684d353451c263b136547c2c6ed7d976d
 ms.contentlocale: fr-fr
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-mysql-mysqltosql"></a>Quel &#39 ; s de SSMA pour MySQL (MySQLToSql)
+# <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 Cette rubrique répertorie SSMA pour que les modifications de MySQL dans chaque version. 
 
 ## <a name="ssma-v76"></a>SSMA v7.6
