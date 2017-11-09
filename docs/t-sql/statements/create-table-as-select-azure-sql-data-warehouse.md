@@ -2,7 +2,7 @@
 title: "CREATE TABLE AS SELECT (entrepôt de données SQL Azure) | Documents Microsoft"
 ms.custom: 
 ms.date: 10/07/2016
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
