@@ -1,7 +1,7 @@
 ---
 title: "Créer des fonctions définies par l’utilisateur (moteur de base de données) | Microsoft Docs"
 ms.custom: 
-ms.date: 10/24/2016
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -75,7 +75,7 @@ Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisa
 ##  <a name="Scalar"></a> Fonctions scalaires  
  L'exemple suivant illustre la création d'une fonction scalaire à instructions multiples dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'une valeur d'entrée unique ( `ProductID`), la fonction retourne une valeur de donnée unique, en l'occurrence, la quantité totale du produit spécifié en stock.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -92,24 +92,21 @@ BEGIN
      IF (@ret IS NULL)   
         SET @ret = 0;  
     RETURN @ret;  
-END;  
-GO  
-  
+END; 
 ```  
   
  Dans l'exemple suivant, la fonction `ufnGetInventoryStock` est utilisée pour déterminer la quantité en stock des produits dont la valeur `ProductModelID` est comprise entre 75 et 80.  
   
-```  
+```t-sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
-  
 ```  
   
 ##  <a name="TVF"></a> Fonctions table  
  L'exemple suivant crée une fonction table en ligne dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique (storeID), la fonction retourne les colonnes `ProductID`, `Name`, ainsi que le total cumulé des ventes ( `YTD Total` ) pour chaque produit vendu au magasin du client.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -126,19 +123,17 @@ RETURN
     WHERE C.StoreID = @storeid  
     GROUP BY P.ProductID, P.Name  
 );  
-  
 ```  
   
  L'exemple suivant appelle la fonction et spécifie l'ID client 602.  
   
-```  
+```t-sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
-  
 ```  
   
  L'exemple suivant crée une fonction table dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . À partir d'un paramètre d'entrée unique, `EmployeeID` , la fonction retourne la liste de tous les employés qui sont sous la responsabilité directe ou indirecte de l'employé spécifié. La fonction est ensuite appelée en spécifiant l'ID d'employé 19.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  
@@ -180,13 +175,12 @@ GO
 -- Example invocation  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
-  
 ```  
   
 ## <a name="more-examples"></a>Plus d'exemples  
  - [Fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
-  - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
+ - [ALTER FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
  - [DROP FUNCTION (Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
  - [DROP PARTITION FUNCTION (Transact-SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - Plus d’exemples dans la [communauté](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)
