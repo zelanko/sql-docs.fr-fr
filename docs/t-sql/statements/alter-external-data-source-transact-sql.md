@@ -1,7 +1,7 @@
 ---
 title: "MODIFIER la SOURCE de données externe (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 11/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="alter-external-data-source-transact-sql"></a>MODIFIER la SOURCE de données externe (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Modifie la source de données externe utilisée pour créer une table externe. La source de données externe peut être le stockage d’objets blob Hadoop ou Azure (WASB).  
   

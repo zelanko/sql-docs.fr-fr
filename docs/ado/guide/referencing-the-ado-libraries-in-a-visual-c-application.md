@@ -3,8 +3,11 @@ title: "Référencer les bibliothèques ADO dans une Application Visual C++ | Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
