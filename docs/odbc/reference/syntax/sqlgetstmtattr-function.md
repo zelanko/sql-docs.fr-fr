@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  **SQLGetStmtAttr** retourne le paramètre actuel d’un attribut d’instruction.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 3. *x* application fonctionne avec une API ODBC 2.* x* pilote, consultez [mappage des fonctions de remplacement pour la compatibilité descendante des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Pour plus d’informations sur les le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote, consultez [mappage des fonctions de remplacement pour la compatibilité descendante des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,20 +66,20 @@ SQLRETURN SQLGetStmtAttr(
  Si *ValuePtr* est NULL, *StringLengthPtr* retourne toujours le nombre total d’octets (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *ValuePtr*.  
   
  *BufferLength*  
- [Entrée] Si *attribut* est un attribut défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *attribut* est un attribut défini par ODBC et \* *ValuePtr* est un entier, *BufferLength* est ignoré. Si la valeur retournée dans * \*ValuePtr* est une chaîne Unicode (lors de l’appel **SQLGetStmtAttrW**), la *BufferLength* l’argument doit être un nombre pair.  
+ [Entrée] Si *attribut* est un attribut défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *attribut* est un attribut défini par ODBC et \* *ValuePtr* est un entier, *BufferLength* est ignoré. Si la valeur retournée dans  *\*ValuePtr* est une chaîne Unicode (lors de l’appel **SQLGetStmtAttrW**), la *BufferLength* l’argument doit être un nombre pair.  
   
  Si *attribut* est un attribut définies par le pilote, l’application indique la nature de l’attribut pour le Gestionnaire de pilotes en définissant le *BufferLength* argument. *BufferLength* peut avoir les valeurs suivantes :  
   
--   Si * \*ValuePtr* est un pointeur vers une chaîne de caractères, puis *BufferLength* est la longueur de la chaîne ou le SQL_NTS.  
+-   Si  *\*ValuePtr* est un pointeur vers une chaîne de caractères, puis *BufferLength* est la longueur de la chaîne ou le SQL_NTS.  
   
--   Si * \*ValuePtr* est un pointeur vers une mémoire tampon binaire, puis l’application place le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Il s’ensuit une valeur négative dans *BufferLength*.  
+-   Si  *\*ValuePtr* est un pointeur vers une mémoire tampon binaire, puis l’application place le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Il s’ensuit une valeur négative dans *BufferLength*.  
   
--   Si * \*ValuePtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou binaires, puis *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
+-   Si  *\*ValuePtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou binaires, puis *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si * \*ValuePtr* est contient un type de données de longueur fixe, puis *BufferLength* est SQL_IS_INTEGER ou SQL_IS_UINTEGER, selon le cas.  
+-   Si  *\*ValuePtr* est contient un type de données de longueur fixe, puis *BufferLength* est SQL_IS_INTEGER ou SQL_IS_UINTEGER, selon le cas.  
   
  *StringLengthPtr*  
- [Sortie] Un pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans * \*ValuePtr*. Si *ValuePtr* est un pointeur null, aucune longueur n’est retournée. Si la valeur d’attribut est une chaîne de caractères, et le nombre d’octets à retourner est supérieur ou égal à *BufferLength*, les données de * \*ValuePtr* est tronqué à *BufferLength* moins la longueur d’un caractère de fin de la valeur null et se termine par null par le pilote.  
+ [Sortie] Un pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans  *\*ValuePtr*. Si *ValuePtr* est un pointeur null, aucune longueur n’est retournée. Si la valeur d’attribut est une chaîne de caractères, et le nombre d’octets à retourner est supérieur ou égal à *BufferLength*, les données de  *\*ValuePtr* est tronqué à *BufferLength* moins la longueur d’un caractère de fin de la valeur null et se termine par null par le pilote.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -90,7 +90,7 @@ SQLRETURN SQLGetStmtAttr(
 |SQLSTATE|Erreur| Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|01004|Données de type chaîne, droite tronquées|Les données retournées dans * \*ValuePtr* a été tronquée pour être *BufferLength* moins la longueur d’un caractère de fin de la valeur null. La longueur de la valeur de chaîne non tronqué est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
+|01004|Données de type chaîne, droite tronquées|Les données retournées dans  *\*ValuePtr* a été tronquée pour être *BufferLength* moins la longueur d’un caractère de fin de la valeur null. La longueur de la valeur de chaîne non tronqué est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |24000|État de curseur non valide|L’argument *attribut* a été SQL_ATTR_ROW_NUMBER et le curseur n’est pas ouvert, ou le curseur est positionné avant le début du jeu de résultats ou après la fin du jeu de résultats.|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans l’argument *MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
@@ -107,9 +107,9 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="comments"></a>Commentaires  
  Pour obtenir des informations générales sur les attributs d’instruction, consultez [les attributs d’instruction](../../../odbc/reference/develop-app/statement-attributes.md).  
   
- Un appel à **SQLGetStmtAttr** retourne dans * \*ValuePtr* la valeur de l’attribut spécifié dans l’instruction *attribut*. Cette valeur peut être une valeur SQLULEN ou une chaîne de caractères terminée par null. Si la valeur est une valeur SQLULEN, certains pilotes peuvent écrire uniquement 32 bits inférieurs ou le bit d’ordre supérieur de 16 bits d’une mémoire tampon et la laisser inchangée. Par conséquent, les applications doivent utiliser une mémoire tampon de SQLULEN et initialiser la valeur 0 avant d’appeler cette fonction. En outre, le *BufferLength* et *StringLengthPtr* arguments ne sont pas utilisés. Si la valeur est une chaîne terminée par null, l’application spécifie la longueur maximale de cette chaîne dans le *BufferLength* argument et le pilote retourne la longueur de cette chaîne dans le * \*StringLengthPtr* mémoire tampon.  
+ Un appel à **SQLGetStmtAttr** retourne dans  *\*ValuePtr* la valeur de l’attribut spécifié dans l’instruction *attribut*. Cette valeur peut être une valeur SQLULEN ou une chaîne de caractères terminée par null. Si la valeur est une valeur SQLULEN, certains pilotes peuvent écrire uniquement 32 bits inférieurs ou le bit d’ordre supérieur de 16 bits d’une mémoire tampon et la laisser inchangée. Par conséquent, les applications doivent utiliser une mémoire tampon de SQLULEN et initialiser la valeur 0 avant d’appeler cette fonction. En outre, le *BufferLength* et *StringLengthPtr* arguments ne sont pas utilisés. Si la valeur est une chaîne terminée par null, l’application spécifie la longueur maximale de cette chaîne dans le *BufferLength* argument et le pilote retourne la longueur de cette chaîne dans le  *\*StringLengthPtr* mémoire tampon.  
   
- Pour autoriser les applications qui appellent **SQLGetStmtAttr** pour travailler avec ODBC 2.* x* pilotes, un appel à **SQLGetStmtAttr** est mappé dans le Gestionnaire de pilotes à **SQLGetStmtOption**.  
+ Pour autoriser les applications qui appellent **SQLGetStmtAttr** pour travailler avec ODBC 2. *x* pilotes, un appel à **SQLGetStmtAttr** est mappé dans le Gestionnaire de pilotes à **SQLGetStmtOption**.  
   
  Les attributs d’instruction suivants sont en lecture seule, peut donc être récupéré par **SQLGetStmtAttr**, mais pas définie par **SQLSetStmtAttr**:  
   

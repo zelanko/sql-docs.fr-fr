@@ -37,7 +37,7 @@ ODBC est alignée avec les spécifications et les normes qui traitent avec l’I
   
  À la suite de cette association, les conditions suivantes sont remplies :  
   
--   Une application écrite aux spécifications de l’ISO CLI Open Group et fonctionne avec un ODBC 3. *x* pilote ou un pilote conforme aux normes lorsqu’il est compilé avec ODBC 3.* x* en-tête des fichiers et liés par ODBC 3.* x* bibliothèques, et quand il accède au pilote via l’ODBC 3.* x* du Gestionnaire de pilotes.  
+-   Une application écrite aux spécifications de l’ISO CLI Open Group et fonctionne avec un ODBC 3. *x* pilote ou un pilote conforme aux normes lorsqu’il est compilé avec ODBC 3. *x* en-tête des fichiers et liés par ODBC 3. *x* bibliothèques, et quand il accède au pilote via l’ODBC 3. *x* du Gestionnaire de pilotes.  
   
 -   Un pilote écrit dans les spécifications Open Group et ISO CLI fonctionne avec un ODBC 3*.x* application ou une application conforme aux normes lorsqu’il est compilé avec ODBC 3*.x* en-tête des fichiers et liés par ODBC 3*.x* bibliothèques, et lorsque l’application accède au pilote via l’ODBC 3*.x* du Gestionnaire de pilotes. (Pour plus d’informations, consultez [conforme aux normes des Applications et des pilotes](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   

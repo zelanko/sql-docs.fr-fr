@@ -40,7 +40,7 @@ Indique le flux utilisé comme entrée pour un [commande](../../../ado/reference
   
  Le flux d’entrée n’est pas disponible à d’autres objets ADO qui retournent la source d’un **commande**. Par exemple, si le [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a la valeur un **commande** objet qui a un flux de données en entrée, **Recordset.Source** continue à retourner la **CommandText** propriété, qui contient une chaîne vide (« »), au lieu du contenu du flux de la **CommandStream** propriété.  
   
- Lorsque vous utilisez un flux de commandes (tel que spécifié par **CommandStream**), valide uniquement [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) les valeurs pour le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sont ** adCmdText** et **adCmdUnknown**. Toute autre valeur génère une erreur.  
+ Lorsque vous utilisez un flux de commandes (tel que spécifié par **CommandStream**), valide uniquement [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) les valeurs pour le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sont  **adCmdText** et **adCmdUnknown**. Toute autre valeur génère une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

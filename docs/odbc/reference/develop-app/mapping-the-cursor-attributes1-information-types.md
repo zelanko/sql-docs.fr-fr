@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Mapper les Types d’informations de Attributes1 curseur
-Lorsqu’une application ODBC 3. *x* application appelle **SQLGetInfo** dans une API ODBC 2*.x* pilote avec les informations de type (pour pilotés dynamique et en avant uniquement, ou les curseurs statiques), le paramètre des bits retournés par le Gestionnaire de pilotes de SQL_XXXX_CURSOR_ATTRIBUTES1 dépend de quelles ODBC 2.* x* pilote retourne pour correspondant ODBC 2.* x* types d’informations. Les bits sont définis comme indiqué dans le tableau suivant.  
+Lorsqu’une application ODBC 3. *x* application appelle **SQLGetInfo** dans une API ODBC 2*.x* pilote avec les informations de type (pour pilotés dynamique et en avant uniquement, ou les curseurs statiques), le paramètre des bits retournés par le Gestionnaire de pilotes de SQL_XXXX_CURSOR_ATTRIBUTES1 dépend de quelles ODBC 2. *x* pilote retourne pour correspondant ODBC 2. *x* types d’informations. Les bits sont définis comme indiqué dans le tableau suivant.  
   
 |Bit dans<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Type de curseur|ODBC 2. *x* informations<br /><br /> Type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  

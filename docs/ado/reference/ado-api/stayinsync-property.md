@@ -38,7 +38,7 @@ Indique, dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api
  Définit ou retourne un **booléenne** valeur. La valeur par défaut est **True**. Si **True**, le chapitre sera mise à jour si le parent **Recordset** objet change de position ; ligne si **False**, le chapitre continueront de faire référence à des données dans le chapitre précédent même si le parent **Recordset** objet a changé de position de ligne.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété s’applique aux jeux d’enregistrements, tels que ceux pris en charge par le [Service de mise en forme des données Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)et doit être définie sur le parent **Recordset** avant l’enfant ** Jeu d’enregistrements** est récupéré. Cette propriété simplifie la navigation dans les jeux d’enregistrements.  
+ Cette propriété s’applique aux jeux d’enregistrements, tels que ceux pris en charge par le [Service de mise en forme des données Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)et doit être définie sur le parent **Recordset** avant l’enfant  **Jeu d’enregistrements** est récupéré. Cette propriété simplifie la navigation dans les jeux d’enregistrements.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

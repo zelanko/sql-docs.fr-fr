@@ -50,9 +50,9 @@ recordset.Move NumRecords, Start
   
  Si le *NbEnregistrements* argument est supérieure à zéro, la position actuelle se déplace vers l’avant (vers la fin de la **Recordset**). Si *NbEnregistrements* est inférieur à zéro, la position actuelle se déplace vers l’arrière (vers le début de la **Recordset**).  
   
- Si le **déplacer** appel serait déplace la position actuelle à un point avant le premier enregistrement, ADO définit l’enregistrement actif à la position avant le premier enregistrement dans le jeu d’enregistrements ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) est **True **). Une tentative de déplacement vers l’arrière lorsque la **BOF** propriété est déjà **True** génère une erreur.  
+ Si le **déplacer** appel serait déplace la position actuelle à un point avant le premier enregistrement, ADO définit l’enregistrement actif à la position avant le premier enregistrement dans le jeu d’enregistrements ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) est **True** ). Une tentative de déplacement vers l’arrière lorsque la **BOF** propriété est déjà **True** génère une erreur.  
   
- Si le **déplacer** appel serait déplace la position actuelle vers un point après le dernier enregistrement, ADO définit l’enregistrement actif à la position après le dernier enregistrement dans le jeu d’enregistrements ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) est **True **). Une tentative de déplacement vers l’avant lorsque la **EOF** propriété est déjà **True** génère une erreur.  
+ Si le **déplacer** appel serait déplace la position actuelle vers un point après le dernier enregistrement, ADO définit l’enregistrement actif à la position après le dernier enregistrement dans le jeu d’enregistrements ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) est **True** ). Une tentative de déplacement vers l’avant lorsque la **EOF** propriété est déjà **True** génère une erreur.  
   
  Appel de la **déplacer** méthode vide **Recordset** objet génère une erreur.  
   

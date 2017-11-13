@@ -34,7 +34,7 @@ Le type de données C signet permet à une application récupérer un signet. Le
  Le tableau suivant répertorie la valeur de *CType* pour le type de données C de signet, le type de données ODBC C qui implémente le type de données C de signet et la définition de ces données de type à partir de SQL. H.  
   
 > [!NOTE]  
->  Le type de données SQL_C_BOOKMARK a été déconseillé. ODBC 3*.x* applications ne doivent pas utiliser SQL_C_BOOKMARK. ODBC 3*.x* pilotes doivent prendre en charge les SQL_C_BOOKMARK uniquement s’ils veulent travailler avec ODBC 2.* x* applications qui l’utilisent. Le Gestionnaire de pilotes mappe SQL_C_VARBOOKMARK à SQL_C_BOOKMARK lorsqu’une application fonctionne avec une API ODBC 2. *x* pilote.  
+>  Le type de données SQL_C_BOOKMARK a été déconseillé. ODBC 3*.x* applications ne doivent pas utiliser SQL_C_BOOKMARK. ODBC 3*.x* pilotes doivent prendre en charge les SQL_C_BOOKMARK uniquement s’ils veulent travailler avec ODBC 2. *x* applications qui l’utilisent. Le Gestionnaire de pilotes mappe SQL_C_VARBOOKMARK à SQL_C_BOOKMARK lorsqu’une application fonctionne avec une API ODBC 2. *x* pilote.  
   
 |Identificateur de type C|Typedef d’ODBC C|Type C|  
 |-----------------------|--------------------|------------|  

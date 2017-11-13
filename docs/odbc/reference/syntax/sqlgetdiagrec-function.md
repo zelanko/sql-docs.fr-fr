@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [Entrée] Longueur de la **MessageText* mémoire tampon en caractères. Il n’existe aucune longueur maximale du texte du message de diagnostic.  
   
  *TextLengthPtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total de caractères (sans compter le nombre de caractères requis pour le caractère de fin de la valeur null) disponibles à renvoyer dans * \*MessageText*. Si le nombre de caractères à retourner est supérieur à *BufferLength*, le texte du message de diagnostic dans * \*MessageText* est tronqué à *BufferLength* moins la longueur d’un caractère de fin de la valeur null.  
+ [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total de caractères (sans compter le nombre de caractères requis pour le caractère de fin de la valeur null) disponibles à renvoyer dans  *\*MessageText*. Si le nombre de caractères à retourner est supérieur à *BufferLength*, le texte du message de diagnostic dans  *\*MessageText* est tronqué à *BufferLength* moins la longueur d’un caractère de fin de la valeur null.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  

@@ -40,7 +40,7 @@ Le compte de serveur Web anonyme (IUSR_*Nom_Ordinateur*) doit être ajouté au g
   
 4.  Dans le **propriétés d’invités** boîte de dialogue, cliquez sur **ajouter**.  
   
-5.  Si le compte anonyme du serveur Web n’apparaît pas dans la liste dans le **sélectionner des utilisateurs ou groupes** boîte de dialogue, tapez son nom (IUSR_*Nom_Ordinateur*) dans la zone vide du bas, puis cliquez sur **ajouter **.  
+5.  Si le compte anonyme du serveur Web n’apparaît pas dans la liste dans le **sélectionner des utilisateurs ou groupes** boîte de dialogue, tapez son nom (IUSR_*Nom_Ordinateur*) dans la zone vide du bas, puis cliquez sur **ajouter** .  
   
 6.  Cliquez sur **OK**.
 

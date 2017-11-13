@@ -42,7 +42,7 @@ ms.lasthandoff: 09/09/2017
 -   **doNotPrompt = true**  
   
 ## <a name="remarks"></a>Notes  
- Antérieures à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications peuvent spécifier l’authentification intégrée (à l’aide de Kerberos ou NTLM, selon ce qui est disponible) à l’aide de la **integratedSecurity** propriété de connexion et en référençant ** sqljdbc_auth.dll**, comme décrit dans [générer l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).  
+ Antérieures à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications peuvent spécifier l’authentification intégrée (à l’aide de Kerberos ou NTLM, selon ce qui est disponible) à l’aide de la **integratedSecurity** propriété de connexion et en référençant  **sqljdbc_auth.dll**, comme décrit dans [générer l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).  
   
  À compter de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], une application peut utiliser le **authenticationScheme** authentification pure Kerberos Java intégrée de propriété de connexion pour indiquer qu’il souhaite se connecter à une base de données à l’aide de Kerberos implémentation :  
   

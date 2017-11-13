@@ -58,10 +58,10 @@ Le tableau suivant décrit les fonctions numériques qui sont incluses dans l’
 |**ALIMENTATION (** *positions numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retourne la valeur de *positions numeric_exp* à la puissance de *integer_exp*.|  
 |**RADIANS (** *positions numeric_exp* **)** (ODBC 2.0)|Retourne le nombre de radians convertis à partir de *positions numeric_exp* degrés.|  
 |**RAND (**[*integer_exp*]**)** (ODBC version 1.0)|Retourne une valeur à virgule flottante aléatoire à l’aide de *integer_exp* en tant que la valeur de départ facultative.|  
-|**ROUND (** *positions numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retourne *positions numeric_exp* arrondi à *integer_exp* place à droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est arrondi à &#124;* integer_exp*&#124; chiffres à gauche de la virgule décimale.|  
+|**ROUND (** *positions numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retourne *positions numeric_exp* arrondi à *integer_exp* place à droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est arrondi à &#124; *integer_exp*&#124; chiffres à gauche de la virgule décimale.|  
 |**SIGNE (** *positions numeric_exp* **)** (ODBC version 1.0)|Renvoie un indicateur du signe de *positions numeric_exp*. Si *positions numeric_exp* est inférieur à zéro, -1 est retournée. Si *positions numeric_exp* est égal à zéro, 0 est retourné. Si *positions numeric_exp* est supérieure à 0, 1 est retourné.|  
 |**SIN (** *exp_float* **)** (ODBC version 1.0)|Retourne le sinus de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
 |**SQRT (** *exp_float* **)** (ODBC version 1.0)|Retourne la racine carrée de *exp_float*.|  
 |**TAN (** *exp_float* **)** (ODBC version 1.0)|Retourne la tangente de *exp_float*, où *exp_float* est un angle exprimé en radians.|  
-|**TRUNCATE (** *positions numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retourne *positions numeric_exp* tronqué à *integer_exp* place à droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est tronqué à &#124;* integer_exp*&#124; chiffres à gauche de la virgule décimale.|
+|**TRUNCATE (** *positions numeric_exp*, *integer_exp***)** (ODBC 2.0)|Retourne *positions numeric_exp* tronqué à *integer_exp* place à droite de la virgule décimale. Si *integer_exp* est négatif, *positions numeric_exp* est tronqué à &#124; *integer_exp*&#124; chiffres à gauche de la virgule décimale.|
 

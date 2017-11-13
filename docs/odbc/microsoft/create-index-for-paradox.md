@@ -50,11 +50,11 @@ La syntaxe de l’instruction CREATE INDEX pour le pilote ODBC Paradox est :
   
 -   Le *-nom de l’index* argument pour un index principal doit être le même que le nom de base de la table, comme requis par Paradox.  
   
- Si le mot clé **UNIQUE** est omis, le pilote ODBC Paradox créera un index non unique. Cela se compose de deux fichiers d’index secondaire Paradox nommés *-nom de la table*. X* nn * et *-nom de la table*. Y*nn*, où * nn * est le numéro de la colonne dans la table. Index non uniques sont soumis aux restrictions suivantes :  
+ Si le mot clé **UNIQUE** est omis, le pilote ODBC Paradox créera un index non unique. Cela se compose de deux fichiers d’index secondaire Paradox nommés *-nom de la table*. X *nn*  et *-nom de la table*. Y*nn*, où  *nn*  est le numéro de la colonne dans la table. Index non uniques sont soumis aux restrictions suivantes :  
   
 -   Avant de pouvoir créer un index non unique pour une table, un index principal doit exister pour que la table.  
   
--   Pour Paradox 3. *x*, le *-nom de l’index* argument pour un index autre que d’un index primaire (unique ou non unique) doit être le même que le nom de colonne. Pour Paradox 4. *x* et 5.* x*, le nom de cet index peut être, mais ne doit pas nécessairement être le même que le nom de colonne.  
+-   Pour Paradox 3. *x*, le *-nom de l’index* argument pour un index autre que d’un index primaire (unique ou non unique) doit être le même que le nom de colonne. Pour Paradox 4. *x* et 5. *x*, le nom de cet index peut être, mais ne doit pas nécessairement être le même que le nom de colonne.  
   
 -   Une seule colonne peut être spécifiée pour un index non unique.  
   

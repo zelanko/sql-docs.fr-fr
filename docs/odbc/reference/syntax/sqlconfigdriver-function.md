@@ -88,7 +88,7 @@ BOOL SQLConfigDriver(
  La fonction retourne TRUE si l’opération a réussi, FALSE en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLConfigDriver** renvoie la valeur FALSE, associé à un * \*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les * \*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
+ Lorsque **SQLConfigDriver** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Erreur| Description|  
 |---------------------|-----------|-----------------|  

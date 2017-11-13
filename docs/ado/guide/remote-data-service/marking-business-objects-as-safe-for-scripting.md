@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Sur la dernière étape, l’Assistant crée un .htm et un fichier .cab. Vous pouvez ensuite copier ces deux fichiers à l’ordinateur cible et double-cliquez sur le fichier .htm pour charger la page et enregistrer correctement le serveur.  
   
- Par défaut, l’objet métier sera installé dans le répertoire Windows\System32\Occache déplacez-le vers le répertoire Windows\System32 et modifier le **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** clé de Registre pour faire correspondre le chemin d’accès correct.
+ Par défaut, l’objet métier sera installé dans le répertoire Windows\System32\Occache déplacez-le vers le répertoire Windows\System32 et modifier le **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** clé de Registre pour faire correspondre le chemin d’accès correct.
 
 
 

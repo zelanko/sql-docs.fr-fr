@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlallocconnect-mapping"></a>Mappage de SQLAllocConnect
-Lorsqu’une application appelle **SQLAllocConnect** via un ODBC 3.* x* pilote, l’appel à **SQLAllocConnect**(*henv*, *phdbc*) est mappée à **SQLAllocHandle** comme suit :  
+Lorsqu’une application appelle **SQLAllocConnect** via un ODBC 3. *x* pilote, l’appel à **SQLAllocConnect**(*henv*, *phdbc*) est mappée à **SQLAllocHandle** comme suit :  
   
 1.  Le Gestionnaire de pilotes alloue une connexion et le retourne à l’application.  
   

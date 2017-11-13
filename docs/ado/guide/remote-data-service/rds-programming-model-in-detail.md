@@ -52,7 +52,7 @@ Les éléments clés du modèle de programmation des services Bureau à distance
   
  Le modèle objet RDS fournit cette fonctionnalité avec le [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet.  
   
- En outre, cet objet a une méthode de création vide **Recordset** objet que vous pouvez remplir par programme ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) et une autre méthode pour convertir un **Recordset ** objet en une chaîne de texte pour générer une page Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ En outre, cet objet a une méthode de création vide **Recordset** objet que vous pouvez remplir par programme ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) et une autre méthode pour convertir un **Recordset**  objet en une chaîne de texte pour générer une page Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
   
  Avec ADO, vous pouvez remplacer certains de la connexion standard et le comportement de commande de la **RDSServer.DataFactory** avec un **DataFactory** gestionnaire et un fichier de personnalisation qui contient la connexion, commande et les paramètres de sécurité.  
   
@@ -63,7 +63,7 @@ Les éléments clés du modèle de programmation des services Bureau à distance
   
  Le modèle objet RDS fournit cette fonctionnalité avec le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
- Le **RDS. DataControl** présente deux aspects. L’un des aspects se rapporte à la source de données. Si vous définissez la commande et les informations de connexion à l’aide du **Connect** et **SQL** propriétés de la **RDS. DataControl**, il utilisera automatiquement le **RDS. DataSpace** pour créer une référence à la valeur par défaut **RDSServer.DataFactory** objet. Le **RDSServer.DataFactory** utilisera le **Connect** valeur de propriété pour se connecter à la source de données, utilisez la **SQL** valeur de propriété à obtenir un ** Jeu d’enregistrements** à partir de la source de données et retournent le **Recordset** de l’objet à le **RDS. DataControl**.  
+ Le **RDS. DataControl** présente deux aspects. L’un des aspects se rapporte à la source de données. Si vous définissez la commande et les informations de connexion à l’aide du **Connect** et **SQL** propriétés de la **RDS. DataControl**, il utilisera automatiquement le **RDS. DataSpace** pour créer une référence à la valeur par défaut **RDSServer.DataFactory** objet. Le **RDSServer.DataFactory** utilisera le **Connect** valeur de propriété pour se connecter à la source de données, utilisez la **SQL** valeur de propriété à obtenir un  **Jeu d’enregistrements** à partir de la source de données et retournent le **Recordset** de l’objet à le **RDS. DataControl**.  
   
  Le second aspect porte sur l’affichage de retourné **Recordset** informations dans un contrôle visuel. Vous pouvez associer un contrôle visuel avec le **RDS. DataControl** (dans un processus appelé liaison) et accéder aux informations dans le type **Recordset** objet, en affichant les résultats de requête dans une page Web dans Microsoft® Internet Explorer. Chaque **RDS. DataControl** objet lie une **Recordset** objet représentant les résultats d’une seule requête, à un ou plusieurs contrôles visuels (par exemple, une zone de texte, zone de liste déroulante, contrôle de grille et ainsi de suite). Il peut y avoir plusieurs **RDS. DataControl** objet sur chaque page. Chaque **RDS. DataControl** objet peut être connecté à une source de données différente et contenir les résultats d’une requête distincte.  
   
@@ -73,7 +73,7 @@ Les éléments clés du modèle de programmation des services Bureau à distance
  Services Bureau à distance prend en charge deux de ses propres événements, qui sont indépendantes du modèle d’événement ADO. Le [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) événement est appelé chaque fois que le **RDS. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) propriété change, vous avertissant ainsi lorsqu’une opération asynchrone terminée, arrêtée ou a rencontré une erreur. Le [onError](../../../ado/reference/rds-api/onerror-event-rds.md) événements sont appelé chaque fois qu’une erreur se produit, même si l’erreur se produit pendant une opération asynchrone.  
   
 > [!NOTE]
->  Microsoft Internet Explorer fournit deux événements supplémentaires pour les services Bureau à distance : **onDataSetChanged**, ce qui indique que le **Recordset** est fonctionnel mais l’extraction de lignes, et ** onDataSetComplete**, ce qui indique que le **Recordset** a fini d’extraire des lignes.  
+>  Microsoft Internet Explorer fournit deux événements supplémentaires pour les services Bureau à distance : **onDataSetChanged**, ce qui indique que le **Recordset** est fonctionnel mais l’extraction de lignes, et  **onDataSetComplete**, ce qui indique que le **Recordset** a fini d’extraire des lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèle de programmation des services Bureau à distance avec des objets](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   

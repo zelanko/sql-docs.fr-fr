@@ -34,7 +34,7 @@ Avant ODBC 3.8, une application peut uniquement récupérer des paramètres de s
  Cette fonctionnalité peut être utilisée par les applications ODBC 3.8 ou recompilée ODBC 3.x et les applications ODBC 2.x et ces applications doivent avoir un pilote ODBC 3.8 qui prend en charge la récupération des paramètres de sortie à l’aide de **SQLGetData** et un gestionnaire ODBC 3.8. Pour plus d’informations sur l’activation d’une application plus ancienne utiliser les nouvelles fonctionnalités d’ODBC, consultez [matrice de compatibilité](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ## <a name="usage-example"></a>Exemple d'utilisation  
- Par exemple, envisagez d’exécuter une procédure stockée, **{appel sp_f(?,?)} **, où les deux paramètres sont liées en tant que SQL_PARAM_OUTPUT_STREAM, et la procédure stockée ne retourne aucun jeu de résultats (plus loin dans cette rubrique vous trouverez un scénario plus complexe) :  
+ Par exemple, envisagez d’exécuter une procédure stockée, **{appel sp_f(?,?)}** , où les deux paramètres sont liées en tant que SQL_PARAM_OUTPUT_STREAM, et la procédure stockée ne retourne aucun jeu de résultats (plus loin dans cette rubrique vous trouverez un scénario plus complexe) :  
   
 1.  Pour chaque paramètre, appelez **SQLBindParameter** avec *InputOutputType* la valeur SQL_PARAM_OUTPUT_STREAM et *ParameterValuePtr* défini sur un jeton, comme un numéro de paramètre, un pointeur vers les données, ou un pointeur vers une structure que l’application utilise pour lier les paramètres d’entrée. Cet exemple utilisera l’ordinal du paramètre sous forme de jeton.  
   

@@ -58,7 +58,7 @@ Les éléments suivants sont utilisés dans les instructions SQL répertoriées 
   
  *expression* :: = terme &#124; expression {+ &#124; –} terme  
   
- *facteur* :: = [*+*&#124;* –*]*principal*  
+ *facteur* :: = [*+*&#124; *–*]*principal*  
   
  *valeur à insérer* :: =  
   
@@ -102,7 +102,7 @@ Les éléments suivants sont utilisés dans les instructions SQL répertoriées 
   
  *liste de références de table* :: = *référence de table* [,*référence de table*]...  
   
- *terme* :: = *facteur* &#124; *terme* {\*&#124;* / *} *facteur*  
+ *terme* :: = *facteur* &#124; *terme* {\*&#124; */* } *facteur*  
   
  *entier non signé* :: = {*chiffre*}  
   

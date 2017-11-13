@@ -50,7 +50,7 @@ Vous permet de contrôle précis des modifications apportées à une table de ba
   
  Une erreur d’exécution des résultats si une table de base unique ne peut pas être trouvée.  
   
- Ces propriétés dynamiques sont ajoutées à la **Recordset** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection lorsque le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) est définie sur ** adUseClient**.  
+ Ces propriétés dynamiques sont ajoutées à la **Recordset** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection lorsque le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) est définie sur  **adUseClient**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

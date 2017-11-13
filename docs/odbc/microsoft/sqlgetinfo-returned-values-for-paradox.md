@@ -101,7 +101,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DRIVER_HSTMT|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_NAME|« OdbcJt32.dll »|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|« 4.00.*nnnn*» (* nnnn * spécifie la date de la build)|  
+|SQL_DRIVER_VER|« 4.00.*nnnn*» ( *nnnn*  spécifie la date de la build)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

@@ -37,7 +37,7 @@ Pour importer les bibliothèques ADO dans une application Microsoft Visual Basic
   
 1.  Créer un nouveau ou ouvrir un projet Visual Basic.  
   
-2.  Cliquez sur le **projet** élément de menu, puis sélectionnez **références... ** à partir du Panneau de menu déroulant.  
+2.  Cliquez sur le **projet** élément de menu, puis sélectionnez **références...**  à partir du Panneau de menu déroulant.  
   
 3.  À partir de **références disponibles**, cochez la case pour **Microsoft ActiveX Data Objects *n.n* bibliothèque**, où ***n.n*** représente la plus récente numéro de version. Le **emplacement** champ ci-dessous doit identifier votre choix en tant que *$installDir\msado15.dll*, où *$installDir* représente le chemin d’accès du répertoire dans lequel la bibliothèque ADO a été installé.  
   

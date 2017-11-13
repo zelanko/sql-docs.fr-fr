@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  Dans ODBC version 2.0, la fonction ODBC 1.0 **SQLSetParam** a été remplacé par **SQLBindParameter**. Pour plus d’informations, consultez [fonction SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur les le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3.* x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md).  
+>  Pour plus d’informations sur les le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md).  
   
 ## <a name="remarks"></a>Notes  
  Consultez [informations ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécutera sur un système d’exploitation de 64 bits.  

@@ -69,17 +69,17 @@ SQLRETURN SQLGetDescField(
  Si *ValuePtr* est NULL, *StringLengthPtr* retourne toujours le nombre total d’octets (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *ValuePtr*.  
   
  *BufferLength*  
- [Entrée] Si *FieldIdentifier* est un champ défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *FieldIdentifier* est un champ défini par ODBC et \* *ValuePtr* est un entier, *BufferLength* est ignoré. Si la valeur de * \*ValuePtr* est d’un type de données Unicode (lors de l’appel **SQLGetDescFieldW**), la *BufferLength* l’argument doit être un nombre pair.  
+ [Entrée] Si *FieldIdentifier* est un champ défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *FieldIdentifier* est un champ défini par ODBC et \* *ValuePtr* est un entier, *BufferLength* est ignoré. Si la valeur de  *\*ValuePtr* est d’un type de données Unicode (lors de l’appel **SQLGetDescFieldW**), la *BufferLength* l’argument doit être un nombre pair.  
   
  Si *FieldIdentifier* est un champ défini par le pilote, l’application indiquant la nature du champ au Gestionnaire de pilote en définissant le *BufferLength* argument. *BufferLength* peut avoir les valeurs suivantes :  
   
--   Si * \*ValuePtr* est un pointeur vers une chaîne de caractères, puis *BufferLength* est la longueur de la chaîne ou le SQL_NTS.  
+-   Si  *\*ValuePtr* est un pointeur vers une chaîne de caractères, puis *BufferLength* est la longueur de la chaîne ou le SQL_NTS.  
   
--   Si * \*ValuePtr* est un pointeur vers une mémoire tampon binaire, puis l’application place le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Il s’ensuit une valeur négative dans *BufferLength*.  
+-   Si  *\*ValuePtr* est un pointeur vers une mémoire tampon binaire, puis l’application place le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Il s’ensuit une valeur négative dans *BufferLength*.  
   
--   Si * \*ValuePtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou binaires, puis *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
+-   Si  *\*ValuePtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou binaires, puis *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si * \*ValuePtr* est contient un type de données de longueur fixe, puis *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
+-   Si  *\*ValuePtr* est contient un type de données de longueur fixe, puis *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
   
  *StringLengthPtr*  
  [Sortie] Pointeur vers la mémoire tampon dans lequel retourner le nombre total d’octets (autre que le nombre d’octets requis pour le caractère de fin de la valeur null) disponibles à renvoyer dans **ValuePtr*.  
@@ -100,13 +100,13 @@ SQLRETURN SQLGetDescField(
 |01004|Données de type chaîne, droite tronquées|La mémoire tampon \* *ValuePtr* n’est pas suffisamment grande pour renvoyer le champ de descripteur entière, pour le champ a été tronqué. La longueur du champ descripteur non tronqué est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |07009|Index de descripteur non valide|(DM) le *RecNumber* argument s’est égal à 0, l’attribut d’instruction SQL_ATTR_USE_BOOKMARK était SQL_UB_OFF et le *DescriptorHandle* argument était un descripteur IRD. (Cette erreur peut être retournée pour un descripteur alloué de manière explicite uniquement si le descripteur est associé à un descripteur d’instruction.)<br /><br /> Le *FieldIdentifier* argument était un champ d’enregistrement, la *RecNumber* argument était 0 et le *DescriptorHandle* argument était un descripteur IPD.<br /><br /> Le *RecNumber* argument était inférieure à 0.|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les * \*MessageText* tampon décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY007|L’instruction associée n’est pas préparée.|*DescriptorHandle* a été associé à un *au paramètre StatementHandle* comme un IRD et l’instruction associée handle n'avait pas été préparé ou exécuté.|  
 |HY010|Erreur de séquence de fonction|(DM) *DescriptorHandle* a été associé à un *au paramètre StatementHandle* pour une fonction de façon asynchrone en cours d’exécution (pas celui-ci) qui a été appelée et toujours en cours d’exécution lorsque cette fonction a été appelée.<br /><br /> (DM) *DescriptorHandle* a été associé à un *au paramètre StatementHandle* pour lequel **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelée et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM), une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *DescriptorHandle*. Cette fonction asynchrone toujours en cours d’exécution lorsque le **SQLGetDescField** fonction a été appelée.|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, éventuellement en raison d’une mémoire insuffisante.|  
 |HY021|Informations de descripteur incohérentes|Les champs SQL_DESC_TYPE et SQL_DESC_DATETIME_INTERVAL_CODE ne forment pas un type ODBC SQL valide, un type valide de SQL spécifiques au pilote (pour IPD) ou un type ODBC C valide (pour ou à partir de APDs).|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) * \*ValuePtr* était une chaîne de caractères et *BufferLength* était inférieur à zéro.|  
+|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM)  *\*ValuePtr* était une chaîne de caractères et *BufferLength* était inférieur à zéro.|  
 |HY091|Identificateur de champ de descripteur non valide|*FieldIdentifier* n’était pas un champ défini par ODBC et n’a pas une valeur définie par l’implémentation.<br /><br /> *FieldIdentifier* a été non définie pour le *DescriptorHandle*.|  
 |HY117|Connexion est interrompue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Délai de connexion a expiré.|Le délai d’expiration de connexion a expiré avant que la source de données a répondu à la demande. Le délai d’expiration de connexion est défini par le **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

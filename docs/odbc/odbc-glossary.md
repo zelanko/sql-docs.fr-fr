@@ -59,7 +59,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="b"></a>B  
  **changement de comportement**  
- Une modification de certaines fonctionnalités à partir d’ODBC 3*.x* comportement ODBC 2.* x* comportement, ou vice versa. Dû en modifiant l’attribut d’environnement SQL_ATTR_ODBC_VERSION.  
+ Une modification de certaines fonctionnalités à partir d’ODBC 3*.x* comportement ODBC 2. *x* comportement, ou vice versa. Dû en modifiant l’attribut d’environnement SQL_ATTR_ODBC_VERSION.  
   
  **Objet binaire volumineux (BLOB)**  
  Toutes les données binaires pour un certain nombre d’octets, telles que 255. En général beaucoup plus longue. Ce type de données est généralement envoyé à et récupérée à partir de la source de données dans les parties. Également appelé *données long*.  

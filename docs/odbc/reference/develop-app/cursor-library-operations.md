@@ -33,5 +33,5 @@ ms.lasthandoff: 09/09/2017
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
   
- Si une application utilisant une API ODBC 2*.x* pilote appelle le ODBC 3.* x* bibliothèque de curseurs, l’application peut être en mesure d’utiliser ODBC 3.* x* les fonctionnalités qui ne sont pas pris en charge par ODBC 2*.x* pilote. Writer de l’application doit veiller comment ces fonctionnalités sont utilisées, toutefois. Utilisation d’ODBC 3. *x* bibliothèque de curseurs n’apporte une ODBC 2*.x* pilote dans un ODBC 3.* x* pilote.
+ Si une application utilisant une API ODBC 2*.x* pilote appelle le ODBC 3. *x* bibliothèque de curseurs, l’application peut être en mesure d’utiliser ODBC 3. *x* les fonctionnalités qui ne sont pas pris en charge par ODBC 2*.x* pilote. Writer de l’application doit veiller comment ces fonctionnalités sont utilisées, toutefois. Utilisation d’ODBC 3. *x* bibliothèque de curseurs n’apporte une ODBC 2*.x* pilote dans un ODBC 3. *x* pilote.
 

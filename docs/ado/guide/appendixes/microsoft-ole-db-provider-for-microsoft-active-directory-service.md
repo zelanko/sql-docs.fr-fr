@@ -90,7 +90,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>Comportement du jeu d’enregistrements  
  Les tableaux suivants répertorient les fonctionnalités disponibles sur un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet ouvert à l’aide de ce fournisseur. Seul le type de curseur statique (**adOpenStatic**) est disponible.  
   
- Pour plus d’informations sur **Recordset** comportement de configuration de votre fournisseur, exécutez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode et énumérer le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la ** Jeu d’enregistrements** pour déterminer si les propriétés dynamiques spécifiques au fournisseur sont présentes.  
+ Pour plus d’informations sur **Recordset** comportement de configuration de votre fournisseur, exécutez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode et énumérer le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la  **Jeu d’enregistrements** pour déterminer si les propriétés dynamiques spécifiques au fournisseur sont présentes.  
   
  **Disponibilité des propriétés de jeu d’enregistrements ADO standard :**  
   

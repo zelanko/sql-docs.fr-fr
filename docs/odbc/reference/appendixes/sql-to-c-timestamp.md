@@ -54,5 +54,5 @@ _C_TYPE_TIMESTAMP|Partie fractions d’horodatage n’est pas tronqué [a]<br />
   
  [f] Il s’agit de la taille du type de données C correspondante.  
   
- Lors de l’horodatage de données SQL sont converties en données de type caractère C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.* f... *] « format, où jusqu'à neuf chiffres peut être utilisé pour les fractions de seconde. Ce format n’est pas affecté par le paramètre de pays Windows®. (À l’exception de la virgule décimale et les fractions de seconde, tout le format doit être utilisé, quelle que soit la précision du type de données timestamp SQL.)
+ Lors de l’horodatage de données SQL sont converties en données de type caractère C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[. *f...* ] « format, où jusqu'à neuf chiffres peut être utilisé pour les fractions de seconde. Ce format n’est pas affecté par le paramètre de pays Windows®. (À l’exception de la virgule décimale et les fractions de seconde, tout le format doit être utilisé, quelle que soit la précision du type de données timestamp SQL.)
 

@@ -51,7 +51,7 @@ Le pilote ODBC Paradox mappe les types de données de Corel aux types de donnée
   
  Valide [1] uniquement pour les versions de Paradox 5. *x*.  
   
- [2] de valide uniquement pour les versions de Paradox 4. *x* et 5.* x*.  
+ [2] de valide uniquement pour les versions de Paradox 4. *x* et 5. *x*.  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo** retourne des types de données ODBC SQL. Toutes les conversions dans l’annexe D de la *de référence du programmeur ODBC* sont pris en charge pour les types de données ODBC SQL répertoriées plus haut dans cette rubrique.  

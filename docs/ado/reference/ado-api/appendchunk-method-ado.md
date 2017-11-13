@@ -49,7 +49,7 @@ object.AppendChunk Data
  Utilisez le **AppendChunk** méthode sur un **champ** ou **paramètre** objet à remplir avec des données binaires longues ou de caractères. Dans les situations où la mémoire système est limitée, vous pouvez utiliser la **AppendChunk** méthode pour manipuler les valeurs longues dans les parties plutôt que dans leur intégralité.  
   
 ## <a name="field"></a>Champ  
- Si le **adFldLong** bit dans le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété d’un **champ** objet a la valeur **true**, que vous pouvez utiliser la ** AppendChunk** méthode pour ce champ.  
+ Si le **adFldLong** bit dans le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété d’un **champ** objet a la valeur **true**, que vous pouvez utiliser la  **AppendChunk** méthode pour ce champ.  
   
  La première **AppendChunk** appeler sur un **champ** objet écrit des données dans le champ, remplaçant les données existantes. Ultérieures **AppendChunk** ajoutent des appels aux données existantes. Si vous ajoutez des données à un champ et puis de définir ou de lire la valeur d’un autre champ dans l’enregistrement actif, ADO suppose que vous avez terminé l’ajout de données dans le premier champ. Si vous appelez le **AppendChunk** méthode sur le premier champ, ADO interprète l’appel en tant que nouvelle **AppendChunk** opération et remplace les données existantes. L’accès à d’autres champs [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) les objets qui ne sont pas des clones du premier **Recordset** objet n’interrompra pas **AppendChunk** operations.  
   
@@ -59,7 +59,7 @@ object.AppendChunk Data
 >  Le **AppendChunk** méthode ne fonctionne pas sur **champ** les objets d’un [enregistrement Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md) objet. Il n’effectue aucune opération et génère une erreur d’exécution.  
   
 ## <a name="parameter"></a>Paramètre  
- Si le **adParamLong** bit dans le **attributs** propriété d’un **paramètre** objet a la valeur **true**, que vous pouvez utiliser la ** AppendChunk** méthode pour ce paramètre.  
+ Si le **adParamLong** bit dans le **attributs** propriété d’un **paramètre** objet a la valeur **true**, que vous pouvez utiliser la  **AppendChunk** méthode pour ce paramètre.  
   
  La première **AppendChunk** appeler sur un **paramètre** objet écrit des données dans ce paramètre en remplaçant les données existantes. Ultérieures **AppendChunk** appelle sur un **paramètre** objet Ajouter paramètre aux données existantes. Un **AppendChunk** appel qui passe une valeur null annule toutes les données de paramètre.  
   

@@ -56,7 +56,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Si vous déterminez, dans l’événement Will, que l’opération doit continuer, laissez le *état* paramètre inchangé. Tant que le paramètre d’état entrant n’a pas été défini **adStatusCantDeny**, toutefois, vous pouvez annuler l’opération en attente en modifiant *état* à **adStatusCancel**. Dans ce cas, l’événement Complete associé à l’opération a son *état* paramètre la valeur **contraire**. Le **erreur** objet passé à l’événement Complete contiendra la valeur **adErrOperationCancelled**.  
   
- Si vous ne voulez plus traiter un événement, vous pouvez définir *état* à **adStatusUnwantedEvent** et votre application n’est plus reçoivent une notification de cet événement. Toutefois, n’oubliez pas que certains événements peuvent être déclenchés pour plusieurs raisons. Dans ce cas, vous devez spécifier **adStatusUnwantedEvent** pour chaque raison possible. Par exemple, pour arrêter de recevoir des notifications en attente **RecordChange** des événements, vous devez définir le *état* paramètre **adStatusUnwantedEvent** pour ** adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, et **adRsnFirstChange** qu’ils se produisent.  
+ Si vous ne voulez plus traiter un événement, vous pouvez définir *état* à **adStatusUnwantedEvent** et votre application n’est plus reçoivent une notification de cet événement. Toutefois, n’oubliez pas que certains événements peuvent être déclenchés pour plusieurs raisons. Dans ce cas, vous devez spécifier **adStatusUnwantedEvent** pour chaque raison possible. Par exemple, pour arrêter de recevoir des notifications en attente **RecordChange** des événements, vous devez définir le *état* paramètre **adStatusUnwantedEvent** pour  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, et **adRsnFirstChange** qu’ils se produisent.  
   
 |Valeur| Description|  
 |-----------|-----------------|  
@@ -64,7 +64,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Demander l’annulation de l’opération qui doit se produire.|  
   
 ## <a name="error-parameter"></a>Paramètre d’erreur  
- Le *erreur* paramètre est une référence à ADO [erreur](../../../ado/reference/ado-api/error-object.md) objet. Lorsque le *état* paramètre est défini sur **contraire**, le **erreur** objet contient des détails sur la raison pour laquelle l’opération a échoué. Si l’événement est associé à un événement Complete a annulé l’opération en définissant le *état* paramètre **adStatusCancel**, l’objet d’erreur est toujours définie ** adErrOperationCancelled**.  
+ Le *erreur* paramètre est une référence à ADO [erreur](../../../ado/reference/ado-api/error-object.md) objet. Lorsque le *état* paramètre est défini sur **contraire**, le **erreur** objet contient des détails sur la raison pour laquelle l’opération a échoué. Si l’événement est associé à un événement Complete a annulé l’opération en définissant le *état* paramètre **adStatusCancel**, l’objet d’erreur est toujours définie  **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Paramètre de l’objet  
  Chaque événement reçoit un ou plusieurs objets représentant les objets impliqués dans l’opération. Par exemple, le **ExecuteComplete** événement reçoit un **commande** objet, un **Recordset** objet et un **connexion** objet.  

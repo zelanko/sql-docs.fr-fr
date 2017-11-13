@@ -41,10 +41,10 @@ Les applications ODBC peuvent être classées comme suit :
     -   N’a pas été recompilée avec des en-têtes de ODBC 3.5.  
   
 -   **Pure ODBC 2.**  
-     ***x* recompiler l’Application** une pure ODBC 2.* x* application qui a été compilée à l’aide des fichiers d’en-tête ODBC 3.5, en définissant ODBCVER = 0x0250.  
+     ***x* recompiler l’Application** une pure ODBC 2. *x* application qui a été compilée à l’aide des fichiers d’en-tête ODBC 3.5, en définissant ODBCVER = 0x0250.  
   
 -   **Pure ODBC 2.**  
-     ***x* Application Unicode** une pure ODBC 2.* x* recompiler l’application qui est compatible avec Unicode et utilise le type de données SQL_WCHAR.  
+     ***x* Application Unicode** une pure ODBC 2. *x* recompiler l’application qui est compatible avec Unicode et utilise le type de données SQL_WCHAR.  
   
 -   **Pure Open Group et ISO**–**Application ODBC compatible** les applications 32 bits qui :  
   

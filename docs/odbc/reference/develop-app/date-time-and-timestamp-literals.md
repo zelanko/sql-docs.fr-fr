@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="date-time-and-timestamp-literals"></a>Date, Time et Timestamp littéraux
 La séquence d’échappement pour les littéraux de date, time et timestamp est  
   
- **{***-type* **'** *valeur* **'}  **  
+ **{***-type* **'** *valeur* **'}**   
   
  où *type de littéral* est l’une des valeurs répertoriées dans le tableau suivant.  
   
@@ -35,7 +35,7 @@ La séquence d’échappement pour les littéraux de date, time et timestamp est
 |---------------------|-------------|-----------------------|  
 |**d**|Date|*aaaa*-*mm*-*dd*|  
 |**t**|Heure *|*hh*:*mm*:*ss*[1]|  
-|**TS**|Horodateur|*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.* f... *] [1]|  
+|**TS**|Horodateur|*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[. *f...* ] [1]|  
   
  [1], le nombre de chiffres à droite de la virgule décimale dans un intervalle de temps ou timestamp littéral contenant un composant « secondes » dépend de la précision en secondes, comme contenue dans le champ de descripteur SQL_DESC_PRECISION. (Pour plus d’informations, consultez [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

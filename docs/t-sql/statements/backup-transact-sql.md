@@ -189,10 +189,10 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 \<file_or_filegroup > [ **,**... *n* ]  
  Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.  
   
- FICHIER ** = ** { *nom_fichier_logique*| **@***variable_nom_fichier_logique* }  
+ FICHIER  **=**  { *nom_fichier_logique*| **@***variable_nom_fichier_logique* }  
  Nom logique d'un fichier ou variable dont la valeur correspond au nom logique d'un fichier à inclure dans la sauvegarde.  
   
- Groupe de fichiers ** = ** { *nom_groupe_fichiers_logique*| **@***var_nom_groupe_fichiers_logique* }  
+ Groupe de fichiers  **=**  { *nom_groupe_fichiers_logique*| **@***var_nom_groupe_fichiers_logique* }  
  Nom logique d'un groupe de fichiers ou variable dont la valeur correspond au nom logique d'un groupe de fichiers à inclure dans la sauvegarde. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.  
   
 > [!NOTE]  
@@ -220,14 +220,14 @@ Nom logique d'un groupe de fichiers en lecture seule ou variable dont la valeur 
   
  Pour plus d’informations sur les sauvegardes partielles, consultez [sauvegardes partielles &#40; SQL Server &#41; ](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-POUR \<backup_device > [ **,**... * n * ] Indique l’accompagnant le jeu de [unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) est un jeu de supports non mis en miroir ou le premier miroir d’un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).  
+POUR \<backup_device > [ **,**...  *n*  ] Indique l’accompagnant le jeu de [unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) est un jeu de supports non mis en miroir ou le premier miroir d’un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).  
   
 \<unité_sauvegarde > Spécifie une unité de sauvegarde logique ou physique à utiliser pour l’opération de sauvegarde.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- Nom logique de l'unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié comme constante de chaîne (@*logical_device_name_var* ** = ** nom de l’unité logique de sauvegarde) ou sous la forme d’une variable de tout type de données de chaîne de caractères à l’exception de la **ntext** ou **texte** des types de données.  
+ Nom logique de l'unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié comme constante de chaîne (@*logical_device_name_var*  **=**  nom de l’unité logique de sauvegarde) ou sous la forme d’une variable de tout type de données de chaîne de caractères à l’exception de la **ntext** ou **texte** des types de données.  
   
- {DISQUE | BANDE | URL} ** = ** { **'***physical_device_name***'** | **@***physical_device_name_var* }  
+ {DISQUE | BANDE | URL}  **=**  { **'***physical_device_name***'** | **@***physical_device_name_var* }  
  Spécifie un fichier de disque ou périphérique à bandes, ou un service de stockage d'objets blob Windows Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Windows Azure. Pour plus d’informations et d’exemples, consultez [SQL Server sauvegarde et restauration avec Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour obtenir un didacticiel, consultez [didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
 > [!IMPORTANT]  
@@ -245,7 +245,7 @@ POUR \<backup_device > [ **,**... * n * ] Indique l’accompagnant le jeu de [un
  *n*  
  Espace réservé indiquant qu'il est possible de spécifier jusqu'à 64 unités de sauvegarde dans une liste séparée par des virgules.  
   
-MIRROR TO \<backup_device > [ **,**... * n * ] Spécifie un ensemble d’unités de sauvegarde secondaire jusqu'à trois, chacun des miroirs des unités de sauvegarde spécifiées dans la clause TO. La clause MIRROR TO doive spécifier le même type et le même nombre d’unités de sauvegarde que la clause TO. Vous pouvez spécifier jusqu'à trois clauses MIRROR TO.  
+MIRROR TO \<backup_device > [ **,**...  *n*  ] Spécifie un ensemble d’unités de sauvegarde secondaire jusqu'à trois, chacun des miroirs des unités de sauvegarde spécifiées dans la clause TO. La clause MIRROR TO doive spécifier le même type et le même nombre d’unités de sauvegarde que la clause TO. Vous pouvez spécifier jusqu'à trois clauses MIRROR TO.  
   
  Cette option est disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -310,7 +310,7 @@ MIRROR TO \<backup_device > [ **,**... * n * ] Spécifie un ensemble d’unités
 Ces options s'appliquent au jeu de sauvegarde qui est créé par cette opération de sauvegarde.  
   
 > [!NOTE]  
->  Pour spécifier une jeu de sauvegarde pour une opération de restauration, utilisez le fichier ** = ** * \<numéro_fichier_jeu_sauvegarde >* option. Pour plus d’informations sur la façon de spécifier un jeu de sauvegarde, consultez « Spécification d’un jeu de sauvegarde » dans [Arguments RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  Pour spécifier une jeu de sauvegarde pour une opération de restauration, utilisez le fichier  **=**   *\<numéro_fichier_jeu_sauvegarde >* option. Pour plus d’informations sur la façon de spécifier un jeu de sauvegarde, consultez « Spécification d’un jeu de sauvegarde » dans [Arguments RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  Spécifie que la sauvegarde est un *sauvegarde de copie uniquement*, qui n’affecte pas la séquence normale des sauvegardes. Une sauvegarde en copie seule est créée indépendamment de vos sauvegardes régulières standard. Ce type de sauvegarde n'a aucun effet sur les procédures globales de sauvegarde et de restauration de la base de données.  
@@ -340,10 +340,10 @@ Désactive explicitement la compression des sauvegardes.
 DESCRIPTION **=** { **’***texte***’** | **@***variable_texte* }  
 Spécifie le texte de format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
-NOM ** = ** { *nom_jeu_sauvegarde*| **@***var_jeu_sauvegardes* }  
+NOM  **=**  { *nom_jeu_sauvegarde*| **@***var_jeu_sauvegardes* }  
 Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
-{EXPIREDATE **='***date***'**| RETAINDAYS ** = ** *jours* }  
+{EXPIREDATE **='***date***'**| RETAINDAYS  **=**  *jours* }  
 Spécifie la date à laquelle le jeu de sauvegarde de cette sauvegarde peut être écrasé. Si ces options sont toutes les deux utilisées, RETAINDAYS l'emporte sur EXPIREDATE.  
   
 Si aucune de ces options est spécifiée, la date d’expiration est déterminée par le **mediaretention** paramètre de configuration. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
@@ -351,10 +351,10 @@ Si aucune de ces options est spécifiée, la date d’expiration est déterminé
 > [!IMPORTANT]  
 >  Ces options empêchent seulement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'écraser un fichier. Le contenu des bandes peut être écrasé par d'autres méthodes, et les fichiers sur disque peuvent être supprimés à partir du système d'exploitation. Pour plus d'informations sur le contrôle du délai d'expiration, consultez SKIP et FORMAT dans cette rubrique.  
   
-EXPIREDATE ** = ** { **'***date***'**| **@***var_date* }  
+EXPIREDATE  **=**  { **'***date***'**| **@***var_date* }  
  Indique la date à laquelle le jeu de sauvegarde expire et peut par conséquent être écrasé. Fourni comme variable (@*var_date*), cette date doit suivre le système configuré **datetime** mettre en forme et être spécifié comme l’une des opérations suivantes :  
   
--   Une constante de chaîne (@*var_date* ** = ** date)  
+-   Une constante de chaîne (@*var_date*  **=**  date)  
 -   Une variable de type chaîne de caractères (à l’exception de la **ntext** ou **texte** des types de données)  
 -   A **smalldatetime**  
 -   A **datetime** variable  
@@ -369,7 +369,7 @@ Pour plus d’informations sur la spécification **datetime** valeurs, consultez
 > [!NOTE]  
 >  Pour ignorer la date d'expiration, utilisez l'option SKIP.  
   
-RETAINDAYS ** = ** { *jours*| **@***days_var* }  
+RETAINDAYS  **=**  { *jours*| **@***days_var* }  
  Indique le nombre de jours qui doivent s'écouler avant de pouvoir remplacer le support de sauvegarde. Fourni comme variable (**@***days_var*), il doit être spécifié en tant qu’entier.  
   
 **Options de support de sauvegarde**  
@@ -424,13 +424,13 @@ Indique qu'un nouveau support de sauvegarde est créé. Si FORMAT est utilisé, 
   
 Si l'option FORMAT est spécifiée, l'option SKIP est implicitement prise en compte ; il n'est pas nécessaire de spécifier explicitement l'option SKIP.  
   
-MEDIADESCRIPTION ** = ** { *texte* | **@***variable_texte* }  
+MEDIADESCRIPTION  **=**  { *texte* | **@***variable_texte* }  
 Indique le texte de description de format libre du support de sauvegarde (maximum 255 caractères).  
   
-MEDIANAME ** = ** { *nom_support* | **@***variable_nom_support* }  
+MEDIANAME  **=**  { *nom_support* | **@***variable_nom_support* }  
 Fournit le nom du support de sauvegarde complet. Le nom du support ne doit pas dépasser 128 caractères. Si MEDIANAME est spécifié, il doit correspondre au nom spécifié précédemment existant sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.  
   
-BLOCKSIZE ** = ** { *blocksize* | **@***variable_taille_bloc* }  
+BLOCKSIZE  **=**  { *blocksize* | **@***variable_taille_bloc* }  
 Indique, en octets, la taille physique du bloc. Les tailles prises en charge sont 512, 1024, 2048, 4096, 8192, 16384, 32768 et 65536 (64 Ko) octets. La valeur par défaut est 65536 pour les périphériques à bandes, 512 sinon. En règle générale, cette option est superflue car BACKUP sélectionne automatiquement une taille de bloc appropriée pour le périphérique. Si vous spécifiez explicitement une taille de bloc, la sélection automatique est annulée et remplacée.  
   
 Si vous effectuez une sauvegarde que vous envisagez de copier sur un CD-ROM pour la restaurer à partir de celui-ci, spécifiez BLOCKSIZE=2048.  
@@ -440,7 +440,7 @@ Si vous effectuez une sauvegarde que vous envisagez de copier sur un CD-ROM pour
   
 **Options de transfert de données**  
   
-BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
 Spécifie le nombre total de tampons d'E/S à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier n'importe quel entier positif ; toutefois, un nombre élevé de tampons peut provoquer des erreurs liées à une insuffisance de mémoire. En effet, l'espace d'adressage virtuel peut s'avérer inapproprié dans la tâche Sqlservr.exe.  
   
 L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount***\****maxtransfersize*.  
@@ -448,7 +448,7 @@ L’espace total utilisé par les mémoires tampons est déterminé par : *buff
 > [!NOTE]  
 >  Pour obtenir des informations importantes sur l’utilisation de l’option BUFFERCOUNT, consultez le [option de transfert de données Incorrect BufferCount risque d’insuffisance](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) blog.  
   
-MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
  Spécifie la plus grande unité de transfert en octets à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).  
 > [!NOTE]  
 >  Lors de la création de sauvegardes à l’aide du Service SQL Writer, si la base de données a configuré FILESTREAM ou comprend des groupes de fichiers OLTP en mémoire, puis la `MAXTRANSFERSIZE` au moment de la restauration doit être supérieure ou égale à la `MAXTRANSFERSIZE` qui a été utilisé lorsque le Création de la sauvegarde. 
@@ -490,7 +490,7 @@ Depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], n'a aucun effet. Ell
   
 **Options de surveillance**  
   
-STATISTIQUES [ ** = ** *pourcentage* ]  
+STATISTIQUES [  **=**  *pourcentage* ]  
  Affiche un message chaque fois qu’un autre *pourcentage* se termine et sert à évaluer la progression. Si *pourcentage* est omis, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message à chaque 10 pour cent.  
   
 L'option STATS signale le pourcentage terminé comme seuil de rapport de l'intervalle suivant. C'est-à-dire approximativement le pourcentage spécifié ; par exemple, si STATS=10, et si le pourcentage terminé est 40 pour cent, l'option peut afficher 43 pour cent. Pour les jeux de sauvegardes volumineux, cela n'est pas un problème car le pourcentage terminé varie très lentement entre les appels d'E/S terminés.  
@@ -531,13 +531,13 @@ Ces options ne sont utilisées qu'avec BACKUP LOG.
 > [!NOTE]  
 >  Si vous ne voulez pas effectuer de sauvegarde du journal, utilisez le mode de récupération simple. Pour plus d’informations, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
-{NORECOVERY | Mise en veille ** = ** *nom_fichier_annulation* }  
+{NORECOVERY | Mise en veille  **=**  *nom_fichier_annulation* }  
   NORECOVERY  
   Effectue une sauvegarde de la fin du journal et laisse la base de données en état de restauration (RESTORING). NORECOVERY s'avère utile lors du basculement vers une base de données secondaire ou de l'exécution d'une sauvegarde de la fin du journal avant une opération RESTORE.  
   
   Pour effectuer au mieux une sauvegarde du journal qui évite la troncation du journal et place la base de données en état RESTORING, utilisez conjointement les options NO_TRUNCATE et NORECOVERY.  
   
-  Mise en veille ** = ** *nom_fichier_annulation*  
+  Mise en veille  **=**  *nom_fichier_annulation*  
   Effectue une sauvegarde de la fin du journal et laisse la base de données en lecture seule et en état STANDBY. La clause STANDBY écrit les données en attente (annulation avec option de restauration ultérieure). L'option STANDBY est semblable à BACKUP LOG WITH NORECOVERY suivie par RESTORE WITH STANDBY.  
   
   À l’aide du mode veille nécessite un fichier d’annulation, spécifié par *nom_fichier_annulation*, dont l’emplacement est stocké dans le journal de la base de données. Si le fichier spécifié existe déjà, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] l'écrase ; sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] le crée. Le fichier d'annulation devient partie intégrante de la base de données.  

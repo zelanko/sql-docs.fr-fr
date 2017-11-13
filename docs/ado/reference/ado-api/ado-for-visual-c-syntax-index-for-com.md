@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>INDEX de la syntaxe Visual C++ pour COM
 Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Visual C++.  
   
- Si vous utilisez la **#import** directive dans votre application, un fichier d’en-tête sera généré qui vous permettront d’utiliser une syntaxe semblable à Microsoft Visual Basic. Les noms de propriété sous la forme **get_***PropertyName* et **put_***PropertyName* peuvent être traitées comme si elles ont été déclarées comme * PropertyName*. Une propriété peut être traitée comme un membre de données au lieu d’une fonction.  
+ Si vous utilisez la **#import** directive dans votre application, un fichier d’en-tête sera généré qui vous permettront d’utiliser une syntaxe semblable à Microsoft Visual Basic. Les noms de propriété sous la forme **get_***PropertyName* et **put_***PropertyName* peuvent être traitées comme si elles ont été déclarées comme  *PropertyName*. Une propriété peut être traitée comme un membre de données au lieu d’une fonction.  
   
  Toutes les méthodes, propriétés et événements sont des fonctions qui retournent un **HRESULT**, que vous pouvez tester pour déterminer si la fonction a été exécutée avec succès.  
   

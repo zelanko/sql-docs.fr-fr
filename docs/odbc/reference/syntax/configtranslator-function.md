@@ -58,7 +58,7 @@ BOOL ConfigTranslator(
  La fonction retourne TRUE si l’opération a réussi, FALSE en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **ConfigTranslator** renvoie la valeur FALSE, associé à un * \*pfErrorCode* valeur est validée dans la mémoire tampon erreur de programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenu en appelant **SQLInstallerError**. Le tableau suivant répertorie les * \*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
+ Lorsque **ConfigTranslator** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur est validée dans la mémoire tampon erreur de programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenu en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Erreur| Description|  
 |---------------------|-----------|-----------------|  

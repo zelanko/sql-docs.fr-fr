@@ -28,7 +28,7 @@ Résilience des connexions est implémentée avec deux mots clés de connexion q
 |**ConnectRetryCount**| Entier compris entre 0 et 255 (inclus)|1|Le nombre maximal de tentatives de rétablissement d’une connexion interrompue avant d’abandonner. Par défaut, une seule tentative pour rétablir une connexion lorsque rompu. Une valeur de 0 signifie qu’aucune reconnexion ne sera tentée.|
 |**ConnectRetryInterval**| Entier compris entre 1 et 60 (inclus)|1| Durée, en secondes, entre les tentatives de rétablir une connexion. L’application tente de se reconnecter immédiatement lors de la détection d’une connexion interrompue et qu’il attendra puis **ConnectRetryInterval** secondes avant de réessayer. Ce mot clé est ignoré si **ConnectRetryCount** est égal à 0.
 
-Si le produit de **ConnectRetryCount** multipliée par **ConnectRetryInterval** est supérieure à **LoginTimeout**, puis le client cesse tente de se connecter une seule fois ** LoginTimeout** est atteinte ; sinon, elle continuera d’essayer de se reconnecter tant que **ConnectRetryCount** est atteinte.
+Si le produit de **ConnectRetryCount** multipliée par **ConnectRetryInterval** est supérieure à **LoginTimeout**, puis le client cesse tente de se connecter une seule fois  **LoginTimeout** est atteinte ; sinon, elle continuera d’essayer de se reconnecter tant que **ConnectRetryCount** est atteinte.
 
 #### <a name="remarks"></a>Notes
 

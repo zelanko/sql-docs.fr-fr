@@ -66,20 +66,20 @@ SQLRETURN SQLGetConnectAttr(
  Si *ValuePtr* est NULL, *StringLengthPtr* retourne toujours le nombre total d’octets (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *ValuePtr*.  
   
  *BufferLength*  
- [Entrée] Si *attribut* est un attribut défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *attribut* est un attribut défini par ODBC et \* *ValuePtr* est un entier, *BufferLength* est ignoré. Si la valeur de * \*ValuePtr* est une chaîne Unicode (lors de l’appel **SQLGetConnectAttrW**), la *BufferLength* l’argument doit être un nombre pair.  
+ [Entrée] Si *attribut* est un attribut défini par ODBC et *ValuePtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *ValuePtr*. Si *attribut* est un attribut défini par ODBC et \* *ValuePtr* est un entier, *BufferLength* est ignoré. Si la valeur de  *\*ValuePtr* est une chaîne Unicode (lors de l’appel **SQLGetConnectAttrW**), la *BufferLength* l’argument doit être un nombre pair.  
   
  Si *attribut* est un attribut définies par le pilote, l’application indique la nature de l’attribut pour le Gestionnaire de pilotes en définissant le *BufferLength* argument. *BufferLength* peut avoir les valeurs suivantes :  
   
--   Si * \*ValuePtr* est un pointeur vers une chaîne de caractères *BufferLength* est la longueur de la chaîne.  
+-   Si  *\*ValuePtr* est un pointeur vers une chaîne de caractères *BufferLength* est la longueur de la chaîne.  
   
--   Si * \*ValuePtr* est un pointeur vers une mémoire tampon binaire, les emplacements de l’application le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Il s’ensuit une valeur négative dans *BufferLength*.  
+-   Si  *\*ValuePtr* est un pointeur vers une mémoire tampon binaire, les emplacements de l’application le résultat de la SQL_LEN_BINARY_ATTR (*longueur*) macro dans *BufferLength*. Il s’ensuit une valeur négative dans *BufferLength*.  
   
--   Si * \*ValuePtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
+-   Si  *\*ValuePtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si * \*ValuePtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER ou SQL_IS_UINTEGER, selon le cas.  
+-   Si  *\*ValuePtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER ou SQL_IS_UINTEGER, selon le cas.  
   
  *StringLengthPtr*  
- [Sortie] Un pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans \* *ValuePtr*. Si \* *ValuePtr* est un pointeur null, aucune longueur n’est retournée. Si la valeur d’attribut est une chaîne de caractères et le nombre d’octets à retourner est supérieur à *BufferLength* moins la longueur du caractère de fin de null, les données de * \*ValuePtr* est tronqué à *BufferLength* moins la longueur du caractère de fin de null et se termine par null par le pilote.  
+ [Sortie] Un pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans \* *ValuePtr*. Si \* *ValuePtr* est un pointeur null, aucune longueur n’est retournée. Si la valeur d’attribut est une chaîne de caractères et le nombre d’octets à retourner est supérieur à *BufferLength* moins la longueur du caractère de fin de null, les données de  *\*ValuePtr* est tronqué à *BufferLength* moins la longueur du caractère de fin de null et se termine par null par le pilote.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire qui est requis pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) **SQLBrowseConnect** a été appelé pour le *handle de connexion* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant **SQLBrowseConnect** a retourné SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *handle de connexion* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant la récupération des données pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, éventuellement en raison d’une mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) * \*ValuePtr* est une chaîne de caractères et BufferLength était inférieur à zéro, mais pas égale à SQL_NTS.|  
+|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM)  *\*ValuePtr* est une chaîne de caractères et BufferLength était inférieur à zéro, mais pas égale à SQL_NTS.|  
 |HY092|Identificateur d’attribut/option non valide|La valeur spécifiée pour l’argument *attribut* n’était pas valide pour la version d’ODBC pris en charge par le pilote.|  
 |HY114|Pilote ne prend pas en charge l’exécution d’une fonction asynchrone du niveau de connexion|(DM) une application a tenté d’activer l’exécution d’une fonction asynchrone avec sql_attr_async_dbc_functions_enable ne pour un pilote qui ne prend pas en charge les opérations de connexion asynchrone.|  
 |HY117|Connexion est interrompue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  

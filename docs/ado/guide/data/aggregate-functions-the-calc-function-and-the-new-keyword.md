@@ -34,13 +34,13 @@ Mise en forme des données prend en charge les fonctions suivantes. Le nom attri
   
 |Fonctions d'agrégation| Description|  
 |-------------------------|-----------------|  
-|SUM (*alias-chapitre*.* nom de la colonne*)|Calcule la somme de toutes les valeurs dans la colonne spécifiée.|  
-|AVG (*alias-chapitre*.* nom de la colonne*)|Calcule la moyenne de toutes les valeurs dans la colonne spécifiée.|  
-|MAX (*alias-chapitre*.* nom de la colonne*)|Calcule la valeur maximale dans la colonne spécifiée.|  
-|MIN (*alias-chapitre*.* nom de la colonne*)|Calcule la valeur minimale de la colonne spécifiée.|  
-|NOMBRE (*alias-chapitre*[.* nom de la colonne*])|Compte le nombre de lignes dans l’alias spécifié. Si une colonne est spécifiée, seules les lignes pour lesquelles cette colonne n’est pas nulle sont inclus dans le nombre.|  
-|STDEV (*alias-chapitre*.* nom de la colonne*)|Calcule l’écart type de la colonne spécifiée.|  
-|N’importe quel (*alias-chapitre*.* nom de la colonne*)|Valeur de la colonne spécifiée. UNE a une valeur prévisible uniquement lorsque la valeur de la colonne est la même pour toutes les lignes dans le chapitre.<br /><br /> **Remarque** si la colonne ne contient pas la même valeur pour toutes les lignes dans le chapitre, la commande SHAPE retourne arbitrairement l’une des valeurs pour la valeur de la fonction de n’importe quel.|  
+|SUM (*alias-chapitre*. *nom de la colonne*)|Calcule la somme de toutes les valeurs dans la colonne spécifiée.|  
+|AVG (*alias-chapitre*. *nom de la colonne*)|Calcule la moyenne de toutes les valeurs dans la colonne spécifiée.|  
+|MAX (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur maximale dans la colonne spécifiée.|  
+|MIN (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur minimale de la colonne spécifiée.|  
+|NOMBRE (*alias-chapitre*[. *nom de la colonne*])|Compte le nombre de lignes dans l’alias spécifié. Si une colonne est spécifiée, seules les lignes pour lesquelles cette colonne n’est pas nulle sont inclus dans le nombre.|  
+|STDEV (*alias-chapitre*. *nom de la colonne*)|Calcule l’écart type de la colonne spécifiée.|  
+|N’importe quel (*alias-chapitre*. *nom de la colonne*)|Valeur de la colonne spécifiée. UNE a une valeur prévisible uniquement lorsque la valeur de la colonne est la même pour toutes les lignes dans le chapitre.<br /><br /> **Remarque** si la colonne ne contient pas la même valeur pour toutes les lignes dans le chapitre, la commande SHAPE retourne arbitrairement l’une des valeurs pour la valeur de la fonction de n’importe quel.|  
   
 |Expression calculée| Description|  
 |---------------------------|-----------------|  

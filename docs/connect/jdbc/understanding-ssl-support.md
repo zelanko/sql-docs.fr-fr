@@ -79,7 +79,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Le certificat n'a pas expiré.  
   
--   Le nom commun (CN) dans l’objet ou un nom DNS dans l’autre nom de l’objet du certificat correspond exactement à la **nom_serveur** valeur spécifiée dans la chaîne de connexion ou, si spécifié, le ** hostNameInCertificate** valeur de propriété.  
+-   Le nom commun (CN) dans l’objet ou un nom DNS dans l’autre nom de l’objet du certificat correspond exactement à la **nom_serveur** valeur spécifiée dans la chaîne de connexion ou, si spécifié, le  **hostNameInCertificate** valeur de propriété.  
   
 -   Un nom DNS peut comprendre des caractères génériques. Mais le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ne prend pas en charge la correspondance générique. Autrement dit, abc.com ne correspondra pas à *.com mais \*.com correspond à \*. com.  
   

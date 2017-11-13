@@ -67,7 +67,7 @@ identifier
   
 -   A **userlist** section est utilisée si le **userlist** section identificateur correspondances un **connecter** identificateur de section. S’il existe une correspondance, le contenu de la **userlist** section sont appliqués à la connexion régie par le **connecter** section.  
   
--   Si la chaîne dans une chaîne de connexion ou de commande ne correspond pas à l’identificateur dans les **connecter** ou **sql** section d’en-tête et il est aucun **connecter** ou **sql ** section d’en-tête avec un paramètre par défaut, la chaîne du client est utilisé sans modification.  
+-   Si la chaîne dans une chaîne de connexion ou de commande ne correspond pas à l’identificateur dans les **connecter** ou **sql** section d’en-tête et il est aucun **connecter** ou **sql**  section d’en-tête avec un paramètre par défaut, la chaîne du client est utilisé sans modification.  
   
 -   Le **journaux** section est utilisée chaque fois que le **DataFactory** est dans l’opération.  
   

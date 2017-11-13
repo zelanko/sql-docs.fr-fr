@@ -69,7 +69,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     avec * \*ValuePtr* défini sur l’une des valeurs dans le tableau ci-dessous, en fonction de la valeur de la *KeysetSize* argument dans **SQLSetScrollOptions**.  
+     avec  *\*ValuePtr* défini sur l’une des valeurs dans le tableau ci-dessous, en fonction de la valeur de la *KeysetSize* argument dans **SQLSetScrollOptions**.  
   
     |*KeysetSize* argument|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -85,7 +85,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     avec * \*ValuePtr* définie sur le *Concurrency* argument dans **SQLSetScrollOptions**.  
+     avec  *\*ValuePtr* définie sur le *Concurrency* argument dans **SQLSetScrollOptions**.  
   
 -   Si le *KeysetSize* argument dans l’appel à **SQLSetScrollOptions** est un nombre positif, un appel à  
   
@@ -93,7 +93,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     avec * \*ValuePtr* définie sur le *KeysetSize* argument dans **SQLSetScrollOptions**.  
+     avec  *\*ValuePtr* définie sur le *KeysetSize* argument dans **SQLSetScrollOptions**.  
   
 -   Un appel à  
   
@@ -101,7 +101,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     avec * \*ValuePtr* définie sur le *la RowsetSize* argument dans **SQLSetScrollOptions**.  
+     avec  *\*ValuePtr* définie sur le *la RowsetSize* argument dans **SQLSetScrollOptions**.  
   
     > [!NOTE]  
     >  Lorsque le Gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application utilisant une ODBC 3*.x* pilote qui ne prend pas en charge **SQLSetScrollOptions**, le Gestionnaire de pilotes définit l’option d’instruction SQL_ROWSET_SIZE, pas l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE, à la *la RowsetSize* argument dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être utilisé uniquement lors de l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.

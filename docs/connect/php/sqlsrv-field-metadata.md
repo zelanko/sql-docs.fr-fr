@@ -53,7 +53,7 @@ sqlsrv_field_metadata( resource $stmt)
 |Taille|Nombre de caractères des champs de type caractère (char(n), varchar(n), nchar(n), nvarchar(n), XML). Nombre d’octets des champs de type binaire (binary(n), varbinary(n), UDT). **NULL** pour les autres types de données SQL Server.|  
 |Précision|Précision des types dont la précision varie (réel, numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
 |Échelle|Échelle des types dont l’échelle varie (numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
-|Nullable|Valeur énumérée indiquant si la colonne est nullable (**SQLSRV_NULLABLE_YES**), la colonne n’est pas nullable (**SQLSRV_NULLABLE_NO**), ou il n’est pas connu si la colonne est nullable (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|Nullable|Valeur énumérée indiquant si la colonne est nullable (**SQLSRV_NULLABLE_YES**), la colonne n’est pas nullable (**SQLSRV_NULLABLE_NO**), ou il n’est pas connu si la colonne est nullable ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-tableau (consultez la documentation de SQL Server pour plus d’informations sur ces types) :  
   

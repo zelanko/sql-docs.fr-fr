@@ -34,7 +34,7 @@ Cette application simple passe en revue chacune des quatre principales opératio
   
 2.  Créez quatre boutons de commande en haut du formulaire, en définissant le **nom** et **légende** propriétés avec les valeurs indiquées dans le tableau à la fin de cette rubrique.  
   
-3.  Sous les boutons, ajoutez un **Microsoft contrôle DataGrid** (Msdatgrd.ocx). Ce fichier est inclus avec Visual Basic et se trouve dans votre répertoire \windows\system32 ou \winnt\system32. Pour ajouter le contrôle DataGrid à votre boîte à outils Visual Basic, sélectionnez **composants... ** à partir de la **projet** menu. Puis activez la case à côté « Microsoft DataGrid Control 6.0 (SP3) (OLEDB) », puis **OK**. Pour ajouter le contrôle au projet, faites glisser le contrôle de grille de données à partir de la boîte à outils vers le formulaire Visual Basic.  
+3.  Sous les boutons, ajoutez un **Microsoft contrôle DataGrid** (Msdatgrd.ocx). Ce fichier est inclus avec Visual Basic et se trouve dans votre répertoire \windows\system32 ou \winnt\system32. Pour ajouter le contrôle DataGrid à votre boîte à outils Visual Basic, sélectionnez **composants...**  à partir de la **projet** menu. Puis activez la case à côté « Microsoft DataGrid Control 6.0 (SP3) (OLEDB) », puis **OK**. Pour ajouter le contrôle au projet, faites glisser le contrôle de grille de données à partir de la boîte à outils vers le formulaire Visual Basic.  
   
 4.  Créer un **zone de texte** sur le formulaire sous la grille et définissez ses propriétés comme indiqué dans le tableau. Le formulaire doit ressembler à la figure suivante lorsque vous avez terminé.  
   

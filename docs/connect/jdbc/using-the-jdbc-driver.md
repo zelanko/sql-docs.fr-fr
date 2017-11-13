@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  Votre choix détermine également les fonctionnalités disponibles. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="setting-the-classpath"></a>Définition de Classpath  
- Le pilote JDBC ne fait pas partie du Kit de développement logiciel (SDK) Java. Si vous souhaitez l’utiliser, vous devez définir l’instruction classpath pour inclure la **sqljdbc.jar** fichier **sqljdbc4.jar** fichier, le **sqljdbc41.jar** fichier, ou le ** sqljdbc42.jar** fichier. Si l’instruction classpath pour inclure la valeur à l’aide de JDBC Driver 6.2, le **mssql-jdbc-6.2.1.jre7.jar** ou **mssql-jdbc-6.2.1.jre8.jar**. S’il manque une entrée dans l’instruction classpath, votre application lève l’exception courante « Classe introuvable ».  
+ Le pilote JDBC ne fait pas partie du Kit de développement logiciel (SDK) Java. Si vous souhaitez l’utiliser, vous devez définir l’instruction classpath pour inclure la **sqljdbc.jar** fichier **sqljdbc4.jar** fichier, le **sqljdbc41.jar** fichier, ou le  **sqljdbc42.jar** fichier. Si l’instruction classpath pour inclure la valeur à l’aide de JDBC Driver 6.2, le **mssql-jdbc-6.2.1.jre7.jar** ou **mssql-jdbc-6.2.1.jre8.jar**. S’il manque une entrée dans l’instruction classpath, votre application lève l’exception courante « Classe introuvable ».  
   
 ### <a name="for-microsoft-jdbc-driver-62"></a>Pour Microsoft JDBC Driver 6.2
  Le **mssql-jdbc-6.2.1.jre7.jar** ou **mssql-jdbc-6.2.1.jre8.jar** fichiers sont installés dans l’emplacement suivant :  

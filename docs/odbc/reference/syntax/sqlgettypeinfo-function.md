@@ -71,7 +71,7 @@ SQLRETURN SQLGetTypeInfo(
 |24000|État de curseur non valide|Un curseur a été ouvert sur le *au paramètre StatementHandle,* et **SQLFetch** ou **SQLFetchScroll** avait été appelée. Cette erreur est retournée par le Gestionnaire de pilotes si **SQLFetch** ou **SQLFetchScroll** n’a pas retourné SQL_NO_DATA et est retourné par le pilote si **SQLFetch** ou **SQLFetchScroll** a retourné SQL_NO_DATA.<br /><br /> Un jeu de résultats a été ouvert sur le *au paramètre StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’avait pas été appelée.|  
 |40001|Échec de la sérialisation|La transaction a été annulée en raison d’un blocage de ressource avec une autre transaction.|  
 |40003|Saisie semi-automatique des instructions inconnue|Échec de la connexion associée lors de l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les * \*MessageText* tampon décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY004|Type de données SQL non valide|La valeur spécifiée pour l’argument *DataType* n’est ni un identificateur de type de données ODBC SQL valide ni un identificateur de type de données spécifique au pilote pris en charge par le pilote.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour le *au paramètre StatementHandle*, puis la fonction a été appelée et, avant qu’elle terminée l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *au paramètre StatementHandle*. La fonction a été appelée à nouveau sur le *au paramètre StatementHandle*.<br /><br /> La fonction a été appelée et, avant qu’elle terminée l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *au paramètre StatementHandle* à partir d’un autre thread dans une application multithread.|  
@@ -101,7 +101,7 @@ SQLRETURN SQLGetTypeInfo(
 |MONEY|FIXED_PREC_SCALE|  
 |AUTO_INCREMENT|AUTO_UNIQUE_VALUE|  
   
- Les colonnes suivantes ont été ajoutées au jeu de résultats retourné par **SQLGetTypeInfo** pour ODBC 3.* x*:  
+ Les colonnes suivantes ont été ajoutées au jeu de résultats retourné par **SQLGetTypeInfo** pour ODBC 3. *x*:  
   
 -   SQL_DATA_TYPE  
   

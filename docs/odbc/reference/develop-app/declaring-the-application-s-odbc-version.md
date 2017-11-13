@@ -30,11 +30,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Déclaration de l’Application &#39; s Version ODBC
-Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3.* x* spécification lorsque vous utilisez les éléments suivants :  
+Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3. *x* spécification lorsque vous utilisez les éléments suivants :  
   
--   **SQLSTATE**. Nombre de valeurs SQLSTATE est différent dans ODBC 2. *x* et ODBC 3.* x*.  
+-   **SQLSTATE**. Nombre de valeurs SQLSTATE est différent dans ODBC 2. *x* et ODBC 3. *x*.  
   
--   **Date, Time et Timestamp, Type identificateurs**. Le tableau suivant présente les identificateurs de type de date et d’heure données timestamp ODBC 2. *x* et ODBC 3.* x*.  
+-   **Date, Time et Timestamp, Type identificateurs**. Le tableau suivant présente les identificateurs de type de date et d’heure données timestamp ODBC 2. *x* et ODBC 3. *x*.  
   
     |ODBC 2. *x*|ODBC 3. *x*|  
     |----------------|----------------|  
@@ -52,5 +52,5 @@ Une application alloue une connexion, il doit au préalable l’attribut d’env
  La version 3 ODBC*.x* du Gestionnaire de pilotes alors que ODBC 3*.x* pilotes vérifier la version de la spécification ODBC dans lequel une application est écrite et réagir en conséquence. Par exemple, si l’application suit ODBC 2. *x* spécification et appelle **SQLExecute** avant d’appeler **SQLPrepare**, la version 3 ODBC*.x* du Gestionnaire de pilotes retourne SQLSTATE S1010 (erreur de séquence de fonction). Si l’application suit les ODBC 3*.x* spécification, le Gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction). Pour plus d’informations, consultez [la compatibilité descendante et la conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Applications qui suivent l’ODBC 3. *x* spécification doit utiliser le code conditionnel pour éviter d’utiliser la fonctionnalité nouvelle ODBC 3.* x* lorsque vous travaillez avec ODBC 2.* x* pilotes. ODBC 2. *x* pilotes ne prennent pas en charge les fonctionnalités nouvelles ODBC 3.* x* parce que l’application déclare qu’il suit la ODBC 3.* x* spécification. En outre, ODBC 3. *x* pilotes cesse pas en charge des fonctionnalités nouvelles ODBC 3.* x* parce que l’application déclare qu’il suit ODBC 2.* x* spécification.
+>  Applications qui suivent l’ODBC 3. *x* spécification doit utiliser le code conditionnel pour éviter d’utiliser la fonctionnalité nouvelle ODBC 3. *x* lorsque vous travaillez avec ODBC 2. *x* pilotes. ODBC 2. *x* pilotes ne prennent pas en charge les fonctionnalités nouvelles ODBC 3. *x* parce que l’application déclare qu’il suit la ODBC 3. *x* spécification. En outre, ODBC 3. *x* pilotes cesse pas en charge des fonctionnalités nouvelles ODBC 3. *x* parce que l’application déclare qu’il suit ODBC 2. *x* spécification.
 

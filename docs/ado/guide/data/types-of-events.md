@@ -32,15 +32,15 @@ ms.lasthandoff: 09/09/2017
 Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement « Est » dans leur nom, par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent « Complète » dans leur nom, par exemple, **RecordChangeComplete** ou **ConnectComplete**. Existe des exceptions, telles que **InfoMessage** , mais ces modifications se produisent après l’opération associée est terminée.  
   
 ## <a name="will-events"></a>Événements Will  
- Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou autoriser qu’elle se termine. Ces routines de gestionnaires d’événements ont généralement des noms au format * *sera*événement***.  
+ Gestionnaires d’événements appelés avant le démarrage de l’opération vous offre la possibilité d’examiner ou modifier les paramètres d’opération, puis annuler l’opération ou autoriser qu’elle se termine. Ces routines de gestionnaires d’événements ont généralement des noms au format  **sera*événement***.  
   
 ## <a name="complete-events"></a>Événements de fin  
- Gestionnaires d’événements appelés au terme d’une opération peuvent avertir votre application qu’une opération est terminée. Ce type de gestionnaire d’événements est également informé lorsqu’un gestionnaire d’événements Will annule une opération en attente. Ces routines de gestionnaires d’événements ont généralement des noms au format ** *événement*Complete**.  
+ Gestionnaires d’événements appelés au terme d’une opération peuvent avertir votre application qu’une opération est terminée. Ce type de gestionnaire d’événements est également informé lorsqu’un gestionnaire d’événements Will annule une opération en attente. Ces routines de gestionnaires d’événements ont généralement des noms au format  ***événement*Complete**.  
   
  Événements Will et Complete sont généralement utilisées par paires.  
   
 ## <a name="other-events"></a>Autres événements  
- Les autres gestionnaires d’événements : autrement dit, les événements dont les noms ne sont pas sous la forme * *sera*événement*** ou ** *événement*Complete** , sont appelés uniquement après qu’une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
+ Les autres gestionnaires d’événements : autrement dit, les événements dont les noms ne sont pas sous la forme  **sera*événement*** ou  ***événement*Complete** , sont appelés uniquement après qu’une opération se termine. Ces événements sont **déconnexion**, **EndOfRecordset**, et **InfoMessage**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

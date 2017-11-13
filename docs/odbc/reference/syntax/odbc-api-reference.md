@@ -46,7 +46,7 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
   
 -   Références à des fonctions connexes  
   
- Le niveau de conformité standard CLI peut prendre l’une des opérations suivantes : ISO 92, Open Group, ODBC ou obsolète. Une fonction marquée comme conforme ISO 92 apparaît également dans la version 1, ouvrir le groupe Open Group étant un sur-ensemble pur de ISO 92. Une fonction en tant que groupe ouvert-conforme apparaît également dans ODBC 3. *x*, étant donné que ODBC 3.* x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme conforme ODBC apparaît dans aucun standard. Une fonction marquée comme déconseillée a été déconseillée dans ODBC 3. *x*.  
+ Le niveau de conformité standard CLI peut prendre l’une des opérations suivantes : ISO 92, Open Group, ODBC ou obsolète. Une fonction marquée comme conforme ISO 92 apparaît également dans la version 1, ouvrir le groupe Open Group étant un sur-ensemble pur de ISO 92. Une fonction en tant que groupe ouvert-conforme apparaît également dans ODBC 3. *x*, étant donné que ODBC 3. *x* est un sur-ensemble pur de Open Group version 1. Une fonction marquée comme conforme ODBC apparaît dans aucun standard. Une fonction marquée comme déconseillée a été déconseillée dans ODBC 3. *x*.  
   
  La gestion des informations de diagnostic est décrite dans le [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) description de fonction. Le texte associé aux valeurs SQLSTATE est inclus pour fournir une description de la condition, mais n’est pas censé prescrire un texte spécifique.  
   

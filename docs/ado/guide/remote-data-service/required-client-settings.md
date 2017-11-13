@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Définir le [propriété CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient**.  
   
--   Spécifiez le nom du gestionnaire à utiliser dans le [objet DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet **gestionnaire** propriété, ou la [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) chaîne de connexion de l’objet »** Gestionnaire**= « mot clé. (Vous ne pouvez pas définir le gestionnaire le **connexion** objet de la chaîne de connexion.)  
+-   Spécifiez le nom du gestionnaire à utiliser dans le [objet DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet **gestionnaire** propriété, ou la [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) chaîne de connexion de l’objet » **Gestionnaire**= « mot clé. (Vous ne pouvez pas définir le gestionnaire le **connexion** objet de la chaîne de connexion.)  
   
  Services Bureau à distance fournit un gestionnaire par défaut sur le serveur nommé **MSDFMAP. Gestionnaire**. (Le fichier de personnalisation par défaut est nommé MSDFMAP. INI.)  
   
@@ -71,7 +71,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Spécifiez soit le [Gestionnaire de propriété (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriété ou un mot clé ; le [fournisseur propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriété ou un mot clé ; et le *CustomerById* et * CustomerDatabase* identificateurs. Ouvrez le **Recordset** objet  
+ Spécifiez soit le [Gestionnaire de propriété (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriété ou un mot clé ; le [fournisseur propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriété ou un mot clé ; et le *CustomerById* et  *CustomerDatabase* identificateurs. Ouvrez le **Recordset** objet  
   
  RS. Ouvrez « CustomerById (4) », « gestionnaire = MSDFMAP. Gestionnaire ; » & _  
   

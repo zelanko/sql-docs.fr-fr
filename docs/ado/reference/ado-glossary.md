@@ -52,7 +52,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  Un mappage entre un champ dans une table et une variable. Dans les extensions ADO de Visual C++, **Recordset** champs sont mappés à des variables C/C++.  
   
  masque de bits  
- Une valeur numérique destiné à une comparaison de valeurs de bit par bit avec d’autres valeurs numériques, généralement indiquer les options disponibles dans les paramètres ou valeurs de retour. Cette comparaison est généralement effectuée par des opérateurs logiques au niveau du bit, tel que **et** et **ou** en Visual Basic, ** & ** et **&#124;** en C++.  
+ Une valeur numérique destiné à une comparaison de valeurs de bit par bit avec d’autres valeurs numériques, généralement indiquer les options disponibles dans les paramètres ou valeurs de retour. Cette comparaison est généralement effectuée par des opérateurs logiques au niveau du bit, tel que **et** et **ou** en Visual Basic,  **&**  et **&#124;** en C++.  
   
  Par exemple, ADO **FieldAttributeEnum** valeurs peuvent être utilisées en tant que masques de bits pour déterminer les attributs d’un champ. Supposons que vous souhaitiez déterminer si un champ a été mise à jour. Pour cela, vous pouvez tester à l’expression suivante en Visual Basic :`Field.Attributes AND adFldUpdatable`  
   
@@ -74,7 +74,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  chapitre  
  Une référence à une plage de lignes à partir d’une source de données. Dans ADO, un chapitre fait généralement référence à un autre **Recordset**.  
   
- Les colonnes de chapitres permettent de définir un *parent-enfant* relation où la *parent* est la **Recordset** contenant la colonne de chapitre et * enfant* est la **Recordset** représenté par le chapitre.  
+ Les colonnes de chapitres permettent de définir un *parent-enfant* relation où la *parent* est la **Recordset** contenant la colonne de chapitre et  *enfant* est la **Recordset** représenté par le chapitre.  
   
  alias-chapitre  
  Un alias qui fait référence à la colonne ajoutée au parent.  
@@ -220,7 +220,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  verrouillage optimiste  
  Type de verrouillage dans lequel la page de données contenant un ou plusieurs enregistrements, notamment l’enregistrement en cours de modification, n’est pas disponible à d’autres utilisateurs uniquement pendant que l’enregistrement est mis à jour par le **mise à jour** mais est disponible avant et après le l’appel à **mise à jour**.  
   
- Verrouillage optimiste est utilisé lorsque le **Recordset** objet est ouvert avec le **LockType** paramètre ou la valeur de propriété **adLockOptimistic** ou ** adLockBatchOptimistic**. Voir aussi verrouillage pessimiste.  
+ Verrouillage optimiste est utilisé lorsque le **Recordset** objet est ouvert avec le **LockType** paramètre ou la valeur de propriété **adLockOptimistic** ou  **adLockBatchOptimistic**. Voir aussi verrouillage pessimiste.  
   
  valeur ordinale  
  Emplacement d’un élément dans un ordre numérique. Dans une collection ADO, la valeur ordinale du premier élément est zéro (0). L’élément suivant est un (1) et ainsi de suite.  

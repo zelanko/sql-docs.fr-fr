@@ -25,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="controlling-transactions-ado"></a>Contrôle des Transactions (ADO)
-ADO prend en charge le traitement des transactions dans une connexion à l’aide de la **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes sur un ** Connexion** objet. L’idée générale de l’implémentation du traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  
+ADO prend en charge le traitement des transactions dans une connexion à l’aide de la **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes sur un  **Connexion** objet. L’idée générale de l’implémentation du traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  
   
 ```  
 Const DS = "MySqlServer"  

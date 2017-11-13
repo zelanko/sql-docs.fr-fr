@@ -39,9 +39,9 @@ ms.lasthandoff: 09/09/2017
   
      **Mise à jour** *-nom de la table*  
   
-     **Définissez** *identificateur de la colonne* ** = ** {*expression* &#124; **NULL**}  
+     **Définissez** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}  
   
-     [**,** *identificateur de la colonne* ** = ** {*expression* &#124; **NULL**}]  
+     [**,** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *nom de curseur*  
   

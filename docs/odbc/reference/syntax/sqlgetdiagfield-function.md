@@ -83,7 +83,7 @@ SQLRETURN SQLGetDiagField(
  Si *DiagInfoPtr* est NULL, *StringLengthPtr* retourne toujours le nombre total d’octets (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *DiagInfoPtr*.  
   
  *BufferLength*  
- [Entrée] Si *DiagIdentifier* est un diagnostic définis par ODBC et *DiagInfoPtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *DiagInfoPtr*. Si *DiagIdentifier* est un champ défini par ODBC et \* *DiagInfoPtr* est un entier, *BufferLength* est ignoré. Si la valeur de * \*DiagInfoPtr* est une chaîne Unicode (lors de l’appel **SQLGetDiagFieldW**), la *BufferLength* l’argument doit être un nombre pair.  
+ [Entrée] Si *DiagIdentifier* est un diagnostic définis par ODBC et *DiagInfoPtr* pointe vers une chaîne de caractères ou d’un tampon binaire, cet argument doit être la longueur de \* *DiagInfoPtr*. Si *DiagIdentifier* est un champ défini par ODBC et \* *DiagInfoPtr* est un entier, *BufferLength* est ignoré. Si la valeur de  *\*DiagInfoPtr* est une chaîne Unicode (lors de l’appel **SQLGetDiagFieldW**), la *BufferLength* l’argument doit être un nombre pair.  
   
  Si *DiagIdentifier* est un champ défini par le pilote, l’application indiquant la nature du champ au Gestionnaire de pilote en définissant le *BufferLength* argument. *BufferLength* peut avoir les valeurs suivantes :  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Si *DiagInfoPtr* est un pointeur vers une valeur autre qu’une chaîne de caractères ou une chaîne binaire *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
--   Si * \*DiagInfoPtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
+-   Si  *\*DiagInfoPtr* contient un type de données de longueur fixe, *BufferLength* est SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT ou SQL_IS_USMALLINT, selon le cas.  
   
  *StringLengthPtr*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total d’octets (autre que le nombre d’octets requis pour le caractère de fin de la valeur null) disponibles à renvoyer dans \* *DiagInfoPtr*, pour les données caractères. Si le nombre d’octets à retourner est supérieur ou égal à *BufferLength*, le texte de \* *DiagInfoPtr* est tronqué à *BufferLength* moins la longueur d’un caractère de fin de la valeur null.  

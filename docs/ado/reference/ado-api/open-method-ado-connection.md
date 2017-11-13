@@ -57,7 +57,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Utilisez le paramètre facultatif *ConnectionString* argument afin de spécifier une chaîne de connexion contenant une série de *argument* *= valeur* instructions séparées par des points-virgules, ou un fichier ou répertoire ressource identifiée par une URL. Le **ConnectionString** propriété hérite automatiquement de la valeur utilisée pour le *ConnectionString* argument. Par conséquent, vous pouvez soit définir la **ConnectionString** propriété de la **connexion** de l’objet avant de l’ouvrir, ou utilisez le *ConnectionString* argument pour définir ou substituer les paramètres de connexion en cours pendant le **ouvrir** appel de méthode.  
   
- Si vous transmettez des informations utilisateur et mot de passe à la fois dans le *ConnectionString* argument et le paramètre facultatif *UserID* et *mot de passe* arguments, le *UserID * et *mot de passe* arguments remplaceront les valeurs spécifiées dans *ConnectionString*.  
+ Si vous transmettez des informations utilisateur et mot de passe à la fois dans le *ConnectionString* argument et le paramètre facultatif *UserID* et *mot de passe* arguments, le *UserID*  et *mot de passe* arguments remplaceront les valeurs spécifiées dans *ConnectionString*.  
   
  Lorsque vous avez terminé les opérations au moyen d’un **connexion**, utilisez le [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthode pour libérer les ressources système d’associées. Fermeture d’un objet ne le supprime pas de la mémoire. Vous pouvez modifier ses paramètres de propriété et utiliser la **ouvrir** méthode pour l’ouvrir à nouveau ultérieurement. Pour éliminer définitivement un objet de la mémoire, affectez la variable objet *rien*.  
   

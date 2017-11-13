@@ -133,7 +133,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’une instance de la classe *Product* définie dans le script. L’exemple récupère les informations de produit à partir de la *Purchasing.PurchaseOrderDetail* et *Production.Product* tables de la base de données AdventureWorks pour les produits qui ont une date d’échéance (* DueDate*) et la quantité en stock (*StockQty*) inférieur à une valeur spécifiée. L’exemple met en évidence certaines des règles qui s’appliquent durant la spécification d’une classe dans un appel à **sqlsrv_fetch_object**:  
+L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’une instance de la classe *Product* définie dans le script. L’exemple récupère les informations de produit à partir de la *Purchasing.PurchaseOrderDetail* et *Production.Product* tables de la base de données AdventureWorks pour les produits qui ont une date d’échéance ( *DueDate*) et la quantité en stock (*StockQty*) inférieur à une valeur spécifiée. L’exemple met en évidence certaines des règles qui s’appliquent durant la spécification d’une classe dans un appel à **sqlsrv_fetch_object**:  
   
 -   La variable *$product* est une instance de la classe *Product* , car Product a été spécifié avec le paramètre *$className* et la classe *Product* existe.  
   

@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Une application peut appeler **SQLBindCol** obligent le résultat à définie les colonnes après l’appel **SQLExtendedFetch**, **SQLFetch**, ou **SQLFetchScroll**, à condition que le type de données C, taille de la colonne et les chiffres décimaux de la colonne liée restent les mêmes. L’application ne doive pas fermer le curseur pour relier les colonnes à différentes adresses.  
   
- La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR à utiliser les décalages de liaison. (**SQLBindCol** n’a pas à être appelée pour cette nouvelle liaison doit avoir lieu.) Si la bibliothèque de curseurs est utilisée avec un ODBC 3*.x* pilote, le décalage de la liaison n’est pas utilisée lorsque **SQLFetch** est appelée. Le décalage de la liaison est utilisé si **SQLFetch** est appelée lorsque la bibliothèque de curseurs est utilisée avec une API ODBC 2.* x* pilote car **SQLFetch** est ensuite mappé sur **SQLExtendedFetch**.  
+ La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR à utiliser les décalages de liaison. (**SQLBindCol** n’a pas à être appelée pour cette nouvelle liaison doit avoir lieu.) Si la bibliothèque de curseurs est utilisée avec un ODBC 3*.x* pilote, le décalage de la liaison n’est pas utilisée lorsque **SQLFetch** est appelée. Le décalage de la liaison est utilisé si **SQLFetch** est appelée lorsque la bibliothèque de curseurs est utilisée avec une API ODBC 2. *x* pilote car **SQLFetch** est ensuite mappé sur **SQLExtendedFetch**.  
   
  La bibliothèque de curseurs prend en charge l’appel **SQLBindCol** pour lier la colonne de signet.  
   

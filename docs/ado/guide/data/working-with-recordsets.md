@@ -78,7 +78,7 @@ Le **Recordset** objet possède des fonctionnalités intégrées qui permettent 
 ## <a name="filtering-the-results"></a>Le filtrage des résultats  
  Le **trouver** méthode limite votre recherche au contenu d’un champ. Le **recherche** méthode nécessite d’avoir un index et présente également d’autres limitations. Si vous devez effectuer des recherches sur plusieurs champs qui ne sont pas la base d’un index ou si votre fournisseur ne prend pas en charge les index, vous pouvez limiter les résultats à l’aide de la **filtre** propriété de la **Recordset** objet.  
   
- Utilisez le **filtre** propriété à filtrer les enregistrements dans une **Recordset** objet. La liste filtrée **Recordset** devient le curseur actuel, ce qui signifie que les enregistrements qui ne répondent pas à la **filtre** critères ne sont pas disponibles dans le **Recordset** jusqu'à ce que le **Filtre** est supprimé. Autres propriétés qui retournent des valeurs basées sur le curseur actuel sont affectées, tel que **AbsolutePosition**, **AbsolutePage**, **RecordCount**, et ** PageCount**. C’est parce que la définition de la **filtre** propriété à une valeur spécifique se déplace l’enregistrement actif vers le premier enregistrement qui satisfait à la nouvelle valeur.  
+ Utilisez le **filtre** propriété à filtrer les enregistrements dans une **Recordset** objet. La liste filtrée **Recordset** devient le curseur actuel, ce qui signifie que les enregistrements qui ne répondent pas à la **filtre** critères ne sont pas disponibles dans le **Recordset** jusqu'à ce que le **Filtre** est supprimé. Autres propriétés qui retournent des valeurs basées sur le curseur actuel sont affectées, tel que **AbsolutePosition**, **AbsolutePage**, **RecordCount**, et  **PageCount**. C’est parce que la définition de la **filtre** propriété à une valeur spécifique se déplace l’enregistrement actif vers le premier enregistrement qui satisfait à la nouvelle valeur.  
   
  Le **filtre** propriété accepte un argument de type variant. Cette valeur représente une des trois méthodes pour l’utilisation de la **filtre** propriété : une chaîne de critères, une **FilterGroupEnum** constante ou un tableau de signets. Pour plus d’informations, consultez le filtrage avec une chaîne de critères de filtrage avec une constante et filtrage avec des signets, plus loin dans cette rubrique.  
   
@@ -92,7 +92,7 @@ Le **Recordset** objet possède des fonctionnalités intégrées qui permettent 
   
 -   *FieldName* doit être un nom de champ valide à partir de la **Recordset**. Si le nom du champ contient des espaces, vous devez placer le nom entre crochets.  
   
--   *Opérateur* doit être une des opérations suivantes : ** \< **, ** > **, ** \< = **, ** >= ** , ** <> **, ** = **, ou **comme**.  
+-   *Opérateur* doit être une des opérations suivantes :  **\<** ,  **>** ,  **\< =** ,  **>=**  ,  **<>** ,  **=** , ou **comme**.  
   
 -   *Valeur* est la valeur à laquelle vous comparez les valeurs de champ (par exemple, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Utilisez des guillemets simples (') avec des chaînes et les signes dièse (`#`) avec des dates. Pour les nombres, vous pouvez utiliser le point décimal, signes dollar et la notation scientifique. Si *opérateur* est **comme**, *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et signe de pourcentage (%) caractères génériques autorisés, et ils doivent être le dernier caractère de la chaîne. *Valeur* ne peut pas être null.  
   

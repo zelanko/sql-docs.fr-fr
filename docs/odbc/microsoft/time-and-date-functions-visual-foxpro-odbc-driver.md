@@ -65,7 +65,7 @@ Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charg
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur* est un horodateur dans le *aaaa-mm-jj hh : mm :*[.* f... *] format. La syntaxe raccourcie pour les données de date et l’horodatage est la suivante :  
+ Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur* est un horodateur dans le *aaaa-mm-jj hh : mm :*[. *f...* ] format. La syntaxe raccourcie pour les données de date et l’horodatage est la suivante :  
   
 ```  
 {d 'value'}  

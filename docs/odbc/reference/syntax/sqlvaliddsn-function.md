@@ -54,7 +54,7 @@ BOOL SQLValidDSN(
  La fonction retourne la valeur TRUE si le nom de source de données est valide. Retourne FALSE si le nom de source de données n’est pas valide ou l’échec de l’appel de fonction.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLValidDSN** renvoie la valeur FALSE, associé à un * \*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. A * \*pfErrorCode* est retourné uniquement si l’appel de fonction échoue, pas si la valeur FALSE est retournée, car le nom de source de données n’est pas valide. Le tableau suivant répertorie les * \*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
+ Lorsque **SQLValidDSN** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. A  *\*pfErrorCode* est retourné uniquement si l’appel de fonction échoue, pas si la valeur FALSE est retournée, car le nom de source de données n’est pas valide. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Erreur| Description|  
 |---------------------|-----------|-----------------|  

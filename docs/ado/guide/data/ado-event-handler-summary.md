@@ -26,11 +26,11 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connexion ADO et les événements de jeu d’enregistrements
-Deux objets ADO peuvent déclencher des événements : le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Le **ConnectionEvent** famille relative aux opérations sur le **connexion** objet et le **RecordsetEvent** famille relative aux opérations sur le ** Jeu d’enregistrements** objet.
+Deux objets ADO peuvent déclencher des événements : le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Le **ConnectionEvent** famille relative aux opérations sur le **connexion** objet et le **RecordsetEvent** famille relative aux opérations sur le  **Jeu d’enregistrements** objet.
 
 -   **Événements de connexion**: événements émis quand une transaction sur une connexion commence, est validée ou est restaurée nouveau ; lorsque un [commande](../../../ado/reference/ado-api/command-object-ado.md) exécute ; lorsqu’un avertissement se produit pendant une **l’événement de connexion**opération ; ou quand un **connexion** commence ou se termine.
 
--   **Événements Recordset**: événements sont émis dans les opérations d’extraction asynchrone, ainsi que lorsque vous parcourez les lignes d’un **Recordset** d’objet, de modifier un champ dans une ligne d’un **Recordset**, modifier une ligne dans un **Recordset**, ouvrez un **Recordset** avec un curseur côté serveur, vous devez fermer un **Recordset**, ou assurez-vous que toute modification que ce soit dans le ** Jeu d’enregistrements**.
+-   **Événements Recordset**: événements sont émis dans les opérations d’extraction asynchrone, ainsi que lorsque vous parcourez les lignes d’un **Recordset** d’objet, de modifier un champ dans une ligne d’un **Recordset**, modifier une ligne dans un **Recordset**, ouvrez un **Recordset** avec un curseur côté serveur, vous devez fermer un **Recordset**, ou assurez-vous que toute modification que ce soit dans le  **Jeu d’enregistrements**.
 
  Les tableaux suivants répertorient les événements et leurs descriptions.
 

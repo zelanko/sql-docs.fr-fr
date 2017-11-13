@@ -66,7 +66,7 @@ Instructions ODBC ont les états suivants.
   
  [4] de cette ligne affiche les transitions lorsque *HandleType* a été SQL_HANDLE_DESC.  
   
- [5] appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle sans tenir compte pour le contenu précédent à qui gère et peut provoquer des problèmes pour les pilotes ODBC. Il s’agit de la programmation d’applications ODBC incorrecte pour appeler **SQLAllocHandle** à deux reprises avec la même variable d’application définie pour * \*OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le handle avant de réallouer. Remplacement ODBC gère de manière peut entraîner un comportement incohérent ou erreur de la part des pilotes ODBC.  
+ [5] appel de **SQLAllocHandle** avec *OutputHandlePtr* pointant vers un handle valide remplace ce handle sans tenir compte pour le contenu précédent à qui gère et peut provoquer des problèmes pour les pilotes ODBC. Il s’agit de la programmation d’applications ODBC incorrecte pour appeler **SQLAllocHandle** à deux reprises avec la même variable d’application définie pour  *\*OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le handle avant de réallouer. Remplacement ODBC gère de manière peut entraîner un comportement incohérent ou erreur de la part des pilotes ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   

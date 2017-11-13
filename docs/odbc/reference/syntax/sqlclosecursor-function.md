@@ -60,7 +60,7 @@ SQLRETURN SQLCloseCursor(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
 |24000|État de curseur non valide|Aucun curseur n’a été ouverte sur le *au paramètre StatementHandle*. (Il est renvoyé uniquement par un ODBC 3. *x* pilote.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les * \*MessageText* tampon décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM), une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion associé à la *au paramètre StatementHandle* et toujours en cours d’exécution lorsque cette fonction a été appelée.<br /><br /> (DM), une fonction de façon asynchrone en cours d’exécution a été appelée pour le *au paramètre StatementHandle* et toujours en cours d’exécution lorsque cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le *au paramètre StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.|  
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, éventuellement en raison d’une mémoire insuffisante.|  
@@ -72,7 +72,7 @@ SQLRETURN SQLCloseCursor(
  **SQLCloseCursor** retourne SQLSTATE 24000 (état de curseur non valide) si aucun curseur n’est ouverte. Appel de **SQLCloseCursor** équivaut à appeler la méthode **SQLFreeStmt** avec l’option SQL_CLOSE, avec l’exception qui **SQLFreeStmt** avec SQL_CLOSE n’a aucun effet sur l’application si aucun curseur n’est ouverte sur l’instruction, tandis que **SQLCloseCursor** retourne SQLSTATE 24000 (état de curseur non valide).  
   
 > [!NOTE]  
->  If un ODBC 3. *x* application utilisant une API ODBC 2.* x* pilote appelle **SQLCloseCursor** lorsque aucun curseur n’est ouvert, SQLSTATE 24000 (état de curseur non valide) n’est retourné, car le Gestionnaire de pilotes mappe **SQLCloseCursor** à **SQLFreeStmt** avec SQL_CLOSE.  
+>  If un ODBC 3. *x* application utilisant une API ODBC 2. *x* pilote appelle **SQLCloseCursor** lorsque aucun curseur n’est ouvert, SQLSTATE 24000 (état de curseur non valide) n’est retourné, car le Gestionnaire de pilotes mappe **SQLCloseCursor** à **SQLFreeStmt** avec SQL_CLOSE.  
   
  Pour plus d’informations, consultez [fermeture du curseur](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="working-with-multidimensional-data"></a>Utilisation des données multidimensionnelles
 A *ensemble de cellules* est le résultat d’une requête sur des données multidimensionnelles. Il se compose d’une collection d’axes, généralement pas plus de quatre axes et généralement deux ou trois. Un *axe* est une collection de membres à partir d’une ou plusieurs dimensions, qui est utilisée pour rechercher ou filtrer des valeurs spécifiques dans un cube.  
   
- A *position* est un point sur un axe. Pour un axe consistant en une seule dimension, ces positions sont un sous-ensemble des membres de dimension. Si un axe comprend plusieurs dimensions, chaque position est une entité composée, ce qui a * n * parties where * n * est le nombre de dimensions orientées le long de cet axe. Chaque partie de la position est un membre d’une dimension qui le composent.  
+ A *position* est un point sur un axe. Pour un axe consistant en une seule dimension, ces positions sont un sous-ensemble des membres de dimension. Si un axe comprend plusieurs dimensions, chaque position est une entité composée, ce qui a  *n*  parties where  *n*  est le nombre de dimensions orientées le long de cet axe. Chaque partie de la position est un membre d’une dimension qui le composent.  
   
  Par exemple, si les dimensions géographie et produit à partir d’un cube contenant des données de ventes sont orientées le long de l’axe des x d’un ensemble de cellules, une position le long de cet axe peut contenir les membres « USA » et « Ordinateurs ». Dans cet exemple, la détermination de la position le long de l’axe des abscisses requiert que les membres de chaque dimension sont orientés le long de l’axe.  
   

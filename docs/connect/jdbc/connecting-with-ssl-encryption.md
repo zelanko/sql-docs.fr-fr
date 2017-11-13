@@ -25,7 +25,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="connecting-with-ssl-encryption"></a>Connexion avec le chiffrement SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Les exemples de cette rubrique décrivent comment utiliser les propriétés de chaîne de connexion qui permettent aux applications d'utiliser le chiffrement SSL (Secure Sockets Layer) dans une application Java. Pour plus d’informations sur ces connexions nouvelle chaîne propriétés tel que **chiffrer**, **trustServerCertificate**, **trustStore**, ** trustStorePassword**, et **hostNameInCertificate**, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
+  Les exemples de cette rubrique décrivent comment utiliser les propriétés de chaîne de connexion qui permettent aux applications d'utiliser le chiffrement SSL (Secure Sockets Layer) dans une application Java. Pour plus d’informations sur ces connexions nouvelle chaîne propriétés tel que **chiffrer**, **trustServerCertificate**, **trustStore**,  **trustStorePassword**, et **hostNameInCertificate**, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
  Lorsque le **chiffrer** est définie sur **true** et **trustServerCertificate** est définie sur **true**, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ne doit pas valider la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] certificat SSL. Cela est généralement requis pour autoriser les connexions dans les environnements de test, notamment l’emplacement du [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance possède seulement un certificat auto-signé.  
   

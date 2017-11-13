@@ -43,11 +43,11 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  *nom de la procédure* :: = *identificateur de la procédure*  
   
- &#124; *-nom du propriétaire*.* identificateur de la procédure*  
+ &#124; *-nom du propriétaire*. *identificateur de la procédure*  
   
  &#124; *nom-catalogue le séparateur de catalogue* *identificateur de la procédure*  
   
- &#124; *nom-catalogue le séparateur de catalogue* [*-nom du propriétaire*].* identificateur de la procédure*  
+ &#124; *nom-catalogue le séparateur de catalogue* [*-nom du propriétaire*]. *identificateur de la procédure*  
   
  (La syntaxe de la troisième est valide uniquement si la source de données ne prend pas en charge les propriétaires).  
   

@@ -50,7 +50,7 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
     > [!NOTE]  
     > Les variables initialisées ou mises à jour avec la valeur **null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
   
-3.  Utilisez vos variables PHP de l’étape 2 pour créer ou mettre à jour un tableau de valeurs de paramètre correspondant, dans l’ordre, aux espaces réservés de paramètre dans la chaîne Transact-SQL. Spécifiez la direction de chaque paramètre dans le tableau. La direction de chaque paramètre est déterminée dans un des deux façons : par défaut (pour les paramètres d’entrée) ou à l’aide de **SQLSRV_PARAM_\* ** constantes (pour les paramètres de sortie et bidirectionnels). Par exemple, le code suivant spécifie le paramètre *$employeeId* comme paramètre d’entrée et le paramètre *$usedVacationHours* comme paramètre bidirectionnel :  
+3.  Utilisez vos variables PHP de l’étape 2 pour créer ou mettre à jour un tableau de valeurs de paramètre correspondant, dans l’ordre, aux espaces réservés de paramètre dans la chaîne Transact-SQL. Spécifiez la direction de chaque paramètre dans le tableau. La direction de chaque paramètre est déterminée dans un des deux façons : par défaut (pour les paramètres d’entrée) ou à l’aide de **SQLSRV_PARAM_\***  constantes (pour les paramètres de sortie et bidirectionnels). Par exemple, le code suivant spécifie le paramètre *$employeeId* comme paramètre d’entrée et le paramètre *$usedVacationHours* comme paramètre bidirectionnel :  
   
     ```  
     $params = array(  

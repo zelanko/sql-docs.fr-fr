@@ -72,7 +72,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  Les classes d’événements héritent de **IUnknown**, vous devez également implémenter la **QueryInterface**, **AddRef**, et **version** méthodes. Également implémenter des destructeurs et des constructeurs de classe. Choisissez les outils Visual C++ avec laquelle vous maîtrisez le mieux simplifier cette partie de la tâche.  
   
- Assurez-vous qu’il est connu que vos gestionnaires d’événements sont disponibles en émettant **QueryInterface** sur la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) des objets pour le ** IConnectionPointContainer** et **IConnectionPoint** interfaces. Ensuite, émettez **IConnectionPoint::Advise** pour chaque classe.  
+ Assurez-vous qu’il est connu que vos gestionnaires d’événements sont disponibles en émettant **QueryInterface** sur la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) des objets pour le  **IConnectionPointContainer** et **IConnectionPoint** interfaces. Ensuite, émettez **IConnectionPoint::Advise** pour chaque classe.  
   
  Par exemple, supposons que vous utilisez une fonction booléenne qui retourne **True** si elle informe un **Recordset** de l’objet que vous avez des gestionnaires d’événements disponibles.  
   

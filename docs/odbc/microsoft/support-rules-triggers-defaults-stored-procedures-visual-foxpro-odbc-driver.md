@@ -48,7 +48,7 @@ Impossible de créer des règles Visual FoxPro, des déclencheurs, des valeurs p
  Si votre application interagit avec les données dont les règles, les déclencheurs, les valeurs par défaut, ou d’appellent de procédures stockées toutes les autres commandes de Visual FoxPro ou fonctions, le pilote génère une erreur. Consultez [non pris en charge les commandes FoxPro Visual et fonctions](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) pour obtenir la liste des commandes et des fonctions non prises en charge par le pilote.  
   
 > [!TIP]  
->  Si vous souhaitez insérer du code conditionnelle dans les règles, des déclencheurs ou des procédures stockées qui détermine les commandes à exécuter lorsqu’elle est appelée par le pilote, vous pouvez utiliser la **(de) VERSION** (fonction). Le **(de) VERSION** fonction retourne « pilote ODBC Visual FoxPro * \<version >*» lorsqu’elle est appelée par le pilote.  
+>  Si vous souhaitez insérer du code conditionnelle dans les règles, des déclencheurs ou des procédures stockées qui détermine les commandes à exécuter lorsqu’elle est appelée par le pilote, vous pouvez utiliser la **(de) VERSION** (fonction). Le **(de) VERSION** fonction retourne « pilote ODBC Visual FoxPro  *\<version >*» lorsqu’elle est appelée par le pilote.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Les commandes de Visual FoxPro et de fonctions pris en charge dans les règles, les déclencheurs, les valeurs par défaut et les procédures stockées  
   

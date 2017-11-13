@@ -40,7 +40,7 @@ Indique un signet qui identifie de façon unique l’enregistrement actif dans u
   
  L’utilisateur ne peut pas être en mesure d’afficher la valeur du signet. En outre, les utilisateurs ne doivent pas s’attendre à signets directement comparables ??? deux signets qui font référence au même enregistrement peuvent avoir des valeurs différentes.  
   
- Si vous utilisez la [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer une copie d’un **Recordset** objet, le **signet** paramètres de propriété pour la version d’origine et le doublon **Recordset ** objets sont identiques et vous pouvez les utiliser indifféremment. Toutefois, vous ne pouvez pas utiliser des signets à partir de différents **Recordset** des objets de manière interchangeable, même si elles ont été créées à partir de la même source ou commande.  
+ Si vous utilisez la [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer une copie d’un **Recordset** objet, le **signet** paramètres de propriété pour la version d’origine et le doublon **Recordset**  objets sont identiques et vous pouvez les utiliser indifféremment. Toutefois, vous ne pouvez pas utiliser des signets à partir de différents **Recordset** des objets de manière interchangeable, même si elles ont été créées à partir de la même source ou commande.  
   
 > [!NOTE]
 >  **Utilisation du Service de données à distance** lorsqu’il est utilisé sur un côté client **Recordset** objet, le **signet** propriété est toujours disponible.  

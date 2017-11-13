@@ -37,7 +37,7 @@ Pour faciliter le débogage, les énumérations ADO comportent une valeur pour c
 |[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)|Spécifie un signet qui indique où doit commencer l’opération.|  
 |[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|Spécifie comment un argument de commande doit être interprété.|  
 |[CompareEnum](../../../ado/reference/ado-api/compareenum.md)|Spécifie la position relative de deux enregistrements représentée par leur signet.|  
-|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Spécifie les autorisations disponibles pour la modification des données dans un **connexion**, ouvrez un **enregistrement**, ou spécifier des valeurs pour le **Mode** propriété de la ** Enregistrement** et **flux** objets.|  
+|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|Spécifie les autorisations disponibles pour la modification des données dans un **connexion**, ouvrez un **enregistrement**, ou spécifier des valeurs pour le **Mode** propriété de la  **Enregistrement** et **flux** objets.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|Spécifie si le **ouvrir** méthode d’un **connexion** objet doit être exécutée après (de façon synchrone) ou avant (de façon asynchrone) la connexion est établie.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|Spécifie si une boîte de dialogue doit être affichée pour demander les paramètres manquants lors de l’ouverture d’une connexion à une source de données ODBC.|  
 |[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|Spécifie le comportement de la **CopyRecord** (méthode).|  

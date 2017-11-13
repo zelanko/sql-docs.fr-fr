@@ -42,7 +42,7 @@ ADO utilise différentes méthodes pour avertir une application d’erreurs qui 
   
 -   Des problèmes qui se produisent lors du traitement par lots mises à jour ou autres opérations en bloc implique un **Recordset** peut être indiquée par le **état** propriété de la **Recordset**. Par exemple, les violations de contraintes de schéma ou des autorisations insuffisantes peuvent être spécifiées par **RecordStatusEnum** valeurs.  
   
--   Problèmes impliquant un particulier **champ** dans l’enregistrement actif sont également signalés par le **état** propriété de chaque **champ** dans le **champs ** collection de la **enregistrement** ou **Recordset**. Par exemple, les types de données incompatible ou les mises à jour qui n’a pas pu être effectuées. peuvent être spécifiés par **FieldStatusEnum** valeurs.  
+-   Problèmes impliquant un particulier **champ** dans l’enregistrement actif sont également signalés par le **état** propriété de chaque **champ** dans le **champs**  collection de la **enregistrement** ou **Recordset**. Par exemple, les types de données incompatible ou les mises à jour qui n’a pas pu être effectuées. peuvent être spécifiés par **FieldStatusEnum** valeurs.  
   
  Cette section contient les rubriques suivantes.  
   

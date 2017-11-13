@@ -33,11 +33,11 @@ Applications basées sur SQL apporter des modifications aux tables en exécutant
   
  La syntaxe de ces instructions est :  
   
- **Mise à jour***-nom de la table  *  
+ **Mise à jour***-nom de la table*   
   
- **Définissez** *identificateur de la colonne* ** = ** {*expression* &#124; **NULL**}  
+ **Définissez** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}  
   
- [**,** *identificateur de la colonne* ** = ** {*expression* &#124; **NULL**}]...  
+ [**,** *identificateur de la colonne*  **=**  {*expression* &#124; **NULL**}]...  
   
  [**Où** *condition de recherche*]  
   

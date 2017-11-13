@@ -35,7 +35,7 @@ Indique le nom d’un objet.
  Définit ou retourne un **chaîne** valeur qui indique le nom d’un objet.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **nom** propriété à attribuer un nom à ou récupérer le nom d’un **commande**, **propriété**, **champ**, ou **paramètre ** objet.  
+ Utilisez le **nom** propriété à attribuer un nom à ou récupérer le nom d’un **commande**, **propriété**, **champ**, ou **paramètre**  objet.  
   
  La valeur est en lecture/écriture sur un **commande** objet et en lecture seule sur un **propriété** objet.  
   

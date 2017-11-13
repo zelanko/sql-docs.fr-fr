@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs spécifiques au fournisseur
 Lorsqu’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en conjonction avec open [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
   
- Si le **enregistrement** est ouvert à partir d’un **Recordset**, le **enregistrement** objet [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection contiendra tous les champs à partir de la ** Jeu d’enregistrements**, ainsi que tous les champs ajoutés par le fournisseur sous-jacent.  
+ Si le **enregistrement** est ouvert à partir d’un **Recordset**, le **enregistrement** objet [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection contiendra tous les champs à partir de la  **Jeu d’enregistrements**, ainsi que tous les champs ajoutés par le fournisseur sous-jacent.  
   
  Le fournisseur peut insérer d’autres champs utilisés comme caractéristiques supplémentaires de la **enregistrement**. Par conséquent, un **enregistrement** peut avoir des champs uniques pas dans le **Recordset** en entier ou un **enregistrement** dérivé d’une autre ligne de la **Recordset**.  
   

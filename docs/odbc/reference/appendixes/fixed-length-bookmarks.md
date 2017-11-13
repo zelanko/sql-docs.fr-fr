@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="fixed-length-bookmarks"></a>Signets de longueur fixe
-Si un ODBC 3*.x* pilote doit fonctionner avec une API ODBC 2.* x* application qu’utilise signets de longueur fixe, le pilote doivent prendre en charge les éléments suivants :  
+Si un ODBC 3*.x* pilote doit fonctionner avec une API ODBC 2. *x* application qu’utilise signets de longueur fixe, le pilote doivent prendre en charge les éléments suivants :  
   
 -   SQL_UB_ON en tant que valeur pour l’option d’instruction SQL_USE_BOOKMARKS. (SQL_UB_ON est déconseillé dans ODBC 3*.x*.)  
   

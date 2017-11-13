@@ -36,7 +36,7 @@ Types de données date et datetime et que les champs à droite de types de donn�
   
 -   La valeur du champ minute doit être comprise entre 0 et 59, inclus.  
   
--   Pour la fin du champ des secondes de types de données interval, la valeur du champ secondes doit être comprise entre 0 et 59,9 (*n*), inclusivement, où * n * est le nombre de chiffres de précision en fractions de seconde.  
+-   Pour la fin du champ des secondes de types de données interval, la valeur du champ secondes doit être comprise entre 0 et 59,9 (*n*), inclusivement, où  *n*  est le nombre de chiffres de précision en fractions de seconde.  
   
--   Pour la fin du champ des secondes de types de données datetime, la valeur du champ secondes doit être comprise entre 0 et 61.9 (*n*), inclusivement, où * n * Spécifie le nombre de chiffres « 9 » et la valeur de * n * précision en fractions de seconde. (La plage des secondes permet à deux secondes intercalaires maintenir la synchronisation de temps de sidereal.)
+-   Pour la fin du champ des secondes de types de données datetime, la valeur du champ secondes doit être comprise entre 0 et 61.9 (*n*), inclusivement, où  *n*  Spécifie le nombre de chiffres « 9 » et la valeur de  *n*  précision en fractions de seconde. (La plage des secondes permet à deux secondes intercalaires maintenir la synchronisation de temps de sidereal.)
 

@@ -85,7 +85,7 @@ Les nouvelles fonctionnalités suivantes a été introduite dans ODBC 3. *x*. Un
   
 -   Paramètres nommés.  
   
--   Une des ODBC 3. *x*– spécifique **SQLGetInfo** options. (Le cas une ODBC 3. *x* application utilisant une API ODBC 2.* x* pilote appelle les types d’informations SQL_XXX_CURSOR_ATTRIBUTES1, qui ont remplacé plusieurs ODBC 2.* x* types d’informations, certaines informations peuvent être fiable, mais certaines peuvent être non fiable. Pour plus d’informations, consultez [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Une des ODBC 3. *x*– spécifique **SQLGetInfo** options. (Le cas une ODBC 3. *x* application utilisant une API ODBC 2. *x* pilote appelle les types d’informations SQL_XXX_CURSOR_ATTRIBUTES1, qui ont remplacé plusieurs ODBC 2. *x* types d’informations, certaines informations peuvent être fiable, mais certaines peuvent être non fiable. Pour plus d’informations, consultez [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Lier les décalages.  
   

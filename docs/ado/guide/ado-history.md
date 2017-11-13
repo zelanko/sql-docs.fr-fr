@@ -38,13 +38,13 @@ Cette rubrique répertorie les nouvelles fonctionnalités introduites par chaque
  *Accès de disque dur n’est pas autorisé en dehors d’une zone de confiance.*
 Dans le script impliquant des sites non approuvés entre domaines, les opérations suivantes sont désactivées : **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, et **Recordset.Open**, utilisé conjointement avec la **adCmdFile** indicateur ou avec le fournisseur Microsoft OLE DB persistance (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *et* **Stream.LoadFromFile***ne fonctionne pas sur les fichiers physiques.        *
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *et* **Stream.LoadFromFile***ne fonctionne pas sur les fichiers physiques.* 
 Ces méthodes maintenant vérifier que les descripteurs de fichiers pointent vers les fichiers physiques.
 
- **Recordset.ActiveCommand***renvoie une erreur lorsqu’elle est appelée à partir d’une page HTML/ASP.  *
+ **Recordset.ActiveCommand***renvoie une erreur lorsqu’elle est appelée à partir d’une page HTML/ASP.* 
 Cela empêche le **commande** objet à partir de l’utilisation abusive.
 
- *Le nombre de***jeux d’enregistrements***retourné par une liste imbriquée***forme***command dispose d’une limite supérieure.        *
+ *Le nombre de***jeux d’enregistrements***retourné par une liste imbriquée***forme***command dispose d’une limite supérieure.* 
 Une commande imbriquée shape retourne maintenant un maximum de 512 **jeux d’enregistrements**. Cela signifie qu’un **forme** n’est plus possible d’imbriquer des commandes à toute profondeur. Au lieu de cela, la profondeur maximale de niveau est 512, si chaque commande se traduit par un seul (enfant) **Recordset**. If, n’importe quel niveau, un **forme** commande retourne plusieurs **jeux d’enregistrements**, le niveau maximal de profondeur sera inférieure à 512.
 
 ## <a name="ado-27"></a>ADO 2.7

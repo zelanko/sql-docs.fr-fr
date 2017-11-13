@@ -41,7 +41,7 @@ Pour plus d’informations sur le regroupement de connexions, consultez [Regroup
   
 ## <a name="enablingdisabling-connection-pooling"></a>Le regroupement de l’activation/désactivation de la connexion
 ### <a name="windows"></a>Windows
-Vous pouvez forcer le pilote pour créer une nouvelle connexion (au lieu de rechercher une connexion équivalente dans le pool de connexions) en définissant la valeur de la *ConnectionPooling* attribut dans la chaîne de connexion à **false ** (ou 0).  
+Vous pouvez forcer le pilote pour créer une nouvelle connexion (au lieu de rechercher une connexion équivalente dans le pool de connexions) en définissant la valeur de la *ConnectionPooling* attribut dans la chaîne de connexion à **false**  (ou 0).  
   
 Si le *ConnectionPooling* attribut est omis à partir de la chaîne de connexion ou si elle est définie sur **true** (ou 1), le pilote crée uniquement une nouvelle connexion si aucune connexion équivalente n’existe pas dans le pool de connexions.  
   

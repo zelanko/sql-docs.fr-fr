@@ -36,7 +36,7 @@ Indique la taille maximale, en octets ou de caractères, d’un [paramètre](../
 ## <a name="remarks"></a>Notes  
  Utilisez le **taille** propriété pour déterminer la taille maximale des valeurs devant être écrites ou lues à partir la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété d’un **paramètre** objet.  
   
- Si vous spécifiez un type de données de longueur variable pour un **paramètre** objet (par exemple, les **chaîne** type, tel que **adVarChar**), vous devez définir l’objet ** Taille** propriété avant de l’ajouter à la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection ; sinon, une erreur se produit.  
+ Si vous spécifiez un type de données de longueur variable pour un **paramètre** objet (par exemple, les **chaîne** type, tel que **adVarChar**), vous devez définir l’objet  **Taille** propriété avant de l’ajouter à la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection ; sinon, une erreur se produit.  
   
  Si vous avez déjà ajouté le **paramètre** de l’objet à la **paramètres** collection d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et que vous modifiez son type pour un type de données de longueur variable, vous devez définir le **paramètre** l’objet **taille** propriété avant d’exécuter le **commande** l’objet ; sinon, une erreur se produit.  
   

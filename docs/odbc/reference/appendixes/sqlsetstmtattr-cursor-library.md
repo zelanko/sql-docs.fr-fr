@@ -50,7 +50,7 @@ ms.lasthandoff: 09/09/2017
   
  Une application peut appeler **SQLSetStmtAttr** avec un **attribut** de SQL_ATTR_ROW_ARRAY_SIZE pour modifier la taille de l’ensemble de lignes tandis que le curseur est ouvert. La nouvelle taille de l’ensemble de lignes prendra effet lors du prochain **SQLFetchScroll** ou **SQLFetch** est appelée.  
   
- La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_PARAM_BIND_OFFSET_PTR ou SQL_ATTR_ROW_BIND_OFFSET_PTR pour activer les décalages de liaison. Le décalage de la liaison n’est pas servir pour les appels à **SQLFetch** lorsque la bibliothèque de curseurs est utilisée avec une API ODBC 2.* x* pilote.  
+ La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_PARAM_BIND_OFFSET_PTR ou SQL_ATTR_ROW_BIND_OFFSET_PTR pour activer les décalages de liaison. Le décalage de la liaison n’est pas servir pour les appels à **SQLFetch** lorsque la bibliothèque de curseurs est utilisée avec une API ODBC 2. *x* pilote.  
   
  La bibliothèque de curseurs prend en charge la définition de l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS sur SQL_UB_VARIABLE.
 

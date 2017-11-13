@@ -70,7 +70,7 @@ Le Gestionnaire de pilotes ODBC 3.5 (ou version ultérieure) prend en charge les
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  Fonctions déconseillées ont prise en charge du mappage Unicode en ANSI, car la version ODBC 3*.x* du Gestionnaire de pilotes prend en charge la recompilation ODBC 2.* x* applications avec UNICODE **#define**.  
+>  Fonctions déconseillées ont prise en charge du mappage Unicode en ANSI, car la version ODBC 3*.x* du Gestionnaire de pilotes prend en charge la recompilation ODBC 2. *x* applications avec UNICODE **#define**.  
   
  Cette section contient les rubriques suivantes.  
   

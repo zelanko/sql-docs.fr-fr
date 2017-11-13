@@ -56,7 +56,7 @@ Cette rubrique répertorie les options qui sont autorisées dans le tableau asso
 
 1. Le `ConnectionPooling` attribut ne peut pas être utilisé pour activer ou désactiver le regroupement de connexions dans Linux et Mac. Consultez [regroupement de connexions (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md).
 
-2. Toutes les requêtes exécutées sur la connexion établie sont apportées à la base de données spécifiée par la *base de données* attribut. Toutefois, si l’utilisateur dispose des autorisations appropriées, les données dans d’autres bases de données peuvent être accessibles à l’aide d’un nom qualifié complet. Par exemple, si le *master* base de données est définie avec la *base de données* l’attribut de connexion, il est toujours possible d’exécuter une requête Transact-SQL qui accède à la * AdventureWorks.HumanResources.Employee* table en utilisant le nom qualifié complet.  
+2. Toutes les requêtes exécutées sur la connexion établie sont apportées à la base de données spécifiée par la *base de données* attribut. Toutefois, si l’utilisateur dispose des autorisations appropriées, les données dans d’autres bases de données peuvent être accessibles à l’aide d’un nom qualifié complet. Par exemple, si le *master* base de données est définie avec la *base de données* l’attribut de connexion, il est toujours possible d’exécuter une requête Transact-SQL qui accède à la  *AdventureWorks.HumanResources.Employee* table en utilisant le nom qualifié complet.  
 
 3. L’activation de *Encryption* peut avoir un impact sur les performances de certaines applications, en raison de la charge de traitement nécessaire pour chiffrer les données.  
 

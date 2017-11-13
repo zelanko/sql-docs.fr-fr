@@ -88,7 +88,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Un champ inexistant peut être créé et ajouté à la **champs** collection en affectant une valeur à l’objet de champ comme s’il existait déjà dans la collection. Cette affectation déclenche la création automatique et l’ajout de la **champ** objet, puis l’affectation seront terminera.  
   
- Après l’ajout un **champ** à la **champs** collection d’un **enregistrement** de l’objet, appelez le **mise à jour** méthode de la **champs ** collection pour enregistrer les modifications.  
+ Après l’ajout un **champ** à la **champs** collection d’un **enregistrement** de l’objet, appelez le **mise à jour** méthode de la **champs**  collection pour enregistrer les modifications.  
   
 ## <a name="applies-to"></a>S'applique à  
   

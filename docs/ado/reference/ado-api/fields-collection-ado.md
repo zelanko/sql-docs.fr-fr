@@ -44,7 +44,7 @@ Contient tous les [champ](../../../ado/reference/ado-api/field-object.md) les ob
   
  Certains fournisseurs (par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) peut remplir le **champs** collection avec un sous-ensemble des champs disponibles pour le **enregistrement** ou **Recordset**. Autres champs ne seront pas ajoutés à la collection jusqu'à ce qu’ils sont tout d’abord référencées par son nom ou indexés par votre code.  
   
- Si vous tentez de référencer un champ inexistant par son nom, un nouveau **champ** objet sera ajouté à la **champs** collection avec une [état](../../../ado/reference/ado-api/status-property-ado-field.md) de ** adFieldPendingInsert**. Lorsque vous appelez [mise à jour](../../../ado/reference/ado-api/update-method.md), ADO crée un nouveau champ dans votre source de données si autorisé par votre fournisseur.  
+ Si vous tentez de référencer un champ inexistant par son nom, un nouveau **champ** objet sera ajouté à la **champs** collection avec une [état](../../../ado/reference/ado-api/status-property-ado-field.md) de  **adFieldPendingInsert**. Lorsque vous appelez [mise à jour](../../../ado/reference/ado-api/update-method.md), ADO crée un nouveau champ dans votre source de données si autorisé par votre fournisseur.  
   
  Cette section contient les rubriques suivantes.  
   

@@ -41,7 +41,7 @@ Indique la source de données ou l’objet représenté par le [enregistrement](
 ## <a name="remarks"></a>Notes  
  Le **Source** propriété retourne le *Source* argument de la **enregistrement** objet [ouvrir](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Il peut contenir une chaîne d’URL absolue ou relative. Une URL absolue peut être utilisée sans le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété pour ouvrir directement le **enregistrement** objet. Implicite **connexion** objet est créé dans ce cas.  
   
- Le **Source** propriété peut également contenir une référence à un déjà ouvert **Recordset**, qui ouvre un **enregistrement** objet représentant la ligne actuelle dans le ** Jeu d’enregistrements**.  
+ Le **Source** propriété peut également contenir une référence à un déjà ouvert **Recordset**, qui ouvre un **enregistrement** objet représentant la ligne actuelle dans le  **Jeu d’enregistrements**.  
   
  Le **Source** propriété peut également contenir une référence à un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui retourne une ligne unique de données à partir du fournisseur.  
   

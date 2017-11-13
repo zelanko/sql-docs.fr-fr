@@ -36,7 +36,7 @@ Indique à lequel [connexion](../../../ado/reference/ado-api/connection-object-a
  Définit ou retourne un **chaîne** valeur qui contient une définition d’une connexion si la connexion est fermée, ou un **Variant** contenant actuel **connexion** de l’objet si le connexion est ouverte. Valeur par défaut est une référence d’objet null. Consultez le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **ActiveConnection** propriété pour déterminer le **connexion** objet sur lequel spécifié **commande** objet s’exécute ou spécifié ** Jeu d’enregistrements** s’ouvre.  
+ Utilisez le **ActiveConnection** propriété pour déterminer le **connexion** objet sur lequel spécifié **commande** objet s’exécute ou spécifié  **Jeu d’enregistrements** s’ouvre.  
   
 ## <a name="command"></a>Command  
  Pour **commande** objets, la **ActiveConnection** propriété est en lecture/écriture.  
@@ -48,7 +48,7 @@ Indique à lequel [connexion](../../../ado/reference/ado-api/connection-object-a
 ### <a name="note"></a>Remarque  
  **Microsoft Visual Basic** paramètre la **ActiveConnection** propriété *rien* dissocie le **commande** objet à partir du **Connexion** et le fournisseur libérer les ressources associées dans la source de données. Vous pouvez ensuite associer la **commande** objet avec la même ou à un autre **connexion** objet. Certains fournisseurs permettent de modifier le paramètre de propriété à partir d’un **connexion** vers un autre, sans devoir tout d’abord définir la propriété sur *rien*.  
   
- Si le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection de la **commande** objet contient les paramètres fournis par le fournisseur, la collection est effacée si vous définissez la **ActiveConnection** propriété *rien* ou à une autre **connexion** objet. Si vous créez manuellement [paramètre](../../../ado/reference/ado-api/parameter-object.md) des objets et les utiliser pour remplir la **paramètres** collection de la **commande** objet, en définissant le **ActiveConnection ** propriété *rien* ou à une autre **connexion** laisse de l’objet le **paramètres** collection intacte.  
+ Si le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection de la **commande** objet contient les paramètres fournis par le fournisseur, la collection est effacée si vous définissez la **ActiveConnection** propriété *rien* ou à une autre **connexion** objet. Si vous créez manuellement [paramètre](../../../ado/reference/ado-api/parameter-object.md) des objets et les utiliser pour remplir la **paramètres** collection de la **commande** objet, en définissant le **ActiveConnection**  propriété *rien* ou à une autre **connexion** laisse de l’objet le **paramètres** collection intacte.  
   
  Fermeture de la **connexion** objet avec lequel un **commande** objet est associé à des jeux le **ActiveConnection** propriété *rien*. Définition de cette propriété à un fermé **connexion** objet génère une erreur.  
   
@@ -62,12 +62,12 @@ Indique à lequel [connexion](../../../ado/reference/ado-api/connection-object-a
  Si vous définissez la **Source** propriété de la **Recordset** objet **commande** variable objet, le **ActiveConnection** propriété de le **Recordset** hérite du paramètre de la **commande** l’objet **ActiveConnection** propriété.  
   
 > [!NOTE]
->  **Utilisation du Service de données à distance** lorsqu’il est utilisé sur un côté client **Recordset** de l’objet, cette propriété peut être définie qu’une chaîne de connexion ou (dans Microsoft Visual Basic ou Visual Basic Scripting Edition) pour *Nothing *.  
+>  **Utilisation du Service de données à distance** lorsqu’il est utilisé sur un côté client **Recordset** de l’objet, cette propriété peut être définie qu’une chaîne de connexion ou (dans Microsoft Visual Basic ou Visual Basic Scripting Edition) pour *Nothing* .  
   
 ## <a name="record"></a>Record  
  Cette propriété est en lecture/écriture lorsque le **enregistrement** objet est fermé et peut contenir une chaîne de connexion ou une référence à une ouverture **connexion** objet. Cette propriété est en lecture seule quand le **enregistrement** objet est ouvert et contient une référence à une ouverture **connexion** objet.  
   
- A **connexion** objet est créé implicitement lorsque le **enregistrement** objet est ouverte à partir d’une URL. Ouvrez le **enregistrement** avec un existant, ouvrez **connexion** objet en affectant le **connexion** de l’objet à cette propriété, ou à l’aide de la **connexion** objet en tant que paramètre dans le [ouvrir](../../../ado/reference/ado-api/open-method-ado-record.md) appel de méthode. Si le **enregistrement** est ouvert à partir d’un fichier **enregistrement** ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), puis il est automatiquement associé **enregistrement** ou ** Jeu d’enregistrements** l’objet **connexion** objet.  
+ A **connexion** objet est créé implicitement lorsque le **enregistrement** objet est ouverte à partir d’une URL. Ouvrez le **enregistrement** avec un existant, ouvrez **connexion** objet en affectant le **connexion** de l’objet à cette propriété, ou à l’aide de la **connexion** objet en tant que paramètre dans le [ouvrir](../../../ado/reference/ado-api/open-method-ado-record.md) appel de méthode. Si le **enregistrement** est ouvert à partir d’un fichier **enregistrement** ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), puis il est automatiquement associé **enregistrement** ou  **Jeu d’enregistrements** l’objet **connexion** objet.  
   
 > [!NOTE]
 >  URL à l’aide du modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  

@@ -38,7 +38,7 @@ ms.lasthandoff: 09/09/2017
  Le **BOF** et **EOF** propriétés retour **booléenne** valeurs.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **BOF** et **EOF** propriétés afin de déterminer si un **Recordset** objet contient des enregistrements ou si vous avez dépassé les limites d’un **Recordset ** lorsque vous déplacez d’un enregistrement à l’objet.  
+ Utilisez le **BOF** et **EOF** propriétés afin de déterminer si un **Recordset** objet contient des enregistrements ou si vous avez dépassé les limites d’un **Recordset**  lorsque vous déplacez d’un enregistrement à l’objet.  
   
  Le **BOF** propriété renvoie **True** (-1) si la position actuelle est avant le premier enregistrement et **False** (0) si la position actuelle est l’ou après le premier enregistrement.  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
  Si le **BOF** ou **EOF** propriété **True**, il n’existe aucun enregistrement actif.  
   
- Si vous ouvrez un **Recordset** objet ne contenant aucun enregistrement, la **BOF** et **EOF** propriétés sont définies sur **True** (voir la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété pour plus d’informations sur cet état d’un **Recordset**). Lorsque vous ouvrez un **Recordset** objet qui contient au moins un enregistrement, le premier enregistrement est l’enregistrement actif et la **BOF** et **EOF** propriétés sont **False **.  
+ Si vous ouvrez un **Recordset** objet ne contenant aucun enregistrement, la **BOF** et **EOF** propriétés sont définies sur **True** (voir la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété pour plus d’informations sur cet état d’un **Recordset**). Lorsque vous ouvrez un **Recordset** objet qui contient au moins un enregistrement, le premier enregistrement est l’enregistrement actif et la **BOF** et **EOF** propriétés sont **False** .  
   
  Si vous supprimez le dernier enregistrement restant dans le **Recordset** objet, le **BOF** et **EOF** propriétés peuvent rester **False** jusqu'à ce que vous tentative d’enregistrement.  
   

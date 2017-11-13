@@ -61,7 +61,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  Si la commande ne vise pas à retourner des résultats (par exemple, une requête SQL UPDATE) le fournisseur retourne **rien** tant que l’option **adExecuteStream** est spécifiée, sinon exécutez retourne un fermé **Recordset**. Certains langages d’application vous permettent d’ignorer cette valeur de retour si aucun **Recordset** est souhaitée.  
   
- **Exécutez** génère une erreur si l’utilisateur spécifie une valeur pour **CommandStream** lors de la **CommandType** est **valeur adCmdStoredProc**, ** adCmdTable**, ou **adCmdTableDirect**.  
+ **Exécutez** génère une erreur si l’utilisateur spécifie une valeur pour **CommandStream** lors de la **CommandType** est **valeur adCmdStoredProc**,  **adCmdTable**, ou **adCmdTableDirect**.  
   
  Si la requête possède des paramètres, les valeurs en cours pour le **commande** les paramètres de l’objet sont utilisés sauf si vous remplacez les valeurs de paramètre passées avec le **Execute** appeler. Vous pouvez remplacer un sous-ensemble des paramètres en omettant les nouvelles valeurs pour certains des paramètres lors de l’appel du **Execute** (méthode). L’ordre dans lequel vous spécifiez les paramètres est le même ordre que celui dans lequel la méthode les passe. Par exemple, si les paramètres de quatre (ou plus) et vous souhaitez passer de nouvelles valeurs uniquement pour le premier et le quatrième, vous devez passer `Array(var1,,,var4)` comme le *paramètres* argument.  
   

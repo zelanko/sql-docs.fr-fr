@@ -91,7 +91,7 @@ Col1=CustomerNumber Text Width 10
 Col2=CustomerName Text Width 30  
 ```  
   
- La syntaxe de **Col** * n * est :  
+ La syntaxe de **Col**  *n*  est :  
   
 ```  
   
@@ -99,7 +99,7 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Notes  
- Le tableau suivant décrit chaque partie de la **Col** * n * entrée.  
+ Le tableau suivant décrit chaque partie de la **Col**  *n*  entrée.  
   
 |Paramètre| Description|  
 |---------------|-----------------|  

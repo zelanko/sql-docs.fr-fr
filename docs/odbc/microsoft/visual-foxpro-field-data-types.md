@@ -33,12 +33,12 @@ Le tableau suivant répertorie les valeurs pour le *FieldType* argument dans l�
 |B|-|d|Double|  
 |C|N|-|Champ de caractères de largeur*n*|  
 |D|-|-|Date|  
-|F|N|d|Flottante champ numérique de largeur * n * avec *d* décimales|  
+|F|N|d|Flottante champ numérique de largeur  *n*  avec *d* décimales|  
 |G|-|-|Général|  
 |I|-|-|Entier|  
 |L|-|-|Logical|  
 |M|-|-|Mémo|  
-|N|N|d|Un champ numérique de largeur * n * avec *d* décimales|  
+|N|N|d|Un champ numérique de largeur  *n*  avec *d* décimales|  
 |T|-|-|DateTime|  
 |O|-|-|Monétaire (Currency)|
 

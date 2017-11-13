@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  Lorsque la bibliothèque de curseurs est utilisée, les appels à **SQLFetchScroll** ne peut pas être combiné avec des appels vers **SQLFetch** ou **SQLExtendedFetch**.  
   
- Lorsque la bibliothèque de curseurs est utilisée, les appels à **SQLFetchScroll** sont pris en charge à la fois pour ODBC 2.* x* et pour ODBC 3.* x* pilotes.  
+ Lorsque la bibliothèque de curseurs est utilisée, les appels à **SQLFetchScroll** sont pris en charge à la fois pour ODBC 2. *x* et pour ODBC 3. *x* pilotes.  
   
 ## <a name="rowset-buffers"></a>Tampons de l’ensemble de lignes  
  La bibliothèque de curseurs permet d’optimiser le transfert de données à partir du pilote dans le tampon de l’ensemble de lignes fourni par l’application si :  

@@ -243,7 +243,7 @@ Le contrôle Visionneuse de rapports est désormais fourni comme package NuGet. 
 
     ![ssRS-supprimer-old-rvcontrol-boîte à outils](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. Avec le bouton droit cliquez n’importe où dans la boîte à outils, puis sélectionnez **choisir des éléments... **.
+3. Avec le bouton droit cliquez n’importe où dans la boîte à outils, puis sélectionnez **choisir des éléments...** .
 
     ![ssRS-élément boîte à outils-choisissez](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

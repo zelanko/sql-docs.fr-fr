@@ -52,7 +52,7 @@ variable = field.GetChunk(Size)
   
  Chaque **GetChunk** appel récupère les données en commençant à partir de laquelle la précédente **GetChunk** appel s’est arrêté. Toutefois, si vous récupérez des données à partir d’un champ et que vous définissez ou de lire la valeur d’un autre champ dans l’enregistrement actif, ADO suppose que vous avez terminé la récupération de données à partir du premier champ. Si vous appelez le **GetChunk** méthode sur le premier champ, ADO interprète l’appel en tant que nouvelle **GetChunk** opération et démarre la lecture à partir du début des données. L’accès à d’autres champs [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) les objets qui ne sont pas des clones du premier **Recordset** objet n’interrompra pas **GetChunk** operations.  
   
- Si le **adFldLong** bit dans le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété d’un **champ** objet a la valeur **True**, que vous pouvez utiliser la **GetChunk ** (méthode) pour ce champ.  
+ Si le **adFldLong** bit dans le [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété d’un **champ** objet a la valeur **True**, que vous pouvez utiliser la **GetChunk**  (méthode) pour ce champ.  
   
  S’il n’existe aucun enregistrement actif lorsque vous utilisez la **GetChunk** méthode sur un **champ** de l’objet, l’erreur 3021 (aucun enregistrement actif) survient.  
   
