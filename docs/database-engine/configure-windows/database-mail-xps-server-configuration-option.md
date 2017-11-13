@@ -28,7 +28,7 @@ ms.lasthandoff: 08/02/2017
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (option de configuration de serveur)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Utilisez l’option **** pour activer la messagerie de base de données sur ce serveur. Les valeurs possibles sont les suivantes :  
+  Pour activer la messagerie de base de données sur ce serveur, utilisez l’option **Messagerie de base de données XPs** . Les valeurs possibles sont les suivantes :  
   
 -   **0** indique que la messagerie de base de données n’est pas disponible (valeur par défaut).  
   

@@ -194,7 +194,7 @@ ms.lasthandoff: 08/02/2017
 3.  Lorsque vous y êtes invité, et si vous souhaitez exécuter l'action, cliquez sur **Oui**.  
   
 ##  <a name="CommandPrompt"></a> À partir de la fenêtre d'invite de commandes en utilisant les commandes net  
- Les services [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés ou suspendus à l’aide des commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)]  **** Windows.  
+ Les services [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés ou suspendus à l’aide des commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] **net** Windows.  
   
 ###  <a name="dbDefault"></a> Pour démarrer l'instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
