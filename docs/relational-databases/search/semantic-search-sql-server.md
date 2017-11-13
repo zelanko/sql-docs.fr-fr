@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Rechercher les expressions clés qui rendent des documents similaires ou connexes  
  La requête suivante obtient les expressions clés qui rendent les deux exemples de documents similaires ou liés l’un à l’autre. Elle présente les résultats par ordre décroissant du score qui indique le poids de chaque expression clé.
  
  Cette requête appelle la fonction [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  

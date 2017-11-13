@@ -53,7 +53,7 @@ Certains scénarios dans lesquels ce problème est susceptible de se poser sont 
 -   Un utilisateur tente de restaurer une base de données système à partir d'une sauvegarde réalisée sur le même serveur. Cependant, le serveur exécutait une version différente au moment de la sauvegarde. Cela signifie que le serveur a été mis à niveau depuis la réalisation de la sauvegarde.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Le processus de restauration intervient en bonne partie dans cette situation et n'est utilisé qu'en dernier recours. Pour plus d’informations, consultez «[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)».  
+Le processus de restauration intervient en bonne partie dans cette situation et n'est utilisé qu'en dernier recours. Pour plus d’informations, consultez «[Vous ne pouvez pas restaurer les sauvegardes de base de données système vers une version différente de SQL Server](http://support.microsoft.com/kb/264474)».  
   
 ## <a name="see-also"></a>Voir aussi  
 [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
