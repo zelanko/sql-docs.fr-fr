@@ -1,5 +1,5 @@
 ---
-title: "Définir l’étendue de synchronisation (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Définir l’étendue de synchronisation (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 302cc9fbe2c49f2d28786b6a1addcecdcafd3ee7
 ms.contentlocale: fr-fr
@@ -50,4 +49,3 @@ ms.lasthandoff: 08/09/2017
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

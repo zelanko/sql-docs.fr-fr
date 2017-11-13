@@ -1,5 +1,5 @@
 ---
-title: "Didacticiel : Introduction aux Expressions | Documents Microsoft"
+title: "Didacticiel : introduction aux expressions | Microsoft Docs"
 ms.custom: 
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: fr-fr
@@ -52,7 +51,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -184,9 +183,9 @@ Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur *
   
 8.  Tapez **, 1)**  
   
-    Cette expression extrait un caractère de la valeur **FirstName**, en partant de la gauche.  
+    Cette expression extrait un caractère de la valeur **FirstName** , en partant de la gauche.  
   
-9. Tapez **&". "&**.  
+9. Tapez **&". "&**  
 
     Un point et un espace sont ajoutés après l’expression.
   
@@ -207,7 +206,7 @@ Dans cette section, vous allez mettre en forme la colonne **Last Purchase** qui 
   
 1.  Cliquez sur **Conception** pour repasser en mode Conception.  
   
-2.  Sélectionnez la cellule de données dans la colonne **Last Purchase**, puis sous l’onglet **Accueil** > de la section **Nombre**, sélectionnez **Date**.  
+2.  Sélectionnez la cellule de données dans la colonne **Last Purchase**, puis sous l’onglet **Accueil** > section **Nombre**, sélectionnez **Date**.  
 
     ![report-builder-expression-tutorial-date-format](../reporting-services/media/report-builder-expression-tutorial-date-format.png)
   
@@ -264,11 +263,11 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
   
 ### <a name="to-use-color-to-show-gender"></a>Pour utiliser des couleurs pour afficher le sexe  
   
-1.  Cliquez avec le bouton droit sur le rectangle dans la cellule de données de la colonne **M/F**, puis cliquez sur **Propriétés du rectangle**.  
+1.  Cliquez avec le bouton droit sur le rectangle dans la cellule de données de la colonne **M/F** , puis cliquez sur **Propriétés du rectangle**.  
   
 2.  Dans la boîte de dialogue **Propriétés du rectangle**, sous l’onglet **Remplissage**, cliquez sur le bouton d’expression **fx** situé en regard de **Couleur de remplissage**.  
   
-3.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes** et cliquez sur **Flux de programme**.  
+3.  Dans la boîte de dialogue **Expression** , développez **Fonctions communes** et cliquez sur **Flux de programme**.  
   
 4.  Dans la liste **Élément** , double-cliquez sur **Switch**.  
   
@@ -327,7 +326,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 2.  Dans le volet des données de rapport, cliquez sur **Nouveau** , puis sur **Dataset**.  
   
-3.  Dans ** Propriétés du Dataset, cliquez sur **utiliser un dataset incorporé dans mon rapport**.  
+3.  Dans **Propriétés du dataset, cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
   
 4.  Dans la liste **Source de données** , sélectionnez ExpressionsDataSource.  
   
@@ -405,7 +404,7 @@ Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **
   
 5.  Dans la boîte de dialogue **Expression**, développez **Fonctions communes**, puis cliquez sur **Date & heure**.  
   
-6.  Dans la liste **Élément**, double-cliquez sur **DateDiff**.  
+6.  Dans la liste **Élément** , double-cliquez sur **DateDiff**.  
   
 7.  Immédiatement après `DateDiff(`, tapez **"d",** (y compris les guillemets "" et la virgule). 
   
@@ -493,7 +492,7 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
   
 24. Développez à nouveau **Fonctions communes** , cliquez sur **Agrégat**, puis dans la liste **Élément** , double-cliquez sur **Avg**.  
   
-26. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
+26. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
 28. Immédiatement après `Fields!YTDPurchase.Value`, tapez **, "Expressions")) < 0**  
   

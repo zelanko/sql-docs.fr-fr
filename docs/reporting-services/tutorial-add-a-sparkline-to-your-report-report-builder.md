@@ -1,5 +1,5 @@
 ---
-title: "Didacticiel : Ajouter un graphique Sparkline à votre rapport (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: fr-fr
@@ -44,7 +43,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -53,7 +52,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 4.  Dans la page **Choisir un dataset** , sélectionnez **Créer un dataset** > **Suivant**. La page **Choisir une connexion à une source de données** s’ouvre.  
   
     > [!NOTE]  
-    > Ce didacticiel n’a pas besoin des données spécifiques ; Il suffit d’une connexion à une base de données SQL Server. Si une connexion est répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à l’étape 10. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
+    > Ce didacticiel n’a pas besoin de données spécifiques. Il a juste besoin d’une connexion à une base de données SQL Server. Si une connexion est répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à l’étape 10. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 5.  Cliquez sur **Nouveau**. La boîte de dialogue **Propriétés de la source de données** s'ouvre.  
   
@@ -73,7 +72,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
     Vous revenez à la page **Choisir une connexion à une source de données** .  
   
-11. Pour vérifier vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
+11. Pour vous assurer que vous pouvez vous connecter à la source de données, cliquez sur **Tester la connexion**.  
   
     Le message « La connexion a été correctement créée » s'affiche.  
   
@@ -179,7 +178,7 @@ Par défaut, les données de synthèse du champ **Sales** affichent un nombre g�
 
     ![report-builder-select-sum-sales](../reporting-services/media/report-builder-select-sum-sales.png) 
   
-3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur **Devise**. Les cellules changent pour afficher le format de devise.  
+3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur **Devise**. Les cellules changent pour afficher le format de devise.  
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
@@ -192,7 +191,7 @@ Par défaut, le champ **SalesDate** affiche les informations de date et d’heur
   
 1.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-3.  Sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur **Date**.  
+3.  Sous l’onglet **Accueil** > groupe **Nombre**, cliquez sur **Date**.  
   
     La cellule affiche la date d’exemple **[1/31/2000]**.
      
@@ -326,10 +325,9 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
   
 ## <a name="next-steps"></a>Étapes suivantes  
 
-Ainsi s'achève le didacticiel de création d'un rapport de tableau avec des graphiques sparkline. Pour plus d’informations sur les graphiques sparkline, consultez [graphiques sparkline et barres de données](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Ainsi s'achève le didacticiel de création d'un rapport de tableau avec des graphiques sparkline. Pour plus d’informations sur les graphiques sparkline, consultez [Graphiques sparkline et barres de données](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 [Didacticiels (Générateur de rapports)](../reporting-services/report-builder-tutorials.md) 
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
