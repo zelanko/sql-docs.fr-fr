@@ -1,0 +1,8 @@
+# [Propriété Enabled (classe ServerNetworkProtocolIpAddress)](enabled-property-servernetworkprotocolipaddress-class.md)
+# [Propriété InstanceName (classe ServerNetworkProtocolIPAddress)](instancename-property-servernetworkprotocolipaddress-class.md)
+# [Ipaddressname, propriété (classe ServerNetworkProtocolIPAddress)](ipaddressname-property-servernetworkprotocolipaddress-class.md)
+# [Propriété Properties (classe ServerNetworkProtocolIPAddress)](properties-property-servernetworkprotocolipaddress-class.md)
+# [Propriété ProtocolName (classe ServerNetworkProtocolIPAddress)](protocolname-property-servernetworkprotocolipaddress-class.md)
+# [Classe ServerNetworkProtocolIPAddress](servernetworkprotocolipaddress-class.md)
+# [Méthode SetDisable (classe ServerNetworkProtocolIPAddress)](setdisable-method-servernetworkprotocolipaddress-class.md)
+# [Méthode SetEnable (classe ServerNetworkProtocolIPAddress)](setenable-method-servernetworkprotocolipaddress-class.md)

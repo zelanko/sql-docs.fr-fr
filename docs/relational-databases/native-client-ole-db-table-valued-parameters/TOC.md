@@ -1,0 +1,10 @@
+# [Paramètres table (OLE DB)](table-valued-parameters-ole-db.md)
+
+# [L’exécution des commandes contenant des paramètres table](executing-commands-containing-table-valued-parameters.md)
+# [Insertion de données dans les paramètres table](inserting-data-into-table-valued-parameters.md)
+# [Support de Type paramètre table OLE DB (méthodes)](ole-db-table-valued-parameter-type-support-methods.md)
+# [Prise en charge OLE DB paramètre table Type (propriétés)](ole-db-table-valued-parameter-type-support-properties.md)
+# [Prise en charge de Type de paramètre table OLE DB](ole-db-table-valued-parameter-type-support.md)
+# [Ensembles de lignes de schéma modifiés pour les paramètres table OLE DB](schema-rowsets-changed-for-ole-db-table-valued-parameters.md)
+# [Création de lignes de paramètre table](table-valued-parameter-rowset-creation.md)
+# [Détection de Type de paramètre table](table-valued-parameter-type-discovery.md)
