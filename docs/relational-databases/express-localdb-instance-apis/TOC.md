@@ -1,0 +1,18 @@
+# [SQL Server Express LocalDB référence - API d’Instance](sql-server-express-localdb-reference-instance-apis.md)
+# [Outil de gestion de ligne de commande : SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
+# [SQL Server Express LocalDB en-tête et les informations de Version](sql-server-express-localdb-header-and-version-information.md)
+
+# Fonctions de base de données locale
+## [Fonction LocalDBCreateInstance](localdbcreateinstance-function.md)
+## [Fonction LocalDBDeleteInstance](localdbdeleteinstance-function.md)
+## [Fonction LocalDBFormatMessage](localdbformatmessage-function.md)
+## [Fonction LocalDBGetInstanceInfo](localdbgetinstanceinfo-function.md)
+## [Fonction LocalDBGetInstances](localdbgetinstances-function.md)
+## [Fonction LocalDBGetVersionInfo](localdbgetversioninfo-function.md)
+## [Fonction LocalDBGetVersions](localdbgetversions-function.md)
+## [Fonction LocalDBShareInstance](localdbshareinstance-function.md)
+## [Fonction LocalDBStartInstance](localdbstartinstance-function.md)
+## [Fonction LocalDBStartTracing](localdbstarttracing-function.md)
+## [Fonction LocalDBStopInstance](localdbstopinstance-function.md)
+## [Fonction LocalDBStopTracing](localdbstoptracing-function.md)
+## [Localdbunshareinstance, fonction](localdbunshareinstance-function.md)

@@ -1,0 +1,6 @@
+# [Exécution d’opérations de copie en bloc (ODBC)](performing-bulk-copy-operations-odbc.md)
+# [Variables de programme à partir de la copie en bloc](bulk-copying-from-program-variables.md)
+# [Données Text et Image de la copie en bloc](bulk-copying-text-and-image-data.md)
+# [Conversion de la DB-Library pour la copie en bloc ODBC](converting-from-db-library-to-odbc-bulk-copy.md)
+# [La gestion des tailles de lot de copie en bloc](managing-bulk-copy-batch-sizes.md)
+# [À l’aide de fichiers de données et les fichiers de Format](using-data-files-and-format-files.md)

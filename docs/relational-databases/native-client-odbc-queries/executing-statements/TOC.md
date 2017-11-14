@@ -1,0 +1,6 @@
+# [L’exécution d’instructions (ODBC)](executing-statements-odbc.md)
+# [Lots d’instructions](batches-of-statements.md)
+# [Exécution directe](direct-execution.md)
+# [Effets des Options ISO](effects-of-iso-options.md)
+# [Exécution préparée](prepared-execution.md)
+# [Procédures](procedures.md)
