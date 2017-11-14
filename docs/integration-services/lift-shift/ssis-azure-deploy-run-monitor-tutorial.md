@@ -36,7 +36,7 @@ Utilisez SQL Server Management Studio pour se connecter au catalogue SSIS sur vo
 
 2. **Connectez-vous au serveur**. Dans le **se connecter au serveur** boîte de dialogue, entrez les informations suivantes :
 
-   | Paramètre       | Valeur suggérée |  Description | 
+   | Paramètre       | Valeur suggérée |  Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Le nom du serveur complet | Le nom doit être au format suivant : **mysqldbserver.database.windows.net**. Si vous avez besoin du nom du serveur, consultez [se connecter à la base de données de catalogue SSISDB sur Azure](ssis-azure-connect-to-catalog-database.md). |

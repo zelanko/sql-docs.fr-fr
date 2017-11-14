@@ -40,7 +40,7 @@ Avant de commencer, assurez-vous que vous avez 17,2 ou version ultérieure de SQ
 
 2. **Connectez-vous au serveur**. Dans le **se connecter au serveur** boîte de dialogue, entrez les informations suivantes :
 
-   | Paramètre       | Valeur suggérée |  Description | 
+   | Paramètre       | Valeur suggérée |  Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Le nom du serveur complet | Le nom doit être au format suivant : **mysqldbserver.database.windows.net**. |

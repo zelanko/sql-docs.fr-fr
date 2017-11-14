@@ -36,7 +36,7 @@ Utilisez SQL Server Management Studio pour établir une connexion dans le catalo
 
 2. Dans le **se connecter au serveur** boîte de dialogue, entrez les informations suivantes :
 
-   | Paramètre       | Valeur suggérée | En savoir plus | 
+   | Paramètre       | Valeur suggérée | En savoir plus | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Le nom du serveur complet | Si vous vous connectez à un serveur de base de données SQL Azure, le nom est au format suivant : `<server_name>.database.windows.net`. |

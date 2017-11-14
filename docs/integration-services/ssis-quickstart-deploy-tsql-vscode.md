@@ -55,7 +55,7 @@ Code Visual Studio permet d’établir une connexion dans le catalogue SSIS.
 
 4. Suivez les invites pour spécifier les propriétés de connexion pour le profil de connexion. Après avoir spécifié de chaque valeur, appuyez sur **entrée** pour continuer. 
 
-   | Paramètre       | Valeur suggérée | En savoir plus |
+   | Paramètre       | Valeur suggérée | En savoir plus |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nom du serveur** | Le nom du serveur complet |  |
    | **Nom de la base de données** | **SSISDB** | Le nom de la base de données à laquelle se connecter. |

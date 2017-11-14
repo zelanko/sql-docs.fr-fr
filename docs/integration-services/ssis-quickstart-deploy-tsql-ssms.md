@@ -40,7 +40,7 @@ Utilisez SQL Server Management Studio pour établir une connexion dans le catalo
 
 2. Dans le **se connecter au serveur** boîte de dialogue, entrez les informations suivantes :
 
-   | Paramètre       | Valeur suggérée | En savoir plus | 
+   | Paramètre       | Valeur suggérée | En savoir plus | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Le nom du serveur complet |  |

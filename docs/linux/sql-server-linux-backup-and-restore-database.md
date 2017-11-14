@@ -28,7 +28,7 @@ Pour effectuer des sauvegardes de bases de données à partir de 2017 du serveur
 Dans l’exemple suivant `sqlcmd` se connecte à l’instance locale de SQL Server et prend un complet sauvegarde de base de données utilisateur appelée `demodb`.
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
 Lorsque vous exécutez la commande, SQL Server demande un mot de passe. Une fois que vous entrez le mot de passe, l’interpréteur de commandes retournera les résultats de la sauvegarde en cours. Exemple :
@@ -55,16 +55,15 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 Dans l’exemple suivant, `sqlcmd` se connecte à l’instance locale de SQL Server et prend la sauvegarde de fin du journal. Une fois l’opération de sauvegarde terminée, la base de données sera dans un état de restauration. 
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
 ```
-
 
 ## <a name="restore-with-sqlcmd"></a>Restauration avec sqlcmd
 
 Dans l’exemple suivant `sqlcmd` se connecte à l’instance locale de SQL Server et restaure une base de données.
 
 ```bash
-sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>Sauvegarde et restauration avec SQL Server Management Studio (SSMS)
