@@ -51,7 +51,7 @@
 # [Sélection d’objet avancée](advanced-object-selection-accesstosql.md)
 # [Paramètres du projet (Migration)](project-settings-migration-accesstosql.md)
 # [Bien démarrer avec SQL Server Migration Assistant](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)
-# [SQL Server Migration Assistant](sql-server-migration-assistant-for-access-accesstosql.md)
+# [Assistant de migration SQL Server](sql-server-migration-assistant-for-access-accesstosql.md)
 # [Actualiser à partir de la base de données](refresh-from-database-accesstosql.md)
 # [Assistant Rechercher des bases de données (Sélectionner des fichiers)](find-databases-wizard-select-files-accesstosql.md)
 # [Touches de raccourci](shortcut-keys-accesstosql.md)

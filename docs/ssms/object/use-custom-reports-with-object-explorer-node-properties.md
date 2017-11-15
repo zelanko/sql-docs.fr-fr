@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Management Studio [SQL Server], custom reports
+helpviewer_keywords: SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9e99d307624e968284409f779dec6eb9a8731a4e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: cd56bfad6a216bd631cdd5c532d86913607dc156
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
 Vous pouvez exécuter des rapports personnalisés dans le contexte d'un nœud de l'Explorateur d'objets si les rapports personnalisés font référence aux paramètres de rapport de ce nœud. Un rapport peut ainsi exploiter le contexte actuel (par exemple, la base de données actuelle ou un objet de serveur ou de base de données).  
@@ -538,4 +535,3 @@ Le rapport créé au moyen du code ci-dessous utilise les paramètres associés 
 [Ajouter un rapport personnalisé à Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 
 Les systèmes de pare-feu empêchent les accès non autorisés aux ressources de l'ordinateur. Si un pare-feu est activé alors qu'il n'est pas configuré correctement, les tentatives de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être bloquées.  
   
-Pour accéder à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d’un pare-feu, vous devez configurer le pare-feu sur l’ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pare-feu est un composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Vous pouvez également installer un pare-feu d'une autre société. Cette rubrique explique comment configurer le Pare-feu Windows, mais les principes de base s'appliquent à d'autres programmes de pare-feu.  
+Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un pare-feu, vous devez configurer le pare-feu sur l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pare-feu est un composant de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Vous pouvez également installer un pare-feu d'une autre société. Cette rubrique explique comment configurer le Pare-feu Windows, mais les principes de base s'appliquent à d'autres programmes de pare-feu.  
   
 > [!NOTE]  
 >  Cette rubrique fournit une vue d'ensemble de la configuration du pare-feu et résume les informations présentant un intérêt pour un administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur le pare-feu et pour des informations rigoureuses sur le pare-feu, consultez la documentation de pare-feu, par exemple [Pare-feu Windows avec fonctions avancées de sécurité et IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
@@ -310,7 +309,7 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
   
     2.  À l’invite de commandes, tapez **netstat -n -a**.  
   
-         Le commutateur **-n** fait en sorte que **netstat** affiche l’adresse et le numéro de port des connexions TCP actives. Le commutateur **-a** demande à **netstat** d’afficher les ports TCP et UDP écoutés par l’ordinateur.  
+         Le composant **-n** demande à **netstat** d’afficher l’adresse numérique et le numéro de port des connexions TCP actives. Le commutateur **-a** demande à **netstat** d’afficher les ports TCP et UDP écoutés par l’ordinateur.  
   
 -   L’utilitaire **PortQry** peut être utilisé pour signaler l’état des ports TCP/IP comme à l’écoute, pas à l’écoute ou filtré. (Lorsque l'état est filtré, le port peut être à l'écoute ou non ; cet état indique que l'utilitaire n'a pas reçu de réponse du port.) l’utilitaire **PortQry** peut être téléchargé à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
@@ -319,4 +318,3 @@ Le tableau suivant répertorie les ports et services dont [!INCLUDE[ssNoVersion]
  [Procédure : configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

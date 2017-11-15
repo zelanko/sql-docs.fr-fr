@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,22 +14,21 @@ helpviewer_keywords:
 - clusters [SQL Server], dependencies
 - dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4fc39f8d8bc454006432c3be42d536e4fa027cdc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Ajouter des dépendances à une ressource SQL Server
   Cette rubrique explique comment ajouter des dépendances à une ressource d’instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Conditions préalables requises](#Prerequisites)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Conditions préalables requises](#Prerequisites)  
   
 -   **Pour ajouter une dépendance à une ressource SQL Server à l'aide du** [Gestionnaire du cluster de basculement Windows](#WinClusManager)  
   
@@ -74,4 +72,3 @@ ms.lasthandoff: 06/22/2017
 -   Sélectionnez la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ouvrez la boîte de dialogue **Propriétés** et utilisez l'onglet **Dépendances** pour ajouter le disque à l'ensemble de dépendances [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
   
-

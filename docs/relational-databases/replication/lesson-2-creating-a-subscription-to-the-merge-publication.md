@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- replication [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 423ad3b42e75c70e6826e04a298c5eac4e590291
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 56379bef6879a1d5fe1e6f004cbb23ed9a23120c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d'un abonnement à la publication de fusion
 Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Pour effectuer cette leçon, vous devez avoir terminé la leçon précédente, [Leçon 1 : Publication de données à l’aide de la réplication de fusion](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md).  
@@ -82,7 +78,6 @@ Vous avez créé avec succès un abonnement à la publication de fusion et gén�
   
 ## <a name="see-also"></a>Voir aussi  
 [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  
-[Créer un abonnement par extraction de données (Pull)](../../relational-databases/replication/create-a-pull-subscription.md)  
+[Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
 [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b50fb9b56d11e1ff911c0781e9cda52df168b82f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 12811563c7939e95294221a54546f09f36a9c10e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Fenêtre Propriétés - Aide (F1) (Management Studio)
 Utilisez la boîte de dialogue **Propriétés** pour afficher ou modifier les propriétés d’éléments sélectionnés. Vous pouvez également utiliser la fenêtre **Propriétés** pour afficher les propriétés d’un fichier, d’un projet et d’une solution. Pour accéder à la fenêtre **Propriétés** , dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés** .  
@@ -59,4 +57,3 @@ Le volet Description apparaît dans la partie inférieure de la fenêtre **Propr
 ## <a name="see-also"></a>Voir aussi  
 [Propriétés (fenêtre) dans SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
   
-

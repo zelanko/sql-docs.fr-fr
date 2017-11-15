@@ -5,8 +5,7 @@ ms.date: 11/01/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2163fd7b37b211d9cf272fda03781d831ad43da0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 36d70ddc89e96b1b07804d429e08722370092806
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/27/2017
  -  
  - Les sous-types des types geometry et geography sont divisés en types simples et de collection.  Certaines méthodes, telles que `STNumCurves()` , fonctionnent uniquement avec les types simples.  
  -  
- - Exemples de types simples :  
+ - Exemples de types simples :  
  -  
  --   [Point](../../relational-databases/spatial/point.md)  
  -  
@@ -63,7 +61,7 @@ ms.lasthandoff: 09/27/2017
  -  
  --   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
  -  
- - Exemples de types de collection :  
+ - Exemples de types de collection :  
  -  
  --   [MultiPoint](../../relational-databases/spatial/multipoint.md)  
  -  
@@ -81,7 +79,7 @@ ms.lasthandoff: 09/27/2017
  - Les données de définition concernant les types **LineString** et **Polygon** sont uniquement des sommets.  L'arête reliant deux sommets dans un type geometry forme une ligne droite.  Toutefois, l'arête reliant deux sommets dans un type geography est un grand arc elliptique court entre les deux sommets.  Une grande ellipse correspond à l'intersection de l'ellipsoïde avec un plan passant par son centre tandis qu'un grand arc elliptique est un segment d'arc sur la grande ellipse.  
  -  
  -### Mode de définition des segments d'arc de cercle  
- - Les segments d'arc de cercle pour les types geography sont définis sur le plan des coordonnées cartésiennes XY (les valeurs Z sont ignorées). Les segments d'arc de cercle pour les types geography sont définis par des segments de courbe sur une sphère de référence. Toute parallèle sur la sphère de référence peut être définie par deux arcs de cercle complémentaires où les points des deux arcs ont un angle de latitude constant.  
+ - Les segments d'arc de cercle pour les types geography sont définis sur le plan des coordonnées cartésiennes XY (les valeurs Z sont ignorées). Les segments d'arc de cercle pour les types geography sont définis par des segments de courbe sur une sphère de référence. Toute parallèle sur la sphère de référence peut être définie par deux arcs de cercle complémentaires où les points des deux arcs ont un angle de latitude constant.  
  -  
  -### Mesures dans les types de données spatiales  
  - Dans le système planaire, ou monde en deux dimensions, les mesures de distances et de surfaces sont données dans la même unité de mesure que les coordonnées. Avec le type de données **geometry** , la distance entre (2, 2) et (5, 6) est 5 unités, quelles que soient les unités utilisées.  
@@ -106,7 +104,7 @@ ms.lasthandoff: 09/27/2017
  -### Les anneaux internes et externes ne sont pas importants dans le type de données geography  
  - La spécification OGC Simple Features for SQL traite des anneaux externes et internes, mais cette distinction n’a que peu de sens pour le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** ; tout anneau d’un polygone peut être accepté comme étant l’anneau externe.  
  -  
- - Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :  
+ - Pour plus d'informations sur les spécifications OGC, reportez-vous aux sites Web suivants :  
  -  
  --   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
  -  
@@ -116,17 +114,17 @@ ms.lasthandoff: 09/27/2017
  -##  <a name="circular"></a> Segments d'arc de cercle  
  - Trois types instanciables acceptent des segments d’arc de cercle : **CircularString**, **CompoundCurve**et **CurvePolygon**.  Un segment d'arc de cercle est défini par trois points dans un plan à deux dimensions ; le troisième point doit être différent du premier point.  
  -  
- - Les figures A et B affichent des segments d'arc de cercle types. Remarquez comment chacun des trois points se situe sur le périmètre d'un cercle.  
+ - Les figures A et B affichent des segments d'arc de cercle types. Remarquez comment chacun des trois points se situe sur le périmètre d'un cercle.  
  -  
- - Les figures C et D montrent comment un segment de ligne peut être défini comme un segment d'arc de cercle.  Notez que trois points sont toujours nécessaires pour définir le segment d'arc de cercle contrairement à un segment de ligne ordinaire qui peut être défini par deux points seulement.  
+ - Les figures C et D montrent comment un segment de ligne peut être défini comme un segment d'arc de cercle.  Notez que trois points sont toujours nécessaires pour définir le segment d'arc de cercle contrairement à un segment de ligne ordinaire qui peut être défini par deux points seulement.  
  -  
- - Les méthodes qui fonctionnent sur les types de segment d'arc de cercle utilisent des segments de ligne droite pour se rapprocher de l'arc de cercle. Le nombre de segments de ligne utilisé pour se rapprocher de l'arc dépend de la longueur et de la courbure de l'arc. Les valeurs Z peuvent être stockées pour chacun des types de segment d'arc de cercle ; toutefois, les méthodes n'utilisent pas les valeurs Z dans leurs calculs.  
+ - Les méthodes qui fonctionnent sur les types de segment d'arc de cercle utilisent des segments de ligne droite pour se rapprocher de l'arc de cercle. Le nombre de segments de ligne utilisé pour se rapprocher de l'arc dépend de la longueur et de la courbure de l'arc. Les valeurs Z peuvent être stockées pour chacun des types de segment d'arc de cercle ; toutefois, les méthodes n'utilisent pas les valeurs Z dans leurs calculs.  
  -  
  -> [!NOTE]  
- ->  Si des valeurs Z sont fournies pour les segments d'arc de cercle, elles doivent être identiques pour tous les points dans le segment d'arc de cercle pour que ce dernier soit accepté comme entrée. Par exemple, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` est autorisé, contrairement à `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)`.  
+ ->  Si des valeurs Z sont fournies pour les segments d'arc de cercle, elles doivent être identiques pour tous les points dans le segment d'arc de cercle pour que ce dernier soit accepté comme entrée. Par exemple, `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` est autorisé, contrairement à `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` .  
  -  
  -### Comparaison de LineString et de CircularString  
- - Le diagramme suivant montre des triangles isocèles identiques (le triangle A utilise des segments de ligne pour définir le triangle, tandis que le triangle B utilise des segments d'arc de cercle) :  
+ - Le diagramme suivant montre des triangles isocèles identiques (le triangle A utilise des segments de ligne pour définir le triangle, tandis que le triangle B utilise des segments d'arc de cercle) :  
  -  
  -  ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
  -  
@@ -210,7 +208,7 @@ ms.lasthandoff: 09/27/2017
  -```  
  -  
  -### Comparaison de Polygon et de CurvePolygon  
- - Les instances**CurvePolygon** peuvent utiliser des instances **CircularString** et **CompoundCurve** lors de la définition de leurs anneaux intérieurs et extérieurs.  Les instances**Polygone** ne peuvent pas utiliser les types de segment d’arc de cercle : **CircularString** et **CompoundCurve**.  
+ - Les instances**CurvePolygon** peuvent utiliser des instances **CircularString** et **CompoundCurve** instances when defining their exterior et interior rings.  Les instances**Polygone** ne peuvent pas utiliser les types de segment d’arc de cercle : **CircularString** et **CompoundCurve**.  
  - 
  -  
  -## Voir aussi  
@@ -222,4 +220,3 @@ ms.lasthandoff: 09/27/2017
  -- [STNumCurves &#40;type de données geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
  -- [STGeomFromText &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   
  -- [STGeomFromText &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
-

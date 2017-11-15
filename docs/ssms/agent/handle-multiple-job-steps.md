@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,29 +15,28 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c7474d555c03a9ce9d02afaf613146e7d638ba8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8dbdbaa5f10ef2903793628e0b8b4adbd57b575c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="handle-multiple-job-steps"></a>Gérer plusieurs étapes de travail
 Si votre travail est composé de plusieurs étapes, vous devez spécifier l'ordre dans lequel celles-ci sont exécutées. Ce processus s’appelle le *contrôle de flux**.* Vous pouvez ajouter de nouvelles étapes de travail et réorganiser le flux des étapes de travail à tout moment ; les modifications prennent effet lors de l'exécution suivante du travail. Cette illustration montre le contrôle de flux pour un travail de sauvegarde de base de données.  
   
 ![Contrôle du flux des étapes du travail de SQL Server Agent](../../ssms/agent/media/dbflow01.gif "Contrôle du flux des étapes du travail de SQL Server Agent")  
   
-La première étape est la sauvegarde de la base de données. Si cette étape échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent signale l'échec à l'opérateur destinataire des notifications. Si l'étape de la sauvegarde de la base de données réussit, le travail se poursuit avec l'étape suivante, en l'occurrence la purge des données client. Si cette étape échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent passe à l'étape de restauration de la base de données. Si la purge des données client réussit, le travail se poursuit avec l'étape suivante, en l'occurrence la mise à jour des statistiques, et ainsi de suite jusqu'à la dernière étape, qui se solde par la réussite ou par l'échec du rapport.  
+La première étape est la sauvegarde de la base de données. Si cette étape échoue, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] signale l'échec à l'opérateur destinataire des notifications. Si l'étape de la sauvegarde de la base de données réussit, le travail se poursuit avec l'étape suivante, en l'occurrence la purge des données client. Si cette étape échoue, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] passe à l'étape de restauration de la base de données. Si la purge des données client réussit, le travail se poursuit avec l'étape suivante, en l'occurrence la mise à jour des statistiques, et ainsi de suite jusqu'à la dernière étape, qui se solde par la réussite ou par l'échec du rapport.  
   
 Vous définissez une action de contrôle de flux pour la réussite ou l'échec de chaque étape de travail. Vous devez préciser l'action à exécuter lors de la réussite ou de l'échec d'une étape de travail. Vous pouvez également définir le nombre de tentatives de reprises pour les étapes de travail ayant échoué ainsi que leurs intervalles.  
   
 > [!NOTE]  
-> Lorsque vous utilisez l'interface graphique utilisateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent et que vous supprimez une ou plusieurs étapes à partir d'un travail multitâches, l'interface supprime toutes les étapes de travail puis rajoute les étapes restantes avec les références correctes en cas de réussite ou en cas d'échec. Par exemple, supposons que vous avez un travail comportant cinq étapes, et que la première étape est configurée pour passer à l'étape 4 si elle aboutit. Si vous supprimez l'étape 3, l'interface utilisateur graphique supprime toutes les étapes de ce travail et ajoute les quatre étapes restantes (1, 2, 4 et 5) avec les références corrigées. Dans ce cas, la référence de l'étape 1 est configurée pour passer à l'étape 3 si l'étape 1 aboutit.  
+> Lorsque vous utilisez l'interface graphique utilisateur de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et que vous supprimez une ou plusieurs étapes à partir d'un travail multitâches, l'interface supprime toutes les étapes de travail puis rajoute les étapes restantes avec les références correctes en cas de réussite ou en cas d'échec. Par exemple, supposons que vous avez un travail comportant cinq étapes, et que la première étape est configurée pour passer à l'étape 4 si elle aboutit. Si vous supprimez l'étape 3, l'interface utilisateur graphique supprime toutes les étapes de ce travail et ajoute les quatre étapes restantes (1, 2, 4 et 5) avec les références corrigées. Dans ce cas, la référence de l'étape 1 est configurée pour passer à l'étape 3 si l'étape 1 aboutit.  
   
 Les étapes de travail doivent être autonomes. En d'autres termes, un travail ne peut pas passer des valeurs booléennes, des données ou des valeurs numériques entre des étapes de travail. Toutefois, vous pouvez passer des valeurs d'une étape de travail [!INCLUDE[tsql](../../includes/tsql_md.md)] à une autre en utilisant des tables permanentes ou des tables temporaires globales. À partir des étapes de travail, vous pouvez transmettre des valeurs afin d'exécuter, d'une étape à l'autre, des programmes qui effectuent des opérations sur des fichiers. Par exemple, le programme exécuté par une étape de travail écrit un fichier, tandis que celui exécuté par une étape de travail ultérieure le lit.  
   
@@ -55,4 +53,3 @@ Les étapes de travail doivent être autonomes. En d'autres termes, un travail n
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
 [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)  
   
-

@@ -3,7 +3,7 @@
 # Leçons
 ## [Leçon 1 : Navigation de base dans SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [Leçon 1-1 - Démarrer SQL Server Management Studio](lesson-1-1-start-sql-server-management-studio.md)  
-### [Leçon 1-2 - Connecter avec le composant Serveurs inscrits et l’Explorateur d'objets](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
+### [Leçon 1-2 - Connecter avec le composant Serveurs inscrits et l’Explorateur d’objets](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 ### [Leçon 1-3 - Modifier la disposition d’environnement](lesson-1-3-change-the-environment-layout.md)  
 ### [Leçon 1-4 - Afficher la fenêtre de requête](lesson-1-4-display-the-query-window.md)  
 ### [Leçon 1-5 - Afficher la page Détails de l’Explorateur d’objets](lesson-1-5-show-the-object-explorer-details-page.md)  
@@ -15,7 +15,7 @@
 ## [Leçon 2 : écriture d'instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
 ### [Leçon 2-1 - Connecter à l’aide de l’Éditeur de requête](lesson-2-1-connecting-with-query-editor.md)  
 ### [Leçon 2-2 - Ajout d’une mise en retrait](lesson-2-2-adding-indentation.md)  
-### [Leçon 2-3 - Agrandissement de l'Éditeur de requête](lesson-2-3-maximizing-query-editor.md)  
+### [Leçon 2-3 - Agrandissement de l’Éditeur de requête](lesson-2-3-maximizing-query-editor.md)  
 ### [Leçon 2-4 - Utilisation de commentaires](lesson-2-4-using-comments.md)  
 ### [Leçon 2-5 - Autres méthodes d’affichage de la fenêtre de code](lesson-2-5-other-ways-of-viewing-the-code-window.md)  
 ### [Leçon 2-6 - Générer un script pour une table](lesson-2-6-script-a-table.md)  

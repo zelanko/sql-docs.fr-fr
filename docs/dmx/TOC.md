@@ -92,7 +92,7 @@
 ### [>= (Supérieur ou égal à)](greater-than-or-equal-to-dmx.md)  
 ### [AND](and-dmx.md)  
 ### [NOT](not-dmx.md)  
-### [OR](or-dmx.md)  
+### [OU](or-dmx.md)  
 ### [+ (Positif)](positive-dmx.md)  
 ### [- (Négatif)](negative-dmx.md)  
 ### [// (Commentaire)](double-slash-comment-dmx.md)  

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Results pane
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3da9966a033a4cf1ad697c27de5a92a33c02206b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 34c9f0c6283b05a06c0b7671b8aa008899a560c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Effacer les résultats d'une requête (Visual Database Tools)
 Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], après l’exécution d’une requête dans l’Éditeur de requête, le volet Résultats ne peut être effacé qu’en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  
@@ -45,4 +43,3 @@ Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de v
 [Arrêter une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
-

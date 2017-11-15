@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f358f84d2dbcec345a160d9fafb660bbebc01be7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Instantanés des publications de fusion avec des filtres paramétrés
   Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Un instantané est d'abord créée. Il contient tous les objets nécessaires à la publication ainsi que le schéma des objets publiés mais pas les données. Ensuite, chaque abonnement est initialisé avec un instantané qui comprend les objets et le schéma provenant de l'instantané du schéma ainsi que les données appartenant à la partition de l'abonnement. Si plusieurs abonnements reçoivent une partition donnée (en d'autres termes, s'ils reçoivent les mêmes schéma et données), l'instantané de cette partition n'est créé qu'une seule fois ; plusieurs abonnements sont initialisés à l'aide du même instantané. Pour plus d'informations sur les filtres de lignes paramétrés, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -50,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  Prenons l'exemple de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], qui possède une force de vente nomade chargée d'approvisionner en stock différents magasins. Chaque commercial reçoit un abonnement basé sur son nom de connexion, lequel extrait les données relatives aux magasins dont le commercial est responsable. L'administrateur choisit de prégénérer des instantanés et de les actualiser tous les dimanches. De temps à autre, un nouvel utilisateur est ajouté au système et a besoin de données pour une partition dont il n'existe aucun instantané disponible. L'administrateur décide par ailleurs d'autoriser les instantanés initialisés par l'Abonné pour éviter que ce dernier se retrouve dans une situation où il est incapable de s'abonner à la publication car aucun instantané n'est disponible. Lorsque le nouvel Abonné se connecte pour la première fois, l'instantané est généré pour la partition spécifiée et appliqué à l'Abonné (l'Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en cours d'exécution sur le serveur de publication pour que l'instantané puisse être généré).  
   
- Pour créer un instantané d'une publication avec des filtres paramétrés, consultez [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Pour créer un instantané d'une publication avec des filtres paramétrés, consultez [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Paramètres de sécurité de l'Agent d'instantané  
  L'Agent d'instantané crée des instantanés de chaque partition. Pour les instantanés prégénérés et ceux demandés par un Abonné, l'Agent s'exécute et se connecte avec les informations d'identification spécifiées au moment de la création du travail de l'Agent d'instantané pour la publication (ce travail est créé par l'Assistant Nouvelle publication ou par **sp_addpublication_snapshot**). Pour modifier les informations d'identification, utilisez **sp_changedynamicsnapshot_job**. Pour plus d’informations, consultez [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  

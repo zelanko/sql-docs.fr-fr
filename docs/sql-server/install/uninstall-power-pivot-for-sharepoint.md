@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 4a43451046d7cbea498941d867b235a58f56d468
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Désinstaller Power Pivot pour SharePoint
   La désinstallation d'une installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est une opération comportant plusieurs étapes qui inclut la préparation pour la désinstallation, la suppression des fonctionnalités et des solutions de la batterie de serveurs, et la suppression des fichiers programme et des paramètres du Registre.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  **Dans cette rubrique :**  
   
--   [Prérequis](#prereq)  
+-   [Conditions préalables](#prereq)  
   
 -   [Étape 1 : Liste de vérification préalable à la désinstallation](#bkmk_before)  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Étape 6 : Liste de vérification post-désinstallation](#bkmk_post)  
   
-##  <a name="prereq"></a> Prérequis  
+##  <a name="prereq"></a> Conditions préalables  
   
 -   Vous devez être administrateur de batterie de serveurs SharePoint ou administrateur d'application de service pour désinstaller des fonctionnalités et des solutions de la batterie.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
 -   Vous devez être un administrateur système Analysis Services et membre du groupe Administrateurs local pour désinstaller Analysis Services et [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 ##  <a name="bkmk_before"></a> Étape 1 : Liste de vérification préalable à la désinstallation  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est désactivé une fois que le logiciel qui prend en charge le traitement des requêtes et des données est supprimé de la batterie. La première étape consiste à supprimer de façon préventive les fichiers et les bibliothèques qui ne seront plus opérationnels. Cela vous permet de répondre à toutes les questions ou problèmes relatifs aux données manquantes avant de désinstaller le logiciel.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est désactivé une fois que le logiciel qui prend en charge le traitement des requêtes et des données est supprimé de la batterie. La première étape consiste à supprimer de façon préemptive les fichiers et les bibliothèques qui ne seront plus opérationnels. Cela vous permet de répondre à toutes les questions ou problèmes relatifs aux données manquantes avant de désinstaller le logiciel.  
   
 1.  Supprimez tous les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , documents et bibliothèques associés à une installation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Ni les bibliothèques ni les documents ne fonctionneront une fois le logiciel désinstallé.  
   
@@ -197,4 +197,3 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  [Outils de configuration de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
-

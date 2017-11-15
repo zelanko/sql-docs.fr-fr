@@ -1,4 +1,4 @@
-# [SQL Server Migration Assistant](sql-server-migration-assistant.md)
+# [Assistant de migration SQL Server](sql-server-migration-assistant.md)
 # [Articles nouveaux et récemment mis à jour](new-updated-ssma.md)
 
 # [Access +](../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)

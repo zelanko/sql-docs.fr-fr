@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
 Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d'installer ou de dépanner Microsoft SQL Server 2012 ([cliquez ici pour le télécharger](http://go.microsoft.com/fwlink/?LinkId=238647)). Ce document Notes de publication, uniquement disponible en ligne (absent du support d'installation), est régulièrement mis à jour.  
@@ -310,7 +308,7 @@ Il existe un certain nombre de problèmes avec la tâche de traitement AS lorsqu
   
 **Solution de contournement**: pour résoudre ce problème, activez IPv4 ou suivez les étapes ci-après pour ajouter une entrée de Registre et créer une liste de contrôle d'accès (ACL) afin d'activer IPv6 pour la visionneuse de l'aide :  
   
-1.  Créez une clé de registre ayant pour nom « IPv6 » et pour valeur «1 (DWORD(32 bit)) » sous HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
+1.  Créez une clé de registre ayant pour nom « IPv6 » et pour valeur «&1; (DWORD(32 bit)) » sous HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
 2.  Définissez l'ACL de sécurité pour le port d'IPv6, en exécutant la commande qui suit à partir d'une fenêtre CMD d'administration  
   
@@ -637,4 +635,3 @@ Problème : lorsque vous essayez d'installer le conseiller de mise à niveau sur
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - word searches [full-text search]
 - NEAR option [full-text search]
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aaff4768722fa830cccf9e2ee397945f0866ae07
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 81230587be4efd864fb2ec3958a1473db8de2e53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
   Vous pouvez utiliser le *terme de proximité* **NEAR** dans un prédicat [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou une fonction [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions à proximité les uns des autres. 
@@ -47,7 +45,7 @@ ms.lasthandoff: 06/22/2017
  
  Pour être une correspondance valide, une chaîne de texte doit :  
   
--   Commencer par l'un des termes de recherche spécifiés et se terminer par l'un des autres termes de recherche spécifiés  
+-   commencer par l'un des termes de recherche spécifiés et se terminer par l'un des autres termes de recherche spécifiés ;  
   
 -   Contenir tous les termes de recherche spécifiés  
   
@@ -112,7 +110,7 @@ GO
  «`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`»  
   
 ## <a name="combine-near-with-other-terms"></a>Combiner NEAR avec d’autres termes  
- Vous pouvez combiner NEAR avec d’autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Par exemple :  
+ Vous pouvez combiner NEAR avec d’autres termes. Vous pouvez utiliser AND (&), OR (|) ou AND NOT (&!) pour combiner un terme de proximité personnalisé avec un autre terme de proximité personnalisé, un terme simple ou un terme de préfixe. Par exemple :  
   
 -   CONTAINS('NEAR((*terme1*,*terme2*),5) AND *terme3*')  
   
@@ -151,7 +149,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
 -   Impact des termes de proximité sur le classement par la fonction CONTAINSTABLE  
   
-    Lorsque NEAR est utilisé dans la fonction CONTAINSTABLE, le nombre de résultats dans un document par rapport à sa longueur, ainsi que la distance entre le premier et le dernier terme de recherche dans chacun des résultats, affectent le classement de chaque document. Pour un terme de proximité générique, si les termes de recherche trouvés sont séparés de >50 termes logiques, le classement retourné sur un document est 0. Pour un terme de proximité personnalisé qui ne spécifie pas d'entier comme distance maximale, un document qui contient uniquement des résultats à intervalle de >100 termes logiques recevra un classement de 0. Pour plus d'informations sur le classement des recherches de proximité personnalisées, consultez [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
+    Lorsque NEAR est utilisé dans la fonction CONTAINSTABLE, le nombre de résultats dans un document par rapport à sa longueur, ainsi que la distance entre le premier et le dernier terme de recherche dans chacun des résultats, affectent le classement de chaque document. Pour un terme de proximité générique, si les termes de recherche trouvés sont séparés de >50 termes logiques, le classement retourné sur un document est 0. Pour un terme de proximité personnalisé qui ne spécifie pas d'entier comme distance maximale, un document qui contient uniquement des résultats à intervalle de >100 termes logiques recevra un classement de 0. Pour plus d'informations sur le classement des recherches de proximité personnalisées, consultez [Limit Search Results with RANK](../../relational-databases/search/limit-search-results-with-rank.md).  
   
 -   Option de serveur **Transformer les mots parasites**   
   
@@ -161,4 +159,3 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
-

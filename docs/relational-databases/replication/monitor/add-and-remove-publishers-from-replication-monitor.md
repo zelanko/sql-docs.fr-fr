@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Replication Monitor, adding and removing Publishers
+helpviewer_keywords: Replication Monitor, adding and removing Publishers
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ea5906fa0b1afa7a5276dcce4fbef605794af190
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7fd06f71bd65e1731ab53924e03e756044e505ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Ajouter et supprimer des serveurs de publication à partir du Moniteur de réplication
   Le serveur à partir duquel vous lancez le moniteur de réplication est automatiquement ajouté au moniteur s'il s'agit d'un serveur de publication. D'autres serveurs de publication peuvent être ajoutés via la boîte de dialogue **Ajouter un serveur de publication** . Après l'ajout d'un serveur de publication, celui-ci est affiché dans le volet gauche du moniteur. Le groupe **Mes serveurs de publication** est inclus par défaut, mais vous pouvez créer de nouveaux groupes pour gérer une ou plusieurs topologies de réplication. Pour plus d’informations sur le démarrage du moniteur de réplication, consultez [Démarrer le moniteur de réplication](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  

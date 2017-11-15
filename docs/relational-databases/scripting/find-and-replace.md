@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords:
-- Find and Replace dialog box
+helpviewer_keywords: Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5d3e50dcc4dd901255992d5aeea8c818f498de2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
   Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et éventuellement le remplacer. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  
@@ -133,4 +130,3 @@ ms.lasthandoff: 06/22/2017
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

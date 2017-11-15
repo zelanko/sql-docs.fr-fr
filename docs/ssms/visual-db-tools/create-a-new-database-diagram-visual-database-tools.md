@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f057c7af427ba69ff5b6253ae0d3c7e33ce435aa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: fbffc3ea565ac6ccebcb13a4b5977f825908b541
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Créer un schéma de base de données (Visual Database Tools)
 Vous pouvez utiliser l'Explorateur d'objets pour créer de nouveaux schémas de base de données. Les schémas de base de données représentent, de manière graphique, la structure de la base de données. Grâce aux schémas de base de données, vous pouvez créer et modifier des tables, des colonnes, des relations et des clés. En outre, vous pouvez modifier des index et des contraintes.  
@@ -46,4 +44,3 @@ Vous pouvez continuer à ajouter ou supprimer des tables, modifier des tables ex
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
-

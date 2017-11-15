@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 3772efa6ab55acd4087cd47f897040f782476636
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: f2e8f9470fe28427a78eb74a41c4e76c400f3761
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Leçon 3-3 - Enregistrer des scripts sous forme de projets ou de solutions
 Les développeurs familiarisés avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio seront heureux de pouvoir utiliser l'Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les scripts sur lesquels votre activité est basée peuvent être groupés en projets de scripts et ces projets être gérés ensemble sous la forme d'une solution. Lorsque les scripts sont placés dans des projets de scripts et des solutions, il est possible de les ouvrir en groupe ou de les enregistrer ensemble dans un produit de contrôle du code source tel que Visual SourceSafe. Les projets de scripts contiennent les informations de connexion pour que les scripts puissent s'exécuter correctement et peuvent inclure des fichiers non script tels que des fichiers texte.  
@@ -74,4 +71,3 @@ Au cours de l'exercice pratique suivant, vous allez créer un script court qui i
   
   
   
-

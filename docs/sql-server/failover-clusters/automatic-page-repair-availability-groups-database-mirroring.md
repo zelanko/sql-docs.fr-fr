@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ffb0714b75265db7e2188a39d1e8ada568ef3160
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 35a71754742484b4a1cdf35f5b28526e6e12309b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Réparation de page automatique (groupes de disponibilité : mise en miroir de bases de données)
   La réparation de page automatique est prise en charge par la mise en miroir de bases de données et par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Lorsque certains types d'erreurs endommagent une page et la rendent illisible, un serveur partenaire de mise en miroir de bases de données (principal ou miroir) ou un réplica de disponibilité (principal ou secondaire) tente de récupérer automatiquement la page. Le serveur partenaire/réplica qui ne peut pas lire la page demande une nouvelle copie de la page auprès de son serveur partenaire ou d'un autre réplica. Si cette demande réussit, la page illisible est remplacée par la copie lisible, ce qui permet généralement de résoudre l'erreur.  
@@ -120,6 +119,5 @@ ms.lasthandoff: 06/22/2017
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   
-
 
 

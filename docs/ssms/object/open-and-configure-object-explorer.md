@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13745947a33fbe51bddb69f4bb35165fd26c1867
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 245c775659b064815e64f5f10a0d56314ecb49b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-and-configure-object-explorer"></a>Ouvrir et configurer l'Explorateur d'objets
 Ouvrez l'Explorateur d'objets à l'aide du menu **Affichage** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configurez les options de l'Explorateur d'objets à l'aide de l'option **Options** du menu **Outils** .  
@@ -38,4 +36,3 @@ Pour configurer les paramètres de l'Explorateur d'objets, dans le menu **Outils
 [Volet Détails de l'Explorateur d'objets](../../ssms/object/object-explorer-details-pane.md)  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   
-

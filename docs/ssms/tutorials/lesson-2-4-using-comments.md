@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: cff5924926e591de763434f86e52a44bea63e677
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 0dc4641b0c397bcd57e64df629bab0d9bbc217af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-4---using-comments"></a>Leçon 2-4 - Utilisation de commentaires
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permet de mettre facilement en commentaire une partie d'un script.  
@@ -46,4 +43,3 @@ Outre l'utilisation du menu **Edition** , vous pouvez ajouter des commentaires o
   
   
   
-

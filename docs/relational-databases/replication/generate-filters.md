@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.generatefilters.f1
+f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb5b6b1e20308a8a249e12437cdfee573899fbac
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2aa276ac1c58809cb97ef0ce002de76db32e1fa3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-filters"></a>Générer des filtres
   La boîte de dialogue **Générer des filtres** permet de définir un filtre de lignes à appliquer sur une table lors d'une opération de publication de fusion. La réplication étend ensuite automatiquement le filtre aux autres tables associées par le biais de relations de clé étrangère. Par exemple, si vous définissez un filtre portant sur une table contenant des données de clients pour ne garder que les données portant sur les clients français, la réplication étend donc ce filtre aux tables retraçant les informations propres aux commandes et à leurs détails en relation avec des clients français.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **Spécifiez combien d'abonnements recevront des données de cette table.**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. La réplication de fusion vous permet d'indiquer le type de partitions répondant au mieux à vos données et votre application. Si vous sélectionnez **Une ligne de cette table ira à un seul abonnement**, la réplication de fusion définit l'option de non-chevauchement des partitions. Cette option, qui fonctionne avec les partitions précalculées pour améliorer les performances, permet de réduire au minimum le coût de téléchargement associé aux partitions précalculées. Le gain de performances lié au non-chevauchement des partitions est plus flagrant lorsque les filtres paramétrés et les filtres de jointure utilisés sont plus complexes. Si vous sélectionnez cette option, vous devez veiller à ce que les données soient partitionnées de telle sorte qu'une ligne ne puisse pas être répliquée vers plusieurs abonnés. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. La réplication de fusion vous permet d'indiquer le type de partitions répondant au mieux à vos données et votre application. Si vous sélectionnez **Une ligne de cette table ira à un seul abonnement**, la réplication de fusion définit l'option de non-chevauchement des partitions. Cette option, qui fonctionne avec les partitions précalculées pour améliorer les performances, permet de réduire au minimum le coût de téléchargement associé aux partitions précalculées. Le gain de performances lié au non-chevauchement des partitions est plus flagrant lorsque les filtres paramétrés et les filtres de jointure utilisés sont plus complexes. Si vous sélectionnez cette option, vous devez veiller à ce que les données soient partitionnées de telle sorte qu'une ligne ne puisse pas être répliquée vers plusieurs abonnés. Pour plus d'informations, consultez la section « Définition de « partition options » » dans la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  Après avoir ajouté un filtre, cliquez sur **OK** pour quitter ainsi la boîte de dialogue. Le filtre que vous spécifiez est ensuite analysé et exécuté sur la table indiquée dans la clause SELECT. Si l'instruction de filtrage contient des erreurs de syntaxe ou d'autres erreurs, vous recevrez un message et pourrez modifier l'instruction de filtrage.  
   

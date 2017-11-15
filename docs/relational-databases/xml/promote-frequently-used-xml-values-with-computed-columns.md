@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc333316c144154f0f06d4f8f9ae0a2887660700
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 790650397525811dd3be71edb28f233f25bf9ab8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
   Si les requêtes portent essentiellement sur un petit nombre de valeurs d'élément et d'attribut, vous pouvez promouvoir ces quantités dans les colonnes relationnelles. Cela peut s'avérer utile lorsque les requêtes sont émises sur une petite partie des données XML et que l'ensemble de l'instance XML est récupéré. Il n'est pas nécessaire de créer un index XML sur la colonne XML. En revanche, la colonne promue peut être indexée. Les requêtes doivent être écrites en vue de l'utilisation de la colonne promue afin que l'optimiseur de requête ne redirige plus les requêtes de la colonne XML vers la colonne promue.  
@@ -262,4 +260,3 @@ as
  [Utiliser des données XML dans les colonnes calculées](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   
-

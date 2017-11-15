@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c0bd256010111e00e31b50776a0034e0066d53b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +172,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 
     ### <a name="best-practice"></a>Recommandation :
     
-    Pour garantir la récupération rapide de clé et être en mesure d’accéder à vos données en dehors d’Azure, nous recommandons les bonnes pratiques suivantes :
+    Pour garantir la récupération rapide de clé et être en mesure d’accéder à vos données en dehors d’Azure, nous recommandons les meilleures pratiques suivantes :
  
     1. Créer votre clé de chiffrement localement sur un appareil HSM local. (S’assurer qu’il s’agit d’une clé RSA 2048 bits asymétrique, et donc stockable dans Azure Key Vault.)
     2. Importer la clé de chiffrement dans Azure Key Vault. Consultez les étapes ci-dessous pour connaître la marche à suivre.
@@ -218,7 +216,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     ### <a name="create-a-new-key"></a>Créer une clé
 
     ##### <a name="example"></a>Exemple :  
-    Si vous le souhaitez, vous pouvez créer une nouvelle clé de chiffrement directement dans Azure Key Vault, et la doter d’une protection logicielle ou HSM. Dans cet exemple, nous allons créer une clé à protection logicielle à l’aide de l’`Add-AzureKeyVaultKey cmdlet` :  
+    Si vous le souhaitez, vous pouvez créer une nouvelle clé de chiffrement directement dans Azure Key Vault, et la doter d’une protection logicielle ou HSM. Dans cet exemple, nous allons créer une clé à protection logicielle à l’aide de l’ `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -365,4 +363,3 @@ Maintenant que vous avez terminé la configuration de base, découvrez comment [
 [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
-

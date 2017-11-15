@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 8e0965ef-cc3a-43d5-82ad-01f525654b2f
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 2a2ac671e38642f24ecf9b2e6e3829bed656a768
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: cd84b6f12a797177d11bda12c4998eec4473ff41
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-5---show-the-object-explorer-details-page"></a>Leçon 1-5 - Afficher la page Détails de l’Explorateur d’objets
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut afficher un rapport pour chaque objet sélectionné dans l’Explorateur d’objets. Ce rapport, appelé page Détails de l'Explorateur d'objets, est créé par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et s'ouvre dans la fenêtre de document.  
@@ -44,4 +41,3 @@ La page **Détails de l’Explorateur d’objets** comporte deux volets. Le vole
   
   
   
-

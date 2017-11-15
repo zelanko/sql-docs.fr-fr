@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, viewing
 - viewing job step information
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 11d5bd90cbe853d287dc0b20c6f036a0000f0355
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 10701e8a66324391441d52da5d7dceedc978e688
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-job-step-information"></a>Afficher des informations sur une étape de travail
 Cette rubrique décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail. Elle contient également des informations sur l'affichage de la sortie d'une étape de travail.  
@@ -64,7 +62,7 @@ Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous
   
 5.  Dans la page **Général** de la boîte de dialogue **Propriétés de l'étape du travail** , vous pouvez afficher le type d'étape de travail et sa fonction.  
   
-6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
+6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
   
 #### <a name="to-view-job-step-output"></a>Pour afficher la sortie d'une étape de travail  
   
@@ -76,4 +74,3 @@ Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous
   
     -   Le bouton **Afficher** est désactivé lorsque le résultat de l'étape de travail est écrit dans un fichier. Pour afficher le fichier de sortie d'une étape de travail, utilisez le Bloc-notes.  
   
-

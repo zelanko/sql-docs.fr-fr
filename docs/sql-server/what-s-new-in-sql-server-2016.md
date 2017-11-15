@@ -1,34 +1,30 @@
 ---
 title: "Nouveautés de SQL Server 2016"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "nouveautés dans SQL Server"
+keywords: "nouveautés dans SQL Server"
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 224
+caps.latest.revision: "224"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 8cbdc851a7b050f359bd473e8ea971587ff850b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
  Avec SQL Server 2016, vous pouvez créer des applications stratégiques intelligentes à l’aide d’une plateforme de base de données hybride évolutive où tout est intégré, depuis les performances en mémoire et la sécurité avancée jusqu’à l’analytique en base de données. La version SQL Server 2016 ajoute de nouveaux composants de sécurité, des fonctionnalités d’interrogation, l’intégration de Hadoop et du cloud, l’analytique R et plus encore, ainsi que de nombreuses améliorations et de nombreux perfectionnements. 
@@ -113,4 +109,3 @@ Consultez la page [Reporting Services (SSRS)](../reporting-services/what-s-new-i
 - [Nouveau module SQL PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

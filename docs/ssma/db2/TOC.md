@@ -35,7 +35,7 @@
 # [Migration de données DB2 dans SQL Server](migrating-db2-data-into-sql-server-db2tosql.md)
 
 # [Conversion de schémas DB2](converting-db2-schemas-db2tosql.md)
-# [SQL Server Migration Assistant](sql-server-migration-assistant-for-db2-db2tosql.md)
+# [Assistant de migration SQL Server](sql-server-migration-assistant-for-db2-db2tosql.md)
 # [Génération de rapports](generating-reports-db2tosql.md)
 # [Création des fichiers de connexion de serveur](creating-the-server-connection-files-db2tosql.md)
 # [Nouveau projet](new-project-db2tosql.md)

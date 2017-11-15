@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1f7fb4d386936f39a471bae4746fecb42057ee2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6be5e63eebd7c9a403ac3bb1330552d474d919b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
   Cette rubrique explique comment réinitialiser un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Des abonnements individuels peuvent être marqués pour réinitialisation afin qu'un nouvel instantané soit appliqué lors de la synchronisation suivante.  
@@ -170,46 +169,46 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par extraction à une publication transactionnelle  
   
-1.  Créez une connexion à l’abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription>, puis définissez <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> et la connexion créée à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPullSubscription> , puis définissez <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>et la connexion créée à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
     >  Si cette méthode retourne **false**, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par extraction n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
   
 5.  Synchronisez l'abonnement par extraction. Pour plus d'informations, voir [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication transactionnelle  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription>, puis définissez <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> et la connexion créée à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransSubscription> , puis définissez <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>et la connexion créée à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
     >  Si cette méthode retourne **false**, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par émission de données n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
   
 5.  Synchronisez l'abonnement par émission de données. Pour plus d'informations, voir [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Pour réinitialiser un abonnement par extraction à une publication de fusion  
   
-1.  Créez une connexion à l’abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion à l'Abonné en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription>, puis définissez <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> et la connexion créée à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePullSubscription> , puis définissez <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>et la connexion créée à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
     >  Si cette méthode retourne **false**, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par extraction n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Passez la valeur **true** pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur **false** pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Passez la valeur **true** pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur **false** pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  
@@ -218,16 +217,16 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication de fusion  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription>, puis définissez <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> et la connexion créée à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscription> , puis définissez <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>et la connexion créée à l'étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet.  
   
     > [!NOTE]  
     >  Si cette méthode retourne **false**, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par émission de données n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Passez la valeur **true** pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur **false** pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passez la valeur **true** pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur **false** pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md).  

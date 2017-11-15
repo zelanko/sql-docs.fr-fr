@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- queries [SQL Server], creating
+helpviewer_keywords: queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d30a0729357abf0cfc18942d0da6db3f36f11686
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 5b7c219e4ead14c4053dfd481d1fa5559ce257a1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Créer des requêtes (Visual Database Tools)
 Les requêtes vous permettent de récupérer des données des tables et vues contenues dans votre base de données. Vous pouvez créer et utiliser des requêtes dans le **Concepteur de requêtes et de vues**, qui se compose de quatre volets : le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)et le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
@@ -55,4 +52,3 @@ Pour affiner davantage votre requête, vous pouvez modifier le code SQL dans le 
 [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

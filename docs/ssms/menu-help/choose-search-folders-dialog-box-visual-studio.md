@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.lookin
+f1_keywords: vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 12c0849728ab63ccc806e0ca2de2d8b98fd7c110
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Boîte de dialogue Choisir des dossiers de recherche (Visual Studio)
 Cette boîte de dialogue vous permet d'assembler, d'enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l'ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  
@@ -45,15 +42,15 @@ Supprimez le jeu de dossiers sélectionné du champ **Jeu de dossiers** et du ch
 Sélectionnez un lecteur ou un dossier dans cette liste déroulante pour remplir la **Liste des dossiers**.  
   
 **Liste des dossiers**  
-Répertorie les lecteurs et dossiers disponibles à l’intérieur du volume sélectionné dans la liste déroulante **Dossiers disponibles** . Pour développer un lecteur ou un dossier figurant dans cette liste, double-cliquez dessus. Sélectionnez un dossier ou maintenez la touche Maj ou Ctrl enfoncée pour sélectionner plusieurs dossiers. Cliquez sur **Add (>)** pour inclure les dossiers sélectionnés dans la liste **Dossiers sélectionnés** .  
+Répertorie les lecteurs et dossiers disponibles à l’intérieur du volume sélectionné dans la liste déroulante **Dossiers disponibles** . Pour développer un lecteur ou un dossier figurant dans cette liste, double-cliquez dessus. Sélectionnez un dossier ou maintenez la touche Maj ou Ctrl enfoncée pour sélectionner plusieurs dossiers. Cliquez sur **Ajouter (>)** pour inclure les dossiers sélectionnés dans la liste **Dossiers sélectionnés** .  
   
 **Parent**  
 Remontez la sélection figurant dans la **Liste des dossiers** d’un niveau dans l’arborescence des dossiers.  
   
-**Ajouter (&gt;)**  
+**Ajouter (>)**  
 Ajoutez les dossiers sélectionnés dans la **Liste des dossiers** à la liste **Dossiers sélectionnés** .  
   
-**Supprimer (&lt;)**  
+**Supprimer (<)**  
 Supprimez les dossiers sélectionnés de la liste **Dossiers sélectionnés** .  
   
 **Dossiers sélectionnés**  
@@ -62,4 +59,3 @@ Répertorie les dossiers ajoutés à partir de la **Liste des dossiers**. Ces do
 **Appliquer**  
 Enregistrez le jeu de dossiers de recherche figurant dans la liste **Dossiers sélectionnés** en tant que jeu de dossiers nommé. Ce jeu de dossiers peut ensuite être sélectionné dans le champ **Regarder dans** de tous les onglets de la fenêtre **Rechercher et remplacer** . Cette commande ferme la boîte de dialogue Choisir des dossiers de recherche.  
   
-

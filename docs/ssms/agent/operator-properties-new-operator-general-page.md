@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.operator.general.f1
+f1_keywords: sql13.ag.operator.general.f1
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a81af1f5c93629929059838a2925e9bd67a600e0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e5f7b177dfdaaedbbaed736f701406138818d58b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Propriétés de l’opérateur - Nouvel opérateur (page Général)
 Utilisez cette page pour afficher et modifier les propriétés générales des opérateurs de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -50,7 +47,7 @@ Définit les périodes d'activité de la radiomessagerie.
 Permet de sélectionner les jours d'activité de la radiomessagerie.  
   
 **Début de journée**  
-Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] envoie des messages à la radiomessagerie.  
+Sélectionne l’heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent envoie des messages à la radiomessagerie.  
   
 **Fin de journée**  
 Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] n’envoie plus de messages à la radiomessagerie.  
@@ -58,4 +55,3 @@ Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../in
 ## <a name="see-also"></a>Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
   
-

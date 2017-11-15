@@ -5,26 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- snapshots [SQL Server replication], security
+helpviewer_keywords: snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 43c9603e1f3a30ed558d264edb81d81c6d4c1297
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-the-snapshot-folder"></a>Sécuriser le dossier d'instantanés
-  Le dossier d'instantanés est un répertoire qui stocke les fichiers d'instantanés ; il vous est recommandé de dédier ce dossier au stockage des instantanés. Accordez à l'Agent d'instantané l'autorisation d'écriture sur ce dossier, et assurez-vous que l'autorisation de lecture n'est accordée qu'au compte Windows qu'utilise l'Agent de fusion ou l'Agent de distribution lorsqu'il accède à ce dossier. Pour accéder à un dossier d'instantané situé sur un ordinateur distant, le compte Windows associé à l'Agent doit être un compte de domaine.  
+  Le dossier d'instantané est un répertoire qui stocke les fichiers d'instantanés ; il vous est recommandé de dédier ce dossier au stockage des instantanés. Accordez à l'Agent d'instantané l'autorisation d'écriture sur ce dossier, et assurez-vous que l'autorisation de lecture n'est accordée qu'au compte Windows qu'utilise l'Agent de fusion ou l'Agent de distribution lorsqu'il accède à ce dossier. Pour accéder à un dossier d'instantané situé sur un ordinateur distant, le compte Windows associé à l'Agent doit être un compte de domaine.  
   
 > [!NOTE]  
 >  Le contrôle de compte d'utilisateur (UAC) aide les administrateurs à gérer leurs droits utilisateur élevés (parfois appelés *privilèges*). Dans les systèmes d'exploitation dans lesquels le contrôle de compte d'utilisateur est activé, les administrateurs n'utilisent pas leurs droits d'administration. À la place, ils effectuent la plupart des actions en tant qu'utilisateurs standard (non administratifs), assumant temporairement leurs droits d'administration seulement lorsque cela est nécessaire. La fonctionnalité Contrôle de compte d'utilisateur peut empêcher l'accès administratif au partage de fichiers d'instantanés. Vous devez donc octroyer explicitement des autorisations sur le partage de fichiers d'instantanés aux comptes Windows qui sont utilisés par l'Agent d'instantané, l'Agent de distribution et l'Agent de fusion. Vous devez effectuer cette opération même si les comptes Windows sont membres du groupe Administrateurs.  

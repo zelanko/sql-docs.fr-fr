@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- role switching [SQL Server]
+helpviewer_keywords: role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 61a44b122cc5b8e3015a4b9611f40a26c03aa183
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 9d08e404267babd8fcc17ad6863ebf9c1ca71d93
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestion des connexions et des travaux après un basculement de rôle (SQL Server)
   Lors du déploiement d’une solution de récupération d’urgence ou haute disponibilité pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , il est important de reproduire les informations importantes stockées pour la base de données dans les bases de données **master** ou **msdb** . En général, les informations importantes incluent les travaux de la base de données primaire/principale et les connexions des utilisateurs ou des processus qui doivent se connecter à la base de données. Vous devez dupliquer ces informations dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge une base de données secondaire/miroir. Si possible, il est préférable de reproduire, par programmation, l'information au niveau de la nouvelle base de données primaire/principale, après le basculement des rôles.  

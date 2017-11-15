@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5f63a3a6b06e0b76e603e1cce094e5fb17ae32db
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3190646ab3eb434e2b7ad17aa6ca3914857c6690
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-toolbox"></a>Utiliser la boîte à outils
 Vous pouvez sélectionner et faire glisser des éléments, du texte et des contrôles à partir de la boîte à outils vers des formulaires, des pages et des générateurs, puis faire glisser ces éléments à partir de ces sources de nouveau vers la boîte à outils pour une utilisation ultérieure. Par exemple, dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , vous pouvez faire glisser une tâche vers un plan de maintenance.  
@@ -49,4 +48,3 @@ Les éléments de la boîte à outils sont regroupés dans des sections appelés
 ## <a name="see-also"></a>Voir aussi  
 [Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
   
-

@@ -5,22 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ac5aa53-cdc3-4ced-9ab9-690be02aa951
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8f84afd80acae08e3fdd0bd3c0ae27dc25df32de
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b9b0c22491394f224c742cbb830334b7e8cb4280
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools - Termes du contrat de licence
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT  
@@ -50,7 +48,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
   
 **2.    CONDITIONS DE LICENCE ET/OU DROITS D’UTILISATION SUPPLÉMENTAIRES.**  
   
-&nbsp;&nbsp;**a.    Code Distribuable.**  
+&nbsp;&nbsp;**a.    Code distribuable.**  
   
 &nbsp;&nbsp;&nbsp;&nbsp;**i.    Droits d’utilisation et de distribution. Si vous vous conformez aux termes ci-dessous :**  
 * vous êtes autorisé à copier et à distribuer la version en code objet de Microsoft SQL Server Data-Tier Application Framework (le « **Code Distribuable** ») dans les programmes que vous développez ; et   
@@ -144,4 +142,3 @@ les réclamations pour rupture de contrat ou violation de garantie, les réclama
 Elle s’applique également même si Microsoft connaissait l’éventualité d’un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
 EFFET JURIDIQUE. Le présent contrat décrit certains droits légaux. Vous pouvez bénéficier d’autres droits prévus par les lois de votre État ou pays. Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre État ou pays si celles-ci ne le permettent pas.
-

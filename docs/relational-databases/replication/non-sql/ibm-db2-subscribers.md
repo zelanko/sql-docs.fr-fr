@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      La plupart des options de cette chaîne sont propres au serveur DB2 que vous configurez, mais vous devez attribuer aux options `Process Binary as Character` et `Derive Parameters` la valeur `False`. Une valeur est nécessaire afin que l'option `Initial Catalog` identifie la base de données d'abonnement. La chaîne de connexion sera indiquée dans l'Assistant Nouvel abonnement lorsque vous créerez l'abonnement.  
   
-3.  Créez une publication transactionnelle ou d'instantané, activez-la pour les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puis créez un abonnement par émission de données pour l'Abonné. Pour plus d’informations, voir [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Créez une publication transactionnelle ou d'instantané, activez-la pour les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puis créez un abonnement par émission de données pour l'Abonné. Pour plus d’informations, voir [Créer un abonnement pour un Abonné non-SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  Éventuellement, spécifiez un script de création personnalisé pour un ou plusieurs articles. Lors de la publication d’une table, un script `CREATE TABLE` est créé pour cette table. Pour les Abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , le script est créé en dialecte [!INCLUDE[tsql](../../../includes/tsql-md.md)] avant d'être traduit dans un dialecte SQL plus générique par l'Agent de distribution et d'être appliqué à l'Abonné. Pour spécifier un script de création personnalisé, vous pouvez soit modifier le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] existant, soit créer un script complet qui utilise le dialecte SQL DB2 ; si vous créez un script DB2, utilisez la directive **bypass_translation** afin que l'Agent de distribution applique le script sur l'Abonné sans le traduire.  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

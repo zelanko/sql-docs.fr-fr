@@ -1,28 +1,25 @@
 ---
 title: Injection SQL | Microsoft Docs
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Injection
+helpviewer_keywords: SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 7
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "7"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 58bdc38f3f48ce52f7d67281af89b45e2007be59
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-injection"></a>Injection SQL
   Une attaque par injection SQL consiste à insérer un code malveillant dans les chaînes transmises ultérieurement à une instance de SQL Server en vue de leur analyse et de leur exécution. Les procédures qui permettent de créer des instructions SQL doivent être vérifiées et analysées à la recherche d’éventuelles failles autorisant cette injection, car SQL Server exécute toutes les requêtes syntaxiquement correctes qu’il reçoit. Même les données paramétrables peuvent être manipulées par un pirate compétent et déterminé.  
@@ -176,10 +173,10 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 |@variable|Wrapper recommandé|  
 |---------------|-------------------------|  
 |Nom d'un élément sécurisable|`QUOTENAME(@variable)`|  
-|Chaîne ≤ à 128 caractères|`QUOTENAME(@variable, '''')`|  
+|Chaîne ≤ à 128 caractères|`QUOTENAME(@variable, '''')`|  
 |Chaîne de > 128 caractères|`REPLACE(@variable,'''', '''''')`|  
   
- Lorsque vous utilisez cette technique, une instruction SET peut être révisée comme suit :  
+ Lorsque vous utilisez cette technique, une instruction SET peut être révisée comme suit :  
   
 ```  
 --Before:  

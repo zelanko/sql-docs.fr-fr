@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aa34dd512a588b02aa30ee1733e037e8b9580d89
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 43a5ca3c9fa4ed16f87071f0c811bf9a98fee3ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nouvelle planification du travail - Propriétés de la planification du travail
 Cette page vous permet d'afficher et de modifier les propriétés de la planification.  
@@ -104,4 +102,3 @@ Sélectionnez l'heure d'exécution du travail.
 [Créer des planifications et les attacher à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Planifier un travail](../../ssms/agent/schedule-a-job.md)  
   
-

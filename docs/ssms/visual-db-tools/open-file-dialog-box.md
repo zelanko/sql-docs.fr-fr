@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aeb2660571f6eff735bf9936be3d4243fb797149
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
 La boîte de dialogue **Ouvrir un fichier** permet d'ouvrir un fichier existant à partir du disque. Vous pouvez également utiliser cette boîte de dialogue pour ouvrir un fichier déjà ouvert en utilisant des options d'encodage linguistique différentes.  
@@ -85,7 +83,7 @@ Affiche les fichiers et les dossiers sous la forme de grandes icônes.
 **Icônes**  
 Affiche les fichiers et les dossiers sous la forme de petites icônes.  
   
-**Listee**  
+**Liste**  
 Affiche les fichiers et les dossiers sous la forme d'une liste.  
   
 **Détails**  
@@ -103,4 +101,3 @@ Supprime le fichier ou dossier sélectionné du support de stockage.
 **Mapper un lecteur réseau**  
 Ouvre la boîte de dialogue **Mapper un lecteur réseau** .  
   
-

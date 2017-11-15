@@ -1,13 +1,11 @@
 ---
 title: "Dépannage de clusters de basculement | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/21/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cd7bcdf3515d6c8f88ef870494c4f6f8b5545fb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="failover-cluster-troubleshooting"></a>Dépannage de clusters de basculement
   Cette rubrique aborde les sujets suivants :  
@@ -93,11 +91,11 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
  **Solution 1**: Utilisez le commutateur **/qb** à la place du commutateur **/qn** . Si vous utilisez le commutateur **/qb** , l’interface utilisateur de base s’affichera à chaque étape, ainsi que les messages d’erreur.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problème : SQL Server ne peut pas se connecter au réseau après avoir fait l'objet d'une migration vers un autre nœud  
- **Erreur 1 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas en mesure de contacter un contrôleur de domaine.  
+ **Erreur 1** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas en mesure de contacter un contrôleur de domaine.  
   
  **Solution 1**: dans les journaux d'événements, recherchez des signes indiquant l'existence de problèmes réseau, tels que des défaillances d'adaptateur ou des problèmes affectant le service DNS. Vérifiez que vous pouvez exécuter une commande ping sur le contrôleur de domaine.  
   
- **Erreur 2 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas identiques sur tous les nœuds du cluster ou le nœud ne redémarre pas un service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a fait l'objet d'une migration depuis un nœud défaillant.  
+ **Erreur 2 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne sont pas identiques sur tous les nœuds du cluster ou le nœud ne redémarre pas un service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui a fait l’objet d’une migration depuis un nœud défaillant.  
   
  **Solution 2 :** modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous n'effectuez pas cette opération et que vous modifiez les mots de passe des comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un nœud, vous devez également modifier les mots de passe sur tous les autres nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue cette opération automatiquement.  
   
@@ -127,7 +125,7 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
  **Solution 2 :** utilisez NBTSTAT pour rechercher le nom en double, puis résolvez le problème.  
   
- **Erreur 3 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne se connecte pas à l'aide de canaux nommés.  
+ **Erreur 3 :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne se connecte pas à l’aide de canaux nommés.  
   
  **Solution 3 :** pour vous connecter à l'aide de canaux nommés, créez un alias avec le Gestionnaire de configuration de SQL Server pour vous connecter à l'ordinateur approprié. Par exemple, si vous disposez d’un cluster à deux nœuds (**Node A** et **Node B**) et d’une instance de cluster de basculement (**Virtsql**) avec une instance par défaut, vous pouvez vous connecter au serveur dont la ressource de nom réseau est hors connexion, en procédant comme suit :  
   
@@ -195,4 +193,3 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
  [Caractéristiques d'exécution des procédures stockées étendues](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
   
   
-

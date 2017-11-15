@@ -5,24 +5,21 @@ ms.date: 03/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "installer powershell sql server, télécharger powershell sql server"
+keywords: "installer powershell sql server, télécharger powershell sql server"
 ms.assetid: 
-caps.latest.revision: 113
+caps.latest.revision: "113"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Télécharger le module PowerShell SQL Server
 Le module PowerShell SQL Server fait partie de la version 17.0 de SQL Server Management Studio et il est désormais fourni via PowerShell Gallery.  Le module n’est plus inclus dans le package d’installation de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez en plus installer le module SQL Server sur l’ordinateur.
@@ -62,4 +59,3 @@ Pour utiliser une version spécifique du module dans vos scripts, vous pouvez l�
 > Import-Module SqlServer -Version 21.0.17178
 
 Les versions du module PowerShell SQL Server incluses dans PowerShell Gallery prennent en charge la gestion de versions et nécessitent PowerShell version 5.0 ou ultérieure. Vous pouvez trouver le module SqlServer dans [PowerShell Gallery](https://www.powershellgallery.com/packages/Sqlserver/) 
-

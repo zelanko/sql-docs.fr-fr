@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.operator.notifications.f1
+f1_keywords: sql13.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a8d182c3e434bfc05831922f0a214b58efbecd48
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d96fbe6d79ff099c552ea95c764dfebd69f45489
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operator-properties---new-operator-notifications-page"></a>Propriétés de l’opérateur - Nouvel opérateur (page Notifications)
 Utilisez cette page pour définir les alertes et les travaux qui notifient l'opérateur.  
@@ -48,10 +45,9 @@ Notifie cet opérateur à l'aide d'un courrier électronique.
 **Récepteur de radiomessagerie**  
 Notifie cet opérateur en envoyant un courrier électronique à son adresse de radiomessagerie.  
   
-**Envoi réseau**  
+**Net send**  
 Notifie cet opérateur à l’aide de **net send**.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
   
-

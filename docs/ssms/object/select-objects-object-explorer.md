@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.selectobjects.f1
+f1_keywords: sql13.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bf429c56ec1c00a62c747869a8bfe4aca2ef0355
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="select-objects-object-explorer"></a>Sélectionner des objets (Explorateur d'objets)
 La boîte de dialogue **Sélectionner des objets** vous permet d’ajouter un objet dans une liste d’une autre boîte de dialogue. Le titre de la boîte de dialogue et les options disponibles dans cette boîte de dialogue dépendent de la manière dont elle a été ouverte. Seules les options disponibles apparaissent ; par exemple, seuls des noms de connexion sont disponibles lorsque vous sélectionnez un propriétaire pour un nouvel objet.  
@@ -43,4 +40,3 @@ Valide les noms d’objets dans la zone **Entrez les noms d’objets à sélecti
 **Parcourir**  
 Affiche la boîte de dialogue **Rechercher des objets** . Celle-ci contient la liste des objets des types répertoriés dans la zone **Sélectionnez ces types d’objets** . Sélectionnez des objets dans cette liste en activant les cases à cocher correspondantes.  
   
-

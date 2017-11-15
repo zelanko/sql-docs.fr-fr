@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ag.proxy.general.f1
+f1_keywords: sql13.ag.proxy.general.f1
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fc35f81488bd4717bc12366421564b2022f66e78
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 90b16c425f81779083c310b15279dc17d0decc85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Propriétés du compte de proxy - Nouveau compte de proxy (page Général)
-Cette page vous permet d'afficher et de modifier les propriétés d'un compte proxy de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Cette page vous permet d'afficher et de modifier les propriétés d'un compte proxy de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 ## <a name="options"></a>Options  
 **Nom du proxy**  
@@ -52,4 +49,3 @@ Sélectionnez le proxy auquel réaffecter les étapes du travail. Cette liste es
 ## <a name="see-also"></a>Voir aussi  
 [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
-

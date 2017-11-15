@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.configdistwizard.distpubproperties.f1
-helpviewer_keywords:
-- Publisher Properties dialog box
+f1_keywords: sql13.rep.configdistwizard.distpubproperties.f1
+helpviewer_keywords: Publisher Properties dialog box
 ms.assetid: ab6ada76-0f99-43fe-b524-baac7b1bc483
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a0fbae64d400b0e4b1b55a5f4495e242b631a7ab
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 788b81b9917f99197df74301f6d1ec7e222dcdeb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publisher-properties---distributor"></a>Propriétés du serveur de publication - Serveur de distribution
   La boîte de dialogue **Propriétés du serveur de publication** permet d'afficher et de modifier les propriétés associées à la relation existant entre le serveur de publication et son serveur de distribution.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Référence des propriétés &#40;réplication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

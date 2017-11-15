@@ -20,7 +20,7 @@
 ## [Événements de requête, colonnes de données](queries-events-data-columns.md)  
 # [Événements de traitement de requête, catégorie d’événement](query-processing-events-category.md)  
 ## [Événements de traitement de requête, colonnes de données](query-processing-events-data-columns.md)  
-# [Audit de sécurité, catégorie d'événement](security-audit-event-category.md)  
+# [Catégorie d'événement Audit de sécurité](security-audit-event-category.md)  
 ## [Audit de sécurité, colonnes de données](security-audit-data-columns.md)  
 # [Événements de session, catégorie d’événement](session-events-event-category.md)  
 ## [Événements de session, colonnes de données](session-events-data-columns.md)  

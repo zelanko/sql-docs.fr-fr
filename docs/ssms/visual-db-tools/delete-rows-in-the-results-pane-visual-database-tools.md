@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - deleting rows
 - Results pane
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cef300f5851e64620787d1dec2ca0b2d6fe114f9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 806a4af5df592567fbcec5ed087f7e1bdf15104e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Supprimer des lignes dans le volet Résultats (Visual Database Tools)
 Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des enregistrements dans la base de données. Pour supprimer l'ensemble des lignes, vous pouvez utiliser une requête Delete. Pour plus d’informations, consultez [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Si vous souhaitez uniquement supprimer des lignes du volet Résultats, modifiez les critères de la requête. Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
@@ -51,4 +49,3 @@ Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des en
 [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
-

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.getdirectoryname
+f1_keywords: vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c55d02a0ccdfd22d1d0b817e362e1faf661c4265
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Boîte de dialogue Emplacement (Visual Database Tools)
 Cette boîte de dialogue permet de localiser et de sélectionner le dossier contenant les fichiers qui vous intéressent. Cette boîte de dialogue renvoie le chemin du dossier sélectionné à la boîte de dialogue appelante. Vous pouvez accéder à cette boîte de dialogue en procédant comme suit :  
@@ -62,4 +59,3 @@ Supprime les fichiers ou dossiers sélectionnés du support de stockage.
 **Créer un nouveau dossier**  
 Affiche la boîte de dialogue **Nouveau dossier** . Utilisez cette option pour créer un dossier enfant sous le dossier sélectionné dans la liste **Regarder dans** .  
   
-

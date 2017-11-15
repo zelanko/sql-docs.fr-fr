@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], filtering published data
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b789fc6033b70608ca30cfa3895442be44ce1e40
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8dccb06209dc9f938254fe2b1e86dc490ed00ab0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-published-data"></a>Filtrer des données publiées
   Le filtrage des articles d'une table vous permet de créer des partitions de données à publier. En filtrant les données publiées, vous pouvez :  
@@ -63,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      À l'aide des filtres de jointure, vous pouvez étendre un filtre de lignes d'une table publiée à l'autre. Pour plus d’informations, consultez [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
-## <a name="static-row-filters"></a>Filtres de lignes statiques  
+## <a name="static-row-filters"></a>filtres de lignes statiques  
  L'illustration suivante montre une table publiée filtrée pour que seules les lignes 2, 3 et 6 soient intégrées à la publication.  
   
  ![Filtrage de lignes](../../../relational-databases/replication/publish/media/repl-16.gif "Filtrage de lignes")  
@@ -140,4 +138,3 @@ ms.lasthandoff: 06/22/2017
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

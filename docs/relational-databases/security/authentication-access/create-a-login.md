@@ -5,8 +5,7 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 29
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "29"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: fa1d1c3cc20155dd5f53c1e62bc15a96c7f3758c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,10 +150,10 @@ ms.lasthandoff: 06/22/2017
  **Schéma par défaut**  
  Spécifie le schéma par défaut de l'utilisateur. Lors de la création d'un utilisateur, son schéma par défaut est **dbo**. Il est possible de spécifier un schéma par défaut qui n'existe pas encore. Vous ne pouvez pas spécifier de schéma par défaut pour un utilisateur mappé sur un groupe Windows, un certificat ou une clé asymétrique.  
   
- **Guest account enabled for:**  *database_name*  
+ **Compte Invité activé pour :**  *nom_base_de_données*  
  Attribut en lecture seule indiquant si le compte Invité est activé sur la base de données sélectionnée. Utilisez la page **État** de la boîte de dialogue **Propriétés de la connexion** du compte Invité pour activer ou désactiver le compte Invité.  
   
- **Database role membership for:**  *database_name*  
+ **Appartenance au rôle de base de données pour :**  *nom_base_de_données*  
  Sélectionnez les rôles pour l'utilisateur dans la base de données spécifiée. Tous les utilisateurs sont membres du rôle **public** de chaque base de données et ne peuvent pas être supprimés. Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Éléments sécurisables  
@@ -279,4 +278,3 @@ ms.lasthandoff: 06/22/2017
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.file.close.f1
 - VS.SaveChangesDlg
-helpviewer_keywords:
-- Save Changes dialog box
+helpviewer_keywords: Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f1f2f0c5925c46db4216e665abecd051e7596f2b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: dbfd36d42ca6843bf061bf6427554f631ab009d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-changes"></a>Enregistrer les modifications
 Vous avertit que les modifications apportées aux éléments répertoriés ne seront enregistrées que si vous cliquez sur **Oui**.  
@@ -45,4 +42,3 @@ Les éléments sélectionnés seront enregistrés. Les éléments peuvent être 
 > [!NOTE]  
 > Lors de l'enregistrement, ne spécifiez que le nom de l'objet, pas le schéma et le nom de l'objet.  
   
-

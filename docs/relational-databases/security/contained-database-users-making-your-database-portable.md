@@ -5,24 +5,23 @@ ms.date: 08/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - contained database, users
 - user [SQL Server], about contained database users
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
-caps.latest.revision: 33
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f6310afe6f8909a560fac0b7762c7aa94e3a1f3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "33"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: On Demand
+ms.openlocfilehash: 410ea9f28ad1a4ec7f48024a6716e5588379af5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="contained-database-user-model"></a>Modèle utilisateur de base de données à relation contenant-contenu  
  Dans le modèle utilisateur de la base de données à relation contenant-contenu, la connexion de la base de données MASTER n'est pas présente. Au lieu de cela, le processus d'authentification se produit sur la base de données utilisateur, et l'utilisateur de base de données de la base de données utilisateur n'a pas de connexion associée dans la base de données MASTER. Le modèle utilisateur de base de données à relation contenant-contenu prend en charge l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et il peut être utilisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Pour vous connecter en tant qu'utilisateur de base de données à relation contenant-contenu, la chaîne de connexion doit toujours contenir un paramètre de la base de données utilisateur afin que [!INCLUDE[ssDE](../../includes/ssde-md.md)] sache quelle base de données est chargée de gérer le processus d'authentification. L'activité de l'utilisateur de base de données à relation contenant-contenu étant limitée à l'authentification de base de données, lorsque vous vous connectez en tant qu' utilisateur de base de données à relation contenant-contenu, le compte d'utilisateur base de données doit être créé indépendamment dans chaque base de données dont l'utilisateur a besoin. Pour modifier les bases de données, les utilisateurs [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doivent créer une connexion. Les utilisateurs de base de données à relation contenant-contenu dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent modifier les bases de données si un même utilisateur est présent dans une autre base de données.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] support Azure Active Directory identities as contained database users. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] prend en charge les utilisateurs de base de données à relation contenant-contenu utilisant l’authentification [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , à la différence de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Lorsque vous utilisez l’authentification Azure Active Directory, les connexions à partir de SSMS peut être établies à l’aide de l’authentification Active Directory universelle.  Les administrateurs peuvent configurer une authentification universelle pour exiger l’authentification multifacteur, qui vérifie l’identité à l’aide d’un appel téléphonique, d’un SMS, d’une carte à puce avec code confidentiel ou d’une notification d’application mobile. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure :** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] prennent en charge les identités Azure Active Directory en tant qu’utilisateurs de base de données à relation contenant-contenu. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] prend en charge les utilisateurs de base de données à relation contenant-contenu utilisant l’authentification [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , à la différence de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Lorsque vous utilisez l’authentification Azure Active Directory, les connexions à partir de SSMS peut être établies à l’aide de l’authentification Active Directory universelle.  Les administrateurs peuvent configurer une authentification universelle pour exiger l’authentification multifacteur, qui vérifie l’identité à l’aide d’un appel téléphonique, d’un SMS, d’une carte à puce avec code confidentiel ou d’une notification d’application mobile. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dans la mesure où le nom de la base de données est toujours requis dans la chaîne de connexion, aucune modification n’est requise sur la chaîne de connexion lorsque vous passez du modèle traditionnel au modèle utilisateur de base de données à relation contenant-contenu. Pour les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom de la base de données doit être ajoutée à la chaîne de connexion, s’il n'est pas déjà présent.  
   
@@ -98,4 +97,3 @@ ms.lasthandoff: 06/22/2017
  [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   
   
-

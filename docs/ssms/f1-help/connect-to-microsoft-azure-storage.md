@@ -5,25 +5,23 @@ ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: 
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: ea0fbb6f0297dfdbe94974de472c7a48ce8ce831
-ms.openlocfilehash: b673559a735d3b28d6055a1440183861b3db692a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: cbb66aa6f65eb0e1c8b0de50de11a9cc3e090bc5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Se connecter au service Stockage Microsoft Azure
 Utilisez la boîte de dialogue **Connexion de stockage Windows Azure** pour spécifier un compte de stockage et valider votre connexion à Windows Azure.  
@@ -46,4 +44,3 @@ Spécifiez les informations suivantes sur votre compte Windows Azure, puis cliqu
   
 4.  **Enregistrer la clé de compte** - Cette option enregistre votre mot de passe dans un fichier chiffré.  
   
-

@@ -5,24 +5,21 @@ ms.date: 09/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- spatial indexes [SQL Server]
+helpviewer_keywords: spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bcfa4dfbf2af7d1cd124ed16fef13eeed89bfcb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae93cf0e3211b9068de0b3dc512f7a59a3f0fd9c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d’un type de données spatiales, tel que **geometry** ou **geography**.  
@@ -250,4 +247,3 @@ ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]
  [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

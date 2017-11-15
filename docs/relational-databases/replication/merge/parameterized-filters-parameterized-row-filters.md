@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtres paramétrés - Filtres de lignes paramétrés
   Les filtres de lignes paramétrables permettent l'envoi de différentes partitions de données à divers Abonnés sans qu'il soit nécessaire de créer plusieurs publications (les filtres paramétrés étaient précédemment désignés par le terme « filtres dynamiques » dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Une partition est un sous-ensemble de lignes d'une table ; selon les paramètres sélectionnés lors de la création d'un filtre de lignes paramétrable, chaque ligne d'une table publiée peut appartenir à une seule partition (ce qui donne des partitions qui ne se chevauchent pas), ou à deux ou plusieurs partitions (auquel cas, elles se chevauchent).  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Les filtres paramétrés sont utilisés sur une seule table et généralement combinés à des filtres de jointure afin d'étendre le filtrage aux tables connexes. Pour plus d’informations, voir [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Pour définir ou modifier un filtre de lignes paramétré, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Pour définir ou modifier un filtre de lignes paramétré, consultez [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Fonctionnement des filtres paramétrés  
  Un filtre de lignes paramétré utilise une clause WHERE pour sélectionner les données appropriées à publier. Plutôt que de spécifier une valeur littérale dans la clause (comme dans un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : SUSER_SNAME() et HOST_NAME(). Il est également possible d'utiliser des fonctions définies par l'utilisateur mais elles doivent inclure SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction ou évaluer l'une de ces fonctions système (par exemple, `MyUDF(SUSER_SNAME()`). Si une fonction définie par l'utilisateur inclut SUSER_SNAME() ou HOST_NAME() dans le corps de la fonction, vous ne pouvez pas passer de paramètres à la fonction.  
@@ -111,7 +110,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Agent de fusion : spécifiez une valeur pour le paramètre **-Hostname** dans la ligne de commande ou par l’intermédiaire d’un profil d’Agent. Pour plus d'informations sur l'Agent de fusion, consultez [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Pour plus d'informations sur les profils d'Agent, consultez [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>Initialisation d'un abonnement à une publication avec des filtres paramétrés  
- Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Pour plus d’informations, voir [Instantanés des publications de fusion avec des filtres paramétrés](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Lorsque vous utilisez des filtres de lignes paramétrés dans les publications de fusion, la réplication initialise chaque abonnement avec un instantané en deux parties. Pour plus d’informations, voir [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## <a name="using-the-appropriate-filtering-options"></a>Utilisation des options de filtrage appropriées  
  Vous contrôlez essentiellement deux processus lorsque vous utilisez les filtres paramétrés :  

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - queued updating subscriptions [SQL Server replication]
 - articles [SQL Server replication], conflict resolution
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Abonnements pouvant être mis à jour - Résolution des conflits de mise à jour en attente
   Étant donné que les abonnements mis à jour en attente permettent d'apporter des modifications aux mêmes données à différents emplacements, des conflits sont susceptibles de se produire lors de la synchronisation des données sur le serveur de publication. La réplication détecte les éventuels conflits lors de la synchronisation des modifications avec le serveur de publication et les résout à l'aide de la stratégie de résolution que vous avez sélectionnée lors de la création de la publication. Les conflits suivants peuvent se produire :  
@@ -86,4 +84,3 @@ ms.lasthandoff: 07/31/2017
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
-

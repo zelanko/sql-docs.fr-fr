@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,20 +13,19 @@ helpviewer_keywords:
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d337913274836597bbcdf26947e3884c4c5c8c2a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 08b94ef42c52450848b4e63d75d164fcc6da0402
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="give-others-ownership-of-a-job"></a>Attribuer la propriété d’un travail à d’autres utilisateurs
-Cette rubrique explique comment réattribuer la propriété de travaux  [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent à un autre utilisateur.  
+Cette rubrique explique comment réattribuer la propriété de travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent à un autre utilisateur.  
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
   
@@ -42,7 +40,7 @@ Cette rubrique explique comment réattribuer la propriété de travaux  [!INCLUD
 ## <a name="BeforeYouBegin"></a>Avant de commencer  
   
 ### <a name="Restrictions"></a>Limitations et restrictions  
-Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou du rôle de serveur fixe **sysadmin**. Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou du rôle de serveur fixe **sysadmin** . Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 Vous devez être administrateur système pour modifier le propriétaire d'un travail.  
   
@@ -55,7 +53,7 @@ Pour des raisons de sécurité, seul le propriétaire du travail ou un membre du
 > Si vous transférez la propriété d’un travail à un utilisateur qui n’est pas membre du rôle serveur fixe **sysadmin** et que ce travail exécute des étapes qui nécessitent des comptes proxy (par exemple l’exécution de packages [!INCLUDE[ssIS](../../includes/ssis_md.md)] ), vérifiez que l’utilisateur en question a accès à ce compte proxy, sinon le travail échouera.  
   
 #### <a name="Permissions"></a>Permissions  
-Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
+Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProc2"></a>Utilisation de SQL Server Management Studio  
 **Pour attribuer la propriété d'un travail à d'autres utilisateurs**  
@@ -97,4 +95,3 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
 [Créer des travaux](../../ssms/agent/create-jobs.md)  
   
-

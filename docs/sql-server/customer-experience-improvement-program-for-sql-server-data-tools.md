@@ -5,22 +5,20 @@ ms.date: 10/21/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 399dd15292b67f89829576234e0b2c600e5b4e44
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: d3ac32a1bded13f7d2411fac6100353f3ec7e2c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programme d’amélioration du produit pour SQL Server Data Tools
   Découvrez comment le Programme d’amélioration du produit (CEIP) aide Microsoft à identifier les méthodes permettant d’améliorer nos logiciels.  Vous pouvez configurer les outils afin de vous abonner ou d’annuler l’abonnement au programme à tout moment.  
@@ -147,4 +145,3 @@ ms.lasthandoff: 07/31/2017
 -   1 pour s'abonner  
   
   
-

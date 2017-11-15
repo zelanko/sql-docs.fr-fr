@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.General
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c81d9fefe5e4e7b8bc41f1a3df26d43a79f8226b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 043ab8f89e389dbd940ca3e34039747e2dbf2d27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---help---general-page"></a>Options (Environnement - Aide - Page Général)
 Utilisez la boîte de dialogue **Options** pour choisir des ensembles de documentation et déterminer si les rubriques d’aide doivent être affichées à l’intérieur de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou dans une fenêtre extérieure distincte. Pour y accéder, cliquez sur **Options** dans le menu **Outils** , développez **Aide** dans le nœud **Environnement** et cliquez sur **Général**.  
@@ -52,4 +49,3 @@ Indique la langue prioritaire dans la liste des résultats pour les recherches r
 **Afficher également les rubriques en anglais**  
 Indique que les rubriques en anglais sont retournées en plus des rubriques dans la langue sélectionnée dans la zone **Langue de la rubrique en ligne** .  
   
-

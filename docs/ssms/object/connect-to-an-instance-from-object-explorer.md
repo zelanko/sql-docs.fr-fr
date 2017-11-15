@@ -5,22 +5,20 @@ ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: 2fbf96ce171fbcbe2eeb54729fc9f543011bcf07
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Se connecter à SQL Server ou Azure SQL Database
 
@@ -32,7 +30,7 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
 
 1. Dans l’**Explorateur d’objets**, cliquez sur **Connexion > Moteur de base de données...**.
 
-   ![connexion](../media/connect-to-server/connect-db-engine.png)
+   ![connect](../media/connect-to-server/connect-db-engine.png)
 
 1. Renseignez l’écran **Se connecter au serveur** et cliquez sur **Connexion** :
 
@@ -65,4 +63,3 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
 [Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
 [Stockage Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
-

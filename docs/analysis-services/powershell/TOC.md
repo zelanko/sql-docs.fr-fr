@@ -13,7 +13,7 @@
 ## [New-RestoreLocation, applet de commande](new-restorelocation-cmdlet.md)  
 ## [Remove-RoleMember, applet de commande](remove-rolemember-cmdlet.md)  
 ## [Restore-ASDatabase, applet de commande](restore-asdatabase-cmdlet.md)  
-# [Informations de référence sur PowerShell pour Power Pivot pour SharePoint](powershell-reference-for-power-pivot-for-sharepoint.md)  
+# [Référence PowerShell pour Power Pivot pour SharePoint](powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [Get-PowerPivotServiceApplication, applet de commande](get-powerpivotserviceapplication-cmdlet.md)  
 ## [Get-PowerPivotSystemServiceInstance, applet de commande](get-powerpivotsystemserviceinstance-cmdlet.md)  
 ## [Get-PowerPivotSystemService, applet de commande](get-powerpivotsystemservice-cmdlet.md)  

@@ -5,8 +5,7 @@ ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +22,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
----   
-
+caps.latest.revision: "31"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Active
+ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
+---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -42,8 +40,8 @@ ms.lasthandoff: 06/22/2017
   
  Vous pouvez créer un utilisateur de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Présentation des types d’utilisateurs  
- [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] présente 6 options de création d’un utilisateur de base de données. L’image suivante montre les 6 options dans la zone verte et indique ce qu'elles représentent.  
+##  <a name="Understanding"></a> Présentation des types d'utilisateurs  
+ [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] présente 6 options de création d'un utilisateur de base de données. L’image suivante montre les 6 options dans la zone verte et indique ce qu'elles représentent.  
   
  ![Types_utilisateurs](../../../relational-databases/security/authentication-access/media/typesofusers.png "Types_utilisateurs")  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  Sélectionnez **utilisateur SQL avec mot de passe** ou **utilisateur SQL avec connexion** avec **connexion d'authentification SQL Server**, lorsque la personne qui se connecte ne peut pas s'authentifier avec Windows. Ceci est courant lorsque des personnes extérieures à votre organisation (par exemple des clients) se connectent à votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-> **ASTUCE** Pour les personnes internes à votre organisation, l'authentification Windows est un meilleur choix, parce qu’elles n'auront pas à mémoriser un mot de passe supplémentaire et que l'authentification Windows offre des fonctionnalités de sécurité supplémentaires, notamment Kerberos.  
+> **ASTUCE !** Pour les personnes internes à votre organisation, l'authentification Windows est un meilleur choix, parce qu’elles n'auront pas à mémoriser un mot de passe supplémentaire et que l'authentification Windows offre des fonctionnalités de sécurité supplémentaires, notamment Kerberos.  
   
 ##  <a name="Restrictions"></a> Arrière-plan  
  Un utilisateur est un principal de sécurité au niveau de la base de données. Les comptes de connexion doivent être mappés à un utilisateur de base de données pour permettre la connexion à une base de données. Un compte de connexion peut être mappé à différentes bases de données en tant qu'utilisateurs différents, mais il ne peut être mappé que comme utilisateur unique dans chaque base de données. Dans une base de données partiellement à relation contenant-contenu, il est possible de créer un utilisateur qui ne dispose pas de compte de connexion. Pour plus d’informations sur les utilisateurs de base de données à relation contenant-contenu, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Lorsque l'utilisateur invité d'une base de données est activé, un compte de connexion non mappé à un utilisateur de base de données peut accéder à la base de données en tant qu'utilisateur invité.  
@@ -77,13 +75,13 @@ ms.lasthandoff: 06/22/2017
   
 2.  Développez la base de données où créer le nouvel utilisateur de base de données.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur**.  
+3.  Cliquez avec le bouton droit sur le dossier **Sécurité** , pointez sur **Nouveau**, puis sélectionnez **Utilisateur**.  
   
 4.  Dans la boîte de dialogue **Utilisateur de base de données – Nouveau** , sur la page **Général** , sélectionnez un des types d'utilisateur suivants à partir de la liste **type d’utilisateur** :  
   
-    -   **Utilisateur SQL avec connexion**  
+    -   **utilisateur SQL avec connexion**  
   
-    -   **Utilisateur SQL avec mot de passe**  
+    -   **utilisateur SQL avec mot de passe**  
   
     -   **Utilisateur SQL sans connexion**  
   
@@ -91,15 +89,15 @@ ms.lasthandoff: 06/22/2017
   
     -   **Utilisateur mappé à une clé asymétrique**  
   
-    -   **Utilisateur Windows**  
+    -   **utilisateur Windows**  
   
 5.  Lorsque vous sélectionnez une option, les options restantes dans la boîte de dialogue peuvent changer. Certaines options s'appliquent uniquement à des types spécifiques d'utilisateurs de base de données. Certaines options peuvent être vides et utiliser la valeur par défaut.  
   
      **Nom d'utilisateur**  
-     Entrez le nom du nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur**, vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe**.  
+     Entrez le nom du nouvel utilisateur. Si vous avez choisi **Utilisateur Windows** dans la liste **Type d’utilisateur** , vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Sélectionner l’utilisateur ou le groupe** .  
   
-     **Nom d’accès**  
-     Entrez le nom de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion**. **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
+     **Nom d'accès**  
+     Entrez le nom de connexion de l'utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion** . **Nom de connexion** est disponible si vous sélectionnez **Utilisateur SQL avec connexion** ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
      **Mot de passe** et **Confirmer le mot de passe**  
      Entrez un mot de passe pour les utilisateurs qui s'authentifient auprès de la base de données.  
@@ -108,13 +106,13 @@ ms.lasthandoff: 06/22/2017
      Entrez la langue par défaut de l’utilisateur.  
   
      **Schéma par défaut**  
-     Entrez le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension**(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma**. **Schéma par défaut** est disponible si vous sélectionnez **Utilisateur SQL avec connexion**, **Utilisateur SQL sans connexion**ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
+     Entrez le schéma qui possédera les objets créés par cet utilisateur. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner le schéma** . **Schéma par défaut** est disponible si vous sélectionnez **Utilisateur SQL avec connexion**, **Utilisateur SQL sans connexion**ou **Utilisateur Windows** dans la liste **Type d'utilisateur** .  
   
      **Nom du certificat**  
-     Entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner un certificat**. **Nom du certificat** est disponible si vous sélectionnez **Utilisateur mappé à un certificat** dans la liste **Type d'utilisateur** .  
+     Entrez le certificat à utiliser pour l'utilisateur de base de données. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner un certificat** . **Nom du certificat** est disponible si vous sélectionnez **Utilisateur mappé à un certificat** dans la liste **Type d'utilisateur** .  
   
      **Nom de la clé asymétrique**  
-     Entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez éventuellement cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique**. **Nom de la clé asymétrique** est disponible si vous sélectionnez **Utilisateur mappé à une clé asymétrique** dans la liste **Type d'utilisateur** .  
+     Entrez la clé à utiliser pour l'utilisateur de base de données. Vous pouvez éventuellement cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la clé asymétrique** . **Nom de la clé asymétrique** est disponible si vous sélectionnez **Utilisateur mappé à une clé asymétrique** dans la liste **Type d'utilisateur** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 06/22/2017
      **Points de suspension (…)**  
      Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Supprimer**  
+     **Delete**  
      Supprime la propriété étendue sélectionnée.  
   
 ##  <a name="TsqlProcedure"></a> Créer un utilisateur à l’aide de T-SQL  
@@ -171,4 +169,3 @@ ms.lasthandoff: 06/22/2017
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
-

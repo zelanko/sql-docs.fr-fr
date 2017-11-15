@@ -15,12 +15,11 @@ ms.workload: sql-server
 ms.custom: partners
 ms.date: 09/17/2017
 ms.author: mikeray
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 67af6dfa3063bea37d0ee73678ae5c1b34c7faf7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Partenaires pour la haute disponibilité et la récupération d’urgence de SQL Server
 Pour fournir la haute disponibilité et la récupération d’urgence pour vos services SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de haute disponibilité et de récupération d’urgence qui prennent en charge Microsoft SQL Server.
@@ -30,7 +29,7 @@ Pour fournir la haute disponibilité et la récupération d’urgence pour vos s
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
-| Partenaire | Description | Liens | 
+| Partenaire |  Description | Liens | 
 | --- | --- | --- |
 |![azure][5] |**Azure Site Recovery**<br>Site Recovery réplique les charges de travail en cours d’exécution sur des machines virtuelles ou des serveurs physiques afin de les garder à disposition dans un emplacement secondaire si le site principal n’est pas disponible. Vous pouvez répliquer et basculer des machines virtuelles SQL Server à partir du centre de données local vers Azure ou vers un autre centre de données local, ou d’un centre de données Azure vers un autre centre de données Azure.<br><br> Éditions Standard et Enterprise de SQL Server 2008 R2 - SQL Server 2016|[Site web][azure_website]<br>[Place de marché][azure_marketplace]<br>[Feuille de données][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Vidéo][azure_youtube]|
 |![dh2i][2] |**DH2i**<br>DxEnterprise est un logiciel de disponibilité intelligente pour Windows, Linux et Docker, qui vous permet d’obtenir des temps d’indisponibilité planifiés ou non les plus proches possibles de zéro, de faire des économies importantes, de bénéficier d’une gestion grandement simplifiée, et d’une consolidation à la fois physique et logique.<br><br>SQL Server 2005+, Windows Server 2008 R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Site web][dh2i_website]<br>[Feuille de données][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Vidéo][dh2i_youtube]|

@@ -5,27 +5,24 @@ ms.date: 2017-04-21
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- instance configuration, Setup
+f1_keywords: instance configuration, Setup
 helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
+caps.latest.revision: "62"
 ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 4b16feb70ed6de54240e3335a42ce6df8fa57b81
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: bf24705838daf5ed120fa279a9b5742d3b8d0ed0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installation-wizard-help"></a>Aide de l’assistant Installation
 
@@ -457,4 +454,3 @@ La page **Instance utilisateur** permet de générer une instance distincte du [
  Pour implémenter les modifications une fois votre sélection terminée, [!INCLUDE[clickOK](../../includes/clickok-md.md)]. Pour quitter l’outil sans apporter de modification, cliquez sur **Annuler**.  
   
   
-

@@ -9,20 +9,19 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: 1d637aa3e820f1acd6dc283030d2cdfa1e6ca074
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: b09784b129109f907c19a56a2a6fadcba119e73d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>Notes de version de SQL Server 2012 SP4
-Cette rubrique récapitule les améliorations apportées dans SQL Server 2012 SP4. Elle décrit également les problèmes dont vous devez avoir connaissance avant d’installer ou de dépanner SP4. Les notes de version sont disponibles uniquement en ligne, et non sur un support d’installation. Cette rubrique est mise à jour régulièrement à mesure que des problèmes sont identifiés. Pour obtenir une liste détaillée des corrections apportées dans SP4, consultez [Version SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937).  
+Cette rubrique récapitule les améliorations apportées dans SQL Server 2012 SP4. Elle décrit également les problèmes dont vous devez avoir connaissance avant d’installer ou de dépanner SP4. Les notes de publication sont disponibles uniquement en ligne, et non sur un support d’installation. Cette rubrique est mise à jour régulièrement à mesure que des problèmes sont identifiés. Pour obtenir une liste détaillée des corrections apportées dans SP4, consultez [Version SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937).  
 
 > Service Pack 4 inclut toutes les mises à jour cumulatives de SQL Server 2012 SP3.
   
@@ -60,4 +59,3 @@ Les liens suivants renvoient vers les principaux packages de téléchargement po
 - [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/en-us/help/321185)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-
