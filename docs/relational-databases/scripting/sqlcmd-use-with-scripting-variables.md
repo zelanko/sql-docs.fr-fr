@@ -5,12 +5,10 @@ ms.date: 08/09/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - scripts [SQL Server], sqlcmd utility
 - variables [SQL Server], scripts
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: d088599955f156dd82f327bcc9833bbae64b6185
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: c538749543f55e0f78485f7bbd2d801275aeb82b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd : utiliser avec des variables de script
   Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
@@ -86,7 +83,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ```
 
 ## <a name="guidelines-for-scripting-variable-names-and-values"></a>Instructions pour les noms et valeurs de variables de script  
- Lorsque vous nommez des variables de script, tenez compte des instructions suivantes :  
+ Lorsque vous nommez des variables de script, tenez compte des instructions suivantes :  
   
 -   Les noms de variables ne doivent pas contenir d'espaces blancs ou de guillemets.  
   
@@ -122,7 +119,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDDBNAME            | -d             | R   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | R/W (Lecture/écriture) | "8" (secondes)           |
 | SQLCMDSTATTIMEOUT       | -t             | R/W (Lecture/écriture) | "0" = Attendre indéfiniment |
-| SQLCMDHEADERS           | -h             | R/W (Lecture/écriture) | "0"                     |
+| SQLCMDHEADERS           | -H             | R/W (Lecture/écriture) | "0"                     |
 | SQLCMDCOLSEP            | -S             | R/W (Lecture/écriture) | « »                     |
 | SQLCMDCOLWIDTH          | -w             | R/W (Lecture/écriture) | "0"                     |
 | SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
@@ -312,7 +309,7 @@ C:\> sqlcmd
 >6 :setvar MyVar $(tablename)
 ```
 
- Ces instructions retournent la ligne ainsi que le message « La variable de script « tablename » n'est pas définie ».  
+ Ces instructions retournent la ligne ainsi que le message « La variable de script « tablename » n'est pas définie ».  
 
 ```
 >6 SELECT Col1 FROM dbo.VariableTest WHERE Col1 = '$(tablename)';
@@ -340,4 +337,3 @@ C:\> sqlcmd
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

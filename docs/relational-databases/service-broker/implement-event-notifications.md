@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - target service [SQL Server]
 - event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b76ab8802ab3aee619fa685b64cd71e35bcde3e1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implement-event-notifications"></a>Implémenter des notifications d'événements
   Pour implémenter une notification d'événement, vous devez créer un service cible destiné à recevoir les notifications d'événements avant de créer la notification d'événement.  
@@ -90,7 +89,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  Dans ce cas, la notification d'événement est déclenchée deux fois : une première fois quand se produit l'événement CREATE_SCHEMA, et une deuxième fois quand se produit l'événement CREATE_TABLE. Nous recommandons d'éviter de créer des notifications d'événements sur les événements CREATE_SCHEMA et les textes <schema_element> des définitions CREATE SCHEMA correspondantes, ou de créer une logique dans votre application destinée à éviter la capture des données d'événement non souhaitées.  
+>  Dans ce cas, la notification d'événement est déclenchée deux fois : une première fois quand se produit l'événement CREATE_SCHEMA, et une deuxième fois quand se produit l'événement CREATE_TABLE. Nous recommandons d'éviter de créer des notifications d'événements sur les événements CREATE_SCHEMA et les textes <schema_element> des définitions CREATE SCHEMA correspondantes, ou de créer une logique dans votre application destinée à éviter la capture des données d'événement non souhaitées.  
   
  **Pour créer une notification d'événement**  
   

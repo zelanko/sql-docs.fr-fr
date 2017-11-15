@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Performance Statistics event class
+helpviewer_keywords: Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94f6ab1826086a7c835b7a5a371f92b362727cff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
   La classe d'événements Performance Statistics permet de surveiller les performances des requêtes, des procédures stockées et des déclencheurs en cours d'exécution. Chacune des six sous-classes d'événements indique un événement dans la durée de vie des requêtes, des procédures stockées et des déclencheurs au sein du système. En combinant ces sous-classes d'événements aux vues de gestion dynamique sys.dm_exec_query_stats, sys.dm_exec_procedure_statset sys.dm_exec_trigger_stats correspondantes, vous pouvez reconstituer l'historique des performances d'une requête, d'une procédure stockée ou d'un déclencheur donnés.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|Oui|  
 |BinaryData|**image**|NULL|2|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 0 = Nouveau texte SQL de traitement qui n'est pas actuellement présent dans le cache.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> 1 de type 0|21|Oui|  
 |IntegerData2|**Int**|NULL|55|Oui|  
@@ -54,13 +52,13 @@ ms.lasthandoff: 06/22/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Nombre cumulatif de fois où ce plan a été recompilé.|52|Oui|  
 |BinaryData|**image**|Code XML binaire du plan compilé.|2|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 1 = Les requêtes d'une procédure stockée ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les procédures stockées.<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 1|21|Oui|  
+|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 1 = Les requêtes d'une procédure stockée ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les procédures stockées.<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> *n* de type 1|21|Oui|  
 |IntegerData2|**Int**|Fin de l'instruction dans la procédure stockée.<br /><br /> -1 pour la fin de la procédure stockée.|55|Oui|  
 |ObjectID|**int**|ID affecté à l'objet par le système.|22|Oui|  
-|Offset|**Int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
+|Offset|**int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
 |SPID|**int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
@@ -78,10 +76,10 @@ ms.lasthandoff: 06/22/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Nombre cumulatif de fois où ce plan a été recompilé.|52|Oui|  
 |BinaryData|**image**|Code XML binaire du plan compilé.|2|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> Nombre*n* de type 2|21|Oui|  
+|EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 2 = Les requêtes d'une instruction SQL ad hoc ont été compilées.<br /><br /> Les types EventSubClass suivants sont générés dans la trace pour les traitements ad hoc.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> *n* de type 2|21|Oui|  
 |IntegerData2|**Int**|Fin de l'instruction dans le traitement.<br /><br /> -1 pour la fin du traitement.|55|Oui|  
 |ObjectID|**Int**|Néant|22|Oui|  
 |Offset|**Int**|Décalage de départ de l'instruction dans le traitement.<br /><br /> 0 pour le début du traitement.|61|Oui|  
@@ -101,13 +99,13 @@ ms.lasthandoff: 06/22/2017
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|Nombre cumulatif de fois où ce plan a été recompilé.|52|Oui|  
 |BinaryData|**image**|NULL|2|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |EventSequence|**int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |EventSubClass|**int**|Type de sous-classe d'événements.<br /><br /> 3 = Une requête mise en cache a été détruite et l'historique des données de performances correspondant au plan est sur le point d'être détruit.<br /><br /> Les types EventSubClass suivants sont générés dans la trace.<br /><br /> Pour les lots ad hoc avec un nombre *n* de requêtes :<br /><br /> 1 de type 3 lorsque la requête est vidée du cache<br /><br /> Pour les procédures stockées avec un nombre *n* de requêtes :<br /><br /> 1 de type 3 lorsque la requête est vidée du cache.|21|Oui|  
 |IntegerData2|**Int**|Fin de l'instruction dans la procédure stockée ou le traitement.<br /><br /> -1 pour la fin de la procédure stockée ou du traitement.|55|Oui|  
 |ObjectID|**Int**|NULL|22|Oui|  
-|Offset|**Int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.<br /><br /> 0 pour le début de la procédure stockée ou du traitement.|61|Oui|  
+|Offset|**int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.<br /><br /> 0 pour le début de la procédure stockée ou du traitement.|61|Oui|  
 |SPID|**int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée ou du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
@@ -162,4 +160,3 @@ ms.lasthandoff: 06/22/2017
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
-

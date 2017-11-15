@@ -1,32 +1,28 @@
 ---
 title: "Vue d’ensemble de Master Data Services (MDS) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 02/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- what is master data
+keywords: what is master data
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 09064a57e9a55ec5bf868b839be6444d0de853be
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 023472f0c047e244f1e4a60fa519a9dc41046743
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-overview-mds"></a>Vue d’ensemble de Master Data Services (MDS)
   Cette rubrique décrit les fonctionnalités d’organisation et de gestion des données clés de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -80,5 +76,4 @@ ms.lasthandoff: 09/07/2017
  Lorsque vous serez prêt, vous pourrez déployer votre modèle, avec ou sans ses données, dans votre environnement de production. Pour plus d’informations, consultez [Déploiement de modèles &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md).  
   
   
-
 

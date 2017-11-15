@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f74637bd0e696ae4fd17d54f3826181e5d2ecf29
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -119,31 +118,31 @@ Vous trouverez de la documentation de référence sur les affichages catalogue p
 
 Dans SSMS, dans l’ **Explorateur d’objets**, vous pouvez démarrer la boîte de dialogue **Nouvelle session** en développant **Gestion** > **Événements étendus**, puis en cliquant avec le bouton droit sur **Sessions** > **Nouvelle session**.
 
-Dans la grande boîte de dialogue **Nouvelle session**, dans la première section intitulée **Général**, nous constatons que l’option **Démarrer la session d’événements au démarrage du serveur** a été sélectionnée.
+Dans la grande boîte de dialogue **Nouvelle session** , dans la première section intitulée **Général**, nous constatons que l’option **Démarrer la session d’événements au démarrage du serveur**a été sélectionnée.
 
 ![Nouvelle session > Général, Démarrer la session d’événements au démarrage du serveur.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Ensuite, dans la section **Événements**, nous constatons que l’événement **lock_deadlock** a été choisi. Pour cet événement, nous voyons que trois **Actions** ont été sélectionnées. Cela signifie que le bouton **Configurer** a été enfoncé. C’est pourquoi il est maintenant grisé.
+Ensuite, dans la section **Événements** , nous constatons que l’événement **lock_deadlock** a été choisi. Pour cet événement, nous voyons que trois **Actions** ont été sélectionnées. Cela signifie que le bouton **Configurer** a été enfoncé. C’est pourquoi il est maintenant grisé.
 
 ![Nouvelle session > Événements, Champs globaux (actions)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-Ensuite, toujours dans la section **Événements** > **Configurer**, nous constatons que [**resource_type** a la valeur **PAGE**](#resource_type_dmv_actual_row). Cela signifie que les données d’événement ne seront pas envoyées du moteur d’événements à la cible si la valeur de **resource_type** est autre que **PAGE**.
+Ensuite, toujours dans la section **Événements** > **Configurer** , nous constatons que [**resource_type** a la valeur **PAGE**](#resource_type_dmv_actual_row). Cela signifie que les données d’événement ne seront pas envoyées du moteur d’événements à la cible si la valeur de **resource_type** est autre que **PAGE**.
 
 Nous constatons la présence de filtres de prédicat supplémentaires pour le nom de base de données et pour un compteur.
 
 ![Nouvelle session > Événements, Filtre (prédicat)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-Ensuite, dans la section **Stockage de données**, nous constatons qu’**event_file** a été choisi comme cible. En outre, nous constatons que l’option **Activer la substitution de fichier** a été sélectionnée.
+Ensuite, dans la section **Stockage de données** , nous constatons qu’ **event_file** a été choisi comme cible. En outre, nous constatons que l’option **Activer la substitution de fichier** a été sélectionnée.
 
 ![Nouvelle session > Stockage de données, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-Pour finir, dans la section **Avancé**, nous constatons que la valeur de **Latence maximale de répartition** a été réduite à quatre secondes.
+Pour finir, dans la section **Avancé** , nous constatons que la valeur de **Latence maximale de répartition** a été réduite à quatre secondes.
 
 ![Nouvelle session > Avancé, Latence maximale de répartition](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -921,6 +920,5 @@ Voici le contenu de la première cellule XML, tirée de l’ensemble de lignes r
   </action>
 </event>
 ```
-
 
 

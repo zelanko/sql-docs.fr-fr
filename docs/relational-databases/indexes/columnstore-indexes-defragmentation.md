@@ -1,26 +1,24 @@
 ---
 title: "Index columnstore - Défragmentation | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 01/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: eea1da9c6a3c9dd30b89c72488570ae98737eaa5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e2db58cbbe41e569a8d084d2f683aa54b806146a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Index columnstore - Défragmentation
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -28,7 +26,7 @@ ms.lasthandoff: 06/22/2017
   Tâches de défragmentation d’index columnstore.  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>Utilisation d’ALTER INDEX REORGANIZE pour défragmenter un index columnstore en ligne  
- S’APPLIQUE À : SQL Server (à partir de 2016), Azure SQL Database  
+ S’APPLIQUE À : SQL Server (à partir de 2016), base de données SQL Azure  
   
   Après avoir exécuté des charges de tout type, vous pouvez avoir plusieurs petits rowgroups dans le deltastore. Vous pouvez utiliser l’instruction ALTER INDEX REORGANIZE pour forcer tous les rowgroups dans le columnstore, puis pour combiner les rowgroups en un plus petit nombre de rowgroups avec plusieurs lignes.  L’opération de réorganisation supprimera également les lignes qui ont été supprimées du columnstore.  
   
@@ -212,7 +210,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Reconstruisez une partition après des opérations DML lourdes.  
   
-    -   Reconstruire une partition la défragmentera et réduira la mémoire sur disque. La reconstruction supprimera toutes les lignes marquées pour suppression du columnstore et déplacera tous les rowgroups du deltastore dans le columnstore. Notez qu’il peut y avoir plusieurs rowgroups dans le deltastore comportent chacun moins d’un million de lignes.  
+    -   Reconstruire une partition la défragmentera et réduira la mémoire sur disque. La reconstruction supprimera toutes les lignes marquées pour suppression du columnstoren et déplacera tous les rowgroups du deltastore dans le columnstore. Notez qu’il peut y avoir plusieurs rowgroups dans le deltastore comportent chacun moins d’un million de lignes.  
   
 3.  Reconstruisez une partition après le chargement des données.  
   
@@ -227,4 +225,3 @@ ms.lasthandoff: 06/22/2017
    
   
   
-

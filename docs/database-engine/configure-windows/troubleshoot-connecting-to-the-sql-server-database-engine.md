@@ -5,25 +5,23 @@ ms.date: 02/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,5 +155,4 @@ Ces deux problèmes sont liés au service SQL Server Browser, qui fournit le num
     1. Sur l’ordinateur client, à l’aide du Gestionnaire de configuration SQL Server, dans le volet gauche développez **Configuration** *version* **Configuration**, and then select **Client Protocols**.
     2. Dans le volet droit, vérifiez que TCP/IP est activé. Si TCP/IP est désactivé, cliquez avec le bouton droit sur **TCP/IP** , puis cliquez sur **Activer**.
     3. Vérifiez que l’ordre des protocoles pour TCP/IP est un nombre inférieur aux protocoles de canaux nommés (ou VIA sur des versions plus anciennes). En règle générale, vous devez laisser la mémoire partagée en 1 et TCP/IP en 2. La mémoire partagée est utilisée uniquement quand le client et SQL Server sont en cours d’exécution sur le même ordinateur. Tous les protocoles activés sont essayés dans l’ordre jusqu’à ce que l’un d’eux réussisse, sauf que la mémoire partagée est ignorée quand la connexion n’est pas sur le même ordinateur. 
-
 

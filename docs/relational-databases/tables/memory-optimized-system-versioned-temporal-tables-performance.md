@@ -1,37 +1,35 @@
 ---
 title: "Performances des tables temporelles optimisées en mémoire avec gestion de version par le système | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/28/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d67b2ac2eb3f10bd5ecbf973ec97d12566973738
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: bdf0303532dce06e4364384aec5d45c79b4596d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Performances des tables temporelles optimisées en mémoire avec gestion de version par le système
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique décrit certaines considérations relatives aux performances lors de l’utilisation de tables temporelles optimisées en mémoire avec gestion de version par le système.  
   
--   L’ajout de la gestion de version à une table non temporelle a un impact sur les opérations de mise à jour et de suppression, car la table historique est mise à jour automatiquement.  
+-   L’ajout du contrôle de version à une table non temporelle a un impact sur les opérations de mise à jour et de suppression, car la table historique est mise à jour automatiquement.  
   
 -   Chaque mise à jour et chaque suppression sont enregistrées dans la table historique interne optimisée en mémoire. Vous pouvez donc constater une consommation importante de mémoire, si votre charge de travail exécute ces deux opérations massivement. Par conséquent, voici ce que nous vous conseillons :  
   
-    -   N’effectuez pas de suppressions massives de la table actuelle afin d’augmenter la mémoire vive disponible par un nettoyage de l’espace. Envisagez de supprimer les données en plusieurs lots par un vidage manuel intermédiaire, en appelant [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)ou pendant **SYSTEM_VERSIONING = OFF**.  
+    -   n’effectuez pas de suppressions massives de la table actuelle afin d’augmenter la mémoire vive disponible par un nettoyage de l’espace. Envisagez de supprimer les données en plusieurs lots par un vidage manuel intermédiaire, en appelant [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md)ou pendant **SYSTEM_VERSIONING = OFF**.  
   
     -   Ne mettez pas à jour de nombreuses tables, car cela peut entraîner une consommation de mémoire deux fois supérieure à celle requise pour mettre à jour une table non temporelle optimisée en mémoire. Cette consommation de mémoire double est temporaire, car la tâche de vidage des données cherche régulièrement à maintenir la consommation de mémoire de la table interne de mise en lots dans les limites de l’état stable (environ 10 % de la consommation de mémoire de la table temporelle actuelle). Envisagez d’effectuer des mises à jour massives en plusieurs lots ou pendant **SYSTEM_VERSIONING = OFF**, comme pour définir les valeurs par défaut des nouvelles colonnes ajoutées.  
   
@@ -44,7 +42,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
- [Création d’une table temporelle optimisée en mémoire avec gestion de versions par le système](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
+ [Création d’une table temporelle de contrôle de version du système à mémoire optimisée](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Utilisation des tables temporelles optimisées en mémoire avec gestion de version par le système](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)   
  [Surveillance des tables temporelles optimisées en mémoire avec gestion de versions par le système](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
@@ -53,4 +51,3 @@ ms.lasthandoff: 06/22/2017
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

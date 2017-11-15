@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 075e44b9b50eb356a4eabdebf8524f186db3d527
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b427d3a291839b588250d8bfd5d1dbab09e62a92
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="policy-management-node-object-explorer"></a>Nœud Gestion de la stratégie (Explorateur d'objets)
   Cette section contient les rubriques d’aide suivantes, accessibles via la touche F1, relatives au nœud **Gestion de la stratégie** de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -49,13 +47,13 @@ ms.lasthandoff: 06/22/2017
   
 -   [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)  
   
--   [Boîte de dialogue Vue détaillée des résultats](../../relational-databases/policy-based-management/results-detailed-view-dialog-box.md)  
+-   [Vue détaillée des résultats, boîte de dialogue](../../relational-databases/policy-based-management/results-detailed-view-dialog-box.md)  
   
--   [Boîte de dialogue Afficher les facettes](../../relational-databases/policy-based-management/view-facets-dialog-box.md)  
+-   [Afficher les facettes, boîte de dialogue ](../../relational-databases/policy-based-management/view-facets-dialog-box.md)  
   
--   [Boîte de dialogue Sélectionner une source](../../relational-databases/policy-based-management/select-source-dialog-box.md)  
+-   [Sélectionner une source, boîte de dialogue](../../relational-databases/policy-based-management/select-source-dialog-box.md)  
   
--   [Boîte de dialogue Exporter en tant que stratégie](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)  
+-   [Exporter en tant que stratégie, boîte de dialogue](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)  
   
 -   [Boîte de dialogue Importer des stratégies](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
@@ -63,4 +61,3 @@ ms.lasthandoff: 06/22/2017
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
-

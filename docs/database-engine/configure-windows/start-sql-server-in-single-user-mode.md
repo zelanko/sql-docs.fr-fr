@@ -5,25 +5,23 @@ ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - starting SQL Server, single-user mode
 - single-user mode [SQL Server]
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bf04867e8e9a0e913d09c58598d10994d771adb2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 65e6e7e89cb862d407d2ebe1519f47e607a72b84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Démarrer SQL Server en mode mono-utilisateur
   Dans certaines circonstances, vous devrez peut-être démarrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur à l’aide de **startup option -m.** Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données master ou une autre base de données système endommagées. Les deux actions requièrent le démarrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur.  
@@ -54,7 +52,7 @@ Par exemple, **-m"SQLCMD"** limite les connexions à une connexion unique, laque
 ## <a name="note-for-clustered-installations"></a>Remarque relative aux installations en cluster  
  Pour l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement en cluster, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré en mode mono-utilisateur, la DLL de ressource de cluster utilise la connexion disponible, ce qui bloque par conséquent les autres connexions au serveur. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est dans cet état, si vous essayez de mettre la ressource Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ligne, la ressource SQL peut basculer à un nœud différent si la ressource est configurée pour affecter le groupe.  
   
- Pour contourner le problème, utilisez la procédure suivante :  
+ Pour contourner le problème, utilisez la procédure suivante :  
   
 1.  Supprimez le paramètre de démarrage –m des Propriétés avancées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -78,4 +76,3 @@ Par exemple, **-m"SQLCMD"** limite les connexions à une connexion unique, laque
  [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
-

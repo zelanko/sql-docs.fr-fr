@@ -5,8 +5,7 @@ ms.date: 07/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 45fe0d96d38f91d8515422380f06a0a661cce0c4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-network-configuration"></a>Configuration réseau du serveur
   Les tâches de configuration réseau du serveur incluent l'activation de protocoles, la modification du port ou du canal utilisé par un protocole, la configuration du chiffrement, la configuration du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, l'exposition ou le masquage du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sur le réseau et l'inscription du nom principal du serveur. La plupart du temps, vous n'avez pas besoin de modifier la configuration réseau du serveur. Reconfigurez uniquement les protocoles réseau du serveur si des spécifications réseau spéciales l'imposent.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/02/2017
  [Gérer les services du moteur de base de données](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
-

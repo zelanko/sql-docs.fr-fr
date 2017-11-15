@@ -1,34 +1,31 @@
 ---
 title: "Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 05/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 08416515a890c5e1f2775afa436ed3bcb4bb0bd7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 96ca811479e59cc444e6ad0ddef19ab3bd7ec3f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Avec les tables temporelles avec version gérée par le système, la table d’historique peut faire croître la taille de la base de données plus que les tables normales, surtout dans les conditions suivantes :  
   
--   conservation des données d’historique sur une longue période ;  
+-   conservation des données d’historique sur une longue période ;  
   
 -   existence d’un modèle de mise à jour ou de suppression des modifications des données lourd.  
   
@@ -47,7 +44,7 @@ ms.lasthandoff: 09/27/2017
 
 -   [Stratégie de rétention](https://msdn.microsoft.com/library/mt637341.aspx#using-temporal-history-retention-policy-approach)  
 
- Pour chacune de ces méthodes, la logique de migration ou de nettoyage des données d’historique est basée sur la colonne qui correspond à la fin de période dans la table active. La valeur de fin de période de chaque ligne détermine le moment où la version de la ligne devient « fermée », c’est-à-dire où elle arrive dans la table d’historique. Par exemple, la condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` spécifie que les données d’historique de plus d’un mois doivent être supprimées ou déplacées de la table d’historique.  
+ Pour chacune de ces méthodes, la logique de migration ou de nettoyage des données d’historique est basée sur la colonne qui correspond à la fin de période dans la table active. La valeur de fin de période de chaque ligne détermine le moment où la version de la ligne devient « fermée », c’est-à-dire où elle arrive dans la table d’historique. Par exemple, la condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` spécifie que les données d’historique de plus d’un mois doivent être supprimées ou déplacées de la table d’historique.  
   
 > **REMARQUE :**  les exemples de cette rubrique utilisent cet [exemple de table temporelle](creating-a-system-versioned-temporal-table.md).  
   
@@ -174,11 +171,11 @@ COMMIT ;
   
  Dans une approche de fenêtre glissante, il y a deux ensembles de tâches à effectuer :  
   
--   une tâche de configuration du partitionnement ;  
+-   une tâche de configuration du partitionnement ;  
   
 -   des tâches de maintenance de partition périodiques.  
   
- Pour illustrer cela, supposons que vous voulez conserver les données d’historique pendant six mois et que vous voulez conserver les données de chaque mois dans une partition distincte. Par ailleurs, supposons que vous avez activé le contrôle de version système en septembre 2015.  
+ Pour illustrer cela, supposons que vous voulez conserver les données d’historique pendant six mois et que vous voulez conserver les données de chaque mois dans une partition distincte. Par ailleurs, supposons que vous avez activé la gestion système des versions en septembre 2015.  
   
  Une tâche de configuration du partitionnement permet de créer la configuration initiale du partitionnement de la table d’historique. Pour cet exemple, il faudrait créer le même nombre de partitions que la taille de fenêtre défilante, exprimée en mois, plus une partition vide préparée à l’avance (voir ci-après). Cette configuration est l’assurance que le système pourra stocker correctement les nouvelles données quand la tâche de maintenance périodique sera lancée pour la première fois. De même, elle garantit que les partitions ne seront jamais fractionnées avec des données pour éviter des mouvements de données coûteux. Vous devez effectuer cette tâche à l’aide de Transact-SQL en utilisant le script d’exemple ci-après.  
   
@@ -320,7 +317,7 @@ COMMIT TRANSACTION
   
 ```  
   
- Vous pouvez rectifier légèrement le script ci-dessus et l’utiliser dans le processus normal de maintenance mensuelle :  
+ Vous pouvez rectifier légèrement le script ci-dessus et l’utiliser dans le processus normal de maintenance mensuelle :  
   
 1.  À l’étape (1), il convient de créer une table de mise en lots intermédiaire pour le mois à supprimer (octobre serait le prochain mois dans notre exemple).  
   
@@ -345,16 +342,16 @@ COMMIT TRANSACTION
   
  Dans un scénario de fenêtre glissante, la limite de partition inférieure est toujours supprimée.  
   
--   Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE n’entraîne aucun déplacement de données.  
+-   Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE n’entraîne aucun déplacement de données.  
   
--   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
+-   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
   
- Conclusion : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.  
+ Conclusion : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.  
   
 ## <a name="using-custom-cleanup-script-approach"></a>Utilisation de la méthode de script de nettoyage personnalisé  
  Dans les cas où la méthode Stretch Database et le partitionnement de table ne sont pas des options viables, la troisième méthode consiste à supprimer les données de la table d’historique à l’aide du script de nettoyage personnalisé. La suppression des données de la table d’historique n’est possible que lorsque **SYSTEM_VERSIONING = OFF**. Pour éviter une incohérence de données, procédez à un nettoyage pendant la fenêtre de maintenance (quand les charges de travail qui modifient les données ne sont pas actives) ou lors d’une transaction (les autres charges de travail sont alors bloquées).  Cette opération nécessite une autorisation **CONTROL** sur les tables actives et d’historique.  
   
- Pour éviter de trop bloquer les applications usuelles et les requêtes utilisateur, supprimez les données en blocs plus petits en prévoyant un laps de temps pendant l’exécution du script de nettoyage dans une transaction. Même s’il n’y a pas de taille optimale pour chaque bloc de données à supprimer pour tous les scénarios, le fait de supprimer plus de 10 000 lignes dans une même transaction peut avoir un impact important.  
+ Pour éviter de trop bloquer les applications usuelles et les requêtes utilisateur, supprimez les données en blocs plus petits en prévoyant un laps de temps pendant l’exécution du script de nettoyage dans une transaction. Même s’il n’y a pas de taille optimale pour chaque bloc de données à supprimer pour tous les scénarios, le fait de supprimer plus de 10 000 lignes dans une même transaction peut avoir un impact important.  
   
  La logique de nettoyage étant identique pour toutes les tables temporelles, il est relativement facile de l’automatiser via une procédure stockée générique dont vous planifiez l’exécution périodique pour chaque table temporelle dont vous voulez limiter l’historique des données.  
   
@@ -362,7 +359,7 @@ COMMIT TRANSACTION
   
  ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
   
- Voici quelques indications générales pour implémenter le processus. Planifiez une exécution quotidienne de la logique de nettoyage, ainsi que son itération sur toutes les tables temporelles nécessitant un nettoyage de données. À l’aide de SQL Server Agent ou d’un autre outil, planifiez ce processus :  
+ Voici quelques indications générales pour implémenter le processus. Planifiez une exécution quotidienne de la logique de nettoyage, ainsi que son itération sur toutes les tables temporelles nécessitant un nettoyage de données. À l’aide de SQL Server Agent ou d’un autre outil, planifiez ce processus :  
   
 -   Supprimez les données d’historique dans chaque table temporelle en partant des lignes les plus anciennes aux plus récentes en plusieurs itérations et sur de petits blocs et évitez de supprimer toutes les lignes d’une même transaction unique, comme indiqué dans le schéma ci-dessus.  
   
@@ -511,4 +508,3 @@ Pour plus d’informations, consultez [Gérer les données d’historique dans l
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

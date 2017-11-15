@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
 Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.   
@@ -61,7 +59,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
 |Distributed Replay Controller|Non||  
 |Distributed Replay Client|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
 |Kit de développement logiciel (SDK) de l'option Connectivité client de SQL|Oui||  
-|Microsoft Sync Framework|Oui|Microsoft Sync Framework n’est pas inclus dans le package d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Vous pouvez télécharger la version appropriée de Sync Framework à partir de cette [page du Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) et l’installer sur un ordinateur exécutant Server Core.|  
+|Microsoft Sync Framework|Oui|Microsoft Sync Framework n’est pas inclus dans le package d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Vous pouvez télécharger la version appropriée de Sync Framework à partir de cette [page du Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) et l’installer sur un ordinateur exécutant Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Non||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Non||  
   
@@ -127,7 +125,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
   
 2.  **Installation à l’aide du fichier de configuration**  
   
-     Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. Le fichier de configuration est un fichier texte avec une structure de base d'un paramètre (paire nom/valeur) et d'un commentaire descriptif. Le fichier de configuration spécifié à l'invite de commande doit avoir une extension de nom de fichier .INI. Consultez les exemples suivants de ConfigurationFile.INI :  
+     Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. Le fichier de configuration est un fichier texte avec une structure de base d'un paramètre (paire nom/valeur) et d'un commentaire descriptif. Le fichier de configuration spécifié à l'invite de commande doit avoir une extension de nom de fichier .INI. Consultez les exemples suivants de ConfigurationFile.INI :  
   
     - Installation du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
@@ -167,7 +165,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
   
         ```  
   
-    -   Installation des composants de connectivité. L'exemple suivant montre comment installer les composants de connectivité :  
+    -   Installation des composants de connectivité. L'exemple suivant montre comment installer les composants de connectivité :  
   
         ```  
         ; SQL Server Configuration File  
@@ -239,9 +237,9 @@ L’option d’installation Server Core offre l’environnement minimal requis p
         IAcceptSQLServerLicenseTerms="True"  
         ```  
   
-     L’exemple suivant montre comment lancer l’installation à l’aide d’un fichier de configuration par défaut ou personnalisé :  
+     L’exemple suivant montre comment lancer l’installation à l’aide d’un fichier de configuration par défaut ou personnalisé :  
   
-    -   Démarrage de l’installation à l’aide d’un fichier de configuration personnalisé :  
+    -   Démarrage de l’installation à l’aide d’un fichier de configuration personnalisé :  
   
          Pour spécifier le fichier de configuration à l'invite de commandes :  
   
@@ -280,7 +278,7 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
   
  `sc config SQLBROWSER start= auto`  
   
- Après activation, exécutez la commande suivante à partir de l'invite de commandes pour démarrer le service :  
+ Après activation, exécutez la commande suivante à partir de l'invite de commandes pour démarrer le service :  
   
  `net start SQLBROWSER`  
   
@@ -288,7 +286,7 @@ Pour activer les connexions distantes, utilisez SQLCMD.exe localement et exécut
  Pour créer des exceptions pour l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le Pare-feu Windows, suivez les étapes spécifiées dans [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Activer TCP/IP sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
+ Le protocole TCP/IP peut être activé via Windows PowerShell pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Server Core. Procédez comme suit :  
   
 1.  Sur le serveur, lancez le Gestionnaire des tâches.  
   
@@ -339,5 +337,4 @@ Si vous fermez accidentellement l'invite de commandes, vous pouvez démarrer une
 
   
   
-
 

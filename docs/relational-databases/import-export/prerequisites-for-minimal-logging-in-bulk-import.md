@@ -1,13 +1,11 @@
 ---
 title: "Prérequis pour une journalisation minimale dans l’importation en bloc | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 50e42a9267199f6e7e00b221a548b216625f5f91
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Bien que les insertions de données ne soient pas consignées dans le journal des transactions lors des opérations d'importation en bloc à journalisation minimale, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] consigne tout de même les allocations d'extensions chaque fois qu'une nouvelle extension est allouée à la table.  
   
--   La table n'est pas une table optimisée en mémoire.  
+-   La table n'est pas une table mémoire optimisée.  
   
  La possibilité de journalisation minimale pour une table dépend également du fait que celle-ci soit indexée et, si elle l'est, du fait qu'elle soit vide :  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
         > [!NOTE]  
         >  Si vous démarrez avec une table vide et importez les données en bloc en plusieurs traitements, les pages de données et d'index bénéficient de la journalisation minimale pour le premier traitement, mais à partir du deuxième traitement, seules les pages de données bénéficient de cette journalisation minimale.  
   
--   Si la table possède un index cluster et est vide, les pages de données et d'index bénéficient de la journalisation minimale. En revanche, si une table possède un index cluster BTree et n’est pas vide, les pages de données et d’index bénéficient de la journalisation complète, quel que soit le mode de récupération choisi. Pour les tables avec index columnstore cluster, le chargement des données dans un rowgroup compressé fait toujours l’objet d’une journalisation minimale, que la table soit vide ou non lorsque la valeur BatchSize > = 102 400.  
+-   Si la table possède un index cluster et est vide, les pages de données et d'index bénéficient de la journalisation minimale. En revanche, si une table possède un index cluster BTree et n’est pas vide, les pages de données et d’index bénéficient de la journalisation complète, quel que soit le mode de récupération choisi. Pour les tables avec index columnstore cluster, le chargement des données dans un rowgroup compressé fait toujours l’objet d’une journalisation minimale, que la table soit vide ou non lorsque la valeur BatchSize > = 102 400.  
   
     > [!NOTE]  
     >  Si vous démarrez avec une table rowstore vide et importez les données en bloc en plusieurs lots, les pages de données et d’index bénéficient de la journalisation minimale pour le premier lot, mais à partir du deuxième lot, seules les pages de données bénéficient de la journalisation en bloc.  

@@ -5,25 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], security
 - Configuring Database Mirroring Security Wizard
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56cfb79fb6490032f9b12eca137ea7a22958f03b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 5d5f46e2ea6356616864c5f60b858caa5ee0c1b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard"></a>Démarrer l’Assistant Configuration de la sécurité de la mise en miroir de bases de données
   Configurer l'Assistant Sécurité de mise en miroir de bases de données vous permet de procéder à la configuration initiale des paramètres de sécurité sur une partie ou sur l'ensemble des instances de serveur impliquées dans la mise en miroir. Cet Assistant travaille conjointement avec la page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** .  
@@ -44,4 +42,3 @@ ms.lasthandoff: 08/02/2017
  [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
   
-

@@ -5,21 +5,20 @@ ms.date: 05/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cda33e54db6382eaee5d4e5343fc2d1873600c8c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2c8789b833d9f2777f7e99ca246baee0387d7966
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Sauvegarder plusieurs bases de données dans le service Stockage Blob Azure - PowerShell
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.lasthandoff: 06/22/2017
   Cette rubrique fournit des exemples de script pouvant être utilisés pour automatiser les sauvegardes dans le service Stockage Blob Microsoft Azure à l'aide d'applets de commande PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Présentation des applets de commande PowerShell pour la sauvegarde et la restauration  
- **Backup-SqlDatabase** et **Restore-SqlDatabase** sont les deux principales applets de commande disponibles pour effectuer des opérations de sauvegarde et de restauration. En outre, d'autres applets de commande peuvent être nécessaires pour automatiser les sauvegardes dans le service Stockage Blob Microsoft Azure, comme l'ensemble d'applets de commande **SqlCredential** . Voici une liste des applets de commande PowerShell disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , qui sont utilisées dans les opérations de sauvegarde et de restauration :  
+ **Backup-SqlDatabase** et **Restore-SqlDatabase** sont les deux principales applets de commande disponibles pour effectuer des opérations de sauvegarde et de restauration. En outre, d'autres applets de commande peuvent être nécessaires pour automatiser les sauvegardes dans le service de stockage d'objets blob Windows Azure, comme l'ensemble d'applets de commande **SqlCredential** . Voici une liste des applets de commande PowerShell disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , qui sont utilisées dans les opérations de sauvegarde et de restauration :  
   
  Backup-SqlDatabase  
  Cette applet de commande permet de créer une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.lasthandoff: 06/22/2017
  Utilisée pour restaurer une base de données.  
   
  New-SqlCredential  
- Cette applet de commande permet de créer des informations d'identification SQL à utiliser pour la sauvegarde SQL Server dans Stockage Microsoft Azure. Pour plus d’informations sur les informations d’identification et leur utilisation dans Sauvegarde et restauration SQL Server, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Cette applet de commande permet de créer des informations d'identification SQL à utiliser pour la sauvegarde SQL Server dans le stockage Windows Azure. Pour plus d’informations sur les informations d’identification et leur utilisation dans Sauvegarde et restauration SQL Server, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Cette applet de commande est utilisée pour récupérer l'objet contenant les informations d'identification et ses propriétés.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 06/22/2017
  Cette applet de commande est utilisée pour modifier ou définir les propriétés de l'objet contenant les informations d'identification SQL.  
   
 > [!TIP]  
->  Les applets de commande Credential sont utilisées dans les scénarios de sauvegarde et de restauration dans Stockage Blob Microsoft Azure.  
+>  Les applets de commande Credential sont utilisées dans les scénarios de sauvegarde et de restauration dans le stockage d'objets blob Windows Azure.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell pour des opérations de sauvegarde de plusieurs bases de données, sur plusieurs instances  
  Les sections suivantes contiennent des scripts pour différentes opérations, notamment créer des informations d'identification SQL sur plusieurs instances de SQL Server, sauvegarder toutes les bases de données utilisateur dans une instance de SQL Server, etc. Utilisez ces scripts pour automatiser ou planifier des opérations de sauvegarde en fonction des spécifications de votre environnement. Les scripts fournis ici sont des exemples, et peuvent être modifiés ou étendus pour votre environnement.  
@@ -61,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
      Pour plus d’informations, consultez [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
-3.  Bien que chaque exemple de code puisse être exécuté indépendamment en modifiant les valeurs de variable, vous devez créer un compte de stockage Microsoft Azure et des informations d'identification SQL pour toutes les opérations de sauvegarde et de restauration dans le service Stockage Blob Microsoft Azure.  
+3.  Bien que chaque exemple de code puisse être exécuté indépendamment en modifiant les valeurs de variable, vous devez créer un compte de stockage Windows Azure et des informations d'identification SQL pour toutes les opérations de sauvegarde et de restauration dans le service de stockage d'objets blob Windows Azure.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Créer des informations d'identification SQL sur toutes les instances de SQL Server  
  Il y a deux exemples de script, et les deux créent les informations d'identification SQL « mybackupToURL » sur toutes les instances de SQL Server sur un ordinateur. Le premier exemple crée les informations d'identification et n'intercepte pas les exceptions.  Par exemple, s'il existe déjà des informations d'identification avec le même nom sur une des instances de l'ordinateur, le script échoue. Le deuxième exemple intercepte les erreurs et permet au script de continuer.  
@@ -271,8 +270,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   
-

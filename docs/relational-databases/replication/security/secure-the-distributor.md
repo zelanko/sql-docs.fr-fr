@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0455938e9a9b0c017da7f8546821a9f318a85d6b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cfaf414f203ac4d7f3788b11bb6c8038a45570d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-the-distributor"></a>Sécuriser le serveur de distribution
   Les Agents de réplication suivants se connectent au serveur de distribution : l'Agent de lecture du journal, l'Agent d'instantané, l'Agent de lecture de la file d'attente, l'Agent de distribution et l'Agent de fusion. Il est important de donner un nom d'accès approprié à chacun de ces agents tout en suivant le principe d'accorder le minimum de droits nécessaires et de protéger également le stockage de tous les mots de passe.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  Ne modifiez pas manuellement le mot de passe pour **distributor_admin** . Utilisez toujours la procédure stockée **sp_changedistributor_password** , ou les boîtes de dialogue **Propriétés du serveur de distribution** ou **Mettre à jour les mots de passe de réplication** dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], car les changements de mots de passe sont ensuite appliqués automatiquement aux publications locales.  
   
-## <a name="snapshot-folder-security"></a>Sécurité du dossier d'instantanés  
+## <a name="snapshot-folder-security"></a>Sécurité du répertoire d'instantanés  
  Assurez-vous que le partage de fichiers d'instantanés dispose d'une autorisation de lecture sur le compte sous lequel s'exécute l'Agent de fusion (pour la réplication de fusion) ou l'Agent de distribution (pour la réplication d'instantané ou transactionnelle), et d'une autorisation d'écriture sur le compte sous lequel s'exécute l'Agent d'instantané. Pour plus d’informations sur le dossier d’instantanés, consultez [Sécuriser le dossier d’instantanés](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Voir aussi  

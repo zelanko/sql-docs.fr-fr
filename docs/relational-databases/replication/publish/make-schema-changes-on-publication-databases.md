@@ -5,8 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 73
+caps.latest.revision: "73"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: b3ba5fca89b73eaff7ec444d3a9eeec2398f1656
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
   La réplication prend en charge une grande variété de modifications de schéma pour les objets publiés. Lorsque vous effectuez l'une des modifications de schémas qui suit sur l'objet publié approprié sur un serveur de publication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cette modification est propagée par défaut sur tous les Abonnés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
  **Pour répliquer les modifications de schéma**  
   
- Les modifications de schéma répertoriées ci-dessus sont répliquées par défaut. Pour plus d'informations sur la désactivation de la réplication des modifications de schéma, consultez [Répliquer les modifications de schéma](../../../relational-databases/replication/publish/replicate-schema-changes.md).  
+ Les modifications de schéma répertoriées ci-dessus sont répliquées par défaut. Pour plus d'informations sur la désactivation de la réplication des modifications de schéma, consultez [Replicate Schema Changes](../../../relational-databases/replication/publish/replicate-schema-changes.md).  
   
 ## <a name="considerations-for-schema-changes"></a>Considérations sur les modifications de schéma  
  Les éléments suivants doivent être pris en compte lors de la réplication des modifications de schéma.  
@@ -77,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 -   La modification ou la suppression de colonnes d'identité gérées par la réplication ne sont pas prises en charge. Pour plus d’informations sur la gestion automatique des colonnes d’identité, consultez [Répliquer des colonnes d’identité](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
--   Les modifications de schéma qui comprennent des fonctions non déterministes ne sont pas prises en charge car elles peuvent se traduire par la présence de données différentes sur le serveur de publication et l'Abonné (c'est-à-dire non convergentes). Par exemple, si vous émettez la commande suivante sur le serveur de publication : `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, les valeurs diffèrent lorsque la commande est répliquée sur l'Abonné, puis exécutée. Pour plus d'informations sur les fonctions non déterministes, consultez [Fonctions déterministes et non déterministes](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+-   Les modifications de schéma qui comprennent des fonctions non déterministes ne sont pas prises en charge car elles peuvent se traduire par la présence de données différentes sur le serveur de publication et l'Abonné (c'est-à-dire non convergentes). Par exemple, si vous émettez la commande suivante sur le serveur de publication : `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`, les valeurs diffèrent lorsque la commande est répliquée sur l'Abonné, puis exécutée. Pour plus d'informations sur les fonctions non déterministes, consultez [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 -   Il est conseillé de nommer explicitement les contraintes. Si les contraintes ne sont pas nommées explicitement, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] génère des noms pour celles-ci, qui seront différents sur le serveur de publication et sur chaque Abonné. Cela peut occasionner des problèmes pendant la réplication des modifications de schéma. Par exemple, si vous supprimez une colonne sur le serveur de publication et qu'une contrainte dépendante est supprimée, la réplication essaie de supprimer la contrainte sur l'Abonné. La suppression sur l'Abonné échouera car le nom de la contrainte est différent. Si la synchronisation échoue en raison d'un problème de dénomination de contrainte, supprimez manuellement la contrainte sur l'Abonné, puis réexécutez l'Agent de fusion.  
   

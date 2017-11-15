@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: cbe7bceca06dd5eef19b56433a8054c20d2e88d2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planifier et tester le plan de mise à niveau du moteur de base de données
   Pour effectuer une mise à niveau réussie de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , quelle que soit l’approche, une planification appropriée est nécessaire.  
@@ -100,4 +98,3 @@ ms.lasthandoff: 08/02/2017
  [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/upgrade-database-engine.md)  
   
   
-

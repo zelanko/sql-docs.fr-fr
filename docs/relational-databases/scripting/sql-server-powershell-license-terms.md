@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- powershell
+ms.technology: powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8c9bce29-1971-47c9-bdaa-375088301313
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0916924eeb783ae65dd254b4d105a01067a08bd5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b97a7e33924f1ee7b6d6e19c08b020ec0b5c779
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-powershell-license-terms"></a>Termes du contrat de licence SQL Server PowerShell
 **TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT**
@@ -108,4 +106,3 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
     - les réclamations au titre de violation de contrat ou de garantie ou de condition, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.
 
     Elle s'applique également même si Microsoft connaissait l’éventualité d’un tel dommage. La limitation ou l’exclusion ci-dessus peut également ne pas vous être applicable si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages incidents, indirects ou de quelque nature que ce soit.
-

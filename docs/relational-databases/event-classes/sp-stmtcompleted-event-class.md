@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:StmtCompleted event class
+helpviewer_keywords: SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0ff9f91227c08c932e33afb97c47a2019e1cd0f0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: dd823a1bb566458d1c158ab6cfc121808e0c6ae3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted, classe d'événements
   La classe d'événements SP:StmtCompleted indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une procédure stockée est terminée.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 |ObjectID|**int**|ID affecté à l'objet par le système.|22|Oui|  
 |ObjectName|**nvarchar**|Nom de l'objet référencé.|34|Oui|  
 |ObjectType|**int**|Valeur représentant le type de l'objet qui intervient dans l'événement. Cette valeur correspond à la colonne type de l'affichage catalogue sys.objects. Pour connaître les valeurs, consultez [Colonne d’événements de trace ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Oui|  
-|Offset|**Int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
+|Offset|**int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
 |Reads|**bigint**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement.|16|Oui|  
 |RequestID|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|**bigint**|Nombre de lignes affectées par un événement.|48|Oui|  

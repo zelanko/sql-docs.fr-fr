@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Débogueur Transact-SQL
   Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de détecter les erreurs dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] en étudiant le comportement du code au moment de l'exécution. Après avoir défini la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode débogage, vous pouvez suspendre l'exécution du code au niveau de lignes spécifiques et inspecter les informations et les données qui sont utilisées ou retournées par ces instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-debugger-information"></a>Affichage des informations du débogueur  
  Chaque fois que le débogueur suspend l'exécution du code à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les fenêtres suivantes du débogueur pour afficher l'état d'exécution actuel :  
   
--   **Locals** and **Watch.** Ces fenêtres affichent les expressions [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement allouées. Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ont pour valeur une expression scalaire unique. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge l’affichage d’expressions qui font référence à des variables et à des paramètres [!INCLUDE[tsql](../../includes/tsql-md.md)], ou les fonctions intégrées dont le nom commence par @@. Ces fenêtres affichent également les valeurs de données qui sont actuellement attribuées aux expressions.  
+-   **Variables locales** et **Espion** Ces fenêtres affichent les expressions [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement allouées. Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ont pour valeur une expression scalaire unique. Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge l’affichage d’expressions qui font référence à des variables et à des paramètres [!INCLUDE[tsql](../../includes/tsql-md.md)], ou les fonctions intégrées dont le nom commence par @@. Ces fenêtres affichent également les valeurs de données qui sont actuellement attribuées aux expressions.  
   
 -   **Espion express.** Cette fenêtre affiche la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] et vous permet d’enregistrer cette expression dans une fenêtre **Espion** .  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

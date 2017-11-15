@@ -5,8 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 11bb38aa47c0892c6c39dfee35a5f81282aa8fd2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0acbecee32af97a69b5a3700140ef4d774a0c70d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Références relatives aux erreurs et aux événements (moteur de base de données)
   Cette section contient des messages d’erreur [!INCLUDE[ssDE](../../includes/ssde-md.md)] sélectionnés qui nécessitent des explications complémentaires.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 06/22/2017
 |[Aide et support Microsoft](http://go.microsoft.com/fwlink/?linkid=16419)|Vous pouvez utiliser ce site Web pour présenter un cas à un professionnel du support [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   
-

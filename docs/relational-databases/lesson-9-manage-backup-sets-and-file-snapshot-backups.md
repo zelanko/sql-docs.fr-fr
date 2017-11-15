@@ -1,29 +1,25 @@
 ---
 title: "Leçon 9 : Gérer des jeux de sauvegarde et des sauvegardes d’instantanés de fichiers | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 06/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 766a0846-db15-4346-b814-4049039bcbfc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9747a3c7730db5d3fe1eda6145ece133c7b6d523
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: fc4ce7fe2c3648da7923dbb35fbfe252c971b006
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>Leçon 9 : Gérer des jeux de sauvegarde et des sauvegardes de captures instantanées de fichiers
 Dans cette leçon, vous allez supprimer une sauvegarde à l’aide de la procédure stockée système [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) . Cette procédure stockée système supprime le fichier de sauvegarde et la capture instantanée de fichier sur chaque fichier de base de données associé à ce jeu de sauvegarde.  
@@ -72,5 +68,4 @@ Pour supprimer un jeu de sauvegarde de captures instantanées de fichiers, proc�
   
   
   
-
 
