@@ -46,24 +46,24 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*expressionToFind*  
-Est un caractère [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui contient la séquence à rechercher. *expressionToFind* est limité à 8 000 caractères.
+*caractères à rechercher*  
+Est un caractère [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui contient la séquence à rechercher. *caractères à rechercher* est limité à 8 000 caractères.
   
-*expressionToSearch*  
+*chaine de caractères dans laquelle rechercher*  
 Expression de caractères à rechercher.
   
 *start_location*  
-Est un **entier** ou **bigint** expression à laquelle la recherche commence. Si *start_location* n’est pas spécifié, est un nombre négatif ou est égal à 0, la recherche commence au début de *expressionToSearch*.
+Est un **entier** ou **bigint** expression à laquelle la recherche commence. Si *start_location* n’est pas spécifié, est un nombre négatif ou est égal à 0, la recherche commence au début de *chaine de caractères dans laquelle rechercher*.
   
 ## <a name="return-types"></a>Types de retour
-**bigint** si *expressionToSearch* est de le **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** des types de données ; sinon, **int**.
+**bigint** si *chaine de caractères dans laquelle rechercher* est de le **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** des types de données ; sinon, **int**.
   
 ## <a name="remarks"></a>Notes  
-Si le paramètre *expressionToFind* ou *expressionToSearch* est d’un type de données Unicode (**nvarchar** ou **nchar**) et l’autre ne l’est pas, l’autre est converti en un type de données Unicode. Fonction CHARINDEX ne peut pas être utilisée avec **texte**, **ntext**, et **image** des types de données.
+Si le paramètre *caractères à rechercher* ou *chaine de caractères dans laquelle rechercher* est d’un type de données Unicode (**nvarchar** ou **nchar**) et l’autre ne l’est pas, l’autre est converti en un type de données Unicode. Fonction CHARINDEX ne peut pas être utilisée avec **texte**, **ntext**, et **image** des types de données.
   
-Si le paramètre *expressionToFind* ou *expressionToSearch* est NULL, CHARINDEX retourne NULL.
+Si le paramètre *caractères à rechercher* ou *chaine de caractères dans laquelle rechercher* est NULL, CHARINDEX retourne NULL.
   
-Si *expressionToFind* n’est trouvé dans *expressionToSearch*, CHARINDEX retourne 0.
+Si *caractères à rechercher* n’est trouvé dans *chaine de caractères dans laquelle rechercher*, CHARINDEX retourne 0.
   
 CHARINDEX effectue des comparaisons basées sur le classement de l'entrée. Pour exécuter une comparaison selon un classement spécifié, vous pouvez utiliser COLLATE pour appliquer à l'entrée un classement explicite.
   
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. Recherche d'une expression inexistante  
-L’exemple suivant montre le jeu de résultats lorsque *expressionToFind* n’est trouvé dans *expressionToSearch*.
+L’exemple suivant montre le jeu de résultats lorsque *caractères à rechercher* n’est trouvé dans *chaine de caractères dans laquelle rechercher*.
   
 ```sql
 DECLARE @document varchar(64);  
