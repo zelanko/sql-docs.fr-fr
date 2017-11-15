@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.Print
+f1_keywords: vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: acc46cf8d6af75c2c4719dcd30e6766ab8756512
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea8fac71efd68ff30b4ea79845434b223f5ba8e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-dialog-box"></a>Imprimer, boîte de dialogue
-Vous pouvez spécifier la façon dont vous souhaitez imprimer un document en sélectionnant des options dans la boîte de dialogue **Imprimer**.  
+Vous pouvez spécifier la façon dont vous souhaitez imprimer un document en sélectionnant des options dans la boîte de dialogue **Imprimer** .  
   
 ## <a name="printer"></a>Imprimante  
 **Nom**  
@@ -40,7 +37,7 @@ Identifie l'imprimante sélectionnée.
 **Où**  
 Identifie l'emplacement de l'imprimante sélectionnée et le port qu'elle utilise.  
   
-**Commentaireaire**  
+**Commentaire**  
 Fournit des informations supplémentaires sur l'imprimante sélectionnée.  
   
 **Propriétés**  
@@ -73,4 +70,3 @@ N'imprime pas les zones réduites dans l'éditeur de code. Tous les éditeurs de
 **Insérer les numéros de ligne**  
 Insère des numéros de ligne dans le document imprimé.  
   
-

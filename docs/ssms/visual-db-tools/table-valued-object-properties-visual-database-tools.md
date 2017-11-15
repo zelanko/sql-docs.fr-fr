@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.TVO
+f1_keywords: vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e1a3aab7fc71e38e5383b8adad799ba3c2a01e4f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriétés de l'objet table (Visual Database Tools)
 Ces propriétés figurent dans la fenêtre Propriétés lorsque vous sélectionnez un objet table dans le **Concepteur de requêtes et de vues**. L'objet table peut être une vue, un synonyme, une table dérivée ou une fonction table. Sauf indication contraire, ces propriétés sont en lecture seule dans la fenêtre **Propriétés** .  
@@ -57,4 +54,3 @@ Affiche le nom de l'objet table sélectionné, notamment des informations suppl�
 **Liste de paramètres**  
 Affiche les paramètres définis pour l'objet table sélectionné. Pour définir une valeur pour les paramètres, cliquez sur Liste de paramètres, puis sur les points de suspension (…) à droite de la propriété. Dans la boîte de dialogue Paramètres de fonction, tapez les valeurs. Cette propriété est disponible uniquement lorsqu'une fonction table est sélectionnée.  
   
-

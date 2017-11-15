@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
-Une assistance utilisateur est disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] via le menu ? (Aide) et la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Le menu ? (Aide) de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre des accès différents aux informations concernant [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Il permet également d'avoir accès à la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] et aux ressources de MSDN en ligne qui n'étaient pas auparavant disponibles à partir de l'environnement d'aide. En outre, l'environnement d'aide est à présent configurable. Il peut être lancé dans l'environnement [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ou dans une fenêtre externe associée.  
+Une assistance utilisateur est disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] via le menu ? (Aide) et la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Le menu ? (Aide) de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre des accès différents aux informations concernant [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Il permet également d'avoir accès à la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] et aux ressources de MSDN en ligne qui n'étaient pas auparavant disponibles à partir de l'environnement d'aide. En outre, l'environnement d'aide est à présent configurable. Il peut être lancé dans l'environnement [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ou dans une fenêtre externe associée.  
   
 ## <a name="the-help-interface"></a>Interface de l'aide  
 Les onglets **Sommaire** et **Index** offrent des fonctionnalités et une interface que les utilisateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] connaissent déjà. Les autres options sont :  
@@ -52,7 +50,7 @@ Les onglets **Sommaire** et **Index** offrent des fonctionnalités et une interf
 Aide sur l'aide (Aide de l'Explorateur de documents[!INCLUDE[msCoName](../includes/msconame_md.md)] ) permet aux utilisateurs d'avoir accès à la documentation sur la visionneuse de l'aide, mais les rubriques se trouvent dans une collection distincte de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Pour plus d’informations sur l’afficheur d’aide, sélectionnez **Aide sur l’aide** dans le menu ? (Aide) de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>Site MSDN et communautés SQL Server  
-L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]sur le web. Vous pouvez :  
+L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] permet également aux utilisateurs d'avoir accès au site MSDN et aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]sur le Web. Vous pouvez :  
   
 -   accéder aux communautés [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] à partir de la page Comment faire ? ;  
   
@@ -103,4 +101,3 @@ Vous pouvez également ouvrir la documentation en ligne sous forme de fenêtre d
   
 2.  Dans la zone **Afficher l’aide en utilisant** , cliquez sur **Afficheur d’aide intégré**.  
   
-

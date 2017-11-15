@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - View Designer, query creation
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 14a314fc77534de5378a38de50e1768d25dc5bda
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 19546151155392376a2c86195e3c77e9a0832f73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Types de requêtes (Visual Database Tools)
 Le Concepteur de requêtes et de vues propose des fonctionnalités intégrées pour certains types de requêtes (Select, Insert Results, Insert Values, Update, Delete et Make Table) et prend également en charge les requêtes d'expression UNION, de recherche en texte intégral et CASE.  
@@ -64,4 +62,3 @@ Décrit les propriétés disponibles lors de la conception de requêtes.
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 Explique comment concevoir et manipuler les requêtes et les vues.  
   
-
