@@ -5,21 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 311887e58067a4f8ba62973a5df757dde0ef7bb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
   Windows Server 2016 prend en charge les périphériques NVDIMM-N qui permettent des opérations d’entrée/sortie (E/S) extrêmement rapides. Une façon intéressante d’utiliser ces périphériques consiste à en faire un cache en écriture différée pour obtenir des latences d’écriture faibles. Cette rubrique explique comment configurer un espace de stockage mis en miroir avec un cache en écriture différée NVDIMM-N mis en miroir en tant que lecteur virtuel pour stocker le journal des transactions SQL Server. Si vous cherchez à l’utiliser pour également stocker des tables de données ou d’autres données, vous pouvez inclure davantage de disques dans le pool de stockage, ou créer plusieurs pools, si l’isolation est importante.  

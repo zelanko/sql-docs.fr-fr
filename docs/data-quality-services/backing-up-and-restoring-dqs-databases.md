@@ -5,29 +5,27 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 93aa4c5421406067d6ff97bc148ca5970d40bb4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sauvegarde et restauration de bases de données DQS
   Cette rubrique explique comment sauvegarder et restaurer les bases de données DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez connaître ou mémoriser le mot de passe de la clé principale de base de données que vous avez fourni pendant l'installation du serveur DQS.  
   
@@ -78,7 +76,6 @@ ms.lasthandoff: 09/09/2017
 12. Appuyez sur F5 pour exécuter les instructions. Consultez le volet de **résultats** pour vérifier que les instructions ont été correctement exécutées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les bases de données DQS](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   
-

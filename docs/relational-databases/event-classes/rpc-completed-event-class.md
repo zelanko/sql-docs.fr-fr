@@ -5,24 +5,21 @@ ms.date: 12/04/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RPC:Completed event class
+helpviewer_keywords: RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7fe53e7186d8b3408c2ecf838d1e1c11c96097f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2ec79d204274c0323e9622005a4235c3c4db62f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed (classe d'événements)
   La classe d'événements RPC:Completed indique qu'un appel de procédure distante a été réglé.  
@@ -35,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 |BinaryData|**image**|Valeur binaire dépendante de la classe d'événements capturés dans la trace.|2|Oui|  
 |ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  
 |Unité centrale|**int**|Temps processeur utilisé par l'événement. En microsecondes à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En millisecondes dans les versions antérieures.|18|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|**bigint**|Temps pris par l'événement. En microsecondes à partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En millisecondes dans les versions antérieures.|13|Oui|  
 |EndTime|**datetime**|Heure de fin de l'appel de procédure distante.|15|Oui|  
@@ -66,4 +63,3 @@ ms.lasthandoff: 06/22/2017
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

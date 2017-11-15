@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d23b44d09b5b1b38a1020ba9a04388f92119c28d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 31ae5e4f32eb2a6a2a5bd1e017b46937d70e8ef0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="considerations-for-using-test-servers"></a>Observations relatives à l'utilisation de serveurs de test
   L’utilisation d’un serveur de test pour paramétrer une base de données sur un serveur de production constitue un avantage important de l’Assistant Paramétrage de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Avec cette fonctionnalité, vous pouvez transférer sur un serveur de test la charge de gestion du paramétrage sans copier les données réelles sur le serveur de test à partir du serveur de production.  
@@ -82,4 +80,3 @@ ms.lasthandoff: 06/22/2017
      Pour déterminer si une vue est basée sur des statistiques de corrélation, sélectionnez la colonne **is_date_correlation_view** de l’affichage catalogue [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md) .  
   
   
-

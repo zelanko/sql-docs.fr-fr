@@ -1,27 +1,24 @@
 ---
 title: "Définition des propriétés pour le complément Master Data Services pour Excel | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: c5055942c39ff3805fcdbdbd47f0b3d8e9e2489d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 3ed8b5cab088e76d05d33614af844aaef5eb517e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Définition des propriétés pour le complément Master Data Services pour Excel
   Les paramètres du complément Master Data Services pour Excel déterminent la façon dont les données sont chargées à partir de MDS dans le complément Excel et la façon dont les données sont publiées du complément Excel vers MDS.  
@@ -48,4 +45,3 @@ ms.lasthandoff: 09/07/2017
 |Données : Format de cellule|Format d’affichage|Sélectionnez le format d’affichage souhaité pour les valeurs d’attributs basés sur un domaine. Les options possibles sont Code {Name}, Code et Nom {Code}.|  
   
   
-

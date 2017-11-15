@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb82238a0e88b3e639a6185bb80de1dd1b33c351
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 46f52e10fdc9a362fe102133bf336a7c7eba41f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-dqs-log-files"></a>Gérer les fichiers journaux DQS
   Les fichiers journaux[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vous aident dans le diagnostic et la résolution de problèmes avec [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Des fichiers journaux distincts sont générés pour [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]et [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
@@ -61,12 +59,12 @@ ms.lasthandoff: 09/09/2017
 23-08-2013 01:45:29|[]|4|INFO|PUID|InfInfoModuleStarting|Microsoft.Ssdqs.Core.Startup.ServerInit|Starting DQS ServerInit: version [12.0.0.0], machine name [DQS-TEST], user name [NT Service\MSSQLSERVER], operating system [Microsoft Windows NT 6.1.7600.0]...  
 ```  
   
- Le fichier DQServerLog.DQS_MAIN.log est un fichier de restauration et un nouveau fichier journal est créé une fois que le fichier journal existant dépasse la limite de la taille du fichier par progression spécifiée dans les paramètres de configuration du journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Pour plus d'informations, consultez [Configurer les paramètres avancés pour les fichiers journaux DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
+ Le fichier DQServerLog.DQS_MAIN.log est un fichier de restauration et un nouveau fichier journal est créé une fois que le fichier journal existant dépasse la limite de la taille du fichier par progression spécifiée dans les paramètres de configuration du journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Pour plus d'informations, consultez [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
 ##  <a name="DQSClient"></a> Fichier journal du client de qualité des données  
  Le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , DQClientLog.log, inclut les enregistrements côté client. Le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est disponible à %APPDATA%\SSDQS\Log. Le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] contient un ensemble d'informations similaires à celles du fichier journal du serveur, mais pour le côté client.  
   
- Comme pour le fichier journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est aussi un fichier par progression et un nouveau fichier journal est créé une fois que le fichier journal existant dépasse la limite de la taille du fichier par progression spécifiée dans les paramètres de configuration du journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Pour plus d'informations, consultez [Configurer les paramètres avancés pour les fichiers journaux DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
+ Comme pour le fichier journal [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , le fichier journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est aussi un fichier par progression et un nouveau fichier journal est créé une fois que le fichier journal existant dépasse la limite de la taille du fichier par progression spécifiée dans les paramètres de configuration du journal [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Pour plus d'informations, consultez [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md).  
   
 ##  <a name="DQSCleansing"></a> Fichier journal du composant de nettoyage DQS  
  Le fichier journal [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, inclut les enregistrements des activités effectuées à l'aide de [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Le fichier journal du composant [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] est disponible à %APPDATA%\SSDQS\Log. Le fichier journal [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] contient un ensemble d'informations similaires à celles du fichier journal du serveur, mais pour le [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/09/2017
  [Administration de DQS](../data-quality-services/dqs-administration.md)  
   
   
-

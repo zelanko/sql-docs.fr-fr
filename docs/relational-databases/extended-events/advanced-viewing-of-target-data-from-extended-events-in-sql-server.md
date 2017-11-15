@@ -5,21 +5,19 @@ ms.date: 10/04/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- xevents
+ms.technology: xevents
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9d7fcf086b0eb18db72c2d710c061ccee9c01aaf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 643d3b6f21d5ff42c1117df009f4e08e83793898
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -47,27 +45,27 @@ Cet article considère aussi que vous avez installé une version mensuelle très
 
 
 
-### <a name="differences-with-azure-sql-database"></a>Différences par rapport à Azure SQL Database
+### <a name="differences-with-azure-sql-database"></a>Différences par rapport à la Base de données SQL Azure
 
 
-Il existe un fort degré de similitude dans l’implémentation et les fonctionnalités des événements étendus dans les deux produits Microsoft SQL Server et Azure SQL Database. Mais il existe aussi quelques différences qui affectent l’interface utilisateur de SSMS.
+Il existe un fort degré de similitude dans l’implémentation et les fonctionnalités des événements étendus dans les deux produits Microsoft SQL Server et Base de données SQL Azure. Mais il existe aussi quelques différences qui affectent l’interface utilisateur de SSMS.
 
 
-- Pour SQL Database, la cible package0.event_file ne peut pas être un fichier du disque dur local. Au lieu de cela, vous devez utiliser un conteneur de stockage Azure. Par conséquent, quand vous êtes connecté à SQL Database, l’interface utilisateur de SSMS réclame un conteneur de stockage, et non un chemin et un nom de fichier locaux.
+- Pour la Base de données SQL, la cible package0.event_file ne peut pas être un fichier du disque dur local. Au lieu de cela, vous devez utiliser un conteneur de stockage Azure. Par conséquent, quand vous êtes connecté à la Base de données SQL, l’interface utilisateur de SSMS réclame un conteneur de stockage, et non un chemin et un nom de fichier locaux.
 
 
 - Si dans l’interface utilisateur de SSMS, vous constatez que la case à cocher **Observer les données actives** est grisée et désactivée, c’est que cette fonctionnalité n’est pas disponible pour la Base de données SQL.
 
 
-- Quelques événements étendus sont installés avec SQL Server. Sous le nœud **Sessions** figure l’événement **AlwaysOn_health** plus quelques autres. Ceux-ci ne sont pas visibles quand vous êtes connecté à SQL Database, car ils n’existent pas pour ce produit.
+- Quelques événements étendus sont installés avec SQL Server. Sous le nœud **Sessions** figure l’événement **AlwaysOn_health** plus quelques autres. Ceux-ci ne sont pas visibles quand vous êtes connecté à la Base de données SQL, car ils n’existent pas pour ce produit.
 
 
 Cet article a été rédigé du point de vue de SQL Server. Il utilise la cible event_file, qui constitue l’une des différences. Par la suite, seules les différences importantes ou non évidentes sont mentionnées.
 
 
-Pour plus d’informations sur les événements étendus propres à Azure SQL Database, consultez :
+Pour plus d’informations sur les événements étendus propres à la Base de données SQL Azure, consultez :
 
-- [Événements étendus dans Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
+- [Événements étendus dans la Base de données SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)
 
 
 
@@ -288,7 +286,7 @@ Regrouper des lignes par la mise en correspondance des valeurs d’une colonne d
 #### <a name="d41-grouping"></a>D.4.1 Regroupement
 
 
-Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom*.
+Dans la barre d’outils des événements étendus, le bouton **Regroupement** donne accès à une boîte de dialogue dans laquelle vous pouvez regrouper les données affichées par une colonne donnée. La capture d’écran suivante montre une boîte de dialogue qui permet d’effectuer un regroupement en fonction de la colonne *nom* .
 
 ![Barre d’outils > Bouton Regroupement, puis boîte de dialogue Regroupement](../../relational-databases/extended-events/media/xevents-ssms-ui53-grouping.png)
 
@@ -301,7 +299,7 @@ Dans la barre d’outils des événements étendus, le bouton **Regroupement** d
 #### <a name="d42-aggregation"></a>D.4.2 Agrégation
 
 
-Une fois que les données affichées ont été regroupées, vous pouvez poursuivre en agrégeant les données dans d’autres colonnes.  La capture d’écran suivante illustre l’agrégation des données regroupées par nombre (*count*).
+Une fois que les données affichées ont été regroupées, vous pouvez poursuivre en agrégeant les données dans d’autres colonnes.  La capture d’écran suivante illustre l’agrégation des données regroupées par nombre ( *count*).
 
 ![Barre d’outils > bouton Agrégation, puis boîte de dialogue Agrégation](../../relational-databases/extended-events/media/xevents-ssms-ui51-aggregdialogcount.png)
 
@@ -318,6 +316,5 @@ L’événement **query_post_execution_showplan** vous permet d’afficher le pl
 
 
 ![Plan de requête, avec la liste des propriétés d’un nœud](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
-
 
 

@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40e0df4262f227aa3a457f43ca137bbc1d9fa6e2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d9bc247506e7948e38aa456e83b669917793ec60
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
   Cette rubrique explique comment créer une publication Oracle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -72,7 +71,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  Dans l'onglet **Propriétés de la connexion** , sélectionnez un type de serveur de publication ( **Passerelle** ou **Complet**).  
   
-     L’option **Complet** est conçue pour fournir des publications transactionnelles et d’instantané avec l’ensemble complet de fonctionnalités prises en charge pour la publication Oracle. L’option **Passerelle** fournit des optimisations de conception spécifiques pour améliorer les performances dans les cas où la réplication sert de passerelle entre les systèmes. L’option **Passerelle** ne peut pas être utilisée si vous avez l’intention de publier la même table dans plusieurs publications transactionnelles. Une table peut apparaître au maximum dans une publication transactionnelle et dans une ou plusieurs publications d'instantané si vous sélectionnez **Passerelle**.  
+     L’option **Complet** est conçue pour fournir des publications transactionnelles et d’instantané avec l’ensemble complet de fonctionnalités prises en charge pour la publication Oracle. L'option **Passerelle** permet l'optimisation de la conception en améliorant les performances pour les cas où la réplication sert de passerelle entre les systèmes. Vous ne pouvez pas utiliser l'option **Passerelle** si vous envisagez de publier la même table dans plusieurs publications transactionnelles. Une table peut apparaître au maximum dans une publication transactionnelle et dans une ou plusieurs publications d'instantané si vous sélectionnez **Passerelle**.  
   
 7.  Cliquez sur **Se connecter**, qui crée une connexion au serveur de publication Oracle et le configure pour la réplication. La boîte de dialogue **Se connecter au serveur** se ferme et vous revenez dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**.  
   

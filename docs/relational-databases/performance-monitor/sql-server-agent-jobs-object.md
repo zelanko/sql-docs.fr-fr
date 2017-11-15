@@ -5,27 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLAgent:Jobs
 - Jobs object
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8f2931c070c0ed3816fb348b4ca41f3705b19a0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 08c18a2223c48c07aee8550401e4044411c73dbf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server Agent, objet Jobs
-  L'objet de performances **Jobs** de SQL Server Agent contient des compteurs qui fournissent des informations sur les travaux de SQL Server Agent. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
+  L'objet de performances **Jobs** de l'Agent SQL Server contient des compteurs qui fournissent des informations sur les travaux de l'Agent SQL Server. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
  Le tableau ci-dessous contient les compteurs **SQLAgent:Jobs** .  
   
@@ -35,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 |**Travaux non réussis**|Nombre de travaux qui se sont terminés par un échec.|  
 |**Taux de travaux réussis**|Pourcentage de travaux exécutés et terminés.|  
 |**Travaux activés/minute**|Nombre de travaux lancés au cours de la dernière minute.|  
-|**Travaux en attente**|Nombre de travaux prêts à l'exécution par SQL Server Agent, mais dont l'exécution n'a pas commencé.|  
+|**Travaux en attente**|Nombre de travaux prêts à l'exécution par l'Agent SQL Server, mais dont l'exécution n'a pas commencé.|  
 |**Travaux réussis**|Nombre de travaux terminés.|  
   
  Chaque compteur de l'objet contient les instances suivantes :  

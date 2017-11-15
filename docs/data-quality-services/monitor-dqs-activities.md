@@ -5,27 +5,24 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.administration.activitymonitoring.f1
+f1_keywords: sql13.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46c5abb9edd4e854609a1854ab6d6d8d6622b4fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 4fa0262edc8b299407ca046bd7f6104143c2d616
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-dqs-activities"></a>Surveiller les activités DQS
   Cette rubrique décrit comment surveiller de manière centralisée les activités suivantes dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) : découverte des connaissances, gestion des domaines, stratégie de correspondance, nettoyage des données, correspondance de données et nettoyage SSIS.  
@@ -164,4 +161,3 @@ ms.lasthandoff: 09/09/2017
 3.  Un message s'affiche pour confirmer votre action. Cliquez sur **Oui**.  
   
   
-

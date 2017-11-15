@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - modifying replication properties, publications
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25672cad6198647ca7e24eb924796740ce20c264
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 78c385fbef819baf5a3f4b1508fc6d58b6464df6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-publication-properties"></a>Afficher et modifier les propriétés d'une publication
   Cette rubrique décrit comment afficher et modifier les propriétés de la publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -156,25 +155,25 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>Pour afficher ou modifier les propriétés d'une publication transactionnelle ou d'instantané  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication>, définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l’étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.TransPublication> , définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
-4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l’opérateur AND logique (**&** en Microsoft Visual C# et **And** en Microsoft Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>. Utilisez l’opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l’opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l'opérateur AND logique (**&** en Microsoft Visual C# et **And** en Microsoft Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . Utilisez l'opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l'opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   
 5.  (Facultatif) Si vous avez spécifié la valeur **true** pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur **false** pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Pour afficher ou modifier les propriétés d'une publication de fusion  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>, définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l’étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> , définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> pour la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur la connexion créée à l'étape 1.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l’objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne **false**, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
-4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l’opérateur AND logique (**&** en Visual C# et **And** en Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>. Utilisez l’opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l’opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  (Facultatif) Pour modifier les propriétés, définissez une nouvelle valeur pour l'une des propriétés paramétrables. Utilisez l'opérateur AND logique (**&** en Visual C# et **And** en Visual Basic) pour déterminer si une valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes> donnée est définie pour la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . Utilisez l'opérateur OR logique inclusif (**|** en Visual C# et **Or** en Visual Basic) et l'opérateur OR logique exclusif (**^** en Visual C# et **Xor** en Visual Basic) pour modifier les valeurs <xref:Microsoft.SqlServer.Replication.PublicationAttributes> de la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   
 5.  (Facultatif) Si vous avez spécifié la valeur **true** pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour valider les modifications sur le serveur. Si vous avez spécifié la valeur **false** pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (valeur par défaut), les modifications sont envoyées immédiatement au serveur.  
   

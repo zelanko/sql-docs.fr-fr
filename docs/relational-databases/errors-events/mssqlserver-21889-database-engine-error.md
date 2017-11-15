@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21889 (Database Engine error)
+helpviewer_keywords: 21889 (Database Engine error)
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2080e4caf4fd027ff448166cea6015ea2b29d5f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0c2b430c438dffd8a38008be9ce9d43ab54d1a15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
   
@@ -43,4 +40,3 @@ Afin d'héberger la base de données du serveur de publication, l'instance de [!
 ## <a name="user-action"></a>Action de l'utilisateur  
 Exécutez **sp_adddistributor** sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de publication. Lors de l’exécution de **sp_adddistributor**, spécifiez le serveur de distribution approprié. Utilisez la même valeur pour le paramètre *@password* que celle utilisée quand **sp_adddistributor** a été initialement exécuté sur le serveur de distribution.  
   
-

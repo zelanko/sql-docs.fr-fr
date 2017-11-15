@@ -1,27 +1,24 @@
 ---
 title: "Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: e50d65ddecb9a22c852c9ed8543db4931df6dfb9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 26ae1044a11c82a96f3b7ef646d62460db93e53a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
   Les hiérarchies dérivées affichent des relations un à plusieurs et peuvent désormais également afficher des relations plusieurs à plusieurs.  
@@ -109,4 +106,3 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
  [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
-

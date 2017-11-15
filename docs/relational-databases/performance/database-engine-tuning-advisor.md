@@ -5,24 +5,21 @@ ms.date: 01/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dta.general.f1
+f1_keywords: sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4f0b031b0c98dd9f7708aebd13984f22403f3de1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-engine-tuning-advisor"></a>Assistant Paramétrage du moteur de base de données
   L'Assistant Paramétrage du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] analyse les bases de données et émet des recommandations que vous pouvez utiliser pour optimiser les performances des requêtes. L'Assistant Paramétrage du moteur de base de données vous permet de sélectionner et de créer un ensemble optimal d'index, de vues indexées ou de partitions de table sans devoir être un expert familiarisé avec la structure de la base de données ou les mécanismes internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer les tâches suivantes à l'aide de l'Assistant Paramétrage du moteur de base de données :  
@@ -130,4 +127,3 @@ ms.lasthandoff: 06/22/2017
 |Afficher les résultats de l'opération de paramétrage de base de données.<br /><br /> Sélectionner et mettre en œuvre des recommandations de paramétrage.<br /><br /> Réaliser une analyse de simulation exploratoire sur la charge de travail.<br /><br /> Examiner les sessions de paramétrage et les sessions de clonage en fonction des sessions existantes <br />ou modifier les recommandations de paramétrage existantes pour une évaluation ou une implémentation plus poussée.<br /><br /> Afficher les descriptions des options d'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.|[Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
-

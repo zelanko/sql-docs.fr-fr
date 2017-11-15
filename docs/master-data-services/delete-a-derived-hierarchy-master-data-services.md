@@ -1,28 +1,27 @@
 ---
-title: "Supprimer une hiérarchie dérivée (Master Data Services) | Documents Microsoft"
+title: "Supprimer une hiérarchie dérivée (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
+caps.latest.revision: "6"
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 56f3791ca9a675e97f26d676cc34d3cb77a18fc4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b95bf71e1cc687ffd70fce617fd6629fede7d5c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Supprimer une hiérarchie dérivée (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une hiérarchie dérivée lorsque vous êtes sûr de ne plus en avoir besoin.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 09/01/2017
 6.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une hiérarchie dérivée &#40; Master Data Services &#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [Hiérarchies dérivées &#40; Master Data Services &#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+ [Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

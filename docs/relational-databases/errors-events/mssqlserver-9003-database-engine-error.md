@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 9003 (Database Engine error)
+helpviewer_keywords: 9003 (Database Engine error)
 ms.assetid: 7fdfb391-5c6f-428b-b434-6c3d0b30fd7b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 27d2fbf1bed8445eb8d3fd42000128741d2ee377
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a383a9f0ac779c37d4fe9cb56dd2233ccc59215
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver9003"></a>MSSQLSERVER_9003
   
@@ -43,4 +40,3 @@ Un composant a passé un numéro séquentiel dans le journal non valide au gesti
 ## <a name="user-action"></a>Action de l'utilisateur  
 Si cela s’est produit pendant la réplication, recréez la publication. Sinon, effectuez une restauration à partir de la sauvegarde.  
   
-

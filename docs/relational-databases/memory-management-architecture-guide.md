@@ -5,24 +5,23 @@ ms.date: 10/21/2016
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d00e5c97e6c27f3fe40b2066b5e194b8011f6b1e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: db2d067b9daaf0ca015e8069c9e01cab783cfeb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="memory-management-architecture-guide"></a>Guide d’architecture de gestion de la mémoire
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +55,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 <sup>1</sup> les versions 32 bits ne sont pas disponibles à partir de la version [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
 <sup>2</sup> /3gb est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez la MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) est un mode dans lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 bits s’exécute sur un système d’exploitation 64 bits.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition supports up to 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Enterprise prend en charge le maximum du maximum du système d’exploitation...  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Standard prend en charge jusqu’à 128 Go. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Enterprise prend en charge le maximum du maximum du système d’exploitation...  
 <sup>5</sup> Notez que l’option sp_configure awe enabled est présente sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]64 bits, mais qu’elle est ignorée.    
 <sup>6</sup> Si le privilège de verrouillage des pages en mémoire (LPIM) est accordé (sur la version 32 bits pour la prise en charge d’AWE ou sur la version 64 bits par elle-même), nous recommandons de définir également la mémoire de serveur maximale.
 
@@ -181,5 +180,4 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est compatible 
 ## <a name="see-also"></a>Voir aussi
 [Lecture de pages](../relational-databases/reading-pages.md)   
  [Écriture de pages](../relational-databases/writing-pages.md)
-
 

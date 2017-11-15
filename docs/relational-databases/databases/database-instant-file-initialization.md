@@ -5,8 +5,7 @@ ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - fast file initialization (SQL Server)
 - file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
-ms.openlocfilehash: 8535e2dd63e3842d249c3cc4a90654a3648f51b3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/16/2017
-
+ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-instant-file-initialization"></a>Initialisation instantanée des fichiers de base de données
   Les fichiers de données et les fichiers journaux sont initialisés pour remplacer toutes les données existantes laissées sur le disque par des fichiers précédemment supprimés. Les fichiers de données et les fichiers journaux sont d'abord initialisés en étant remplis avec des zéros quand vous effectuez l'une des opérations suivantes :  
@@ -78,4 +76,3 @@ Certaines conditions, comme TDE, peuvent empêcher l’initialisation instantan�
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
-

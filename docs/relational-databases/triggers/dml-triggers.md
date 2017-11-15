@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-dml
+ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49e88050bea0405d8801a5b53faafcb644a6b62d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a6cbad16ee3ca0db8c5506810e62ac869b518823
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dml-triggers"></a>Déclencheurs DML
   Un déclencheur DML est un type spécial de procédure stockée qui entre automatiquement en vigueur lorsqu'un événement de langage de manipulation de données (DML, ou Data Manipulation Language) qui affecte la table ou la vue définie dans le déclencheur se produit. Les événements DML incluent les instructions INSERT, UPDATE ou DELETE. Les déclencheurs DML peuvent être utilisés pour appliquer des règles d'entreprise et l'intégrité des données, interroger d'autres tables et inclure des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] complexes. Le déclencheur et l'instruction qui le déclenche sont traités comme une unique transaction qui peut être annulée (par une opération de restauration) à partir du déclencheur. Si une erreur grave est détectée (par exemple un espace disque insuffisant), toute la transaction est automatiquement annulée.  

@@ -1,26 +1,24 @@
 ---
 title: "Migration vers OLTP en mémoire | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79214d5c4104f232cf2094f0911d6c397d465434
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: f51aa014f0921b4f074818cd4aa8ffd9793274c4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migration vers OLTP en mémoire
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Requêtes de bases de données croisées](../../relational-databases/in-memory-oltp/cross-database-queries.md)  
   
--   [Implémentation d'IDENTITY dans une table optimisée en mémoire](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)  
+-   [Implémentation d'IDENTITY dans une table mémoire optimisée](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md)  
   
  Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration](http://msdn.microsoft.com/library/dn673538.aspx).  
   

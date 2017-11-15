@@ -5,33 +5,32 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Statistics object
 - SQLAgent:Statistics
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 98d3012389ae11ad45bc60d35f88f75d0fdf23e9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3e029925e4922b8a45c76957c412992835d71863
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent, objet Statistics
-  L'objet de performance **Statistics** de SQL Server Agent contient des compteurs de performance qui fournissent des informations sur SQL Server Agent.  
+  L'objet de performance **Statistics** de l'Agent SQL Server contient des compteurs de performance qui fournissent des informations au sujet de cet agent.  
   
  Le tableau ci-dessous décrit le compteur de **SQLAgent:Statistics** .  
   
 |Nom|Description|  
 |----------|-----------------|  
-|**Redémarrages de SQL Server**|Nombre de redémarrages réussis de Microsoft SQL Server effectués par SQL Server Agent depuis le dernier démarrage de ce dernier.|  
+|**Redémarrages de SQL Server**|Nombre de redémarrages réussis de Microsoft SQL Server effectués par l'Agent SQL Server depuis le dernier démarrage de ce dernier.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des objets de performance](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   

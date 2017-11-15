@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-ddl
+ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cb1a29cd7638f5ec9a4248f615381fe6da721b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
   Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur **xml** . Le schéma XML inclut des informations sur les éléments suivants :  
@@ -62,7 +61,7 @@ AS
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  Si l'application récupère les données `TSQLCommand` de l'événement CREATE_TABLE, soyez conscient que ces données peuvent apparaître deux fois : une fois lorsque l'événement CREATE_SCHEMA se produit et de nouveau lorsque l'événement CREATE_TABLE a lieu. Évitez de créer des déclencheurs DDL sur les événements CREATE_SCHEMA et sur les textes <élément_de_schéma> de toute définition CREATE SCHEMA correspondante, ou construisez la logique dans votre application de sorte que le même événement ne soit pas traité deux fois.  
+>  Si l'application récupère les données `TSQLCommand` de l'événement CREATE_TABLE, soyez conscient que ces données peuvent apparaître deux fois : une fois lorsque l'événement CREATE_SCHEMA se produit et de nouveau lorsque l'événement CREATE_TABLE a lieu. Évitez de créer des déclencheurs DDL sur les événements CREATE_SCHEMA et sur les textes <élément_de_schéma> de toute définition CREATE SCHEMA correspondante, ou construisez la logique dans votre application de sorte que le même événement ne soit pas traité deux fois.  
   
 ## <a name="alter-table-and-alter-database-events"></a>Événements ALTER TABLE et ALTER DATABASE  
  Les données d'événements pour les événements ALTER_TABLE et ALTER_DATABASE incluent également les noms et types d'autres objets affectés par l'instruction DDL et l'action effectuée sur ces objets. Les données d'événements ALTER_TABLE incluent les noms des colonnes, contraintes ou déclencheurs affectés par l'instruction TABLE ALTER et l'action (créer, modifier, supprimer, activer ou désactiver) effectuée sur les objets affectés. Les données d'événements ALTER_DATABASE incluent les noms des fichiers ou groupes de fichiers affectés par l'instruction ALTER DATABASE et l'action (créer, modifier ou supprimer) effectuée sur les objets affectés.  

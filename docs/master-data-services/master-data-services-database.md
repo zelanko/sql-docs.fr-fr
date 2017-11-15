@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 746f2073255e38e7b92ec7690ec2669ebdfaeba4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: cb58a997ed715a768852ff42ac2192f0f93e50cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="master-data-services-database"></a>Base de données Master Data Services
   La base de données contient toutes les informations pour le système [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Elle est au centre d’un déploiement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . La base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/07/2017
  [Connexions, utilisateurs et rôles de base de données &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   
-

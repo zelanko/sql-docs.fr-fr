@@ -5,8 +5,7 @@ ms.date: 06/27/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 148
+caps.latest.revision: "148"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6d832a7928f8f39b810cfd87a29a10c8c503dad9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 7ca4efe4610487f96b0092cac9a9c070dd3eebb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Mises à niveau de version et d’édition prises en charge
   Vous pouvez effectuer une mise à niveau à partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]et [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Cette rubrique répertorie les chemins de mise à niveau pris en charge à partir de ces versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et les mises à niveau d'édition prises en charge pour [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
@@ -72,7 +70,7 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
   
  Le tableau ci-dessous répertorie les scénarios de mise à niveau pris en charge depuis des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
-|Mise à niveau à partir de|Chemin de mise à niveau pris en charge|  
+|Mise à niveau à partir de|Chemin d'accès de mise à niveau pris en charge|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Enterprise|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP4 Developer|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
@@ -95,14 +93,14 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> |  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Business Intelligence|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Evaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Evaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] version d’évaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Evaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] version d’évaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] version d’évaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] version Release Candidate (RC)* |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
@@ -110,7 +108,7 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
 
    
 ###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Prise en charge pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- Cette section aborde la prise en charge de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez effectuer les opérations suivantes :  
+ Cette section aborde la prise en charge de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez effectuer les opérations suivantes :  
   
 -   Attacher une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (fichiers mdf/ldf) à l'instance [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] du moteur de base de données.  
   
@@ -124,7 +122,7 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
   
 -   Installation de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] sur le même ordinateur (côte à côte).  
   
--   Utilisation d'une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comme membre de la topologie de réplication qui implique une instance de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] .  
+-   Utilisation d'une instance de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] comme membre de la topologie de réplication qui implique une instance de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].  
   
 -   Configuration de la mise en miroir de bases de données entre les instances [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] et [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
@@ -156,7 +154,7 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express*|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (licence serveur+CAL ou licence principale) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
   
- Vous pouvez également effectuer une mise à niveau d'édition entre [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (licence serveur+CAL) et [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (licence principale) :  
+ En outre vous pouvez également effectuer une mise à niveau d'édition entre [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (licence serveur+CAL) et [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (licence principale) :  
   
 |Mise à niveau d'édition depuis|Mise à niveau d'édition vers|  
 |--------------------------|------------------------|  
@@ -165,7 +163,7 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
   
  \* S’applique également à [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Tools et à [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express with Advanced Services.  
   
- ** La modification de l’édition d’un cluster de basculement [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] est limitée à certains scénarios. Les scénarios suivants ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] :  
+ ** La modification de l’édition d’un cluster de basculement [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] est limitée à certains scénarios. Les scénarios suivants ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] :  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise vers [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer, Standard ou Evaluation.  
   
@@ -184,4 +182,3 @@ SQL Server 2016 prend en charge la mise à niveau à partir des versions suivant
  [Mettre à niveau vers SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   
-

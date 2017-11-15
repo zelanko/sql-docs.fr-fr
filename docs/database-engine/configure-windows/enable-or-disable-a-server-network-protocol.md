@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: d83a336ea3d35d22ea14d6a4a66698f99890650d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# Activer ou désactiver un protocole réseau de serveur
+# <a name="enable-or-disable-a-server-network-protocol"></a>Activer ou désactiver un protocole réseau de serveur
   Tous les protocoles réseau sont installés par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais ils peuvent être activés ou non. Cette rubrique décrit comment activer ou désactiver un protocole réseau de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de PowerShell. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être arrêté et redémarré pour que la modification soit prise en compte.  
   
 > [!IMPORTANT]  
@@ -51,7 +49,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
-#### Pour activer un protocole réseau de serveur  
+#### <a name="to-enable-a-server-network-protocol"></a>Pour activer un protocole réseau de serveur  
   
 1.  Dans le Gestionnaire de configuration du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , développez **Configuration du réseau SQL Server**dans le volet de la console.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell SQL Server  
   
-#### Pour activer un protocole réseau de serveur à l'aide de PowerShell  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Pour activer un protocole réseau de serveur à l'aide de PowerShell  
   
 1.  En utilisant des autorisations d'administrateur, ouvrez une invite de commandes.  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### Pour configurer les protocoles pour l'ordinateur local  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>Pour configurer les protocoles pour l'ordinateur local  
   
 -   Lorsque le script est exécuté localement et configure l'ordinateur local, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell peut rendre le script plus souple en déterminant de façon dynamique le nom de l'ordinateur local. Pour récupérer le nom de l'ordinateur local, remplacez la ligne qui définit la variable `$uri` par la ligne suivante.  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### Pour redémarrer le Moteur de base de données à l'aide de SQL Server PowerShell  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>Pour redémarrer le Moteur de base de données à l'aide de SQL Server PowerShell  
   
 -   Après avoir activé ou désactivé des protocoles, vous devez arrêter et redémarrer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour que la modification entre en vigueur. Exécutez les instructions suivantes pour arrêter et démarrer l'instance par défaut à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Pour arrêter et démarrer une instance nommée, remplacez `'MSSQLSERVER'` par `'MSSQL$<instance_name>'`.  
   
@@ -134,4 +132,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

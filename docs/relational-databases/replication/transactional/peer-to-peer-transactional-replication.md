@@ -5,8 +5,7 @@ ms.date: 08/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73cba38d92983eb7e6650201a76c067e7f6de58f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9056e5d3d04f9a4c39683907ca20c8675eb7d17c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Réplication transactionnelle d’égal à égal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,7 +171,7 @@ ms.lasthandoff: 06/22/2017
   
  Les modifications de schéma d’article (ajout/suppression de colonnes) ne nécessitent jamais de suspension.  
   
--   Ajout d’article : pour l’ajout d’un article à une configuration existante, nous devons suspendre le système, exécuter l’instruction CREATE TABLE, charger les données initiales dans chaque nœud de la topologie, puis ajouter le nouvel article à chacun de ces nœuds.  
+-   Ajout d’article : pour l’ajout d’un article à une configuration existante, nous devons suspendre le système, exécuter l’instruction CREATE TABLE, charger les données initiales dans chaque nœud de la topologie, puis ajouter le nouvel article à chacun de ces nœuds.  
   
 -   Suppression d’article : si nous voulons que tous les nœuds présentent un état cohérent, nous devons suspendre la topologie.  
   
@@ -188,4 +187,3 @@ ms.lasthandoff: 06/22/2017
  [Types de publication pour la réplication transactionnelle](../../../relational-databases/replication/transactional/publication-types-for-transactional-replication.md)  
   
   
-

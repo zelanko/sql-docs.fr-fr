@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL:StmtCompleted event class
+helpviewer_keywords: SQL:StmtCompleted event class
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99a9d763386ecea12b12e9ddd6d597f00ff6b172
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 7e748f3fa3ec93660084f2bed127a832ca70832a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlstmtcompleted-event-class"></a>SQL:StmtCompleted (classe d'événements)
   La classe d'événements SQL:StmtCompleted indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] a été exécutée.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 06/22/2017
 |ApplicationName|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |ClientProcessID|**int**|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. La colonne de données est remplie si le client fournit l'ID du processus client.|9|Oui|  
 |Unité centrale|**int**|Temps processeur (en millisecondes) utilisé par l'événement.|18|Oui|  
-|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
+|DatabaseID|**int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Duration|**bigint**|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|**datetime**|Heure de fin de l'événement.|15|Oui|  
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 |NestLevel|**int**|Niveau d'imbrication de la procédure stockée si l'instruction a été exécutée dans une procédure stockée.|29|Oui|  
 |NTDomainName|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |NTUserName|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
-|Offset|**Int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
+|Offset|**int**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|61|Oui|  
 |Reads|**bigint**|Nombre de lectures de pages émises par l'instruction SQL.|16|Oui|  
 |RequestID|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|**bigint**|Nombre de lignes affectées par un événement.|48|Oui|  

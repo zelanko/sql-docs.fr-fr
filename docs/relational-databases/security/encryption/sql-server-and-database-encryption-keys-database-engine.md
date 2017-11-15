@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- keys [SQL Server], database encryption
+helpviewer_keywords: keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 467e7f36ce088db78184858888070206c8bc1e28
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: ee3fe7a3feeaf400fea2a982d1813f0c9296e0ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des clés de chiffrement pour mieux sécuriser les données, les informations d’identification et les informations de connexion qui sont stockées dans une base de données du serveur. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux types de clés : des clés *symétriques* et *asymétriques*. Les clés symétriques utilisent le même mot de passe pour chiffrer et déchiffrer des données. Les clés asymétriques utilisent un premier mot de passe pour chiffrer des données (appelé clé *publique* ) et un second mot de passe pour déchiffrer les données (appelé clé *privée* ).  
@@ -105,4 +102,3 @@ ms.lasthandoff: 08/28/2017
  [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
-

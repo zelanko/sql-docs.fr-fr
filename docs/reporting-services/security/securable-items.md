@@ -16,20 +16,19 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7cd3e8b8d3e1a623a7bcc10022da6081dca330cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="securable-items"></a>Éléments sécurisables
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]utilise la sécurité basée sur les rôles pour contrôler l’accès aux éléments qui sont stockés sur un serveur de rapports. Lorsque vous accordez à un utilisateur l'accès à un serveur de rapports, vous le faites en général en créant une paire d'attributions de rôle :  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour contrôler l’accès aux éléments stockés sur un serveur de rapports. Lorsque vous accordez à un utilisateur l'accès à un serveur de rapports, vous le faites en général en créant une paire d'attributions de rôle :  
   
 -   Au niveau du site  
   
@@ -66,10 +65,9 @@ ms.lasthandoff: 08/09/2017
 |Datasets partagés|Les datasets partagés peuvent être sécurisés pour contrôler la plage d'actions que les utilisateurs peuvent effectuer, telles que l'affichage ou la modification de la définition, ou la modification des propriétés d'un dataset partagé donné.<br /><br /> Pour plus d’informations, consultez [Sécuriser les éléments de dataset partagés](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Créer, supprimer ou modifier un rôle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Accorder l’accès de l’utilisateur à un serveur de rapports &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modifier ou supprimer une attribution de rôle &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   
-

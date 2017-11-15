@@ -1,13 +1,11 @@
 ---
 title: "Haute disponibilité et récupération d’urgence pour Master Data Services | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -16,16 +14,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: fe2bcae7a0f5694cf744df9c7d44b6fd2253c4b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
 **Résumé :** Cet article décrit une solution pour Master Data Services (MDS) hébergé sur une configuration de groupe de disponibilité AlwaysOn. L’article décrit comment installer et configurer SQL 2016 Master Data Services sur un groupe de disponibilité SQL 2016 AlwaysOn. L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
@@ -218,7 +212,7 @@ Le groupe de disponibilité améliore la haute disponibilité de niveau base de 
 Une instance de cluster de basculement améliore la haute disponibilité de niveau instance. Le service SQL Server et les services associés sont enregistrés en tant que ressources dans le cluster WSFC. De plus, la solution des instances de cluster de basculement requiert un stockage sur disque partagé symétrique, tel que des partages de fichiers SAN ou SMB, qui soit disponible pour tous les nœuds du cluster WFC.
 
 
-### <a name="prerequisites"></a>Prérequis
+### <a name="prerequisites"></a>Conditions préalables
 
 -   Installez SQL Server sur tous les nœuds. Pour plus d’informations, consultez [Installer SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -408,5 +402,4 @@ Dans ce livre blanc, nous avons vu comment installer et configurer la base de do
 Ce document vous a-t-il été utile ? Envoyez-nous vos commentaires en cliquant sur **Commentaires** en haut de l’article. 
 
 Vos commentaires nous aideront à améliorer la qualité des livres blancs que nous publions. 
-
 

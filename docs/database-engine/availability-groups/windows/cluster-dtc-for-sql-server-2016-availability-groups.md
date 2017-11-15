@@ -5,22 +5,20 @@ ms.date: 08/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: bf3445a7f28bc53b844946f66bc86712931d82e2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9291f9ce4659e022652078a9f1fadb3502c0e6e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>DTC en cluster pour les groupes de disponibilité SQL Server 2016
 Cette rubrique décrit les exigences et les étapes liées au clustering du service Microsoft Distributed Transaction Coordinator (DTC) pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations sur les transactions distribuées et [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
@@ -68,4 +66,3 @@ Une fois que vous avez créé votre ressource de groupe de disponibilité, crée
 [Prise en charge de SQL Server 2016 DTC dans les groupes de disponibilité](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) 
 
 [Lien externe : Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (Configurer DTC pour une instance en cluster de SQL Server avec Windows Server 2008 R2)
-

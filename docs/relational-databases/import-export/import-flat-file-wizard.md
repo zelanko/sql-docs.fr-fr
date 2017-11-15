@@ -5,22 +5,19 @@ ms.date: 09/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: douglasl
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.openlocfilehash: b19a4d0d4c2e15081b6a890aea4a4f2a9226e9bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 > Pour tout contenu associé à l’Assistant Importation et exportation, consultez [Assistant Importation et exportation SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
@@ -32,7 +29,7 @@ Cet Assistant a été créé pour améliorer l’expérience d’importation act
 
 PROSE analyse les modèles de données dans votre fichier d’entrée pour déduire les noms de colonnes, les types, les séparateurs, etc. Ce framework apprend la structure du fichier et gère tout le travail ingrat que les utilisateurs n’ont pas à faire.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 Cette fonctionnalité est uniquement disponible dans SQL Server Management Studio (SSMS) version 17.3 ou ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Commencer
@@ -94,5 +91,4 @@ Découvrez-en plus sur l’Assistant.
 - **En savoir plus sur l’importation d’autres sources.** Si vous souhaitez importer plusieurs fichiers plats, consultez [Assistant Importation et exportation SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **En savoir plus sur la connexion à des sources de fichiers plats.** Si vous recherchez plus d’informations sur la connexion à des sources de fichiers plats, consultez [Se connecter à une source de données de fichiers plats](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **En savoir plus sur PROSE.** Si vous recherchez une vue d’ensemble du framework intelligent utilisé par cet Assistant, consultez [PROSE SDK](https://microsoft.github.io/prose/).
-
 

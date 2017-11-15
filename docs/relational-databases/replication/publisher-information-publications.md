@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.monitor.publisherinfo.publications.f1
+f1_keywords: sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58631a593562e6fc04ddf411128111bed5f847c7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0d5a47e752f77625cbebc9fbb5ca5df42c8fb419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publisher-information-publications"></a>Informations sur le serveur de publication, Publications
   L'onglet **Publications** fournit des informations résumées pour toutes les publications sur le serveur de publication sélectionné dans le volet gauche.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 06/22/2017
 -   Pour la réplication d'instantané, le terme « synchronisation » signifie que l'Agent de distribution est en cours d'exécution et que les données sont en cours de réplication.  
   
  **Performance moyenne actuelle** et **Pire performance actuelle**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Évaluations respectives des performances moyenne et pire pour tous les abonnements à une publication. Ces évaluations sont basées sur les mesures les plus récentes prises par le moniteur de réplication. Elles ne reflètent pas les performances d'un abonnement dans le temps.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Évaluations respectives des performances moyenne et pire pour tous les abonnements à une publication. Ces évaluations sont basées sur les mesures les plus récentes prises par le moniteur de réplication. Elles ne reflètent pas les performances d'un abonnement dans le temps.  
   
  Dans le cas de la réplication transactionnelle, le moniteur de réplication affiche une valeur uniquement pour les publications dont les seuils de performances sont définis. Si des seuils de performances ne sont pas définis pour une publication, cette colonne contient **Non activé**. Dans le cas de la réplication de fusion, le moniteur de réplication affiche une valeur après cinq synchronisations avec au moins 50 modifications chacune via le même type de connexion (accès à distance ou LAN). S'il y a eu moins de cinq synchronisations avec au moins 50 modifications ou que la synchronisation la plus récente possède moins de 50 modifications, cette colonne est vide.  
   

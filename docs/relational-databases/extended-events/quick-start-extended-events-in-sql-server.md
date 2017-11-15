@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c02a1b16e4ab6375c0479f494838649ed7a413f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Démarrage rapide : événements étendus dans SQL Server
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -94,25 +94,25 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
 
 2. Dans l’Explorateur d’objets, cliquez sur **Gestion** > **Événements étendus** > **Nouvelle session**. La boîte de dialogue **nouvelle Session** est préférable à l’ **Assistant Nouvelle Session**, bien que les deux soient similaires.
 
-3. Dans l’angle supérieur gauche, cliquez sur la page **Général** . Ensuite, tapez *YourSession*ou tout autre nom de votre choix, dans la zone de texte **Nom de session** . Ne cliquez *pas* encore sur le bouton **OK**, vous le ferez uniquement à la fin de la démonstration.
+3. Dans l’angle supérieur gauche, cliquez sur la page **Général** . Ensuite, tapez *YourSession*ou tout autre nom de votre choix, dans la zone de texte **Nom de session** . Ne cliquez *pas* encore sur le bouton **OK** , vous le ferez uniquement à la fin de la démonstration.
 
     ![Nouvelle Session > Général > Nom de session](../../relational-databases/extended-events/media/xevents-session-newsessions-10-general-ssms-yoursessionnode.png)
 
-4. Dans l’angle supérieur gauche, cliquez sur la page **Événements**, puis cliquez sur le bouton **Sélectionner**.
+4. Dans l’angle supérieur gauche, cliquez sur la page **Événements** , puis cliquez sur le bouton **Sélectionner** .
 
     ![Nouvelle Session > Événements > Sélectionner > Bibliothèque d’événements, Événements sélectionnés](../../relational-databases/extended-events/media/xevents-session-newsessions-14-events-ssms-rightclick-not-wizard.png)
 
-5. Dans la **Bibliothèque d’événements**, dans la liste déroulante, choisissez **Noms d’événements uniquement**.
+5. Dans la **Bibliothèque d’événements** , dans la liste déroulante, choisissez **Noms d’événements uniquement**.
     - Dans la zone de texte, tapez **sql**, ce qui filtre et réduit la longue liste des événements disponibles en utilisant un opérateur *contient* .
     - Faites défiler et cliquez sur l’événement nommé **sql_statement_completed**.
     - Cliquez sur le bouton représentant une flèche vers la droite **>** pour déplacer l’événement vers la zone **Événements sélectionnés** .
 
 6. Toujours dans la page **Événements** , cliquez sur le bouton **Configurer** situé à l’extrémité droite.
-    - Le côté gauche étant coupé pour améliorer la présentation, vous pouvez voir, dans la capture d’écran ci-après, la zone **Options de configuration d’événement**.
+    - Le côté gauche étant coupé pour améliorer la présentation, vous pouvez voir, dans la capture d’écran ci-après, la zone **Options de configuration d’événement** .
 
     ![Nouvelle session > Événements > Configurer > Filtre (prédicat) > Champ](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Cliquez sur l’onglet **Filtre (prédicat)**. Ensuite, cliquez sur **Cliquez ici pour ajouter une clause**, dans le but de capturer toutes les instructions SQL SELECT qui ont une clause HAVING.
+7. Cliquez sur l’onglet **Filtre (prédicat)** . Ensuite, cliquez sur **Cliquez ici pour ajouter une clause**, dans le but de capturer toutes les instructions SQL SELECT qui ont une clause HAVING.
 
 8. Dans la liste déroulante **Champ** , choisissez **sqlserver.sql_text**.
    - Pour **Opérateur** , choisissez un opérateur LIKE.
@@ -129,17 +129,17 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
 
     ![Nouvelle Session > Stockage de données > Cibles > Type > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
-11. Dans la zone **Propriétés**, tapez un chemin et un nom de fichier dans la zone de texte **Nom de fichier sur le serveur**.
+11. Dans la zone **Propriétés** , tapez un chemin et un nom de fichier dans la zone de texte **Nom de fichier sur le serveur** .
     - L’extension de nom de fichier doit être *.xel*.
     - Notre test requiert une taille de fichier inférieure à 1 Mo.
 
     ![Nouvelle session > Avancé > Latence maximale de répartition > OK](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. Dans l’angle supérieur gauche, cliquez sur la page **Avancé**.
+12. Dans l’angle supérieur gauche, cliquez sur la page **Avancé** .
     - Réduisez la valeur **Latence maximale de répartition** à 3 secondes.
     - Enfin, cliquez sur le bouton **OK** situé en bas.
 
-13. De retour dans l’**Explorateur d’objets**, développez **Gestion** > **Sessions**, puis observez la présence du nouveau nœud **YourSession**.
+13. De retour dans l’ **Explorateur d’objets**, développez **Gestion** > **Sessions**, puis observez la présence du nouveau nœud **YourSession**.
 
     ![Nœud de votre nouvelle *session d’événements* nommé YourSession, dans l’Explorateur d’objets, sous Gestion > Événements étendus > Sessions](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -392,7 +392,7 @@ Pour commencer, deux options de menu contextuel intitulées **Afficher les donn�
 
 Dans l’ **Explorateur d’objets**de SSMS, vous pouvez cliquer avec le bouton droit sur le nœud cible qui se trouve sous le nœud de votre session d’événements. Dans le menu contextuel, cliquez sur **Afficher les données cibles**. SSMS affiche les données.
 
-L’affichage n’est pas mis à jour si de nouvelles données sont signalées par l’événement. Mais vous pouvez cliquer de nouveau sur **Afficher les données cibles**.
+L’affichage n’est pas mis à jour si de nouvelles données sont signalées par l’événement. Mais vous pouvez cliquer de nouveau sur **Afficher les données cibles** .
 
 
 ![Afficher les données cibles, dans SSMS, Gestion > Événements étendus > Sessions > YourSession > package0.event_file, clic avec le bouton droit](../../relational-databases/extended-events/media/xevents-viewtargetdata-ssms-targetnode-61.png)
@@ -661,6 +661,5 @@ Voici des liens vers la documentation relative à ces instructions SELECT et les
 
 
 - [sys.fn_xe_file_target_read_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)
-
 
 

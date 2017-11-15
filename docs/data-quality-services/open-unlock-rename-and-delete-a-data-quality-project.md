@@ -5,29 +5,26 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dqproject.opendqproject.f1
+f1_keywords: sql13.dqs.dqproject.opendqproject.f1
 helpviewer_keywords:
 - data quality project,delete
 - data quality project,rename
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eec04917faf24e5e6d9075fd165a45148c9f10b7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: 00e34abfcc2162483023fd4eace52581c12a1e30
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données
   Cette rubrique explique comment gérer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , par exemple ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Vous pouvez uniquement déverrouiller un projet de qualité des données que vous avez vous-même créé.  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Vous devez disposer d'au moins un projet de qualité des données à gérer.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -98,4 +95,3 @@ ms.lasthandoff: 09/09/2017
 4.  Un message de confirmation s'affiche. Cliquez sur **Oui**.  
   
   
-

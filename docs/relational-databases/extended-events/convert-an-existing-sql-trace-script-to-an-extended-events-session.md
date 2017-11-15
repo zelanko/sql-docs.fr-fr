@@ -14,17 +14,16 @@ helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c74449bc0b97b0f1c717a8bc3ac1c096a45bd8e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.lasthandoff: 06/22/2017
            AND em.xe_event_name = '<event_name>';  
         ```  
   
-         Par exemple, la classe d’événements SP:StmtCompleted correspond à l’événement d’événements étendus sp_statement_completed. Si vous spécifiez sp_statement_completed comme nom d’événement dans la requête, la colonne « event_field » affiche les champs inclus par défaut avec l’événement. Si vous observez les champs, vous pouvez voir qu'il y a un champ de « durée ». Pour créer le filtre dans la session d'événements étendus équivalente, vous devez ajouter un prédicat tel que « WHERE duration > 0 ». Pour obtenir un exemple, consultez la procédure « Pour créer la session d'événements étendus » dans cette rubrique.  
+         Par exemple, la classe d’événements SP:StmtCompleted correspond à l’événement d’événements étendus sp_statement_completed. Si vous spécifiez sp_statement_completed comme nom d’événement dans la requête, la colonne « event_field » affiche les champs inclus par défaut avec l’événement. Si vous observez les champs, vous pouvez voir qu'il y a un champ de « durée ». Pour créer le filtre dans la session d'événements étendus équivalente, vous devez ajouter un prédicat tel que « WHERE duration > 0 ». Pour obtenir un exemple, consultez la procédure « Pour créer la session d'événements étendus » dans cette rubrique.  
   
 ## <a name="to-create-the-extended-events-session"></a>Pour créer la session d'événements étendus  
  Utilisez l'Éditeur de requête pour créer la session d'événements étendus, et écrire la sortie dans une cible de fichier. Les étapes suivantes décrivent une requête unique, avec les explications indiquant comment générer la requête. Pour obtenir un exemple de requête complet, consultez la section Exemple de cette rubrique.  
@@ -259,4 +258,3 @@ ADD TARGET package0.asynchronous_file_target
  [Consulter les Événements étendus équivalents aux classes d’événements Trace SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   
-
