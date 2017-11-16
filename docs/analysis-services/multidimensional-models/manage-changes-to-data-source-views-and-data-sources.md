@@ -2,9 +2,12 @@
 title: "Gérer les modifications apportées aux vues de sources de données et Sources de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: multidimensional-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

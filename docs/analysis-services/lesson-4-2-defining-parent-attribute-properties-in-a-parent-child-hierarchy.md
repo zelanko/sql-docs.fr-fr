@@ -2,9 +2,12 @@
 title: "Définition des propriétés d’attribut Parent dans une hiérarchie Parent-enfant | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 

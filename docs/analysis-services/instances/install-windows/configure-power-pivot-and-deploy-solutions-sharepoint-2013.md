@@ -2,9 +2,12 @@
 title: "Configurer PowerPivot et déployer des Solutions (SharePoint 2013) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: instances
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - power-view
 ms.tgt_pltfrm: 

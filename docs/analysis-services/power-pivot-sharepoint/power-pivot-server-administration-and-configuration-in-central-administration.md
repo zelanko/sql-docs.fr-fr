@@ -2,9 +2,12 @@
 title: "Administration de serveur de tableau croisé dynamique et de Configuration dans l’Administration centrale de l’alimentation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: power-pivot-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
