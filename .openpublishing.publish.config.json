@@ -22,8 +22,7 @@
     "CnE_UE_Bugfixing_ENG@moravia.com"
   ],
   "branches_to_filter": [
-    "live-oldev",
-    "live"
+    "live-oldev"    
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/sql-docs.fr-fr",
   "git_repository_branch_open_to_public_contributors": "live",
