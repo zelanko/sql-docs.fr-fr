@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Stratégies de sauvegarde et de restauration de la réplication de fusion
   Pour la réplication de fusion, effectuez régulièrement des sauvegardes des bases de données suivantes :  
@@ -65,16 +64,16 @@ ms.lasthandoff: 06/22/2017
   
  Si vous effectuez une synchronisation avec un Abonné qui exécute une version de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme ; il doit être un abonnement client ou un abonnement serveur (qui s'appelaient « abonnement local » et « abonnement global » dans les versions antérieures).  
   
- Pour synchroniser un abonnement, consultez [Synchroniser un abonnement par émission (push)](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchroniser un abonnement par extraction (pull)](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Pour synchroniser un abonnement, consultez [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) et [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ### <a name="reinitializing-all-subscriptions"></a>Réinitialisation de tous les abonnements  
  La réinitialisation de tous les abonnements garantit que tous les Abonnés sont dans un état cohérent avec la base de données de publication restaurée. Cette approche doit être utilisée si vous voulez replacer une topologie entière à l'état précédent représenté par une sauvegarde donnée de la base de données d'abonnement. Par exemple, vous pouvez souhaiter réinitialiser tous les abonnements si vous effectuez la restauration d'une base de données de publication à un point antérieur dans le temps, dans le but de récupérer d'une opération de traitement effectuée incorrectement.  
   
  Si vous choisissez cette option, générez un nouvel instantané en vue de la communiquer aux Abonnés réinitialisés dès la fin de la restauration de la base de données de publication.  
   
- Pour réinitialiser un abonnement, consultez [Réinitialiser un abonnement](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Pour réinitialiser un abonnement, consultez [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Pour créer et appliquer un instantané, consultez [Créer et appliquer l'instantané initial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) et [Créer un instantané d'une publication de fusion avec des filtres paramétrés](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Pour créer et appliquer un instantané, consultez [Create et Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) et [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Sauvegarde et restauration de la base de données de distribution  
  Avec la réplication de fusion, la base de données de distribution doit être sauvegardée régulièrement, et peut être restaurée sans considérations particulières aussi longtemps que la sauvegarde n'est pas plus ancienne que la période de rétention la plus courte de tous les abonnements qui utilisent le serveur de distribution. Par exemple, s'il y a trois publications avec des périodes de rétention de 10, 20 et 30 jours respectivement, la sauvegarde utilisée pour restaurer la base de données ne doit pas être vieille de plus de 10 jours. La base de données de distribution a un rôle limité dans la réplication de fusion : elle ne stocke aucune donnée utilisée dans le suivi des modifications et ne constitue pas un support de stockage temporaire pour les modifications de réplication de fusion destinées aux bases de données d'abonnement (comme elle le fait dans la réplication transactionnelle).  

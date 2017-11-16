@@ -5,30 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newsubwizard.subproperties.subscriber.f1
-helpviewer_keywords:
-- Subscription Properties dialog box
+f1_keywords: sql13.rep.newsubwizard.subproperties.subscriber.f1
+helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bdd36d6397cf33bb99773fd974b150f63029339
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 348b0b2b95f433f5c186fa71addbf418432198d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subscription-properties---subscriber"></a>Propriétés de l'abonnement - Abonné
   La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'afficher et de configurer les propriétés des abonnements par extraction.  
   
- Chaque propriété de cette boîte de dialogue **** comporte une description. Cliquez sur une propriété pour afficher sa description au bas de la boîte de dialogue. Cette rubrique fournit des informations sur diverses propriétés, Les propriétés sont regroupées selon les catégories suivantes :  
+ Chaque propriété de **cette boîte de dialogue** comporte une description. Cliquez sur une propriété pour afficher sa description au bas de la boîte de dialogue. Cette rubrique fournit des informations sur diverses propriétés, Les propriétés sont regroupées selon les catégories suivantes :  
   
 -   Propriétés appliquées à tous les abonnements.  
   
@@ -90,7 +87,7 @@ ms.lasthandoff: 06/22/2017
  Détermine s'il faut utiliser l'interface utilisateur du Résolveur interactif pour résoudre les conflits pendant la synchronisation de fusion. Pour cela, l'option **Utiliser le Gestionnaire de synchronisation Windows** doit être active ( **Activer**). Pour plus d’informations, consultez [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Synchronisation Web**  
-L'option **Utiliser la synchronisation Web** détermine s'il est nécessaire de connecter un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) pour synchroniser l'abonnement. Cette option est disponible uniquement si la publication est activée pour la synchronisation. Pour plus d’informations, consultez [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
+ L'option**Utiliser la synchronisation Web** détermine s'il est nécessaire de connecter un serveur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) pour synchroniser l'abonnement. Cette option est disponible uniquement si la publication est activée pour la synchronisation. Pour plus d’informations, consultez [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Si vous sélectionnez la valeur **True** pour l'option **Utiliser la synchronisation Web**:  
   

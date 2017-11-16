@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.filtertablerows.f1
+f1_keywords: sql13.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 610fb6065c2261ae6f1e2c8627656b193cb5d456
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e6dcb77e0afba0aaf1947ec7d5d150c9c2281370
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-table-rows"></a>Filtrer les lignes de la table
   La page **Filtrer les lignes de la table** vous permet d'effectuer les opérations suivantes :  
@@ -55,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  **Ajouter**  
  Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s'affichent : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
   
--   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du même nom **** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
+-   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom**. Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   
 -   Sélectionnez **Ajouter une jointure pour étendre le filtre sélectionné** afin de lancer la boîte de dialogue **Ajouter une jointure** . La boîte de dialogue **Ajouter une jointure** vous permet d'étendre un filtre de lignes de sorte à filtrer les données dans les tables associées à la table contenant le filtre de ligne. Par exemple, si une table de clients est filtrée de manière à ne contenir que les données relatives aux clients français et qu'une table de commandes client lui est associée, vous pouvez définir une jointure entre les deux tables afin que la table de commandes inclue uniquement les commandes émanant de clients français.  
   

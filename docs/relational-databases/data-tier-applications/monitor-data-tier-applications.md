@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,22 +13,22 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7949096021314093ef63877175ceddf77e4cf0e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: d5760acc8966ee698f20e7aa714abbe7d2e691f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
   Une application de la couche Données (DAC) peut être analysée à partir de l’ **Explorateur de l’utilitaire** et de l’ **Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), avec les vues et les tables système. De plus, tous les objets dans la base de données contenue dans la DAC peuvent être analysés à l'aide des techniques d'analyse de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de base de données standard.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
- Si vous déployez une DAC dans une instance gérée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], les informations sur la DAC déployée sont incorporées dans l'utilitaire SQL Server lorsque le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. Vous pouvez ensuite afficher les informations intégrité de base sur la DAC à l'aide de l'Explorateur de l'utilitaire [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ****.  
+ Si vous déployez une DAC dans une instance gérée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], les informations sur la DAC déployée sont incorporées dans l'utilitaire SQL Server lorsque le jeu d'éléments de collecte de l'utilitaire est envoyé de l'instance au point de contrôle de l'utilitaire. Vous pouvez ensuite afficher les informations intégrité de base sur la DAC à l'aide de **l'Explorateur de l'utilitaire** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  L' **Explorateur d'objets** de SSMS affiche les informations de configuration de base sur chaque DAC déployée sur une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], que l'instance soit gérée ou non dans l'utilitaire SQL Server. En outre, la base de données associée à une DAC déployée peut être analysée à l'aide des mêmes procédures d'analyse que celles employées pour toute base de données.  
   
