@@ -2,37 +2,42 @@
 title: "Conseiller d’optimisation de la mémoire | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - swb.memoryoptimizationwizard.f1
 - sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46108ced5a1b7d06eedf5b867cc8b773c7ad3894
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04ee098de4740d0d4a3d3c195d24869ee41cea9a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Les rapports sur les performances des transactions (voir [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indiquent quelles tables de votre base de données tireront parti de l’utilisation de la fonctionnalité OLTP en mémoire. Après avoir identifié une table que vous souhaitez déplacer pour utiliser l’OLTP en mémoire, utilisez le Conseiller d’optimisation de la mémoire dans SQL Server Management Studio pour vous aider à migrer la table sur disque vers l’OLTP en mémoire.  
   
  Le Conseiller d’optimisation de la mémoire vous permet d’effectuer les opérations suivantes :  
   
--   Identifier les fonctionnalités utilisées dans une table basée sur disque qui ne sont pas prises en charge pour les tables mémoire optimisées.  
+-   Identifier les fonctionnalités utilisées dans une table basée sur disque qui ne sont pas prises en charge pour les tables optimisées en mémoire.  
   
--   Migrer une table et les données vers une table mémoire optimisée (si toutes les fonctionnalités sont prises en charge).  
+-   Migrer une table et les données vers une table optimisée en mémoire (si toutes les fonctionnalités sont prises en charge).  
     
  Pour plus d’informations sur les méthodologies de transfert, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](http://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
   
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table que vous souhaitez convertir, puis sélectionnez **Conseiller d’optimisation de la mémoire**. Ce faisant, vous affichez la page d'accueil du **Conseiller d'optimisation de la mémoire de la table**.  
   
 ### <a name="memory-optimization-checklist"></a>Liste de contrôle de l'optimisation de la mémoire  
- Lorsque vous cliquez sur **Suivant** dans la page d'accueil du **Conseiller d'optimisation de la mémoire de la table**, vous voyez la liste de contrôle d'optimisation de la mémoire. Les tables mémoire optimisées ne prennent pas en charge toutes les fonctionnalités d'une table sur disque. La liste de contrôle d'optimisation de la mémoire indique si la table sur disque utilise des fonctionnalités qui ne sont pas compatibles avec une table mémoire optimisée. Le **Conseiller d’optimisation de la mémoire de la table** ne modifie pas la table sur disque pour qu’elle puisse être migrée afin d’utiliser l’OLTP en mémoire. Vous devez effectuer ces modifications avant de poursuivre la migration. Pour chaque incompatibilité trouvée, le **Conseiller d’optimisation de la mémoire de la table** affiche un lien vers des informations qui peuvent vous aider à modifier les tables sur disque.  
+ Lorsque vous cliquez sur **Suivant** dans la page d'accueil du **Conseiller d'optimisation de la mémoire de la table**, vous voyez la liste de contrôle d'optimisation de la mémoire. Les tables optimisées en mémoire ne prennent pas en charge toutes les fonctionnalités d'une table sur disque. La liste de contrôle d'optimisation de la mémoire indique si la table sur disque utilise des fonctionnalités qui ne sont pas compatibles avec une table optimisée en mémoire. Le **Conseiller d’optimisation de la mémoire de la table** ne modifie pas la table sur disque pour qu’elle puisse être migrée afin d’utiliser l’OLTP en mémoire. Vous devez effectuer ces modifications avant de poursuivre la migration. Pour chaque incompatibilité trouvée, le **Conseiller d’optimisation de la mémoire de la table** affiche un lien vers des informations qui peuvent vous aider à modifier les tables sur disque.  
   
  Pour conserver une liste de ces incompatibilités dans le but de planifier la migration, cliquez sur **Générer le rapport** afin de générer une liste HTML.  
   
@@ -60,33 +65,33 @@ ms.lasthandoff: 11/09/2017
 ### <a name="review-optimization-options"></a>Vérification des options d'optimisation  
  L'écran suivant vous permet de modifier des options pour la migration vers l'OLTP en mémoire :  
   
- Groupe de fichiers mémoire optimisé  
- Nom du groupe de fichiers mémoire optimisé. Une base de données doit posséder un groupe de fichiers mémoire optimisé avec au moins un fichier pour qu'une table mémoire optimisée puisse être créée.  
+ Groupe de fichiers optimisé en mémoire  
+ Nom du groupe de fichiers optimisé en mémoire. Une base de données doit posséder un groupe de fichiers optimisé en mémoire avec au moins un fichier pour qu'une table optimisée en mémoire puisse être créée.  
   
- Si aucun groupe de fichiers mémoire optimisé n'est présent, vous pouvez modifier le nom par défaut. Les groupes de fichiers mémoire optimisés ne peuvent pas être supprimés. L'existence d'un groupe de fichiers mémoire optimisé peut désactiver certaines fonctionnalités au niveau de la base de données telles que l'instruction AUTO CLOSE et la mise en miroir de bases de données.  
+ Si aucun groupe de fichiers optimisé en mémoire n'est présent, vous pouvez modifier le nom par défaut. Les groupes de fichiers optimisés en mémoire ne peuvent pas être supprimés. L'existence d'un groupe de fichiers optimisé en mémoire peut désactiver certaines fonctionnalités au niveau de la base de données telles que l'instruction AUTO CLOSE et la mise en miroir de bases de données.  
   
- Si une base de données comporte déjà un groupe de fichiers mémoire optimisé, ce champ indiquera son nom et vous ne pourrez pas modifier la valeur de ce champ.  
+ Si une base de données comporte déjà un groupe de fichiers optimisé en mémoire, ce champ indiquera son nom et vous ne pourrez pas modifier la valeur de ce champ.  
   
  Nom du fichier logique et chemin d'accès au fichier  
- Nom du fichier qui contient la table mémoire optimisée. Une base de données doit posséder un groupe de fichiers mémoire optimisé avec au moins un fichier pour qu'une table mémoire optimisée puisse être créée.  
+ Nom du fichier qui contient la table optimisée en mémoire. Une base de données doit posséder un groupe de fichiers optimisé en mémoire avec au moins un fichier pour qu'une table optimisée en mémoire puisse être créée.  
   
- En l'absence de groupe de fichiers mémoire optimisé existant, vous pouvez modifier le nom par défaut et le chemin d'accès du fichier à créer à la fin du processus de migration.  
+ En l'absence de groupe de fichiers optimisé en mémoire existant, vous pouvez modifier le nom par défaut et le chemin du fichier à créer à la fin du processus de migration.  
   
- Si vous disposez d'un groupe de fichiers mémoire optimisé, ces champs sont remplis à l'avance et vous ne pouvez pas modifier les valeurs.  
+ Si vous disposez d'un groupe de fichiers optimisé en mémoire, ces champs sont remplis à l'avance et vous ne pouvez pas modifier les valeurs.  
   
  Changer le nom de la table d'origine pour  
- À la fin du processus de migration, une nouvelle table mémoire optimisée est créée avec le nom actuel de la table. Pour éviter un conflit de nom, la table actuelle doit être renommée. Vous pouvez modifier le nom dans ce champ.  
+ À la fin du processus de migration, une nouvelle table optimisée en mémoire est créée avec le nom actuel de la table. Pour éviter un conflit de nom, la table actuelle doit être renommée. Vous pouvez modifier le nom dans ce champ.  
   
  Coût mémoire actuel estimé (Mo)  
- Le Conseiller d'optimisation de la mémoire estime la quantité de mémoire utilisée par la nouvelle table mémoire optimisée en fonction des métadonnées de la table sur disque. Le calcul de la taille de la table est expliqué dans [Taille de la table et des lignes dans les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).  
+ Le Conseiller d'optimisation de la mémoire estime la quantité de mémoire utilisée par la nouvelle table optimisée en mémoire en fonction des métadonnées de la table sur disque. Le calcul de la taille de la table est expliqué dans [Taille de la table et des lignes dans les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).  
   
  Si la capacité de mémoire allouée n'est pas suffisante, la migration peut échouer.  
   
- Copier également les données de la table dans la nouvelle table mémoire optimisée  
- Sélectionnez cette option si vous souhaitez également déplacer les données de la table actuelle vers la nouvelle table mémoire optimisée. Si cette option n'est pas sélectionnée, la nouvelle table mémoire optimisée est créée sans lignes.  
+ Copier également les données de la table dans la nouvelle table optimisée en mémoire  
+ Sélectionnez cette option si vous souhaitez également déplacer les données de la table actuelle vers la nouvelle table optimisée en mémoire. Si cette option n'est pas sélectionnée, la nouvelle table optimisée en mémoire est créée sans lignes.  
   
  La table sera migrée sous forme de table durable par défaut  
- L'OLTP en mémoire prend en charge les tables non durables avec des performances supérieures par rapport aux tables mémoire optimisées durables. Toutefois, les données d'une table non durable seront perdues lors du redémarrage du serveur.  
+ L'OLTP en mémoire prend en charge les tables non durables avec des performances supérieures par rapport aux tables optimisées en mémoire durables. Toutefois, les données d'une table non durable seront perdues lors du redémarrage du serveur.  
   
  Si cette option est sélectionnée, le Conseiller d'optimisation de la mémoire crée une table non durable au lieu d'une table durable.  
   
@@ -96,11 +101,11 @@ ms.lasthandoff: 11/09/2017
  Cliquez sur **Suivant** pour continuer.  
   
 ### <a name="review-primary-key-conversion"></a>Vérifier la conversion de la clé primaire  
- L'écran suivant est **Vérifier la conversion de la clé primaire**. Le Conseiller d'optimisation de la mémoire détecte s'il existe une ou plusieurs clés primaires dans la table, puis remplit la liste des colonnes à partir des métadonnées de clé primaire. Sinon, si vous souhaitez effectuer une migration vers une table mémoire optimisée durable, vous devez créer une clé primaire.  
+ L'écran suivant est **Vérifier la conversion de la clé primaire**. Le Conseiller d'optimisation de la mémoire détecte s'il existe une ou plusieurs clés primaires dans la table, puis remplit la liste des colonnes à partir des métadonnées de clé primaire. Sinon, si vous souhaitez effectuer une migration vers une table optimisée en mémoire durable, vous devez créer une clé primaire.  
   
  S'il n'existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s'affiche pas.  
   
- Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
+ Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table optimisée en mémoire, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Classements et pages de code](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
  Vous pouvez configurer les paramètres suivants pour la clé primaire :  
   
@@ -108,7 +113,7 @@ ms.lasthandoff: 11/09/2017
  Le nom de la clé primaire de cette table doit être unique dans la base de données. Vous pouvez modifier le nom de la clé primaire ici.  
   
  Sélectionnez le type de cette clé primaire  
- L'OLTP en mémoire prend en charge deux types d'index sur une table mémoire optimisée :  
+ L'OLTP en mémoire prend en charge deux types d'index sur une table optimisée en mémoire :  
   
 -   Index NONCLUSTERED HASH. Cet index est idéal pour les index avec un grand nombre de recherches de point. Vous pouvez configurer le nombre de compartiments de cet index dans le champ **Nombre de compartiments** .  
   
@@ -134,3 +139,4 @@ ms.lasthandoff: 11/09/2017
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

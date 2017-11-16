@@ -2,26 +2,33 @@
 title: MSSQLSERVER_3168 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 3168 (Database Engine error)
+helpviewer_keywords:
+- 3168 (Database Engine error)
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 9ee612ae808580661f5c35bb6a177e5e58f26617
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e65ac3a25fa7982dc29bc04873c068392f31e16a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
   
@@ -50,8 +57,9 @@ Certains scénarios dans lesquels ce problème est susceptible de se poser sont 
 -   Un utilisateur tente de restaurer une base de données système à partir d'une sauvegarde réalisée sur le même serveur. Cependant, le serveur exécutait une version différente au moment de la sauvegarde. Cela signifie que le serveur a été mis à niveau depuis la réalisation de la sauvegarde.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Le processus de restauration intervient en bonne partie dans cette situation et n'est utilisé qu'en dernier recours. Pour plus d’informations, consultez «[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)».  
+Le processus de restauration intervient en bonne partie dans cette situation et n'est utilisé qu'en dernier recours. Pour plus d’informations, consultez «[Vous ne pouvez pas restaurer les sauvegardes de base de données système vers une version différente de SQL Server](http://support.microsoft.com/kb/264474)».  
   
 ## <a name="see-also"></a>Voir aussi  
 [Sauvegarder et restaurer des bases de données système &#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
+

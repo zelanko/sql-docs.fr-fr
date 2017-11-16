@@ -2,26 +2,31 @@
 title: "Prise en charge d’OLTP en mémoire par Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 969aeddecb82270a81c1e23836033bc7e6d6e1ee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc975fbbdb4118158e4beacef63f45a63c479d38
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/18/2017
+
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes incluent des options de syntaxe pour prendre en charge l’OLTP en mémoire :  
   
@@ -57,3 +62,4 @@ ms.lasthandoff: 11/09/2017
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
+

@@ -2,26 +2,33 @@
 title: "MSSQLSERVER_802 - Erreur du moteur de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 802 (Database Engine error)
+helpviewer_keywords:
+- 802 (Database Engine error)
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 6f77f62eea2dac69a4d9d9b4b0ce3beb78136214
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83a4a02b0977f3a1b9feec0ad720aef6728cb906
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - Erreur du moteur de base de données
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
   
@@ -46,9 +53,9 @@ La liste suivante présente les procédures générales à suivre pour résoudre
   
 3.  Vérifiez les paramètres de configuration de la mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
-    -   **Mémoire maximum du serveur**  
+    -   **max server memory**  
   
-    -   **Mémoire minimum du serveur**  
+    -   **min server memory**  
   
     -   **min memory per query**  
   
@@ -74,3 +81,4 @@ Exécutez les commandes DBCC ci-dessous pour libérer plusieurs caches mémoire 
   
 Si le problème persiste, vous devez poursuivre vos recherches et éventuellement, réduire la charge de travail.  
   
+

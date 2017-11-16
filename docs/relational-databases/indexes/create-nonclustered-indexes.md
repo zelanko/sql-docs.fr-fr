@@ -2,10 +2,14 @@
 title: "Créer des index non cluster | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f0133b0a3975c46f4672d87be0b6b92f3c002d5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez créer des index non-cluster dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index non-cluster est une structure d'index séparé des données stockées dans une table qui réorganise une ou plusieurs colonnes sélectionnées. Les index non-cluster peuvent vous aider à trouver plus rapidement les données au lieu de rechercher dans la table sous-jacente. Il est parfois possible de répondre entièrement aux requêtes selon les données dans l'index non-cluster, ou l'index non-cluster peut indiquer au [!INCLUDE[ssDE](../../includes/ssde-md.md)] les lignes dans la table sous-jacente. En général, les index non-cluster sont créés pour améliorer les performances des requêtes fréquemment utilisées qui ne sont pas couvertes par l'index cluster ou pour rechercher des lignes dans une table sans index cluster (ce qui s'appelle un « segment »). Vous pouvez créer plusieurs index non cluster sur une table ou une vue indexée.  
   
@@ -137,3 +142,4 @@ ms.lasthandoff: 11/09/2017
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

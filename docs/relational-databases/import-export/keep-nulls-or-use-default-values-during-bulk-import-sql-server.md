@@ -2,10 +2,14 @@
 title: "Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-bulk-import-export
+ms.suite: sql
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 23e50a8144b21194aca61100c49bf35fff9b776e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 74e0dabe8b6691e467e82d7267c40ef578d84490
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/04/2017
+
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Par défaut, quand des données sont importées dans une table, la commande [bcp](../../tools/bcp-utility.md) et l’instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) inspectent toutes les valeurs par défaut définies pour les colonnes de la table.  Par exemple, si un fichier de données contient un champ NULL, la valeur par défaut de la colonne est chargée à la place.  La commande [bcp](../../tools/bcp-utility.md) et l’instruction [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) vous permettent de spécifier que les valeurs NULL doivent être conservées.
 
@@ -358,3 +363,4 @@ SELECT * FROM TestDatabase.dbo.myNulls;
  [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
   
   
+

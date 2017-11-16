@@ -1,28 +1,34 @@
 ---
 title: "Résoudre des problèmes courants JSON dans SQL Server | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: json
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-json
+ms.suite: sql
+ms.technology:
+- dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: JSON, FAQ
+helpviewer_keywords:
+- JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 40408a6c0a42882fb2c268d70ddd2959b2d627b4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Résoudre des problèmes courants JSON dans SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  Vous pouvez trouver ici des réponses aux questions courantes sur la prise en charge de JSON intégrée à SQL Server.  
  
@@ -147,3 +153,4 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>En savoir plus sur la prise en charge intégrée de JSON dans SQL Server  
 Pour accéder à un grand nombre de solutions spécifiques, de cas d’usage et de recommandations, consultez les [billets de blog sur la prise en charge intégrée de JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) dans SQL Server et Azure SQL Database, écrits par Jovan Popovic (Microsoft Program Manager).
+

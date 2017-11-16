@@ -2,27 +2,33 @@
 title: Index | Microsoft Docs
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: index types [SQL Server]
+helpviewer_keywords:
+- index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 271ebf1536918dde11e024877b591141a7eadbba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f4ac3c815fec2e6add64257dd2ae12e7b659f84
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="indexes"></a>Index
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   La table suivante répertorie les types d'index disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et propose des liens correspondants pour plus d'informations.  
   
@@ -54,7 +60,7 @@ ms.lasthandoff: 11/09/2017
   
  [Définir les options d’index](../../relational-databases/indexes/set-index-options.md)  
   
- [Espace disque nécessaire pour les opérations DDL d’index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
@@ -66,3 +72,4 @@ ms.lasthandoff: 11/09/2017
  [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
   
   
+

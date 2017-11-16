@@ -2,26 +2,33 @@
 title: MSSQLSERVER_8994 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 8994 (Database Engine error)
+helpviewer_keywords:
+- 8994 (Database Engine error)
 ms.assetid: 8f4b0e2f-04c0-46e4-9208-20a7085d7a1a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 2fc0246823b5ca836ab27974090a7123c3224bf0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5bbe6e23318bf3590eccfa8e063af1b17a019485
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver8994"></a>MSSQLSERVER_8994
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
   
@@ -60,3 +67,4 @@ Si l'exécution de DBCC CHECKDB avec une des clauses REPAIR ne résout pas le pr
 #### <a name="results-of-running-repair-options"></a>Résultats de l'exécution des options REPAIR  
 La ligne transmise sera convertie en ligne de données normale.  
   
+

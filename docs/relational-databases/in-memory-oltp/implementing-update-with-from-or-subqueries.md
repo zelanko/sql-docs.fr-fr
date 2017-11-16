@@ -1,27 +1,32 @@
 ---
 title: "Implémentation d’UPDATE avec FROM ou des sous-requêtes | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 337a85dddb52869d8ec54d13bb8231164b98f4e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implémentation d’UPDATE avec FROM ou des sous-requêtes
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Les modules T-SQL compilés en mode natif ne prennent pas en charge la clause FROM et ne prennent pas en charge les sous-requêtes dans les instructions UPDATE (elles sont prises en charge dans SELECT). Les instructions UPDATE avec la clause FROM sont généralement utilisées pour mettre à jour les informations contenues dans une table basée sur un paramètre table), ou pour mettre à jour les colonnes d’une table dans un déclencheur AFTER. 
 
@@ -160,3 +165,4 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
   
   
   
+

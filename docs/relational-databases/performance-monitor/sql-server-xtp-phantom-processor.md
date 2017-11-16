@@ -2,26 +2,31 @@
 title: "Processeur fantôme XTP de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 526d4f6e78260f01290e6f2460cf40dedba93d71
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 722137db4fdddd79f8ed4bfe8d5a7c3ed4531738
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>Processeur fantôme XTP de SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   L’objet de performance Processeur fantôme XTP SQL Server contient des compteurs connexes au sous-système de traitement fantôme du moteur OLTP en mémoire. Ce composant est chargé de la détection des lignes fantômes dans les transactions exécutées dans le niveau d’isolation SERIALIZABLE, et de la validation de la contrainte dans les scénarios de concurrence  
   
@@ -40,3 +45,4 @@ ms.lasthandoff: 11/09/2017
  [SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   
+

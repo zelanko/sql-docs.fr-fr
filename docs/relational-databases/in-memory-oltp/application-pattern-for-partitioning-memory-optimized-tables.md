@@ -2,9 +2,12 @@
 title: "Modèle d’application pour partitionner des tables mémoire optimisées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En général, c'est un scénario où les données sont stockées en fonction d'une clé **datetime** .  
   

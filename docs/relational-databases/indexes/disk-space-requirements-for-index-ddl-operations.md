@@ -2,10 +2,14 @@
 title: "Espace disque nécessaire pour les opérations DDL d’index | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa0c1457fbe63f013759b545929d98ea16ff3bf4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Espace disque nécessaire pour les opérations DDL d'index
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   L'espace disque est un élément important à prendre en compte lors de la création, de la reconstruction ou de la suppression d'index. Un espace disque inadéquat peut réduire les performances, voire entraîner l'échec de l'opération d'index. Cette rubrique propose des informations générales qui peuvent vous aider à déterminer la quantité d'espace disque nécessaire pour les opérations DDL d'index.  
   
@@ -107,3 +112,4 @@ ms.lasthandoff: 11/09/2017
  [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
+

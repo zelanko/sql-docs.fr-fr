@@ -1,30 +1,35 @@
 ---
 title: "Déterminer si une procédure stockée ou une table doit être déplacée vers l’OLTP en mémoire | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 13b7c99ce7dc82823dec6f518e84b55820fcdc63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Le rapport d’analyse des performances de transaction de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous aide à déterminer si l’OLTP en mémoire améliore les performances de votre application de base de données. Il vous indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif. Pour plus d’informations sur les méthodologies de migration, consultez [In-Memory OLTP – Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)(OLTP en mémoire – Modèles de charge de travail courants et considérations relatives à la migration).  
   
@@ -178,3 +183,4 @@ Les statistiques d'analyse et de contention dans le rapport détaillé de la tab
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

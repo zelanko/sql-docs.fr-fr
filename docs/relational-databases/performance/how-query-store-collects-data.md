@@ -1,28 +1,34 @@
 ---
 title: "Comment le magasin de requêtes collecte les données | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/13/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Query Store, data collection
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7374c44e653391e043dc85ae87808d3998b3527
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Le magasin de requêtes fonctionne comme un **enregistreur de données de vol** . Il collecte constamment des informations de compilation et d'exécution relatives aux requêtes et aux plans. Les données relatives aux requêtes sont conservées dans les tables internes et présentées aux utilisateurs selon différents affichages.  
   
@@ -77,3 +83,4 @@ En cas d’interruption de la session ou de blocage/redémarrage de l’applicat
  [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

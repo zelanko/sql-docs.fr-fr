@@ -2,10 +2,14 @@
 title: "Créer des vues uniques | Microsoft Docs"
 ms.custom: 
 ms.date: 02/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-indexes
+ms.suite: sql
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f02df330226be64a6a1dc6f89318cc1fb2fcc5b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment créer un index unique sur une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index unique garantit que la clé d'index ne contient aucune valeur dupliquée et que, par conséquent, chaque ligne de la table est unique d'une certaine manière. Il n'existe pas de différence notable entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant de toute contrainte. La validation des données se produit d'une manière similaire et l'optimiseur de requête ne fait aucune distinction entre un index unique créé à partir d'une contrainte et un index unique créé manuellement. Toutefois, la création d'une contrainte UNIQUE sur la colonne permet de clarifier l'objectif de l'index. Pour plus d'informations sur les contraintes UNIQUE, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
@@ -147,7 +152,7 @@ ms.lasthandoff: 11/09/2017
   
 7.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
+8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez les cases correspondant aux colonnes de table à ajouter à l’index unique.  
   
 9. Cliquez sur **OK**.  
   
@@ -181,3 +186,4 @@ ms.lasthandoff: 11/09/2017
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
+

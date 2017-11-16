@@ -2,26 +2,33 @@
 title: MSSQLSERVER_4846 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords: 4846 (Database Engine error)
+helpviewer_keywords:
+- 4846 (Database Engine error)
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 1d4bc2c115ecfb6364469afdc2d737f143e71600
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0b9152072fde4c139602eecef4a182e3e2cd1300
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="mssqlserver4846"></a>MSSQLSERVER_4846
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
   
@@ -46,9 +53,9 @@ Pour corriger des erreurs de mémoire, procédez comme suit :
   
 3.  Vérifiez les paramètres de configuration de la mémoire de SQL Server suivants :  
   
-    -   **Mémoire maximum du serveur**  
+    -   **max server memory**  
   
-    -   **Mémoire minimum du serveur**  
+    -   **min server memory**  
   
     -   **min memory per query**  
   
@@ -62,7 +69,7 @@ Les actions ci-dessous peuvent éventuellement augmenter la quantité de mémoir
   
 -   Si des applications autres que SQL Server consomment des ressources, essayez d'arrêter l'exécution de ces applications ou envisagez de les exécuter sur un serveur distinct. Vous relâcherez ainsi la pression sur la mémoire externe.  
   
--   Si vous avez configuré le paramètre **Mémoire maximum du serveur**, augmentez sa valeur.  
+-   Si vous avez configuré le paramètre **max server memory**, augmentez sa valeur.  
   
 Exécutez les commandes DBCC ci-dessous pour libérer plusieurs caches mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -74,3 +81,4 @@ Exécutez les commandes DBCC ci-dessous pour libérer plusieurs caches mémoire 
   
 Si le problème persiste, vous devez poursuivre vos recherches et éventuellement, réduire la charge de travail.  
   
+

@@ -2,26 +2,31 @@
 title: "Constructions Transact-SQL non prises en charge par l’OLTP en mémoire | Microsoft Docs"
 ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 986ad79967b8b8f4a83e11c271cf350033409f0d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Les tables optimisées en mémoire, les procédures stockées compilées en mode natif et les fonctions définies par l’utilisateur ne prennent pas en charge la totalité de la surface d’exposition [!INCLUDE[tsql](../../includes/tsql-md.md)] qui est prise en charge par les tables sur disque, les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées et les fonctions définies par l’utilisateur. Lorsque vous tentez d'utiliser une des fonctionnalités non prises en charge, le serveur retourne une erreur.  
   
@@ -191,3 +196,4 @@ ms.lasthandoff: 11/09/2017
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

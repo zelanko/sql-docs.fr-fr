@@ -1,27 +1,32 @@
 ---
 title: "Modification des tables à mémoire optimisée | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb499975e6429ac0a54f60cbfca6e72b0290f946
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
+ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez effectuer des modifications de schéma et d’index sur les tables optimisées en mémoire en utilisant l’instruction ALTER TABLE. Dans SQL Server 2016 et Azure SQL Database, les opérations ALTER TABLE sur des tables à mémoire optimisée sont HORS CONNEXION, ce qui signifie que la table n’est pas disponible pour les requêtes quand l’opération est en cours. Dans le cadre de cette modification, l’application de base de données peut continuer à s’exécuter, mais toute opération accédant à la table est bloquée jusqu’à la fin du processus de modification. Il est possible de combiner plusieurs opérations ADD, DROP ou ALTER dans une seule instruction ALTER TABLE.
   
@@ -172,4 +177,5 @@ GO
 
 [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
+
 

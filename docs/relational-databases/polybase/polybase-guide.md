@@ -1,10 +1,15 @@
 ---
 title: Guide de PolyBase | Microsoft Docs
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-data-warehouse, pdw
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.custom: 
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -17,19 +22,19 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f3413635f51d180135d94e9240769e7fc075f682
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="polybase-guide"></a>Guide de PolyBase
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase est une technologie qui permet d’accéder aux données en dehors de la base de données via le langage t-sql.  Dans SQL Server 2016, elle vous permet d’exécuter des requêtes sur des données externes dans Hadoop, ou d’importer/exporter des données à partir de Stockage Blob Azure. Les requêtes sont optimisées pour déléguer les calculs à Hadoop. Dans Azure SQL Data Warehouse, vous pouvez importer/exporter des données depuis Stockage Blob Azure et Azure Data Lake Store.
   
@@ -77,3 +82,4 @@ Pour plus de simplicité, PolyBase vous dispense d’installer des logiciels sup
 |[Résolution des problèmes de Polybase](../../relational-databases/polybase/polybase-troubleshooting.md)|Techniques de gestion des requêtes PolyBase. Utilisez des vues de gestion dynamique (DMV) pour surveiller les requêtes PolyBase, et apprenez à lire un plan de requête PolyBase pour identifier les goulots d’étranglement.|  
   
   
+
