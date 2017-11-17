@@ -3,8 +3,11 @@ title: Le constructeur de valeurs (Transact-SQL) de la table | Documents Microso
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>Constructeur de valeurs de table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Spécifie un ensemble d'expressions de valeurs de ligne à créer dans une table. Le constructeur de valeurs de table [!INCLUDE[tsql](../../includes/tsql-md.md)] permet de spécifier plusieurs lignes de données dans une seule instruction DML. Le constructeur de valeurs de table peut être spécifié dans la clause VALUES de l’instruction INSERT, dans la \<table source > clause de l’instruction MERGE et dans la définition d’une table dérivée dans la clause FROM.  
   

@@ -3,8 +3,11 @@ title: "CRÉER des informations d’identification (Transact-SQL) | Documents Mi
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée une information d’identification au niveau du serveur. Informations d’identification sont un enregistrement qui contient les informations d’authentification qui sont requis pour se connecter à une ressource en dehors de SQL Server. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows. Par exemple, l’enregistrement d’une sauvegarde de base de données à un emplacement peut nécessiter SQL Server fournir des informations d’identification spéciale pour accéder à cet emplacement. Pour plus d’informations, consultez [informations d’identification (moteur de base de données)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   

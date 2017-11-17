@@ -3,8 +3,11 @@ title: ALTER DATABASE (Parallel Data Warehouse) | Documents Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>MODIFIER la base de données (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Modifie les options de taille maximale de la base de données pour les tables répliquées, tables distribuées et le journal des transactions dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Cette instruction permet de gérer les allocations d’espace disque pour une base de données augmente ou diminue la taille.  
   

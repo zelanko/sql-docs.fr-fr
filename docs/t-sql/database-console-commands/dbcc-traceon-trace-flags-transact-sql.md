@@ -3,8 +3,11 @@ title: Indicateurs de trace (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - les indicateurs de Trace (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Les indicateurs de trace permettent de définir temporairement des caractéristiques de serveur spécifiques ou de désactiver un comportement particulier. Par exemple, si l'indicateur de trace 3205 est défini au démarrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la compression matérielle des lecteurs de bandes est désactivée. Les indicateurs de trace servent le plus souvent à diagnostiquer des problèmes de performances et à déboguer des procédures stockées ou des systèmes informatiques complexes.
   

@@ -3,9 +3,11 @@ title: "CREATE TABLE AS SELECT (entrepôt de données SQL Azure) | Documents Mic
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (entrepôt de données SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 CREATE TABLE AS sélectionnez (SACT) est une des fonctionnalités de T-SQL plus importantes. Il s’agit d’une opération entièrement parallélisée qui crée une table basée sur la sortie d’une instruction SELECT. SACT est le moyen le plus rapide pour créer une copie d’une table.   
  

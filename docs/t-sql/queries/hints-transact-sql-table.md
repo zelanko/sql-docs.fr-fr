@@ -3,8 +3,11 @@ title: "Tableau d’indicateurs (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs de Table (Transact-SQL) :
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Les indicateurs de table substituer le comportement par défaut de l’optimiseur de requête pendant la durée de l’instruction data manipulation language (DML) en spécifiant une méthode de verrouillage, un ou plusieurs index, une opération de traitement des requêtes telles que la recherche analyse ou l’index d’un tableau ou d’autres options. Les indicateurs de table sont spécifiés dans la clause FROM de l'instruction DML et n'affectent que la table ou vue référencée dans cette clause.  
   

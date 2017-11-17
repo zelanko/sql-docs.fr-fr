@@ -3,8 +3,11 @@ title: "!&gt; (Non supérieur à) (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (Non supérieur à) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compare deux expressions (opérateur de comparaison). Lorsque vous comparez des expressions non NULL, le résultat est TRUE si la valeur de l'opérande de gauche n'est pas supérieure à celle de l'opérande de droite ; dans le cas contraire, le résultat est FALSE. Contrairement à l'opérateur de comparaison = (égalité), le résultat de la comparaison !> de deux valeurs NULL ne dépend pas du paramètre ANSI_NULLS.  
   

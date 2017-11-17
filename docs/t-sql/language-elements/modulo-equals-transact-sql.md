@@ -3,8 +3,11 @@ title: "Modulo égal à (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="modulo-equals-transact-sql"></a>Modulo EQUALS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Divise un nombre par un autre et affecte une valeur au résultat de l'opération. Par exemple, si une variable @x égal à 38, puis @x % = 5 prend la valeur d’origine @x, divise par 5 et affecte @x pour le reste de cette division (3).  
   

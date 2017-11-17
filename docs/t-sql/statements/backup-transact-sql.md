@@ -3,8 +3,11 @@ title: SAUVEGARDE (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -58,7 +61,7 @@ ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sauvegarde complète [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données pour créer une sauvegarde de base de données, ou un ou plusieurs fichiers ou groupes de fichiers de la base de données pour créer une sauvegarde de fichiers (sauvegarde de base de données). De plus, en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions, sauvegarde le journal des transactions de la base de données afin de créer une sauvegarde de journal (BACKUP LOG).  
   

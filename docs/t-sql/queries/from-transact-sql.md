@@ -1,11 +1,13 @@
 ---
 title: "À partir de (Transact-SQL) | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Spécifie les tables, les vues, les tables dérivées et les tables jointes utilisées dans les instructions DELETE, SELECT et UPDATE dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dans l'instruction SELECT, la clause FROM est obligatoire sauf lorsque la liste de sélection ne contient que des constantes, des variables et des expressions arithmétiques (aucun nom de colonne).  
   

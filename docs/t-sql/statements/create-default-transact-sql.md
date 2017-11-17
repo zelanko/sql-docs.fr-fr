@@ -3,8 +3,11 @@ title: "CRÉER la valeur par défaut (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée un objet appelé default (valeur par défaut). Lorsqu'elle est liée à une colonne ou à un type de données alias, une valeur par défaut spécifie une valeur à insérer dans la colonne à laquelle est lié l'objet (ou dans toutes les colonnes, dans le cas d'un type de données alias) lorsqu'aucune valeur n'est explicitement fournie lors d'une opération d'insertion.  
   

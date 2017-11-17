@@ -3,8 +3,11 @@ title: Fonctions (Transact-SQL) de classement | Documents Microsoft
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ranking-functions-transact-sql"></a>Fonctions de classement (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Les fonctions de classement renvoient une valeur de classement pour chaque ligne d'une partition. Selon la fonction utilisée, certaines lignes peuvent recevoir la même valeur que d'autres lignes. Les fonctions de classement sont non déterministes.  
   

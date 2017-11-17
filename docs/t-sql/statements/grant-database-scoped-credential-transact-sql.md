@@ -3,8 +3,11 @@ title: "Base de données de l’octroi d’une étendue d’informations d’ide
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>ALLOCATION de base de données étendue des autorisations d’informations d’identification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Accorde les autorisations requises sur une base de données d’une étendue d’informations d’identification. 
   

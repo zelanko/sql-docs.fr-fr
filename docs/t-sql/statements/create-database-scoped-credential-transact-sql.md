@@ -3,8 +3,11 @@ title: "CRÉER des informations d’identification inclus dans l’étendue de b
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CRÉER des informations d’identification inclus dans l’étendue de base de données (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Crée une information d’identification de base de données. Informations d’identification de la base de données ne sont pas mappée à un utilisateur de connexion ou de la base de données du serveur. Les informations d’identification sont utilisée par la base de données pour l’accès à l’emplacement externe à chaque fois que la base de données est une opération qui requiert l’accès.  
   

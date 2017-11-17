@@ -3,8 +3,11 @@ title: GO (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instructions d’utilitaires SQL Server - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fournit des commandes qui ne sont pas [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, mais sont reconnues par le **sqlcmd** et **osql** utilitaires et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de Code. Ces commandes facilitent la lisibilité et l'exécution de lots et de scripts.  
   

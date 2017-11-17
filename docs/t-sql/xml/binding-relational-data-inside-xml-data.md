@@ -3,8 +3,11 @@ title: "Liaison de données relationnelles à l’intérieur des données XML | 
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Liaison de données relationnelles dans des données XML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Vous pouvez spécifier [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) contre un **xml** variable ou une colonne de type de données. Par exemple, le [de requête &#40; &#41; Méthode &#40; Type de données xml &#41; ](../../t-sql/xml/query-method-xml-data-type.md) exécute l’expression XQuery spécifiée sur une instance XML. Lorsque vous construisez des données XML de cette manière, vous pouvez inclure une valeur à partir d'une colonne de type non-XML ou une variable Transact-SQL. Ce processus est appelé liaison de données relationnelles dans des données XML.  
   

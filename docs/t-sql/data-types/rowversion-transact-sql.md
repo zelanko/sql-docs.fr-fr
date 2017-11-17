@@ -3,8 +3,11 @@ title: rowversion (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Type de données présentant des nombres binaires uniques automatiquement générés à l'intérieur d'une base de données. **rowversion** est généralement utilisé comme un mécanisme de marquage de version des lignes de table. La taille de stockage est de 8 octets. Le **rowversion** est simplement un numéro à incrémentation de type de données et ne conserve pas une date ou une heure. Pour enregistrer une date ou heure, utilisez un **datetime2** type de données.
   

@@ -3,8 +3,11 @@ title: CUME_DIST (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Calcule la distribution cumulative d'une valeur dans un groupe de valeurs dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Autrement dit, CUME_DIST calcule la position relative d'une valeur spécifiée dans un groupe de valeurs. Pour une ligne *r*, en supposant un ordre croissant, le CUME_DIST de *r* est le nombre de lignes avec des valeurs inférieures ou égales à la valeur de *r*, divisé par le nombre de lignes évaluées dans le jeu de résultats de requête ou de la partition. CUME_DIST s'apparente à la fonction PERCENT_RANK.
   

@@ -3,8 +3,11 @@ title: "Prédicats | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="predicates"></a>Prédicats
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Expression qui s'évalue à TRUE, FALSE ou UNKNOWN. Les prédicats sont utilisés dans la condition de recherche de [où](../../t-sql/queries/where-transact-sql.md) clauses et [HAVING](../../t-sql/queries/select-having-transact-sql.md) , dans les conditions de jointure de [FROM](../../t-sql/queries/from-transact-sql.md) clauses et autres constructions où une valeur booléenne est requise.  
   

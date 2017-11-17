@@ -3,8 +3,11 @@ title: (Transact-SQL) de la Clause OVER | Documents Microsoft
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="select---over-clause-transact-sql"></a>Sélectionnez - sur la clause for (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Détermine le partitionnement et l'ordre d'un ensemble de lignes avant l'application de la fonction de fenêtre associée. Autrement dit, la clause OVER définit une fenêtre ou un ensemble de lignes spécifié par l'utilisateur dans un jeu de résultats de requête. Une fonction de fenêtre calcule ensuite une valeur pour chaque ligne dans la fenêtre. Vous pouvez utiliser la clause OVER avec des fonctions pour calculer des valeurs agrégées telles que les moyennes mobiles, les agrégats cumulatifs, des cumuls ou les N premières lignes par groupe de résultats.  
   

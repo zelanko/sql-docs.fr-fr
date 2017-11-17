@@ -3,8 +3,11 @@ title: "CRÉER (fonction) (entrepôt de données SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>CRÉER (fonction) (entrepôt de données SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Une fonction définie par l’utilisateur est un [!INCLUDE[tsql](../../includes/tsql-md.md)] routine qui accepte des paramètres, exécute une action, par exemple un calcul complexe et retourne le résultat de cette action en tant que valeur. La valeur de retour doit être une valeur scalaire (unique). Utilisez cette instruction pour créer une routine réutilisable, exploitable :  
   

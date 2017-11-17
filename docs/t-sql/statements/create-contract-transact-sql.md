@@ -3,8 +3,11 @@ title: "CRÉER le contrat (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée un nouveau contrat. Un contrat définit les types de messages utilisés dans une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)] et détermine quel côté de la conversation peut envoyer des messages de ce type. Chaque conversation observe un contrat. Le service initiateur spécifie le contrat associé à la conversation au démarrage de celle-ci. Le service cible spécifie les contrats pour lesquels il accepte des conversations.  
   

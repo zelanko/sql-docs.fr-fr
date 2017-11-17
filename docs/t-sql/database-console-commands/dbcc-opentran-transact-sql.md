@@ -3,8 +3,11 @@ title: DBCC OPENTRAN (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 L'instruction DBCC OPENTRAN aide à identifier les transactions actives qui peuvent empêcher la troncation du journal. Elle affiche les informations relatives à la transaction active la plus ancienne et aux transactions répliquées distribuées et non distribuées les plus anciennes, le cas échéant, dans le journal des transactions de la base de données spécifiée. Les résultats ne sont affichés que s'il existe une transaction active dans le journal ou si la base de données contient des informations de réplication. Un message d'information est affiché s'il n'y a pas de transactions actives dans le journal.
   

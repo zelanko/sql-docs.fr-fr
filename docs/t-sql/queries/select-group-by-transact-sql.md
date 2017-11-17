@@ -3,8 +3,11 @@ title: GROUP BY (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -44,7 +47,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="select---group-by--transact-sql"></a>Sélectionnez - GROUP - BY Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Une clause de l’instruction SELECT qui divise le résultat de la requête en groupes de lignes, généralement afin d’exécuter une ou plusieurs agrégations sur chaque groupe. L’instruction SELECT renvoie une ligne par groupe.  
   

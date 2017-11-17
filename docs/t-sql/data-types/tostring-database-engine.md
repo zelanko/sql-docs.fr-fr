@@ -3,8 +3,11 @@ title: "ToString (moteur de base de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="tostring-database-engine"></a>ToString (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retourne une chaîne avec la représentation logique de *cela*. ToString est appelée implicitement lorsqu’une conversion de **hierarchyid** à une chaîne de type se produit. Agit comme l’opposé de [Parse &#40; moteur de base de données &#41;](../../t-sql/data-types/parse-database-engine.md).
   

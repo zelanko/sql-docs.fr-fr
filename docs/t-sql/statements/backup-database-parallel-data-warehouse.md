@@ -3,8 +3,11 @@ title: "SAUVEGARDE de la base de données (Parallel Data Warehouse) | Documents 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>SAUVEGARDE de la base de données (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Crée une sauvegarde d’un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] de base de données et stocke la sauvegarde de l’application dans un emplacement spécifié par l’utilisateur de réseau. Utilisez cette instruction avec [restaurer la base de données &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) pour la récupération d’urgence, ou copier une base de données à partir d’un équipement à un autre.  
   

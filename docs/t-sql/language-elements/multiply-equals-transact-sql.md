@@ -3,8 +3,11 @@ title: "* = (Égal de multiplication) (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="-multiply-equals-transact-sql"></a>*= (Multiply EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Multiplie deux nombres et définit une valeur selon le résultat de l'opération. Par exemple, si une variable @x égal à 35, puis @x * = 2 prend la valeur d’origine @x, multiplie par 2 et affecte @x cette nouvelle valeur (70).  
   

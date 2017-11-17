@@ -3,9 +3,11 @@ title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|database-console-commands
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +27,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Affiche la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plan d’exécution pour une requête en cours d’exécution sur un spécifique [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nœud de contrôle ou un nœud de calcul. Cela permet de résoudre les problèmes de performances de requête pendant l’exécutant de requêtes sur les nœuds de calcul et le nœud de contrôle.
   

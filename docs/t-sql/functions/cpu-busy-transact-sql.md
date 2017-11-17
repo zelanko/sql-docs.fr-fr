@@ -3,8 +3,11 @@ title: '@@CPU_BUSY (Transact-SQL) | Documents Microsoft'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="x40x40cpubusy-transact-sql"></a>& #x 40 ; & #x 40 ; Cpu_busy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Retourne le temps pendant lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été actif depuis le dernier démarrage. Le résultat est exprimé en incréments de temps processeur ou « cycles », et est cumulé pour tous les processeurs. Par conséquent, il peut être supérieur au temps écoulé actuel. Multiplier par@TIMETICKS à convertir en microsecondes.
   

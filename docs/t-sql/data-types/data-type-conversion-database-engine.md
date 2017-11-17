@@ -3,8 +3,11 @@ title: "Types de données (moteur de base de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversion de type de données (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Les types de données peuvent être convertis dans les scénarios suivants :
 -   Lorsque les données d'un objet sont déplacées dans les données d'un autre objet, sont comparées ou combinées à ces dernières, les données d'un objet doivent être converties du type de données d'un objet en type de données de l'autre.  

@@ -3,8 +3,11 @@ title: Fonctions analytiques (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="analytic-functions-transact-sql"></a>Fonctions analytiques (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 SQL Server prend en charge les fonctions analytiques suivantes. Les fonctions analytiques calculent une valeur d'agrégation basée sur un groupe de lignes. Toutefois, contrairement aux fonctions d'agrégation, elles peuvent retourner plusieurs lignes pour chaque groupe. Vous pouvez utiliser des fonctions analytiques pour calculer des moyennes mobiles, des cumuls, des pourcentages ou des résultats de type « N premiers » dans un groupe.
   

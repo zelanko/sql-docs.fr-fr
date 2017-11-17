@@ -3,8 +3,11 @@ title: "CRÉER la base de données (Parallel Data Warehouse) | Documents Microso
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-database-parallel-data-warehouse"></a>CRÉER la base de données (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Crée une nouvelle base de données sur un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. Utilisez cette instruction pour créer tous les fichiers associés à une base de données et définir les options de croissance automatique pour les tables de base de données et le journal des transactions et de la taille maximale.  
   

@@ -3,8 +3,11 @@ title: CREATE FULLTEXT CATALOG (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée un catalogue de texte intégral pour une base de données. Ce catalogue peut avoir plusieurs index de recherche en texte intégral, mais ce type d'index ne peut faire partie que d'un catalogue de texte intégral. Chaque base de données peut contenir plusieurs catalogues de texte intégral ou n'en contenir aucun.  
   

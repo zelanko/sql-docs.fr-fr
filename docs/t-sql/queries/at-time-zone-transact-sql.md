@@ -2,8 +2,12 @@
 title: SUR le fuseau horaire (Transact-SQL) | Documents Microsoft
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="at-time-zone-transact-sql"></a>SUR le fuseau horaire (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Convertit un *inputdate* correspondant *datetimeoffset* valeur dans le fuseau horaire cible. Si *inputdate* est fourni sans informations de décalage, la fonction s’applique à l’offset du fuseau horaire en supposant que *inputdate* valeur est fournie dans le fuseau horaire cible. Si *inputdate* est fournie comme un *datetimeoffset* valeur, à **AT TIME ZONE** clause convertit en fuseau horaire cible à l’aide des règles de conversion de fuseau horaire.  
   

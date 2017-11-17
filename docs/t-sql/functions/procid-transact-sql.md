@@ -3,8 +3,11 @@ title: '@@PROCID (Transact-SQL) | Documents Microsoft'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40procid-transact-sql"></a>& #x 40 ; & #x 40 ; PROCID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne l'identificateur (ID) d'objet du module [!INCLUDE[tsql](../../includes/tsql-md.md)] en cours. Un module [!INCLUDE[tsql](../../includes/tsql-md.md)] peut consister en une procédure stockée, une fonction définie par l'utilisateur ou un déclencheur. @@PROCID ne peut pas être spécifié dans les modules CLR ou les données in-process fournisseur d’accès.  
   

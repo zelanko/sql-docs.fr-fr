@@ -3,8 +3,11 @@ title: "RESTAURATION de base de données (Parallel Data Warehouse) | Documents M
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTAURER la base de données (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Restaure un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] base de données utilisateur à partir d’une sauvegarde de base de données à un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. La base de données est restaurée à partir d’une sauvegarde qui a été créée précédemment par le [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [sauvegarde de base de données &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) commande. Utilisez la sauvegarde et de restauration des opérations pour créer un plan de récupération d’urgence, ou pour déplacer des bases de données à partir d’une application vers un autre.  
   

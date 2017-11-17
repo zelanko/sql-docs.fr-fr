@@ -3,8 +3,11 @@ title: "Type de données synonymes (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Synonymes des types de données (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Les synonymes des types de données sont inclus dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la conformité aux normes ISO. Le tableau suivant répertorie les synonymes et les types de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auxquels ils sont mappés.
   

@@ -3,8 +3,11 @@ title: "JEU d’instructions (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-statements-transact-sql"></a>Instructions SET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le langage de programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] fournit plusieurs instructions SET qui modifient la façon dont la session en cours gère des informations spécifiques. Les instructions SET sont regroupées selon les catégories indiquées dans le tableau suivant :  
   

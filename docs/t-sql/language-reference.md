@@ -3,8 +3,11 @@ title: "Référence de Transact-SQL (moteur de base de données) | Documents Mic
 ms.custom: 
 ms.date: 04/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="transact-sql-reference-database-engine"></a>Référence Transact-SQL (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Cette rubrique présente les principes de base sur la façon de rechercher et utilisez les rubriques de référence Microsoft Transact-SQL (T-SQL). T-SQL est à l’utilisation de services et produits Microsoft SQL. Tous les outils et applications qui communiquent avec une base de données SQL font en envoyant des commandes T-SQL.  
 

@@ -3,8 +3,11 @@ title: "CRÉER un itinéraire (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ajoute un itinéraire à la table de routage de la base de données active. Pour les messages sortants, [!INCLUDE[ssSB](../../includes/sssb-md.md)] détermine l'itinéraire en vérifiant la table de routage dans la base de données locale. Pour les messages de conversations issus dans une autre instance, y compris les messages doivent être transférés, [!INCLUDE[ssSB](../../includes/sssb-md.md)] vérifie les itinéraires dans **msdb**.  
   

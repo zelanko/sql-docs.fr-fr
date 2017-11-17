@@ -3,8 +3,11 @@ title: "Les autorisations GRANT DENY REVOKE-Azure SQL Data et entrepôts de donn
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY et REVOKE (entrepôt de données SQL Azure, entrepôt de données en parallèle)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Utilisez [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **GRANT** et **DENY** instructions pour accorder ou refuser une autorisation (tels que **mise à jour**) sur un élément sécurisable (par exemple, une base de données, table, vue, etc.) à un principal de sécurité (un compte de connexion, un utilisateur de base de données ou un rôle de base de données). Utilisez **RÉVOQUER** pour supprimer l’octroi ou de refus d’une autorisation.  
   

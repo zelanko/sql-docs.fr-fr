@@ -3,8 +3,11 @@ title: "Données de date et heure fonctions (Transact-SQL) et Types | Documents 
 ms.custom: 
 ms.date: 09/01/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Types de données et fonctions de date et d'heure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Les sections suivantes dans cette rubrique fournissent une vue d'ensemble de tous les types de données et fonctions de date et d'heure [!INCLUDE[tsql](../../includes/tsql-md.md)].
 -   [Date et heure les Types de données](#DateandTimeDataTypes)  
