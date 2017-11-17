@@ -2,13 +2,18 @@
 title: "Hiérarchie des autorisations (moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.server.permissions.f1--May use common.permissions
+f1_keywords:
+- sql13.swb.server.permissions.f1--May use common.permissions
 helpviewer_keywords:
 - security [SQL Server], denying access
 - hierarchies [SQL Server], permissions
@@ -17,19 +22,20 @@ helpviewer_keywords:
 - permissions [SQL Server], hierarchy
 - security [SQL Server], granting access
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.openlocfilehash: 099bfdb495e48870a0bced69cccf1ebfc0021daf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d62db97488a8aefee7d878fb72159907315deb6
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/03/2017
+
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Hiérarchie des autorisations (moteur de base de données)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] gère une collection hiérarchisée d’entités qui peuvent être sécurisées à l’aide d’autorisations. Ces entités sont appelées *éléments sécurisables*. Les éléments sécurisables les plus proéminents sont les serveurs et les bases de données, mais les autorisations discrètes peuvent être définies à un niveau beaucoup plus fin. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] règle les actions des principaux sur des éléments sécurisables en vérifiant que les autorisations appropriées leur ont été octroyées.  
   
@@ -61,3 +67,4 @@ ms.lasthandoff: 11/09/2017
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   
+

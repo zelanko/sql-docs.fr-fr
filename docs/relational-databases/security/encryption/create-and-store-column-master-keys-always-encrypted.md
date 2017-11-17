@@ -2,26 +2,31 @@
 title: "Créer et stocker des clés principales de colonne (Always Encrypted) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a250eaea12b32fb08603efb56a7a5105502fc38
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Dans Always Encrypted, les*clés principales de colonne* sont des clés de protection de clés servant à chiffrer les clés de chiffrement de colonne. Les clés principales de colonne doivent être stockées dans un magasin de clés approuvé, et les clés doivent être accessibles aux applications qui doivent chiffrer ou déchiffrer des données, ainsi qu’aux outils servant à la configuration d’Always Encrypted et à la gestion des clés Always Encrypted.
 
@@ -243,4 +248,5 @@ Consultez la documentation relative au module de sécurité matériel et au four
 - [Développer des applications à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Blog Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
+
 

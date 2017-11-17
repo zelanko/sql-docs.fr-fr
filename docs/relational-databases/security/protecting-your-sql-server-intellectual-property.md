@@ -3,28 +3,33 @@ title: "Protection de votre propriété intellectuelle SQL Server | Microsoft Do
 ms.custom: 
 ms.date: 01/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - protecting intellectual property
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.openlocfilehash: 363fa4744ca429f19e2c8dd2375146e616e85f85
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/28/2017
+
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Protection de votre propriété intellectuelle SQL Server
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Les développeurs demandent souvent comment distribuer leur application de données [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] aux clients tout en empêchant ceux-ci d’analyser et de déconstruire leur application. La protection de votre propriété intellectuelle est un aspect juridique, et cette protection doit être stipulée dans votre contrat de licence. Quand [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] est installé sur un ordinateur administré par d’autres personnes, vous perdez, par nature, certains aspects du contrôle. 
 
@@ -44,4 +49,5 @@ Vous pouvez également héberger un ordinateur [!INCLUDE[ssNoVersion_md](../../i
 
 [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Sécurisation de SQL Server](../../relational-databases/security/securing-sql-server.md)  
+
 

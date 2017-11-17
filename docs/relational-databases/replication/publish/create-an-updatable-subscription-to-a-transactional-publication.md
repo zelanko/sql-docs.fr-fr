@@ -2,29 +2,34 @@
 title: "Créer un abonnement pouvant être mis à jour pour une publication transactionnelle | Microsoft Docs"
 ms.custom: 
 ms.date: 07/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
-ms.technology: replication
+ms.suite: sql
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - updatable transactional subscriptions
 - updateable transactional subscriptions, SSMS
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ce114ccceb58bbb21e226be2b029eac76ef4387
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 94a6afee0fbc828b7c3036cfc4d1282b71674384
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 > [!NOTE]  
 >  Cette fonctionnalité reste prise en charge dans les versions de [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] (2012 à 2016).  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
  
@@ -104,4 +109,5 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)
 
 [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle à l’aide de Transact-SQL](../../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md) 
+
 
