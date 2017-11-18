@@ -3,8 +3,11 @@ title: "Étape 3 : Preuve de concept pour la connexion à SQL via pyodbc | Docu
 ms.custom: 
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: python
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

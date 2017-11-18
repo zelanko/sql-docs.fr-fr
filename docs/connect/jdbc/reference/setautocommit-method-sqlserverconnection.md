@@ -3,8 +3,11 @@ title: "setAutoCommit (méthode) (SQLServerConnection) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit (méthode) (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit (méthode) (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Définit le mode de validation automatique pour cet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objet à l’état donné.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### Paramètres  
+#### <a name="parameters"></a>Paramètres  
  *valeur*  
   
  **true** pour activer le mode de validation automatique pour la connexion, **false** pour la désactiver.  
   
-## Exceptions  
+## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Cette méthode setAutoCommit est spécifiée par la méthode setAutoCommit dans l’interface java.sql.Connection.  
   
  Si une connexion est en mode de validation automatique, toutes ses instructions SQL sont exécutées et validées en tant que transactions individuelles. Dans le cas contraire, ses instructions SQL sont regroupées dans des transactions qui sont terminent par un appel à la [validation](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) méthode ou la [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) (méthode). Par défaut, les nouvelles connexions sont en mode de validation automatique.  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  Si cette méthode est appelée au cours d'une transaction, la transaction est validée.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

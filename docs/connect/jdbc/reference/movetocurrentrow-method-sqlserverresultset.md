@@ -3,8 +3,11 @@ title: "moveToCurrentRow (méthode) (SQLServerResultSet) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: fr-fr
 ms.lasthandoff: 09/09/2017
 
 ---
-# moveToCurrentRow (méthode) (SQLServerResultSet)
+# <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow (méthode) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Déplace le curseur à la position de curseur mémorisée, qui est généralement la ligne actuelle.  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
 public void moveToCurrentRow()  
 ```  
   
-## Exceptions  
+## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Cette méthode moveToCurrentRow est spécifiée par la méthode moveToCurrentRow dans l’interface java.sql.ResultSet.  
   
  Cette méthode n'a aucun effet si le curseur ne se trouve pas sur la ligne d'insertion.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

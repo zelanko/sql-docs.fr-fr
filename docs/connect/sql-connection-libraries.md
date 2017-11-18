@@ -3,9 +3,12 @@ title: "Bibliothèques de connexions de bases de données Microsoft SQL | Docume
 description: "Fournit des liens de téléchargement pour les modules qui permettent la connexion à Microsoft SQL Server et de la base de données SQL Azure, à partir d’une variété de langages de programmation du client."
 author: MightyPen
 ms.service: 
-ms.prod: sql-server
+ms.component: connect
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: develop apps
+ms.custom: 
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017

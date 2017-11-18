@@ -3,8 +3,11 @@ title: "À l’aide d’Azure Active Directory avec le pilote ODBC | Documents M
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: odbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 

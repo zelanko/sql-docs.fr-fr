@@ -4,6 +4,11 @@ description: "Page Hub avec des liens annotés pour les téléchargements et la 
 author: MightyPen
 ms.date: 09/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: connect
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - drivers
 ms.topic: article

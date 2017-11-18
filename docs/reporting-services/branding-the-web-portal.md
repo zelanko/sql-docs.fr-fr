@@ -1,7 +1,7 @@
 ---
 title: Personnalisation du portail web | Documents Microsoft
 ms.custom: 
-ms.date: 07/02/2017
+ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,11 +9,9 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
@@ -31,7 +29,7 @@ Vous pouvez modifier l'apparence du portail web en le personnalisant à l’imag
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Création du package de marque  
+## <a name="creating-the-brand-package"></a>Création du package de marque
   
 Un package de marque pour Reporting Services se compose de trois éléments, et il est empaqueté comme un fichier .zip.   
   
@@ -41,7 +39,7 @@ Un package de marque pour Reporting Services se compose de trois éléments, et 
   
 Les fichiers doivent afficher les noms ci-dessus. Le fichier zip peut être nommé comme vous le souhaitez.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 Le fichier metadata.xml vous permet de définir le nom du package de marque et comporte une entrée de référence pour vos deux fichiers logo.png et colors.json.  
   
@@ -64,7 +62,7 @@ Exemple avec un fichier de logo.
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 Lorsque le package de marque est chargé, le serveur extrait les paires nom/valeur appropriées à partir du fichier colors.json et les fusionne avec la feuille de style LESS master, brand.less. Ce fichier LESS est ensuite traité et le fichier CSS qui en résulte est transmis au client. Toutes les couleurs de la feuille de style suivent la représentation hexadécimale à six caractères d'une couleur.  
   
@@ -115,13 +113,13 @@ La première fois que vous vous connectez à un serveur avec l'Éditeur de rappo
   
 Vous pouvez ensuite utiliser ce thème pour les rapports mobiles que vous créez, même s’ils ne sont pas destinés au même serveur sur lequel vous avez déployé le thème.   
   
-### <a name="using-a-logo"></a>Utilisation d’un logo  
+### <a name="using-a-logo"></a>Utilisation d’un logo
   
 Si vous incluez un logo avec votre package de marque, ce logo apparaît dans le portail web à la place de celui que vous définissez pour le portail web dans le menu Paramètres du site.  
   
 Le fichier que vous incluez comme logo doit utiliser le format de fichier PNG. Une fois chargées sur le serveur, les dimensions du fichier seront mises à l'échelle. Ces dimensions devraient avoisiner 290 x 60 pixels.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Application du package de marque au portail web  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Application du package de marque au portail web
   
 Pour ajouter, télécharger ou supprimer un package de marque, vous pouvez procédez comme suit.  
   
@@ -141,9 +139,9 @@ L’option**Charger le package de marque** appliquera le package au le portail w
   
 Vous pouvez également **télécharger** ou **supprimer** le package. La suppression du package réinitialisera immédiatement le portail web à la marque par défaut.  
   
-## <a name="metadataxml-example"></a>Exemple de fichier metadata.xml  
+## <a name="metadataxml-example"></a>Exemple de fichier metadata.xml
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +153,7 @@ Vous pouvez également **télécharger** ou **supprimer** le package. La suppres
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Exemple de fichier colors.json  
+## <a name="colorsjson-example"></a>Exemple de fichier colors.json
   
     {  
         "name":"Multicolored example brand",  
