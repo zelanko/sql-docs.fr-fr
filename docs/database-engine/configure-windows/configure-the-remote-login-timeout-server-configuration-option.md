@@ -2,27 +2,33 @@
 title: "Configurer l’option de configuration de serveur remote login timeout | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: remote login timeout option
+helpviewer_keywords:
+- remote login timeout option
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eb2db797ebf5918c7d406ef7b0861698bd8e9bf2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9581ea300b05cd811cfddd73d04e24e9cac65bf4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Configurer l'option de configuration de serveur remote login timeout
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment configurer l'option de configuration de serveur **remote login timeout** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **Délai d'attente de la connexion distante** spécifie le nombre de secondes d'attente avant le renvoi d'une tentative de connexion à un serveur distant qui a échoué. Par exemple, si vous tentez de vous connecter à un serveur distant et que ce serveur est arrêté, l'option **remote login timeout** vous assure de ne pas attendre indéfiniment que votre ordinateur cesse ses tentatives de connexion. La valeur par défaut de cette option est de 10 secondes. Une valeur égale à 0 entraîne une attente infinie.  
   
@@ -99,3 +105,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

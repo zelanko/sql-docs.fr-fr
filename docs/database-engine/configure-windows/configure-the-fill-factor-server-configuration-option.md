@@ -2,27 +2,33 @@
 title: "Configurer l’option de configuration de serveur fill factor | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: fill factor option [SQL Server]
+helpviewer_keywords:
+- fill factor option [SQL Server]
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efa01762086829d9bccac9da206c753355547d9d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fc5db00110b3cb6c8d465befde945ff1044efc09
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurer l'option de configuration de serveur fill factor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment configurer l'option de configuration de serveur **fill factor** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le facteur de remplissage permet de paramétrer précisément les performances et le stockage des données d'index. Lorsqu'un index est créé ou régénéré, la valeur du facteur de remplissage détermine le pourcentage d'espace sur chaque page de niveau feuille à remplir de données, réservant ainsi le reste comme espace disponible pour une croissance future. Pour plus d’informations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
@@ -71,7 +77,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour attribuer à l’option `fill factor` la valeur `100`.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour définir l’option `fill factor` sur `100`.  
   
 ```tsql  
 Use AdventureWorks2012;  
@@ -101,3 +107,4 @@ GO
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

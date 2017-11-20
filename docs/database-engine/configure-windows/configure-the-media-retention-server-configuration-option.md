@@ -2,10 +2,14 @@
 title: "Configurer l’option de configuration de serveur media retention | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0865981b4beecf7eae99ad341bfe1f32d65fcb4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b9456777c44ade52f6f9dc0121027202e7d319c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurer l'option de configuration de serveur media retention
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment configurer l'option de configuration de serveur **media retention** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **media retention** spécifie la durée de rétention de chaque jeu de sauvegarde. Cette option permet d'éviter l'écrasement des sauvegardes pendant le nombre de jours spécifié. Après avoir configuré l'option  **media retention** , il est inutile de spécifier la durée de rétention des sauvegardes système à chaque sauvegarde. La valeur par défaut est de 0 jour et la valeur maximum de 365 jours.  
   
@@ -111,3 +116,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

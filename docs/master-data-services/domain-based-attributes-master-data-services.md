@@ -2,10 +2,14 @@
 title: "Attributs basés sur un domaine (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +17,17 @@ helpviewer_keywords:
 - domain-based attributes [Master Data Services]
 - attributes [Master Data Services], domain-based attributes
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bec978e2dc7ca21a91b21ac08bce54e056ba601e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b4165f006ea12587b8c3e385d6c1c01e3aa9d9e5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Attributs basés sur un domaine (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un attribut basé sur un domaine est un attribut dont les valeurs sont remplies par les membres d'une autre entité. Vous pouvez considérer un attribut basé sur un domaine sous la forme d'une liste contrainte ; les attributs basés sur un domaine empêchent les utilisateurs d'entrer des valeurs d'attribut qui sont valides. Pour sélectionner une valeur d'attribut, l'utilisateur doit choisir dans une liste.  
@@ -56,3 +61,4 @@ ms.lasthandoff: 11/09/2017
 -   [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   
+

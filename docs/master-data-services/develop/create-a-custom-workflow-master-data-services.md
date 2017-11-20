@@ -2,24 +2,30 @@
 title: "Créer un flux de travail personnalisé (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6011525ab0b33a19ddd392a46a2b02a20dbefe9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Créer un flux de travail personnalisé (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base, comme la mise à jour et la validation automatique des données et l'envoi de notifications par courrier électronique, en fonction des conditions que vous spécifiez. Lorsque vous avez besoin de traitements plus complexes que ceux fournis par ces actions de flux de travail intégrées, utilisez un flux de travail personnalisé. Un flux de travail personnalisé est un assembly .NET. que vous créez. Lorsque votre assembly de flux de travail est appelé, votre code peut exécuter n'importe quelle action requise par votre situation. Par exemple, si votre flux de travail nécessite le traitement d'événements complexes, tels que des approbations multicouches ou des arbres de décision compliqués, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour démarrer un flux de travail personnalisé qui analyse les données et détermine où les transmettre pour l'approbation.  
@@ -157,3 +163,4 @@ ms.lasthandoff: 11/09/2017
  [Description du code XML d’un flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   
+

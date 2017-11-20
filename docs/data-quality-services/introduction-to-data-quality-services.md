@@ -2,24 +2,30 @@
 title: "Présentation de Data Quality Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/05/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domains
+helpviewer_keywords:
+- Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 396ce09be4ec6cf853d79c4ab1798476d04f097c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="introduction-to-data-quality-services"></a>Présentation de Data Quality Services
   La solution de qualité des données fournie par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permet aux gestionnaires de données et aux professionnels de l'informatique de préserver la qualité de leurs données et de s'assurer que ces dernières sont adaptées à leur utilisation professionnelle. DQS est une solution reposant sur des connaissances qui offre des méthodes interactives et assistées par ordinateur pour gérer l'intégrité et la qualité de vos sources de données. DQS vous permet de découvrir, de générer et de gérer les connaissances relatives à vos données. Vous pouvez ensuite utiliser ces connaissances pour procéder au nettoyage, à la mise en correspondance et au profilage des données. Vous pouvez également tirer parti des services en nuage de fournisseurs de données de référence dans un projet de qualité des données DQS.  
@@ -88,3 +94,4 @@ ms.lasthandoff: 11/09/2017
  La fonctionnalité Data Quality Services a été intégrée dans Master Data Services (MDS), de sorte que vous pouvez exécuter une déduplication sur les données sources et les données de référence dans le complément Microsoft SQL Server 2014 Master Data Services pour Microsoft Excel. Pour effectuer la correspondance, chargez les données gérées par MDS dans une feuille de calcul Excel, associez-les aux données non gérées par MDS, puis effectuez la correspondance dans Excel. Les composants de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] doivent être installés avec MDS. Pour plus d’informations, consultez  [Mise en correspondance de la qualité des données dans le complément MDS pour Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
+

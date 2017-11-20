@@ -2,27 +2,33 @@
 title: "Configurer l’option de configuration du serveur remote access | Microsoft Docs"
 ms.custom: 
 ms.date: 08/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: remote servers [SQL Server], stored procedure execution
+helpviewer_keywords:
+- remote servers [SQL Server], stored procedure execution
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 531f4312e969517d90bdb2e666fe75660f399131
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fb74c78868691c1a59a132eb637dedbfebec41e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurer l'option de configuration du serveur remote access
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique concerne la fonctionnalité remote access. Cette option de configuration est une fonctionnalité de communication peu intelligible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle est dépréciée et son utilisation n’est pas recommandée. Si vous êtes sur cette page en raison de problèmes de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez plutôt l’une des rubriques suivantes :  
   
@@ -121,3 +127,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

@@ -2,9 +2,12 @@
 title: "MODIFIER LA STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crée un modèle d'exploration de données sur la base d'une structure d'exploration de données existante.  Lorsque vous utilisez la **ALTER MINING STRUCTURE** instruction pour créer un nouveau modèle d’exploration de données, la structure doit déjà exister. En revanche, lorsque vous utilisez l’instruction, [créer un modèle d’exploration de données &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), vous créez un modèle et générer automatiquement sa structure d’exploration de données sous-jacente en même temps.  
   

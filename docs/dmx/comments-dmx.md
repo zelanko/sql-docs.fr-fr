@@ -2,9 +2,12 @@
 title: Commentaires (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,7 +42,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="comments-dmx"></a>Commentaires (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Commentaires dans les Extensions DMX (Data Mining) sont des chaînes de texte dans un programme de code qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne s’exécute pas. Les commentaires sont également appelés remarques. Vous pouvez utiliser les commentaires pour documenter du code ou pour désactiver temporairement les composants d'une instruction ou d'un script DMX lorsque vous analysez le code.  
   

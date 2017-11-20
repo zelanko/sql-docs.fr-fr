@@ -2,10 +2,14 @@
 title: "Configurer l’option de configuration de serveur query governor cost limit | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - query governor cost limit option [SQL Server]
 - time [SQL Server], query run time
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6f26ee4961a35d6cf2bb67483b75cae163d1ff48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c37c6564ace5110c3035003cecad2ab3b52461ac
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurer l'option de configuration de serveur query governor cost limit
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment configurer l'option de configuration de serveur **query governor cost limit** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’option query governor cost limit spécifie une limite supérieure de durée d’exécution d’une requête. Le coût d'une requête correspond à la durée (en secondes) estimée nécessaire à l'exécution complète d'une requête dans une configuration matérielle donnée. La valeur par défaut de cette option est 0, laquelle désactive l'Administrateur de requêtes. Cela permet l'exécution de toutes les requêtes sans limitation de temps. Si vous spécifiez une valeur positive et différente de zéro, l'Administrateur de requêtes n'autorise pas l'exécution de requêtes dont le coût estimé excède cette valeur.  
   
@@ -78,7 +83,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour attribuer à l’option `query governor cost limit` la valeur `120` secondes.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour attribuer à l’option `query governor cost limit` une valeur de `120` secondes.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -106,3 +111,4 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

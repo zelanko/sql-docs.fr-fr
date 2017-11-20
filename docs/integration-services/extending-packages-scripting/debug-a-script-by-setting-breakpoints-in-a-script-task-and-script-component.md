@@ -2,9 +2,12 @@
 title: "Déboguer un Script en définissant des points d’arrêt dans une tâche de Script et le composant de Script | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: extending-packages-scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 

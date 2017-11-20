@@ -2,23 +2,28 @@
 title: "Attachement et détachement de bases de données DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31868077c333d3e8be25507a3d995aa172b572c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00f259597e28f7c2cf841f71dfeaf18467f1ebb0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Attachement et détachement de bases de données DQS
   Cette rubrique explique comment attacher et détacher les bases de données DQS.  
@@ -28,7 +33,7 @@ ms.lasthandoff: 11/09/2017
 ###  <a name="Limitations"></a> Limitations et restrictions  
  Pour obtenir la liste des limitations et restrictions, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
   
 -   Vérifiez qu'aucune activité ou aucun processus n'est en cours d'exécution dans DQS. Pour ce faire, utilisez l'écran **Analyse des activités** . Pour plus d'informations sur l'utilisation de cet écran, consultez [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
@@ -103,6 +108,7 @@ ms.lasthandoff: 11/09/2017
  Vous pouvez également attacher des bases de données DQS à l'aide d'instructions Transact-SQL. Pour plus d'informations sur l'attachement de bases de données à l'aide d'instructions Transact-SQL, consultez [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) dans [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
+ [Gérer les bases de données DQS](../data-quality-services/manage-dqs-databases.md)  
   
   
+

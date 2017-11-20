@@ -2,9 +2,12 @@
 title: "&lt;requête de source de données&gt; | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="ltsource-data-querygt"></a>&lt;requête de source de données&gt;
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Pour former un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de données, vous devez accéder aux données qui sont externes à la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Vous utilisez la \<requête de source de données > clause dans les Extensions DMX (Data Mining) pour définir ces données externes. Le [INSERT INTO &#40; DMX &#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60; modèle &#62; JOINTURE de prédiction &#40; DMX &#41; ](../dmx/select-from-model-prediction-join-dmx.md), et [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) toutes les instructions utilisent  **\<requête de source de données >**.  
   

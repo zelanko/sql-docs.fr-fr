@@ -6,17 +6,24 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurer SQL Server pour envoyer des commentaires à Microsoft
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## <a name="summary"></a>Résumé
 Par défaut, Microsoft SQL Server collecte des informations sur la façon dont ses clients utilisent l’application. Plus précisément, SQL Server recueille des données sur l’expérience d’installation, l’utilisation et les performances. Elles aident Microsoft à améliorer le produit pour mieux répondre aux besoins des clients. Par exemple, Microsoft collecte des informations sur les types de codes d’erreur rencontrés par les utilisateurs afin que nous puissions corriger les bogues associés, améliorer notre documentation sur l’utilisation de SQL Server et déterminer s’il faudrait ajouter des fonctionnalités au produit pour mieux servir des clients.
@@ -164,3 +171,4 @@ Pendant l’installation, SQL Server 2016 Analysis Services ajoute un compte sp�
 Vous pouvez configurer votre service de sorte qu’il n’envoie pas de données d’utilisation, comme le décrit la section « Définir des sous-clés de Registre sur le serveur ». Toutefois, cela ne supprime pas le compte de service. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

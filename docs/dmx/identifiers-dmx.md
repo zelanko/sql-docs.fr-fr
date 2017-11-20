@@ -2,9 +2,12 @@
 title: Identificateurs (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="identifiers-dmx"></a>Identificateurs (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Tous les objets de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit avoir un identificateur. Le nom d'un objet constitue son identificateur. Les serveurs, les bases de données et les objets de base de données tels que sources de données, vues de source de données, cubes, dimensions, modèles d'exploration de données, etc., ont tous un identificateur.  
   

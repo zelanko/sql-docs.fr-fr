@@ -2,12 +2,14 @@
 title: "Configurer un groupe de disponibilité pour les transactions distribuées | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,18 +19,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 523b46925b2ed32ab68840fcc76ddead5d613758
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurer un groupe de disponibilité pour les transactions distribuées
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] prend en charge toutes les transactions distribuées incluant des bases de données dans un groupe de disponibilité. Cet article explique comment configurer un groupe de disponibilité pour les transactions distribuées.  
 
@@ -197,3 +200,4 @@ Pour plus d’informations sur la résolution des transactions incertaines, cons
 [Prise en charge des transactions XA](http://technet.microsoft.com/library/cc753563(v=ws.10).aspx)
 
 [Fonctionnement : Session/SPID – (2) pour les transactions DTC](http://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/)
+

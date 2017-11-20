@@ -2,12 +2,14 @@
 title: "Secondaires actifs - Sauvegarde sur les réplicas secondaires - Disponibilité Always On | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,18 +21,19 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
 ms.openlocfilehash: 2d54e433746548bcef8cb0780f8586ec2568d898
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/02/2017
+
 ---
 # <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : sauvegarde sur les réplicas secondaires (groupes de disponibilité Always On)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Les fonctions secondaires actives [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent la prise en charge des opérations de sauvegarde sur les réplicas secondaires. Les opérations de sauvegarde peuvent solliciter de manière significative les E/S et l'UC (avec la compression de sauvegarde). Le déchargement des sauvegardes vers un réplica secondaire synchronisé ou en cours de synchronisation vous permet d'utiliser les ressources sur l'instance de serveur qui héberge le réplica principal pour vos charges de travail de niveau 1.  
 
@@ -86,3 +89,4 @@ Dans un groupe de disponibilité distribué, les sauvegardes peuvent être effec
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

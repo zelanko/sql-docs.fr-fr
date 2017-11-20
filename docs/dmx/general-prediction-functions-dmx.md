@@ -2,9 +2,12 @@
 title: "Fonctions de prédiction générales (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Vous pouvez utiliser la **sélectionnez** instruction dans les Extensions DMX (Data Mining) pour créer différents types de requêtes. Une requête peut être utilisée pour retourner des informations sur le modèle d'exploration de données lui-même, afin de faire de nouvelles prédictions ou encore modifier le modèle en effectuant un apprentissage avec de nouvelles données. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]fournit un éventail de fonctions spécialisées qui contrôlent le type d’informations qui sont retournées dans une requête. En ajoutant ces fonctions à une requête DMX, vous pouvez récupérer des statistiques ou des colonnes de données supplémentaires. Toutefois, pour chaque type de requête et chaque type de modèle, seules certaines fonctions sont prises en charge.  
   

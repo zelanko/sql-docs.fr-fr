@@ -2,9 +2,12 @@
 title: "Référence de fonction Data Mining Extensions (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Fonctions DMX (Data Mining Extensions)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge plusieurs fonctions du langage DMX (Data Mining Extensions). Les fonctions étendent les résultats d'une requête de prévision afin d'inclure les informations qui décrivent en détail la prévision. Les fonctions permettent aussi de mieux contrôler la présentation des résultats de la prévision. Le tableau suivant fournit des liens vers des ressources vous permettant de comprendre l'utilisation des fonctions dans DMX.  
   

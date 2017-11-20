@@ -1,24 +1,29 @@
 ---
 title: Approuver ou rejeter un ensemble de modifications (Master Data Services) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b923d3ccbe0c9f76a019d4d880994791586b770
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 849e543ec67ea42dfbed2f8138e244ede56085e5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Approuver ou rejeter un ensemble de modifications (Master Data Services)
   Un ensemble de modifications est un ensemble de modifications en attente portant sur les données de référence. Si des modifications de l’entité requièrent l’approbation d’un administrateur et si un ensemble de modifications est soumis pour approbation, vous pouvez examiner puis approuver ou rejeter cet ensemble de modifications.  
@@ -55,3 +60,4 @@ ms.lasthandoff: 11/09/2017
  [Valider ou envoyer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
   
+

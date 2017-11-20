@@ -2,23 +2,28 @@
 title: "Utiliser le vérificateur d’orthographe DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a01e31bf6965cb1d7ac6bbcf183e1ce0c98fc38e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
   Le vérificateur d'orthographe [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vérifie la syntaxe, l'orthographe, et la structure de la phrase des valeurs de chaîne dans un domaine. Le vérificateur d'orthographe est une fonctionnalité autonome et côté client qui n'a pas d'intégration avec les moteurs côté serveur et aucune conséquence sur les flux ou les états actuels. Le vérificateur d'orthographe identifie ces valeurs de chaîne qu'il considère comme des erreurs potentielles, puis les marque d'un trait de soulignement rouge dans le même emplacement que celui où vous apportez d'autres modifications manuelles aux valeurs de domaine. Ces emplacements incluent :  
@@ -33,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour exécuter le vérificateur d'orthographe, vous devez disposer d'une base de connaissances et d'un domaine ouverts dans l'activité de découverte des connaissances ou de gestion de l'arborescence du domaine ; le vérificateur d'orthographe doit être activé pour le domaine et dans la page où vous allez l'exécuter ; et la propriété de langue doit être spécifiée pour le domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -76,3 +81,4 @@ ms.lasthandoff: 11/09/2017
  DQS fournit des suggestions pour les valeurs de la colonne **Valeur** et de la colonne **Corriger vers** de la table **Valeur** . Lorsque vous sélectionnez une suggestion dans la colonne **Valeur** , le type de la valeur est défini sur **Erreur**et la suggestion est copiée dans la colonne **Corriger vers** , comme si vous l'aviez insérée manuellement. S'il y avait une correction existante, elle devient une suggestion. Dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , lorsque vous sélectionnez une suggestion dans la colonne **Corriger vers** , DQS remplace la valeur actuellement sélectionnée par la sélection, et la valeur actuellement sélectionnée devient une suggestion. Dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , aucune suggestion n'est effectuée au niveau enregistrement (grille inférieure).  
   
   
+

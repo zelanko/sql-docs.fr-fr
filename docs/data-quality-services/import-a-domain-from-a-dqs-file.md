@@ -2,23 +2,28 @@
 title: "Importer un domaine à partir d’un fichier .dqs | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08c813576d6dcc9291c80ccacd95caae5c75a0b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4adc315932a7632077913866b648cba4947a9d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importer un domaine à partir d'un fichier .dqs
   Cette rubrique explique comment importer un domaine à partir d'un fichier .dqs vers une base de connaissances existante dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un fichier de données .dqs est créé en exportant un domaine ou une base de connaissances à partir de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Un fichier de données .dqs est chiffré, et ne peut pas être affiché.  
@@ -29,7 +34,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Pour importer un domaine à partir d'un fichier .dqs, vous devez avoir déjà exporté un domaine unique ou un domaine composite (contenant plusieurs domaines uniques) vers le fichier .dqs. Le fichier .dqs doit contenir un seul domaine. Vous devez également avoir créé et ouvert une base de connaissances dans laquelle importer le domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -58,3 +63,4 @@ ms.lasthandoff: 11/09/2017
  Après avoir importé un domaine à partir d'un fichier .dqs, vous pouvez ajouter des connaissances au domaine ou utiliser le domaine dans un projet de nettoyage ou de correspondance, en fonction du contenu du domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md), [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md), [Nettoyage des données](../data-quality-services/data-cleansing.md) ou [Correspondance de données](../data-quality-services/data-matching.md).  
   
   
+

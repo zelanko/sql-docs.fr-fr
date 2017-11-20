@@ -2,10 +2,14 @@
 title: "Exécuter un projet de correspondance | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c15245cf026a3746660a1f82394240a3f5aaa6a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6dd319ab3fabac9cecd2aa7ed8091b51fd190573
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
@@ -33,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
   
 -   Vous devez avoir créé une base de connaissances avec une stratégie de correspondance composée d'une ou de plusieurs règles de correspondance.  
   
@@ -220,7 +225,7 @@ ms.lasthandoff: 11/09/2017
  Affiche une liste de toutes les règles de correspondance dans la stratégie de correspondance. Sélectionnez l'une des règles pour afficher les conditions de la règle dans la table Règle de correspondance.  
   
  **Table Règle de correspondance**  
- Affiche chaque condition dans la règle sélectionnée, notamment le domaine, la valeur de similarité, le poids et la sélection des éléments requis.  
+ Affiche chaque condition dans la règle sélectionnée, notamment le domaine, la valeur de similarité, le poids et la sélection des prérequis.  
   
 ### <a name="matching-results-tab"></a>Onglet Résultats de correspondance  
  Cliquez sur l'onglet **Résultats de correspondance** pour afficher des statistiques pour l'analyse de la source de données à l'aide de la connaissance sélectionnée pour le projet et des règles de correspondance dans cette base de connaissances. Les statistiques sont les suivantes :  
@@ -240,3 +245,4 @@ ms.lasthandoff: 11/09/2017
 -   Nombre le plus élevé de doublons dans un cluster  
   
   
+

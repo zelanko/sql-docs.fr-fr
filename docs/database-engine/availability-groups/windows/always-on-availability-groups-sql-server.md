@@ -2,10 +2,14 @@
 title: "Groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see Availability Groups [SQL Server]
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8879965285990b014ebabb6514b57170f9b21af3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/28/2017
+
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est une solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Introduite dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] optimise la disponibilité d'un ensemble de bases de données utilisateur pour l'entreprise. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires en lecture-écriture et un à huit ensembles de bases de données secondaires correspondantes. Éventuellement, les bases de données secondaires peuvent être rendues disponibles pour l'accès en lecture seule et/ou certaines opérations de sauvegarde.  
   
@@ -184,3 +189,4 @@ ms.lasthandoff: 11/09/2017
  [Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
+

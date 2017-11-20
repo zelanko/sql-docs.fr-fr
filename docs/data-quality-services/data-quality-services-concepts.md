@@ -2,23 +2,28 @@
 title: Concepts Data Quality Services | Microsoft Docs
 ms.custom: 
 ms.date: 01/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eacf688d4ea67d06d3244f7aab2e51bf3ba72bfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 225ee23d618225d1424cd81e1acf5974153f0726
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
   Cette rubrique fournit un bref résumé des concepts [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) relatifs à la gestion des connaissances, aux projets de qualité des données et à l'administration de la qualité des données.  
@@ -28,11 +33,11 @@ ms.lasthandoff: 11/09/2017
   
  **Découverte des connaissances**  
   
- La découverte des connaissances est un processus assisté par ordinateur qui analyse des exemples de données tirés de votre organisation pour générer des connaissances. Lorsque vous obtenez les résultats de l'analyse, vous pouvez valider et améliorer les connaissances, puis les appliquer pour nettoyer, mettre en correspondance et profiler les données. Pour plus d’informations, consultez [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ La découverte des connaissances est un processus assisté par ordinateur qui analyse des exemples de données tirés de votre organisation pour générer des connaissances. Lorsque vous obtenez les résultats de l'analyse, vous pouvez valider et améliorer les connaissances, puis les appliquer pour nettoyer, mettre en correspondance et profiler les données. Pour plus d’informations, consultez [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Gestion de l'arborescence du domaine**  
   
- Le processus de gestion de domaine vous permet de modifier ou augmenter les connaissances générées par le processus de découverte des connaissances. Vous pouvez modifier, mettre à jour et examiner de manière interactive les connaissances dans une base de connaissances. Une base de connaissances comprend des champs de données qui contiennent des valeurs de domaine et leur état, leurs règles de domaine, leurs relations à base de termes et leurs données de référence. Dans la gestion d'un domaine, vous pouvez modifier les propriétés du domaine, lui joindre des données de référence, gérer ses règles, gérer ses valeurs, écrire des relations de données et créer, supprimer, importer, ou exporter des domaines. Vous pouvez également utiliser des domaines composés qui agrègent plusieurs domaines. Pour plus d’informations, consultez [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Le processus de gestion de domaine vous permet de modifier ou augmenter les connaissances générées par le processus de découverte des connaissances. Vous pouvez modifier, mettre à jour et examiner de manière interactive les connaissances dans une base de connaissances. Une base de connaissances comprend des champs de données qui contiennent des valeurs de domaine et leur état, leurs règles de domaine, leurs relations à base de termes et leurs données de référence. Dans la gestion d'un domaine, vous pouvez modifier les propriétés du domaine, lui joindre des données de référence, gérer ses règles, gérer ses valeurs, écrire des relations de données et créer, supprimer, importer, ou exporter des domaines. Vous pouvez également utiliser des domaines composés qui agrègent plusieurs domaines. Pour plus d’informations, consultez [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Stratégie de correspondance**  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 11/09/2017
   
  Vous pouvez utiliser des données de référence pour valider, corriger et enrichir vos données, en exploitant les services de sociétés qui garantissent la qualité de leurs données de référence. Vous pouvez utiliser les services de Windows Azure Marketplace pour vous connecter à des fournisseurs de données de référence, ou vous pouvez prendre directement contact avec un fournisseur. Pour plus d’informations, consultez [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
- Pour plus d'informations sur la gestion des connaissances dans DQS, consultez [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
+ Pour plus d'informations sur la gestion des connaissances dans DQS, consultez [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ##  <a name="Projects"></a> Concepts relatifs au projets de qualité des données  
  Le gestionnaire de données effectue des opérations de qualité des données (nettoyage et correspondance) à l'aide d'un projet de qualité des données dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
@@ -78,21 +83,22 @@ ms.lasthandoff: 11/09/2017
   
  L'option de configuration vous permet de :  
   
--   Configurer les paramètres de service des données de référence. Pour plus d’informations, consultez [Configure DQS to Use Reference Data](../data-quality-services/configure-dqs-to-use-reference-data.md).  
+-   Configurer les paramètres de service des données de référence. Pour plus d’informations, consultez [Configurer DQS pour utiliser les données de référence](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
 -   Définir les valeurs de seuil pour les activités de nettoyage et de correspondance. Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
 -   Activer/désactiver les notifications de profilage Pour plus d’informations, consultez [Activer ou désactiver les notifications de profilage dans DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md).  
   
--   Configurer les niveaux de gravité des journaux DQS au niveau de l'activité ou au niveau du module (configuration plus avancée). Pour plus d’informations, consultez [Configure Severity Levels for DQS Log Files](../data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
+-   Configurer les niveaux de gravité des journaux DQS au niveau de l'activité ou au niveau du module (configuration plus avancée). Pour plus d’informations, consultez [Configurer les niveaux de gravité pour les fichiers journaux DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md).  
   
  **Sécurité relative au magasin d'objets blob distants (DQS)**  
   
- Vous pouvez utiliser des rôles dans le mécanisme de sécurité SQL Server pour sécuriser DQS. Il existe trois rôles DQS qui déterminent le niveau d'accès d'un utilisateur à l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor, et dqs_kb_operator. Vous ne pouvez pas accorder les rôles aux utilisateurs à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; cela s'effectue à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [DQS Security](../data-quality-services/dqs-security.md).  
+ Vous pouvez utiliser des rôles dans le mécanisme de sécurité SQL Server pour sécuriser DQS. Il existe trois rôles DQS qui déterminent le niveau d'accès d'un utilisateur à l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] : dqs_administrator, dqs_kb_editor, et dqs_kb_operator. Vous ne pouvez pas accorder les rôles aux utilisateurs à l'aide de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; cela s'effectue à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [Sécurité de DQS](../data-quality-services/dqs-security.md).  
   
- Pour plus d'informations sur l'administration DQS, consultez [DQS Administration](../data-quality-services/dqs-administration.md).  
+ Pour plus d'informations sur l'administration de DQS, consultez [Administration de DQS](../data-quality-services/dqs-administration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   
+

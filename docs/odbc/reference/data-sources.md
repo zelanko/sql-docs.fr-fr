@@ -3,8 +3,11 @@ title: "Sources de données | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -38,3 +41,4 @@ A *source de données* est simplement la source de données. Il peut être un fi
 -   [À l’aide de Sources de données](../../odbc/reference/using-data-sources.md)  
   
 -   [Exemple de Source de données](../../odbc/reference/data-source-example.md)
+

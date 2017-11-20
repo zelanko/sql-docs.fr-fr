@@ -1,11 +1,15 @@
 ---
 title: "Mise en route en exécutant l’Assistant Activer la base de données pour Stretch | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -22,19 +26,20 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e164e6f47a97f860b6b84e9519e14d7887b873c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: a3385d76691aa2710dd0d0e1544ee6e4fb5b43d0
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/29/2017
+
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  Pour configurer une base de données pour Stretch Database, exécutez l’Assistant Activer la base de données pour Stretch.  Cette rubrique décrit les informations que vous devez entrer et les choix que vous avez à faire dans l'Assistant.  
   
@@ -203,3 +208,4 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
  [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
+

@@ -1,11 +1,15 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - non-uniform memory access
 - soft-NUMA
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7516d8a10fc121bfa05661eb94084fa148fce0ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 2f57a1d59210a002ebd03b04be4158e514e725cd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA.  Pour les processeurs contenant 10 noyaux par socket ou plus, l’utilisation du NUMA logiciel pour fractionner les nœuds NUMA matériels augmente généralement l’évolutivité et les performances. Avant SQL Server 2014 SP2, le NUMA logiciel (soft-NUMA) nécessitait la modification du Registre pour ajouter un masque d’affinité de configuration des nœuds et était configuré par ordinateur plutôt que par instance.  Avec SQL Server 2014 SP2 et SQL Server 2016, le soft-NUMA est configuré automatiquement au niveau instance de base de données au démarrage du service SQL Server.  
   
@@ -146,4 +151,5 @@ SET PROCESS AFFINITY CPU=4 TO 7;
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+
 

@@ -1,11 +1,15 @@
 ---
 title: "Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017 | Microsoft Docs"
-ms.custom: SQL2017_New_Updated
+ms.custom: 
 ms.date: 06/09/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +22,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32f79ae305b50c6d50c2c4505622752417ee83eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: e52b9300c764e99fb3f4bd54ed5b50f9f3ba686f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
   
@@ -128,7 +133,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Sécurité|SETUSER|EXECUTE AS|SETUSER|165|  
 |Sécurité|Algorithmes de chiffrement RC4 et DESX|Utilisez un autre algorithme, par exemple AES.|Algorithme DESX|238|  
 |Options définies|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
-|Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[common criteria compliance enabled (option de configuration de serveur)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
+|Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[ (option de configuration de serveur)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Classes SMO|**Microsoft.SQLServer. Management.Smo.Information** (classe)<br /><br /> **Microsoft.SQLServer. Management.Smo.Settings** (classe)<br /><br /> **Microsoft.SQLServer.Management. Smo.DatabaseOptions** (classe)<br /><br /> **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** (propriété)|**Microsoft.SqlServer.  Management.Smo.Server** (classe)<br /><br /> **Microsoft.SqlServer.  Management.Smo.Server** (classe)<br /><br /> **Microsoft.SqlServer. Management.Smo.Database** (classe)<br /><br /> Aucune|Aucune|Aucune|  
 |Agent SQL Server|Notification**net send** <br /><br /> Notification par radiomessagerie|Notification par courrier électronique<br /><br /> Notification par courrier électronique |Aucune|Aucune|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Intégration de l’Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Aucune|Aucune|  
@@ -174,4 +179,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
 

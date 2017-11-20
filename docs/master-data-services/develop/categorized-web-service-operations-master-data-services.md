@@ -2,24 +2,30 @@
 title: "Opérations de service web par catégorie (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9e8b639454a99c23dbecf503d78e4c9f83cb28a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Opérations de service Web par catégorie (Master Data Services)
   Le service Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] contient un jeu complet d'événements qui vous permettent d'écrire du code pour contrôler toutes les fonctionnalités que [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] traite via son interface utilisateur. Les opérations de service Web sont définies par le biais de l'interface <xref:Microsoft.MasterDataServices.IService> et sont implémentées en tant que méthodes de la classe <xref:Microsoft.MasterDataServices.ServiceClient>. Cette rubrique regroupe les opérations de service Web en catégories conceptuelles pour vous aider à comprendre comment utiliser l'API du service Web.  
@@ -182,3 +188,4 @@ ms.lasthandoff: 11/09/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.UserPreferencesUpdate%2A>|  
   
   
+

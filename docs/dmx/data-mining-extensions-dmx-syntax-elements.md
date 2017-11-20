@@ -2,9 +2,12 @@
 title: "Data Mining Extensions (DMX) des éléments de syntaxe | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Éléments de syntaxe DMX (Data Mining Extensions)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser divers éléments de syntaxe pour définir des instructions d’Extensions DMX (Data Mining) que vous pouvez utiliser pour créer, gérer et à utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
   

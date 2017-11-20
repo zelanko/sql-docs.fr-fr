@@ -2,10 +2,14 @@
 title: Administration de DQS | Microsoft Docs
 ms.custom: 
 ms.date: 10/01/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,18 +17,19 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79d0d011909f4e368480efaabaa70322f2ceeb64
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dab2f79fbd66389684bafcac726bcfe363f50f8e
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
-# <a name="dqs-administration"></a>administration de dqs
+# <a name="dqs-administration"></a>Administration de DQS
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vous permet d'administrer et gérer les différentes activités de DQS effectuées sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], de configurer les propriétés de niveau serveur relatives aux activités de DQS, de configurer les paramètres de Reference Data Services et de configurer les paramètres de journalisation de DQS. Ces opérations sont effectuées par le biais de la fonctionnalité **Administration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Selon votre accès de sécurité (rôle) dans DQS, vous êtes autorisé ou non à accéder à certaines fonctionnalités de cette zone.  
   
  Outre ces activités d'administration, cette rubrique offre également des informations sur la sauvegarde et la restauration des bases de données DQS, une activité d'administration qui n'est pas effectuée à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
@@ -68,7 +73,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **Détacher et attacher des bases de données DQS**: les étapes permettant d'attacher et de détacher des bases de données DQS sont identiques à celles utilisées pour toute base de données SQL Server, à l'exception de quelques spécificités applicables à DQS.  
   
- Pour plus d’informations, consultez [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
+ Pour plus d’informations, consultez [Gérer les bases de données DQS](../data-quality-services/manage-dqs-databases.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -86,6 +91,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Services de données de référence dans DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Gérer les fichiers journaux DQS](../data-quality-services/manage-dqs-log-files.md)   
- [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
+ [Gérer les bases de données DQS](../data-quality-services/manage-dqs-databases.md)  
   
   
+

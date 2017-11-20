@@ -2,9 +2,12 @@
 title: Fonctions (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="functions-dmx"></a>Fonctions (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Lorsque vous utilisez des Extensions DMX (Data Mining) pour les objets de requête dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser des fonctions pour retourner des informations plus que simplement les valeurs dans les colonnes dans le modèle d’exploration de données ou le dataset d’entrée. Les requêtes DMX permettent de retourner, par exemple, non seulement la valeur de prévision d'une colonne, mais également la probabilité que la prévision est correcte. Outre les fonctions DMX, vous pouvez également utiliser les fonctions de Microsoft Visual Basic for Applications (VBA), Microsoft Excel et les procédures stockées.  
   

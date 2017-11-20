@@ -2,12 +2,14 @@
 title: "Installer SQL Server 2016 avec l’Assistant Installation (programme d’installation) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +17,19 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: "91"
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/08/2017
+
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Cet article explique comment installer SQL Server avec l’Assistant Installation. Il s’applique à [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] et [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Pour consulter le contenu relatif aux versions précédentes de SQL Server, consultez [Installer SQL Server 2014 à partir de l’Assistant Installation (programme d’installation)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
 Cette rubrique fournit une procédure d'installation pas à pas d'une nouvelle instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l'Assistant Installation du programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une seule arborescence de fonctionnalités pour l'installation de tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ce qui vous évite d'installer individuellement les composants. Pour plus d’informations sur l’installation individuelle des composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Installer SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
@@ -200,3 +203,4 @@ Microsoft a identifié un problème avec la version spécifique des fichiers bin
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

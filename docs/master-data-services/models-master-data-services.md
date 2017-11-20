@@ -2,26 +2,31 @@
 title: "Modèles (services de données de référence) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f0b8df54fd7cce2cb994108cd71103c258fdc42
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0dd8ddbd08e97d1761881d0c955f02d491fce7af
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="models-master-data-services"></a>Modèles (services de données de référence)
   Les modèles constituent le niveau d'organisation des données le plus élevé dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Un modèle définit la structure des données dans votre solution de gestion des données de référence. Un modèle contient les objets suivants :  
@@ -90,3 +95,4 @@ ms.lasthandoff: 11/09/2017
 -   [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   
+

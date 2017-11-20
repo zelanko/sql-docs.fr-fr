@@ -2,28 +2,33 @@
 title: Collections (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 04/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b613d751fd68818fbee4720254199a701cfb03ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: de78b7945e376f115e92778981fea709d9b612ed
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/07/2017
+
 ---
-# <a name="collections-master-data-services"></a>Collections (services de données de référence)
+# <a name="collections-master-data-services"></a>Collections (Master Data Services)
   Une collection est un groupe de membres feuille et de membres consolidés d'une entité unique. Utilisez des collections lorsque vous n'avez pas besoin d'une hiérarchie complète et que vous souhaitez afficher des regroupements différents de vos membres pour la création de rapports ou l'analyse, ou lorsque vous devez créer une taxonomie.  
   
 > [!NOTE]  
@@ -57,3 +62,4 @@ ms.lasthandoff: 11/09/2017
 -   [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
   
+

@@ -2,10 +2,14 @@
 title: "Abonnés de réplication et groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d09bb49663705689839e5a6b2ae2f2e2cd35634c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 777e170ba0f7b64a1522c614c52661f1a70a7bab
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>Abonnés de réplication et groupes de disponibilité Always On (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Quand un groupe de disponibilité Always On contenant une base de données est un abonné de réplication et bascule, l’abonnement de réplication peut échouer. Pour les abonnés transactionnels, l'agent de distribution continue la réplication automatiquement si l'abonnement utilise le nom de l'écouteur de groupe de disponibilité de l'abonné. Pour les abonnés de fusion, un administrateur de réplication doit reconfigurer l'abonné manuellement, en recréant l'abonnement.  
   
@@ -94,3 +99,4 @@ GO
 >  Le processus actuel n’est pas pratique pour les abonnés de réplication de fusion ; toutefois, le scénario principal de la réplication de fusion implique des utilisateurs déconnectés (bureaux, ordinateurs portables, appareils combinés téléphoniques) qui n’utilisent pas les groupes de disponibilité Always On sur l’abonné.  
   
   
+

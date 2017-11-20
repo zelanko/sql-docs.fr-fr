@@ -2,9 +2,12 @@
 title: "Désinstaller une instance existante de SQL Server (programme d’installation) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/27/2017
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - setup-install
 - setup-install
@@ -17,19 +20,20 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: "74"
+caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1267da1e11ffb76d2b2ce32dfde03c16e7eb3742
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Désinstaller une instance existante de SQL Server (programme d'installation)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Pour obtenir du contenu relatif à des versions précédentes de SQL Server, consultez [Désinstaller une instance existante de SQL Server (programme d’installation)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
 
   Cet article explique comment désinstaller une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En suivant les étapes de cette rubrique, vous préparez également le système afin de pouvoir réinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -80,7 +84,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  **Supprimez les groupes de sécurité locaux.** Avant de désinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], supprimez les groupes de sécurité locaux des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  **Arrêtez tous**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **les services.** Nous vous recommandons d'arrêter tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de désinstaller les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La désinstallation peut échouer s'il existe des connexions actives.  
+3.  **Arrêtez tous**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**les services.** Nous vous recommandons d'arrêter tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de désinstaller les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La désinstallation peut échouer s'il existe des connexions actives.  
   
 4.  **Utiliser un compte bénéficiant des autorisations appropriées** Connectez-vous au serveur à l'aide du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à l'aide d'un compte doté d'autorisations équivalentes. Par exemple, vous pouvez vous connecter au serveur à l'aide d'un compte qui est membre du groupe Administrateurs local.  
   
@@ -116,3 +120,4 @@ ms.lasthandoff: 11/09/2017
  [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   
+

@@ -2,10 +2,14 @@
 title: Instances de cluster de basculement Always On (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 01/18/2017
-ms.prod: sql-server-2016
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,19 +23,20 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9ba9300c5bfa55b5f9968453874b29e6d8c4b179
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instances de cluster de basculement Always On (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dans le cadre de l’offre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, les instances de cluster de basculement Always On exploitent la fonctionnalité de clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance au niveau de l’instance de serveur, une *instance de cluster de basculement* (FCI). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   
@@ -164,3 +169,4 @@ ms.lasthandoff: 11/09/2017
 |Décrit les différences de concepts entre les nœuds dans une instance FCI et les réplicas au sein d'un groupe de disponibilité, ainsi que les éléments à prendre en compte pour utiliser une instance FCI pour héberger un réplica pour un groupe de disponibilité.|[Clustering de basculement et groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   
+

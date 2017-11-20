@@ -2,23 +2,28 @@
 title: "Construction d’une base de connaissances | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d72a65cd051ca0ebd273c66fd2ce957b32d97a5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8fe15c5c9313fee10edbd7a9ebc3fd282dafa5f8
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="building-a-knowledge-base"></a>Construction d'une base de connaissances
   Une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité. Une base de connaissances comprend des domaines, chacun représentant les données dans un champ de données. La base de connaissances est utilisée par DQS pour effectuer le nettoyage et la duplication de données sur une base de données. Pour préparer la base de connaissances au nettoyage de données, vous pouvez exécuter une analyse assistée par ordinateur d'un exemple de données, et gérer de manière interactive les valeurs dans les domaines. DQS vous permet d'importer des connaissances, de créer des règles et des relations, de modifier directement les valeurs des données et d'exploiter une base de données par défaut.  
@@ -43,3 +48,4 @@ ms.lasthandoff: 11/09/2017
 |Création d'un domaine composite et ajout de connaissances au domaine.|[Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md)|  
   
   
+

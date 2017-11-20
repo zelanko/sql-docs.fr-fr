@@ -2,9 +2,12 @@
 title: "(DMX) de mots clés réservés | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>Mots clés réservés (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] réserve certains mots clés pour son usage exclusif. Ces mots clés peuvent être utilisés dans les instructions DMX (Data Mining Extensions) uniquement dans les positions définies par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la référence au langage DMX. Ces mots clés DMX restreints incluent les membres suivants :  
   

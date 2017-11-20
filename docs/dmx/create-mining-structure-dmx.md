@@ -2,9 +2,12 @@
 title: "CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crée une structure d'exploration de données dans une base de données et, éventuellement, définit les partitions d'apprentissage et de test. Après avoir créé la structure d’exploration de données, vous pouvez utiliser la [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) instruction pour ajouter des modèles à la structure d’exploration de données.  
   

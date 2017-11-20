@@ -1,11 +1,15 @@
 ---
 title: "Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2016 | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +17,20 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: "215"
+caps.latest.revision: 215
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e6a58910370ab694918578fbced16f856d34c8e9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
 
@@ -50,7 +55,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Objets de base de données|Possibilité de retourner les jeux de résultats à partir de déclencheurs|Aucune|Le déclencheur retourne des résultats|12|  
 |Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déconseillé.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déconseillé|253|  
 |Serveurs distants|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ».|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Serveurs distants|@@remserver|Remplacez les serveurs distants à l'aide de serveurs liés.|Aucune|Aucune|  
+|Serveurs distants|@@remserver |Remplacez les serveurs distants à l'aide de serveurs liés.|Aucune|Aucune|  
 |Serveurs distants|SET REMOTE_PROC_TRANSACTIONS|Remplacez les serveurs distants à l'aide de serveurs liés.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Options définies|**SET ROWCOUNT** pour les instructions **INSERT**, **UPDATE**et **DELETE**|Mot clé TOP|SET ROWCOUNT|109|  
 |Indicateurs de table|Indicateur de table HOLDLOCK sans parenthèses.|Utilisez HOLDLOCK avec la parenthèse.|Indicateur de table HOLDLOCK sans parenthèses|167|  
@@ -127,7 +132,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Sécurité|SETUSER|EXECUTE AS|SETUSER|165|  
 |Sécurité|Algorithmes de chiffrement RC4 et DESX|Utilisez un autre algorithme, par exemple AES.|Algorithme DESX|238|  
 |Options définies|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
-|Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[common criteria compliance enabled (option de configuration de serveur)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
+|Options de configuration de serveur|Option c2 audit<br /><br /> Option default trace enabled|[common criteria compliance enabled (option de configuration de serveur)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Classes SMO|**Microsoft.SQLServer. Management.Smo.Information** (classe)<br /><br /> **Microsoft.SQLServer. Management.Smo.Settings** (classe)<br /><br /> **Microsoft.SQLServer.Management. Smo.DatabaseOptions** (classe)<br /><br /> **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** (propriété)|**Microsoft.SqlServer.  Management.Smo.Server** (classe)<br /><br /> **Microsoft.SqlServer.  Management.Smo.Server** (classe)<br /><br /> **Microsoft.SqlServer. Management.Smo.Database** (classe)<br /><br /> Aucune|Aucune|Aucune|  
 |Agent SQL Server|Notification**net send** <br /><br /> Notification par radiomessagerie|Notification par courrier électronique<br /><br /> Notification par courrier électronique |Aucune|Aucune|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Intégration de l’Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Aucune|Aucune|  
@@ -154,7 +159,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL comme nom de colonne dans les instructions DML.|Utilisez $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL comme nom de colonne dans les instructions DML.|Utilisez $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de #, ## comme table temporaire et noms de procédure stockée temporaires.|Utilisez au moins un caractère supplémentaire.|'#' et '##' comme nom des tables temporaires et procédures stockées|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de @, @@ ou @@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)] .|N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs.|'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de @, @@ ou @@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)] .|N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs.|' @ ' et noms commençant par ' @@ ' comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation du mot clé DEFAULT comme valeur par défaut.|N'utilisez pas le mot DEFAULT comme valeur par défaut.|Mot clé DEFAULT comme valeur par défaut.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation d'un espace comme séparateur entre les indicateurs de table.|Utilisez une virgule pour séparer les indicateurs de table.|Indicateurs de table multiples sans virgule|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La liste de sélection d'une vue indexée d'agrégation doit contenir COUNT_BIG (*) dans le mode de compatibilité 90.|Utilisez COUNT_BIG (*).|Liste de sélection de vue d'index sans COUNT_BIG (*)|2|  
@@ -173,4 +178,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
 

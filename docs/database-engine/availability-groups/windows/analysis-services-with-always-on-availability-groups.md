@@ -2,26 +2,31 @@
 title: "Analysis Services avec les groupes de disponibilité Always On | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e61f61c0814d3b5a6e7691203f9da946fc211db7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Un groupe de disponibilité Always On est une collection prédéfinie de bases de données relationnelles SQL Server qui basculent ensemble quand les conditions déclenchent un basculement dans l’une des bases de données, redirigeant les requêtes vers une base de données mise en miroir sur une autre instance dans le même groupe de disponibilité. Si vous utilisez des groupes de disponibilité pour votre solution haute disponibilité, vous pouvez utiliser une base de données de ce groupe comme source de données dans une solution Analysis Services tabulaire ou multidimensionnelle. Toutes les opérations d'Analysis Services s'exécutent comme prévu lorsque vous utilisez une base de données de disponibilité : le traitement ou l'importation des données, l'interrogation directe des données relationnelles (à l'aide du stockage ROLAP ou du mode DirectQuery) et l'écriture différée.  
   
@@ -238,3 +243,4 @@ ms.lasthandoff: 11/09/2017
  [Activer l’écriture différée de la dimension](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

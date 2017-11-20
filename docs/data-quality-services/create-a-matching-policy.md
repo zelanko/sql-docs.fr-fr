@@ -2,10 +2,14 @@
 title: "Créer une stratégie de correspondance | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,16 +17,17 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a1f1379effcdfe728dae0f3a74f1a014876b9d1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1fe1c8b25d8309d3984c70c31f5949a9724599a3
+ms.contentlocale: fr-fr
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="create-a-matching-policy"></a>Créer une stratégie de correspondance
   Cette rubrique explique comment créer une stratégie de correspondance dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous vous préparez au processus de correspondance dans DQS en exécutant l'activité Stratégie de correspondance sur des exemples de données. Dans cette activité, vous créez et testez une ou plusieurs règles de correspondance dans la stratégie, puis vous publiez la base de connaissances afin que les règles de correspondance soient publiquement disponibles. Il ne peut y avoir qu'une seule stratégie de correspondance dans une base de connaissances, mais cette stratégie peut contenir plusieurs règles de correspondance.  
@@ -31,7 +36,7 @@ ms.lasthandoff: 11/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+###  <a name="Prerequisites"></a> Prérequis  
  Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -44,24 +49,24 @@ ms.lasthandoff: 11/09/2017
   
  Les facteurs que vous entrez dans une règle de correspondance sont les suivants :  
   
--   Poids : pour chaque domaine de la règle, entrez un poids numérique qui détermine comment l'analyse de correspondance pour le domaine sera comparée à celle de chaque autre domaine de la règle. Le poids indique la contribution du score du champ au score de correspondance global entre deux enregistrements. Les scores calculés affectés à chaque champ source sont additionnés pour obtenir un score de correspondance composite pour les deux enregistrements. Pour chaque champ qui n'est pas un élément requis (avec Exacte ou Similaire comme valeur de similarité), définissez le poids entre 10 et 100. La somme des poids des domaines qui ne sont pas des éléments requis doit être égale à 100. Si la valeur est un élément requis, le poids a la valeur 0 et ne peut pas être modifié.  
+-   Poids : pour chaque domaine de la règle, entrez un poids numérique qui détermine comment l'analyse de correspondance pour le domaine sera comparée à celle de chaque autre domaine de la règle. Le poids indique la contribution du score du champ au score de correspondance global entre deux enregistrements. Les scores calculés affectés à chaque champ source sont additionnés pour obtenir un score de correspondance composite pour les deux enregistrements. Pour chaque champ qui n'est pas un prérequis (avec Exacte ou Similaire comme valeur de similarité), définissez le poids entre 10 et 100. La somme des poids des domaines qui ne sont pas des prérequis doit être égale à 100. Si la valeur est un prérequis, le poids a la valeur 0 et ne peut pas être modifié.  
   
 -   Exacte comme valeur de similarité : sélectionnez **Exacte** si les valeurs du même domaine de deux enregistrements distincts doivent être identiques pour être considérées comme une correspondance. Si elles sont identiques, le score de correspondance pour ce domaine a la valeur « 100 », et DQS utilise ce score et les scores des autres domaines de la règle pour déterminer le score de correspondance total. Si elles ne sont pas identiques, le score de correspondance à ce domaine a la valeur « 0 », et le traitement de la règle passera à la condition suivante. Si vous configurez une règle de correspondance pour un domaine numérique et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance sous la forme d'un pourcentage ou d'un entier. Pour un domaine de type date, vous pouvez entrer une tolérance telle qu'un jour, un mois ou une année (entier) si vous sélectionnez **Similaire**; il n'y a aucune tolérance sous forme de pourcentage pour un domaine de date. Si vous sélectionnez **Exacte**, vous n'avez pas cette possibilité.  
   
 -   Similaire comme valeur de similarité : sélectionnez **Similaire** si deux valeurs du même champ de deux enregistrements distincts peuvent être considérées comme une correspondance, même si elles ne sont pas identiques. Lorsque DQS exécute la règle, il calcule un score de correspondance pour ce domaine, et utilise ce score et les scores des autres domaines de la règle pour déterminer le score de correspondance total. La similarité minimale entre les valeurs d'un champ est de 60 %. Si le score de correspondance calculé pour un champ de deux enregistrements est inférieur à 60, la valeur 0 est automatiquement affectée au score de similarité. Si vous configurez une règle de correspondance pour un champ numérique et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance sous la forme d'un pourcentage ou d'un entier. Si vous configurez une règle de correspondance pour un champ de date, et que vous sélectionnez **Similaire**, vous pouvez entrer une tolérance numérique.  
   
--   Condition préalable : sélectionnez **Condition préalable** pour spécifier que les valeurs du même champ de deux enregistrements distincts doivent retourner une correspondance de 100 %, sans quoi les enregistrements ne sont pas considérés comme une correspondance et les autres clauses de la règle sont ignorées. Lorsque l'option **Condition préalable** est sélectionnée, le champ de poids du domaine est supprimé afin que vous ne puissiez pas définir un poids pour le domaine. Vous devez réinitialiser un ou plusieurs poids de domaine afin que la somme pondérée soit égale à 100. Les domaines requis ne contribuent pas au score de correspondance des enregistrements. Le score de correspondance des enregistrements est déterminé en comparant les valeurs des champs pour lesquels la similarité a la valeur Similaire ou Exact. Lorsque vous faites d'un champ une condition préalable, la valeur Exacte est automatiquement définie comme similarité pour ce domaine.  
+-   Condition préalable : sélectionnez **Condition préalable** pour spécifier que les valeurs du même champ de deux enregistrements distincts doivent retourner une correspondance de 100 %, sans quoi les enregistrements ne sont pas considérés comme une correspondance et les autres clauses de la règle sont ignorées. Lorsque l'option **Condition préalable** est sélectionnée, le champ de poids du domaine est supprimé afin que vous ne puissiez pas définir un poids pour le domaine. Vous devez réinitialiser un ou plusieurs poids de domaine afin que la somme pondérée soit égale à 100. Les domaines prérequis ne contribuent pas au score de correspondance des enregistrements. Le score de correspondance des enregistrements est déterminé en comparant les valeurs des champs pour lesquels la similarité a la valeur Similaire ou Exact. Lorsque vous faites d'un champ une condition préalable, la valeur Exacte est automatiquement définie comme similarité pour ce domaine.  
   
  Le score de correspondance minimal est le seuil auquel ou au-delà duquel deux enregistrements sont considérés comme une correspondance (et l'état affecté aux enregistrements est « Correspondants »). Entrez une valeur entière par incréments de « 1 » ou cliquez sur la flèche haut ou bas pour augmenter ou diminuer la valeur par incréments de « 10 ». La valeur minimale est 80. Si le score de correspondance est inférieur à 80, les deux enregistrements ne sont pas considérés comme une correspondance. Vous ne pouvez pas modifier la plage du score de correspondance minimal dans cette page. Le plus faible score de correspondance minimal est 80. Vous pouvez, toutefois, modifier le plus faible score de correspondance minimal dans la page Administration (si vous êtes administrateur DQS).  
   
- La création d’une règle de correspondance est un processus itératif, car vous devrez peut-être modifier les poids relatifs des domaines dans la règle, ou bien la similarité ou la propriété requise d’un domaine, ou encore le score de correspondance minimal pour la règle, afin d’obtenir les résultats dont vous avez besoin. Vous pouvez également souhaiter créer plusieurs règles, qui seront chacune exécutées pour créer le score de correspondance. Il peut être difficile d'obtenir le résultat dont vous avez besoin avec une seule règle. Plusieurs règles fournissent des vues différentes d'une correspondance requise. Avec plusieurs règles, vous pourrez peut-être inclure moins de domaines dans chaque règle, utiliser des poids plus élevés pour chaque domaine et obtenir de meilleurs résultats. Si les données sont moins précises et moins complètes, vous pouvez avoir besoin de davantage de règles pour trouver les correspondances requises. Si les données sont plus précises et complètes, vous avez besoin de moins de règles.  
+ La création d’une règle de correspondance est un processus itératif, car vous devrez peut-être modifier les poids relatifs des domaines dans la règle, ou bien la similarité ou la propriété prérequise d’un domaine, ou encore le score de correspondance minimal pour la règle, afin d’obtenir les résultats dont vous avez besoin. Vous pouvez également souhaiter créer plusieurs règles, qui seront chacune exécutées pour créer le score de correspondance. Il peut être difficile d'obtenir le résultat dont vous avez besoin avec une seule règle. Plusieurs règles fournissent des vues différentes d'une correspondance requise. Avec plusieurs règles, vous pourrez peut-être inclure moins de domaines dans chaque règle, utiliser des poids plus élevés pour chaque domaine et obtenir de meilleurs résultats. Si les données sont moins précises et moins complètes, vous pouvez avoir besoin de davantage de règles pour trouver les correspondances requises. Si les données sont plus précises et complètes, vous avez besoin de moins de règles.  
   
- Le profilage fournit des informations sur l'exhaustivité et l'unicité. Considérez l'exhaustivité et l'unicité en tandem. Utilisez les données d'exhaustivité et d'unicité pour déterminer le poids à donner à un champ dans le processus de correspondance. Si le niveau d'unicité est élevé dans un champ, l'utilisation de ce champ dans une stratégie de correspondance peut diminuer les résultats de correspondance ; de ce fait, vous pouvez affecter une valeur relativement faible pour le poids de ce champ. Si vous avez un niveau d'unicité faible pour une colonne, mais une faible exhaustivité, vous pouvez décider de ne pas inclure de domaine pour cette colonne. Avec un niveau d'unicité faible, mais un niveau d'exhaustivité élevé, vous pouvez inclure le domaine. Certaines colonnes, telles que le sexe, peuvent naturellement avoir un niveau d'unicité faible. Pour plus d’informations, consultez [Profiler and Results Tabs](#Tabs).  
+ Le profilage fournit des informations sur l'exhaustivité et l'unicité. Considérez l'exhaustivité et l'unicité en tandem. Utilisez les données d'exhaustivité et d'unicité pour déterminer le poids à donner à un champ dans le processus de correspondance. Si le niveau d'unicité est élevé dans un champ, l'utilisation de ce champ dans une stratégie de correspondance peut diminuer les résultats de correspondance ; de ce fait, vous pouvez affecter une valeur relativement faible pour le poids de ce champ. Si vous avez un niveau d'unicité faible pour une colonne, mais une faible exhaustivité, vous pouvez décider de ne pas inclure de domaine pour cette colonne. Avec un niveau d'unicité faible, mais un niveau d'exhaustivité élevé, vous pouvez inclure le domaine. Certaines colonnes, telles que le sexe, peuvent naturellement avoir un niveau d'unicité faible. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
 ##  <a name="Starting"></a> Première étape : Démarrage d'une stratégie de correspondance  
  Vous effectuez l'activité de stratégie de correspondance dans la zone de gestion des bases de connaissances de l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Nouvelle base de connaissances** pour créer une stratégie de correspondance dans une nouvelle base de connaissances. Entrez un nom pour la base de connaissances, entrez une description, puis définissez **Créer la base de connaissances à partir de** selon vos besoins. Cliquez sur **Stratégie de correspondance** pour l'activité. Cliquez sur **Suivant** pour continuer.  
   
@@ -135,7 +140,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Si vous double-cliquez sur un enregistrement dans la table des résultats de correspondance, DQS affiche une fenêtre **Détails du score de correspondance** qui présente l'enregistrement pivot et l'enregistrement source (ainsi que les valeurs de tous leurs champs), le score entre elles et une exploration de correspondance d'enregistrement. L'exploration affiche les valeurs de chaque champ de l'enregistrement pivot et de l'enregistrement source pour vous permettre de les comparer, et indique le score de correspondance auquel chaque champ contribue dans le score de correspondance global pour les deux enregistrements.  
   
-14. Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Pour plus d’informations, consultez [Profiler and Results Tabs](#Tabs).  
+14. Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
 15. Si la règle doit être modifiée, effectuez cette opération dans l'éditeur de règles, puis cliquez sur **Redémarrer**.  
   
@@ -167,7 +172,7 @@ ms.lasthandoff: 11/09/2017
   
     -   Si vous double-cliquez sur un enregistrement dans la table des résultats de correspondance, DQS affiche une fenêtre **Détails du score de correspondance** qui présente l'enregistrement pivot et l'enregistrement source (ainsi que les valeurs de tous leurs champs), le score entre elles et une exploration de correspondance d'enregistrement. L'exploration affiche les valeurs de chaque champ de l'enregistrement pivot et de l'enregistrement source pour vous permettre de les comparer, et indique le score de correspondance auquel chaque champ contribue dans le score de correspondance global pour les deux enregistrements.  
   
-5.  Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Cliquez sur l'onglet **Règles de correspondance** pour voir quels sont les paramètres de domaine pour chaque règle. Pour plus d’informations, consultez [Profiler and Results Tabs](#Tabs).  
+5.  Affichez les statistiques sous les onglets **Générateur de profils** et **Résultats de correspondance** pour vérifier que vous obtenez les résultats dont vous avez besoin. Cliquez sur l'onglet **Règles de correspondance** pour voir quels sont les paramètres de domaine pour chaque règle. Pour plus d’informations, consultez [Onglets Générateur de profils et Résultats](#Tabs).  
   
 6.  Si vous n'êtes pas satisfait des résultats obtenus avec toutes les règles, cliquez sur **Précédent** pour revenir à la page **Stratégie de correspondance** , modifiez une ou plusieurs règles en fonction des besoins, retournez à la page **Résultats de correspondance** , puis cliquez sur **Redémarrer**.  
   
@@ -192,7 +197,7 @@ ms.lasthandoff: 11/09/2017
 ##  <a name="FollowUp"></a> Suivi : Après avoir créé une stratégie de correspondance  
  Après avoir créé une stratégie de correspondance, vous pouvez exécuter un projet de correspondance basé sur la base de connaissances qui contient la stratégie de correspondance. Pour plus d’informations, consultez [Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a> Profiler and Results Tabs  
+##  <a name="Tabs"></a> Onglets Générateur de profils et Résultats  
  Les onglets Générateur de profils et Résultats contiennent des statistiques pour les pages Stratégie de correspondance et Résultats de correspondance.  
   
 ###  <a name="Profiler"></a> Onglet Générateur de profils  
@@ -257,3 +262,4 @@ ms.lasthandoff: 11/09/2017
 -   Nombre le plus élevé de doublons dans un cluster  
   
   
+

@@ -2,10 +2,14 @@
 title: "Configurer un serveur pour l’écoute sur un port TCP spécifique | Microsoft Docs"
 ms.custom: 
 ms.date: 04/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 857ffa080413910678e1d75332ed67f401e23de9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dc24dcc363329d4a0b11ce3a202069c95d717fe1
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurer un serveur pour l’écoute sur un port TCP spécifique
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment configurer une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour l'écoute sur un port fixe spécifique à l'aide du Gestionnaire de configuration SQL Server. Si elle est activée, l’instance par défaut du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] écoute le port TCP 1433. Les instances nommées du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de [!INCLUDE[ssEW](../../includes/ssew-md.md)] sont configurées pour des [ports dynamiques](https://msdn.microsoft.com/library/dd981060). Cela signifie qu'elles sélectionnent un port disponible lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré. Lorsque vous vous connectez à une instance nommée par l'intermédiaire d'un pare-feu, configurez le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter un port spécifique, de façon à pouvoir ouvrir le port approprié dans le pare-feu.  
 
@@ -76,3 +81,4 @@ Après avoir configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
  [Service SQL Server Browser](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   
+
