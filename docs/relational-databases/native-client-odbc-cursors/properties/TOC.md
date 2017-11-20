@@ -1,4 +1,4 @@
-# [Propriétés du curseur](cursor-properties.md)
+# [Propriétés de curseur](cursor-properties.md)
 # [Accès concurrentiel au curseur (ODBC)](cursor-concurrency-odbc.md)
-# [Taille d’ensemble de lignes du curseur](cursor-rowset-size.md)
-# [Niveau d’Isolation de Transaction de curseur](cursor-transaction-isolation-level.md)
+# [Taille de l’ensemble de lignes d’un curseur](cursor-rowset-size.md)
+# [Niveau d’isolation des transactions de curseur](cursor-transaction-isolation-level.md)

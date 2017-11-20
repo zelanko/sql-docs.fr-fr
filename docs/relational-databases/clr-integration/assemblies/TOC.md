@@ -1,4 +1,4 @@
-# [La gestion des assemblys d’intégration du CLR](managing-clr-integration-assemblies.md)
-# [Modification d’un Assembly](altering-an-assembly.md)
-# [Création d’un Assembly](creating-an-assembly.md)
-# [Suppression d’un Assembly](dropping-an-assembly.md)
+# [Gestion des assemblys d’intégration du CLR](managing-clr-integration-assemblies.md)
+# [Modification d’un assembly](altering-an-assembly.md)
+# [Création d’un assembly](creating-an-assembly.md)
+# [Suppression d’un assembly](dropping-an-assembly.md)

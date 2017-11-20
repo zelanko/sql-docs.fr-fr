@@ -28,6 +28,8 @@
 ## [Se connecter au catalogue SSIS sur Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Planifier l’exécution de packages sur Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Se connecter aux sources de données avec l’authentification Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Se connecter aux fichiers et partages de fichiers](lift-shift/ssis-azure-files-file-shares.md)
+
 # [Installer ou mettre à niveau](../integration-services/install-windows/install-integration-services.md)
 
 # [Outils de développement et de gestion](integration-services-ssis-development-and-management-tools.md)
@@ -68,7 +70,7 @@
 # [Requêtes](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 # [Déployer des packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
-# [Scale Out](scale-out/integration-services-ssis-scale-out.md)
+# [Montée en puissance parallèle](scale-out/integration-services-ssis-scale-out.md)
 
 # [Service (hérité)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Sécurité](../integration-services/security/security-overview-integration-services.md)
@@ -169,3 +171,13 @@
 #### [Leçon 3-1 : Copie du bundle de déploiement](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Leçon 3-2 : Exécution de l’Assistant Installation de package](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Leçon 3-3 : Test des packages déployés](lesson-3-3-testing-the-deployed-packages.md)
+
+# Ressources
+## Suivre le blog
+### [Blog de l’équipe SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## Obtenir de l’aide
+### [Forum SSIS sur MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Balise SSIS sur Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## Envoyer des commentaires
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Obtenir les documents sur votre PC](../sql-server/sql-server-help-installation.md)
