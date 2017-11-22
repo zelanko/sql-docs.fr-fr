@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Connecting to Sybase ASE
+helpviewer_keywords: Connecting to Sybase ASE
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 48cd7837f5075ad4dff65aabfbf4dff73a3b5f0e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4cbdcd08cc4186dd4fa6d7d8fcffebdfd1139799
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connexion à Sybase ASE (SybaseToSQL)
 Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez vous connecter au serveur adaptatif qui contient les bases de données que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à toutes les bases de données sur le serveur Adaptive et affiche les métadonnées de la base de données dans le volet Explorateur de métadonnées de Sybase. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
@@ -130,4 +127,3 @@ Les métadonnées sur les bases de données ASE ne sont pas actualisée automati
 ## <a name="see-also"></a>Voir aussi  
 [Migration Sybase ASE bases de données SQL Server : base de données SQL Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

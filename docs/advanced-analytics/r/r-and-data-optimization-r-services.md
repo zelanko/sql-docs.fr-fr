@@ -5,22 +5,20 @@ ms.date: 07/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 57cd083ac721f94eba1135c4d5b34147015700d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: df91cedac15da65bee9c9aa38c3c747e04f6d60d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Performances pour R Services - optimisation des données
 
@@ -193,4 +191,3 @@ Si votre scénario implique la prédiction rapide à l’aide d’un modèle sto
 [Réglage des performances pour R - R optimisation de code et les données](r-and-data-optimization-r-services.md)
 
 [Réglage des performances - résultats de l’étude de cas](performance-case-study-r-services.md)
-

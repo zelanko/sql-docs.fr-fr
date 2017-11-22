@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22120bdb847408e9701b87a46b21b78c5f0499ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b60bab1d71142a74c8558ce05a6ca96451e7cfc9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Fonctions d’accès incompatibles (AccessToSQL)
 Pas toutes les fonctionnalités de base de données Access sont compatibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et accès contiennent différents ensembles de mots clés réservés. Problèmes tels que ceux-ci peuvent empêcher la migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Utilisez le tableau suivant pour en savoir plus sur les problèmes de migration possibles et ce que vous pouvez faire à leur sujet.  
@@ -65,4 +63,3 @@ Pas toutes les fonctionnalités de base de données Access sont compatibles avec
 [Préparation pour la Migration des bases de données Access](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [Migration des bases de données de l’accès à SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

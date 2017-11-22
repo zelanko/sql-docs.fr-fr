@@ -8,26 +8,22 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "8525"
-helpviewer_keywords:
-- 8525 (Database Engine error)
+f1_keywords: "8525"
+helpviewer_keywords: 8525 (Database Engine error)
 ms.assetid: 297867c1-691e-4d6b-a3be-a7575015ecfa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3b465c4e4c7a7484413f93aa2bb547e9685297bd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9a573b27b2d0a86a2e6a5d6634005f463b888c59
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver8525"></a>MSSQLSERVER_8525
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,4 +57,3 @@ L'état d'erreur 1 est utilisé lorsque l'application effectue une opération q
 ## <a name="user-action"></a>Action de l'utilisateur  
 Une fois qu'une application est inscrite dans une transaction distribuée, l'application doit être explicitement désinscrite de la transaction distribuée ou inscrite dans une autre transaction distribuée. Cela entraînera la désinscription implicite d'une transaction inscrite antérieure. Pour obtenir la syntaxe exacte relative à la désinscription ou à l'inscription dans une transaction distribuée, consultez le manuel de l'interface de programmation de l'application.  
   
-

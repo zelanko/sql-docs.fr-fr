@@ -8,22 +8,20 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e9fc5c574cc4fee841cfc6598623ec20ae26c504
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1acbcd97dfabfa5d23fa82e55d4eb01101233aa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hash-indexes-for-memory-optimized-tables"></a>Index de hachage pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -440,4 +438,3 @@ Votre index à deux colonnes peut être un index non-cluster ou un index de hach
 L’index de hachage a besoin de la clause WHERE pour spécifier un test d’égalité pour chacune des colonnes dans sa clé. Sinon, l’index de hachage n’est pas utile à l’optimiseur.  
   
 Aucun type d’index n’est utile si la clause WHERE spécifie uniquement la deuxième colonne de la clé d’index.  
-

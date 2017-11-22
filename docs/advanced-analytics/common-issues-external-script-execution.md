@@ -1,26 +1,23 @@
 ---
 title: "Problèmes courants liés à l’exécution du script externe dans SQL Server | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9432ce24c94aab73862e8d1460f62e17bbc3f36c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Problèmes courants liés à l’exécution du script externe dans SQL Server
 
@@ -335,4 +332,3 @@ Pour résoudre ce problème, vous devez réinstaller le package à la bibliothè
 [FAQ sur la mise à niveau et l’installation](r/upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Résoudre les problèmes de connexions du moteur de base de données](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
-

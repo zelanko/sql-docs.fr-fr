@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, using with ADO MD
+helpviewer_keywords: ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e762bf200d81596f99cd20352f8da381bffe9255
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-ado-md"></a>À l’aide d’ADO avec ADO MD
 ADO et ADO MD sont des modèles d’objet apparentés mais distincts. ADO fournit des objets de connexion aux sources de données, l’exécution de commandes, la récupération de données tabulaires et métadonnées de schéma dans un format tabulaire et affichage des informations d’erreur de fournisseur. ADO MD fournit des objets pour la récupération de données multidimensionnelles et l’affichage des métadonnées du schéma multidimensionnel.  
@@ -58,4 +55,3 @@ ADO et ADO MD sont des modèles d’objet apparentés mais distincts. ADO fourni
  [Vue d’ensemble des schémas et données multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmation avec ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Utilisation de données multidimensionnelles](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

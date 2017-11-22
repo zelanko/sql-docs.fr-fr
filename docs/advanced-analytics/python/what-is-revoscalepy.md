@@ -5,19 +5,17 @@ ms.date: 10/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: e7135947e2a8ed23b960575cae0689a77bcdd97d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="introducing-revoscalepy"></a>Présentation de revoscalepy
 
@@ -125,7 +123,7 @@ Vous pouvez exécuter le code qui inclut **revoscalepy** fonctionne localement o
 
 Lorsque vous exécutez localement, vous en général, exécutez un script Python à partir de la ligne de commande ou dans un environnement de développement Python, puis spécifiez un contexte de calcul de SQL Server à l’aide d’une de la **revoscalepy** fonctions. Vous pouvez utiliser le contexte de calcul à distance pour l’ensemble du code, ou pour des fonctions individuelles. Par exemple, vous pouvez souhaiter décharger l’apprentissage du modèle sur le serveur pour utiliser les données les plus récentes et d’éviter le déplacement des données.
 
-Si vous souhaitez placer un script Python complet à l’intérieur de la procédure stockée, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), nous vous recommandons de réécrire le code comme une fonction unique qui a défini clairement les entrées et sorties. Entrées et sorties doivent être **pandas** des trames de données. Dans ce cas, vous pouvez appeler la procédure stockée à partir de n’importe quel client qui prend en charge T-SQL, facilement transmettre des requêtes SQL en tant qu’entrées et enregistrer les résultats dans des tables SQL. Pour obtenir un exemple, consultez [Analytique de Python dans base de données pour les développeurs de L](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Si vous souhaitez placer un script Python complet à l’intérieur de la procédure stockée, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), nous vous recommandons de réécrire le code comme une fonction unique qui a défini clairement les entrées et sorties. Entrées et sorties doivent être **pandas** des trames de données. Dans ce cas, vous pouvez appeler la procédure stockée à partir de n’importe quel client qui prend en charge T-SQL, facilement transmettre des requêtes SQL en tant qu’entrées et enregistrer les résultats dans des tables SQL. Pour obtenir un exemple, consultez [Analytique de Python dans base de données pour les développeurs SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
 
 ### <a name="using-remote-compute-contexts"></a>À l’aide de contextes de calcul à distance
 

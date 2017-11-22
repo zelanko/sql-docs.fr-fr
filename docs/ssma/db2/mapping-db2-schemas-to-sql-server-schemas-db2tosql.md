@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e422c99f45b5da02214aee96bb0520dc8c851e74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5d4d96ee2d2fb0bad8947b85c36ef6b27f4af326
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Mappage des schémas de DB2 aux schémas SQL Server (DB2ToSQL)
 Dans DB2, chaque base de données a un ou plusieurs schémas. Par défaut, SSMA migre tous les objets dans un schéma DB2 à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nommé pour le schéma de base de données. Toutefois, vous pouvez personnaliser le mappage entre les schémas de DB2 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de données.  
@@ -74,4 +72,3 @@ Si vous souhaitez analyser la conversion d’objets DB2 dans [!INCLUDE[ssNoVersi
 [Connexion à SQL Server &#40; DB2eToSQL &#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [Migration des bases de données de DB2 pour SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

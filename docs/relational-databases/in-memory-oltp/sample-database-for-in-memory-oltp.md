@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5e8a9a30e4221c0c425c45d46b1e3bdddda9a66e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Exemple de base de données pour OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Utilisation de la mémoire et de l’espace disque dans l’exemple](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Configuration requise  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  Pour afficher les exemples de scripts et la charge de travail, décompressez le fichier SQLServer2016CTP3Samples.zip dans un dossier local. Consultez le fichier In-Memory OLTP\readme.txt pour obtenir des instructions sur l’exécution de la charge de travail.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Description des exemples de tables et de procédures  
  L'exemple crée de nouvelles tables pour les produits et les commandes, selon les tables existantes dans AdventureWorks. Le schéma des nouvelles tables est similaire à celui des tables existantes, avec quelques différences, comme expliqué ci-dessous.  
   
  Les tables optimisées en mémoire ont le suffixe « _inmem ». L'exemple inclut également les tables correspondantes avec le suffixe « _ondisk » : ces tables peuvent être utilisées pour effectuer une comparaison un-à-un entre les performances des tables optimisées en mémoire et des tables sur disque de votre système.  
@@ -154,7 +152,7 @@ ms.lasthandoff: 06/22/2017
   
 -   *Colonnes calculées[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
 
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les colonnes calculées sont prises en charge dans les tables optimisées en mémoire et les index.
 
   
@@ -311,7 +309,7 @@ ms.lasthandoff: 06/22/2017
   
     -   Elle repose sur les procédures d'assistance dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck, et dbo.GenerateUQCheck pour générer l'instruction T-SQL nécessaire pour effectuer les vérifications d'intégrité.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Performance Measurements using the Demo Workload  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Mesures de performance à l'aide de la charge de travail de démonstration  
  Ostress est un outil en ligne de commande qui a été développé par l’équipe de support technique de Microsoft CSS SQL Server. Cet outil peut être utilisé pour exécuter des requêtes ou des procédures stockées distantes en parallèle. Vous pouvez configurer le nombre de threads pour exécuter une instruction T-SQL donnée en parallèle et spécifier combien de fois l'instruction doit être exécutée sur ce thread. Ostress assemblera les threads et exécutera l'instruction sur tous les threads en parallèle. Lorsque l'exécution est terminée pour tous les threads, Ostress indique le temps qu'il a fallu pour terminer l'exécution sur tous les threads.  
   
 ### <a name="installing-ostress"></a>Installation d'Ostress  
@@ -437,7 +435,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Nous vous recommandons de réinitialiser après chaque exécution de démonstration. Étant donné que cette charge de travail est réservée à l'insertion, chaque exécution consommera plus de mémoire, c'est pourquoi une réinitialisation est requise afin d'éviter des conditions de mémoire insuffisante. La quantité de mémoire consommée après une exécution est décrite dans la section [Utilisation de la mémoire après avoir exécuté la charge de travail](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
+###  <a name="Troubleshootingslow-runningtests"></a> Dépannage des tests lents  
  Les résultats des tests varient généralement selon le matériel, mais aussi selon le niveau de concurrence utilisé dans l'exécution du test. Voici quelques pistes à explorer, si les résultats ne sont pas tels que prévu :  
   
 -   Nombre de transactions simultanées : lors de l’exécution de la charge de travail sur un seul thread, le gain de performances avec l’OLTP en mémoire sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
@@ -506,7 +504,7 @@ WHERE t.type='U'
   
  Ce qui est frappant ici est la taille de la mémoire allouée aux index, par rapport à la taille des données de table. Cela est dû au fait que les index de hachage de l'exemple sont prédimensionnés pour contenir plus de données. Notez que les index de hachage ont une taille fixe, par conséquent, leur taille n'augmente pas selon la taille des données de la table.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilisation de la mémoire après avoir exécuté la charge de travail  
  Après l'insertion de 10 millions de commandes, l'utilisation globale de la mémoire devrait s'apparenter à ce qui suit :  
   
 ```  
@@ -779,5 +777,4 @@ ORDER BY state, file_type
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-
 

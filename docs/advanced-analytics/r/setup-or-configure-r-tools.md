@@ -1,80 +1,64 @@
 ---
-title: Installer ou configurer les outils R | Microsoft Docs
+title: "Outils de R inclus dans le programme d’installation de SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 01/20/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 37910463066855d8929d554cb7f850c410dac4a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3baf97a960d7e8f950bb6e9cd251550f4c4b942
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="setup-or-configure-r-tools"></a>Installer ou configurer les outils R
-  Microsoft R Server fournit toutes les bibliothèques R de base, un ensemble de packages ScaleR et les outils R standard dont vous avez besoin pour développer et tester du code R. Toutefois, si vous souhaitez utiliser un environnement de développement R dédié, il existe d’autres outils disponibles, dont beaucoup sont gratuits.  
-  
-## <a name="basic-r-tools"></a>Outils R de base  
- Vous n’avez pas à installer d’outils supplémentaires dans une installation Microsoft R Server, car tous les outils R standard sont fournis dans l’*installation de base* de R et sont installés par défaut.
+# <a name="r-tools-included-with-sql-server-setup"></a>Outils de R inclus dans le programme d’installation de SQL Server
 
--   **RTerm** : outil en ligne de commande pour l’exécution de scripts R. 
-  
--   **RGui.exe** : éditeur interactif simple pour R. Les arguments de ligne de commande sont les mêmes pour RGui.exe et RTerm. 
-  
--   **RScript** : outil en ligne de commande pour l’exécution de scripts R en mode batch.  
+Lorsque vous installez R avec SQL Server, vous obtenez les mêmes outils R qui sont installés avec les **base** installation de R, tels que RGui, Rterm et ainsi de suite. Par conséquent techniquement, vous devez tous les outils dont vous avez besoin pour développer et tester le code R.
 
-Ces outils se trouvent à l’emplacement de la bibliothèque R. L’emplacement est différent selon que vous avez installé uniquement SQL Server R Services, ou installé également R Server (autonome). Pour plus d’informations, consultez [Quels sont les éléments installés et où trouver des packages R](https://msdn.microsoft.com/library/mt695941(sql.130).aspx#Anchor_1).
-
-Recherchez ensuite les outils dans le dossier `..\R_SERVER\bin\x64`.  
-
-> [!TIP]  
->  Si vous avez besoin d’aide pour utiliser les outils R, consultez la documentation fournie dans le dossier d’installation : `C:\Program Files\Microsoft SQL Server\R_SERVER\doc` et dans `C:\Program Files\Microsoft SQL Server\R_SERVER\doc\manual`.  
->   
->  Vous pouvez aussi simplement ouvrir **RGui**, cliquer sur **Aide**, puis sélectionner l’une des options proposées.  
-
-## <a name="microsoft-r-client"></a>Microsoft R Client
-
-Microsoft R Client est un outil que vous pouvez télécharger gratuitement. Il vous permet de développer des solutions R qui s’exécutent facilement dans Microsoft R Server ou SQL Server R Services. Cet outil est conçu pour aider les « scientifiques des données » qui n’ont pas R Server (disponible dans l’édition Enterprise) à développer des solutions utilisant ScaleR. 
-
-Si vous utilisez un autre environnement de développement R (par exemple, Outils R pour Visual Studio ou RStudio) et souhaitez utiliser ScaleR, vous devez spécifier Microsoft R Client comme étant l’exécutable R. Ainsi, vous avez un accès total au package RevoScaleR et à d’autres fonctionnalités de Microsoft R Server (mais avec des performances réduites).
-
-Vous pouvez également utiliser les outils fournis dans R Client, tels que RGui et RTerm, pour exécuter des scripts ou écrire et exécuter du code R ad hoc.
-
-[Installer Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-install)
-  
-##  <a name="bkmk_RTools"></a> Outils R pour Visual Studio  
-
- Pour simplifier votre travail avec des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],utilisez de préférence [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] comme environnement de développement. [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] est un complément gratuit pour Visual Studio, compatible avec toutes les éditions de Visual Studio. Visual Studio prend également en charge l’intégration de Python et de F#.  
-
- Pour obtenir des instructions d’installation, consultez [comment installer les outils R pour Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation).
+Cette rubrique répertorie les outils inclus avec l’installation.
 
 > [!TIP]
-> Avant d’installer de nouveaux packages, vérifiez quel runtime R est utilisé par défaut. Sinon, vous risquez d’installer de nouveaux packages R à un emplacement de bibliothèque par défaut et de ne pas réussir à les retrouver ensuite sur R Server.
+> 
+> En général, il est plus facile à déboguer et tester le code R à l’aide d’un environnement de développement dédié. Vous trouverez plus facile d’exécuter votre code R dans SQL Server, si vous le testez au préalable dans un outil externe, afin que vous pouvez lire les messages d’erreur détaillés et déboguer la solution.
+> 
+> Consultez cet article pour obtenir la liste des outils gratuits que vous pouvez utiliser pour développer des solutions R et comment les configurer pour fonctionner avec SQL Server : [configurer un client de science des données](set-up-a-data-science-client.md)
 
+**S’applique à :** SQL Server 2016 R Services (de-de base de données) et Microsoft R Server (autonome) ; SQL Server 2017 Machine Learning Services (de-de base de données) et d’apprentissage automatique Server (autonome)
 
-## <a name="rstudio"></a>RStudio
+## <a name="r-tools-included-with-installation"></a>Outils R inclus avec l’installation
 
-Si vous préférez RStudio, vous devez effectuer des étapes supplémentaires pour pouvoir utiliser les bibliothèques RevoScaleR :
-- Installez Microsoft R Server ou Microsoft R Client pour obtenir les packages et bibliothèques nécessaires.
-- Mettez à jour votre chemin R pour utiliser le runtime R Server.
+Les outils R standards suivants sont inclus dans un *installation de base* de R et par conséquent, sont installés par défaut.
 
-Pour plus d’informations, consultez [Configurer votre IDE](https://msdn.microsoft.com/microsoft-r/r-client-get-started#step-2-configure-your-ide).
++ **RTerm**: un terminal de ligne de commande pour l’exécution des scripts R
 
++ **RGui.exe** : éditeur interactif simple pour R. Les arguments de ligne de commande sont les mêmes pour RGui.exe et RTerm.
 
-## <a name="see-also"></a>Voir aussi  
- [Créer un serveur R autonome](../../advanced-analytics/r-services/create-a-standalone-r-server.md)   
- [Bien démarrer avec Microsoft R Server &#40;autonome&#41;](../../advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md)  
-  
-  
++ **RScript** : outil en ligne de commande pour l’exécution de scripts R en mode batch.
 
+Pour rechercher ces outils, déterminez la bibliothèque R qui a été installée lorsque vous installez SQL Server ou la fonctionnalité d’apprentissage autonome. Par exemple, dans une installation par défaut, les outils R sont situés dans ces dossiers :
+
++ SQL Server 2016 R Services :`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server autonome :`~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 apprentissage Services :`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Apprentissage Server (autonome) :`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+Si vous avez besoin d’aide avec les outils R, ouvrez simplement **RGui**, cliquez sur **aide**, puis sélectionnez une des options.
+
+## <a name="introducing-microsoft-r-client"></a>Présentation de Microsoft R Client
+
+Microsoft R Client est un téléchargement gratuit qui vous permet d’accéder aux packages RevoScaleR à des fins de développement. En installant le Client de R, vous pouvez créer des solutions R qui peuvent être exécutées dans tous les contextes de calcul pris en charge, y compris analytique dans base de données de SQL Server et traitements distribués R sur Hadoop, Spark ou Linux à l’aide de la Machine Learning Server.
+
+Si vous avez déjà installé un autre environnement de développement R, tels que RStudio, veillez à reconfigurer l’environnement pour utiliser les bibliothèques et les exécutables fournis par le Client de Microsoft R. En procédant comme vous pouvez donc utiliser toutes les fonctionnalités du package RevoScaleR, bien que les performances seront en trouvent limitées.
+
+Pour plus d’informations, consultez [qu’est Microsoft R Client ?](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 8679e3f18c8352b1a10f110354af6dafc0c7e81c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 75fd62bd569709733c1915357057d9b8a88556e6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Sélectionner et configurer les objets (OracleToSQL) affectés
 Sur cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparés quand SSMA vérifie les résultats de l’exécution pour les objets sélectionnés dans l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -46,7 +44,7 @@ L’onglet de la Table contient l’affichage de grille de la table sélectionn�
   
 -   Règle  
   
--   Par défaut  
+-   Valeur par défaut  
   
 -   Identity  
   
@@ -55,7 +53,7 @@ L’onglet de la Table contient l’affichage de grille de la table sélectionn�
 ## <a name="sql"></a>SQL  
 Onglet SQL contient la table « créer » SQL de la table sélectionnée.  
   
-## <a name="data"></a>Données  
+## <a name="data"></a>data  
 Onglet données affiche les données présentes dans la table sélectionnée.  
   
 ## <a name="properties"></a>Propriétés  
@@ -119,4 +117,3 @@ Vous pouvez modifier les instructions SELECT pour fournir une vérification pers
 [Exécuter des cas de Test &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Test de migration des objets de base de données &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

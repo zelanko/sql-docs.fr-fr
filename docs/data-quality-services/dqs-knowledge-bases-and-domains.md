@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cb35ff2046a3e744ebe759f51eeaedda58ea38d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d4cb9317da6bda1e0620a7a98299416999a8394
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
   Cette rubrique explique en quoi consiste une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Pour nettoyer les données, vous devez disposer de connaissances sur les données. Pour préparer les connaissances d'un projet de qualité des données, vous créez et gérez une base de connaissances que DQS peut utiliser pour identifier les données incorrectes ou non valides. DQS vous permet d'utiliser des processus assistés par ordinateur et interactifs pour créer, générer, et mettre à jour votre base de connaissances. Les connaissances contenues dans une base de connaissances sont conservées dans des domaines, chacun d'entre eux étant spécifique à un champ de données. La base de connaissances est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité.  
@@ -161,4 +159,3 @@ ms.lasthandoff: 09/09/2017
 |Utiliser Données DQS, la base de connaissances par défaut intégrée à DQS|[Utilisation de la base de connaissances par défaut DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   
-

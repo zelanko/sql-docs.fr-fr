@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 961e3ea99f4c6f8d801528ab20b3c9ed99465e81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 026f6f0422de3345be3dc5d44c17bf9dfcdc1137
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Afficher et analyser des traces avec SQL Server Profiler
   Utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour afficher les données d'événement capturées dans une trace. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche les données selon les propriétés de trace définies. L’une des façons d'analyser les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à les copier dans un autre programme, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] L’Assistant Paramétrage peut utiliser un fichier de trace qui contient des événements de traitement SQL et d’appels de procédures distantes si la colonne de données **Text** est présente dans la trace. Pour vous assurer que les colonnes et les événements nécessaires sont bien présents pour être utilisés avec l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilisez le modèle de paramétrage prédéfini fourni avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -95,4 +93,3 @@ AND     CPU < (Duration * 1000)
  [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   
-

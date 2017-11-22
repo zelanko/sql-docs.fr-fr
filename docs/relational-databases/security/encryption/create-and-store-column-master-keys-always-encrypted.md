@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-security
+ms.technology: dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0aaccaa65855630a7b08cdae1af41fdfeeba62a5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -248,5 +246,4 @@ Consultez la documentation relative au module de sécurité matériel et au four
 - [Développer des applications à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Blog Always Encrypted](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
     
-
 

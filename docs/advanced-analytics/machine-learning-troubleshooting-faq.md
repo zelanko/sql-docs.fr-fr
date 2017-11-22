@@ -5,22 +5,19 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="troubleshoot-machine-learning"></a>Résoudre les problèmes d’apprentissage
 
 Cet article fournit des informations de dépannage relatives à l’installation et configuration des fonctionnalités d’apprentissage machine dans SQL Server. Ces informations incluent des liens vers les guides d’installation, les problèmes connus et les notes de publication. Autres articles lié à partir de cet article fournit des conseils sur l’optimisation des performances pour les solutions d’apprentissage machine dans SQL Server.
@@ -61,7 +58,7 @@ Les articles suivants décrivent les étapes supplémentaires requises pour le p
 
 Si vous avez besoin installer les fonctionnalités sur un ordinateur disposant d’aucune connexion Internet d’apprentissage automatique, utilisez les liens dans cet article pour télécharger les composants R et Python avant de lancer le programme d’installation :
 
-+ [Installation des composants d’apprentissage machine sans accès à Internet](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [Installation de composants Machine Learning sans accès à Internet](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>Configuration
 
@@ -78,4 +75,3 @@ Les articles suivants contiennent des informations sur les valeurs par défaut e
 + [Configurer le serveur R sur une machine virtuelle Azure](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Installer R Server pour Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [Obtenir les outils R pour Visual Studio](https://www.visualstudio.com/vs/rtvs/)
-

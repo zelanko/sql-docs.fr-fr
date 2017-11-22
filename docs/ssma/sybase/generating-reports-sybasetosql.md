@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Sybase Console,refresh-from-database report
 - Sybase Console,synchronize-target report
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12fb20ce07dec3e59549ba592c982d9bab1b1d60
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 22c7b87b46064a5de6f5108e4efd850aed7ed650
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-reports-sybasetosql"></a>Génération de rapports (SybaseToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -40,7 +38,7 @@ Utilisez la procédure suivante pour générer des rapports :
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Command**|**Titre de rapport**|  
+    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
     |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convertir le schéma|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
@@ -156,4 +154,3 @@ La commande **actualisation de base de données** a **erreurs de rapports pour**
 ## <a name="see-also"></a>Voir aussi  
 [L’exécution de la Console SSMA (Sybase)](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   
-

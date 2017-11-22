@@ -8,25 +8,23 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 024a323e253a4e1146ea5ce8fff816a612a1df93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e3c99d8f8ee8621925f49e301a4ea95c8b00383
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
-  Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d'informations sur les domaines composites, consultez [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md).  
+  Cette rubrique fournit des informations sur le nettoyage des domaines composites dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend plusieurs domaines uniques et est mappé à un champ de données qui comprend plusieurs termes connexes. Les différents domaines dans un domaine composite doivent avoir un espace commun de connaissance. Pour plus d'informations sur les domaines composites, consultez [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
 ##  <a name="Mapping"></a> Mappage d'un domaine composite aux données sources  
  Il existe deux façons de mapper vos données sources à un domaine composite :  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
  Pour plus d’informations sur le profilage des données pendant l’activité de nettoyage, consultez [Statistiques du Générateur de profils](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler) dans [Nettoyer des données à l’aide de la base de connaissances DQS &#40 ;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
   
-

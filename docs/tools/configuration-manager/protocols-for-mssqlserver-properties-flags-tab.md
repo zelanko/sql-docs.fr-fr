@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQLSERVER property protocols
+helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbc638b0c74469f41d5f8c60d5401115cfbd3ea6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 141fb04ee3c89dca748f04dec9c6984d7106d886
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)
-  Lorsqu'un certificat est installé sur le serveur, utilisez l'onglet **Indicateurs** dans la boîte de dialogue **Propriétés de Protocoles pour MSSQLSERVER** pour afficher ou spécifier les options de chiffrement de protocole et de masquage d'instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être redémarré pour activer ou désactiver la **ForceEncryption** paramètre.  
+# <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)
+  Lorsqu'un certificat est installé sur le serveur, utilisez l'onglet **Indicateurs** dans la boîte de dialogue **Propriétés de Protocoles pour MSSQLSERVER** pour afficher ou spécifier les options de chiffrement de protocole et de masquage d'instance. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être redémarré pour activer ou désactiver le paramètre **ForceEncryption** .  
   
  Pour chiffrer les connexions, vous devez fournir un certificat au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si aucun certificat n’est installé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un certificat auto-signé lors du démarrage de l’instance. Ce certificat autosigné peut être utilisé à la place d'un certificat émanant d'une autorité de certification approuvée, mais il ne fournit ni authentification ni non-répudiation.  
   
@@ -36,10 +33,10 @@ ms.lasthandoff: 08/02/2017
   
  Le processus de connexion est toujours chiffré. Quand l’option **ForceEncryption** a la valeur **Oui**, toutes les communications client/serveur sont chiffrées et les clients qui se connectent au [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent être configurés de manière à approuver l’autorité racine du certificat du serveur. Pour plus d’informations, consultez « Procédure : activer des connexions chiffrées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] (Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## Serveurs clusters  
+## <a name="cluster-servers"></a>Serveurs clusters  
  Si vous souhaitez utiliser le chiffrement à l'aide d'un cluster de basculement, vous devez installer le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Par exemple, si vous disposez d’un cluster à deux nœuds, avec les nœuds nommés « test1.  *\<votre société >*.com » et « test2. *\<votre société >*.com » et un serveur virtuel nommé « virtsql », vous devez installer un certificat pour « virtsql. *\<votre société >*.com » sur les deux nœuds. Vous pouvez ensuite activer la case à cocher **ForceEncryption** du **Gestionnaire de configurations SQL Server** pour configurer le chiffrement du cluster de basculement.  
   
-## Options  
+## <a name="options"></a>Options  
  **ForceEncryption**  
  Force le chiffrement du protocole. Le chiffrement est une méthode permettant de préserver la confidentialité des informations en changeant les données en un format non lisible. Le chiffrement garantit que les données demeurent confidentielles, même si les paquets de transmission sont visualisés pendant la transmission. Pour utiliser une liaison de canal, choisissez la valeur **Activé** pour l'option **Forcer le chiffrement** et configurez la **Protection étendue** sous l'onglet **Avancé** .  
   
@@ -49,4 +46,3 @@ ms.lasthandoff: 08/02/2017
  Pour plus d'informations, consultez « Procédure : activer des connexions chiffrées dans le moteur de base de données (Gestionnaire de configuration SQL Server) » dans la documentation en ligne.  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], static
 - static cursors [ADO]
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4442e8fe5464f1eb8c7e79fe4df347ae10959b36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fd0ace9aabf10c2b7e5b34d28bd54dbde84cfd0a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="static-cursors"></a>Curseurs statiques
 Le curseur statique affiche toujours le jeu que lors de l’ouverture du curseur tout d’abord de résultats. En fonction de l’implémentation, les curseurs statiques sont en lecture seule ou lecture/écriture et fournir le défilement vers l’avant et vers l’arrière. Généralement, le curseur statique ne détecte pas les modifications apportées à l’appartenance, l’ordre ou les valeurs du jeu de résultats après l’ouverture du curseur. Les curseurs statiques peuvent détecter leurs propres mises à jour, suppressions et insertions, bien qu’ils ne doivent pas à le faire.  
@@ -39,4 +37,3 @@ Le curseur statique affiche toujours le jeu que lors de l’ouverture du curseur
  [Curseurs avant uniquement](../../../ado/guide/data/forward-only-cursors.md)   
  [Curseurs keyset](../../../ado/guide/data/keyset-cursors.md)   
  [Curseurs dynamiques](../../../ado/guide/data/dynamic-cursors.md)
-

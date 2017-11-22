@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d9e89b8e0b25f470be7292190acc05a722c4c7b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f247bb5a8b739b1f2d35ce4e7fb08c5904ef7d50
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Ajout de connaissances à une base de connaissances
   Cette rubrique décrit les différentes façons d'ajouter des connaissances à une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Avant de pouvoir effectuer des opérations de qualité des données, vous devez disposer de connaissances sur les données. Pour acquérir ces connaissances, vous devez créer et maintenir une base de connaissances de qualité des données, et y ajouter des connaissances liées à un type spécifique de source de données. La base de connaissances est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité.  
@@ -47,14 +45,14 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Discovery"></a> Effectuer une découverte des connaissances  
  La découverte des connaissances analyse un exemple des données en fonction de critères de qualité des données, puis ajoute les connaissances qu'il a acquises à la base de connaissances. Il s'agit d'un processus assisté par ordinateur qui identifie les incohérences et les erreurs de syntaxe dans les données, et qui suggère des modifications à apporter aux données. L'activité de découverte des connaissances est un Assistant qui comprend une page vous permettant de gérer de façon interactive les valeurs de domaine.  
   
--   Pour plus d'informations dans la documentation, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md).  
+-   Pour plus d'informations dans la documentation, consultez [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
 -   Pour obtenir une vidéo qui montre comment effectuer une découverte des connaissances, cliquez [ici](http://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
 ##  <a name="ManageDomain"></a> Gérer des valeurs de données dans un domaine  
  DQS vous permet de modifier et d'augmenter de façon interactive les métadonnées qui sont générées par l'activité de découverte des connaissances assistée par ordinateur. Vous effectuez ces opérations dans l'activité Gestion de l'arborescence du domaine, où vous pouvez appliquer une modification à une valeur de données spécifique.  
   
--   Pour plus d'informations dans la documentation, consultez [Changer les valeurs de domaine](../data-quality-services/change-domain-values.md).  
+-   Pour plus d'informations dans la documentation, consultez [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
 -   Pour obtenir une vidéo qui montre comment effectuer la gestion de l'arborescence du domaine, cliquez [ici](http://msdn.microsoft.com/sqlserver/hh323825.aspx). Notez que dans cette vidéo, vous modifiez des valeurs de domaine dans la page Gestion de l'arborescence du domaine de l'Assistant de découverte des connaissances. Vous pouvez également effectuer ces étapes dans la page Valeurs du domaine de l'activité Gestion de l'arborescence du domaine.  
   
@@ -76,7 +74,6 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Default"></a> Utiliser la base de connaissances DQS par défaut  
  DQS est fourni avec une base de connaissances prégénérée appelée Données DQS, qui contient des domaines pour des données relatives à des sociétés et adresses des États-Unis. Cette base de connaissances peut être utilisée pour démarrer rapidement un projet sans créer une nouvelle base de connaissances. La base de connaissances Données DQS est en lecture seule, mais le gestionnaire de données peut créer une base de connaissances à partir de celle-ci.  
   
--   Pour plus d'informations dans la documentation, consultez [Utilisation de la base de connaissances par défaut DQS](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
+-   Pour plus d'informations dans la documentation, consultez [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   
-

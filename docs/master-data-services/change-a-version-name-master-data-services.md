@@ -8,26 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- versions [Master Data Services], changing name
+helpviewer_keywords: versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 486e1130f657d031e83fd6d8beed63467d8bbc47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 52436cbd38e92c97ce939af21eacb089f3b4797f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="change-a-version-name-master-data-services"></a>Renommer une version (Master Data Services)
+# <a name="change-a-version-name-master-data-services"></a>Modifier le nom d'une version (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], modifiez le nom de version pour le personnaliser en fonction de votre organisation.  
   
 ## <a name="prerequisites"></a>Conditions préalables  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/07/2017
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   
-

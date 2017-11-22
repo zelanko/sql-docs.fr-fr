@@ -8,8 +8,7 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,12 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e52b9300c764e99fb3f4bd54ed5b50f9f3ba686f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +131,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Sécurité|SETUSER|EXECUTE AS|SETUSER|165|  
 |Sécurité|Algorithmes de chiffrement RC4 et DESX|Utilisez un autre algorithme, par exemple AES.|Algorithme DESX|238|  
 |Options définies|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
-|Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[ (option de configuration de serveur)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
+|Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[common criteria compliance enabled (option de configuration de serveur)](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |Classes SMO|**Microsoft.SQLServer. Management.Smo.Information** (classe)<br /><br /> **Microsoft.SQLServer. Management.Smo.Settings** (classe)<br /><br /> **Microsoft.SQLServer.Management. Smo.DatabaseOptions** (classe)<br /><br /> **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** (propriété)|**Microsoft.SqlServer.  Management.Smo.Server** (classe)<br /><br /> **Microsoft.SqlServer.  Management.Smo.Server** (classe)<br /><br /> **Microsoft.SqlServer. Management.Smo.Database** (classe)<br /><br /> Aucune|Aucune|Aucune|  
 |Agent SQL Server|Notification**net send** <br /><br /> Notification par radiomessagerie|Notification par courrier électronique<br /><br /> Notification par courrier électronique |Aucune|Aucune|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Intégration de l’Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||Aucune|Aucune|  
@@ -179,5 +177,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

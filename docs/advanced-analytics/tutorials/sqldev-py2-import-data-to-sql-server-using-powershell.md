@@ -5,26 +5,23 @@ ms.date: 10/17/2017
 ms.prod: sql-server-vnext-ctp2
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2017
+applies_to: SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: b4741dcfee4bdc2e5ca2327b50f5dd727be9de55
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/18/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>Étape 2 : Importer des données vers SQL Server à l’aide de PowerShell
 
@@ -103,5 +100,4 @@ Dans la dernière partie de cette procédure pas à pas, vous créez ces procéd
 ## <a name="previous-step"></a>Étape précédente
 
 [Étape 1 : Télécharger les exemples de données](sqldev-py1-download-the-sample-data.md)
-
 
