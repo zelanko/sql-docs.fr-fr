@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Connexion de modèle sémantique BI Power Pivot (.bism)
   Une connexion de modèle sémantique BI (.bism) est une connexion portable qui connecte des rapports Excel ou Power View à une base de données de modèle tabulaire Analysis Services, ou une instance Analysis Services en mode multidimensionnel. Si vous connaissez les fichiers Office Data Connection (.odc), vous remarquerez des similitudes avec la définition et l'utilisation d'une connexion .bism.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> Bases de données prises en charge  
  Une connexion de modèle sémantique BI pointe sur des données de modèle tabulaire. Il y a trois sources pour ces données :  
   
--   Base de données model tabulaire s'exécutant dans une instance d'Analysis Services autonome en mode serveur tabulaire. Déploiement d'une instance d'Analysis Services autonome extérieure à la batterie. L'accès aux sources de données de la batterie requiert des autorisations supplémentaires, abordées plus loin dans cette rubrique : [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+-   Base de données model tabulaire s'exécutant dans une instance d'Analysis Services autonome en mode serveur tabulaire. Déploiement d'une instance d'Analysis Services autonome extérieure à la batterie. L'accès aux sources de données de la batterie requiert des autorisations supplémentaires, abordées plus loin dans cette rubrique : [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] enregistrés sur SharePoint. Les bases de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporées dans les classeurs Excel sont équivalentes aux bases de données de modèle tabulaire qui s’exécutent sur un serveur Analysis Services autonome en mode tabulaire. Si vous utilisez déjà [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, vous pouvez définir une connexion de modèle sémantique BI qui pointe sur des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une bibliothèque SharePoint et créer des rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] à partir des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existantes.  Vous pouvez utiliser les classeurs créés dans les versions SQL Server 2008 R2 ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel.  
   
@@ -92,4 +91,3 @@ ms.lasthandoff: 09/01/2017
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

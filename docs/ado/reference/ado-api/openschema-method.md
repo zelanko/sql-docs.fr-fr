@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
 - Connection15::raw_OpenSchema
-helpviewer_keywords:
-- OpenSchema method [ADO]
+helpviewer_keywords: OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5c547eb8a6c1208bedffb988096f45b4c871d09
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="openschema-method"></a>OpenSchema, méthode
 Obtient les informations de schéma de base de données à partir du fournisseur.  
@@ -75,7 +72,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Les utilisateurs de Visual C/C++** lorsque vous n’utilisez ne pas de curseurs côté client, la récupération de la « ORDINAL_POSITION » d’un schéma de la colonne dans ADO renvoie un variant de type VT_R8 dans Windows Data Access Components (Windows DAC) 6.0, tandis que le type utilisé dans MDAC, MDAC 2.8 et MDAC 2.7 2.6 a été VT_I4. Programmes écrits pour MDAC 2.6 recherchent uniquement un variant retourné de type que VT_I4 obtiendriez un zéro pour chaque ordinal de s’exécuter sous Windows DAC 6.0, MDAC 2.8 et MDAC 2.7 sans modification. Cette modification a été effectuée, car le type de données OLE DB retourne est DBTYPE_UI4, et dans le type VT_I4 signé il n’est pas assez d’espace pour contenir toutes les valeurs possibles sans troncation éventuellement qui se produisent et qui provoquent une perte de données.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de méthode OpenSchema (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
@@ -84,5 +81,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open (méthode) (enregistrement ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open (méthode) (flux ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

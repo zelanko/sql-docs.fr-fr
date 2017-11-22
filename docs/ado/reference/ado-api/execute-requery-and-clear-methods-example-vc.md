@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Requery method [ADO], VC++ example
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b991ab1b281f00bf94253e98628789fc97433958
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 87fde51ce69aed865eae5ce57511b3d21e32f1cd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery et Clear, méthodes-exemple (VC ++)
 Cet exemple illustre la **Execute** exécution à partir de la méthode un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Il utilise également le [Requery](../../../ado/reference/ado-api/requery-method.md) méthode pour récupérer les données actuelles dans une [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et le [effacer](../../../ado/reference/ado-api/clear-method-ado.md) méthode pour effacer le contenu de la [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Les fonctions ExecuteCommand et PrintOutput sont nécessaires pour exécuter cet exemple.  
@@ -202,5 +199,4 @@ void PrintComError(_com_error &e) {
  [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Execute (méthode) (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute (méthode) (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Requery (méthode)](../../../ado/reference/ado-api/requery-method.md)
-
+ [Requery, méthode](../../../ado/reference/ado-api/requery-method.md)

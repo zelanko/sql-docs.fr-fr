@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
   Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint qui s’exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d’authentification et le modèle d’autorisation fournis par les serveurs SharePoint. L’infrastructure de sécurité SharePoint s’étend au contenu et aux opérations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , car l’ensemble du contenu relatif à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est stocké dans des bases de données de contenu SharePoint, et l’ensemble des opérations relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est effectué par des services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont authentifiés à l’aide d’une identité d’utilisateur SharePoint basée sur leur identité d’utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Architecture de sécurité PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

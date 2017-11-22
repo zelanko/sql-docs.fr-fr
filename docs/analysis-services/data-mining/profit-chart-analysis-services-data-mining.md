@@ -20,17 +20,16 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d2916b5895028aebea5b05f28a09ad7432e509f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Graphique des bénéfices (Analysis Services - Exploration de données)
   Un graphique des bénéfices affiche la rentabilité estimée associée à l'utilisation d'un modèle d'exploration de données. Par exemple, supposons que votre modèle prédit les clients qu'une société doit contacter dans un scénario d'application professionnelle. Dans ce cas, vous devez ajouter au graphique des bénéfices des informations relatives au coût de la campagne de publipostage ciblée. Ensuite, dans le graphique terminé, consultez les bénéfices estimés si les clients sont correctement ciblés, par à rapport à la prise de contact aléatoire avec des clients.  
@@ -110,4 +109,3 @@ ms.lasthandoff: 09/01/2017
  [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   
-

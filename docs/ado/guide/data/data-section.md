@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data section [ADO]
+helpviewer_keywords: data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62eb026fac4588cc159afec1714a6aa51903aa8a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-section"></a>Section de données
 La section de données définit les données de l’ensemble de lignes, ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes dépourvues de données peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  
@@ -93,5 +90,4 @@ La section de données définit les données de l’ensemble de lignes, ainsi qu
  Une mise à jour contienne toujours les données de ligne d’origine entier suivies par les données de la ligne modifiée. La ligne modifiée peut contenir toutes les colonnes ou uniquement les colonnes qui ont été modifiées. Dans l’exemple précédent, la ligne relative à Shipper 2 n’est pas modifiée, et que la colonne Phone a modifié les valeurs pour Shipper 3 et est donc la seule colonne incluse dans la ligne modifiée. Les lignes insérées pour Shipper 12, 13 et 14 sont traités par lot balise rs : insert sous un ensemble. Notez que les lignes supprimées peuvent également être regroupées, bien que cela n’est pas présenté dans l’exemple précédent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Maintien d’enregistrements au Format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

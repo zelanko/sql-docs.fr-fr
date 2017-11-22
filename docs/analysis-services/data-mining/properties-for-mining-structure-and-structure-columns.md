@@ -19,17 +19,16 @@ helpviewer_keywords:
 - columns [data mining], properties
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b342f6466a757ce2705d97680ed0e0460c0031f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
   Vous pouvez définir ou modifier les propriétés pour une structure d’exploration de données ainsi que pour ses colonnes et colonnes imbriquées associées en utilisant l’onglet **Structure d’exploration de données** du Concepteur d’exploration de données. Les propriétés que vous définissez sous cet onglet sont propagées à chaque modèle d'exploration de données associé à la structure.  
@@ -84,7 +83,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

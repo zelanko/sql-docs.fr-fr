@@ -20,17 +20,16 @@ f1_keywords:
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50c41697a0197261be8ef1b60b469a28bd331248
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurer les propriétés par défaut de modélisation des données et de déploiement (SSAS Tabulaire)
   Cette rubrique explique comment configurer les paramètres de propriétés de niveau de compatibilité, de déploiement et de base de données d’espace de travail par défaut, qui peuvent être prédéfinis pour chaque nouveau projet de modèle tabulaire que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
@@ -86,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

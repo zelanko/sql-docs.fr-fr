@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- CacheSize property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7bc9aa494fed72b37d1147d2ee82d1308cb95c50
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a0cf574cdeda2f914c9a53d782c1871d5a9fa24
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cachesize-property-example-vc"></a>Exemple de propriété CacheSize (VC ++)
 Cet exemple utilise le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété pour afficher la différence de performances pour une opération effectuée avec et sans cache de 30 enregistrements.  
@@ -170,5 +166,4 @@ void PrintComError(_com_error &e) {
   
 ## <a name="see-also"></a>Voir aussi  
  [CacheSize, propriété (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

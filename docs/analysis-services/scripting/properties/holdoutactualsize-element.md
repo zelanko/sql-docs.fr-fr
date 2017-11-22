@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutActualSize
-helpviewer_keywords:
-- HoldoutActualSize element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutActualSize
+helpviewer_keywords: HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fc09419e2099c4e0cb5587c4d328ef876728584e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 24a26b453f90fc82e91b1572b0e79af6477caa22
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutactualsize-element"></a>Élément HoldoutActualSize
   Indique la taille réelle, après traitement, de la partition d’exclusion qui contient le jeu de tests d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément. Les cas restants dans le jeu de données sont utilisés pour l'apprentissage. Cette propriété est en lecture seule.  
@@ -74,7 +70,6 @@ ms.lasthandoff: 09/01/2017
  [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [Holdoutmaxcases, élément](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)   
  [Holdoutmaxpercent, élément](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
- [Holdoutseed, élément](../../../analysis-services/scripting/properties/holdoutseed-element.md)  
+ [HoldoutSeed, élément](../../../analysis-services/scripting/properties/holdoutseed-element.md)  
   
   
-

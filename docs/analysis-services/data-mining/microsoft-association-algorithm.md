@@ -34,17 +34,16 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24dda88f2855c4b5a83814203092e12d645a1e84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
   L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme qui est souvent utilisé pour les moteurs de recommandation. Un moteur de recommandation recommande des éléments aux clients en se basant sur ceux qu’ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat.   
@@ -110,7 +109,6 @@ ms.lasthandoff: 09/01/2017
  [Parcourir un modèle à l’aide de la visionneuse de règles Microsoft Association](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [Contenu du modèle d’exploration de données pour les modèles d’Association &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Référence technique d’algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [Exemples de requêtes de modèle d'association](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Exemples de requêtes de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   
-

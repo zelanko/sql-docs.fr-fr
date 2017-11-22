@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72ef02bfcf8e5392d23cd90f0ad0d49fe4d87122
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-cachesize"></a>Utilisation de CacheSize
 Utilisez le **CacheSize** propriété pour contrôler le nombre d’enregistrements à récupérer simultanément dans la mémoire locale à partir du fournisseur. Par exemple, si le **CacheSize** est 10, après la première ouverture du **Recordset** de l’objet, le fournisseur extrait les 10 premiers enregistrements dans la mémoire locale. À mesure que vous parcourez les **Recordset** de l’objet, le fournisseur retourne les données de la mémoire tampon locale. Dès que vous déplacez au-delà du dernier enregistrement dans le cache, le fournisseur extrait les 10 enregistrements suivants à partir de la source de données dans le cache.  
@@ -43,4 +41,3 @@ Utilisez le **CacheSize** propriété pour contrôler le nombre d’enregistreme
  Enregistrements récupérés du cache ne reflètent pas les modifications simultanées apportées par d’autres utilisateurs à la source de données. Pour forcer une mise à jour de toutes les données mises en cache, utilisez la [Resync](../../../ado/reference/ado-api/resync-method.md) (méthode).  
   
  Si **CacheSize** est défini sur une valeur supérieure à 1, les méthodes de navigation ([déplacer](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) peut entraîner la navigation vers un élément supprimé enregistrement, si la suppression a lieu après la récupération des enregistrements. Après l’extraction initiale, les suppressions suivantes seront répercutées dans votre cache de données jusqu'à ce que vous tentez d’accéder à une valeur de données à partir d’une ligne supprimée. Toutefois, l’affectation **CacheSize** 1 élimine ce problème, car les lignes supprimées ne peuvent pas être extraites.
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
 - OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Traitement des objets Analysis Services
   Le traitement affecte les types d’objets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : bases de données, cubes, dimensions, groupes de mesures, partitions, et structures et modèles d’exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour chaque objet, vous pouvez spécifier le niveau de traitement de l’objet ou spécifier l’option Traiter par défaut pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de sélectionner automatiquement le niveau optimal de traitement. Pour plus d’informations sur les différents niveaux de traitement pour chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

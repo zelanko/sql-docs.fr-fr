@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Indexes::Append
-helpviewer_keywords:
-- Append method [ADOX]
+f1_keywords: Indexes::Append
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 27ddeee201dba9d1381b31023039256d9e587a1f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb25d4ce8ab95f1311460f67b79a2b2199b96e62
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-indexes"></a>Append (méthode) (Index ADOX)
 Ajoute un nouveau [Index](../../../ado/reference/adox-api/index-object-adox.md) de l’objet à la [index](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  
@@ -53,7 +49,7 @@ Indexes.Append Index [,Columns]
  Une erreur se produit si le fournisseur ne prend pas en charge la création d’index.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Collection d’index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes, collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Indexes Append, méthode-exemple (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
@@ -63,5 +59,4 @@ Indexes.Append Index [,Columns]
  [Append (méthode) (procédures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append (méthode) (Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append (méthode) (utilisateurs ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append (méthode) (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append, méthode (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

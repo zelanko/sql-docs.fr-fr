@@ -14,8 +14,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensiondata.f1
+f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
 - dimensions [Analysis Services], security
 - AllowedSet property
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - VisualTotals property
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 42ea70f08c2f051970898fa4e3e9498f7f8c1627
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
   Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
@@ -145,4 +143,3 @@ ms.lasthandoff: 09/27/2017
  [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

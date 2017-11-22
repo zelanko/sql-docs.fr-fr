@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- CubeDef
-helpviewer_keywords:
-- CubeDef object [ADO MD]
+f1_keywords: CubeDef
+helpviewer_keywords: CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2b2d69c9a59868ee135cc98ec8de61d5be166224
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: acf8f7ad28f56e8eee7dc1a78fb05d6cac99dd39
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
 Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.  
@@ -51,7 +47,7 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |Créé à|Date et heure de création du cube.|  
 |CubeGUID|GUID du cube.|  
-|Nom du cube|Nom du cube.|  
+|CubeName|Nom du cube.|  
 |CubeType|Type du cube.|  
 |DataUpdatedBy|ID utilisateur de la personne qui effectue la dernière mise à jour de données.|  
 | Description|Description explicite du cube.|  
@@ -68,5 +64,4 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
  [Objet de catalogue (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [Collection de CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
  [Collection de dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

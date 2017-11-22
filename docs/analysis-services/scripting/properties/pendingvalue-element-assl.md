@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- PendingValue Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: PendingValue Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- PendingValue
-helpviewer_keywords:
-- PendingValue element
+applies_to: SQL Server 2016 Preview
+f1_keywords: PendingValue
+helpviewer_keywords: PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ca08dac97b473cea4841b4ce510a73e25431a554
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5f52fd24820bf616cf82fb6e322329a9bdeb5bea
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="pendingvalue-element-assl"></a>Élément PendingValue (ASSL)
   Contient la lecture seule en attente de la valeur de la [ServerProperty](../../../analysis-services/scripting/objects/serverproperty-element-assl.md) élément.  
@@ -77,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

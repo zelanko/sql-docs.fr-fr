@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Collection::Count
-helpviewer_keywords:
-- Count property [ADO]
+f1_keywords: _Collection::Count
+helpviewer_keywords: Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 899b0eab595e939d9a42456785fcea492f1fd606
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 173b2fc9073676e77ad3068e9e9dc3ca76089702
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="count-property-ado"></a>Count, propriété (ADO)
 Indique le nombre d’objets dans une collection.  
@@ -47,16 +43,15 @@ Indique le nombre d’objets dans une collection.
   
 ||||  
 |-|-|-|  
-|[Collection d’axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Collection de colonnes (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Collection de CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Collection de dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Collection de groupes (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Collection de hiérarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Collection d’index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Collection de clés (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Collection de niveaux (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Collection de membres (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Collection de positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Collection de procédures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Collection de tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Collection d’utilisateurs (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Collection de vues (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
+|[Axes, collection (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs, collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
+|[Dimensions, collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors, collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
+|[Groups, collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchies, collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes, collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels, collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members, collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
+|[Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positions, collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|[Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Exemple de propriété Count (VC ++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh, méthode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-

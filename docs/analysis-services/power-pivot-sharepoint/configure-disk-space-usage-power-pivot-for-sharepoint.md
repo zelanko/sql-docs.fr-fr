@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Configurer l’utilisation de l’espace disque (PowerPivot pour SharePoint)
   Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise l’espace disque de l’ordinateur hôte pour mettre en cache des bases de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et accélérer leurs rechargements. Chaque base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] chargée en mémoire est d’abord mise en cache sur le disque, ce qui permet de la recharger ensuite rapidement en vue de nouvelles demandes de données. Par défaut, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise tout l’espace disque disponible pour mettre en cache ses bases de données, mais peut modifier ce comportement à l’aide de propriétés qui limitent la quantité d’espace disque utilisée.  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

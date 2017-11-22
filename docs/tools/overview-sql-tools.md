@@ -1,54 +1,54 @@
 ---
-title: "Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et SQL Data Warehouse | Documents Microsoft"
+title: "Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse | Documents Microsoft"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 11/15/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ad2c6a833d064d7e70da281e1fdc36ae9c235e1
+ms.sourcegitcommit: c31ab3a0c47644560fd125decee4f8630da5ebdb
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>Outils et utilitaires de base de données SQL Azure, SQL Server et SQL Data Warehouse
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et l’entrepôt de données SQL Azure
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-![](../includes/media/sql-database-tools.png)Cet article fournit une liste des outils disponibles pour l’utilisation avec SQL Server, base de données SQL Azure, entrepôt de données SQL et les applications basées sur SQL Server. 
 
-Si vous souhaitez accéder au travail et commencer à créer des tables, les requêtes en cours d’exécution, essentiellement concevoir et gérer votre base de données, puis [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) est très probablement votre outil. SSMS est gratuit et s’exécute sur Windows.
+## <a name="tools-to-run-queries-and-manage-databases"></a>Outils pour exécuter des requêtes et de gérer des bases de données  
 
-Si vous exécutez Linux ou macOS, essayez [Visual Studio Code](https://code.visualstudio.com/) avec la [ **mssql pour Visual Studio Code** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) extension. Ces outils sont pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse avec un jeu complet de fonctionnalités et sont également disponibles. Consultez [utiliser le Code de Visual Studio pour créer et exécuter des scripts Transact-SQL pour SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
-
-
-## <a name="sql-tools"></a>Outils SQL 
- 
 | Outil |  Description |
 |:--|:--|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour les requêtes, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. |
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Activez Visual Studio dans un environnement de développement puissant pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. |
-| [Code Visual Studio](https://code.visualstudio.com/)| Code Visual Studio fonctionne sur Windows, Linux et macOS. Après avoir installé Visual Studio Code, vous devez installer le [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse. |
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]est un outil gratuit et léger, pour la gestion des bases de données partout où ils s’exécutent. Cette version préliminaire fournit des fonctionnalités de gestion de base de données, y compris un éditeur Transact-SQL étendue et personnalisable connaître l’état de fonctionnement de vos bases de données. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]s’exécute sur Windows et Linux macOS**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour les requêtes, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. **SSMS est exécuté sur Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Activez Visual Studio dans un environnement de développement puissant pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. **SSDT s’exécute sur Windows**.|
+| [Code Visual Studio](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, vous devez installer le [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse. **Code Visual Studio s’exécute sur Windows et Linux macOS**.|
+
+
+
+## <a name="additional-tools"></a>Outils supplémentaires
+
+| Outil |  Description |
+|:--|:--|
 | [Gestionnaire de configuration](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilisez le Gestionnaire de Configuration SQL Server pour configurer les services SQL Server et de configurer la connectivité réseau.|
 | [Assistant de migration SQL Server](../ssma/sql-server-migration-assistant.md) | Utilisez l’Assistant Migration SQL Server pour automatiser la migration de base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase.|
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Utilisez la fonctionnalité de Distributed Replay pour vous aider à évaluer l’impact de futures mises à niveau de SQL Server. Utilisez également Distributed Replay pour aider à évaluer l’impact de matériel et de mises à niveau du système d’exploitation et de réglage de SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | L’utilitaire ssbdiagnose signale des problèmes dans les conversations Service Broker ou la configuration des services de Service Broker. |
 
 
-## <a name="sql-command-prompt-utilities"></a>Utilitaires d’invite de commandes SQL
+## <a name="command-line-utilities"></a>Utilitaires de ligne de commande
 
-  Les utilitaires d'invite de commandes vous permettent d'écrire des scripts d'opérations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Le tableau suivant contient la liste des utilitaires d'invite de commandes fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Utilitaires de ligne de commande vous permettent de script [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] operations. Le tableau suivant contient la liste des utilitaires d'invite de commandes fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Utility**|**Description**|**Installé dans**|  
 |-----------------|---------------------|----------------------|  
@@ -82,6 +82,5 @@ Si vous exécutez Linux ou macOS, essayez [Visual Studio Code](https://code.visu
 |`monospace`|Exemples de commandes et de code de programmation.|  
 |*italique*|Paramètres fournis par l'utilisateur.|  
 |**gras**|Commandes, paramètres et autres éléments de la syntaxe qui doivent être tapés exactement de la manière indiquée.|  
-
 
 

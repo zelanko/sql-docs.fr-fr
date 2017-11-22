@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
 En cas d’erreur du fournisseur, une erreur d’exécution de -2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez le **erreurs** collection actif **connexion** objet, qui contient une ou plusieurs erreurs décrivant ce qui s’est produite.  
@@ -87,4 +85,3 @@ End Function
  Le **erreur** objet est également utilisé lorsque des erreurs liées aux événements se produisent. Vous pouvez déterminer si une erreur s’est produite dans le processus qui a déclenché un événement ADO en vérifiant la **erreur** objet passé comme paramètre d’événement.  
   
  Si l’opération qui provoque un événement se termine avec succès, le *ne* paramètre du Gestionnaire d’événements est défini *adStatusOK*. En revanche, si l’opération qui a déclenché l’événement a échoué, le *ne* paramètre est défini sur *contraire*. Dans ce cas, le *pError* paramètre contiendra un **erreur** objet qui décrit l’erreur.
-

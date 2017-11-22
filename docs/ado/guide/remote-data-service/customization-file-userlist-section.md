@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - UserList section in rds [ADO]
 - customization file in RDS [ADO]
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 882b50778567fd82367bcbac376363e9e93eaaed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5521648ed1c4d125168d3f9afb7a4c884854d9b4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="customization-file-userlist-section"></a>Section du fichier de personnalisation UserList
 Le **userlist** section relative à la **connecter** section avec la même *identificateur* paramètre.  
@@ -55,6 +53,5 @@ Le **userlist** section relative à la **connecter** section avec la même *iden
  [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Présentation du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 

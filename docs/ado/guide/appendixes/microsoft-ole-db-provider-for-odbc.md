@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez les interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette manière. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui accessibles via ODBC.
@@ -440,4 +438,3 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 ## <a name="see-also"></a>Voir aussi
  [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [CommandText, propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString, propriété (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [exécuter Méthode (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Fournisseur, propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [l’objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [prend en charge (méthode)](../../../ado/reference/ado-api/supports-method.md)
-

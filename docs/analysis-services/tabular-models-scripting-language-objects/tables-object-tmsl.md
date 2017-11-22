@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-object-tmsl"></a>Objet de tables (TMSL)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 09/01/2017
   
  isHidden  
  Valeur booléenne qui indique si la table est traitée comme masqué par les outils de visualisation de clients.  
-True si la Table est traitée comme masqué ; Sinon, false.  
+True si la Table est traitée comme masquée ; sinon, false.  
   
  colonnes  
  Représente une colonne dans une Table. C’est un enfant d’un objet Table. Chaque colonne a un nombre de propriétés définies sur ce dernier qui influencent la manière dont les applications clientes visualiser les données dans la colonne.  
@@ -825,4 +824,3 @@ True si la Table est traitée comme masqué ; Sinon, false.
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Informations de référence sur TMSL &#40;Tabular Model Scripting Language&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

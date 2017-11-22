@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_CopyTo
 - _Stream::CopyTo
-helpviewer_keywords:
-- CopyTo method [ADO]
+helpviewer_keywords: CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0dd6b935b73ee6841118533d322eb092e77b7cb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="copyto-method-ado"></a>CopyTo (méthode) (ADO)
 Copie le nombre spécifié de caractères ou d’octets (en fonction de [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) dans le [flux](../../../ado/reference/ado-api/stream-object-ado.md) vers un autre **flux** objet.  
@@ -59,5 +56,4 @@ Stream.CopyTo DestStream, NumChars
  **CopyTo** doit être utilisé pour copier des données vers une destination **flux** du même type que la source de **flux** (leurs **Type** les paramètres de propriété sont les deux **adTypeText** ou les deux **adTypeBinary**). Pour le texte **flux** des objets, vous pouvez modifier le [Charset](../../../ado/reference/ado-api/charset-property-ado.md) définition de la propriété de la destination **flux** permet de convertir un jeu de caractères à un autre. En outre, le texte **flux** objets peuvent être copiés avec succès en binaire **flux** objets mais binaire **flux** objets ne peut pas être copiés dans le texte **flux**  objets.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

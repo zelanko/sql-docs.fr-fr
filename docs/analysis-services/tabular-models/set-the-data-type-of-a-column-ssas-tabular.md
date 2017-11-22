@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Définir le type de données d'une colonne (SSAS Tabulaire)
   Lorsque vous importez ou collez des données dans un modèle, le générateur de modèles détecte et applique automatiquement les types de données. Après avoir ajouté les données au modèle, vous pouvez modifier manuellement le type de données d'une colonne afin de modifier la manière dont les données sont stockées. Si vous souhaitez simplement changer le format d'affichage des données sans modifier le mode de stockage de ces dernières, suivez plutôt la procédure ci-après.  
@@ -89,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [Types de données pris en charge &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- MaxRecords property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e69d3f3ec9b90e01593951b908441ff106bb6d4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 77ab4e80cb319aa95f7a566462e648ccbb9bbadb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maxrecords-property-example-vc"></a>Exemple de propriété MaxRecords (VC ++)
 Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus coûteuses dans le ***titres*** table.  
@@ -186,5 +182,4 @@ void PrintComError(_com_error &e) {
 **50 ans dans Buckingham Palace cuisines---11.95**   
 ## <a name="see-also"></a>Voir aussi  
  [MaxRecords, propriété (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

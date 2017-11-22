@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory
 Le fournisseur Active Directory Service Interfaces ADSI () permet à ADO pour se connecter à des services d’annuaire hétérogènes via ADSI. Ainsi, les applications ADO accès en lecture seule pour les services d’annuaire Microsoft Windows NT 4.0 et Microsoft Windows 2000, en plus de n’importe quel service d’annuaire compatible LDAP et les Services d’annuaire Novell. ADSI est basé sur un modèle de fournisseur, afin que s’il existe un nouveau fournisseur donnant accès à un autre annuaire, l’application ADO puisse y accéder en toute transparence. Le fournisseur ADSI est libre de threads et Unicode.  
@@ -153,5 +151,4 @@ objectClass='user' AND objectCategory='Person'"
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Propriété du fournisseur (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Prend en charge (méthode)](../../../ado/reference/ado-api/supports-method.md)
-
+ [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)

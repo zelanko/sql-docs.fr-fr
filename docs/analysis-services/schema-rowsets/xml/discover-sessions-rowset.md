@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_SESSIONS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_SESSIONS rowset
 ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e2a206d090df4b9ab2e498352892b2c3cbb55b35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79aeb0bedd96eb02138c424f4e381115ae47d8b1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoversessions-rowset"></a>Ensemble de lignes DISCOVER_SESSIONS
   Fournit des informations sur l'activité et l'utilisation des ressources des sessions actuellement ouvertes sur le serveur.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**SESSION_CPU_TIME_MS**|**DBTYPE_UI8**||Temps processeur, en millisecondes, consommé par toutes les requêtes depuis le début de la session.|  
 |**SESSION_CURRENT_DATABASE**|**DBTYPE_WSTR**||Nom de la base de données utilisée par l'exécution de la commande actuelle, ou nom de la base de données qui a été utilisée par la dernière commande exécutée.|  
 |**SESSION_ELAPSED_TIME_MS**|**DBTYPE_UI8**||Durée écoulée, en millisecondes, depuis le début de la session.|  
-|**ID DE SESSION**|**DBTYPE_WSTR**||Identificateur unique de session, tel qu'un GUID.|  
+|**SESSION_ID**|**DBTYPE_WSTR**||Identificateur unique de session, tel qu'un GUID.|  
 |**SESSION_IDLE_TIME_MS**|**DBTYPE_UI8**||Durée d'inactivité, en millisecondes, depuis le début de la session.|  
 |**SESSION_LAST_COMMAND**|**DBTYPE_WSTR**||Texte de la commande en cours d'exécution ou de la dernière commande exécutée.|  
 |**SESSION_LAST_COMMAND_CPU_TIME_MS**|**DBTYPE_UI8**||Temps processeur, en millisecondes, consommé par **SESSION_LAST_COMMAND**.|  
@@ -79,7 +76,6 @@ ms.lasthandoff: 09/01/2017
 |SESSION_STATUS|DBTYPE_I4|Ce paramètre est facultatif.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-
