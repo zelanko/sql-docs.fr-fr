@@ -8,8 +8,7 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.swb.newagwizard.selectinitialdatasync.f1
 - sql13.swb.addreplicawizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8c8da2c493fa73991a4c04cd82b0f85e871de5d2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bae5aa51a2a72e7f056bba56516ed357c61e4b8d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Page Sélectionner la synchronisation de données initiale (Assistants de groupe de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="Auto"></a> Amorçage automatique
  
- SQL Server crée automatiquement les réplicas secondaires pour chaque base de données dans le groupe. L’amorçage automatique nécessite que le chemin des données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe. Disponible sur [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] et versions ultérieures. Consultez [Initialiser automatiquement le groupe de disponibilité Always On](automatically-initialize-always-on-availability-group.md).
+ SQL Server crée automatiquement les réplicas secondaires pour chaque base de données dans le groupe. L’amorçage automatique nécessite que le chemin des données et des fichiers journaux soit le même sur chaque instance de SQL Server qui participe au groupe. Disponible sur [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] et ultérieur. Consultez [Initialiser automatiquement le groupe de disponibilité Always On](automatically-initialize-always-on-availability-group.md).
 
 ##  <a name="Full"></a> Sauvegarde complète de la base de données et des journaux 
  Pour chaque base de données principale, l'option **Sauvegarde complète de la base de données et des journaux** exécute plusieurs opérations dans un flux de travail : créer une sauvegarde complète et une sauvegarde des journaux de la base de données principale, créer les bases de données secondaires correspondantes en restaurant ces sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire et joindre chaque base de données secondaire à un groupe de disponibilité.  
@@ -138,4 +136,3 @@ ms.lasthandoff: 08/02/2017
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
-

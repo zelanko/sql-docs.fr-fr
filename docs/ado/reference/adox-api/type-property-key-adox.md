@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Key::Type
 - _Key::PutType
 - _Key::put_Type
-helpviewer_keywords:
-- Type property [ADOX]
+helpviewer_keywords: Type property [ADOX]
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 63f8939f42b228c0b4084156d4d9962d69dd25c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9f63f020a46b20c1657f073ea1590fa260d21a0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-key-adox"></a>Propriété de type (clé) (ADOX)
 Indique le type de la clé.  
@@ -44,10 +41,9 @@ Indique le type de la clé.
  Cette propriété est en lecture seule sur [clé](../../../ado/reference/adox-api/key-object-adox.md) objets déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet clé (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Type, propriété (colonne) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type, propriété (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
-
+ [Type, propriété (table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

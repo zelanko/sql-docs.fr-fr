@@ -8,28 +8,25 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.alwaysencryptedwizard.encryption.f1
 - sql13.swb.alwaysencryptedwizard.f1
 - sql.swb.alwaysencryptedwizard.masterkey.f1
-helpviewer_keywords:
-- Wizard, Always Encrypted
+helpviewer_keywords: Wizard, Always Encrypted
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 8d07fe91f365bd274d835d77b22efb8830d09b70
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 8322346347568b8bb3bc56b56f363ceb7d6f5cfa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="always-encrypted-wizard"></a>Assistant Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ms.lasthandoff: 09/27/2017
  -  
  -## Termes relatifs à Always Encrypted  
  -  
- Le --   **chiffrement déterministe** utilise une méthode qui génère toujours la même valeur chiffrée pour une valeur de texte brut donnée. L’utilisation du chiffrement déterministe permet les regroupements, le filtrage par égalité et les jointures de tables sur la base de valeurs chiffrées. Il peut par contre aussi permettre à des utilisateurs non autorisés de deviner des informations sur les valeurs chiffrées en examinant les séquences dans la colonne chiffrée. Cette faille est accrue si l’ensemble de valeurs chiffrées possibles est restreint, par exemple Vrai/Faux ou Région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.  
+ Le --   **chiffrement déterministe** utilise une méthode qui génère toujours la même valeur chiffrée pour une valeur de texte brut donnée. L’utilisation du chiffrement déterministe permet les regroupements, le filtrage par égalité et les jointures de tables sur la base de valeurs chiffrées. Il peut par contre aussi permettre à des utilisateurs non autorisés de deviner des informations sur les valeurs chiffrées en examinant les séquences dans la colonne chiffrée. Cette faille est accrue si l’ensemble de valeurs chiffrées possibles est restreint, par exemple Vrai/Faux ou Région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.  
  -  
  Le --   **chiffrement aléatoire** utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche les recherches d’égalité, le regroupement, l’indexation et la jointure sur des colonnes chiffrées.  
  -  
@@ -81,4 +78,3 @@ ms.lasthandoff: 09/27/2017
  -## Voir aussi  
  - [Always Encrypted &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Gestion de clés extensible à l’aide d’Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
-

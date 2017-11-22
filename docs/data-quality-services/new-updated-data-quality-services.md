@@ -19,12 +19,11 @@ ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
 ms.author: genemi
 ms.workload: data-quality-services
+ms.openlocfilehash: 40c98b58bb5caf5f59aace35724bbef5b14f07cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 153edd4079a3baa18a590771dc407314d0cd267e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>Nouveautés et mises à jour récentes : Data Quality Services pour SQL Server
 
@@ -127,6 +126,5 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 - [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
-
 
 

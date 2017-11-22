@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 339f65cf1d4715d66e6c96316b04b072873d015d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : Une Application ADO Simple
 Cette application simple passe en revue chacune des quatre principales opérations ADO : mise en route, d’examiner, de modification et de mise à jour des données. Ces opérations sont effectuées sur la base de données Northwind fournie avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base de l’objet ADO et éviter l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
@@ -66,4 +64,3 @@ Cette application simple passe en revue chacune des quatre principales opératio
 ||Légende|Modifier des données|  
 |Bouton de commande|Nom|cmdUpdateData|  
 ||Légende|Données mises à jour|
-

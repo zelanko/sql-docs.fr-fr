@@ -1,0 +1,54 @@
+---
+title: Sys.dm_pdw_exec_sessions (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: sql-data-warehouse
+ms.component: dmv's
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: TSQL
+ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
+caps.latest.revision: "8"
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: bbec94d3778bf9b898f9b0f789a644d39829ae5a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
+---
+# <a name="sysdmpdwexecsessions-transact-sql"></a>Sys.dm_pdw_exec_sessions (Transact-SQL)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+
+  Contient des informations sur toutes les sessions actuellement ou récemment ouverte sur l’appareil. Il répertorie une ligne par session.  
+  
+|Nom de la colonne|Type de données| Description|Plage|  
+|-----------------|---------------|-----------------|-----------|  
+|session_id|**nvarchar(32)**|L’id de la requête en cours de la dernière requête exécuter (si la session est terminée et que la requête en cours d’exécution au moment de l’arrêt). Clé pour cette vue.|Unique dans toutes les sessions dans le système.|  
+|status|**nvarchar (10)**|Pour les sessions en cours, identifie si la session est actuellement active ou inactive. Pour des sessions précédentes, la session d’état peut être fermé ou supprimé des (si la session a été fermée).|'ACTIVE', 'FERMÉ', 'INACTIVE', 'TERMINÉ'|  
+|request_id|**nvarchar(32)**|L’id de la requête actuelle ou de la dernière exécution de la requête.|Le point d’entrée unique pour toutes les demandes dans le système. Null si aucune n’a été exécutée.|  
+|security_id|**varbinary(85)**|ID de sécurité de l’entité de la session en cours d’exécution.||  
+|login_name|**nvarchar (128)**|Le nom de connexion du principal qui exécute la session.|Toute chaîne conforme aux conventions de nom d’utilisateur.|  
+|login_time|**datetime**|Date et heure à laquelle l’utilisateur connecté et cette session a été créée.|Valide **datetime** avant l’heure actuelle.|  
+|query_count|**int**|Capture le nombre de requêtes/requeststhis session s’est exécutée depuis la création.|Supérieur ou égal à 0.|  
+|is_transactional|**bit**|Indique si une session est actuellement dans une transaction ou non.|0 pour la validation automatique, 1 pour transactionnelle.|  
+|client_id|**nvarchar(255)**|Capture des informations sur le client pour la session.|N’importe quelle chaîne valide.|  
+|app_name|**nvarchar(255)**|Capture des informations de nom d’application éventuellement définie en tant que partie du processus de connexion.|N’importe quelle chaîne valide.|  
+|sql_spid|**int**|Numéro d’identification du SPID. Utilisez le `session_id` cette session. Utilisez le `sql_spid` colonne pour joindre au **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\*Avertissement \* \***  cette colonne contient les SPID fermés.||  
+  
+ Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section valeurs de la vue système Maximum dans la [valeurs minimale et maximale (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) rubrique.  
+  
+## <a name="permissions"></a>Permissions  
+ Nécessite le `VIEW SERVER STATE` autorisation.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Entrepôt de données SQL et les vues de gestion dynamique de l’entrepôt de données en parallèle &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+  
+  

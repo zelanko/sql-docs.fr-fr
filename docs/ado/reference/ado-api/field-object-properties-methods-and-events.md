@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Field object [ADO], members
+helpviewer_keywords: Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cbb59a6baa87d2535ef43fb8bee543070e118cc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4e9deaf9563f49e94c8648f340c33bd305f54b7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="field-object-properties-methods-and-events"></a>Champ objet propriétés, méthodes et événements
 ## <a name="propertiescollections"></a>Propriétés et de Collections  
@@ -33,7 +30,7 @@ ms.lasthandoff: 09/09/2017
   
  [Propriété des attributs](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
- [Propriété DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)  
+ [DefinedSize, propriété](../../../ado/reference/ado-api/definedsize-property.md)  
   
  [Propriété Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
@@ -45,11 +42,11 @@ ms.lasthandoff: 09/09/2017
   
  [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Propriété d’état (champ ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
+ [Status, propriété (objet Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
  [Propriété de type](../../../ado/reference/ado-api/type-property-ado.md)  
   
- [Propriété UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)  
+ [UnderlyingValue, propriété](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
  [Value (propriété)](../../../ado/reference/ado-api/value-property-ado.md)  
   
@@ -62,5 +59,4 @@ ms.lasthandoff: 09/09/2017
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)
-
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)

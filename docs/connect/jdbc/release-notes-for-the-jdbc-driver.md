@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notes de publication pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -133,11 +131,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Prise en charge pour les connexions de récupération d’urgence haute disponibilité, à des groupes de disponibilité AlwaysOn dans [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Consultez [prise en charge du pilote JDBC pour la haute disponibilité, la récupération d’urgence](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) pour plus d’informations.  
   
- **À l’aide de l’authentification intégrée Kerberos pour se connecter à SQL Server**  
+ **Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server**  
   
  Prise en charge de type 4 l’authentification intégrée Kerberos pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données. Pour plus d’informations, consultez [à l’aide de l’authentification intégrée Kerberos pour se connecter à SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Tapez 2 intégrée l’authentification Kerberos est disponible dans [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versions antérieures à 4.0.)  
   
- **L’accès aux informations de Diagnostic dans le journal des événements étendus**  
+ **Accès aux informations de diagnostic dans le journal des événements étendus**  
   
  Vous pouvez accéder aux informations contenues dans le journal des événements étendus du serveur pour analyser les échecs de connexion. Pour plus d’informations, consultez [l’accès à des informations de Diagnostic dans le journal des événements étendus](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
@@ -157,4 +155,3 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

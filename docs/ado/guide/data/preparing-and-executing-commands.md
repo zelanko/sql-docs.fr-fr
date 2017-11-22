@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Command object [ADO], preparing and executing commands
+helpviewer_keywords: Command object [ADO], preparing and executing commands
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc77ab26c705aaaaed4a7171f8c9349be8ac7f0b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f566d3fb0c639e5f7cb7214d8cf467312ae7f28d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preparing-and-executing-commands"></a>Préparation et l’exécution de commandes
 Les commandes sont émises pour un fournisseur des instructions pour effectuer certaines opérations sur la source de données sous-jacente. Une instruction SQL, par exemple, est une commande au fournisseur de données Microsoft SQL. Dans ADO, les commandes sont généralement représentées par **commande** des objets, bien que les commandes simples peuvent également être émis via **connexion** ou **Recordset** objets.  
@@ -39,11 +36,11 @@ Les commandes sont émises pour un fournisseur des instructions pour effectuer c
   
  Cette section contient les rubriques suivantes.  
   
--   [Vue d’ensemble de l’objet de commande](../../../ado/guide/data/command-object-overview.md)  
+-   [Vue d’ensemble de l’objet Command](../../../ado/guide/data/command-object-overview.md)  
   
--   [Création et exécution d’une commande Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Création et exécution d’une commande simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Paramètres de l’objet de commande](../../../ado/guide/data/command-object-parameters.md)  
+-   [Paramètres de l’objet Command](../../../ado/guide/data/command-object-parameters.md)  
   
 -   [Appel d’une procédure stockée avec une commande](../../../ado/guide/data/calling-a-stored-procedure-with-a-command.md)  
   
@@ -52,4 +49,3 @@ Les commandes sont émises pour un fournisseur des instructions pour effectuer c
 -   [Commandes nommées](../../../ado/guide/data/named-commands.md)  
   
 -   [Passage de paramètres à une commande nommée](../../../ado/guide/data/passing-parameters-to-a-named-command.md)
-

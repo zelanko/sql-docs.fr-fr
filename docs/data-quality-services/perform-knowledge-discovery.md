@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2071dfc0ea042138a9f6b5f00261b81847f7f909
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4b98bfc1ffb87a23817ce01380de2f62113e4748
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
   Cette rubrique décrit comment créer une base de connaissances via la découverte des connaissances. Dans le processus de découverte, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyse les données dans un exemple de source de données via un processus assisté par ordinateur, et ajoute les connaissances qu'il acquiert à la base de connaissances. Ces connaissances peuvent être modifiées et améliorées dans l'étape **Gestion des valeurs de domaine** de l'activité de découverte des connaissances ou de celle de gestion des domaines.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Microsoft Excel doit être installé sur l'ordinateur de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] si les données sources sur lesquelles vous exécutez la découverte se trouvent dans un fichier Excel. Sinon, vous ne pourrez pas sélectionner le fichier Excel à l'étape de mappage. Les fichiers créés par Microsoft Excel peuvent avoir une extension .xlsx, .xls ou .csv. Si la version 64 bits d'Excel est utilisée, seuls les fichiers Excel 2003 (.xls) sont pris en charge ; les fichiers Excel 2007 ou 2010 (.xlsx) ne sont pas pris en charge. Si vous utilisez la version 64 bits d'Excel 2007 ou 2010, enregistrez le fichier comme fichier .xls ou fichier .csv, ou installez une version 32 bits d'Excel à la place.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -74,12 +72,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  Dans la table **Mappages** , mappez chaque colonne source sur laquelle vous voulez procéder à la découverte des connaissances avec un domaine de la base de connaissances, comme suit :  
   
-    1.  Créez un mappage en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide, puis sélectionnez un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne, s'il existe un domaine. Si aucun domaine n'existe, cliquez sur **Créer un domaine** ou sur **Créer un domaine composite** pour créer un domaine. Pour plus d'informations, consultez [Créer une règle de domaine](../data-quality-services/create-a-domain-rule.md) ou [Créer un domaine composite](../data-quality-services/create-a-composite-domain.md).  
+    1.  Créez un mappage en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide, puis sélectionnez un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne, s'il existe un domaine. Si aucun domaine n'existe, cliquez sur **Créer un domaine** ou sur **Créer un domaine composite** pour créer un domaine. Pour plus d'informations, consultez [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) ou [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md).  
   
     2.  Répétez l'étape précédente pour chaque mappage. Pour modifier le nombre de lignes de la table, cliquez sur **Ajouter un mappage de colonnes**, ou sélectionnez une ligne et cliquez sur **Supprimer le mappage des colonnes sélectionné**. Si vous cliquez sur **Supprimer le mappage des colonnes sélectionné** alors qu'une ligne remplie est sélectionnée, la ligne sélectionnée est supprimée même s'il existe une ligne non remplie.  
   
         > [!NOTE]  
-        >  Vous pouvez mapper vos données source à un domaine DQS lors d'une activité de découverte des connaissances uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS Pour plus d'informations sur les types de données pris en charge, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+        >  Vous pouvez mapper vos données source à un domaine DQS lors d'une activité de découverte des connaissances uniquement si le type de données source est pris en charge dans DQS et correspond au type de données du domaine DQS Pour plus d'informations sur les types de données pris en charge, consultez [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
     3.  Cliquez sur **Afficher/Sélectionner des domaines composites** pour afficher les domaines composites qui ont été définis. Si aucun domaine composite n'a été défini, le contrôle ne sera pas disponible.  
   
@@ -224,7 +222,7 @@ ms.lasthandoff: 09/09/2017
   
  Lorsque vous effectuez un nettoyage des données interactif dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** , les valeurs non valides et erronées sont incluses dans l'onglet **Non valide** de la page **Gérer et afficher les résultats** .  
   
-##  <a name="Display"></a> Comment afficher les valeurs appropriées  
+##  <a name="Display"></a> How to Display the Appropriate Values  
  Vous pouvez modifier l'affichage comme suit :  
   
 -   **Filtre** : filtrez les résultats souhaités dans la table, selon leur état, en sélectionnant celui-ci dans la liste déroulante **Filtre** .  
@@ -294,7 +292,6 @@ ms.lasthandoff: 09/09/2017
   
 -   Il existe un faible niveau de valeurs valides dans le champ ; vous devez vérifier le mappage et la pertinence des règles de domaine par rapport au contenu du champ.  
   
- Pour plus d'informations sur le profilage, consultez [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
+ Pour plus d'informations sur le profilage, consultez [Profilage des données et notifications dans DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
-

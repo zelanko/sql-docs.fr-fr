@@ -2,9 +2,12 @@
 title: "Audit local pour la collecte de commentaires d’utilisation de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - dbe-security
@@ -17,13 +20,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6274b8a4a335482b24ab3e5df2ab9baeac61188
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 48de69218e71bb9688e6d7a3d0669b43baefe150
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Audit local pour la collecte de commentaires d’utilisation de SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ## <a name="introduction"></a>Introduction
 
 Microsoft SQL Server contient des fonctionnalités Internet susceptibles de collecter et d’envoyer des informations sur votre ordinateur ou appareil (« informations standard sur l’ordinateur ») à Microsoft. Le composant d’audit local de la [collecte de commentaires d’utilisation de SQL Serve](http://support.microsoft.com/kb/3153756) écrit les données collectées par le service vers un dossier désigné, représentant les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.  

@@ -8,24 +8,21 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Stretch Database
+helpviewer_keywords: Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 408a8cb4ac718d63c91a1520e3d3a012942b798d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -88,4 +85,3 @@ ms.lasthandoff: 04/11/2017
  **Identifier les bases de données et les tables qui peuvent être utilisées avec Stretch Database.** Pour identifier les bases de données et tables que vous pouvez utiliser avec Stretch Database, téléchargez le Conseiller de mise à niveau de SQL Server 2016 et exécutez Stretch Database Advisor. Stretch Database Advisor identifie également les problèmes bloquants. Pour plus d’informations, consultez [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   
-

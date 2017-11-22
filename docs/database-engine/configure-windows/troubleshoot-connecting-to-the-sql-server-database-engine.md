@@ -8,25 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,5 +158,4 @@ Ces deux problèmes sont liés au service SQL Server Browser, qui fournit le num
     1. Sur l’ordinateur client, à l’aide du Gestionnaire de configuration SQL Server, dans le volet gauche développez **Configuration** *version* **Configuration**, and then select **Client Protocols**.
     2. Dans le volet droit, vérifiez que TCP/IP est activé. Si TCP/IP est désactivé, cliquez avec le bouton droit sur **TCP/IP** , puis cliquez sur **Activer**.
     3. Vérifiez que l’ordre des protocoles pour TCP/IP est un nombre inférieur aux protocoles de canaux nommés (ou VIA sur des versions plus anciennes). En règle générale, vous devez laisser la mémoire partagée en 1 et TCP/IP en 2. La mémoire partagée est utilisée uniquement quand le client et SQL Server sont en cours d’exécution sur le même ordinateur. Tous les protocoles activés sont essayés dans l’ordre jusqu’à ce que l’un d’eux réussisse, sauf que la mémoire partagée est ignorée quand la connexion n’est pas sur le même ordinateur. 
-
 

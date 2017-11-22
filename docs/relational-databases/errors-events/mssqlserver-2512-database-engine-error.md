@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 2512 (Database Engine error)
+helpviewer_keywords: 2512 (Database Engine error)
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1010301cae338b1f6d1544f48541ea5237297381
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 46642a6c8c6b3db6e0f5cb213af3ab11a1ca100b
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,4 +64,3 @@ Si l'exécution de DBCC CHECKDB avec une des clauses REPAIR ne résout pas le pr
 ### <a name="results-of-running-repair-options"></a>Résultats de l'exécution des options REPAIR  
 Si chaque enregistrement est de type Ghost ou si l'index n'est pas unique, DBCC peut réparer ce problème en reconstruisant l'index. Dans le cas contraire, si cela est nécessaire, REPAIR supprime l’emplacement *SLOT2* dans la page *P_ID2* ou marque l’emplacement en tant que fantôme.  
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc3df1d697b05201ac48520c1e344c28648cdfaf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ca100f215bd33913fc7ac65cc64f813906314ca6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-engine-powershell-reference"></a>Référence de PowerShell (Moteur de base de données)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclut un jeu d’applets de commande Windows PowerShell pour effectuer des actions courantes dans le [!INCLUDE[ssDE](../includes/ssde-md.md)]. En outre, les expressions de requête et les noms URN (Uniform Resource Names) peuvent être convertis en chemins d'accès SQL Server PowerShell, ou être utilisés pour spécifier un ou plusieurs objets dans le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -53,4 +51,3 @@ ms.lasthandoff: 06/22/2017
  [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
   
   
-

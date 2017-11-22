@@ -8,25 +8,23 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-transaction-log
+ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +95,7 @@ ms.lasthandoff: 06/22/2017
     
 ## <a name="how-to-control-transaction-durability"></a>Procédure pour contrôler la durabilité d'une transaction    
     
-###  <a name="bkmk_DbControl"></a> Database level control    
+###  <a name="bkmk_DbControl"></a> Contrôle au niveau de la base de données    
  En tant qu'administrateur de base de données, vous pouvez contrôler si les utilisateurs peuvent utiliser la durabilité retardée des transactions sur une base de données avec l'instruction suivante. Vous devez définir le paramètre de durabilité retardée avec ALTER DATABASE.    
     
 ```tsql    
@@ -113,7 +111,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **FORCED**    
  Avec ce paramètre, chaque transaction qui est validée sur la base de données a une durabilité retardée, même si la transaction spécifie une durabilité complète (DELAYED_DURABILITY = OFF) ou omette toute indication de durabilité. Ce paramètre est utile lorsque la durabilité retardée des transactions a un intérêt pour une base de données, mais que vous ne souhaitez pas modifier le code de l'application.    
     
-###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
+###  <a name="CompiledProcControl"></a> Contrôle au niveau du bloc atomique – Procédures stockées compilées en mode natif    
  Le code suivant s'insère à l'intérieur du bloc atomique.    
     
 ```tsql    
@@ -148,7 +146,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Le bloc atomique démarre une nouvelle transaction à durabilité complète.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|    
 |**DELAYED_DURABILITY = ON**|Le bloc atomique démarre une nouvelle transaction à durabilité retardée.|Le bloc atomique crée un point d'enregistrement dans la transaction existante, puis démarre la nouvelle transaction.|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Contrôle au niveau de la validation (COMMIT) –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  La syntaxe de l'option COMMIT est étendue pour vous permettre de forcer la durabilité retardée des transactions. Si DELAYED_DURABILITY a la valeur DISABLED ou FORCED au niveau de la base de données (voir ci-dessus), cette option COMMIT est ignorée.    
     
 ```tsql    
@@ -204,7 +202,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Sauvegarde de journal**    
  Seules les transactions rendues durables sont incluses dans la sauvegarde.    
     
-##  <a name="bkmk_DataLoss"></a> When can I lose data?    
+##  <a name="bkmk_DataLoss"></a> Quand puis-je perdre des données ?    
  Si vous implémentez la durabilité retardée sur l'une de vos tables, certaines circonstances peuvent entraîner une perte de données. Si vous ne pouvez pas vous permettre de perdre des données, n'utilisez pas la durabilité retardée sur les tables.    
     
 ### <a name="catastrophic-events"></a>Événements graves    
@@ -217,4 +215,3 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  [Transactions avec tables optimisées en mémoire](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
-

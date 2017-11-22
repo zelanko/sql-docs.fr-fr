@@ -8,28 +8,26 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 72f4daeb47e7c023e14cdd5a87a51e5dcbee2436
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
-ms.openlocfilehash: 2c44f6288c4e58caa45748e6e832465f43145b83
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/19/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
-Si vous utilisez des tables temporaires, des variables de table ou des paramètres table, envisagez de les convertir pour tirer parti des tables à mémoire optimisée et des variables de table afin d’améliorer les performances. Les modifications de code sont généralement minimes.  
+Si vous utilisez des tables temporaires, des variables de table ou des paramètres table, envisagez de les convertir pour tirer parti des tables optimisées en mémoire et des variables de table afin d’améliorer les performances. Les modifications de code sont généralement minimes.  
   
 Cet article décrit :  
   
@@ -39,9 +37,9 @@ Cet article décrit :
 - Exemple de code qui met en évidence les avantages en matière de performances de l’optimisation en mémoire
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Principes de base des variables de table à mémoire optimisée  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>A. Principes de base des variables de table optimisées en mémoire  
   
-Une variable de table à mémoire optimisée offre une grande efficacité en utilisant les mêmes algorithme et structures de données à mémoire optimisée que ceux utilisés par les tables à mémoire optimisée. L’efficacité est optimale quand la variable de table est accessible à partir d’un module compilé en mode natif.  
+Une variable de table optimisée en mémoire offre une grande efficacité en utilisant les mêmes algorithme et structures de données optimisés en mémoire que ceux utilisés par les tables optimisées en mémoire. L’efficacité est optimale quand la variable de table est accessible à partir d’un module compilé en mode natif.  
   
   
 Une variable de table optimisée en mémoire :  
@@ -51,7 +49,7 @@ Une variable de table optimisée en mémoire :
 - N’implique aucune contention ni utilisation de tempdb.  
 - Peut être passée dans une procédure stockée comme un paramètre table.  
 - Doit avoir au moins un index, de hachage ou non cluster.  
-  - Pour un index de hachage, le nombre de compartiments doit idéalement être égal à 1 à 2 fois le nombre de clés d’index uniques attendu, mais une surestimation du nombre de compartiments convient habituellement (jusqu’à 10 fois). Pour plus d’informations, consultez [Index pour les tables à mémoire optimisée](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+  - Pour un index de hachage, le nombre de compartiments doit idéalement être égal à 1 à 2 fois le nombre de clés d’index uniques attendu, mais une surestimation du nombre de compartiments convient habituellement (jusqu’à 10 fois). Pour plus d’informations, consultez [Index pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
 
   
   
@@ -59,9 +57,9 @@ Une variable de table optimisée en mémoire :
   
 OLTP en mémoire fournit les objets suivants qui peuvent être utilisés pour l’optimisation en mémoire des tables temporaires et des variables de table :  
   
-- Tables à mémoire optimisée  
+- Tables optimisées en mémoire  
   - Durabilité = SCHEMA_ONLY  
-- Variables de table à mémoire optimisée  
+- Variables de table optimisées en mémoire  
   - Déclaration en deux étapes (plutôt qu’inline) :  
     - `CREATE TYPE my_type AS TABLE ...;` , puis  
     - `DECLARE @mytablevariable my_type;`.  
@@ -85,7 +83,7 @@ Supposons que vous disposez de la table temporaire globale suivante.
   
   
   
-Envisagez de remplacer la table temporaire globale par la table à mémoire optimisée suivante qui affiche DURABILITY = SCHEMA_ONLY.  
+Envisagez de remplacer la table temporaire globale par la table optimisée en mémoire suivante qui affiche DURABILITY = SCHEMA_ONLY.  
   
   
   
@@ -189,7 +187,7 @@ Notez que chaque table optimisée en mémoire doit avoir au moins un index.
   
 Troisièmement, dans votre code T-SQL général :  
   
-1. Modifiez toutes les références à la table temporaire dans vos instructions Transact-SQL en spécifiant la nouvelle table à mémoire optimisée :
+1. Modifiez toutes les références à la table temporaire dans vos instructions Transact-SQL en spécifiant la nouvelle table optimisée en mémoire :
     - _Ancien :_ &#x23;tempSessionC  
     - _Nouveau :_ dbo.soSessionC  
 2. Remplacez les instructions `CREATE TABLE #tempSessionC` dans votre code par `DELETE FROM dbo.soSessionC`, pour garantir qu’une session n’est pas exposée au contenu de table inséré par une session précédente avec la même valeur session_id. Il est important de créer la table à mémoire optimisée au moment du déploiement, et non de l’exécution, pour éviter la surcharge de compilation qui accompagne la création de la table.
@@ -243,13 +241,13 @@ La syntaxe précédente permet de créer la variable de table *inline*. La synta
   
   
   
-#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 Convertir une table sur disque explicite en table à mémoire optimisée  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 Convertir une table sur disque explicite en table optimisée en mémoire  
   
 Une variable de table optimisée en mémoire ne se trouve pas dans tempdb. L’optimisation en mémoire entraîne une augmentation de la vitesse, qui est souvent 10 fois supérieure ou plus.  
   
-La conversion en table à mémoire optimisée est effectuée en une seule étape. Améliorez la création TYPE explicite pour obtenir le résultat suivant, qui ajoute :  
+La conversion en table optimisée en mémoire est effectuée en une seule étape. Améliorez la création TYPE explicite pour obtenir le résultat suivant, qui ajoute :  
   
-- Un index. Là encore, chaque table à mémoire optimisée doit avoir au moins un index.  
+- Un index. Là encore, chaque table optimisée en mémoire doit avoir au moins un index.  
 - MEMORY_OPTIMIZED = ON.  
   
   
@@ -277,11 +275,11 @@ Dans Microsoft SQL Server, pour utiliser les fonctionnalités optimisées en mé
 - La base de données SQL Azure ne nécessite pas la création de ce groupe de fichiers.  
   
   
-*Prérequis :* le code Transact-SQL suivant pour un groupe de fichiers est requis pour les exemples de code T-SQL longs dans les sections ultérieures de cet article.  
+*Condition préalable :* le code Transact-SQL suivant pour un groupe de fichiers est requis pour les exemples de code T-SQL longs dans les sections ultérieures de cet article.  
   
 1. Vous devez utiliser SSMS.exe ou un autre outil qui peut envoyer du code T-SQL.  
 2. Collez l’exemple de code T-SQL de groupe de fichiers dans SSMS.  
-3. Modifiez le code T-SQL pour changer ses propres noms et chemins de répertoire à votre convenance.  
+3. Modifiez le code T-SQL pour changer ses noms et chemins d’accès aux répertoires spécifiques à votre convenance.  
   - Tous les répertoires dans la valeur de nom de fichier doivent exister au préalable, à l’exception du répertoire final.  
 4. Exécutez votre code T-SQL modifié.  
   - Il est inutile d’exécuter le code T-SQL de groupe de fichiers plusieurs fois, même si vous ajustez et réexécutez à plusieurs reprises le code T-SQL de comparaison de vitesse dans la sous-section suivante.  
@@ -316,11 +314,11 @@ Pour plus d’informations sur `ALTER DATABASE ... ADD` pour les fichiers et gro
 ## <a name="f-quick-test-to-prove-speed-improvement"></a>F. Test rapide pour prouver l’amélioration de la vitesse  
   
   
-Cette section fournit le code Transact-SQL que vous pouvez exécuter pour tester et comparer le gain de vitesse pour INSERT-DELETE à partir de l’utilisation d’une variable de table à mémoire optimisée. Le code est composé de deux parties presque identiques sauf que, dans la première partie, le type de table est optimisé en mémoire.  
+Cette section fournit le code Transact-SQL que vous pouvez exécuter pour tester et comparer le gain de vitesse pour INSERT-DELETE à partir de l’utilisation d’une variable de table optimisée en mémoire. Le code est composé de deux parties presque identiques sauf que, dans la première partie, le type de table est optimisé en mémoire.  
   
 Le test de comparaison dure environ 7 secondes. Pour exécuter l’exemple :  
   
-1. *Prérequis :* vous devez déjà avoir exécuté le code T-SQL de groupe de fichiers de la section précédente.  
+1. *Condition préalable :* vous devez déjà avoir exécuté le code T-SQL de groupe de fichiers de la section précédente.  
 2. Exécutez le script T-SQL INSERT-DELETE suivant.  
   - Notez l’instruction « GO 5001 », qui renvoie le code T-SQL 5001 fois. Vous pouvez ajuster le nombre et l’exécuter à nouveau.  
   
@@ -429,13 +427,12 @@ Vous pouvez apprendre à prévoir les besoins en mémoire active de vos tables o
 - [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Taille de la table et des lignes dans les tables optimisées en mémoire : exemple de calcul](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
-Pour les variables de table plus importantes, les index non cluster utilisent plus de mémoire que pour les *tables* à mémoire optimisée. Plus le nombre de lignes et la clé d’index sont importants, plus la différence augmente.  
+Pour les variables de table plus importantes, les index non cluster utilisent plus de mémoire que pour les *tables*optimisées en mémoire. Plus le nombre de lignes et la clé d’index sont importants, plus la différence augmente.  
   
-Si la variable de table à mémoire optimisée est accessible uniquement avec une valeur de clé exacte par accès, un index de hachage peut être un meilleur choix qu’un index non cluster. Toutefois, si vous ne pouvez pas estimer la valeur BUCKET_COUNT appropriée, un index non cluster représente une bonne alternative.  
+Si la variable de table optimisée en mémoire est accessible uniquement avec une valeur de clé exacte par accès, un index de hachage peut être un meilleur choix qu’un index non cluster. Toutefois, si vous ne pouvez pas estimer la valeur BUCKET_COUNT appropriée, un index non cluster représente une bonne alternative.  
   
 ## <a name="h-see-also"></a>H. Voir aussi  
   
-- [Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
-- [Définition de la durabilité des objets à mémoire optimisée](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Définition de la durabilité des objets mémoire optimisés](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-

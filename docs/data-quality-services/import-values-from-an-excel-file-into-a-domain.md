@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,17 +16,16 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98b520919aeb80434d33d9a1b66ae3f4c3d4f986
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
   Cette rubrique décrit comment importer des valeurs à partir d'un fichier Excel vers un champ de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilisation d'un fichier Excel pour importer les valeurs de champ dans l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifie le processus de génération de connaissance, et permet d'économiser aussi bien le temps que les efforts. Elle permet aux personnes qui ont une liste de valeurs de données valides dans un fichier Excel ou un fichier texte d'importer ces valeurs dans un domaine. À partir d'un fichier Excel, vous pouvez importer les valeurs de domaine dans un domaine ou des domaines d'une base de connaissances. (Consultez [Importer les domaines d’un fichier Excel dans la découverte des connaissances](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) pour plus d’informations sur l’importation de domaines dans une base de connaissances.) L'exportation vers un fichier Excel n'est pas prise en charge.  
@@ -40,15 +38,15 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
- Pour importer les champs d'un fichier Excel, Excel doit être installé sur l'ordinateur où l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est installée pour pouvoir importer les valeurs de domaine ou un domaine complet ; vous devez avoir créé un fichier Excel avec des valeurs de domaine (consultez [Fonctionnement de l’importation](#How)) et devez avoir créé et ouvert une base de connaissances dans laquelle importer le domaine.  
+###  <a name="Prerequisites"></a> Conditions préalables  
+ Pour importer les champs d'un fichier Excel, Excel doit être installé sur l'ordinateur où l'application [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] est installée pour pouvoir importer les valeurs de domaine ou un domaine complet ; vous devez avoir créé un fichier Excel avec des valeurs de domaine (consultez [How the import works](#How)) et devez avoir créé et ouvert une base de connaissances dans laquelle importer le domaine.  
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les valeurs de champs d'un fichier Excel.  
   
-##  <a name="Import"></a> Importer des valeurs à partir d’un fichier Excel dans un domaine  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Si les valeurs ne peuvent pas être connectées manuellement dans l'application pour une raison quelconque, elles ne pourront pas s'appliquer à l'opération d'importation.  
   
-##  <a name="How"></a> Fonctionnement de l’importation  
+##  <a name="How"></a> How the import works  
  Les valeurs suivantes sont importées par cette opération :  
   
  Dans l'opération d'importation, DQS importe à partir d'un fichier Excel comme suit :  
@@ -134,4 +132,3 @@ ms.lasthandoff: 09/09/2017
 -   Si le fichier Excel n'est pas dans le bon format ou est endommagé, l'opération d'importation génère une erreur.  
   
   
-

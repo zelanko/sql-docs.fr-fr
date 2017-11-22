@@ -1,79 +1,86 @@
 ---
 title: Prise en main de Microsoft R Server (autonome) | Microsoft Docs
 ms.custom: 
-ms.date: 03/01/2017
+ms.date: 10/31/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 52347d0d-ce60-4bb8-98d2-6163e87716b0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: a0932e10c72166bee4b674ea5df6e80b032e7964
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fc7874c6900474c7c2f3d927183616b2f5e69699
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="getting-started-with-microsoft-r-server-standalone"></a>Prise en main de Microsoft R Server (autonome)
-  Microsoft R Server (autonome) vous permet de mettre en œuvre le langage R Open Source populaire dans votre entreprise pour permettre l’utilisation de solutions d’analyse hautes performances et l’intégration avec d’autres applications de gestion des informations professionnelles.  
-
-  
-## <a name="install-microsoft-r-server"></a>Installer Microsoft R Server 
-
-Vous installez Microsoft R Server différemment selon que vous avez ou non besoin d’utiliser des données SQL Server dans vos applications. Si c’est le cas, vous devez utiliser le programme d’installation de SQL Server. Dans le cas contraire ou si vous n’avez pas besoin d’exécuter le code R en base de données, vous pouvez utiliser le programme d’installation de SQL Server ou le nouveau programme d’installation en mode autonome.
+# <a name="getting-started-with-machine-learning-server-standalone"></a>Prise en main de Machine Learning Server (autonome)
  
- 
-+ Installer Microsoft R Server (autonome) à partir du programme d’installation de SQL Server. Une instance distincte des fichiers binaires R est créée pour R Server et cette instance est concédée sous licence via la politique de support de SQL Server Enterprise Edition. Pour plus d’informations, consultez [Créer un serveur R autonome](../../advanced-analytics/r-services/create-a-standalone-r-server.md).  
+Dans SQL Server 2016, Microsoft R Server (autonome) a permis de mettre le langage R open source populaire dans l’entreprise, pour activer des solutions d’analytique de hautes performances et l’intégration avec d’autres applications d’entreprise.  
 
-+ Utilisez le nouveau programme d’installation Windows en mode autonome pour créer une nouvelle instance de Microsoft R Server qui utilise la politique de support du cycle de vie moderne des logiciels Microsoft. Pour plus d’informations, consultez [Exécuter Microsoft R Server pour Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
+Dans SQL Server 2017, le nom a été modifié pour la Machine Learning Server (autonome) pour refléter l’ajout de la prise en charge pour le langage Python. Les deux versions sont disponibles gratuitement pour les utilisateurs de l’édition Enterprise ou Software Assurance.
 
-+ Si vous voulez mettre à niveau une instance R Server (autonome) ou R Services, vous devez également télécharger et exécuter le programme d’installation Windows pour la mise à jour. Pour plus d’informations, consultez [Exécuter Microsoft R Server pour Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows).
-  
-## <a name="install-additional-r-tools"></a>Installer des outils R supplémentaires  
+Cet article fournit une vue d’ensemble de comment vous pouvez utiliser Machine Learning serveur (ou R Server) et la prise en main des exemples et d’installation.
 
- Nous vous recommandons la version gratuite de [Microsoft R Client](http://aka.ms/rclient/download) (télécharger).  
+## <a name="why-use-a-standalone-server-for-machine-learning"></a>Pourquoi utiliser un serveur autonome pour l’apprentissage
 
- Vous pouvez également utiliser votre environnement de développement R par défaut pour développer des solutions pour SQL Server R Services ou Microsoft R Server. Pour plus d’informations, consultez [Installer ou configurer les outils R](../../advanced-analytics/r-services/setup-or-configure-r-tools.md). 
- 
+Si vous n’avez pas besoin d’intégrer vos solutions avec des données SQL Server d’apprentissage Machine Learning Server vous donne le même support distribué et évolutif pour R et Python et plus prend en charge le déploiement des solutions à Hadoop, Spark ou Linux.
 
-### <a name="location-of-r-server-binaries"></a>Emplacement des fichiers binaires R Server
+Machine Learning Server inclut également des modèles d’analyse d’image et d’analyse de sentiments, que vous pouvez utiliser immédiatement dans les applications dont l’apprentissage.
 
-Selon la méthode que vous utilisez pour installer Microsoft R Server, l’emplacement par défaut est différent. Avant de commencer à utiliser votre environnement de développement par défaut, vérifiez l’emplacement d’installation des bibliothèques R :
+Les fonctionnalités à l’Opérationnalisation du serveur de Machine Learning prend en charge le déploiement et de distribuer des solutions R et Python à l’aide des services web, avec l’exécution à distance, les topologies de cluster pour Spark et Hadoop MapReduce et prend en charge pour Windows ou Linux.
 
-+ Microsoft R Server installé à l’aide du nouveau programme d’installation Windows
+**SQL Server 2016**
 
-  `C:\Program Files\Microsoft\R Server\R_SERVER`
++ Installer Microsoft R Server (autonome) du programme d’installation de SQL Server 2016.
 
-+ R Server (autonome) installé via le programme d’installation de SQL Server
+    Cette option crée un serveur autonome qui est entièrement indépendant de R Services (de-de base de données). Cette version prend uniquement en charge R. Le programme d’installation d’un serveur autonome est inclus dans votre stratégie de prise en charge de SQL Server Enterprise Edition. Pour plus d’informations, consultez [Créer un serveur R autonome](../../advanced-analytics/r/create-a-standalone-r-server.md).
 
-  `C:\Program Files\Microsoft SQL Server\130\R_SERVER`
++ Installer R Server à l’aide du programme d’installation Windows distinct.
 
-+ R Services (dans la base de données)
-
-  `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES`
-      
-## <a name="start-using-r-on-microsoft-r-server"></a>Commencer à utiliser R sur Microsoft R Server  
-
- Après avoir installé les composants serveur et configuré votre IDE R pour utiliser les fichiers binaires R Server, vous pouvez commencer à développer votre solution en utilisant les nouvelles API, comme le package RevoScaleR, MicrosoftML et olapR.
+    Ce programme d’installation crée une toute nouvelle instance de Microsoft R Server qui utilise la stratégie de prise en charge Microsoft moderne logiciel du cycle de vie. Vous pouvez également installer R Server pour Linux, Cloudera, Teradata et Hadoop.
     
-Pour démarrer avec R Server, consultez ce guide dans la bibliothèque MSDN : [Get started with Microsoft R](https://msdn.microsoft.com/microsoft-r/microsoft-r-get-started-node)   
-  
--   [ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-getting-started) : explorez cet ensemble de fonctions analytiques distribuables qui offrent des performances élevées et la mise à l’échelle vers des solutions R. Inclut des versions parallélisables des packages de modélisation R les plus populaires comme le clustering k-means, les arbres de décision, les forêts de décision et les outils de manipulation des données. Pour plus d’informations, consultez [Explore R and ScaleR in 25 functions](https://msdn.microsoft.com/microsoft-r/microsoft-r-getting-started-tutorial)  
+    Pour plus d’informations, consultez [installer R Server 9.1 pour Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+
+**SQL Server 2017**
+
++ Installez Machine Learning Server (autonome) du programme d’installation de SQL Server 2017. 
+
+    Cette option crée un serveur autonome pour prendre en charge à l’Opérationnalisation d’apprentissage dans R, Python ou les deux. Le programme d’installation d’un serveur autonome est inclus dans votre stratégie de prise en charge de SQL Server Enterprise Edition. Pour plus d’informations, consultez [Créer un serveur R autonome](../../advanced-analytics/r/create-a-standalone-r-server.md).  
+
++ Utilisez le nouveau programme d’installation de Windows autonome.
+
+    Cette méthode d’installation crée une nouvelle instance de Machine Learning Server qui utilise la stratégie de prise en charge Microsoft moderne logiciel du cycle de vie. Vous pouvez également installer Machine Learning Server sur Linux, Hadoop et/ou Spark sans coût supplémentaire.
     
-- [MicrosoftML](https://msdn.microsoft.com/library/mt790482.aspx) : le package MicrosoftML est un ensemble de nouveaux algorithmes d’apprentissage automatique et transformations développés par Microsoft qui sont rapides et évolutifs. Pour plus d’informations, consultez [MicrosoftML: State-of-the-art machine learning R algorithms](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml).
-  
+    Pour plus d’informations, consultez [installer Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
+**Mise à niveau un serveur existant**
 
-  
-## <a name="see-also"></a>Voir aussi  
- [Prise en main de SQL Server R Services](../../advanced-analytics/r-services/getting-started-with-sql-server-r-services.md)  
-  
-  
++ Si vous avez un serveur existant ou une instance que vous souhaitez mettre à niveau, téléchargez et exécutez le programme d’installation basé sur Windows pour obtenir les mises à jour. 
 
+    Pour plus d’informations, consultez [à l’aide de SqlBindR pour mettre à niveau une instance](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+
+## <a name="start-using-machine-learning-server"></a>Commencer à utiliser le serveur de Machine Learning
+
+ Après avoir configuré les composants serveur et configuré votre IDE pour utiliser les fichiers binaires du serveur de Machine Learning, vous pouvez commencer à développer votre solution en utilisant les nouvelles API, tel que le RevoScaleR revoscalepy, MicrosoftML et olapR.
+    
+Pour commencer, consultez ces guides :
+
++ [Modèles de solution](https://docs.microsoft.com/machine-learning-server/r/sample-solutions)
+
+    Les exemples de ces des solutions qui montrent comment appliquer l’apprentissage automatique dans des secteurs spécifiques. Scénarios en cours sont dans la vente au détail, les finances, les soins de santé et marketing.
+
++ [Explorer R et ScaleR dans les 25 fonctions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler): Explorer cette collection de fonctions analytiques distribuables qui fournissent des performances élevées et la mise à l’échelle pour des solutions R. Inclut des versions parallélisables des packages de modélisation R les plus populaires comme le clustering k-means, les arbres de décision, les forêts de décision et les outils de manipulation des données.
+
+- [MicrosoftML](https://msdn.microsoft.com/library/mt790482.aspx)
+
+    Le package MicrosoftML est un ensemble d’apprentissage nouveaux algorithmes et des transformations développées par Microsoft qui sont rapides et évolutives. Vous pouvez l’utiliser dans R ou Python. Pour plus d’informations, consultez [MicrosoftML pour Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) et [MicrosoftML pour R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package).
+
+## <a name="see-also"></a>Voir aussi
+
+[Prise en main de SQL Server d’apprentissage Services](../../advanced-analytics/r/getting-started-with-sql-server-r-services.md)
