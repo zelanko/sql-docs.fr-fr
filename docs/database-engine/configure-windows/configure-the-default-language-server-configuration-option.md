@@ -8,29 +8,26 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- default language option
+helpviewer_keywords: default language option
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 612b11735f0309b840ea720fe7a98d6008b82e0b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a37c53330f2f60f73ce9605dd3bcb36bad8aef08
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Configurer l'option de configuration de serveur default language
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **default language** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option spécifie la **langue par défaut** pour toutes les connexions nouvellement créées. Pour définir la langue par défaut, spécifiez la valeur **langid** de la langue souhaitée. La valeur **langid** peut être obtenue en interrogeant la vue de compatibilité **sys.syslanguages** .  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **default language** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **default language** spécifie la langue par défaut pour toutes les connexions nouvellement créées. Pour définir la langue par défaut, spécifiez la valeur **langid** de la langue souhaitée. La valeur **langid** peut être obtenue en interrogeant la vue de compatibilité **sys.syslanguages** .  
   
  **Dans cette rubrique**  
   
@@ -107,4 +104,3 @@ GO
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-
