@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: de5702dd6682d08538722c2e36fb730a311c9e44
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2dd0e259bdb6b5e31cd60da49561f47acde784b0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour Sybase (SybaseToSQL)
 Ce chapitre décrit les nouvelles fonctionnalités de l’Interface utilisateur SSMA.  
@@ -132,4 +130,3 @@ Vous pouvez effectuer la recherche de texte rapide à l’aide des fonctionnalit
 ### <a name="advanced-search"></a>Recherche avancée  
 Pour ouvrir la boîte de dialogue Recherche avancée, sur le point de menu Modifier Rechercher, puis cliquez sur recherche avancée. Dans la boîte de dialogue, vous serez en mesure de trouver un objet à l’aide du modèle. En haut de la boîte de dialogue, vous pouvez rechercher des catégories de zone et d’objet.  
   
-

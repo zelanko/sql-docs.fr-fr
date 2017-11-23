@@ -1,0 +1,99 @@
+---
+title: sp_helplanguage (Transact-SQL) | Documents Microsoft
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: system-stored-procedures
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sp_helplanguage
+- sp_helplanguage_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- sp_helplanguage
+- default languages
+ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
+caps.latest.revision: "19"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.workload: Inactive
+ms.openlocfilehash: 4f0fc40a5dda8040d253766cc6dadf0bf298ad22
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
+---
+# <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+  Affiche des informations sur une langue de remplacement particulière ou sur toutes les langues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+||  
+|-|  
+|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+  
+ ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+  
+sp_helplanguage [ [ @language = ] 'language' ]  
+```  
+  
+## <a name="arguments"></a>Arguments  
+ [  **@language=** ] **'***langage***'**  
+ Nom de la langue de remplacement au sujet de laquelle fournir des informations. *langage* est **sysname**, avec NULL comme valeur par défaut. Si *langage* est spécifié, les informations sur le langage spécifié sont retournées. Si la langue n’est pas spécifié, les informations sur toutes les langues dans le **sys.syslanguages** vue de compatibilité est retournée.  
+  
+## <a name="return-code-values"></a>Valeurs des codes de retour  
+ 0 (réussite) ou 1 (échec)  
+  
+## <a name="result-sets"></a>Jeux de résultats  
+  
+|Nom de colonne|Type de données| Description|  
+|-----------------|---------------|-----------------|  
+|**ID de langue**|**smallint**|Numéro d'identification de la langue.|  
+|**DateFormat**|**NCHAR(3)**|Format de la date.|  
+|**DATEFIRST**|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, etc., jusqu'à 7 pour dimanche.|  
+|**mise à niveau**|**int**|Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la dernière mise à niveau pour cette langue.|  
+|**nom**|**sysname**|Nom de la langue.|  
+|**alias**|**sysname**|Nom de remplacement de la langue.|  
+|**mois**|**nvarchar(372)**|Noms des mois.|  
+|**ShortMonths**|**nvarchar(132)**|Abréviations des noms des mois.|  
+|**jours d’utilisation**|**nvarchar(217)**|Noms des jours.|  
+|**LCID**|**int**|ID de paramètres régionaux Windows pour la langue.|  
+|**msglangid**|**smallint**|ID du groupe de messages du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+  
+## <a name="permissions"></a>Permissions  
+ Nécessite l'appartenance au rôle **public** .  
+  
+## <a name="examples"></a>Exemples  
+  
+### <a name="a-returning-information-about-a-single-language"></a>A. Renvoi d’informations sur une langue  
+ L'exemple suivant affiche des informations sur la langue de remplacement `French`.  
+  
+```  
+sp_helplanguage French;  
+```  
+  
+### <a name="b-returning-information-about-all-languages"></a>B. Renvoi d’informations sur toutes les langues  
+ L'exemple suivant vous renseigne sur toutes les langues de remplacement installées.  
+  
+```  
+sp_helplanguage;  
+```  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Moteur de base de données stockée procédures &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
+ [SET LANGUAGE &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+  
+  

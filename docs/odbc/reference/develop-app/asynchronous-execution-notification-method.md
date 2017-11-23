@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56eadba88bc229b4d3f3560c60988124b54f33b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b39bfb096e980106ecaef4e12ef9871f1a32452a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="asynchronous-execution-notification-method"></a>Exécution asynchrone (méthode de notification)
 ODBC permet l’exécution asynchrone de connexion et les opérations de l’instruction. Un thread d’application peut appeler une fonction ODBC en mode asynchrone et la fonction peut retourner avant que l’opération est terminée, en autorisant le thread d’application effectuer d’autres tâches. Dans le SDK Windows 7, pour les opérations de connexion, ou l’instruction asynchrone, une application déterminé que l’opération asynchrone a été terminée à l’aide de la méthode d’interrogation. Pour plus d’informations, consultez [exécution asynchrone (méthode d’interrogation)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). À compter dans le SDK Windows 8, vous pouvez déterminer qu’une opération asynchrone est terminée à l’aide de la méthode de notification.  
@@ -424,4 +422,3 @@ Else
     // Call the corresponding Asynchronous ODBC API to complete all processing and retrieve the return code.  
 }  
 ```
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Détermination de la cible SGBD et les pilotes
 La question suivante à prendre en compte est, quelles sont la SGBD cible pour l’application et les pilotes sont disponibles qui prennent en charge ces SGBD ? Étant donné que les applications génériques ont tendance à être hautement interopérable, la question de cible de SGBD est plus applicable à des applications personnalisées et verticales. Toutefois, la question de pilotes cibles s’applique à toutes les applications, car les pilotes peuvent varier dans la vitesse, la qualité, la prise en charge de la fonctionnalité et disponibilité. Également, si les pilotes doivent être redistribué par l’application, le coût et la disponibilité des régimes de licences en doivent être pris en compte.  
@@ -40,4 +38,3 @@ La question suivante à prendre en compte est, quelles sont la SGBD cible pour l
  Bases de données de serveur telles que Oracle, DB2 et SQL Server prennent en charge complète des transactions prend en charge de nombreux utilisateurs simultanés et ont SQL riche. Elles sont beaucoup plus onéreuse et disposer d’une plus petite base installée. En revanche, prix du logiciel ont tendance à être plus élevée, quelque peu compensation un marché potentiel plus petit.  
   
  Par conséquent, vous pouvez choisir cible SGBD parfois selon les fonctionnalités requises par l’application et de marché de l’application cible. Par exemple, un système d’entrée de commande pour les grandes entreprises peuvent ne pas cible des bases de données bureautiques, car ceux-ci ne disposent pas de prise en charge des transactions adéquates. Un système semblable conçu pour les petites entreprises exclut peut-être la plupart des bases de données de serveur en fonction du coût. Et les développeurs d’applications génériques peuvent cibler à la fois, mais évitez d’utiliser les fonctionnalités avancées de bases de données de serveur.
-

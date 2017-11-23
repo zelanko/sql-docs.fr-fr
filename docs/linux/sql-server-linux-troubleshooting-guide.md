@@ -6,15 +6,20 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 05/08/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
+ms.workload: On Demand
+ms.openlocfilehash: 74d1111cab0b0e59ff13644e86ed33323a0185dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
@@ -119,6 +124,37 @@ Pour les vidages
 Pour les sauvegardes SQL 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
+   ```
+   
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>Démarrage de SQL Server dans une Configuration minimale ou en Mode mono-utilisateur
+
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>Démarrage de SQL Server en Mode Configuration minimale
+Cette option est utile lorsqu'une valeur de configuration définie (espace mémoire insuffisant, par exemple) a empêché le serveur de démarrer.
+  
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -f
+   ```
+
+### <a name="start-sql-server-in-single-user-mode"></a>Démarrage de SQL Server en Mode mono-utilisateur
+Dans certaines circonstances, vous devrez peut-être démarrer une instance de SQL Server en mode mono-utilisateur à l’aide de l’option de démarrage -m. Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données master ou une autre base de données système endommagées. Par exemple, vous souhaiterez modifier les options de configuration de serveur ou rétablir une base de données master endommagée ou une autre base de données système   
+
+Démarrage de SQL Server en Mode mono-utilisateur
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m
+   ```
+
+Démarrage de SQL Server en Mode mono-utilisateur avec SQLCMD
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
+   ```
+  
+> [!WARNING]  
+>  Démarrez SQL Server sur Linux avec l’utilisateur « mssql » afin d’éviter les problèmes de démarrage futures. Exemple « sudo -u mssql /opt/mssql/bin/sqlservr [OPTIONS de démarrage] » 
+
+Si vous avez commencé par inadvertance de SQL Server avec un autre utilisateur, vous devez modifier la propriété des fichiers de base de données SQL Server à l’utilisateur 'mssql' avant de démarrer SQL Server avec systemd. Par exemple, exécutez la commande suivante pour modifier la propriété de tous les fichiers de base de données sous /var/opt/mssql à l’utilisateur « mssql »,
+
+   ```bash
+   chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## <a name="common-issues"></a>Problèmes courants

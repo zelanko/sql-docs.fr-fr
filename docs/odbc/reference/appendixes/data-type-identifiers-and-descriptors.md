@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0040a426bd11048a993e98015a536c76e1b4381c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93b813632c3a281e1ae0ba90e95545e28d07ed09
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Les identificateurs de Type de données et les descripteurs de
 Les types de données répertoriés dans le [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) et [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) sections plus haut dans cette annexe sont des types de données « concis » : chaque identificateur fait référence à un type de données unique. Il existe une correspondance univoque entre l’identificateur et le type de données. Descripteurs, toutefois, ne faire pas dans tous les cas utilisent une valeur unique pour identifier les types de données. Dans certains cas, ils utilisent un type de données « commentaires » et un sous-code de type. Pour tous les types de données à l’exception des types de données datetime et d’intervalle, l’identificateur de type détaillé est le même que l’identificateur de type concis, et la valeur SQL_DESC_DATETIME_INTERVAL_CODE est égale à 0. Pour les types de données datetime et interval, toutefois, un type verbose (SQL_DATETIME ou SQL_INTERVAL) est stocké dans SQL_DESC_TYPE, un type concis est stocké dans SQL_DESC_CONCISE_TYPE, et un sous-code pour chaque type concis est stocké dans SQL_DESC_DATETIME_INTERVAL_CODE. L’un de ces champs affecte les autres. Pour plus d’informations sur ces champs, consultez la [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) description de fonction.  
@@ -57,4 +55,3 @@ QL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY
 |SQL_INTERVAL_HOUR_TO_MINUTE|SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_INTERVAL|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND|SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_INTERVAL|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_INTERVAL|SQL_CODE_MINUTE_TO_SECOND|
-

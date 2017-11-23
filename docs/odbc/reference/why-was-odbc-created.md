@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC [ODBC], about ODBC
+helpviewer_keywords: ODBC [ODBC], about ODBC
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94325210db4232ae3a5b715aa26a059d7895eae
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ab537128c572ef36bf4e0175f3bde1c8bedefc1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="why-was-odbc-created"></a>Pourquoi ODBC a été créé ?
 Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de base de données a été effectuée via le serveur frontal de ce système ou les applications écrites pour utiliser exclusivement avec ce système. Toutefois, comme l’utilisation d’ordinateurs a augmenté et plus matériels et logiciels ont été rendues disponibles, sociétés démarré pour acquérir des SGBD différents. Les raisons sont nombreux : personnes ont acheté quel était moins coûteux, ce qui a été le plus rapide, ce qu’ils déjà connaissait, ce qui a été plus récent sur le marché, ce qui a fonctionné mieux pour une application unique. Pour d’autres raisons ont été réorganisations et les fusions, où les services qui avaient un SGBD unique avaient désormais plusieurs.  
@@ -37,4 +34,3 @@ Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de bas
  Un problème similaire confrontée à des éditeurs de logiciels indépendants (ISV). Éditeurs de logiciel de base de données pour mini-ordinateurs et grands systèmes d’écriture ont été généralement contraints d’écrire une seule version d’une application pour chaque SGBD ou écrire du code de propres au SGBD pour chaque SGBD qu’ils veulent accéder. Écriture de logiciels pour ordinateurs personnels des fournisseurs eu à écrire des routines d’accès aux données pour chaque SGBD différent avec lequel ils voulaient utiliser. Cela signifie souvent une grande quantité de ressources ont été passé à l’écriture et la gestion d’accès aux données routines plutôt que les applications et les applications ont été vendues souvent pas sur leur qualité, mais si elles Impossible d’accès aux données dans un SGBD donné.  
   
  Si nécessaire par les deux ensembles de développeurs était un moyen d’accéder aux données dans le SGBD différents. Le groupe de macroordinateur et ses besoin d’une méthode pour fusionner les données de SGBD différents dans une application unique, alors que le groupe d’ordinateurs personnels si nécessaire, cette possibilité, ainsi que d’écrire une application unique qui est indépendante de tout un SGBD. En bref, les deux groupes nécessaires un moyen interopérable pour accéder aux données ; ils nécessitent ouvrir la connectivité de base de données.
-

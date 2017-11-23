@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], fetching results
 - fetches [ODBC], fetching results
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f706364735794aea773847431a9d42d0a09c8183
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 736cfc952412780a4720fd92239e36106affeba7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-4a-fetch-the-results"></a>Étape 4 a : extraire les résultats
 L’étape suivante consiste à extraire les résultats, comme indiqué dans l’illustration suivante.  
@@ -42,4 +40,3 @@ L’étape suivante consiste à extraire les résultats, comme indiqué dans l�
  Pour obtenir une description complète de la récupération des résultats, consultez [la récupération des résultats (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) et [la récupération des résultats (Avancé)](../../../odbc/reference/develop-app/retrieving-results-advanced.md).  
   
  L’application maintenant retourne à le « Étape 3 : générer et exécuter une instruction SQL » pour exécuter une autre instruction dans la même transaction ; ou passe à « Étape 5 : la Transaction de validation » pour valider ou restaurer la transaction.
-

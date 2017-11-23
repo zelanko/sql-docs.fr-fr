@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 051a94e77b5a53d2a87b3310048da9f8d67260fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="call-level-interfaces"></a>Interfaces de niveau d’appel
 La dernière technique pour l’envoi d’instructions SQL au SGBD est via une interface de niveau d’appel (CLI). Une interface de niveau d’appel fournit une bibliothèque de fonctions SGBD qui peut être appelée par l’application. Par conséquent, au lieu de tenter de fusion SQL avec un autre langage de programmation, une interface de niveau d’appel est similaire aux routine la plupart des programmeurs sont habitués à utiliser, par exemple, la chaîne, d’e/s, les bibliothèques ou des bibliothèques de mathématiques dans C. Notez que SGBD qui prennent en charge de SQL incorporé déjà ont une interface au niveau de l’appel, les appels à qui sont générés par le précompilés. Toutefois, ces appels sont non documenté et l’objet de modifications sans préavis.  
@@ -47,4 +45,3 @@ La dernière technique pour l’envoi d’instructions SQL au SGBD est via une i
 3.  Si l’instruction est une instruction SELECT, l’application appelle une fonction CLI pour retourner les résultats dans les mémoires tampon d’application. En règle générale, cette fonction retourne une ligne ou une colonne de données à la fois.  
   
 4.  L’application appelle une fonction CLI pour vous déconnecter du SGBD.
-

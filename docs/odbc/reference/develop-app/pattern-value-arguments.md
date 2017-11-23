@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - arguments in catalog functions [ODBC], pattern value
 - pattern value arguments [ODBC]
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 28caa361e4363aa2224d6cfa63a8830675aeece8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6935d0e94b931451aba5940db60877c8443df7c4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, accepte les modèles de recherche. Ces arguments accepte les modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils représentent les arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  
@@ -55,4 +53,3 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
 >  ODBC 2. *x* pilotes ne prennent pas en charge les modèles de recherche dans les *CatalogName* argument dans **SQLTables**. ODBC 3*.x* pilotes accepte les modèles de recherche dans cet argument si l’attribut d’environnement le paramètre version_odbc SQL_ATTR_ est défini à SQL_OV_ODBC3 ; ils n’acceptent pas les modèles de recherche dans cet argument si elle est définie sur SQL_OV_ODBC2.  
   
  En passant un pointeur null à un argument de modèle de recherche ne limite pas la recherche pour cet argument ; Autrement dit, un pointeur null et que le pourcentage de modèle de recherche (caractères) sont équivalentes. Cependant, une longueur nulle rechercher le modèle : autrement dit, un pointeur valide vers une chaîne de longueur zéro — correspond uniquement à la chaîne vide (« »).
-

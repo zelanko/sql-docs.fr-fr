@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - core level API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7dd288a2b2c95f19c2e2a472bc5875971c9df312
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions d’API de niveau principales (le pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|Associe un nom de curseur avec un handle d’instruction active, *hstmt*.|  
 |**SQLSetParam**|Remplacé par SQLBindParameter dans ODBC 2. *x*.|  
 |**SQLTransact**|Demande une opération de validation ou de restauration pour toutes les opérations actives sur tous les descripteurs d’instruction (hstmts) associés à une connexion, ou pour toutes les connexions associées au handle d’environnement, *henv*. Si une validation échoue en mode manuel, la transaction reste active ; Vous pouvez choisir de restaurer la transaction ou recommencez l’opération de validation. Si une opération de validation échoue en mode de transaction automatique, la transaction est restaurée automatiquement ; la transaction ne peut pas être inactive.|
-

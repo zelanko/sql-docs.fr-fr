@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - block cursors [ODBC]
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 79f78fed6b8b3c2624e9c9fc7617df3dde797bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursors"></a>Curseurs
 Une application extrait les données avec un *curseur*. Un curseur est différent à partir d’un jeu de résultats : un jeu de résultats est l’ensemble de lignes qui correspond aux critères de recherche spécifique, tandis qu’un curseur est le logiciel qui retourne les lignes à l’application. Le nom *curseur,* telle qu’elle s’applique aux bases de données, probablement l’origine à partir du curseur clignotant sur un ordinateur Terminal Server. Comme ce curseur indique la position actuelle sur l’écran et l’emplacement où les mots apparaîtra suivants, un curseur sur un jeu de résultats indique la position actuelle dans le jeu de résultats et reviendrez ensuite les lignes.  
@@ -46,4 +44,3 @@ Une application extrait les données avec un *curseur*. Un curseur est différen
   
 > [!IMPORTANT]  
 >  Validation ou la restauration d’une transaction en appelant explicitement **SQLEndTran** ou par fonctionne en mode de validation automatique, fait que certaines sources de données fermer tous les curseurs sur toutes les instructions sur une connexion. Pour plus d’informations, consultez les attributs SQL_CURSOR_COMMIT_BEHAVIOR et SQL_CURSOR_ROLLBACK_BEHAVIOR dans les [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description de fonction.
-

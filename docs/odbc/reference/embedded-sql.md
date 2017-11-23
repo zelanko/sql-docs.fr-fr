@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 La première technique pour l’envoi d’instructions SQL au SGBD est incorporée SQL. Étant donné que SQL n’utilise pas les variables et les instructions de flux de contrôle, il est souvent utilisé comme une sous-langue de base de données qui peut être ajoutée à un programme écrit dans un langage de programmation classique, tels que C ou COBOL. Il s’agit d’une idée centrale SQL incorporée : placer des instructions SQL dans un programme écrit dans un hôte de langage de programmation. En bref, les techniques suivantes sont utilisés pour incorporer des instructions SQL dans un langage hôte :  
@@ -46,11 +44,10 @@ La première technique pour l’envoi d’instructions SQL au SGBD est incorpor�
   
  Cette section contient les rubriques suivantes.  
   
--   [Exemple SQL incorporé](../../odbc/reference/embedded-sql-example.md)  
+-   [Exemple Embedded SQL](../../odbc/reference/embedded-sql-example.md)  
   
--   [Compilez un programme SQL incorporé](../../odbc/reference/compiling-an-embedded-sql-program.md)  
+-   [Compilation d’un programme Embedded SQL](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
 -   [SQL statique](../../odbc/reference/static-sql.md)  
   
--   [Instructions SQL dynamiques](../../odbc/reference/dynamic-sql.md)
-
+-   [SQL dynamique](../../odbc/reference/dynamic-sql.md)

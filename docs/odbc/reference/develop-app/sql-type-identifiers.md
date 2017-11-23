@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d0565ddfffb5b74344aaa41a1d0dfd243c590850
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-type-identifiers"></a>Identificateurs de Type SQL
 Chaque source de données définit ses propres types de données SQL. ODBC définit les identificateurs de type et décrit les caractéristiques générales des types de données SQL qui peuvent être mappés à l’identificateur de chaque type. Il est spécifique au pilote comment chaque type de données dans la source de données sous-jacente est mappé à un identificateur de type SQL d’ODBC.  
@@ -39,4 +37,3 @@ Chaque source de données définit ses propres types de données SQL. ODBC défi
  ODBC définit un large éventail d’identificateurs de type SQL. Toutefois, le pilote n’est pas obligatoirement à utiliser la totalité de ces identificateurs. Au lieu de cela, il utilise uniquement ces identificateurs qu'il doit exposer les types de données SQL pris en charge par la source de données sous-jacente. Si la source de données sous-jacente prend en charge les types de données SQL qui aucun identificateur de type ne correspondant, le pilote peut définir des identificateurs de type supplémentaire. Pour plus d’informations, consultez [les Types de données spécifiques au pilote, Types de descripteur, Types d’informations, Types de diagnostics et attributs](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
  Pour obtenir une description complète des identificateurs de type SQL, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) annexe d : Types de données.
-

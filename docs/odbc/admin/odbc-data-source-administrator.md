@@ -8,25 +8,23 @@ ms.service:
 ms.component: admin
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7b9056b21f5f2b74956c4a94878a0b326bbd1335
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3673b168743e169ba7dd4a711ae5aa7224224201
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-data-source-administrator"></a>Administrateur des sources de données ODBC
 Administrateur de sources de données Microsoft® ODBC gère les sources de données et les pilotes de base de données. Cette application se trouve dans le panneau de configuration Windows sous **outils d’administration**. À compter de Windows 8, l’icône est nommé **des Sources de données ODBC**, et sur les systèmes d’exploitation 64 bits, il existe une version 32 bits et 64 bits.  
@@ -37,13 +35,12 @@ Administrateur de sources de données Microsoft® ODBC gère les sources de donn
   
  Cette section contient les rubriques suivantes.  
   
--   [Sur les pilotes et les Sources de données](../../odbc/admin/about-drivers-and-data-sources.md)  
+-   [À propos des pilotes et des sources de données](../../odbc/admin/about-drivers-and-data-sources.md)  
   
--   [Gestion des Sources de données](../../odbc/admin/managing-data-sources.md)  
+-   [Gestion des sources de données](../../odbc/admin/managing-data-sources.md)  
   
--   [Définition des Options de suivi](../../odbc/admin/setting-tracing-options.md)  
+-   [Définition des options de suivi](../../odbc/admin/setting-tracing-options.md)  
   
--   [Définition des Options de mise en pool de connexions ODBC](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
+-   [Définition des options de mise en pools des connexions ODBC](../../odbc/admin/setting-odbc-connection-pooling-options.md)  
   
 -   [Affichage des pilotes](../../odbc/admin/viewing-drivers.md)
-

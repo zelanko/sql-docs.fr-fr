@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e201fb8bfe84fe44c0efb969274dae14478ed651
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 014a79813f5755e422b5e854b98f737d59a280a6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-fields"></a>Champs de descripteur
 Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décrivent complètement les colonnes ou des paramètres.  
@@ -76,9 +74,8 @@ Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décriven
   
 -   [Nombre d’enregistrements](../../../odbc/reference/develop-app/record-count.md)  
   
--   [Enregistrements de descripteurs liée](../../../odbc/reference/develop-app/bound-descriptor-records.md)  
+-   [Enregistrements de descripteurs liés](../../../odbc/reference/develop-app/bound-descriptor-records.md)  
   
 -   [Champs différés](../../../odbc/reference/develop-app/deferred-fields.md)  
   
--   [Vérification de cohérence](../../../odbc/reference/develop-app/consistency-check.md)
-
+-   [Vérification de la cohérence](../../../odbc/reference/develop-app/consistency-check.md)

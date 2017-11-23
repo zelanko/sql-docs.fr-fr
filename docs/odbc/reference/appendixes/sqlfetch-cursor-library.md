@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLFetch function [ODBC], Cursor Library
+helpviewer_keywords: SQLFetch function [ODBC], Cursor Library
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be061255491a6c697654d82f9933b3b1133e2d67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1e5cabca53c503e2cd0c12147248b11da84ed157
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlfetch-cursor-library"></a>SQLFetch (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -40,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Si la bibliothèque de curseurs est utilisée avec une API ODBC 2. *x* pilote, une liaison de décalage (comme défini par l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR) n’est pas utilisée lorsque **SQLFetch** est appelée.  
   
  Lors du chargée de la bibliothèque de curseurs, une application ne peut pas appeler **SQLFetch** pour extraire des colonnes de signet. La bibliothèque de curseurs passe l’appel à **SQLFetch** via le pilote, mais la fonction appelle pour activer des signets et lier la colonne de signet est interceptés par la bibliothèque de curseurs.
-

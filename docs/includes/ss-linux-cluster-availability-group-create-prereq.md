@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 Vous pouvez éventuellement activer les événements étendus des groupes de disponibilité Always On pour mieux diagnostiquer la cause principale quand vous résolvez les problèmes d’un groupe de disponibilité. Exécutez la commande suivante sur chaque instance de SQL Server. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ Pour plus d’informations sur cette session XE, consultez [Événements étendu
 
 Le script Transact-SQL suivant crée une connexion nommée `dbm_login` et un utilisateur nommé `dbm_user`. Mettez à jour le script avec un mot de passe fort. Exécutez la commande suivante sur toutes les instances de SQL Server pour créer l’utilisateur de point de terminaison de mise en miroir de bases de données.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ Le service SQL Server sur Linux utilise des certificats pour authentifier les co
 
 Le script Transact-SQL suivant crée une clé principale et un certificat principal. Il sauvegarde ensuite le certificat et sécurise le fichier avec une clé privée. Mettez à jour le script avec des mots de passe forts. Connectez-vous à l’instance principale de SQL Server et exécutez la commande Transact-SQL suivante pour créer le certificat :
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 Le script Transact-SQL suivant crée une clé principale et un certificat principal à partir de la sauvegarde que vous avez créée sur le réplica principal de SQL Server. La commande autorise également l’utilisateur à accéder au certificat. Mettez à jour le script avec des mots de passe forts. Le mot de passe de déchiffrement est le même mot de passe que celui que vous avez utilisé pour créer le fichier .pvk à une étape précédente. Exécutez le script suivant sur tous les serveurs secondaires pour créer le certificat.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Créer les points de terminaison de mise en miroir de bases de données sur tous les réplicas
 
-Les points de terminaison de mise en miroir de bases de données utilisent le protocole TCP (Transmission Control Protocol) pour l'envoi et la réception de messages entre les instances de serveur participant à des sessions de mise en miroir de bases de donnée ou hébergeant des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique. 
+Les points de terminaison de mise en miroir de bases de données utilisent le protocole TCP (Transmission Control Protocol) pour l'envoi et la réception de messages entre les instances de serveur participant à des sessions de mise en miroir de bases de donnée ou hébergeant des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique. L’écouteur TCP requiert une adresse IP d’écouteur. L’adresse IP d’écouteur doit être une adresse IPv4. Vous pouvez également utiliser `0.0.0.0`. 
 
 L’instruction Transact-SQL suivante crée un point de terminaison d’écoute nommé `Hadr_endpoint` pour le groupe de disponibilité. Il démarre le point de terminaison et donne l’autorisation de connexion à l’utilisateur que vous avez créé. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`.
 
->[!NOTE]
->Pour cette version, n’utilisez pas une adresse IP différente pour l’adresse IP de l’écouteur. Nous travaillons sur un correctif pour résoudre ce problème, mais la seule valeur acceptable pour le moment est « 0.0.0.0 ».
+Mise à jour de l’instruction Transact-SQL suivant pour votre environnement sur toutes les instances de SQL Server : 
 
-Mettez à jour le code Transact-SQL suivant pour votre environnement sur toutes les instances de SQL Server : 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->Le port TCP sur le pare-feu doit être ouvert pour le port d’écoute.
+>[!NOTE]
+>Si vous utilisez SQL Server Express Edition sur un nœud pour héberger un seul réplica de configuration, la seule valeur valide pour le rôle est `WITNESS`. Exécutez le script suivant dans SQL Server Express Edition.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->Pour la version SQL Server 2017, la seule méthode d’authentification prise en charge pour le point de terminaison de mise en miroir de bases de données est `CERTIFICATE`. L’option `WINDOWS` sera activée dans une version ultérieure.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-Pour plus d’informations, consultez [Point de terminaison de mise en miroir de bases de données (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

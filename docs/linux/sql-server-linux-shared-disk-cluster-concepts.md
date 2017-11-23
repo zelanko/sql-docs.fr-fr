@@ -15,14 +15,12 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 36c5b7ccd0cc8c3a56dca700469fb4fd05fa2871
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 229c6a989a4707921eae3046e3c9707b05bb0306
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instances de Cluster de basculement, SQL Server sur Linux
 
 Cet article explique les concepts liés aux instances de cluster de basculement SQL Server (ICF) sur Linux. 
@@ -92,4 +90,3 @@ Les rubriques suivantes expliquent comment configurer les types de stockage pris
 - [Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 - [Configuration d’instance de cluster de basculement - NFS - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [Configuration d’instance de cluster de basculement - SMB - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
-

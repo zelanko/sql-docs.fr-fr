@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQLBulkOperations function [ODBC], deleting rows
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b4ad7a4bb88318ebabf2ff5e21f8baaf38dd4280
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db7e04c5bf76855afdb24676c905c5cccbc60cbc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>Suppression de lignes par le signet avec SQLBulkOperations
 Lors de la suppression d’une ligne par un signet, **SQLBulkOperations** permet de supprimer une ou plusieurs lignes sélectionnées de la table de la source de données. Les lignes sont identifiées par le signet dans une colonne liée de signet.  
@@ -39,4 +37,3 @@ Lors de la suppression d’une ligne par un signet, **SQLBulkOperations** permet
 2.  Définit l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE au nombre de signets et lie la mémoire tampon qui contient la valeur du signet, ou le tableau de signets, à la colonne 0.  
   
 3.  Appels **SQLBulkOperations** avec *opération* SQL_DELETE_BY_BOOKMARK la valeur.
-

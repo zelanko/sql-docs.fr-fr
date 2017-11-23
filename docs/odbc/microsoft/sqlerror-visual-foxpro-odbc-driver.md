@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLError function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLError function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 03c6fd59fc4b60e1e02f3d13c19bcab0206d571c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 46696509f9276ac4974604c931c4d77acbaae15b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlerror-visual-foxpro-odbc-driver"></a>SQLError (le pilote ODBC Visual FoxPro)
 > [!NOTE]  
@@ -47,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |*pcbErrorMsg*|La longueur du texte du message ainsi que la longueur des identificateurs.|  
   
  Pour plus d’informations sur les messages d’erreur de pilote, consultez [présentation des Messages d’erreur](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md). Pour plus d’informations sur cette fonction, consultez [SQLError](../../odbc/reference/syntax/sqlerror-function.md) dans les *de référence du programmeur ODBC*.
-

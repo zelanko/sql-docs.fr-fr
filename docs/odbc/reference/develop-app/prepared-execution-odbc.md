@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], prepared execution
 - SQL statements [ODBC], executing
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bde6eb0d06e99a9a7e08aeb4d4179bcbb9a5bff2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepared-execution-odbc"></a>Exécution préparée ODBC
 L’exécution préparée est un moyen efficace pour exécuter une instruction plusieurs fois. L’instruction est compilée tout d’abord, ou *préparée,* dans un plan d’accès. Le plan d’accès est alors exécutée une ou plusieurs fois à une date ultérieure. Pour plus d’informations sur les plans d’accès, consultez [le traitement d’une instruction SQL](../../../odbc/reference/processing-a-sql-statement.md).  
@@ -100,4 +98,3 @@ while (GetPrice(&PartID, &Price)) {
  Si le pilote ne peut pas émuler la préparation de l’instruction, elle stocke l’instruction lorsque **SQLPrepare** est appelée et la soumet pour exécution lorsque **SQLExecute** est appelée.  
   
  Car la préparation de l’instruction émulée n’est pas parfaite, **SQLExecute** peut retourner les erreurs retournées normalement par **SQLPrepare**.
-

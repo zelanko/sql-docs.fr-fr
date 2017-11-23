@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - level 2 interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 216cfaa83c7b48e94778b98fde9766a47221091b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-interface-conformance"></a>Conformité d’Interface de niveau 2
 Niveau de conformité de l’interface de niveau 2 inclut les fonctionnalités de conformité au niveau de l’interface de niveau 1 ainsi que les fonctionnalités suivantes :  
@@ -45,4 +43,3 @@ Niveau de conformité de l’interface de niveau 2 inclut les fonctionnalités d
 |209|Définissez l’attribut d’instruction SQL_ATTR_CONCURRENCY au moins une valeur autre que SQL_CONCUR_READ_ONLY.|  
 |210|Capacité de la demande de connexion de délai d’attente et des requêtes SQL (SQL_ATTR_LOGIN_TIMEOUT et SQL_ATTR_QUERY_TIMEOUT).|  
 |211|La possibilité de modifier le niveau d’isolement par défaut ; la possibilité d’exécuter des transactions avec niveau d’isolement « sérialisable ».|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], about driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ee227f7fab393cdf563daab2aa695cd469281ff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-driver-manager"></a>Le Gestionnaire de pilotes
 Le *du Gestionnaire de pilotes* est une bibliothèque qui gère la communication entre les applications et des pilotes. Par exemple, sur les plateformes Microsoft® Windows®, le Gestionnaire de pilotes est une bibliothèque de liens dynamiques (DLL) qui est écrit par Microsoft et peut être redistribuée par les utilisateurs du composant redistribuable MDAC 2.8 SP1 SDK.  
@@ -44,4 +42,3 @@ Le *du Gestionnaire de pilotes* est une bibliothèque qui gère la communication
  Le rôle principal final du Gestionnaire de pilotes est le chargement et déchargement de pilotes. L’application charge et décharge uniquement le Gestionnaire de pilotes. Quand il souhaite utiliser un pilote spécifique, il appelle une fonction de connexion (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**) dans le Gestionnaire de pilotes et spécifie le nom de source de données particulière ou de pilote, tels que « Comptabilité » ou « SQL Server ». À l’aide de ce nom, le Gestionnaire de pilote recherche les informations de source de données pour le nom de fichier du pilote, telles que Sqlsrvr.dll. Il charge le pilote (en supposant qu’il n’est pas déjà chargé), stocke l’adresse de chaque fonction dans le pilote et appelle la fonction de connexion dans le pilote, puis s’initialise et se connecte à la source de données.  
   
  Lorsque l’application est terminée à l’aide du pilote, il appelle **SQLDisconnect** dans le Gestionnaire de pilotes. Le Gestionnaire de pilotes appelle cette fonction dans le pilote, se déconnecte de la source de données. Toutefois, le Gestionnaire de pilotes conserve le pilote en mémoire dans le cas où l’application se reconnecte à celui-ci. Il décharge le pilote uniquement lorsque l’application libère la connexion utilisée par le pilote utilise la connexion pour un autre pilote, et aucune autre connexion n’utilisent le pilote. Pour obtenir une description complète du rôle de gestionnaire de pilotes dans le chargement et déchargement de pilotes, consultez [rôle du Gestionnaire de pilotes dans le processus de connexion](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).
-

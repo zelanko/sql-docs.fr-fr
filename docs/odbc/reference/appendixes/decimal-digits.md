@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>Chiffres décimaux
 Le *chiffres décimaux* de données decimal et numeric types est défini comme le nombre maximal de chiffres à droite de la virgule décimale, ou à l’échelle des données. Pour les colonnes de nombres à virgule flottante approximatifs ou les paramètres, l’échelle n’est pas définie, car le nombre de chiffres à droite de la virgule décimale n’est pas fixe. Pour les données datetime ou interval qui contient un composant « secondes », les chiffres décimaux est défini comme le nombre de chiffres à droite de la virgule décimale dans le composant « secondes » de données.  
@@ -60,4 +58,3 @@ Le *chiffres décimaux* de données decimal et numeric types est défini comme l
 |Tous les types date/heure|PRECISION|  
 |Tous les types d’intervalle avec un composant « secondes »|PRECISION|  
 |Tous les types d’intervalle avec aucun composant « secondes »|n/a|
-

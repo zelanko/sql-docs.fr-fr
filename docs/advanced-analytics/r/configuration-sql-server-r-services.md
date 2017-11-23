@@ -5,22 +5,20 @@ ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0fd4554-60c6-4181-ac4c-2e366fb434f6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f90cb9c8792086352403a6bb937391daf3f338f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c533a35c09842221468764ef2f59e7c9cd7714d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configuration-and-management"></a>Configuration et gestion
 
@@ -53,7 +51,7 @@ Ces rubriques décrivent comment installer de nouveaux packages R sur l’instan
 
 Ces rubriques expliquent comment apporter des modifications à l’architecture sous-jacente du service et comment gérer les entités de sécurité associées au service d’extensibilité.
 
-+ [Considérations sur la sécurité](security-considerations-for-the-r-runtime-in-sql-server.md)
++ [Considérations relatives à la sécurité](security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Modifier le pool de comptes d’utilisateurs pour SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md)
 + [Configurer et gérer les extensions analytiques avancées](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md)
 + [Activer la gestion de Package pour une Instance à l’aide de rôles de base de données](r-package-how-to-enable-or-disable.md)
@@ -75,7 +73,6 @@ Voir aussi :
 Vous trouverez plus d’aide relatives à l’installation initiale et la configuration dans les rubriques suivantes :
 
 + [FAQ d’installation et de mise à niveau](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-+ [Considérations sur la sécurité](../r/security-considerations-for-the-r-runtime-in-sql-server.md)
++ [Considérations relatives à la sécurité](../r/security-considerations-for-the-r-runtime-in-sql-server.md)
 + [Problèmes connus pour R Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
-
 

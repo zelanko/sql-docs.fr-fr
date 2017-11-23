@@ -3,33 +3,36 @@ title: Exemples Microsoft SQL Server | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
+ms.prod: sample
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: a8aa94cd3d28fe8516588b0c7c25811319cb4c50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Exemples Microsoft SQL Server
-Cette galerie contient des bases de données et d’autres exemples pour les produits Microsoft SQL, y compris SQL Server et la base de données SQL Azure.   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Cette galerie contient des bases de données et d’autres exemples pour les produits Microsoft SQL, y compris SQL Server et la base de données SQL Azure.   
 
 ## <a name="new-wide-world-importers-sample-database"></a>Nouveau !! Exemple de base de données World Wide Importers
 
 Nous sommes heureux d’une nouvelle base de données exemple appelée Wide World Importers (WWI), développé pour la conception de base de données d’affichage des objets à l’aide des fonctionnalités actuelles, les outils et techniques de conception de la fonctionnalité. Les exemples incluent un système OLTP et OLAP qui sont conçus pour s’exécuter sur SQL Server 2016 et versions ultérieures. 
 
 ## <a name="documentation"></a>Documentation
-Le [documentation de WWI](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) sur MSDN.   
+Le [documentation de WWI](./world-wide-importers/wide-world-importers-documentation.md) sur Microsoft Docs.   
   
 
 ## <a name="sql-server-samples-repository"></a>Référentiel d’exemples de SQL Server

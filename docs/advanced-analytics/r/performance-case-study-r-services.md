@@ -1,26 +1,24 @@
 ---
 title: "Performances pour R Services - résultats et ressources | Documents Microsoft"
 ms.custom: 
-ms.date: 07/15/2017
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 9c3aba17a6f70f581ded64f25d171d46570667c8
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f14e3d744a6d65891f6162bf63e69d682d08a971
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et des ressources
 
@@ -31,7 +29,7 @@ Les études de cas deux a différents objectifs :
 + La première étude de cas, par l’équipe de développement R Services, recherché mesurer l’impact des techniques d’optimisation spécifiques
 + La deuxième étude de cas, par une équipe de spécialistes des données, Transposez plusieurs méthodes pour déterminer les meilleures optimisations pour un scénario de calcul de score de haut volume spécifique.
 
-Cette rubrique répertorie les résultats détaillés de la première étude de cas. Pour le deuxième étude de cas, un résumé décrit les conclusions générales. À la fin de cette rubrique, vous trouverez des liens vers tous les scripts et les exemples de données et les ressources utilisées par les auteurs d’origine.
+Cette rubrique répertorie les résultats détaillés de la première étude de cas. Pour le deuxième étude de cas, un résumé décrit les conclusions générales. À la fin de cette rubrique sont des liens vers tous les scripts et les exemples de données et les ressources utilisées par les auteurs d’origine.
 
 ## <a name="performance-case-study-airline-dataset"></a>Étude de cas de performances : jeu de données de billet d’avion
 
@@ -280,13 +278,13 @@ Les résultats des tests affichent l’heure pour enregistrer le modèle et le t
 
 Chargement d’un modèle formé à partir d’une table est une méthode plus rapide pour effectuer la prédiction. Nous vous déconseillons de création du modèle et l’exécution dans le même script de calcul de score.
 
-## <a name="case-study-optimization-for-resume-matching-task"></a>Étude de cas : optimisation pour une reprise tâche mise en correspondance
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Étude de cas : l’optimisation de la tâche de mise en correspondance de reprise
 
-Le modèle de mise en correspondance de reprise a été développé par le chercheur de données Microsoft Ke Huang pour tester les performances du code R dans SQL Server et activer des chercheurs de données prendre en charge des solutions évolutives et au niveau de l’entreprise.
+Le modèle de mise en correspondance de reprise a été développé par le chercheur de données Microsoft Ke Huang pour tester les performances du code R dans SQL Server et en effectuant des chercheurs créer évolutives, donc les données aide solutions au niveau de l’entreprise.
 
 ### <a name="methods"></a>Méthodes
 
-Les packages MicrosoftML et RevoScaleR ont été utilisés pour l’apprentissage d’un modèle de prévision dans une solution R complexe impliquant de volumineux datasets. Requêtes SQL et le code R étaient identiques. Tous les tests ont été effectués sur une seule machine virtuelle de Azure avec SQL Server est installé. Ensuite, l’auteur comparé heures de calcul de score avec et sans ces optimisations fournies par SQL Server :
+Les packages MicrosoftML et RevoScaleR ont été utilisés pour l’apprentissage d’un modèle de prévision dans une solution R complexe impliquant de volumineux datasets. Requêtes SQL et le code R sont identiques dans tous les tests. Les tests ont été effectués sur une seule machine virtuelle de Azure avec SQL Server est installé. Ensuite, l’auteur comparé heures de calcul de score avec et sans les optimisations suivantes fournies par SQL Server :
 
 - Tables en mémoire
 - Soft-NUMA
@@ -328,12 +326,9 @@ La configuration ayant les meilleures performances dans la correspondance de rep
 
 -   Mémoire maximale utilisée par les sessions R = 70 %
 
-Pour le modèle de mise en correspondance de reprise, script externe a été importante, et aucune autre base de données n’est en cours d’exécution des services de moteur. Par conséquent, les ressources allouées aux scripts externes a été augmentée à 70 %, ce qui était la meilleure configuration pour les performances de script.
+Pour le modèle de mise en correspondance de reprise, script externe a été importante, et aucune autre base de données n’est en cours d’exécution des services de moteur. Par conséquent, les ressources allouées aux scripts externes ont été augmentées à 70 %, ce qui a été identifié comme la meilleure configuration pour les performances de script.
 
-Cette configuration a été arrivée en expérimentant des modèles avec des valeurs différentes. Si vous utilisez un matériel différent ou une autre solution, la configuration optimale peut être différente.
-
-> [!IMPORTANT]
-> Faire des essais pour trouver la meilleure configuration pour votre cas !
+Cette configuration a été arrivée en expérimentant des modèles avec des valeurs différentes. Si vous utilisez un matériel différent ou une autre solution, la configuration optimale peut être différente. Toujours faire des essais pour trouver la meilleure configuration pour votre cas !
 
 Dans la solution optimisée, 1.1 millions de lignes (avec les fonctionnalités de 100) ont été notées dans sous 8,5 secondes sur un ordinateur de 20 cœurs. Les optimisations d’améliorer considérablement les performances en termes de temps de calcul de score.
 
@@ -342,6 +337,16 @@ Les résultats suggéré également que le **nombre de fonctionnalités** eu un 
 Nous vous recommandons de lire cet article de blog et le didacticiel d’accompagnement pour une présentation détaillée.
 
 -   [Conseils d’optimisation et pour l’apprentissage dans SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+
+De nombreux utilisateurs ont de noter qu’il existe une petite pause en tant que le runtime R (ou Python) est chargé pour la première fois. Pour cette raison, comme décrit dans ces tests, l’heure de la première exécution est souvent mesurée mais rejeté par la suite. Mise en cache ultérieure peut entraîner des différences de performances notables entre la première et deuxième s’exécute. Il existe également une charge de traitement lorsque les données sont déplacées entre SQL Server et le runtime externe, en particulier si les données sont transmises sur le réseau au lieu d’être chargée directement à partir de SQL Server.
+
+Pour toutes ces raisons, il n’existe aucune solution pour atténuer ce temps de chargement initial, comme l’impact sur les performances varie considérablement selon la tâche. Par exemple, la mise en cache est effectuée pour une seule ligne de calcul de score par lots ; Par conséquent, les opérations de calcul de score successives sont beaucoup plus rapides et le modèle, ni le runtime R est rechargé. Vous pouvez également utiliser [score native](../sql-native-scoring.md) pour éviter de charger le runtime R entièrement.
+
+Apprentissage des modèles de grande taille ou de score par lots de grande taille, la surcharge peut être minimale comparée les gains en évitant le déplacement des données ou à partir de la diffusion en continu et le traitement parallèle. Consultez ces dernières blogs et des exemples pour obtenir des conseils supplémentaires sur les performances :
+
++ [Classification de prêt à l’aide de SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
++ [Client anticipée des expériences avec R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
++ [À l’aide de R à détecter une fraude à 1 million de transactions par seconde](http://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Ressources
 
@@ -407,4 +412,3 @@ Voici des liens vers plus d’informations, les outils et les scripts utilisés 
 [Réglage des performances pour R - R optimisation de code et les données](r-and-data-optimization-r-services.md)
 
 [Réglage des performances - résultats de l’étude de cas](performance-case-study-r-services.md)
-

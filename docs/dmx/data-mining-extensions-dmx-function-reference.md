@@ -13,31 +13,29 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - functions [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: fadd105b-9c8e-4118-a1f7-c0518b9ad970
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1871de9ebb81ef5bd88063a3a26067e86b32ad3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Fonctions DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge plusieurs fonctions du langage DMX (Data Mining Extensions). Les fonctions étendent les résultats d'une requête de prévision afin d'inclure les informations qui décrivent en détail la prévision. Les fonctions permettent aussi de mieux contrôler la présentation des résultats de la prévision. Le tableau suivant fournit des liens vers des ressources vous permettant de comprendre l'utilisation des fonctions dans DMX.  
   
-|Fonction|Description|  
+|Fonction| Description|  
 |--------------|-----------------|  
 |[Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)|Répertorie les fonctions qui peuvent être utilisées avec tous les types de modèles et fournit des liens vers des informations supplémentaires sur l'interrogation de types spécifiques de modèles d'exploration de données.|  
 |[Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Fournit une vue d'ensemble de la création d'une requête de prédiction à l'aide de DMX.|  
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

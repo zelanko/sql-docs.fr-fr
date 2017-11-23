@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f4451ccb74ca19a02c352c2e7361d0ec8e84c87d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-status-array"></a>Tableau d’état de ligne
 En plus des données, **SQLFetch** et **SQLFetchScroll** peut retourner un tableau qui donne le statut de chaque ligne dans l’ensemble de lignes. Ce tableau est spécifié via l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR. Ce tableau est alloué par l’application et doit avoir autant d’éléments spécifiés par l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE. Les valeurs du tableau sont définies par **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, et **SQLSetPos.** Les valeurs de décrivent l’état de la ligne et si cet état a été modifiée depuis sa dernière extraction.  
@@ -44,4 +42,3 @@ En plus des données, **SQLFetch** et **SQLFetchScroll** peut retourner un table
 |SQL_ROW_DELETED|La ligne a été supprimée depuis sa dernière extraction.|  
 |SQL_ROW_ADDED|La ligne a été insérée par **SQLBulkOperations**. Si la ligne est extraite à nouveau ou qu’il est actualisée par **SQLSetPos**, son état est SQL_ROW_SUCCESS.<br /><br /> Cette valeur n’est pas définie **SQLFetch** ou **SQLFetchScroll**.|  
 |SQL_ROW_NOROW|L’ensemble de lignes avec chevauchement de la fin du jeu de résultats, et aucune ligne n’a été retourné qui correspondait à cet élément du tableau d’état de ligne.|
-

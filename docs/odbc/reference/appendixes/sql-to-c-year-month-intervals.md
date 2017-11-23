@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4acd46374597b19849abfaa7cb547c8b6af23bd9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL à des intervalles d’année-mois C:
 Les identificateurs pour les types de données SQL ODBC intervalle année-mois sont :  
@@ -54,4 +52,3 @@ _C_BINARY|Longueur en octets de données < = *BufferLength*<br /><br /> Longueur
  [b] si la précision de l’intervalle est un champ unique (une année ou un mois), l’intervalle de type SQL peut être converti en n’importe quel numérique exact (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG ou SQL_C_NUMERIC).  
   
  La conversion d’un type SQL de l’intervalle par défaut est pour le type de données d’intervalle C correspondant. L’application puis lie la colonne ou du paramètre (ou définit le champ SQL_DESC_DATA_PTR dans l’enregistrement approprié de la ARD) pour pointer vers la structure SQL_INTERVAL_STRUCT initialisée (ou passe un pointeur vers la structure SQL_ INTERVAL_STRUCT que le *TargetValuePtr* argument dans un appel à **SQLGetData**).
-

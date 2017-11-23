@@ -2,32 +2,31 @@
 title: "Création de vues et procédures stockées | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- creating views and stored procedures
+applies_to: SQL Server 2016
+helpviewer_keywords: creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: b246171441ba9eedb213fd2baef55d8dc7668d26
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bc361e589dba1215781adcf951fd419b7dc806f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Leçon 2-3 - Création de vues et procédures stockées
-Étant donné que Mary peut désormais accéder à la base de données **TestData** , vous pouvez envisager de créer des objets de base de données, tels qu'une vue et une procédure stockée, puis octroyer à Mary l'accès à ses objets. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Maintenant que Mary peut accéder à la **TestData** base de données, vous souhaiterez créer certains objets de base de données, tels qu’une vue et une procédure stockée et ensuite accorder Mary l’accès à. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
   
 Les vues peuvent être interrogées comme des tables et n'acceptent pas de paramètres. Les procédures stockées sont plus complexes que les vues. Elles peuvent contenir des paramètres d'entrée et de sortie et peuvent contenir des instructions pour contrôler le flux du code, comme les instructions IF et WHILE. Il est recommandé de faire appel aux procédures stockées pour coder toutes les actions répétitives dans la base de données  
   
@@ -92,4 +91,3 @@ Pour cet exemple, vous allez utiliser CREATE VIEW pour créer une vue qui sélec
   
   
   
-

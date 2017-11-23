@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a6e0b002c34e8bf35f4f2c9b42dd7b47293ac9b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70c6dba19353cc503dc42b33640c18c4ee72caa9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="role-of-the-driver-manager"></a>Rôle du Gestionnaire de pilotes
 Le Gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’état qu’elle génère. En particulier, il détermine quel enregistrement a le rang le plus élevé et doit être retournées en premier. Le pilote est chargé de classer des enregistrements d’état qu’elle génère. Si les enregistrements d’état sont publiées par le Gestionnaire de pilotes et le pilote, le Gestionnaire de pilotes est responsable de leur classement. Pour plus d’informations, consultez [séquence d’enregistrements d’état](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
@@ -42,11 +40,10 @@ Le Gestionnaire de pilotes détermine l’ordre final dans lequel retourner les 
   
  Cette section contient les rubriques suivantes.  
   
--   [Vérifications de valeur d’argument](../../../odbc/reference/develop-app/argument-value-checks.md)  
+-   [Vérifications de la valeur des arguments](../../../odbc/reference/develop-app/argument-value-checks.md)  
   
--   [Vérifications de la Transition d’état](../../../odbc/reference/develop-app/state-transition-checks.md)  
+-   [Vérifications des transitions d’état](../../../odbc/reference/develop-app/state-transition-checks.md)  
   
 -   [Vérifications des erreurs générales](../../../odbc/reference/develop-app/general-error-checks.md)  
   
--   [Erreur du Gestionnaire de pilotes et des vérifications d’avertissement](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)
-
+-   [Vérifications des erreurs et avertissements du gestionnaire de pilotes](../../../odbc/reference/develop-app/driver-manager-error-and-warning-checks.md)

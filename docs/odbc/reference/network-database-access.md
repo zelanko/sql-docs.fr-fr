@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 920de8b36ee55357eebde9ad844bfe569773f74e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="network-database-access"></a>Réseau de base de données Access
 L’accès à une base de données sur un réseau requiert un nombre de composants, chacun d’eux est indépendante d’et se trouve en dessous de l’interface de programmation. Ces composants sont illustrés dans l’illustration suivante.  
@@ -47,4 +45,3 @@ L’accès à une base de données sur un réseau requiert un nombre de composan
 -   **Mécanisme de Communication d’interprocessus** le mécanisme de communication interprocessus (IPC) est le processus par lequel un processus communique avec un autre. Exemples DECnet sockets, sockets TCP/IP et canaux nommés. Le choix du mécanisme IPC est limité par le système d’exploitation et le réseau utilisé.  
   
 -   **Protocole réseau** le protocole de réseau est utilisé pour transporter le flux de données sur un réseau. Il peut être considéré comme la structure que prend en charge les mécanismes IPC permettant d’implémenter les données de flux du protocole, ainsi que les opérations de réseau de base telles que les transferts de fichiers de prise en charge et de partage d’impression. Protocoles réseau incluent NetBEUI, TCP/IP, DECnet et SPX/IPX et sont spécifiques à chaque réseau.
-

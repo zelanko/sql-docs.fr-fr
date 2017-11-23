@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _DynaCollection::Append
-helpviewer_keywords:
-- Append method [ADO]
+f1_keywords: _DynaCollection::Append
+helpviewer_keywords: Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: db5dc5c8b6d40873ce333aa2987d04c046c222b1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-ado"></a>Append (méthode) (ADO)
 Ajoute un objet à une collection. Si la collection est [champs](../../../ado/reference/ado-api/fields-collection-ado.md), un nouveau [champ](../../../ado/reference/ado-api/field-object.md) objet peut être créé avant d’être ajouté à la collection.  
@@ -95,8 +91,8 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
 ## <a name="applies-to"></a>S'applique à  
   
-- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
-- [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+- [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+- [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Append et CreateParameter, méthodes-exemple (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
@@ -105,5 +101,4 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  [DELETE, méthode (Collection de champs ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [DELETE, méthode (Collection de paramètres ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DELETE, méthode (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
- [Update (méthode)](../../../ado/reference/ado-api/update-method.md)
-
+ [Update, méthode](../../../ado/reference/ado-api/update-method.md)

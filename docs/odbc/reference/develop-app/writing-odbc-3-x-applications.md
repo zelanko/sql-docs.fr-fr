@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b0c0701ce83e4d1d30bd8f69f94ddc90e7a60a8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3941a679210a18b39ed201dd564b9613b48a2a58
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-applications"></a>Écriture d’Applications ODBC 3.x
 Lorsqu’une application ODBC 2. *x* application est mise à niveau vers ODBC 3. *x*, il doit être écrit tel qu’il fonctionne avec ODBC 2. *x* et 3. *x* pilotes. L’application doit incorporer le code conditionnel pour tirer pleinement parti de ODBC 3. *x* fonctionnalités.  
@@ -92,17 +90,16 @@ Lorsqu’une application ODBC 2. *x* application est mise à niveau vers ODBC 3.
   
  Cette section contient les rubriques suivantes.  
   
--   [Mappage des fonctions de remplacement pour la compatibilité descendante des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
+-   [Mappage des fonctions de remplacement pour la compatibilité descendante des applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   
--   [Appel SQLCloseCursor](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
+-   [Appel de SQLCloseCursor](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
   
--   [L’appel de SQLGetDiagField](../../../odbc/reference/develop-app/calling-sqlgetdiagfield.md)  
+-   [Appel de SQLGetDiagField](../../../odbc/reference/develop-app/calling-sqlgetdiagfield.md)  
   
--   [L’appel de SQLSetPos](../../../odbc/reference/develop-app/calling-sqlsetpos.md)  
+-   [Appel de SQLSetPos](../../../odbc/reference/develop-app/calling-sqlsetpos.md)  
   
--   [Opérations de bibliothèque de curseur](../../../odbc/reference/develop-app/cursor-library-operations.md)  
+-   [Opérations de bibliothèque de curseurs](../../../odbc/reference/develop-app/cursor-library-operations.md)  
   
--   [Mapper les Types d’informations de Attributes1 curseur](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
+-   [Mappage des types d’informations Attributes1 du curseur](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)
-

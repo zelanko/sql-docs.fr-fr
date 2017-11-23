@@ -1,30 +1,31 @@
 ---
 title: "Utilisation de fonctionnalités de SQL Server | Documents Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Utilisation de WideWorldImportersDW de fonctionnalités de SQL Server
-WideWorldImportersDW est conçu pour illustrer la plupart des fonctionnalités clés de SQL Server qui conviennent pour l’entreposage des données et analytique. Voici une liste des fonctionnalités de SQL Server et fonctionnalités et une description de la façon dont elles sont utilisées dans WideWorldImportersDW.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW est conçu pour illustrer la plupart des fonctionnalités clés de SQL Server qui conviennent pour l’entreposage des données et analytique. Voici une liste des fonctionnalités de SQL Server et fonctionnalités et une description de la façon dont elles sont utilisées dans WideWorldImportersDW.
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ La fonction de partition utilisé pour les tables partitionnées toutes les `PF_
 WideWorldImportersDW utilise les tables optimisées en mémoire SCHEMA_ONLY pour les tables intermédiaires. Tous les `Integration.` * `_Staging` tables sont des tables optimisées en mémoire SCHEMA_ONLY.
 
 L’avantage de tables SCHEMA_ONLY est qu’ils ne sont pas enregistrés et ne nécessitent pas l’accès de disque. Cela améliore les performances du processus ETL. Étant donné que ces tables ne sont pas enregistrés, leur contenu est perdu en cas de panne. Toutefois, la source de données est toujours disponible, donc le processus ETL peut simplement être redémarré si une défaillance se produit.
-

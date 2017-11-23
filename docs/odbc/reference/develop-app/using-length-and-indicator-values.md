@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5497ef9b94a57442fd675db6729147d0432ece56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-length-and-indicator-values"></a>À l’aide de la longueur et les valeurs d’indicateur
 La mémoire tampon de longueur / d’indicateur est utilisée pour passer la longueur en octets des données dans le tampon de données ou un indicateur spécial tel que SQL_NULL_DATA, ce qui indique que les données sont NULL. Selon la fonction dans laquelle il est utilisé, une mémoire tampon de longueur / d’indicateur est définie comme un SQLINTEGER ou un SQLSMALLINT. Par conséquent, un seul argument est nécessaire pour le décrire. Si la mémoire tampon de données est un tampon d’entrée nondeferred, cet argument contient la longueur en octets des données elles-mêmes ou une valeur de l’indicateur. Il est souvent appelée *StrLen_or_Ind* ou un nom similaire. Par exemple, les éléments suivants code appelle **SQLPutData** à passer une mémoire tampon complète de données ; la longueur d’octet (*ValueLen*) est passée directement, car le tampon de données (*ValuePtr*) est un mémoire tampon d’entrée.  
@@ -79,4 +77,3 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM. Une procédure consiste à utiliser la valeur par défaut d’un paramètre d’entrée dans une procédure au lieu de la valeur dans la mémoire tampon de données correspondante.  
   
 -   SQL_COLUMN_IGNORE. **SQLBulkOperations** ou **SQLSetPos** consiste à ignorer la valeur dans la mémoire tampon de données. Lors de la mise à jour d’une ligne de données par un appel à **SQLBulkOperations** ou **SQLSetPos,** la valeur de la colonne n’est pas modifiée. Lors de l’insertion d’une nouvelle ligne de données par un appel à **SQLBulkOperations**, la valeur de colonne est définie à sa valeur par défaut ou, si la colonne n’a pas de valeur par défaut, null.
-

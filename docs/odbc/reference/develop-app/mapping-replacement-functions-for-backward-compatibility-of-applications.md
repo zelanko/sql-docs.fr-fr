@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mappage des fonctions de remplacement pour la compatibilité descendante des Applications
 Un ODBC 3*.x* application parcourt le ODBC 3*.x* du Gestionnaire de pilotes fonctionnera sur une API ODBC 2. *x* pilote tant qu’aucune nouvelle fonctionnalité n’est utilisées. Les deux dupliqué fonctionnalités et changements de comportement, toutefois, affectent-elles la façon qui le ODBC 3. *x* application fonctionne sur une API ODBC 2. *x* pilote. Lorsque vous travaillez avec une API ODBC 2. *x* pilote, le Gestionnaire de pilotes mappe le suivantes ODBC 3. *x* fonctions qui ont remplacé un ou plusieurs ODBC 2. *x* fonctions, dans le correspondant ODBC 2. *x* fonctions.  
@@ -486,4 +484,3 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Lorsqu’une application ODBC 3. *x* application utilisant une API ODBC 2. *x* pilote appelle **SQLSetStmtAttr** pour définir l’attribut SQL_ATTR_USE_BOOKMARKS à SQL_UB_VARIABLE, le Gestionnaire de pilotes affecte l’attribut SQL_UB_ON dans sous-jacent ODBC 2. *x* pilote.
-
