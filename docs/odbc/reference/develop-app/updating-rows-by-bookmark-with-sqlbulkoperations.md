@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c626472dd121d39ae01ac90824a7977587401944
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Mise à jour des lignes par le signet avec SQLBulkOperations
 Lors de la mise à jour d’une ligne par un signet, **SQLBulkOperations** rend la source de données à mettre à jour une ou plusieurs lignes de la table. Les lignes sont identifiées par le signet dans une colonne liée de signet. La ligne est mise à jour à l’aide des données dans les mémoires tampons d’application pour chaque colonne dépendante (sauf si la valeur dans la mémoire tampon de longueur / d’indicateur pour une colonne est SQL_COLUMN_IGNORE). Colonnes indépendantes ne seront pas mis à jour.  
@@ -50,4 +48,3 @@ Lors de la mise à jour d’une ligne par un signet, **SQLBulkOperations** rend 
 6.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_UPDATE_BY_BOOKMARK.  
   
  Pour chaque ligne est envoyée à la source de données en tant qu’une mise à jour, les tampons de l’application doivent avoir des données de ligne valide. Si les mémoires tampons d’application ont été remplies par extraction, si un tableau d’état de ligne a été maintenu, et si la valeur d’état d’une ligne est SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW, les données non valides par inadvertance pu être envoyées que pour la source de données.
-

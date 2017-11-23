@@ -14,14 +14,12 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: d6fb9839ee1ba7f583eca9445599422469212083
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 18d40800ee74783b0ce3df4d9d4e0458fbb72ebb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Meilleures pratiques de performance et des instructions de configuration pour 2017 du serveur SQL sur Linux
 
 Cette rubrique fournit les meilleures pratiques et recommandations pour optimiser les performances pour les applications de base de données qui se connectent à SQL Server sur Linux. Ces recommandations sont spécifiques à l’exécution de la plate-forme Linux. Toutes les recommandations de SQL Server standard, telles que la création d’index, s’appliquent toujours.
@@ -118,4 +116,3 @@ Si vous exécutez SQL Server sur Linux sur une machine virtuelle, veillez à que
 Pour en savoir plus sur les fonctionnalités de SQL Server qui améliorent les performances, consultez [prise en main des fonctionnalités de performances](sql-server-linux-performance-get-started.md).
 
 Pour plus d’informations sur SQL Server sur Linux, consultez [vue d’ensemble de SQL Server sur Linux](sql-server-linux-overview.md).
-

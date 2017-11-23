@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 7dc04aac6bf9ec53b72705322ebe7f056caf8bfb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e5c3b945652c04cbbe75563d853703b5676b43f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilisation d'une procédure stockée avec des paramètres de sortie
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +102,6 @@ public static void executeStoredProcedure(Connection con) {
  Les procédures stockées peuvent retourner des nombres de mises à jour et des jeux de résultats multiples. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] suit la spécification JDBC 3.0, qui stipule que plusieurs jeux de résultats et les mises à jour multiples doivent être récupérés avant les paramètres OUT sont récupérés. Autrement dit, l’application doit récupérer tous les objets du jeu de résultats et nombres avant de récupérer les paramètres OUT à l’aide de méthodes CallableStatement.getter de mettre à jour. Dans le cas contraire, les objets de jeu de résultats et les nombres de mises à jour qui n’ont pas déjà été récupérées seront perdues lorsque les paramètres OUT sont récupérés. Pour plus d’informations sur le nombre de mises à jour et plusieurs jeux de résultats, consultez [à l’aide d’une procédure stockée avec un nombre de mettre à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) et [à l’aide de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)  
+ [Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   
-

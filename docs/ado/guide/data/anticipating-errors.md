@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], preventing
 - preventing errors [ADO]
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72dc8972826c149430203b95c14e6b5153620527
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="anticipating-errors"></a>Anticipation des erreurs
 Prévention des erreurs est au moins aussi importante que la gestion des erreurs. Cette dernière section contient une courte liste des précautions de que votre application peut prendre pour faciliter les erreurs éventuelles.  
@@ -41,4 +39,3 @@ Prévention des erreurs est au moins aussi importante que la gestion des erreurs
  Assurez-vous que **Recordset** objets ne sont pas au-delà des limites de la **Recordset** avant de tenter de déplacer le pointeur. Si vous essayez **MoveNext** lorsque **EOF** a la valeur True ou **MovePrev** lorsque **BOF** a la valeur True, une erreur se produit. Si vous effectuez l’une de la **déplacer** méthodes lorsque les deux **EOF** et **BOF** ont la valeur True, une erreur sera générée.  
   
  Erreurs seront produisent si vous essayez d’effectuer des opérations telles que **recherche** et **trouver** sur vide **Recordset**.
-

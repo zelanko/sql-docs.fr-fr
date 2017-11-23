@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Command15::Prepared
-helpviewer_keywords:
-- Prepared property [ADO]
+f1_keywords: Command15::Prepared
+helpviewer_keywords: Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 62f01b807c56065c61e5cf8650c15f7210df6b7a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f47836c824401e5ca49edd5eac33c2f6f6393993
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prepared-property-ado"></a>Prepared, propriété (ADO)
 Indique s’il faut enregistrer la version compilée d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) avant l’exécution.  
@@ -44,9 +40,8 @@ Indique s’il faut enregistrer la version compilée d’un [commande](../../../
  Si le fournisseur ne prend pas en charge la préparation des commandes, elle peut retourner une erreur lorsque cette propriété est définie sur **True**. Si le fournisseur ne retourne pas d’erreur, il ignore simplement la requête de préparation de la commande et le définit le **Prepared** propriété **False**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété préparé (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
- [Exemple de propriété préparé (VC ++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
-
+ [Prepared, exemple de propriété (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

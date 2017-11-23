@@ -1,5 +1,5 @@
 ---
-title: "Opérateur (Transact-SQL) de la résolution de portée | Documents Microsoft"
+title: ":: (Résolution de portée) (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
-dev_langs:
-- TSQL
+applies_to: SQL Server (starting with 2008)
+dev_langs: TSQL
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4fa0fa1cd5a86ab4dc736803f6d4926b98f4a30
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f03f0c8274d52f61e5db2d75fe21e3fe90a4ce26
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="scope-resolution-operator-transact-sql"></a>Opérateur de résolution de portée (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="-scope-resolution-transact-sql"></a>:: (Résolution de portée) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  L’opérateur de résolution de portée **::** fournit l’accès à des membres statiques d’un type de données composé. Un type de données composé contient plusieurs types de données simples et méthodes.  
+  L’opérateur de résolution de portée **::** fournit l’accès à des membres statiques d’un type de données composé. Type de données composé est une qui contient plusieurs types de données simples et méthodes, telles que les types CLR intégrés et les Types de SQLCLR User-Defined personnalisé (UDT).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre comment utiliser l'opérateur de résolution de portée pour accéder au membre `GetRoot()` du type `hierarchyid`.  
@@ -51,4 +47,3 @@ PRINT @hid.ToString();
  [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

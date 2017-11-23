@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], environment handles
 - handles [ODBC], environment
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c0bbe08b13b45b47fecda5143ca419c31dfe82d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="allocating-the-environment-handle"></a>Allouer le Handle d’environnement
 La première tâche pour une application ODBC consiste à charger le Gestionnaire de pilotes ; Cette opération dépend du système d’exploitation. Par exemple, sur un ordinateur exécutant Microsoft Windows® 95/98, Windows NT Workstation et Windows 2000 Professionnel ou Microsoft® Windows NT® Server et Windows 2000 Server, l’application soit liée à la bibliothèque du Gestionnaire de pilotes ou les appels **LoadLibrary** de charger la DLL du Gestionnaire de pilotes.  
@@ -55,4 +53,3 @@ La première tâche pour une application ODBC consiste à charger le Gestionnair
  Lorsque **SQLFreeHandle** est appelée, les versions de pilote la structure utilisée pour stocker des informations sur l’environnement. Notez que **SQLFreeHandle** ne peut pas être appelée pour un handle d’environnement jusqu'à ce qu’une fois que tous les handles de connexion sur le handle d’environnement ont été libérées.  
   
  Pour plus d’informations sur le handle d’environnement, consultez [environnement gère](../../../odbc/reference/develop-app/environment-handles.md).
-

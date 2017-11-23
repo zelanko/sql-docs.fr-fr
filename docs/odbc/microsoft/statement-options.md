@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - statement options [ODBC]
 - ODBC driver for Oracle [ODBC], statement options
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 702aa4a49a3db1c22c90be40486cb212fc1479a2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-options"></a>Options d’instruction
 > [!IMPORTANT]  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|Retourne un entier de 32 bits spécifiant la position de la ligne actuelle dans le jeu de résultats. Obtenir uniquement ; Impossible de définir.|  
 |SQL_ROWSET_SIZE|Ne peut pas dépasser 4 294 967 296 lignes ; Toutefois, vous devez disposer de suffisamment de mémoire virtuelle sur votre ordinateur pour traiter votre demande.|  
 |SQL_USE_BOOKMARKS|Prend en charge la définition de SQL_USE_BOOKMARKS à SQL_UB_ON et expose des signets de longueur fixe.|
-

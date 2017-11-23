@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLAllocStmt function [ODBC], Cursor Library
+helpviewer_keywords: SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bf80a3dfd02c2871267cfe57f1b95ae246094bc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5a445725a72a517b0ea779ea1fc547e55cb803
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -42,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  La bibliothèque de curseurs prend en charge l’appel **SQLBindCol** pour lier la colonne de signet.  
   
  Lorsque vous travaillez avec une API ODBC 2. *x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou une mémoire tampon non valide) lorsque **SQLBindCol** est appelée pour définir la longueur du tampon pour une colonne de signet à une valeur non égale à 4. Lorsque vous travaillez avec un ODBC 3*.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.
-

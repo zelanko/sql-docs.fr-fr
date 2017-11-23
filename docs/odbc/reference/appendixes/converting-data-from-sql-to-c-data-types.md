@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0fef5a663ecbb3ec1f162dcf453691f04183d732
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8fae054b572cb0d61299781d67adc0038afa9a97
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversion de données à partir de SQL pour Types de données C
 Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, le pilote récupère les données à partir de la source de données. Si nécessaire, il convertit les données du type de données dans lequel, extraites par le pilote pour le type de données spécifié par le *TargetType* argument dans **SQLBindCol** ou **SQLGetData.** Enfin, il stocke les données dans l’emplacement vers lequel pointé le *TargetValuePtr* argument dans **SQLBindCol** ou **SQLGetData** (et le champ SQL_DESC_DATA_PTR de la ARD).  
@@ -60,25 +58,24 @@ Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetDa
   
  Cette section contient les rubriques suivantes.  
   
--   [SQL à c : caractère](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL en C : caractère](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL en c : numérique](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL en C : numérique](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL au Bit de c :](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL en C : bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL à c : binaire](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL en C : binaire](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL à c : Date](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL en C : date](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL à c : GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL en C : GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL à l’heure de c :](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL en C : heure](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL à c : Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL en C : horodatage](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL à des intervalles d’année-mois C:](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL en C : intervalles d’années-mois](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL à des intervalles de temps de jour C:](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL en C : intervalles de jours-heures](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
--   [SQL aux exemples de Conversion de données C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)
-
+-   [Exemples de conversion de données SQL en C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

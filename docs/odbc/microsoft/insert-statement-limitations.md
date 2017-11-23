@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - INSERT statement limitations [ODBC]
 - truncation of data [ODBC]
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a54e963114104ec1acc9644323724f7d9238b06b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="insert-statement-limitations"></a>Insérez l’instruction
 Les données insérées sont tronquées à droite sans avertissement si elle est trop longue pour tenir dans la colonne.  
@@ -51,4 +49,3 @@ Les données insérées sont tronquées à droite sans avertissement si elle est
 ```  
   
  Lorsque le pilote de texte est utilisé, toutes les valeurs de colonne peuvent être remplis avec des espaces de début. La longueur de n’importe quelle ligne doit être inférieur ou égal à 65,543 octets.
-

@@ -8,26 +8,22 @@ ms.service:
 ms.component: data-mining
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- data mining [Analysis Services], designing
+applies_to: SQL Server 2016
+helpviewer_keywords: data mining [Analysis Services], designing
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97b1f305fe41cc1bf67113cdad38fbe14f7f15a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Didacticiels sur l'exploration de données (Analysis Services)
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilite la création de solutions d’exploration de données à l’aide des Assistants et des visualisations intégrées. En particulier si vous ne connaissez pas le Machine Learning, les outils de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] constituent un moyen facile de concevoir, former et explorer des modèles d’exploration de données. Les données de vos modèles peuvent être stockées dans un cube, une base de données relationnelle ou tout autre support source par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Après avoir créé un modèle, vous pouvez le mettre en production en accédant au modèle pour créer des prédictions à l’aide de plusieurs clients de prédiction, notamment [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ASP.NET.  
@@ -50,5 +46,4 @@ ms.lasthandoff: 09/01/2017
   
   
   
-
 

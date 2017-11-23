@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7ea94113-c0f1-4cca-9228-f1a034fba5db
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: eeaa2b9b696f70a9a72e439e0a6a5a66ae132905
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-powerpivotsystemserviceinstance-cmdlet"></a>Applet de commande New-PowerPivotSystemServiceInstance
 
@@ -108,4 +106,3 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  Cet exemple nomme l’instance du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais sans la configurer. Si vous ne fournissez pas de nom, le nom par défaut, instance de service système SQL Server Analysis Services, est utilisé à la place. La création d'un nom personnalisé pour le service est facultative. Vous pouvez nommer le service pour prendre en charge les scénarios de test, ou si vous disposez d'un outil ou d'un script personnalisé qui configure l'instance à une étape ultérieure.  
   
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e46fb86489ca7e2a1fed33e85f638f99e47770eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ab9b6365d527d2cbd804ab0095021c2f2d9dc2b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Paramètres du projet (Migration) (MySQLToSQL)
 La page de la Migration de le **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA migre les données de MySQL vers SQL Server.  
@@ -91,4 +89,3 @@ Le volet de la Migration est disponible dans le **les paramètres de projet** et
 |**Gestion des erreurs**|Spécifie comment gérer les erreurs de migration de valeurs de types de données spatiales. Si 'Remplacer par la valeur NULL' est spécifié, toutes les valeurs spatiales et provoquent des erreurs seront remplacés par la valeur NULL. Aucun remplacement n’est effectuée dans le cas contraire.<br /><br />**Mode par défaut**: générer une erreur<br /><br />**Mode optimisé**: générer une erreur<br /><br />**Mode plein**: générer une erreur|  
 |**Validation de la valeur**|Spécifie comment gérer les valeurs spatiales non valides. Si la valeur est « Essayez rendre valide » est spécifié, une tentative est effectuée pour modifier des valeurs non valides pour les rendre valide.<br /><br />**Mode par défaut**: rendre valide<br /><br />**Mode optimisé**: ne modifiez pas<br /><br />**Mode plein**: rendre valide|  
   
-

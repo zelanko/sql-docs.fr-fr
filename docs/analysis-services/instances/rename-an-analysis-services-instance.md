@@ -20,17 +20,16 @@ helpviewer_keywords:
 - names [Analysis Services], renaming instances
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45ccdebbfaa2ca30bd6d5cd6c02bb7f869aa6496
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renommer une instance d'Analysis Services
   Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de l’utilitaire **Modification du nom d’instance** , installé avec Management Studio (installation web).  
@@ -86,4 +85,3 @@ ms.lasthandoff: 09/01/2017
      Comme vous pouvez le voir, les autorisations d'accès à la base de données et aux fichiers précédemment accordées au service « NT Service\ MSOLAP$TABULAR » ne sont plus valides. Pour vous assurer que les tâches et les opérations effectuées par le service s'exécutent comme précédemment, vous devez maintenant accorder au service « NT Service\ MSOLAP$TAB2 » les autorisations d'accès à la nouvelle base de données et aux fichiers.  
   
   
-

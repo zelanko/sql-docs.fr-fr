@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::Flush
 - _Stream::raw_Flush
-helpviewer_keywords:
-- Flush method [ADO]
+helpviewer_keywords: Flush method [ADO]
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d4ddc1ad0790ed951b846813e6724b97a8aaaa33
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc0e90c43b2f691f1dff705e813ffe77fe5fc35a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="flush-method-ado"></a>Flush (méthode) (ADO)
 Force le contenu de la [flux](../../../ado/reference/ado-api/stream-object-ado.md) restants dans la mémoire tampon d’ADO à l’objet sous-jacent avec lequel le **flux** est associé.  
@@ -47,5 +44,4 @@ Stream.Flush
  Fermeture un **flux** avec la [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthode vide le contenu d’un **flux** automatiquement ; il n’est pas nécessaire d’appeler explicitement **vider**immédiatement avant **fermer**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

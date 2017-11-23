@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], numeric
 - converting data from c to SQL types [ODBC], numeric
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f7f754d17ef64213a0d608e2502f7a65545b2076
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2cbdbbd3da828d5a995dbd9bff9c6b95aed1420a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-numeric"></a>C en SQL : numérique
 Les identificateurs pour les types de données ODBC C numériques sont :  
@@ -76,4 +74,3 @@ Les identificateurs pour les types de données ODBC C numériques sont :
  [b] dans le cas de « n/a », un pilote peut renvoyer éventuellement SQL_SUCCESS_WITH_INFO et 01 s 07 lorsqu’il existe une troncation de fractions de seconde.  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données à partir des types de données C numériques et suppose que la taille du tampon de données est la taille du type de données C numérique. La valeur de l’indicateur/longueur est passée dans le *StrLen_or_Ind* argument dans **SQLPutData** et dans la mémoire tampon spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindParameter**. Le tampon de données est spécifié avec la *DataPtr* argument dans **SQLPutData** et *ParameterValuePtr* argument dans **SQLBindParameter**.
-

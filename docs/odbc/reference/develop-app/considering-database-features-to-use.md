@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], database features
+helpviewer_keywords: interoperability [ODBC], database features
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30b073e6bca1fee5b98ed835bcc72f127c9ad40c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d17758711dd0e4e1590a3b4176829d9709a5dfd0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="considering-database-features-to-use"></a>Prise en compte les fonctionnalités de base de données à utiliser
 Une fois le niveau de base d’interopérabilité est connu, les fonctionnalités de base de données utilisées par l’application doivent être examinées. Par exemple, les instructions SQL que l’application exécute ? L’application va utiliser des curseurs de défilement ? Transactions ? Procédures ? Données de type long ? Pour les idées sur les fonctionnalités ne peuvent pas être pris en charge par tous les SGBD, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) une description, de fonction et [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les fonctionnalités requises par une application peuvent éliminer certains SGBD à partir de la liste des cibles SGBD. Ils peuvent également afficher que l’application peut cibler facilement de nombreux SGBD.  
@@ -55,4 +52,3 @@ Une fois le niveau de base d’interopérabilité est connu, les fonctionnalité
 -   **Prend en charge plusieurs requêtes uniquement si le pilote ne.** Après la connexion à un pilote, l’application vérifie le nombre d’instructions actives. L’application permet à l’utilisateur démarrer une nouvelle instruction lorsque l’une est déjà active uniquement si le pilote prend en charge plusieurs instructions actives. L’application a des fonctionnalités plus élevées et interopérabilité, mais est plus difficile à implémenter.  
   
 -   **Toujours prendre en charge plusieurs requêtes et émuler les lorsque cela est nécessaire.** Après la connexion à un pilote, l’application vérifie le nombre d’instructions actives. Toujours l’application permet à l’utilisateur démarrer une nouvelle instruction lorsque l’une est déjà active. Si le pilote prend en charge qu’une seule instruction active, l’application ouvre une connexion supplémentaire à ce pilote et exécute l’instruction de nouveau sur cette connexion. L’application a toutes les fonctionnalités et l’interopérabilité haute mais est plus difficile à implémenter.
-

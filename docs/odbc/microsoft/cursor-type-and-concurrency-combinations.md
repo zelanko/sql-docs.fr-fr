@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - concurrency options [ODBC]
 - ODBC driver for Oracle [ODBC], cursor options
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4d9798b819b702b4e984872a19b0c761a8621de2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a20223e272ce2790a8959df3d9f7ed318e700aef
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>Type de curseur et les combinaisons d’accès concurrentiel
 > [!IMPORTANT]  
@@ -47,5 +45,4 @@ ms.lasthandoff: 09/09/2017
  <sup>[2] </sup> SQL_CONCUR_LOCK est pris en charge uniquement lorsque l’option de connexion SQL_AUTOCOMMIT a la valeur SQL_AUTOCOMMIT_OFF.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Options de connexion](../../odbc/microsoft/connect-options.md)
-
+ [Options de connexion](../../odbc/microsoft/connect-options.md)

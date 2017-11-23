@@ -13,33 +13,28 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Discover Method
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Discover Method
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#
 - http://schemas.microsoft.com/analysisservices/2003/engine#
 - microsoft.xml.analysis.discover
 - urn:schemas-microsoft-com:xml-analysis#Discover
 - Discover
-helpviewer_keywords:
-- Discover method
+helpviewer_keywords: Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b7878e526fbeadc11efda25e9ca35ff34cf2d0fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 60a101afa2953d62e2910b4523a0213e4e786490
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---methods---discover"></a>Découvrir les éléments XML de - méthodes suivantes :
   Récupère les informations, telles que la liste des bases de données disponibles ou des détails concernant un objet spécifique, à partir d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les données récupérées avec le **Discover** méthode varie selon les valeurs des paramètres passés à ce dernier.  
@@ -106,7 +101,6 @@ ms.lasthandoff: 09/01/2017
  [Exécuter la méthode &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-execute.md)   
  [Méthodes &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
  [Éléments XML &#40; XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
- [Ensembles de lignes de schéma de Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Ensembles de lignes de schéma Analysis Services](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   
-

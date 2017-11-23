@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52c9495e221ba7a4b71ba91d276eefd576f6715d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de forme
 La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un enfant **Recordset**.  
@@ -120,16 +118,15 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
  Cette section contient les rubriques suivantes.  
   
--   [Fonctionnement des commandes Non paramétrées](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
+-   [Fonctionnement des commandes non paramétrées](../../../ado/guide/data/operation-of-non-parameterized-commands.md)  
   
 -   [Fonctionnement des commandes paramétrées](../../../ado/guide/data/operation-of-parameterized-commands.md)  
   
 -   [Commandes hybrides](../../../ado/guide/data/hybrid-commands.md)  
   
--   [Les Clauses COMPUTE de forme](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
+-   [Clauses COMPUTE intermédiaires de la commande SHAPE](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
  [Grammaire de mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

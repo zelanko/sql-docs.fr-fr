@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- binding parameters [ODBC]
+helpviewer_keywords: binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e0994006c2e99c8f1e454eaf07b74fffcee70e9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20879f658c1fdc2ca8a4527f76a540ab2700b98f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-odbc"></a>Liaison de paramètres ODBC
 Chaque paramètre dans une instruction SQL doit être associé, ou *lié,* à une variable dans l’application avant que l’instruction est exécutée. Lorsque l’application lie une variable à un paramètre, il décrit cette variable, adresse, type de données C et ainsi de suite, pour le pilote. Elle décrit également le paramètre lui-même : données SQL type, précision et ainsi de suite. Le pilote stocke ces informations dans la structure, il tient à jour pour cette instruction et utilise les informations pour récupérer la valeur de la variable lorsque l’instruction est exécutée.  
@@ -50,11 +47,10 @@ SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?
   
  Cette section contient les rubriques suivantes.  
   
--   [Marqueurs de paramètres de liaison](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
+-   [Liaison de marqueurs de paramètre](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   
 -   [Liaison de paramètres par nom (paramètres nommés)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
   
--   [Décalages de liaison de paramètre](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
+-   [Décalages des liaisons de paramètres](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
--   [Décrivant les paramètres](../../../odbc/reference/develop-app/describing-parameters.md)
-
+-   [Description des paramètres](../../../odbc/reference/develop-app/describing-parameters.md)

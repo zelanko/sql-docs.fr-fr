@@ -8,24 +8,22 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Sources de données
 A *source de données* est simplement la source de données. Il peut être un fichier, une base de données sur un SGBD, ou même un flux de données actives. Les données peuvent être situées sur le même ordinateur que le programme, ou sur un autre ordinateur situé sur un réseau. Par exemple, une source de données peut être un SGBD Oracle s’exécutant sur un système d’exploitation OS/2®, accédé par Novell® Netware ; un SGBD de DB2 d’IBM accessibles via une passerelle ; une collection de fichiers Xbase dans un répertoire du serveur ; ou un fichier de base de données Microsoft® Access local.  
@@ -36,9 +34,8 @@ A *source de données* est simplement la source de données. Il peut être un fi
   
  Cette section contient les rubriques suivantes.  
   
--   [Types de Sources de données](../../odbc/reference/types-of-data-sources.md)  
+-   [Types de sources de données](../../odbc/reference/types-of-data-sources.md)  
   
--   [À l’aide de Sources de données](../../odbc/reference/using-data-sources.md)  
+-   [Utilisation des sources de données](../../odbc/reference/using-data-sources.md)  
   
--   [Exemple de Source de données](../../odbc/reference/data-source-example.md)
-
+-   [Exemple de source de données](../../odbc/reference/data-source-example.md)

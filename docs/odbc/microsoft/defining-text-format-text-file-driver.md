@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 224a4c7f7c2540d78c69dc7c1ed61267db564261
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ed4eb087a11db45f2e3841b6e65824f1076d3693
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="defining-text-format-text-file-driver"></a>Définir le Format de texte (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition du Format texte** boîte de dialogue pour définir le format des colonnes dans un fichier sélectionné. Cette boîte de dialogue vous permet de spécifier le schéma pour chaque table de données. Cette information est écrite dans un fichier Schema.ini dans le répertoire de source de données. Un fichier Schema.ini distinct est créé pour chaque répertoire de source de données de texte.  
@@ -52,4 +50,3 @@ Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition d
 |**Lignes à analyser**|Le nombre de lignes que le programme d’installation ou le pilote analysera lors de la définition des colonnes et types de données de colonne en fonction des données existantes.<br /><br /> Vous pouvez entrer un nombre compris entre 1 et 32 767 pour le nombre de lignes à analyser. Par défaut, cette fonction 25 si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue. (Un nombre en dehors de la limite retournera une erreur).|  
 |**Tables**|Contient une liste de tous les fichiers dans le répertoire sélectionné dans le **le programme d’installation de texte** boîte de dialogue qui correspondent à la liste des extensions spécifiées.<br /><br /> Lorsque \<par défaut > est sélectionnée, et une des conditions suivantes est true, les valeurs des attributs de table dans le **Tables** groupe sont écrits dans Schema.ini (sans les autres entrées dans Schema.ini sont couvertes) :<br /><br /> -Il n’existe aucun Schema.ini dans le répertoire spécifié.<br />-Le fichier Schema.ini existe, mais il n’existe pas dans Schema.ini pour un des fichiers texte (avec l’extension spécifiée) dans le répertoire.<br />-La section d’un fichier texte existe dans Schema.ini, mais le corps est vide.<br /><br /> Lorsque \<par défaut > est sélectionnée, le **colonnes** groupe est désactivé.|  
 |**Largeur**|La largeur de la colonne peut être modifiée pour les colonnes CHAR ou LONGCHAR. La largeur par défaut est 1, si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue.<br /><br /> Pour les autres types de données, la largeur du contrôle est désactivé et aucune valeur affichée.|
-

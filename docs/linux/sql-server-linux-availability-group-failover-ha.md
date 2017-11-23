@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 54c9be66075ebbc9614de0b007b5b718e976121b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 07a50a59c320d7abb58c725c717393f8751b337d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-ha-availability-group-for-sql-server-on-linux"></a>Utiliser le groupe de disponibilité haute disponibilité pour SQL Server sur Linux
 
@@ -138,13 +137,13 @@ Si vous ne peuvent pas basculer le groupe de disponibilité avec les outils de g
 
 1. Vérifiez que la ressource de groupe de disponibilité n’est pas plus gérée par le cluster. 
 
-      - Tentative de définition de la ressource au mode non géré. Cela signale à l’agent de ressource pour arrêter la surveillance des ressources et la gestion. Par exemple : 
+      - Tentative de définition de la ressource au mode non géré. Cela signale à l’agent de ressource pour arrêter la surveillance des ressources et la gestion. Exemple : 
       
       ```bash
       sudo pcs resource unmanage <**resourceName**>
       ```
 
-      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Par exemple :
+      - Si la tentative de définir le mode de la ressource en mode non managé échoue, supprimez la ressource. Exemple :
 
       ```bash
       sudo pcs resource delete <**resourceName**>
@@ -298,4 +297,3 @@ Pour supprimer un groupe de disponibilité, exécutez [DROP AVAILABILITY GROUP](
 [Configurer SUSE Linux Enterprise Server Cluster pour les ressources de Cluster de groupe de disponibilité de SQL Server](sql-server-linux-availability-group-cluster-sles.md)
 
 [Configurer le Cluster Ubuntu pour les ressources de Cluster de groupe de disponibilité de SQL Server](sql-server-linux-availability-group-cluster-ubuntu.md)
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>Objet de modèle (TMSL)
 
@@ -44,10 +43,10 @@ ms.lasthandoff: 09/01/2017
  Tous les objets ont un ensemble commun de propriétés, y compris le nom, type, la description, une collection de propriétés et annotations. **Modèle** objets ont également les propriétés suivantes.  
   
  storageLocation  
- L’emplacement sur le disque pour placer le modèle.  
+ Emplacement sur le disque où placer le modèle.  
   
  defaultMode  
- La méthode par défaut pour rendre les données disponibles dans la partition.  
+ Méthode par défaut pour rendre les données disponibles dans la partition.  
   
  defaultDataView  
  Pour les modèles en mode DirectQuery, cette propriété détermine les partitions sont utilisées pour exécuter des requêtes sur le modèle.  Les valeurs valides sont Full et exemple.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/01/2017
  La culture à utiliser pour mettre en forme.  
   
  collation  
- La séquence de classement. Consultez [des scénarios de globalisation pour Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) pour plus d’informations.  
+ Séquence de classement. Consultez [des scénarios de globalisation pour Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) pour plus d’informations.  
   
  tables  
  La collection complète des tables dans le modèle, y compris les partitions, les colonnes, les mesures, les indicateurs de performance clés et les annotations. Consultez [Tables objet &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) pour plus d’informations.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

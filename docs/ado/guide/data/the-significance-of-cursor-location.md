@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>L’importance de l’emplacement du curseur
 Chaque curseur utilise des ressources temporaires pour contenir ses données. Ces ressources peuvent être en mémoire, un fichier d’échange de disque, les fichiers de disque temporaire ou même temporaire dans la base de données. Le curseur est appelé un *côté client* curseur lorsque ces ressources se trouvent sur l’ordinateur client. Le curseur est appelé un *côté serveur* curseur lorsque ces ressources se trouvent sur le serveur.  
@@ -46,4 +44,3 @@ Chaque curseur utilise des ressources temporaires pour contenir ses données. Ce
  Toutefois, il est important de souligner qu’un curseur côté serveur, au moins temporairement — consomme d’importantes ressources du serveur pour chaque client actif. Vous devez planifier en conséquence pour vous assurer que votre matériel de serveur est capable de gérer tous les curseurs côté serveur demandées par les clients actifs. En outre, un curseur côté serveur peut être lent, car elle fournit uniquement un accès ligne unique, aucun curseur de lot n’est disponible.  
   
  Les curseurs côté serveur sont utiles lors de l’insertion, la mise à jour ou supprimer des enregistrements. Avec les curseurs côté serveur, vous pouvez avoir plusieurs instructions actives sur la même connexion.
-

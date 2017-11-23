@@ -1,25 +1,27 @@
 ---
 title: PDOStatement::bindValue | Documents Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 910b5326d910f57056ac885a91762496a96d7a0a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c006ba33bad8d0afb010b0f0bbe316d7a5e3e28f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,11 +32,11 @@ Lie une valeur à un espace réservé nommé ou constitué de points d’interro
   
 ```  
   
-bool PDOStatement::bindValue( $parameter, $value [,$data_type] );  
+bool PDOStatement::bindValue($parameter, $value[, $data_type]);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*paramètre*: un identificateur de paramètre (mixte). Pour une instruction qui utilise des espaces réservés nommés, nom d’un paramètre (:name). Pour une instruction préparée qui utilise la syntaxe constituée de points d’interrogation, il s’agit de l’index en base 1 du paramètre.  
+$*paramètre*: un identificateur de paramètre (mixte). Pour une instruction à l’aide, des espaces réservés nommés, utilisez un nom de paramètre ( : nom). Pour une instruction préparée à l’aide de la syntaxe de point d’interrogation, il est l’index de base 1 du paramètre.
   
 $*valeur*: la valeur (mixte) à lier au paramètre.  
   
@@ -44,6 +46,7 @@ $*data_type*: le type de données facultatif (entier) représenté par une const
 TRUE en cas de réussite ; sinon, FALSE.  
   
 ## <a name="remarks"></a>Notes  
+  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="example"></a>Exemple  
@@ -53,7 +56,7 @@ Cet exemple montre qu’une fois que la valeur de $contact est liée, sa modific
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $contact = "Sales Agent";  
 $stmt = $conn->prepare("select * from Person.ContactType where name = ?");  
@@ -61,7 +64,7 @@ $stmt->bindValue(1, $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
   
@@ -72,14 +75,34 @@ $stmt->bindValue(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
 ?>  
-```  
+```
+
+> [!NOTE]
+> Il est recommandé d’utiliser des chaînes en tant qu’entrées lors de la liaison de valeurs à un [colonne decimal ou numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour vérifier la précision et l’exactitude que PHP est limitée à la précision pour [nombres à virgule flottante](http://php.net/manual/en/language.types.float.php).
+
+## <a name="example"></a>Exemple  
+Cet exemple de code montre comment lier une valeur décimale en tant que paramètre d’entrée.  
+
+```
+<?php  
+$database = "Test";  
+$server = "(local)";  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
+
+// Assume TestTable exists with a decimal field 
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindValue(1, $input, PDO::PARAM_STR);
+$stmt->execute();
+```
   
 ## <a name="see-also"></a>Voir aussi  
 [Classe PDOStatement](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

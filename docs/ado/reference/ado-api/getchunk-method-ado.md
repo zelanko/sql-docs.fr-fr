@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Field20::raw_GetChunk
 - Field20::GetChunk
-helpviewer_keywords:
-- GetChunk method [ADO]
+helpviewer_keywords: GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0d34a6d93c37513dd766529f85294ccd5743cec
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4972e08f1db08bde4cdb1241fa36895f2f33ad7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getchunk-method-ado"></a>GetChunk, méthode (ADO)
 Retourne l’ensemble ou une partie du contenu d’un texte de grande taille ou les données binaires [champ](../../../ado/reference/ado-api/field-object.md) objet.  
@@ -63,11 +60,10 @@ variable = field.GetChunk(Size)
 >  Le **GetChunk** méthode ne fonctionne pas sur **champ** les objets d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet. Il n’effectue aucune opération et génère une erreur d’exécution.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)  
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [AppendChunk et GetChunk, méthodes-exemple (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk et GetChunk, méthodes-exemple (VC ++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [AppendChunk, méthode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Attributs, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
-
+ [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

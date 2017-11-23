@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- errors [ADO], types
+helpviewer_keywords: errors [ADO], types
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ab5cab79bcf5bb1441e066e27e0edf9552cb10ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 395afb47b153eb0050473963ff7866aa2852e975
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendix-b-ado-error-codes"></a>Annexe b : Codes d’erreur ADO
 Consultez les rubriques suivantes pour plus d’informations sur les messages d’erreur particulier :
@@ -36,8 +33,7 @@ Consultez les rubriques suivantes pour plus d’informations sur les messages d�
 
 -   [Codes d’erreur Internet Explorer](../../../ado/guide/appendixes/internet-explorer-error-codes.md)
 
--   [Codes d’erreur des Services Internet](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
+-   [Codes d’erreur Internet Information Services](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
 ## <a name="see-also"></a>Voir aussi
  [Référence des API ADO](../../../ado/reference/ado-api/ado-api-reference.md) [Collections ADO](../../../ado/reference/ado-api/ado-collections.md) [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) [constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md) [événements ADO](../../../ado/reference/ado-api/ado-events.md) [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md) [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md) [les Interfaces et les objets ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
-

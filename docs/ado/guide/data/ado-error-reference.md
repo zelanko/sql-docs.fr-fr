@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2604f09ecffab3e0f5519731acffa00111af9677
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-errors"></a>Erreurs ADO
 Le **ErrorValueEnum** constante décrit les valeurs d’erreur ADO. Pour une liste complète de ces constantes énumérées, notamment les valeurs, consultez [annexe b : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Cette section examine certaines des erreurs plus intéressantes et explique certaines situations peuvent déclencher ou des solutions pour résoudre le problème. Les deux le **ErrorValueEnum** constante et le nombre décimal positif court sont répertoriés.
@@ -88,4 +86,3 @@ Le **ErrorValueEnum** constante décrit les valeurs d’erreur ADO. Pour une lis
 |**3749**|**adErrFieldsUpdateFailed**|Échec de la mise à jour des champs. Pour plus d’informations, examinez la **état** des propriétés des objets de champ individuel. Cette erreur peut se produire dans deux situations : lorsque vous modifiez un **champ** valeur de l’objet en cours de modification ou ajout d’un enregistrement à la base de données et lorsque vous modifiez les propriétés de la **champ** objet lui-même.<br /><br /> Le **enregistrement** ou **Recordset** mise à jour a échoué en raison d’un problème avec l’un des champs dans l’enregistrement actif. Énumérer les **champs** collecte et vérification de la **état** propriété de chaque champ pour déterminer la cause du problème.|
 |**3750**|**adErrDenyNotSupported**|Fournisseur ne prend pas en charge les restrictions de partage. Une tentative a été effectuée pour restreindre le partage de fichiers et votre fournisseur ne prend pas en charge le concept.|
 |**3751**|**adErrDenyTypeNotSupported**|Fournisseur ne prend pas en charge le type demandé de restriction de partage. Une tentative a été effectuée pour établir un type particulier de partage de fichiers restriction n’est pas pris en charge par votre fournisseur. Consultez la documentation du fournisseur pour déterminer les restrictions de partage de fichiers sont pris en charge.|
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 42993cc9fdaa5deaad46fae2f7c61f8beb776489
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75bef2df222023fe54ec5c890b3321677f2a7a40
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Fournisseur et un exemple de propriétés DefaultDatabase (VC ++)
 Cet exemple illustre la [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété en ouvrant trois [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objets à l’aide de différents fournisseurs. Elle utilise également le [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propriété à définir la base de données par défaut pour le fournisseur ODBC de Microsoft.  
@@ -144,5 +141,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>Voir aussi  
  [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propriété DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Propriété du fournisseur (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
-
+ [Provider, propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

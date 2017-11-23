@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sample console script files
+helpviewer_keywords: Sample console script files
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3c79b522672035f45acccd85ec4c1321904b7478
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 84a1bddb2cb42011d5150257e5dd28ebab1a9ade
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Travailler avec les fichiers de Script de la Console exemple (MySQLToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -88,7 +85,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     Mappage de schéma de base de données source vers le schéma cible.  
   
-    **Attribut**  
+    **Attribute**  
   
     -   `source-schema:`Spécifie la base de données source qui nécessite d’être converti.  
   
@@ -102,7 +99,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     2.  Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `convert-schema` 4 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name`: Permet de spécifier la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`  
   
@@ -114,7 +111,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     2.  Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `synchronize-target` 3 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name:`Spécifiez la base de données sql server / nom qui nécessite la création de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`  
   
@@ -126,7 +123,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     2.  Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name:`Spécifie la source de données / tables nom qui nécessite d’être migrée. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`  
   
@@ -135,4 +132,3 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
 [Créer les fichiers de connexion de serveur &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Génération de rapports &#40; MySQLToSQL &#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "+= (Égal d’addition) (Transact-SQL) | Documents Microsoft"
+title: "+= (Assignation d’addition) (Transact-SQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,32 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +=
 - +=_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - += (add equals)
 - compound operators, +=
+- assignment operators, +=
+- augmented operators, +=
 ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7437b65f197650eb06d736519122770a005fb6d8
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0d07ab123822db8f381af6fcc4f1707529bed359
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-add-equals-transact-sql"></a>+= (Add EQUALS) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-addition-assignment-transact-sql"></a>+= (Assignation d’addition) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Ajoute deux nombres et définit une valeur selon le résultat de l'opération. Par exemple, si une variable @x égal à 35, puis @x += 2 prend la valeur d’origine de @x, ajouter 2 et des jeux @x cette nouvelle valeur (37).  
   
@@ -54,13 +53,12 @@ expression += expression
  Retourne le type de données de l'argument ayant la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations, consultez [+ &#40; Ajouter &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/add-transact-sql.md).  
+ Pour plus d’informations, consultez [+ &#40; Ajout &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/add-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Expressions &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [+= &#40; Concaténation de chaînes &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
+ [+= &#40; Assignation de concaténation de chaîne &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
   
-

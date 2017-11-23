@@ -3,17 +3,18 @@ title: ALTER INDEX (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifie une table ou un index de vue (relationnel ou XML) en désactivant, en reconstruisant ou en réorganisant l'index d'une part, ou en définissant les options portant sur l'index d'autre part.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |RÉORGANISER une PARTITION = *partition_number*|Index non partitionné, index XML, index spatial ou index désactivé|  
 |IGNORE_DUP_KEY = ON|Index XML<br /><br /> Index spatial<br /><br /> Index ColumnStore : **s’applique à :** SQL Server (à partir de SQL Server 2012) et la base de données SQL Azure.|  
 |ONLINE = ON|Index XML<br /><br /> Index spatial<br /><br /> Index ColumnStore : **s’applique à :** SQL Server (à partir de SQL Server 2012) et la base de données SQL Azure.|
-| PEUT ÊTRE REPRIS = ON  | Non pris en charge avec les index peut être repris **tous les** (mot clé). <br /><br /> **S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique) |   
+| PEUT ÊTRE REPRIS = ON  | Non pris en charge avec les index peut être repris **tous les** (mot clé). <br /><br /> **S’applique à**: à partir de SQL Server 2017 et Azure SQL Database |   
   
 > [!WARNING]
 >  Pour plus d’informations sur les opérations d’index qui peuvent être effectuées en ligne, consultez [instructions pour les opérations d’Index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -436,7 +436,7 @@ FILLFACTOR = *facteur de remplissage*
 
 PEUT ÊTRE REPRIS  **=**  {ON | **OFF**}
 
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)  
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database   
 
  Spécifie si une opération d’index en ligne est peut être reprise.
 
@@ -446,7 +446,7 @@ PEUT ÊTRE REPRIS  **=**  {ON | **OFF**}
 
 MAX_DURATION  **=**  *temps* [**MINUTES**] utilisé avec **reprise = ON** (nécessite **ONLINE = ON**).
  
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)  
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database 
 
 Indique le temps (valeur entière spécifiée en minutes) qu’une reprise en ligne opération d’index est exécutée avant en pause. 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**S’applique à**: à partir de SQL Server 2017 est (fonctionnalité est en version préliminaire publique)
+**S’applique à**: à partir de SQL Server 2017  
 
 Reprendre une opération d’index est en pause manuellement ou en raison d’une défaillance.
 
 MAX_DURATION est utilisé avec **reprise = ON**
 
  
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database
 
 L’heure (valeur entière spécifiée en minutes) de l’opération d’index en ligne peut être repris est exécutée après la reprise. Une fois que le délai expire, l’opération de reprise est suspendue si elle est en cours d’exécution.
 
 WAIT_AT_LOW_PRIORITY utilisé avec **reprise = ON** et **ONLINE = ON**.  
   
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database 
   
  La reprise d’une reconstruction d’index en ligne après qu’une pause se trouve en attente pour les opérations de blocage sur cette table. **WAIT_AT_LOW_PRIORITY** indique que l’opération de reconstruction d’index en ligne attend les verrouillages de faible priorité, laissant les autres opérations se poursuivre pendant l’opération de création d’index en ligne est en attente. L’omission de la **attente basse** option est équivalente à `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Pour plus d’informations, consultez [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 PAUSE
  
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database 
   
 Interrompre une opération de reconstruction d’index en ligne peut être repris.
 
 ABANDON
 
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)   
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database   
 
 Abandonner une opération d’index en cours d’exécution ou en pause qui a été déclarée comme pouvant être reprise. Vous devez exécuter explicitement une **abandonner** opération de reconstruction de commande pour mettre fin à un index peut être repris. Échec ou la suspension d’une opération d’index peut être repris n’arrête pas son exécution ; au lieu de cela, elle laisse l’opération dans un état de pause indéterminée.
   
@@ -712,7 +712,7 @@ Abandonner une opération d’index en cours d’exécution ou en pause qui a é
 
 ### <a name="resumable-index-operations"></a>Opérations d’index pouvant être reprises
 
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database 
 
 RECONSTRUCTION d’INDEX en ligne est spécifié comme pouvant être repris à l’aide de la reprise = option. 
 -  L’option de reprise n’est pas conservée dans les métadonnées pour un index donné et s’applique uniquement à la durée d’une instruction DDL en cours. Par conséquent, la reprise = ON clause doit être spécifiée explicitement pour activer la fonction.
@@ -786,7 +786,7 @@ La fonctionnalité suivante est désactivée pour les opérations de reconstruct
   
 -   Index ColumnStore ne sont pas disponibles avant SQL Server 2012. 
 
--  Opérations d’index peut être repris sont disponibles à compter de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique) |   
+-  Opérations d’index peut être repris sont disponibles à compter de SQL Server 2017 et de la base de données SQL Azure   
   
 ## <a name="basic-syntax-example"></a>Exemple de syntaxe de base :   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>J. Reconstruction d’index peut être repris en ligne
 
-**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database (fonctionnalité est en version préliminaire publique)    
+**S’applique à**: à partir de SQL Server 2017 et Azure SQL Database   
 
  Les exemples suivants montrent comment utiliser la reconstruction d’index peut être repris en ligne. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

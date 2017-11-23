@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Types de données et fonctions de date et d'heure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,9 +91,9 @@ Toutes les valeurs système de date et d'heure sont dérivées du système d'exp
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Retourne une chaîne de caractères qui représente l’élément *datepart* de la date spécifiée.|**nvarchar**|Non déterministe|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Retourne un entier qui représente l’élément *datepart* spécifié *date*.|**int**|Non déterministe|  
-|[JOUR](../../t-sql/functions/day-transact-sql.md)|JOUR ( *date* )|Retourne un entier qui représente la partie jour de l’objet *date*.|**int**|Déterministe|  
-|[MOIS](../../t-sql/functions/month-transact-sql.md)|MOIS ( *date* )|Retourne un entier qui représente la partie mois d’un *date*.|**int**|Déterministe|  
-|[ANNÉE](../../t-sql/functions/year-transact-sql.md)|ANNÉE ( *date* )|Retourne un entier qui représente la partie année d’un *date*.|**int**|Déterministe|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|JOUR ( *date* )|Retourne un entier qui représente la partie jour de l’objet *date*.|**int**|Déterministe|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MOIS ( *date* )|Retourne un entier qui représente la partie mois d’un *date*.|**int**|Déterministe|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|ANNÉE ( *date* )|Retourne un entier qui représente la partie année d’un *date*.|**int**|Déterministe|  
   
 ###  <a name="fromParts"></a>Fonctions permettant d’obtenir les valeurs de Date et heure à partir de leurs parties
   
@@ -129,10 +126,10 @@ Toutes les valeurs système de date et d'heure sont dérivées du système d'exp
   
 |Fonction|Syntaxe|Valeur retournée|Type de données de retour|Propriété de déterminisme|  
 |---|---|---|---|---|
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Retourne la valeur actuelle, pour la session, de SET DATEFIRST.|**tinyint**|Non déterministe|  
+|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST |Retourne la valeur actuelle, pour la session, de SET DATEFIRST.|**tinyint**|Non déterministe|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *nombre* &#124;  **@**  *var_nombre* }|Affecte au premier jour de la semaine un nombre allant de 1 à 7.|Non applicable|Non applicable|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124;  **@**  *format_var* }|Définit l’ordre des parties de date (jour/mois/année) pour l’entrée **datetime** ou **smalldatetime** données.|Non applicable|Non applicable|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Retourne le nom de la langue actuellement utilisée. @@LANGUAGE n’est pas une fonction de date ou d’heure. Toutefois, le paramètre de langue peut affecter la sortie de fonctions de date.|Non applicable|Non applicable|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE |Retourne le nom de la langue actuellement utilisée. @@LANGUAGE n’est pas une fonction de date ou d’heure. Toutefois, le paramètre de langue peut affecter la sortie de fonctions de date.|Non applicable|Non applicable|  
 |[DÉFINITION DE LA LANGUE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE {[N] **'***langage***'** &#124;  **@**  *var_langue* }|Définit l'environnement de la langue pour la session et les messages système. SET LANGUAGE n'est pas une fonction de date ou d'heure. Toutefois, le paramètre de langue affecte la sortie de fonctions de date.|Non applicable|Non applicable|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [[  **@language =** ] **'***langage***'** ]|Retourne des informations sur les formats de date de toutes les langues prises en charge. **sp_helplanguage** n’est pas une date ou heure procédure stockée. Toutefois, le paramètre de langue affecte la sortie de fonctions de date.|Non applicable|Non applicable|  
   
@@ -149,11 +146,10 @@ Toutes les valeurs système de date et d'heure sont dérivées du système d'exp
 |[CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)|Fournit des informations sur la conversion des valeurs de date et d'heure depuis et vers des littéraux de chaîne et d'autres formats de date et d'heure.|  
 |[Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)|Fournit des instructions pour la portabilité des bases de données et les applications de base de données qui utilisent [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions d’une langue à l’autre ou qui prennent en charge plusieurs langues.|  
 |[Fonctions scalaires ODBC &#40; Transact-SQL &#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Fournit des informations sur les fonctions scalaires ODBC qui peut être utilisé dans [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. Cela inclut les fonctions de date et d’heure ODBC.|  
-|[FUSEAU horaire &AMP; #40 ; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Fournit la conversion du fuseau horaire.|  
+|[FUSEAU horaire &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Fournit la conversion du fuseau horaire.|  
   
 ## <a name="see-also"></a>Voir aussi
 [Fonctions](../../t-sql/functions/functions.md)  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

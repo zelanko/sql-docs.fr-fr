@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - heterogeneous join engines[ODBC]
 - drivers [ODBC], middle component
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f3fc19dd4b6553362705b7cc57c9431a29aa91ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a458ba0d7e83ab4e4c56ed40c34fae54e24c1b2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="other-driver-architectures"></a>Autres Architectures de pilote
 Certains pilotes ODBC ne sont pas strictement conformes à l’architecture décrite précédemment. Cela peut être, car les pilotes de remplir des fonctions autres que ceux d’un pilote ODBC traditionnel ou ne sont pas des pilotes dans le sens normal.  
@@ -58,4 +56,3 @@ Certains pilotes ODBC ne sont pas strictement conformes à l’architecture déc
  L’un des avantages de cette architecture sont la configuration et maintenance logicielle efficace. Pilotes doivent uniquement être mis à jour dans un seul endroit : sur le serveur. À l’aide de sources de données système, les sources de données peuvent être définies sur le serveur pour une utilisation par tous les clients. Les sources de données ne doivent pas être définies sur le client. Le regroupement de connexions peut être utilisé pour simplifier le processus par lequel les clients se connectent aux sources de données.  
   
  Le pilote sur le client est généralement une très faible qui transfère l’appel du Gestionnaire de pilotes au serveur. Son empreinte peut être beaucoup plus petite que les pilotes ODBC entièrement fonctionnels sur le serveur. Dans cette architecture, les ressources client peuvent être libérées si le serveur dispose de plus de puissance de calcul. En outre, vous peuvent améliorer l’efficacité et la sécurité de l’ensemble du système en installant des serveurs de sauvegarde et exécution de l’équilibrage de charge pour optimiser l’utilisation du serveur.
-
