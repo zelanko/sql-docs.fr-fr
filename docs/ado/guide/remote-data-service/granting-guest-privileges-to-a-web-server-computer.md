@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- guest privileges in RDS [ADO]
+helpviewer_keywords: guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3935d66bdd1dfb412f5410b245231036ae025823
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d9027a8e8adead5801a27465bda36a347472e383
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Octroi de privilèges invité à un serveur Web
 Le compte de serveur Web anonyme (IUSR_*Nom_Ordinateur*) doit être ajouté au groupe local invités sur l’ordinateur serveur Web à utiliser RDS.  
@@ -46,6 +43,5 @@ Le compte de serveur Web anonyme (IUSR_*Nom_Ordinateur*) doit être ajouté au g
 5.  Si le compte anonyme du serveur Web n’apparaît pas dans la liste dans le **sélectionner des utilisateurs ou groupes** boîte de dialogue, tapez son nom (IUSR_*Nom_Ordinateur*) dans la zone vide du bas, puis cliquez sur **ajouter** .  
   
 6.  Cliquez sur **OK**.
-
 
 

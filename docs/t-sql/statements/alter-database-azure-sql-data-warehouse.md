@@ -1,33 +1,30 @@
 ---
 title: "ALTER DATABASE (entrepôt de données SQL Azure) | Documents Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/03/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b5e328da952c853409437f7c3a4993f17022de22
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>MODIFIER la base de données (entrepôt de données SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Modifie le nom, une taille maximale ou un objectif de service pour une base de données.  
   
@@ -42,8 +39,18 @@ ALTER DATABASE database_name
 | MODIFY ( <edition_option> [, ... n] )  
   
 <edition_option> ::=   
-      MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB  
-    | SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000'}  
+      MAXSIZE = { 
+            250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 
+          | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 
+          | 92160 | 102400 | 153600 | 204800 | 245760 
+      } GB  
+      | SERVICE_OBJECTIVE = { 
+            'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' 
+          | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' 
+          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c' 
+          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c' 
+          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+      }  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -54,10 +61,18 @@ MODIFY NAME = *nouveau_nom_base_de_données*
 Renomme la base de données portant le nom spécifié en tant que *nouveau_nom_base_de_données*.  
   
 MAXSIZE  
-La taille maximale que peut atteindre la base de données. La définition de cette valeur empêche la croissance de la taille de la base de données au-delà de la taille définie. La valeur par défaut *MAXSIZE* lorsque ne pas spécifié est 10240 Go (10 To). D’autres valeurs possibles allant jusqu'à 250 Go to 240.  
+La valeur par défaut est 10 240 Go (10 To).  
+
+**S’applique à :** optimisé pour le niveau de performance d’élasticité
+
+La taille maximale autorisée pour la base de données. La base de données ne peut pas croître au-delà de MAXSIZE. 
+
+**S’applique à :** optimisé pour le niveau de performances de calcul
+
+La taille maximale autorisée pour les données rowstore dans la base de données. Les données stockées dans les tables rowstore, deltastore d’un index columnstore ou un index non cluster sur un index cluster columnstore ne peut pas croître au-delà de MAXSIZE.  Les données compressées au format columnstore n’ont pas d’une limite de taille et ne sont pas contraint par MAXSIZE. 
   
 SERVICE_OBJECTIVE  
-Spécifie le niveau de performances. Pour plus d’informations sur les objectifs de service pour [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], consultez [mise à l’échelle des performances sur SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-manage-compute-overview/).  
+Spécifie le niveau de performances. Pour plus d’informations sur les objectifs de service pour [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], consultez [des niveaux de performances](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="permissions"></a>Permissions  
 Ces autorisations sont nécessaires :  

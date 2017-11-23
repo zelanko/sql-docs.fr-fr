@@ -5,8 +5,7 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,23 +13,21 @@ f1_keywords:
 - CREATE SET
 - CREATE_SET
 - CREATE
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - named sets [MDX]
 - CREATE SET statement
 ms.assetid: eff51eeb-5e7e-4706-b861-c57b6f3f89f0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 6684e5b5d8edd630e623e5210d977c70903b01c5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12462e2b5a81c34e53332fa9749d698fecca36a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mdx-data-definition---create-set"></a>Définition de données MDX - créer défini
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +54,10 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Property_Name*  
+ *Property_name*  
  Chaîne valide qui fournit le nom d'une propriété de jeu.  
   
- *Property_Value*  
+ *Nom*  
  Expression scalaire valide qui définit la valeur de la propriété de jeu.  
   
 ## <a name="remarks"></a>Notes  
@@ -121,4 +118,3 @@ SELECT [Core Products] ON 0
  [Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

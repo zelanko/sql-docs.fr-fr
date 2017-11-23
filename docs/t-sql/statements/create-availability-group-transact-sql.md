@@ -1,12 +1,14 @@
 ---
 title: "CRÉER le groupe de disponibilité (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,28 +18,26 @@ f1_keywords:
 - CREATE AVAILABILITY GROUP
 - CREATE AVAILABILITY
 - AVAILABILITY_GROUP_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - CREATE AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], creating
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
-caps.latest.revision: 196
+caps.latest.revision: "196"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 35ccffcfbdce2c10b20c8459e59a1c2d41962088
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cebeb43402be1762021738096b9a0e959082d986
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Crée un nouveau groupe de disponibilité, si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est activée pour la fonctionnalité [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -73,8 +73,8 @@ CREATE AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-       FAILOVER_MODE = { AUTOMATIC | MANUAL }  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
        [ , <add_replica_option> [ ,...n ] ]  
     )   
   
@@ -188,10 +188,10 @@ CREATE AVAILABILITY GROUP group_name
  Utilisé pour créer un groupe de disponibilité distribué. Cette option est utilisée avec le paramètre de groupe de disponibilité ON pour connecter deux groupes de disponibilité dans les Clusters de basculement Windows Server distincts.  Pour plus d’informations, consultez [Groupes de disponibilité distribués &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md). Groupes de disponibilité distribués sont pris en charge à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Introduite dans SQL Server 2017 CTP 2.2. Utilisé pour définir un nombre minimal de réplicas secondaires synchrones requis pour valider avant que le réplica principal valide une transaction. Garantit que la transaction SQL Server attend jusqu'à ce que les journaux des transactions sont mis à jour sur le nombre minimal de réplicas secondaires. La valeur par défaut est 0, ce qui donne le même comportement que SQL Server 2016. La valeur minimale est 0. La valeur maximale est le nombre de réplicas moins 1. Cette option se rapporte aux réplicas en mode de validation synchrone. Lorsque les réplicas sont en mode de validation synchrone, les écritures sur le réplica principal patienter jusqu'à ce que les écritures sur les réplicas secondaires synchrones sont validées dans le journal des transactions de base de données réplica. Si un serveur SQL Server qui héberge un réplica synchrone secondaire cesse de répondre, le serveur SQL qui héberge le réplica principal marque ce réplica secondaire comme pas synchronisés et continuer. Lorsque la base de données ne répond pas revient en ligne, il se trouve dans un état « non synchronisé » et le réplica est marqué comme étant non fonctionnelle jusqu'à ce que le serveur principal peut rendre synchrones à nouveau. Ce paramètre garantit que le réplica principal attend jusqu'à ce que le nombre minimal de réplicas ont validées à chaque transaction. Si le nombre minimal de réplicas n’est pas disponible est validée sur le serveur principal échoue. Ce paramètre s’applique aux groupes de disponibilité avec le type de cluster `WSFC` et `EXTERNAL`. Pour le type de cluster `EXTERNAL` le paramètre est modifié lorsque le groupe de disponibilité est ajouté à une ressource de cluster. Consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](../../linux/sql-server-linux-availability-group-ha.md).
+ Introduite dans SQL Server 2017. Utilisé pour définir un nombre minimal de réplicas secondaires synchrones requis pour valider avant que le réplica principal valide une transaction. Garantit que la transaction SQL Server attend jusqu'à ce que les journaux des transactions sont mis à jour sur le nombre minimal de réplicas secondaires. La valeur par défaut est 0, ce qui donne le même comportement que SQL Server 2016. La valeur minimale est 0. La valeur maximale est le nombre de réplicas moins 1. Cette option se rapporte aux réplicas en mode de validation synchrone. Lorsque les réplicas sont en mode de validation synchrone, les écritures sur le réplica principal patienter jusqu'à ce que les écritures sur les réplicas secondaires synchrones sont validées dans le journal des transactions de base de données réplica. Si un serveur SQL Server qui héberge un réplica synchrone secondaire cesse de répondre, le serveur SQL qui héberge le réplica principal marque ce réplica secondaire comme pas synchronisés et continuer. Lorsque la base de données ne répond pas revient en ligne, il se trouve dans un état « non synchronisé » et le réplica est marqué comme étant non fonctionnelle jusqu'à ce que le serveur principal peut rendre synchrones à nouveau. Ce paramètre garantit que le réplica principal attend jusqu'à ce que le nombre minimal de réplicas ont validées à chaque transaction. Si le nombre minimal de réplicas n’est pas disponible est validée sur le serveur principal échoue. Pour le type de cluster `EXTERNAL` le paramètre est modifié lorsque le groupe de disponibilité est ajouté à une ressource de cluster. Consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](../../linux/sql-server-linux-availability-group-ha.md).
 
  CLUSTER_TYPE  
- Introduite dans SQL Server 2017 CTP 2.2. Utilisé pour identifier si le groupe de disponibilité est sur un Cluster de basculement du serveur Windows (WSFC).  La valeur WSFC lorsque le groupe de disponibilité se trouve sur une instance de cluster de basculement sur un cluster de basculement Windows Server. La valeur externe lorsque le cluster est géré par un gestionnaire de cluster qui n’est pas un cluster de basculement Windows Server, tels que Linux STIMULATEUR. Défini sur NONE lorsque ne pas à l’aide de WSFC pour la coordination de cluster du groupe de disponibilité. Par exemple, lorsqu’un groupe de disponibilité comprend des serveurs Linux. 
+ Introduite dans SQL Server 2017. Utilisé pour identifier si le groupe de disponibilité est sur un Cluster de basculement du serveur Windows (WSFC).  La valeur WSFC lorsque le groupe de disponibilité se trouve sur une instance de cluster de basculement sur un cluster de basculement Windows Server. La valeur externe lorsque le cluster est géré par un gestionnaire de cluster qui n’est pas un cluster de basculement Windows Server, tels que Linux STIMULATEUR. Défini sur NONE lorsque ne pas à l’aide de WSFC pour la coordination de cluster du groupe de disponibilité. Par exemple, lorsqu’un groupe de disponibilité inclut des serveurs Linux avec aucun gestionnaire de cluster. 
 
  Base de données *nom_base_de_données*  
  Spécifie une liste d'une ou plusieurs bases de données utilisateur sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale (autrement dit, l'instance de serveur sur laquelle vous créez le groupe de disponibilité). Vous pouvez spécifier plusieurs bases de données pour un groupe de disponibilité, mais chaque base de données ne peut appartenir qu'à un seul groupe de disponibilité. Pour plus d’informations sur le type de bases de données prises en charge par un groupe de disponibilité, consultez [conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Pour les bases de données locales appartient déjà à un groupe de disponibilité, consultez le **replica_id** colonne dans la [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue.  
@@ -245,14 +245,23 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Numéro de port associé au point de terminaison de mise en miroir de l'instance de serveur partenaire (pour l'option ENDPOINT_URL) ou numéro de port utilisé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] de l'instance de serveur (pour l'option READ_ONLY_ROUTING_URL).  
   
- AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
- SYNCHRONOUS_COMMIT ou ASYNCHRONOUS_COMMIT Spécifie si le réplica principal doit attendre que le réplica secondaire accepter la sécurisation renforcée (écriture) des enregistrements de journal sur le disque avant que le réplica principal peut valider la transaction sur une base de données primaire. Les transactions sur des bases de données différentes sur le même réplica principal peuvent être validées indépendamment.
+ AVAILABILITY_MODE  **=**  {{SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
+ SYNCHRONOUS_COMMIT ou ASYNCHRONOUS_COMMIT Spécifie si le réplica principal doit attendre que le réplica secondaire accepter la sécurisation renforcée (écriture) des enregistrements de journal sur le disque avant que le réplica principal peut valider la transaction sur une base de données primaire. Les transactions sur des bases de données différentes sur le même réplica principal peuvent être validées indépendamment. SQL Server 2017 CU 1 introduit CONFIGURATION_ONLY. Réplica CONFIGURATION_ONLY s’applique uniquement aux groupes de disponibilité avec CLUSTER_TYPE = externe ou CLUSTER_TYPE = NONE. 
   
  SYNCHRONOUS_COMMIT  
  Spécifie que le réplica principal attend pour valider des transactions jusqu'à ce qu’ils ont été renforcés sur ce réplica secondaire (mode de validation synchrone). Vous pouvez spécifier SYNCHRONOUS_COMMIT pour trois réplicas au maximum, y compris le réplica principal.  
   
  ASYNCHRONOUS_COMMIT  
  Spécifie que le réplica principal valide les transactions sans attendre que la sécurité du journal de ce réplica secondaire soit renforcée (mode de disponibilité de validation synchrone). Vous pouvez spécifier ASYNCHRONOUS_COMMIT pour cinq réplicas de disponibilité au maximum, y compris le réplica principal.  
+
+ CONFIGURATION_ONLY Spécifie que le réplica principal synchrone valider les métadonnées de configuration de groupe de disponibilité pour la base de données master sur ce réplica. Le réplica ne contient pas de données utilisateur. Cette option :
+
+- Peut être hébergé sur n’importe quelle édition de SQL Server, y compris Express Edition.
+- Exige que les données du réplica CONFIGURATION_ONLY pour être le type de point de terminaison de mise en miroir `WITNESS`.
+- Ne peut pas être modifié.
+- N’est pas valide lorsque `CLUSTER_TYPE = WSFC`. 
+
+   Pour plus d’informations, consultez [seul réplica de Configuration](../../linux/sql-server-linux-availability-group-ha.md).
   
  La clause AVAILABILITY_MODE est obligatoire. Pour plus d’informations, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
@@ -380,7 +389,7 @@ CREATE AVAILABILITY GROUP group_name
  *port*  
  Est un numéro de port qui est associé au point de terminaison de mise en miroir du groupe de disponibilité. Notez que cela n’est pas le port de l’écouteur.  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY}  
  Spécifie si le réplica principal se trouve en attente pour le groupe de disponibilité secondaire accepter la sécurisation renforcée (écriture) des enregistrements de journal sur le disque avant que le réplica principal peut valider la transaction sur une base de données primaire.  
   
  SYNCHRONOUS_COMMIT  
@@ -498,7 +507,7 @@ CREATE AVAILABILITY GROUP group_name
   
  Enfin, l'exemple spécifie la clause facultative LISTENER pour créer un écouteur du groupe de disponibilité pour le nouveau groupe de disponibilité. Un seul nom DNS, `MyAgListenerIvP6`, est spécifié pour cet écouteur. Les deux réplicas sont sur des sous-réseaux différents, l'écouteur doit utiliser des adresses IP statiques. Pour les deux réplicas de disponibilité, la clause WITH IP spécifie une adresse IP statique, `2001:4898:f0:f00f::cf3c` et `2001:4898:e0:f213::4ce2`, qui utilisent le format IPv6. Cet exemple utilise également l'argument facultatif PORT pour spécifier le port `60173` comme port d'écoute.  
   
-```  
+```SQL
 CREATE AVAILABILITY GROUP MyAg   
    WITH (  
       AUTOMATED_BACKUP_PREFERENCE = SECONDARY,  
@@ -572,5 +581,4 @@ GO
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-
 

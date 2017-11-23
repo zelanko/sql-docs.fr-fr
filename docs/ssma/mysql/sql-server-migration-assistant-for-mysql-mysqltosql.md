@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/09/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: a53e3452725304ba0c688da213ca2e49a504f2e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 9147a4de7cb2b74c0cdb65518c07ecb7ff1ba8a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant pour MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) pour MySQL est un outil de migration des bases de données de MySQL vers [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 sur Windows et Linux (version préliminaire) / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB. SSMA pour MySQL convertit les objets de base de données MySQL pour les objets de base de données SQL Server, crée ces objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], et puis migre les données de MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -43,4 +41,3 @@ Cette documentation vous présente SSMA pour MySQL et fournit des instructions d
 |[Utilisation de SSMA pour MySQL Console](http://msdn.microsoft.com/en-us/240aaad1-d65d-4dea-b60b-315cb1ac733d)|Contient la documentation sur l’application Console de SSMA|  
 |[Mise en route de SSMA pour obtenir une Assistance MySQL](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Fournit des informations sur l’obtention d’une assistance supplémentaire.|  
   
-

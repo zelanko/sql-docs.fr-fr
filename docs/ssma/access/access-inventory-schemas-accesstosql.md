@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -40,17 +39,16 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b399910612848033ea927aa8c4d3adc86d048ae0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cd7d907f2c78125a477737299f6aaee28b5ccc7f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Accès aux schémas de stock (AccessToSQL)
 Les sections suivantes décrivent les tables qui sont créés par SSMA lorsque vous exportez des schémas d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -164,7 +162,7 @@ Métadonnées d’un formulaire sont exportée vers le **SSMA_Access_InventoryFo
 ## <a name="macros"></a>Macros  
 Métadonnées de la macro sont exportée vers le **SSMA_Access_InventoryMacros** table. Cette table contient les colonnes suivantes :  
   
-|Nom de la colonne|Type de données|Description|  
+|Nom de la colonne|Type de données| Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient la macro.|  
 |**MacroId**|**int**|Nombre s’incrémentant entier qui identifie la macro. Cette colonne est la clé primaire pour la table.|  
@@ -189,6 +187,5 @@ Métadonnées du module sont exportées vers le **SSMA_Access_InventoryModules**
 |**Nom du module**|**nvarchar(4000)**|Le nom du module.|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exportation d’un inventaire de l’accès](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Exportation d’un inventaire Access](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
   
-

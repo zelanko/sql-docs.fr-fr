@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f51708cf47cf84a33cefee3003e0edb94baaae6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b997bfd1cc338f9c7a9dbb4b1b5b1ce851e71072
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="return-codes-odbc"></a>Codes de retour ODBC
 Chaque fonction dans ODBC retourne un code appelé son *code de retour,* qui indique la réussite ou l’échec de la fonction globale. La logique du programme repose en général sur des codes de retour.  
@@ -61,4 +59,3 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_NO_DATA|Aucune donnée n’était disponible. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Un ou plusieurs enregistrements de statut définies par le pilote de classe 02xxx peuvent être renvoyés. **Remarque :** dans ODBC 2. *x*, ce code a été nommé SQL_NO_DATA_FOUND de retour.|  
 |SQL_NEED_DATA|Plus de données est nécessaire, par exemple lorsque les données du paramètre sont envoyées au moment de l’exécution, ou les informations de connexion supplémentaires sont requises. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|  
 |SQL_STILL_EXECUTING|Une fonction qui a été démarrée en mode asynchrone est en cours d’exécution. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Command15::CommandType
-helpviewer_keywords:
-- CommandType property [ADO]
+f1_keywords: Command15::CommandType
+helpviewer_keywords: CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a69692774703950cad8aae7b12dbfc82728157d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d670a188c89ed96001c93d17a33dc0c03d601a82
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commandtype-property-ado"></a>CommandType, propriété (ADO)
 Indique le type d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
@@ -45,10 +41,9 @@ Indique le type d’un [commande](../../../ado/reference/ado-api/command-object-
  Si le **CommandType** valeur de propriété est définie sur la valeur par défaut, **adCmdUnknown**, vous pouvez rencontrer des performances car ADO doit effectuer des appels au fournisseur pour déterminer si le  **CommandText** propriété est une instruction SQL, une procédure stockée ou un nom de table. Si vous connaissez le type de commande que vous utilisez, la définition de la **CommandType** propriété à ADO d’accéder directement au code approprié. Si le **CommandType** propriété ne correspond pas au type de commande dans le **CommandText** propriété, une erreur se produit lorsque vous appelez le [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) (méthode).  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)
-

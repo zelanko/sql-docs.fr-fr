@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - C data types [ODBC], about C data types
 - C data types [ODBC]
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b042185cb49c00e61d090934a9c8ed8d2258059f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65a5bd882462dbd72c39c751dcfed52c61ab194c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-data-types-in-odbc"></a>Types de données C dans ODBC
 ODBC définit les types de données C qui sont utilisés par les variables d’application et de leurs identificateurs de type correspondant. Ils sont utilisés par les mémoires tampons qui sont liées aux colonnes du jeu de résultats et les paramètres de l’instruction. Par exemple, qu'une application veut récupérer des données d’une colonne de jeu de résultats au format caractère. Elle déclare une variable avec le SQLCHAR * type de données et lie cette variable à la colonne du jeu de résultats avec l’identificateur type SQL_C_CHAR. Pour obtenir une liste complète des types de données C et des identificateurs de type, consultez [annexe d : les Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
@@ -59,5 +57,4 @@ ODBC définit les types de données C qui sont utilisés par les variables d’a
  Pour plus d’informations sur ODBC 3.8, consultez [Nouveautés ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données C](../../../odbc/reference/appendixes/c-data-types.md)
-
+ [Type de données C](../../../odbc/reference/appendixes/c-data-types.md)

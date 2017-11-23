@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6cb8bb35eb0e53415465b3ea003341d74e248bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-is-metadata-used"></a>Quelles sont les métadonnées utilisées ?
 Les applications requièrent des métadonnées pour la plupart des opérations de jeu de résultats. Par exemple, l'application utilise le type de données d'une colonne pour déterminer le type de variable à lier à cette colonne. Il utilise la longueur d’octet d’une colonne de caractères pour déterminer la quantité d’espace qu’il doit afficher les données de cette colonne. La façon dont une application détermine les métadonnées d'une colonne dépend du type de l'application.  
@@ -38,4 +36,3 @@ Les applications requièrent des métadonnées pour la plupart des opérations d
  Applications génériques, en particulier ceux qui prennent en charge les requêtes ad hoc, presque jamais de connaître les métadonnées, les jeux de résultats qu’ils créent. Par conséquent, ils doivent découvrir les métadonnées au moment de l’exécution en utilisant les fonctions **SQLNumResultCols**, **SQLDescribeCol**, et **SQLColAttribute**, qui sont décrites dans la section suivante, [SQLDescribeCol et SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Toutes les applications, quel que soit leur type, peuvent coder en dur les métadonnées pour les jeux de résultats retournés par les fonctions de catalogue. Ces jeux de résultats est définis dans la section de référence de ce manuel.
-

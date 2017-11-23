@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e80e99479b65bfabbc6d44098d19580eb8d331f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: db60668fb90aec8b093938533487a6f0ff5bdf0f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Test migration des objets de base de données (SybaseToSQL)
 Microsoft SQL Server Migration Assistant pour Sybase Tester (testeur SSMA) teste automatiquement la conversion des objets de base de données et la migration des données effectuées par SSMA. Une fois que toutes les étapes de migration de SSMA sont terminées, utilisez SSMA testeur pour vérifier que les objets convertis fonctionnent de manière identique et que toutes les données a été transféré correctement.  
@@ -54,7 +52,7 @@ SSMA testeur exécute les objets sélectionnés pour le test sur Sybase et leurs
 > [!NOTE]  
 > Attention ! N’utilisez jamais de SSMA testeur sur les systèmes de production. Lors de l’exécution de Tester le schéma source et les données sont modifiées. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Conditions préalables  
 Si vous souhaitez utiliser le testeur de SSMA, installer SSMA Sybase Extension avec le **installer la base de données testeur** activée.  
   
 En outre, vérifiez les éléments suivants :  
@@ -72,4 +70,3 @@ Notez que la version actuelle de SSMA testeur ne prend pas en charge l’exécut
 [Installation des composants SSMA sur SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [Paramètres du projet &#40; Conversion de &#41; &#40; SybaseToSQL &#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   
-

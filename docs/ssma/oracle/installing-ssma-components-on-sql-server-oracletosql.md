@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d2a76c23bc7b29caa87360362c7121d068bb92a6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a363954dd56d20d3fb47d15c6325526bba8cf808
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installation des composants SSMA sur SQL Server (OracleToSQL)
 Outre l’installation SSMA, vous devez également installer les composants sur l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ces composants incluent le Pack d’extension SSMA, qui prend en charge la migration des données et les fournisseurs Oracle pour permettre la connectivité du serveur à serveur.  
@@ -33,7 +31,7 @@ Le Pack d’extension SSMA ajoute les bases de données, **sysdb** et **ssmatest
   
 En outre, lorsque vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], SSMA crée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] travaux de l’Agent lorsque le moteur de migration de données côté serveur est utilisé pour migrer les données.  
   
-### <a name="prerequisites"></a>Configuration requise  
+### <a name="prerequisites"></a>Conditions préalables  
 Avant d’installer des composants de serveur Oracle SSMA sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], assurez-vous que le système répond aux exigences suivantes :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]instance est installée. SSMA ne prend pas en charge SQL Server 2008 Express Edition.  
@@ -112,4 +110,3 @@ Chaque fois que vous migrez des données à [!INCLUDE[ssNoVersion](../../include
 [L’installation de SSMA pour Client Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Migration bases de données Oracle pour SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

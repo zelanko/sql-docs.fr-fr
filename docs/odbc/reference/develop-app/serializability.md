@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - serialization [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 24abc4dee066853da7b201f19839063aa437d854
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 81d23b5bc94f2982becca5e76ab28269d6c233c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="serializability"></a>Sérialisation
 Dans l’idéal, les transactions doivent être *sérialisable*. Les transactions sont dites sérialisables si les résultats de l’exécution de transactions simultanément sont les mêmes que les résultats de leur exécution en série : autrement dit, une après l’autre. Il n’est pas important de la transaction s’exécute en premier, uniquement que le résultat ne reflète pas les mélanger des transactions.  
@@ -38,4 +36,3 @@ Dans l’idéal, les transactions doivent être *sérialisable*. Les transaction
  Par conséquent, pourquoi est renouvelable souhaitable ? En d’autres termes, pourquoi est-ce important qu’il apparaît qu’une transaction se termine avant le démarrage de la transaction suivante ? Prenez le problème suivant. Un représentant commercial est saisie de commandes en même temps qu'un employé envoie des factures. Supposons que le représentant commercial entre une commande à partir de la société X, mais ne la valide pas ; le représentant commercial toujours communique avec le représentant à partir de la société X. Le régisseur de demande une liste de toutes les commandes ouvertes et détecte l’ordre de la société X et les envoie une facture. Maintenant le représentant de la société X décide qu'ils souhaitent modifier leur ordre, de sorte que si le représentant commercial il change avant de valider la transaction. Société X Obtient une facture incorrecte.  
   
  Si du représentant commercial et du régisseur de transactions ont été sérialisables, ce problème ne serait jamais survenus. Soit les transactions entre le commercial sont terminés avant le début de la transaction de l’employé, auquel cas le régisseur sera donc avoir envoyé la facture de façon correcte, ou les transactions de l’employé sont terminés avant la transaction entre le commercial démarré, auquel cas le régisseur n'aurait pas envoyé une facture à la société X tout.
-

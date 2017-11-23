@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f0b5499af07c7bbb5309ff87037f7c3825872dab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13997d3c8d4bb3c4ea5ff47ec6e8d4c95b303d21
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transaction-isolation-levels"></a>Niveaux d'isolement des transactions
 *Niveaux d’isolation des transactions* sont une mesure de l’étendue pour la transaction isolation aboutit. En particulier, les niveaux d’isolation des transactions sont définis par la présence ou l’absence de phénomènes suivants :  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |Sérialisable|La transaction attend jusqu'à ce que les lignes verrouillées en écriture par d’autres transactions sont déverrouillées ; Cela empêche de lire des données modifiées (« dirty ».<br /><br /> La transaction maintient un verrou de lecture (si elle lit uniquement les lignes) ou le verrou d’écriture (s’il peut mettre à jour ou supprimer des lignes) de la plage de lignes qu’il affecte. Par exemple, si la transaction inclut l’instruction SQL **sélectionnez \* de commandes**, la plage est l’ensemble de table Orders ; les transaction des verrouillages en lecture la table et ne pas autoriser toutes les nouvelles lignes à insérer dans ce. Si la transaction inclut l’instruction SQL **supprimer à partir de commandes où état = 'Fermé'**, la plage est toutes les lignes avec un état de « CLOSED » ; les verrous d’écriture transaction toutes les lignes de commandes de table avec l’état « CLOSED » et n’autorise pas les lignes à insérer ou la mise à jour la ligne qui en résulte a le statut « Fermé ».<br /><br /> Étant donné que les autres transactions ne peut pas mettre à jour ou supprimer les lignes de la plage, la transaction actuelle permet d’éviter des lectures non reproductibles. Étant donné que les autres transactions ne peut pas insérer des lignes dans la plage, la transaction actuelle évite toute fantômes. La transaction libère son verrou lorsqu’elle est validée ou restaurée.|  
   
  Il est important de noter que le niveau d’isolation de transaction n’affecte pas la possibilité d’une transaction pour voir ses propres modifications ; les transactions peuvent toujours voir les modifications. Par exemple, une transaction peut être constituée de deux **mise à jour** instructions, la première qui déclenche le salaire de tous les employés de 10 % et le second définit le salaire de tous les employés sur certains quantité maximale de ce montant. Cette opération réussit comme une transaction unique uniquement parce que la seconde **mise à jour** instruction permettre voir les résultats de la première.
-

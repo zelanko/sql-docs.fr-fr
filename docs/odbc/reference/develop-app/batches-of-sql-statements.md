@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7966552f130ce8ab4825c77929c5fd4599fd6209
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 70649ee51ec7b5c2ef3926706f802da8189fc3b2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="batches-of-sql-statements"></a>Lots d’instructions SQL
 Un lot d’instructions SQL est un groupe de deux ou plusieurs instructions SQL ou une instruction SQL unique qui a le même effet en tant que groupe de deux ou plusieurs instructions SQL. Dans certaines implémentations, l’instruction du lot entier est exécutée avant que les résultats soient disponibles. Ceci est souvent plus efficace que la soumission des instructions séparément, car le trafic réseau peut souvent être réduit et la source de données peut optimiser parfois de l’exécution d’un lot d’instructions SQL. Dans d’autres implémentations, appelant **SQLMoreResults** entraîne l’exécution de l’instruction suivante dans le lot. ODBC prend en charge les types de lots suivants :  
@@ -71,9 +69,8 @@ Un lot d’instructions SQL est un groupe de deux ou plusieurs instructions SQL 
   
  Cette section contient les rubriques suivantes.  
   
--   [Instructions de génération de résultat et sans résultat](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
+-   [Instructions avec génération de résultats et sans résultats](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   
--   [L’exécution de lots](../../../odbc/reference/develop-app/executing-batches.md)  
+-   [Exécution de lots](../../../odbc/reference/develop-app/executing-batches.md)  
   
--   [Erreurs et des traitements](../../../odbc/reference/develop-app/errors-and-batches.md)
-
+-   [Erreurs et lots](../../../odbc/reference/develop-app/errors-and-batches.md)

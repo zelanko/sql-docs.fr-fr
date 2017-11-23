@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Caractéristiques du curseur et le Type de curseur
 Une application peut spécifier les caractéristiques d’un curseur au lieu de spécifier le type de curseur (avant uniquement, statique, commandé par keyset ou dynamique). Pour ce faire, l’application sélectionne capacité de défilement du curseur (en définissant l’attribut d’instruction SQL_ATTR_CURSOR_SCROLLABLE) et la sensibilité (en définissant l’attribut d’instruction SQL_ATTR_CURSOR_SENSITIVITY) avant d’ouvrir le curseur sur le handle d’instruction. Le pilote choisit ensuite le type de curseur qui fournit plus efficacement les caractéristiques de l’application demandée.  
@@ -57,4 +55,3 @@ Une application peut spécifier les caractéristiques d’un curseur au lieu de 
 |SQL_ATTR_CURSOR_TYPE à SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE SQL_NONSCROLLABLE.|  
 |SQL_ATTR_CURSOR_TYPE SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE à la valeur SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED ou SQL_SENSITIVE (critères définis par le pilote, si SQL_ATTR_CONCURRENCY n’est pas SQL_CONCUR_READ_ONLY).|  
 |SQL_ATTR_CURSOR_TYPE à SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE à la valeur SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY avec la valeur SQL_INSENSITIVE (si SQL_ATTR_CONCURRENCY est SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED ou SQL_SENSITIVE (si SQL_ATTR_CONCURRENCY n’est pas SQL_CONCUR_READ_ONLY).|
-

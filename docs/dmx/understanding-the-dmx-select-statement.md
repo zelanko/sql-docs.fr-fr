@@ -13,8 +13,7 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - Data Mining Extensions [Analysis Services], statements
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - copying mining models
 ms.assetid: 61e97285-4a06-4434-9a40-38cde5af7c3f
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f8429c48fb398f1d1a9e3f20741c7eecfd0810b5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431bc5b84d76725904fff27f63c73121e13fa48
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Présentation de l'instruction DMX Select
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,14 +95,14 @@ ms.lasthandoff: 08/02/2017
 |SELECT DISTINCT FROM  *\<modèle >*|Retourne toutes les valeurs d'état provenant du modèle d'exploration de données pour la colonne spécifiée.<br /><br /> Le domaine de données pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT DISTINCT FROM &#60; modèle &#62; &#40; DMX &#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Contenu des requêtes &#40; exploration de données &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modèle >*. CONTENU|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [SELECT FROM &#60; modèle &#62;. CONTENU &#40; DMX &#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Contenu des requêtes &#40; exploration de données &#41;](../analysis-services/data-mining/content-queries-data-mining.md)|  
 |SELECT FROM  *\<modèle >*. DIMENSION_CONTENT|Retourne le contenu décrivant le modèle d'exploration de données.<br /><br /> Le domaine de données pour ce type de requête est l'ensemble de lignes du contenu.<br /><br /> [SELECT FROM &#60; modèle &#62;. DIMENSION_CONTENT &#40; DMX &#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM  *\<modèle >*. PMML|Retourne la représentation PMML (Predictive Model Markup Language) du modèle d'exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.<br /><br /> Le domaine pour ce type de requête est l'ensemble de lignes du schéma PMML.<br /><br /> [Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT_PMML](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
+|SELECT FROM  *\<modèle >*. PMML|Retourne la représentation PMML (Predictive Model Markup Language) du modèle d'exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.<br /><br /> Le domaine pour ce type de requête est l'ensemble de lignes du schéma PMML.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML, ensemble de lignes](../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|  
   
  [Retour à Types Select](#Select_Types)  
   
 ###  <a name="Copying"></a>Copie  
  Vous pouvez copier un modèle d'exploration de données et sa structure d'exploration de données associée dans un nouveau modèle, puis renommer le modèle dans l'instruction.  
   
-|Type de requête|Description|  
+|Type de requête| Description|  
 |----------------|-----------------|  
 |SELECT INTO  *\<nouveau modèle >*|Crée une copie du modèle d'exploration de données.<br /><br /> Le domaine pour ce type de requête est le modèle d'exploration de données.<br /><br /> [SELECT INTO &#40; DMX &#41;](../dmx/select-into-dmx.md)|  
   
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/02/2017
  [Les Extensions d’exploration de données &#40; DMX &#41; Conventions de syntaxe](../dmx/data-mining-extensions-dmx-syntax-conventions.md)  
   
   
-

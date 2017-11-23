@@ -8,31 +8,25 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDataSourceToDriver
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDataSourceToDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDataSourceToDriver
-helpviewer_keywords:
-- SQLDataSourceToDriver function [ODBC]
+f1_keywords: SQLDataSourceToDriver
+helpviewer_keywords: SQLDataSourceToDriver function [ODBC]
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0594551a7bc82eb96208ecb5d8840db0477c4f3a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b6b37e632f4e610ec19cf355e94999135d72781
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver (fonction)
 **SQLDataSourceToDriver** supportstranslations pour les pilotes ODBC. Cette fonction n’est pas appelée par les applications ODBC compatibles ; applications de demander une traduction via **SQLSetConnectAttr**. Le pilote associé à la *handle de connexion* spécifié dans **SQLSetConnectAttr** appelle la DLL spécifiée pour effectuer des conversions de toutes les données circulent à partir de la source de données pour le pilote. Une DLL de traduction par défaut peut être spécifié dans le fichier d’initialisation ODBC.  
@@ -117,4 +111,3 @@ BOOL SQLDataSourceToDriver(
 |Conversion des données envoyées à la source de données|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
 |Retourner la valeur de l’attribut de connexion|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Définition d’un attribut de connexion|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

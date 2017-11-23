@@ -16,25 +16,23 @@ ms.topic: language-reference
 f1_keywords:
 - DISTINCT
 - SELECT
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - discrete columns [DMX]
 - discretized columns [DMX]
 - SELECT DISTINCT FROM <model> statement
 - continuous columns
 ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e36b3c6b97fa441297961d2edf889bee61f67cc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9aa916d15654b1fb4f806291d7d05ca7a683709f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modèle &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +66,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 ## <a name="remarks"></a>Notes  
  Le **SELECT DISTINCT FROM** instruction fonctionne uniquement avec une seule colonne ou un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
   
- Le **SELECT DISTINCT FROM** instruction vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Par exemple :  
+ Le **SELECT DISTINCT FROM** instruction vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Exemple :  
   
 ```  
 <model>.<table column reference>.<column reference>  
@@ -160,4 +158,3 @@ FROM [TM Decision Tree]
  [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

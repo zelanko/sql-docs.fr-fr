@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: deb18077283a1512c09aa223f9790079bdae5855
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f1ea7333aa847916f45d648c582f07de0774eda6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Étape 3 : preuve de concept pour la connexion à SQL via PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -174,4 +172,3 @@ Cet exemple de code illustre l’utilisation de transactions dans lequel vous :
   
 [Exemple d’application (pilote SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
 [Exemple d’application (pilote PDO_SQLSRV)](../../connect/php/example-application-pdo-sqlsrv-driver.md)
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fdd0c7da1074a5f6a1d86a941fd29330145f07c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-long-data"></a>Envoi de données de type Long
 Définir des SGBD *données longues* sous forme de n’importe quel caractère ou binaire sur une certaine taille, tels que de 254 caractères. Il se peut qu’il ne soit pas possible de stocker la totalité d’un élément de données de type long dans la mémoire, telles que lorsque l’élément représente un document de texte long ou une image bitmap. Étant donné que ces données ne peut pas être stockées dans une seule mémoire tampon, la source de données l’envoie au pilote dans des parties avec **SQLPutData** lorsque l’instruction est exécutée. Paramètres pour lesquels les données sont envoyées au moment de l’exécution sont appelées *data-at-execution paramètres*.  
@@ -53,4 +51,3 @@ Définir des SGBD *données longues* sous forme de n’importe quel caractère o
  Après avoir **SQLExecute** ou **SQLExecDirect** retourne SQL_NEED_DATA et avant l’envoi de données pour le dernier paramètre de data-at-execution a complètement, l’instruction est dans un état besoin des données. Alors qu’une instruction est dans un état besoin des données, l’application peut uniquement appeler **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; toutes les autres fonctions retournent la valeur SQLSTATE HY010 (erreur de séquence de fonction). Appel de **SQLCancel** annule l’exécution de l’instruction et le retourne à son état précédent. Pour plus d’informations, consultez [Tables de Transition d’état annexe b : ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Pour obtenir un exemple d’envoi de données au moment de l’exécution, consultez la [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) description de fonction.
-

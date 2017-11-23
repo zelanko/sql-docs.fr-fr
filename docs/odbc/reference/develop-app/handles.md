@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 499f62ecd8e053ef0776873dcdf4fe20cac1fa96
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05788f48f4a3fdb695fc3064023e52c2a3750c2e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handles"></a>Poignées
 Poignées sont opaques, 32 bits des valeurs qui identifient un élément particulier ; dans ODBC, cet élément peut être un environnement, une connexion, une instruction ou une descripteur. Lorsque l’application appelle **SQLAllocHandle**, le Gestionnaire de pilote ou le pilote crée un nouvel élément du type spécifié et retourne son handle à l’application. L’application plus tard utilise le handle pour identifier cet élément lors de l’appel de fonctions ODBC. Le Gestionnaire de pilotes et le pilote utilisent le handle pour rechercher des informations sur l’élément.  
@@ -95,9 +93,8 @@ SQLCloseCursor(hstmtOrder);
   
 -   [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md)  
   
--   [Descripteurs d’instruction](../../../odbc/reference/develop-app/statement-handles.md)  
+-   [Handles d’instruction](../../../odbc/reference/develop-app/statement-handles.md)  
   
 -   [Handles de descripteur](../../../odbc/reference/develop-app/descriptor-handles.md)  
   
 -   [Transitions d’état](../../../odbc/reference/develop-app/state-transitions.md)
-

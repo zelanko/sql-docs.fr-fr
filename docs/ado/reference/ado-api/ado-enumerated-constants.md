@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- enumerated constants [ADO]
+helpviewer_keywords: enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fb606a366746b09d7ba6303b0cb11bb1b96f6164
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93011b8b30d552e5bf3852c9e4d483161d90fc55
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-enumerated-constants"></a>Constantes énumérées ADO
 Pour faciliter le débogage, les énumérations ADO comportent une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version de l’objet ADO à un autre. Votre code doit uniquement dépendre du nom, pas la valeur réelle de chaque constante énumérée.  
@@ -51,7 +48,7 @@ Pour faciliter le débogage, les énumérations ADO comportent une valeur pour c
 |[EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)|Spécifie l’état de modification d’un enregistrement.|  
 |[ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md)|Spécifie le type d’erreur d’exécution ADO.|  
 |[EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)|Spécifie la raison qui a provoqué un événement se produise.|  
-|[Il n'](../../../ado/reference/ado-api/eventstatusenum.md)|Spécifie l’état actuel de l’exécution d’un événement.|  
+|[EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)|Spécifie l’état actuel de l’exécution d’un événement.|  
 |[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)|Spécifie comment un fournisseur doit exécuter une commande.|  
 |[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)|Spécifie les champs spéciaux référencés dans les **champs** collection d’un **enregistrement** objet.|  
 |[FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md)|Spécifie un ou plusieurs attributs d’un **champ** objet.|  
@@ -61,7 +58,7 @@ Pour faciliter le débogage, les énumérations ADO comportent une valeur pour c
 |[IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)|Spécifie le niveau d’isolation des transactions pour un **connexion** objet.|  
 |[LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md)|Spécifie le caractère utilisé comme séparateur de ligne dans le texte **flux** objets.|  
 |[LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)|Spécifie le type de verrou placé sur les enregistrements pendant la modification.|  
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptionsenum.md)|Spécifie les enregistrements qui doivent être renvoyées au serveur.|  
+|[MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)|Spécifie les enregistrements qui doivent être renvoyées au serveur.|  
 |[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)|Spécifie le comportement de la **enregistrement** objet **MoveRecord** (méthode).|  
 |[ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md)|Spécifie si un objet est ouvert ou fermé, la connexion à une source de données, l’exécution d’une commande ou l’extraction de données.|  
 |[ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md)|Spécifie les attributs d’un **paramètre** objet.|  
@@ -95,4 +92,3 @@ Pour faciliter le débogage, les énumérations ADO comportent une valeur pour c
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
-
