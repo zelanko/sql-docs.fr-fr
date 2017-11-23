@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling embedded SQL programs [ODBC]
 - embedded SQL [ODBC]
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 996e0cc19a0828fe7ca7a7ba1bd1a95402ebbe81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b4914a0f7c426f8409c53835e84ff26cecca94ba
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilez un programme SQL incorporé
 Comme un programme SQL incorporé contient une combinaison d’instructions de langage SQL et l’hôte, il ne peut pas être soumis directement à un compilateur pour le langage hôte. Au lieu de cela, il est compilé dans un processus en plusieurs étapes. Bien que ce processus est différent du produit, les étapes sont à peu près les mêmes pour tous les produits.  
@@ -50,4 +48,3 @@ Comme un programme SQL incorporé contient une combinaison d’instructions de l
 5.  Le module de demande de base de données généré par le précompilé est soumis à un utilitaire de liaison spéciale. Cet utilitaire examine les instructions SQL, analyse, valide et optimise les, puis génère un plan d’accès pour chaque instruction. Le résultat est un plan d’accès pour l’ensemble du programme, qui représente une version exécutable des instructions SQL incorporées. L’utilitaire de liaison stocke le plan dans la base de données, en lui assignant généralement le nom de l’application qui l’utilise. Indique si cette étape a lieu au moment de l’exécution ou de temps de compilation dépend du SGBD.  
   
  Notez que les étapes permettant de compiler un programme SQL incorporé correspondent très proche de la procédure décrite précédemment dans [le traitement d’une instruction SQL](../../odbc/reference/processing-a-sql-statement.md). En particulier, notez que le précompilés sépare les instructions SQL à partir du code de langage hôte et l’utilitaire de liaison analyse et valide les instructions SQL et crée les plans d’accès. Dans le SGBD où l’étape 5 a lieu au moment de la compilation, les quatre premières étapes de traitement d’une instruction SQL lieu au moment de la compilation, tandis que la dernière étape (exécution) a lieu au moment de l’exécution. Cela a pour effet de rendre l’exécution des requêtes dans ces SGBD très rapide.
-

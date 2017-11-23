@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f952e8d2fbc1eb41d65cd4d30fa2f13c991d264
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-procedures"></a>L’exécution de procédures
 ODBC définit une séquence d’échappement standard pour l’exécution de procédures. Pour connaître la syntaxe de cette séquence et un exemple de code qui l’utilise, consultez [les appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md).  
@@ -44,4 +42,3 @@ ODBC définit une séquence d’échappement standard pour l’exécution de pro
     -   Appelle la procédure dans la source de données et l’envoie les valeurs de paramètre converti. Comment le pilote appelle la procédure est spécifique au pilote. Par exemple, il peut modifier l’instruction SQL pour utiliser la grammaire SQL de la source de données et d’envoyer cette instruction pour l’exécution, ou il peut appeler la procédure directement à l’aide d’un mécanisme d’appel de procédure distante (RPC) qui est défini dans le protocole de flux de données du SGBD.  
   
     -   Retourne les valeurs de toutes les entrées/sorties ou paramètres de sortie ou la valeur de retour de procédure, en supposant que la procédure réussit. Ces valeurs ne soient pas disponibles tant qu’après le traitement de tous les autres résultats (nombre de lignes et de jeux de résultats) générés par la procédure. Si la procédure échoue, le pilote retourne toutes les erreurs.
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3941b8cdc2a53cb0f9fe3ad2b94f2ef972ad3775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes"></a>Changements de comportement
 Changements de comportement sont celles pour lesquelles le *syntaxe* de l’interface reste la même, mais la *sémantique* ont été modifiés. Pour que ces modifications, les fonctionnalités utilisées dans ODBC 2. *x* se comporte différemment de la même fonctionnalité dans ODBC 3. *x*.  
@@ -52,7 +50,6 @@ Changements de comportement sont celles pour lesquelles le *syntaxe* de l’inte
   
  Cette section contient les rubriques suivantes.  
   
--   [Mappages SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
+-   [Mappages de SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
--   [Modifications de Type de données DateTime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
-
+-   [Changements dans le type de données datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)

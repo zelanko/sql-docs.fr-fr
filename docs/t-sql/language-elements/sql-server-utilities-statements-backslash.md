@@ -1,21 +1,21 @@
 ---
-title: (Barre oblique inverse) (Transact-SQL) | Documents Microsoft
+title: Barre oblique inverse (Continuation de ligne) (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 11/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
+applies_to: SQL Server (starting with 2008)
 f1_keywords:
 - '\_TSQL'
 - '\'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - backwhack
 - backslash
@@ -30,24 +30,21 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 36fb10b5e6d2606de0bf920d66933f720cc09b98
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 011025d20b6341b9fa43b25f6c14c91a135a6ffa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="sql-server-utilities-statements---backslash"></a>Instructions d’utilitaires SQL Server - barre oblique inverse
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="backslash-line-continuation-transact-sql"></a>Barre oblique inverse (Continuation de ligne) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fournit des commandes qui ne sont pas [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, mais sont reconnues par le **sqlcmd** et **osql** utilitaires et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de Code. Ces commandes facilitent la lisibilité et l'exécution de lots et de scripts.  
-  
-\ interrompt une longue chaîne constante dans deux ou plusieurs lignes pour une meilleure lisibilité.  
+`\`divise constante de chaîne longue, caractère ou binaire, en deux ou plusieurs lignes pour une meilleure lisibilité.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,15 +64,16 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="remarks"></a>Notes  
  Cette commande retourne les premières sections et les sections suivantes de la chaîne sous la forme d'une chaîne, sans la barre oblique inverse.  
-  
- La barre oblique inverse n'est pas une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il s’agit d’une commande qui est reconnue par le **sqlcmd** et **osql** utilitaires et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de Code.  
-  
+
 ## <a name="examples"></a>Exemples  
- L'exemple suivant utilise une barre oblique inverse et un retour chariot pour fractionner la chaîne en deux lignes.  
+
+### <a name="a-splitting-a-character-string"></a>A. Fractionnement d’une chaîne de caractères  
+
+L’exemple suivant utilise une barre oblique inverse et un retour chariot pour fractionner une chaîne de caractères en deux lignes.  
   
 ```  
 SELECT 'abc\  
-def' AS ColumnResult;  
+def' AS [ColumnResult];  
   
 ```  
   
@@ -86,14 +84,31 @@ def' AS ColumnResult;
  ------------  
  abcdef
  ```    
+
+### <a name="b-splitting-a-binary-string"></a>B. Fractionnement d’une chaîne binaire  
+
+L’exemple suivant utilise une barre oblique inverse et un retour chariot pour fractionner une chaîne binaire en deux lignes.  
+
+```  
+SELECT 0xabc\  
+def AS [ColumnResult];  
   
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+  
+ ```  
+ ColumnResult  
+ ------------  
+ 0xABCDEF
+ ```    
+
 ## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [&#40; division &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-transact-sql.md)   
- [&#40; diviser égal &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
+ [&#40; assignation de division &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)   
  [Compound, opérateurs &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-

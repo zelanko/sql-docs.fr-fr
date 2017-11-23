@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1136751fc7ec479cd3538814369cafed8ca45abf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 142c9a2c95900e5b3776f96d86a145defc447512
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-a-row-of-data"></a>Extraction d’une ligne de données
 Pour extraire une ligne de données, une application appelle **SQLFetch**. **SQLFetch** peut être appelé avec n’importe quel type de curseur, mais il ne déplace le curseur de l’ensemble de lignes dans une direction avant uniquement. **SQLFetch** avance le curseur à la ligne suivante et retourne les données pour toutes les colonnes qui ont été liés avec des appels à **SQLBindCol**. Lorsque le curseur atteint la fin du résultat défini, **SQLFetch** retourne SQL_NO_DATA. Pour obtenir des exemples de l’appel de **SQLFetch**, consultez [à l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  
@@ -44,4 +42,3 @@ Pour extraire une ligne de données, une application appelle **SQLFetch**. **SQL
  Données de caractères doivent être terminée par le pilote avant d’être retournée à l’application, même si elle a été tronquée. Le caractère de fin de la valeur null n’est pas inclus dans la longueur d’octet retourné mais requiert d’espace dans la mémoire tampon liée. Par exemple, une application utilise des chaînes composées de données de caractères dans le jeu de caractères ASCII, un pilote a 50 caractères des données à renvoyer, et la mémoire tampon de l’application est 25 octets de long. Dans la mémoire tampon de l’application, le pilote retourne les premier 24 caractères suivis d’un caractère de fin de la valeur null. Dans la mémoire tampon de longueur / d’indicateur, il retourne une longueur d’octet de 50.  
   
  L’application peut restreindre le nombre de lignes du jeu de résultats en définissant l’attribut d’instruction SQL_ATTR_MAX_ROWS avant l’exécution de l’instruction qui crée le résultat. Par exemple, le mode Aperçu dans une application qui permet de formater des rapports doit uniquement suffisamment de données pour afficher la première page du rapport. En limitant la taille du jeu de résultats, une telle fonctionnalité s’exécute plus rapidement. Cet attribut d’instruction vise à réduire le trafic réseau et ne peut pas être pris en charge par tous les pilotes.
-

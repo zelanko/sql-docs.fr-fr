@@ -1,27 +1,23 @@
 ---
 title: "Considérations sur la sécurité pour l’apprentissage dans SQL Server | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 8c1cc4c65d35f6c2806a9890464cccfb6c621494
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9b5fba856cc40c11f218faf0a61f66ee5451aa4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Considérations sur la sécurité pour l’apprentissage dans SQL Server
 
@@ -29,44 +25,52 @@ Cet article répertorie les considérations de sécurité que l’administrateur
 
 **S’applique à :** SQL Server 2016 R Services, SQL Server 2017 d’apprentissage automatique Services
 
-## <a name="use-a-firewall-to-restrict-network-access-by-r"></a>Utilisez un pare-feu pour restreindre l’accès réseau par R
+## <a name="use-a-firewall-to-restrict-network-access"></a>Utilisez un pare-feu pour restreindre l’accès réseau
 
-Dans une installation par défaut, une règle de pare-feu Windows est utilisée pour bloquer tout accès réseau sortant à partir du processus du runtime R. Des règles de pare-feu doivent être créées pour éviter que le processus d’exécution R ne télécharge des packages ou n’effectue d’autres appels réseau potentiellement malveillants.
+Dans une installation par défaut, une règle de pare-feu Windows est utilisée pour bloquer tous les accès réseau sortant des processus d’exécution externe. Les règles de pare-feu doivent être créées pour empêcher les processus du runtime externe de télécharger des packages ou à partir d’autres appels de réseau qui peuvent être potentiellement malveillant.
 
-Si vous utilisez un autre programme de pare-feu, vous pouvez également créer des règles pour bloquer les connexions réseau sortantes pour le composant d’exécution R en définissant des règles pour les comptes d’utilisateurs locaux ou pour le groupe représenté par le pool de comptes d’utilisateur.
+Si vous utilisez un autre programme de pare-feu, vous pouvez également créer des règles pour bloquer les connexions réseau sortantes pour runtimes externes, en définissant des règles pour les comptes d’utilisateur local ou pour le groupe représenté par le pool de comptes d’utilisateur.
 
-Nous recommandons fortement d’activer le pare-feu Windows (ou un autre pare-feu de votre choix) pour empêcher l’accès au réseau sans limites par les exécutions de R ou Python.
+Nous recommandons fortement d’activer le pare-feu Windows (ou un autre pare-feu de votre choix) pour empêcher tout accès réseau non restreint par les exécutions de R ou Python.
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>Méthodes d’authentification pris en charge pour les contextes de calcul à distance
 
 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]prend en charge les connexions à la fois l’authentification intégrée Windows et SQL lors de la création des connexions entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un client de science des données distantes.
 
-Par exemple, si vous développez une solution R sur votre ordinateur portable et que vous voulez effectuer des calculs sur l’ordinateur SQL Server, vous devez créer une source de données SQL Server dans le code R, en utilisant les fonctions **rx** et en définissant une chaîne de connexion basée sur vos informations d’identification Windows.
+Par exemple, que vous développez une solution R sur votre ordinateur portable et que vous souhaitez effectuer des calculs sur l’ordinateur SQL Server. Vous devez créer une source de données SQL Server dans R, à l’aide de la **rx** fonctions et la définition d’une chaîne de connexion en fonction de vos informations d’identification Windows.
 
-Lorsque vous modifiez le _contexte de calcul_ à partir de votre ordinateur portable à l’ordinateur SQL Server, si votre compte Windows dispose des autorisations nécessaires, tout le code R est exécuté sur l’ordinateur SQL Server. En outre, toutes les requêtes SQL exécutées en tant que partie du code R sont exécutées sous également vos informations d’identification.
+Lorsque vous modifiez le _contexte de calcul_ à partir de votre ordinateur portable à l’ordinateur SQL Server, tout le code R est exécuté sur l’ordinateur SQL Server, si votre compte Windows dispose des autorisations nécessaires. En outre, toutes les requêtes SQL exécutées en tant que partie du code R sont exécutées sous également vos informations d’identification.
 
-L’utilisation de connexions SQL est également pris en charge dans ce scénario, qui nécessite que l’instance SQL Server soit configuré pour autoriser l’authentification en mode mixte.
+L’utilisation de connexions SQL est également pris en charge dans ce scénario. Toutefois, cela requiert que l’instance SQL Server est configuré pour autoriser l’authentification en mode mixte.
 
 ### <a name="implied-authentication"></a>Authentification implicite
 
  En règle générale, le [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] démarre l’exécution du script externe et exécute des scripts sous son propre compte. Toutefois, si le runtime externe effectue un appel ODBC, le [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] emprunte l’identité de l’identification de l’utilisateur qui a envoyé la commande pour vous assurer que l’appel ODBC n’échoue pas. C’est ce que l’on appelle l’*authentification implicite*.
  
  > [!IMPORTANT]
- >
  > Pour que l’authentification implicite aboutisse, le groupe d’utilisateurs Windows qui contient les comptes de travail (par défaut, **SQLRUser**) doit posséder un compte dans la base de données MASTER pour l’instance, et ce compte doit avoir reçu les autorisations permettant de se connecter à l’instance.
  > 
  > Le groupe **SQLRUser** est également utilisé lors de l’exécution de scripts Python. 
 
+En général, nous recommandons que vous déplacez des jeux de données volumineux dans SQL Server au préalable, au lieu de tentez de lire les données à l’aide de RODBC ou une autre bibliothèque. En outre, utilisez une requête SQL Server ou une vue en tant que votre source de données principale, pour de meilleures performances. 
+
+Par exemple, vous pouvez obtenir vos données d’apprentissage (en général, les données plus volumineux) à partir de SQL Server et obtenir la liste des facteurs à partir d’une source externe. Vous pouvez définir un serveur lié pour obtenir des données à partir de la plupart des sources de données ODBC. Pour plus d’informations, consultez [créer un serveur lié](https://docs.microsoft.com/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine).
+
+Pour réduire la dépendance sur les appels ODBC à des sources de données externes, vous pourrez également effectuer l’ingénierie de données comme un processus séparé et enregistrer les résultats dans une table ou utiliser T-SQL. Consultez le didacticiel pour un bon exemple d’ingénierie de données dans Visual Studio SQL. R : [créent des fonctionnalités de données à l’aide de T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md).
+
 ## <a name="no-support-for-encryption-at-rest"></a>Aucune prise en charge pour le chiffrement au repos
 
-Chiffrement transparent des données n’est pas prise en charge pour les données envoyées ou reçues à partir de l’exécution du script externe. Par conséquent, le chiffrement au repos **n’est pas** être appliqué à toutes les données que vous utilisez dans les scripts R ou Python, toutes les données enregistrées sur disque, ou aucun résultat intermédiaire persistant.
+[Chiffrement transparent des données (TDE)](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption) n’est pas prise en charge pour les données envoyées ou reçues à partir de l’exécution du script externe. La raison est que R (ou Python) s’exécute en dehors du processus SQL Server ; Par conséquent, les données utilisées par le runtime externe ne sont pas protégées par les fonctionnalités de chiffrement du moteur de base de données.  Ce comportement n’est pas différent de n’importe quel autre client en cours d’exécution sur l’ordinateur SQL Server qui lit les données à partir de la base de données et effectue une copie.
+
+Par conséquent, le chiffrement transparent des données **n’est pas** appliquée à toutes les données que vous utilisez dans les scripts R ou Python, ou à toutes les données enregistrées sur disque, ou aucun résultat intermédiaire persistant. Toutefois, autres types de chiffrement, tel que le chiffrement BitLocker de Windows ou tiers chiffrement appliqué au niveau du fichier ou dossier, toujours s’appliquent.
+
+Dans le cas de [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted), runtimes externes n’ont pas accès aux clés de chiffrement ; par conséquent, les données ne peuvent pas être envoyées aux scripts.
 
 ## <a name="resources"></a>Ressources
 
-Pour plus d’informations sur la gestion du service et comment configurer les comptes d’utilisateur utilisés pour exécuter des scripts R, consultez [configurer et gérer les Extensions d’Analytique avancée](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md).
+Pour plus d’informations sur la gestion du service et comment configurer les comptes d’utilisateur utilisés pour exécuter des scripts de machine learning, consultez [configurer et gérer les Extensions d’Analytique avancée](../../advanced-analytics/r/configure-and-manage-advanced-analytics-extensions.md).
 
-Pour obtenir une description de l’architecture de sécurité, consultez :
+Pour obtenir une explication de l’architecture de sécurité générales, consultez :
 
 + [Vue d’ensemble de la sécurité pour R](security-overview-sql-server-r.md)
 + [Vue d’ensemble de la sécurité pour Python](../python/security-overview-sql-server-python-services.md)
-

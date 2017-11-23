@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - argument value checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5269d810e91187b8c57ce6b2fbd1043d1df3a89d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0a5a57d03f7f1da36115bd0e69c11c33289547f9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="argument-value-checks"></a>Vérifications de valeur d’argument
 Le Gestionnaire de pilotes vérifie les types suivants d’arguments. Sauf indication contraire, le Gestionnaire de pilotes retourne SQL_ERROR des erreurs dans les valeurs d’argument.  
@@ -43,4 +41,3 @@ Le Gestionnaire de pilotes vérifie les types suivants d’arguments. Sauf indic
 -   Numéros de colonne et de paramètre doivent être supérieur à 0 ou supérieur ou égal à 0, selon la fonction. Le pilote doit vérifier la limite supérieure de ces valeurs d’argument selon le jeu de résultats actuel ou d’une instruction SQL.  
   
 -   Arguments de longueur / d’indicateur et les arguments de longueur de mémoire tampon de données doivent contenir des valeurs appropriées. Par exemple, l’argument qui spécifie la longueur d’un nom de table dans **SQLColumns** (*NameLength3*) doit être SQL_NTS ou une valeur supérieure à 0 ; *BufferLength* dans **SQLDescribeCol** doit être supérieur ou égal à 0. Le pilote devrez peut-être également vérifier ces arguments. Par exemple, il peut vérifier que *NameLength3* est inférieur ou égal à la longueur maximale d’un nom de table dans la source de données.
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abf3068ec65fdcca39a88f6ce18d750294f865bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 01b64e71e67aa9839d858d919d3cfbdcc8f2ec75
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="supported-odbc-api-functions"></a>Fonctions API ODBC pris en charge
 L’objectif de l’audit est d’informer l’application quelles fonctionnalités sont disponibles à ce dernier à partir du pilote. Les pilotes de base de données Microsoft ODBC Desktop prend en charge toutes les fonctions de base et de niveau 1.  
@@ -63,23 +61,22 @@ Transact] (.. / Topic/SQLTransact%20Function.md)|[Accès](../../odbc/microsoft/s
   
  Les rubriques suivantes fournissent des notes sur les fonctions ODBC. Ce notes s’appliquent à tous les pilotes de base de données ODBC Desktop.  
   
--   [SQLGetData (pilotes bureau de base de données)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
+-   [SQLGetData (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlgetdata-desktop-database-drivers.md)  
   
 -   [SQLGetStmtOption (pilotes bureau de base de données)](../../odbc/microsoft/sqlgetstmtoption-desktop-database-drivers.md)  
   
--   [SQLMoreResults (pilotes bureau de base de données)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
+-   [SQLMoreResults (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlmoreresults-desktop-database-drivers.md)  
   
--   [SQLPrepare (pilotes bureau de base de données)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
+-   [SQLPrepare (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlprepare-desktop-database-drivers.md)  
   
--   [SQLProcedures (pilotes bureau de base de données)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
+-   [SQLProcedures (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlprocedures-desktop-database-drivers.md)  
   
--   [SQLSetCursorName (pilotes bureau de base de données)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
+-   [SQLSetCursorName (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlsetcursorname-desktop-database-drivers.md)  
   
--   [SQLSetPos (pilotes bureau de base de données)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
+-   [SQLSetPos (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlsetpos-desktop-database-drivers.md)  
   
--   [SQLSetScrollOptions (pilotes bureau de base de données)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
+-   [SQLSetScrollOptions (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlsetscrolloptions-desktop-database-drivers.md)  
   
--   [SQLSetStmtOption (pilotes bureau de base de données)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
+-   [SQLSetStmtOption (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlsetstmtoption-desktop-database-drivers.md)  
   
--   [SQLSpecialColumns (pilotes bureau de base de données)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)
-
+-   [SQLSpecialColumns (pilotes pour les bases de données de poste de travail)](../../odbc/microsoft/sqlspecialcolumns-desktop-database-drivers.md)

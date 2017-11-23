@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.workload: Inactive
+ms.openlocfilehash: a57fee5d37032e54ac13f57ee3cb7d9a20fad6c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b0fec674c130732a159598797ce332070dd6242e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server sur le client Linux VDI spécification du Kit de développement logiciel
 
@@ -223,7 +222,7 @@ Lorsque cette routine doive bloquer d’attente d’une commande, le thread rest
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |Aucun | Non applicable
+| |Aucune | Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |
@@ -243,7 +242,7 @@ Lorsque cette routine doive bloquer d’attente d’une commande, le thread rest
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |Aucun |Non applicable
+| |Aucune |Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |
@@ -330,6 +329,5 @@ Remarques le processus qui appelle la fonction GetBufferHandle est chargé d’a
 | |**VD_E_INVALID** |Le ppBuffer est un handle non valide.
 
 **La section Notes** doit veiller à communiquer les poignées correctement. Poignées sont locales à un ensemble de périphérique virtuel unique. Les processus de partenaire partage un handle doivent s’assurer de cette mémoire tampon les handles sont utilisées uniquement dans l’étendue de l’appareil virtuel défini à partir duquel la mémoire tampon a été obtenue à l’origine.
-
 
 

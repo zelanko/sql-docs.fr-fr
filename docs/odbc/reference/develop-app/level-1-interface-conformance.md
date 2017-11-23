@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>Conformité d’Interface de niveau 1
 Niveau de conformité de l’interface de niveau 1 inclut les fonctionnalités au niveau de la mise en conformité Core interface ainsi que des fonctionnalités supplémentaires, telles que les transactions, qui sont généralement disponibles dans un SGBD OLTP. Un pilote d’interface conforme de niveau 1 permet à l’application effectuer les opérations suivantes, en plus des fonctionnalités dans le niveau de conformité de l’interface Core :  
@@ -43,4 +41,3 @@ Niveau de conformité de l’interface de niveau 1 inclut les fonctionnalités a
 |107|Utiliser les fonctions ODBC au lieu d’instructions SQL pour effectuer certaines opérations de base de données : **SQLSetPos** avec SQL_POSITION et SQL_REFRESH.|  
 |108|Accéder au contenu de plusieurs jeux de résultats générés par lots et procédures stockées, en appelant **SQLMoreResults**.|  
 |109|Délimiter les transactions couvrant plusieurs fonctions ODBC, avec l’atomicité et la possibilité de spécifier SQL_ROLLBACK dans **SQLEndTran**.|
-

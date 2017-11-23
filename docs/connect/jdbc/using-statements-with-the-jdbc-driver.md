@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Utilisation d'instructions avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,16 +42,15 @@ ms.lasthandoff: 09/09/2017
   
 |Rubrique| Description|  
 |-----------|-----------------|  
-|[À l’aide d’instructions SQL](../../connect/jdbc/using-statements-with-sql.md)|Décrit comment utiliser des instructions SQL avec le pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.|  
-|[À l’aide d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)|Décrit comment utiliser des procédures stockées avec le pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.|  
-|[À l’aide de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md)|Décrit l'utilisation du pilote JDBC pour extraire des données de plusieurs jeux de résultats.|  
-|[À l’aide de séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Décrit l'utilisation de séquences d'échappement SQL, telles que les littéraux et fonctions de date et d'heure.|  
-|[L’utilisation de clés générées](../../connect/jdbc/using-auto-generated-keys.md)|Décrit l'utilisation des clés générées automatiquement.|  
-|[Exécution d’opérations de traitement par lots](../../connect/jdbc/performing-batch-operations.md)|Décrit l'utilisation du pilote JDBC pour effectuer des opérations par lot.|  
-|[Gestion d’instructions complexes](../../connect/jdbc/handling-complex-statements.md)|Décrit l'utilisation du pilote JDBC pour exécuter des instructions complexes effectuant plusieurs tâches et pouvant retourner différents types de données.|  
+|[Utilisation d’instructions avec SQL](../../connect/jdbc/using-statements-with-sql.md)|Décrit comment utiliser des instructions SQL avec le pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.|  
+|[Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)|Décrit comment utiliser des procédures stockées avec le pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données.|  
+|[Utilisation de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md)|Décrit l'utilisation du pilote JDBC pour extraire des données de plusieurs jeux de résultats.|  
+|[Utilisation de séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Décrit l'utilisation de séquences d'échappement SQL, telles que les littéraux et fonctions de date et d'heure.|  
+|[Utilisation de clés générées automatiquement](../../connect/jdbc/using-auto-generated-keys.md)|Décrit l'utilisation des clés générées automatiquement.|  
+|[Exécution d’opérations par lot](../../connect/jdbc/performing-batch-operations.md)|Décrit l'utilisation du pilote JDBC pour effectuer des opérations par lot.|  
+|[Gestion des instructions complexes](../../connect/jdbc/handling-complex-statements.md)|Décrit l'utilisation du pilote JDBC pour exécuter des instructions complexes effectuant plusieurs tâches et pouvant retourner différents types de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 38917d4e3a7cbd53be9a638d0d4dc3f5b2c2b179
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Pilotes de bureau de base de données ODBC de Microsoft
 ODBC est une API qui utilise le langage SQL (Structured Query) comme langage de base de données access. Vous pouvez accéder à un large éventail de systèmes de gestion de base de données (SGBD) avec le même code de source ODBC est directement incorporé dans le code source d’une application. Avec les pilotes de base de données Microsoft ODBC Desktop, un utilisateur d’une application ODBC peut ouvrir, la requête et mettre à jour une base de données de bureau via l’interface ODBC.  
@@ -54,29 +52,28 @@ ODBC est une API qui utilise le langage SQL (Structured Query) comme langage de 
   
  Cette section contient les rubriques suivantes.  
   
--   [Architecture des pilotes de bureau de base de données](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
+-   [Architecture des pilotes pour les bases de données de poste de travail](../../odbc/microsoft/desktop-database-drivers-architecture.md)  
   
--   [Historique des pilotes de base de données de bureau](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
+-   [Historique des pilotes pour les bases de données de poste de travail](../../odbc/microsoft/history-of-the-desktop-database-drivers.md)  
   
 -   [Prise en charge du produit](../../odbc/microsoft/product-support.md)  
   
--   [Implémentation des pilotes de base de données de bureau](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
+-   [Implémentation des pilotes pour les bases de données de poste de travail](../../odbc/microsoft/implementing-desktop-database-drivers.md)  
   
--   [Considérations sur la programmation pilote Microsoft Access](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
+-   [Considérations sur la programmation du pilote Microsoft Access](../../odbc/microsoft/microsoft-access-driver-programming-considerations.md)  
   
--   [Considérations sur la programmation pilote Microsoft Excel](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
+-   [Considérations sur la programmation du pilote Microsoft Excel](../../odbc/microsoft/microsoft-excel-driver-programming-considerations.md)  
   
--   [Considérations sur la programmation pilote Paradox](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
+-   [Considérations sur la programmation du pilote Paradox](../../odbc/microsoft/paradox-driver-programming-considerations.md)  
   
--   [dBASE considérations relatives à la programmation de pilote](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
+-   [Considérations sur la programmation du pilote dBASE](../../odbc/microsoft/dbase-driver-programming-considerations.md)  
   
--   [Considérations relatives à la programmation pilote fichier texte](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
+-   [Considérations sur la programmation du pilote de fichier texte](../../odbc/microsoft/text-file-driver-programming-considerations.md)  
   
--   [Grammaire supplémentaires SQL ODBC pris en charge](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
+-   [Grammaire SQL ODBC supplémentaire prise en charge](../../odbc/microsoft/additional-supported-odbc-sql-grammar.md)  
   
 -   [Limitations](../../odbc/microsoft/limitations.md)  
   
 -   [Erreurs ODBC](../../odbc/microsoft/odbc-errors.md)  
   
--   [Fonctions API ODBC pris en charge](../../odbc/microsoft/supported-odbc-api-functions.md)
-
+-   [Fonctions de l’API ODBC prises en charge](../../odbc/microsoft/supported-odbc-api-functions.md)

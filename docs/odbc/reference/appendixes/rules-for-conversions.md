@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 673b0a0ca903e5607822f78363c300f40a2df0ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rules-for-conversions"></a>Règles pour les Conversions
 Les règles de cette section s’appliquent pour les conversions de littéraux numériques. Dans le cadre de ces règles, les termes suivants sont définis :  
@@ -110,4 +108,3 @@ Les règles de cette section s’appliquent pour les conversions de littéraux n
          (2) le pilote arrondit la chaîne dans Y à une échelle appropriée (qui peut être pas également de zéro) et écrit le résultat dans CT  
   
          (3) le pilote ni tronque ni arrondit, mais copie tout simplement les premiers caractères LT de Y dans CT
-

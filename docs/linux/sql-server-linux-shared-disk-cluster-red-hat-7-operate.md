@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: ed87490e0aedfd0953c8c77715ddc7e843aefd2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -281,5 +280,4 @@ Vérifiez les éléments suivants lorsqu’un nœud est hors connexion.
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

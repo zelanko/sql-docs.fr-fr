@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 5d77d1cc5f03ac2d6894cefa6458f9096b47b3a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b44bf68cba02b03faad632d4b93fe3cca361e62f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-deployed-tabular-model-databases"></a>Gérer les bases de données de modèle tabulaire déployé
   Une base de données model tabulaire est une base de données Analysis Services que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l'aide d'un exemple de projet de modèle tabulaire Analysis Services, où les tables et les relations sont des structures primaires qui représentent des données.  
@@ -33,9 +32,9 @@ ms.lasthandoff: 09/01/2017
 ## <a name="in-this-section"></a>Dans cette section  
  [Traiter une base de données, une table ou une partition &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)  
   
- [Rôles de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)  
+ [Rôles des modèles tabulaires](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)  
   
- [Partitions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)  
+ [Partitions de modèle tabulaire](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)  
   
  [Se connecter à une base de données de modèle tabulaire](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
   
  [Attacher et détacher des bases de données Analysis Services](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)  
   
-

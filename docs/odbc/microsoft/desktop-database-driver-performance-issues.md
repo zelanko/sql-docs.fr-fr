@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb888ab7920bdac942c60d26980a71a34a54800
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Problèmes de performances du pilote bureau de base de données
 Pour garantir la compatibilité avec les applications existantes ANSI, les types de données SQL_WCHAR, SQL_WVARCHAR et SQL_WLONGVARCHAR exposées en tant que SQL_CHAR, SQL_VARCHAR et SQL_LONGVARCHAR pour Microsoft Access 4.0 ou supérieure sources de données. Les sources de données ne retournent pas de types de données CHAR large, mais les données toujours doivent être envoyées à Jet sous forme de Char large. Il est important de comprendre que conversion a lieu si une colonne de paramètre ou le résultat SQL_C_CHAR est liée à un type de données SQL_CHAR dans une application ANSI.  
@@ -40,4 +38,3 @@ Pour garantir la compatibilité avec les applications existantes ANSI, les types
  Lorsqu’une application à l’aide d’une base de données Jet 3.5 via les pilotes de base de données Microsoft ODBC Desktop est mis à niveau vers la version 4.0, une baisse des performances et une taille de jeu de travail accrue peuvent se produire. C’est parce que lorsqu’une version 3. *x* base de données est ouverte à l’aide de la version 4.0 du pilote nouveau, il charge Jet 4.0. Lorsque Jet 4.0 s’ouvre à la base de données et constate que la base de données est un 3. *x* version, il charge un pilote ISAM Installable qui équivaut au chargement également le moteur Jet 3.5. Pour supprimer la pénalité de performances et la taille, la version 3 Jet. *x* base de données doit être compactée dans une base de données de format Jet 4.0. Cela élimine le chargement de deux moteurs Jet et réduire le chemin d’accès du code pour les données.  
   
  En outre, le moteur Jet 4.0 est un moteur de Unicode. Toutes les chaînes sont stockées et manipulées en Unicode. Lorsqu’une application ANSI accède à un Jet 3. *x* par le moteur Jet 4.0, les données de base de données est converti d’ANSI en Unicode et en ANSI. Si la base de données est mis à jour vers la version 4.0, les chaînes sont converties en Unicode, la suppression d’un niveau de conversion de chaîne ainsi que des minimiser le chemin d’accès du code aux données par l’intermédiaire d’un seul moteur Jet.
-

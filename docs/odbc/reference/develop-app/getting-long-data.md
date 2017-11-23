@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLGetData function [ODBC], getting long data
 - retrieving long data [ODBC]
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0d78c97adc2ee17c4da6d3f1224313360a798e3b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="getting-long-data"></a>Obtention de données de type Long
 Définir des SGBD *données longues* sous forme de n’importe quel caractère ou binaire sur une certaine taille, tels que 255 caractères. Ces données peuvent être assez petites pour être stocké dans une mémoire tampon unique, telle qu’une description de partie de plusieurs caractères de milliers. Toutefois, il peut être trop long pour stocker en mémoire, telles que des documents de texte long ou de bitmaps. Étant donné que ces données ne peut pas être stockées dans un tampon unique, il est extraite du pilote dans des parties avec **SQLGetData** après les autres données de la ligne a été extraite.  
@@ -93,4 +91,3 @@ SQLCloseCursor(hstmt);
  Certains pilotes n’appliquent pas ces restrictions. Applications interopérables soit partez du principe qu’ils existent ou déterminent les restrictions ne sont pas appliquées en appelant **SQLGetInfo** avec l’option SQL_GETDATA_EXTENSIONS.  
   
  Si l’application ne doit pas toutes les données dans un caractère ou d’une colonne de données binary, elle peut réduire le trafic réseau dans les pilotes basés sur SGBD en définissant l’attribut d’instruction SQL_ATTR_MAX_LENGTH avant d’exécuter l’instruction. Cela limite le nombre d’octets de données qui seront retournées pour tout caractère ou d’une colonne binaire. Par exemple, qu'une colonne contient des documents de texte long. Une application qui parcourt la table contenant cette colonne peut avoir afficher uniquement la première page de chaque document. Bien que cet attribut d’instruction peut être simulé dans le pilote, il n’existe aucune raison à cela. En particulier, si une application souhaite tronquer binaire ou caractère, il doit lier une petite mémoire tampon à la colonne avec **SQLBindCol** et laisser le pilote tronquer les données.
-

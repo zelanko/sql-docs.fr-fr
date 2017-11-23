@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7b989547fa41d187ac33efe65050bc09add3a0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-searched-statements"></a>Construction de recherche des instructions
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   **Spécifiez des tampons de longueur de non null pour les données binaires de C.** La bibliothèque de curseurs alloue des tampons de longueur dans son cache que si la *StrLen_or_IndPtr* argument dans **SQLBindCol** n’est pas null. Lorsque le *TargetType* argument est SQL_C_BINARY, la bibliothèque de curseurs nécessite la longueur des données binaires pour construire un **où** clause à partir des données. S’il n’existe aucune mémoire tampon de longueur pour une colonne SQL_C_BINARY et l’application appelle **SQLGetData** ou tente d’exécuter une mise à jour positionnée ou la bibliothèque de curseurs, l’instruction delete retourne SQL_ERROR et SL014 SQLSTATE (une requête positionnée était le nombre de colonnes d’émis et pas tous les champs ont été mis en mémoire tampon).  
   
 -   **Spécifiez des tampons de longueur de non null pour les colonnes autorisant des valeurs NULL.** La bibliothèque de curseurs alloue des tampons de longueur dans son cache que si la *StrLen_or_IndPtr* argument dans **SQLBindCol** n’est pas null. Dans la mesure où les SQL_NULL_DATA est stocké dans la mémoire tampon de longueur, la bibliothèque de curseurs suppose que n’importe quelle colonne pour l’aucune longueur tampon est indiquée est non nullable. Si aucune colonne de longueur n’est spécifiée pour une colonne acceptant les valeurs NULL, la bibliothèque de curseurs construit un **où** clause qui utilise la valeur de données pour la colonne. Cette clause ne peut pas identifier correctement la ligne.
-
