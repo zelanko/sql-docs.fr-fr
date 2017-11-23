@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be54505545b80211ec34216a67596c32ca8ce2b2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="registering-a-custom-business-object"></a>L’inscription d’un objet métier personnalisé
 Pour permettre l’exécution d’un objet métier personnalisé (.dll ou .exe) via le serveur Web, le ProgID de l’objet métier doit être entrée dans le Registre comme indiqué dans cette procédure. Cette fonctionnalité RDS protège la sécurité de votre serveur Web en cours d’exécution que les exécutables approuvés.  
@@ -49,6 +47,5 @@ Pour permettre l’exécution d’un objet métier personnalisé (.dll ou .exe) 
 4.  Sélectionnez le **ADCLaunch** clé, puis dans le **modifier**menu, pointez sur **nouveau** et cliquez sur **clé**.  
   
 5.  Tapez l’identificateur ProgID de votre objet métier personnalisé, cliquez sur **entrée**. Laissez le **valeur** entrée vide.
-
 
 

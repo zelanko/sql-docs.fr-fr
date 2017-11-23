@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Table
-helpviewer_keywords:
-- Table object [ADOX]
+f1_keywords: Table
+helpviewer_keywords: Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d4e461d9f63180f1965a5bfdd3034c0dc9ba2d4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 198b59d624b2daa2e2451b8dbb61ae5868f7eb7d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="table-object-adox"></a>Objet table (ADOX)
 Représente une table de base de données, y compris les colonnes, les index et les clés.  
@@ -65,7 +61,7 @@ Dim obj As New Table
   
  Cette section contient les rubriques suivantes.  
   
--   [Propriétés de l’objet table, méthodes et événements](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Table](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété ActiveConnection catalogue (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -77,5 +73,4 @@ Dim obj As New Table
  [Collection d’index (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [Collection de clés (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Collection de tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
-
+ [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

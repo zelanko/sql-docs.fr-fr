@@ -27,17 +27,16 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a5b34600d0037fc0d2f5eaac20251718ae4ff217
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53869c8e03d3b4c289872351e59579d49aa193e2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Algorithme MNN (Microsoft Neural Network)
   L’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) est une implémentation de l’architecture de réseau neuronal à succès et modulable destinée à l’apprentissage automatique (Machine Learning).  L’algorithme opère en testant chaque état possible de l’attribut d’entrée par rapport à chaque état possible de l’attribut prévisible, et en calculant des probabilités pour chaque combinaison en fonction des données d’apprentissage. Vous pouvez utiliser ces probabilités à des fins de classification ou de régression pour prédire un résultat en fonction de certains attributs d’entrée. Un réseau neuronal peut aussi être utile pour l’analyse d’association.  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   
   
-

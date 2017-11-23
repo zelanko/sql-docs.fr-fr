@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Cellset
-helpviewer_keywords:
-- Cellset object [ADO MD]
+f1_keywords: Cellset
+helpviewer_keywords: Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c860f9b84514cc84c73c52e10978ad76365cc6ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f53e9ec68a4375a9c8d07dc3937750c2e7ba3d46
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cellset-object-ado-md"></a>Cellset, objet (ADO MD)
 Représente les résultats d’une requête multidimensionnelle. Il est une collection de cellules sélectionnées à partir de cubes ou d’autres ensembles de cellules.  
@@ -72,5 +68,4 @@ cst.Axes(0).Positions(0).Members(0).Caption
  [Collection d’axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Objet de cellule (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

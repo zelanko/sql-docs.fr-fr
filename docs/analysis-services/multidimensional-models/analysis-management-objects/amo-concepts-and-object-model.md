@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>Concepts et modèle objet AMO
   Cette rubrique fournit une définition d’objets AMO (Analysis Management), comment AMO est lié à d’autres outils et les bibliothèques fournies dans l’architecture de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]et une explication conceptuelle de tous les principaux objets AMO.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 09/01/2017
 |[Classes OLAP AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Classes permettant de gérer les objets OLAP dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Classes d’exploration de données AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Classes permettant de gérer les objets d'exploration de données dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Classes de sécurité AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Classes permettant de contrôler l'accès aux autres objets et de maintenir la sécurité.|  
-|[AMO autres Classes et méthodes](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Classes et méthodes permettant aux administrateurs OLAP ou d'exploration de données de réaliser leurs tâches quotidiennes.|  
+|[Autres classes et méthodes AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Classes et méthodes permettant aux administrateurs OLAP ou d'exploration de données de réaliser leurs tâches quotidiennes.|  
   
 ##  <a name="bkmk_UsingAMO"></a>À l’aide d’AMO  
  AMO s'avère particulièrement utile pour automatiser les tâches répétitives, telles que la création de nouvelles partitions dans un groupe de mesures sur la base de nouvelles données dans la table de faits, ou le réapprentissage d'un modèle d'exploration de données sur la base de nouvelles données. Ces tâches qui créent de nouveaux objets sont généralement effectuées tous les mois, toutes les semaines ou tous les trimestres, et les nouveaux objets peuvent être facilement nommés par l'application sur la base des nouvelles données.  
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  AMO ne peut pas être utilisé pour interroger les données. Pour interroger des données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], y compris les cubes et les modèles d'exploration de données, utilisez ADOMD.NET à partir d'une application utilisateur. Pour plus d’informations, consultez [développement avec ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
-

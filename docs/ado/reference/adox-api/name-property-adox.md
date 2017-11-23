@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -41,20 +40,18 @@ f1_keywords:
 - _User25::put_Name
 - _Index::GetName
 - _User25::GetName
-helpviewer_keywords:
-- Name property [ADOX]
+helpviewer_keywords: Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 47d95403232ef3b5a13fc5f7c30854591f837bab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96a4d83770ee986c781efb9859eb071d197b112c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-property-adox"></a>Nom, propriété (ADOX)
 Indique le nom de l’objet.  
@@ -76,12 +73,11 @@ Indique le nom de l’objet.
   
 ||||  
 |-|-|-|  
-|[Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Objet de groupe (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Objet index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Objet clé (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Objet Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objet de propriété (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Objet table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objet utilisateur (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Objet de vue (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Group, objet (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
+|[Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Colonnes et Tables ajouter des méthodes, exemple de propriété Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Exemple de propriété ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-
+ [ParentCatalog, exemple de propriété (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - local mining models [Analysis Services]
 - Analysis Services, architecture
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - client architecture [Analysis Services]
 - local cubes [Analysis Services]
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b15bbb83f989f53ef8e8b959771f5bd7fa568a12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4bf626021f48834b9c7e3711ffcf5f31639591fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Spécifications relatives à l'architecture du client pour le développement d'Analysis Services
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge une architecture de client léger. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] du moteur de calcul étant entièrement basée sur serveur, toutes les requêtes sont résolues sur le serveur. De ce fait, chaque requête n'exige qu'un seul aller-retour entre le client et le serveur, et les performances peuvent évoluer lorsque la complexité des requêtes augmente.  
@@ -88,7 +86,6 @@ ms.lasthandoff: 09/01/2017
  **CANAL** réservés pour les communications avec le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service système dans la batterie de serveurs SharePoint.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants de serveur du moteur OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
+ [Composants serveur du moteur OLAP](../../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)  
   
   
-

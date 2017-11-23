@@ -1,4 +1,3 @@
-
 ---
 title: Pilote PHP pour SQL Server Support for LocalDB | Documents Microsoft
 ms.custom: 
@@ -6,22 +5,20 @@ ms.date: 02/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abf75fb674ea8da86c84c3605dadef61db8b3913
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a54071c75ca4437974be7b742ee3285972850e0a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="php-driver-for-sql-server-support-for-localdb"></a>Prise en charge de LocalDB par le pilote SQL Server pour PHP
 
@@ -87,4 +84,3 @@ Vous pouvez télécharger LocalDB depuis le [page de pack de fonctionnalités de
 ## <a name="see-also"></a>Voir aussi
 
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
-

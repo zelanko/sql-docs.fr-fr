@@ -26,17 +26,16 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Configuration requise et considérations relatives au déploiement d'Analysis Services
   Les performances et la disponibilité d'une solution dépendent de nombreux facteurs, notamment des capacités du matériel sous-jacent, de la topologie de votre déploiement de serveur, des caractéristiques de votre solution (présence, par exemple, de partitions distribuées sur plusieurs serveurs ou utilisation du stockage ROLAP qui requiert l'accès direct au moteur relationnel), des contrats de niveau de service et de la complexité de votre modèle de données.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
 -   Si les performances des requêtes sont dégradées et que vous ne pouvez pas augmenter les ressources de traitement et mémoire de l'ordinateur local, déployez un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur au moins deux serveurs de production. Ainsi, vous pouvez utiliser l'équilibrage de la charge réseau pour placer les serveurs dans un cluster. Dans un cluster avec équilibrage de la charge réseau, les requêtes sont distribuées automatiquement vers tous les serveurs du cluster avec équilibrage de la charge réseau.  
   
   
-

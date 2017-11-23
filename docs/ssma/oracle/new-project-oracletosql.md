@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 4cff2bb1f0e114bb0bf5662009866fcfba1c4770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bcb1364b156e4730b61e66c7e64d87488a3c73d7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-project-oracletosql"></a>Nouveau projet (OracleToSQL)
 Utilisez le **nouveau projet** boîte de dialogue pour créer un projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  
@@ -47,4 +45,3 @@ Vous avez le choix de la version de la base de données cible dessous la liste 
   
 -   Base de données SQL Azure  
   
-

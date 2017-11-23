@@ -13,26 +13,24 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-programming"></a>Programmation de modèle multidimensionnel
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs API que vous pouvez utiliser pour programmer sur une instance Analysis Services et met à disposition des bases de données multidimensionnelles. Cette section décrit les méthodes disponibles aux développeurs qui souhaitent créer des applications personnalisées à l'aide des solutions multidimensionnelles Analysis Services. Vous pouvez utiliser ces informations pour choisir l'interface de programmation qui répond le mieux aux besoins d'un projet spécifique. Les projets de développement Analysis Services peuvent être basés sur du code managé ou non managé qui s'exécute sur une plateforme Windows, ou d'autres plateformes qui prennent en charge l'accès HTTP.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Présentation de l’Architecture Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
+ [Présentation de l’architecture Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
  [Développement avec ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
   
@@ -42,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
  [Développement avec le langage de script Analysis Services &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Étendre les fonctionnalités OLAP](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
+ [Extension des fonctionnalités OLAP](../../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md)  
   
  [Fournisseur OLE DB Analysis Services &#40;Analysis Services – Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/cdeecd50-1d91-4162-a4a2-01c7799b02a8)  
   
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Programmation d’exploration de données](../../analysis-services/data-mining-programming.md)  
   
   
-

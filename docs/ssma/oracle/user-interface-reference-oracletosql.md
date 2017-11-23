@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 160d4784-d108-4705-932d-763558912804
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f01bfe2d06f8dcbf6ea20d7037a109509860bc34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a09dd49a6178aef1762c889bfbd00d4ccef07b76
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-oracletosql"></a>Référence de l’Interface utilisateur (OracleToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour Oracle.  
@@ -36,7 +34,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Se connecter à Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|Utilisez le **se connecter à Oracle** boîte de dialogue se connecter à la base de données Oracle que vous souhaitez migrer.|  
 |[Se connecter à SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-sql-server-oracletosql.md)|Utilisez le **se connecter à SQL Server** boîte de dialogue se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pour lequel vous souhaitez migrer.|  
 |[Rapport de Migration de données &#40; OracleToSQL &#41;](../../ssma/oracle/data-migration-report-oracletosql.md)|Affiche les résultats de migration des données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Paramètres de Migration de données](http://msdn.microsoft.com/en-us/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
+|[Paramètres de migration de données](http://msdn.microsoft.com/en-us/91f7f558-025d-4f4d-ac2c-aa095e7d1ace)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
 |[Modifier le mappage de Type &#40; OracleToSQL &#41;](../../ssma/oracle/edit-type-mapping-oracletosql.md)|Utilisez le **nouveau mappage de Type** ou **modifier un mappage de Type** boîtes de dialogue pour créer ou modifier le mappage des types de données entre les bases de données source et cible et les objets de base de données.|  
 |[Paramètres globaux &#40; Éditeur de &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/global-settings-editor-oracletosql.md)|Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour configurer les options de l’éditeur de code.|  
 |[Global paramètres &#40; boîtes de dialogue &#41;  &#40; OracleToSQL &#41;](../../ssma/oracle/global-settings-dialogs-oracletosql.md)|Utilisez la page de boîtes de dialogue de la **paramètres globaux** boîte de dialogue pour configurer les paramètres de l’avertissement et de la boîte de dialogue par défaut.|  
@@ -57,4 +55,3 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 [Prise en main de SSMA pour Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [Migration bases de données Oracle pour SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

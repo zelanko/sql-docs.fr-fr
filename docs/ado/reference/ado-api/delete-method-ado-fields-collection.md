@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Fields20::Delete
 - Fields20::raw_Delete
-helpviewer_keywords:
-- Delete method [ADO]
+helpviewer_keywords: Delete method [ADO]
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2f26c6370aa87be18a1c0a2e80cffa637fcab70
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: de4e5f85bad4849f4ace2ee4e32fbe6606cb667d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="delete-method-ado-fields-collection"></a>DELETE, méthode (Collection de champs ADO)
 Supprime un objet à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  
@@ -49,10 +46,9 @@ Fields.Delete Field
  Appel de la **Fields.Delete** méthode sur open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) provoque une erreur d’exécution.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [DELETE, méthode (Collection de paramètres ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [DELETE, méthode (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord, méthode (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)
-

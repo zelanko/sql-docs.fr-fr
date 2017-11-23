@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Append method [ADOX]
+dev_langs: VB
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e297d5927cdd504c1c0aebd39d3dac9320965d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6c4672189074eb65e4220bcdbeacbd471c4d7911
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-append-method-example-vb"></a>Views Append, méthode-exemple (VB)
 Le code suivant montre comment utiliser un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et la [vues](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md) méthode pour créer une nouvelle vue dans la source de données sous-jacente.  
@@ -74,5 +70,4 @@ End Sub
  [Append (méthode) (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objet de vue (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Collection de vues (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

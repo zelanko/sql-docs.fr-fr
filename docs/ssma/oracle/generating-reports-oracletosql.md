@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: f6e37655da9045fef47c483daf0be0c24a215bfe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d82ebc3f1d6a3e88874430419d3a11baf5528695
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-reports-oracletosql"></a>Génération de rapports (OracleToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -37,7 +35,7 @@ Utilisez la procédure suivante pour générer des rapports :
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Command**|**Titre de rapport**|  
+    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
     |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convertir le schéma|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
@@ -149,4 +147,3 @@ La commande **actualisation de base de données** a **erreurs de rapports pour**
 ## <a name="see-also"></a>Voir aussi  
 [L’exécution de la Console SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-

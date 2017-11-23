@@ -1,27 +1,24 @@
 ---
 title: "Opérationaliser le code de R (Machine Learning Services) | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1f7084d2634d6cce02fcf0e6f945547a535815b2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d858352ed7dc519dfde9f625ea24cea6a538be5b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Opérationaliser le code de R (Machine Learning Services)
 
@@ -46,7 +43,7 @@ Pour obtenir un exemple de la façon dont vous pouvez déployer du code R en pro
 
 Bien entendu, il est plus facile si certaines optimisations sont effectuées au préalable dans le code R ou Python de convertir votre code R dans SQL. Notamment, en évitant les types de données qui entraînent des problèmes, ce qui évite les conversions de données inutiles et réécrire le code R en tant qu’un seul appel de fonction qui peut être facilement paramétrable. Pour plus d'informations, consultez :
 
-+ [R bibliothèques et types de données](r-libraries-and-data-types.md)
++ [Bibliothèques et types de données R](r-libraries-and-data-types.md)
 
 + [Conversion de code R pour une utilisation dans R Services](converting-r-code-for-use-in-sql-server.md)
 
@@ -102,5 +99,4 @@ Pour plus d’informations sur la façon dont vous pouvez optimiser vos solution
 + [Calcul des données volumineuses dans R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
 
 + [Développer votre propre algorithme parallèle](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
-
 

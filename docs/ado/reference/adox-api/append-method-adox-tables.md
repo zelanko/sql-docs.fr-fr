@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Tables::Append
 - Tables::raw_Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c5ab4e01e7478f1501dc550c8d45a86f5e8a600
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f350249377a89e70ebd8e21313032e02826d184e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-tables"></a>Append (méthode) (Tables ADOX)
 Ajoute un nouveau [Table](../../../ado/reference/adox-api/table-object-adox.md) de l’objet à la [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection.  
@@ -49,7 +46,7 @@ Tables.Append Table
  Une erreur se produit si le fournisseur ne prend pas en charge la création de tables.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Collection de tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Colonnes et Tables ajouter des méthodes, exemple de propriété Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -60,5 +57,4 @@ Tables.Append Table
  [Append (méthode) (clés ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append (méthode) (procédures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append (méthode) (utilisateurs ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append (méthode) (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append, méthode (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

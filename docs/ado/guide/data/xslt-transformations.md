@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XSLT transformations in ADO
+helpviewer_keywords: XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7fb8a2fc948c7793ed07076f338c230350d6abb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 36b39d14a4856d882add1e9bafdc9457fa3b8bc1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xslt-transformations"></a>Transformations XSLT
 XSLT peut être appliqué au XML généré pour le transformer en un autre format. Présentation du format XML dans ADO permet de développer des modèles XSLT, qui peuvent transformer en une forme plus conviviale.  
@@ -61,5 +58,4 @@ XSLT peut être appliqué au XML généré pour le transformer en un autre forma
  XSLT convertit le flux XML généré par la méthode ADO enregistrer dans une table HTML qui affiche chaque champ de l’ensemble d’enregistrements, ainsi que le titre de la table. En-têtes des colonnes et les lignes sont également affectés différentes polices et couleurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Maintien d’enregistrements au Format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

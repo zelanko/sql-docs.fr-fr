@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d5dac701e82f8d9b979b1d4d289a1e06ba0233c7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Leçon 1-1-Création d’un projet Analysis Services
 Au cours de la tâche suivante, vous utiliserez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un nouveau projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] appelé **Analysis Services Tutorial**, basé sur le modèle de projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un *projet* est une collection d'objets connexes. Les projets existent au sein d'une solution, laquelle peut inclure un ou plusieurs projets. Pour plus d’informations, consultez [Créer un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -52,4 +49,3 @@ Vous avez créé le projet **Analysis Services Tutorial** , selon le modèle **A
   
   
   
-

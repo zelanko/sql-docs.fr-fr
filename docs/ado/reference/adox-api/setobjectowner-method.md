@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Catalog::SetObjectOwner
 - _Catalog::raw_SetObjectOwner
-helpviewer_keywords:
-- SetObjectOwner method [ADOX]
+helpviewer_keywords: SetObjectOwner method [ADOX]
 ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c908ef7a43f0ab2e4742764f6ff587646b0b9c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33226468d9d1f556d2cf7ec3edac37375b0c8d84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner, méthode
 Spécifie le propriétaire d’un objet dans un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -58,9 +55,8 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  Une erreur se produit si le fournisseur ne prend pas en charge en spécifiant les propriétaires d’objets.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [GetObjectOwner et SetObjectOwner, méthodes-exemple (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [GetObjectOwner, méthode (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)
-

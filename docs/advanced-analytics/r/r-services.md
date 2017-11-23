@@ -1,27 +1,23 @@
 ---
 title: "Services d’apprentissage Microsoft | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 341e80f5-3b59-4122-bbaa-969d7904297d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9735d257ce81e5b84ea19eeb70be8bef21127c13
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: ddc9b3f17afe1f9d4c811e4a5871f48a3a08de7f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="microsoft-machine-learning-services"></a>Services Microsoft Machine Learning
 
@@ -30,7 +26,7 @@ Microsoft Machine Learning Services vise à fournir une plateforme extensible et
 Principaux avantages :
 
 + Analytique évolutive
-+ Plusieurs plateformes et les contextes de calcul pour les solutions « écrire une seule fois, n’importe où déployer »
++ Plusieurs plateformes et les contextes de calcul pour les solutions « code une seule fois, n’importe où déployer »
 + Permet d’éviter le déplacement des données et risque de données en rassemblant analytique aux données
 + Les chercheurs de données peuvent choisir leurs propres outils et les langues
 + Intègre les meilleures fonctionnalités d’open source avec les fonctionnalités d’entreprise de Microsoft
@@ -47,15 +43,15 @@ Dans SQL Server 2016, Microsoft a lancé deux plateformes serveur permettant d�
 Dans SQL Server 2017, le nom a été modifié pour refléter la prise en charge pour le langage Python populaire.
 
 + **SQL Server Machine Learning Services (de-de base de données)** prend en charge de R et Python pour la base de données analytique.
-+ **Microsoft Machine Learning Server** prend en charge les déploiements de R et Python sur les serveurs Windows, avec une expansion à d’autres plateformes prises en charge prévue pour la liaison tardive 2017.
++ **Microsoft Machine Learning Server** prend en charge les déploiements de R et Python sur les clusters Windows, Linux et HDInsight Spark et Hadoop.
 
 ### <a name="benefits"></a>Avantages
 
-Microsoft Machine Learning Services met le calcul pour les données en permettant à R à exécuter sur le même ordinateur que la base de données. Il inclut le service Launchpad de confiance, qui s’exécute en dehors du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter et communique de façon sécurisée avec le runtime R ou Python.
+Microsoft Machine Learning Services met le calcul pour les données en permettant à R à exécuter sur le même ordinateur que la base de données. Il inclut le service Launchpad, qui s’exécute en dehors du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traiter et communique de façon sécurisée avec le runtime R ou Python.
 
-À l’aide de la Machine Learning Services SQL Server, vous pouvez effectuer l’apprentissage des modèles, générer des graphiques, effectuer le calcul de score et déplacer facilement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et R ou Python.
+À l’aide de la Machine Learning Services SQL Server, vous pouvez effectuer l’apprentissage des modèles, générer des graphiques, effectuer le calcul de score et déplacer en toute sécurité des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et R ou Python.
 
-Chercheurs de données qui testent et développent des solutions peuvent envoyer des scripts à partir d’un ordinateur de développement à distance pour exécuter du code en toute sécurité sur le serveur, ou ils peuvent déployer des solutions terminées sur SQL Server en incorporant le code machine learning dans les procédures stockées SQL.
+Chercheurs de données qui testent et développent des solutions peuvent envoyer des scripts à partir d’un ordinateur de développement à distance et exécuter son code sur le serveur sans déplacer les données. Les développeurs peuvent déployer des solutions terminées à SQL Server en incorporant le code machine learning dans les procédures stockées SQL.
 
 Lorsque vous installez d’apprentissage pour SQL Server, vous obtenez une distribution de R open source ou de langage Python, ainsi que les bibliothèques R et Python évolutives, fournis par Microsoft. Le moteur de base de données SQL Server inclut également les nouveaux composants sont conçues pour renforcer la connectivité et de garantir plus rapidement, plus une communication sécurisée avec les langues externes tels que R ou Python.
 
@@ -72,7 +68,7 @@ Pour commencer, consultez ces ressources :
 
 ## <a name="machine-learning-server-standalone-and-microsoft-r-server-standalone"></a>Apprentissage Server (autonome) et Microsoft R Server (autonome)
 
-Ce système de serveur autonome prend en charge des solutions R évolutives et distribuées sur plusieurs plateformes et à l’aide de plusieurs sources de données d’entreprise, tels que Linux et HD Insight. Si vous n’avez pas besoin de s’intégrer avec SQL Server, vous pouvez installer R Server pour permettre le développement rapide, le déploiement et une Opérationnalisation rapides des solutions d’apprentissage. Vous pouvez également utiliser les programmes d’installation de R Server pour mettre à niveau les composants de R associés à une instance de SQL Server et d’obtenir la dernière version de R.
+Ce système de serveur autonome prend en charge des solutions R évolutives et distribuées sur plusieurs plateformes et à l’aide de plusieurs sources de données d’entreprise, tels que Linux et HDInsight. Si vous n’avez pas besoin de s’intégrer avec SQL Server, vous pouvez installer R Server pour permettre le développement rapide, le déploiement et une Opérationnalisation rapides des solutions d’apprentissage. Vous pouvez également utiliser les programmes d’installation de R Server pour mettre à niveau les composants de R associés à une instance de SQL Server et d’obtenir la dernière version de R.
 
 Si vous installez Microsoft Machine Learning Server à l’aide du programme d’installation de SQL Server 2017, vous pouvez également déployer et utiliser les applications Python.
 
@@ -95,31 +91,30 @@ Pour plus d'informations, consultez :
 
 ### <a name="azure-machine-learning"></a>Azure Machine Learning
 
-Lorsque vous créez votre propre espace de travail dans Azure Machine Learning Studio, vous devez avoir accès à plus de 400 packages R préinstallés. Vous pouvez également choisir lorsque vous créez une expérience qui utilise R, pour déployer R à l’aide d’une distribution de CRAN R standard, ou Microsoft R Open. Vous pouvez même créer vos propres packages R et les télécharger vers Azure pour exécuter en tant que modules personnalisés.
-
-Pour plus d'informations, consultez ces ressources :
-
-+ [Prolonger votre expérience avec R](https://docs.microsoft.com/azure/machine-learning/machine-learning-extend-your-experiment-with-r)
-+ [Auteur modules R personnalisés dans Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/machine-learning-custom-r-modules)
+Lorsque vous créez votre propre espace de travail dans Azure Machine Learning Studio, vous pouvez accéder à plus de 400 packages R préinstallés. Vous pouvez également choisir lorsque vous créez une expérience qui utilise R, pour déployer R à l’aide d’une distribution de CRAN R standard, ou Microsoft R Open. Vous pouvez même créer vos propres packages R et les télécharger vers Azure pour exécuter en tant que modules personnalisés.
 
 La plupart des algorithmes fournis dans Azure ML sont désormais incluses dans Machine Learning Services, dans le cadre du package MicrosoftML. Pour plus d’informations, consultez [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package).
 
 Azure Machine Learning est une autre plate-forme pratique pour les données scientifiques et les développeurs qui doivent créer, de l’apprentissage et de déployer des modèles à l’aide des services Web. Vous pouvez publier des solutions pour le [Machine Learning Marketplace](http://datamarket.azure.com/browse/data?category=machine-learning).
 
+Pour plus d’informations sur les modifications dans le service Azure Machine Learning, pour prendre en charge des chercheurs de données professionnelles, consultez ces ressources :
+
++ [Nouveautés d’Azure Machine Learning ?](https://docs.microsoft.com/azure/machine-learning/preview/overview-what-is-azure-ml)
++ [Fonctionnalités de gestion de modèle](https://docs.microsoft.com/azure/machine-learning/preview/model-management-overview)
+
 ### <a name="data-science-virtual-machines"></a>Machines virtuelles pour la science des données
 
 Vous pouvez déployer une version préinstallée et préconfigurée de [!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)] dans Microsoft Azure, qui vous permet de vous familiariser immédiatement avec l’exploration et la modélisation de données sur le cloud sans installer un système entièrement configuré localement.
 
-Azure Marketplace contient plusieurs machines virtuelles qui prennent en charge la science des données :
+Azure Marketplace contient plusieurs machines virtuelles qui prennent en charge la science des données.
 
-+ La **machine virtuelle pour la science des données Microsoft** est configurée avec Microsoft R Server, ainsi que Python (distribution Anaconda), un serveur Jupyter Notebook, Visual Studio Community Edition, Power BI Desktop, le Kit de développement logiciel (SDK) Azure et SQL Server Express Edition.
++ Le **Machine virtuelle de science des données Microsoft** est configuré avec Machine Learning Server, ainsi que Python (distribution Anaconda), un serveur jupyter Notebook, Visual Studio Community Edition, Power BI Desktop, la Azure SDK, et SQL Serveur.
 
-+ **Microsoft R Server 2016 pour Linux** contient la dernière version de R Server (version 9.0.1). Machines virtuelles distinctes sont disponibles pour CentOS version 7.2 et Ubuntu version 16.04.
+    La nouvelle [données science des ordinateurs virtuels pour Windows Server 2016](http://aka.ms/dsvm/win2016) fournit des versions GPU des infrastructures de formation approfondie populaires tels que CNTK. Préinstallés, citons les pilotes GPU NVIDIA, CUDA Toolkit 8.0 et la bibliothèque de cuDNN NVIDIA pour les charges de travail GPU. En quelques minutes, vous pouvez avoir un environnement complet pour générer des modèles d’apprentissage approfondie pouvant s’exécuter sur l’UC ou du processeur et d’autre du GPU.
 
-+ Le **R Server uniquement SQL Server 2016 Enterprise** machine virtuelle inclut un programme d’installation autonome pour R Server 9.0.1 qui prend en charge le nouveau modèle de licence du cycle de vie logiciel moderne.
++ Pour le serveur de R ou Machine Learning, nous vous recommandons du 2017 Microsoft Machine Learning Server pour Linux ou Windows Server de 2016.
 
-> [!TIP]
-> La nouvelle [données science des ordinateurs virtuels pour Windows Server 2016](http://aka.ms/dsvm/win2016) fournit des versions GPU des infrastructures de formation approfondie populaires tels que CNTK. Préinstallés, citons les pilotes GPU NVIDIA, CUDA Toolkit 8.0 et la bibliothèque de cuDNN NVIDIA pour les charges de travail GPU. En quelques minutes, vous pouvez avoir un environnement complet pour générer des modèles d’apprentissage approfondie pouvant s’exécuter sur l’UC ou du processeur et d’autre du GPU.
++ Pour obtenir une image Azure avec l’apprentissage de SQL Server, nous vous recommandons d’une des offres de la machine virtuelle qui incluent **SQL Server 2017**. Lorsque vous sélectionnez l’image, suivez les recommandations supplémentaires sur le niveau de service et de couche pour vous assurer que la machine virtuelle peut prendre en charge les charges de travail machine learning.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -128,4 +123,3 @@ Azure Marketplace contient plusieurs machines virtuelles qui prennent en charge 
 [Prise en main de Machine Learning Server](getting-started-with-microsoft-r-server-standalone.md)
 
 [Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md)
-

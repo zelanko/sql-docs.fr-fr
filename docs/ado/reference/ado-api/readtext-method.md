@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
 - _Stream::ReadText
-helpviewer_keywords:
-- ReadText method [ADO]
+helpviewer_keywords: ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b134e064cc3d1dfa06c5d948d74e49f643756bd1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readtext-method"></a>ReadText, méthode
 Lit un nombre spécifié de caractères à partir d’un fichier texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -57,8 +54,7 @@ String = Stream.ReadText ( NumChars)
  Les requêtes qui résultent d’une grande quantité de données XML renvoyées par le biais du **ReadText** méthode de l’objet de flux de données objet ADO (ActiveX) peut prendre beaucoup de temps d’exécution ; si cette opération est effectuée dans un composant COM + qui est appelé à partir d’un Page ASP, de la session peut expirer. ADO convertit les données d’objet de flux de données à partir de l’encodage UTF-8 au format Unicode ; la réallocation de mémoire fréquent impliquée dans la conversion d’une grande quantité de données à la fois est très longue. Pour résoudre, effectuer des appels répétés à la **ReadText** méthode de ADO command, objet et spécifiez un plus petit nombre de caractères. Les tests ont montré qu’une valeur équivalente à 128K (131 072) est optimale. Temps de réponse réduit car cette valeur est réduite. Pour plus d’informations, consultez l’article de la Base de connaissances 280067, « PRB : la récupération de Documents XML très volumineux à partir de SQL Server 2000 en utilisant la méthode ReadText d’objet de flux de données ADO peut être lente », dans la Base de connaissances Microsoft à http://support.microsoft.com.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Read, méthode](../../../ado/reference/ado-api/read-method.md)
-
