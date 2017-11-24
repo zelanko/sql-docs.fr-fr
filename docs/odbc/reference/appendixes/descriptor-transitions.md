@@ -3,10 +3,12 @@ title: Les Transitions de descripteur | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 82dd5d9fe22a33c50ac33426f71a25524a2b5c2f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 280d35d8ce03d3d7685441c12d99c05c9ff5f451
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-transitions"></a>Transitions de descripteur
 Les descripteurs ODBC ont trois états suivants.  
@@ -84,4 +85,3 @@ Les descripteurs ODBC ont trois états suivants.
 |D0<br /><br /> Non alloué|D1i<br /><br /> Implicite|D1e<br /><br /> Explicite|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|
-

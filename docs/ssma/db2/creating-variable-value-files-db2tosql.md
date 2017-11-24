@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 088943be06c8c544f57bc68d9593d8175ff2995c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7123aabd58c58446c289490dd3b03edda1367dce
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Création de fichiers de la valeur de la Variable (DB2ToSQL)
 Fichier de la valeur de variable est un fichier XML contenant les valeurs de paramètre de commandes, comme le nom du serveur source ou de destination qui changent fréquemment à partir de la migration d’un serveur vers un autre. En cas d’un grand nombre de migrations de la base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source seront créés et référencés dans un fichier de script principal avec le **– v** passer à la ligne de commande. Cela permet de conserver des valeurs statiques dans plusieurs fichiers de script avec les valeurs des variables dans plusieurs fichiers de variable.  
@@ -98,4 +96,3 @@ L’étape suivante d’exploitation de la console est [créer les fichiers de c
 ## <a name="see-also"></a>Voir aussi  
 [Création des fichiers de connexion de serveur](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   
-

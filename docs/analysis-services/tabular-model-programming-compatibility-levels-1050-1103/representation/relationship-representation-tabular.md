@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 948614ea176ef4cb4cc506272daed33ac7435ded
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c11ae09c8c6bef956333c8a9cbee62f43992f91b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationship-representation-tabular"></a>Représentation (tabulaire) d'une relation
   Une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation.  
@@ -236,4 +234,3 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
  Toutefois, pour connaître l'utilisation d’AMO pour créer et manipuler des représentations de relation, consultez le code source de l'exemple Objets AMO vers objets tabulaires. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   
-

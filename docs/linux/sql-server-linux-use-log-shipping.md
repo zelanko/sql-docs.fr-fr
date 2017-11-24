@@ -6,16 +6,20 @@ ms.author: meetb
 manager: jhubbard
 ms.date: 04/19/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
+ms.openlocfilehash: 443330a48628e17f7dfa9688e57bb58b118605b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dc8c8094c6701af90aa9f645dc24fff8a70394b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Prise en main l’envoi de journaux sur Linux
 
@@ -32,7 +36,7 @@ Comme indiqué dans l’image ci-dessus, une session d’envoi de journaux impli
 - Copie le fichier de sauvegarde du journal des transactions sur le réseau à une ou plusieurs instances de SQL Server secondaire
 - Restaurer le fichier de sauvegarde du journal de transactions sur les instances de SQL Server secondaire
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 - [Installer l’Agent SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurez un partage réseau pour l’envoi de journaux à l’aide de CIFS 
@@ -310,6 +314,5 @@ Comme indiqué dans l’image ci-dessus, une session d’envoi de journaux impli
     GO  
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
-
 
 

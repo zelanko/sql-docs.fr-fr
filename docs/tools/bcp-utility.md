@@ -5,8 +5,7 @@ ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b08d2a27a911c625c8d2b8ad5aa4e27fa8841bd6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: d6c9588690a1848e022fd12bf8fa338f258338ec
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +148,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|Numéro spécifique de la page de codes, par exemple 850.<br /><br /> Les versions antérieures à la version 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) ne prennent pas en charge la page de codes 65001 (encodage UTF-8). La version 13 et les versions ultérieures peuvent importer l’encodage UTF-8 pour les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  **-d** ***database_name***<a name="d"></a>   
- Spécifie la base de données à laquelle se connecter. Par défaut, bcp.exe se connecte à la base de données par défaut de l'utilisateur. Si **-d** *database_name* et un nom en trois parties (*database_name.schema.table*, passé comme premier paramètre à bcp.exe) est spécifié, une erreur se produit, car vous ne pouvez pas spécifier le nom de la base de données deux fois. Si *database_name* commence par un trait d’union (-) ou une barre oblique (/), n’ajoutez pas d’espace entre **-d** et le nom de la base de données.  
+ Spécifie la base de données à laquelle se connecter. Par défaut, bcp.exe se connecte à la base de données par défaut de l'utilisateur. Si **-d** *database_name* et un nom en trois parties (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Si *database_name* commence par un trait d’union (-) ou une barre oblique (/), n’ajoutez pas d’espace entre **-d** et le nom de la base de données.  
   
  **-e** ***err_file***<a name="e"></a>  
  Spécifie le chemin complet d’un fichier d’erreur utilisé pour stocker les lignes que l’utilitaire **bcp** ne peut pas transférer du fichier vers la base de données. Les messages d’erreur de la commande **bcp** sont transmis à la station de travail de l’utilisateur. Si cette option est omise, aucun fichier d'erreur n'est créé.  
@@ -621,4 +619,3 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
-

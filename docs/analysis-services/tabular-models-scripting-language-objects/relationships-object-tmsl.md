@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>Objet de relations (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  Tous les objets ont un ensemble commun de propriétés, y compris le nom, type, la description, une collection de propriétés et annotations. **Relation** objets ont également les propriétés suivantes.  
   
  isActive  
- Valeur booléenne qui indique si la relation est marquée comme Active ou Inactive. Une relation Active est automatiquement utilisée pour le filtrage entre les tables. Une relation Inactive peut être utilisée par les calculs DAX avec la fonction USERELATIONSHIP explicitement.  
+ Valeur booléenne qui indique si la relation est marquée comme Active ou Inactive. Une relation Active est automatiquement utilisée pour le filtrage entre les tables. Une relation Inactive peut être utilisée explicitement par les calculs DAX avec la fonction USERELATIONSHIP.  
   
  crossFilteringBehavior  
  Indique comment les relations influencent le filtrage des données. Consultez [bidirectionnelles entre les filtres pour les modèles tabulaires dans SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) pour plus d’informations. Les valeurs valides sont les suivantes :  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   DatePartOnly (2) - lors de la jonction de deux colonnes heure date, joindre sur la partie de date uniquement.  
   
  relyOnReferentialIntegrity  
- N’est pas utilisé ; réservé à un usage ultérieur.  
+ Inutilisé ; réservé à un usage ultérieur.  
   
  propriété securityFilteringBehavior  
  Énumération qui indique comment les relations influencent le filtrage des données lors de l’évaluation des expressions de la sécurité de niveau ligne. Les valeurs valides sont les suivantes :  
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [Créer des relations](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

@@ -3,27 +3,28 @@ title: "Utilisation des tableaux de paramètres | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Utilisation des tableaux de paramètres
 Pour utiliser les tableaux de paramètres, l’application appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAMSET_SIZE pour spécifier le nombre de jeux de paramètres. Il appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAMS_PROCESSED_PTR pour spécifier l’adresse d’une variable dans laquelle le pilote peut retourner le nombre de jeux de paramètres traités, y compris les jeux de l’erreur. Il appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAM_STATUS_PTR pour pointer vers un tableau dans lequel retourner les informations d’état pour chaque ligne de valeurs de paramètre. Le pilote stocke ces adresses dans la structure que de l’instruction il tient à jour.  
@@ -58,4 +59,3 @@ Pour utiliser les tableaux de paramètres, l’application appelle **SQLSetStmtA
 -   Étant donné que le pilote n’interprète pas la valeur de la *ParameterValuePtr* argument de **SQLBindParameter** pour les paramètres de data-at-execution, si l’application fournit un pointeur vers un tableau, **SQLParamData** n’a pas été extrait et retourner un élément de ce tableau à l’application. Au lieu de cela, il retourne que la valeur scalaire de l’application avait fourni. Cela signifie que la valeur retournée par **SQLParamData** est insuffisant spécifier le paramètre pour lequel l’application a besoin pour envoyer des données ; l’application doit également prendre en compte le nombre actuel de la ligne.  
   
      Lorsque seulement certains des éléments du tableau de paramètres sont des paramètres de data-at-execution, l’application doit passer l’adresse d’un tableau dans *ParameterValuePtr* qui contient les éléments pour tous les paramètres. Ce tableau est interprété normalement pour les paramètres qui ne sont pas des paramètres de données en cours d’exécution. Pour les paramètres de données d’exécution, la valeur qui **SQLParamData** fournit à l’application normalement peut être utilisé pour identifier les données qui demande le pilote à cette occasion, est toujours l’adresse du tableau.
-

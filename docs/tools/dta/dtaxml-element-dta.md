@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DTAXML element
+dev_langs: XML
+helpviewer_keywords: DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cfbd14f4f2fb602111c72e82ddf71503a751cead
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 175cfd247df19129f39d1e4ed8914da32dd57d11
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML, élément (Assistant Paramétrage de base de données)
   Élément racine d'un fichier d'entrée ou de sortie de l'Assistant Paramétrage du moteur de base de données, **DTAXML** contient tous les éléments qui décrivent les entrées et les sorties de paramétrage générées par l'Assistant Paramétrage du moteur de base de données.  
@@ -69,8 +65,7 @@ ms.lasthandoff: 08/02/2017
  Pour obtenir des exemples d’éléments **DTAXML** caractéristiques, consultez [Exemples de fichiers d’entrée XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de fichier d’entrée XML &#40; moteur de base de données de paramétrage Assistant &#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
- [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
+ [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   
-

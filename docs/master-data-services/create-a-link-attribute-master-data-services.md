@@ -1,10 +1,13 @@
 ---
 title: "Créer un attribut de lien (Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e71f3ac8c91989941b12bdd6320f4de8f529b48b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3c14b8efb8cd1a2c1fe70397aa2b6482b2932247
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Créer un attribut de lien (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de lien lorsque vous souhaitez que les utilisateurs entrent un lien hypertexte comme valeur d'attribut, tel que http://www.contoso.com.  

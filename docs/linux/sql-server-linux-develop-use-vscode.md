@@ -6,17 +6,20 @@ ms.author: erickang
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.workload: Active
+ms.openlocfilehash: 41bfb66db6f16d9e7ca8829568798a2aa57316da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez le Code de Visual Studio pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
@@ -24,7 +27,7 @@ ms.lasthandoff: 10/10/2017
 
 Cette rubrique montre comment utiliser le **mssql** extension pour Visual Studio Code (Code de Visual Studio) pour développer des bases de données SQL Server.
 
-Code Visual Studio est un éditeur de code graphique pour Linux et Windows qui prend en charge les extensions macOS. Le [**mssql** extension VS Code] vous permet de se connecter à SQL Server, la requête avec Transact-SQL (T-SQL) et afficher les résultats.
+Code Visual Studio est un éditeur de code graphique pour Linux et Windows qui prend en charge les extensions macOS. Le [ **mssql** extension VS Code] vous permet de se connecter à SQL Server, la requête avec Transact-SQL (T-SQL) et afficher les résultats.
 
 ## <a name="install-vs-code"></a>Installer Visual Studio Code
 1. Si vous n’avez pas déjà installé Visual Studio Code, [télécharger et installer VS Code] sur votre ordinateur.
@@ -269,4 +272,3 @@ Pour plus d’informations sur l’utilisation de Code de Visual Studio, consult
 [Windows 10 universelles C Runtime]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [personnaliser les options d’extension]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options
 [le wiki de projet d’extension mssql]: https://github.com/Microsoft/vscode-mssql/wiki
-

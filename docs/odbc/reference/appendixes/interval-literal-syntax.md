@@ -3,10 +3,12 @@ title: "Syntaxe de littéral d’intervalle | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - ODBC literals [ODBC], interval
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34f144b270e1820234503189fd5315da539428bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 472a8a68032c1d5b119bbf1d366b353927eca0dd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literal-syntax"></a>Syntaxe de littéral d’intervalle
 La syntaxe suivante est utilisée pour les littéraux de l’intervalle dans ODBC.  
@@ -82,4 +83,3 @@ La syntaxe suivante est utilisée pour les littéraux de l’intervalle dans ODB
  *guillemet* :: = '  
   
  *entier non signé* :: = *chiffre...*
-

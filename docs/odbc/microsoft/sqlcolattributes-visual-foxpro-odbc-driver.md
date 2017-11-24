@@ -3,26 +3,26 @@ title: SQLColAttributes (le pilote ODBC Visual FoxPro) | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLColAttribute function [ODBC], Visual FoxPro ODBC Driver
+helpviewer_keywords: SQLColAttribute function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 750f95ef793d36daca117817d81f9136ef016a55
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f4fae186ea7880325f6e3a96aae29f1edef07e1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (le pilote ODBC Visual FoxPro)
 > [!NOTE]  
@@ -51,4 +51,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_COLUMN_TABLE_NAME|Retourne toujours une chaîne vide.|  
   
  Pour plus d’informations, consultez [SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md) dans les *de référence du programmeur ODBC*.
-

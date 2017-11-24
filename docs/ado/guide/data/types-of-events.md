@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 502c77b55eb0e3a60497fa10bf9fe8c8a412dc4d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="types-of-events"></a>Types d’événements
 Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement « Est » dans leur nom, par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent « Complète » dans leur nom, par exemple, **RecordChangeComplete** ou **ConnectComplete**. Existe des exceptions, telles que **InfoMessage** , mais ces modifications se produisent après l’opération associée est terminée.  
@@ -50,4 +48,3 @@ Il existe deux types d’événements. « Événements will », appelés avant
  [Instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Paramètres d’événement](../../../ado/guide/data/event-parameters.md)   
  [Fonctionnement conjoint des gestionnaires d’événements](../../../ado/guide/data/how-event-handlers-work-together.md)
-

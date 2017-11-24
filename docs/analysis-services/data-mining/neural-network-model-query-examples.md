@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="neural-network-model-query-examples"></a>Exemples de requêtes de modèle de réseau neuronal
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de réseau neuronal peut extraire des métadonnées du modèle telles que le nombre de couches masquées. Une requête de prédiction peut également suggérer des classifications selon une entrée et fournir éventuellement des probabilités pour chaque classification.  
@@ -237,4 +236,3 @@ NATURAL PREDICTION JOIN
  [Leçon 5 : Génération neuronal réseau et les modèles de régression logistique &#40; didacticiel d’exploration de données intermédiaires &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
-

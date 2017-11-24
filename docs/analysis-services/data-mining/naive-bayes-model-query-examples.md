@@ -18,17 +18,16 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 622eaa381d4507cb75d66a93916743af40e73932
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="naive-bayes-model-query-examples"></a>Exemples de requêtes de modèle Naive Bayes
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Vous pouvez également récupérer les métadonnées relatives au modèle en utilisant une requête sur l'ensemble de lignes de schéma d'exploration de données. Cette section explique comment créer ces requêtes pour les modèles basés sur l'algorithme MNB (Microsoft Naive Bayes).  
@@ -269,4 +268,3 @@ AS t
  [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "À l’aide de SQLBindCol | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e0cc3b7bde32302ed16a20a8b1c0ccbc985584a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 300ac3348efa4d66076879917091200ac73a8a62
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlbindcol"></a>À l’aide de SQLBindCol
 L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction est liée à une colonne à la fois. Avec elle, l’application spécifie les éléments suivants :  
@@ -173,4 +174,3 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

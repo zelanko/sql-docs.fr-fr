@@ -21,17 +21,16 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95d4624aab2e35b3e7ec34963aa33c3af8434eb5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriétés de cellule MDX - contenu de FORMAT_STRING
   La propriété de cellule **FORMAT_STRING** met en forme la propriété de cellule **VALUE** , en créant la valeur pour la propriété de cellule **FORMATTED_VALUE** . La propriété de cellule **FORMAT_STRING** traite les valeurs brutes de types chaîne et numérique en appliquant une expression de format à la valeur pour retourner une valeur mise en forme pour la propriété de cellule **FORMATTED_VALUE** . Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
@@ -165,4 +164,3 @@ ms.lasthandoff: 09/01/2017
  [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - write-enabled partitions [Analysis Services]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>Partitions - Partitions activées en écriture
   Dans un cube, les données sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une partition. Les partitions activées en écriture permettent aux utilisateurs professionnels d'explorer différents scénarios en changeant les valeurs des cellules et en analysant les effets de ces modifications sur les données de cube. Si vous activez une partition en écriture, les applications clientes peuvent enregistrer les modifications des données de la partition. Ces modifications, qu'il est convenu d'appeler données d'écriture différée, sont stockées dans une table séparée et ne remplacent pas de données existantes d'un groupe de mesures. Toutefois, elles sont incorporées dans les résultats des requêtes comme si elles faisaient partie des données de cube.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Dimensions activées en écriture](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

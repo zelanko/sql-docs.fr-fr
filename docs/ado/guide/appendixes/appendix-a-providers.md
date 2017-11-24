@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 09a9ef813f1ef093456abb62fd68a28c61cfd30d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Annexe a : données et fournisseurs de services
 Cette section traite des trois types de fournisseurs : les fournisseurs de données, les fournisseurs de services et les composants de service. Fournisseurs sont divisés en deux catégories : ceux qui fournissent des données et ceux qui fournissent des services. A *fournisseur de données* possède ses propres données et les expose sous forme de tableau à votre application. A *fournisseur de services* encapsule un service en production et la consommation des données, étendant les fonctionnalités de vos applications ADO. Un fournisseur de services peut être également défini comme un *composant de service*, qui doivent travailler conjointement avec d’autres composants ou fournisseurs de service.
@@ -66,7 +64,7 @@ Cette section traite des trois types de fournisseurs : les fournisseurs de donn
 ## <a name="service-providers"></a>Fournisseurs de services
  Pour utiliser un fournisseur de services, vous devez fournir un mot clé. Vous devez également être conscient des propriétés dynamiques spécifiques au fournisseur associées à chaque fournisseur de service. Les détails spécifiques au fournisseur sont répertoriés pour chaque fournisseur de service est actuellement disponible à partir de Microsoft :
 
--   [Données de Microsoft Service pour OLE DB de la mise en forme](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+-   [Microsoft Data Shaping Service pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
 -   [Fournisseur de persistance Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
@@ -82,4 +80,3 @@ Cette section traite des trois types de fournisseurs : les fournisseurs de donn
 
 ## <a name="see-also"></a>Voir aussi
  [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [fournisseur Microsoft OLE DB pour Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [fournisseur Microsoft OLE DB pour ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [fournisseur Microsoft OLE DB pour Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [fournisseur Microsoft OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Recordset Objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh, méthode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-

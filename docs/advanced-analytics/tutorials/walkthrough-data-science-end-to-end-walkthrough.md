@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Procédure pas à pas de données de bout en bout science pour R et SQL Server
 
@@ -46,7 +42,7 @@ Estimée temps n’incluent pas le programme d’installation. Pour plus d’inf
 |-|------------------------------|
 |[Préparer les données de la procédure pas à pas R](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Obtenez les données utilisées pour la création d’un modèle. Téléchargez un jeu de données publiques et chargez-le dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|30 minutes|
 |[Explorer les données à l’aide de SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Comprendre vos données à l’aide des résumés et des outils SQL.|10 minutes|
-|[Résumer les données à l’aide de R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Utiliser R pour Explorer les données et générer des synthèses.|10 minutes|
+|[Totaliser les données à l’aide de R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Utiliser R pour Explorer les données et générer des synthèses.|10 minutes|
 |[Créer des graphiques à l’aide de R dans SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Créer des graphiques dans les contextes de calcul locaux et distants par le mélange de R et SQL.|10 minutes|
 |[Créer des fonctionnalités de données à l’aide de R et T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Effectuez l’ingénierie des caractéristiques à l’aide de fonctions personnalisées dans R et [!INCLUDE[tsql](../../includes/tsql-md.md)]. Comparez les performances de R et de T-SQL pour les tâches de personnalisation des fonctions. |10 minutes|
 |[Générer un modèle R et l’enregistrer dans SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Formez un modèle de prédiction et ajustez-le. Évaluez les performances d’un modèle. Cette procédure pas à pas permet de créer un modèle de classification. Tracez la précision du modèle à l’aide de R.|15 minutes|
@@ -71,4 +67,3 @@ Pour plus d’informations sur la façon de configurer ces environnements serveu
 ## <a name="next-lesson"></a>Leçon suivante
 
 [Préparer les données de la procédure pas à pas R](../tutorials/walkthrough-prepare-the-data.md)
-

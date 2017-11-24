@@ -3,10 +3,12 @@ title: "Conversion de données à partir de C en Types de données SQL | Documen
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d3f3edee7f90920ad1d3ff68ccf3057a248b3b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversion de données à partir de C en Types de données SQL
 Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote récupère les données pour tous les paramètres liés avec **SQLBindParameter** à partir d’emplacements de stockage dans l’application. Lorsqu’une application appelle **SQLSetPos**, le pilote récupère les données pour une mise à jour ou l’opération d’ajout de colonnes liées avec **SQLBindCol**. Pour les paramètres de données d’exécution, l’application envoie les données de paramètre avec **SQLPutData**. Si nécessaire, le pilote convertit les données du type de données spécifié par le *ValueType* argument dans **SQLBindParameter** au type de données spécifié par le *ParameterType* argument dans **SQLBindParameter**, puis envoie les données à la source de données.  
@@ -66,21 +67,20 @@ Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote 
   
 -   [C en SQL : numérique](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C en SQL : bits](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C en SQL : bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
 -   [C en SQL : binaire](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C en SQL : Date](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C en SQL : date](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
 -   [C en SQL : GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
 -   [C en SQL : heure](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C en SQL : Timestamp](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C en SQL : horodatage](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C en SQL : année-mois](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C en SQL : intervalles d’années-mois](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C en SQL : intervalles de temps de jour](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C en SQL : intervalles de jours-heures](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
--   [C pour les exemples de Conversion de données SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
-
+-   [Exemples de conversion de données C en SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

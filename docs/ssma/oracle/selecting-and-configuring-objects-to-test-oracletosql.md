@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Selection of Objects to Test,Parameter Comparison Settings
+helpviewer_keywords: Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d33e430c5ecb7957e3886bf05c4fdb9d30b7614a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3b12a1b9ec20f736072d57039d247be13be57e69
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Sélection et configuration des objets de Test (OracleToSQL)
 À ce stade, sélectionner les objets pour tester et de configurer les paramètres pour la comparaison des procédures et fonctions paramètres de sortie, ainsi que les valeurs de retour des fonctions.  
@@ -90,4 +87,3 @@ Vous pouvez spécifier des valeurs de paramètre d’entrée sur le **appeler le
 ## <a name="see-also"></a>Voir aussi  
 [Test de migration des objets de base de données &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

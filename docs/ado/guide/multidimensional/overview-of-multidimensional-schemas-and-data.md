@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- multidimensional schemas and data
+helpviewer_keywords: multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 49c9f724fcd82de499ecb88a464c4c5ea3980b2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf3e8d6bebd5860df9f52236eecf4d1f287a8f9d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Vue d’ensemble des schémas et données multidimensionnels
 ## <a name="understanding-multidimensional-schemas"></a>Présentation des schémas multidimensionnels  
@@ -97,4 +94,3 @@ Hamburg, Munich, Stuttgart}
  [Programmation avec ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [À l’aide d’ADO avec ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Utilisation de données multidimensionnelles](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
-

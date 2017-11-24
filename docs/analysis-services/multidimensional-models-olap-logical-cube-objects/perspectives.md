@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ready-only cube view
 - OLAP objects [Analysis Services], perspectives
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 798a8d872b52c21d794e3d1f21cf52e133d56277
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives"></a>Perspectives
   Une perspective est une définition qui permet aux utilisateurs de consulter un cube de façon plus simple. Une perspective est un sous-ensemble des fonctionnalités d'un cube. Une perspective permet aux administrateurs de créer des vues d'un cube, aidant ainsi les utilisateurs à se concentrer sur les données les plus pertinentes pour eux. Une perspective contient les sous-ensembles de tous les objets d'un cube. Une perspective ne peut pas inclure les éléments qui ne sont pas définis dans le cube parent.  
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  Les perspectives ne sont pas censées servir de mécanisme de sécurité, mais elles constituent plutôt un outil qui optimise l'expérience de l'utilisateur dans les applications de décisionnel. L'intégralité de la sécurité d'une perspective donnée est héritée du cube sous-jacent. Par exemple, les perspectives ne peuvent pas donner accès aux objets d'un cube auxquels un utilisateur n'a pas déjà accès. La sécurité du cube doit d'abord être résolue, avant que l'utilisateur ne puisse accéder aux objets d'un cube par le biais d'une perspective.  
   
   
-

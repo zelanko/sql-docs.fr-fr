@@ -5,7 +5,7 @@ keywords:
 services: sql-database
 documentationcenter: 
 author: becczhang
-manager: cguyer
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -16,12 +16,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
+ms.openlocfilehash: d486dd7b9d3019cfb3f3cf88482cdb578e9f9066
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 35c94a39989fda76ea023588b2d7a3aa4e463262
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -135,4 +134,3 @@ Pour configurer TDE par le biais de l’API REST, vous devez être connecté en
 - Pour commencer à utiliser TDE avec prise en charge de BYOK, consultez le guide pratique [Activer Transparent Data Encryption avec votre propre clé Key Vault à l’aide de PowerShell](transparent-data-encryption-byok-azure-sql-configure.md).
 
 - Pour plus d’informations sur Key Vault, consultez la [page de documentation de Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
-

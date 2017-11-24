@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75209516e372612beb8885051fd22882b967894c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96231e4b76ab2a01f2d817c0fd85aa2d0dca33e4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-cursors-and-locks"></a>Présentation des curseurs et verrous
 Il est important de comprendre le fonctionnement des curseurs pour vous pouvez de sélectionner le type de curseur meilleure et plus efficace pour les exigences d’accès aux données d’une application. Une configuration de curseur qu’optimale peut rendre les opérations d’accès aux données lentes et laborieux.  
@@ -35,17 +33,16 @@ Il est important de comprendre le fonctionnement des curseurs pour vous pouvez d
   
  Cette section contient les rubriques suivantes.  
   
--   [Qu’est un curseur ?](../../../ado/guide/data/what-is-a-cursor.md)  
+-   [Qu’est qu’un curseur ?](../../../ado/guide/data/what-is-a-cursor.md)  
   
 -   [Types de curseurs](../../../ado/guide/data/types-of-cursors-ado.md)  
   
--   [L’importance de l’emplacement du curseur](../../../ado/guide/data/the-significance-of-cursor-location.md)  
+-   [Signification de l’emplacement du curseur](../../../ado/guide/data/the-significance-of-cursor-location.md)  
   
--   [Le Service de curseur Microsoft pour OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
+-   [Service de curseur Microsoft pour OLE DB](../../../ado/guide/data/the-microsoft-cursor-service-for-ole-db.md)  
   
--   [Qu’est un verrou ?](../../../ado/guide/data/what-is-a-lock.md)  
+-   [Qu’est qu’un verrou ?](../../../ado/guide/data/what-is-a-lock.md)  
   
 -   [Utilisation de CacheSize](../../../ado/guide/data/using-cachesize.md)  
   
--   [Curseur et les caractéristiques de verrou](../../../ado/guide/data/cursor-and-lock-characteristics.md)
-
+-   [Caractéristiques des curseurs et des verrous](../../../ado/guide/data/cursor-and-lock-characteristics.md)

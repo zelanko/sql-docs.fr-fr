@@ -3,27 +3,28 @@ title: Mappage de SQLSetScrollOptions | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a81cbdd48f7e794a55fdeddbafc589c59efe5b7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e6774f99f1a9596964a965e34f800141fd58e9fb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Mappage de SQLSetScrollOptions
 Lorsqu’une application appelle **SQLSetScrollOptions** via un ODBC 3*.x* pilote et le pilote ne prend pas en charge **SQLSetScrollOptions**, l’appel à  
@@ -105,4 +106,3 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
   
     > [!NOTE]  
     >  Lorsque le Gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application utilisant une ODBC 3*.x* pilote qui ne prend pas en charge **SQLSetScrollOptions**, le Gestionnaire de pilotes définit l’option d’instruction SQL_ROWSET_SIZE, pas l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE, à la *la RowsetSize* argument dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être utilisé uniquement lors de l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.
-

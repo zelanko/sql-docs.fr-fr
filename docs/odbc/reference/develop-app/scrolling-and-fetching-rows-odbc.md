@@ -3,10 +3,12 @@ title: "Défilement et extraction de lignes (ODBC) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bf6624c5c5a814c1b290fec1d4f717e66dd5e46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Défilement et extraction de lignes (ODBC)
 Lorsque vous utilisez un curseur de défilement, les applications appellent **SQLFetchScroll** pour positionner les curseur et extraire les lignes. **SQLFetchScroll** prend en charge le défilement relatif (suivant, précédent et relatif  *n*  lignes), défilement absolu (first, last et de ligne  *n* ) et la position du signet. Le *FetchOrientation* et *FetchOffset* arguments dans **SQLFetchScroll** spécifier quel ensemble de lignes à extraire, comme indiqué dans les diagrammes suivants.  
@@ -46,4 +47,3 @@ Lorsque vous utilisez un curseur de défilement, les applications appellent **SQ
   
 > [!NOTE]  
 >  Le défilement est pris en charge dans ODBC 2. *x* pilotes **SQLExtendedFetch**. Pour plus d’informations, consultez [curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)dans l’annexe g : pilote recommandations pour la compatibilité descendante.
-

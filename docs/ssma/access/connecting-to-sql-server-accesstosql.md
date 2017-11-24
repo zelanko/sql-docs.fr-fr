@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f282c03b5492ea05fefe3d65b968d42ce146333c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9f2633151345d57fbba2fe7c40b3ca52b492e68
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connexion à SQL Server (AccessToSQL)
 Pour migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez vous connecter à l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Lorsque vous vous connectez, SSMA Obtient des métadonnées sur les bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et affiche les métadonnées de la base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous êtes connecté à, mais ne stocke pas les mots de passe.  
@@ -73,7 +71,7 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
     -   Si vous vous connectez à une instance nommée, entrez le nom d’ordinateur, une barre oblique inverse et le nom d’instance. Par exemple : MyServer\MyInstance.  
   
-    -   Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connectez-vous à l’aide de canaux nommés protocole et en spécifiant le nom du canal, tel que \\ \\.\pipe\sql\query. Pour plus d’informations, consultez le [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.  
+    -   Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], connectez-vous à l’aide de canaux nommés protocole et en spécifiant le nom du canal, tel que \\ \\.\pipe\sql\query. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
 3.  Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est configuré pour accepter les connexions sur un port non défini par défaut, entrez le numéro de port qui est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connexions dans le **port du serveur** boîte. L’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], le numéro de port par défaut est 1433. Pour les instances nommées, SSMA essaiera d’obtenir le numéro de port à partir de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Service Browser.  
   
@@ -134,4 +132,3 @@ Si vous souhaitez personnaliser le mappage entre les bases de données source et
 ## <a name="see-also"></a>Voir aussi  
 [Migration des bases de données de l’accès à SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

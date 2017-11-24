@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b451623a525def6b15942e70eb10397d9b7173de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f656aced164f2d3ca10ff4d8d3475de177f39d1b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Commandes de menu et autres touches de raccourci (DB2ToSQL)
 Les sections suivantes décrivent les raccourcis clavier pour accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de SSMA pour l’application de DB2.  
@@ -191,4 +189,3 @@ Pour accéder au menu contextuel de l’objet sélectionné dans l’Explorateur
 ## <a name="see-also"></a>Voir aussi  
 [Touches de raccourci &#40; DB2ToSQL &#41;](../../ssma/db2/shortcut-keys-db2tosql.md)  
   
-

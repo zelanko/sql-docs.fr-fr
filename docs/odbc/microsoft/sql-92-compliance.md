@@ -3,10 +3,12 @@ title: "Conformité SQL-92 | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQL-92 compliance [ODBC]
 - ODBC desktop database drivers [ODBC], SQL-92 compliance
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7e611136116edd4f6b978f7fc09bd7acf2bf1e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a925896250a307c7d256232377ec6d9325c8db77
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-92-compliance"></a>Conformité SQL-92
 Les pilotes de base de données ODBC Desktop et le moteur Microsoft Jet sous-jacente ne sont pas conformes SQL-92. Ils prennent en charge de nombreuses fonctionnalités qui ont été définies dans SQL-92. Certaines fonctionnalités prises en charge dans le pilote ne sont pas pris en charge dans SQL-92. Pour plus d’informations, consultez la *Guide du programmeur moteur Microsoft Jet de base de données*. Voici les principales différences entre les deux :  
@@ -50,4 +51,3 @@ Les pilotes de base de données ODBC Desktop et le moteur Microsoft Jet sous-jac
   
 > [!NOTE]  
 >  Les pilotes de la base de données Desktop prend en charge la syntaxe ANSI standard (pourcentage) et _ (trait de soulignement), pas * (astérisque) et ? (point d’interrogation).
-

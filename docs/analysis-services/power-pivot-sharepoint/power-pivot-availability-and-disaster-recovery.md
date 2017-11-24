@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c2534d88a10602dcabb594e5a18925ce2547194
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Récupération d’urgence et disponibilité PowerPivot
   La disponibilité et les plans de récupération d'urgence pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dépendent principalement de la conception de votre batterie de serveurs SharePoint, de la durée de temps mort acceptable pour les différents composants, ainsi que des outils et des meilleures pratiques que vous implémentez pour la disponibilité SharePoint. Cette rubrique présente une synthèse des différentes technologies et inclut des exemples de schémas de topologie à prendre en compte lorsque vous planifiez la disponibilité et la récupération d'urgence pour un déploiement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -117,4 +116,3 @@ ms.lasthandoff: 09/01/2017
   
 -   [Gestion des instances de service dans SharePoint 2013](http://www.petri.co.il/manage-service-instances-sharepoint-2013.htm)  
   
-

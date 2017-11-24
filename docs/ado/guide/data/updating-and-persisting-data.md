@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9220fd7448c5c2b7ba9e2600ca129f61e917723
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c08f7bfbb813bb3e2041f350a2e4397d9aff6ffd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updating-and-persisting-data"></a>Mise à jour et persistance des données
 Les chapitres précédents ont décrit comment utiliser ADO pour accéder aux données d’une source de données, pour vous déplacer dans les données et même comment modifier les données. Bien entendu, si votre application vise à permettre aux utilisateurs d’apporter des modifications aux données, vous devez comprendre comment enregistrer ces modifications. Vous pouvez soit conserver le **Recordset** modifications apportées à un fichier en utilisant le **enregistrer** (méthode), ou vous pouvez renvoyer les modifications à la source de données pour le stockage à l’aide la **mise à jour** ou  **UpdateBatch** méthodes.  
@@ -45,4 +43,3 @@ Les chapitres précédents ont décrit comment utiliser ADO pour accéder aux do
 -   [Mise à jour des données](../../../ado/guide/data/updating-data.md)  
   
 -   [Persistance des données](../../../ado/guide/data/persisting-data.md)
-

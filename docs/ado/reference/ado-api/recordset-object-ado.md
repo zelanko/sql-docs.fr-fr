@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset
-helpviewer_keywords:
-- Recordset object [ADO]
+f1_keywords: Recordset
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 02d767f733ed8cb3767d49cf092ff67d1e37ef54
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ad07b3aeaa8428bc5c2dee78a061c511893daef
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-object-ado"></a>Objet Recordset (ADO)
 Représente l’ensemble d’enregistrements à partir d’une table de base ou les résultats d’une commande exécutée. À tout moment, le **Recordset** objet fait référence à un seul enregistrement dans le jeu en tant que l’enregistrement actif.  
@@ -88,5 +84,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

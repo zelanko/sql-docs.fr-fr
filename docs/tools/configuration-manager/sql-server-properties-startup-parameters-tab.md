@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des paramètres de démarrage pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les paramètres de démarrage peuvent avoir un effet considérable sur les performances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Avant d'ajouter ou de modifier des paramètres de démarrage, consultez la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
  Pour supprimer un paramètre, sélectionnez-le, puis cliquez sur **Supprimer**.  
   
 ## <a name="parameter-format"></a>Format du paramètre  
- N'entrez aucun séparateur entre les paramètres. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute automatiquement le séparateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration met en œuvre les spécifications de paramètre suivantes.  
+ N'entrez aucun séparateur entre les paramètres. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajoute automatiquement le séparateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose les spécifications de paramètre suivantes.  
   
 -   Les espaces de début et de fin sont supprimés des paramètres de démarrage.  
   
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  Pour plus d’informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez « Procédure : configurer les options de démarrage du serveur (Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-

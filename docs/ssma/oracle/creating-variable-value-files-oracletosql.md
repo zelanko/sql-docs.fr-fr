@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Variable Value File Creation
 - Variable Value File, Variable Value File Validation
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 610a188ae9588c60e2c9ad8bec48c29a59301bf5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ba4def7c054b0d5a65a8ac93698cf6cb432845a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Création de fichiers de la valeur de la Variable (OracleToSQL)
 Fichier de la valeur de variable est un fichier XML contenant les valeurs de paramètre de commandes, comme le nom du serveur source ou de destination qui changent fréquemment à partir de la migration d’un serveur vers un autre. En cas d’un grand nombre de migrations de la base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source seront créés et référencés dans un fichier de script principal avec le **– v** passer à la ligne de commande. Cela permet de conserver des valeurs statiques dans plusieurs fichiers de script avec les valeurs des variables dans plusieurs fichiers de variable.  
@@ -98,4 +96,3 @@ L’étape suivante d’exploitation de la console est [créer les fichiers de c
 ## <a name="see-also"></a>Voir aussi  
 [Création des fichiers de serveur (Oracle)](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   
-

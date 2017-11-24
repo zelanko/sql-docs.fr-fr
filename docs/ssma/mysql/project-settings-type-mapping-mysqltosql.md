@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 445f69a6c78293f74dfea35f40ea99c380108e72
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 269c901b4242ae199f6d83fc7f678c29be39e5e5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres (Type de mappage) du projet (MySQLToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA.  
@@ -93,17 +91,17 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |caractère [2..255]|NCHAR [*]|  
 |date|date|  
 |datetime|datetime2 [0]|  
-|dec|Décimal|  
+|dec|decimal|  
 |DEC [*.. 65]|Decimal [*] [0]|  
 |DEC [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|Décimal|Décimal|  
+|decimal|decimal|  
 |Decimal [*.. 65]|Decimal [*] [0]|  
 |Decimal [*.. 65][\*.. 30]|Decimal [*] [\*]|  
 |double|float [53]|  
 |double précision|float [53]|  
 |double précision [*.. 255][\*.. 30]|numérique [*] [\*]|  
 |double [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|fixe|numérique|  
+|fixe|numeric|  
 |fixe [*.. 65][\*.. 30]|numérique [*] [\*]|  
 |float|float [24]|  
 |float [*.. 255][\*.. 30]|numérique [*] [\*]|  
@@ -139,7 +137,7 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |NCHAR varchar [4001.. *]|nvarchar(max)|  
 |NCHAR [valeur 0.. 1]|NCHAR [1]|  
 |NCHAR [2..255]|NCHAR [*]|  
-|numérique|numérique|  
+|numeric|numeric|  
 |numérique [*.. 65]|numérique [*] [0]|  
 |numérique [*.. 65][\*.. 30]|numérique [*] [\*]|  
 |nvarchar|nvarchar [1]|  
@@ -163,17 +161,17 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |tinytext|nvarchar [255]|  
 |bigint non signé|bigint|  
 |bigint non signé [*.. 255]|bigint|  
-|dec non signé|Décimal|  
+|dec non signé|decimal|  
 |non signé dec [*.. 65]|Decimal [*] [0]|  
 |non signé dec [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|décimal non signé|Décimal|  
+|décimal non signé|decimal|  
 |décimal non signé [*.. 65]|Decimal [*] [0]|  
 |décimal non signé [*.. 65][\*.. 30]|Decimal [*] [\*]|  
 |double non signé|float [53]|  
 |non signée double précision|float [53]|  
 |non signé double précision [*.. 255][\*.. 30]|numérique [*] [\*]|  
 |non signé double [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|non signé fixe|numérique|  
+|non signé fixe|numeric|  
 |non signé fixe [*.. 65][\*.. 30]|numérique [*] [\*]|  
 |float non signé|float [24]|  
 |non signé float [*.. 255][\*.. 30]|numérique [*] [\*]|  
@@ -184,7 +182,7 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |entier non signé [*.. 255]|bigint|  
 |mediumint non signé|int|  
 |non signé mediumint [*.. 255]|int|  
-|numérique non signé|numérique|  
+|numérique non signé|numeric|  
 |non signé numérique [*.. 65]|numérique [*] [0]|  
 |non signé numérique [*.. 65][\*.. 30]|numérique [*] [\*]|  
 |non signé réel|float [53]|  
@@ -215,4 +213,3 @@ Cliquez pour supprimer le mappage de type de données sélectionnées à partir 
 ##### <a name="reset-to-default"></a>Rétablir les valeurs par défaut  
 Cliquez pour réinitialiser tous les mappages de type de données pour les valeurs par défaut SSMA.  
   
-

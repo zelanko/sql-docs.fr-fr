@@ -8,24 +8,21 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d68e4caadf4e19582fb5ccd767535baee1001762
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-spécification des relations d’attributs dans une hiérarchie définie par l’utilisateur
 Comme vous l'avez déjà appris au cours de ce didacticiel, vous pouvez organiser les hiérarchies d'attributs en niveaux au sein des hiérarchies utilisateur pour mettre à disposition des utilisateurs d'un cube des chemins de navigation. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  
@@ -199,4 +196,3 @@ Au cours des tâches de cette rubrique, vous allez définir des relations d'attr
   
   
   
-

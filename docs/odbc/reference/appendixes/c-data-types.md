@@ -3,10 +3,12 @@ title: "Types de données C | Documents Microsoft"
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e2933ac739ff3772d3d0ad223f4c2a3041256777
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0fe266052c52b46b7f206869bdf89ff5377daf3b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-data-types"></a>Types de données C
 Types de données ODBC C indiquent le type de données de mémoires tampons de C utilisé pour stocker les données dans l’application.  
@@ -158,8 +159,7 @@ struct tagSQLGUID {
   
  Cette section contient les rubriques suivantes.  
   
--   [Structures d’entier 64 bits](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
+-   [Structures d’entiers 64 bits](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de données C dans ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)
-

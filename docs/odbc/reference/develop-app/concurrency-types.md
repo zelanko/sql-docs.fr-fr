@@ -3,10 +3,12 @@ title: "Types d’accès concurrentiel | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d1b457d3cc344821cbcfc567ba1617089ca4a7b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 737fadc881109457051cf30bfce9b493bd164f1c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-types"></a>Types d’accès concurrentiel
 Pour résoudre le problème de concurrence réduite dans les curseurs, ODBC expose quatre types d’accès concurrentiel au curseur :  
@@ -38,4 +39,3 @@ Pour résoudre le problème de concurrence réduite dans les curseurs, ODBC expo
 -   **L’accès concurrentiel optimiste à l’aide de versions de ligne et accès concurrentiel optimiste à l’aide de valeurs** le curseur utilise l’accès concurrentiel optimiste : il met à jour ou supprime des lignes uniquement si elles n’ont pas changé depuis leur dernière lecture. Pour détecter les modifications, il compare les valeurs ou les versions de ligne. Il n’existe aucune garantie que le curseur sera en mesure de mettre à jour ou supprimer une ligne, mais l’accès simultané est beaucoup plus élevée que lorsque le verrouillage est utilisé. Pour plus d’informations, consultez la section suivante, [d’accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Une application spécifie le type d’accès concurrentiel, il veut le curseur à utiliser avec l’attribut d’instruction SQL_ATTR_CONCURRENCY. Pour déterminer quels types sont pris en charge, il appelle **SQLGetInfo** avec l’option SQL_SCROLL_CONCURRENCY.
-

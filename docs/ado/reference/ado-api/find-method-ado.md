@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find (méthode) (ADO)
 Recherche un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour la ligne qui répond aux critères spécifiés. Si vous le souhaitez, la direction de recherche, de la ligne de début et du décalage à partir de la ligne de début peut être spécifiée. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement trouvé. dans le cas contraire, la position est définie à la fin (ou démarrer) de la **Recordset**.  
@@ -72,11 +69,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 >  Si vous appelez le **trouver** méthode sur un jeu d’enregistrements et la position actuelle dans le jeu d’enregistrements est au dernier enregistrement ou à la fin du fichier (EOF), vous ne trouverez pas quoi que ce soit. Vous avez besoin d’appeler le **MoveFirst** pour définir la position/le curseur actuel au début de l’objet recordset.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple (VB) de la méthode Find](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Propriété index](../../../ado/reference/ado-api/index-property.md)   
  [Optimiser la propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [La méthode de recherche](../../../ado/reference/ado-api/seek-method.md)
-
+ [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)

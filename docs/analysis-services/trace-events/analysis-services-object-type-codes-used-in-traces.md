@@ -8,22 +8,20 @@ ms.service:
 ms.component: trace-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Codes des types d'objets Analysis Services utilisés dans les traces
   Cette page répertorie le type d'objet (un numéro à six chiffres) de chaque objet d'un modèle de données Analysis Services. Ces codes apparaissent dans les journaux des traces et sont utilisés pour identifier le type d'objet associé à un verrou particulier. Par exemple, un dépassement du délai d'attente d'un verrou sur une base de données indique le type d'objet 100002, qui est le type d'objet Base de données.  
@@ -130,4 +128,3 @@ ms.lasthandoff: 09/01/2017
 |100155|PerspectiveCollection|  
   
   
-

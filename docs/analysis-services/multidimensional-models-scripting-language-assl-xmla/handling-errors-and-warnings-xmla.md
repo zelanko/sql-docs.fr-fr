@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - errors [XML for Analysis]
 - inline errors [XMLA]
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - warnings [XML for Analysis]
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: febb20820f7ca8be5c0994ae8bbee8070be559d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b1268714f696f852d999a833cf59e69be8c44bb3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestion des erreurs et des avertissements (XMLA)
   Gestion des erreurs est requises lorsqu’un document XML for Analysis (XMLA) [Discover](../../analysis-services/xmla/xml-elements-methods-discover.md) ou [Execute](../../analysis-services/xmla/xml-elements-methods-execute.md) appel de méthode ne s’exécute pas, s’exécute correctement mais génère des erreurs ou avertissements, ou s’exécute correctement mais retourne des résultats qui contiennent des erreurs.  
@@ -140,4 +138,3 @@ HelpFile="" />
  [Développement avec XMLA dans Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

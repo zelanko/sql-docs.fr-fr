@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX code examples
+helpviewer_keywords: ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8a30aa48521f1fd634bb2bd8e2f462ad60e648b9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-code-examples"></a>Exemples de Code ADOX
 Utilisez les exemples de code suivants pour apprendre à utiliser les objets, méthodes, propriétés et événements ADOX.  
@@ -33,9 +30,9 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les objets, m�
 > [!NOTE]
 >  Collez l’exemple de code entier dans votre éditeur de code. L’exemple de ne pas fonctionner correctement si les exemples partielles sont utilisés ou si la mise en forme est perdue.  
   
--   [Exemples de Code ADOX dans Microsoft Visual Basic](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
+-   [Exemples de code ADOX dans Microsoft Visual Basic](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
   
--   [Exemples de Code ADOX dans Microsoft Visual C++](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
+-   [Exemples de code ADOX dans Microsoft Visual C++](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété ActiveConnection catalogue (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -55,5 +52,4 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les objets, m�
  [Views Append, méthode-exemple (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Collection de vues, exemple de propriété CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Exemple de méthode (VB) de suppression de vues](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Actualiser les vues, méthode-exemple (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
-
+ [Views, exemple de méthode Refresh (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)

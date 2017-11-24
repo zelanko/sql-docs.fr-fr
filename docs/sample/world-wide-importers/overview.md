@@ -1,30 +1,31 @@
 ---
 title: "Vue d’ensemble | Documents Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: ff91724bead3e6b1aa96962bd5bb801afe3af950
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e5a3dd9c765c347b7516706d6e157a47f3c9bd03
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-overview"></a>Vue d’ensemble de Wide World Importers
-Il s’agit d’une vue d’ensemble de la société fictive Wide World Importers et les flux de travail qui est abordés dans les bases de données exemple WideWorldImporters pour SQL Server et la base de données SQL Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Il s’agit d’une vue d’ensemble de la société fictive Wide World Importers et les flux de travail qui est abordés dans les bases de données exemple WideWorldImporters pour SQL Server et la base de données SQL Azure.  
 
 Wide World Importers (WWI) est un importateur de biens de gros nouveauté et d’un serveur de distribution d’exploitation à partir de la zone de la baie de San Francisco.
 
@@ -71,4 +72,3 @@ La société opère avec un exercice qui commence le 1er novembre.
 La licence de la base de données et de l’exemple de code est décrit ici : [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 La base de données inclut des données publiques qui a été chargées à partir de data.gov et EarthData naturelle. Les conditions d’utilisation sont ici : [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
-

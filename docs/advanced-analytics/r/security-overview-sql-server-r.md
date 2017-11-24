@@ -1,39 +1,38 @@
 ---
-title: "Vue d’ensemble de la sécurité (SQL Server R Services) | Microsoft Docs"
+title: "Sécurité pour l’apprentissage de SQL Server et R | Documents Microsoft"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f694cca3286b5f1a9f738a08919f4fe8214fa770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8388d7c9d22a49a49a1a45a6fa6b479107f9ccae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="security-overview-sql-server-r-services"></a>Vue d’ensemble de la sécurité (SQL Server R Services)
+# <a name="security-for-sql-server-machine-learning-and-r"></a>Sécurité pour l’apprentissage de SQL Server et R
 
-Cette rubrique décrit l’architecture de sécurité globale qui est utilisée pour connecter le moteur de base de données [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et les composants associés au runtime R. Des exemples du processus de sécurité sont fournis pour deux scénarios courants d’utilisation de R dans un environnement d’entreprise :
+Cet article décrit l’architecture de sécurité globale qui est utilisé pour connecter le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] moteur et des composants associés au runtime R de base de données. Exemples du processus de sécurité sont fournis pour ces scénarios courants pour l’utilisation de R dans un environnement d’entreprise :
 
 + Exécution de fonctions RevoScaleR dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] à partir d’un client de science des données
 + Exécution de code R directement à partir de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] à l’aide de procédures stockées
 
 ## <a name="security-overview"></a>Vue d’ensemble de la sécurité
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] connexion ou compte d’utilisateur Windows est requis pour exécuter des scripts R qui utilisent des données SQL Server ou qui s’exécutent avec SQL Server en tant que le contexte de calcul. Cette exigence s’applique aux deux [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] et SQL Server 2017 Machine Learning Services. 
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] connexion ou compte d’utilisateur Windows est requis pour exécuter des scripts R qui utilisent des données SQL Server ou qui s’exécutent avec SQL Server en tant que le contexte de calcul. Cette exigence s’applique aux deux [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] et SQL Server 2017 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)].
 
 Le compte d’utilisateur ou de connexion identifie le *principal de sécurité*, qui peut-être plusieurs niveaux d’accès, selon les besoins de script R :
+
 + Autorisation d’accéder à la base de données où R est activé
 + Autorisations nécessaires pour lire des données à partir des objets sécurisés tels que des tables
 + La possibilité d’écrire les nouvelles données dans une table, comme un modèle, ou d’évaluation des résultats
@@ -56,7 +55,7 @@ Une fois la connexion ou le compte d’utilisateur Windows a été configuré et
 
 Par conséquent, tous les travaux R qui sont lancées à partir d’un client distant doivent spécifier les informations de connexion ou un utilisateur dans le cadre de la chaîne de connexion.
 
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Interaction de la sécurité de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et de la sécurité de LaunchPad
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Interaction de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sécurité et la sécurité de Launchpad
 
 Quand un script R est exécuté dans le contexte de l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] obtient un compte de travail disponible (compte d’utilisateur local) auprès d’un pool de comptes de travail établi pour le processus externe et utilise ce compte de travail pour effectuer les tâches associées. 
 
@@ -66,21 +65,25 @@ Après avoir effectué le mappage à un compte de travail, [!INCLUDE[rsql_launch
 
 Quand toutes les opérations [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sont terminées, le compte de travail utilisateur est marqué comme étant libre et réintègre le pool.
 
-Pour plus d’informations sur [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], consultez [Nouveaux composants de SQL Server pour prendre en charge l’intégration R](../../advanced-analytics/r-services/new-components-in-sql-server-to-support-r.md).
+Pour plus d’informations sur [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], consultez [composants de SQL Server pour prendre en charge l’intégration R](../../advanced-analytics/r/new-components-in-sql-server-to-support-r.md).
 
-> [!NOTE]
-Pour permettre à Launchpad de gérer les comptes de travail et d’exécuter les travaux R, le groupe qui contient les comptes de travail, SQLRUserGroup, doit disposer des autorisations « Permettre l’ouverture d’une session locale » ; dans le cas contraire, R Services risque de ne pas fonctionner. Par défaut, ce droit est attribué à tous les nouveaux utilisateurs locaux, mais dans certaines organisations, les stratégies de groupe plus strictes empêchent les comptes de travail de se connecter à SQL Server pour effectuer des travaux R.  
+### <a name="implied-authentication"></a>Authentification implicite
+
+**L’authentification implicite** est le terme utilisé pour le processus sous lequel SQL Server obtient l’utilisateur des informations d’identification, puis l’exécute toutes les tâches de script externe pour le compte d’utilisateurs, en supposant l’utilisateur dispose des autorisations appropriées dans la base de données. L’authentification implicite est particulièrement importante si le script R a besoin effectuer un appel ODBC en dehors de la base de données SQL Server. Par exemple, le code peut extraire une liste plus courte de facteurs à partir d’une feuille de calcul ou une autre source.
+
+Pour ces appels de bouclage réussisse, le groupe qui contient les comptes de travail, SQLRUserGroup, doit avoir les autorisations « Autoriser l’ouverture d’une session locale ». Par défaut, ce droit est attribué à tous les nouveaux utilisateurs locaux, mais dans certaines organisations plus strictes stratégies de groupe peuvent être appliquées.
+
+![Authentification implicite pour R](media/implied-auth-rsql.png)
 
 ## <a name="security-of-worker-accounts"></a>Sécurité des comptes de travail
 
-Le mappage d’un utilisateur Windows externe ou d’une connexion SQL valide à un compte de processus de travail est valid uniquement pour la durée de vie de la durée de vie de la requête SQL qui exécute le script R. 
+Le mappage d’un utilisateur Windows externe ou d’une connexion SQL valide à un compte de processus de travail est valid uniquement pour la durée de vie de la durée de vie de la requête SQL qui exécute le script R.
 
 Les requêtes en parallèle du même compte de connexion sont mappées au même compte de travail utilisateur.
 
 Les répertoires utilisés pour les processus sont gérés par [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] à l’aide de RLauncher, et les répertoires ont un accès limité. Si le compte de travail ne peut accéder à aucun des fichiers contenus dans les dossiers situés au-dessus du sien, il peut en revanche lire, écrire ou supprimer les enfants situés en dessous du dossier de travail de session qui a été créé pour la requête SQL avec le script R.
 
-Pour plus d’informations sur la modification du nombre de comptes de travail, du nom des comptes ou de leur mot de passe, consultez [Modifier le pool de comptes d’utilisateurs pour SQL Server R Services](../../advanced-analytics/r-services/modify-the-user-account-pool-for-sql-server-r-services.md).
-
+Pour plus d’informations sur la façon de modifier le nombre de comptes de travail, des noms de compte ou des mots de passe, consultez [modifier le pool de comptes d’utilisateur pour l’apprentissage de SQL Server](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ## <a name="security-isolation-for-multiple-external-scripts"></a>Isolation de sécurité pour plusieurs scripts externes
 
@@ -91,5 +94,5 @@ Un compte de travail ne peut ni afficher ni manipuler les fichiers utilisés par
 Si vous êtes administrateur de l’ordinateur, vous pouvez afficher les répertoires créés pour chaque processus. Chaque répertoire est identifié par son GUID de session.
 
 ## <a name="see-also"></a>Voir aussi
-[Vue d’ensemble de l’architecture](../../advanced-analytics/r-services/architecture-overview-sql-server-r.md)
 
+[Présentation de l’architecture pour l’apprentissage de SQL Server](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

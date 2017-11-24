@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6952149829845872a78d5732671c1f9f9cd6a323
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ab898dffadaee1c70f40d94f5d73f9d24e83de93
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mappage de Sybase ASE et Types de données SQL Server (SybaseToSQL)
 Les types de base de données Sybase Adaptive Server Enterprise (ASE) diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou les types de base de données SQL Azure. Lorsque vous convertissez des objets de base de données ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des objets de SQL Azure, vous devez spécifier le mappage des types de données à partir de ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
@@ -102,4 +100,3 @@ L’étape suivante du processus de migration consiste à [créer un rapport d�
 ## <a name="see-also"></a>Voir aussi  
 [Migration Sybase ASE bases de données SQL Server : base de données SQL Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

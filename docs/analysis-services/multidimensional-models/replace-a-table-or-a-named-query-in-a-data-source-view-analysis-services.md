@@ -21,17 +21,16 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7ef8b35a810411ed5f035e8cc7ba69d737bf8df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6913e8639e482442c1af4da942ddae8a4089c877
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Remplacer une table ou une requête nommée dans une vue de source de données (Analysis Services)
   Dans le Concepteur de vue de source de données, vous pouvez remplacer une table, une vue ou une requête nommée dans une vue de source de données (DSV) par une autre table ou vue provenant de la même source de données ou d'une source de données différente ou par une requête nommée définie dans la vue DSV. Quand vous remplacez une table, tous les autres objets qui figurent dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et qui contiennent des références à la table continuent à faire référence à la table, car l’ID d’objet de la table reste le même dans la vue DSV. Toutes les relations qui continuent à être pertinentes (correspondance des noms et des types de colonne) sont conservées. Par contre, si vous supprimez une table et que vous en ajoutez une autre, les références et les relations sont supprimées et doivent être recréées.  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

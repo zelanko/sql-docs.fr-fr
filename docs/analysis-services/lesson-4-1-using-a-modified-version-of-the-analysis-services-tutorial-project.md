@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 10cb63369b23a19ecb126ee210de2a90ed114fc4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Leçon 4-1-à l’aide d’une Version modifiée du projet didacticiel Analysis Services
 Les sept dernières leçons de ce didacticiel sont basées sur une version évoluée du projet du didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous avez créé au cours des trois premières leçons. D’autres tables et calculs nommés ont été ajoutés à la vue de source de données **Adventure Works DW 2012** , des dimensions supplémentaires ont été ajoutées au projet et ces nouvelles dimensions ajoutées au cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. De plus, un deuxième groupe de mesures a été ajouté, qui contient des mesures d'une deuxième table de faits. Ce projet évolué va vous permettre d'apprendre à enrichir en fonctionnalités votre application Business Intelligence sans avoir à répéter ce que vous avez déjà appris.  
@@ -129,4 +126,3 @@ Le cube **Analysis Services Tutorial** contient maintenant deux groupes de mesur
 ## <a name="see-also"></a>Voir aussi  
 [Déploiement d'un projet Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   
-

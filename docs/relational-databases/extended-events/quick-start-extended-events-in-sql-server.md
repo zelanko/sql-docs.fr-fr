@@ -2,9 +2,12 @@
 title: "Démarrage rapide : événements étendus dans SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 09/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: extended-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
@@ -16,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 54b7cc1dc7cbd96f17a9c39e1b0e1f8a812df145
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a505859d320552f4c591e61440a5b97bf92d8e17
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Démarrage rapide : événements étendus dans SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Cet article vise à aider le développeur SQL qui ne connaît pas encore les événements étendus et qui veut créer une session d’événements en quelques minutes seulement. Grâce aux événements étendus, vous pouvez afficher des détails sur les opérations internes du système SQL et votre application. Quand vous créez une session d’événements étendus, vous indiquez au système :

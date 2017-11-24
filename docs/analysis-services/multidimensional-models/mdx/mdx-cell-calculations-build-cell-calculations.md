@@ -23,17 +23,16 @@ helpviewer_keywords:
 - calculated values [MDX]
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: cef256029853aabd5017f610081ed45ac632a935
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 78aef4c489045b9f40177bf82d8ad384cc86b85e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-cell-calculations---build-cell-calculations"></a>Calculs de cellules MDX - calculs de cellules de Build
   MDX (Multidimensional Expressions) propose un certain nombre d'outils qui vous permettent de générer des valeurs calculées comme des membres calculés, des cumuls personnalisés et des membres personnalisés. Cependant, il est difficile d'affecter un jeu de cellules spécifique (voire une cellule unique) à l'aide de ces outils.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

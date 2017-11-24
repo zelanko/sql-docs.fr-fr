@@ -3,10 +3,12 @@ title: "Autres détails de programmation du pilote dBASE | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98f265fb759e2ec3c479eff7be7a555975e94003
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f0a09a7af11cf2f8d446906b9c093d5cb1cab57
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="other-dbase-driver-programming-details"></a>Autres détails de programmation du pilote dBASE
 > [!NOTE]  
@@ -53,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTransact (pilote dBASE)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
 -   [Index dBASE (pilote dBASE)](../../odbc/microsoft/dbase-indexes.md)
-

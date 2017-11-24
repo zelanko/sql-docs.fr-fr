@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d5f229e73487aab0be1f118c535f9d43851b44c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 13fa0beac02abb6f606757bc44a63163e1cf07de
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Sélection d’objet avancé (DB2ToSQL)
 Le **Section avancé de l’objet** boîte de dialogue vous permet de filtrer les objets de base de données à l’aide de chaînes et les sous-chaînes dans le nom d’objet, puis sélectionnez ou désélectionnez ces objets. SSMA effectue des opérations de conversion et la migration sur les objets sélectionnés.  
@@ -50,7 +48,7 @@ Affiche les éléments dans une table filtrés.
 **Affiche les éléments chargés uniquement**  
 Active/désactive l’affichage des catégories ou des éléments. Lorsque cette option est sélectionnée, SSMA montre tous les éléments qui correspondent aux critères de filtre et ceux qui ont été précédemment chargée. Lorsque ce bouton n’est pas sélectionné, SSMA montre les dossiers de catégorie.  
   
-**Filtre**  
+**Filter**  
 Entrez la chaîne que vous souhaitez utiliser pour filtrer les éléments. Par exemple, pour rechercher tous les éléments qui contiennent la chaîne « ID » dans le nom de l’élément, entrez la chaîne « ID » dans le **filtre** boîte.  
   
 Si les éléments correspondent aux critères de filtre, les catégories ou éléments seront affiche lorsque vous tapez la chaîne. Pour afficher les éléments correspondants, nous vous recommandons de cliquer sur le **affiche uniquement les éléments chargés** bouton.  
@@ -58,4 +56,3 @@ Si les éléments correspondent aux critères de filtre, les catégories ou él�
 **Effacer le filtre**  
 Efface le **filtre** boîte.  
   
-

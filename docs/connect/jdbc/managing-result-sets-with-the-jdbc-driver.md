@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5cf61ff8794270ca5706284118c41c224bd5518f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e17e39f8a83313a60b269fed82631b80f07ffed5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>Gestion de jeux de résultats avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,12 +40,11 @@ ms.lasthandoff: 09/09/2017
   
 |Rubrique| Description|  
 |-----------|-----------------|  
-|[Présentation des Types de curseur](../../connect/jdbc/understanding-cursor-types.md)|Décrit les différents types de curseurs le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge.|  
+|[Présentation des types de curseurs](../../connect/jdbc/understanding-cursor-types.md)|Décrit les différents types de curseurs le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge.|  
 |[Présentation du contrôle d’accès concurrentiel](../../connect/jdbc/understanding-concurrency-control.md)|Décrit la manière dont le pilote JDBC prend en charge le contrôle de concurrence.|  
-|[Comprendre le verrouillage de ligne](../../connect/jdbc/understanding-row-locking.md)|Décrit la manière dont le pilote JDBC prend en charge le verrouillage de ligne.|  
+|[Présentation du verrouillage des lignes](../../connect/jdbc/understanding-row-locking.md)|Décrit la manière dont le pilote JDBC prend en charge le verrouillage de ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Fonctions d’API de niveau 1 (le pilote ODBC pour Oracle) | Documents M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - level 1 API functions [ODBC]
 - API functions [ODBC]
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f6aac543377e321be8db38f7dd95fad16efbac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3cd7f827ecfc367536654b9ad825302f4dba9fcf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Fonctions d’API de niveau 1 (le pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -51,4 +52,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLSpecialColumns**|Récupère le jeu optimal de colonnes qui identifie de façon unique une ligne dans la table.|  
 |**SQLStatistics**|Récupère une liste des statistiques sur une seule table et les index ou les noms de balise associés à la table. Le pilote retourne les informations comme jeu de résultats.|  
 |**SQLTables**|Retourne la liste des noms de table spécifié par le paramètre dans le **SQLTables** instruction. Si aucun paramètre n’est spécifié, retourne les noms de table stockées dans la source de données actuelle. Le pilote retourne les informations comme jeu de résultats.<br /><br /> Appels de type énumération ne reçoivent pas une entrée de jeu de résultats pour des vues paramétrées locales ou distant. Toutefois, un appel à **SQLTables** avec une table unique spécificateur de nom trouver une correspondance pour cette vue, le cas échéant, portant ce nom ; Cela permet à l’API de recherche de conflits de nom avant la création d’une nouvelle table.<br /><br /> Synonymes publiques sont retournées avec la valeur TABLE_OWNER « ».<br /><br /> VUES appartenant à SYS ou système sont identifiés en tant que vue système.|
-

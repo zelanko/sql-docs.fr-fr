@@ -1,10 +1,13 @@
 ---
 title: "Extension de règles d’entreprise (Master Data Services) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 51125c09ec99fc6eddc532bf2fe576dece66aa4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3a4eea06466e59b0ddb8344dbba5b7d81bf1e97b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extension de règles d’entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez appliquer des scripts SQL définis par l’utilisateur en tant qu’extension de conditions et d’actions prédéfinies.  

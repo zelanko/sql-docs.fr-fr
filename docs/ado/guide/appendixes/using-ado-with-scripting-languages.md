@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e3e63f9389016dcd7e198d7d09099f94299bd19
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a0f909233d29c84e1c64ca19f100fdd1eabf4d61
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-ado-with-scripting-languages"></a>Utilisation d’ADO avec des langages de script
 Dans un environnement de script, ADO vous permet d’exposer des données par le biais de script côté serveur. Dans ce scénario, ADO, le fournisseur OLE DB sous-jacent qu’il utilise, et tous les autres composants nécessaires pour faire référence à un magasin de données installées sur un serveur exécutant Internet Information Services (IIS). À l’aide d’Active Server Pages (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu peut être passé via le protocole HTTP pour un navigateur Web client. À l’aide de scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, de traverser ou afficher des données spécifiques.  
@@ -69,12 +67,11 @@ Dans un environnement de script, ADO vous permet d’exposer des données par le
   
  Les rubriques suivantes contiennent des informations plus spécifiques sur l’utilisation d’ADO avec des langages de script :  
   
--   [Programmation ADO en VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [Programmation ADO VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
--   [Programmation ADO en JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [Programmation ADO JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [À l’aide d’ADO avec Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Utilisation d’ADO avec Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
-

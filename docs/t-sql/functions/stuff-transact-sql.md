@@ -1,19 +1,20 @@
 ---
 title: STUFF (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df9a3d019f22ec8a0ba610f2dd694e45a8bd9da3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   La fonction STUFF permet d'insérer une chaîne dans une autre chaîne. Elle efface d'abord le nombre de caractères spécifié dans la première chaîne à partir de la position de début. Ensuite, elle insère la seconde chaîne dans la première à partir de la position de début.  
   
@@ -53,11 +53,11 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) des données de caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaire ou caractère.  
   
  *Démarrer*  
- Entier précisant la position de départ de la suppression et de l'insertion. Si *Démarrer* ou *longueur* est négatif, une chaîne null est retournée. Si *Démarrer* est plus longue que la première *character_expression*, une chaîne null est retournée. *Démarrer* peut être de type **bigint**.  
+ Entier précisant la position de départ de la suppression et de l'insertion. Si *Démarrer* est un nombre négatif ou égal à zéro, une chaîne null est retournée. Si *Démarrer* est plus longue que la première *character_expression*, une chaîne null est retournée. *Démarrer* peut être de type **bigint**.  
   
  *length*  
- Entier spécifiant le nombre de caractères à supprimer. Si *longueur* est plus longue que la première *character_expression*, suppression s’effectue jusqu’au dernier caractère de la dernière *character_expression*. *longueur* peut être de type **bigint**.  
-  
+ Entier spécifiant le nombre de caractères à supprimer. Si *longueur* est négatif, une chaîne null est retournée. Si *longueur* est plus longue que la première *character_expression*, suppression s’effectue jusqu’au dernier caractère de la dernière *character_expression*.  Si *longueur* est égal à zéro, d’insertion se produit avant le premier caractère dans la chaîne. *longueur* peut être de type **bigint**.
+
  *replaceWith_expression*  
  Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) des données de caractères. *character_expression* peut être une constante, une variable ou une colonne de données binaire ou caractère. Cette expression remplace *longueur* caractères de *character_expression* commençant à *Démarrer*. Fournissant `NULL` comme le *replaceWith_expression*, supprime les caractères sans insérer quoi que ce soit.   
   
@@ -92,4 +92,3 @@ aijklmnef
 ## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Fonctions de chaîne &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-

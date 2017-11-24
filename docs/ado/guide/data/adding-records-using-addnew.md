@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3bb2828935872cc4759608b0041db71ce8c24d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92bbc404985ebbb49c4e654efd5a7f54198d35ab
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adding-records-using-addnew-method"></a>Ajout d’enregistrements à l’aide de AddNew (méthode)
 Voici la syntaxe de base de la **AddNew** méthode :
@@ -57,4 +55,3 @@ End If
 
 ## <a name="remarks"></a>Notes
  Étant donné que ce code utilise un déconnecté **Recordset** avec un curseur côté client en mode batch, vous devez reconnecter le **Recordset** à la source de données avec un nouveau **connexion** l’objet avant de pouvoir appeler le **UpdateBatch** méthode pour valider les modifications apportées à la base de données. Cela est facilement effectué à l’aide de la nouvelle fonction **GetNewConnection**.
-

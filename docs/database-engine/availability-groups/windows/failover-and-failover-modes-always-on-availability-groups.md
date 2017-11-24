@@ -2,9 +2,12 @@
 title: "Basculement et modes de basculement (groupes de disponibilité Always On) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0ec5c20cc9681f9196c02fa864e4c79acf3541dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d521b60320fc490d2ba7e824e85bb2eabe1e9bb3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement*actuelle).  
   

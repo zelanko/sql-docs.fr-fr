@@ -3,10 +3,12 @@ title: "Séquence d’enregistrements d’état | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29c8fb3232abfc81eb41e9e3ec67ceb7e96de7ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
 Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire de pilotes et le pilote les classement selon les règles suivantes. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (Gestionnaire de pilotes, pilotes, passerelle et ainsi de suite) n’est pas constitue lorsque les enregistrements de classement.  
@@ -36,4 +37,3 @@ Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire 
 -   **Avertissements** enregistrements d’état qui décrivent les avertissements (classe 01) ont le rang le plus bas. Si deux ou plusieurs enregistrements décrivent la même condition d’avertissement, avertissement SQLSTATE définis par la spécification CLI de groupe ouvert outrank SQLSTATE définies par ODBC et définies par le pilote.  
   
  S’il existe deux ou plusieurs enregistrements avec le rang le plus élevé, il n’est pas l’enregistrement est le premier enregistrement. L’ordre de tous les autres enregistrements n’est pas défini. En particulier, étant donné que les avertissements peuvent apparaître avant les erreurs, les applications doivent vérifier tous les enregistrements d’état lorsqu’une fonction retourne une valeur autre que SQL_SUCCESS.
-

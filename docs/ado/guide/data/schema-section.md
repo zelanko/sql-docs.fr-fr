@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Schema section [ADO]
+helpviewer_keywords: Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fbe340ed1778b125d6281ef62f53b721923939cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3f691a4ba9632f40ceb4eb08c33a35135d9a0e7d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schema-section"></a>Section de schéma
 La section de schéma est requise. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées à propos de chaque colonne pour préserver la sémantique des valeurs de données autant que possible pour la mise à jour. Toutefois, pour charger le fichier XML, ADO requiert uniquement les noms des colonnes et de l’ensemble de lignes auquel elles appartiennent. Voici un exemple de schéma minimal :  
@@ -183,5 +180,4 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
  Pour plus d’informations sur OLE DB construit disponible dans le schéma d’un document XML pour OLE DB, consultez la définition de « urn : schemas-microsoft-rowset » et le Guide du programmeur OLE DB.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Maintien d’enregistrements au Format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

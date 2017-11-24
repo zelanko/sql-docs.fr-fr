@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utiliser l'Assistant Génération de schéma (Analysis Services)
   L'Assistant Génération de schéma requiert un volume d'informations restreint durant la phase de génération. La plupart des informations dont l’Assistant Génération de schéma a besoin pour générer des schémas relationnels sont extraites depuis les cubes et dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez déjà créés dans le projet. En outre, vous pouvez personnaliser la façon dont le schéma de la base de données de zone de sujet est généré et comment les objets du schéma sont nommés.  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  Vous pouvez définir les conventions de nom que l’Assistant Génération de schéma utilise quand vous générez certains objets dans la base de données de la zone de sujet dans la page **Spécifier les conventions de nom** de l’assistant. Pour plus d’informations sur les options disponibles dans la page **Spécifier les conventions de nom**, consultez [Spécifier les conventions de nom &#40;Assistant Génération de schéma&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   
-

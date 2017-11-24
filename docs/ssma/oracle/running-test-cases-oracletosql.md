@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: ff5baf3dadeee06d33f5d75f0c62a1ee339ba2b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d810cee8f3d8b521350aa99a83ca6f7148cd5064
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="running-test-cases-oracletosql"></a>Cas de Test en cours d’exécution (OracleToSQL)
 Lorsque le testeur de SSMA s’exécute à un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminé en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -90,4 +88,3 @@ Lors de la finalisation SSMA testeur nettoie les objets auxiliaires créés lors
 [Sélection et configuration affectées objets &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [Test de migration des objets de base de données &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   
-

@@ -3,10 +3,12 @@ title: DBCC SHOW_STATISTICS (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - DBCC SHOW_STATISTICS
 - SHOW_STATISTICS
 - DBCC_SHOW_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], densities
 - histograms [SQL Server]
@@ -32,20 +33,19 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 777deb8a6e479b388d0dc980b58f7b757eed1b73
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 38abfb552f1bb969c132d5086ca007d36541a76c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS affiche les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée. L'optimiseur de requête utilise des statistiques pour estimer le nombre de lignes, également appelé cardinalité, dans le résultat de la requête, ce qui lui permet de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête pourrait utiliser des estimations de cardinalité afin de choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index dans le plan de requête. Cela permettrait d'améliorer les performances des requêtes car le recours à une analyse d'index monopolisant de nombreuses ressources serait ainsi évité.
   
@@ -139,7 +139,7 @@ Pour créer l'histogramme, l'optimiseur de requête trie les valeurs de colonnes
   
 Le diagramme suivant illustre un histogramme avec six étapes : La zone située à gauche de la première valeur limite supérieure représente la première étape.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-A083-8cbd2d6f617a")
   
 Pour chaque étape d'histogramme :
 -   La ligne en gras représente la valeur limite supérieure (RANGE_HI_KEY) et le nombre d'occurrences (EQ_ROWS) correspondant.  
@@ -149,7 +149,7 @@ Pour chaque étape d'histogramme :
 L'optimiseur de requête définit les étapes d'histogramme en fonction de leur importance statistique. Il utilise un algorithme de nombre maximal de différences pour réduire le nombre d'étapes dans l'histogramme tout en augmentant la différence entre les valeurs limites. Le nombre maximal d'étapes est 200. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par exemple, une colonne avec 100 valeurs distinctes peut avoir un histogramme comportant moins de 100 points de limite.
   
 ## <a name="density-vector"></a>Vecteur de densité  
-L'optimiseur de requête utilise des densités afin d'améliorer les estimations de cardinalité pour les requêtes qui retournent plusieurs colonnes à partir de la même table ou vue indexée. Le vecteur de densité contient une densité pour chaque préfixe des colonnes dans l'objet de statistiques. Par exemple, si un objet de statistiques contient les colonnes clés CustomerID, ItemId, Price, la densité est calculée sur chacun des préfixes de colonnes suivants :
+L'optimiseur de requête utilise des densités afin d'améliorer les estimations de cardinalité pour les requêtes qui retournent plusieurs colonnes à partir de la même table ou vue indexée. Le vecteur de densité contient une densité pour chaque préfixe des colonnes dans l'objet de statistiques. Par exemple, si un objet de statistiques comporte les colonnes clés `CustomerId`, `ItemId` et `Price`, densité est calculée sur chacun des préfixes de colonne suivants.
   
 |Préfixe de colonne|Densité calculée sur|  
 |---|---|
@@ -163,7 +163,7 @@ L'optimiseur de requête utilise des densités afin d'améliorer les estimations
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Autorisations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 Afin d’afficher l’objet de statistiques, l’utilisateur doit posséder la table ou de l’utilisateur doit être un membre de la `sysadmin` rôle serveur fixe le `db_owner` rôle de base de données fixe ou la `db_ddladmin` rôle de base de données fixe.
   
-SQL Server 2012 SP1 modifie les limites liées aux autorisations et permet aux utilisateurs avec l'autorisation SELECT d'utiliser cette commande. Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 modifie les restrictions d’autorisation et permet aux utilisateurs avec l’autorisation SELECT pour utiliser cette commande. Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
 -   Les utilisateurs doivent posséder des autorisations sur toutes les colonnes dans l'objet de statistiques.  
 -   Les utilisateurs doivent posséder une autorisation sur toutes les colonnes dans une condition de filtre (le cas échéant).  
 -   La table ne peut pas avoir une stratégie de sécurité de niveau ligne.  
@@ -227,4 +227,3 @@ Les résultats indiquent l’en-tête, le vecteur de densité et la partie de l�
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [Sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [Sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
-

@@ -2,11 +2,12 @@
 title: "Changer le mode de compatibilité de base de données et utiliser le magasin des requêtes | Microsoft Docs"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,13 +20,15 @@ caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 514fe566dd9a26d4a6244e8fb067f97678d2dbc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a230544eba53d9b506aae4bce6feb019820550e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 Dans SQL Server 2016 et SQL Server 2017, certaines modifications sont activées uniquement une fois que le niveau DATABASE_COMPATIBILITY d’une base de données a été changé. Cette opération a été effectuée pour plusieurs raisons :  
   
 - Étant donné que la mise à niveau est une opération unidirectionnelle (il est impossible de faire passer le format de fichier à une version antérieure), le fait de séparer l’activation de nouvelles fonctionnalités pour en faire une opération distincte dans la base de données, comporte un intérêt.  Il est possible de rétablir un paramètre à un niveau DATABASE_COMPATIBILITY antérieur.  Le nouveau modèle réduit le nombre d’éléments devant se produire lors de l’interruption d’une fenêtre.  

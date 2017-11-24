@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 50bbc2bc214fd0ad8c7e997ea36c1edd0b764421
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95783265e2e89df6aeafbbe0d74e6d999cbdcff3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Source de mappage et les Types de données cible (AccessToSQL)
 Les types de base de données Access diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des objets, vous devez spécifier le mappage des types de données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  
@@ -102,4 +100,3 @@ L’étape suivante du processus de migration est [convertir des objets de base 
 ## <a name="see-also"></a>Voir aussi  
 [Migration des bases de données de l’accès à SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

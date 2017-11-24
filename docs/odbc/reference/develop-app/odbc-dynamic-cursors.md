@@ -3,27 +3,28 @@ title: Les curseurs dynamiques ODBC | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], dynamic
 - dynamic cursors [ODBC]
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>Curseurs dynamiques ODBC
 Un curseur dynamique est rien de plus : dynamique. Il peut détecter les modifications apportées à l’appartenance, order et les valeurs du jeu de résultats après l’ouverture du curseur. Par exemple, un curseur dynamique extrait deux lignes et une autre application, puis met à jour l’une de ces lignes et supprime l’autre. Si le curseur dynamique tente d’extraire ces lignes, elle ne trouvera pas la ligne supprimée mais retournera les nouvelles valeurs de la ligne mise à jour.  
@@ -48,4 +49,3 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  Cette instruction crée un deuxième jeu de résultats, le premier ensemble de lignes qui est l’ensemble de lignes suivant dans le jeu de résultats d’origine : dans ce cas, l’ensemble de lignes dans la table Customers. Le curseur retourne cet ensemble de lignes à l’application.  
   
  Il est intéressant de noter qu’un curseur dynamique est implémenté de cette manière crée plusieurs jeux de résultats, qui permet de détecter des modifications au jeu de résultats d’origine. L’application jamais apprend l’existence de ces jeux de résultats auxiliaire ; Il s’affiche simplement comme si le curseur est en mesure de détecter les modifications apportées à l’ensemble de résultats d’origine.
-

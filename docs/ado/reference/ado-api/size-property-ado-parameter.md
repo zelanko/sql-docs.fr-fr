@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Parameter::Size
-helpviewer_keywords:
-- Size property [ADO Parameter]
+f1_keywords: _Parameter::Size
+helpviewer_keywords: Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2208300a31c141c2092caae62bc11cfe83606cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 73a6f0f2cd2e0d59ba6cd3e581e9f2aab8934c5f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="size-property-ado-parameter"></a>Propriété Size (paramètre ADO)
 Indique la taille maximale, en octets ou de caractères, d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet.  
@@ -48,11 +44,10 @@ Indique la taille maximale, en octets ou de caractères, d’un [paramètre](../
  Le **taille** propriété est en lecture/écriture.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)  
+ [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [Taille, propriété (flux ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)
-
+ [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)

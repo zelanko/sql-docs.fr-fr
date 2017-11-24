@@ -18,17 +18,16 @@ helpviewer_keywords:
 - dependency network nodes [Analysis Services]
 - Mining Model Viewer [Analysis Services], dependency network nodes
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab11f0f2b60a67656bc5c529a17b0251fe2c9487
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Rechercher un nœud spécifique dans un réseau de dépendances
   Un réseau de dépendances dans un modèle d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut contenir plusieurs nœuds, ce qui rend difficile la recherche des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
@@ -49,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   
-

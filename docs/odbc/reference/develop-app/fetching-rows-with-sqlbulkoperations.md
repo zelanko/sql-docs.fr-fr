@@ -3,10 +3,12 @@ title: Extraction de lignes avec SQLBulkOperations | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84b8e31821e1571da8272806c5fcd7f5563a4182
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Extraction de lignes avec SQLBulkOperations
 Peuvent récupérer des données dans un ensemble de lignes à l’aide de signets par un appel à **SQLBulkOperations.** Les lignes doivent être extraites sont identifiées par les signets dans une colonne liée de signet. Colonnes avec la valeur SQL_COLUMN_IGNORE ne sont pas extraits.  
@@ -43,4 +44,3 @@ Peuvent récupérer des données dans un ensemble de lignes à l’aide de signe
 4.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_FETCH_BY_BOOKMARK.  
   
  Il n’est pas nécessaire pour l’application pour utiliser le tableau d’opération de ligne pour empêcher l’opération à réaliser sur certaines colonnes. L’application sélectionne les lignes qu’il souhaite extraire en copiant uniquement les signets pour les lignes dans le tableau de signet lié.
-

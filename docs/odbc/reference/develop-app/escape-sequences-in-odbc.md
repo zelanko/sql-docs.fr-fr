@@ -3,10 +3,12 @@ title: "Séquences d’échappement dans ODBC | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], escape sequences
 - escape sequences [ODBC], about escape sequences
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a1981e538d5ea3a8730547544f99bcbf96d0e9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 92fd9745bccacad3d7487c3ed9f1bee58eeb4411
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="escape-sequences-in-odbc"></a>Séquences d’échappement dans ODBC
 Un nombre de fonctionnalités de langage, telles que les jointures externes et des appels de fonction scalaire, est généralement implémenté par le SGBD. Toutefois, les syntaxes pour ces fonctionnalités sont susceptibles d’être propres au SGBD, même lorsque les syntaxes standards sont définis par les organismes de normalisation différents. Pour cette raison, ODBC définit des séquences d’échappement qui contiennent des syntaxes standards pour les fonctionnalités de langage suivantes :  
@@ -63,13 +64,12 @@ Un nombre de fonctionnalités de langage, telles que les jointures externes et d
   
  Cette section contient les rubriques suivantes.  
   
--   [Date, Time et Timestamp littéraux](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
+-   [Littéraux de date, d’heure et d’horodatage](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   
--   [Appels de fonction scalaire](../../../odbc/reference/develop-app/scalar-function-calls.md)  
+-   [Appels de fonctions scalaires](../../../odbc/reference/develop-app/scalar-function-calls.md)  
   
--   [COMME caractère d’échappement de prédicat](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
+-   [Caractère d’échappement du prédicat LIKE](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
 -   [Jointures externes](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [Appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md)
-

@@ -1,26 +1,23 @@
 ---
 title: "Calculer les scores en temps réel | Documents Microsoft"
 ms.custom: 
-ms.date: 07/17/2017
+ms.date: 11/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea8977d555bc30f661817b72fbf90f9198cf3088
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="realtime-scoring"></a>Calculer les scores en temps réel
 
 Cette rubrique décrit une fonctionnalité disponible dans SQL Server 2016 et SQL Server 2017 qui prend en charge le calcul de score sur les modèles d’apprentissage automatique en temps quasi réel.
@@ -54,56 +51,56 @@ Pour obtenir un exemple de comment rxPredict pouvez utilisés pour calculer les 
 
 Calculer les scores en temps réel sont prise en charge sur ces plateformes :
 
-+ Services SQL Server 2017 Machine Learning (y compris Microsoft R Server 9.1.0)
++ SQL Server 2017 Machine Learning Services
 + SQL Server R Services 2016, avec une mise à niveau de l’instance de R Services à Microsoft R Server 9.1.0 ou version ultérieure
-+ Microsoft Machine Learning Server (autonome)
++ Machine Learning Server (autonome)
 
 Sur SQL Server, vous devez activer les scores de fonctionnalité à l’avance en temps réel. Il s’agit, car la fonctionnalité nécessite l’installation des bibliothèques de basé sur CLR dans SQL Server.
 
-Pour plus d’informations concernant en temps réel de calcul de score dans un environnement distribué basé sur Microsoft R Server, reportez-vous à la [publishService](https://msdn.microsoft.com/microsoft-r/mrsdeploy/packagehelp/publishservice) fonction disponible dans le [mrsDeploy package](https://msdn.microsoft.com/microsoft-r/mrsdeploy/mrsdeploy), qui prend en charge les modèles de publication en temps réel de calcul de score en tant que nouvelle un service web en cours d’exécution sur le serveur de R.
+Pour plus d’informations concernant en temps réel de calcul de score dans un environnement distribué basé sur Microsoft R Server, reportez-vous à la [publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice) fonction disponible dans le [mrsDeploy package](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package), qui prend en charge les modèles de publication en temps réel de calcul de score en tant que nouvelle un service web en cours d’exécution sur le serveur de R.
 
 ### <a name="restrictions"></a>Restrictions
 
-+ Le modèle doit être formé à l’avance à l’aide d’une des prises en charge **rx** algorithmes. Pour plus d’informations, consultez [algorithmes pris en charge](#bkmk_rt_supported_algos). En temps réel de calcul de score avec sp_rxPredict prend en charge les algorithmes de RevoScaleR et MicrosoftML.
++ Le modèle doit être formé à l’avance à l’aide d’une des prises en charge **rx** algorithmes. Pour plus d’informations, consultez [algorithmes pris en charge](#bkmk_rt_supported_algos). En temps réel de calcul de score avec `sp_rxPredict` prend en charge les algorithmes de RevoScaleR et MicrosoftML.
 
-+ Le modèle doit être enregistré à l’aide de la nouvelle fonction de sérialisation fournie dans Microsoft R Server 9.1.0. La méthode de sérialisation a été optimisée pour prendre en charge la notation rapide.
++ Le modèle doit être enregistré à l’aide des nouvelles fonctions de sérialisation : [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R, et [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge la notation rapide.
 
-+ Calculer les scores en temps réel n’utilisent pas un interpréteur R ; Par conséquent, toutes les fonctionnalités qui peuvent nécessiter l’interpréteur R ne sont pas pris en charge lors de l’étape de calcul de score.  Celles-ci peuvent inclure :
++ Calculer les scores en temps réel n’utilisent pas un interpréteur interpréteur ; Par conséquent, toutes les fonctionnalités qui peuvent nécessiter un interpréteur ne sont pas pris en charge lors de l’étape de calcul de score.  Celles-ci peuvent inclure :
 
   + Modèles à l’aide de la `rxGlm` ou `rxNaiveBayes` algorithmes ne sont pas actuellement pris en charge
 
   + Modèles de RevoScaleR qui utilisent une fonction de transformation de R, ou une formule qui contient une transformation, tel que <code>A ~ log(B)</code> ne sont pas pris en charge dans le calcul de score en temps réel. Pour utiliser un modèle de ce type, nous vous recommandons d’effectuer la transformation sur le pour les données d’entrée avant de les transmettre à calculer les scores en temps réel.
 
-+ Calculer les scores en temps réel sont actuellement optimisé pour des prédictions rapides sur les petits jeux de données, allant de quelques lignes à des centaines de milliers de lignes. Sur les jeux de données très volumineux, le calcul de score dans R à l’aide de rxPredict peut-être être plus rapide.
++ Calculer les scores en temps réel sont actuellement optimisé pour des prédictions rapides sur les petits jeux de données, allant de quelques lignes à des centaines de milliers de lignes. Sur les jeux de données très volumineux, à l’aide de [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) peuvent être plus rapides.
 
 ### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-realtime-scoring"></a><a name="bkmk_rt_supported_algos">Algorithmes qui prennent en charge le calcul de score en temps réel
 
 + Modèles de RevoScaleR
 
-  + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)\*
-  + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)\*
-  + [rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)\*
-  + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)\*
-  + [rxdForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)\*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
   
   Modèles marquée avec \* prennent également en charge le calcul de score natif avec la fonction de prédiction.
 
 + Modèles de MicrosoftML
 
-  + [rxFastTrees](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxlogisticregression)
-  + [rxOneClassSvm](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfastlinear)
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + Transformations fournies par MicrosoftML
 
-  + [featurizeText](https://docs.microsoft.com/r-server/r-reference/microsoftml/rxfasttrees)
-  + [concat](https://docs.microsoft.com/r-server/r-reference/microsoftml/concat)
-  + [par catégorie](https://docs.microsoft.com/r-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/r-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/r-server/r-reference/microsoftml/selectFeatures)
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [par catégorie](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
 ### <a name="unsupported-model-types"></a>Types de modèles non pris en charge
 
@@ -122,4 +119,3 @@ Les types de modèles suivants ne sont pas prises en charge :
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Comment effectuer le calcul de score en temps réel](r/how-to-do-realtime-scoring.md)
-

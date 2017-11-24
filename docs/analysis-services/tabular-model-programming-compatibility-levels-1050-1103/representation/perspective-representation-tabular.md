@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 6d2636c4-dae4-448f-a1d4-dbee739e177c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d4945666e8650497c57bc2795f82378cc4bb269e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6fbef7caf08fe13a1f86e9797277c609b836bc5d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspective-representation-tabular"></a>Représentation (tabulaire) d'une perspective
   Une perspective permet de simplifier ou mettre l'accent sur une plus petite partie du modèle pour l'application cliente.  
@@ -144,4 +142,3 @@ private void updatePerspective_Click(
  Toutefois, pour connaître la façon d'utiliser AMO pour créer et manipuler des représentations de perspective consultez le code source de l'exemple Objets AMO vers objets tabulaires. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   
-

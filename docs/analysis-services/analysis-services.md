@@ -8,8 +8,7 @@ ms.component: misc
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8c3a514f91e9af8de54fdbd4d9ef851c72f1911e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="what-is-analysis-services"></a>Nouveautés d’Analysis Services ?
   Analysis Services est un moteur de données analytiques utilisé de la prise de décision et analytique d’entreprise, en fournissant les données analytiques pour les rapports d’entreprise et les applications clientes, telles que Power BI, Excel, des rapports Reporting Services et d’autres outils de visualisation de données.  
@@ -65,8 +63,7 @@ En général, la documentation Azure Analysis Services est incluse dans la docum
 *  [Modèles multidimensionnels](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
 *  [Exploration de données](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [PowerPivot pour SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
-*  [Gestion des instances](../analysis-services/instances/analysis-services-instance-management.md)    
+*  [Gestion d’instances](../analysis-services/instances/analysis-services-instance-management.md)    
 *  [Didacticiels](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Documentation pour développeurs](https://msdn.microsoft.com/library/bb500153(SQL.130).aspx)  
 *  [Informations techniques de référence (SSAS)](../analysis-services/powershell/technical-reference-ssas.md)
-

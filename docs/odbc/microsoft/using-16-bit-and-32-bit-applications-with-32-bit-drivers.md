@@ -3,10 +3,12 @@ title: "À l’aide d’Applications 16 bits et 32 bits avec les pilotes 32 bits
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - 32-bit applications with 32-bit drivers [ODBC]
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7e3b907c36e065440a9c07b93177d57745a38957
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 802b09dd83ce3671edbff33ff2be447c6279621f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>À l’aide d’Applications 16 bits et 32 bits avec les pilotes 32 bits
 > [!IMPORTANT]  
@@ -60,7 +61,6 @@ ms.lasthandoff: 09/09/2017
   
  Cette section contient les rubriques suivantes.  
   
--   [À l’aide d’Applications 16 bits avec les pilotes 32 bits](../../odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md)  
+-   [Utilisation d’applications 16 bits avec des pilotes 32 bits](../../odbc/microsoft/using-16-bit-applications-with-32-bit-drivers.md)  
   
--   [À l’aide des Applications 32 bits avec les pilotes 32 bits](../../odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md)
-
+-   [Utilisation d’applications 32 bits avec des pilotes 32 bits](../../odbc/microsoft/using-32-bit-applications-with-32-bit-drivers.md)

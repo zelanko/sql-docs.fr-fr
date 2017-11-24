@@ -4,33 +4,30 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - ReadText method [ADO], Visual Basic example
 - Write method [ADO], Visual Basic example
 - Read method [ADO], Visual Basic example
 - WriteText method [ADO], Visual Basic example
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 148d884f1effd676b4fabd80abe9f741ecc396f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c90b463c42d7f0cc289fdc35620f610a5a2980ff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lecture, ReadText, écriture et WriteText, méthodes-exemple (VB)
 Cet exemple montre comment lire le contenu d’une zone de texte dans les deux un texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) et un fichier binaire **flux**. Incluent d’autres propriétés et méthodes indiqués [Position](../../../ado/reference/ado-api/position-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), et [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
@@ -128,4 +125,3 @@ End Sub
  [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write, méthode](../../../ado/reference/ado-api/write-method.md)   
  [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)
-

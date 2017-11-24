@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 1360c23595b7ff81180352795f0a78ded3efd583
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 14287c0638d066c18662937fa53c41ffc0d4e6cb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-passwords-oracletosql"></a>La gestion des mots de passe (OracleToSQL)
 Cette section est sur la sécurisation de la procédure pour importer ou exporter les sur les serveurs et les mots de passe de base de données :  
@@ -134,4 +132,3 @@ Exemple :
 ## <a name="see-also"></a>Voir aussi  
 [L’exécution de la Console SSMA (Oracle)](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
-

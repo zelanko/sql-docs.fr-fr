@@ -3,10 +3,12 @@ title: Fonction de mappage dans le Gestionnaire de pilotes | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - driver manager [ODBC], function mapping
 - functions [ODBC], Unicode functions
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 63c908b668e4cecd93cc9930f638ccde9173b563
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Mappage de fonction dans le Gestionnaire de pilotes
 Le Gestionnaire de pilote prend en charge les deux points d’entrée pour les fonctions qui acceptent des arguments de chaîne. La fonction non décorée (**SQLDriverConnect**) est au format ANSI de la fonction. Le format Unicode est décorée avec un *W* (**SQLDriverConnectW**.)  
@@ -54,4 +55,3 @@ Le Gestionnaire de pilote prend en charge les deux points d’entrée pour les f
  Le Gestionnaire de pilote prend en charge Unicode en interne. Par conséquent, les performances optimales sont obtenu par une application Unicode opère avec un pilote Unicode, car le Gestionnaire de pilotes transmet simplement fonctions Unicode via le pilote. Lorsqu’une application ANSI fonctionne avec un pilote ANSI, le Gestionnaire de pilotes doit convertir des chaînes d’ANSI en Unicode lors du traitement de certaines fonctions, telles que **SQLDriverConnect**. Après le traitement de la fonction, le Gestionnaire de pilotes doit puis convertir la chaîne Unicode en ANSI avant l’envoi de la fonction au pilote ANSI.  
   
  Une application ne doit pas modifier ou lire ses tampons de paramètres liés, lorsque le pilote retourne SQL_NEED_DATA ou SQL_STILL_EXECUTING. Le Gestionnaire de pilotes laisse les mémoires tampons liés à la norme ANSI jusqu'à ce que le pilote retourne SQL_SUCCESS, SQL_SUCCESS_WITH_INFO ou SQL_ERROR. Une application multithread ne doit pas accéder à toutes les valeurs de paramètre lié un autre thread s’exécute une instruction SQL. Le Gestionnaire de pilote convertit les données Unicode en ANSI « sur place », et l’autre thread peut voir les données ANSI dans ces mémoires tampons pendant que le pilote traite toujours l’instruction SQL. Applications qui lient des données Unicode à un pilote ANSI ne doivent pas lier deux colonnes différentes à la même adresse.
-

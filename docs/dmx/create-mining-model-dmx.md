@@ -2,9 +2,12 @@
 title: "CRÉER LE MODÈLE D’EXPLORATION DE DONNÉES (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,8 +17,7 @@ f1_keywords:
 - CREATE MINING MODEL
 - CREATE
 - CREATE_MINING_MODEL
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - RELATED TO column
 - mining models [Analysis Services], creating
@@ -24,19 +26,19 @@ helpviewer_keywords:
 - SESSION clause
 - CREATE MINING MODEL statement
 ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 279d4750f6264cbffb07e26a0d75317a1457cb56
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a8cdeac4e5da9e232959777278e5b5d0c45d7ac7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crée à la fois un modèle d'exploration de données et une structure d'exploration de données dans la base de données. Vous pouvez créer un modèle en définissant le nouveau modèle dans l'instruction ou en utilisant le langage PMML (Predictive Model Markup Language). La deuxième option s'adresse uniquement aux utilisateurs expérimentés.  
   
@@ -131,7 +133,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |\<PRÉDICTION > clause| Description|  
 |---------------------------|-----------------|  
-|**PRÉDIRE**|Cette colonne peut être prédite par le modèle, et elle peut être fournie à des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
+|**PREDICT**|Cette colonne peut être prédite par le modèle, et elle peut être fournie à des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
 |**PREDICT_ONLY**|Cette colonne peut être prédite par le modèle, mais ses valeurs ne peuvent pas être utilisées dans des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
   
 ### <a name="parameter-definition-list"></a>Liste des définitions des paramètres  
@@ -212,4 +214,3 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

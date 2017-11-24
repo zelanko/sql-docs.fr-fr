@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 267d3e30f61539da24ed22d54c4355945da21999
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b9bc26477c4b43e47588280e2cce74096b810c5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Paramètres (Type de mappage) du projet (DB2ToSQL)
 La page mappage de Type de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
@@ -80,7 +78,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
-|Décimal|float [53]|  
+|decimal|float [53]|  
 |double précision|float [53]|  
 |float|float [53]|  
 |int|int|  
@@ -97,13 +95,13 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |nchar|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |nombre|float [53]|  
-|numérique|float [53]|  
+|numeric|float [53]|  
 |NVARCHAR2|nvarchar(max)|  
 |pls_integer|int|  
 |brut|varbinary(max)|  
 |real|float [53]|  
 |ID de ligne|uniqueidentifier|  
-|signtype|smallint|  
+|Signtype|smallint|  
 |smallint|smallint|  
 |chaîne|varchar(max)|  
 |timestamp|datetime2|  
@@ -138,7 +136,7 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|Décimal|Decimal [38] [0]|  
+|decimal|Decimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |double précision|float [53]|  
@@ -166,7 +164,7 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |nombre|float [53]|  
 |nombre [*.. \*]|numérique [*]|  
 |nombre [*.. \*][\*.. \*]|numérique [*] [\*]|  
-|numérique|numérique|  
+|numeric|numeric|  
 |numérique [*.. \*]|numérique [*]|  
 |numérique [*.. \*][\*.. \*]|numérique [*] [\*]|  
 |NVARCHAR2 [*.. \*]|nvarchar [*]|  
@@ -212,7 +210,7 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|Décimal|Decimal [38] [0]|  
+|decimal|Decimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |double précision|float [53]|  
@@ -276,4 +274,3 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 ## <a name="see-also"></a>Voir aussi  
 [Référence de l’Interface utilisateur &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

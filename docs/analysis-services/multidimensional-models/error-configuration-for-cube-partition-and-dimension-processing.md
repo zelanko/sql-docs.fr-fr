@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuration d’erreur pour le Cube, Partition et le traitement de Dimension
   Les propriétés de configuration d'erreur sur les objets cube, partition ou de dimension déterminent le mode de réponse du serveur lorsqu'une erreur d'intégrité des données se produit pendant le traitement. Les clés dupliquées, manquantes et les valeurs NULL dans une colonne clé déclenchent généralement ces erreurs, et comme l'enregistrement à l'origine de l'erreur n'est pas ajouté à la base de données, vous pouvez définir des propriétés qui déterminent ce qui se produit après. Par défaut, le traitement s'arrête. Cependant, lorsque vous développez le cube, vous pouvez souhaiter que le traitement continue lorsque des erreurs se produisent afin de tester le comportement du cube avec des données importées, même si elles sont incomplètes.  
@@ -195,4 +194,3 @@ ms.lasthandoff: 09/01/2017
  [Définition des propriétés de traitement des valeurs Null et membre inconnu](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

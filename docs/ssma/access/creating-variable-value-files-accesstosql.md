@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a04787fdf99c804a7ec304ae4f022583a192508f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de la valeur de la Variable (AccessToSQL)
 Un fichier de valeurs de Variable est un fichier XML contenant les valeurs de paramètre des commandes qui changent fréquemment sur les migrations de serveurs (par exemple, le nom du serveur source ou de destination). En cas d’un grand nombre de migrations de la base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec le **– v** passer à la ligne de commande. Ce comportement permet de conserver des valeurs statiques dans plusieurs fichiers de script avec les valeurs des variables dans plusieurs fichiers de variable.  
@@ -105,4 +103,3 @@ L’étape suivante d’exploitation de la console est [créer les fichiers de c
 ## <a name="see-also"></a>Voir aussi  
 [Création des fichiers de connexion de serveur (accès)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
-

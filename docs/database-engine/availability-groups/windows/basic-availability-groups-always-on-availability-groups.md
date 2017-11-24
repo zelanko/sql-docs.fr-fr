@@ -2,11 +2,12 @@
 title: "Groupes de disponibilité de base (Groupes de disponibilité Always On) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/27/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2704a726c3d9c6caffd1c26bac0cfb3926d1c0b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Groupes de disponibilité de base (Groupes de disponibilité Always On)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Les groupes de disponibilité Always On de base fournissent une solution haute disponibilité pour SQL Server 2016 et SQL Server 2017 Standard Edition. Un groupe de disponibilité de base prend en charge un environnement de basculement pour une base de données unique. Il est créé et géré davantage comme les [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) classiques (avancés) avec Enterprise Edition. Les différences et limitations des groupes de disponibilité de base sont résumées dans ce document.  
   

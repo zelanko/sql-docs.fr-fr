@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - uploading objects into SQL Azure
 - uploading objects into SQL Server
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: de8c4e743f214e1a53ec1fe5a0cc3190a0b5d6b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5def0c73f1c77a289eb926c4d8ab7691a6d19253
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Chargement converti objets base de données dans SQL Server (AccessToSQL)
 Après avoir converti les objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous pouvez charger les objets de base de données qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Vous pouvez avoir créer les objets SSMA, ou vous pouvez les objets de script et exécuter les scripts vous-même. SSMA vous permet également de mettre à jour des métadonnées de la cible avec le contenu réel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou de la base de données SQL Azure.  
@@ -151,4 +149,3 @@ L’étape suivante du processus de migration est [migrer des données vers SQL 
 ## <a name="see-also"></a>Voir aussi  
 [Migration des bases de données de l’accès à SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

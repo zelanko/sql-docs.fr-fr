@@ -3,26 +3,26 @@ title: "Programme d’installation | Documents Microsoft"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 741ccfc8e9a096b60eca94b125890d48f65eb764
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-program"></a>Programme d’installation
 > **Remarque :** en commençant par Windows XP et Windows Server 2003, **ODBC est inclus dans le système d’exploitation Windows**. Vous devez explicitement uniquement installer ODBC dans les versions antérieures de Windows.  
@@ -34,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  La quantité de l’installation s’effectue par le programme d’installation dépend de ce que les appels dans le programme d’installation DLL de fonctions. Le programme d’installation DLL contient des fonctions pour l’installation de composants ODBC. Le programme d’installation appelle simplement **SQLInstallDriverManager**, **SQLInstallDriverEx**, ou **SQLInstallTranslatorEx** dans le programme d’installation de la DLL pour récupérer le chemin d’accès du répertoire dans lequel le composant à installer et à ajouter des informations sur le composant dans le Registre. Ces fonctions ne copient pas réellement les fichiers ; le programme d’installation pour cela en utilisant les informations dans les arguments de ces fonctions.  
   
  Le programme d’installation DLL contient également des fonctions pour supprimer des composants ODBC. Le programme d’installation appelle **SQLRemoveDriverManager**, **SQLRemoveDriver**, ou **SQLRemoveTranslator** dans le programme d’installation DLL pour décrémenter le décompte d’utilisation d’un composant dans le Registre et, si le nouveau nombre de l’utilisation du composant tombe à 0, supprimez toutes les informations sur le composant à partir du Registre. Ces fonctions ne suppriment pas réellement les fichiers pour le composant ; le programme d’installation pour cela, si le décompte d’utilisation se situe à 0.
-

@@ -3,10 +3,12 @@ title: "Transitions d’état | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - allocated state [ODBC]
 - connection state [ODBC]
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a0483bc53e02fa645c48200323ed4573105d37dd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="state-transitions"></a>Transitions d’état
 ODBC définit discrètes *états* pour chaque environnement, chaque connexion et chaque instruction. Par exemple, l’environnement a trois états possibles : non alloué (dans lequel aucun environnement n’est affectée), alloué (dans lequel un environnement est alloué, mais aucune connexion n’est allouées) et la connexion (dans lequel un environnement et une ou plusieurs connexions sont allouées). Les connexions ont sept États possibles ; les instructions avoir 13 états possibles.  
@@ -42,4 +43,3 @@ ODBC définit discrètes *états* pour chaque environnement, chaque connexion et
  Du point de vue de l’application, les transitions d’état sont généralement simples : transitions d’état autorisées ont tendance à aller de pair avec le flux d’une application bien écrite. Transitions d’état sont plus complexes pour le Gestionnaire de pilotes et les pilotes, car ils doivent suivre l’état de l’environnement, chaque connexion et chaque instruction. La plupart de ce travail est effectuée par le Gestionnaire de pilotes ; la plupart du travail qui doit être effectuée par les pilotes se produit avec les instructions avec des résultats en attente.  
   
  Les parties 1 et 2 de ce manuel (« Introduction to ODBC » et « Développement des Applications et des pilotes ») sont généralement ne pas mentionner explicitement les transitions d’état. Au lieu de cela, elles décrivent l’ordre dans lequel les fonctions doivent être appelées. Par exemple, « L’exécution des instructions » indique qu’une instruction doit être préparée avec **SQLPrepare** avant de pouvoir être exécuté avec **SQLExecute**. Pour obtenir une description complète des États et transitions d’état, ainsi que les transitions sont vérifiées par le Gestionnaire de pilotes qui doivent être vérifié par les pilotes, consultez [Tables de Transition d’état annexe b : ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
-

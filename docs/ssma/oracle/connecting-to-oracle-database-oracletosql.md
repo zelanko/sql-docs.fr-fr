@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Refreshing Oracle Metadata
+helpviewer_keywords: Refreshing Oracle Metadata
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: cc1639022e61c9a79e6d185c984bd13d1e4acaaa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6a4ac43e0f79e8f7841f8f9d4234ccdd988a7b6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Connexion à la base de données Oracle (OracleToSQL)
 Pour migrer des bases de données Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez vous connecter à la base de données Oracle que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à tous les schémas Oracle, puis l’affiche dans le volet Explorateur de métadonnées d’Oracle. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
@@ -133,4 +130,3 @@ Métadonnées relatives à la base de données Oracle ne sont pas actualisée au
 ## <a name="see-also"></a>Voir aussi  
 [Migration bases de données Oracle pour SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

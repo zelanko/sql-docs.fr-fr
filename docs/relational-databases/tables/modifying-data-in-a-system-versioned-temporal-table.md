@@ -1,10 +1,13 @@
 ---
 title: "Modification des données dans une table temporelle avec système par version | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/28/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1ed023d0892262a8491cc434048e8932510e0e3b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 23e504dd3b54b7cd2c2f2eced0cc9056b009e377
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modification des données dans une table temporelle avec système par version
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les données d'une table temporelle avec système par version sont modifiées à l'aide d’instructions DML régulières avec une différence importante : les données de la colonne de période ne peuvent pas être directement modifiées. Lorsque des données sont mises à jour, des versions sont générées, et la version précédente de chaque ligne mise à jour est insérée dans la table d'historique. Lorsque des données sont supprimées, la suppression est logique : la ligne est déplacée dans la table d'historique à partir de la table actuelle et n'est pas définitivement supprimée.  
   

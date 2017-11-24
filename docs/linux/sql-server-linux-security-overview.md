@@ -6,16 +6,20 @@ ms.author: rickbyh
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
+ms.openlocfilehash: 6564447c9b07bbf8147ca256d2898c535199c7f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 45f88572804d236c209ab86884fc0fcbc432bc62
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Limitations de sécurité pour SQL Server sur Linux
 
@@ -34,4 +38,3 @@ Pour plus d’informations sur les fonctionnalités de sécurité disponibles da
 
 Pour les tâches de sécurité courantes, consultez [prise en main des fonctionnalités de sécurité de SQL Server sur Linux](sql-server-linux-security-get-started.md).   
 Pour obtenir un script modifier le protocole TCP numéro de port, les répertoires de SQL Server et configurer des traceflags ou le classement, consultez [configurer SQL Server sur Linux avec mssql-conf](sql-server-linux-configure-mssql-conf.md).
-

@@ -3,10 +3,12 @@ title: Les Applications Unicode | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a09b99c9fdf819cbc78cfe68a7d78634187f2426
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-applications"></a>Applications Unicode
 Vous pouvez recompiler une application comme une application Unicode de deux manières :  
@@ -45,4 +46,3 @@ Vous pouvez recompiler une application comme une application Unicode de deux man
  Une fonction peut être appelée de trois manières : en tant qu’un appel de fonction Unicode uniquement (avec la *W* suffixe), comme un appel de fonction ANSI uniquement (avec la *A* suffixe), ou en tant que l’appel de fonction ODBC sans suffixe. Les arguments pour les trois formes d’une fonction sont identiques. Seules les fonctions avec SQLCHAR \* arguments ou des arguments SQLPOINTER qui pointent vers les chaînes nécessitent des formulaires Unicode et ANSI. Pour les fonctions qui possèdent des arguments qui peuvent être déclarés comme type de caractère, tel que **SQLBindCol** ou **SQLGetData** (qui n’ont pas les formulaires Unicode et ANSI), l’argument peut être déclaré comme type Unicode, le type ANSI, ou dans le cas d’un argument de type C, la macro SQL_C_TCHAR. Pour plus d’informations, consultez [les données Unicode](../../../odbc/reference/develop-app/unicode-data.md).  
   
  Une application peut être écrite comme une application Unicode, même si aucun pilote Unicode n’est disponibles pour qu’il fonctionne avec. Le Gestionnaire de pilotes mappera les types de fonctions et les données Unicode en ANSI. Il existe certaines restrictions à Unicode aux mappages ANSI qui peuvent être effectuées. L’existence d’un pilote Unicode pour l’application Unicode pour travailler avec entraîne de meilleures performances et supprime les restrictions liées aux Unicode aux mappages d’ANSI.
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- power-view
+ms.technology: power-view
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: abdb6547c70842f0aa223aee2d35755a2a22e69b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
   Cette rubrique décrit le déploiement et la configuration des améliorations intermédiaires apportées aux fonctionnalités [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , dont la Galerie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , l’actualisation des données de planification, le tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013** pour effectuer les opérations suivantes :  
@@ -151,4 +149,3 @@ ms.lasthandoff: 09/01/2017
  Pour plus d'informations sur l'outil de configuration, consultez [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   
   
-

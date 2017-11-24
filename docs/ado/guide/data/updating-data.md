@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - data updates [ADO], about data updates
 - updating data [ADO], about updating data
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 85a34b6343f5f6251ab6f43f6802acd27bee4a3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8138aeea7e5ea40e659a6fed5f5d5f551b1c69d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updating-data"></a>Mise à jour des données
 Comportement de mise à jour et fonctionnalités dépend en grande partie mettre à jour le mode (type de verrou), type de curseur et l’emplacement du curseur.  
@@ -41,7 +39,6 @@ Comportement de mise à jour et fonctionnalités dépend en grande partie mettre
   
 -   [Mode immédiat](../../../ado/guide/data/immediate-mode.md)  
   
--   [En Mode Batch](../../../ado/guide/data/batch-mode.md)  
+-   [Mode batch](../../../ado/guide/data/batch-mode.md)  
   
 -   [Traitement des transactions](../../../ado/guide/data/transaction-processing.md)
-

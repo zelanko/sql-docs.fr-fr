@@ -3,27 +3,28 @@ title: "Connexion à une Source de données (le pilote ODBC pour Oracle) | Docum
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connecting to data source [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], connecting to data sources
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b06651615b2e7578b277984c278d680ae9077f2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 054c274bc65c0f4ecf149607216f62e9e15df225
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>Connexion à une Source de données (le pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -42,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 2.  Renseignez les informations appropriées pour la boîte de dialogue se connecter, puis cliquez sur OK.  
   
  Une fois la connexion le cas échéant, votre application peut utiliser le pilote ODBC pour Oracle pour accéder aux informations de la source de données contient.
-

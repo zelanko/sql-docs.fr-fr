@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4d46ec3bdad80879ddc4a931d8668a5298972e58
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciation des événements ADO : ADO et WFC
 ADO pour Windows Foundation Classes (ADO/WFC) repose sur le modèle d’événement ADO et présente une interface de programmation d’application simplifiée. En général, ADO/WFC intercepte les événements ADO, consolide les paramètres d’événement dans une classe d’événement unique, puis appelle le Gestionnaire d’événements.  
@@ -74,4 +72,3 @@ ADO pour Windows Foundation Classes (ADO/WFC) repose sur le modèle d’événem
  [Paramètres d’événement](../../../ado/guide/data/event-parameters.md)   
  [Fonctionnement conjoint des gestionnaires d’événements](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Types d’événements](../../../ado/guide/data/types-of-events.md)
-

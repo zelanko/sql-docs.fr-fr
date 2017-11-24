@@ -5,27 +5,24 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Find Databases Wizard
+helpviewer_keywords: Find Databases Wizard
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c2156cf4dc39f411eec6043c909b9b4b009cffa9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 121eaac78860ce58d2028f62f352e66e951558b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Assistant de bases de données de la recherche (Vérifiez la sélection) (AccessToSQL)
 La page vérifier la sélection de l’Assistant trouver les bases de données répertorie les fichiers à ajouter à SSMA. Si la liste des fichiers est incorrecte, cliquez sur **retour** pour modifier la liste. Sinon, cliquez sur **Terminer** pour ajouter les fichiers.  
@@ -45,4 +42,3 @@ Affiche le propriétaire du fichier.
 ## <a name="see-also"></a>Voir aussi  
 [Reference(Access) d’Interface utilisateur](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

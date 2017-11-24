@@ -6,11 +6,19 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
+ms.openlocfilehash: 9cf216249d8e5971eb480e79bf9d97756cb3d948
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
+
 ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
 ms.openlocfilehash: 48e2d1ae54100f7ea83bdd677bf4a98859825b67
 ms.contentlocale: fr-fr

@@ -3,10 +3,12 @@ title: "Annexe d : les Types de données | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe3088b5a750bd47f4d9a2c8288a1cedbd87be4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-d-data-types"></a>Annexe d : les Types de données
 ODBC définit deux ensembles de types de données : SQL des types de données et les types de données C. Types de données SQL indiquent le type de données des données stockées dans la source de données. Types de données C indiquent le type de données des données stockées dans les mémoires tampon d’application.  
@@ -41,27 +42,26 @@ ODBC définit deux ensembles de types de données : SQL des types de données e
   
  Cette annexe contient les rubriques suivantes.  
   
--   [À l’aide d’identificateurs de Type de données](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
+-   [Utilisation d’identificateurs de types de données](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   
 -   [Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md)  
   
--   [Types de données C](../../../odbc/reference/appendixes/c-data-types.md)  
+-   [Type de données C](../../../odbc/reference/appendixes/c-data-types.md)  
   
--   [Les identificateurs de Type de données et les descripteurs de](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
+-   [Identificateurs et descripteurs des types de données](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
   
--   [Identificateurs de Type pseudo-aléatoire](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
+-   [Identificateurs des pseudo-types](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
   
--   [Transfert de données dans sa forme binaire](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
+-   [Transfert de données dans leur forme binaire](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
--   [Instructions pour l’intervalle et Types de données numériques](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
+-   [Conseils pour les types de données d’intervalle et numériques](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
 -   [Contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
   
--   [Taille de la colonne, des chiffres décimaux, transfert de la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
+-   [Taille de colonne, nombres décimaux, longueur en octets du transfert et taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
   
--   [Conversion de données à partir de SQL pour Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
+-   [Conversion de données de SQL en types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
   
--   [Conversion de données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
+-   [Conversion de données de C en types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  Pour obtenir une explication des types de données ODBC, consultez [des Types de données dans ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.
-

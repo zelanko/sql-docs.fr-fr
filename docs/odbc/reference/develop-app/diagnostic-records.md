@@ -3,10 +3,12 @@ title: Les enregistrements de diagnostic | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 13dbdcb97bb56f665d6688b981dfc472349b54bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 598f047d1ae18e2c37587df270001b49d1b15831
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-records"></a>Enregistrements de diagnostic
 Associé à chaque environnement, connexion, l’instruction et handle de descripteur sont *les enregistrements de diagnostic*. Ces enregistrements contiennent des informations de diagnostic sur la dernière fonction appelée qui a utilisé un handle donné. Les enregistrements sont remplacés uniquement quand une autre fonction est appelée à l’aide de ce descripteur. Il n’existe aucune limite au nombre d’enregistrements de diagnostic qui peuvent être stockés à tout moment.  
@@ -42,4 +43,3 @@ Associé à chaque environnement, connexion, l’instruction et handle de descri
 -   [Enregistrement d’en-tête](../../../odbc/reference/develop-app/header-record.md)  
   
 -   [Enregistrements d’état](../../../odbc/reference/develop-app/status-records.md)
-

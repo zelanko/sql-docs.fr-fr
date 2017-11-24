@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::CacheSize
-helpviewer_keywords:
-- CacheSize property [ADO]
+f1_keywords: Recordset15::CacheSize
+helpviewer_keywords: CacheSize property [ADO]
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 29d5a36905a4de936dcac630adf97688d2b40855
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cachesize-property-ado"></a>CacheSize, propriété (ADO)
 Indique le nombre d’enregistrements d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet mis en cache localement dans la mémoire.  
@@ -53,10 +49,9 @@ Indique le nombre d’enregistrements d’un [Recordset](../../../ado/reference/
  Si **CacheSize** est défini sur une valeur supérieure à 1, les méthodes de navigation ([déplacer](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) peut entraîner la navigation vers un supprimé l’enregistrement, si la suppression a lieu après la récupération des enregistrements. Après l’extraction initiale, les suppressions suivantes seront répercutées dans votre cache de données jusqu'à ce que vous tentez d’accéder à une valeur de données à partir d’une ligne supprimée. Toutefois, l’affectation **CacheSize** une élimine ce problème, car les lignes supprimées ne peuvent pas être extraites.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété CacheSize (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [Exemple de propriété CacheSize (VC ++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [Exemple de propriété CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
-
+ [CacheSize, exemple de propriété (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

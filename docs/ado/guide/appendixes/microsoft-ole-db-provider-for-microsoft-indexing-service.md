@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2303810eb0856db07b096927559f2db18ce29838
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Fournisseur Microsoft OLE DB pour l’indexation de vue d’ensemble du Service Microsoft
 Le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft fournit un accès en lecture seule par programmation pour le système de fichiers et données Web indexées par le Service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer des informations de propriété de contenu et de fichiers.
@@ -125,4 +123,3 @@ MSIDXS
 
 ## <a name="see-also"></a>Voir aussi
  [CommandType, propriété (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString, propriété (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [fournisseur, propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ L’objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [prend en charge (méthode)](../../../ado/reference/ado-api/supports-method.md)
-

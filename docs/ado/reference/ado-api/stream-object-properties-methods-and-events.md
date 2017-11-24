@@ -4,34 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Stream object [ADO], members
+helpviewer_keywords: Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b16f5729754582e038b9e12f9e68014967006d2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f65f612a0175ac59cc2f7be99498d7c295fe0dd3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Propriétés de l’objet stream, méthodes et événements
 ## <a name="properties"></a>Propriétés  
  [Propriété de jeu de caractères](../../../ado/reference/ado-api/charset-property-ado.md)  
   
- [Propriété de la fin du support](../../../ado/reference/ado-api/eos-property.md)  
+ [EOS, propriété](../../../ado/reference/ado-api/eos-property.md)  
   
  [LineSeparator, propriété](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
@@ -39,11 +36,11 @@ ms.lasthandoff: 09/09/2017
   
  [Propriété position](../../../ado/reference/ado-api/position-property-ado.md)  
   
- [Taille, propriété (flux ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
+ [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
  [State, propriété](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Type, propriété (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+ [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Méthodes  
  [Cancel (méthode)](../../../ado/reference/ado-api/cancel-method-ado.md)  
@@ -56,7 +53,7 @@ ms.lasthandoff: 09/09/2017
   
  [LoadFromFile (méthode)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
- [Open (méthode) (flux ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
  [Read, méthode](../../../ado/reference/ado-api/read-method.md)  
   
@@ -78,5 +75,4 @@ ms.lasthandoff: 09/09/2017
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

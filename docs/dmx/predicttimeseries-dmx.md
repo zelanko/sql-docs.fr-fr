@@ -2,18 +2,19 @@
 title: PredictTimeSeries (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictTimeSeries
-dev_langs:
-- DMX
+f1_keywords: PredictTimeSeries
+dev_langs: DMX
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - time series [Analysis Services]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - REPLACE_MODEL_CASES parameter
 - PredictTimeSeries function
 ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: eba719cb9cc1463b83e6e8aeda8b489d05fba53a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6770961f4e48ca2f6d96aecb4d51e679af396d0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne les valeurs suivantes prédites pour les données de série chronologique. Les données de séries chronologiques étant continues, elles peuvent être stockées dans une table imbriquée ou une table de cas. Le **PredictTimeSeries** fonction retourne toujours une table imbriquée.  
   
@@ -275,4 +275,3 @@ OR [Model Region] = 'M200 North America'
  [Prédire &#40; DMX &#41;](../dmx/predict-dmx.md)  
   
   
-

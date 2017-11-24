@@ -8,22 +8,20 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 881cdb2e9fc9d7faf8423574efa944c4149ded22
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -598,4 +596,3 @@ Si une valeur qui vient d’être mise à jour n’est pas correcte, dans de nom
  [Vues et fonctions de métadonnées de table temporelle](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
-

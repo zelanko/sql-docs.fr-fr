@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ad72f038095af14c6df605c3d018da0feec7b847
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: 2d716dc332ec8271a11498b6385d4801b64b808a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-sources-supported-in-tabular-models"></a>Sources de données prises en charge dans les modèles tabulaires
 
@@ -78,4 +77,3 @@ Importer plusieurs tables, puis supprimer celles dont vous n'avez pas besoin peu
 Les colonnes qui contiennent des données similaires dans différentes sources de données constituent la base de la création de relations dans le générateur de modèles. Si vous utilisez des sources de données hétérogènes, choisissez des tables qui comportent des colonnes pouvant être mappées à des tables d'autres sources de données qui contiennent des données identiques ou similaires.  
   
 Fournisseurs OLE DB peuvent parfois offrir de meilleures performances pour les données à grande échelle. Quand vient le moment de faire votre choix parmi différents fournisseurs pour la même source de données, il est conseillé d'essayer en premier le fournisseur OLE DB.  
-

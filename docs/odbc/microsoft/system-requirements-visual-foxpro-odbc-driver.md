@@ -3,10 +3,12 @@ title: "Configuration système requise (le pilote ODBC Visual FoxPro) | Document
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 842f31d5444513a6acde47f3a502806578b9baeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Configuration système requise (le pilote ODBC Visual FoxPro)
 La configuration requise pour l’installation fournit la configuration minimale du système d’exploitation et l’espace disque nécessaires à l’installation du pilote. Une fois que vous avez installé le pilote, vous pouvez sélectionner le logiciel d’application spécifique que vous souhaitez utiliser pour accéder aux données Visual FoxPro.  
@@ -60,4 +61,3 @@ La configuration requise pour l’installation fournit la configuration minimale
  Le pilote ODBC Visual FoxPro prend en charge les jeux de caractères à deux octets (DBCS). Pour plus d’informations, consultez [prise en charge internationale](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
  Le pilote ne prend pas en charge les applications de Microsoft Windows 3.1 16 bits.
-

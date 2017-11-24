@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71a89ccaf6d6c8ce7022d2441814b2a6284d1993
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4d0b2c896be1059d999418d1f88053225c5d44a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-objects-and-interfaces"></a>Objets et interfaces ADO
 Les relations entre ces objets sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -38,10 +36,10 @@ Les relations entre ces objets sont représentées dans le [modèle objet ADO](.
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Utilisé pour récupérer la commande OLEDB sous-jacente à partir d’un objet ADOCommand.|  
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Construit un ADO **enregistrement** objet OLE DB **ligne** objet dans une application C/C++.|  
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Construit un ADO **Recordset** objet OLE DB **ensemble de lignes** objet dans une application C/C++.|  
-|[Interface de ADOStreamConstruction](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Construit un ADO **flux** objet OLE DB **IStream** objet dans une application C/C++.|  
+|[ADOStreamConstruction, interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Construit un ADO **flux** objet OLE DB **IStream** objet dans une application C/C++.|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.<br /><br /> Le **commande** l’objet n’est pas sécurisé pour le script.|  
 |[Connexion](../../../ado/reference/ado-api/connection-object-ado.md)|Représente une connexion ouverte à une source de données.<br /><br /> Le **connexion** objet est sécurisé pour le script.|  
-|[Interface de IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet sous-jacent de la Source de données OLE DB pour le fournisseur SHAPE.|  
+|[IDSOShapeExtensions, interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet sous-jacent de la Source de données OLE DB pour le fournisseur SHAPE.|  
 |[Erreur](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> Le **erreur** objet n’est pas sécurisé pour le script.|  
 |[Field](../../../ado/reference/ado-api/field-object.md)|Représente une colonne de données avec un type de données commun.|  
 |[Paramètre](../../../ado/reference/ado-api/parameter-object.md)|Représente un paramètre ou un argument associé à un **commande** objet basé sur une procédure stockée ou une requête paramétrable.<br /><br /> Le **paramètre** objet n’est pas sécurisé pour le script.|  
@@ -60,4 +58,3 @@ Les relations entre ces objets sont représentées dans le [modèle objet ADO](.
  [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
-

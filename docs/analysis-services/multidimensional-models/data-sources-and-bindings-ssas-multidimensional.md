@@ -38,17 +38,16 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 64aee5ba79973ea7ceca7020a4ee7dda04a12637
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
   Les cubes, les dimensions et autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
@@ -198,4 +197,3 @@ ms.lasthandoff: 09/01/2017
  Un élément supplémentaire autorisé dans un élément **Binding** qui n'existe pas directement dans le DDL est **ParentColumnID**, utilisé pour les tables imbriquées pour l'exploration de données. Dans ce cas, il est nécessaire d'identifier la colonne parente dans la table imbriquée pour laquelle la liaison est fournie.  
   
   
-

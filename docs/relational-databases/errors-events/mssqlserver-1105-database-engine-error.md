@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1105 (Database Engine error)
+helpviewer_keywords: 1105 (Database Engine error)
 ms.assetid: e7f4ad02-8c7f-4bb9-9781-2c86253f2138
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6351998ecebd4a63c6fff509cb535f6107247513
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 28cb37ebdca0e3bb0078c591a78ff099ac44c5a7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver1105"></a>MSSQLSERVER_1105
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,4 +55,3 @@ Les actions ci-dessous peuvent éventuellement créer de l'espace disponible dan
 > [!NOTE]  
 > Si un index se trouve sur plusieurs fichiers, **ALTER INDEX REORGANIZE** peut retourner une erreur 1105 quand l’un des fichiers est plein. Le processus de réorganisation est bloqué quand il tente de déplacer des lignes vers le fichier plein. Pour contourner cette limitation, effectuez une opération **ALTER INDEX REBUILD** au lieu de **ALTER INDEX REORGANIZE** ou augmentez la limite de croissance des fichiers qui sont pleins.  
   
-

@@ -3,10 +3,12 @@ title: Insertion de lignes avec SQLBulkOperations | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 854db50773ce22ec96641cbb6848fe8884b0c61c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Insertion de lignes avec SQLBulkOperations
 Insertion de données avec **SQLBulkOperations** est similaire à la mise à jour des données avec **SQLBulkOperations** , car elle utilise les données du tampon de l’application liée.  
@@ -40,4 +41,3 @@ Insertion de données avec **SQLBulkOperations** est similaire à la mise à jou
 3.  Appels **SQLBulkOperations** avec la *opération* argument a la valeur SQL_ADD.  
   
  Après avoir **SQLBulkOperations** est retournée, la ligne actuelle est inchangée. Si la signet colonne (0) est liée, **SQLBulkOperations** retourne les signets des lignes insérées dans la mémoire tampon d’ensemble de lignes est liées à cette colonne.
-

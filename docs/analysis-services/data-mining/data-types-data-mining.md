@@ -18,17 +18,16 @@ helpviewer_keywords:
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 380a7208eceb9468e4bca2490f04c79149d4665d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8caea228dd0ddd646c90b7e5661a8d4fd2b4a722
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-types-data-mining"></a>Types de données (Exploration de données)
   Quand vous créez un modèle d’exploration de données ou une structure d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez définir les types de données pour chacune des colonnes dans la structure d’exploration de données. Le type de données indique au moteur d’analyse si les données dans la source de données sont numériques ou de texte, et comment elles doivent être traitées. Par exemple, si vos données sources contiennent des données numériques, vous pouvez spécifier si les nombres doivent être traités en tant qu'entiers ou en utilisant des décimales.  
@@ -66,7 +65,6 @@ ms.lasthandoff: 09/01/2017
  [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Types de données &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
  [Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
- [Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
-

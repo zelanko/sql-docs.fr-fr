@@ -5,22 +5,20 @@ ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6c4a4f66-ea3e-4a73-acf2-6c8aeafc94b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2fb02e5c71ae74afb4dd48e6a02e36a1c7dce9b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="architecture-overview-for-r-in-sql-server"></a>Présentation de l’architecture de R dans SQL Server
 
@@ -58,9 +56,8 @@ En appliquant la sécurité au niveau de la table, la base de données et le niv
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Composants qui prennent en charge l’intégration R](new-components-in-sql-server-to-support-r.md)
+[Composants prenant en charge l’intégration de R](new-components-in-sql-server-to-support-r.md)
 
 [Interopérabilité de R](r-interoperability-in-sql-server.md)
 
 [Vue d’ensemble de la sécurité](security-overview-sql-server-r.md)
-

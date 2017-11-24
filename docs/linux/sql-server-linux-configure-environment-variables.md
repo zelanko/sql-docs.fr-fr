@@ -6,16 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 07/21/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
+ms.openlocfilehash: a599b0857ecad6d68aad77861e5ad29a71d8162c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
@@ -89,4 +93,3 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Pour les autres paramètres de SQL Server non répertoriés ici, consultez [configurer SQL Server sur Linux avec l’outil mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 Pour plus d’informations sur la façon d’installer et exécuter SQL Server sur Linux, consultez [installer SQL Server sur Linux](sql-server-linux-setup.md).
-

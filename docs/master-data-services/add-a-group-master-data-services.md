@@ -2,9 +2,12 @@
 title: Ajouter un groupe (Master Data Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c712da7b348a191e9cd68f37e267ff116980d6b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a7e0d8aab20d5d92bbc9b74c84d8159bcb560d3d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-a-group-master-data-services"></a>Ajouter un groupe (Master Data Services)
   Ajoutez un groupe à la liste **Groupes** dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour commencer la procédure d’affectation d’une autorisation d’accès à l’application web. Pour qu’un utilisateur du groupe puisse accéder à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez accorder au groupe une autorisation d’accès à un ou plusieurs objets de modèle et zones fonctionnelles.  

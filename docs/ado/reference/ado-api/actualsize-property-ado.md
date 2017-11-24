@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Field20::ActualSize
-helpviewer_keywords:
-- ActualSize property [ADO]
+f1_keywords: Field20::ActualSize
+helpviewer_keywords: ActualSize property [ADO]
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2aea06491a75da7144a4c8e5a59d3182118056cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d66019d7a71dd480f1a88a28fe94d72a176497c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="actualsize-property-ado"></a>ActualSize, propriété (ADO)
 Indique la longueur réelle d’un champ ??? valeur s en octets.  
@@ -42,10 +38,9 @@ Indique la longueur réelle d’un champ ??? valeur s en octets.
  Le **ActualSize** et [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriétés sont différentes, comme indiqué dans l’exemple suivant. A **champ** objet avec un type déclaré de **adVarChar** et une longueur maximale de 50 caractères retourne un **DefinedSize** valeur de la propriété de 50, mais la  **ActualSize** valeur de propriété retournée est la longueur des données stockées dans le champ de l’enregistrement actif. **Champs** avec un **DefinedSize** supérieure à 255 octets sont traités comme des colonnes de longueur variable.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)  
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [ActualSize et DefinedSize, propriétés-exemple (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize et DefinedSize, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
- [Propriété DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)
-
+ [DefinedSize, propriété](../../../ado/reference/ado-api/definedsize-property.md)

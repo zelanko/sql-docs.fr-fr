@@ -3,26 +3,26 @@ title: Commande exclusif SET | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET EXCLUSIVE command [ODBC]
+helpviewer_keywords: SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5aa039c9af4b3dfbabce2647408be7f612c80f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 830cec1dbb87ae2bc4336d28d6112fd76b4db0ed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-exclusive-command"></a>Commande exclusif SET
 Spécifie si les fichiers de la table sont ouverts pour un usage exclusif ou partagé sur un réseau.  
@@ -45,5 +45,4 @@ SET EXCLUSIVE ON | OFF
  Modification du paramètre de valeur exclusif ne change pas l’état des tables précédemment ouverts. Par exemple, si une table est ouvert avec la valeur exclusif la valeur ON et définir exclusif est modifié ultérieurement à OFF, la table conserve son état de l’usage exclusif.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue du programme d’installation ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
-
+ [Configuration d’ODBC pour Visual FoxPro, boîte de dialogue](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

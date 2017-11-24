@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1968b025d87d76cf8e1cf2417e13dd6027a252d3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="querying-a-tabular-model"></a>Interrogation d'un modèle tabulaire
   En tant que développeur, l'interrogation d'un modèle tabulaire revient à récupérer des données de la base de données tabulaire ; vous avez deux options pour atteindre cet objectif : utilisez des requêtes de table dans DAX ou utilisez MDX et récupérez les données comme si elles provenaient d'un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
@@ -119,4 +117,3 @@ DEFINE
 |2|2|Components||$  11,799,076.66|  
   
   
-

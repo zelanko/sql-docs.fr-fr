@@ -20,17 +20,16 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-calculated-members"></a>Créer des membres calculés
   Vous pouvez créer des mesures ou des membres de dimension personnalisés, nommés « membres calculés », en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  
@@ -94,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [Calculs dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subselects-in-queries"></a>Instructions de sous-sélection dans les requêtes
   Les expressions d'instruction de sous-sélection sont des expressions SELECT imbriquées utilisées pour restreindre l'espace du cube à partir duquel SELECT externe est évalué. Les instructions de sous-sélection vous permettent de définir un nouvel espace sur lequel tous les calculs sont évalués.  
@@ -362,4 +361,3 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   Par défaut les membres calculés ne sont pas autorisés dans les instructions de sous-sélection ; Toutefois, cette restriction peut être modifiée, dans une base par session, en affectant une valeur pour le **sous-requêtes** propriété de chaîne de connexion dans <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> ou **DBPROP_MSMD_SUBQUERIES** propriété [pris en charge les propriétés XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Consultez [Membres calculés dans les sous-sélections et les sous-cubes](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) pour obtenir une explication détaillée du comportement des membres calculés en fonction des valeurs de **SubQueries** ou **DBPROP_MSMD_SUBQUERIES**.  
   
   
-

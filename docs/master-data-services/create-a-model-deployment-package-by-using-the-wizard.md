@@ -2,9 +2,12 @@
 title: "Créer un package de déploiement de modèle à l’aide de l’Assistant | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +21,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0bec3b95a2716af2e0d0e8ff9e6df2e82481cb35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4b3f6faa7ac5d8506b75f32a018f3d568da65aa2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Créer un package de déploiement de modèle à l'aide de l'Assistant
   Utilisez l'Assistant Déploiement de modèle de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour créer un package d'objets de modèle uniquement. Si vous avez besoin d’inclure des données dans un package, consultez [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  

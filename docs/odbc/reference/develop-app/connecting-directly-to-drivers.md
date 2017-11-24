@@ -3,10 +3,12 @@ title: "Se connecter directement à des pilotes | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], connecting directly to drivers
 - connecting to driver [ODBC], drivers
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ee6c108c005572d8002be0e0ba13131a7a86f60f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bacb659cb6986f86151502998523ade468f7cedd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-directly-to-drivers"></a>Se connecter directement à des pilotes
 Comme mentionné dans [choisir une Source de données ou le pilote](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), plus haut dans cette section, certaines applications ne souhaitez pas utiliser une source de données du tout. Au lieu de cela, ils souhaitent se connecter directement à un pilote. **SQLDriverConnect** fournit un moyen de l’application de se connecter directement à un pilote sans spécifier une source de données. Point de vue conceptuel, une source de données temporaire est créée au moment de l’exécution.  
@@ -38,4 +39,3 @@ DRIVER={Paradox Driver};
 ```  
   
  Avec la première chaîne, le pilote n’est pas nécessaire d’autres informations. Avec la deuxième chaîne, le pilote doit demander le nom du répertoire contenant les fichiers de données.
-

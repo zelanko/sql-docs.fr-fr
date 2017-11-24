@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.partitionmgr.f1
+f1_keywords: sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13beb940c74b269a15fcae447e144a4767288848
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Créer et gérer des partitions dans la base de données de l'espace de travail (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment ou parallèlement à d'autres partitions. Les partitions peuvent améliorer l'évolutivité et la gestion de bases de données volumineuses. Par défaut, chaque table possède une partition qui inclut toutes les colonnes. Les tâches de cette rubrique décrivent comment créer et gérer des partitions dans la base de données model de l’espace de travail à l’aide de la boîte de dialogue **Gestionnaire de partition** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Traiter des partitions dans la base de données de l’espace de travail &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   
   
-

@@ -3,26 +3,26 @@ title: "Définition des valeurs de paramètre | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-parameter-values"></a>Définition des valeurs de paramètre
 Pour définir la valeur d’un paramètre, l’application définit simplement la valeur de la variable liée au paramètre. Il n’est pas important lorsque cette valeur est définie, tant qu’elle est définie avant l’exécution de l’instruction. L’application peut définir la valeur avant ou après la variable de liaison, et elle peut modifier la valeur autant de fois qu’il le souhaite. Lorsque l’instruction est exécutée, le pilote récupère simplement la valeur actuelle de la variable. Cela est particulièrement utile lors de l’exécution d’une instruction préparée plusieurs fois ; l’application définit de nouvelles valeurs pour certaines ou toutes les variables chaque fois que l’instruction est exécutée. Pour obtenir un exemple, consultez [exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md), plus haut dans cette section.  
@@ -57,4 +57,3 @@ Pour définir la valeur d’un paramètre, l’application définit simplement l
  [d] pilotes doivent toujours vérifier cette valeur pour déterminer s’il est une valeur spéciale, comme SQL_NULL_DATA.  
   
  Ce que fait par un pilote avec une valeur de paramètre au moment de l’exécution dépend du pilote. Si nécessaire, le pilote convertit la valeur de la C codés et type de longueur des données de la variable liée pour le type de données SQL, la précision et l’échelle du paramètre. Dans la plupart des cas, le pilote envoie ensuite la valeur de la source de données. Dans certains cas, il met en forme la valeur sous forme de texte et l’insère dans l’instruction SQL avant d’envoyer l’instruction à la source de données.
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 37ab0ae613127c66c1c2cdd43018e6347dfc8902
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures
 Au cours des leçons précédentes de ce didacticiel, vous avez appris que des dimensions de base de données ajoutées à un cube pouvaient être utilisées comme base pour une ou plusieurs dimensions de cube. Au cours de cette leçon, vous allez apprendre à définir différents types de relations entre des dimensions de cube et des groupes de mesures et à spécifier les propriétés de ces relations.  
@@ -59,4 +56,3 @@ Au cours de cette tâche, vous allez apprendre à modifier la granularité d'une
   
   
   
-

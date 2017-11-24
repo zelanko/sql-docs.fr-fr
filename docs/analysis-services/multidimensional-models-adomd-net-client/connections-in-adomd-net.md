@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - opening connections
 - closing connections
 - connections [ADOMD.NET]
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7c3555be8e304add34cba3a8dd9f0bac4264216
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connections-in-adomdnet"></a>Connexions dans ADOMD.NET
   Dans ADOMD.NET, vous utilisez la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objet pour ouvrir des connexions avec les sources de données analytiques, telles que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données. Lorsque vous n'avez plus besoin de la connexion, vous devez la fermer explicitement.  
@@ -75,7 +73,6 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 >  Dans le **Finalize** méthode de n’importe quel implémentée classe, n’appelez pas la **fermer** ou **Dispose** méthodes d’un <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objet, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objet, ou tout autre objet managé. Dans un finaliseur, veillez à ne diffuser que des ressources non managées qui sont directement détenues par la classe implémentée. Si la classe implémentée ne possède pas les ressources non managées, n’incluez pas une **Finalize** méthode dans la définition de classe.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation du Client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
+ [Programmation du client ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
-

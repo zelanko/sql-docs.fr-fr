@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- updates [ADO], dealing with failed updates
+helpviewer_keywords: updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2be023b954040c1c539063c1e1a3d1cf67931ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dc8facd3f93f0c752739c20d61352d8c4ab2f63f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dealing-with-failed-updates"></a>Traitement des mises à jour ayant échouées
 Lorsqu’une mise à jour est terminée avec des erreurs, la résolution des erreurs dépend de la nature et la gravité des erreurs et la logique de votre application. Toutefois, si la base de données est partagée avec d’autres utilisateurs, une erreur standard est que quelqu'un d’autre modifie le champ avant de procéder. Ce type d’erreur est appelé un conflit. ADO détecte cette situation et signale une erreur.  
@@ -45,5 +42,4 @@ Loop
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [En Mode Batch](../../../ado/guide/data/batch-mode.md)
-
+ [Mode batch](../../../ado/guide/data/batch-mode.md)

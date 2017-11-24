@@ -3,26 +3,26 @@ title: Appels de fonction scalaire | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- escape sequences [ODBC], scalar function calls
+helpviewer_keywords: escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e45b0f8bf4944b1f683245033123b15d76c1befa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scalar-function-calls"></a>Appels de fonction scalaire
 Fonctions scalaires retournent une valeur pour chaque ligne. Par exemple, la fonction scalaire de valeur absolue prend une colonne numérique en tant qu’argument et retourne la valeur absolue de chaque valeur dans la colonne. Est de la séquence d’échappement pour appeler une fonction scalaire  
@@ -57,4 +57,3 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  Pour déterminer les fonctions scalaires sont prises en charge par une source de données, une application appelle **SQLGetInfo** avec les options SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS et SQL_TIMEDATE_FUNCTIONS. Pour déterminer quelles opérations de conversion sont pris en charge par le **convertir** (fonction), une application appelle **SQLGetInfo** avec les options qui commencent par SQL_CONVERT.
-

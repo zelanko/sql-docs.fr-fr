@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ go
   
     3.  Vérifiez dans votre base de données que la configuration `LEGACY_CARDINALITY_ESTIMATION` est désactivée.  
   
-    4.  Supprimez le contenu de votre Magasin des requêtes. Vérifiez bien entendu que votre Magasin des requêtes est activé.  
+    4.  Supprimez le contenu de votre magasin de requêtes. Vérifiez bien entendu que votre magasin de requêtes est activé.  
   
     5.  Exécutez l’instruction suivante : `SET NOCOUNT OFF;`  
   
@@ -219,13 +217,13 @@ Pour un plus grand contrôle, vous pouvez *forcer* le système SQL à utiliser l
   
 ### <a name="how-to-force-a-particular-query-plan"></a>Comment forcer un plan de requête  
   
-Le Magasin des requêtes vous propose différentes façons de forcer le système à utiliser un plan de requête :  
+Le magasin de requêtes vous propose différentes façons de forcer le système à utiliser un plan de requête :  
   
 - Exécutez **sp_query_store_force_plan**.  
   
-- Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], développez le nœud de votre **Magasin des requêtes**, cliquez avec le bouton droit sur **Principaux nœuds consommateurs de ressources**, puis cliquez sur **Afficher les principaux nœuds consommateurs de ressources**. L’affichage montre les boutons **Forcer le plan** et **Annuler l’obligation d’utiliser le plan**.  
+- Dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], développez le nœud de votre **Magasin de requêtes**, cliquez avec le bouton droit sur **Principaux nœuds consommateurs de ressources**, puis cliquez sur **Afficher les principaux nœuds consommateurs de ressources**. L’affichage montre les boutons **Forcer le plan** et **Annuler l’obligation d’utiliser le plan**.  
   
- Pour plus d’informations sur le Magasin des requêtes, consultez [Analyse des performances à l’aide du Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
+ Pour plus d’informations sur le magasin de requêtes, consultez [Analyse des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
   
 ## <a name="examples-of-ce-improvements"></a>Exemples d’améliorations apportées à l’estimation de la cardinalité  
@@ -275,6 +273,5 @@ SELECT s.ticket, s.customer, r.store
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)  
  [Indicateurs de requête](../../t-sql/queries/hints-transact-sql-query.md)  
- [Analyse des performances à l'aide du Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)
-

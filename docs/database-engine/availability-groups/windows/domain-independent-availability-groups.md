@@ -2,9 +2,12 @@
 title: "Groupes de disponibilité indépendants du domaine (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,13 +18,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 568798a19fac1a40d16d95e4f93e95968630ee0e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="domain-independent-availability-groups"></a>Groupes de disponibilité indépendants du domaine
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Les groupes de disponibilité AlwaysOn exigent un cluster de basculement Windows Server (cluster WSFC) sous-jacent. Le déploiement d’un cluster WSFC via Windows Server 2012 R2 a toujours nécessité que les serveurs participant à un cluster WSFC, également connu sous le nom de nœuds, soient joints au même domaine. Pour plus d’informations sur Active Directory Domain Services (AD DS), reportez-vous [ici](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 

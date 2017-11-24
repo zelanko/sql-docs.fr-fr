@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 05/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ms.workload: Inactive
+ms.openlocfilehash: d8ebecb0d6ff5892bdee8cf4cf98287f1ace33e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 50a2633790b9878a8be2a9a3c417fc877a37633d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer SLES Cluster pour le groupe de disponibilité de SQL Server
 
@@ -48,7 +52,7 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
 
 5. [Ajouter le groupe de disponibilité en tant que ressource dans le cluster](sql-server-linux-availability-group-cluster-sles.md#configure-the-cluster-resources-for-sql-server). 
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de trois ordinateurs pour déployer le trois nœuds cluster. Les étapes ci-dessous décrivent comment configurer ces serveurs.
 
@@ -118,9 +122,9 @@ Sur des serveurs Linux configurer le groupe de disponibilité, puis configurez l
 
 3. Pour configurer la couche de communication du cluster (Corosync) : 
 
-   A. Entrez une adresse réseau à lier. Par défaut, le script va vous proposer l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
+   a. Entrez une adresse réseau à lier. Par défaut, le script va vous proposer l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
 
-   B. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
+   b. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
 
    c. Entrez un port de multidiffusion. Le script propose 5405 comme valeur par défaut. 
 
@@ -308,4 +312,3 @@ Pour plus d’informations, consultez :
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Utiliser le groupe de disponibilité haute disponibilité](sql-server-linux-availability-group-failover-ha.md)
-

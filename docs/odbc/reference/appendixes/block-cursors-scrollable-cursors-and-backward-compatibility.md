@@ -3,10 +3,12 @@ title: "Curseurs de bloc, les curseurs permettant le défilement et la compatibi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8f653ed286aa421f9ac7fe8ae7c29e5eb8cb3348
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 72c256f326366d631dada13fbfe002c8d4674eda
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Curseurs de bloc, les curseurs permettant le défilement et la compatibilité descendante
 L’existence de deux **SQLFetchScroll** et **SQLExtendedFetch** représente le premier clear Fractionner dans ODBC entre l’Interface API (Application Programming), qui est l’ensemble de fonctions, les appels de l’application et le Service fournisseur Interface SPI (), qui est l’ensemble de fonctions le pilote implémente. Cette séparation est nécessaire afin que ODBC 3. *x*, qui utilise **SQLFetchScroll**, bealigned avec les normes et également être compatibles avec ODBC 2. *x*, qui utilise **SQLExtendedFetch**.  
@@ -37,7 +38,6 @@ L’existence de deux **SQLFetchScroll** et **SQLExtendedFetch** représente le 
   
  Cette section contient les rubriques suivantes.  
   
--   [Ce que fait le Gestionnaire de pilotes](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
+-   [Ce que fait le gestionnaire de pilotes](../../../odbc/reference/appendixes/what-the-driver-manager-does.md)  
   
 -   [Ce que fait le pilote](../../../odbc/reference/appendixes/what-the-driver-does.md)
-

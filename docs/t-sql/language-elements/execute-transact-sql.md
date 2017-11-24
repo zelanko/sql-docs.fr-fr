@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - EXECUTE_TSQL
 - EXECUTE
 - EXEC_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - remote stored procedures [SQL Server]
 - command strings [SQL Server]
@@ -33,20 +31,19 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-caps.latest.revision: 104
+caps.latest.revision: "104"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="execute-transact-sql"></a>EXÉCUTION-Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Exécute une chaîne de commande ou une chaîne de caractères dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot ou l’un des modules suivants : système stockées procédure, procédure stockée définie par l’utilisateur, procédure stockée CLR, fonction définie par l’utilisateur scalaire ou de la procédure stockée étendue. L'instruction EXECUTE peut être utilisée pour envoyer des commandes directes à des serveurs liés. De plus, il est possible de définir explicitement le contexte dans lequel une chaîne de caractères ou une commande s'exécute. Les métadonnées pour le jeu de résultats peuvent être définies à l'aide des options WITH RESULT SETS.
   
@@ -746,4 +743,3 @@ GO
  [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   
-

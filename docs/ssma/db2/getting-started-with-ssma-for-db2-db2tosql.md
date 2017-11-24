@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 125bf372621875c92a316751246d22e61554ee6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8b84d83b0f72d1a8130792532b191639f521225e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Prise en main de SSMA pour DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) pour DB2 vous permet de rapidement convertir des schémas de base de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] schémas, téléchargez les schémas qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et migrer les données à partir de DB2 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -116,4 +114,3 @@ Le **vue** menu fournit des commandes pour activer/désactiver la visibilité du
 [Migration de données DB2 dans SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
 [Référence de l’Interface utilisateur &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
-

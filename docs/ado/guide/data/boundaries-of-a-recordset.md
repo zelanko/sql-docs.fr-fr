@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 67a300e30522a5f02bb6c33409a062a3c2434643
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66dec387cc91a2d0bd4d3aded73a6b4301aff593
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un jeu d’enregistrements
 **Jeu d’enregistrements** prend en charge la **BOF** et **EOF** propriétés pour délimiter le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** sous forme d’enregistrements « fantômes » placés au début et à la fin de la **Recordset**. Comptage **BOF** et **EOF**, notre exemple **Recordset** ressemble maintenant à ceci :  
@@ -78,4 +76,3 @@ else
  Ce modèle fonctionne pour tous les types de curseur et est indépendant des fournisseurs sous-jacents. Si vous essayez de déterminer l’emptiness d’un **Recordset** objet en vérifiant si sa **RecordCount** valeur de propriété est zéro (0) ou non, vous devez prendre des précautions pour utiliser un curseur approprié et le fournisseur qui prend en charge le retour du nombre d’enregistrements dans le résultat.  
   
  Si vous supprimez le dernier enregistrement restant dans le **Recordset** de l’objet, le curseur reste dans un état indéterminé. Le **BOF** et **EOF** propriétés peuvent rester **False** jusqu'à ce que vous tentiez de repositionner l’enregistrement en cours, en fonction du fournisseur. Pour plus d’informations, consultez [les enregistrements de suppression à l’aide de la méthode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
-

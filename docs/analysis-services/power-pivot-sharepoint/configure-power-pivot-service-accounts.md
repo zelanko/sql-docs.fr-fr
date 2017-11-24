@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configuration des comptes de service Power Pivot
   Une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]inclut deux services qui prennent en charge des opérations serveur. Le service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** est un service Windows qui assure le traitement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et la prise en charge des requêtes sur un serveur d’applications. Le compte de connexion pour ce service est toujours spécifié pendant l'installation de SQL Server lorsque vous installez Analysis Services en mode intégré SharePoint.  
@@ -194,4 +193,3 @@ ms.lasthandoff: 09/01/2017
  [Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   
-

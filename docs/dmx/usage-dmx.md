@@ -2,35 +2,36 @@
 title: Utilisation (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - column usage [DMX]
 - Data Mining Extensions [Analysis Services], column usage types
 - DMX [Analysis Services], column usage types
 ms.assetid: 6d7ae72a-f5b5-4744-a3a2-46ccd6432c1a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: f440075e399a35f1e9fd48cc4cfd624f46360a18
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2acfde9b8d7c9d13fc626b006116e9b3760fd432
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="usage-dmx"></a>Utilisation (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Lorsque vous utilisez des Extensions DMX (Data Mining) pour définir un nouveau modèle d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez spécifier la façon dont l’algorithme d’exploration de données qui génère le modèle utilisera chaque colonne. Vous pouvez spécifier une colonne comme étant l'un des types suivants :  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **Temps clé**  
   
--   **Prédire**  
+-   **Predict**  
   
 -   **PredictOnly**  
   
@@ -65,4 +66,3 @@ ms.lasthandoff: 08/02/2017
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

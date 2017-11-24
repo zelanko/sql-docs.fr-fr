@@ -3,33 +3,30 @@ title: Fonction de SQLTransact | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLTransact
-apilocation:
-- sqlsrv32.dll
+apiname: SQLTransact
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLTransact
-helpviewer_keywords:
-- SQLTransact function [ODBC]
+f1_keywords: SQLTransact
+helpviewer_keywords: SQLTransact function [ODBC]
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e293ad391bee9698941b8681a852ed75bf0717e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1af98fb53aadf7ea6bb2253041c951481a019027
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqltransact-function"></a>SQLTransact (fonction)
 **Mise en conformité**  
@@ -44,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

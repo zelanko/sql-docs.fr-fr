@@ -2,16 +2,18 @@
 title: Fonctions (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - VBA [DMX]
@@ -20,20 +22,19 @@ helpviewer_keywords:
 - Excel [DMX]
 - Data Mining Extensions [Analysis Services], functions
 ms.assetid: 75ab6346-f4a4-4699-90f3-66d35f930ed7
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: db76e1106224d9095360c1fe33af3f389632fed0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b12a4a948dcb90c43eee52a01436ac0ca0c3f174
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functions-dmx"></a>Fonctions (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Lorsque vous utilisez des Extensions DMX (Data Mining) pour les objets de requête dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser des fonctions pour retourner des informations plus que simplement les valeurs dans les colonnes dans le modèle d’exploration de données ou le dataset d’entrée. Les requêtes DMX permettent de retourner, par exemple, non seulement la valeur de prévision d'une colonne, mais également la probabilité que la prévision est correcte. Outre les fonctions DMX, vous pouvez également utiliser les fonctions de Microsoft Visual Basic for Applications (VBA), Microsoft Excel et les procédures stockées.  
   
@@ -79,4 +80,3 @@ FROM [TM_Decision_Tree].CONTENT
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

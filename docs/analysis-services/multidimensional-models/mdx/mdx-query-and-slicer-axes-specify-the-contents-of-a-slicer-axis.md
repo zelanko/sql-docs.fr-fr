@@ -18,17 +18,16 @@ helpviewer_keywords:
 - slicer axis
 - filtering data [MDX]
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 75bba3346fdfc496e2fb6fcce55bc757bb65d989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Requête MDX et les Axes de segment - spécifier le contenu d’un axe de secteur
   L'axe de secteur filtre les données retournées par l'instruction SELECT MDX (Multidimensional Expressions), en restreignant les données retournées de telle sorte que seules les données communes aux membres spécifiés soient retournées. Il peut être perçu comme un axe supplémentaire invisible dans une requête. L'axe de secteur est défini dans la clause WHERE de l'instruction SELECT de MDX.  
@@ -92,4 +91,3 @@ WHERE(
  Comme indiqué précédemment, l'utilisation d'un jeu dans la clause WHERE effectue implicitement un agrégat des valeurs pour tous les membres du jeu. Dans le cas présent, la requête affiche les valeurs agrégées pour les États-Unis et le Royaume-Uni dans chaque cellule.  
   
   
-

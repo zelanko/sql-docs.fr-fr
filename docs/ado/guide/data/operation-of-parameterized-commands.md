@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5bce98fd15ac82cf9492b4f4454dba36146dd46f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65f8a1caba2f709e4583613ced4d6aa03b2d6bf1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais avez besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  
@@ -99,5 +97,4 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
  [Grammaire de mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)
-
+ [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- many-to-many relationships [Analysis Services]
+helpviewer_keywords: many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ad2f336f3197d7746ef250b942d48b5d17740d20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 164dd337f413200dc0cec3371551aa2b4317ec41
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d'une relation plusieurs à plusieurs
   Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
@@ -200,4 +198,3 @@ ms.lasthandoff: 09/01/2017
  [Perspectives dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 902db63e79472afb65f81ee3d15f1fbfa87cbb8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8cdc3a878c24f53cbadefdee49dc300ce616c009
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-migration-report-accesstosql"></a>Rapport de Migration de données (AccessToSQL)
 Le **rapport de Migration de données** boîte de dialogue s’affiche après la migration des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -32,7 +30,7 @@ Le **rapport de Migration de données** boîte de dialogue s’affiche après la
 **État**  
 Indique l’état de la migration des données à partir de la source de la base de données cible.  
   
-**De**  
+**From**  
 La table source.  
   
 **Pour**  
@@ -53,4 +51,3 @@ En cas d’échec de la migration des données, cliquez pour afficher les détai
 **Enregistrer le rapport**  
 Enregistre le rapport à un. CSV, fichier (valeurs séparées par des virgules), qui peut être examiné à l’aide de Microsoft Excel.  
   
-

@@ -2,9 +2,12 @@
 title: "MODIFIER LA STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -13,8 +16,7 @@ ms.topic: language-reference
 f1_keywords:
 - ALTER_MINING_STRUCTURE
 - ALTER MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - mining structures [DMX], creating
 - WITH DRILLTHROUGH clause
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - parameter lists [DMX]
 - ALTER MINING STRUCTURE statement
 ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1e835c27541ab59fc6913b31600cd5804ea99f6b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7ad24d223012bb301abc57f2fb48f34e112a7647
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crée un modèle d'exploration de données sur la base d'une structure d'exploration de données existante.  Lorsque vous utilisez la **ALTER MINING STRUCTURE** instruction pour créer un nouveau modèle d’exploration de données, la structure doit déjà exister. En revanche, lorsque vous utilisez l’instruction, [créer un modèle d’exploration de données &#40; DMX &#41;](../dmx/create-mining-model-dmx.md), vous créez un modèle et générer automatiquement sa structure d’exploration de données sous-jacente en même temps.  
   
@@ -130,7 +131,7 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |Terme|Définition|  
-|**RÉGRESSEUR**|Indique que l'algorithme peut utiliser la colonne spécifiée dans la formule de régression des algorithmes de régression.|  
+|**REGRESSOR**|Indique que l'algorithme peut utiliser la colonne spécifiée dans la formule de régression des algorithmes de régression.|  
 |**MODEL_EXISTENCE_ONLY**|Indique que les valeurs de la colonne d'attribut sont moins importantes que la présence de l'attribut.|  
   
  Vous pouvez définir plusieurs indicateurs de modélisation pour une colonne. Pour plus d’informations sur l’utilisation des indicateurs de modélisation, consultez [indicateurs de modélisation &#40; DMX &#41;](../dmx/modeling-flags-dmx.md).  
@@ -140,7 +141,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PRÉDIRE**|Cette colonne peut être prédite par le modèle, et ses valeurs peuvent être utilisées comme entrée pour prédire la valeur d'autres colonnes prédictibles.|  
+|**PREDICT**|Cette colonne peut être prédite par le modèle, et ses valeurs peuvent être utilisées comme entrée pour prédire la valeur d'autres colonnes prédictibles.|  
 |**PREDICT_ONLY**|Cette colonne peut être prédite par le modèle, mais ses valeurs ne peuvent pas être utilisées dans des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
   
 ## <a name="filter-criteria-expressions"></a>Expressions de critères de filtre  
@@ -225,4 +226,3 @@ USING Microsoft_Decision Trees
  [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

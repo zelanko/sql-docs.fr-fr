@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-cube-schema"></a>Afficher le schéma de cube
   Le volet **Vue de source de données** de l'onglet **Structure de cube** du **Concepteur de cube** affiche le schéma de cube. Le schéma est l'ensemble de tables à partir desquelles les mesures et les dimensions d'un cube sont dérivées. Chaque schéma de cube se compose d'une ou plusieurs tables de faits et d'une ou plusieurs tables de dimension sur lesquelles les mesures et les dimensions du cube sont basées.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
 |Modifier le schéma de la vue de source de données|Dans le menu **Vue de source de données** , cliquez sur **Modifier la vue de source de données**.<br /><br /> - ou -<br /><br /> Cliquez avec le bouton droit sur l’arrière-plan du volet **Vue de source de données** , puis sélectionnez **Modifier la vue de source de données**.|  
   
   
-

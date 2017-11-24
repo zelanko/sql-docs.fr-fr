@@ -19,12 +19,11 @@ ms.date: 09/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.author: genemi
+ms.openlocfilehash: c4ba0c20ca68b64ae377dfd3fb5855be30fed080
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Contenu nouveau et récemment mis à jour : documentation des bases de données relationnelles
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -160,6 +159,5 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 - [Nouveaux + Mis à jour (0 + 0) : **SQL Server Migration Assistant (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Outils pour SQL** (documentation)](../tools/new-updated-tools.md)
 - [Nouveaux + Mis à jour (0 + 0) : **XQuery pour SQL** (documentation)](../xquery/new-updated-xquery.md)
-
 
 

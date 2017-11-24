@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 94f4cf7687c8e1469ea5f3a4260b69224e0ddbc0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Ensemble de lignes DISCOVER_CSDL_METADATA
   Retourne des informations sur un modèle de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (tabulaire ou multidimensionnel), qui fournit la définition du modèle au format CSDLBI (Conceptual Schema Definition avec annotations BI). CSDLBI repose sur CSDL, un schéma XML exploité par l'infrastructure Entity Data Framework utilisée pour la communication entre un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et le client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Les annotations Business Intelligence (BI) fournissent des métadonnées supplémentaires sur les modèles tabulaires et les objets qu'ils contiennent. Pour plus d’informations sur les modèles de données tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -136,4 +134,3 @@ ms.lasthandoff: 09/01/2017
  [Annotations CSDL pour Business Intelligence &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   
-

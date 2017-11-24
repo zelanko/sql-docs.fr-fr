@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 35c34140f987d243648cd6172aa3a9a165c41f76
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7430d5ffdcd4a0b57d8b5e6faf3b37fa33d919a2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Prise en main de SSMA pour Oracle Console (OracleToSQL)
 Cette section décrit la procédure pour lancer et commencer à l’application de console Oracle. Dans la liste, qu’elle contient, sont les conventions utilisées dans une fenêtre de sortie de Console de SSMA classique.  
@@ -73,4 +71,3 @@ Interprétation de couleur de la sortie de console dans le tableau suivant :
 ## <a name="see-also"></a>Voir aussi  
 [L’installation de SSMA pour Oracle](http://msdn.microsoft.com/en-us/9211013a-ab24-4c52-9b26-87994b35e502)  
   
-

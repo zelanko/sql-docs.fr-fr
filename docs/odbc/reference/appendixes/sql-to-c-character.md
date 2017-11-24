@@ -3,10 +3,12 @@ title: "SQL à c : caractère | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - character data type [ODBC]
 - data conversions from SQL to C types [ODBC], character
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: eefd7af07aceb228597589a43a57af75c896f6ab
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-character"></a>SQL à c : caractère
 Les identificateurs pour les types de données SQL ODBC caractères sont :  
@@ -71,4 +72,3 @@ _C_TYPE_TIMESTAMP|Valeur de données est valide *-valeur d’horodateur ou une v
  [g] les champs de date de la structure d’horodatage sont définies à la date actuelle.  
   
  Lorsque les données de caractères SQL sont converties en numérique, date, heure, timestamp ou données d’intervalle C, espaces à gauche et sont ignorées.
-

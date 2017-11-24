@@ -1,19 +1,20 @@
 ---
 title: SELECT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Récupère des lignes de la base de données et permet de sélectionner une ou plusieurs lignes ou colonnes à partir d’une ou plusieurs tables dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La syntaxe complète de l'instruction SELECT est complexe mais en voici les principales clauses :  
   
@@ -137,8 +137,13 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. HAUT  
-  
+11. Haut de la page  
+
+> [!WARNING]
+> La séquence précédente est généralement la valeur true. Toutefois, il existe des cas rares où la séquence peut-être différer.
+>
+> Par exemple, supposons que vous avez un index cluster sur une vue et la vue exclut certaines lignes de la table, et liste de sélection des colonnes de la vue utilise une conversion qui modifie un type de données à partir de *varchar* à *entier*. Dans ce cas, la conversion peut s’exécuter avant la clause WHERE s’exécute. En effet rare. Il existe souvent un moyen de modifier votre vue pour éviter la séquence différents, si cela est important dans votre cas. 
+
 ## <a name="permissions"></a>Permissions  
  La sélection de données requiert l'autorisation **SELECT** sur la table ou la vue, qui pourrait être héritée d'une étendue supérieure telle que l'autorisation **SELECT** sur le schéma ou l'autorisation **CONTROL** sur la table. Ou nécessite l’appartenance dans le **db_datareader** ou **db_owner** rôles de base de données fixes ou le **sysadmin** rôle serveur fixe. Création d’une table à l’aide **SELECTINTO** requiert également le **CREATETABLE** autorisation et la **ALTERSCHEMA** autorisation sur le schéma qui possède la nouvelle table.  
   
@@ -266,5 +271,4 @@ ORDER BY OrderDateKey;
  [Exemples SELECT &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Indicateurs de &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

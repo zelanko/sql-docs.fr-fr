@@ -20,17 +20,16 @@ helpviewer_keywords:
 - classification algorithms [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 074a93f83cd89449898f0fe66e3680b8dfd95b21
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algorithme MNB (Microsoft Naive Bayes)
   L’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) est un algorithme de classification basé sur les théorèmes de Bayes. Vous pouvez l’utiliser pour une modélisation exploratoire et prédictive. Le terme Naïve dans le nom Naïve Bayes est dérivé du fait que l'algorithme utilise des techniques bayésiennes, mais ne prend pas en compte les dépendances qui peuvent exister.  
@@ -103,7 +102,6 @@ ms.lasthandoff: 09/01/2017
  [Sélection des fonctionnalités &#40; exploration de données &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [Exemples de requêtes de modèle Naive Bayes](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
- [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
+ [Informations techniques de référence sur l’algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   
-

@@ -5,21 +5,18 @@ ms.date: 09/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
 ms.openlocfilehash: fe571e3e432d6445c76133c4c2a9c56f2f67eff0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="native-scoring"></a>Calcul de score en natif
 
 Cette rubrique décrit les fonctionnalités de SQL Server 2017 permettant de calculer les scores sur les modèles d’apprentissage automatique en temps quasi réel.
@@ -119,4 +116,3 @@ Les types de modèles suivants ne sont pas prises en charge :
 + Modèles PMML
 + Modèles créés à l’aide d’autres bibliothèques R à partir de CRAN ou autres référentiels
 + Modèles contenant toutes les autres transformations R
-

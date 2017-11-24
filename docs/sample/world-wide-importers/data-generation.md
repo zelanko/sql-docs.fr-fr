@@ -3,28 +3,29 @@ title: "Génération de données | Documents Microsoft"
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.technology:
-- " database-engine "
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: " database-engine "
 ms.topic: article
 ms.assetid: f387273b-8b5f-4687-b033-09499ea2d68f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: cb816c1d41f0f5b77aa1dd6434cf912a6fbf4592
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c17ad40220d46ab6e19054818ce2abfdce7251f4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimporters-data-generation"></a>Génération de données WideWorldImporters
-Les versions des bases de données WideWorldImporters et WideWorldImportersDW contient des données en commençant le 1er de janvier 2013, le jour de ces bases de données ont été générées.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Les versions des bases de données WideWorldImporters et WideWorldImportersDW contient des données en commençant le 1er de janvier 2013, le jour de ces bases de données ont été générées.
 
 Si les bases de données exemple sont utilisés à une date ultérieure, à des fins de démonstration ou illustration, il peut être utile d’inclure des exemples de données les plus récentes dans la base de données.
 
@@ -85,4 +86,3 @@ La procédure `Application.Configuration_PopulateLargeSaleTable` peut être util
 Approximativement le nombre de lignes requis est inséré dans le `Fact.Sale` table dans l’année 2012. La procédure limite artificiellement le nombre de lignes par jour à 50 000. Cela a pu être modifiée mais il afin d’éviter overinflations accidentelle de la table.
 
 En outre, la procédure s’applique l’indexation de columnstore en cluster, si elle n’a pas déjà été appliqué.
-

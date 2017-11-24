@@ -3,10 +3,12 @@ title: "Données de la colonne | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7694a2646f8cb62824991d37a01cd49f5291033
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2b97769aebb017ab60de531f4242ed2421b76835
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-data"></a>Données de la colonne
 > [!IMPORTANT]  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 >  La bibliothèque de curseurs ne met pas à jour son cache pour une colonne si **StrLen_or_IndPtr* dans l’ensemble de lignes correspondante mémoire tampon est SQL_DATA_AT_EXEC ou le résultat de la macro SQL_LEN_DATA_AT_EXEC.  
   
  Lorsqu’il met à jour une colonne, une source vide-remplit caractères de longueur fixe de données et les données binaires de longueur fixe remplit de zéro si nécessaire. Par exemple, une source de données stocke « Smith » dans une colonne char (10) en tant que « Smith ». La bibliothèque de curseurs n’effectue pas blancs ou zéro-remplissage des données dans les mémoires tampons de lignes lorsqu’il copie ces données à son cache après l’exécution d’une instruction de mise à jour positionnée. Par conséquent, si une application requiert que les valeurs dans le cache de la bibliothèque de curseurs sont complétées par des blancs ou de zéros, il doit blancs ou remplissage de zéro les valeurs dans les tampons de l’ensemble de lignes avant d’exécuter une instruction de mise à jour positionnée.
-

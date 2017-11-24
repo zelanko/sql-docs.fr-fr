@@ -3,10 +3,12 @@ title: "Écrivez une Application interopérable | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bab5be84b66571f7ca361a3b158921330c00007f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Écrivez une Application interopérable
 Chaque fois qu’une application utilise le même code sur plusieurs pilotes, ce code doit être interopérable parmi ces pilotes. Dans la plupart des cas, il s’agit d’une tâche facile. Par exemple, le code pour extraire les lignes avec un curseur avant uniquement est identique pour tous les pilotes. Dans certains cas, cela peut être plus difficile. Par exemple, le code pour construire des identificateurs pour une utilisation dans les instructions SQL doit prendre en compte la casse de l’identificateur, des guillemets et des conventions de dénomination en trois parties, en deux parties et une seule partie.  
@@ -40,7 +41,6 @@ Chaque fois qu’une application utilise le même code sur plusieurs pilotes, ce
   
  Cette section contient les rubriques suivantes.  
   
--   [Vérification de la prise en charge de la fonctionnalité et la variabilité](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
+-   [Vérification de la prise en charge et de la variabilité des fonctionnalités](../../../odbc/reference/develop-app/checking-feature-support-and-variability.md)  
   
--   [Fonctionnalités à surveiller](../../../odbc/reference/develop-app/features-to-watch-for.md)
-
+-   [Fonctionnalités à considérer avec attention](../../../odbc/reference/develop-app/features-to-watch-for.md)

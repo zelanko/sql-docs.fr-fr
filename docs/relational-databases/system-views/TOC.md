@@ -10,6 +10,6 @@
 # [sysextendedarticlesview (Transact-SQL)](sysextendedarticlesview-transact-sql.md)  
 # [sysmergeextendedarticlesview (Transact-SQL)](sysmergeextendedarticlesview-transact-sql.md)  
 # [sysmergepartitioninfoview (Transact-SQL)](sysmergepartitioninfoview-transact-sql.md)  
-# [SYSPUBLICATIONS (vue système) (Transact-SQL)](syspublications-system-view-transact-sql.md)  
-# [SYSSUBSCRIPTIONS (vue système) (Transact-SQL)](syssubscriptions-system-view-transact-sql.md)  
+# [syspublications (vue système) (Transact-SQL)](syspublications-system-view-transact-sql.md)  
+# [syssubscriptions (vue système) (Transact-SQL)](syssubscriptions-system-view-transact-sql.md)  
 # [systranschemas (Transact-SQL)](systranschemas-transact-sql.md)  

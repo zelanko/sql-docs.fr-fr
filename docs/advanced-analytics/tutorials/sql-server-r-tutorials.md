@@ -1,30 +1,25 @@
 ---
 title: Didacticiels pour SQL Server R | Documents Microsoft
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-caps.latest.revision: 1
+applies_to: SQL Server 2016
+dev_langs: R
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 341ec619ee5976ca7488f3662f010358b4457437
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a313a6f26283b96d138671991438197ae0cc0332
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-r-tutorials"></a>Didacticiels de SQL Server R
 
@@ -118,4 +113,3 @@ Après avoir exécuté le programme d’installation de SQL Server, n’oubliez 
 + Assurez-vous que votre compte de connexion SQL ou un compte d’utilisateur Windows dispose des autorisations nécessaires pour se connecter au serveur, pour lire des données et à créer des objets de base de données requis par l’exemple
 
 Si vous rencontrez des problèmes, consultez cet article pour certains problèmes courants : [dépannage Machine Learning Services](../machine-learning-troubleshooting-faq.md)
-

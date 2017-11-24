@@ -20,17 +20,16 @@ helpviewer_keywords:
 - accounts [Analysis Services]
 - logon accounts [Analysis Services], about logon accounts
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 43be205737ddf16cd329598646cb60a8cebbe8e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8557ed990a03d36aaf4728726de1bb3dd67d6c9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurer les comptes de service (Analysis Services)
   L’approvisionnement de comptes à l’échelle du produit est traité dans la rubrique [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). Vous y trouverez des informations complètes sur les comptes de service pour tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Reportez-vous à cette rubrique pour en savoir plus sur les types de comptes valides, les privilèges Windows assignés par le programme d'installation, les autorisations du système de fichiers, les autorisations de Registre et bien plus encore.  
@@ -168,4 +167,3 @@ ms.lasthandoff: 09/01/2017
  [Listes de contrôle d’accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   
   
-

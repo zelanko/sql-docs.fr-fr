@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e295cce9f15d1ea0dc12f4402807996e44b3fe09
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitions dans les modèles multidimensionnels
   Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une *partition* permet le stockage physique des données de faits chargées dans un groupe de mesures. Une partition unique est créée automatiquement pour chaque groupe de mesures, mais il est courant de créer des partitions supplémentaires qui segmentent encore davantage les données, ce qui permet un traitement plus efficace et des performances de requête plus rapides.  
@@ -64,4 +63,3 @@ ms.lasthandoff: 09/01/2017
 |[Créer et gérer une partition distante &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|Décrit comment créer et gérer une partition distante.|  
   
   
-

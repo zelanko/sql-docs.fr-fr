@@ -21,17 +21,16 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 02cce6cea072f9d9258dc52221397506840fd492
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3e1a704ba6b69cba4750df3e51e6e27d3626d877
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-modification---using-cube-writebacks"></a>Modification des données MDX - à l’aide d’écriture différée de cubes
   Pour mettre à jour un cube, vous pouvez utiliser l’instruction [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
@@ -130,4 +129,3 @@ USE_EQUAL_ALLOCATION
  [Modification de données &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   
-

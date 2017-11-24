@@ -2,9 +2,12 @@
 title: "CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -13,27 +16,25 @@ ms.topic: language-reference
 f1_keywords:
 - CREATE_MINING_STRUCTURE
 - CREATE MINING STRUCTURE
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - CREATE MINING STRUCTURE statement
 - mining structures [DMX], creating
 - RELATED TO column
 ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4663f814087722ef581c14c188b18b52178a5076
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cb0b52cf7ac2b866119ff75bbd0d7e8da8cbac84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crée une structure d'exploration de données dans une base de données et, éventuellement, définit les partitions d'apprentissage et de test. Après avoir créé la structure d’exploration de données, vous pouvez utiliser la [ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md) instruction pour ajouter des modèles à la structure d’exploration de données.  
   
@@ -200,4 +201,3 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

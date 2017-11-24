@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, glossary
+helpviewer_keywords: ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ddc7cab1de929354827a316770f373c0792828e8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da1566fc59ac51e0923392a3cc0bee6d24dd3bfa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-glossary-terms"></a>Termes du glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.
@@ -222,4 +219,3 @@ Cette rubrique définit les termes pertinents pour ADO.
  Une arborescence représentant une relation hiérarchique entre des éléments (nœuds). Il existe un nœud au niveau supérieur d’une arborescence (racine). Sous la racine, il peut y avoir plusieurs enfants. Chaque enfant peut être à son tour le parent d’autres enfants, donc créer une branche comme un arbre. Un dossier contenant des documents et autres dossiers est un exemple classique d’une structure arborescente. Voir aussi hiérarchie, nœud, racine, enfant, parent.
 
  Serveur Web un ordinateur qui fournit des services Web et des pages pour les utilisateurs intranet et Internet.
-

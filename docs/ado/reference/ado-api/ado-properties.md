@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>Propriétés ADO
 |||  
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/09/2017
 |[État (champ ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)|Indique l’état d’un **champ** objet.|  
 |[État (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indique l’état de l’enregistrement actif en ce qui concerne les mises à jour du lot ou d’autres opérations en bloc.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indique, dans une liste hiérarchique **Recordset** objet, si la référence aux enregistrements enfants sous-jacents (autrement dit, le *chapitre*) change lorsque le changement de position de la ligne parente.|  
-|[Propriété de flux de données](../../../ado/reference/ado-api/stream-property.md)|Obtient ou définit un OLE DB **flux** objet à partir de/sur un **ADOStreamConstruction** objet.|  
+|[Stream, propriété](../../../ado/reference/ado-api/stream-property.md)|Obtient ou définit un OLE DB **flux** objet à partir de/sur un **ADOStreamConstruction** objet.|  
 |[Type](../../../ado/reference/ado-api/type-property-ado.md)|Indique le type de données ou de type opérationnel d’un **paramètre**, **champ**, ou **propriété** objet.|  
 |[Type (flux ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indique le type de données qui sont contenues dans le **flux** (binaire ou texte).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indique la valeur actuelle de la base de données pour un **champ** objet.|  
@@ -113,4 +111,3 @@ ms.lasthandoff: 09/09/2017
  [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-

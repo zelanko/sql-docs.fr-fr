@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- aggregate functions [Analysis Services]
+helpviewer_keywords: aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62fb5170cb4d1ea3b33e5bb080f56860d610a531
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-aggregate-functions"></a>Utiliser des fonctions d'agrégation
   Lorsqu'une dimension est utilisée pour segmenter une mesure, celle-ci est résumée en fonction des hiérarchies contenues dans la dimension. Le comportement de sommation dépend de la fonction d'agrégation spécifiée pour la mesure. Pour la plupart des mesures contenant des données numériques, la fonction d’agrégation est **Sum**. La valeur de la mesure est la somme de montants différents selon le niveau auquel la hiérarchie est active.  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [Définir le comportement semi-additif](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   
-

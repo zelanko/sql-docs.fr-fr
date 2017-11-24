@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 85b07e5b292632403a719ef6deee92acffce658c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a5d1d6dd514d346f4a24783307b27b86e777be1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Leçon 4-7 : définition des propriétés de traitement des valeurs Null et membre inconnu
 Lorsque [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] traite une dimension, toutes les valeurs distinctes des colonnes sous-jacentes dans les tables ou les vues de la vue de source de données remplissent les attributs de la dimension. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur Null au cours du traitement, par défaut, elle convertit celle-ci en zéro pour des colonnes numériques ou en une chaîne vide pour des colonnes de type chaîne. Vous pouvez modifier les paramètres par défaut ou convertir les valeurs Null dans votre processus d’extraction, de transformation et de chargement (le cas échéant) de l’entrepôt de données relationnelles sous-jacent. Par ailleurs, vous pouvez faire en sorte que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convertisse la valeur Null en une valeur désignée en configurant trois propriétés : les propriétés **UnknownMember** et **UnknownMemberName** pour la dimension, et la propriété **NullProcessing** pour l’attribut de clé de la dimension.  
@@ -192,4 +189,3 @@ Pour modifier le comportement mentionné dans la tâche précédente, activez la
   
   
   
-

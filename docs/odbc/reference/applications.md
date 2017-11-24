@@ -3,10 +3,12 @@ title: Applications | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>Applications
 Un *application* est un programme qui appelle l’API ODBC pour accéder aux données. Bien que de nombreux types d’applications sont possibles, la plupart sont classées en trois catégories, qui sont utilisés comme exemples dans ce guide.  
@@ -60,4 +61,3 @@ Un *application* est un programme qui appelle l’API ODBC pour accéder aux don
 -   Déconnexion de la source de données.  
   
  Étant donné que la plupart du travail accès aux données s’effectue avec SQL, la tâche principale pour les applications qui utilisent ODBC consiste à envoyer des instructions SQL et récupérer les résultats (le cas échéant) générées par ces instructions. Autres tâches pour les applications qui utilisent ODBC comprennent déterminer et de réglage pour les fonctionnalités du pilote et parcourent le catalogue de base de données.
-

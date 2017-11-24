@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Stream::Size
-helpviewer_keywords:
-- Size property [ADO Stream]
+f1_keywords: _Stream::Size
+helpviewer_keywords: Size property [ADO Stream]
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 28bea0348e59cc3003009cd2c82242f826e9250c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c5a4027bf589a469092a6605743df3d08147e7d2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="size-property-ado-stream"></a>Taille, propriété (flux ADO)
 Indique la taille du flux en nombre d’octets.  
@@ -43,8 +39,7 @@ Indique la taille du flux en nombre d’octets.
 >  N’importe quel nombre de bits peut être stocké dans un **flux** objet, limitée uniquement par les ressources système. Si le **flux** contient plus de bits peut être représenté par un **Long** valeur, **taille** est tronqué et par conséquent ne représentent pas avec précision la longueur de la **Flux**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriété Size (paramètre ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-
+ [Size, propriété (paramètre ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

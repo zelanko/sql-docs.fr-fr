@@ -23,17 +23,16 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 717cf118bae358e566c130ede70fb82572a1d38b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
   Une vue de source de données (DSV) est une abstraction d'une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Sources de données prises en charge &#40;SSAS – Multidimensionnel&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   
-

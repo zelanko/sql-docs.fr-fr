@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Choisir la colonne à utiliser pour tester un modèle d'exploration de données
   Avant de pouvoir mesurer la précision d'un modèle d'exploration de données, vous devez déterminer le résultat que vous voulez évaluer. La plupart des modèles d'exploration de données requièrent que vous choisissiez au moins une colonne à utiliser comme attribut prédictible lorsque vous créez le modèle. Par conséquent, lorsque vous testez la précision du modèle, vous devez généralement sélectionner cet attribut comme devant être testé.  
@@ -65,7 +64,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Choisir et mapper les données de test du modèle](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [Choisir un Type de graphique d’analyse de précision et le jeu de Options de graphique](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [Choisir un type de graphique d’analyse de précision et définir des options de graphique](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
-

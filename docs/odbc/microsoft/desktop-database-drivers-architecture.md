@@ -3,10 +3,12 @@ title: "Architecture des pilotes de bureau de base de données | Documents Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4da82298313f27adc74f8712895b1777db5078f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architecture des pilotes de bureau de base de données
 Ces pilotes sont conçues pour utiliser Microsoft Windows 95 ou version ultérieure, ou Windows NT 4.0 et Windows 2000. Seules les applications 32 bits sont pris en charge sur Windows 95 ou version ultérieure ; les applications 16 bits et 32 bits sont pris en charge sur Windows NT 4.0 et Windows 2000.  
@@ -55,4 +56,3 @@ Ces pilotes sont conçues pour utiliser Microsoft Windows 95 ou version ultérie
  Odbcjt32.dll implémente des fonctions API Microsoft Jet ODBC. Il n’est cependant pas de mappage direct entre les fonctions ODBC et Microsoft Jet. De nombreux facteurs, tels que les modèles de curseurs et le mappage de SQL, empêchent une corrélation directe des fonctions.  
   
  Le pilote ODBC se trouve entre le moteur Microsoft Jet et le Gestionnaire de pilotes ODBC. Certaines fonctions ODBC appelées par une application sont gérées par le Gestionnaire de pilotes et pas passées au pilote. Pour ces fonctions, Microsoft Jet voit jamais la fonction appeler car il ne dispose pas d’une connexion directe au Gestionnaire de pilote.
-

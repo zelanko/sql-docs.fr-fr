@@ -5,7 +5,7 @@ keywords:
 services: sql-database
 documentationcenter: 
 author: becczhang
-manager: cguyer
+manager: craigg
 editor: 
 ms.assetid: 
 ms.service: sql-database
@@ -16,12 +16,11 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
+ms.openlocfilehash: be2fd15b1f742d7edb01d39be69456c58d472801
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 861a24ef2f0bc26adece27b2612d4bf2d4640a63
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="remove-a-transparent-data-encryption-tde-protector-using-powershell"></a>Supprimer un protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -111,4 +110,3 @@ Les fichiers de base de données et les fichiers journaux sont automatiquement s
 - Découvrez comment effectuer une rotation du protecteur TDE d’un serveur conformément aux exigences de sécurité : [Effectuer une rotation du protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md)
 
 - Commencez à utiliser TDE avec prise en charge de Bring Your Own Key : [Activer TDE avec votre propre clé Key Vault à l’aide de PowerShell](transparent-data-encryption-byok-azure-sql-configure.md)
-

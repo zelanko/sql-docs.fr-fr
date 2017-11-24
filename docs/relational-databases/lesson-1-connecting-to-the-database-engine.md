@@ -8,22 +8,20 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: d029887fd0610748381a4c1512ae74c451769aab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a005345fe51f1b1b1479f854c636464b728429f7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/27/2017
  -  
  -### Outils de base  
  -  
- --   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est l’outil principal employé pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et écrire le code [!INCLUDE[tsql](../includes/tsql-md.md)]. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. SSMS peut être téléchargé gratuitement depuis le [Centre de téléchargement Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La version la plus récente peut être utilisée avec les versions antérieures du [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+ --   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est l’outil principal employé pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et écrire le code [!INCLUDE[tsql](../includes/tsql-md.md)]. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS peut être téléchargé gratuitement depuis le [Centre de téléchargement Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La version la plus récente peut être utilisée avec les versions antérieures du [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
  -  
- Le Gestionnaire de configuration --   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
+ Le Gestionnaire de configuration --   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
  -  
  -### Exemple de base de données  
  -Les exemples de bases de données et les exemples ne sont pas fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La plupart des exemples décrits dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent l'exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
@@ -70,7 +68,7 @@ ms.lasthandoff: 09/27/2017
  -  
  -##### Pour définir le nom de l'instance du moteur de base de données  
  -  
- -1.  Ouvrez une session Windows en tant que membre du groupe Administrateurs, puis ouvrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ -1.  Ouvrez une session Windows en tant que membre du groupe Administrateurs, puis ouvrez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
  -  
  -2.  Dans la boîte de dialogue **Se connecter au serveur** , cliquez sur **Annuler**.  
  -  
@@ -138,5 +136,4 @@ ms.lasthandoff: 09/27/2017
  -[Leçon 2 : connexion à partir d’un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   
   
-
 

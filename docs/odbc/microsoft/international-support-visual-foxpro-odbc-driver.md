@@ -3,10 +3,12 @@ title: Prise en charge internationale (le pilote ODBC Visual FoxPro) | Documents
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - collating sequences [ODBC]
 - Visual FoxPro ODBC driver [ODBC], international support
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 06d85711cc234a8245e22b6b923b02641259eeef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>Prise en charge internationale (le pilote ODBC Visual FoxPro)
 Le pilote ODBC Microsoft Visual FoxPro prend en charge :  
@@ -46,4 +47,3 @@ Le pilote ODBC Microsoft Visual FoxPro prend en charge :
   
 ## <a name="sort-order"></a>ordre de tri  
  Ordres de tri intègrent les règles de tri de différentes *paramètres régionaux*s, ce qui vous permet de trier correctement les données dans ces langues. Dans Visual FoxPro, l’ordre de tri actuelle détermine les résultats des comparaisons d’expression de caractères et l’ordre dans lequel les enregistrements apparaissent dans indexée ou du tri des tables.
-

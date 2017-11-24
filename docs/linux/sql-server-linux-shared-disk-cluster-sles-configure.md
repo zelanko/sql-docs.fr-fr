@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
+ms.openlocfilehash: f5c51b405d3c3eaca081abfddd1b770e4b9a8559
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 30187dcf31421be045bb54e9824336e5d258f555
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés SLES pour SQL Server
 
@@ -264,4 +268,3 @@ migrate mssqlha SLES2
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 [Extension de haute disponibilité SUSE Linux Enterprise - Guide d’Administration](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 
-

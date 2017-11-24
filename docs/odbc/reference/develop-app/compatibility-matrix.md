@@ -3,10 +3,12 @@ title: "Matrice de compatibilité | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 26f6b907cf81545ce8356ca7654c3779833f73aa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c980058ea2cacba7b9160571b1b42884ea02e41
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="compatibility-matrix"></a>Matrice de compatibilité
 Le tableau suivant décrit la compatibilité des types d’applications et des pilotes définies précédemment dans cette section.  
@@ -74,5 +75,4 @@ Le tableau suivant décrit la compatibilité des types d’applications et des p
  Étant donné que [SQLCancelHandle fonction](../../../odbc/reference/syntax/sqlcancelhandle-function.md) n’est pas pris en charge dans les gestionnaires de pilotes qui ont été publiés avant Windows 7, une application ne peut pas être chargée dans les versions antérieures de Windows si elle appelle **SQLCancelHandle** directement. Travailler avec toutes les versions de gestionnaires de pilotes et utiliser **SQLCancelHandle** sur les nouvelles versions de Windows, une application doit appeler **SQLCancelHandle** indirectement à l’aide **LoadLibrary** et **GetProcAddress.**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Quelles sont les nouveautés dans ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)
-
+ [Nouveautés d’ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

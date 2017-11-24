@@ -3,33 +3,30 @@ title: Fonction de SQLSetConfigMode | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetConfigMode
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetConfigMode
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetConfigMode
-helpviewer_keywords:
-- SQLSetConfigMode function [ODBC]
+f1_keywords: SQLSetConfigMode
+helpviewer_keywords: SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 96ffac2d3329aa9e9b69be122dfd7becc37acd57
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c8919f758c486e6569b9620fcaa7bcf76f4dac0f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode (fonction)
 **Mise en conformité**  
@@ -83,4 +80,3 @@ BOOL SQLSetConfigMode(
 |Création d’une source de données|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
 |Connexion à une source de données à l’aide d’une boîte de dialogue ou la chaîne de connexion|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Le mode de configuration de la récupération des|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecfc7532761897cddf868dcb617c6eeb5f32bccb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c5d81985322b03892d17875959086078defd819
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-fields-collection"></a>La Collection de champs
 Le **champs** collection est une des collections intrinsèques d’ADO. Une collection est un ensemble ordonné d’éléments qui peuvent être référencés en tant qu’unité. Pour plus d’informations sur les collections ADO, consultez [modèle d’objet ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
@@ -122,5 +120,4 @@ objField = objRecordset.Fields(0)
  L’utilisation de la **ajouter des champs** méthode diffère entre le **Recordset** objet et la **enregistrement** objet. Pour plus d’informations sur la **enregistrement** d’objets, consultez [enregistrements et flux](../../../ado/guide/data/records-and-streams.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fabrication de jeux d’enregistrements](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)
-
+ [Fabrication de recordsets hiérarchiques](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

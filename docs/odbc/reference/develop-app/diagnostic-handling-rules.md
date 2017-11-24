@@ -3,10 +3,12 @@ title: "Diagnostic de la gestion des règles | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQLGetDiagRec function [ODBC], diagnostic handling rules
 - diagnostic information [ODBC], SqlGetDiagRec
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 154261b999911bcc02050634901b199d0ae49be1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cfd05e9c41fee1e0a753e2c4e4fa4f86db641b3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-handling-rules"></a>Règles de gestion des Diagnostics
 Les règles suivantes régissent la gestion de diagnostic dans **SQLGetDiagRec** et **SQLGetDiagField**.  
@@ -63,4 +64,3 @@ Les règles suivantes régissent la gestion de diagnostic dans **SQLGetDiagRec**
  Pour un composant ODBC autre que le Gestionnaire de pilotes :  
   
 -   Doit définir la valeur SQLSTATE en fonction de l’erreur. Pour les pilotes basés sur des fichiers et pilotes basés sur SGBD qui n’utilisent pas une passerelle, le pilote doit définir la valeur SQLSTATE. Pour les pilotes basés sur SGBD qui utilisent une passerelle, le pilote ou une passerelle qui prend en charge ODBC peut-être définir la valeur SQLSTATE.
-

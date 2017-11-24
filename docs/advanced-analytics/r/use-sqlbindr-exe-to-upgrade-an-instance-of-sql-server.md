@@ -1,35 +1,34 @@
 ---
 title: "Mettre à niveau les composants de la machine learning dans une instance de SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server (starting with 2016 CTP3)
+applies_to: SQL Server (starting with 2016 CTP3)
 ms.assetid: 4da80998-f929-4fad-a86f-87d09c1a79ef
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Mettre à niveau les composants de la machine learning dans une instance de SQL Server
 
-Cet article explique le processus de _liaison_, que vous pouvez utiliser pour mettre à niveau les composants utilisés dans SQL Server d’apprentissage automatique. Le processus de liaison verrouille le serveur dans une cadence de mise à jour basée sur des versions de la Machine Learning Server plutôt que SQL Server.
+Cet article explique le processus de _liaison_, que vous pouvez utiliser pour mettre à niveau les composants utilisés dans SQL Server d’apprentissage automatique. Le processus de liaison verrouille le serveur dans une cadence de mise à jour selon les versions du serveur de Machine Learning, au lieu d’utiliser le serveur SQL Server de version et mettre à jour de la planification.
 
 > [!IMPORTANT]
-> Vous n’avez pas besoin d’utiliser ce processus de mise à niveau si vous souhaitez obtenir des mises à niveau dans le cadre de mises à jour de SQL Server. Chaque fois que vous installez un nouveau service pack ou une version de service, machine learning composants sont automatiquement mis à niveau vers la dernière version. Utilisez cette procédure si vous souhaitez mettre à niveau des composants à un rythme plus rapide que vous est offerte par les versions de service SQL Server.
+> Vous n’avez pas besoin d’utiliser ce processus de mise à niveau si vous souhaitez obtenir des mises à niveau dans le cadre de mises à jour de SQL Server. Chaque fois que vous installez un nouveau service pack ou une version de service, machine learning composants sont automatiquement mis à niveau vers la dernière version. Utilisez uniquement le _liaison_ traiter si vous souhaitez mettre à niveau des composants à un rythme plus rapide que vous est offerte par les versions de service SQL Server.
 
 Si à tout moment vous souhaitez arrêter la mise à niveau sur la planification de la Machine Learning Server, vous devez _dissocier_ l’instance, comme décrit dans [cette section](#bkmk_Unbind), désinstaller le serveur d’apprentissage Machine.
 
@@ -39,22 +38,22 @@ Si à tout moment vous souhaitez arrêter la mise à niveau sur la planification
 
 Le processus de mise à niveau les composants d’apprentissage automatique est appelé **liaison**, car il modifie le modèle de prise en charge pour les composants de formation ordinateur SQL Server à utiliser la nouvelle stratégie de cycle de vie de logiciel moderne. 
 
-En règle générale, le basculement vers le nouveau modèle de licence garantit que les chercheurs de données peuvent utiliser toujours la dernière version de R ou Python. Pour plus d’informations sur les conditions de la stratégie de cycle de vie moderne, consultez [chronologie de prise en charge de Microsoft R Server](https://msdn.microsoft.com/microsoft-r/rserver-servicing-support).
+En règle générale, le basculement vers le nouveau modèle de licence garantit que les chercheurs de données peuvent utiliser toujours la dernière version de R ou Python. Pour plus d’informations sur les conditions de la stratégie de cycle de vie moderne, consultez [chronologie de prise en charge de Microsoft R Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support).
 
 > [!NOTE]
 > La mise à niveau ne modifie pas le modèle de prise en charge pour la base de données SQL Server et ne change pas la version de SQL Server.
 
-Lorsque vous liez une instance, plusieurs choses se produisent, qui peut inclure une mise à niveau vers les composants d’apprentissage automatique :
+Les effets d’une liaison d’une instance sont multiples :
 
 + Le modèle de prise en charge est modifié. Plutôt que sur des versions de service SQL Server, prise en charge est basée sur la nouvelle stratégie de cycle de vie moderne.
 + Les composants d’apprentissage machine associés à l’instance sont automatiquement mis à niveau avec chaque version, dans l’étape de verrou avec la version actuelle sous la nouvelle stratégie de cycle de vie moderne. 
-+ Nouveaux packages R ou Python peuvent être ajoutées. Par exemple, précédentes mises à jour à partir de Microsoft R Server ajoutés comme nouveaux packages R, [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), et [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
++ Nouveaux packages R ou Python peuvent être ajoutées. Par exemple, précédentes mises à jour en fonction de Microsoft R Server 9.1 ajoutés comme nouveaux packages R, [MicrosoftML](../using-the-microsoftml-package.md), [olapR](../r/how-to-create-mdx-queries-using-olapr.md), et [sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md).
 + L’instance peut ne plus être mise à jour manuellement, excepté pour ajouter de nouveaux packages.
-+ Vous avez la possibilité d’ajouter des modèles préformés fournis par Microsoft.
++ Vous obtenez l’option d’installation préformés modèles fournis par Microsoft.
 
 ## <a name="bkmk_prereqs"></a>Prérequis
 
-Commencez par identifier les instances qui sont des candidats pour une mise à niveau. Si vous exécutez le programme d’installation et que vous sélectionnez l’option de liaison, il retourne une liste d’instances qui sont compatibles avec la mise à niveau. 
+Commencez par identifier les instances qui sont des candidats pour une mise à niveau. Si vous exécutez le programme d’installation et que vous sélectionnez l’option de liaison, il retourne une liste d’instances qui sont compatibles avec la mise à niveau.
 
 Consultez le tableau suivant pour obtenir la liste des mises à niveau pris en charge et les exigences.
 
@@ -65,7 +64,7 @@ Consultez le tableau suivant pour obtenir la liste des mises à niveau pris en c
 
 ## <a name="bind-or-upgrade-an-instance"></a>Lier ou mettre à niveau une instance
 
-Microsoft Machine Learning pour Windows Server inclut un outil que vous pouvez utiliser pour mettre à niveau de l’apprentissage de langages et outils associés à une instance de SQL Server. Il existe deux versions de l’outil : un Assistant et un utilitaire de ligne de commande.
+Machine Learning pour Windows Server inclut un outil que vous pouvez utiliser pour mettre à niveau de l’apprentissage de langages et outils associés à une instance de SQL Server. Il existe deux versions de l’outil : un Assistant et un utilitaire de ligne de commande.
 
 Avant de pouvoir exécuter l’Assistant ou l’outil de ligne de commande, vous devez télécharger la dernière version du programme d’installation autonome pour l’apprentissage de composants.
 
@@ -89,13 +88,13 @@ Avant de pouvoir exécuter l’Assistant ou l’outil de ligne de commande, vous
 
 4. Sur des pages successives, fournir son consentement pour les conditions de licences supplémentaires pour tous les composants open source que vous avez sélectionné, telles que Microsoft R Open ou la distribution de Python Anaconda.
 
-5. Sur le **presque** page, notez le dossier d’installation. Le dossier par défaut est `~\Program Files\Microsoft\ML Server`. 
+5. Sur le **presque** page, notez le dossier d’installation. Le dossier par défaut est `~\Program Files\Microsoft\ML Server`.
 
-    Si vous souhaitez modifier le dossier d’installation, cliquez sur **avancé** pour revenir à la première page de l’Assistant. Toutefois, vous devez répéter toutes les sélections précédentes. 
+    Si vous souhaitez modifier le dossier d’installation, cliquez sur **avancé** pour revenir à la première page de l’Assistant. Toutefois, vous devez répéter toutes les sélections précédentes.
 
 6. Si vous installez les composants en mode hors connexion, vous pouvez être invité pour l’emplacement des composants d’apprentissage nécessaires de l’ordinateur, telles que Microsoft R Open, serveur de Python et ouvrir de Python.
-    
-Pendant l’installation, toutes les bibliothèques R ou Python utilisés par SQL Server sont remplacés et Launchpad est mis à jour pour utiliser les composants les plus récents. Autrement dit, si l’instance utilisé précédemment des bibliothèques dans le dossier R_SERVICES par défaut, après mise à niveau ces bibliothèques sont supprimés et les propriétés pour le service Launchpad sont modifiées, pour utiliser les bibliothèques dans l’emplacement spécifié.
+
+Pendant le processus d’installation, toutes les bibliothèques R ou Python utilisés par SQL Server sont remplacés et Launchpad est mis à jour pour utiliser les composants les plus récents. Par conséquent, si l’instance utilisé précédemment des bibliothèques dans le dossier R_SERVICES par défaut, après mise à niveau ces bibliothèques sont supprimés et les propriétés pour le service Launchpad sont modifiées, pour utiliser les bibliothèques dans le nouvel emplacement.
 
 ### <a name="bkmk_BindCmd"></a>Mise à niveau de l’aide de la ligne de commande
 
@@ -219,4 +218,3 @@ Pour plus d’informations, consultez les notes de publication pour Microsoft R 
 + [Annonces de fonctionnalités à partir de la version précédente de R Server](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [Fonctionnalités déconseillées, supprimées ou modifiées](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
-

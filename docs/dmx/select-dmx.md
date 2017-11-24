@@ -2,18 +2,19 @@
 title: SELECT (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- SELECT
-dev_langs:
-- DMX
+f1_keywords: SELECT
+dev_langs: DMX
 helpviewer_keywords:
 - browsing mining model [Analysis Services]
 - TOP clause, SELECT
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - statements [DMX], SELECT statement
 - WHERE clause, DMX
 ms.assetid: 32d9e8fd-796b-4e1c-ae59-73cd6f645485
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 79fb3f8ce7766130ced9a8353a83e34bbbf007d1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c012d5fd04ed19665964119d0a0985b08ff2c7c8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le **sélectionnez** instruction dans les Extensions DMX (Data Mining) est utilisée pour les tâches suivantes dans l’exploration de données :  
   
@@ -155,4 +155,3 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  [Les Extensions d’exploration de données &#40; DMX &#41; Instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)  
   
   
-

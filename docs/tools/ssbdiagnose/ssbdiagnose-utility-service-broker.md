@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
   L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
@@ -469,4 +467,3 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [Sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   
-

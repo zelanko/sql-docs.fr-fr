@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - GetChunk method [ADO], Visual Basic example
 - AppendChunk method [ADO], Visual Basic example
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5dc8e9ec12357e0e92e2d94fe80ad54029740ff4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 53550f1e8e899a480c189c6925e649d8814316ff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk et GetChunk, méthodes-exemple (VB)
 Cet exemple utilise le [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) méthodes pour remplir un champ d’image de données à partir d’un autre enregistrement.  
@@ -159,5 +156,4 @@ End Sub
  [AppendChunk, méthode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Objet Field](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk, méthode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)
-
+ [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - deploying [Analysis Services], installation targets
 - modifying installation targets
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 26398b7fe94f9e96f34e811764104e2109d72f11
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e284ed2df95c56c19ed25cad79f4cf11099902f2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deployment-script-files---specifying-the-installation-target"></a>Fichiers de Script de déploiement - spécification de la cible d’Installation
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les informations de cible d’installation à partir de la \< *nom du projet*> .deploymenttargets fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]utilise la base de données et le serveur spécifié sur le **déploiement** page de la  *\<nom du projet >* **Pages de propriétés** boîte de dialogue pour créer le \< *nom du projet*> fichier .targets.  
@@ -61,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  [Spécification d'options de traitement](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "L’exécution positionné instructions Update et Delete | Documents Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 757def8025702d5ca7c867b2d8009c7a1d5cb9a2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>L’exécution des instructions de suppression et de mise à jour positionnée
 > [!IMPORTANT]  
@@ -69,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 |Suppression positionnée|SQL_ROW_DELETED|Anciennes valeurs|Anciennes valeurs|  
   
  [1], l’application doit mettre à jour les valeurs dans les tampons de l’ensemble de lignes avant d’exécuter l’instruction de mise à jour positionnée ; Après avoir exécuté l’instruction de mise à jour positionnée, la bibliothèque de curseurs copie les valeurs dans les tampons de l’ensemble de lignes dans son cache.
-

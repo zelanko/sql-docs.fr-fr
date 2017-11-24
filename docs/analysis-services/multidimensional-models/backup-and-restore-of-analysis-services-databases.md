@@ -26,17 +26,16 @@ helpviewer_keywords:
 - restoring databases [Analysis Services]
 - recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et la restauration afin que vous puissiez récupérer une base de données et ses objets à partir d'une date et heure spécifiques. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
@@ -138,4 +137,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

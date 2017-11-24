@@ -2,9 +2,12 @@
 title: "Configuration de la connectivité PolyBase (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, pdw
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4cc9ed218c603bc82ffea5a7653b36513f5a452e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9ff43bd1953f7f175bc8726cc617081c6173b1d6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
   Affiche ou modifie les paramètres de configuration globale pour la connectivité du stockage d'objets blob Azure et PolyBase Hadoop.  
   

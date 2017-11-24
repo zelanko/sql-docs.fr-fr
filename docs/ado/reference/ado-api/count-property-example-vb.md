@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Count property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 665541a111e8117a9a96b0788ac837a50ed79eaf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20fdfff410f2b36e8974aa7073ad287e6f4a74d4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="count-property-example-vb"></a>Exemple de propriété Count (VB)
 Cet exemple illustre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets de chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections. Une autre méthode pour énumérer ces collections sans utiliser le **nombre** propriété serait d’utiliser `For Each...Next` instructions.  
@@ -106,4 +102,3 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Count, propriété (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
-

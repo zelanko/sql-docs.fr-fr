@@ -3,27 +3,28 @@ title: Le fichier Schema.ini (pilote du fichier texte) | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema.ini et toujours conservé dans le même répertoire que la source de données de texte. Le fichier d’informations de schéma fournit la méthode IISAM avec des informations sur le format général du fichier, le nom de colonne et les informations de type de données et plusieurs autres caractéristiques des données. Un fichier Schema.ini est toujours requis pour accéder à des données de longueur fixe. Vous devez utiliser un fichier Schema.ini lorsque votre table de texte contient la date/heure, devise, ou données Decimal ou à tout moment que vous souhaitez davantage de contrôle sur la gestion des données dans la table.  
@@ -133,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Si vous omettez une entrée, la valeur par défaut dans le panneau de configuration de Windows est utilisée.
-

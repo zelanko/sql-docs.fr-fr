@@ -2,9 +2,12 @@
 title: "Description du code XML d’un flux de travail personnalisé (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -15,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1541cab93742a053752706838056d7ffb1ea616
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0d615319210bcedd0c22cd59c3dbe8c1a3f06daa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Créer un flux de travail personnalisé - Description du code XML
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], la méthode <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> est appelée par le service d'intégration de flux de travail MDS SQL Server lors du démarrage d'un flux de travail. Cette méthode reçoit les métadonnées et les données relatives à l'élément qui a déclenché la règle d'entreprise de flux de travail sous la forme d'un bloc XML. Pour découvrir un exemple de code qui implémente un gestionnaire de flux de travail, consultez [Exemple de flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  

@@ -2,9 +2,12 @@
 title: "Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae69dfe35f74a8e8084c44ca4ed8614ae3ba4ae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a05d33191df12f115cea94a10eb1b2bd3a9a3498
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Pendant la mise à niveau d’un groupe de disponibilité Always On [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers une nouvelle version [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , un nouveau Service Pack [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou une mise à jour cumulative, ou pendant l’installation d’un nouveau Service Pack ou une nouvelle mise à jour cumulative Windows, vous pouvez réduire les temps d’arrêt pour chaque réplica principal à un seul basculement manuel en effectuant une mise à niveau propagée (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine). Pendant le processus de mise à niveau, un réplica secondaire sera pas disponible pour le basculement ou pour des opérations en lecture seule et, après la mise à niveau, le réplica secondaire peut prendre un certain temps rattraper son retard sur le nœud de réplica principal en fonction du volume d’activité sur le nœud de réplica principal (attendez-vous à un trafic réseau important).  
   

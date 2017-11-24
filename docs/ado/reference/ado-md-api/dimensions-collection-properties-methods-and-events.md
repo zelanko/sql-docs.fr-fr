@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Dimensions collection [ADO MD], members
+helpviewer_keywords: Dimensions collection [ADO MD], members
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4fae7faa4394ca0a608f801e2b2f0811eb5e124d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0303042e14f015f217c3d22e23d0f4576e2dfd07
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Propriétés de Collection de dimensions, méthodes et événements
 ## <a name="properties"></a>Propriétés  
@@ -40,5 +37,4 @@ ms.lasthandoff: 09/09/2017
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection de dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)
-
+ [Dimensions, collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)

@@ -6,17 +6,20 @@ ms.author: sanagama
 manager: jhubbard
 ms.date: 08/23/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 57c13b89e4bb8410f40e4a75ed93b08fa9812722
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: f8dd1654dc05a89147ecf9d658d492adeb3d0ceb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilisez SQL Server Management Studio sur Windows pour gérer SQL Server sur Linux
 
@@ -95,4 +98,3 @@ Lorsqu’un volet est développé, le moniteur d’activité interroge l’insta
 - [Didacticiel : SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [Didacticiel : écriture d'instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Analyse des performances et surveillance de l’activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)
-

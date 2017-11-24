@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc9012023093ad4f2acdf02e66a42d41581469da
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7cc8dbd9eaf1f0cce54d142f775076d58528c4fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-migration-db2tosql"></a>Paramètres du projet (Migration) (DB2ToSQL)
 La page de la Migration de le **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA migre les données à partir de DB2 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -68,4 +66,3 @@ Le volet de la Migration est disponible à la fois dans le **les paramètres de 
 > [!IMPORTANT]  
 > Lorsque le **parallèles en Mode Migration de données** option est définie sur **personnalisé**, un nouveau projet de définition d’option **le nombre de threads** s’affiche. Il spécifie le nombre de threads utilisés pour la migration de données.  
   
-

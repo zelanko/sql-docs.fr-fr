@@ -2,9 +2,12 @@
 title: "Paramètres système (Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb5eb5554de4e65e040a2308fa4bc5a52fe765d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: eab5482b701e990308aeaf1c39c1125b1592787b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="system-settings-master-data-services"></a>Paramètres système (Master Data Services)
   Vous pouvez configurer les paramètres système de l'ensemble des applications Web et services Web associés à une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

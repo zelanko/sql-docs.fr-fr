@@ -3,10 +3,12 @@ title: "Gestion des Sources de données | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: admin
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 8d5a80fc70b3a41c05a85fa23fb44a11f1d2e860
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d80594ac41f27d28051fc64f489b5cad59335c00
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-data-sources"></a>Gestion des Sources de données
 Après avoir installé un pilote ODBC programme du pilote d’installation, vous pouvez définir une ou plusieurs sources de données pour celui-ci. Le nom de source de données (DSN) doit fournir une description unique des données ; par exemple, *paie* ou *paies*. Les sources de données utilisateur et système qui sont définies pour tous les pilotes actuellement installés sont répertoriés dans le **DSN utilisateur** ou **DSN système** onglets de la **administrateur de sources de données ODBC** boîte de dialogue. Les sources de données de fichier dans un répertoire donné sont répertoriées dans le **DSN de fichier** onglet ; le répertoire à afficher est entré dans le **Regarder dans** zone le **DSN de fichier** onglet.  
@@ -54,4 +55,3 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrateur de sources de données ODBC](../../odbc/admin/odbc-data-source-administrator.md)
-

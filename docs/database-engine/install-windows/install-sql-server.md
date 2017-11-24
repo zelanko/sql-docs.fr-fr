@@ -1,12 +1,13 @@
 ---
 title: Installer SQL Server | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/24/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +20,14 @@ caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: eab4b7f0ac099d615df1eda831adf04dfd29a7f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 992a6dcf93bba9eba91297c894700d00b82186b7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server"></a>Installer SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Installer SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx).
 
  À partir de [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] est disponible uniquement en tant qu’application 64 bits. Voici des informations importantes sur la façon d’obtenir SQL Server et de l’installer.

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: 8ff312fceaee24d32f23ff8135bcc18e09601ddf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Nouveautés de SSMA pour DB2 (DB2ToSQL)
 Cette rubrique répertorie SSMA pour DB2 les modifications dans chaque version.  
@@ -111,4 +109,3 @@ La version de maintenance de janvier 2016 de SSMA pour DB2 contient les modifica
   
 ## <a name="november-2014"></a>Novembre 2014  
 La version de novembre 2014 de SSMA pour DB2 était la version initiale.
-

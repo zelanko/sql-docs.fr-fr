@@ -3,10 +3,12 @@ title: "Diagnostic de descripteur, plus d’informations, de Types spécifiques 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2ccf90b309c6a2355612546e82c2181988879520
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05aaeca12342ec9d037595ff001a0d1edc745818
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Les Types de données spécifique au pilote, les Types de descripteur, les Types d’informations, les Types de Diagnostic et les attributs
 Pilotes peuvent allouer des valeurs spécifiques au pilote pour les éléments suivants :  
@@ -65,4 +66,3 @@ Pilotes peuvent allouer des valeurs spécifiques au pilote pour les éléments s
 ```  
 SQL_DRIVER_DIAGNOSTIC_BASE+0, SQL_DRIVER_DIAGNOSTIC_BASE +1  
 ```
-

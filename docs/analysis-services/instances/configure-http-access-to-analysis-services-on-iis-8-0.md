@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 02c1e956d40ed9a4b69e0606f5a273ecab814e83
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bfb3bdd7224a72849e35bd1433e59267b559f0f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurer l’accès HTTP à Analysis Services sur IIS 8.0
   Cet article explique comment configurer un point de terminaison HTTP pour accéder à une instance Analysis Services. Vous pouvez activer l'accès HTTP en configurant MSMDPUMP.dll, une extension ISAPI qui s'exécute dans Internet Information Services (IIS) et qui pompe des données entre des applications clientes et un serveur Analysis Services. Cette approche constitue une alternative à la connexion à Analysis Services lorsque votre solution de décisionnel nécessite les capacités suivantes :  
@@ -249,7 +248,7 @@ ms.lasthandoff: 09/01/2017
   
  Si l'instance Analysis Services pour laquelle vous configurez l'accès HTTP se trouve sur l'ordinateur local et si elle est installée comme instance par défaut, il n'y a aucune raison de modifier ce paramètre. Sinon, vous devez spécifier le nom du serveur (par exemple, \<NomServeur > ADWRKS-SRV01 \< /servername >). Pour un serveur qui est installé comme instance nommée, veillez à ajouter le nom d’instance (par exemple, \<NomServeur > ADWRKS-SRV01\Tabular \< /servername >).  
   
- Par défaut, Analysis Services écoute le port TCP/IP 2383. Si vous avez installé Analysis Services en tant que l’instance par défaut, vous n’avez pas besoin de spécifier de port dans \<nom_serveur >, car Analysis Services sait comment écouter le port 2383 automatiquement. Cependant, vous devrez autoriser les connexions entrantes pour ce port dans le Pare-feu Windows. Pour plus d’informations, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Par défaut, Analysis Services écoute le port TCP/IP 2383. Si vous avez installé Analysis Services en tant que l’instance par défaut, vous n’avez pas besoin de spécifier de port dans \<nom_serveur >, car Analysis Services sait comment écouter le port 2383 automatiquement. Cependant, vous devrez autoriser les connexions entrantes pour ce port dans le Pare-feu Windows. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  Si vous configuré un jeu nommé ou instance d’Analysis Services à l’écoute sur un port fixe par défaut, vous devez ajouter le numéro de port pour le nom du serveur (par exemple, \<NomServeur > AW-SRV01:55555 \< /servername >) et vous devez autoriser les connexions entrantes dans le pare-feu Windows à ce port.  
   
@@ -327,4 +326,3 @@ ms.lasthandoff: 09/01/2017
  [Comment faire pour configurer SSL sur IIS 7](http://go.microsoft.com/fwlink/?LinkId=207562)  
   
   
-

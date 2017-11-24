@@ -4,17 +4,22 @@ description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. C
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: Active
+ms.openlocfilehash: 8d61ba8334d81c46643d15b38173b6b2dd2e1a93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -94,31 +99,82 @@ Pour restaurer ou rétrograder SQL Server vers une version précédente, procéd
 > [!NOTE]
 > Il est uniquement pris en charge pour mettre à niveau vers une version au sein de la même version principale, telles que SQL Server 2017.
 
-> [!IMPORTANT]
-> Vers une version antérieure est uniquement prise en charge entre RC1, RC2 et RTM pour l’instant.
+## <a id="versioncheck"></a>Vérifiez la version installée de SQL Server
+
+Pour vérifier votre version actuelle et l’édition de SQL Server sur Linux, utilisez la procédure suivante :
+
+1. Si pas déjà installé, installez le [les outils de ligne de SQL Server](sql-server-linux-setup-tools.md).
+
+1. Utilisez **sqlcmd** pour exécuter une commande Transact-SQL qui affiche la version de SQL Server et l’édition.
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
+## <a id="uninstall"></a>Désinstaller SQL Server
+
+Pour supprimer la **mssql-serveur** package sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
+
+| Plateforme | Commandes de suppression de package |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+La suppression du package ne supprime pas les fichiers de base de données générée. Si vous souhaitez supprimer les fichiers de base de données, utilisez la commande suivante :
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
 
 ## <a id="repositories"></a>Configurer des référentiels de code source
 
-Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server à partir de votre référentiel de Microsoft. Il est important de noter qu’il existe deux principaux types de référentiels pour chaque point de distribution :
+Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server à partir de votre référentiel de Microsoft.
+
+### <a name="repository-options"></a>Options de dépôt
+
+Il existe deux principaux types de référentiels pour chaque point de distribution :
 
 - **Les mises à jour cumulative (CU)**: référentiel de la mise à jour Cumulative (CU) contient des packages pour la version de SQL Server de base et tous les correctifs de bogues ou améliorations apportées depuis cette version. Mises à jour cumulatives sont spécifiques à une version release, telles que SQL Server 2017. Ils sont publiés sur une cadence régulière.
 
 - **GDR**: référentiel du GDR contient des packages pour la base version de SQL Server et uniquement les correctifs critiques et les mises à jour de sécurité depuis cette version. Ces mises à jour sont également ajoutés à la prochaine version CU.
 
-Chaque version de CU et correctif logiciel grand public contient le package SQL Server complète et toutes les mises à jour précédentes pour ce référentiel. Mise à jour à partir d’une version GDR vers une version CU prend en charge la modification de votre référentiel configuré pour SQL Server. Vous pouvez également [rétrograder](#rollback) à n’importe quelle version dans votre version principale (ex : 2017).
+Chaque version de CU et correctif logiciel grand public contient le package SQL Server complète et toutes les mises à jour précédentes pour ce référentiel. Mise à jour à partir d’une version GDR vers une version CU prend en charge la modification de votre référentiel configuré pour SQL Server. Vous pouvez également [rétrograder](#rollback) à n’importe quelle version dans votre version principale (ex : 2017). Mise à jour à partir d’une CU version à une version de correctif logiciel grand public n’est pas pris en charge.
 
-> [!NOTE]
-> Mise à jour à partir d’une CU version à une version de correctif logiciel grand public n’est pas pris en charge.
+### <a name="check-your-configured-repository"></a>Vérifiez votre référentiel
+
+Si vous souhaitez vérifier le référentiel est configurée, utilisez les techniques de dépend de la plateforme suivants.
+
+| Plateforme | Procédure |
+|-----|-----|
+| RHEL | 1. Afficher les fichiers dans le **/etc/yum.repos.d** active :`sudo ls /etc/yum.repos.d`<br/>2. Recherchez le fichier qui configure le répertoire de SQL Server, tels que **mssql-server.repo**.<br/>3. Imprimer le contenu du fichier :`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. Le **nom** propriété est le référentiel.|
+| SLES | 1. Exécutez la commande suivante : `sudo zypper info mssql-server`.<br/>2. Le **référentiel** propriété est le référentiel. |
+| Ubuntu | 1. Exécutez la commande suivante : `sudo cat /etc/apt/sources.list`.<br/>2. Examinez l’URL du package pour mssql-serveur. |
+
+La fin de l’URL du référentiel confirme que le type de référentiel :
+
+- **MSSQL-serveur**: référentiel d’aperçu.
+- **MSSQL-server-2017**: référentiel CU.
+- **MSSQL server 2017 gdr**: référentiel de correctif logiciel grand public.
+
+### <a name="change-the-source-repository"></a>Modifier le référentiel source
 
 Pour configurer les référentiels CU ou GDR, procédez comme suit :
 
+> [!NOTE]
+> Le [didacticiels de démarrage rapide](#platforms) configurer le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont nécessaires pour la modification de votre référentiel.
+
 1. Si nécessaire, supprimez l’espace de stockage configuré précédemment.
 
-   | Plateforme | Commande de suppression de référentiel |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | Plateforme | Référentiel | Commande de suppression de référentiel |
+   |---|---|---|
+   | RHEL | **Tous** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | **CTP** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. Pour **Ubuntu uniquement**, importation des clés publiques de référentiel GPG.
 
@@ -137,26 +193,10 @@ Pour configurer les référentiels CU ou GDR, procédez comme suit :
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [Installer](#platforms) ou [mettre à jour](#upgrade) SQL Server à partir du référentiel de nouveau.
+1. [Installer](#platforms) ou [mettre à jour](#upgrade) SQL Server et les liés les packages à partir du référentiel de nouveau.
 
    > [!IMPORTANT]
-   > À ce stade, si vous choisissez d’effectuer une installation complète à l’aide de la [didacticiels de démarrage rapide](#platforms), souvenez-vous que vous venez de configurer le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que les didacticiels de démarrage rapide utilisent le référentiel CU.
-
-## <a id="uninstall"></a>Désinstaller SQL Server
-
-Pour supprimer la **mssql-serveur** package sous Linux, utilisez une des commandes suivantes en fonction de votre plateforme :
-
-| Plateforme | Commandes de suppression de package |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-La suppression du package ne supprime pas les fichiers de base de données générée. Si vous souhaitez supprimer les fichiers de base de données, utilisez la commande suivante :
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
+   > À ce stade, si vous choisissez d’utiliser un des didacticiels de l’installation, tel que le [didacticiels de démarrage rapide](#platforms), souvenez-vous que vous venez de configurer le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que les didacticiels de démarrage rapide utilisent le référentiel CU.
 
 ## <a id="unattended"></a>Installation sans assistance
 
@@ -232,4 +272,3 @@ Se connecter à votre instance de SQL Server pour commencer la création et la g
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécutez sur Docker](quickstart-install-connect-ubuntu.md)
-

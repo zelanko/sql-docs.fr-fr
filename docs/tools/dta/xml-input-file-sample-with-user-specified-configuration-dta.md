@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- sample applications [DTA]
+dev_langs: XML
+helpviewer_keywords: sample applications [DTA]
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1650b5ccfc752cc07e97647c3e1cced118b3bb7c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b11febc0d8f432453516237b93a753a588014691
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>Exemple de fichier d'entrée XML avec une configuration spécifiée par l'utilisateur (Assistant Paramétrage de base de données)
   Copiez et collez cet exemple de fichier d’entrée XML qui spécifie une configuration spécifiée par l’utilisateur avec l’élément **Configuration** dans votre éditeur XML ou de texte favori. Vous pouvez ainsi effectuer une évaluation de simulation. Une évaluation de simulation implique l’utilisation de l’élément **Configuration** pour spécifier un ensemble de structures PDS hypothétiques pour la base de données que vous souhaitez paramétrer. Vous pouvez ensuite utiliser l'Assistant Paramétrage du moteur de base de données pour analyser les effets de l'exécution d'une charge de travail dans cette configuration hypothétique en vue de déterminer si elle améliore les performances du traitement des requêtes. Ce type d'analyse offre l'avantage de pouvoir évaluer la nouvelle configuration sans avoir à supporter la charge induite par une mise en œuvre effective. Si votre configuration hypothétique ne permet pas d'améliorer suffisamment les performances, vous pouvez facilement la modifier et l'analyser de nouveau jusqu'à obtention des résultats escomptés.  
@@ -107,4 +103,3 @@ ms.lasthandoff: 08/02/2017
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

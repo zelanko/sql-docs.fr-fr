@@ -2,9 +2,12 @@
 title: "Planifier et exécuter des séquences de restauration (mode de récupération complète) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da3e2c8873fbc1b44ab45698d08c27edfdaf27a6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aeaff84574eaa0f535596efe8c03b2b14b640ba1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment planifier et effectuer une séquence de restauration pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent habituellement le mode de restauration complète. Une *séquence de restauration* est une séquence contenant une ou plusieurs instructions [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . En règle générale, une séquence de restauration initialise le contenu de la base de données, des fichiers et/ou des pages en cours de restauration (phase de copie des données), restaure les transactions journalisées (phase de restauration par progression) et annule les transactions non validées (phase de restauration).  
   

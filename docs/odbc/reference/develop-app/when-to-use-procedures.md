@@ -3,27 +3,28 @@ title: "Quand utiliser les procédures | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], about procedures
 ms.assetid: 7dc9e327-dd54-4b10-9f66-9ef5c074f122
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d69e085ace58008eab92bbe8422180b9b8eeab07
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="when-to-use-procedures"></a>Quand utiliser des procédures
 Il existe de nombreux avantages à l’aide des procédures, tous les repose sur le fait qu’à l’aide de procédures déplace les instructions SQL à partir de l’application à la source de données. Ce qui est conservé dans l’application est un appel de procédure interopérable. Ces avantages :  
@@ -51,4 +52,3 @@ Il existe de nombreux avantages à l’aide des procédures, tous les repose sur
  Le deuxième inconvénient que nombreux SGBD ne prennent pas en charge les procédures. Là encore, il s’agit probablement d’un problème pour les applications verticales conçus pour s’exécuter avec un nombre de SGBD. Pour déterminer si les procédures sont prises en charge, une application appelle **SQLGetInfo** avec l’option SQL_PROCEDURES.  
   
  L’inconvénient de tiers, ce qui concerne particulièrement aux environnements de développement, est que ODBC ne définit pas une grammaire standard pour créer des procédures. Autrement dit, bien que les applications peuvent appeler des procédures plus, ils ne peuvent pas les créer plus.
-

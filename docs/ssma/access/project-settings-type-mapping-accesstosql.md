@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43b1e632293658300a3ca8c242a57507e31ffb5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f1fbca03968ed7257cd7b65a42a6fff5180dbedc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres (Type de mappage) du projet (AccessToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuels. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
@@ -66,7 +64,7 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |**Mémo**|**nvarchar(max)**|  
 |**Mémo** - pour Access 97|**varchar(max)**|  
 |**unique**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
+|**text[\*.. \*]**|**nvarchar [\*]**|  
 |**text[\*.. \*]** - pour Access 97|**varchar [\*]**|  
   
 **Ajouter**  
@@ -82,7 +80,6 @@ Cliquez pour supprimer le mappage de type de données sélectionnées à partir 
 Cliquez pour réinitialiser tous les mappages de type de données pour les valeurs par défaut SSMA.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Source de mappage et les Types de données cible](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Mappage de types de données sources et cibles](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
 [Reference(Access) d’Interface utilisateur](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   
-

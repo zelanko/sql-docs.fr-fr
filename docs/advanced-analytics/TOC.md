@@ -153,12 +153,11 @@
 ### [Options de configuration avancées pour Machine Learning Services](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Considérations sur la sécurité pour le runtime R dans SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Modifier le pool de comptes d’utilisateur pour SQL Server Machine Learning Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Configurer et gérer les extensions Machine Learning](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Déployer et utiliser des modèles à l’aide de services web](operationalization-with-mrsdeploy.md)
 ### [Gestion et surveillance des solutions Machine Learning](r/managing-and-monitoring-r-solutions.md)
 ### [Gouvernance des ressources pour Machine Learning Services](r/resource-governance-for-r-services.md)
-### [Créer un pool de ressources pour R](r/how-to-create-a-resource-pool-for-r.md)
+### [Créer un pool de ressources pour Machine Learning](r/how-to-create-a-resource-pool-for-r.md)
 ### [Événements étendus pour Machine Learning Services](r/extended-events-for-sql-server-r-services.md)
 
 ### [DMV pour Machine Learning Services](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [Ajouter R à une machine virtuelle Azure existante](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Utiliser sqlBindR.exe pour mettre à niveau une instance](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Installer R Server à partir de la ligne de commande](r/install-microsoft-r-server-from-the-command-line.md)
-### [Approvisionner la machine virtuelle pour la science des données](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Provisionner une machine virtuelle pour la science des données d’entreprise](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Configurer les outils de science des données](r/setup-or-configure-r-tools.md)
 ### [Configurer un client de science des données](r/set-up-a-data-science-client.md)
 

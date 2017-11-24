@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO]
+helpviewer_keywords: Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-recordsets"></a>Utilisation des jeux d’enregistrements
 Le **Recordset** objet possède des fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser les opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas, telle que celle de la [Index](../../../ado/reference/ado-api/index-property.md) propriété — la structure de la source de données.  
@@ -174,4 +171,3 @@ Loop
  Fermeture de l’original **Recordset** ne ferme pas ses copies, ni est fermeture fermer une copie la version d’origine ou les autres copies.  
   
  Vous pouvez cloner un **Recordset** uniquement l’objet si elle prend en charge les signets. Les valeurs de signet sont interchangeables ; Autrement dit, une référence de signet à partir d’un **Recordset** objet fait référence au même enregistrement dans un de ses clones.
-

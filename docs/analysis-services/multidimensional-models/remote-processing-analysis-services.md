@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59113cc41bf1e7805b033ff0af68ee2c1accda3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f32eb86f0d4b18ac576df77a28885c7f2053d962
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-processing-analysis-services"></a>Traitement à distance (Analysis Services)
   Vous pouvez exécuter un traitement planifié ou sans assistance sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La demande de traitement proviendra d'un ordinateur, mais s'exécutera sur un autre ordinateur du même réseau.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Sur le serveur distant, l'option **Autoriser les connexions à distance à cet ordinateur** doit être activée, et le compte qui émet la demande de traitement doit être répertorié en tant qu'utilisateur autorisé.  
   
--   Les règles du Pare-feu Windows doivent être configurées pour autoriser les connexions entrantes à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vérifiez que vous pouvez vous connecter à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Les règles du Pare-feu Windows doivent être configurées pour autoriser les connexions entrantes à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vérifiez que vous pouvez vous connecter à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Résolvez les erreurs de traitement local existantes avant de tenter le traitement à distance. Quand le traitement de la demande est local, vérifiez que les données peuvent être récupérées à partir de la source de données relationnelles externe. Pour obtenir des instructions sur la spécification des informations d’identification utilisées pour récupérer des données, consultez [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [Le traitement des objets &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   
-

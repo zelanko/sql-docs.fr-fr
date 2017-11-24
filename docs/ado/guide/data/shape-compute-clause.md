@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d2fad39eb54af49b9f25b7f5b62073df44afc814
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de forme
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constitués d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation de l’enfant **Recordset** ou un préalablement mis en forme **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans le paramètre facultatif par clause.  
@@ -150,5 +148,4 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
  [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   
  [En général, les commandes de forme](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value (propriété) (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
- [Visual Basic pour Applications functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)
-
+ [Fonctions Visual Basic pour Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)

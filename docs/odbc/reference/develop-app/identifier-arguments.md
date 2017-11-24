@@ -3,10 +3,12 @@ title: "Arguments de l’identificateur | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a81844609833db4953102f72d2eb6d0939cfc78
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifier-arguments"></a>Arguments de l’identificateur
 Si une chaîne dans un argument de l’identificateur est placé entre guillemets, le pilote supprime de début et les espaces à droite et traite littéralement la chaîne entre guillemets. Si la chaîne n’est pas placé entre guillemets, le pilote supprime les espaces et des plis la chaîne en majuscules. La définition d’un argument d’identificateur à un pointeur null retourne SQL_ERROR et SQLSTATE HY009 (utilisation non valide d’un pointeur null), sauf si l’argument est un nom de catalogue et de catalogues ne sont pas pris en charge.  
@@ -41,4 +42,3 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  Identificateurs entre guillemets sont utilisés pour distinguer un nom de colonne true une pseudo-colonne du même nom, tels que le ROWID dans Oracle. Si « ROWID » est passée dans un argument d’une fonction de catalogue, la fonction fonctionnera avec la pseudo-colonne ROWID si elle existe. Si la colonne pseudo-aléatoire n’existe pas, la fonction fonctionnera avec la colonne « ROWID ». Si le ROWID est passée dans un argument d’une fonction de catalogue, la fonction fonctionnera avec la colonne de ligne ROWID.  
   
  Pour plus d’informations sur les identificateurs entre guillemets, consultez [identificateurs entre guillemets](../../../odbc/reference/develop-app/quoted-identifiers.md).
-

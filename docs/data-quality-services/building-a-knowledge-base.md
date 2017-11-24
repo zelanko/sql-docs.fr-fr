@@ -2,9 +2,12 @@
 title: "Construction d’une base de connaissances | Microsoft Docs"
 ms.custom: 
 ms.date: 07/31/2012
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d72a65cd051ca0ebd273c66fd2ce957b32d97a5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ca2abbc8b7ebe6a123680c0ff59b8a162282cd7a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="building-a-knowledge-base"></a>Construction d'une base de connaissances
   Une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité. Une base de connaissances comprend des domaines, chacun représentant les données dans un champ de données. La base de connaissances est utilisée par DQS pour effectuer le nettoyage et la duplication de données sur une base de données. Pour préparer la base de connaissances au nettoyage de données, vous pouvez exécuter une analyse assistée par ordinateur d'un exemple de données, et gérer de manière interactive les valeurs dans les domaines. DQS vous permet d'importer des connaissances, de créer des règles et des relations, de modifier directement les valeurs des données et d'exploiter une base de données par défaut.  

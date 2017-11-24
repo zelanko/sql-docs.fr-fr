@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d1e9cd8ed1c7014ccaaee5ee477f40d81c66a631
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: df359be112e86522d35e27d8cf49a4515d8745d6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="global-settings-logging-oracletosql"></a>Paramètres globaux (journalisation) (OracleToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, il faudrait modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -65,4 +63,3 @@ La taille maximale du fichier journal en Ko. La taille minimale est de 10 Ko. La
 **Nombre total de fichiers journaux**  
 Lorsqu’un journal est saturé, SSMA sera renommer le fichier journal et démarrer une nouvelle. À l’aide de ce paramètre, spécifiez le nombre maximal de fichiers journaux à conserver. La valeur minimale est 2.  
   
-

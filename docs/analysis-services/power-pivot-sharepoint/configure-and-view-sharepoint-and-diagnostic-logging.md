@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 2ca4cda21f2cb76f2f46e13be5f87765a73d665d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5e94ef1aeee4d633353964a6398bd12b89ef86cf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurer et afficher SharePoint et la journalisation des Diagnostics
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -140,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

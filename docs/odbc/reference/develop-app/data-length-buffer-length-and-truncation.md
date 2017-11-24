@@ -3,10 +3,12 @@ title: "Longueur des données, la longueur de la mémoire tampon et la troncatio
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 978418b3341bf82e0d7560052e68fecbbeb3c59b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Longueur des données, la longueur de la mémoire tampon et la troncation
 Le *longueur des données* est la longueur en octets des données telles qu’elles sont stockées dans le tampon de données de l’application, pas comme il est stocké dans la source de données. Cette distinction est importante, car les données sont souvent stockées dans des types différents dans la mémoire tampon de données que dans la source de données. Par conséquent, pour les données envoyées à la source de données, il s’agit la longueur en octets des données avant la conversion en type de la source de données. Pour les données récupérées à partir de la source de données, il est la longueur en octets des données après la conversion en type de la mémoire tampon les données et avant toute troncation.  
@@ -38,4 +39,3 @@ Le *longueur des données* est la longueur en octets des données telles qu’el
  Par exemple, qu'une application alloue de 50 octets pour une mémoire tampon de données binaires. Si le pilote a 10 octets de données binaires à retourner, il retourne les 10 octets dans la mémoire tampon. La longueur en octets des données est 10 et la longueur d’octet de la mémoire tampon est 50. Si le pilote a 60 octets de données binaires à retourner, elle tronque les données à 50 octets retourne ces octets dans la mémoire tampon et retourne SQL_SUCCESS_WITH_INFO. La longueur en octets des données est de 60 (longueur avant la troncature), et la longueur d’octet de la mémoire tampon reste encore 50.  
   
  Un enregistrement de diagnostic est créé pour chaque colonne est tronquée. Étant donné que de temps pour le pilote créer ces enregistrements et de l’application pour les traiter, la troncation peut dégrader les performances. En règle générale, une application peut éviter ce problème en allouant des tampons de grande taille suffisamment, bien que cela est peut-être pas possible lorsque vous travaillez avec des données de type long. En cas de troncation de données, l’application peut parfois allouer une mémoire tampon plus importante et extraire les données ; Cela n’est pas vrai dans tous les cas. Si une troncation se produit lors de l’obtention des données avec des appels à **SQLGetData**, l’application ne doive pas appeler **SQLGetData** pour les données qui ont déjà été retournées ; pour plus d’informations, consultez [obtention de données de type Long](../../../odbc/reference/develop-app/getting-long-data.md).
-

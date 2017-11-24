@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Create element (DTA)
+dev_langs: XML
+helpviewer_keywords: Create element (DTA)
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 02dc029883c6d10ed523e4762b843349cb8f420a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 36d80fd25c31641b693370d9a4212a8454981878
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-element-dta"></a>Create, élément (Assistant Paramétrage de base de données)
   Contient des informations sur les index, les statistiques ou les structures de segments d'une configuration spécifiée par l'utilisateur.  
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Recommendation, élément &#40; DTA &#41;](../../tools/dta/recommendation-element-dta.md)|  
+|**Élément parent**|[Recommendation, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/recommendation-element-dta.md)|  
 |**Éléments enfants**|[Index, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/index-element-dta.md)<br /><br /> Élément**Statistics** (pour plus d’informations, consultez [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) (Schéma XML de l’Assistant Paramétrage du moteur de base de données))<br /><br /> Élément**Heap** (pour plus d’informations, consultez [Database Engine Tuning Advisor XML schema](http://schemas.microsoft.com/sqlserver/) (Schéma XML de l’Assistant Paramétrage du moteur de base de données))|  
   
 ## <a name="remarks"></a>Notes  
@@ -65,4 +61,3 @@ ms.lasthandoff: 08/02/2017
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

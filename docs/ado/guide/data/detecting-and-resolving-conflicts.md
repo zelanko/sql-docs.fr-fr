@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7ac1ca3e4cd6e9047f6a3f47e8067efc6143ba5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a768c70b1945bc573aaca6c48841e665780081
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
 Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il est beaucoup moins le risque de problèmes d’accès concurrentiel se produise. En revanche, si votre application utilise le mode de traitement par lots mise à jour, il peut être une bonne chance qu’un utilisateur modifie un enregistrement avant l’enregistrement des modifications apportées par un autre utilisateur, ce même enregistrement. Dans ce cas, vous préférerez votre application de façon à gérer le conflit. Il peut être votre souhait de la dernière personne à envoyer une mise à jour sur le serveur « remporte ». Ou vous pouvez souhaiter permettre à l’utilisateur la plus récente afin de déterminer la mise à jour est prioritaire en lui offrant un choix entre les deux valeurs en conflit.  
@@ -124,5 +122,4 @@ Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il
  Pour plus d’informations sur la gestion des erreurs, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [En Mode Batch](../../../ado/guide/data/batch-mode.md)
-
+ [Mode batch](../../../ado/guide/data/batch-mode.md)

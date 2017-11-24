@@ -25,17 +25,16 @@ helpviewer_keywords:
 - mining models [Analysis Services]
 - mining models [Analysis Services], about data mining models
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d796c274172d6fdc8402c5965b6d281cc8c4e89
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0145d9d7cd222d24294d7aaab389aa5a4bdc28cb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Structures d'exploration de données (Analysis Services – exploration de données)
   La structure d'exploration de données définit les données à partir desquelles les modèles d'exploration de données sont construits : elle spécifie la vue de source de données, le nombre et le type de colonnes, ainsi qu'une partition facultative en jeux d'apprentissage et en jeux de test. Une structure d'exploration de données individuelle peut prendre en charge plusieurs modèles d'exploration de données qui partagent le même domaine. Le diagramme suivant illustre la relation de la structure d'exploration de données par rapport à la source de données et à ses modèles d'exploration de données constitutifs.  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   
-

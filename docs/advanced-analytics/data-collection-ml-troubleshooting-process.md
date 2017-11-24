@@ -5,23 +5,20 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- R
-caps.latest.revision: 1
+dev_langs: R
+caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8a476372f97251ae3cf075e69cf7baf55ba0649
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: b9185b1798c638541a5228d9cbe9e675a8de3427
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
 
@@ -345,4 +342,3 @@ En outre, vous pouvez utiliser le package sqlrutils pour regrouper votre script 
 ## <a name="see-also"></a>Voir aussi
 
 [Résoudre les problèmes d’apprentissage dans SQL Server](machine-learning-troubleshooting-faq.md)
-

@@ -3,10 +3,12 @@ title: "Mise à jour des lignes dans l’ensemble de lignes avec SQLSetPos | Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 960845d3101157b3e263230e51bd2b3b5ac05ef5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a041d356171785b0f4496a300e784bf910261942
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Mise à jour des lignes dans l’ensemble de lignes avec SQLSetPos
 L’opération de mise à jour de **SQLSetPos** rend la source de données à mettre à jour une ou plusieurs lignes sélectionnées d’une table, à l’aide de données dans les mémoires tampons d’application pour chaque colonne dépendante (sauf si la valeur dans la mémoire tampon de longueur / d’indicateur est SQL_COLUMN_IGNORE). Les colonnes qui ne sont pas liés ne seront pas mis à jour.  
@@ -137,4 +138,3 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

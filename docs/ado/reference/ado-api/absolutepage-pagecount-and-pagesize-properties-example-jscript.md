@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - PageCount property [ADO], JScript example
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 30f5eee1b1fa6e6cab2ab982d4be7d12bbd6e4b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a17b453028c97f8155a7ddf9897cc668d8571ece
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount et PageSize, propriétés-exemple (JScript)
 Cet exemple illustre les propriétés AbsolutePage, PageCount et PageSize. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **AbsolutePageJS.asp**.  
@@ -169,5 +166,4 @@ BODY {
  [AbsolutePage, propriété (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount, propriété (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize, propriété (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

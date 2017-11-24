@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b93fe94c608cce5ca4338e1d0a7ccfbcc834a322
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2ffd5c3c3a735c86aa39f7ab0b521bb23e0c4e14
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-methods"></a>Méthodes ADO
 |||  
@@ -53,10 +51,10 @@ ms.lasthandoff: 09/09/2017
 |[Exécuter (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Exécute la requête spécifiée, l’instruction SQL, une procédure stockée ou du texte spécifique au fournisseur.|  
 |[Rechercher](../../../ado/reference/ado-api/find-method-ado.md)|Recherche un **Recordset** pour la ligne qui répond aux critères spécifiés.|  
 |[Vidage](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu de la **flux** restants dans la mémoire tampon d’ADO à l’objet sous-jacent avec lequel le **flux** est associé.|  
-|[get_OLEDBCommand (méthode)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retourne la commande OLE DB sous-jacents, tout d’abord propagation n’importe quel paramètre d’informations sur la commande ADO à la commande OLE DB.|  
+|[get_OLEDBCommand, méthode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retourne la commande OLE DB sous-jacents, tout d’abord propagation n’importe quel paramètre d’informations sur la commande ADO à la commande OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retourne un **Recordset** dont les lignes représentent les fichiers et sous-répertoires dans le répertoire représenté par cet **enregistrement**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Retourne l’ensemble ou une partie du contenu d’un texte de grande taille ou les données binaires **champ** objet.|  
-|[GetDataProviderDSO (méthode)](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Récupère l’objet de Source de données OLEDB sous-jacent à partir du fournisseur de forme.|  
+|[GetDataProviderDSO, méthode](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Récupère l’objet de Source de données OLEDB sous-jacent à partir du fournisseur de forme.|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Récupère plusieurs enregistrements d’un **Recordset** objet dans un tableau.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Retourne le **Recordset** sous forme de chaîne.|  
 |[LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Charge le contenu d’un fichier existant dans un **flux**.|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 09/09/2017
 |[Open (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Ouvre un curseur.|  
 |[Open (flux ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|Ouvre un **flux** objet à manipuler des flux de données binaire ou texte.|  
 |[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)|Obtient les informations de schéma de base de données à partir du fournisseur.|  
-|[put_OLEDBCommand (méthode)](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Cette méthode n’effectue aucune opération - toujours retourne S_OK.|  
+|[put_OLEDBCommand, méthode](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Cette méthode n’effectue aucune opération - toujours retourne S_OK.|  
 |[En lecture](../../../ado/reference/ado-api/read-method.md)|Lit un nombre spécifié d’octets d’un **flux** objet.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lit un nombre spécifié de caractères à partir d’un fichier texte **flux** objet.|  
 |[Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets dans une collection afin de refléter les objets disponibles à partir d’et spécifiques au fournisseur.|  
@@ -97,4 +95,3 @@ ms.lasthandoff: 09/09/2017
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
  [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
-

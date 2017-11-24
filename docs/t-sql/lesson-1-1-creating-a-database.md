@@ -2,32 +2,31 @@
 title: "Création d’une base de données (didacticiel) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tutorial creating a database
+applies_to: SQL Server 2016
+helpviewer_keywords: tutorial creating a database
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 55a63275dc9e7d130614b5dece07b7f74edd53ca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6628dcf0ab38db441de9bd9324e69993e5759c38
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-1-1---creating-a-database"></a>Leçon 1-1-Création d’une base de données
-Comme de nombreuses instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , l'instruction CREATE DATABASE nécessite un paramètre obligatoire : le nom de la base de données. L'instruction CREATE DATABASE possède aussi de nombreux paramètres facultatifs, tels que l'emplacement du disque où vous souhaitez copier les fichiers de base de données. Lorsque vous exécutez l'instruction CREATE DATABASE sans les paramètres facultatifs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise les valeurs par défaut pour un grand nombre de ces paramètres. Ce didacticiel utilise très peu de paramètres de syntaxe facultatifs.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Comme de nombreuses [!INCLUDE[tsql](../includes/tsql-md.md)] instructions, l’instruction CREATE DATABASE nécessite un paramètre obligatoire : le nom de la base de données. L'instruction CREATE DATABASE possède aussi de nombreux paramètres facultatifs, tels que l'emplacement du disque où vous souhaitez copier les fichiers de base de données. Lorsque vous exécutez l'instruction CREATE DATABASE sans les paramètres facultatifs, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise les valeurs par défaut pour un grand nombre de ces paramètres. Ce didacticiel utilise très peu de paramètres de syntaxe facultatifs.  
   
 ### <a name="to-create-a-database"></a>Pour créer une base de données  
   
@@ -55,4 +54,3 @@ Lorsque vous créez une base de données, [!INCLUDE[ssNoVersion](../includes/ssn
   
   
   
-

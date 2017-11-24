@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cubes [Analysis Services], creating
+helpviewer_keywords: cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 241ff4df1733939b5e63e5e7bd28d9fa8d644ff4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Créer un cube à l'aide de l'Assistant Cube
   Vous pouvez créer un cube en utilisant l’Assistant Cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -74,4 +72,3 @@ ms.lasthandoff: 09/01/2017
     >  Vous pouvez utiliser le Concepteur de cube une fois l'exécution de l'Assistant Cube terminée pour définir le cube. Vous pouvez également utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans les dimensions que vous avez créées.  
   
   
-

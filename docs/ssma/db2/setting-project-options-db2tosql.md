@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dbcf08606316614f18bbc69beef54eea0a7569ee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f5b71db23d56150fbc6a2f7990ba9960d83d2d1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Définition des Options de projet (DB2ToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options déterminent la conversion de l’objet, lors du chargement de l’objet de paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -45,11 +43,11 @@ SSMA a cinq jeux de paramètres du projet :
   
 Il comprend quatre modes de configuration de ces paramètres :  
   
--   Par défaut  
+-   Valeur par défaut  
   
 -   Optimistic  
   
--   Complète  
+-   Complet  
   
 -   Custom  
   
@@ -108,4 +106,3 @@ L’étape suivante de la migration dépend des besoins de votre projet :
 ## <a name="see-also"></a>Voir aussi  
 [Mappage de DB2 et les Types de données SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   
-

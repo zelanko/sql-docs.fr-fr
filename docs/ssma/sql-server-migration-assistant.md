@@ -5,25 +5,23 @@ ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 8c431da24d6449ce7d7ec8a5125d207828ff0b6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 7a199b65ceb8fdd1692b37e307dd544c52ad618b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant de migration SQL Server
 Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de la base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
@@ -106,4 +104,3 @@ Les clients ne doivent pas utiliser d’API non documentées, y compris mais de 
   
 Les mises à niveau de serveur et de base de données vers les versions ultérieures de SQL Server ne sont pas garanties pour les applications et les bases de données qui exploitent et utilisent des points d’entrée non documentés. L’utilisation des fonctions et fonctionnalités SQL Server doit être limitée à celles qui sont incluses dans la documentation Microsoft SQL Server. Si une fonctionnalité n’est pas documentée dans la documentation Microsoft SQL Server, elle n’est pas considérée comme une partie prise en charge de SQL Server.  
   
-

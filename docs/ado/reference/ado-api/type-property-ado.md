@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Parameter::Type
 - Field20::Type
-helpviewer_keywords:
-- Type property [ADO]
+helpviewer_keywords: Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bdc4aa735c131b800b77086c76902dbe688e9399
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 663a17993b9bd614efd2436ae3050d78d7fd9e73
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="type-property-ado"></a>Type, propriété (ADO)
 Indique le type de données ou de type opérationnel d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md), [champ](../../../ado/reference/ado-api/field-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.  
@@ -46,11 +43,10 @@ Indique le type de données ou de type opérationnel d’un [paramètre](../../.
   
 ||||  
 |-|-|-|  
-|[Objet Field](../../../ado/reference/ado-api/field-object.md)|[Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)|[Objet de propriété (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Field, objet](../../../ado/reference/ado-api/field-object.md)|[Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)|[Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de type de propriété (champ) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Exemple de propriété de type (propriété) (VC ++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType, propriété (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
- [Type, propriété (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
-
+ [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

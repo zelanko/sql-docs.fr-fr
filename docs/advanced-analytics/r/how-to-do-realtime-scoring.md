@@ -1,24 +1,22 @@
 ---
 title: "Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Comment effectuer le calcul de score en temps réel ou calculer les scores natif dans SQL Server
 
@@ -37,7 +35,7 @@ Les options suivantes sont prises en charge pour la prédiction de lot rapide :
 > Utilisation de la fonction de prédiction est recommandée dans SQL Server 2017.
 > Pour utiliser sp\_rxPredict nécessite l’activation de l’intégration SQLCLR. Prendre en compte les implications de sécurité avant d’activer cette option.
 
-Le processus global de la préparation du modèle et générer des scores est très similaire :
+Le processus global de la préparation du modèle et générer des scores est similaire :
 
 1. Créer un modèle à l’aide d’un algorithme pris en charge.
 2. Sérialisation du modèle à l’aide d’un format binaire spécial.
@@ -54,7 +52,7 @@ Le processus global de la préparation du modèle et générer des scores est tr
 
 ### <a name="serialization-and-storage"></a>Sérialisation et stockage
 
-Pour utiliser un modèle avec des options de calcul de score rapides, le modèle doit être enregistré dans un format sérialisé spécial, qui a été optimisé pour la taille et l’efficacité de calcul de score.
+Pour utiliser un modèle avec des options de calcul de score rapides, enregistrez le modèle à l’aide d’un format sérialisé spécial, qui a été optimisé pour la taille et l’efficacité de calcul de score.
 
 + Appelez `rxSerializeModel` pour écrire un modèle pris en charge pour le **brutes** format.
 + Appelez `rxUnserializeModel` pour reconstituer le modèle pour une utilisation dans un autre code R, ou d’afficher le modèle.
@@ -75,7 +73,7 @@ Pour obtenir un exemple simple, consultez [ce didacticiel](../tutorials/rtsql-cr
 
   Le `rxWriteObject()` fonction peut récupérer des objets R à partir d’une source de données ODBC comme SQL Server, ou écrire des objets dans SQL Server. L’API est modélisée d’après un magasin clé-valeur simple.
   
-  Si vous utilisez cette fonction, veillez à sérialiser le modèle à l’aide de la nouvelle fonction de sérialisation tout d’abord. Ensuite, définissez la *sérialiser* indicateur dans `rxWriteObject` sur FALSE, pour éviter de répéter l’étape de la sérialisation.
+  Si vous utilisez cette fonction, veillez à sérialiser le modèle à l’aide de la nouvelle fonction de sérialisation tout d’abord. Ensuite, définissez la *sérialiser* argument dans `rxWriteObject` sur FALSE, pour éviter de répéter l’étape de la sérialisation.
 
 + Vous pouvez également enregistrer le modèle dans un format brut dans un fichier et ensuite lues à partir du fichier dans SQL Server. Cette option peut être utile si vous déplacez ou copiez les modèles entre les environnements.
 
@@ -125,7 +123,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-Le code suivant crée un modèle basé sur le **iris** jeu de données et l’enregistre dans la table de modèles.
+Le code suivant crée un modèle basé sur le **iris** jeu de données et l’enregistre dans la table nommée **modèles**.
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -143,7 +141,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> Vous devez utiliser le [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) RevoScaleR pour enregistrer le modèle de fonction. R standard `serialize` fonction ne peut pas générer le format requis.
+> Veillez à utiliser le [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) RevoScaleR pour enregistrer le modèle de fonction. R standard `serialize` fonction ne peut pas générer le format requis.
 
 Vous pouvez exécuter une instruction telle que la suivante pour afficher le modèle stocké au format binaire :
 
@@ -182,7 +180,7 @@ Cette section décrit les étapes requises pour configurer **en temps réel** pr
 Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour calculer les scores. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt.exe, qui est inclus dans le package RevoScaleR.
 
 > [!NOTE]
-> Dans l’ordre de calcul de score de travail et en temps réel, des fonctionnalités CLR SQL doivent être activé dans l’instance et la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, vous devez envisager les implications de sécurité supplémentaires.
+> Dans l’ordre de calcul de score de travail et en temps réel, des fonctionnalités CLR SQL devant être activé dans l’instance ; en outre, la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, prendre en compte les implications de sécurité supplémentaires avant de le faire !
 
 1. Ouvrez une invite de commandes avec élévation de privilèges et accédez au dossier où se trouve RegisterRExt.exe. Le chemin d’accès suivant peut être utilisé dans une installation par défaut :
     
@@ -208,11 +206,11 @@ Vous devez activer cette fonctionnalité pour chaque base de données que vous s
 
 > [!NOTE]
 > 
-> Dans SQL Server 2017, des mesures de sécurité sont en place pour éviter des problèmes avec l’intégration du CLR. Ces mesures imposent des restrictions supplémentaires sur l’utilisation de cette procédure stockée ainsi.
+> Dans SQL Server 2017, des mesures de sécurité sont en place pour éviter des problèmes avec l’intégration du CLR. Ces mesures imposent des restrictions supplémentaires sur l’utilisation de cette procédure stockée ainsi. 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>Étape 2. Préparer et enregistrer le modèle
 
-Le format binaire requis par sp\_rxPredict est la même que celle pour prédire. Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)et veillez à spécifier _realtimeScoringOnly_ = TRUE, comme dans cet exemple :
+Le format binaire requis par sp\_rxPredict est le même que le format requis pour utiliser la fonction de prédiction. Par conséquent, dans votre code R, incluez un appel à [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)et veillez à spécifier `realtimeScoringOnly = TRUE`, comme dans cet exemple :
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -227,7 +225,8 @@ Vous appelez sp\_rxPredict en tant que vous feriez avec un autre procédure stoc
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,
@@ -255,4 +254,3 @@ Machine Learning prend en charge distribuée en temps réel à partir de modèle
 + [Déployer un modèle de Python comme un service web avec le Kit de développement logiciel modèle azureml gestion](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publier un bloc de code R ou d’un modèle en temps réel sous la forme d’un service web](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [package mrsdeploy pour R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
-

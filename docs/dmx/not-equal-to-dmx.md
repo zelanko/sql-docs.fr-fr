@@ -2,34 +2,35 @@
 title: "&lt;&gt;(Différent de) (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - not equal operator (<>)
 - <> (not equal to operator)
 ms.assetid: df0e7901-9e31-452a-af14-471f5130c09d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: df165d14cacfde172fa8d242c3fae7add30f87db
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 162c2e98b21a799288a4acc30817730f017f06fd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt;(Différent de) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Effectue une opération de comparaison qui détermine si la valeur d'une expression DMX (Data Mining Extensions) n'est pas égale à la valeur d'une autre expression DMX.  
   
@@ -53,4 +54,3 @@ DMX_Expression <> DMX_Expression
  [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

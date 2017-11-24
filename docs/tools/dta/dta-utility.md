@@ -5,8 +5,7 @@ ms.date: 01/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5e364743bf03da5f76b776174241bf3911a6b447
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
   L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
@@ -185,7 +183,7 @@ dta -d AdventureWorks2012 ...
 [Recommandations d’index ColumnStore dans base de données Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
   
  **-fk** *keep_existing_option*  
@@ -223,7 +221,7 @@ dta -d AdventureWorks2012 ...
  Spécifie que le magasin de requêtes est utilisé comme la charge de travail. Les 1 000 premiers événements du magasin de requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  Consultez [magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [de paramétrage de base de données à l’aide de la charge de travail à partir du magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) pour plus d’informations.
  ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
      
   
  **-if** *workload_file*  
@@ -277,7 +275,7 @@ dta -iq -I 48
 Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de travail et prendre en compte uniquement des requêtes qui ont exécuté avec les dernières 48 heures.  
   ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
 
   
@@ -424,4 +422,3 @@ dta –D pubs –if pubs_wkld.sql –ox XMLTune.xml –A 120 –Tf table_list.tx
  [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   
-

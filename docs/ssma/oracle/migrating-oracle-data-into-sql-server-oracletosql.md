@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: 8ce077de47c8f72a11054c6b0d07323375e88641
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 10c7bfea3316146924544a7c76d3bc727006b694
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Migration de données Oracle dans SQL Server (OracleToSQL)
 Après avoir synchronisé correctement les objets convertis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez migrer des données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -109,4 +107,3 @@ Pour afficher les messages de la migration, assurez-vous que le volet de résult
 ## <a name="see-also"></a>Voir aussi  
 [Migration bases de données Oracle pour SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

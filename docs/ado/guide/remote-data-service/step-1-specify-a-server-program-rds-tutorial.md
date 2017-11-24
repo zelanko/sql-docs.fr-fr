@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS tutorial [ADO], specifying server program
+helpviewer_keywords: RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: faacf23664dcc0160a5571664e7ba112e3096f5f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c79cf47179f8fff140f4fda779b5db816c1d9418
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Étape 1 : Spécifier un programme serveur (didacticiel RDS)
 Dans la plupart des cas, utilisez le [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objet [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode pour spécifier le programme de serveur par défaut, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), ou votre propre programme serveur personnalisé (objet métier). Un programme serveur est instancié sur le serveur et une référence au programme, ou *proxy*, est retourné.  
@@ -46,4 +43,3 @@ Sub RDSTutorial1()
 ## <a name="see-also"></a>Voir aussi  
  [Étape 2 : Appeler le programme de serveur (didacticiel RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)   
  [Didacticiel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

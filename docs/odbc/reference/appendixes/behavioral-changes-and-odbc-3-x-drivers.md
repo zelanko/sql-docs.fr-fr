@@ -3,10 +3,12 @@ title: Changements de comportement et les pilotes ODBC 3.x | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - compatibility [ODBC], behavioral changes
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7a5bcfea240af2477b3522f2baa849a6a5a6876
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5bd1ce6560e8c93d22cac8f99f2eee53be1b953
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Changements de comportement et les pilotes ODBC 3.x
 L’attribut d’environnement SQL_ATTR_ODBC_VERSION indique au pilote si elle doit présenter ODBC 2. *x* comportement ou ODBC 3*.x* comportement. Paramétrage de l’attribut d’environnement SQL_ATTR_ODBC_VERSION dépend de l’application. ODBC 3*.x* les applications doivent appeler **SQLSetEnvAttr** pour définir cet attribut, une fois qu’ils appellent **SQLAllocHandle** à allouer un handle d’environnement et avant d’appeler **SQLAllocHandle** pour allouer un handle de connexion. Si elles ne le faites pas, le Gestionnaire de pilotes retourne SQLSTATE HY010 (erreur de séquence de fonction) sur le dernier appel à **SQLAllocHandle**.  
@@ -40,17 +41,16 @@ L’attribut d’environnement SQL_ATTR_ODBC_VERSION indique au pilote si elle d
   
  Cette section contient les rubriques suivantes.  
   
--   [Types de données DateTime](../../../odbc/reference/appendixes/datetime-data-types.md)  
+-   [Type de données datetime](../../../odbc/reference/appendixes/datetime-data-types.md)  
   
--   [Compatibilité descendante des Types de données C](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
+-   [Compatibilité descendante des types de données C](../../../odbc/reference/appendixes/backward-compatibility-of-c-data-types.md)  
   
 -   [Signets de longueur fixe](../../../odbc/reference/appendixes/fixed-length-bookmarks.md)  
   
--   [Prise en charge SQLGetInfo](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
+-   [SQLGetInfo, prise en charge](../../../odbc/reference/appendixes/sqlgetinfo-support.md)  
   
--   [Retournant SQL_NO_DATA](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
+-   [Retour de SQL_NO_DATA](../../../odbc/reference/appendixes/returning-sql-no-data.md)  
   
--   [L’appel de SQLSetPos pour insérer des données](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
+-   [Appel de SQLSetPos pour insérer des données](../../../odbc/reference/appendixes/calling-sqlsetpos-to-insert-data.md)  
   
--   [Chargement par Ordinal](../../../odbc/reference/appendixes/loading-by-ordinal.md)
-
+-   [Chargement par ordinal](../../../odbc/reference/appendixes/loading-by-ordinal.md)

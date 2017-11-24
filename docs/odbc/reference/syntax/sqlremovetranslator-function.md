@@ -3,33 +3,30 @@ title: Fonction de SQLRemoveTranslator | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLRemoveTranslator
-apilocation:
-- sqlsrv32.dll
+apiname: SQLRemoveTranslator
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLRemoveTranslator
-helpviewer_keywords:
-- SQLRemoveTranslator function [ODBC]
+f1_keywords: SQLRemoveTranslator
+helpviewer_keywords: SQLRemoveTranslator function [ODBC]
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2275533c204c6c123edbfde8354615e6881e8730
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c859eba5dc2b064c595ce57dffa2bde6aeda364e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator (fonction)
 **Mise en conformité**  
@@ -90,4 +87,3 @@ BOOL SQLRemoveTranslator(
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |L’installation d’un convertisseur|[SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)|
-

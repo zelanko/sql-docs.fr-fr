@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Catalog::Tables
 - Tables
-helpviewer_keywords:
-- Tables collection [ADOX]
+helpviewer_keywords: Tables collection [ADOX]
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c47b8088fa5603de7bd8b17d784100170388509c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1489bb1716cb29116e385158e6f05dcc3d028431
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables-collection-adox"></a>Collection de tables (ADOX)
 Contient tous les [Table](../../../ado/reference/adox-api/table-object-adox.md) objets d’un catalogue.  
@@ -53,7 +50,7 @@ Contient tous les [Table](../../../ado/reference/adox-api/table-object-adox.md) 
   
  Cette section contient les rubriques suivantes.  
   
--   [Propriétés de Collection de tables, méthodes et événements](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de la collection Tables](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété ActiveConnection catalogue (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -61,5 +58,4 @@ Contient tous les [Table](../../../ado/reference/adox-api/table-object-adox.md) 
  [Méthode de fermeture de connexion, exemple de propriété Table Type (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objet table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
-
+ [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

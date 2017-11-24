@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - XmlReader object
 - data retrieval [ADOMD.NET], XmlReader object
 ms.assetid: 420ec40e-be2d-413a-b4b2-6d2b1756e270
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bb85566c9ed1533e35e2f108dd61f50dc20a5a23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: fae89c067dd0f13768fc6136bf6259f9645adeff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Récupération de données à l'aide de XmlReader
   Le **XmlReader** classe, partie de la **System.Xml** espace de noms pour la bibliothèque de classes Microsoft .NET Framework, est similaire à la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> classe qui le **XmlReader** classe fournit également rapide, non mis en cache et en avant uniquement accès aux données. S’il n’est pas nécessaire pour une vue analytique en mémoire des données avec le <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objet, le **XmlReader** objet est parfait pour récupérer des données XML, en particulier pour les grandes quantités de données. Étant donné que **XmlReader** flux de données, **XmlReader** n’a pas à récupérer et mettre en cache toutes les données avant de les exposer les données à l’appelant, comme ce serait le cas si un <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> objet ont été utilisés pour convertir la réponse XML for Analysis dans une représentation du modèle objet analytique.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 10/24/2017
  [Récupération de données à l’aide d’AdomdDataReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader.md)  
   
   
-

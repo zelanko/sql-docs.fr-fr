@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 45a912354d122eadb7008c2ff260366fa46770fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
   Une requête de contenu est une façon d'extraire des informations sur les statistiques internes et la structure du modèle d'exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
@@ -209,4 +208,3 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
  [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

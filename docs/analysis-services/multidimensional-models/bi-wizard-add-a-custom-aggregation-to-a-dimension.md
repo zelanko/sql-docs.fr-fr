@@ -21,17 +21,16 @@ helpviewer_keywords:
 - unary operators
 - custom aggregations [Analysis Services]
 ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 63ad6f1d9e72fae70997c87aca194f7437c62d07
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Assistant BI - ajouter une agrégation personnalisée à une Dimension
   Ajoutez une agrégation personnalisée à un cube ou à une dimension pour remplacer les agrégations par défaut qui sont associées à un membre de dimension avec un opérateur unaire différent. Cette amélioration spécifie une colonne d'opérateur unaire qui, dans la table de dimension, définit le cumul pour les membres d'une hiérarchie parent-enfant. L'opérateur unaire agit sur l'attribut parent dans une hiérarchie parent-enfant.  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  Dans **Colonne source**, vous sélectionnez la colonne de valeurs de chaîne qui contient les opérateurs unaires. (Cette sélection définit la propriété **UnaryOperatorColumn** sur l’attribut parent.) La table de dimension doit aussi avoir une colonne de valeurs de chaîne qui spécifie l'opérateur de cumul unaire. Les valeurs de chaîne de cette colonne doivent contenir des opérateurs d'agrégation valides. Si une ligne est vide, le membre correspondant est calculé normalement. Si la formule figurant dans une colonne n'est pas valide, une erreur se produit au moment de l'exécution lorsqu'une valeur de cellule utilisant le membre est extraite. Pour plus d’informations, consultez [Opérateurs unaires dans les dimensions parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md).  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
   Utilisez cette méthode de génération d'un nouveau cube si vous envisagez d'utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  Sur la page **Fin de l'Assistant** de l'Assistant, vous pouvez afficher les groupes de mesures, les mesures et les dimensions du nouveau cube. Dans la zone **Nom du cube** , entrez un nom pour le cube. Ensuite, si vous êtes satisfait du cube, cliquez sur **Terminer**. Cliquez sur **Précédent** pour revenir à toute page précédente de l'Assistant et apporter des modifications.  
   
   
-

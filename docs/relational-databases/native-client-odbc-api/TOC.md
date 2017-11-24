@@ -1,6 +1,6 @@
-# [Détails d’implémentation API ODBC](odbc-api-implementation-details.md)
+# [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)
 
-# API ODBC SQL * pour les Clients natifs
+# API ODBC SQL* pour Native Client
 ## [SQLBindCol](sqlbindcol.md)
 ## [SQLBindParameter](sqlbindparameter.md)
 ## [SQLBrowseConnect](sqlbrowseconnect.md)

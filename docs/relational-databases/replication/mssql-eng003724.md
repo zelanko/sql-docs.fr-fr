@@ -8,24 +8,21 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MSSQL_ENG003724 error
+helpviewer_keywords: MSSQL_ENG003724 error
 ms.assetid: 10cb119d-92df-4124-b85d-cd2f2666c99c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d97300f400557643da18e81201136649d629b681
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7075db02099e3797031f3ecafd7465644a2db795
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|Impossible de %S_MSG le %S_MSG '%.*ls' parce qu’il est utilisé pour la réplication.|  
+|Texte du message|Impossible de %1! le %2! '%3!' parce qu'il est utilisé pour la réplication.|  
   
 ## <a name="explanation"></a>Explication  
  Lorsque des objets d'une base de données sont répliqués, ils sont marqués comme étant répliqués dans la table système **sysarticles** (publications transactionnelles ou d'instantanés) ou dans la table système **sysmergearticles** (publications de fusion). Si vous tentez de supprimer un objet répliqué, cette erreur est générée.  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
-

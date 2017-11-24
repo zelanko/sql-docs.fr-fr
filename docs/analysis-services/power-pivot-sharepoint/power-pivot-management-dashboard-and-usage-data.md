@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 54ed8cfaefb6bf4af33f5acb804fa61f49503416
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5833c1dae2cc6b5cf8f85a52bec088d96e609537
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion Power Pivot et données d’utilisation
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] est une collection de rapports et de composants WebPart prédéfinis dans l’Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   
-

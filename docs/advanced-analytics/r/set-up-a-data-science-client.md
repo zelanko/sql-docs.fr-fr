@@ -1,59 +1,128 @@
 ---
-title: "Configurer un client de science des données | Microsoft Docs"
+title: "Configurer un client de science des données pour une utilisation avec SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 02/10/2017
+ms.date: 10/31/2017
 ms.prod: r-server
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
+ms.openlocfilehash: 791a27f78442cd1ca191a042238769368c7da228
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0661b2fcf9b23d3c81cb0d80f0424d87dbde7ef8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="set-up--a-data-science-client"></a>Configurer un client de science des données
-  Après avoir configuré une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en installant **R Services (dans la base de données)**, vous pourrez configurer un environnement de développement R capable de se connecter au serveur pour le déploiement et l’exécution à distance. 
+# <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>Configurer un client de science des données pour une utilisation avec SQL Server
+
+Après avoir configuré une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour prendre en charge d’apprentissage, vous devez configurer un environnement de développement qui est capable de se connecter au serveur pour le déploiement et l’exécution à distance.
+
+Cet article décrit certains scénarios de client standard, y compris la configuration de l’édition de Visual Studio Community gratuite pour exécuter le code R dans SQL Server.
+
+## <a name="install-r-libraries-on-the-client"></a>Installer les bibliothèques R sur le client
+
+Votre environnement client doit inclure Microsoft R Open, ainsi que les packages RevoScaleR supplémentaires qui prennent en charge l’exécution distribuée de R sur SQL Server. Distributions standards de R n’ont pas les packages qui prennent en charge des contextes de calcul à distance ou de l’exécution parallèle de tâches R.
+
+Pour obtenir ces bibliothèques, installez les éléments suivants :
   
-  Cet environnement doit inclure les packages ScaleR et, éventuellement, un environnement de développement client.
-  
- ## <a name="where-to-get-scaler"></a>Où obtenir ScaleR 
-  
-  Votre environnement client doit inclure Microsoft R Open, ainsi que les packages RevoScaleR supplémentaires qui prennent en charge l’exécution distribuée de R sur SQL Server.  Il existe plusieurs méthodes d’installation de ces packages :
-  
-+ Installez [Microsoft R Open](http://aka.ms/rclient/download). Pour obtenir des instructions d’installation supplémentaires, consultez [Get Started with Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-get-started) (Bien démarrer avec Microsoft R Client).
-+ Installez Microsoft R Server. Vous pouvez obtenir Microsoft R Server à partir du programme d’installation de SQL Server, ou en utilisant le nouveau programme d’installation de Windows en mode autonome. Pour plus d’informations, consultez [Créer un serveur R autonome](../../advanced-analytics/r-services/create-a-standalone-r-server.md) et [Introduction à R Server](https://msdn.microsoft.com/microsoft-r/rserver).
++ [Microsoft R Client](http://aka.ms/rclient/download)
 
-Si vous avez un contrat de licence R Server, nous vous recommandons d’utiliser Microsoft R Server (autonome) pour éviter les limitations de R relatives au traitement des threads et des données en mémoire.
++ Microsoft R Server (pour SQL Server 2016)
 
+    - Pour installer à partir de l’installation de SQL Server, consultez [créer un serveur R autonome](../../advanced-analytics/r/create-a-standalone-r-server.md)
 
-## <a name="how-to-set-up-the-r-development-environment"></a>Comment configurer l’environnement de développement R
+    - Pour utiliser le programme d’installation distinct basé sur Windows, consultez [installer Machine Learning pour Windows Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
-Vous pouvez utiliser n’importe quel environnement de développement R qui est compatible avec Windows. 
++ Apprentissage de serveur (pour SQL Server 2017)
 
-+ Le complément Outils R pour Visual Studio prend en charge l’intégration avec Microsoft R Open.
-+ RStudio est un environnement gratuit couramment utilisé.  
+    - Pour installer à partir de l’installation de SQL Server, consultez [créer un serveur R autonome](../../advanced-analytics/r/create-a-standalone-r-server.md)
 
-Après l’installation, vous devrez reconfigurer votre environnement pour utiliser les bibliothèques Microsoft R Open par défaut. Sinon, vous n’aurez pas accès aux bibliothèques ScaleR. Pour plus d’informations, consultez [Getting Started with Microsoft R Client](http://msdn.microsoft.com/microsoft-r/r-client-get-started) (Bien démarrer avec Microsoft R Client).
+    - Pour utiliser le programme d’installation distinct basé sur Windows, consultez [installer R Server 9.1 pour Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+
+## <a name="install-a-development-environment"></a>Installez un environnement de développement
+
+Si vous n’avez pas encore un environnement de développement R par défaut, nous vous recommandons une des opérations suivantes :
+
++ Outils R pour Visual Studio
+
+    Fonctionne avec Visual Studio 2015.
+
+    Pour plus d’informations d’installation, consultez [comment installer les outils R pour Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation).
  
-## <a name="more-resources"></a>Plus de ressources
-  
- Pour une description détaillée de la connexion à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l’exécution distante du code R, consultez ce didacticiel : [Immersion dans la science des données : utilisation des packages RevoScaleR](../../advanced-analytics/r-services/data-science-deep-dive-using-the-revoscaler-packages.md).  
+    Pour configurer RTV pour utiliser vos bibliothèques de client de Microsoft R, consultez [sur le Client Microsoft R](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
+
++ Visual Studio 2017
+
+    Même l’édition Community gratuite inclut la charge de science des données, qui installe des modèles de projet pour R, Python et F #.
+
+    Télécharger Visual Studio à partir de [ce site](https://www.visualstudio.com/vs/). 
+
++ RStudio
+
+    Si vous préférez RStudio, vous devez effectuer des étapes supplémentaires pour pouvoir utiliser les bibliothèques RevoScaleR :
+
+    - Installer le Client Microsoft R pour obtenir les packages requis et les bibliothèques.
+    - Mettre à jour votre chemin d’accès de R pour utiliser le runtime de Microsoft R.
+
+    Pour plus d’informations, consultez [R Client - configurer votre IDE](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client#step-2-configure-your-ide).
+
+## <a name="configure-your-ide"></a>Configurez votre interface IDE
+
++ Outils R pour Visual Studio
+
+    Consultez [ce site](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r) pour obtenir des exemples montrant comment générer et déboguer R projets à l’aide des outils R pour Visual Studio. 
+
++ Visual Studio 2017
+
+    Si vous installez le Client Microsoft R ou R Server **avant** vous installez Visual Studio, les bibliothèques R Server sont automatiquement détectés et utilisés pour votre chemin d’accès de la bibliothèque. Si vous n’avez pas installé les bibliothèques RevoScaleR, à partir de la **outils R** menu, sélectionnez **installer le Client R**.
+
+## <a name="run-r-in-sql-server"></a>Exécuter R dans SQL Server
+
+Cet exemple utilise Visual Studio 2017 Community Edition, avec la charge de travail de science des données installé.
+
+1. À partir de la **fichier** menu, sélectionnez **nouveau** , puis sélectionnez **projet**.
+
+2. -Main volet contient une liste de modèles préinstallés. Cliquez sur **R**, puis sélectionnez **projet R**. Dans le **nom** , tapez `dbtest` et cliquez sur **OK**.
+
+3. Visual Studio crée un nouveau dossier de projet et un fichier de script par défaut, `Script.R`. 
+
+4. Type `.libPaths()` sur la première ligne du script de fichier, puis appuyez sur CTRL + ENTRÉE.
+
+5. Le chemin d’accès de bibliothèque R en cours doit être affiché dans le **Interactive R** fenêtre. 
+
+6. Cliquez sur le **outils R** menu et sélectionnez **Windows** pour afficher une liste des autres fenêtres R spécifiques que vous pouvez afficher dans votre espace de travail.
  
+    + Afficher l’aide sur les packages dans la bibliothèque en cours en appuyant sur CTRL + 3.
+    + Voir les variables de R dans le **Explorer Variable**, en appuyant sur CTRL + 8.
 
-Pour commencer à utiliser Microsoft R Client et les packages ScaleR avec SQL Server, consultez [ScaleR Getting Started](https://msdn.microsoft.com/microsoft-r/scaler-getting-started#) (Bien démarrer avec ScaleR).  
-  
-## <a name="see-also"></a>Voir aussi  
- [Configurer SQL Server R Services &#40;dans la base de données&#41;](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)  
-  
-  
+7. Créer une chaîne de connexion à une instance de SQL Server et utilisez la chaîne de connexion dans le constructeur RxInSqlServer pour créer un objet de source de données SQL Server. 
 
+    ```r
+    connStr <- "Driver=SQL Server;Server=MyServer;Database=MyTestDB;Uid=;Pwd="
+    sqlShareDir <- paste("C:\\AllShare\\", Sys.getenv("USERNAME"), sep = "")
+    sqlWait <- TRUE
+    sqlConsoleOutput <- FALSE
+    cc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
+    sampleDataQuery <- "SELECT TOP 100 * from [dbo].[MyTestTable]"
+    inDataSource <- RxSqlServerData(sqlQuery = sampleDataQuery, connectionString = connStr, rowsPerRead = 500)
+    ```
+
+    > [!TIP]
+    > Pour exécuter un lot, sélectionnez les lignes que vous souhaitez exécuter, puis appuyez sur CTRL + ENTRÉE.
+
+8. Définir le contexte de calcul sur le serveur, puis exécutez le code R simple sur les données.
+
+    ```r
+    rxSetComputeContext(cc)
+    rxGetVarInfo(data = inDataSource)
+    ```
+
+    Résultats sont retournés dans le **Interactive R** fenêtre.
+    
+    Si vous souhaitez vous assurer que le code est en cours d’exécution sur l’instance de SQL Server, vous pouvez utiliser le Générateur de profils pour créer une trace.

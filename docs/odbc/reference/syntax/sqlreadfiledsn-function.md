@@ -3,33 +3,30 @@ title: Fonction de SQLReadFileDSN | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLReadFileDSN
-apilocation:
-- sqlsrv32.dll
+apiname: SQLReadFileDSN
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLReadFileDSN
-helpviewer_keywords:
-- SQLReadFileDSN function [ODBC]
+f1_keywords: SQLReadFileDSN
+helpviewer_keywords: SQLReadFileDSN function [ODBC]
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 58e67106bfa4923725570fdd72ea53433a6b8cf3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3d74f900de16f8b2b257d9af6c65e8745139d3c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN (fonction)
 **Mise en conformité**  
@@ -98,4 +95,3 @@ BOOL SQLReadFileDSN(
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Écrire des informations dans un fichier DSN|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|
-

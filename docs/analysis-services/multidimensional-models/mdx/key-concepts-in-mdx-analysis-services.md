@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], dimensional modeling
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f6f9969a793d33ba203ba1f93d87b1a235a896f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8d474afc6fb339265ff58a6af4204d7d3677cff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concepts clés dans MDX (Analysis Services)
   Avant de pouvoir utiliser MDX (Multidimensional Expressions) pour interroger des données multidimensionnelles ou créer des expressions MDX dans un cube, vous devez vous familiariser avec les concepts et les termes liés aux données multidimensionnelles.  
@@ -166,4 +165,3 @@ ms.lasthandoff: 09/01/2017
  [Informations de référence sur les expressions multidimensionnelles &#40;MDX&#41;](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   
-

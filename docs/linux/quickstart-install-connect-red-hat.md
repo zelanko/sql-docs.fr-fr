@@ -6,16 +6,20 @@ ms.author: jroth
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
+ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Installer SQL Server et de créer une base de données sur Red Hat
 
@@ -116,4 +120,3 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
 > **SQLCMD** est le seul outil pour la connexion à SQL Server pour exécuter des requêtes et d’effectuer les tâches de gestion et de développement. Incluent d’autres outils [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) et [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-

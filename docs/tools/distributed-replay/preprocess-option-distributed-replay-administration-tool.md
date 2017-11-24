@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88d5c85d15eed2503cc1b7315173b4a4ac9fa462
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 313a794c807faa3adaf95e902526a9ac9504be80
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Option preprocess (outil d'administration Distributed Replay)
   L’outil d’administration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay **DReplay.exe**est un outil en ligne de commande que vous pouvez utiliser pour communiquer avec Distributed Replay Controller. Cette rubrique décrit l’option de ligne de commande **preprocess** et la syntaxe correspondante.  
@@ -109,9 +107,8 @@ dreplay preprocess –m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DRepl
  Pour plus d’informations, voir [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Préparer les données de Trace d’entrée](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
+ [Préparer les données de trace d'entrée](../../tools/distributed-replay/prepare-the-input-trace-data.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Configurer Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
-

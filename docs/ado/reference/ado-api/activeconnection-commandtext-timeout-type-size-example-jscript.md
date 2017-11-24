@@ -4,16 +4,14 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - ActiveConnection property [ADO], JScript example
 - CommandText property [ADO], JScript example
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: edab19241285b944cb2fad816a9f23cba64bff3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c975baf653e9cc32432bfec9359ff2caef7dc1c7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (JScript)
 Cet exemple utilise le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Direction](../../../ado/reference/ado-api/direction-property.md) propriétés pour exécuter une procédure stockée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **ActiveConnectionJS.asp**.  
@@ -191,5 +188,4 @@ BODY {
  [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)   
  [Objet d’enregistrement (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propriété Size (paramètre ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-
+ [Size, propriété (paramètre ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

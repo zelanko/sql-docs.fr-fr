@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Unique Schema property [ADO]
 - Unique Catalog property [ADO]
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: da2f70b0f3d6f1ae3983e44f26191e13cc26f5a2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Table unique, de schéma Unique, Unique catalogue des propriétés dynamiques (ADO)
 Vous permet de contrôle précis des modifications apportées à une table de base de données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui a été formé par une opération de jointure sur plusieurs tables de base.  
@@ -56,8 +54,7 @@ Vous permet de contrôle précis des modifications apportées à une table de ba
  Ces propriétés dynamiques sont ajoutées à la **Recordset** objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection lorsque le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) est définie sur  **adUseClient**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

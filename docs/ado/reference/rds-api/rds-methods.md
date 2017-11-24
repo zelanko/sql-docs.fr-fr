@@ -1,8 +1,7 @@
 ---
 title: "Méthodes des services Bureau à distance | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ helpviewer_keywords:
 - RDS methods [ADO]
 - methods [ADO], RDS
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0e2a034ccdd85f3c05d3438cd8a589ac47d1aabd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 623b1f814d23ab8a23e87634ba1fe16b647907d0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rds-methods"></a>Méthodes des services Bureau à distance
 > [!IMPORTANT]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Convertit un **Recordset** en chaîne MIME qui représente les données du jeu d’enregistrements.|  
 |[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle.|  
 |[CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crée un vide, déconnecté **Recordset**.|  
-|[Execute (méthode) (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.5 et versions ultérieur).|  
+|[Execute, méthode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.5 et versions ultérieur).|  
 |[Execute21, méthode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.1).|  
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Retourne un pointeur vers l’interface demandée sur une version plus performante de l’objet.|  
 |[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Se déplace vers le premier, au dernier enregistrement suivant ou précédent dans un **Recordset** objet.|  
@@ -44,8 +42,7 @@ ms.lasthandoff: 09/09/2017
 |[Actualisation (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Actualise la source de données spécifiée dans le **Connect** mises à jour les résultats de requête et la propriété.|  
 |[Réinitialiser (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Exécute le tri ou le filtre sur un côté client **Recordset**, basé sur les propriétés de tri et de filtre spécifiées.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Soumet les modifications en attente de localement mis en cache et être mise à jour **Recordset** à la source de données spécifiée dans le **Connect** propriété.|  
-|[Synchronize (méthode) (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.5 et versions ultérieur).|  
+|[Synchronize, méthode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.5 et versions ultérieur).|  
 |[Synchronize21, méthode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.1).|
-
 
 

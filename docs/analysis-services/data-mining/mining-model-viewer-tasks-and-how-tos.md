@@ -21,17 +21,16 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], how-to topics
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ae59c83e386be1eb222a24cd3ef7a9c9b070444f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10136119c29d785b78eec49a5e909ab1254df436
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tâches de la visionneuse de modèle d'exploration de données et procédures
   Le concepteur d’exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contient des outils que vous pouvez utiliser pour explorer les modèles d’exploration de données. Les rubriques suivantes expliquent en détail comment exécuter les tâches spécifiques à l’utilisation de l’onglet **Visionneuse de modèle d’exploration** du Concepteur.  
@@ -40,11 +39,11 @@ ms.lasthandoff: 09/01/2017
   
 -   [Sélectionner un modèle d'exploration de données et une visionneuse d'exploration de données](../../analysis-services/data-mining/select-a-mining-model-and-a-data-mining-viewer.md)  
   
--   [Copier une vue d'un modèle d'exploration de données](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)  
+-   [Copier une vue d’un modèle d’exploration de données](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)  
   
 -   [Rechercher un nœud spécifique dans un réseau de dépendances](../../analysis-services/data-mining/find-a-specific-node-in-a-dependency-network.md)  
   
--   [Filtrer une règle dans un modèle de règles d'association](../../analysis-services/data-mining/filter-a-rule-in-an-association-rules-model.md)  
+-   [Filtrer une règle dans un modèle de règles d’association](../../analysis-services/data-mining/filter-a-rule-in-an-association-rules-model.md)  
   
 -   [Filtrer un jeu d'éléments dans un modèle de règles d'association](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
   
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Visionneuses de modèle d’exploration de données &#40; Générateur de modèles d’exploration de données &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   
-

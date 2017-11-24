@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Attributes property [ADO], VC++ example
 - Name property [ADO], VC++ example
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c157c41d046585806c7ae3f00ef822fa90e06b2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ce39b2b1c7a580be7cc4e51dd0c5c83b2d863907
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributs et propriétés nom-exemple (VC ++)
 Cet exemple affiche la valeur de la [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [champ](../../../ado/reference/ado-api/field-object.md), et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets. Elle utilise le [nom](../../../ado/reference/ado-api/name-property-ado.md) pour afficher le nom de chaque propriété **champ** et **propriété** objet.  
@@ -193,5 +190,4 @@ void PrintComError(_com_error &e) {
  [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Objet Field](../../../ado/reference/ado-api/field-object.md)   
  [Nom, propriété (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Objet de propriété (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
-
+ [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

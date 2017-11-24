@@ -5,24 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f006e161323a8f86147a63e2dde9ae4eebbcbb5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)
+# <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)
   Utilisez l'onglet **Avancé** dans la boîte de dialogue **Propriétés de Protocoles pour MSSQLSERVER** pour configurer la **protection étendue de l'authentification** du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La**Protection étendue** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est disponible dans Windows 7 et Windows Server 2008 R2 et est incluse dans les Service Packs pour les précédents systèmes d'exploitation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**. Certains avantages de la **Protection étendue** requièrent de sélectionner l'option **Forcer le chiffrement** sous l'onglet **Indicateurs** .  
   
 > [!IMPORTANT]  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
  La**protection étendue** est totalement prise en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client à partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La prise en charge de la **protection étendue** pour d'autres fournisseurs du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est actuellement pas prise en charge.  
   
-## Options  
+## <a name="options"></a>Options  
  **Protection étendue**  
  Il existe trois valeurs possibles :  
   
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/02/2017
  **SPN NTLM acceptés**  
  Lorsque l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est identifiée par plusieurs noms principaux de service (SPN) NTLM, répertoriez-les ici sous la forme d'une série de chaînes séparées par des points-virgules. Par exemple, la valeur **MSSQLSvc/NomHôte1.Contoso.com;MSSQLSvc/NomHôte2.Contoso.com**indique que les clients qui essaient de se connecter aux noms principaux de service (SPN) **MSSQLSvc/HÔTE1.Contoso.com** et **MSSQLSvc/HÔTE2.Contoso.com** sont autorisés. La variable a une longueur maximale de 2048 caractères.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Protection étendue de l'authentification avec Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
-

@@ -6,12 +6,13 @@
 ## [Articles nouveaux et récemment mis à jour](new-updated-linux.md)
 ## [Éditions et fonctionnalités prises en charge](sql-server-linux-editions-and-components-2017.md)
 
-# Démarrages rapides
+# Guides de démarrage rapide
 ## [Installer et connecter - Red Hat](quickstart-install-connect-red-hat.md)
 ## [Installer et connecter - SUSE](quickstart-install-connect-suse.md)
 ## [Installer et connecter - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Exécuter et connecter - Docker](quickstart-install-connect-docker.md)
 ## [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [Exécuter et connecter - Cloud](quickstart-install-connect-clouds.md)
 
 # Didacticiels
 ## [1_Migrer depuis Windows](sql-server-linux-migrate-restore-database.md)
@@ -25,7 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
 # Concepts
-## Install
+## Installer
 ### [Installer SQL Server](sql-server-linux-setup.md)
 ### [Installer les outils SQL Server](sql-server-linux-setup-tools.md)
 ### [Installer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
@@ -77,7 +78,7 @@
 ##### [Configurer sur SUSE](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Configurer sur Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Opérer](sql-server-linux-availability-group-failover-ha.md)
-#### [Créer pour un scale-out en lecture uniquement]()
+#### [Créer pour l’échelle lecture uniquement]()
 ##### [Configurer un groupe de disponibilité](sql-server-linux-availability-group-configure-rs.md)
 
 ## [Sécurité](sql-server-linux-security-overview.md)

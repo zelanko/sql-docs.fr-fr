@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Catalog
-helpviewer_keywords:
-- Catalog object [ADOX]
+f1_keywords: Catalog
+helpviewer_keywords: Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a7b82a70fadffd904d1da5a84f813c015faf80b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 26033bff0a1a88da25ed2eae566ffef49538c35f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="catalog-object-adox"></a>Objet catalogue (ADOX)
 Contient des collections ([Tables](../../../ado/reference/adox-api/tables-collection-adox.md), [vues](../../../ado/reference/adox-api/views-collection-adox.md), [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md), [groupes](../../../ado/reference/adox-api/groups-collection-adox.md), et [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md)) qui décrivent le catalogue de schémas d’une source de données.  
@@ -46,7 +42,7 @@ Contient des collections ([Tables](../../../ado/reference/adox-api/tables-collec
   
  Cette section contient les rubriques suivantes.  
   
--   [Propriétés de l’objet catalogue, méthodes et événements](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Catalog](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété ActiveConnection catalogue (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -68,5 +64,4 @@ Contient des collections ([Tables](../../../ado/reference/adox-api/tables-collec
  [Collection de procédures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Collection de tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Collection d’utilisateurs (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
- [Collection de vues (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

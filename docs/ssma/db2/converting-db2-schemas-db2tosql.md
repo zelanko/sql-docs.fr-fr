@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9704f41686d4859e2b6ba10fbf1ef86ea7a5b23b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a1463d2f715bb957c28064840dcf0ce33e3a0f1e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversion de schémas de DB2 (DB2ToSQL)
 Une fois que vous êtes connecté à DB2, connectée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] les objets de base de données.  
@@ -160,4 +158,3 @@ L’étape suivante du processus de migration consiste à [charger les objets co
 ## <a name="see-also"></a>Voir aussi  
 [Migration de données DB2 dans SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   
-

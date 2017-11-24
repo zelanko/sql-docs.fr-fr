@@ -1,35 +1,29 @@
 ---
 title: "Créer des graphiques et des graphiques à l’aide de SQL et R (procédure pas à pas) | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des graphiques à l’aide de SQL et R (procédure pas à pas)
 
-Dans cette partie de la procédure pas à pas, vous allez apprendre des techniques permettant de générer des graphiques et des cartes à l’aide de R avec des données SQL Server. Vous allez d’abord créer un histogramme simple pour vous exercer, après quoi vous développerez un tracé de carte plus complexe.
+Dans cette partie de la procédure pas à pas, vous découvrez les techniques permettant de générer des graphiques et des cartes à l’aide de R avec des données SQL Server. Vous créez un histogramme simple, pour faire la main et ensuite développez un tracé de mappage plus complexe.
 
 ### <a name="create-a-histogram"></a>Créer un histogramme
 
@@ -56,8 +50,6 @@ Dans cette partie de la procédure pas à pas, vous allez apprendre des techniqu
 ### <a name="create-a-map-plot"></a>Créer un tracé de carte
 
 En règle générale, les serveurs de base de données bloquent l’accès à Internet. Cela peut être gênant lors de l’utilisation de packages R que vous doivent télécharger des mappages ou autres images pour générer des graphiques. Toutefois, il est une solution de contournement qui peuvent s’avérer utile lors du développement de vos propres applications. En fait, vous générez la représentation sous forme de carte sur le client et puis superposer les points qui sont stockés en tant qu’attributs dans la table SQL Server sur la carte.
-
-Nous allons vous guider il dans cette leçon.
 
 1. Définition de la fonction qui crée l’objet de traçage. La fonction personnalisée *mapPlot* crée un nuage qui utilise des emplacements de la collecte taxi et trace le nombre de trajets démarré à partir de chaque emplacement. Elle utilise les packages **ggplot2** et  **ggmap** , qui doivent déjà être installés et chargés.
 
@@ -117,4 +109,3 @@ Nous allons vous guider il dans cette leçon.
 ## <a name="previous-lesson"></a>Leçon précédente
 
 [Résumer les données à l’aide de R](/walkthrough-view-and-summarize-data-using-r.md)
-

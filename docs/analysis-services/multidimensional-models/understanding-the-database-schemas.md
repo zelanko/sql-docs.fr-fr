@@ -22,17 +22,16 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
   L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
@@ -106,7 +105,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de la génération incrémentielle](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Gérer les modifications apportées aux vues de sources de données et Sources de données](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Gérer des modifications dans les vues de source de données et les sources de données](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   
-

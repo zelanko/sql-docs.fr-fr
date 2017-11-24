@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a7328007b213817e0d306fe3329e434304dedfa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76a5921185f6643f328559e3bc73dfac46bfee0c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editing-data"></a>Modification des données
 Nous avons expliqué comment utiliser ADO pour se connecter à une source de données, d’exécuter une commande, d’obtenir les résultats dans un **Recordset** de l’objet et naviguer dans le **Recordset**. Cette section se concentre sur la prochaine opération ADO fondamentale : modification des données.  
@@ -91,13 +89,12 @@ End Function
   
  Cette section contient les rubriques suivantes.  
   
--   [Modification des enregistrements existants](../../../ado/guide/data/editing-existing-records.md)  
+-   [Modification d’enregistrements existants](../../../ado/guide/data/editing-existing-records.md)  
   
--   [Ajouter des enregistrements](../../../ado/guide/data/adding-records.md)  
+-   [Ajout d’enregistrements](../../../ado/guide/data/adding-records.md)  
   
--   [Déterminer ce qui est pris en charge](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [Détermination de ce qui est pris en charge](../../../ado/guide/data/determining-what-is-supported.md)  
   
--   [Suppression d’enregistrements à l’aide de la méthode de suppression](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Suppression d’enregistrements avec la méthode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternatives : À l’aide d’instructions SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
-
+-   [Alternatives : utilisation d’instructions SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

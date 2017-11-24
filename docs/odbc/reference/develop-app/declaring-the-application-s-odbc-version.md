@@ -3,10 +3,12 @@ title: "Déclaration de l’Application &#39; s ODBC Version | Documents Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a58aebc6517268c054a4d2ac92066eb0d0469d2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Déclaration de l’Application &#39; s Version ODBC
 Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3. *x* spécification lorsque vous utilisez les éléments suivants :  
@@ -38,7 +39,7 @@ Une application alloue une connexion, il doit au préalable l’attribut d’env
   
     |ODBC 2. *x*|ODBC 3. *x*|  
     |----------------|----------------|  
-    |**Identificateurs de Type SQL**||  
+    |**Identificateurs de types SQL**||  
     |SQL_DATE|SQL_TYPE_DATE|  
     |SQL_TIME|SQL_TYPE_TIME|  
     |SQL_TIMESTAMP|SQL_TYPE_TIMESTAMP|  
@@ -53,4 +54,3 @@ Une application alloue une connexion, il doit au préalable l’attribut d’env
   
 > [!IMPORTANT]  
 >  Applications qui suivent l’ODBC 3. *x* spécification doit utiliser le code conditionnel pour éviter d’utiliser la fonctionnalité nouvelle ODBC 3. *x* lorsque vous travaillez avec ODBC 2. *x* pilotes. ODBC 2. *x* pilotes ne prennent pas en charge les fonctionnalités nouvelles ODBC 3. *x* parce que l’application déclare qu’il suit la ODBC 3. *x* spécification. En outre, ODBC 3. *x* pilotes cesse pas en charge des fonctionnalités nouvelles ODBC 3. *x* parce que l’application déclare qu’il suit ODBC 2. *x* spécification.
-

@@ -5,22 +5,19 @@ ms.date: 08/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0bd3095fbb41beeb5d31d8c64dc5969acfdb3c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a8b090a9d5a9ed0a9f63b8f666fa9985089305ed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="deploy-and-consume-analytics-using-mrsdeploy"></a>Déployer et de consommer analytique à l’aide de mrsdeploy
 
 Microsoft R Server inclut une fonctionnalité à l’Opérationnalisation, **mrsdeploy**, qui prend en charge ces tâches :
@@ -95,4 +92,3 @@ Toutefois, si vous avez besoin de les installer ensemble, suivez ces étapes sup
 5. Continuer à configurer le **mrsdeploy** de service comme indiqué ici : [Configuration pour les administrateurs](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 
 6. Pour plus d’informations, consultez [mrsdeploy fonctions](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package).
-

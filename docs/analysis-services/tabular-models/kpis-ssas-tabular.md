@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9c3c91a755b50ffc1dc51d305589f17322584854
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f4755d0271523b65073b72c6b06f6dec8cfcb90a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="kpis"></a>Indicateurs de performance clés
   Un *indicateur de performance clé* (KPI), dans un modèle tabulaire, permet de mesurer les performances d’une valeur, définies par une mesure de *base* par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Cette rubrique fournit aux concepteurs de modèles tabulaires une présentation de base des indicateurs de performance clés dans un modèle tabulaire.  
@@ -90,4 +89,3 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

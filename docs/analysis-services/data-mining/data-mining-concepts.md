@@ -28,17 +28,16 @@ helpviewer_keywords:
 - SSAS, data mining
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 167d150c65f8fcdfb16417c204eebac22f2ddc40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
   L'exploration de données est un processus de recherche d'informations utilisables à partir de jeux de données de grande taille. L'exploration de données utilise l’analyse mathématique pour dégager les motifs et les tendances existant dans les données. En général, ces motifs ne peuvent pas être trouvés par l’exploration de données traditionnelle parce que les relations sont trop complexes ou parce que la quantité de données est trop importante.  
@@ -190,4 +189,3 @@ ms.lasthandoff: 09/01/2017
  [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)  
   
   
-

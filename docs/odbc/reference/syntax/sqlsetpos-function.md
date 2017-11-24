@@ -3,33 +3,30 @@ title: Fonction SQLSetPos | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLSetPos
-apilocation:
-- sqlsrv32.dll
+apiname: SQLSetPos
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLSetPos
-helpviewer_keywords:
-- SQLSetPos function [ODBC]
+f1_keywords: SQLSetPos
+helpviewer_keywords: SQLSetPos function [ODBC]
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45c46ec84d6f5a431521589a506b4028e406ac09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6140625da489bcb573b3beb4ca2be0838805f8d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Mise en conformité**  
@@ -386,4 +383,3 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

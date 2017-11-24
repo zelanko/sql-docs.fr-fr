@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
+helpviewer_keywords: data mining [Analysis Services], about data mining
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 23048ed60a625a573d4820435f4ba87c0375e013
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est la première solution d’analyse prédictive depuis la version 2000, qui a introduit l’exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La combinaison d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining fournit une plateforme intégrée pour l’analyse prédictive qui englobe la préparation et le nettoyage des données, l’apprentissage automatique et la création de rapports. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining inclut de nombreux algorithmes standard, y compris les modèles de clustering EM et K-means, les réseaux neuronaux, les régressions logistique et linéaire, les arbres de décision et les classifieurs Naive Bayes. Tous les modèles proposent des visualisations destinées à vous aider à concevoir, ajuster et évaluer vos modèles.  L’intégration de l’exploration des données dans une solution d’aide à la décision vous permet de prendre des décisions plus avisées concernant des problèmes complexes.  
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/01/2017
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   
-

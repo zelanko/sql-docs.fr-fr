@@ -22,17 +22,16 @@ helpviewer_keywords:
 - support [data mining]
 - exploring data mining models [Analysis Services]
 ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1d511fe97903969218f9f052132fc0521baa976b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1436a91678a48c64ee3ee8d35a78c5957d69e32d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-model-viewers"></a>Visionneuses de modèle d’exploration de données
   Après avoir effectué l’apprentissage d’un modèle d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
@@ -95,4 +94,3 @@ ms.lasthandoff: 09/01/2017
  [Concepteur d’exploration de données](../../analysis-services/data-mining/data-mining-designer.md)  
   
   
-

@@ -3,26 +3,26 @@ title: Alignement | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- alignment issues [ODBC]
+helpviewer_keywords: alignment issues [ODBC]
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 506a496cb09e2a874e7d2dc19f06e250715db6f1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="alignment"></a>Alignment
 Les problèmes d’alignement dans une application ODBC sont généralement pas différents qu’ils se trouvent dans une autre application. Autrement dit, la plupart des applications ODBC ont peu ou pas des problèmes avec l’alignement. Les pénalités pour non-alignement adresses varient selon le matériel et le système d’exploitation et peuvent être aussi mineure qu’une légère baisse des performances ou comme principale comme une erreur d’exécution irrécupérable. Par conséquent, les applications ODBC et les applications ODBC portables en particulier, prudence aligner correctement les données.  
@@ -52,4 +52,3 @@ Les problèmes d’alignement dans une application ODBC sont généralement pas 
  ![Liaison par alignement de plus grande limite](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  Bien que cette solution laisse trous plus volumineux, le code pour l’implémenter est relativement simple et rapide. Dans la plupart des cas, cela compense la pénalité payée dans la mémoire inutilisée. Pour obtenir un exemple qui utilise cette méthode, consultez [à l’aide de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).
-

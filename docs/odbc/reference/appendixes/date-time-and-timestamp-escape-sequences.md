@@ -3,10 +3,12 @@ title: "Date, Time et Timestamp de séquences d’échappement | Documents Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - ODBC escape sequences [ODBC], about escape sequences
 - ODBC escape sequences [ODBC]
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e94eb22965a841d514e257fc63045dfaa5ddb757
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0476415619db3591fd9c26d22bc615b6d90f6c2e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Date, Time et Timestamp de séquences d’échappement
 ODBC définit des séquences d’échappement de date, time et timestamp littéraux. La syntaxe de ces séquences d’échappement est comme suit :  
@@ -59,4 +60,3 @@ timestamp-separator ::=
   
 ## <a name="remarks"></a>Notes  
  Les séquences d’échappement des littéraux de date, time et timestamp sont pris en charge si les types de données date, time et timestamp sont pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ces types de données sont pris en charge.
-

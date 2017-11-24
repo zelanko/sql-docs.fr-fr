@@ -5,22 +5,20 @@ ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27f2a1ce-316f-4347-b206-8a1b9eebe90b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cc7c216cb95d10c4158a3ac0998d458cec3d7b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 1dd7e8f1a0054818849b3b9672a5df6286bdabce
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-local-package-repository-using-minicran"></a>Créer un référentiel de package local à l’aide de miniCRAN
 
@@ -91,8 +89,8 @@ Vous commencez par créer un référentiel miniCRAN à utiliser en tant que sour
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
-
-2. Optionally, plot the dependency graph, which can be informative and looks cool.
+    ```
+2. Si vous le souhaitez, tracer le graphique de dépendance, ce qui peut être informatifs et ressemble à froid.
     
     ```R
     plot(makeDepGraph(pkgs_needed))
@@ -199,4 +197,3 @@ Après avoir téléchargé les packages, vous installez les packages R à partir
 > Lorsque vous utilisez des outils R pour installer des packages, ils sont installés pour l’instance dans sa globalité. 
 > 
 > Si vous souhaitez installer le package dans une base de données et de partager le package avec les utilisateurs à l’aide de rôles de base de données, vous devez télécharger la bibliothèque à l’aide de l’instruction de créer une bibliothèque externe. Consultez [installer des packages R supplémentaires dans SQL Server](install-additional-r-packages-on-sql-server.md)
-

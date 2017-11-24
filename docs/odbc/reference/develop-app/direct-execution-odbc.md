@@ -3,10 +3,12 @@ title: "Dirigent l’exécution ODBC | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: abce5a1c9f4fceb38420c15159cf89a2430025dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="direct-execution-odbc"></a>Exécution directe ODBC
 L’exécution directe est la façon la plus simple d’exécuter une instruction. Lorsque l’instruction est envoyée pour exécution, la source de données compile dans un plan d’accès, puis exécute ce plan d’accès.  
@@ -58,4 +59,3 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   Envoie l’instruction et les valeurs de paramètre converti à la source de données pour l’exécution.  
   
     -   Retourne toutes les erreurs. Citons notamment séquencement ou état diagnostics comme SQLSTATE 24000 (état de curseur non valide), des erreurs syntaxiques comme SQLSTATE 42000 (syntaxe ou violation d’accès) et les erreurs sémantiques telles que 42 s 02 SQLSTATE (Base de table ou vue introuvable).
-

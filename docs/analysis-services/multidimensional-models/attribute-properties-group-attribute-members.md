@@ -27,17 +27,16 @@ helpviewer_keywords:
 - members [Analysis Services], groups
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dd9947d01b6f916d19c1115e767c4b2eb5bdb807
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriétés - groupe attribut des membres d’attribut
   Un groupe de membres est une collection de membres de dimension contigus générée par le système. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
@@ -123,4 +122,3 @@ ms.lasthandoff: 09/01/2017
  [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   
-
