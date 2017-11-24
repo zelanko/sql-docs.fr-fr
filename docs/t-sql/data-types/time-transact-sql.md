@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh : mm : [.nnnnnnn] pour Informatica)<br /><br /> Pour plus d'informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » qui suit.|  
 |Plage|00:00:00.0000000 via 23:59:59.9999999 (00:00:00.000 via 23:59:59.999 pour Informatica)|  
 |Plages d'éléments|hh comprend deux chiffres, entre 0 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 0 et 59, qui représentent la seconde.<br /><br /> n\*est égal à zéro et sept chiffres, entre 0 et 9999999, qui représentent les fractions de seconde. Pour Informatica, n\* est égal à zéro et trois chiffres, entre 0 et 999.|  
-|Longueur de caractère|8 positions au minimum (HH) à 16 au maximum (.nnnnnnn). Pour Informatica, la valeur maximale est de 12 (hh:mm:ss.nnn).|  
+|Longueur de caractère|8 positions au minimum (hh:mm:ss) à 16 au maximum (hh:mm:ss.nnnnnnn) Pour Informatica, la valeur maximale est de 12 (hh:mm:ss.nnn).|  
 |Précision, échelle<br /><br /> (l'utilisateur spécifie l'échelle uniquement)|Consultez le tableau ci-dessous.|  
 |Taille de stockage|5 octets, fixes, sont la valeur par défaut avec une précision à la fraction de seconde de 100 ns par défaut. Dans Informatica, la valeur par défaut est de 4 octets, fixés, avec la valeur par défaut de 1 MS fractionnaire deuxième précision.|  
 |Analyse de précision|100 nanosecondes (1 milliseconde dans Informatica)|  
