@@ -2,13 +2,18 @@
 title: Les expressions (MDX Multidimensional) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - identifiers [MDX]
 - expressions [MDX]
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - MDX [Analysis Services], expressions
 - Multidimensional Expressions [Analysis Services], expressions
 ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 8474c90f0cfbcd8ae0aabce14623c427106298a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 608cba1c2819136f5bafa71be8ac5a347c5939cd
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="expressions-mdx"></a>Expressions (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Une expression est une combinaison d’identificateurs, de valeurs et d’opérateurs qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut évaluer pour obtenir un résultat. Les données peuvent être utilisées à différents endroits lors de l'accès ou la modification des données. Vous pouvez, par exemple, utiliser une expression en tant qu'élément des données à récupérer dans une requête ou en tant que condition de recherche de données répondant à un jeu de critères.  
   
@@ -87,16 +93,17 @@ WHERE [Product].[Category].[Bikes]
   
 |Rubrique| Description|  
 |-----------|-----------------|  
-|[Utilisation d’expressions de cube et de sous-cube](../mdx/using-cube-and-subcube-expressions.md)|Définit les expressions de cube et de sous-cube.|  
-|[Utilisation d’expressions de dimension](../mdx/using-dimension-expressions.md)|Définit les expressions de dimension.|  
-|[Utilisation d’expressions de membre](../mdx/using-member-expressions.md)|Définit les expressions de membre.|  
-|[Utilisation d’expressions de tuple](../mdx/using-tuple-expressions.md)|Définit les expressions de tuple.|  
-|[Utilisation d’expressions de jeu](../mdx/using-set-expressions.md)|Définit les expressions de jeu.|  
-|[Utilisation d’expressions scalaires](../mdx/using-scalar-expressions.md)|Définit les expressions scalaires.|  
-|[Manipulation de valeurs vides](../mdx/working-with-empty-values.md)|Décrit une valeur vide et la manière dont les valeurs de ce type sont gérées.|  
+|[À l’aide de Cube et les Expressions de sous-cube](../mdx/using-cube-and-subcube-expressions.md)|Définit les expressions de cube et de sous-cube.|  
+|[À l’aide d’Expressions de Dimension](../mdx/using-dimension-expressions.md)|Définit les expressions de dimension.|  
+|[Utilisation d’Expressions de membre](../mdx/using-member-expressions.md)|Définit les expressions de membre.|  
+|[À l’aide d’Expressions de Tuple](../mdx/using-tuple-expressions.md)|Définit les expressions de tuple.|  
+|[À l’aide d’Expressions de jeu](../mdx/using-set-expressions.md)|Définit les expressions de jeu.|  
+|[Utilisation d’Expressions scalaires](../mdx/using-scalar-expressions.md)|Définit les expressions scalaires.|  
+|[Utilisation des valeurs vides](../mdx/working-with-empty-values.md)|Décrit une valeur vide et la manière dont les valeurs de ce type sont gérées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
  [Principes de base de requête MDX &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
+

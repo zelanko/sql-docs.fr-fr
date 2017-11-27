@@ -2,31 +2,37 @@
 title: "Référence des opérateurs MDX (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], operators
 - operators [MDX]
 - MDX [Analysis Services], operators
 ms.assetid: 1cdb8c31-a5f6-4430-b509-f81344f4622a
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9a9d400dc50856ef01261ec58a50b4b5593f377a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a7178882592492f2447b802ff88bdf5c8b902be5
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-operator-reference-mdx"></a>Référence des opérateurs MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le langage MDX (Multidimensional Expressions) prend en charge des opérateurs arithmétiques, logiques, de comparaison, de jeu, de chaîne et unaires. Le tableau ci-dessous répertorie et décrit les opérateurs pris en charge.  
   
@@ -65,3 +71,4 @@ ms.lasthandoff: 11/09/2017
  [Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+

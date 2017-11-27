@@ -2,29 +2,37 @@
 title: TopSum (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: TOPSUM
-dev_langs: kbMDX
-helpviewer_keywords: TopSum function
+f1_keywords:
+- TOPSUM
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- TopSum function
 ms.assetid: e32496fd-4897-43c9-a388-4028609f4ffb
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 11d3e5e42de98eb97e392193cd7cf4e7d5a9383b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 58a7bffc672af75c52eacca28f2e83d36a56af0c
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Trie un jeu et retourne les éléments situés le plus en haut, dont le total cumulatif est au moins une valeur spécifiée.  
   
@@ -39,7 +47,7 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Valeur*  
+ *Value*  
  Expression numérique valide qui précise la valeur par rapport à laquelle chaque tuple est comparé.  
   
  *Numeric_expression*  
@@ -69,3 +77,4 @@ WHERE([Product].[Product Categories].Bikes)
  [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+

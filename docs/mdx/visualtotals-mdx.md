@@ -2,29 +2,37 @@
 title: VisualTotals (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: VisualTotals
-dev_langs: kbMDX
-helpviewer_keywords: VisualTotals function
+f1_keywords:
+- VisualTotals
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- VisualTotals function
 ms.assetid: 8ec529c2-729a-4a5b-892e-750849ab4013
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 15fea625f4c1f19df2cfa30afa1c135145b38c23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c77ceae3fc74974224d0ad2d5320b3983786127f
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne un jeu généré en totalisant de manière dynamique les membres enfants d'un jeu spécifié, et avec l'aide éventuelle d'un modèle pour le nom du membre parent dans le jeu de résultats.  
   
@@ -39,7 +47,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Modèle*  
+ *Motif*  
  Expression de chaîne valide du membre parent du jeu contenant un astérisque (*) en tant que caractère de substitution utilisé pour le nom du parent.  
   
 ## <a name="remarks"></a>Notes  
@@ -78,3 +86,4 @@ FROM [Adventure Works]
  [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+
