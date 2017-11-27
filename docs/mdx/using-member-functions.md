@@ -2,28 +2,35 @@
 title: "À l’aide des fonctions membres | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: member functions [MDX]
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- member functions [MDX]
 ms.assetid: 094c443f-0daa-4af7-801c-d2e1d686d755
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0411049e6d7f7f7c4db00d6a4692868772127ea3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9354c2e6a83918742f1c2de1dea943be4b21e844
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="using-member-functions"></a>Utilisation de fonctions de membre
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Une fonction de membre est une fonction MDX (Multidimensional Expressions) qui retourne un membre. Les fonctions de membre, comme les fonctions de tuple et les fonctions de définition, sont essentielles à la négociation des structures multidimensionnelles de la syntaxe MDX (Multidimensional Expressions) présentes dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -56,6 +63,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40; La syntaxe MDX &#41;](../mdx/functions-mdx-syntax.md)   
  [À l’aide des fonctions de Tuple](../mdx/using-tuple-functions.md)   
- [Utilisation de fonctions de jeu](../mdx/using-set-functions.md)  
+ [À l’aide des fonctions de jeu](../mdx/using-set-functions.md)  
   
   
+

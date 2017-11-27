@@ -2,37 +2,43 @@
 title: "Référence des instructions MDX (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - statements [MDX]
 - Multidimensional Expressions [Analysis Services], statements
 - MDX [Analysis Services], statements
 ms.assetid: 812d2647-587d-4fcb-8db8-64a5e4b23aec
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 60982f4002cfb760ae9aa24f51358dbd5cdff593
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3058511ab523787a9e6a6fb4a774e36247ad8b50
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="mdx-statement-reference-mdx"></a>Guide de référence des instructions MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Les instructions MDX (Multidimensional Expressions) sont divisées en trois groupes, comme le montre le tableau ci-dessous.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Instructions de script MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)|Contient des informations sur les instructions de script MDX qui gèrent le contexte de la requête, l'étendue et le contrôle de flux au sein des scripts MDX.|  
 |[Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contient des informations sur les instructions de définition de données MDX qui créent, suppriment et manipulent des objets multidimensionnels.|  
@@ -42,3 +48,4 @@ ms.lasthandoff: 11/09/2017
  [Référence du langage MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
   
   
+

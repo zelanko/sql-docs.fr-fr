@@ -2,28 +2,35 @@
 title: "Opérateurs arithmétiques | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: arithmetic operators
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- arithmetic operators
 ms.assetid: 1dff3e20-fe9d-4155-bf06-27d6458188e9
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7d32b5c9c7dba58abd456847b77836a5f4a9028b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bc3adf599f92a74dd996a0ef090f6f42ab1fba0d
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="arithmetic-operators"></a>Opérateurs arithmétiques
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Vous pouvez utiliser des opérateurs arithmétiques dans la syntaxe MDX (Multidimensional Expressions) pour tout calcul arithmétique, notamment une addition, une soustraction, une multiplication et une division.  
   
@@ -31,10 +38,10 @@ ms.lasthandoff: 11/09/2017
   
 |Opérateur| Description|  
 |--------------|-----------------|  
-|[+ (Additionner)](../mdx/add-mdx.md)|Additionne deux nombres.|  
+|[+ (Addition)](../mdx/add-mdx.md)|Additionne deux nombres.|  
 |[/ (Division)](../mdx/divide-mdx-operator-reference.md)|Divise un nombre par un autre.|  
-|[* (Multiplier)](../mdx/multiply-mdx.md)|Multiplie deux nombres.|  
-|[- (Soustraire)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
+|[* (Multiplication)](../mdx/multiply-mdx.md)|Multiplie deux nombres.|  
+|[-(Soustraction)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
 |^ (Puissance) |Élève un nombre à une puissance égale à un autre nombre.|  
   
 > [!NOTE]  
@@ -54,3 +61,4 @@ ms.lasthandoff: 11/09/2017
  [Opérateurs &#40; La syntaxe MDX &#41;](../mdx/operators-mdx-syntax.md)  
   
   
+

@@ -2,29 +2,37 @@
 title: StdevP (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: analysis-services
+ms.suite: pro-bi
+ms.technology:
+- analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: STDEVP
-dev_langs: kbMDX
-helpviewer_keywords: StdevP function [MDX]
+f1_keywords:
+- STDEVP
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- StdevP function [MDX]
 ms.assetid: cd8ae7c9-3cef-49f0-bb41-8f577c7b6f31
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c0c1f50b8dba6594e94812c689ca935fc6060928
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d72eb148aafccc60aa5097c8c7fed7f8b842a583
+ms.contentlocale: fr-fr
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne l’écart-type de population d’une expression numérique évaluée sur un jeu, à l’aide de la formule de remplissage biaisée (division par  *n* ).  
   
@@ -63,3 +71,4 @@ FROM [Adventure Works]
  [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
+
