@@ -2,9 +2,12 @@
 title: "(Syntaxe MDX) de mots clés réservés | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Mots clés réservés (syntaxe MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] réserve certains mots clés pour son usage exclusif. Pour obtenir la liste des mots clés réservés, consultez [les mots réservés MDX](../mdx/mdx-reserved-words.md).  
   

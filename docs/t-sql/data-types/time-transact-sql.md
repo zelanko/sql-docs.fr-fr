@@ -3,17 +3,18 @@ title: heure (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Définit une heure d'un jour. L'heure ne prend pas en charge les fuseaux horaires et se présente au format 24 heures.  
   
@@ -48,10 +48,10 @@ ms.lasthandoff: 10/05/2017
 |Syntaxe|**temps** [(*fractionnaire deuxième échelle*)]|  
 |Utilisation|DÉCLARER @MyTime **Time (7)**<br /><br /> CRÉER la TABLE Table1 (Column1 **Time (7)** )|  
 |*échelle de fractions de seconde*|Spécifie le nombre de chiffres pour la partie fractionnaire des secondes.<br /><br /> Il peut s'agir d'un entier compris entre 0 et 7. Pour Informatica, cela peut être un entier compris entre 0 et 3.<br /><br /> L’échelle de fractions de seconde par défaut est 7 (100 NS).|  
-|Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh : mm : [.nnnnnnn] (hh : mm : [.nnn] pour Informatica)<br /><br /> Pour plus d'informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » qui suit.|  
+|Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh : mm : [.nnnnnnn] pour Informatica)<br /><br /> Pour plus d'informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » qui suit.|  
 |Plage|00:00:00.0000000 via 23:59:59.9999999 (00:00:00.000 via 23:59:59.999 pour Informatica)|  
 |Plages d'éléments|hh comprend deux chiffres, entre 0 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 0 et 59, qui représentent la seconde.<br /><br /> n\*est égal à zéro et sept chiffres, entre 0 et 9999999, qui représentent les fractions de seconde. Pour Informatica, n\* est égal à zéro et trois chiffres, entre 0 et 999.|  
-|Longueur de caractère|8 positions au minimum (HH) à 16 au maximum (.nnnnnnn). Pour Informatica, la valeur maximale est de 12 (hh:mm:ss.nnn).|  
+|Longueur de caractère|8 positions au minimum (hh:mm:ss) à 16 au maximum (hh:mm:ss.nnnnnnn) Pour Informatica, la valeur maximale est de 12 (hh:mm:ss.nnn).|  
 |Précision, échelle<br /><br /> (l'utilisateur spécifie l'échelle uniquement)|Consultez le tableau ci-dessous.|  
 |Taille de stockage|5 octets, fixes, sont la valeur par défaut avec une précision à la fraction de seconde de 100 ns par défaut. Dans Informatica, la valeur par défaut est de 4 octets, fixés, avec la valeur par défaut de 1 MS fractionnaire deuxième précision.|  
 |Analyse de précision|100 nanosecondes (1 milliseconde dans Informatica)|  
@@ -277,4 +277,3 @@ SELECT
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

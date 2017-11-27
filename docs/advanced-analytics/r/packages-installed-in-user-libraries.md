@@ -1,26 +1,24 @@
 ---
 title: "Comment éviter les erreurs sur les packages R sont installés dans les bibliothèques utilisateur | Documents Microsoft"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 11/16/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99ffd9b8-aa6d-4ac2-9840-4e66d0463978
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: f7e5a9e69d98a3e39a66c48b1a7add5a3f0b0e69
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 0de06ebee16d903b4b00c9d8e4673bf450c485d1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="avoiding-errors-on-r-packages-installed-in-user-libraries"></a>Comment éviter les erreurs sur les packages R sont installés dans les bibliothèques utilisateur
 
@@ -35,7 +33,7 @@ Les développeurs R qui ont besoin d’installer de nouveaux packages R sont hab
 Par exemple, dans un environnement de développement R classique, l’utilisateur devez ajouter l’emplacement du package à la variable d’environnement R `libPath`, ou référence le chemin d’accès complet du package, comme suit :
 
 ```R
-library("c:/Users/<username>/R/win-library/packagename")  
+library("c:/Users/<username>/R/win-library/packagename")
 ```
 
 Toutefois, cela peut ne jamais fonctionne lors de l’exécution des solutions R dans SQL Server, car les packages R doivent être installés dans une bibliothèque spécifique par défaut qui est associée à l’instance.
@@ -68,7 +66,6 @@ Si vous prenez l’approche de gestion de package basée sur les rôles de base 
 
     + Modifier le code pour vous assurer que les packages sont chargés à partir de la bibliothèque par défaut, et non à partir de répertoires ad hoc ou les bibliothèques utilisateur.
 
-+ Évitez d’installation du package ad hoc dans le cadre d’une solution. Vérifiez votre code pour vous assurer qu’il n’y a aucun appel à des packages désinstallés ou le code qui installe les packages de façon dynamique. Si vous n’êtes pas autorisé, le code échoue, et si vous ne disposez pas des autorisations, vous devez installer séparément les packages à partir de tout autre code que vous souhaitez exécuter.
++ Évitez d’installation du package ad hoc dans le cadre d’une solution. Vérifiez votre code pour vous assurer qu’il n’y a aucun appel à des packages désinstallés ou le code qui installe les packages de façon dynamique. Si vous n’êtes pas autorisé à installer des packages, le code échoue. Même si vous avez les autorisations nécessaires pour installer des packages, vous devez procéder séparément du reste du code que vous souhaitez exécuter.
 
-+ Modifier les chemins d’accès directs aux bibliothèques de package de R. Si un package est installé dans la bibliothèque par défaut, le runtime R charge ce package à partir de la bibliothèque par défaut, même si une autre bibliothèque est spécifiée dans le code R.
-
++ Mettre à jour votre code pour supprimer des références directes aux chemins des packages R ou des bibliothèques R. Si un package est installé dans la bibliothèque par défaut, le runtime R charge ce package à partir de la bibliothèque par défaut, même si une autre bibliothèque est spécifiée dans le code R.

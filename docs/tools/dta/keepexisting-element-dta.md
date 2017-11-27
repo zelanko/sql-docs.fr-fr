@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- KeepExisting element
+dev_langs: XML
+helpviewer_keywords: KeepExisting element
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1277619f7c7f293ad49724f40faa9eb0cbb64cf1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b67140ed0c525636e3229852521e21d0e0078c5a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting, élément (Assistant Paramétrage de base de données)
   Spécifie les structures PDS (index, vues indexées ou partitions) que l'Assistant Paramétrage du moteur de base de données doit conserver lors de la génération de sa recommandation.  
@@ -52,7 +48,7 @@ ms.lasthandoff: 08/02/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Tuningoptions, élément &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
 ## <a name="example"></a>Exemple  
@@ -62,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

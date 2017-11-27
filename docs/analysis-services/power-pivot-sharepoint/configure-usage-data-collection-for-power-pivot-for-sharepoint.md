@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d074eb99de5c97bb9df38d6f2305fb906370f64a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurer la collecte des données d’utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint utilise et étend ce système pour fournir des rapports dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui détaillent le mode d’utilisation des données et services [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie de serveurs doit activer la journalisation pour créer les données d’utilisation qui s’affichent dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -204,4 +203,3 @@ ms.lasthandoff: 09/01/2017
  [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

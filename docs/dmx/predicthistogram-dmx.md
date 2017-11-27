@@ -2,35 +2,34 @@
 title: PredictHistogram (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
+f1_keywords: PredictHistogram
+dev_langs: DMX
+helpviewer_keywords: PredictHistogram function
 ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 37e2d03cebd214a7c36074666cd0dcdc9cb32887
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e2e0d45b8169d567bbdc69a916f242b2707f6570
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne une table qui représente un histogramme de la prévision d'une colonne donnée.  
   
@@ -111,4 +110,3 @@ NATURAL PREDICTION JOIN
  [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

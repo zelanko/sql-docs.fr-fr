@@ -3,27 +3,28 @@ title: "Définie les colonnes de résultat de la liaison | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cafac55eeca169ff83521e945f0f5e76b31f19c8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-result-set-columns"></a>Définie les colonnes de résultat de la liaison
 Les applications peuvent lier en tant que nombre des colonnes du jeu de résultats lorsqu’ils le souhaitent, y compris tout aucune colonne de liaison. Lorsqu’une ligne de données est atteinte, le pilote retourne les données pour les colonnes liées à l’application. Indique si l’application lie toutes les colonnes du jeu de résultats dépend de l’application. Par exemple, les applications qui génèrent les rapports généralement ont un format fixe ; de telles applications créer un jeu de résultats contenant toutes les colonnes utilisées dans le rapport et ensuite lient et récupèrent les données pour toutes ces colonnes. Les applications qui affichent des écrans complète des données parfois autorisent l’utilisateur de choisir les colonnes à afficher ; de telles applications créent un jeu de résultats contenant toutes les colonnes de choix, mais lier et l’utilisateur peut récupérer les données pour les colonnes choisies par l’utilisateur.  
@@ -47,4 +48,3 @@ SELECT * FROM Lines
 ```  
   
  sur le même descripteur d’instruction, les liaisons de colonne pour le premier jeu de résultats sont toujours en vigueur, car ce sont les liaisons stockées dans la structure de l’instruction. Dans la plupart des cas, ceci est une pratique de programmation médiocre et doit être évitée. Au lieu de cela, l’application doit appeler **SQLFreeStmt** avec l’option SQL_UNBIND pour dissocier les anciennes colonnes, puis lier d’autres.
-

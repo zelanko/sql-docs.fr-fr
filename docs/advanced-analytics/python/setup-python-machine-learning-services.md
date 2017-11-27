@@ -2,23 +2,21 @@
 title: "Le programme d’installation et de configuration pour Python Machine Learning Services | Documents Microsoft"
 ms.custom: 
 ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e3142bcf06fa2ed88ead730d0cc127cf41cfde56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-up-python-machine-learning-services-in-database"></a>Configurer les Python Machine Learning Services (de-de base de données)
 
@@ -50,13 +48,15 @@ Une fois l’installation terminée, reconfigurer l’instance pour permettre l�
 
 ### <a name="unattended-installation"></a>Installation sans assistance
 
-Pour effectuer une installation sans assistance, utilisez les options de ligne de commande pour le programme d’installation de SQL Server et les arguments spécifiques à Python. Pour plus d’informations, consultez [Unattended l’installation de SQL Server avec les Services de Python Machine Learning](./unattended-installs-of-sql-server-python-services.md).
+Pour effectuer une installation sans assistance, utilisez les options de ligne de commande pour le programme d’installation de SQL Server et les arguments spécifiques à Python. Pour plus d’informations, consultez [Unattended l’installation de SQL Server avec les Services de Python Machine Learning](unattended-installs-of-sql-server-python-services.md).
 
 ##  <a name="bkmk_installPythonInDatabase"></a>Étape 1 : Installer les Services (de-de base de données) sur SQL Server d’apprentissage
 
 1. Exécutez l’Assistant Installation de SQL Server 2017.
   
 2. Sur le **Installation** onglet, sélectionnez **nouvelle installation SQL Server autonome ou ajouter des fonctionnalités à une installation existante**.
+
+    ![Installer Python dans la base de données](media/2017setup-installation-page-mlsvcs.PNG)
    
 3. Dans la page **Sélection de fonctionnalités** , sélectionnez les options suivantes :
   
@@ -69,11 +69,12 @@ Pour effectuer une installation sans assistance, utilisez les options de ligne d
          Cette option installe les services de base de données qui prennent en charge l’exécution du script Python.
 
     -   **Python** Activez cette option pour obtenir de l’exécutable de Python 3.5 et sélectionner des bibliothèques à partir de la distribution Anaconda. Installer qu’une seule langue par instance.
+        
+        ![Fonctionnalité des options pour Python](media/ml-svcs-features-python-highlight.png "options d’installation de Python")
 
         > [!NOTE]
-        > Ne sélectionnez pas l’option de **fonctionnalités partagées** pour **Microsoft R Server (autonome)**. Utilisez cette option dans une installation distincte, si vous devez ajouter les composants vers un autre ordinateur qui est utilisé pour le développement de R d’apprentissage automatique. Par exemple, cela peut être utile pour un ordinateur portable de votre spécialiste des données.
-        
-        ![Options d’installation de Python](media/ml-svcs-features-python-highlight.png "options d’installation de Python")
+        > 
+        > Ne sélectionnez pas l’option pour **Machine Learning Server (autonome)**. L’option d’installation du serveur d’apprentissage Machine sous **fonctionnalités partagées** est prévu pour une utilisation sur un ordinateur distinct. Par exemple, vous souhaiterez installer la même version de composants sur un autre ordinateur qui est utilisé pour le développement de projet, par exemple un ordinateur portable de votre spécialiste des données d’apprentissage.
 
 4. Sur le **donner son consentement pour installer les Python** page, sélectionnez **accepter**.
   
@@ -92,7 +93,7 @@ Pour effectuer une installation sans assistance, utilisez les options de ligne d
      + Machine Learning Services (en base de données)
      + Python
   
-    Ces sélections représentent la configuration minimale requise pour utiliser Python avec SQL Server.
+    Ces sélections représentent la configuration minimale requise pour utiliser Python avec [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)].
     
     ![Prêt à installer Python](media/ready-to-install-python.png "les composants requis pour l’installation de Python")
 
@@ -118,7 +119,8 @@ Pour effectuer une installation sans assistance, utilisez les options de ligne d
     EXEC sp_configure  'external scripts enabled', 1
     RECONFIGURE WITH OVERRIDE
     ```
-    Cela est exactement le même processus qui est utilisé pour activer R, car la fonctionnalité d’extensibilité sous-jacent prend en charge les deux langages.
+    
+    Si vous avez déjà activé la fonctionnalité du langage R, vous ne devez exécuter reconfigure une deuxième fois pour Python. La plateforme d’extensibilité sous-jacente prend en charge les deux langages.
 
 4. Redémarrez le service SQL Server pour l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Redémarrage du service SQL Server également le redémarrage automatique connexe [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
@@ -140,13 +142,13 @@ Prenez un moment pour vérifier que tous les composants utilisés pour lancer le
   
     Si vous avez installé plusieurs instances de SQL Server, n’importe quelle instance ayant R ou Python activé a son propre service Launchpad.
 
-    Toutefois, si vous installez R et Python sur une instance unique, seul Launchpad est installé. Un lanceur séparé et spécifiques au langage de DLL est ajouté pour chaque langue. Pour plus d’informations, consultez [composants pour prendre en charge l’intégration Python](new-components-in-sql-server-to-support-python-integration.md). 
+    Si vous installez R et Python sur une instance unique, seul Launchpad est installé. Un lanceur séparé et spécifiques au langage de DLL est ajouté pour chaque langue. Pour plus d’informations, consultez [composants pour prendre en charge l’intégration Python](new-components-in-sql-server-to-support-python-integration.md). 
    
 3. Si le Launchpad est en cours d’exécution, vous devez être en mesure d’exécuter des scripts Python simples comme suit dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:
     
     ```SQL
     EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'OutputDataSet=InputDataSet',
+    @script=N'OutputDataSet = InputDataSet',
     @input_data_1 = N'SELECT 1 AS col'
     ```
     
@@ -156,6 +158,7 @@ Prenez un moment pour vérifier que tous les composants utilisés pour lancer le
 
 > [!NOTE]
 > Colonnes ou les en-têtes utilisés dans le script Python ne sont pas renvoyées par conception. Pour ajouter des noms de colonnes pour la sortie, vous devez spécifier le schéma pour le jeu de données de retour. Cela l’aide du paramètre avec les résultats de la procédure stockée, les colonnes d’affectation de noms et en spécifiant le type de données SQL.
+> 
 > Par exemple, vous pouvez ajouter la ligne suivante pour générer un nom de colonne arbitraire :`WITH RESULT SETS ((Col1 AS int))`
 
 ## <a name="step-4-additional-configuration"></a>Étape 4 : Une configuration supplémentaire
@@ -177,20 +180,20 @@ Il s’agit *l’authentification implicite*, est un service du moteur de base d
 Vous pouvez afficher ces comptes dans le groupe d’utilisateurs Windows, **SQLRUserGroup**. Par défaut, 20 comptes de travail sont créés, ce qui est habituellement des tâches plus que suffisant pour l’exécution de script externe.
 
 > [!IMPORTANT]
-> Le groupe de travail est nommé SQLRUserGroup, quelle que soit le type de script que vous exécutez. Il existe un groupe unique pour chaque instance.
+> Le groupe de travail est nommé **SQLRUserGroup** indépendamment de si vous avez installé R ou Python. Il existe un groupe unique pour chaque instance.
 
-Si vous avez besoin exécuter des scripts R à partir d’un client de science des données distantes, et vous utilisez l’authentification Windows, il existe des considérations supplémentaires. Ces comptes de travail doivent recevoir l’autorisation de se connecter à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à votre place.
+Si vous avez besoin exécuter des scripts à partir d’un client de science des données distantes, et vous utilisez l’authentification Windows, il existe des considérations supplémentaires. Ces comptes de travail doivent recevoir l’autorisation de se connecter à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à votre place.
 
 1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, développez **sécurité**. Avec le bouton droit puis **connexions**, puis sélectionnez **nouvelle connexion**.
 2. Dans le **nouvelle connexion** boîte de dialogue, sélectionnez **recherche**.
 3. Sélectionnez **les Types d’objets**, puis sélectionnez **groupes**. Désactivez tout le reste.
 4. Dans **Entrez le nom de l’objet à sélectionner**, type *SQLRUserGroup*, puis sélectionnez **vérifier les noms**.
 5. Le nom du groupe local associé au service Launchpad de l’instance doit ressembler à quelque chose comme *nom_instance\SQLRUserGroup*. Sélectionnez **OK**.
-6. Par défaut, le signe dans est affecté à la **public** rôle, et est autorisé à se connecter au moteur de base de données.
+6. Par défaut, le groupe est affecté à la **public** rôle, et est autorisé à se connecter au moteur de base de données.
 7. Sélectionnez **OK**.
 
 > [!NOTE]
-> Si vous utilisez une connexion à SQL pour exécuter des scripts dans un contexte de calcul de SQL Server, cette étape supplémentaire n’est pas requise.
+> Si vous utilisez un **connexion SQL** pour exécuter des scripts dans un contexte de calcul de SQL Server, cette étape supplémentaire n’est pas requise.
 
 ### <a name="give-users-permission-to-run-external-scripts"></a>Autoriser les utilisateurs à exécuter des scripts externes
 
@@ -209,12 +212,12 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 
 ### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>Accorder des autorisations de language (DDL) sur les bases de données de votre définition de données, d’écriture ou en lecture aux utilisateurs
 
-Pendant l’exécution de scripts est un utilisateur, le compte d’utilisateur ou l’authentification SQL dans peut-être lire les données à partir d’autres bases de données. Le compte d’utilisateur ou l’authentification SQL dans devrez peut-être également créer des tables pour stocker les résultats et écrire des données dans des tables.
+Pendant l’exécution de scripts est un utilisateur, l’utilisateur peut avoir besoin lire des données à partir d’autres bases de données. L’utilisateur peut également besoin créer des tables pour stocker les résultats et écrire des données dans des tables.
 
-Pour chaque compte d’utilisateur ou SQL connectez-vous qui est en cours d’exécution des scripts R ou Python, vérifiez qu’il possède `db_datareader`, `db_datawriter`, ou `db_ddladmin` des autorisations sur la base de données spécifique.
+Pour chaque compte d’utilisateur Windows ou un compte de connexion SQL qui est en cours d’exécution des scripts R ou Python, assurez-vous qu’il dispose des autorisations appropriées sur la base de données : `db_datareader`, `db_datawriter`, ou `db_ddladmin`.
 
-Par exemple, [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction permet la connexion à SQL *MySQLLogin* les droits pour exécuter des requêtes T-SQL le *ML_Samples* base de données. Pour exécuter cette instruction, la connexion à SQL doit déjà exister dans le contexte de sécurité du serveur.
-  
+Par exemple, [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction donne la connexion SQL *MySQLLogin* les droits pour exécuter des requêtes T-SQL le *ML_Samples* base de données. Pour exécuter cette instruction, la connexion SQL doit déjà exister dans le contexte de sécurité du serveur.
+
 ```SQL
 USE ML_Samples
 GO
@@ -229,12 +232,11 @@ Si vous ne pouvez pas vous connecter à partir d’un ordinateur distant, vérif
 
 ### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>Créer une source de données ODBC pour l’instance sur votre client de science des données
 
-Vous pouvez créer une solution sur un ordinateur client de science des données d’apprentissage. Si vous avez besoin exécuter du code à l’aide de l’ordinateur SQL Server en tant que le contexte de calcul, vous avez deux possibilités. Vous pouvez utiliser une connexion à SQL ou une authentification Windows intégrée.
+Vous pouvez créer une solution sur un ordinateur client de science des données d’apprentissage. Si vous avez besoin exécuter du code à l’aide de l’ordinateur SQL Server en tant que le contexte de calcul, vous avez deux options : accéder à l’instance à l’aide d’une connexion SQL ou à l’aide d’une fenêtre de compte.
 
-+ Pour les connexions SQL : Assurez-vous que connexion dispose des autorisations appropriées sur la base de données où vous lisez des données. Ce faire, vous pouvez ajouter *se connecter à* et *sélectionnez* autorisations, ou en ajoutant l’authentification dans le `db_datareader` rôle. Besoin de connexions qui créent des objets `DDL_admin` droits. Connexions qui doivent enregistrer les données dans les tables doivent être ajoutées à la `db_datawriter` rôle.
++ Pour les connexions SQL : Vérifiez que la connexion dispose des autorisations appropriées sur la base de données où vous lisez des données. Ce faire, vous pouvez ajouter *se connecter à* et *sélectionnez* autorisations, ou en ajoutant de la connexion à la `db_datareader` rôle. Pour créer des objets, assignez `DDL_admin` droits. Si vous devez enregistrer les données à des tables, ajouter à la `db_datawriter` rôle.
 
 + Pour l’authentification Windows : vous devrez peut-être créer une source de données ODBC sur le client de science des données qui spécifie le nom d’instance et d’autres informations de connexion. Pour plus d’informations, consultez [administrateur de sources de données ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator).
-
 
 ## <a name="additional-optimizations"></a>Optimisations supplémentaires
 
@@ -242,7 +244,7 @@ Maintenant que vous avez tout fonctionne, vous pouvez également souhaiter d’o
 
 ### <a name="add-more-worker-accounts"></a>Ajoutez d’autres comptes de travail
 
-Si vous pensez que de nombreux utilisateurs d’exécuter simultanément des scripts, vous pouvez augmenter le nombre de comptes de travail qui sont affectés au service Launchpad. Pour plus d’informations, consultez [modifier le pool de comptes d’utilisateur pour SQL Server R Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Si vous pensez que de nombreux utilisateurs d’exécuter simultanément des scripts, vous pouvez augmenter le nombre de comptes de travail qui sont affectés au service Launchpad. Pour plus d’informations, consultez [modifier le pool de comptes d’utilisateur pour SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 ### <a name="optimize-the-server-for-script-execution"></a>Optimiser le serveur pour l’exécution du script
 
@@ -280,10 +282,6 @@ Vous pouvez mettre à niveau les composants sur une planification plus rapide qu
 
 Pour plus d’informations sur la mise à niveau une instance, consultez [composants R de mise à niveau via la liaison](..\r\use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
-> [!NOTE]
-> 
-> La version actuelle contient la version la plus récente de tous les composants d’apprentissage machine. Par conséquent, bien que les mises à jour via Microsoft Machine Learning Server sont prises en charge pour SQL Server 2017, la mise à niveau n’est actuellement disponible s’applique uniquement aux instances de SQL Server 2016.
-
 ### <a name="tutorials"></a>Didacticiels
 
 Reportez-vous aux didacticiels suivants pour obtenir des exemples de la façon dont vous pouvez utiliser Python avec SQL Server pour créer et déployer des solutions d’apprentissage machine :
@@ -291,4 +289,3 @@ Reportez-vous aux didacticiels suivants pour obtenir des exemples de la façon d
 [À l’aide de Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
 
 [Créer un modèle de Python à l’aide de revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md)
-

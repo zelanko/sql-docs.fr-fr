@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.workload: Inactive
+ms.openlocfilehash: 0f1ce3070cbefa63323e109a10c7a262616c2cb3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a5f84178bc2f70dfd04239ec130735e51d117e3c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Se connecter à SQL Server (OracleToSQL)
 Utilisez le **se connecter à SQL Server** boîte de dialogue se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous souhaitez migrer vers. Pour accéder à la **se connecter à SQL Server** boîte de dialogue le **fichier** menu, cliquez sur **se connecter à SQL Server**.  
@@ -59,4 +57,3 @@ Si vous souhaitez utiliser cette option, sélectionnez le **faire confiance au c
 > [!NOTE]  
 > Pour activer **faire confiance au certificat serveur**, « Encrypt » doit être définie sur **True**.  
   
-

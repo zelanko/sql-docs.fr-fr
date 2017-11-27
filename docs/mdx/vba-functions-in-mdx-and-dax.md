@@ -2,9 +2,12 @@
 title: Les fonctions VBA dans MDX et DAX | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Ce document contient une référence croisée de toutes les fonctions VBA disponibles dans [Microsoft Visual Basic pour Applications de référence du langage pour Office 2010](https://msdn.microsoft.com/library/gg264383(v=office.14).aspx) qui sont pris en charge dans MDX ; en outre, la liste inclut une remarque lorsqu’il existe une équivalence fonctionnelle avec le langage DAX.  
   

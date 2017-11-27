@@ -5,31 +5,28 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- TCP/IP [SQL Server], configuration options
+helpviewer_keywords: TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ade77164dd1a752439d21249284b63c48bfcb8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0cb8a1ffb609405f5c27ee62d3663ba2b4214d46
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# Propriétés de TCP/IP (onglet Protocoles)
+# <a name="tcpip-properties-protocols-tab"></a>Propriétés de TCP/IP (onglet Protocoles)
   La boîte de dialogue **Propriétés de TCP/IP** permet de configurer les options du protocole TCP/IP. Cliquez sur **TCP/IP** dans le volet gauche pour afficher les configurations de chaque adresse IP dans le volet d’informations.  
   
  Pour appliquer les modifications, redémarrez Microsoft SQL Servermust.  
   
-## Options  
+## <a name="options"></a>Options  
  **Activé**  
  Les valeurs possibles sont **Yes** et **No**.  
   
@@ -42,9 +39,8 @@ ms.lasthandoff: 09/27/2017
  **Aucun délai**  
  SQL Serverdoes n’implémente pas les modifications apportées à cette propriété.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Choix d'un protocole réseau](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
  [Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   
-

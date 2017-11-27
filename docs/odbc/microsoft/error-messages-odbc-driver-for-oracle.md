@@ -3,27 +3,28 @@ title: "Messages d’erreur (le pilote ODBC pour Oracle) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - error messages [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], error messages
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f32a4645beb82b129368c8456cc74854efca1b60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45b66b513595612de968bfc8cb274ebfc90a7a46
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>Messages d’erreur (le pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -33,5 +34,4 @@ ms.lasthandoff: 09/09/2017
   
  Cette section comprend la rubrique suivante :  
   
--   [Messages renvoyés par le pilote ODBC pour Oracle](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)
-
+-   [Messages retournés par le pilote ODBC pour Oracle](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)

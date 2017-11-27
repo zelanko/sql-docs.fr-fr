@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 206b31adec86e7ea2213746687d535d56ca3b617
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a9725c24b4cc324db21e9c39cdd9feef0829cae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Déployer des solutions Power Pivot sur SharePoint
   Utilisez les instructions suivantes pour déployer manuellement deux packages de solution qui ajoutent des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à un environnement SharePoint Server 2010. Le déploiement des solutions est une étape indispensable pour configurer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur un serveur SharePoint 2010. Pour obtenir la liste complète des étapes nécessaires, consultez [Administration et configuration d’un serveur Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -161,4 +159,3 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  [Configuration de Power Pivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
   
-

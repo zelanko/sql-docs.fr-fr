@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - calling stored procedures
 - stored procedures [Analysis Services], calling
 - MDX queries [Analysis Services]
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e2c8656c28db458104a3793175a739d311ac379
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calling-stored-procedures"></a>Appel des procédures stockées
   Les procédures stockées peuvent être appelées sur le serveur ou à partir d'une application cliente. Dans les deux cas, les procédures stockées s'exécutent toujours sur le serveur, soit dans le contexte du serveur, soit dans le contexte d'une base de données. Aucune autorisation spéciale n'est requise pour exécuter une procédure stockée. Lorsqu'une procédure stockée est ajoutée par un assembly dans le contexte du serveur ou de la base de données, tous les utilisateurs peuvent l'exécuter, à condition que leur rôle autorise les actions qu'elle effectue.  
@@ -97,4 +95,3 @@ CALL(MyVoidFunction)
  [Définition de procédures stockées](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

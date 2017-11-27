@@ -8,12 +8,10 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- PolyBase
+keywords: PolyBase
 helpviewer_keywords:
 - PolyBase, import and export
 - Hadoop, import with PolyBase
@@ -21,19 +19,18 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2648460e86e3fca300fdf1cb0396602e176236c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="polybase-queries"></a>Requêtes PolyBase
+# <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Voici des exemples de requêtes utilisant la fonctionnalité [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (consultez [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).  
@@ -131,7 +128,7 @@ OPTION (DISABLE EXTERNALPUSHDOWN);
 ```  
   
 ## <a name="import-data"></a>Importer des données  
- Importez des données de Hadoop ou de Stockage Azure dans SQL Server à des fins de stockage permanent. Utilisez SELECT INTO pour importer des données référencées par une table externe en vue de leur stockage permanent dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
+ Importez des données de Hadoop ou d’Azure Storage dans SQL Server à des fins de stockage permanent. Utilisez SELECT INTO pour importer des données référencées par une table externe en vue de leur stockage permanent dans SQL Server. Créez une table relationnelle à la volée, puis créez un index column-store en plus de la table.  
   
 ```sql  
 -- PolyBase Scenario 2: Import external data into SQL Server.  
@@ -152,7 +149,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 ```  
   
 ## <a name="export-data"></a>Exporter des données  
-Exportez des données de SQL Server vers Hadoop ou Stockage Azure. Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur sp_configure de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. L’instruction INSERT INTO crée le répertoire de destination s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés. Les fichiers externes sont nommés *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Par exemple, QID776_20160130_182739_0.orc.  
+Exportez des données de SQL Server vers Hadoop ou Azure Storage. Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur sp_configure de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. L’instruction INSERT INTO crée le répertoire de destination s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés. Les fichiers externes sont nommés *QueryID_date_time_ID.format*, où *ID* est un identificateur incrémentiel et *format* est le format des données exportées. Par exemple, QID776_20160130_182739_0.orc.  
   
 ```sql  
 -- PolyBase Scenario 3: Export data from SQL Server to Hadoop.  
@@ -194,7 +191,6 @@ SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'
 ```  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour en savoir plus sur la résolution des problèmes, consultez [Résolution des problèmes de PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md).  
+ Pour en savoir plus sur la résolution des problèmes, consultez [Résolution des problèmes de Polybase](../../relational-databases/polybase/polybase-troubleshooting.md).  
   
   
-

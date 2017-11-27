@@ -2,9 +2,12 @@
 title: ALTER CUBE Statement (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Définition de données MDX - ALTER CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce billet de blog : [création d’une Application de l’écriture différée avec Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
   

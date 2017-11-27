@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Field::Status
 - Field::get_Status
 - Field::GetStatus
-helpviewer_keywords:
-- Status property [ADO Field]
+helpviewer_keywords: Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b6db998d81ce756eb68633fb5778c4e8f3633c05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65acf492f0364b26fa6a12240fbbd49c7d1dfed3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="status-property-ado-field"></a>Propriété d’état (champ ADO)
 Indique l’état d’un [champ](../../../ado/reference/ado-api/field-object.md) objet.  
@@ -53,9 +50,8 @@ Indique l’état d’un [champ](../../../ado/reference/ado-api/field-object.md)
  Modifications apportées à la valeur d’un **champ** objet dans la collection de champs de l’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont mis en cache jusqu'à ce que l’objet [mise à jour](../../../ado/reference/ado-api/update-method.md) méthode est appelée. À ce stade, si la modification de la valeur du champ a provoqué une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status d’un de la **champ** des objets dans le **champs** collection qui a provoqué l’erreur contiendra une valeur à partir de la [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) décrivant la cause de le problème.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)  
+ [Field, objet](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété d’état (champ) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
- [Exemple de propriété d’état (VC ++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
-
+ [Status, exemple de propriété (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

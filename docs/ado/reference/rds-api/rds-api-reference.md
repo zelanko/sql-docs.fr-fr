@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS API reference [ADO]
+helpviewer_keywords: RDS API reference [ADO]
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2880835faa2db42439d6ddb8862c6351fd72c60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7207a7dc640edb709e4d2f91a3b03777d82385c3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-api-reference"></a>Référence des API RDS
 > [!IMPORTANT]
@@ -33,15 +30,14 @@ ms.lasthandoff: 09/09/2017
   
  Cette section de la documentation ADO contient des rubriques de référence pour chaque objet de services Bureau à distance, la propriété, la méthode et les exemples de code d’événement, ainsi que les services Bureau à distance :  
   
--   [Objets des services Bureau à distance](../../../ado/reference/rds-api/rds-objects.md)  
+-   [Objets RDS](../../../ado/reference/rds-api/rds-objects.md)  
   
--   [Propriétés des services Bureau à distance](../../../ado/reference/rds-api/rds-properties.md)  
+-   [Propriétés RDS](../../../ado/reference/rds-api/rds-properties.md)  
   
--   [Méthodes des services Bureau à distance](../../../ado/reference/rds-api/rds-methods.md)  
+-   [Méthodes RDS](../../../ado/reference/rds-api/rds-methods.md)  
   
--   [Événements de services Bureau à distance](../../../ado/reference/rds-api/rds-events.md)  
+-   [Événements RDS](../../../ado/reference/rds-api/rds-events.md)  
   
--   [Exemples de Code RDS](../../../ado/reference/rds-api/rds-code-examples.md)
-
+-   [Exemples de code RDS](../../../ado/reference/rds-api/rds-code-examples.md)
 
 

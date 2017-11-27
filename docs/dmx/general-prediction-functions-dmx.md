@@ -2,16 +2,18 @@
 title: "Fonctions de prédiction générales (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - DMX [Analysis Services], functions
 - mapping functions to query types [DMX]
@@ -21,20 +23,19 @@ helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], functions
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: e128159a-0458-43c9-bfe9-129cb6cfbe1c
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: bb62e03f1f151bde68dd2fbc10d64ac32ef9c993
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f63573a32882c40619e28666e2a251794c121621
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Vous pouvez utiliser la **sélectionnez** instruction dans les Extensions DMX (Data Mining) pour créer différents types de requêtes. Une requête peut être utilisée pour retourner des informations sur le modèle d'exploration de données lui-même, afin de faire de nouvelles prédictions ou encore modifier le modèle en effectuant un apprentissage avec de nouvelles données. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]fournit un éventail de fonctions spécialisées qui contrôlent le type d’informations qui sont retournées dans une requête. En ajoutant ces fonctions à une requête DMX, vous pouvez récupérer des statistiques ou des colonnes de données supplémentaires. Toutefois, pour chaque type de requête et chaque type de modèle, seules certaines fonctions sont prises en charge.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/02/2017
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<modèle >](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40; DMX &#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40; DMX &#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40; DMX &#41;](../dmx/rangemax-dmx.md)|Ces fonctions peuvent être utilisées pour fournir des valeurs maximales, des valeurs minimales et des moyennes pour toute colonne contenant un type de données numérique, que la colonne soit continue ou ait été discrétisée.|  
 |[SELECT FROM \<modèle >. CONTENU](../dmx/select-from-model-content-dmx.md)<br /><br /> ou<br /><br /> [SELECT FROM \<modèle >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40; DMX &#41;](../dmx/isdescendant-dmx.md)|Cette fonction récupère les nœuds enfants pour le nœud spécifié dans le modèle. Elle peut être utilisée, par exemple, pour parcourir les nœuds dans le contenu du modèle d'exploration de données. La disposition des nœuds dans le contenu du modèle d'exploration de données dépend du type de modèle. Pour plus d’informations sur la structure pour chaque type de modèle d’exploration de données, consultez [contenu du modèle d’exploration de données &#40; Analysis Services - Exploration de données &#41; ](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> Si vous avez enregistré le contenu du modèle d'exploration de données sous forme d'une dimension, vous pouvez aussi utiliser d'autres fonctions MDX (Multidimensional Expressions) disponibles pour interroger une hiérarchie d'attribut.|  
-|[SELECT FROM \<modèle >. CAS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40; DMX &#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md)|La fonction Lag est pris en charge uniquement pour les modèles de série chronologique.<br /><br /> La fonction IsTestCase est pris en charge dans les modèles qui sont basées sur une structure qui a été créée à l’aide de l’option d’exclusion, pour créer un jeu de données de test. Si le modèle n'est pas basé sur une structure avec le jeu de test d'exclusion, tous les cas sont traités comme des cas d'apprentissage.|  
+|[SELECT FROM \<modèle >. CAS](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag, classe](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40; DMX &#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md)|La fonction Lag est pris en charge uniquement pour les modèles de série chronologique.<br /><br /> La fonction IsTestCase est pris en charge dans les modèles qui sont basées sur une structure qui a été créée à l’aide de l’option d’exclusion, pour créer un jeu de données de test. Si le modèle n'est pas basé sur une structure avec le jeu de test d'exclusion, tous les cas sont traités comme des cas d'apprentissage.|  
 |[SELECT FROM \<modèle >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40; DMX &#41;](../dmx/isinnode-dmx.md)|Dans ce contexte, la fonction IsInNode retourne un cas appartenant à un ensemble de cas d’exemple idéalisés.|  
 |SELECT FROM \<modèle >. PMML|Non applicable. Utilisez plutôt des fonctions de requête XML.|Les représentations PMML ne sont prises en charge que pour les types de modèles suivants :<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
 |[SELECT FROM \<modèle > PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](../analysis-services/data-mining/data-mining-queries.md).|  
@@ -97,4 +98,3 @@ ms.lasthandoff: 08/02/2017
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

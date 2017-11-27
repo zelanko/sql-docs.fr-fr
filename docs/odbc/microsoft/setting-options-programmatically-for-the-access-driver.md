@@ -3,10 +3,12 @@ title: "Définition des Options par programmation pour le pilote Access | Docume
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed08d24f96b66b69bbff409cbc2c9e203526041b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Définition des Options par programmation pour le pilote Access
 |Option| Description|Méthode|  
@@ -41,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |Base de données système|Le chemin d’accès complet de la base de données du système de Microsoft Access à utiliser avec la base de données Microsoft Access que vous souhaitez accéder.<br /><br /> Cliquez sur le **base de données système** pour sélectionner la base de données système à utiliser. Le pilote ODBC Microsoft Access invite l’utilisateur à un nom et un mot de passe. Le nom par défaut est Admin et le mot de passe par défaut dans Microsoft Access pour l’utilisateur Admin est une chaîne vide.<br /><br /> Pour renforcer la sécurité de votre base de données Microsoft Access, créez un nouvel utilisateur pour remplacer l’utilisateur Admin et de supprimer l’utilisateur Admin, ou modifier les objets auxquels l’utilisateur Admin a accès.|Pour définir cette option dynamiquement, utilisez le **SYSTEMDB** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Threads|Le nombre de threads d’arrière-plan pour le moteur à utiliser. Pour le pilote Microsoft Access, cette valeur par défaut est 3, mais peut être modifiée. L’utilisateur souhaite augmenter le nombre de threads s’il existe une grande quantité d’activité dans la base de données.<br /><br /> Cette option est incluse dans le **des Options avancées** boîte de dialogue pour le pilote Microsoft Access.|Pour définir cette option dynamiquement, utilisez le **THREADS** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Détermine si le pilote Microsoft Access effectuera une transactions explicites définies par l’utilisateur en mode asynchrone. Cette valeur est initialement définie sur « Oui », ce qui signifie que le pilote Microsoft Access attendra les validations dans une transaction définie par l’utilisateur doit être terminé.<br /><br /> Définition de cette option sur False permettre avoir des conséquences imprévisibles dans un environnement multi-utilisateur.|Pour définir cette option dynamiquement, utilisez le **USERCOMMITSYNC** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|
-

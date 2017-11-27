@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c220da116fb0294ad463d8a0e9c1e4ade6ce652
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
   Cette section décrit l'architecture des solutions d'exploration de données qui sont hébergées dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [Programmation d’exploration de données](../../analysis-services/data-mining-programming.md)  
   
   
-

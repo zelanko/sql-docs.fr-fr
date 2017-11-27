@@ -2,9 +2,12 @@
 title: Utilisation des valeurs vides | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="working-with-empty-values"></a>Manipulation de valeurs vides
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Une valeur vide indique qu'un membre, tuple ou cellule spécifique est vide. Une valeur de cellule vide signifie soit que les données de la cellule spécifiée sont introuvables dans la table de faits sous-jacente, soit que le tuple de la cellule spécifiée représente une combinaison de membres qui n'est pas applicable à ce cube.  
   

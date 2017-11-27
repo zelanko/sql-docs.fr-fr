@@ -2,9 +2,12 @@
 title: "Configurer l’option de configuration de serveur user connections | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 387b06afcbdf9058f140a547c5faa35f9c0dd8d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0bee016da506e74d50e2391a1b5c486e6da30eb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurer l'option de configuration de serveur user connections
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique explique comment définir l'option de configuration de serveur **user connections** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **user connections** spécifie le nombre maximal de connexions utilisateur simultanées autorisées sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nombre réel de connexions utilisateur autorisées dépend également de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée, ainsi que des limites de vos applications et de votre matériel. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise un maximum de 32 767 connexions utilisateur. L’option **user connections** est dynamique (auto-configurable). Ainsi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique automatiquement le nombre maximal de connexions utilisateur en fonction des besoins, jusqu’à la valeur maximale autorisée. Par exemple, si seuls 10 utilisateurs sont connectés, 10 objets connexion utilisateur sont alloués. Dans la plupart des cas, il est inutile de modifier la valeur de cette option. La valeur par défaut est zéro, ce qui signifie que le nombre maximal (32 767) de connexions utilisateur est autorisé.  
   

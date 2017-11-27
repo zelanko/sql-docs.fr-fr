@@ -3,10 +3,12 @@ title: "C en SQL : année-mois intervalles | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - year-month intervals [ODBC]
 - data conversions from C to SQL types [ODBC], year-month intervals
 ms.assetid: a0eb7b55-9db0-4375-9210-bddec4593880
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 24246f654c492d10cf06d069c48e3f31abe7b396
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6a6b4e1992ea5f446203b125261f5572c2bd9db7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-year-month-intervals"></a>C en SQL : année-mois
 Les identificateurs pour les types de données ODBC C intervalle année-mois sont :  
@@ -48,4 +49,3 @@ Les identificateurs pour les types de données ODBC C intervalle année-mois son
  La conversion de la valeur par défaut d’un type C de l’intervalle est de l’intervalle de mois-année type SQL correspondant.  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données à partir du type de données d’intervalle C et suppose que la taille du tampon de données est la taille du type de données d’intervalle C. La valeur de l’indicateur/longueur est passée dans le *StrLen_or_Ind* argument dans **SQLPutData** et dans la mémoire tampon spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindParameter**. Le tampon de données est spécifié avec la *DataPtr* argument dans **SQLPutData** et *ParameterValuePtr* argument dans **SQLBindParameter**.
-

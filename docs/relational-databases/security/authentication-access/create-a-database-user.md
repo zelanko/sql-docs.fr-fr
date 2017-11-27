@@ -2,9 +2,12 @@
 title: "Créer un utilisateur de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 04/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,16 +28,16 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: "31"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3459cbe5b6e141af32ba7e8f29f0da6e3a34819d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Cette rubrique décrit comment créer les types courants d'utilisateurs de base de données. On dénombre onze types d'utilisateurs. La liste complète est fournie dans la rubrique [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Tous les types de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prennent en charge les utilisateurs de base de données, mais pas nécessairement tous les types d'utilisateurs.  
   

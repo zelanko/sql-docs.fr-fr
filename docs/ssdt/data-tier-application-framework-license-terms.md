@@ -2,9 +2,12 @@
 title: Data-Tier Application Framework - Termes du contrat de licence | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df64e3cbb943839e24d0ceef9d0ce97a094806a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 67d200f7fd16799631dd3f01be5eb2a820fe6def
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-tier-application-framework---license-terms"></a>Data-Tier Application Framework - Termes du contrat de licence
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT  
   
 **MICROSOFT SQL SERVER DATA-TIER APPLICATION FRAMEWORK**  

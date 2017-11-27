@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - updating data [ADO], transaction processing
 - nested transactions [ADO]
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a2afb43e83ebc2ed765c04fa15f070597009457
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transaction-processing"></a>Traitement des transactions
 A *transaction* délimite le début et la fin d’une série d’opérations d’accès aux données exécutée sur une connexion. Selon les fonctionnalités transactionnelles de votre source de données, le **connexion** objet vous permet également de créer et gérer des transactions. Par exemple, à l’aide du fournisseur Microsoft OLE DB pour SQL Server pour accéder à une base de données Microsoft SQL Server, vous pouvez créer plusieurs transactions imbriquées pour les commandes que vous exécutez.  
@@ -53,4 +51,3 @@ A *transaction* délimite le début et la fin d’une série d’opérations d�
   
 ## <a name="nested-transactions"></a>Transactions imbriquées  
  Pour les fournisseurs qui prennent en charge les transactions imbriquées, l’appel du **BeginTrans** méthode dans une transaction ouverte démarre une nouvelle transaction imbriquée. La valeur de retour indique le niveau d’imbrication : une valeur de retour de « 1 » indique que vous avez ouvert une transaction de niveau supérieur (autrement dit, la transaction n'est pas imbriquée dans une autre transaction), « 2 » indique que vous avez ouvert une transaction de second niveau (une transaction imbriquée dans une transaction de niveau supérieur), et ainsi de suite. Appel de **CommitTrans** ou **RollbackTrans** affecte uniquement le plus récemment ouvert transaction ; vous devez fermer ou annuler la transaction en cours avant de résoudre toutes les transactions de niveau supérieur.
-

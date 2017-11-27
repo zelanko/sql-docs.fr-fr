@@ -9,21 +9,19 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: jdbc
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 3dde204d199935b25f492ed23fadb3c2d4e70a99
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83d5ad3bae131b58dd344c3f5f9bfc7f5d0c4f5a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion à l’aide de l’authentification Azure Active Directory
 Cet article fournit des informations sur la façon de développer des applications Java à utiliser la fonctionnalité d’authentification Azure Active Directory avec Microsoft JDBC Driver 6.0 (ou version ultérieure) pour SQL Server.
@@ -237,4 +235,3 @@ Si la connexion est établie, vous voyez le message suivant en tant que sortie 
 Access Token: <your access token>
 You have successfully logged on as: <your client ID>    
 ``` 
-

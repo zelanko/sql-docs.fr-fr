@@ -3,33 +3,30 @@ title: Sqlcancel, fonction | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLCancel
-apilocation:
-- sqlsrv32.dll
+apiname: SQLCancel
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLCancel
-helpviewer_keywords:
-- SQLCancel function [ODBC]
+f1_keywords: SQLCancel
+helpviewer_keywords: SQLCancel function [ODBC]
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f6b3ba9320a577e636ac682912a6fb226ad04431
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 079a1ac7467348472c501c4dcb055d2cef8e9306
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlcancel-function"></a>Sqlcancel, fonction
 **Mise en conformité**  
@@ -124,4 +121,3 @@ SQLRETURN SQLCancel(
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

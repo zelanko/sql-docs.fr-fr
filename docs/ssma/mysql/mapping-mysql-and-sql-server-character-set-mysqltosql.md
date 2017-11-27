@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6953025addea83b247e8f1c03fef4bdd24d27147
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1145e4168e41f2014b95e7315a17dd00d764c386
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des caractères SQL Server et MySQL définie (MySQLToSQL)
 Jeu de caractères (jeu de caractères) peut être spécifié pour les types de données caractères, les expressions et les littéraux de MySQL.  
@@ -143,4 +141,3 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
 > -   Dans le mappage de jeu de caractères entre la base de données MySQL et de la base de données cible sur base de données, de catégorie et de niveaux de nœuds d’objet, les valeurs par défaut pour un jeu de caractères particulier sur chaque niveau de la racine de la colonne **Type de données cible** doit être « hérité ».  
 > -   Dans la grille, la valeur **Inherited** est suivi du suffixe avec l’option '(CHAR/VARCHAR)' ou '(NCHAR/NVARCHAR)' en fonction de la valeur a été héritée parent par ce jeu de caractères particulier.  
   
-

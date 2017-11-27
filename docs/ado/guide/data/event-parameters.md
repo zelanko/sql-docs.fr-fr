@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 750def3dc0a8f2938bcdf7adb6c3a8935da5dda1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ae7ee638c8489795df8894be23ef80e63b26f07
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-parameters"></a>Paramètres d’événement
 Chaque gestionnaire d’événements a un paramètre d’état qui contrôle le Gestionnaire d’événements. Pour les événements terminées, ce paramètre est également utilisé pour indiquer la réussite ou l’échec de l’opération qui a généré l’événement. Événements plus complètes ont également un paramètre d’erreur pour fournir des informations sur toute erreur qui se sont produites et un ou plusieurs paramètres de l’objet qui font référence à des objets ADO utilisés pour effectuer l’opération. Par exemple, le [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) événement inclut les paramètres de l’objet pour le **commande**, **Recordset**, et **connexion** objets associé à l’événement. Dans l’exemple suivant de Microsoft® Visual Basic®, vous pouvez voir les pCommand, Connection et pConnection objets qui représentent les **commande**, **Recordset**, et **deconnexion** les objets qui sont utilisés par le **Execute** (méthode).  
@@ -99,4 +97,3 @@ End Sub
  [Instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Fonctionnement conjoint des gestionnaires d’événements](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Types d’événements](../../../ado/guide/data/types-of-events.md)
-

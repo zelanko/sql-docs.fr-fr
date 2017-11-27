@@ -1,13 +1,14 @@
 ---
 title: "Compatibilité descendante de SQL Server 2016 Analysis Services | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +20,16 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4b7c58d201f40123ab206d02a4b32948c3d976c2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f54505056125f11f3843a671a76136288f54b5d1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilité descendante de Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -54,7 +54,7 @@ Les fonctionnalités suivantes sont déconseillées dans cette version :
 |Tabulaire|Les niveaux de compatibilité 1100 et 1103 des modèles tabulaires ne seront pas pris en charge dans une future version. La solution consiste à définir des modèles au niveau de compatibilité 1200 ou supérieur, la conversion des définitions de modèle en métadonnées tabulaires. Consultez [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Outils|SQL Server Profiler pour la capture de traces<br /><br /> La solution consiste à utiliser le Générateur de profils d’événements étendus, intégré dans SQL Server Management Studio.  <br /> Consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Outils|Server Profiler pour Trace Replay <br />Remplacement. Il n’existe aucune solution de remplacement.|  
-|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -   Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-   Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-   Relecture de trace : Aucune|  
+|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-   Relecture de trace : Aucune|  
   
 > [!NOTE]  
 >  Les fonctionnalités précédemment annoncées comme déconseillées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] restent en place. Le code prenant en charge ces fonctionnalités n’ayant pas encore été supprimé du produit, bon nombre de celles-ci sont toujours présentes dans cette version. Lors des fonctions précédemment déconseillées peuvent être accessibles, ils sont considérés comme déconseillés et ne peut être physiquement retirées du produit à tout moment.  
@@ -129,4 +129,3 @@ Les comportements de fonctionnalité modifiés dans cette version, mais qui rest
 
 ## <a name="see-also"></a>Voir aussi
 [Compatibilité descendante de Analysis Services (2017 de serveur SQL)](analysis-services-backward-compatibility-sql2017.md)
-

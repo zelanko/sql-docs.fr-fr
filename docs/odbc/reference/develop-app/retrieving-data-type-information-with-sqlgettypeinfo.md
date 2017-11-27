@@ -3,10 +3,12 @@ title: "La récupération des données de Type d’informations avec SQLGetTypeI
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a440ee58a5c59237ee31186beb19d1847e814637
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a1eb337e91595b5be013067847f73c3de117e97
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>La récupération des informations de Type de données avec SQLGetTypeInfo
 Étant donné que les mappages de types de données SQL sous-jacente aux identificateurs de type ODBC sont approximatifs, ODBC fournit une fonction (**SQLGetTypeInfo**) via lequel un pilote peut complètement décrivent chaque type de données SQL dans la source de données. Cette fonction retourne un jeu de résultats, chaque ligne qui décrit les caractéristiques d’un type de données, telles que le nom, identificateur de type, la précision, échelle et possibilité de valeur null.  
@@ -39,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 -   ODBC ne définit pas de noms de types de données pour une utilisation dans **CREATE TABLE** et **ALTER TABLE** instructions. Au lieu de cela, l’application doit utiliser le nom retourné dans la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**. La raison en est que bien que la plupart des SQL ne change pas en grande partie sur SGBD, les noms de types de données varient considérablement. Au lieu d’obliger les pilotes pour analyser des instructions SQL et remplacez les noms de types de données standard avec des noms de type de données propres au SGBD, ODBC exige des applications pour utiliser les noms propres au SGBD en premier lieu.  
   
  Notez que **SQLGetTypeInfo** ne décrit pas nécessairement tous les types de données une application peut rencontrer. En particulier, les jeux de résultats peuvent contenir des types de données pas directement pris en charge par la source de données. Par exemple, les types de données des colonnes dans les jeux de résultats retournés par les fonctions de catalogue sont définies par ODBC, et ces types de données ne peuvent pas être pris en charge par la source de données. Pour déterminer les caractéristiques des types de données dans un jeu de résultats, une application appelle **SQLColAttribute**.
-

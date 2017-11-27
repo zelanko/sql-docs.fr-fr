@@ -2,9 +2,12 @@
 title: Aggregate (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne un nombre calculé par agrégation sur les cellules retournées par l'expression de jeu. Si aucune expression numérique n'est spécifiée, cette fonction agrège chaque mesure dans le contexte de requête actuel en utilisant l'opérateur d'agrégation par défaut spécifié pour chaque mesure. Si une expression numérique est précisée, cette fonction évalue d'abord, puis totalise l'expression numérique pour chaque cellule du jeu spécifié.  
   

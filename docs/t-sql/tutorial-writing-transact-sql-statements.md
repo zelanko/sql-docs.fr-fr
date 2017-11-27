@@ -2,11 +2,13 @@
 title: "Didacticiel : Écriture d’instructions Transact-SQL | Documents Microsoft"
 ms.custom: 
 ms.date: 08/03/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -14,20 +16,19 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 22ddf6026a91dbbc2f7f1919497fa796b76ecc34
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 509334a16689e2aa8fda308fcb7ca20b24badb93
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Didacticiel : écriture d'instructions Transact-SQL
-Bienvenue dans le didacticiel d'écriture d'instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce didacticiel s'adresse aux utilisateurs qui débutent dans l'écriture d'instructions SQL. Il permet aux nouveaux utilisateurs de débuter en passant en revue certaines instructions de base destinées à créer des tables et à insérer des données. Ce didacticiel utilise [!INCLUDE[tsql](../includes/tsql-md.md)], l'implémentation [!INCLUDE[msCoName](../includes/msconame-md.md)] de la norme SQL. Ce didacticiel constitue une brève introduction au langage [!INCLUDE[tsql](../includes/tsql-md.md)] mais ne remplace pas un cours de formation sur [!INCLUDE[tsql](../includes/tsql-md.md)] . Les instructions de ce didacticiel sont volontairement simples et n'ont pas pour objectif de traduire la complexité propre à une base de données de production type.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Bienvenue dans l’écriture [!INCLUDE[tsql](../includes/tsql-md.md)] didacticiel d’instructions. Ce didacticiel s'adresse aux utilisateurs qui débutent dans l'écriture d'instructions SQL. Il permet aux nouveaux utilisateurs de débuter en passant en revue certaines instructions de base destinées à créer des tables et à insérer des données. Ce didacticiel utilise [!INCLUDE[tsql](../includes/tsql-md.md)], l'implémentation [!INCLUDE[msCoName](../includes/msconame-md.md)] de la norme SQL. Ce didacticiel constitue une brève introduction au langage [!INCLUDE[tsql](../includes/tsql-md.md)] mais ne remplace pas un cours de formation sur [!INCLUDE[tsql](../includes/tsql-md.md)] . Les instructions de ce didacticiel sont volontairement simples et n'ont pas pour objectif de traduire la complexité propre à une base de données de production type.  
   
 >**REMARQUE :** Si vous êtes débutant, utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pourrait vous sembler plus facile que d’écrire des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
@@ -62,5 +63,4 @@ Les programmes suivants doivent être installés sur votre système :
   
   
   
-
 

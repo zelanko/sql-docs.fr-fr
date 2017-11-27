@@ -1,36 +1,34 @@
 ---
-title: "Vue d’ensemble de la sécurité (SQL Server R Services) | Microsoft Docs"
+title: "Vue d’ensemble de la sécurité pour Python dans SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 03/10/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 8e0f7b35f91fa9f62b1ac4ab2e32c56ff0265bdf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6ddfc3ccb67d017dc618cfbb7e7680c0164f3a21
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="security-overview"></a>Vue d’ensemble de la sécurité
+# <a name="security-overview-for-python-in-sql-server"></a>Vue d’ensemble de la sécurité pour Python dans SQL Server
 
 Cette rubrique décrit l’architecture de sécurité qui permet de connecter le [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] les composants de Python et de moteur de base de données. Exemples du processus de sécurité sont fournis pour deux scénarios courants : Python en cours d’exécution dans SQL Server à l’aide d’une procédure stockée et l’exécution de Python avec SQL Server en tant que le contexte de calcul à distance.
 
 ## <a name="security-overview"></a>Vue d’ensemble de la sécurité
 
-A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] connexion ou compte d’utilisateur Windows est requise pour exécuter le script Python dans SQL Server. Le compte d’utilisateur ou de connexion identifie le *principal de sécurité*, qui doit détenir des autorisation d’accéder à la base de données où les données sont récupérées à partir de. Selon que le script Python crée de nouveaux objets ou écrit des nouvelles données, l’utilisateur peut avoir besoin d’autorisations pour créer des tables, écrire des données ou créer des fonctions personnalisées ou des procédures stockées.
+A [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] connexion ou compte d’utilisateur Windows est requise pour exécuter le script Python dans SQL Server. Ces *principaux de sécurité* sont gérés à l’instance et le niveau de la base de données et identifier les utilisateurs qui sont autorisés à se connecter à la base de données, lire et écrire des données ou créer des objets de base de données tels que des tables ou des procédures stockées. En outre, les utilisateurs qui exécutent le script Python doivent avoir l’autorisation d’exécuter un script externe au niveau de la base de données.
 
-Par conséquent, il s’agit d’une condition préalable stricte que chaque personne qui exécute le code Python dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] doit être mappée à une connexion ou un compte dans la base de données. Cette restriction s’applique indépendamment de si le script est envoyé à partir d’un client de science des données à distance ou de démarrage à l’aide d’une procédure stockée T-SQL.
+Si l’utilisateur doit s’exécuter Python code dans-base de données, ou les objets de base de données access et les données, même les utilisateurs qui sont à l’aide de Python dans un outil externe doivent être mappés à un compte dans la base de données ou de connexion. Les mêmes autorisations sont requises si le script Python est envoyé à partir d’un client de science des données distantes ou démarré à l’aide d’une procédure stockée T-SQL.
 
 Par exemple, supposons que vous avez créé un script Python qui s’exécute sur votre ordinateur portable et que vous souhaitez exécuter ce code [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Vous devez veiller à ce que les conditions suivantes soient réunies :
 
@@ -48,12 +46,11 @@ Chaque fois qu’un script Python est lancé à partir de [!INCLUDE[ssNoVersion_
 
 Par conséquent, tous les scripts Python lancées à partir d’un client distant doivent spécifier les informations de connexion ou un utilisateur dans le cadre de la chaîne de connexion.
 
-
-## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Interaction de la sécurité de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] et de la sécurité de LaunchPad
+## <a name="interaction-of-includessnoversionmdincludesssnoversion-mdmd-security-and-launchpad-security"></a>Interaction de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sécurité et la sécurité de Launchpad
 
 Lorsqu’un script Python est exécuté dans le contexte de la [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ordinateur, le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service obtient un compte de travail disponible (un compte d’utilisateur local) à partir d’un pool de comptes de travail établies pour les processus externes et utilise ce compte de processus de travail à effectuer les tâches associées.
 
-Par exemple, supposons que vous lancez un script Python sous vos informations d’identification de domaine Windows. SQL Server obtenir vos informations d’identification et le mapper à un compte de processus de travail Launchpad disponible, telles que *SQLRUser01*.
+Par exemple, supposons que vous lancez un script Python sous vos informations d’identification de domaine Windows. SQL Server obtient de vos informations d’identification et mappe la tâche à un compte de processus de travail Launchpad disponible, telles que *SQLRUser01*.
 
 > [!NOTE]
 > Le nom du groupe de comptes de travail est la même, si vous utilisez R ou Python. Toutefois, un groupe distinct est créé pour chaque instance où vous permettent de n’importe quel langage externe.
@@ -62,10 +59,15 @@ Après avoir effectué le mappage à un compte de travail, [!INCLUDE[rsql_launch
 
 Quand toutes les opérations [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] sont terminées, le compte de travail utilisateur est marqué comme étant libre et réintègre le pool.
 
-Pour plus d’informations sur [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], consultez [nouveaux composants de SQL Server prise en charge de l’intégration Python](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
+Pour plus d’informations sur [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], consultez [composants de SQL Server pour prendre en charge l’intégration Python](../../advanced-analytics/python/new-components-in-sql-server-to-support-python-integration.md).
 
-> [!NOTE]
-> Pour le Launchpad gérer les comptes de travail et exécuter des travaux de Python, le groupe qui contient les comptes de travail, *SQLRUserGroup*, doit disposer des autorisations « Autoriser la connexion localement » ; sinon, le runtime Python ne peut-être pas démarrer. Par défaut, ce droit est attribué à tous les nouveaux utilisateurs locaux, mais dans certaines organisations, les stratégies de groupe plus strictes peuvent être appliqués, qui empêche les comptes de travail à partir de la connexion à SQL Server à des travaux de Python.
+### <a name="implied-authentication"></a>Authentification implicite
+
+**L’authentification implicite** est le terme utilisé pour le processus sous lequel SQL Server obtient l’utilisateur des informations d’identification, puis l’exécute toutes les tâches de script externe pour le compte d’utilisateurs, en supposant l’utilisateur dispose des autorisations appropriées dans la base de données. L’authentification implicite est particulièrement importante si le script Python doit effectuer un appel ODBC en dehors de la base de données SQL Server. Par exemple, le code peut extraire une liste plus courte de facteurs à partir d’une feuille de calcul ou une autre source.
+
+Pour ces appels de bouclage réussisse, le groupe qui contient les comptes de travail, SQLRUserGroup, doit avoir les autorisations « Autoriser l’ouverture d’une session locale ». Par défaut, ce droit est attribué à tous les nouveaux utilisateurs locaux, mais dans certaines organisations plus strictes stratégies de groupe peuvent être appliquées.
+
+![Authentification implicite pour R](media/implied-auth-python2.png)
 
 ## <a name="security-of-worker-accounts"></a>Sécurité des comptes de travail
 
@@ -75,12 +77,12 @@ Les requêtes en parallèle du même compte de connexion sont mappées au même 
 
 Les répertoires utilisés pour les processus sont gérés par le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)], et les répertoires sont à accès restreint. Pour Python, PythonLauncher effectue cette tâche. Chaque compte de travail individuel est limité à son propre dossier et ne peut pas accéder aux fichiers des dossiers au-dessus de son propre niveau. Toutefois, le compte de travail peut lire, écrire ou supprimer des enfants sous le dossier de travail de session qui a été créé.
 
-Pour plus d’informations sur la modification du nombre de comptes de travail, du nom des comptes ou de leur mot de passe, consultez [Modifier le pool de comptes d’utilisateurs pour SQL Server R Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Pour plus d’informations sur la façon de modifier le nombre de comptes de travail, des noms de compte ou des mots de passe, consultez [modifier le pool de comptes d’utilisateur pour l’apprentissage de SQL Server](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 
 ## <a name="security-isolation-for-multiple-external-scripts"></a>Isolation de sécurité pour plusieurs scripts externes
 
-Le mécanisme d’isolation repose sur des comptes d’utilisateurs physiques. À mesure que des processus satellites sont lancés pour un runtime de langage spécifique, chaque tâche satellite utilise le compte de travail spécifié par [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. Si une tâche nécessite plusieurs satellites, par exemple, dans le cas de requêtes en parallèle, un même compte de travail est utilisé pour toutes les tâches associées.
+Le mécanisme d’isolation est basé sur les comptes d’utilisateur physique. À mesure que des processus satellites sont lancés pour un runtime de langage spécifique, chaque tâche satellite utilise le compte de travail spécifié par [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. Si une tâche nécessite plusieurs satellites, par exemple, dans le cas de requêtes en parallèle, un même compte de travail est utilisé pour toutes les tâches associées.
 
 Un compte de travail ne peut ni afficher ni manipuler les fichiers utilisés par d’autres comptes de travail.
 
@@ -89,4 +91,3 @@ Si vous êtes administrateur de l’ordinateur, vous pouvez afficher les répert
 ## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de l’architecture](../../advanced-analytics/python/architecture-overview-sql-server-python.md)
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 03208e45eb04540befeae3e8e86ec0100e1f9831
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8baac18c8d27face9438a85a2c35db57348836a3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-about-recordset-persistence"></a>En savoir plus sur la persistance des objets Recordset
 Prend en charge de l’objet ADO Recordset stocker le contenu d’un **Recordset** dans un fichier à l’aide de son [enregistrer](../../../ado/reference/ado-api/save-method.md) (méthode). Le fichier stocké de façon permanente se trouve sur un ordinateur local lecteur, serveur, ou en tant qu’URL sur un serveur Web de site. Une version ultérieure, le fichier peut être restauré avec l’option le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode de la **Recordset** objet ou le [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) méthode de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
@@ -89,5 +87,4 @@ dc.Refresh
  [GetString, méthode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Flux de données et de persistance](../../../ado/guide/data/streams-and-persistence.md)
-
+ [Flux et persistance](../../../ado/guide/data/streams-and-persistence.md)

@@ -3,10 +3,12 @@ title: "Caractères de données et chaînes C | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - buffers [ODBC], length
 - C strings and buffers [ODBC]
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54f9d438571b1535d16f5fc3b333e9a9cede42eb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="character-data-and-c-strings"></a>Données de caractères et chaînes C
 Les paramètres d’entrée qui font référence à des données de caractères de longueur variable (par exemple, les noms de colonnes, les paramètres dynamiques et valeurs d’attribut de chaîne) ont un paramètre de longueur. Si l’application termine par le caractère null, comme cela est courant en C, les chaînes, il fournit en tant qu’argument, la longueur en octets de la chaîne (ne pas y compris la marque de fin null) ou SQL_NTS (String Null-Terminated). Un argument de longueur non négative indique la longueur réelle de la chaîne associée. L’argument de longueur peut être 0 pour spécifier une chaîne de longueur nulle, ce qui est différent de celui à partir d’une valeur NULL. La valeur négative SQL_NTS dirige le pilote pour déterminer la longueur de la chaîne en recherchant le caractère de fin de la valeur null.  
@@ -46,4 +47,3 @@ Les paramètres d’entrée qui font référence à des données de caractères 
  Bien que les applications et les pilotes utilisent couramment des chaînes C (se terminant par null des tableaux de caractères) pour contenir les données de type caractère, il n’est pas nécessaire pour ce faire. En C, les données de caractères peuvent également être traitées comme un tableau de caractères (sans fin-null) et sa longueur en octets passé séparément dans la mémoire tampon de longueur / d’indicateur.  
   
  Car les données de caractères peuvent être contenues dans un tableau non – terminant par null et sa longueur en octets passé séparément, il est possible d’incorporer des caractères null dans les données de type caractère. Toutefois, le comportement des fonctions ODBC dans ce cas n’est pas défini et qu’il est spécifique au pilote si un pilote gère cela correctement. Par conséquent, les applications interopérables doivent gérer les données de type caractère qui peuvent contenir des caractères null incorporés en tant que données binaires.
-

@@ -3,10 +3,12 @@ title: "Mémoires tampons | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7fa45570f0f5bda2190f7b3193f404ffccd3d621
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5953f3409a3886abbf76963d0207a89be1e83aec
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="buffers"></a>Mémoires tampons
 Une mémoire tampon est tout élément de la mémoire de l’application utilisée pour passer des données entre l’application et le pilote. Par exemple, mémoires tampons d’application peuvent être associées, ou *lié,* avec les colonnes du jeu de résultats **SQLBindCol**. Comme chaque ligne est extraite, les données sont retournées pour chaque colonne dans ces mémoires tampons. *Entrée de mémoires tampons* sont utilisés pour passer des données à partir de l’application au pilote ; *tampons de sortie* sont utilisées pour retourner des données à partir du pilote à l’application.  
@@ -59,7 +60,6 @@ Une mémoire tampon est tout élément de la mémoire de l’application utilis�
   
 -   [Mémoires tampons différées](../../../odbc/reference/develop-app/deferred-buffers.md)  
   
--   [Allocation et la libération des mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
+-   [Allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)  
   
--   [À l’aide de mémoires tampons de données](../../../odbc/reference/develop-app/using-data-buffers.md)
-
+-   [Utilisation des tampons de données](../../../odbc/reference/develop-app/using-data-buffers.md)

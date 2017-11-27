@@ -3,10 +3,12 @@ title: "Définition des Options de suivi | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: admin
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - ODBC data source administrator [ODBC], tracing options
 - tracing options [ODBC], ODBC data source administrator
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b1a62a03d3bb9e9876ed152bb4ac2cb8fb56ce66
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-tracing-options"></a>Définition des Options de suivi
 Le **suivi** onglet de la **administrateur de sources de données ODBC** boîte de dialogue vous permet de configurer la manière dont les appels de fonction ODBC sont suivis.  
@@ -69,4 +70,3 @@ Le **suivi** onglet de la **administrateur de sources de données ODBC** boîte 
 >  Prise en charge de Visual Studio Analyzer a été supprimée à compter de Windows 8 (Visual Studio Analyzer a été inclus uniquement dans les versions antérieures de Visual Studio.). Pour un autre mécanisme de résolution des problèmes, utilisez le suivi de l’offre.  
   
  Suivi de Visual Studio® Analyzer fournit des performances et des informations de débogage sur la couche ODBC. Tous les événements sortants seront déclenchés sur l’interface de niveau supérieur pour présenter une image précis que possible en matière de temps passé dans ODBC (composants). Suivi de Visual Studio Analyzer requiert n’importe quelle source d’événement pour inscrire lors de la configuration de la source. Pour plus d’informations sur ce type de traçage, consultez la documentation de Visual Studio.
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO], members
+helpviewer_keywords: Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6917146077060e7ca9d11aeb034479dff6901e32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d35cf15880ae2dfa902acaccca04cb204a6d77
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Propriétés de l’objet Recordset, méthodes et événements
 ## <a name="propertiescollections"></a>Propriétés et de Collections  
@@ -47,7 +44,7 @@ ms.lasthandoff: 09/09/2017
   
  [CursorType, propriété](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
- [Propriété DataMember](../../../ado/reference/ado-api/datamember-property.md)  
+ [DataMember, propriété](../../../ado/reference/ado-api/datamember-property.md)  
   
  [Propriété de source de données](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
@@ -57,7 +54,7 @@ ms.lasthandoff: 09/09/2017
   
  [Filter, propriété](../../../ado/reference/ado-api/filter-property.md)  
   
- [Propriété index](../../../ado/reference/ado-api/index-property.md)  
+ [Index, propriété](../../../ado/reference/ado-api/index-property.md)  
   
  [Propriété LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
@@ -73,13 +70,13 @@ ms.lasthandoff: 09/09/2017
   
  [Propriété RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
- [Propriété de tri](../../../ado/reference/ado-api/sort-property.md)  
+ [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)  
   
- [Source, propriété (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Source, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
  [State, propriété](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Propriété d’état (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Status, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [StayInSync, propriété](../../../ado/reference/ado-api/stayinsync-property.md)  
   
@@ -98,9 +95,9 @@ ms.lasthandoff: 09/09/2017
   
  [CompareBookmarks, méthode](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
- [DELETE, méthode (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Delete, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Find (méthode)](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Méthode Find](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [GetRows, méthode](../../../ado/reference/ado-api/getrows-method-ado.md)  
   
@@ -112,21 +109,21 @@ ms.lasthandoff: 09/09/2017
   
  [NextRecordset, méthode](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
- [Requery (méthode)](../../../ado/reference/ado-api/requery-method.md)  
+ [Requery, méthode](../../../ado/reference/ado-api/requery-method.md)  
   
  [Resync, méthode](../../../ado/reference/ado-api/resync-method.md)  
   
- [Save (méthode)](../../../ado/reference/ado-api/save-method.md)  
+ [Save, méthode](../../../ado/reference/ado-api/save-method.md)  
   
- [La méthode de recherche](../../../ado/reference/ado-api/seek-method.md)  
+ [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)  
   
- [Prend en charge (méthode)](../../../ado/reference/ado-api/supports-method.md)  
+ [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)  
   
- [Update (méthode)](../../../ado/reference/ado-api/update-method.md)  
+ [Update, méthode](../../../ado/reference/ado-api/update-method.md)  
   
- [Méthode UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
+ [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)  
   
 ## <a name="events"></a>Événements  
  [Événement EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
@@ -144,5 +141,4 @@ ms.lasthandoff: 09/09/2017
  [WillMove et MoveComplete, événements](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

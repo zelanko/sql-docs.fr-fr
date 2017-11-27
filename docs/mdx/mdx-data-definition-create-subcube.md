@@ -2,9 +2,12 @@
 title: Instruction CREATE SUBCUBE (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Définition de données MDX - créer un sous-cube
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Redéfinit l'espace du cube d'un cube ou d'un sous-cube spécifié en un sous-cube spécifié. Cette instruction modifie l'espace apparent du cube pour les opérations suivantes.  
   

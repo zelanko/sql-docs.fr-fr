@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e9584786347e107e166dfcb4c6a51b2057d0b9cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f501e406ff428ee6c901e122b3ec222124a345
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS, ensemble de lignes
   Retourne la valeur d'un ou de plusieurs compteurs de performance. Ne prend pas en charge les compteurs qui retournent des informations sur l'utilisation dans le temps (comme les lectures de disque par seconde et le pourcentage d'utilisation de l'UC).  
@@ -54,7 +52,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|PerformanceCounters|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

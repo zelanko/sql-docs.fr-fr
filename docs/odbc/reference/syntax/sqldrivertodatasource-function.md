@@ -3,33 +3,30 @@ title: Fonction de SQLDriverToDataSource | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLDriverToDataSource
-apilocation:
-- sqlsrv32.dll
+apiname: SQLDriverToDataSource
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLDriverToDataSource
-helpviewer_keywords:
-- SQLDriverToDataSource function [ODBC]
+f1_keywords: SQLDriverToDataSource
+helpviewer_keywords: SQLDriverToDataSource function [ODBC]
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0fcb5ecd444385b44ecc82d1952cbde88b55e594
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0582038f1b1b89da041fde96e77bbdc47cad12a0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource (fonction)
 **SQLDriverToDataSource** prend en charge les traductions pour les pilotes ODBC. Cette fonction n’est pas appelée par les applications ODBC compatibles ; applications de demander une traduction via **SQLSetConnectAttr**. Le pilote associé à la *handle de connexion* spécifié dans **SQLSetConnectAttr** appelle la DLL spécifiée pour effectuer des conversions de toutes les données circulent à partir du pilote pour la source de données. Une DLL de traduction par défaut peut être spécifié dans le fichier d’initialisation ODBC.  
@@ -114,4 +111,3 @@ BOOL SQLDriverToDataSource(
 |Conversion des données retournées à partir de la source de données|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|  
 |Retourner la valeur de l’attribut de connexion|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Définition d’un attribut de connexion|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

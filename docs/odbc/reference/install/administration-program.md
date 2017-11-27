@@ -3,27 +3,28 @@ title: "Programme d’administration | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 53024c6d7ba7933ae6bcc425455b262b176fed80
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="administration-program"></a>Programme d’administration
 > [!NOTE]  
@@ -42,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 -   **Ajouter, modifier ou supprimer des sources de données en mode silencieux.** Le programme d’administration appelle **SQLConfigDataSource** dans le programme d’installation DLL et passe il une null handle de fenêtre, le nom d’une source de données à ajouter, modifier ou supprimer et une liste de valeurs du Registre. La DLL du programme d’installation appelle **ConfigDSN** dans le programme d’installation du pilote DLL pour ajouter, modifier ou supprimer la source de données.  
   
 -   **Ajouter, modifier ou supprimer une source de données par défaut.** La source de données par défaut est le même que toute autre source de données, à ceci près que son nom est la valeur par défaut. Il est ajouté, modifié ou supprimé de la même manière que toute autre source de données.
-

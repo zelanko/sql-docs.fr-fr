@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a45c434bdcf551e97eb97f85997ab73c883b599c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>Maintien d’enregistrements au Format XML
 Comme le format ADTG, **Recordset** persistance au format XML est implémenté avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement en lecture seule à partir d’un fichier XML ou un flux qui contient les informations de schéma générées par ADO enregistré. De même, elle peut prendre un ADO **Recordset**, générer un fichier XML et enregistrez-le dans un fichier ou tout objet qui implémente le modèle COM **IStream** interface. (En fait, un fichier est juste un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2.5 et ultérieures, ADO repose sur l’analyseur Microsoft XML (MSXML) pour charger le code XML dans le **Recordset**; par conséquent msxml.dll est obligatoire.  
@@ -86,15 +84,14 @@ rs.Save "btitles.sav", adPersistXML
   
 -   [Section de données](../../../ado/guide/data/data-section.md)  
   
--   [Jeux d’enregistrements hiérarchiques dans XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
+-   [Recordsets hiérarchiques dans XML](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Propriétés dynamiques du jeu d’enregistrements au format XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Propriétés dynamiques du recordset dans XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [Transformations XSLT](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Enregistrement à l’objet DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Enregistrement dans l’objet DOM XML](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
--   [Considérations de sécurité XML](../../../ado/guide/data/xml-security-considerations.md)  
+-   [Considérations relatives à la sécurité de XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Scénario de persistance des objets Recordset XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
-
+-   [Scénario de persistance des recordsets XML](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

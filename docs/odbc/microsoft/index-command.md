@@ -3,26 +3,26 @@ title: Commande INDEX | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- index command [ODBC]
+helpviewer_keywords: index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 40581a79d22feadb8616c021820e93a634ef94d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cdec619d99c610c75b9b27de710cd4e5913602f6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="index-command"></a>Commande INDEX
 Crée un fichier d’index pour afficher et accéder aux enregistrements de la table dans un ordre logique.  
@@ -124,5 +124,4 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  [ALTER TABLE - commande SQL](../../odbc/microsoft/alter-table-sql-command.md)   
  [SUPPRIMER des commandes de balise](../../odbc/microsoft/delete-tag-command.md)   
  [Commande SET COLLATE](../../odbc/microsoft/set-collate-command.md)   
- [Commande UNIQUE SET](../../odbc/microsoft/set-unique-command.md)
-
+ [SET UNIQUE, commande](../../odbc/microsoft/set-unique-command.md)

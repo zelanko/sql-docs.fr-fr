@@ -3,33 +3,30 @@ title: Fonction de SQLGetTranslator | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetTranslator
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetTranslator
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetTranslator
-helpviewer_keywords:
-- SQLGetTranslator function [ODBC]
+f1_keywords: SQLGetTranslator
+helpviewer_keywords: SQLGetTranslator function [ODBC]
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5d8b0f18e683facc1316fd5a58ac1a2983acea63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 76bc8c85e923c792e87c13c2ca7f490c7273d975
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator (fonction)
 **Mise en conformité**  
@@ -112,4 +109,3 @@ BOOL SQLGetTranslator(
 |Configuration d’un convertisseur|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |Obtention d’un attribut de traduction|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Définition d’un attribut de traduction|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
-

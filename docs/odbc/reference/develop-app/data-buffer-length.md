@@ -3,10 +3,12 @@ title: "Longueur du tampon de données | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 48167151eab4627fd51e5ec575cca4250bd63617
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 84bacf4e45760b14515d44a9d81f46de4485ee5f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-buffer-length"></a>Longueur de mémoire tampon de données
 L’application transmet la longueur d’octet de la mémoire tampon de données pour le pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, l’application spécifie la longueur de la *ValuePtr* tampon (**sizeof (***ValuePtr***)**) :  
@@ -48,7 +49,6 @@ SQLBindCol(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   [À l’aide des valeurs de longueur / d’indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)  
   
--   [Longueur des données, la longueur de la mémoire tampon et la troncation](../../../odbc/reference/develop-app/data-length-buffer-length-and-truncation.md)  
+-   [Longueur des données, longueur de la mémoire tampon et troncation](../../../odbc/reference/develop-app/data-length-buffer-length-and-truncation.md)  
   
--   [Données de caractères et chaînes C](../../../odbc/reference/develop-app/character-data-and-c-strings.md)
-
+-   [Données caractères et chaînes C](../../../odbc/reference/develop-app/character-data-and-c-strings.md)

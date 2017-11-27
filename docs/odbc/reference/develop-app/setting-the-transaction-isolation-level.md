@@ -3,10 +3,12 @@ title: "Définition du niveau d’Isolation des transactions | Documents Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Définition du niveau d’Isolation des transactions
 Pour définir le niveau d’isolation de transaction, une application utilise l’attribut de connexion SQL_ATTR_TXN_ISOLATION. Si la source de données ne prend pas en charge le niveau d’isolation demandé, le pilote ou une source de données peut définir un niveau supérieur. Pour déterminer quelles transactions niveau d’isolation d’une source de données prend en charge et le niveau d’isolement par défaut est, une application appelle **SQLGetInfo** avec les options SQL_TXN_ISOLATION_OPTION et SQL_DEFAULT_TXN_ISOLATION, respectivement.  
@@ -38,4 +39,3 @@ Pour définir le niveau d’isolation de transaction, une application utilise l�
 -   Quand la vitesse est plus importante que la précision et les erreurs sont susceptibles d’être petit. Par exemple, supposons qu’une société fait petit nombre de ventes et que les ventes de grande taille sont rares. Une transaction qui détermine la valeur totale de toutes les ventes peut utiliser en toute sécurité le niveau d’isolation Read Uncommitted. Bien que la transaction inclut les commandes qui sont en cours ouvert ou fermé et sont par la suite de restauration, il seraient généralement annulent et la transaction serait beaucoup plus rapide, car il n’est pas bloquée chaque fois qu’il rencontre un ordre.  
   
  Pour plus d’informations, consultez [d’accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).
-

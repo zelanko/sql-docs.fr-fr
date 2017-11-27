@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DataFactory object [ADO], members
+helpviewer_keywords: DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3f5343dacd2ae5369e5d21fcd72df46ea9f11a9e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1375d8c681129f2be813257dbc805b2ed02517b3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>DataFactory, objet (RDSServer) Propriétés, méthodes et événements
 > [!IMPORTANT]
@@ -40,11 +37,11 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[ConvertToString, méthode (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Convertit un jeu d’enregistrements en chaîne MIME64.|  
 |[CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Crée et retourne un objet recordset vide.|  
-|[Execute (méthode) (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.5 ou version ultérieure).|  
+|[Execute, méthode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.5 ou version ultérieure).|  
 |[Execute21, méthode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.1).|  
-|[Méthode de requête (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés.|  
+|[Query, méthode (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés.|  
 |[SubmitChanges, méthode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Étant donné un jeu d’enregistrements avec des modifications en attente, cette méthode les soumet à la base de données identifiée dans la chaîne de connexion.|  
-|[Synchronize (méthode) (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.5 ou version ultérieure).|  
+|[Synchronize, méthode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.5 ou version ultérieure).|  
 |[Synchronize21, méthode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.1).|  
   
 ## <a name="events"></a>Événements  
@@ -52,6 +49,5 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [DataFactory, objet (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
 
 

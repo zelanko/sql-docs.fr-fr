@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 77ec535a43cf79b10e25d3c0fd7108d3c9a40dd0
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5f561c72cda30a9f62e202cbd612725d02b7f408
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="supporting-xml-data"></a>Prise en charge des données XML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,10 +40,9 @@ ms.lasthandoff: 09/09/2017
 |Rubrique| Description|  
 |-----------|-----------------|  
 |[Interface SQLXML](../../connect/jdbc/sqlxml-interface.md)|Décrit l'interface SQLXML et ses méthodes.|  
-|[Programmation de SQLXML](../../connect/jdbc/programming-with-sqlxml.md)|Décrit comment utiliser le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] méthodes API permettant de stocker et récupérer des données XML dans une base de données relationnelle avec le **SQLXML** type de données Java. Contient également des informations sur les types d'objets SQLXML ; par ailleurs, elle dresse une liste des recommandations et limitations importantes relatives à l'utilisation des objets SQLXML.|  
+|[Programmation avec SQLXML](../../connect/jdbc/programming-with-sqlxml.md)|Décrit comment utiliser le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] méthodes API permettant de stocker et récupérer des données XML dans une base de données relationnelle avec le **SQLXML** type de données Java. Contient également des informations sur les types d'objets SQLXML ; par ailleurs, elle dresse une liste des recommandations et limitations importantes relatives à l'utilisation des objets SQLXML.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+ [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
-

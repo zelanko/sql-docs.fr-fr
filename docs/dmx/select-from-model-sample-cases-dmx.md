@@ -2,9 +2,12 @@
 title: "SELECT FROM &lt;modèle&gt;. SAMPLE_CASES (DMX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -14,28 +17,26 @@ f1_keywords:
 - SAMPLE_CASES
 - SELECT
 - FROM
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - SELECT FROM <model>.SAMPLE_CASES statement
 - mining models [Analysis Services], sample cases
 - sample cases [DMX]
 - training mining models
 ms.assetid: e7a34b9b-3562-4503-bfa7-dd9b12db480a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 3b66bc09dcf501d73fdb8dd66516b738a4483e22
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3c1e90c2d4fd6b7dab565550bc4b08a4a33192ee
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;modèle&gt;. SAMPLE_CASES (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Retourne les exemples de cas qui sont représentatifs des cas utilisés pour l'apprentissage du modèle d'exploration de données.  
   
@@ -85,4 +86,3 @@ WHERE IsInNode('000000003')
  [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: Instruction UPDATE CUBE (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulation de données MDX - UPDATE CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   L'instruction UPDATE CUBE est utilisée pour l'écriture différée des données dans une cellule d'un cube qui agrège uniquement dans son parent à l'aide de l'agrégation SUM. Pour une explication plus détaillée et un exemple, consultez « Présentation des Allocations » dans ce billet de blog : [création d’une Application de l’écriture différée avec Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977).  
   

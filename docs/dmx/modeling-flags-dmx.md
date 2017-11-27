@@ -2,16 +2,18 @@
 title: "Indicateurs (DMX) de modélisation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - REGRESSOR flag
 - DMX [Analysis Services], modeling flags
@@ -21,29 +23,28 @@ helpviewer_keywords:
 - flags [DMX]
 - NOT NULL flag
 ms.assetid: 498d25f7-9597-47ae-8717-61ddd1d2fd15
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8db8cd9de8d614c3b44bb2012dfbc5b33448807c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ce032085f10db22608aee69b886724309e83506b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="modeling-flags-dmx"></a>Indicateurs de modélisation (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour fournir à un algorithme d'exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis. Les indicateurs de modélisation peuvent se définir sur des colonnes de structure d'exploration de données comme sur des colonnes de modèle d'exploration de données.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les indicateurs de modélisation suivants :  
   
- **NON NULL**  
+ **NOT NULL**  
  Les valeurs de la colonne d'attribut ne doivent jamais contenir de valeur NULL. Une erreur est générée si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur NULL pour la colonne d’attribut au cours du processus d’apprentissage du modèle. Cet indicateur est défini sur une colonne de structure d'exploration de données.  
   
- **RÉGRESSEUR**  
+ **REGRESSOR**  
  Indique que l'algorithme peut utiliser la colonne spécifiée dans la formule de régression des algorithmes de régression. Cet indicateur est pris en charge par les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)] Linear Regression et [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees. Il est défini sur une colonne de modèle d'exploration de données.  
   
  **MODEL_EXISTENCE_ONLY**  
@@ -81,4 +82,3 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

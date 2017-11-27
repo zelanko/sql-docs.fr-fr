@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 45e86a66d67fdfdcbc3fe259caf5f358b048193e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e32dfd7db190884d20ae97c8b00d57a7b6683c30
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Test migration des objets de base de données (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Assistant de migration pour Oracle Tester (testeur SSMA) teste automatiquement la conversion des objets de base de données et la migration des données effectuées par SSMA. Une fois que toutes les étapes de migration de SSMA sont terminées, utilisez SSMA testeur pour vérifier que les objets convertis fonctionnent de manière identique et que toutes les données a été transféré correctement.  
@@ -50,7 +48,7 @@ SSMA testeur exécute les objets sélectionnés pour le test sur Oracle et leurs
 > [!NOTE]  
 > Attention ! N’utilisez jamais de SSMA testeur sur les systèmes de production. Lors de l’exécution de Tester le schéma source et les données sont modifiées. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Conditions préalables  
 Si vous souhaitez utiliser le testeur de SSMA, installer SSMA Oracle Extension avec le **installer la base de données testeur** activée.  
   
 Pour permettre la comparaison des données de la table résultante, définissez la **colonne ROWID de générer** option **Oui** avant le démarrage de la conversion de schéma. SSMA ajoutera une colonne ROWID à toutes les tables lors de l’exécution de la **convertir le schéma** commande.  
@@ -70,4 +68,3 @@ Notez que la version actuelle de SSMA testeur ne prend pas en charge l’exécut
 [L’installation des composants SSMA SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [Paramètres du projet &#40; Conversion de &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
-

@@ -2,9 +2,12 @@
 title: Instruction CREATE SESSION CUBE (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Définition de données MDX - créer un CUBE de SESSION
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Crée et remplit un cube de session à partir d'un cube serveur existant. Le cube de session est visible uniquement dans la session active ; vous ne pouvez pas le parcourir ou l'interroger à partir d'une autre session. Le cube de session est implicitement supprimé à la fermeture de la session.  
   

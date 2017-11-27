@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Procedures::Append
 - Procedures::raw_Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ac280aebcf98c593124cabb6876a0dd5b6a56826
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 679f7691a8f93026ce1f6a68ea232d01818e6dc9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-procedures"></a>Append (méthode) (procédures ADOX)
 Ajoute un nouveau [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) de l’objet à la [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  
@@ -57,7 +54,7 @@ Procedures.Append Name, Command
 >  Lorsque vous utilisez le fournisseur OLE DB pour Microsoft Jet, le **procédures** collection **Append** méthode vous permettra de spécifier un **vue** plutôt qu’un **procédure** dans les *commande* paramètre. Le **vue** sera ajouté à la source de données et est ajoutée à la **procédures** collection. Après le **Append**, si le **procédures** et **vues** collections sont actualisées, les **vue** ne pourra plus être dans le **procédures** collection et apparaîtra dans le **vues** collection.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Collection de procédures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures ajouter l’exemple de méthode (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
@@ -67,5 +64,4 @@ Procedures.Append Name, Command
  [Append (méthode) (clés ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append (méthode) (Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append (méthode) (utilisateurs ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append (méthode) (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append, méthode (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

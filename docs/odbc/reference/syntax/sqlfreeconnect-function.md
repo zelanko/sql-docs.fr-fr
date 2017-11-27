@@ -3,33 +3,30 @@ title: Fonction de SQLFreeConnect | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLFreeConnect
-apilocation:
-- sqlsrv32.dll
+apiname: SQLFreeConnect
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLFreeConnect
-helpviewer_keywords:
-- SQLFreeConnect function [ODBC]
+f1_keywords: SQLFreeConnect
+helpviewer_keywords: SQLFreeConnect function [ODBC]
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ee6866061c9a1169704d878aec8d01b18c64578d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dddc35f3c73a580a69581ce38e929c23dab79a1c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect (fonction)
 **Mise en conformité**  
@@ -44,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

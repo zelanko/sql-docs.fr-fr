@@ -2,9 +2,12 @@
 title: "Référence des fonctions MDX (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="mdx-function-reference-mdx"></a>Guide de référence des fonctions MDX (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet d’utiliser des fonctions dans la syntaxe des Expressions multidimensionnelles (MDX). Ces fonctions peuvent être employées dans n'importe quelle instruction MDX valide ; elles sont souvent utilisées dans des requêtes, des définitions de cumul personnalisées et d'autres calculs. Cette section fournit des informations sur les fonctions MDX comprises dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   

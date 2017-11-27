@@ -13,38 +13,33 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- ProtocolCapabilities Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: ProtocolCapabilities Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.protocolcapabilities
 - http://schemas.microsoft.com/analysisservices/2003/engine#ProtocolCapabilities
 - urn:schemas-microsoft-com:xml-analysis#ProtocolCapabilities
-helpviewer_keywords:
-- ProtocolCapabilities element
+helpviewer_keywords: ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 42ff93dce6b71f7cfd69ed85d92c4c4f7912faee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5d2ff72b1fdc3a3e3a4b09a046933d3ead88fc78
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
-# Élément ProtocolCapabilities (XMLA)
+# <a name="protocolcapabilities-element-xmla"></a>Élément ProtocolCapabilities (XMLA)
   Utilise l’en-tête SOAP dans un message de demande SOAP pour identifier les fonctionnalités de protocole entre une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et une application cliente.  
   
  **Namespace**`http://schemas.microsoft.com/analysisservices/2003/engine`  
   
-## Syntaxe  
+## <a name="syntax"></a>Syntaxe  
   
 ```xml  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 </soap:Envelope>  
 ```  
   
-## Caractéristiques de l'élément  
+## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -70,14 +65,14 @@ ms.lasthandoff: 09/01/2017
 |Valeur par défaut|Aucune|  
 |Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
   
-## Relations entre les éléments  
+## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|Aucune|  
 |Éléments enfants|[Fonctionnalité](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## Notes  
+## <a name="remarks"></a>Notes  
  Le **ProtocolCapabilities** élément permet aux applications de client négocier les fonctionnalités de protocole, telles que XML binaire ou de la prise en charge de la compression, avec un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance à tout moment. La négociation de protocole implique les étapes suivantes :  
   
 1.  L'application cliente identifie sa fonctionnalité de protocole en envoyant une demande SOAP qui inclut l'élément **ProtocolCapabilities** dans le cadre de l'en-tête SOAP.  
@@ -94,9 +89,8 @@ ms.lasthandoff: 09/01/2017
   
  Les fonctionnalités de protocole n'ont pas à être négociées de manière explicite, ce qui signifie qu'une application cliente n'a pas pour obligation d'inclure un élément **ProtocolCapabilities** dans le cadre de la demande SOAP. Si une demande SOAP n’inclut pas un **ProtocolCapabilities** élément, le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance répond en adoptant le même format que la demande SOAP.  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [La gestion des connexions et Sessions &#40; XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [En-têtes &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   
-

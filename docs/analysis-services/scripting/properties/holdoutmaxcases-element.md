@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutMaxCases
-helpviewer_keywords:
-- HoldoutMaxCases element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutMaxCases
+helpviewer_keywords: HoldoutMaxCases element
 ms.assetid: 58d94d10-e11e-4368-b3b8-dff23e1947cd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 96558785d84797018b6a0ba4cf0d0b370127443e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1e49da22961d21088649b4eda4539e357998049e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutmaxcases-element"></a>Élément HoldoutMaxCases
   Spécifie le nombre maximal de cas dans la source de données à utiliser pour la partition d’exclusion qui contient le jeu de tests d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément. Les cas restants dans le jeu de données sont utilisés pour l'apprentissage. Une valeur de 0 indique qu'il n'existe aucune limite au nombre des cas pouvant être exclus en tant que jeu de tests.  
@@ -78,7 +74,6 @@ ms.lasthandoff: 09/01/2017
  [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [Holdoutmaxpercent, élément](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
  [Holdoutseed, élément](../../../analysis-services/scripting/properties/holdoutseed-element.md)   
- [HoldoutActualSize (élément)](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
+ [HoldoutActualSize, élément](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)  
   
   
-

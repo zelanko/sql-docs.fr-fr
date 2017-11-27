@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services], defining
+helpviewer_keywords: measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Création de mesures et de groupes de mesures dans les modèles multidimensionnels
   Une *mesure* est une agrégation de valeurs de données numériques, telle qu'une somme, un décompte, un minimum, un maximum, une moyenne ou une expression MDX personnalisée que vous créez. Un *groupe de mesures* est un conteneur d'une ou de plusieurs mesures. Toutes les mesures existent dans un groupe de mesures, même s'il n'y a qu'une seule mesure. Un cube doit comporter au moins une mesure et un groupe de mesures.  
@@ -99,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Mesures et groupes de mesures](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Traitement positionné les instructions Update et Delete | Documents Mic
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9061ad8221537eaa00eb40fab56fa10d3357198d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Traitement positionné les instructions Update et Delete
 > [!IMPORTANT]  
@@ -48,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   Si le pilote prend en charge qu’une seule instruction active, les extractions de bibliothèque de curseurs le reste du résultat défini et réextrait ensuite l’ensemble de lignes en cours à partir de son cache avant d’exécuter un positionnées mettre à jour ou supprimer l’instruction. Si l’application appelle ensuite une fonction qui retourne des métadonnées dans un jeu de résultats (par exemple, **SQLNumResultCols** ou **SQLDescribeCol**), la bibliothèque de curseurs retourne une erreur.  
   
 -   Si une mise à jour positionnée ou une instruction delete est effectuée sur une colonne d’une table qui comprend une colonne horodateur est mis à jour automatiquement chaque fois qu’une mise à jour est exécutée, toutes les mise à jour positionnée ou des instructions delete échoue si la colonne horodateur est liée. Cela se produit car la mise à jour ou supprime instruction qui crée de la bibliothèque de curseurs n’identifie pas avec précision la ligne à mettre à jour. La valeur de l’instruction de recherche pour la colonne timestamp n’a pas correspondra à la valeur mise à jour automatique de la colonne timestamp.
-

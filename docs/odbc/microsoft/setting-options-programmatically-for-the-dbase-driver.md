@@ -3,10 +3,12 @@ title: "Paramètre Options par programmation pour le pilote dBASE | Documents Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - DBase driver [ODBC], setting options programmatically
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fc037c3db2eddaf91338d1ce74aa4894f2a3b7b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2760e0b08417121e765582904565461501eb0df6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Paramètre Options par programmation pour le pilote dBASE
 |Option| Description|Méthode|  
@@ -40,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |Lecture seule|Désigne la base de données en lecture seule.|Pour définir cette option dynamiquement, utilisez le **READONLY** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Sélectionnez le répertoire|Affiche une boîte de dialogue où vous pouvez sélectionner un répertoire qui contient les fichiers que vous souhaitez accéder.<br /><br /> Lorsque vous définissez un répertoire de source de données, spécifiez le répertoire où se trouvent vos fichiers fréquemment utilisés. Le pilote ODBC utilise ce répertoire comme répertoire par défaut. Copier d’autres fichiers dans ce répertoire s’ils sont utilisés fréquemment. Ou bien, vous pouvez qualifier les noms de fichiers dans une instruction SELECT avec le nom du répertoire :<br /><br /> SÉLECTIONNEZ \* DE C:\MYDIR\EMP<br /><br /> Ou bien, vous pouvez spécifier un nouveau répertoire par défaut à l’aide de la **SQLSetConnectOption** fonction avec l’option SQL_CURRENT_QUALIFIER.|Pour définir cette option dynamiquement, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Afficher les lignes supprimées|Spécifie si les lignes qui ont été marquées comme supprimées peuvent être récupérées ou positionnés sur. Si désactivée, les lignes supprimées ne sont pas affichées. Si sélectionné, les lignes supprimées sont traitées le même que les lignes non supprimées. Par défaut, cette option est désactivée.|Pour définir cette option dynamiquement, utilisez le **DELETED** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|
-

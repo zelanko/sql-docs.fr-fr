@@ -6,16 +6,20 @@ ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords:
-- Linux, AAD authentication
+helpviewer_keywords: Linux, AAD authentication
+ms.workload: On Demand
+ms.openlocfilehash: ab9be968e11688a960e4306f82cf7ca47666f688
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Authentification Active Directory avec SQL Server sur Linux
 
@@ -144,8 +148,13 @@ Utilisez les étapes suivantes pour joindre un [!INCLUDE[ssNoVersion](../include
    > Si vous voyez une erreur, « les packages nécessaires ne sont pas installés », puis vous devez installer ces packages à l’aide du Gestionnaire de package de votre distribution Linux avant d’exécuter le `realm join` réexécutez la commande.
    >
    > Si vous recevez une erreur, « Autorisations insuffisantes pour joindre le domaine, » vous devez vérifier avec un administrateur de domaine que vous disposez des autorisations suffisantes pour joindre des ordinateurs Linux à votre domaine.
+   
+   > SQL Server utilise SSSD et NSS pour le mappage des comptes d’utilisateurs et des groupes aux identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution dans l’ordre pour SQL Server créer les connexions AD avec succès. Realmd généralement cette opération automatiquement dans le cadre de joindre le domaine, mais dans certains cas, vous devez procéder séparément.
+   >
+   > Consultez les ressources suivantes pour configurer [SSSD manuellement](https://access.redhat.com/articles/3023951), et [configurer NSS pour travailler avec SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
-1. Vérifiez que vous pouvez maintenant collecter des informations relatives à un utilisateur du domaine, et que vous pouvez obtenir un ticket Kerberos en tant qu’utilisateur.
+  
+5. Vérifiez que vous pouvez maintenant collecter des informations relatives à un utilisateur du domaine, et que vous pouvez obtenir un ticket Kerberos en tant qu’utilisateur.
 
    We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
@@ -297,4 +306,3 @@ Ensuite, Explorer d’autres scénarios de sécurité pour SQL Server sur Linux.
 
 > [!div class="nextstepaction"]
 >[Chiffrement des connexions à SQL Server sur Linux](sql-server-linux-encrypted-connections.md)
-

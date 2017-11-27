@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
+f1_keywords: sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
-ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/20/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>Générateur de modèles tabulaires (SSAS)
 Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], intégré à Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], qui propose des modèles de type de projet supplémentaires propres au développement de solutions de modèles tabulaires professionnelles.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] peut être téléchargé gratuitement sur Internet. Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
@@ -146,4 +144,3 @@ Le générateur de modèles tabulaires fait partie de [!INCLUDE[ssBIDevStudioFul
  [Propriétés &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
-

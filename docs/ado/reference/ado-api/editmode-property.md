@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::EditMode
-helpviewer_keywords:
-- EditMode property
+f1_keywords: Recordset15::EditMode
+helpviewer_keywords: EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 078c1b9979339fc31f3b9e064094892caef0d6c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: be4670f359212f1079044341285ec2b0aff6c559
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="editmode-property"></a>EditMode, propriété
 Indique l’état de modification de l’enregistrement actif.  
@@ -47,7 +43,7 @@ Indique l’état de modification de l’enregistrement actif.
 >  **EditMode** peut retourner une valeur valide uniquement si un enregistrement actif. **EditMode** retournera une erreur si [BOF ou EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la valeur true, ou si l’enregistrement actif a été supprimé.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [CursorType, LockType et EditMode, propriétés-exemple (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
@@ -55,5 +51,4 @@ Indique l’état de modification de l’enregistrement actif.
  [AddNew (méthode) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [DELETE, méthode (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [CancelUpdate, méthode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Update (méthode)](../../../ado/reference/ado-api/update-method.md)
-
+ [Update, méthode](../../../ado/reference/ado-api/update-method.md)

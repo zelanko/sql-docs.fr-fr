@@ -2,9 +2,12 @@
 title: "Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3b254dd4fa4b664a0787898a61cc94ca050a097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser Resource Governor pour limiter l'utilisation de l'UC par compression de la sauvegarde (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Par défaut, sauvegarder en utilisant la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Ainsi, il peut être préférable, dans une session où l’utilisation du processeur est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de[Resource Governor](../../relational-databases/resource-governor/resource-governor.md) en cas de contention du processeur. Cette rubrique présente un scénario qui classifie les sessions d'un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] particulier en les mappant à un groupe de charge de travail de Resource Governor qui limite l'utilisation de l'UC dans de tels cas.  
   

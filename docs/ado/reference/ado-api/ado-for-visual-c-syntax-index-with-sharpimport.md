@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,24 +12,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 'syntax indexes [ADO], ADO for Visual C++ syntax with #import'
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71bce9e2ce923dc9fed85493e1f986b5bb685abb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 911abc9ecb9cd17f4f69479a2de9fa7f498303e5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO pour les Index de la syntaxe Visual C++ avec #import
 Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Visual C++ et le **#import** directive.  
@@ -47,11 +44,11 @@ Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Vis
   
 -   [Objet de connexion](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Error](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
+-   [Error, objet](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Field](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
+-   [Field, objet](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet de paramètre](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
+-   [Parameter, objet](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Objet de propriété](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -66,5 +63,4 @@ Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Vis
 -   [Événements Recordset](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [INDEX de la syntaxe Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
-
+ [Index de la syntaxe ADO pour Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

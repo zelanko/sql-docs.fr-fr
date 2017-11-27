@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
 - Command15::CreateParameter
-helpviewer_keywords:
-- CreateParameter method [RDS]
+helpviewer_keywords: CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 929d7e91566aa18938a64f1085b1d77153205898
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7fc09313bffacefd2d9eff86c9176222c094ebe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter, méthode (ADO)
 Crée un nouveau [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet avec les propriétés spécifiées.  
@@ -70,12 +67,11 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Si vous spécifiez un type de données numérique (**adNumeric** ou **adDecimal**) dans le *Type* argument, alors vous devez également définir le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [Précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Append et CreateParameter, méthodes-exemple (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Append et CreateParameter, méthodes-exemple (VC ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Append (méthode) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)   
- [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
-
+ [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

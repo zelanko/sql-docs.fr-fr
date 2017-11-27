@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 90f472a8eaa4bcfadf13eaea3d5145fe25c74a63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 31c069a602027d7d49d944b654653e2476c94e2b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Utilisation de SSMA pour Oracle Console (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Mise en production de migration Assistant (SSMA) pour DB2 est désormais accessible via une application console à la ligne de commande. Les fichiers de script forment l’entrée de l’application pour l’exécution des commandes. Comme une application de console SSMA permet d’assurer l’interface au niveau du script, réduit le cycle de migration et d’évolutivité l’effort de migration.  
@@ -49,4 +47,3 @@ Les rubriques de cette section sont les suivantes :
 ## <a name="see-also"></a>Voir aussi  
 [Prise en main de SSMA pour DB2 Console](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  
   
-

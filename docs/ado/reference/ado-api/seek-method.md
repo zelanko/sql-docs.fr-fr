@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset21::Seek
 - Recordset21::raw_Seek
-helpviewer_keywords:
-- Seek method [ADO]
+helpviewer_keywords: Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d2e6e7d303e8cf1bad6edc21b22832ab76df5244
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d401bca51d735b2d0d633716cee732ad2ab9a086
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="seek-method"></a>La méthode de recherche
 Recherche l’index d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour localiser rapidement la ligne qui correspond aux valeurs spécifiées et la position de ligne en cours à cette ligne.  
@@ -58,11 +55,10 @@ recordset.Seek KeyValues, SeekOption
  Cette méthode peut uniquement être utilisé lorsque le **Recordset** objet a été ouverte avec un [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeur **adCmdTableDirect**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherche la méthode et les Index, propriété-Exemple (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Recherche la méthode et les Index, propriété-Exemple (VC ++)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find (méthode) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Propriété index](../../../ado/reference/ado-api/index-property.md)
-
+ [Index, propriété](../../../ado/reference/ado-api/index-property.md)

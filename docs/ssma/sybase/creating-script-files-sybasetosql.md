@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: da140d71612c135152befbf2527f016903a2d97a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ef30f1ff45422bbe034c1fe815753ebb7e2543df
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-sybasetosql"></a>Création de fichiers de Script (SybaseToSQL)
 La première étape avant le lancement de l’application de console SSMA est à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
-Le fichier de script peut être divisé en trois sections, notamment..,:  
+Le fichier de script peut être divisé en trois sections, notamment.., :  
   
 1.  **config :** permet à l’utilisateur définir les paramètres de configuration pour l’application console.  
   
@@ -411,4 +409,3 @@ L’étape suivante d’exploitation de la console est [création de fichiers de
 ## <a name="see-also"></a>Voir aussi  
 [Création de fichiers de la valeur de la Variable &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   
-

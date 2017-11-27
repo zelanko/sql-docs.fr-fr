@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 648fca1de8f4c98bce4e778a2d4d26fb44246267
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Inscrire une instance Analysis Services dans un groupe de serveurs
   Si vous utilisez un grand nombre d'instances de serveur Analysis Services, vous pouvez créer des groupes de serveurs dans Management Studio pour faciliter l'administration des serveurs. La finalité d'un groupe de serveurs est d'assurer la proximité au sein d'un groupe de serveurs associés dans l'espace de travail d'administration. Par exemple, supposons que votre rôle consiste à gérer dix instances distinctes d'Analysis Services. En les regroupant par mode serveur, par critères de temps d'exécution ou par service ou région, vous pouvez afficher les instances qui partagent les mêmes caractéristiques et vous y connecter plus facilement. Vous pouvez également ajouter des informations descriptives qui vous permettent de vous souvenir du mode d'utilisation du serveur.  
@@ -47,4 +46,3 @@ ms.lasthandoff: 09/01/2017
 3.  Cliquez avec le bouton droit sur le groupe de serveurs et sélectionnez Nouvelle inscription de serveur. Entrez le nom réseau d'un serveur local ou distant, y compris le nom de l'instance si le serveur a été installé en tant qu'instance nommée. Éventuellement, vous pouvez fournir un nom de serveur inscrit qui apparaît dans le volet Serveurs inscrits. Ce nom est utilisé dans le volet Serveurs inscrits uniquement. Vous ne pouvez pas l'utiliser pour renommer un serveur, ni l'utiliser dans une chaîne de connexion. Un nom de serveur inscrit peut être plus descriptif que le nom du serveur réel ou inclure d'autres caractéristiques d'identification qui contribuent à distinguer ce serveur des autres serveurs.  
   
   
-

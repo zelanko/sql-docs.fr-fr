@@ -3,33 +3,30 @@ title: Fonction de cas | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLGetEnvAttr
-apilocation:
-- sqlsrv32.dll
+apiname: SQLGetEnvAttr
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLGetEnvAttr
-helpviewer_keywords:
-- SQLGetEnvAttr function [ODBC]
+f1_keywords: SQLGetEnvAttr
+helpviewer_keywords: SQLGetEnvAttr function [ODBC]
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8b7db465aa78dcbcdeb2443d6cb0c859923e4ccb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7e353d41c1065f8d65a70c6633901ef22547a61
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetenvattr-function"></a>Cas (fonction)
 **Mise en conformité**  
@@ -108,4 +105,3 @@ SQLRETURN SQLGetEnvAttr(
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

@@ -2,9 +2,12 @@
 title: "Mots réservés MDX | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="mdx-reserved-words"></a>Mots réservés MDX
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le tableau ci-dessous contient les mots réservés utilisés par MDX (Multidimensional Expressions). Dans MDX, vous ne devez utiliser ces mots dans aucun identificateur, tel qu'un nom de cube, ou un nom de fonction définie par l'utilisateur.  
   

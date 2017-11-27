@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_COMMAND_OBJECTS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 130ebbaa5453b61e0c473edea40c97eb0b65b0f7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cae36b0ff5492555137952c2ad9b19f609c53948
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercommandobjects-rowset"></a>Ensemble de lignes DISCOVER_COMMAND_OBJECTS
   Fournit des informations sur l'activité et l'utilisation des ressources des objets actuellement utilisés par la commande référencée.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 |Nom de colonne|Indicateur de type|Restriction| Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**SESSION_SPID**|**DBTYPE_I4**|Oui|ID de session.|  
-|**ID DE SESSION**|**DBTYPE_WSTR**|Oui|Identificateur unique de session, tel qu'un GUID.|  
+|**SESSION_ID**|**DBTYPE_WSTR**|Oui|Identificateur unique de session, tel qu'un GUID.|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||Numéro de séquence de la commande.|  
 |**OBJECT_PARENT_PATH**|**DBTYPE_WSTR**|Oui|Chemin d'accès au parent de l'objet actuel.|  
 |**OBJECT_ID**|**DBTYPE_WSTR**|Oui|ID de l'objet tel que défini lors de sa création.|  
@@ -71,7 +68,6 @@ ms.lasthandoff: 09/01/2017
 |ADOMDNAME|CommandObjects|  
   
 ## <a name="see-also"></a>Voir aussi  
- [XML for Analysis ensembles de lignes de schéma](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [Ensembles de lignes de schéma XML for Analysis](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   
-

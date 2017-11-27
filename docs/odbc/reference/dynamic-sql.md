@@ -3,10 +3,12 @@ title: Instructions SQL dynamiques | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb717a151e6917d49e164cfeba9b3df3507d46e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-sql"></a>Instructions SQL dynamiques
 Bien que SQL statique fonctionne dans de nombreuses situations, il est une classe d’applications dans lequel l’accès aux données ne peut pas être déterminé à l’avance. Par exemple, qu'une feuille de calcul permet à un utilisateur à entrer une requête, puis envoie à la feuille de calcul au SGBD pour récupérer des données. Évidemment, le contenu de cette requête ne peut pas être connu au programmeur lorsque le programme de feuille de calcul est écrit.  
@@ -45,4 +46,3 @@ Bien que SQL statique fonctionne dans de nombreuses situations, il est une class
 3.  Le programme peut utiliser l’instruction EXECUTE à plusieurs reprises, en fournissant des valeurs de paramètre différentes chaque fois que cette instruction est exécutée.  
   
  L’exécution préparée n’est toujours pas le même que SQL statique. Dans les instructions SQL statiques, les quatre premières étapes de traitement d’une instruction SQL lieu au moment de la compilation. Dans l’exécution préparée, ces étapes ont toujours lieu au moment de l’exécution, mais elles sont exécutées une seule fois ; exécution du plan a lieu uniquement lorsque EXECUTE est appelée. Cela permet d’éliminer certains inconvénients de performances inhérentes à l’architecture d’instructions SQL dynamiques. L’illustration suivante montre les différences entre SQL statique, SQL dynamique avec l’exécution immédiate et SQL dynamique avec l’exécution préparée.
-

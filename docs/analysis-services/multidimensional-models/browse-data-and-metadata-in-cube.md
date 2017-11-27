@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
   Utilisez l'onglet **Navigateur** du Concepteur de cube pour parcourir les données du cube. Vous pouvez utiliser cette vue pour examiner la structure d'un cube et vérifier des données, le calcul, la mise en forme, ainsi que la sécurité des objets de base de données. Vous pouvez examiner rapidement un cube tel que les utilisateurs finaux le voient dans les outils de création de rapports ou d'autres applications clientes. Lorsque vous parcourez des données de cube, vous pouvez afficher différentes dimensions, explorer les membres et découper les dimensions.  
@@ -116,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  Vous pouvez masquer les cellules vides dans la grille de données en cliquant avec le bouton droit dans le volet Données, puis en cliquant sur **Afficher les cellules vides**.  
   
   
-

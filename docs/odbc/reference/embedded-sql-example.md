@@ -3,10 +3,12 @@ title: Embedded SQL exemple | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ae3b2c60025f82d3153166a887fea12453443450
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql-example"></a>Exemple SQL incorporé
 Le code suivant est un simple programme SQL incorporé, écrit en C. Le programme illustre des techniques SQL de nombreuses, mais pas la totalité, d’incorporé. Le programme vous invite à entrer un numéro de commande de l’utilisateur, récupère le numéro de client, le vendeur et le statut de la commande et affiche les informations récupérées à l’écran.  
@@ -78,4 +79,3 @@ bad_number:
 -   **Gestion des erreurs** le SGBD signale des erreurs d’exécution du programme d’applications via une zone de communication SQL ou SQLCA. Dans l’exemple de code précédent, la première instruction SQL incorporée est INCLUDE SQLCA. Cela indique la précompilés pour inclure la structure SQLCA dans le programme. Cela est nécessaire chaque fois que le programme traite les erreurs retournées par le SGBD. Le WHENEVER... GOTO (instruction) indique le précompilés pour générer le code de gestion des erreurs qui effectue un branchement vers une étiquette spécifique lorsqu’une erreur se produit.  
   
 -   **SELECT unique** l’instruction utilisée pour renvoyer les données est une instruction SELECT singleton ; autrement dit, il retourne une seule ligne de données. Par conséquent, l’exemple de code ne déclarez pas ou utiliser des curseurs.
-

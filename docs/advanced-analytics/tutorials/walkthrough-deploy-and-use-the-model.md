@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Déployer le modèle R et l’utiliser dans SQL
 
@@ -72,7 +68,7 @@ Une procédure stockée pour le calcul du score du lot a été créée lorsque v
 
     + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que **varbinary (max)** données stockées dans la variable SQL  _@lmodel2_ et passé comme paramètre *mod* dans le système de la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Les données utilisées en tant qu’entrées pour le score est défini comme une requête SQL et stocké sous forme de chaîne dans la variable SQL  _@input_ . Comme les données sont récupérées à partir de la base de données, il est stocké dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée pour le [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procédure ; vous pouvez définir un autre nom de la variable si nécessaire en utilisant le paramètre  _@input \_données\_1\_nom_.
+    + Les données utilisées en tant qu’entrées pour le score est défini comme une requête SQL et stocké sous forme de chaîne dans la variable SQL  _@input_ . Comme les données sont récupérées à partir de la base de données, il est stocké dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée pour le [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procédure ; vous pouvez définir un autre nom de variable si nécessaire en utilisant le paramètre   *_@input_data_1_name_*  .
 
     + Pour générer les scores, la procédure stockée appelle la fonction `rxPredict` à partir de la bibliothèque **RevoScaleR** .
 
@@ -229,4 +225,3 @@ Nous vous recommandons également de consulter certains de ces exemples et resso
 [Didacticiels de SQL Server R](sql-server-r-tutorials.md)
 
 [Comment créer une procédure stockée à l’aide de sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

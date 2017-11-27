@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- Recommendation element
+dev_langs: XML
+helpviewer_keywords: Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 88ee6ad381638147b1b19a515fb3c55cdf0a7447
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d3402eb2554aa2342335b2901206dac1fbcf7a5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="recommendation-element-dta"></a>Recommendation, élément (Assistant Paramétrage de base de données)
   Contient des informations sur les index hypothétiques qui font partie d'une configuration spécifiée par l'utilisateur.  
@@ -54,7 +50,7 @@ ms.lasthandoff: 08/02/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Table, élément pour les schémas &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Élément parent**|[Table, élément pour les schémas &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Éléments enfants**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Élément**Drop** . Pour plus d'informations, consultez l'article [Database Engine Tuning Advisor XML schema](http://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Notes  
@@ -67,4 +63,3 @@ ms.lasthandoff: 08/02/2017
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

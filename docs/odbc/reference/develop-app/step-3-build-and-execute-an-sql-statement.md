@@ -3,27 +3,28 @@ title: "Étape 3 : Créer et exécuter une instruction SQL | Documents Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4f213203e7601c79f8f5336756462d6ad344aaa8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aa16463daf34d3851a2a1dc214e9f4ba87de6132
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Étape 3 : Créer et exécuter une instruction SQL
 La troisième étape consiste à générer et exécuter une instruction SQL, comme indiqué dans l’illustration suivante. Les méthodes utilisées pour effectuer cette étape sont susceptibles de varier considérablement. L’application peut inviter l’utilisateur à entrer une instruction SQL, créez une instruction SQL en fonction de l’entrée d’utilisateur, ou utiliser une instruction SQL codées en dur. Pour plus d’informations, consultez [construire des instructions SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
@@ -40,7 +41,6 @@ La troisième étape consiste à générer et exécuter une instruction SQL, com
   
 |Type d’instruction SQL|Passez à|  
 |---------------------------|----------------|  
-|**Sélectionnez** ou de catalogue (fonction)|[Étape 4 a : extraire les résultats](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**Mise à jour**, **supprimer**, ou **INSERT**|[Étape 4 b : extraire le nombre de lignes](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|**Sélectionnez** ou de catalogue (fonction)|[Étape 4a : Extraire les résultats](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**Mise à jour**, **supprimer**, ou **INSERT**|[Étape 4b : Extraire le nombre de lignes](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
 |Toutes les autres instructions SQL|Étape 3 : Créer et exécuter une instruction SQL (cette rubrique) ou [étape 5 : valider la Transaction](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
-

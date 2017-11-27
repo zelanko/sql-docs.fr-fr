@@ -1,30 +1,31 @@
 ---
 title: Flux de travail ETL | Documents Microsoft
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 06/15/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 679e58fe-b062-4934-a94c-9bb916b0bcb0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 3b81a6494458f7d9f2e89b120119e402786e21ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 85898dfc3a12ee195910bf965f0099b35f95b239
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flux de travail WideWorldImportersDW ETL
-Le package ETL WWI_Integration est utilisé pour migrer des données à partir de la base de données WideWorldImporters à la base de données WideWorldImportersDW en tant que les modifications de données. Le package est exécuté périodiquement (généralement tous les jours).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Le package ETL WWI_Integration est utilisé pour migrer des données à partir de la base de données WideWorldImporters à la base de données WideWorldImportersDW en tant que les modifications de données. Le package est exécuté périodiquement (généralement tous les jours).
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -42,7 +43,7 @@ Le traitement principal commence par le remplissage de la table de dimension de 
 
 Après cela, une série de tâches de flux de données charge chaque dimension, puis chaque fait.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
 
 - SQL Server 2016 (ou version ultérieure) avec les bases de données WideWorldImporters et WideWorldImportersDW. Il peut s’agir sur identiques ou différentes instances de SQL Server.
 - SQL Server Management Studio (SSMS)
@@ -80,4 +81,3 @@ Code source pour recréer la base de données est disponible à partir de l’em
    - Cliquez sur OK pour créer le travail.
 
 3. Exécuter ou planifier la tâche.
-

@@ -3,10 +3,12 @@ title: "Mappage des fonctions déconseillées | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bf9d6ecc7971d8047dff4a808e1fe84a6261b71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61d05017039673989e1477501feb17b3da6d7220
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mapping-deprecated-functions"></a>Mappage des fonctions déconseillées
 Cette section décrit les fonctions déconseillées comment sont mappés par les 3 ODBC*.x* du Gestionnaire de pilotes pour garantir la compatibilité descendante des ODBC 3*.x* pilotes qui sont utilisés avec ODBC 2. *x* applications. Le Gestionnaire de pilotes effectue ce mappage, quelle que soit la version de l’application. Étant donné que chaque ODBC 2. *x* fonctions dans la liste suivante est mappée à la 3 ODBC correspondants*.x* fonction lorsqu’elle est appelée dans un ODBC 3*.x* pilote, la version 3 ODBC*.x* pilote n’a pas d’implémenter ODBC 2. *x* fonctions.  
@@ -62,39 +63,38 @@ Cette section décrit les fonctions déconseillées comment sont mappés par les
   
  Cette section contient les rubriques suivantes.  
   
--   [Mappage de SQLAllocConnect](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
+-   [SQLAllocConnect, mappage](../../../odbc/reference/appendixes/sqlallocconnect-mapping.md)  
   
--   [Mappage de SQLAllocEnv](../../../odbc/reference/appendixes/sqlallocenv-mapping.md)  
+-   [SQLAllocEnv, mappage](../../../odbc/reference/appendixes/sqlallocenv-mapping.md)  
   
--   [Mappage de SQLAllocStmt](../../../odbc/reference/appendixes/sqlallocstmt-mapping.md)  
+-   [SQLAllocStmt, mappage](../../../odbc/reference/appendixes/sqlallocstmt-mapping.md)  
   
--   [Mappage de SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)  
+-   [SQLBindParam, mappage](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)  
   
--   [Mappage de SQLColAttributes](../../../odbc/reference/appendixes/sqlcolattributes-mapping.md)  
+-   [SQLColAttributes, mappage](../../../odbc/reference/appendixes/sqlcolattributes-mapping.md)  
   
--   [Mappage de SQLError](../../../odbc/reference/appendixes/sqlerror-mapping.md)  
+-   [SQLError, mappage](../../../odbc/reference/appendixes/sqlerror-mapping.md)  
   
--   [Mappage de SQLFreeConnect](../../../odbc/reference/appendixes/sqlfreeconnect-mapping.md)  
+-   [SQLFreeConnect, mappage](../../../odbc/reference/appendixes/sqlfreeconnect-mapping.md)  
   
--   [Mappage de SQLFreeEnv](../../../odbc/reference/appendixes/sqlfreeenv-mapping.md)  
+-   [SQLFreeEnv, mappage](../../../odbc/reference/appendixes/sqlfreeenv-mapping.md)  
   
--   [Mappage de SQLFreeStmt](../../../odbc/reference/appendixes/sqlfreestmt-mapping.md)  
+-   [SQLFreeStmt, mappage](../../../odbc/reference/appendixes/sqlfreestmt-mapping.md)  
   
--   [Mappage de SQLGetConnectOption](../../../odbc/reference/appendixes/sqlgetconnectoption-mapping.md)  
+-   [SQLGetConnectOption, mappage](../../../odbc/reference/appendixes/sqlgetconnectoption-mapping.md)  
   
--   [Mappage de SQLGetStmtOption](../../../odbc/reference/appendixes/sqlgetstmtoption-mapping.md)  
+-   [SQLGetStmtOption, mappage](../../../odbc/reference/appendixes/sqlgetstmtoption-mapping.md)  
   
--   [Mappage de SQLInstallTranslator](../../../odbc/reference/appendixes/sqlinstalltranslator-mapping.md)  
+-   [SQLInstallTranslator, mappage](../../../odbc/reference/appendixes/sqlinstalltranslator-mapping.md)  
   
--   [Mappage de SQLParamOptions](../../../odbc/reference/appendixes/sqlparamoptions-mapping.md)  
+-   [SQLParamOptions, mappage](../../../odbc/reference/appendixes/sqlparamoptions-mapping.md)  
   
--   [Mappage de SQLSetConnectOption](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)  
+-   [SQLSetConnectOption, mappage](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)  
   
--   [Mappage de SQLSetParam](../../../odbc/reference/appendixes/sqlsetparam-mapping.md)  
+-   [SQLSetParam, mappage](../../../odbc/reference/appendixes/sqlsetparam-mapping.md)  
   
--   [Mappage de SQLSetScrollOptions](../../../odbc/reference/appendixes/sqlsetscrolloptions-mapping.md)  
+-   [SQLSetScrollOptions, mappage](../../../odbc/reference/appendixes/sqlsetscrolloptions-mapping.md)  
   
--   [Mappage de SQLSetStmtOption](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
+-   [SQLSetStmtOption, mappage](../../../odbc/reference/appendixes/sqlsetstmtoption-mapping.md)  
   
--   [Mappage de SQLTransact](../../../odbc/reference/appendixes/sqltransact-mapping.md)
-
+-   [SQLTransact, mappage](../../../odbc/reference/appendixes/sqltransact-mapping.md)

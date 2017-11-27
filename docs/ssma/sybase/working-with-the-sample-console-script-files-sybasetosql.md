@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Sybase Console,Sample Console Script Files
+helpviewer_keywords: Sybase Console,Sample Console Script Files
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6777922c0282df350ed0107dc3a37ef7102ef5d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3cb3c0f4f2e9f57b10527b9e524eae10563efebe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Travailler avec les fichiers de Script de la Console exemple (SybaseToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -88,7 +85,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     Mappage de schéma de base de données source vers le schéma cible.  
   
-    **Attribut**  
+    **Attribute**  
   
     -   `source-schema:`Spécifie la base de données source qui nécessite d’être converti.  
   
@@ -102,7 +99,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `convert-schema` 4 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name`: Permet de spécifier la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`  
   
@@ -114,7 +111,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `synchronize-target` 3 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name:`Spécifiez la base de données sql server / nom qui nécessite la création de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`  
   
@@ -126,7 +123,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
     -   Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.  
   
-    **Attribut**  
+    **Attribute**  
   
     `object-name:`Spécifie la source de données / tables nom qui nécessite d’être migrée. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`  
   
@@ -135,4 +132,3 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
 [Créer les fichiers de connexion de serveur &#40; SybaseToSQL &#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [Génération de rapports &#40; SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01a193158158bcc4d86c090acc302984b015bc7d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dbb9bbf584caeca1f6d8db034323e6695512f6a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>Compatibilité avec JDBC 4.2 pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,4 +78,3 @@ ms.lasthandoff: 09/09/2017
 |**Nouvelles classes Java dans Java 8 :**<br /><br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **Nouveaux types JDBC :**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR n'est pas pris en charge dans SQL Server. Le pilote lève une exception SQLFeatureNotSupportedException si ce type est utilisé. Le pilote prend en charge tous les autres nouveaux mappages de type Java et JDBC comme spécifié dans la spécification JDBC 4.2.|  
   
   
-

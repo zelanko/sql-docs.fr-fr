@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 42cc598c702a0e88063896717926e280171d0371
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurer des règles d’intégrité PowerPivot
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint inclut des règles d’intégrité SharePoint qui vous aident à analyser et à résoudre les problèmes de disponibilité et de configuration du serveur. Les règles d’intégrité qui s’appliquent à [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint apparaissent dans la page Vérifier les définitions de règles.  
@@ -142,4 +141,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
  [Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   
   
-

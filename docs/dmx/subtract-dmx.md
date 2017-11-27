@@ -2,34 +2,35 @@
 title: '- (Soustraction) (DMX) | Documents Microsoft'
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: 9602e908-e80c-442a-a412-073e10d0abd4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d1156dfc98cc1d2fd5d91e9f54fd0ab4001fa2b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6385e939f6dcf1881b86d9aa20d7f8e6c04aceb4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="--subtract-dmx"></a>- (Soustraction) (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Exécute une opération arithmétique qui soustrait un nombre d'un autre.  
   
@@ -56,4 +57,3 @@ Numeric_Expression - Numeric_Expression
  [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

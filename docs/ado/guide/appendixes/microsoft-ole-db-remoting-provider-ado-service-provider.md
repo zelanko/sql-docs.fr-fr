@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fea86b408c80a0165ddfae0899df4fa072839163
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6d969ae607f15876c21271d2721ed3f33c6949f3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB la communication à distance
 Le fournisseur Microsoft OLE DB d’accès à distance permet à un utilisateur local sur un ordinateur client appeler des fournisseurs de données sur un ordinateur distant. Spécifiez les paramètres du fournisseur de données pour l’ordinateur distant comme vous le feriez si vous étiez un utilisateur local sur l’ordinateur distant. Ensuite, spécifiez les paramètres utilisés par le fournisseur de la communication à distance pour accéder à l’ordinateur distant. Vous pouvez ensuite accéder l’ordinateur distant comme si vous étiez un utilisateur local.
@@ -100,4 +98,3 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 
 ## <a name="see-also"></a>Voir aussi
  [Vue d’ensemble du fournisseur OLE DB la communication à distance](http://msdn.microsoft.com/en-us/4083b72f-68c4-4252-b366-abb70db5ca2b)
-

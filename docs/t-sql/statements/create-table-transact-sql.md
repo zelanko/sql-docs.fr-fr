@@ -1,13 +1,14 @@
 ---
 title: "CRÉER la TABLE (Transact-SQL) | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,8 +20,7 @@ f1_keywords:
 - TABLE_TSQL
 - FILESTREAM_ON
 - FILESTREAM_ON_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECK constraints
 - global temporary tables [SQL Server]
@@ -47,20 +47,19 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
+caps.latest.revision: "256"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0978041b1c2683f6af3f6c531ddc10edc6b9bcbf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée une nouvelle table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -513,7 +512,7 @@ Spécifie pour créer un index sur la table. Il peut s’agir d’un index clust
   
  Spécifie de stocker la table entière sous forme de colonnes avec un index cluster columnstore. Cela inclut toujours toutes les colonnes de la table. Les données ne sont pas triées par ordre alphabétique ou numérique, car les lignes sont organisées pour bénéficier des avantages de la compression de columnstore.  
   
- INDEX *index_name* [NONCLUSTERED] COLUMNSTORE (*column_name* [,...*n* ] )  
+ INDEX *index_name* [NONCLUSTERED] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
   
 **S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1020,7 +1019,7 @@ INSERT INTO #MyTempTable VALUES (1);
 ```  
 CREATE PROCEDURE dbo.Test2  
 AS  
-    CREATE TABLE #t(x INT PRIMARY KEY);  
+n    CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (2);  
     SELECT Test2Col = x FROM #t;  
 GO  
@@ -1030,7 +1029,7 @@ AS
     CREATE TABLE #t(x INT PRIMARY KEY);  
     INSERT INTO #t VALUES (1);  
     SELECT Test1Col = x FROM #t;  
-EXEC Test2;  
+ EXEC Test2;  
 GO  
   
 CREATE TABLE #t(x INT PRIMARY KEY);  
@@ -1069,7 +1068,7 @@ Base de données SQL Azure prend en charge les tables temporaires globales qui s
 Les tables temporaires globales pour la base de données SQL Azure suivent la même syntaxe et sémantique que SQL Server utilise pour les tables temporaires.  De même, les procédures stockées temporaires globales sont également limités au niveau de la base de données dans la base de données SQL Azure. Les tables temporaires locales (initiés avec le nom de la table #) sont également pris en charge pour la base de données SQL Azure et suivent la même syntaxe et sémantique que SQL Server utilise.  Consultez la section ci-dessus sur [Tables temporaires](#temporary-tables).  
 
 > [!IMPORTANT]
-> Cette fonctionnalité en version préliminaire publique et est disponible pour la base de données SQL Azure.
+> Cette fonctionnalité est uniquement disponible pour la base de données SQL Azure.
 >
 
 ### <a name="troubleshooting-global-temporary-tables-for-azure-sql-db"></a>Dépannage des tables temporaires globales pour la base de données SQL Azure 
@@ -1660,6 +1659,5 @@ GO
  [sp_spaceused &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
   
   
-
 
 

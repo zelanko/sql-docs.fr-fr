@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CONVERT_TSQL
 - CAST
 - CONVERT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CAST function
 - automatic data type conversion
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -216,7 +213,7 @@ Lorsque vous explicitement ou implicitement converti le **xml** type de données
 Conversion automatique n’est pas pris en charge pour le **texte** et **image** des types de données. Vous pouvez convertir explicitement **texte** données en données caractères, et **image** données **binaire** ou **varbinary**, mais la longueur maximale est de 8 000 octets. Si vous essayez d’une conversion incorrecte, par exemple une expression de caractères contenant des lettres pour un **int**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] renvoie un message d’erreur.
   
 ## <a name="output-collation"></a>Classement des résultats  
-Lorsque l'entrée et la sortie de CAST ou CONVERT sont des chaînes de caractères, l'entrée et la sortie présentent les mêmes classement et étiquette de classement. Si l'entrée n'est pas une chaîne de caractères, la sortie présente le classement par défaut de la base de données et une étiquette de classement de contrainte par défaut. Pour plus d’informations, consultez [priorité de classement & #40 ; Transact-SQL & #41 ; ](../../t-sql/statements/collation-precedence-transact-sql.md).
+Lorsque l'entrée et la sortie de CAST ou CONVERT sont des chaînes de caractères, l'entrée et la sortie présentent les mêmes classement et étiquette de classement. Si l'entrée n'est pas une chaîne de caractères, la sortie présente le classement par défaut de la base de données et une étiquette de classement de contrainte par défaut. Pour plus d’informations, consultez [priorité de classement &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).
   
 Pour attribuer un classement différent à la sortie, appliquez la clause COLLATE à l'expression de résultat de la fonction CAST ou CONVERT. Exemple :
   
@@ -460,7 +457,7 @@ Rachel           Valdez              2241204.0424      289
 ```
   
 ### <a name="f-using-convert-or-cast-with-typed-xml"></a>F. Utilisation de CONVERT ou de CAST avec des données au format XML typé  
-Voici plusieurs exemples qui illustrent l’utilisation de CONVERT pour convertir en XML typé à l’aide de la [Type de données XML et les colonnes & #40 ; SQL Server & #41 ; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).
+Voici plusieurs exemples qui illustrent l’utilisation de CONVERT pour convertir en XML typé à l’aide de la [Type de données XML et les colonnes &#40; SQL Server &#41; ](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md).
   
 Cet exemple convertit une chaîne incluant des espaces, du texte et des balises en XML typé, puis supprime tous les espaces non significatifs (correspondant aux espaces délimitant les nœuds) :
   
@@ -714,9 +711,8 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[Conversion de Type de données & #40 ; moteur de base de données & #41 ;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Conversion de Type de données &#40; moteur de base de données &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-[Fonctions système & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[Fonctions système &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)
   
-

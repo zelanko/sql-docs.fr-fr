@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- XML persistence [ADO], persistence format
+helpviewer_keywords: XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ef8f1495b6c790abe7b3b616e2d37908c42517b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8694aac4f8699d102d94664862f5ad357579eab9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-persistence-format"></a>Format de persistance XML
 ADO utilise l’encodage UTF-8 pour le flux de données XML.  
@@ -79,5 +76,4 @@ xmlns:z="#RowsetSchema">
  La section de données possède trois lignes contenant des informations à leur sujet. Pour un ensemble de lignes vide, la section de données peut être vide, mais la \<rs : data > balises doivent être présents. Sans données, vous pouvez écrire la balise simplement \<rs : data / >. Les balises précédées de « rs » indique qu’il est dans l’espace de noms défini par urn : schemas-microsoft-rowset.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Maintien d’enregistrements au Format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
-
+ [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

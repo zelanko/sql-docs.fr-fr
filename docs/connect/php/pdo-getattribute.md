@@ -8,22 +8,20 @@ ms.service:
 ms.component: php
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d07bb348e196f1aad4bb38835e726e0b94d82298
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56f361ca01d08db285ecd0f9d5afeae443935a92
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,15 +47,15 @@ Le tableau suivant contient la liste des attributs pris en charge.
 |Attribute|Traité par|Valeurs prises en charge| Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Spécifie si les noms de colonne doivent respecter une casse spécifique. PDO::CASE_LOWER impose des noms de colonne en minuscules, PDO::CASE_NATURAL laisse le nom de colonne tel qu’il est retourné par la base de données et PDO::CASE_UPPER impose des noms de colonne en majuscules.<br /><br />La valeur par défaut est PDO::CASE_NATURAL.<br /><br />Cet attribut peut également être défini à l’aide de PDO::setAttribute.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de chaînes|Décrit les versions du pilote et des bibliothèques associées. Retourne un tableau avec les éléments suivants : version ODBC (*MajorVer*. *MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nom de la DLL Native Client et la version [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*. *MinorVer*. *BuildNumber*. *Révision*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de chaînes|Décrit les versions du pilote et des bibliothèques associées. Retourne un tableau avec les éléments suivants : version ODBC (*MajorVer*.* MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nom de la DLL Native Client et la version [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.* MinorVer*.* BuildNumber*.* Révision*)|  
 |PDO::ATTR_DRIVER_NAME|PDO|Chaîne|Retourne toujours « sqlsrv ».|  
-|PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Chaîne|Indique le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*. *MinorVer*. *BuildNumber*. *Révision*)|  
+|PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Chaîne|Indique le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] version (*MajorVer*.* MinorVer*.* BuildNumber*.* Révision*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Spécifie comment les échecs doivent être gérés par le pilote.<br /><br />PDO::ERRMODE_SILENT (valeur par défaut) définit les codes d’erreur et les informations.<br /><br />PDO::ERRMODE_WARNING déclenche un E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION lève une exception.<br /><br />Cet attribut peut également être défini à l’aide de PDO::setAttribute.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|Consultez la documentation de PDO.|Consultez la documentation de PDO.|  
 |PDO::ATTR_SERVER_INFO|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Tableau de 3 éléments|Retourne la base de données, la version de SQL Server et l’instance SQL Server actuelles.|  
-|PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Chaîne|Indique la version de SQL Server (*majeure*. *Mineure*. *BuildNumber*)|  
+|PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Chaîne|Indique la version de SQL Server (*majeure*.* Mineure*.* BuildNumber*)|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|Consultez la documentation de PDO.|Consultez la documentation de PDO.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|De 1 jusqu’à la limite de la mémoire PHP.|Configure la taille de la mémoire tampon qui contient le jeu de résultats pour un curseur côté client.<br /><br />La valeur par défaut est 10 240 Ko (10 Mo).<br /><br />Pour plus d’informations sur les curseurs côté client, consultez [Types de curseur &#40; Pilote SQLSRV &#41; ](../../connect/php/cursor-types-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|De 1 jusqu’à la limite de la mémoire PHP.|Configure la taille de la mémoire tampon qui contient le jeu de résultats pour un curseur côté client.<br /><br />La valeur par défaut est 10 240 Ko (10 Mo).<br /><br />Pour plus d’informations sur les curseurs côté client, consultez [Types de curseur & #40 ; Pilote SQLSRV & #41 ; ](../../connect/php/cursor-types-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Spécifie une exécution de requête directe ou préparée. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|Spécifie l’encodage de jeu de caractères utilisé par le pilote pour communiquer avec le serveur.<br /><br />La valeur par défaut est PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Gère les extractions de numériques à partir de colonnes avec des types numériques SQL (bits, entier, smallint, tinyint, float ou real).<br /><br />Lorsque l’indicateur d’option de connexion ATTR_STRINGIFY_FETCHES se trouve sur, même lorsque SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est activé, la valeur de retour est une chaîne.<br /><br />Lorsque le type PDO retourné dans la colonne de la liaison est PDO_PARAM_INT, la valeur de retour à partir d’une colonne d’entiers est int, même si SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est désactivée.|  
@@ -99,4 +97,3 @@ print_r($conn->getAttribute( PDO::ATTR_CLIENT_VERSION ));
 [Classe PDO](../../connect/php/pdo-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

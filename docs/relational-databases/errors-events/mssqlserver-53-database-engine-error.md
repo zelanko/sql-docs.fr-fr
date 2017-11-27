@@ -8,26 +8,22 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- "53"
-helpviewer_keywords:
-- 53 (Database Engine error)
+f1_keywords: "53"
+helpviewer_keywords: 53 (Database Engine error)
 ms.assetid: 1234f5a2-b3d1-425a-b29f-480fa792305f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2c415a8e19d463194764a3d78ab538782c74e721
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 92e18d67d20b9333563f64db149355daeeb8feb9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver53"></a>MSSQLSERVER_53
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 Le client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas se connecter au serveur. Cette erreur s’est peut-être produite parce que le client ne peut pas résoudre le nom du serveur ou que le nom du serveur est incorrect.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Assurez-vous que vous avez entré le nom de serveur correct sur le client et que vous pouvez résoudre ce nom à partir du client. Pour vérifier la résolution du nom TCP/IP, vous pouvez exécuter la commande **ping** dans votre système d’exploitation Windows.  
+Assurez-vous que vous avez entré le nom de serveur correct sur le client et que vous pouvez résoudre ce nom à partir du client. Pour vérifier la résolution du nom TCP/IP, vous pouvez exécuter la commande **ping** dans le système d’exploitation Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Protocoles réseau et bibliothèques réseau](~/sql-server/install/network-protocols-and-network-libraries.md)  
@@ -55,4 +51,3 @@ Assurez-vous que vous avez entré le nom de serveur correct sur le client et que
 [Configurer des protocoles clients](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Activer ou désactiver un protocole réseau de serveur](~/database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
-

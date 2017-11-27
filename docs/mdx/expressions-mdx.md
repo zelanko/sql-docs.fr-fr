@@ -2,9 +2,12 @@
 title: Les expressions (MDX Multidimensional) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="expressions-mdx"></a>Expressions (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Une expression est une combinaison d’identificateurs, de valeurs et d’opérateurs qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut évaluer pour obtenir un résultat. Les données peuvent être utilisées à différents endroits lors de l'accès ou la modification des données. Vous pouvez, par exemple, utiliser une expression en tant qu'élément des données à récupérer dans une requête ou en tant que condition de recherche de données répondant à un jeu de critères.  
   

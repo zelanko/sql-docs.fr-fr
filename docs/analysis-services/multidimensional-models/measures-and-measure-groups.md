@@ -25,17 +25,16 @@ helpviewer_keywords:
 - aggregations [Analysis Services], measures
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bd15969978480e68505747609332f6224355a22f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
   Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
@@ -80,4 +79,3 @@ ms.lasthandoff: 09/01/2017
  [Création de mesures et de groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   
-

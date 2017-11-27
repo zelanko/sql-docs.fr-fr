@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - retrieving data
 - AdomdDataReader object
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e1e086fd6662a00e79b87a02fbaf3528b08895de
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a04a25d6bf72a8bacd5af46313982e8ff0197170
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Récupération de données à l'aide d'AdomdDataReader
   Lorsqu'il s'agit de récupérer des données analytiques, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> offre un bon compromis entre charge et interactivité. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> récupère un flux de données aplati, avant uniquement et en lecture seule auprès d'une source de données analytiques. Ce flux de données, qui n'est pas mis en mémoire tampon, permet à la logique procédurale de traiter de façon séquentielle et efficace les résultats d'une source de données analytiques. Le choix de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> s'avère judicieux lorsqu'il s'agit de récupérer de grandes quantités de données en vue de les afficher, car les données ne sont pas placées en mémoire cache.  
@@ -129,7 +127,6 @@ foreach (DataRow objRow in schemaTable.Rows)
 ## <a name="see-also"></a>Voir aussi  
  [La récupération des données à partir d’une Source de données analytiques](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
  [La récupération des données à l’aide de l’ensemble de cellules](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset.md)   
- [La récupération des données à l’aide de XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
+ [Récupération de données à l’aide de XmlReader](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - scatter charts
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 737cb2c584dc25396eafe6e023ff0d3bd8a32c2f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 81f819ad89411bd9acea670ded6abac0b154a7b6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Nuage de points (Analysis Services - Exploration de données)
   Un *nuage de points* représente graphiquement les valeurs réelles de vos données par rapport aux valeurs prédites par le modèle. Le nuage de points affiche les valeurs réelles le long de l'axe des X et les valeurs prédites le long de l'axe des Y. Il affiche également une ligne qui illustre la prédiction parfaite, où la valeur prédite correspond exactement à la valeur réelle. La distance d'un point par rapport à cette ligne à un angle idéal de 45 degrés indique le niveau d'exactitude ou d'inexactitude de la prédiction.  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

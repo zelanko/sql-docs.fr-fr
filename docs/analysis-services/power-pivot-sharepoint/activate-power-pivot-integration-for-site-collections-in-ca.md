@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9958979cc8e0c966ca12c531667d9e05e7dd91f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e4c3c7403a6fefb42c15f8b4ba71af403195a057
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>Activer l’intégration de Power Pivot pour des Collections de sites dans l’autorité de certification
   L’activation de l’intégration des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour des collections de sites spécifiques est indispensable si vous avez utilisé l’option d’installation Batterie de serveurs existante lors de l’installation de SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Si vous avez installé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint à l’aide de l’option Nouveau serveur, vous pouvez ignorer cette tâche, car le programme d’installation de SQL Server a déjà activé l’intégration des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour la collection de sites racine lorsqu’il a configuré votre déploiement.  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)  
   
   
-

@@ -1,25 +1,27 @@
 ---
 title: PDOStatement::bindParam | Documents Microsoft
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: php
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 61cecbcd76ba7c28135cd4ed306dad1c0ea0830c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 02d31959423de5c0df4dc06e9caa16ea983ef000
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,11 +32,11 @@ Lie un paramètre à un espace réservé nommé ou de point d’interrogation da
   
 ```  
   
-bool PDOStatement::bindParam( $parameter, &$variable [,$data_type[, $length[, $driver_options]]] );  
+bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $driver_options]]]);  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*paramètre*: un identificateur de paramètre (mixte). Pour une instruction qui utilise des espaces réservés nommés, nom d’un paramètre (:name). Pour une instruction préparée qui utilise la syntaxe constituée de points d’interrogation, il s’agit de l’index en base 1 du paramètre.  
+$*paramètre*: un identificateur de paramètre (mixte). Pour une instruction à l’aide, des espaces réservés nommés, utilisez un nom de paramètre ( : nom). Pour une instruction préparée à l’aide de la syntaxe de point d’interrogation, il est l’index de base 1 du paramètre.  
   
 &$*variable*: le nom (mixte) de la variable PHP à lier au paramètre d’instruction SQL.  
   
@@ -48,10 +50,10 @@ $*driver_options*: les options spécifiques au pilote de (mixtes) facultatif. Pa
 TRUE en cas de réussite ; sinon, FALSE.  
   
 ## <a name="remarks"></a>Notes  
-Lors de la liaison de données de type null pour les colonnes de serveur de type varbinary, binary ou varbinary (max), vous devez spécifier le codage binaire (PDO::SQLSRV_ENCODING_BINARY) à l’aide de la $*driver_options*. Pour plus d’informations sur l’encodage des constantes, consultez [Constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) .  
+Lors de la liaison de données de type null pour les colonnes de serveur de type varbinary, binary ou varbinary (max), vous devez spécifier le codage binaire (PDO::SQLSRV_ENCODING_BINARY) à l’aide de la $*driver_options*. Pour plus d’informations sur les constantes d’encodage, consultez [constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-  
+
 ## <a name="example"></a>Exemple  
 Cet exemple de code montre qu’après la liaison de $contact au paramètre, le fait de modifier la valeur change la valeur transmise dans la requête.  
   
@@ -59,7 +61,7 @@ Cet exemple de code montre qu’après la liaison de $contact au paramètre, le 
 <?php  
 $database = "AdventureWorks";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $contact = "Sales Agent";  
 $stmt = $conn->prepare("select * from Person.ContactType where name = ?");  
@@ -67,7 +69,7 @@ $stmt->bindParam(1, $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
   
@@ -78,7 +80,7 @@ $stmt->bindParam(':contact', $contact);
 $contact = "Owner";  
 $stmt->execute();  
   
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {  
    print "$row[Name]\n\n";  
 }  
 ?>  
@@ -91,12 +93,12 @@ Cet exemple de code montre comment accéder à un paramètre de sortie.
 <?php  
 $database = "Test";  
 $server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
 $input1 = 'bb';  
   
-$stmt = $conn->prepare("select ? = count(* ) from Sys.tables");  
-$stmt->bindParam( 1, $input1, PDO::PARAM_STR, 10 );  
+$stmt = $conn->prepare("select ? = count(*) from Sys.tables");  
+$stmt->bindParam(1, $input1, PDO::PARAM_STR, 10);  
 $stmt->execute();  
 echo $input1;  
 ?>  
@@ -109,7 +111,7 @@ Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.
 <?php  
    $database = "AdventureWorks";  
    $server = "(local)";  
-   $dbh = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
+   $dbh = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
   
    $dbh->query("IF OBJECT_ID('dbo.sp_ReverseString', 'P') IS NOT NULL DROP PROCEDURE dbo.sp_ReverseString");  
    $dbh->query("CREATE PROCEDURE dbo.sp_ReverseString @String as VARCHAR(2048) OUTPUT as SELECT @String = REVERSE(@String)");  
@@ -120,9 +122,30 @@ Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.
    print $string;   // Expect 987654321  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> Il est recommandé d’utiliser des chaînes en tant qu’entrées lors de la liaison de valeurs à un [colonne decimal ou numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour vérifier la précision et l’exactitude que PHP est limitée à la précision pour [nombres à virgule flottante](http://php.net/manual/en/language.types.float.php).
+
+## <a name="example"></a>Exemple  
+Cet exemple de code montre comment lier une valeur décimale en tant que paramètre d’entrée.  
+
+```
+<?php  
+$database = "Test";  
+$server = "(local)";  
+$conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
+
+// Assume TestTable exists with a decimal field 
+$input = 9223372036854.80000;
+$stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
+// by default it is PDO::PARAM_STR, rounding of a large input value may
+// occur if PDO::PARAM_INT is specified
+$stmt->bindParam(1, $input, PDO::PARAM_STR);
+$stmt->execute();
+```
+
+
 ## <a name="see-also"></a>Voir aussi  
 [Classe PDOStatement](../../connect/php/pdostatement-class.md)  
 [PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
   
-

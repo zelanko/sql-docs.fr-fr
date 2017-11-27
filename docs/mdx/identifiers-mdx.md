@@ -2,9 +2,12 @@
 title: Identificateurs (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="identifiers-mdx"></a>Identificateurs (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Un identificateur est le nom d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objet. Tous les objets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent et doivent posséder un identificateur. Ces objets comprennent les cubes, les dimensions, les hiérarchies, les niveaux, les membres, etc. L'identificateur d'un objet permet de faire référence à l'objet dans des instructions MDX (Multidimensional Expressions).  
   

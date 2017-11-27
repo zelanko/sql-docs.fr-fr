@@ -3,26 +3,26 @@ title: Types de descripteurs | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], types
+helpviewer_keywords: descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-descriptors"></a>Types de descripteurs
 Un descripteur est utilisé pour décrire l’un des éléments suivants :  
@@ -55,4 +55,3 @@ Un descripteur est utilisé pour décrire l’un des éléments suivants :
  Un descripteur permettre exécuter différents rôles. Instructions différentes peuvent partager le descripteur de l’application alloue explicitement. Un descripteur de ligne dans une seule instruction peut servir d’un descripteur de paramètre dans une autre instruction.  
   
  Il est toujours connue si un descripteur donné est un descripteur de l’application ou un descripteur d’implémentation, même si le descripteur n’a pas encore été utilisé dans une opération de base de données. Pour les descripteurs implicitement alloue de l’implémentation, l’implémentation enregistre la ligne prédéfinie par rapport au handle d’instruction. Un descripteur qui alloue de l’application en appelant **SQLAllocHandle** est un descripteur de l’application.
-

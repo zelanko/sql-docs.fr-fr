@@ -8,8 +8,7 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ad915ae7f113e7080f3fe5b7dbd9bb1c233f8bb4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 40c852b19c2b2ed8a1f7f8b304c30d6214bcee21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -152,7 +150,7 @@ ms.lasthandoff: 06/22/2017
   
 7.  Sous **Colonnes clés d'index**, cliquez sur **Ajouter…**.  
   
-8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez les cases correspondant aux colonnes de table à ajouter à l’index unique.  
+8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de***nom_table* , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   
 9. Cliquez sur **OK**.  
   
@@ -186,4 +184,3 @@ ms.lasthandoff: 06/22/2017
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
   
-

@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92bc671abed684b7653a44229f5732d71ac7f271
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abe35043a599a0a8969431d9f5188cc7751049fc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Modifier le mappage de Type (DB2ToSQL)
 Le **modifier le mappage de Type** boîte de dialogue vous permet de spécifier comment les types sont mappés entre les objets de base de données source et de destination.  
@@ -42,7 +40,7 @@ Sélectionnez le type de données source à mapper à un [!INCLUDE[ssNoVersion](
   
 Si le type de données est de longueur variable, les champs suivants apparaissent sous **type de Source de**:  
   
-**De**  
+**From**  
 Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 10 pour indiquer que ce mappage est pour une plage commençant à **nchar(10)**.  
   
 **Pour**  
@@ -56,4 +54,3 @@ Si le type de données est de longueur variable, le champ suivant s’affiche so
 **Replace with**  
 Spécifiez la longueur de la cible pour ce mappage. Par exemple, pour le **nvarchar** type de données, vous pouvez entrer 20 pour spécifier que le type de données source spécifiée doit être mappé à **nvarchar (20)**.  
   
-

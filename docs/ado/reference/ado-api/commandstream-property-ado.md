@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Command::CommandStream
-helpviewer_keywords:
-- CommandStream property [ADO]
+f1_keywords: _Command::CommandStream
+helpviewer_keywords: CommandStream property [ADO]
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dacfa25b7ab9967f8c28e38c0df121063b583319
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28e4c73b4fdc94be1687ec011ad3a42e5b51bd78
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commandstream-property-ado"></a>CommandStream, propriété (ADO)
 Indique le flux utilisé comme entrée pour un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
@@ -46,10 +42,9 @@ Indique le flux utilisé comme entrée pour un [commande](../../../ado/reference
  Lorsque vous utilisez un flux de commandes (tel que spécifié par **CommandStream**), valide uniquement [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) les valeurs pour le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sont  **adCmdText** et **adCmdUnknown**. Toute autre valeur génère une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [CommandText, propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Propriété Dialect](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)
-

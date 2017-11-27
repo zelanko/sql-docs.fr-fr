@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80944d5ebb5ec8c9f6ba98d9c520b10a0c4ade30
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-adaptive-buffering"></a>Utilisation de la mise en mémoire tampon adaptative
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **La requête génère un jeu de résultats très volumineux :** l’application peut exécuter une instruction SELECT qui produit plus de lignes que l’application peut stocker en mémoire. Dans les versions précédentes, l’application devait utiliser un curseur côté serveur afin d’éviter une OutOfMemoryError. La mise en mémoire tampon adaptative permet d'effectuer un passage en lecture seule avant uniquement d'un jeu de résultats arbitrairement volumineux sans nécessiter de curseur côté serveur.  
   
--   **La requête produit très volumineux**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonnes ou**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**les valeurs de paramètre :**  L’application peut récupérer une valeur unique (colonne ou paramètre OUT) trop grande pour tenir entièrement dans la mémoire de l’application.         Mise en mémoire tampon adaptative permet à l’application cliente récupérer une telle valeur en tant que flux, à l’aide de la getAsciiStream, la getBinaryStream ou les méthodes getCharacterStream. L’application récupère la valeur de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lorsqu’il lit à partir du flux.  
+-   **La requête produit très volumineux**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonnes ou**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**les valeurs de paramètre :**  L’application peut récupérer une valeur unique (colonne ou paramètre OUT) trop grande pour tenir entièrement dans la mémoire de l’application. Mise en mémoire tampon adaptative permet à l’application cliente récupérer une telle valeur en tant que flux, à l’aide de la getAsciiStream, la getBinaryStream ou les méthodes getCharacterStream. L’application récupère la valeur de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] lorsqu’il lit à partir du flux.  
   
 > [!NOTE]  
 >  Avec la mise en mémoire tampon adaptative, le pilote JDBC ne met en mémoire tampon que la quantité de données requise. Le pilote ne fournit aucune méthode publique pour contrôler ou limiter la taille de la mémoire tampon.  
@@ -96,7 +94,6 @@ ms.lasthandoff: 09/09/2017
 -   Pour les jeux de résultats actualisable avant uniquement, lors de l’extraction d’un bloc de lignes le pilote normalement lit en mémoire le nombre de lignes indiqué par le [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) méthode de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) objet, même lorsque la mise en mémoire tampon adaptative est activée sur la connexion. Si l’appel de la [suivant](../../connect/jdbc/reference/next-method-sqlserverresultset.md) méthode de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) les résultats des objets dans une OutOfMemoryError, vous pouvez réduire le nombre de lignes extraites en appelant le [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) méthode de la [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) objet pour définir la taille d’extraction à un plus petit nombre de lignes, voire une seule 1 ligne, si nécessaire. Vous pouvez également forcer le pilote à ne mettre en mémoire tampon toutes les lignes en appelant le [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) méthode de la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) avec l’objet «**adaptive**« paramètre avant l’exécution de l’instruction. Étant donné que le jeu de résultats n’est pas déroulable, si l’application accède à une valeur de colonne importante à l’aide de la méthode get\<Type > méthodes de flux de données, le pilote ignore la valeur dès que l’application la lit comme il le fait pour le curseur avant uniquement en lecture seule jeux de résultats.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Amélioration des performances et fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+ [Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   
-

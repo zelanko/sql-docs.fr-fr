@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Users::raw_Append
 - Users::Append
-helpviewer_keywords:
-- Append method [ADOX]
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1720503f6ff8de32b247fa4878bccb69c88d5c71
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 616000cfb53d9c3178aa6fa9adbd0ac7f8437efc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="append-method-adox-users"></a>Append (méthode) (utilisateurs ADOX)
 Ajoute un nouveau [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) de l’objet à la [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection.  
@@ -57,7 +54,7 @@ Users.Append User[,Password]
 >  Avant d’ajouter un **utilisateur** de l’objet à la **utilisateurs** collection d’un **groupe** objet, un **utilisateur** objet avec le même [nom](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans le **utilisateurs** collection de la **catalogue**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Collection d’utilisateurs (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisateurs et groupes Append, ChangePassword, méthodes-exemple (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
@@ -67,5 +64,4 @@ Users.Append User[,Password]
  [Append (méthode) (clés ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append (méthode) (procédures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append (méthode) (Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append (méthode) (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
-
+ [Append, méthode (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)

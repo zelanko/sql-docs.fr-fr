@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d30c5b808c13258e784187182eab23b0a50c76e0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 88939992ca125a6db88d0e0f3cb3dab794916195
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Conditions requises pour l'utilisation des tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 -   SQL Server 2016 SP1 (ou version ultérieure), n’importe quelle édition. Pour SQL Server 2014 et SQL Server 2016 RTM (antérieure àSP1), vous avez besoin de l’édition Enterprise, Developer ou Evaluation.
     - Remarque : L’OLTP en mémoire nécessite la version 64 bits de SQL Server.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite une quantité de mémoire suffisante pour contenir les données des tables et des index optimisés en mémoire, ainsi qu’une quantité de mémoire supplémentaire pour gérer la charge de travail en ligne. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite une quantité de mémoire suffisante pour contenir les données des tables et des index optimisés en mémoire, ainsi qu’une quantité de mémoire supplémentaire pour gérer la charge de travail en ligne. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) .  
 
 -   Lors de l’exécution de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle, vérifiez qu’une quantité de mémoire suffisante est allouée à la machine virtuelle pour prendre en charge la mémoire nécessaire pour les tables et index optimisés en mémoire. Selon l’application hôte de la machine virtuelle, l’option de configuration pour garantir l’allocation de mémoire pour la machine virtuelle peut être appelée réserve de mémoire ou, lors de l’utilisation de mémoire dynamique, RAM minimale. Vérifiez que ces paramètres sont suffisants pour les besoins des bases de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Notes importantes lors de l'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   Depuis SQL Server 2016, il n’existe aucune limite de la taille des tables optimisées en mémoire, autre que la mémoire disponible. Dans SQL Server 2014, la taille totale en mémoire de toutes les tables durables dans une base de données ne devait pas dépasser 250 Go pour les bases de données SQL Server 2014. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
+-   Depuis SQL Server 2016, il n’existe aucune limite de la taille des tables optimisées en mémoire, autre que la mémoire disponible. Dans SQL Server 2014, la taille totale en mémoire de toutes les tables durables dans une base de données ne devait pas dépasser 250 Go pour les bases de données SQL Server 2014. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
     - Remarque : À compter de SQL Server 2016 SP1, les éditions Standard et Express prennent en charge l’OLTP en mémoire, mais elles imposent des quotas sur la quantité de mémoire que vous pouvez utiliser pour les tables optimisées en mémoire dans une base de données. Dans l’édition Standard, ce quota est de 32 Go par base de données ; dans l’édition Express, il est de 352 Mo par base de données. 
   
 -   Si vous créez une ou plusieurs bases de données avec des tables optimisées en mémoire, vous devez activer l'initialisation instantanée de fichiers (accordez au compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le droit de l'utilisateur SE_MANAGE_VOLUME_NAME) pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Faute d'initialisation instantanée, les fichiers de stockage optimisés en mémoire (fichiers de données et delta) seront initialisés à la création, ce qui peut avoir un impact négatif sur les performances de votre charge de travail. Pour plus d'informations sur l'initialisation instantanée de fichiers, consultez [Initialisation des fichiers de base de données](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Pour plus d'informations sur la façon d'activer l'initialisation instantanée de fichiers, consultez [Comment et pourquoi activer l'initialisation instantanée de fichiers](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
@@ -60,4 +58,3 @@ ms.lasthandoff: 06/22/2017
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
-

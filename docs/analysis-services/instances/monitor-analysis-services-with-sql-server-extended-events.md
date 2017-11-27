@@ -21,17 +21,16 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Surveiller Analysis Services avec des événements étendus SQL Server
   Les événements étendus (*xEvents*) est un système léger de traçage et de surveillance des performances qui utilise très peu de ressources système. C’est un outil idéal pour diagnostiquer les problèmes sur les serveurs de production et de test. Il est également hautement évolutif et configurable, et plus facile à utiliser dans SQL Server 2016 grâce à la prise en charge de nouveaux outils intégrés. Dans SQL Server Management Studio, vous pouvez configurer, exécuter et surveiller sur les connexions aux instances Analysis Services un traçage en direct, d’une manière similaire à l’utilisation du SQL Server Profiler. L’ajout d’outils optimisés doit faire des xEvents un remplacement plus raisonnable du SQL Server Profiler et crée une meilleure symétrie plus dans la façon dont vous diagnostiquez des problèmes dans votre moteur de base de données et les charges de travail Analysis Services.  
@@ -178,4 +177,3 @@ ms.lasthandoff: 09/01/2017
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   
-

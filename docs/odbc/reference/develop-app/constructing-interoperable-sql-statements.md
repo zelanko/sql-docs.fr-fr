@@ -3,27 +3,28 @@ title: "Construction d’instructions SQL interopérable | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2f3ce3621c9a6cd709dc008f436fe89fbba14ef3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 070b42e5350471ec86fbc256f2005dd7c0385002
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construction d’instructions SQL interopérables
 Comme indiqué dans les sections précédentes, les applications interopérables doivent utiliser la grammaire SQL ODBC. Au-delà, grâce à cette grammaire, toutefois, un nombre de problèmes supplémentaires est confronté par les applications interopérables. Par exemple, qu’une application ne s’il souhaite utiliser une fonctionnalité, telles que les jointures externes, qui n’est pas pris en charge par toutes les sources de données ?  
@@ -34,19 +35,18 @@ Comme indiqué dans les sections précédentes, les applications interopérables
   
  Cette section contient les rubriques suivantes.  
   
--   [Catalogue et l’utilisation de schéma](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
+-   [Utilisation des catalogues et des schémas](../../../odbc/reference/develop-app/catalog-and-schema-usage.md)  
   
 -   [Position du catalogue](../../../odbc/reference/develop-app/catalog-position.md)  
   
 -   [Identificateurs entre guillemets](../../../odbc/reference/develop-app/quoted-identifiers.md)  
   
--   [Cas d’identificateur](../../../odbc/reference/develop-app/identifier-case.md)  
+-   [Casse des identificateurs](../../../odbc/reference/develop-app/identifier-case.md)  
   
 -   [Séquences d’échappement](../../../odbc/reference/develop-app/escape-sequences.md)  
   
--   [Suffixes et les préfixes de littéral](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
+-   [Préfixes et suffixes de littéraux](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)  
   
 -   [Marqueurs de paramètre dans les appels de procédure](../../../odbc/reference/develop-app/parameter-markers-in-procedure-calls.md)  
   
 -   [Instructions DDL](../../../odbc/reference/develop-app/ddl-statements.md)
-

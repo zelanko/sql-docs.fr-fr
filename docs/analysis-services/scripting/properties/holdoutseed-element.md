@@ -14,24 +14,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- HoldoutSeed
-helpviewer_keywords:
-- HoldoutSeed element
+applies_to: SQL Server 2016 Preview
+f1_keywords: HoldoutSeed
+helpviewer_keywords: HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 751e18d05897651d0996232f8b4c5c590985a5b0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e97148f9630a125dbe6e93754c532a825de96c84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="holdoutseed-element"></a>Élément HoldoutSeed
   Spécifie la valeur initiale d’une partition d’exclusion répétée qui contient le jeu de tests d’un [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) élément. Cette valeur de départ garantit que le contenu du modèle reste le même pendant le retraitement. Si non spécifié ou la valeur 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée une valeur initiale à l’aide d’un algorithme de hachage sur le nom de la structure d’exploration de données.  
@@ -77,7 +73,6 @@ ms.lasthandoff: 09/01/2017
  [Propriétés &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)   
  [HoldoutActualSize (élément)](../../../analysis-services/scripting/properties/holdoutactualsize-element.md)   
  [Holdoutmaxpercent, élément](../../../analysis-services/scripting/properties/holdoutmaxpercent-element.md)   
- [Holdoutmaxcases, élément](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  
+ [HoldoutMaxCases, élément](../../../analysis-services/scripting/properties/holdoutmaxcases-element.md)  
   
   
-

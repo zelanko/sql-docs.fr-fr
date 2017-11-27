@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: dd175faf728f44c4d29c1097d876b52210aec992
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Prise en main de SSMA pour MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) pour MySQL vous permet de rapidement convertir des schémas de base de données MySQL en schémas SQL Server ou de la base de données SQL Azure, téléchargez les schémas qui en résulte dans SQL Server ou une base de données SQL Azure et migrer des données de MySQL vers SQL Server ou de la base de données SQL Azure.  
@@ -134,4 +132,3 @@ Le **vue** menu fournit des commandes pour activer/désactiver la visibilité du
 [Référence de l’Interface utilisateur &#40; MySQLToSQL &#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
 [Migration de données MySQL vers SQL Server - base de données SQL Azure &#40; MySQLToSQL &#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-

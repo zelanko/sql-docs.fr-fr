@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b68c59db369660cfbe57e715c25fa0667d1b2584
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b8127d7bbec21ec5121d8d7388d9afd9492081bd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Notice légale (SSMA pour Sybase)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  
@@ -51,4 +49,3 @@ Les clients ne doivent pas utiliser d’API non documentées, y compris mais de 
   
 Les mises à niveau de serveur et de base de données vers les versions ultérieures de SQL Server ne sont pas garanties pour les applications et les bases de données qui exploitent et utilisent des points d’entrée non documentés. L’utilisation des fonctions et fonctionnalités SQL Server doit être limitée à celles qui sont incluses dans la documentation Microsoft SQL Server. Si une fonctionnalité n’est pas documentée dans la documentation Microsoft SQL Server, elle n’est pas considérée comme une partie prise en charge de SQL Server.  
   
-

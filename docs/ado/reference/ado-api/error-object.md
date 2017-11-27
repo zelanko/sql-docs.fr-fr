@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Error
-helpviewer_keywords:
-- error object [ADO]
+f1_keywords: Error
+helpviewer_keywords: error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c866f3df4ca51d935fee22327a6196f88635a4ea
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a283d7d40140e46668dc704196316a4a52c1fdbf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-object"></a>Objet Error
 Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.  
@@ -62,12 +58,11 @@ Contient des détails sur les erreurs d’accès aux données qui se rapportent 
   
  Cette section contient les rubriques suivantes.  
   
--   [Propriétés, méthodes et événements](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Error](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Description, HelpContext, HelpFile, Native Error, nombre, Source et SQLState, propriétés-exemple (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, Native Error, nombre, Source et SQLState, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
-
+ [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

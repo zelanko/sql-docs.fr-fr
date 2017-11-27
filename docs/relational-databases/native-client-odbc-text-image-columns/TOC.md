@@ -1,5 +1,5 @@
-# [Gestion des colonnes Text et Image](managing-text-and-image-columns.md)
+# [Gestion des colonnes texte et image](managing-text-and-image-columns.md)
 
-# [Lié à Visual Studio. Indépendant colonnes Text et Image](bound-vs-unbound-text-and-image-columns.md)
-# [Data-at-Execution et colonnes Text, ntext ou Image](data-at-execution-and-text-ntext-or-image-columns.md)
-# [Vs connectés. Modifications enregistrées](logged-vs-unlogged-modifications.md)
+# [Colonnes texte et image liées et non liées](bound-vs-unbound-text-and-image-columns.md)
+# [Colonnes text, ntext ou image de données en cours d’exécution](data-at-execution-and-text-ntext-or-image-columns.md)
+# [Modifications enregistrées ou non enregistrées](logged-vs-unlogged-modifications.md)

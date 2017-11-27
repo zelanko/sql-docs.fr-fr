@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CHARINDEX
 - CHARINDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], pattern searching
 - CHARINDEX function
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 898016ca9940dfa587e57e18ac1c8516f5c2bc64
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
-ms.openlocfilehash: 5467f9d98562fac8262e537887d03c1d68b25d88
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,24 +46,24 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*caractères à rechercher*  
-Est un caractère [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui contient la séquence à rechercher. *caractères à rechercher* est limité à 8 000 caractères.
+*expressionToFind*  
+Est un caractère [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui contient la séquence à rechercher. *expressionToFind* est limité à 8 000 caractères.
   
-*chaine de caractères dans laquelle rechercher*  
+*expressionToSearch*  
 Expression de caractères à rechercher.
   
 *start_location*  
-Est un **entier** ou **bigint** expression à laquelle la recherche commence. Si *start_location* n’est pas spécifié, est un nombre négatif ou est égal à 0, la recherche commence au début de *chaine de caractères dans laquelle rechercher*.
+Est un **entier** ou **bigint** expression à laquelle la recherche commence. Si *start_location* n’est pas spécifié, est un nombre négatif ou est égal à 0, la recherche commence au début de *expressionToSearch*.
   
 ## <a name="return-types"></a>Types de retour
-**bigint** si *chaine de caractères dans laquelle rechercher* est de le **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** des types de données ; sinon, **int**.
+**bigint** si *expressionToSearch* est de le **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** des types de données ; sinon, **int**.
   
 ## <a name="remarks"></a>Notes  
-Si le paramètre *caractères à rechercher* ou *chaine de caractères dans laquelle rechercher* est d’un type de données Unicode (**nvarchar** ou **nchar**) et l’autre ne l’est pas, l’autre est converti en un type de données Unicode. Fonction CHARINDEX ne peut pas être utilisée avec **texte**, **ntext**, et **image** des types de données.
+Si le paramètre *expressionToFind* ou *expressionToSearch* est d’un type de données Unicode (**nvarchar** ou **nchar**) et l’autre ne l’est pas, l’autre est converti en un type de données Unicode. Fonction CHARINDEX ne peut pas être utilisée avec **texte**, **ntext**, et **image** des types de données.
   
-Si le paramètre *caractères à rechercher* ou *chaine de caractères dans laquelle rechercher* est NULL, CHARINDEX retourne NULL.
+Si le paramètre *expressionToFind* ou *expressionToSearch* est NULL, CHARINDEX retourne NULL.
   
-Si *caractères à rechercher* n’est trouvé dans *chaine de caractères dans laquelle rechercher*, CHARINDEX retourne 0.
+Si *expressionToFind* n’est trouvé dans *expressionToSearch*, CHARINDEX retourne 0.
   
 CHARINDEX effectue des comparaisons basées sur le classement de l'entrée. Pour exécuter une comparaison selon un classement spécifié, vous pouvez utiliser COLLATE pour appliquer à l'entrée un classement explicite.
   
@@ -119,7 +116,7 @@ GO
 ```  
   
 ### <a name="c-searching-for-a-nonexistent-expression"></a>C. Recherche d'une expression inexistante  
-L’exemple suivant montre le jeu de résultats lorsque *caractères à rechercher* n’est trouvé dans *chaine de caractères dans laquelle rechercher*.
+L’exemple suivant montre le jeu de résultats lorsque *expressionToFind* n’est trouvé dans *expressionToSearch*.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -246,6 +243,5 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)
   
   
-
 
 

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c73c6b68b7fb9f108b96732a7e30bb48f8404ba8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3aae9714c37d9bd4272add2829d4cdef8f2d9c9d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
   Une vue de source de données contient le modèle logique du schéma utilisé par les objets multidimensionnels de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , autrement dit des cubes, des dimensions et des structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  
@@ -152,4 +151,3 @@ ms.lasthandoff: 09/01/2017
  [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   
-

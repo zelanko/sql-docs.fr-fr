@@ -18,17 +18,16 @@ helpviewer_keywords:
 - attributes [Analysis Services], relationships
 - relationships [Analysis Services], attributes
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 808b6dbe06968e5c44a4979f20ca07a12ac70be5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1b74894ea54989ca409c860f8cd95126941e118
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-relationships---define"></a>Attribut de relations - définir
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les attributs constituent le bloc de construction autour duquel s’articule une dimension. Une dimension contient un ensemble d'attributs organisés en fonction des relations d'attributs.  
@@ -60,4 +59,3 @@ ms.lasthandoff: 09/01/2017
  [Relations d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   
-

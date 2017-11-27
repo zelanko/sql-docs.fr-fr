@@ -1,12 +1,13 @@
 ---
 title: "Nouveautés du moteur de base de données - SQL Server 2016 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-- SQL2016_rc1
+ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 211d0d1d59ac9875fd3c66efb0fc88a453a8deb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0ca847dd4e836fbfd350a8c92df263f50347ae99
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Cette rubrique récapitule les améliorations introduites dans la version [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  Les nouvelles fonctionnalités et améliorations augmentent les capacités et la productivité des architectes, des développeurs et des administrateurs qui conçoivent, développent et maintiennent des systèmes de stockage de données.
 

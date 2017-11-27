@@ -3,10 +3,12 @@ title: "Résolution des problèmes (le pilote ODBC Visual FoxPro) | Documents Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +21,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - background fetching [ODBC]
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ea6c45c362047d45275b6895d58faafe0250d26f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3db2f795910c0ee331ad77903b12201f365784e6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Dépannage (Visual FoxPro le pilote ODBC)
 Les sections suivantes expliquent comment améliorer les performances et résoudre les problèmes que vous pouvez rencontrer lors de l’utilisation du pilote ODBC Visual FoxPro.  
@@ -69,4 +70,3 @@ Les sections suivantes expliquent comment améliorer les performances et résoud
   
 ## <a name="using-the-set-ansi-command"></a>À l’aide de la commande de ANSI SET  
  Si vous êtes un développeur Visual FoxPro, sachez que le paramètre par défaut pour SET ANSI est activé pour le pilote, contrairement à un paramètre par défaut (OFF) pour Visual FoxPro. La valeur par défaut sur le paramètre de SET ANSI permet à des sources de données Visual FoxPro à un comportement cohérent avec d’autres sources de données ODBC qui effectuent des comparaisons exactes. Vous pouvez modifier le paramètre par défaut. Pour plus d’informations, consultez [SET ANSI](../../odbc/microsoft/set-ansi-command.md).
-

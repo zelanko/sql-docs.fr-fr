@@ -3,27 +3,28 @@ title: "Résumé de la DLL du programme d’installation fonction | Documents Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], installer DLL functions
 - installer DLL [ODBC]
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6f5edcdfe04d018aa586d0b476226532784b1049
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 42b2338cafa53a2813929c3d674d9ed0a9789bdb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installer-dll-function-summary"></a>Résumé de la fonction DLL programme d’installation
 Le tableau suivant décrit les fonctions dans la DLL de programme d’installation. Pour plus d’informations sur la syntaxe et la sémantique pour chaque fonction, consultez [référence d’API de DLL de programme d’installation](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
@@ -54,4 +55,3 @@ Le tableau suivant décrit les fonctions dans la DLL de programme d’installati
 ||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Ajoute une source de données.|  
 ||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Écrit les informations dans le fichier DSN.|  
 ||[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|Obtient une valeur à partir des informations système.|
-

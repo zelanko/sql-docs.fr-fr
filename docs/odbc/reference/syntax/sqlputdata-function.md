@@ -3,33 +3,30 @@ title: Fonction SQLPutData | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLPutData
-apilocation:
-- sqlsrv32.dll
+apiname: SQLPutData
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- SQLPutData
-helpviewer_keywords:
-- SQLPutData function [ODBC]
+f1_keywords: SQLPutData
+helpviewer_keywords: SQLPutData function [ODBC]
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 60d6ad48f44d4d4301b8570c51fc83f7aa42d734
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fac078be865e13dc2a216c8c0610d15be0b2e373
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlputdata-function"></a>Fonction SQLPutData
 **Mise en conformité**  
@@ -291,4 +288,3 @@ int main() {
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)
-

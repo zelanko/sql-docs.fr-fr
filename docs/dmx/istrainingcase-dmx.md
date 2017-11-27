@@ -2,35 +2,34 @@
 title: IsTrainingCase (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- IsTrainingCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTrainingCase function
+f1_keywords: IsTrainingCase
+dev_langs: DMX
+helpviewer_keywords: IsTrainingCase function
 ms.assetid: 63eab315-e743-470d-9c4c-edfc3f4058a3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 2b61ee6f3cdcb55b020e9ff4fe751034d0fcf87f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed062df083d4c11c635f9241eac38b4ec4406a32
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Indique si un cas est utilisé comme cas d'apprentissage pour le modèle d'exploration de données ou la structure d'exploration de données spécifiés.  
   
@@ -72,4 +71,3 @@ AND [Age] <40
  [Requêtes d’exploration de données](../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

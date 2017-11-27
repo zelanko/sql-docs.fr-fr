@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deadlocks in RDS [ADO]
 - read repeatable in RDS [ADO]
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 41c5bba6a874904ed7b1e323e96779a46afcbe7b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 02e8b890b7973626676b8439471a782d6fba3f27
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Blocages avec le niveau d’Isolation Repeatable lecture
 Si un objet métier personnalisé utilise un niveau d’isolation de lecture renouvelable pour accéder à un serveur SQL et l’objet métier est appelé simultanément par deux clients qui envoient une requête et mettre à jour dans la même transaction, un blocage est possible. Service de données distant est conçu pour permettre à l’un des processus à un délai d’attente pour libérer le blocage, mais la mise à jour ne fonctionnera pas pour ce client.  
@@ -38,7 +36,6 @@ Si un objet métier personnalisé utilise un niveau d’isolation de lecture ren
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
 
 
 

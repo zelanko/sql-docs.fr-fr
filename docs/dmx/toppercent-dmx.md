@@ -2,35 +2,34 @@
 title: TopPercent (DMX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPPERCENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopPercent function
+f1_keywords: TOPPERCENT
+dev_langs: DMX
+helpviewer_keywords: TopPercent function
 ms.assetid: 0b407ab2-2a69-4cbd-ae13-bdd29654fa86
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 465adf40fdbd7db16df5b2b88031d9e0b2cec779
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b8f75b2ba35d1eb6a8c7929dfedfa08e5de6c27f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le **TopPercent** fonction retourne, dans l’ordre décroissant, les lignes les plus haut d’une table dont le total cumulé est au moins un pourcentage spécifié.  
   
@@ -122,4 +121,3 @@ NATURAL PREDICTION JOIN
  [Fonctions de prédiction générales &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
   
   
-

@@ -2,11 +2,13 @@
 title: Concepteur SSIS | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: integration-services
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,34 +26,33 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/11/2017
-
+ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] est un outil graphique permettant de créer et de gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , en tant que projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] est un outil graphique permettant de créer et de gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , en tant que projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Vous pouvez utiliser le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour effectuer les tâches suivantes :  
   
--   Construire le flux de contrôle dans un package.  
+-   construire le flux de contrôle dans un package ;  
   
--   Construire les flux de données dans un package.  
+-   construire les flux de données dans un package ;  
   
--   Ajouter des gestionnaires d'événements au package et aux objets du package.  
+-   ajouter des gestionnaires d'événements au package et aux objets du package ;  
   
--   Afficher le contenu du package.  
+-   afficher le contenu du package ;  
   
--   Au moment de l’exécution, afficher la progression de l’exécution du package.  
+-   au moment de l'exécution, afficher la progression de l'exécution du package.  
   
- Le diagramme qui suit montre le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et la fenêtre **Boîte à outils**.  
+ Le diagramme qui suit montre le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et la fenêtre **Boîte à outils** .  
   
  ![Capture d’écran du concepteur SSIS et de la boîte à outils](../integration-services/media/denali-designerandtoolbox.gif "Capture d’écran du concepteur SSIS et de la boîte à outils")  
   
@@ -193,4 +194,3 @@ Les packages utilisent des gestionnaires de connexion pour se connecter aux sour
  [Interface utilisateur d’Integration Services](../integration-services/integration-services-user-interface.md)  
   
   
-

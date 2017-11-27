@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9c7e0a6e50df2e448d63be99d4aefe9bea9e3e5b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b19bd52df094e13cadb042208cc42fb8da1a418c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-db2tosql"></a>Référence de l’Interface utilisateur (DB2ToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour DB2.  
@@ -39,7 +37,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Connexion à la base de données DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Utilisez le **se connecter à DB2** boîte de dialogue se connecter à la base de données DB2 que vous souhaitez migrer.|  
 |[Se connecter à SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Utilisez le **se connecter à SQL Server** boîte de dialogue se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pour lequel vous souhaitez migrer.|  
 |[Rapport de Migration de données &#40; DB2ToSQL &#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Affiche les résultats de migration des données à partir de DB2 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|[Paramètres de Migration de données](http://msdn.microsoft.com/en-us/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
+|[Paramètres de migration de données](http://msdn.microsoft.com/en-us/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
 |[Modifier le mappage de Type &#40; DB2ToSQL &#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Utilisez le **nouveau mappage de Type** ou **modifier un mappage de Type** boîtes de dialogue pour créer ou modifier le mappage des types de données entre les bases de données source et cible et les objets de base de données.|  
 |[Paramètres globaux &#40; Éditeur de &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour configurer les options de l’éditeur de code.|  
 |[Global paramètres &#40; boîtes de dialogue &#41; &#40; DB2ToSQL &#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|Utilisez la page de boîtes de dialogue de la **paramètres globaux** boîte de dialogue pour configurer les paramètres de l’avertissement et de la boîte de dialogue par défaut.|  
@@ -59,4 +57,3 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 [Prise en main de SSMA pour DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Migration des bases de données de DB2 pour SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

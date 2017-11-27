@@ -11,20 +11,18 @@ ms.component: ado
 ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, about
+helpviewer_keywords: ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0d9da4cba3b4d90d82b3ac66ffec68a0e961ec40
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28fa2c279cfd7964d8516514a3caed129e335692
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -56,13 +54,13 @@ Chaque section de cet article décrit un composant de l’objet ADO.
  ADOX est une bibliothèque d’accompagnement pour les objets ADO de base. Il expose des objets supplémentaires pour la création, modification et suppression d’objets de schéma, tels que des tables et des procédures. Il inclut également des objets de sécurité pour gérer les utilisateurs et groupes et pour accorder et révoquer des autorisations sur les objets.  
   
 ## <a name="documentation"></a>Documentation  
- [Problèmes de conception de sécurité ADO](../ado/guide/ado-security-design-issues.md)  
+ [Problèmes de conception de la sécurité d’ADO](../ado/guide/ado-security-design-issues.md)  
   
  [Guide du programmeur ADO](../ado/guide/ado-programmer-s-guide.md)  
   
  Introduction à l’aide d’ADO, RDS, ADO MD et ADOX.  
   
- [Référence du programmeur ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Guide de référence du programmeur ADO](../ado/reference/ado-programmer-s-reference.md)  
   
  Cette section de la documentation ADO contient des rubriques pour chaque ADO, RDS, ADO MD, ADOX objet, collection, propriété, propriété dynamique, méthode, événement et énumération.  
   
@@ -72,6 +70,5 @@ Chaque section de cet article décrit un composant de l’objet ADO.
  Gratuitement aide avec ADO problèmes, essayez de validation dans le groupe de discussion public ADO. Ce groupe de discussion est analysée par les techniciens du support technique Microsoft Product Support Services (PSS) qui couvrent ADO et par d’autres développeurs expérimentés de ADO.  
   
  Vous trouverez plus d’informations sur les options de prise en charge sur le site Web de prendre en charge et de Microsoft Help.
-
 
 

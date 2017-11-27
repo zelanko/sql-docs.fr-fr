@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RecordCreateOptionsEnum
-helpviewer_keywords:
-- RecordCreateOptionsEnum enumeration [ADO]
+f1_keywords: RecordCreateOptionsEnum
+helpviewer_keywords: RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32d0349d5a37f73e03670d1e34a509530e9153fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2f108d977c278d9f86ca47853e07c7960ee574b8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Spécifie si un existant **enregistrement** doit être ouvert ou un nouveau **enregistrement** créé pour le [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet [ouvrir](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Les valeurs peuvent être combinées avec un opérateur AND.  
@@ -46,5 +42,4 @@ Spécifie si un existant **enregistrement** doit être ouvert ou un nouveau **en
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Open (méthode) (enregistrement ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
-
+ [Open, méthode (objet Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)

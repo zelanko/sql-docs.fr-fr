@@ -2,16 +2,18 @@
 title: "Structure et utilisation des requêtes de prédiction DMX | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - empty prediction joins [DMX]
@@ -22,20 +24,19 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 524d925504e7615d21f3e5e365418feebcee5380
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fca2ff8ef1e6fbe496d412a82c1d2694005ffe6b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Structure et utilisation des requêtes de prédiction DMX
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser la requête de prédiction dans les Extensions DMX (Data Mining) pour prédire des valeurs de colonne inconnues dans un nouveau jeu de données, selon les résultats d’un modèle d’exploration de données.  
   
@@ -61,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 -   **SÉLECTIONNEZ [APLATIES]**  
   
--   **RETOUR AU DÉBUT**  
+-   **TOP**  
   
 -   **À partir de***\<modèle >***PREDICTION JOIN**   
   
 -   **ON**  
   
--   **OÙ**  
+-   **WHERE**  
   
 -   **TRIER PAR**  
   
@@ -98,4 +99,3 @@ ms.lasthandoff: 08/02/2017
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   
-

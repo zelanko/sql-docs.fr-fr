@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a46f7218cee1a6561428ad83babf288bf8e24bb5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f617fdf969c0bdd238b07cb0def1b0a948a4d328
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-stored-procedures"></a>Utilisation d'instructions avec des procédures stockées
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -57,14 +55,13 @@ ms.lasthandoff: 09/09/2017
   
 |Rubrique| Description|  
 |-----------|-----------------|  
-|[À l’aide d’une procédure stockée sans paramètres](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées ne contenant pas de paramètres d'entrée ou de sortie.|  
-|[À l’aide d’une procédure stockée avec des paramètres d’entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres d'entrée.|  
-|[À l’aide d’une procédure stockée avec des paramètres Output](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres de sortie.|  
-|[À l’aide d’une procédure stockée avec un état de retour](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des valeurs de retour d'état.|  
-|[À l’aide d’une procédure stockée avec un nombre de mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées qui retournent des nombres de mises à jour.|  
+|[Utilisation d’une procédure stockée sans paramètres](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées ne contenant pas de paramètres d'entrée ou de sortie.|  
+|[Utilisation d’une procédure stockée avec des paramètres d’entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres d'entrée.|  
+|[Utilisation d’une procédure stockée avec des paramètres de sortie](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des paramètres de sortie.|  
+|[Utilisation d’une procédure stockée avec retour d’état](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des valeurs de retour d'état.|  
+|[Utilisation d’une procédure stockée avec un compteur des mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées qui retournent des nombres de mises à jour.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b0366f161e6c2e6639a18ca06c4e82ffbf686d3e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8def959d69c353449c2f862638d6edd54f786624
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="keyset-cursors"></a>Curseurs keyset
 Le curseur de jeu de clés fournit les fonctionnalités entre un statique et un curseur dynamique dans sa capacité à détecter les modifications. À un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte des modifications aux valeurs de lignes dans le jeu de résultats.  
@@ -49,4 +47,3 @@ Le curseur de jeu de clés fournit les fonctionnalités entre un statique et un 
  [Curseurs avant uniquement](../../../ado/guide/data/forward-only-cursors.md)   
  [Curseurs statiques](../../../ado/guide/data/static-cursors.md)   
  [Curseurs dynamiques](../../../ado/guide/data/dynamic-cursors.md)
-

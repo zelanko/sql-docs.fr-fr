@@ -2,35 +2,36 @@
 title: "Data Mining Extensions (DMX) référence des opérateurs | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - operators [DMX]
 - DMX [Analysis Services], operators
 - Data Mining Extensions [Analysis Services], operators
 ms.assetid: a6d747c0-9ff0-475f-86cd-34bebd79c21a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: b750c1ba7fb7f0557b69aa70e768fd323e2de2c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4958e829a3b857d9aff25dff8d38e49b88f9b3c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Guide de référence des opérateurs DMX (Data Mining Extensions)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Le langage d’Extensions DMX (Data Mining) dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les opérateurs arithmétiques, d’affectation, de comparaison, logiques et d’unaire. Le tableau ci-dessous affiche la liste des opérateurs pris en charge par DMX.  
   
@@ -64,4 +65,3 @@ ms.lasthandoff: 08/02/2017
  [Opérateurs &#40; DMX &#41;](../dmx/operators-dmx.md)  
   
   
-

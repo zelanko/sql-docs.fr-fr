@@ -3,10 +3,12 @@ title: "Fonctions d’API de niveau 2 (le pilote ODBC pour Oracle) | Documents M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Fonctions d’API de niveau 2 (le pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -52,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Retourne une liste des procédures dans la source de données. Pour les procédures de packages, la colonne nom de la procédure est en *packagename.procedurename* format.<br /><br /> Étant donné que Oracle ne fournit pas de permet de distinguer les procédures de packages à partir de fonctions empaquetées, le pilote retourne SQL_PT_UNKNOWN pour la colonne PROCEDURE_TYPE.|  
 |**SQLSetPos**|Définit la position du curseur dans un ensemble de lignes. Vous pouvez utiliser **SQLSetPos** avec **SQLGetData** pour extraire des lignes à partir des colonnes indépendantes après le curseur sur une ligne spécifique dans l’ensemble de lignes. Lignes ajoutées dans le jeu de résultats *fOption* SQL_ADD sont ajoutés après la dernière ligne du jeu de résultats.|  
 |**SQLSetScrollOptions**|Définit les options qui contrôlent le comportement des curseurs associé à un descripteur d’instruction, hstmt. Pour plus d’informations, consultez [Type de curseur et les combinaisons d’accès concurrentiel](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
-

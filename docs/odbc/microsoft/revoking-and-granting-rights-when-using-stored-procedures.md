@@ -3,27 +3,28 @@ title: "Révocation et accorder des droits lors de l’utilisation de procédure
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 24070039-03ab-4623-a681-6308802eb399
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5c82fc5db88bae5cb02d3fd7bf5164b775484a25
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 67bad57e201d10c5eb29aafb19fa9f513c43b172
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>Révocation et accorder des droits lors de l’utilisation de procédures stockées
 > [!IMPORTANT]  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  szErrorMsg = « [Microsoft] [pilote ODBC pour Oracle] syntaxe ou violation d’accès »  
   
  L’appel à la fonction Oracle OCI Odessp() échoue dans ce scénario, mais est nécessaire pour implémenter les paramètres par défaut. Une fois les autorisations de la table sous-jacente sont modifiées, la procédure stockée doit être recompilée avant d’exécuter à nouveau.
-

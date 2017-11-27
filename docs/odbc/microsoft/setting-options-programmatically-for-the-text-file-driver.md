@@ -3,10 +3,12 @@ title: "Définition des Options par programmation pour le pilote de fichier text
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b8127a7249f9f878dcd3d15b9afa874def8c64a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d5037ca7d41470a2e9f7ce342ab49b08a6af0d74
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Définition des Options par programmation pour le pilote de fichier texte
 |Option| Description|Méthode|  
@@ -38,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 |Lecture seule|Désigne la base de données en lecture seule.|Pour définir cette option dynamiquement, utilisez le **READONLY** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Lignes à analyser|Le nombre de lignes à analyser pour déterminer le type de données de chaque colonne. Le type de données est déterminé compte tenu du nombre maximal de types de données trouvées. Si les données sont rencontrées, qui ne correspond pas au type de données estimé pour la colonne, le type de données est retourné en une valeur NULL.<br /><br /> Pour le pilote de texte, vous pouvez entrer un numéro compris entre 1 et 32 767 pour le nombre de lignes à analyser ; Toutefois, la valeur toujours par défaut est 25. (Un nombre en dehors de la limite retournera une erreur).|Pour définir cette option dynamiquement, utilisez le **MAXSCANROWS** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Sélectionnez le répertoire|Affiche une boîte de dialogue où vous pouvez sélectionner un répertoire contenant les fichiers que vous souhaitez accéder.<br /><br /> Lorsque la définition d’un répertoire de source de données spécifiez le répertoire où les plus couramment utilisées fichiers se trouvent. Le pilote ODBC utilise ce répertoire comme répertoire par défaut. Copier d’autres fichiers dans ce répertoire s’ils sont utilisés fréquemment. Ou bien, vous pouvez qualifier les noms de fichiers dans une instruction SELECT avec le nom du répertoire :`SELECT * FROM C:\MYDIR\EMP`<br /><br /> Ou bien, vous pouvez spécifier un nouveau répertoire par défaut à l’aide de la **SQLSetConnectOption** fonction avec l’option SQL_CURRENT_QUALIFIER.|Pour définir cette option dynamiquement, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|
-

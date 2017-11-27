@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 673a35deddae2b67e6dfcdee51ecb1d9ca666cdc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cbaf5f7fce645c4133c94a5ae1562b7aabcfc897
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Connecter l’application de Service Power Pivot à une application Web SharePoint dans l’autorité de certification
   Une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peut être utilisée par un nombre illimité d’applications web SharePoint de la batterie de serveurs. Pour définir une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comme disponible, vous devez l’ajouter à une liste d’association de services.  
@@ -72,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Configuration initiale (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)  
   
   
-

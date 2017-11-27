@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - State
 - Cellset::State
-helpviewer_keywords:
-- State property [ADO MD]
+helpviewer_keywords: State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7508f54af89f445c1d4171f53917721430d82c3f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5be08b4202cc5f9ba4974b794e29b96f536d934e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="state-property-ado-md"></a>State, propriété (ADO MD)
 Indique l’état actuel de l’ensemble de cellules.  
@@ -45,5 +42,4 @@ Indique l’état actuel de l’ensemble de cellules.
   
 ## <a name="see-also"></a>Voir aussi  
  [Close (méthode) (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
- [Open (méthode) (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
-
+ [Open, méthode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

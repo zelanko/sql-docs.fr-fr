@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 84298ed11ae25bf533b5916711d3634bddec1b98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a40cc82e75fe1109ea318cf4d3ab36b5669e8c8d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generating-reports-accesstosql"></a>Génération de rapports (AccessToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -36,7 +34,7 @@ Utilisez la procédure suivante pour générer des rapports :
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Command**|**Titre de rapport**|  
+    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
     |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convertir le schéma|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
@@ -153,4 +151,3 @@ La commande **actualisation de base de données** a **erreurs de rapports pour**
 ## <a name="see-also"></a>Voir aussi  
 [L’exécution de la Console SSMA (accès)](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
-

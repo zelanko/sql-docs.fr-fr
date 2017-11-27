@@ -15,23 +15,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 69878a319fb5b061e712bcf96e094356b558553e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85963e947dbed1fc2d1574a537d0e42f61fbba35
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Se connecter à une base de données model tabulaire (SSAS)
   Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cette rubrique explique comment accorder des autorisations et comment se connecter à une base de données à partir d'applications clientes.  
   
 > [!NOTE]  
->  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+>  Par défaut, les connexions distantes à Analysis Services ne sont pas disponibles avant d'avoir configuré le pare-feu. Assurez-vous que vous avez ouvert le port approprié si vous configurez une instance par défaut ou nommée pour les connexions clientes. Pour plus d’informations, consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  Cette rubrique contient les sections suivantes :  
   
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   
-

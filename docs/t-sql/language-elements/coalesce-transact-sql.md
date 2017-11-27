@@ -3,37 +3,37 @@ title: COALESCE (Transact-SQL) | Documents Microsoft
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - COALESCE
 - COALESCE_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - expressions [SQL Server], nonnull
 - COALESCE function
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f9cb11cb46ab14ab7b1efee597371799882f0e55
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d597c347b0b608b69c5d435fbf58b2779d462a32
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Évalue les arguments dans l’ordre et retourne la valeur actuelle de la première expression initialement ne correspond pas à `NULL`. Par exemple, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` renvoie la troisième valeur, car la troisième valeur est la première valeur qui n’est pas null. 
   
@@ -69,7 +69,7 @@ COALESCE ( expression [ ,...n ] )
   
  Cela signifie que les valeurs d’entrée (*expression1*, *expression2*, *expressionN*, etc.) sont évaluées plusieurs fois. En outre, conformément à la norme SQL, une expression de valeur qui contient une sous-requête est considérée comme non déterministe et la sous-requête est évaluée deux fois. Dans l'un et l'autre cas, différents résultats peuvent être retournés entre la première évaluation et les suivantes.  
   
- Par exemple, lorsque le code `COALESCE((subquery), 1)` est exécuté, la sous-requête est évaluée deux fois. Par conséquent, vous pouvez obtenir des résultats différents selon le niveau d'isolement de la requête. Par exemple, le code peut retourner `NULL` sous le `READ COMMITTED` niveau d’isolation dans un environnement multi-utilisateur. Pour garantir des résultats stables, utilisez le `SNAPSHOT ISOLATION` niveau d’isolation ou remplacez `COALESE` avec la `ISNULL` (fonction). Ou bien, vous pouvez réécrire la requête pour envoyer la sous-requête dans une instruction de sous-sélection, comme indiqué dans l’exemple suivant :  
+ Par exemple, lorsque le code `COALESCE((subquery), 1)` est exécuté, la sous-requête est évaluée deux fois. Par conséquent, vous pouvez obtenir des résultats différents selon le niveau d'isolement de la requête. Par exemple, le code peut retourner `NULL` sous le `READ COMMITTED` niveau d’isolation dans un environnement multi-utilisateur. Pour garantir des résultats stables, utilisez le `SNAPSHOT ISOLATION` niveau d’isolation ou remplacez `COALESCE` avec la `ISNULL` (fonction). Ou bien, vous pouvez réécrire la requête pour envoyer la sous-requête dans une instruction de sous-sélection, comme indiqué dans l’exemple suivant :  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -302,4 +302,3 @@ ORDER BY TotalSalary;
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   
-

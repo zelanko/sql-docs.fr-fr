@@ -6,16 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurer le Cluster d’Ubuntu et de ressources du groupe de disponibilité
 
@@ -119,7 +123,7 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le script, remplacez les valeurs comprises entre `**< ... >**`. Exécutez la commande suivante sur le nœud principal. 
+La commande suivante crée un cluster à trois nœuds. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`. Exécutez la commande suivante sur le nœud principal. 
 
    ```bash
    sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
@@ -229,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Utiliser le groupe de disponibilité haute disponibilité](sql-server-linux-availability-group-failover-ha.md)
-
 

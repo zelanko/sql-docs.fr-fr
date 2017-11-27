@@ -3,10 +3,12 @@ title: Connexion avec SQLConnect | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 31ade565f2294d00a297671cbf745c038db6d475
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e3ebe247996127ca1aae6559ece4bdd3f281efc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-with-sqlconnect"></a>Connexion avec SQLConnect
 **SQLConnect** est la fonction de connexion la plus simple. Il requiert un nom de source de données et qui accepte un ID d’utilisateur facultatif et le mot de passe. Elle fonctionne bien pour les applications que coder en dur une source de données nom et ne requièrent pas un ID d’utilisateur ou le mot de passe. Elle fonctionne également bien pour les applications qui souhaitent contrôlent leur propres « apparence » ou qui n’ont aucune interface utilisateur. De telles applications peuvent générer une liste de sources de données à l’aide de **SQLDataSources**, inviter l’utilisateur à la source de données, ID d’utilisateur et mot de passe, puis appelez **SQLConnect**.  
@@ -141,4 +142,3 @@ int main () {
    x.sqldisconn();   // Free handles and disconnect  
 }  
 ```
-

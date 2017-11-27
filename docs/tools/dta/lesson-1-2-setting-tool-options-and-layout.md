@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Leçon 1-2-mise en page et les Options de l’outil paramètre
 Vous pouvez définir les options qui permettent de configurer ce que l'interface de l'Assistant Paramétrage du moteur de base de données affiche au démarrage, les polices qu'elle utilise et également configurer d'autres fonctionnalités pour faciliter l'utilisation de l'outil. Les exercices pratiques de cette page vous aideront à vous familiariser avec les options qu'il est possible de définir et avec la façon de procéder.  
@@ -54,4 +50,3 @@ Vous pouvez définir les options qui permettent de configurer ce que l'interface
   
   
   
-

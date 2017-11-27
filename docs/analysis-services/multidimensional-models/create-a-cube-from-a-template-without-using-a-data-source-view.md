@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
   Sélectionnez **Construire le cube sans utiliser de source de données** dans la première page de l’Assistant Cube pour créer un cube sans utiliser de vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  Dans la page **Fin de l’Assistant** , examinez la structure du nouveau cube et dans la zone **Nom du cube** , tapez son nom. Cochez éventuellement la case **Créer le schéma maintenant** pour lancer l’Assistant Génération de schéma. En règle générale, vous ne devez pas activer cette case à cocher si vous prévoyez de créer des objets supplémentaires. Vous pouvez également utiliser le Concepteur de cube pour générer le schéma ultérieurement.  
   
   
-

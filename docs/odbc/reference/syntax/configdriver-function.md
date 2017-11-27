@@ -3,33 +3,30 @@ title: Fonction de ConfigDriver | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ConfigDriver
-apilocation:
-- sqlsrv32.dll
+apiname: ConfigDriver
+apilocation: sqlsrv32.dll
 apitype: dllExport
-f1_keywords:
-- ConfigDriver
-helpviewer_keywords:
-- ConfigDriver [ODBC]
+f1_keywords: ConfigDriver
+helpviewer_keywords: ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d52e818312a12397328854971cdf065f1ef9eb3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configdriver-function"></a>ConfigDriver (fonction)
 **Mise en conformité**  
@@ -103,4 +100,3 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>Messages  
  Une routine d’installation de pilote peut envoyer un message texte à une application sous forme de chaîne se terminant par null dans le *lpszMsg* mémoire tampon. Le message est tronqué à *cbMsgMax* moins le caractère de fin de la valeur null par le **ConfigDriver** fonctionner s’il est supérieur ou égal à *cbMsgMax* caractères.
-

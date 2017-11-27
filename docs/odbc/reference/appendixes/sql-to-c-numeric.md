@@ -3,10 +3,12 @@ title: "SQL en c : numérique | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - numeric data type [ODBC], converting
 - converting data from SQL to C types [ODBC], numeric
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e30f313435a56284a65d780f64db46414db2fde9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5513983bcd8d7858629bb1a9f45ff5489ad46246
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-numeric"></a>SQL en c : numérique
 Les identificateurs pour les types de données SQL ODBC numériques sont :  
@@ -100,4 +101,3 @@ if (fCType == SQL_C_NUMERIC) {
       goto error;  
    retcode = SQLSetDescField(hdesc, iCol, SQL_DESC_DATA_PTR, (SQLPOINTER) &(num), sizeof(num));  
 ```
-

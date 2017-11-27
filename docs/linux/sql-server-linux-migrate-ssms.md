@@ -6,17 +6,20 @@ ms.author: sanagama
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: H1Hack27Feb2017
+ms.custom: 
 ms.workload: On Demand
+ms.openlocfilehash: 41d3647796306cb1a9b89f5af47c75416de79c01
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 06dc93bec060f2ceb435fcf17817df9e7a8daee9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exporter et importer une base de données sur Linux avec SSMS ou SqlPackage.exe sur Windows
 
@@ -84,4 +87,3 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ## <a name="see-also"></a>Voir aussi
 Pour plus d’informations sur l’utilisation de SSMS, consultez [utiliser SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). Pour plus d’informations sur SqlPackage.exe, consultez la [documentation de référence de SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx).
-

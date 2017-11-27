@@ -2,9 +2,12 @@
 title: "À l’aide des fonctions de jeu | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -27,7 +30,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="using-set-functions"></a>Utilisation de fonctions de jeu
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Une fonction de jeu récupère un jeu à partir d'une dimension, d'une hiérarchie, ou d'un niveau, ou encore en parcourant les emplacements absolus et relatifs des membres contenus dans ces objets et en construisant des jeux de différentes manières.  
   

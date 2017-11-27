@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 556b0370cb61af9c5c9716ec74b62a32cabe3f21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
   Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé de modèle sémantique BI, consultez [Créer une connexion du modèle sémantique BI à un classeur PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [Créer une connexion de modèle sémantique BI à une base de données model tabulaire](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -69,4 +68,3 @@ ms.lasthandoff: 09/01/2017
  Pour la conception de rapports ad hoc dans SharePoint, l'utilisateur qui crée le rapport doit disposer d'autorisations SharePoint sur le fichier de connexion de modèle sémantique BI (.bism) et sur la base de données de modèle sémantique Business Intelligence. Le contexte de sécurité de la connexion est l'utilisateur interactif qui crée le rapport.  
   
   
-

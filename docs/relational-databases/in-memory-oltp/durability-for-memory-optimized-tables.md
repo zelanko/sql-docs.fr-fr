@@ -8,29 +8,27 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67987be025c453a2b1c5629c44314834716c7ec6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 772e17a6f5b444b6d75719896bed74e3cd13ab67
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fournit la durabilité complète pour les tables optimisées en mémoire. Lorsqu'une transaction qui a modifié une table optimisée en mémoire est validée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (comme pour les tables sur disque), garantit que les modifications sont permanentes (perdureront au redémarrage d'une base de données), à condition que le stockage sous-jacent soit disponible. Il existe deux composantes clés de durabilité : l'enregistrement des transactions et la conservation des modifications de données dans un stockage sur disque.  
   
- Pour plus d’informations sur les limitations en taille des tables durables, consultez [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md). 
+ Pour plus d’informations sur les limitations en taille des tables durables, consultez [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md). 
   
 ## <a name="transaction-log"></a>Journal des transactions  
  Toutes les modifications apportées aux tables sur disque ou aux tables optimisées en mémoire durables sont capturées dans un ou plusieurs enregistrements de journaux des transactions. Lorsqu'une transaction est validée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écrit les enregistrements de journal associés à la transaction sur le disque avant d'indiquer à l'application ou à la session utilisateur que la transaction a été validée. Cela garantit que les modifications apportées par la transaction sont durables. Le journal des transactions pour les tables optimisées en mémoire est entièrement intégré au même flux du journal utilisé par les tables sur disque. Cette intégration permet de continuer les opérations de sauvegarde, de récupération et de restauration des journaux des transactions existants sans aucune étape supplémentaire. Toutefois, étant donné que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] peut augmenter le débit des transactions de votre charge de travail de manière significative, les E/S du journal peuvent devenir un goulot d’étranglement. Pour prendre en charge cette augmentation de débit, vérifiez que le sous-système d’E/S du journal peut gérer la charge accrue.  
@@ -120,4 +118,3 @@ ms.lasthandoff: 06/22/2017
  [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
-

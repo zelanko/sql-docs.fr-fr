@@ -3,10 +3,12 @@ title: SQLDescribeCol et SQLColAttribute | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +18,16 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6044ca37e00d96c4a86fb5e9740ec6dfc824ca51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a80ccf6ed695433a109770a567f50d100fd3a33
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol et SQLColAttribute
 **SQLDescribeCol** et **SQLColAttribute** sont utilisées pour récupérer les métadonnées du jeu de résultats. La différence entre ces deux fonctions est que **SQLDescribeCol** retourne toujours les cinq pièces d’informations (d’une colonne nom, type de données, précision, échelle et possibilité de valeur null), lors de la mêmes **SQLColAttribute** retourne un seul élément d’information demandé par l’application. Toutefois, **SQLColAttribute** peut retourner une sélection plus riche de métadonnées, notamment le respect de la casse d’une colonne, affiche la taille, les mises à jour et les possibilités de recherche.  
@@ -36,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  Une application peut récupérer les métadonnées du jeu de résultats à tout moment après une instruction a été préparée ou exécutée et avant le curseur sur le résultat d’ensemble est fermé. Très peu d’applications requièrent des métadonnées d’ensemble de résultats une fois que l’instruction est préparée et avant son exécution. Si possible, les applications doivent attendre de récupérer les métadonnées jusqu'à une fois que l’instruction est exécutée, car certaines sources de données ne peut pas retourner des métadonnées pour les instructions préparées et l’émulation de cette fonctionnalité dans le pilote est souvent un processus lent. Par exemple, le pilote peut générer des résultats d’une ligne zéro défini en remplaçant le **où** clause d’une **sélectionnez** instruction avec la clause **WHERE 1 = 2** et en exécutant l’instruction obtenue.  
   
  Les métadonnées sont souvent coûteuses à récupérer à partir de la source de données. Pour cette raison, les pilotes doivent mettre en cache des métadonnées à récupérer à partir du serveur et de la stocker pour tant que le curseur sur le résultat défini est ouvert. En outre, les applications doivent demander uniquement les métadonnées que dont ils ont absolument besoin.
-

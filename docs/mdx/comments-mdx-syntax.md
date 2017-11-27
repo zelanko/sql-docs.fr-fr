@@ -2,9 +2,12 @@
 title: Commentaires (syntaxe MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="comments-mdx-syntax"></a>Commentaires (syntaxe MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Les commentaires sont des chaînes de texte non exécutables figurant dans un code de programmation (les commentaires sont également appelés remarques). Vous pouvez utiliser des commentaires pour documenter du code ou désactiver temporairement des parties d'instructions et de scripts MDX (Multidimensional Expressions) en cours d'analyse. À l’aide de commentaires pour documenter du code, vous pouvez simplifier sa maintenance. Les commentaires servent souvent à enregistrer le nom du programme, le nom de l'auteur et les dates des principales mises à jour. Vous pouvez également utiliser des commentaires pour décrire des calculs compliqués ou expliquer une méthode de programmation.  
   

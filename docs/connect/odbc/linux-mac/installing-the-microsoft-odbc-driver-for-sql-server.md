@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- driver, installing
+helpviewer_keywords: driver, installing
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 68c52f15a2704a28a9e8fe9c049e50232ce2c543
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8a12dec078ada9d029a70edbe1c35a608c85a538
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>L’installation de Microsoft ODBC Driver for SQL Server sur Linux et Mac OS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -374,4 +371,3 @@ Pour plus d’informations sur la résolution des échecs de connexion, consulte
 [Notes de publication](../../../connect/odbc/linux-mac/release-notes.md)
 
 [Configuration système requise](../../../connect/odbc/linux-mac/system-requirements.md)
-

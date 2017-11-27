@@ -5,22 +5,20 @@ ms.date: 11/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 132db249-b9f1-48f5-a63e-c9806cacc4af
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 745133739eed6e7ca08ffd55e51f479304566ec9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1fe4b8a4299570f07b858962bb665e37fc980e44
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-r-code-profiling-functions"></a>Utilisation des fonctions de profilage de code R
 En plus des ressources et des outils SQL Server permettant de surveiller l’exécution de script R, vous pouvez utiliser les outils de performances fournis par d’autres packages R pour obtenir des informations complémentaires sur les appels de fonctions internes. Cette rubrique vous propose une liste de ressources de base comme point de départ. Pour obtenir des conseils d’expert, nous vous recommandons de lire le chapitre [Performance](http://adv-r.had.co.nz/Performance.html) de l’ouvrage de Hadley Wickham, « Advanced R ».
@@ -77,7 +75,6 @@ Le chapitre est aussi disponible en ligne à l’adresse suivante : [https://cr
 ### <a name="location-of-r-help-files"></a>Emplacement des fichiers d’aide de R
 
 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual
-
 
 
 

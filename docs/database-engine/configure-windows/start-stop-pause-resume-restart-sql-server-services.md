@@ -1,10 +1,13 @@
 ---
 title: "Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -44,14 +47,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 615db091e0e81bab78154ec9ceaf81c5b94d54bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2694383403923ad677ba680fcdaaa0a2e7e5138a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Pour le contenu relatif aux versions antérieures de SQL Server, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   Cette rubrique explique comment démarrer, arrêter, interrompre, reprendre ou redémarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser à l’aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , de  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des commandes **net** à partir d’une invite de commandes, de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  

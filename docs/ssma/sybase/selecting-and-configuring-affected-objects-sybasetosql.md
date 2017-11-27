@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Tester Component,Affected Objects
+helpviewer_keywords: Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97bb6a73aa744a6471a48ba16fc3ee9b52dea67e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e5f4fcb5af81da2b78520542e2b57bd66bc4fd1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Sélectionner et configurer les objets (SybaseToSQL) affectés
 Sur cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparés quand SSMA vérifie les résultats de l’exécution pour les objets sélectionnés dans l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -48,7 +45,7 @@ L’onglet de la Table contient l’affichage de grille de la table sélectionn�
   
 -   Règle  
   
--   Par défaut  
+-   Valeur par défaut  
   
 -   Identity  
   
@@ -57,7 +54,7 @@ L’onglet de la Table contient l’affichage de grille de la table sélectionn�
 ## <a name="sql"></a>SQL  
 Onglet SQL contient la table « créer » SQL de la table sélectionnée.  
   
-## <a name="data"></a>Données  
+## <a name="data"></a>data  
 Onglet données affiche les données présentes dans la table sélectionnée.  
   
 ## <a name="properties"></a>Propriétés  
@@ -130,4 +127,3 @@ Vous pouvez modifier les instructions SELECT pour fournir une vérification pers
 [Exécuter des cas de Test &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Test de migration des objets de base de données &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
-

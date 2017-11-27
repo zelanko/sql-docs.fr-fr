@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Synchronize Database Wizard
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comprend une fonctionnalité de synchronisation de bases de données qui rend deux bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] équivalentes en copiant les données et les métadonnées depuis une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
@@ -199,7 +198,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>Voir aussi  
  [Élément Synchronize &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Déployer des solutions de modèle à l'aide de XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
- [Deploy Model Solutions Using the Deployment Wizard](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [Déployer des solutions de modèle à l’aide de l’Assistant Déploiement](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   
-

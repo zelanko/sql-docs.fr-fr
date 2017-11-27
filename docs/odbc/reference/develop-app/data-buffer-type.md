@@ -3,10 +3,12 @@ title: "Type du tampon de données | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - C data types [ODBC], buffers
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 73acfc1747cdda9d3082eaed420e56943f698fea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c2ed3fb1d6a68737a894663e1b5c841d6cb1041
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-buffer-type"></a>Type de tampon de données
 Le type de données C d’une mémoire tampon est spécifié par l’application. Avec une seule variable, cela se produit lorsque l’application alloue la variable. Avec une mémoire générique, autrement dit, mémoire vers laquelle pointe un pointeur de type void : cela se produit lorsque l’application effectue un cast de la mémoire à un type particulier. Le pilote détecte ce type de deux manières :  
@@ -49,4 +50,3 @@ Le type de données C d’une mémoire tampon est spécifié par l’application
     ```  
   
  Le pilote utilise le type de données C pour interpréter les données dans la mémoire tampon.
-

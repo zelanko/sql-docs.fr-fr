@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fa55853548b825b04ac75d5cb4af9689e34e3cd7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cda6c82147648f35adb80012d0810d514d08de86
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (ADO)
 Se déplace vers le premier, au dernier enregistrement suivant ou précédent dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet et en fait l’enregistre actif.  
@@ -66,7 +64,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  Si le **Recordset** est avant uniquement et que vous souhaitez prendre en charge le défilement arrière et avant, vous pouvez utiliser la [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété pour créer un cache d’enregistrements qui prend en charge le déplacement du curseur vers l’arrière via le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) (méthode). Étant donné que les enregistrements mis en cache sont chargés en mémoire, vous devez éviter la mise en cache plus d’enregistrements qu’il n’est nécessaire. Vous pouvez appeler la **MoveFirst** méthode dans un curseur avant uniquement **Recordset** objet ; cela peut provoquer le fournisseur réexécute la commande qui a généré le **Recordset** objet .  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes-exemple (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
@@ -75,4 +73,3 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  [Move, méthode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
  [MoveRecord, méthode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-

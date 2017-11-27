@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9d10f7422ca7cf39d343b67a37a6285243248eb1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d75e71f66415fa7bec3b0496064321da3f312e6e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-usage-and-security"></a>Sécurité et l’utilisation des services Bureau à distance
 Utilisez les informations de cette section pour configurer votre serveur et d’utiliser rapidement des services Bureau à distance. Cette section inclut des étapes de configuration spécifiques que vous devrez peut-être effectuer lors de la mise en œuvre des services Bureau à distance, décrit certaines des relations entre les services Bureau à distance et d’autres technologies clées, et vous aide à identifier les solutions aux problèmes que vous pouvez rencontrer lorsque vous configurez un Solution de services Bureau à distance.  
@@ -48,6 +46,5 @@ Utilisez les informations de cette section pour configurer votre serveur et d’
  [Principes de base des services Bureau à distance](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Scénario des services Bureau à distance](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
 
 

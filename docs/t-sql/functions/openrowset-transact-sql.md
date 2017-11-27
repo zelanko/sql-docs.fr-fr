@@ -8,15 +8,13 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - data sources [SQL Server]
 - OPENROWSET function
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
+caps.latest.revision: "130"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3c23ec85299af595305a5f6d5141dbbf3ffab96d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +171,7 @@ Une source de données externe nommé pointe vers l’emplacement de stockage d�
   
  Par défaut, ROWS_PER_BATCH est inconnu. Si vous spécifiez ROWS_PER_BATCH = 0, le résultat est le même que si vous omettez ROWS_PER_BATCH.  
   
- COMMANDE ({ *colonne* [ASC | DESC]} [,... *n*  ] [UNIQUE])  
+ COMMANDE ({ *colonne* [ASC | DESC]} [ ,...  *n*  ] [UNIQUE])  
  Indicateur facultatif qui spécifie la manière dont sont triées les données dans le fichier de données. Par défaut, le processus de chargement en masse considère que le fichier de données n'est pas trié. Il est possible que les performances soient améliorées si l'optimiseur de requête peut exploiter l'ordre spécifié pour générer un plan de requête plus efficace. Voici quelques exemples de situations dans lesquelles il peut être intéressant de spécifier un tri :  
   
 -   Insertion de lignes dans une table qui a un index cluster, où les données d'un ensemble de lignes sont triées sur la clé d'index cluster.  
@@ -438,4 +435,3 @@ Pour terminer `OPENROWSET` des exemples, y compris la configuration de source de
  [OÙ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

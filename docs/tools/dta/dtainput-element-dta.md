@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- XML
-helpviewer_keywords:
-- DTAInput element
+dev_langs: XML
+helpviewer_keywords: DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 01ce41754770e58ae35e5c1ca6c1d94dab4d5fb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22a7b07a5dee4e826d2b438d384d44796ca23480
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtainput-element-dta"></a>DTAInput, élément (Assistant Paramétrage de base de données)
   Contient la définition de l'entrée XML pour l'Assistant Paramétrage du moteur de base de données.  
@@ -51,8 +47,8 @@ ms.lasthandoff: 08/02/2017
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[DTAXML, élément &#40; DTA &#41;](../../tools/dta/dtaxml-element-dta.md)|  
-|**Éléments enfants**|[Élément de serveur &#40; DTA &#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload, élément &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [Tuningoptions, élément &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Élément de configuration &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
+|**Élément parent**|[DTAXML, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/dtaxml-element-dta.md)|  
+|**Éléments enfants**|[Server, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Workload, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [TuningOptions, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Configuration, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/configuration-element-dta.md)|  
   
 ## <a name="remarks"></a>Notes  
  Cet élément est la racine de la hiérarchie de schéma d'entrée de l'Assistant Paramétrage du moteur de base de données. Les entrées de l'Assistant Paramétrage du moteur de base de données peuvent être des arguments qui spécifient les bases de données à paramétrer, des charges de travail, des options de paramétrage ou une configuration spécifiée par l'utilisateur.  
@@ -64,4 +60,3 @@ ms.lasthandoff: 08/02/2017
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
-

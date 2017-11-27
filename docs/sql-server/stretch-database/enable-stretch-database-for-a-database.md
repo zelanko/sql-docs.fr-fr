@@ -1,10 +1,13 @@
 ---
 title: "Activer Stretch Database pour une base de données | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59ad1742daa12e2ea501888b15b9aa8075b7001d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 98f2b5c6f881989276a8728218a57118f44a47c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Activer Stretch Database pour une base de données
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Pour configurer une base de données existante pour Stretch Database, sélectionnez **Tâches | Stretch | Activer** pour une base de données dans SQL Server Management Studio afin d’ouvrir l’Assistant **Activer la base de données pour Stretch**. Vous pouvez également utiliser Transact-SQL pour activer Stretch Database pour une base de données.  
   

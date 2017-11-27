@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,20 +14,19 @@ helpviewer_keywords:
 - health monitor [SQL Server]
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4cfeb511776dc078c118ee41ea7ce039bdbda1e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e334fe938bd9cc93854fc25e0074292a653bc3d7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replay-options-sql-server-profiler"></a>Options de relecture (SQL Server Profiler)
-  Avant de relire une trace capturée avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], spécifiez les options de relecture dans la boîte de dialogue **Configuration de la relecture**. Pour accéder à cette boîte de dialogue, ouvrez le fichier ou la table de trace de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puis cliquez sur **Démarrer** dans le menu **Relire**. Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+  Avant de relire une trace capturée avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], spécifiez les options de relecture dans la boîte de dialogue **Configuration de la relecture** . Pour accéder à cette boîte de dialogue, ouvrez le fichier ou la table de trace de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puis cliquez sur **Démarrer** dans le menu **Relire**. Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
  Cette rubrique décrit les options spécifiées avec la boîte de dialogue **Configuration de la relecture** .  
   
@@ -83,9 +81,8 @@ ms.lasthandoff: 08/02/2017
  Le moniteur d'intégrité est un thread d'application qui surveille les processus simulés impliqués dans la relecture d'une trace, et met fin aux processus bloqués au cours de la relecture. Sous l’onglet **Options de relecture avancées** de la boîte de dialogue **Configuration de la relecture** , vous pouvez spécifier combien de temps le moniteur d’intégrité doit attendre (en secondes) avant de mettre fin à un processus bloqué (**Délai d’attente du moniteur d’intégrité**). Si vous affectez à cet intervalle la valeur 0, le moniteur d'intégrité ne met jamais fin aux processus de blocage simulés dans la trace en cours de relecture.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relire des Traces](../../tools/sql-server-profiler/replay-traces.md)   
+ [Relire des traces](../../tools/sql-server-profiler/replay-traces.md)   
  [Conditions préalables de relecture](../../tools/sql-server-profiler/replay-requirements.md)   
- [Considérations sur la relecture des Traces &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
+ [Considérations sur la relecture des traces &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   
-

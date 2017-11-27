@@ -3,10 +3,12 @@ title: "Transfert de la longueur d’Octet | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - data types [ODBC], transfer octet length
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e9a6655bde245348b3b70c3d29631be1b9caa60b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transfer-octet-length"></a>Transfert de la longueur en octets
 La longueur d’octet de transfert d’une colonne est le nombre maximal d’octets renvoyés à l’application lorsque les données sont transférées vers son type de données C par défaut. Pour les données de caractères, la longueur d’octet de transfert n’inclut pas d’espace pour le caractère de fin de la valeur null. La longueur d’octet de transfert d’une colonne peut être différente du nombre d’octets requis pour stocker les données sur la source de données.  
@@ -51,4 +52,3 @@ La longueur d’octet de transfert d’une colonne est le nombre maximal d’oct
 |SQL_GUID|16 (la taille de la structure GUID).|  
   
  [a] si le pilote ne peut pas déterminer la longueur de colonne ou de paramètre pour les types de variable, elle retourne SQL_NO_TOTAL.
-

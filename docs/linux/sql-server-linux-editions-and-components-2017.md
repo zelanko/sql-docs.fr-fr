@@ -1,11 +1,13 @@
 ---
 title: "Éditions et des fonctionnalités prises en charge de SQL Server 2017 ~ Linux | Documents Microsoft"
-ms.custom:
-- SQL2017_New_Updated
+ms.custom: 
 ms.date: 09/14/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - sql-linux
 - server-general
@@ -29,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et des fonctionnalités prises en charge de 2017 du serveur SQL sur Linux
 
@@ -47,7 +48,7 @@ Cet article fournit des détails sur les fonctionnalités prises en charge par l
 La configuration requise pour l'installation varie selon vos besoins applicatifs. Les différentes éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'adaptent aux exigences de chaque organisation et de chaque individu en termes de performances, d'exécution et de prix. Les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous installez dépendent également de vos exigences spécifiques. Les sections suivantes vous aident à choisir parmi les éditions et les composants disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Pour obtenir les notes de publication les plus récentes et des informations sur les nouveautés, consultez les rubriques suivantes :
-- [SQL Server sur les notes de version de Linux](sql-server-linux-release-notes.md)
+- [Notes de publication de SQL Server sur Linux](sql-server-linux-release-notes.md)
 - [Nouveautés de SQL Server sur Linux](sql-server-linux-whats-new.md)
 
 Pour obtenir la liste des fonctionnalités de SQL Server non disponibles sur Linux, consultez [non pris en charge des fonctionnalités et services](sql-server-linux-release-notes.md#Unsupported).
@@ -119,11 +120,11 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|
   
-<sup>1</sup> sur Enterprise edition, le nombre de nœuds est au maximum du système d’exploitation. Sur une édition Standard, il est prise en charge de deux nœuds. 
+<sup>1</sup> sur Enterprise edition, le nombre de nœuds est au maximum du système d’exploitation. L’édition Standard prend en charge deux nœuds. 
 
 <sup>2</sup> sur Enterprise edition prend en charge jusqu'à 8 réplicas secondaires - notamment 2 réplicas secondaires synchrones. 
 
-<sup>3</sup> standard edition prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge les deux réplicas, avec une base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard edition prend en charge les groupes de disponibilité de base. Un groupe de disponibilité de base prend en charge deux réplicas, avec une base de données. Pour plus d’informations sur les groupes de disponibilité de base, consultez [Groupes de disponibilité de base](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
@@ -227,4 +228,3 @@ Pour plus d’informations sur les fonctionnalités d’Integration Services (SS
 
   
   
-

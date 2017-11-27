@@ -5,26 +5,23 @@ ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- python-services
+ms.technology: python-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2017
+applies_to: SQL Server 2017
 dev_langs:
 - Python
 - TSQL
 ms.assetid: 
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 11fa031229d8bc08a9091c3fa6f85e81468d7379
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/18/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Étape 5 : L’apprentissage et enregistrer un modèle de Python à l’aide de T-SQL
 
@@ -208,4 +205,3 @@ Dans l’étape suivante, vous utilisez les modèles formés pour créer des pr�
 ## <a name="previous-step"></a>Étape précédente
 
 [Étape 4 : Créer des caractéristiques de données à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
-

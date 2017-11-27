@@ -13,25 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- MDSCHEMA_SETS
+apiname: MDSCHEMA_SETS
 apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_SETS rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1e197a9d26eb5839425166fde987de22637603f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4820c18992da2aab0ac8e0550a5cadd75ca193bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdschemasets-rowset"></a>Ensemble de lignes MDSCHEMA_SETS
   Décrit les ensembles actuellement définis dans une base de données, y compris les ensembles de niveau session.  
@@ -69,7 +65,6 @@ ms.lasthandoff: 09/01/2017
 |**CUBE_SOURCE**|**DBTYPE_UI2**|Ce paramètre est facultatif.<br /><br /> Remarque : Une seule hiérarchie peut être incluse, et seuls les jeux nommés dont les hiérarchies correspondent exactement à la restriction sont retournés.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [OLE DB pour OLAP Schema Rowsets](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [Ensembles de lignes de schéma OLE DB pour OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   
-

@@ -3,10 +3,12 @@ title: "Mise en conformité du champ de descripteur | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b25100a54d5a98a9db06bb26be4a3e1a6871b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 049208450144fdd1c1d3b902093517627486ccf9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-field-conformance"></a>Mise en conformité du champ de descripteur
 Le tableau suivant indique le niveau de conformité de chaque champ d’en-tête descripteur ODBC, où cela est bien défini.  
@@ -81,4 +82,3 @@ Le tableau suivant indique le niveau de conformité de chaque champ d’en-tête
  [1] prise en charge pour ces champs d’enregistrement est requis uniquement si le pilote prend en charge les types de données applicable.  
   
  [2] pour la mise en conformité au niveau du noyau, le pilote doit prendre en charge SQL_PARAM_INPUT. Pour la conformité d’interface de niveau 2, le pilote doit également prendre en charge SQL_PARAM_INPUT_OUTPUT et SQL_PARAM_OUTPUT.
-

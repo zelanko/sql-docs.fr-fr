@@ -5,27 +5,24 @@ ms.date: 07/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 dev_langs:
 - R
 - TSQL
 ms.assetid: 5b2f4c44-6192-40df-abf1-fc983844f1d0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f77e853d87c82cd6f2bd2a64e387ea3286eccfc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c9359979b625ad8763f95f340b2b4527ea9fbb6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-create-data-features-using-t-sql"></a>Leçon 4 : Créer des fonctionnalités de données à l’aide de T-SQL
 
@@ -139,4 +136,3 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
 ## <a name="previous-lesson"></a>Leçon précédente
 
 [Leçon 3 : Explorer et visualiser les données](../tutorials/sqldev-explore-and-visualize-the-data.md)
-

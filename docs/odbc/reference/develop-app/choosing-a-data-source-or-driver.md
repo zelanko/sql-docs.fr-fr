@@ -3,10 +3,12 @@ title: "En choisissant des données Source ou le pilote | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>En choisissant des données Source ou pilote
 La source de données ou le pilote utilisé par une application est parfois codé en dur dans l’application. Par exemple, une application personnalisée écrite par un service MIS à transférer des données à partir d’une source de données à l’autre contient les noms de ces sources de données, l’application ne fonctionnerait pas avec d’autres sources de données. Un autre exemple est une application verticale, tel que celui utilisé pour l’entrée de commande. Une telle application toujours utilise la même source de données, qui dispose d’un schéma prédéfini connu par l’application.  
@@ -47,4 +48,3 @@ La source de données ou le pilote utilisé par une application est parfois cod�
 -   **L’accès à un SGBD particulier une seule fois.** Par exemple, une feuille de calcul qui Récupère des données en appelant les fonctions ODBC peut contenir le **pilote** mot clé pour identifier un pilote spécifique. Étant donné que le nom du pilote est significatif pour les utilisateurs qui disposent de ce pilote, la feuille de calcul peut être passée entre les utilisateurs. Si la feuille de calcul contenue un nom de source de données, chaque utilisateur devra créer la même source de données pour utiliser la feuille de calcul.  
   
 -   **Parcourir le système pour toutes les bases de données accessibles à un pilote spécifique.** Pour plus d’informations, consultez [connexion avec SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md), plus loin dans cette section.
-

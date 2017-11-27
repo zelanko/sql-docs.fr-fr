@@ -3,10 +3,12 @@ title: "Littéraux de l’intervalle | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>Littéraux de l’intervalle
 ODBC requiert que tous les pilotes prennent en charge la conversion du type de données SQL_CHAR ou SQL_VARCHAR à tous les types de données d’intervalle C. Si la source de données sous-jacente ne prend pas en charge les types de données interval, toutefois, le pilote doit connaître le format correct de la valeur dans le champ SQL_CHAR pour prendre en charge ces conversions. De même, ODBC requiert que n’importe quel type être convertible en SQL_CHAR ou SQL_VARCHAR, par conséquent, un pilote doit savoir quel format un intervalle stocké dans le champ de caractère de ODBC C doit avoir. Cette section décrit la syntaxe des littéraux de l’intervalle, le writer de pilote doit utiliser pour valider les champs SQL_CHAR lors de la conversion vers ou depuis des types d’intervalle C.  
@@ -99,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{INTERVALLE '223.16' DEUXIÈME}<br /><br /> {INTERVALLE '223' YEAR}|Étant donné que la précision de début n’est pas spécifiée, la valeur par défaut 2, qui est trop petit pour contenir le littéral spécifié.|  
 |{INTERVALLE '22.1234567' DEUXIÈME}|La précision en secondes n’est pas spécifiée, afin de la valeur par défaut est 6. Le littéral a sept chiffres après la virgule décimale.|  
 |{INTERVALLE ' 163-13' ANNÉE (3) MOIS}<br /><br /> {INTERVALLE 163 ' DAY (3) À L’HEURE DE 65'}<br /><br /> {INTERVALLE '163 62:39' DAY (3) À LA MINUTE}<br /><br /> {INTERVALLE '163 12:125:59.163' DAY (3) À SECOND(3)}<br /><br /> {INTERVALLE '163:144' HOUR(3) MINUTE}<br /><br /> {INTERVALLE '163:567:234.163' HOUR(3) À SECOND(4)}<br /><br /> {INTERVALLE '163:591.163' MINUTE(3) À SECOND(5)}|Le champ de fin ne suit pas les règles du calendrier grégorien.|
-

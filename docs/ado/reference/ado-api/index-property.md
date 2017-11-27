@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset21::Index
-helpviewer_keywords:
-- Index property
+f1_keywords: Recordset21::Index
+helpviewer_keywords: Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9091e9a65b178806c8695faffa50f11946c6b2ca
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-property"></a>Propriété index
 Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -58,10 +54,9 @@ Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../..
  La fonction intégrée **Index** propriété n’est pas liée à la dynamique [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété, bien que les deux portent sur les index.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherche la méthode et les Index, propriété-Exemple (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Objet index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [La méthode de recherche](../../../ado/reference/ado-api/seek-method.md)
-
+ [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)

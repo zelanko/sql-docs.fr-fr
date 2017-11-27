@@ -3,27 +3,28 @@ title: "Vue d’ensemble ODBC | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 607e516c8654631ab032dfc6159a8990d464a023
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20767544a83219c6583eaf03a78e240e15e19be2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-overview"></a>Vue d’ensemble d’ODBC
 Connectivité de base de données ouverte (ODBC) est une interface de programmation largement répandue d’application (API) pour l’accès de la base de données. Il est basé sur les spécifications de l’Interface de niveau d’appel (CLI) d’Open Group et de la norme ISO/IEC pour l’API de la base de données et utilise le langage SQL (Structured Query) en tant que son langage d’accès de base de données.  
@@ -32,9 +33,8 @@ Connectivité de base de données ouverte (ODBC) est une interface de programmat
   
  Cette section contient les rubriques suivantes.  
   
--   [Pourquoi ODBC a été créé ?](../../odbc/reference/why-was-odbc-created.md)  
+-   [Pourquoi ODBC a-t-il été créé ?](../../odbc/reference/why-was-odbc-created.md)  
   
--   [Nouveautés d’ODBC ?](../../odbc/reference/what-is-odbc.md)  
+-   [Qu’est-ce que ODBC ?](../../odbc/reference/what-is-odbc.md)  
   
--   [ODBC et l’interface CLI Standard](../../odbc/reference/odbc-and-the-standard-cli.md)
-
+-   [ODBC et l’interface CLI standard](../../odbc/reference/odbc-and-the-standard-cli.md)

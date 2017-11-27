@@ -3,10 +3,12 @@ title: Liaison selon les lignes | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b5caaab8154951fe771767206ce3755d84314855
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 967d7682c666dd6c413d49e083affeb55721742d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="row-wise-binding"></a>Liaison selon les lignes
 Lorsque vous utilisez la liaison selon les lignes, une application définit une structure contenant un ou deux, ou dans certains cas, trois éléments pour chaque colonne pour laquelle les données sont à retourner. Le premier élément conserve la valeur de données, et le deuxième élément conserve la mémoire tampon de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockés dans les mémoires tampon distincte en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR à des valeurs différentes ; Si cette opération est effectuée, la structure contient un troisième élément. L’application alloue un tableau de ces structures, qui contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  
@@ -112,4 +113,3 @@ while ((rc = SQLFetchScroll(hstmt,SQL_FETCH_NEXT,0)) != SQL_NO_DATA) {
 // Close the cursor.  
 SQLCloseCursor(hstmt);  
 ```
-

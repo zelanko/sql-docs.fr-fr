@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getTables
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getTables
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c469b56d30e93ba96378df87490be5cea83d8c2a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9bbf35aeec7b5626b380fc654995d181fe124811
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Méthode getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +75,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**Chaîne**|Nom du schéma de table.|  
 |TABLE_NAME|**Chaîne**|Le nom de la table.|  
 |TABLE_TYPE|**Chaîne**|Le type de table.|  
-|REMARKS|**Chaîne**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ne retourne pas une valeur pour cette colonne.  |  
+|REMARKS|**Chaîne**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ne retourne pas une valeur pour cette colonne.|  
 |TYPE_CAT|**Chaîne**|Non pris en charge par le pilote JDBC.|  
 |TYPE_SCHEM|**Chaîne**|Non pris en charge par le pilote JDBC.|  
 |TYPE_NAME|**Chaîne**|Non pris en charge par le pilote JDBC.|  
@@ -121,4 +117,3 @@ public static void executeGetTables(Connection con) {
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

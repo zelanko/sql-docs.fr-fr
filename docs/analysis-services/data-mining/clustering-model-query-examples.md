@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
@@ -402,4 +401,3 @@ NATURAL PREDICTION JOIN
  [Algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   
-

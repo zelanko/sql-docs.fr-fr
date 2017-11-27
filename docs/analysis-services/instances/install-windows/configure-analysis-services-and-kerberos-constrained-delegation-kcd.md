@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95a002a015a94f0b6ad69bc2331403604717d778
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4c13b9095224d1c33e09c9513121e46483da05c0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurer Analysis Services et la délégation Kerberos contrainte (KCD)
   La délégation Kerberos contrainte (KCD) est un protocole d’authentification que vous pouvez configurer avec l’authentification Windows pour déléguer les informations d’identification du client d’un service à l’autre dans votre environnement. KCD requiert une infrastructure supplémentaire, par exemple un contrôleur de domaine, et une configuration supplémentaire de votre environnement. KCD est condition nécessaire dans certains scénarios qui impliquent des données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] avec SharePoint 2016. Dans SharePoint 2016, Excel Services a été déplacé de la batterie de serveurs SharePoint vers un nouveau serveur séparé nommé **Office Online Server**. Le serveur Office Online Server étant séparé, il existe un besoin accru de trouver un mode de délégation les informations d’identification du client dans les scénarios classiques de deux tronçons.  
@@ -229,4 +227,3 @@ ms.lasthandoff: 09/01/2017
  [Microsoft® Kerberos Configuration Manager for SQL Server® (en anglais)](http://www.microsoft.com/en-us/download/details.aspx?id=39046)  
   
   
-

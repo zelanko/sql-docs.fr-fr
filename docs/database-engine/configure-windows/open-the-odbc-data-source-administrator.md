@@ -2,9 +2,12 @@
 title: "Ouvrir l'Administrateur de la source de données ODBC | Microsoft Docs"
 ms.custom: 
 ms.date: 11/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 50d6aacdc264d01a5c7b38410b0cf6609bcb256b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a1e1cac2d9bf679eaf5e0eb0c2a8b8068cc9c919
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Ouvrir l'Administrateur de la source de données ODBC
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique indique comment ouvrir l'administrateur de la source de données ODBC. L'Administrateur de la source de données ODBC est un composant Windows. Utilisez l'Administrateur de la source de données ODBC pour créer et gérer des sources de données ODBC.  
   

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4763614ab5a50cb430f820d2a043af2c6776ab23
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5badf017821cbc6cee07289df5c8500f6cdb86ae
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize et DefinedSize, propriétés-exemple (VC ++)
 Cet exemple utilise le [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) et [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriétés pour afficher la taille définie et la taille réelle d’un champ.  
@@ -156,5 +153,4 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **Taille réelle : 8**   
 ## <a name="see-also"></a>Voir aussi  
  [ActualSize, propriété (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [Propriété DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)
-
+ [DefinedSize, propriété](../../../ado/reference/ado-api/definedsize-property.md)

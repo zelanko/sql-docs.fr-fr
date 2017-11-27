@@ -7,19 +7,17 @@ ms.service:
 ms.component: php
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.topic: article
 author: ulvii
 ms.author: v-ulibra
 manager: Hadis Fard
 ms.workload: Inactive
+ms.openlocfilehash: f57df5092dfa9a1eabe1e0dc04eba28cd256d978
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6ca464b620a092a910d341c90b0fec364dadd89b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="php-linux-and-mac-drivers-installation-tutorial"></a>PHP Linux et Mac pilotes Installation didacticiel
 Les instructions suivantes supposent un environnement propre et montrent comment installer PHP 7.x, Microsoft ODBC driver, Apache et Microsoft PHP pilotes sur 15.10 d’Ubuntu, 16.04, RedHat 7, 8 Debian et Mac OS X.
@@ -380,5 +378,4 @@ function FormatErrors( $errors )
 ?>
 ```
 Pointez votre navigateur http://localhost/testsql.php (http://localhost:8080/testsql.php sur MacOS). Vous devez maintenant être en mesure de se connecter à votre base de données SQL Server/Azure SQL.
-
 

@@ -3,10 +3,12 @@ title: "Demander à l’utilisateur des informations de connexion | Documents Mi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +22,16 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Demander à l’utilisateur des informations de connexion
 Si l’application utilise **SQLConnect** et doit demander à l’utilisateur pour toutes les informations de connexion, telles qu’un nom d’utilisateur et un mot de passe, il doit le faire lui-même. Cela permet l’application de contrôler son « apparence », il peut forcer l’application pour contenir le code spécifique au pilote. Cela se produit lorsque l’application doit demander à l’utilisateur pour les informations de connexion spécifiques au pilote. Cela présente une situation impossible pour les applications génériques qui sont conçues pour fonctionner avec tous les pilotes, y compris les pilotes qui n’existent pas lorsque l’application est écrite.  
@@ -54,4 +55,3 @@ DSN=XYZ Corp;
  Une fois que l’utilisateur sélectionne une source de données, le Gestionnaire de pilotes construit une chaîne de connexion en spécifiant cette source de données et les transmet au pilote. Le pilote peut inviter l’utilisateur pour des informations supplémentaires dont il a besoin.  
   
  Les conditions dans lesquelles le pilote invite l’utilisateur sont contrôlées par le *DriverCompletion* indicateur ; il existe des options toujours demander, invite si nécessaire ou pour ne jamais demander. Pour obtenir une description complète de cet indicateur, consultez la [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) description de fonction.
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - invoking functions
 - extended stored procedures [SQL Server], functions
@@ -38,17 +36,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
+caps.latest.revision: "162"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -369,9 +366,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,...*n*  ]) Définit les données de table de type pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonction). La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
+ *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,... *n*  ]) Définit les données de table de type pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonction). La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
   
- \<clr_table_type_definition > ({ *column_name**data_type* } [ ,...*n*  ]) **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \<clr_table_type_definition > ({ *column_name**data_type* } [ ,... *n*  ]) **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne. La table est toujours placée dans le groupe de fichiers primaire.  
   
@@ -655,8 +652,8 @@ RETURNS return_data_type
 |Affichage système| Description|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Consultez l’exemple E dans la section exemples ci-dessous.|  
-|[Sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Affiche des informations sur les fonctions définies par l'utilisateur CLR.|  
-|[Sys.Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Affiche des informations sur les paramètres définis dans les fonctions définies par l'utilisateur.|  
+|[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Affiche des informations sur les fonctions définies par l'utilisateur CLR.|  
+|[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Affiche des informations sur les paramètres définis dans les fonctions définies par l'utilisateur.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Affiche les objets sous-jacents référencés par une fonction.|  
   
 ## <a name="permissions"></a>Permissions  
@@ -828,5 +825,4 @@ GO
  [CRÉER une stratégie de sécurité &#40; Transact-SQL &#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
  
-
 

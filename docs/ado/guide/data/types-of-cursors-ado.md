@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- cursors [ADO], types
+helpviewer_keywords: cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7c8ab039bfe5754587e3f7adda36c0b715138d65
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d7648e91432bd90c03398e5189e4101b9741841c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="types-of-cursors-ado"></a>Types de curseurs (ADO)
 En règle générale, votre application doit utiliser le curseur de la plus simple qui fournit l’accès aux données requises. Toutes les caractéristiques supplémentaires au-delà des principes de base (avant uniquement, en lecture seule, statique, défilement, sans tampon) a un prix : dans la mémoire du client, de la charge réseau ou les performances. Dans de nombreux cas, les options de curseur par défaut génèrent un curseur plus complexe que votre application a réellement besoin.  
@@ -48,7 +45,7 @@ En règle générale, votre application doit utiliser le curseur de la plus simp
   
 -   [Curseurs statiques](../../../ado/guide/data/static-cursors.md)  
   
--   [Curseurs keyset](../../../ado/guide/data/keyset-cursors.md)  
+-   [Curseurs de jeu de clés](../../../ado/guide/data/keyset-cursors.md)  
   
 -   [Curseurs dynamiques](../../../ado/guide/data/dynamic-cursors.md)  
   
@@ -57,4 +54,3 @@ En règle générale, votre application doit utiliser le curseur de la plus simp
  [Curseurs statiques](../../../ado/guide/data/static-cursors.md)   
  [Curseurs keyset](../../../ado/guide/data/keyset-cursors.md)   
  [Curseurs dynamiques](../../../ado/guide/data/dynamic-cursors.md)
-

@@ -8,22 +8,20 @@ ms.reviewer:
 ms.service: 
 ms.component: in-memory-oltp
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 808602a0671f64daaf313af49ef4974d6e754061
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 8301993dd05a833c07bd2b30674e59c6cb293c0e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/30/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +61,7 @@ SQL Server dispose des modes suivants pour l’initiation de la transaction :
 - **Explicite** : votre instruction Transact-SQL contient le code BEGIN TRANSACTION, et éventuellement COMMIT TRANSACTION. Plusieurs instructions peuvent être rassemblées dans une même transaction.  
   - En mode Explicite, vous devez utiliser l’option de base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT ou coder un indicateur de table à propos du niveau d’isolation de la transaction sur la table optimisée en mémoire dans la clause FROM.  
   
-- **Implicite** : lorsque SET IMPLICIT_TRANSACTION ON est appliqué. Le nom IMPLICIT_BEGIN_TRANSACTION aurait sans doute été plus approprié, car cette option ne fait qu’appliquer implicitement l’équivalent d’une instruction BEGIN TRANSACTION explicite avant chaque instruction UPDATE si 0 = @@trancount.  Par conséquent, c’est à votre code T-SQL d’émettre finalement une instruction COMMIT TRANSACTION explicite.   
+- **Implicite** : lorsque SET IMPLICIT_TRANSACTION ON est appliqué. Le nom IMPLICIT_BEGIN_TRANSACTION aurait sans doute été plus approprié, car cette option ne fait qu’appliquer implicitement l’équivalent d’une instruction BEGIN TRANSACTION explicite avant chaque instruction UPDATE si 0 = @@trancount. Par conséquent, c’est à votre code T-SQL d’émettre finalement une instruction COMMIT TRANSACTION explicite.   
   
 - **Bloc ATOMIC** : toutes les instructions des blocs ATOMIC s’exécutent toujours dans le cadre d’une seule transaction. Les actions du bloc ATOMIC sont validées comme un tout en cas de réussite, ou les actions sont toutes annulées quand une défaillance se produit. Chaque procédure stockée compilée en mode natif nécessite un bloc ATOMIC.  
   
@@ -325,4 +323,3 @@ go
 - [Niveaux d'isolation basés sur le contrôle de version de ligne dans le moteur de base de données](http://msdn.microsoft.com/library/ms177404.aspx)  
   
 - [Contrôler la durabilité d'une transaction](../../relational-databases/logs/control-transaction-durability.md)   
-

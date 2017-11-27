@@ -3,26 +3,26 @@ title: "Les paramètres de procédure | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- procedure parameters [ODBC]
+helpviewer_keywords: procedure parameters [ODBC]
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: faafa85cf85fd538fbc8efa92ba18a520d7562d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4cf4aa29c376ac600842804eb4b7e3b935fb049b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="procedure-parameters"></a>Paramètres de procédure
 Paramètres dans les appels de procédure peuvent utiliser en entrée, d’entrée/sortient ou paramètres de sortie. Cela est différent des paramètres de toutes les autres instructions de SQL, qui sont toujours des paramètres d’entrée.  
@@ -58,4 +58,3 @@ Paramètres dans les appels de procédure peuvent utiliser en entrée, d’entr�
  Une fois que l’instruction a été exécutée, pilotes de stocker les valeurs retournées d’entrée/sortie et les paramètres de sortie dans les variables liées à ces paramètres. Ces retourné ne sont pas garantis que les valeurs pour définir jusqu'à ce que tous les résultats retournés par la procédure qui ont été extraites et **SQLMoreResults** a retourné SQL_NO_DATA. Si l’exécution de l’instruction entraîne une erreur, le contenu de la mémoire tampon de paramètre d’entrée/sortie ou de la mémoire tampon de paramètre de sortie n’est pas défini.  
   
  Une application appelle **SQLProcedure** pour déterminer si une procédure a une valeur de retour. Il appelle **SQLProcedureColumns** pour déterminer le type (valeur de retour, d’entrée, d’entrée/sortie ou de sortie) de chaque paramètre de procédure.
-

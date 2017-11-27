@@ -3,10 +3,12 @@ title: "La récupération des résultats (Basic) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +16,16 @@ helpviewer_keywords:
 - data sources [ODBC], result sets
 - empty result sets [ODBC]
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54a310e3e2f13431c0963f513fb9d5c4ec4e226b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05a58b18fab1fe40220b20e8b18849acc4de11a9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-results-basic"></a>La récupération des résultats (Basic)
 A *jeu de résultats* est un ensemble de lignes dans la source de données qui correspond à certains critères. Est une table conceptuelle qui résulte d’une requête et qui est disponible pour une application dans un format tabulaire. **Sélectionnez** instructions, fonctions de catalogue et certaines procédures créent des jeux de résultats. Dans l’exemple suivant, la première instruction SQL crée un jeu de résultats contenant toutes les lignes et toutes les colonnes de la table Orders, et la deuxième instruction SQL crée un jeu de résultats contenant les colonnes OrderID, vendeur et l’état pour les lignes de la table Orders dans lequel l’état est ouvert :  
@@ -46,13 +47,12 @@ SELECT * FROM Orders WHERE 1 = 2
   
  Cette section contient les rubriques suivantes.  
   
--   [Est le résultat créé ?](../../../odbc/reference/develop-app/was-a-result-set-created.md)  
+-   [Un jeu de résultats a-t-il été créé ?](../../../odbc/reference/develop-app/was-a-result-set-created.md)  
   
--   [Métadonnées du jeu de résultats](../../../odbc/reference/develop-app/result-set-metadata.md)  
+-   [Métadonnées des jeux de résultats](../../../odbc/reference/develop-app/result-set-metadata.md)  
   
 -   [Liaison de colonnes](../../../odbc/reference/develop-app/binding-columns.md)  
   
 -   [Extraction de données](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [Fermeture du curseur](../../../odbc/reference/develop-app/closing-the-cursor.md)
-

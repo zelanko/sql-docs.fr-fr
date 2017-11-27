@@ -6,15 +6,19 @@ ms.author: edmacauley
 manager: jhubbard
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: f8b30f6fcef4a0091871a5a1c4639143671197cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemple : Script d’installation sans assistance de SQL Server pour Red Hat Enterprise Linux
 
@@ -220,4 +224,3 @@ Puis exécutez le script de l’interpréteur de commandes comme suit :
 ```
 
 Pour plus d’informations sur SQL Server sur Linux, consultez [SQL Server sur une vue d’ensemble de Linux](sql-server-linux-overview.md).
-

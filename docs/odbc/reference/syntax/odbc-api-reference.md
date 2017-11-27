@@ -3,25 +3,26 @@ title: "Référence de l’API ODBC | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 348b9a8bead318f99f0ab85f0f961e64a56770f5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: abb5aebcd58c79c6351d7c47a7b98be5a040ef46
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-api-reference"></a>Référence de l’API ODBC
 Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre alphabétique. Chaque fonction est définie en tant que fonction de langage de programmation C. Descriptions sont les suivantes :  
@@ -210,4 +211,3 @@ Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre al
 -   [SQLTables, fonction](../../../odbc/reference/syntax/sqltables-function.md)  
   
 -   [SQLTransact, fonction](../../../odbc/reference/syntax/sqltransact-function.md)
-

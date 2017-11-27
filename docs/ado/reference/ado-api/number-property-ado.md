@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Error::Number
 - Error::GetNumber
 - Error::get_Number
-helpviewer_keywords:
-- number property [ADO]
+helpviewer_keywords: number property [ADO]
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a479b188bc9bab4af8b248b4c40602bc5f380ff7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d5567283a62a31842185afce7682d3641d6fcc4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="number-property-ado"></a>Number, propriété (ADO)
 Indique le numéro qui identifie de façon unique un [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
@@ -44,12 +41,11 @@ Indique le numéro qui identifie de façon unique un [erreur](../../../ado/refer
  Le [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection retourne un HRESULT en format hexadécimal (par exemple, 0 x 80004005) ou une valeur longue (2147467259 par exemple). Ces valeurs HRESULT peut être déclenchés par les composants sous-jacents, telle que OLE DB ou même OLE. Pour plus d’informations sur ces numéros, consultez [erreurs (OLE DB)](http://msdn.microsoft.com/en-us/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) dans les [de référence du programmeur OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Error](../../../ado/reference/ado-api/error-object.md)  
+ [Error, objet](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Description, HelpContext, HelpFile, Native Error, nombre, Source et SQLState, propriétés-exemple (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Description, HelpContext, HelpFile, Native Error, nombre, Source et SQLState, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Description (propriété)](../../../ado/reference/ado-api/description-property.md)   
  [HelpContext, HelpFile, propriétés](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Source, propriété (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
-
+ [Source, propriété (objet Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)

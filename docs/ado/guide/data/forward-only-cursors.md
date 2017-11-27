@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 496e62ece05a14a5b64eae797d546af7ba4a1ede
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 121e8eec0b95f66b6e034f1f77d78c7d88fd5184
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="forward-only-cursors"></a>Curseurs avant uniquement
 Le type de curseur par défaut, appelé un curseur avant uniquement (ou non déroulante), peut avancer uniquement dans le jeu de résultats. Un curseur avant uniquement ne prend pas en charge le défilement (la possibilité de déplacer vers l’avant et vers l’arrière dans le jeu de résultats) ; Il prend uniquement en charge l’extraction de lignes à partir du début à la fin du jeu de résultats. Avec certains curseurs avant uniquement (comme avec la bibliothèque de curseurs SQL Server), toutes les instructions delete, update et insert effectuées par l’utilisateur actuel (ou validées par d’autres utilisateurs) qu’incidence sur les lignes du jeu de résultats sont visibles que les lignes sont extraites. Étant donné que le curseur ne peut pas être le défilement arrière, toutefois, les modifications apportées aux lignes de la base de données après l’extraction de la ligne ne sont pas visibles via le curseur.  
@@ -41,4 +39,3 @@ Le type de curseur par défaut, appelé un curseur avant uniquement (ou non dér
  [Curseurs statiques](../../../ado/guide/data/static-cursors.md)   
  [Curseurs keyset](../../../ado/guide/data/keyset-cursors.md)   
  [Curseurs dynamiques](../../../ado/guide/data/dynamic-cursors.md)
-

@@ -3,10 +3,12 @@ title: "Attribut de conformité | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7859fbb5483acd09dd99f4f27be77d5874e7b992
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="attribute-conformance"></a>Mise en conformité de l’attribut
 Le tableau suivant indique le niveau de conformité de chaque attribut d’environnement ODBC, où cela est bien défini.  
@@ -107,4 +108,3 @@ Le tableau suivant indique le niveau de conformité de chaque attribut d’envir
  [2] pour la conformité d’interface de niveau 2, le pilote doit prendre en charge SQL_CONCUR_READ_ONLY et au moins une autre valeur.  
   
  [3] pour la conformité d’interface de niveau 1, le pilote doit prendre en charge SQL_CURSOR_FORWARD_ONLY et au moins une autre valeur. Pour la conformité d’interface de niveau 2, le pilote doit prendre en charge toutes les valeurs définies dans ce document.
-

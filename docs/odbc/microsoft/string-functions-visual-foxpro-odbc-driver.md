@@ -3,10 +3,12 @@ title: "(Le pilote ODBC Visual FoxPro) de fonctions de chaîne | Documents Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c62e64602162e71916624d3185426fbf73cf0bc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f3fa7491ea354cc616d6b58de17e6fa82c785a3a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Fonctions de chaîne (pilote ODBC de Visual FoxPro)
 Le tableau suivant répertorie les fonctions de manipulation de chaîne ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
@@ -49,4 +50,3 @@ Le tableau suivant répertorie les fonctions de manipulation de chaîne ODBC pri
 |ESPACE *(nombre)*||  
 |SOUS-chaîne *(exp_chaîne, début, longueur)*|SUBSTR *(exp_chaîne, début, longueur)*|  
 |UCASE *(exp_chaîne)*|SUPÉRIEUR *(exp_chaîne)*|
-

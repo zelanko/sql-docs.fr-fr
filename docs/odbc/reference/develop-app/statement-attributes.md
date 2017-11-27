@@ -3,27 +3,28 @@ title: "Les attributs d’instruction | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL statements [ODBC], statement attributes
 - statement attributes [ODBC]
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 36cc6b00223185a5a1e21708109842384c6ecb1e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-attributes"></a>Attributs d'instruction
 Les attributs d’instruction sont caractéristiques de l’instruction. Par exemple, s’il faut pour utiliser des signets et quel type de curseur à utiliser avec le résultat de l’instruction sont des attributs d’instruction.  
@@ -40,4 +41,3 @@ Les attributs d’instruction sont caractéristiques de l’instruction. Par exe
 >  Aucun des attributs d’instruction introduites dans ODBC 3. *x* (à l’exception de SQL_ATTR_METADATA_ID) peut être définie au niveau de la connexion.  
   
  Pour plus d’informations, consultez la [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) description de fonction.
-

@@ -3,27 +3,28 @@ title: Handles de connexion | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - connection handles [ODBC]
 - handles [ODBC], connection
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bed6c0fda5b192d92ff5b0fb2eebb151070ee096
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-handles"></a>Handles de connexion
 A *connexion* se compose d’un pilote et une source de données. Un handle de connexion identifie chaque connexion. Le handle de connexion définit non seulement le pilote à utiliser, mais la source de données à utiliser avec ce pilote. Dans un segment de code qui implémente ODBC (le Gestionnaire de pilotes ou un pilote), le handle de connexion identifie une structure qui contient les informations de connexion, tels que les éléments suivants :  
@@ -41,4 +42,3 @@ A *connexion* se compose d’un pilote et une source de données. Un handle de c
  Handles de connexion sont principalement utilisées lors de la connexion à la source de données (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**), déconnexion à partir de la source de données (**SQLDisconnect**), obtention d’informations sur la source de données et de pilote (**SQLGetInfo**), la récupération de diagnostics (**SQLGetDiagField** et **SQLGetDiagRec**) et l’exécution de transactions (**SQLEndTran**). Ils sont également utilisées lors de la définition et l’obtention des attributs de connexion (**SQLSetConnectAttr** et **SQLGetConnectAttr**) et lors de l’obtention du format natif d’une instruction SQL (**SQLNativeSql**).  
   
  Handles de connexion sont allouées avec **SQLAllocHandle** et libérée avec **SQLFreeHandle**.
-

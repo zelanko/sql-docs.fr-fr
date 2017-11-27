@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dba56641beaa8c22bc1bc0552d51737b81f4128d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparaison des solutions multidimensionnelles et tabulaires
   SQL Server Analysis Services offre plusieurs approches pour la création d’un modèle sémantique business intelligence : tabulaire, multidimensionnel et PowerPivot pour SharePoint.
@@ -184,4 +183,3 @@ ms.lasthandoff: 09/01/2017
 
   
   
-

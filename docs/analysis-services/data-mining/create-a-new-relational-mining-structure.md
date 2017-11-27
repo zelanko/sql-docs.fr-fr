@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ea2feced212b0af6a9cf67a2eccc0445b9bee74f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-new-relational-mining-structure"></a>créer une structure d'exploration de données relationnelle
   Utilisez l’Assistant Exploration de données pour créer une nouvelle structure d’exploration de données, utiliser les données d’une base de données relationnelle ou d’une autre source, puis enregistrer la structure et tous les modèles associés dans une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -72,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Tâches de la structure d'exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
-

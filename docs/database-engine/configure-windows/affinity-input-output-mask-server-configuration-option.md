@@ -2,9 +2,12 @@
 title: affinity Input-Output mask (option de configuration de serveur) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 52c6307494677e60ecaceb77781910781c4a9687
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fbb539201ac8566005913d9b45574aa7f261b089
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (option de configuration de serveur)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Pour réaliser les travaux multitâches, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows déplace parfois les threads de processus entre les différents processeurs. Bien qu’efficace du point de vue du système d’exploitation, cette activité peut réduire les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des charges de système intenses, car des données sont rechargées de façon répétée dans chaque cache de processeur. L'affectation de processeurs à des threads spécifiques peut améliorer les performances sous ces conditions en éliminant les rechargements de processeur ; une telle association entre un thread et un processeur est qualifiée d'affinité de processeur.  
   

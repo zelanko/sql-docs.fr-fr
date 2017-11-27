@@ -2,9 +2,12 @@
 title: "Résoudre des problèmes de configuration des groupes de disponibilité Always On (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b8f520bcd8599966e99c90ea471a8d74c491465
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Résoudre des problèmes de configuration des groupes de disponibilité Always On (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique fournit des informations pour vous aider à résoudre les problèmes courants de configuration des instances de serveur pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Problèmes courants de configuration : [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est désactivé, les comptes sont incorrectement configurés, le point de terminaison de mise en miroir de bases de données n'existe pas, le point de terminaison est inaccessible (erreur SQL Server 1418), l'accès réseau n'existe pas et échec d'une commande de jointure de base de données (erreur SQL Server 35250).  
   

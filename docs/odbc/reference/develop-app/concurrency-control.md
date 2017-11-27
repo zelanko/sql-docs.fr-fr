@@ -3,27 +3,28 @@ title: "Contrôle d’accès concurrentiel | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d40d92b6771aa27a0fbfbdbfefd485496b10984c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a10dc30810a1ea71bd4e2c9d823ed010f7f611d4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-control"></a>Contrôle d'accès concurrentiel
 *Accès concurrentiel* est la possibilité de deux transactions utilisent les mêmes données en même temps, et avec accrue des transactions isolation devrait être une concurrence réduite. Il s’agit, car l’isolation des transactions est généralement implémentée par le verrouillage de lignes et que plusieurs lignes sont verrouillées, moins de transactions peuvent être effectuées au moins temporairement bloqué par une ligne verrouillée. Lors de la concurrence réduite est généralement considérée comme un compromis pour les transaction d’isolation élevés nécessaires pour maintenir l’intégrité de base de données, il peut devenir un problème dans un environnement interactif avec une activité élevée en lecture/écriture qui utilisent des curseurs.  
@@ -36,7 +37,6 @@ ms.lasthandoff: 09/09/2017
   
  Cette section contient les rubriques suivantes.  
   
--   [Types d’accès concurrentiel](../../../odbc/reference/develop-app/concurrency-types.md)  
+-   [Types d’accès concurrentiels](../../../odbc/reference/develop-app/concurrency-types.md)  
   
 -   [Accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md)
-

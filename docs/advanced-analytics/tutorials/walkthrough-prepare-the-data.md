@@ -1,30 +1,26 @@
 ---
 title: "Préparer les données à l’aide de PowerShell (procédure pas à pas) | Documents Microsoft"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: 048419d5838a5e7f667f80ccd5fccb5dfa101d0f
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e1d85684da36ef69caf9dfa39f155a320def37b5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Préparer les données à l’aide de PowerShell (procédure pas à pas)
 
@@ -111,7 +107,7 @@ Il existe différentes manières que vous pouvez installer des packages sur SQL 
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - Cet exemple utilise la fonction grep R pour rechercher le vecteur de chemins disponibles et trouver celui qui se trouve dans « Program Files ». Pour plus d’informations, consultez [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - Cet exemple utilise la fonction grep R permet de rechercher le vecteur de chemins d’accès disponibles et de trouver le chemin d’accès qui inclut « Program Files ». Pour plus d’informations, consultez [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Si vous pensez que les packages sont déjà installés, vérifiez la liste des packages installés en exécutant `installed.packages()`.
 
@@ -129,7 +125,7 @@ En même temps que les fichiers de données, des scripts R et des scripts T-SQL,
 
 - Il réécrit les arguments dans le fichier de script R pour utiliser le nom de base de données que vous spécifiez.
 
-Vous devez exécuter ce script sur l’ordinateur où vous générez la solution : par exemple, l’ordinateur portable sur lequel vous développez et testez votre code R. Cet ordinateur, que nous allons appeler le client de science des données, doit pouvoir se connecter à l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du protocole Canaux nommés.
+Exécutez ce script sur l’ordinateur où vous générez la solution : par exemple, l’ordinateur portable sur lequel vous développez et testez votre code R. Cet ordinateur, que nous allons appeler le client de science des données, doit pouvoir se connecter à l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du protocole Canaux nommés.
 
 1. Ouvrez une ligne de commande PowerShell **en tant qu’administrateur**.
   
@@ -156,7 +152,7 @@ Vous devez exécuter ce script sur l’ordinateur où vous générez la solution
       > [!WARNING]
       > Lorsque vous utilisez l’invite de commandes dans le script PowerShell pour fournir vos informations d’identification, le mot de passe est écrit dans le fichier de script mis à jour en texte brut. Immédiatement après avoir créé les objets R nécessaires, modifiez le fichier pour supprimer les informations d’identification.
       
-    **Chemin au fichier csv** : indiquez le chemin complet au fichier de données. Le chemin et le nom de fichier par défaut sont `C:\tempR\nyctaxi1pct.csv1`.
+    **Chemin au fichier csv** : indiquez le chemin complet au fichier de données. Le chemin et le nom de fichier par défaut sont `C:\tempR\nyctaxi1pct.csv`.
   
 4.  Appuyez sur Entrée pour exécuter le script.
 
@@ -260,7 +256,7 @@ L’exemple suivant exécute le script à l’aide d’une connexion SQL :
 
 Si votre base de données contient une table existante du même nom et le même schéma, **bcp** insère une nouvelle copie de ces données plutôt que de remplacement des données existantes.
 
-Pour éviter les doublons, tronquez les tables existantes avant de réexécuter le script.
+Pour éviter la duplication des données, tronquer des tables existantes avant de réexécuter le script.
 
 ## <a name="whats-included-in-the-sample"></a>Ce qui est inclus dans l’exemple
 
@@ -274,7 +270,7 @@ Lorsque vous téléchargez les fichiers à partir du référentiel GitHub, vous 
 
 ### <a name="bkmk_data"></a>Apprentissage et le score des données
 
-Les données sont un échantillon représentatif du jeu de données sur les taxis de la ville de New York, qui contient les enregistrements de plus de 173 millions de trajets en 2013, y compris les tarifs et le montant des pourboires versés pour chaque trajet. Pour rendre les données plus faciles à manipuler, l’équipe de science des données Microsoft a effectué un sous-échantillonnage pour obtenir seulement 1 % des données.  Ces données a été partagées dans un conteneur de stockage d’objets blob public dans Azure, au format .CSV. La source de données est un fichier non compressé, d’un peu moins de 350 Mo.
+Les données sont un échantillon représentatif du jeu de données sur les taxis de la ville de New York, qui contient les enregistrements de plus de 173 millions de trajets en 2013, y compris les tarifs et le montant des pourboires versés pour chaque trajet. Pour rendre les données plus faciles à manipuler, l’équipe de science des données Microsoft a effectué un sous-échantillonnage pour obtenir seulement 1 % des données.  Ces données a été partagées dans un conteneur de stockage d’objets blob public dans Azure, au format .CSV. La source de données est un fichier non compressé, juste sous 350 Mo.
 
 + Jeu de données public : [NYC Taxi et briefings Commission] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
@@ -294,7 +290,7 @@ Le script PowerShell s’exécute plusieurs [!INCLUDE[tsql](../../includes/tsql-
 
 |Nom du fichier de script SQL| Description|
 |------------------------|----------------|
-|create-db-tb-upload-data.sql|Crée une base de données et deux tables :<br /><br /> *nyctaxi_sample*: table qui contient les données de formation, un échantillon de 1 % du jeu de données sur les taxis de New York. Un index cluster columnstore est ajouté à la table pour améliorer les performances de stockage et des requêtes.<br /><br /> *nyc_taxi_models*: table vide que vous utiliserez ultérieurement pour enregistrer le modèle de classification formé.|
+|create-db-tb-upload-data.sql|Crée une base de données et deux tables :<br /><br /> *nyctaxi_sample*: table qui contient les données de formation, un échantillon de 1 % du jeu de données sur les taxis de New York. Un index cluster columnstore est ajouté à la table pour améliorer les performances de stockage et des requêtes.<br /><br /> *nyc_taxi_models*: une table utilisée pour stocker les modèles formés au format binaire.|
 |PredictTipBatchMode.sql|Crée une procédure stockée qui appelle un modèle formé pour prédire les étiquettes des nouvelles observations. Il accepte une requête comme paramètre d’entrée.|
 |PredictTipSingleMode.sql|Crée une procédure stockée qui appelle un modèle de classification formé pour prédire les étiquettes des nouvelles observations. Les variables des nouvelles observations sont passées comme paramètres inline.|
 |PersistModel.sql|Crée une procédure stockée qui permet de stocker la représentation binaire du modèle de classification dans une table de la base de données.|
@@ -314,5 +310,4 @@ Les requêtes T-SQL utilisées dans cette procédure pas à pas ont été testé
 
 [Procédure pas à pas de données de bout en bout science pour R et SQL Server](/walkthrough-data-science-end-to-end-walkthrough.md)
 
-[Configuration requise pour la procédure pas à pas la science des données](walkthrough-prerequisites-for-data-science-walkthroughs.md)
-
+[Prérequis pour les procédures pas à pas de science des données](walkthrough-prerequisites-for-data-science-walkthroughs.md)

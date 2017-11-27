@@ -11,20 +11,18 @@ ms.service:
 ms.component: guide
 ms.technology: "“drivers”"
 ms.topic: article
-helpviewer_keywords:
-- ADO, what's new
+helpviewer_keywords: ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 594152a9dd7e6d4fdb4d00668692239d09bdf373
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1ace4237c41b4a92b62e958970ebb49dcf2156d0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-features-for-each-release"></a>Fonctionnalités d’ADO pour chaque version
 Cette rubrique répertorie les nouvelles fonctionnalités introduites par chaque version de ADO, ADO MD et ADOX.
@@ -51,17 +49,17 @@ Une commande imbriquée shape retourne maintenant un maximum de 512 **jeux d’e
  *prise en charge de la plateforme 64 bits* ADO 2.7 introduit la prise en charge des processeurs 64 bits.
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***méthode* à partir de ADO 2.6, objets ADO MD peuvent être récupérées à l’aide des noms uniques, comme spécifié par le [UniqueName, propriété (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md).   Les noms des objets parents n’avez pas besoin de connaître et collections de parent n’avez pas besoin d’être rempli pour récupérer un objet de schéma. Consultez [GetSchemaObject, méthode (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ **CubDef.GetSchemaObject***méthode* à partir de ADO 2.6, objets ADO MD peuvent être récupérées à l’aide des noms uniques, comme spécifié par le [UniqueName, propriété (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). Les noms des objets parents n’avez pas besoin de connaître et collections de parent n’avez pas besoin d’être rempli pour récupérer un objet de schéma. Consultez [GetSchemaObject, méthode (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Flux de commandes* le **commande** objet prend en charge des commandes dans un format de flux de données en guise d’alternative à l’utilisation de la **CommandText** propriété. Le [CommandStream, propriété (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) peut être utilisé pour spécifier les modèles XML ou des programmes en tant que le **commande** d’entrée avec le fournisseur Microsoft OLE DB pour SQL Server.
 
- **Dialecte***propriété* [dialecte](../../ado/reference/ado-api/dialect-property.md) est une propriété qui définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  
+ **Dialecte***propriété* [dialecte](../../ado/reference/ado-api/dialect-property.md) est une propriété qui définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.
 
- **Command.Execute***méthode* le [exécuter la méthode](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **commande** objet a été amélioré pour utiliser des flux d’entrée et de sortie.  
+ **Command.Execute***méthode* le [exécuter la méthode](../../ado/reference/ado-api/execute-method-ado-command.md) de ADO **commande** objet a été amélioré pour utiliser des flux d’entrée et de sortie.
 
  *Champ statusvalues* si l’utilisateur rencontre une erreur DB_E_ERRORSOCCURRED lorsque vous modifiez un **champ** d’un **Recordset**, ADO remplira maintenant la **Field.Status**propriété avec les informations d’état approprié afin que l’utilisateur aura plus d’informations sur la cause du problème. Consultez [Status, propriété (champ ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- **NamedParameters***propriété* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) une nouvelle propriété de la **commande** nommé de l’objet qui indique que le fournisseur doit utiliser. paramètres.  
+ **NamedParameters***propriété* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) une nouvelle propriété de la **commande** nommé de l’objet qui indique que le fournisseur doit utiliser. paramètres.
 
  *Jeux de résultats dans des flux* ADO peut retourner des jeux de résultats à partir d’une source de données dans un **flux**, plutôt qu’un **Recordset** objet. À l’aide de la version la plus récente du fournisseur Microsoft OLE DB pour SQL Server, vous pouvez obtenir des résultats XML à partir du fournisseur en exécutant une requête « Pour le XML ». A **flux** qui reçoit le jeu de résultats peut être ouvert avec une commande « Pour XML » comme source. Consultez [la récupération des jeux de résultats en flux](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -75,4 +73,3 @@ Une commande imbriquée shape retourne maintenant un maximum de 512 **jeux d’e
  *La liaison d’URL* ADO 2.5 présente l’utilisation d’une URL, au lieu d’un texte à chaîne et la commande de connexion, pour nommer des objets de magasin de données. Une URL peut être utilisée avec le **connexion** et **Recordset** objets, ainsi qu’avec la nouvelle **enregistrement** et **flux** objets.
 
  *Fournisseurs de données prenant en charge la liaison d’URL* ADO 2.5 prend en charge les fournisseurs OLE DB qui reconnaissent les schémas d’URL. Cela inclut le fournisseur OLE DB pour la publication Internet qui accède au système de fichiers Windows 2000 et identifie le schéma HTTP existant.
-

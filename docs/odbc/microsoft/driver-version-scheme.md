@@ -3,26 +3,26 @@ title: "Schéma de Version de pilote | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ODBC driver for Oracle [ODBC], versions
+helpviewer_keywords: ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 35ee21329cabca4e160112887f8c746ad8f44b82
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-version-scheme"></a>Schéma de Version de pilote
 > [!IMPORTANT]  
@@ -52,4 +52,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Avec la version 2.573.2973, la convention d’affectation de noms a conduit à une certaine confusion 2.573 est une version antérieure à celle de 2,73 que chaque section du numéro de build doit être considérée comme individuellement. Le nombre 573 est supérieur à 73, par conséquent, il est une version plus récente. « 2.5 » indique également, numéro de version du pilote.
-

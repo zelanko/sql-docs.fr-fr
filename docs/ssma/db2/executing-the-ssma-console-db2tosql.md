@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ae2f531642d8701861b217bb53951c8dad07d2d8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7431b1906dcb647bfea80249a4019246f56910f2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>L’exécution de la Console SSMA (DB2ToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même. L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
@@ -31,7 +29,7 @@ Microsoft vous fournit un ensemble robuste de script de commandes du fichier à 
 ## <a name="project-script-file-commands"></a>Commandes de Script de fichier projet  
 Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et les projets en cours de fermeture.  
   
-**Command**  
+**Commande**  
   
 créer à nouveau projet  
   
@@ -66,7 +64,7 @@ Est de l’attribut 'Remplacer-if-exists' **false** par défaut.
   
 Est de l’attribut 'type de projet' **sql-server-2008** par défaut.  
   
-**Command**  
+**Commande**  
   
 projet ouvert  
   
@@ -91,7 +89,7 @@ Ouvre un projet existant.
 ```  
 SSMA pour l’Application de Console DB2 prend en charge la compatibilité descendante. Vous ne pourrez pas ouvrir les projets créés par une version précédente de SSMA.  
   
-**Command**  
+**Commande**  
   
 enregistrer le projet  
   
@@ -104,7 +102,7 @@ Enregistre le projet de migration.
 ```xml  
 <save-project/>  
 ```  
-**Command**  
+**Commande**  
   
 projet de fermer  
   
@@ -129,7 +127,7 @@ Les commandes de connexion de base de données aident à vous connecter à la ba
   
 -   Pour plus d’informations sur « Créer des fichiers de Script », consultez [création de fichiers de Script &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
   
-**Command**  
+**Commande**  
   
 se connecter--base de données source  
   
@@ -146,7 +144,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 force-charge-source/cible-base de données  
   
@@ -176,7 +174,7 @@ ou
   
 </force-load>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données source  
   
@@ -191,7 +189,7 @@ reconnecter--base de données source
 ```xml  
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 se connecter--base de données cible  
   
@@ -208,7 +206,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```xml  
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
-**Command**  
+**Commande**  
   
 reconnecter--base de données cible  
   
@@ -227,7 +225,7 @@ reconnecter--base de données cible
 ## <a name="report-script-file-commands"></a>Commandes de fichier de Script de rapport  
 Les commandes de rapports génèrent des rapports sur les performances de diverses activités de la Console de SSMA.  
   
-**Command**  
+**Commande**  
   
 Générer--rapport d’évaluation  
   
@@ -301,7 +299,7 @@ ou
 ## <a name="migration-script-file-commands"></a>Commandes de fichier de Script de migration  
 Les commandes de Migration de convertir le schéma de base de données cible au schéma source et migre les données vers le serveur cible. La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 convertir le schéma  
   
@@ -367,7 +365,7 @@ ou
   
 </convert-schema>  
 ```  
-**Command**  
+**Commande**  
   
 migrer des données : migre les données source à la cible.  
   
@@ -437,7 +435,7 @@ ou
 ## <a name="migration-preparation-script-file-commands"></a>Commandes de fichier de Script de préparation migration  
 La commande de préparation de Migration lance un mappage de schéma entre les bases de données source et cible.  
   
-**Command**  
+**Commande**  
   
 schéma de mappage  
   
@@ -458,7 +456,7 @@ Mappage de schéma de base de données source vers le schéma cible.
   
    sql-server-schema="<target-schema>"/>  
 ```  
-**Command**  
+**Commande**  
   
 schéma de mappage  
   
@@ -485,7 +483,7 @@ Les commandes de la facilité de gestion permettent de synchroniser les objets d
   
 La sortie de console par défaut définissant pour les commandes de migration est le rapport de sortie « Complète » avec aucun rapport d’erreur détaillé : résumé uniquement sur le nœud racine d’arborescence objet source.  
   
-**Command**  
+**Commande**  
   
 synchroniser la cible  
   
@@ -550,7 +548,7 @@ ou
   
 </synchronize-target>  
 ```  
-**Command**  
+**Commande**  
   
 actualisation de base de données  
   
@@ -615,7 +613,7 @@ ou
 ## <a name="script-generation-script-file-commands"></a>Commandes de fichier de Script de génération script  
 Les commandes de génération du Script effectuent deux tâches : ils permettent d’enregistrer la console de sortie dans un fichier de script ; et enregistrez la sortie de T-SQL dans la console ou un fichier basé sur le paramètre que vous spécifiez.  
   
-**Command**  
+**Commande**  
   
 en tant que script de sauvegarde  
   
@@ -667,7 +665,7 @@ ou
   
 </save-as-script>  
 ```  
-**Command**  
+**Commande**  
   
 instruction CONVERT-sql  
   
@@ -778,4 +776,3 @@ L’étape suivante varie selon les spécifications de votre projet :
   
 -   Pour résoudre les problèmes dans la console, consultez [dépannage &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   
-

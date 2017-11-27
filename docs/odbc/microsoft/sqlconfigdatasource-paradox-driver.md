@@ -3,27 +3,28 @@ title: SQLConfigDataSource (pilote Paradox) | Documents Microsoft
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: microsoft
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18d184fa68e1b8a9d87f6c4e86e5059c7f7a118d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (pilote Paradox)
 > [!NOTE]  
@@ -49,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |PWD|Mot de passe.<br /><br /> Ce mot clé facultatif et ne sera jamais être écrites dans le fichier par le pilote. Il est utilisé dans un appel à **SQLDriverConnect** mot de passe sécurisé de fichiers de Corel. Le mot de passe sera valide chaque fois qu’une table est ouvert. Si aucun mot de passe n’est transmis dans la chaîne de connexion, aucun mot de passe n’est générée pour cette table. Si les tables ont des mots de passe différents, plusieurs ne peut pas être ouvert dans la même session, ni si les tables peuvent être jointes.|  
 |READONLY|TRUE pour rendre le fichier en lecture seule ; Valeur FALSE à rendre le fichier pas en lecture seule.<br /><br /> L’option est définie en tant que même **en lecture seule** dans la boîte de dialogue d’installation.|  
 |THREADS|Le nombre de threads d’arrière-plan pour le moteur à utiliser. Cette valeur est 3 et ne peut pas être modifiée.<br /><br /> L’option est définie en tant que même **Threads** dans la boîte de dialogue d’installation.|
-

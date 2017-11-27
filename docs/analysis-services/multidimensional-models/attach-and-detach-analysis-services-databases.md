@@ -23,17 +23,16 @@ helpviewer_keywords:
 - databases [Analysis Services], attach
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f7cc88be76e8ad64d81465543ab4f463c98687e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f4c193def48b92245c1e2f2955262d3fb0850957
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
   Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas et d’autres, les commandes **Attach** et **Detach** permettent à l’administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de placer la base de données hors connexion et de la remettre en ligne de manière simple.  
@@ -72,7 +71,6 @@ ms.lasthandoff: 09/01/2017
  [Base de données ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
  [Élément Detach](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Élément Attach](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [Attach, élément](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
   
   
-

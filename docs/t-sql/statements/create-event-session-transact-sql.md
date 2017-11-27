@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,23 +18,21 @@ f1_keywords:
 - SESSION_TSQL
 - EVENT_SESSION_TSQL
 - CREATE_EVENT_SESSION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aaee13bce387e36c1dcb7d26f2dd983b8d36a661
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,7 +125,7 @@ ON SERVER
   
  Les événements apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « événement ».  
   
- Définissez { *event_customizable_attribute*= \<valeur > [,...*n*] }  
+ Définissez { *event_customizable_attribute*= \<valeur > [ ,...*n*] }  
  Autorise les attributs personnalisables pour l'événement à définir. Attributs personnalisables s’affichent dans la vue sys.dm_xe_object_columns en tant que column_type « personnalisable » et object_name = *event_name*.  
   
  ACTION ({[*event_module_guid*]. *event_package_name*. *action_name* [ **,**... *n*] })  
@@ -180,13 +177,13 @@ ON SERVER
   
 -   *target_name* est la cible. Les cibles apparaissent dans la vue sys.dm_xe_en tant qu'object_type « cible ».  
   
- Définissez { *target_parameter_name*= \<valeur > [,...*n*] }  
+ Définissez { *target_parameter_name*= \<valeur > [, ...*n*] }  
  Définit un paramètre cible. Paramètres cibles apparaissent dans la vue sys.dm_xe_object_columns en tant que column_type « personnalisable » et object_name = *target_name*.  
   
 > [!IMPORTANT]  
 >  Si vous utilisez la cible de mémoire tampon en anneau, il est préférable de configurer le paramètre cible max_memory avec 2 048 kilo-octets (Ko) pour éviter les éventuelles données tronquées dans le résultat XML. Pour plus d’informations sur quand utiliser les différents types de cibles, consultez [cibles des événements étendus SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
- AVEC ( \<options_session_événements > [,... *n* ]) Spécifie les options à utiliser avec la session d’événements.  
+ AVEC ( \<options_session_événements > [ ,... *n* ]) Spécifie les options à utiliser avec la session d’événements.  
   
  MAX_MEMORY =*taille* [Ko | **Mo** ]  
  Spécifie la quantité de mémoire maximale à allouer à la session pour la mise en mémoire tampon d'événement. La valeur par défaut est 4 Mo. *taille* est un nombre entier et peut prendre l’exprimer en kilo-octets (Ko) ou une valeur en mégaoctets (Mo).  
@@ -276,5 +273,4 @@ GO
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
   
   
-
 

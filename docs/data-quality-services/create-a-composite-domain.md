@@ -2,9 +2,12 @@
 title: "Créer un domaine composite | Microsoft Docs"
 ms.custom: 
 ms.date: 11/22/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c69c58ed516b9977e8b8ea43a6a5f69a1e57f2e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cd7202378a76fb0de0552685343fc681f39ea4bb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
   Cette rubrique explique comment créer un domaine composite dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend un ou plusieurs domaines uniques qui s'appliquent à un seul champ de données. Pour plus d’informations sur les domaines composites, consultez [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md).  
