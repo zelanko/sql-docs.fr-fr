@@ -8,24 +8,21 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11df71495b55ca72074c6ab928caaf6474bb2576
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CRÉER la TABLE (entrepôt de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -136,7 +133,7 @@ Stocke le tableau sous la forme d’un index cluster columnstore. L’index clus
  `HEAP`   
   Stocke le tableau sous la forme d’un segment de mémoire. Ceci est la valeur par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
- `CLUSTERED INDEX`( *index_column_name* [,...*n* ] )  
+ `CLUSTERED INDEX`( *index_column_name* [ ,...*n* ] )  
  Stocke le tableau sous la forme d’un index cluster avec une ou plusieurs colonnes clés. Stocke les données en ligne. Utilisez *index_column_name* pour spécifier le nom d’une ou plusieurs colonnes clés dans l’index.  Pour plus d’informations, consultez les Tables Rowstore dans les remarques d’ordre général.
  
  `LOCATION = USER_DB`   
@@ -567,4 +564,3 @@ WITH
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-
