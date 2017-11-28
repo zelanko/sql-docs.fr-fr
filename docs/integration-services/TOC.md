@@ -7,7 +7,7 @@
 ## [Fonctionnalités Integration Services prises en charge par les éditions de SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilité descendante d’Integration Services](integration-services-backward-compatibility.md)
 
-# Démarrages rapides
+# Guides de démarrage rapide
 ## Déployer
 ### [Déployer avec SSMS](./ssis-quickstart-deploy-ssms.md)
 ### [Déployer avec Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
@@ -27,6 +27,7 @@
 ## [Didacticiel - déployer, exécuter et surveiller un package sur Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Se connecter au catalogue SSIS sur Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Planifier l’exécution de packages sur Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Valider les packages déployés sur Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Se connecter aux sources de données avec l’authentification Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Se connecter aux fichiers et partages de fichiers](lift-shift/ssis-azure-files-file-shares.md)
 
