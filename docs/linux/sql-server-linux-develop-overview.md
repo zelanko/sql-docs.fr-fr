@@ -4,7 +4,7 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,19 +13,21 @@ ms.component: linux
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: ed4f34bf3e08897ab13cae24f47fc74292ce38bc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c83b105706916c193cb1a0bbf966ff64fb7bac05
+ms.contentlocale: fr-fr
+ms.lasthandoff: 10/02/2017
+
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Pour commencer à développer des applications pour SQL Server sur Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Vous pouvez créer des applications qui se connectent à et utilisent SQL Server 2017 sur Linux à partir de divers langages de programmation, tels que c#, Java, Node.js, PHP, Python, Ruby et C++. Vous pouvez également utiliser les infrastructures web les plus courants et les structures relationnelles mappage ORM (Object).
+
+> [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
 > Ces mêmes options de développement vous permettent également à la cible SQL Server sur d’autres plateformes. Les applications peuvent cibler SQL Server exécuté localement ou dans le cloud, Linux, Windows ou Docker sur macOS. Ou bien, vous pouvez cibler des base de données SQL Azure et Azure SQL Data Warehouse.
@@ -82,3 +84,4 @@ Pour commencer, installez SQL Server sur Linux à l’aide d’un des didacticie
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécutez sur Docker](quickstart-install-connect-ubuntu.md)
+
