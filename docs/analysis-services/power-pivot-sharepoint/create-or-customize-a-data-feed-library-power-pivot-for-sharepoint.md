@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  [Ajouter le type de contenu du flux à une bibliothèque](#addtolib)  
   
 ##  <a name="prereq"></a> Conditions préalables  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L’intégration de la fonctionnalité doit être activée pour les sites pour lesquels vous créez la bibliothèque de flux de données. Si le type de modèle de bibliothèque de flux n'est pas disponible, la cause en est probablement que cette condition préalable n'est pas respectée. Pour plus d’informations, consultez [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] L’intégration de la fonctionnalité doit être activée pour les sites pour lesquels vous créez la bibliothèque de flux de données. Si le type de modèle de bibliothèque de flux n'est pas disponible, la cause en est probablement que cette condition préalable n'est pas respectée. Pour plus d’informations, consultez [Activer l’intégration des fonctionnalités Power Pivot pour des collections de sites dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Vous devez être propriétaire de site pour créer la bibliothèque.  
   

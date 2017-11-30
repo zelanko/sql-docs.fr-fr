@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- set operators [MDX]
+dev_langs: kbMDX
+helpviewer_keywords: set operators [MDX]
 ms.assetid: 83500d2e-44b3-49eb-a221-3ce5a58277a5
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 55d5b2c2b28a644221673c7104881d5864fbbfa7
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ed67b969d53eeb65009926cade623d2b87b9e175
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="set-operators"></a>Opérateurs de jeu
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,8 +34,8 @@ ms.lasthandoff: 08/02/2017
   
 |Opérateur| Description|  
 |--------------|-----------------|  
-|[-(Sauf)](../mdx/except-mdx-operator.md)|Retourne les différences entre deux jeux, en supprimant les membres en double.<br /><br /> Cet opérateur est fonctionnellement équivalent à la [sauf](../mdx/except-mdx-function.md) (fonction).|  
-|[* (Crossjoin)](../mdx/crossjoin-mdx-operator-reference.md)|Renvoie le produit croisé de deux jeux de données<br /><br /> Cet opérateur est fonctionnellement équivalent à la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).|  
+|[- (Sauf)](../mdx/except-mdx-operator.md)|Retourne les différences entre deux jeux, en supprimant les membres en double.<br /><br /> Cet opérateur est fonctionnellement équivalent à la [sauf](../mdx/except-mdx-function.md) (fonction).|  
+|[* (Jointure croisée)](../mdx/crossjoin-mdx-operator-reference.md)|Renvoie le produit croisé de deux jeux de données<br /><br /> Cet opérateur est fonctionnellement équivalent à la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).|  
 |[: (Plage)](../mdx/range-mdx.md)|Retourne un jeu naturellement ordonné, dont les extrémités sont représentées par les deux membres spécifiés, entre lesquels figurent les autres membres du jeu.|  
 |[+ (Union)](../mdx/union-mdx-operator-reference.md)|Retourne l'union de deux jeux, en excluant les membres en double.<br /><br /> Cet opérateur est fonctionnellement équivalent à la [Union &#40; MDX &#41; ](../mdx/union-mdx.md) (fonction).|  
   
@@ -49,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  [Opérateurs &#40; La syntaxe MDX &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

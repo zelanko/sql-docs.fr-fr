@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- bitwise operators
+dev_langs: kbMDX
+helpviewer_keywords: bitwise operators
 ms.assetid: 7349167b-f4b3-4344-bd01-b8f5fee4a509
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: e70569ca260759f97cdf7330fde496e990c334bb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 73d85cd8e892b6d1f9bfe4f0999e73e4da16f73c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,12 +32,12 @@ ms.lasthandoff: 08/02/2017
   
  MDX prend en charge les opérateurs logiques répertoriés dans le tableau suivant.  
   
-|Opérateur|Description|  
+|Opérateur| Description|  
 |--------------|-----------------|  
-|[ET](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
-|[EST](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
-|[PAS](../mdx/not-mdx.md)|Effectue une négation logique sur une expression numérique.|  
-|[- ou -](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
+|[AND](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
+|[IS](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
+|[NOT](../mdx/not-mdx.md)|Effectue une négation logique sur une expression numérique.|  
+|[OU](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
 |[XOR](../mdx/xor-mdx.md)|Effectue une exclusion logique sur deux expressions numériques.|  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -49,4 +45,3 @@ ms.lasthandoff: 08/02/2017
  [Opérateurs &#40; La syntaxe MDX &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-

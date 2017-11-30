@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Définir des autorisations de traitement sur une structure d'exploration de données  
  Vous pouvez créer un rôle accordant l'autorisation de traiter des structures d'exploration de données. Ceci comprend le traitement de tous les modèles d'exploration de données.  
   
- Les autorisations**Extraire** et **Lire la définition** permissions used for browsing a mining model et structure are atomic et can be added to the same role, or separated out into a different role.  
+ Les autorisations **Extraire** et **Lire la définition** utilisées pour parcourir une structure et un modèle d'exploration de données sont atomiques et peuvent être ajoutées au même rôle ou réparties dans des rôles différents.  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à l’instance d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ouvrez le dossier Bases de données et sélectionnez une base de données.  
   

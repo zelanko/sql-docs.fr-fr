@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- NONEMPTYCROSSJOIN
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- NonEmptyCrossjoin function
+f1_keywords: NONEMPTYCROSSJOIN
+dev_langs: kbMDX
+helpviewer_keywords: NonEmptyCrossjoin function
 ms.assetid: 3dc9522d-9126-4f7a-b587-216fa7a06c62
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 356f5c7c807645e798527fc29fc5ccb587e3bac4
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 54ea9a17d94b73d5423384023d49e4c86771f072
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +45,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Compter*  
+ *Nombre*  
  Expression numérique valide qui précise le nombre de jeux à retourner.  
   
 ## <a name="remarks"></a>Notes  
@@ -65,4 +60,3 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

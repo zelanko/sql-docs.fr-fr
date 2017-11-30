@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Attribut prédictible|Continu, Cyclique et Ordonné|  
   
 > [!NOTE]  
->  Les types de contenu**Cyclique** et **Trié** content types are supported, but the algorithm treats them as discrete values et does not perform special processing.  
+>  Les types de contenu**Cyclique** et **Trié** sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

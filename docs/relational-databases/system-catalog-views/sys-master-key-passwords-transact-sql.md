@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f00190c24d06f888767343270f77dfdeea8ee7b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6bb1977fb034f2fd2c682b12b4466bd7914009dd
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/21/2017
   Retourne une ligne pour chaque mot de passe de clé principale de base de données ajouté à l’aide de la **sp_control_dbmasterkey_password** procédure stockée. Les mots de passe utilisés pour protéger les clés principales sont stockés dans la banque d'informations d'identification. Les noms des informations d'identification s'expriment dans le format suivant : ##DBMKEY_<database_family_guid>_<random_password_guid>##. Le mot de passe est stocké en tant que secret des informations d'identification. Pour chaque mot de passe ajouté à l’aide de **sp_control_dbmasterkey_password**, il existe une ligne dans **sys.credentials**.  
   
  Chaque ligne dans cette vue montre un **credential_id** et **family_guid** d’une base de données de la clé principale qui est protégée par mot de passe associé à ces informations d’identification. Une jointure avec **sys.credentials** sur la **credential_id** retournera les champs utiles, telles que la **create_date** et le nom d’identification.  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
