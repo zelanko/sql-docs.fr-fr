@@ -1,5 +1,5 @@
 ---
-title: "Mettre à jour une ressource (Gestionnaire de rapports) | Documents Microsoft"
+title: "Mettre à jour une ressource (Gestionnaire de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,18 @@ helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 09c43f1eb33ae86935be561c2ef956307092a9e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="update-a-resource-report-manager"></a>mise à jour d'une ressource (Gestionnaire de rapports)
+# <a name="update-a-resource-report-manager"></a>Mettre à jour une ressource (Gestionnaire de rapports)
   Vous pouvez mettre à jour une ressource en la remplaçant par une nouvelle version. Les ressources sont des éléments stockés sur un serveur de rapports qui tirent leur contenu des fichiers que vous téléchargez. Vous pouvez remplacer une ressource existante en important du contenu de fichier inédit ou différent dans la ressource existante. La mise à jour d'une ressource permet d'actualiser du contenu tout en préservant les propriétés existantes et les paramètres de sécurité définis sur la ressource.  
   
 ### <a name="to-update-a-resource"></a>Pour mettre à jour une ressource  
@@ -50,10 +49,9 @@ ms.lasthandoff: 08/09/2017
  Si la ressource en cours de mise à jour contient une image utilisée dans un rapport, vous devez actualiser le rapport pour afficher l'image mise à jour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page contenu &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Page de téléchargement du fichier &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [Télécharger les fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Aide (F1) de gestionnaire de rapports](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)   
+ [Aide F1 du Gestionnaire de rapports](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   
-

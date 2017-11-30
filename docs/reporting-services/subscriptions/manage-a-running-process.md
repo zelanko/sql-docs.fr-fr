@@ -1,5 +1,5 @@
 ---
-title: "Gérer un processus en cours d’exécution | Documents Microsoft"
+title: "Gérer un processus en cours d’exécution | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l'état des travaux qui s'exécutent sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Abonnements standard détenus par des utilisateurs individuels.  
   
- L'annulation d'un travail supprime uniquement les processus qui s'exécutent sur le serveur de rapports. Le serveur de rapports ne gère pas le traitement des données sur d'autres ordinateurs ; par conséquent, vous devez annuler manuellement les processus de requête qui se retrouvent par la suite orphelins sur d'autres systèmes. Envisagez la possibilité d'affecter des valeurs au délai d'expiration des requêtes afin de clore automatiquement les requêtes dont l'exécution est trop longue. Pour plus d’informations, consultez [des valeurs de délai d’expiration des paramètres de rapport et le traitement de Dataset partagé &#40; SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Pour plus d’informations sur l’interruption momentanée d’un rapport, consultez [Désactiver ou suspendre le traitement des rapports et des abonnements](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ L'annulation d'un travail supprime uniquement les processus qui s'exécutent sur le serveur de rapports. Le serveur de rapports ne gère pas le traitement des données sur d'autres ordinateurs ; par conséquent, vous devez annuler manuellement les processus de requête qui se retrouvent par la suite orphelins sur d'autres systèmes. Envisagez la possibilité d'affecter des valeurs au délai d'expiration des requêtes afin de clore automatiquement les requêtes dont l'exécution est trop longue. Pour plus d’informations, consultez [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Pour plus d’informations sur l’interruption momentanée d’un rapport, consultez [Désactiver ou suspendre le traitement des rapports et des abonnements](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  Dans de rares cas, vous serez peut-être amené à redémarrer le serveur pour annuler un processus. Pour le mode SharePoint, vous devrez peut-être redémarrer le pool d'applications hébergeant l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -126,11 +125,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Propriétés du travail &#40; Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Modifier un fichier de Configuration Reporting Services &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Propriétés du travail &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Contrôle des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

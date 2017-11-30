@@ -1,5 +1,5 @@
 ---
-title: "Rechercher la Version de schéma de définition de rapport (SSRS) | Documents Microsoft"
+title: "Rechercher la version du schéma de définition de rapport | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,17 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dadc45cb80ec7fa1fedca54af2a17eef5eef2bf6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Rechercher la version du schéma de définition de rapport (SSRS)
 
 Un fichier de définition de rapport spécifie l'espace de noms RDL de la version du schéma de définition de rapport qui est utilisée pour valider le fichier rdl. Lorsque vous ouvrez un fichier .rdl dans un environnement de création de rapports, tel que le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou le Générateur de rapports, si le rapport a déjà été créé pour un espace de noms, un fichier de sauvegarde est automatiquement créé et le rapport est mis à niveau d'après l'espace de noms actuel. Si vous enregistrez la définition de rapport mise à niveau, vous enregistrez le fichier .rdl converti. Il s'agit de la seule façon de mettre à niveau une définition de rapport. La définition de rapport proprement dite n'est pas mise à niveau sur un serveur de rapports. Le rapport compilé est mis à niveau sur un serveur de rapports. Pour plus d'informations, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md).  
@@ -47,7 +45,7 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procédure : identifier la version du schéma RDL du Concepteur de rapports  
   
-1.  Ouvrez un nouveau projet. La version du projet que vous choisissez détermine la version du schéma RDL. Dans SQL Server, plusieurs versions de schéma sont prise en charge. Pour plus d’informations, consultez [déploiement et prise en charge de la Version de SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Ouvrez un nouveau projet. La version du projet que vous choisissez détermine la version du schéma RDL. Dans SQL Server, plusieurs versions de schéma sont prises en charge. Pour plus d’informations, consultez [Déploiement et prise en charge des versions dans SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**. La boîte de dialogue **Ajouter un nouvel élément** s’ouvre.  
   
@@ -91,7 +89,6 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Rapports de mise à niveau](../../reporting-services/install-windows/upgrade-reports.md)   
-[Langage de définition de rapport](../../reporting-services/reports/report-definition-language-ssrs.md)  
+[Langage de définition des rapports](../../reporting-services/reports/report-definition-language-ssrs.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

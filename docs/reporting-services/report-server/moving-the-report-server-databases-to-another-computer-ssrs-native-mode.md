@@ -1,5 +1,5 @@
 ---
-title: "Déplacer les bases de données de serveur de rapports vers un autre ordinateur (SSRS en Mode natif) | Documents Microsoft"
+title: "Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90dc9bb5624c19c282d34782909fb5e168b4a695
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
 
   Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Le déplacement d'une base de données n'a aucune incidence sur les opérations planifiées qui sont actuellement définies pour les éléments du serveur de rapports.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 >  Les procédures décrites dans cette rubrique sont recommandées lorsque le déplacement de la base de données du serveur de rapports est la seule modification que vous apportez à l'installation existante. Procéder à la migration de toute une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (c’est-à-dire déplacer la base de données et modifier l’identité du service Windows Report Server utilisant la base de données) nécessite la reconfiguration de la connexion et la réinitialisation de la clé de chiffrement.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Détachement et attachement des bases de données du serveur de rapports  
- Si vous pouvez procéder à une mise hors connexion du serveur de rapports, vous pouvez détacher les bases de données pour les déplacer vers l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez utiliser. Cette approche permet de conserver les autorisations définies dans les bases de données. Si vous utilisez une base de données SQL Server, vous devez le déplacer vers une autre instance de SQL Server. Une fois que vous avez déplacé les bases de données, vous devez reconfigurer la connexion du serveur de rapports à la base de données du serveur de rapports. Si vous exécutez un déploiement avec montée en puissance parallèle, vous devez reconfigurer la connexion à la base de données du serveur de rapports pour chaque serveur de rapports appartenant au déploiement.  
+ Si vous pouvez procéder à une mise hors connexion du serveur de rapports, vous pouvez détacher les bases de données pour les déplacer vers l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez utiliser. Cette approche permet de conserver les autorisations définies dans les bases de données. Si vous utilisez une base de données SQL Server, vous devez la déplacer vers une autre instance SQL Server. Une fois que vous avez déplacé les bases de données, vous devez reconfigurer la connexion du serveur de rapports à la base de données du serveur de rapports. Si vous exécutez un déploiement avec montée en puissance parallèle, vous devez reconfigurer la connexion à la base de données du serveur de rapports pour chaque serveur de rapports appartenant au déploiement.  
   
  Suivez la procédure ci-dessous pour déplacer les bases de données :  
   
@@ -228,12 +226,11 @@ GO
 
 [Créer le rôle RSExecRole](../../reporting-services/security/create-the-rsexecrole.md)   
 [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
-[Configurer une connexion de base de données de serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Configurer le compte d’exécution sans assistance](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
-[Gestionnaire de Configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Utilitaire RSConfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
-[Configurer et gérer les clés de chiffrement](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Utilitaire rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[Configurer et gérer des clés de chiffrement](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [Base de données du serveur de rapports](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

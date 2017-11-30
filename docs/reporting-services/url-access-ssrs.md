@@ -1,5 +1,5 @@
 ---
-title: "L’accès URL (SSRS) | Documents Microsoft"
+title: "Accès URL (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0bfb2510ccee617500e4bf307b3293c29a777cbe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-ssrs"></a>Accès URL (SSRS)
   L'accès URL du serveur de rapports dans SQL Server Reporting Services (SSRS) vous permet d'envoyer des commandes à un serveur de rapports par la biais d'une demande d'URL. Par exemple, vous pouvez personnaliser le rendu d'un rapport sur un serveur de rapports en mode natif ou dans une bibliothèque SharePoint. Vous avez peut-être affiché le rapport à l'aide d'un ensemble de valeurs de paramètre de rapport, ou vous avez peut-être consulté une page spécifique digne d'intérêt dans le rapport. Vous pouvez encapsuler ces informations dans l'URL à l'aide de paramètres d'accès URL prédéfinis. Vous pouvez personnaliser davantage la façon dont le serveur de rapports traite le rapport en incorporant des paramètres pour les formats de rendu ou pour l'apparence de la visionneuse de rapports. Vous pouvez ensuite coller cette URL directement dans un courrier électronique ou une page Web pour permettre à d'autres utilisateurs d'accéder à votre rapport de la même manière dans le navigateur.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
  Pour obtenir la liste complète des commandes et paramètres disponibles via l’accès URL, consultez [Référence de paramètre d’accès URL](../reporting-services/url-access-parameter-reference.md).  
   
 ## <a name="url-access-concepts"></a>Concepts d'accès URL  
- Les demandes d'URL au serveur de rapports contiennent des paramètres qui sont traités par le serveur de rapports. La façon dont le serveur de rapports gère les demandes d'URL dépend des paramètres, des préfixes de paramètres et des types d'éléments qui sont inclus dans l'URL. Les URL du serveur de rapports suivent les recommandations de mise en forme des URL indiquées dans la version préliminaire de la norme conjointe du W3C (World Wide Web Consortium) et de l'IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Les fonctionnalités d'URL sont compatibles avec la plupart des navigateurs et applications Internet qui prennent en charge l'adressage URL standard.  
+ Les demandes d'URL au serveur de rapports contiennent des paramètres qui sont traités par le serveur de rapports. La façon dont le serveur de rapports gère les demandes d'URL dépend des paramètres, des préfixes de paramètres et des types d'éléments qui sont inclus dans l'URL. Les URL du serveur de rapports suivent les recommandations de mise en forme des URL indiquées dans la version préliminaire de la norme conjointe du W3C (World Wide Web Consortium) et de l'IETF. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Les fonctionnalités d’URL sont compatibles avec la plupart des navigateurs et applications Internet qui prennent en charge l’adressage URL standard.  
   
 ### <a name="url-access-syntax"></a>Syntaxe de l'accès URL  
  Les demandes d'URL peuvent contenir plusieurs paramètres, indiqués sans ordre précis. Les paramètres sont séparés par une esperluette (&) et les paires nom/valeur sont séparées par un signe égal (=).  
@@ -64,7 +63,7 @@ reportpath
   
 ### <a name="syntax-description"></a>Description de la syntaxe  
  *rswebserviceurl*  
- URL du service web du serveurs de rapports. Pour le mode natif, il s’agit de l’URL du service web de l’instance du serveur de rapports configurée dans le Gestionnaire de configuration de Reporting Services (consultez [Configurer des URL de serveurs de rapports &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Par exemple :  
+ URL du service web du serveurs de rapports. Pour le mode natif, il s’agit de l’URL du service web de l’instance du serveur de rapports configurée dans le Gestionnaire de configuration de Reporting Services (consultez [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). Exemple :  
   
 ```  
 http://myrshost/reportserver  
@@ -116,19 +115,18 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Descriptions de tâche|Liens|  
 |-----------------------|-----------|  
-|Accéder aux éléments du serveur de rapports, tels que des rapports, des sources de données partagées, et des ressources.|[Accéder aux éléments de serveur de rapports à l’aide de l’accès URL](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Accéder aux éléments du serveur de rapports, tels que des rapports, des sources de données partagées, et des ressources.|[Accéder à des éléments de serveur de rapports à l'aide de l'accès URL](../reporting-services/access-report-server-items-using-url-access.md)|  
 |Passer des paramètres de rapport à un rapport.|[Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Définir les paramètres régionaux des paramètres de rapport dans la chaîne d'accès URL, qui définit les traductions spécifiques aux paramètres régionaux des dates, des devises, et ainsi de suite.|[Définir la langue pour les paramètres de rapport dans une URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Envoyer les paramètres spécifiques d'extension de rendu qui personnalisent le rendu du rapport.|[Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|Exporter un rapport directement vers un format de fichier sans l'afficher dans le navigateur.|[Exporter un rapport à l’aide de l’accès URL](../reporting-services/export-a-report-using-url-access.md)|  
-|Ouvrir un rapport et accéder directement à l'emplacement d'une chaîne.|[Rechercher un rapport à l’aide de l’accès URL](../reporting-services/search-a-report-using-url-access.md)|  
-|Effectuer le rendu d'un instantané d'historique de rapport.|[Afficher un instantané d’historique de rapport à l’aide de l’accès URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Définir les paramètres régionaux des paramètres de rapport dans la chaîne d'accès URL, qui définit les traductions spécifiques aux paramètres régionaux des dates, des devises, et ainsi de suite.|[Définir la langue des paramètres de rapport dans une URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Envoyer les paramètres spécifiques d'extension de rendu qui personnalisent le rendu du rapport.|[Spécifier les paramètres d'informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Exporter un rapport directement vers un format de fichier sans l'afficher dans le navigateur.|[Exporter un rapport à l'aide de l'accès URL](../reporting-services/export-a-report-using-url-access.md)|  
+|Ouvrir un rapport et accéder directement à l'emplacement d'une chaîne.|[Rechercher un rapport à l'aide de l'accès URL](../reporting-services/search-a-report-using-url-access.md)|  
+|Effectuer le rendu d'un instantané d'historique de rapport.|[Rendre un instantané d'historique de rapport à l'aide de l'accès URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
- [Référence de paramètre d’accès URL](../reporting-services/url-access-parameter-reference.md)   
+ [Référence de paramètres d’accès URL](../reporting-services/url-access-parameter-reference.md)   
  [Intégration de Reporting Services à l’aide de l’accès URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

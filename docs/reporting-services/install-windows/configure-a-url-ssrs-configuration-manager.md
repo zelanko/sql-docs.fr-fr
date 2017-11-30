@@ -1,35 +1,32 @@
 ---
-title: Configurer une URL (Gestionnaire de Configuration de SSRS) | Documents Microsoft
+title: Configurer une URL (Gestionnaire de configuration de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- URL access [Reporting Services], syntax
+helpviewer_keywords: URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99c21c41115748c82267ed72845607b044ee3a6a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1c356b28e675e824b1a6b6a4b434f27c4fe81de8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  
   
  Utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer les URL. Toutes les parties de l'URL sont définies dans cet outil. Contrairement aux versions précédentes, les sites Web IIS (Internet Information Services) ne fournissent plus l'accès aux applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Fournit des valeurs par défaut qui fonctionnent bien dans la plupart des scénarios de déploiement, y compris les déploiements côte à côte avec d’autres applications et services Web. Les URL par défaut incorporent les noms d'instance, réduisant le risque de conflits d'URL si vous exécutez plusieurs instances de serveur de rapports sur le même ordinateur.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit les valeurs par défaut qui fonctionnent bien dans la plupart des scénarios de déploiement, y compris les déploiements côte à côte avec les autres applications et services web. Les URL par défaut incorporent les noms d'instance, réduisant le risque de conflits d'URL si vous exécutez plusieurs instances de serveur de rapports sur le même ordinateur.  
   
  Cette rubrique fournit des instructions relatives aux tâches suivantes :  
   
@@ -39,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Définir les propriétés URL avancées pour définir des URL supplémentaires.  
   
- Pour plus d’informations sur comment les URL sont stockées et conservées ou des problèmes d’interopérabilité, consultez [sur les réservations d’URL et l’inscription &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) et [installer Reporting Services et Internet Information Services côte à côte &#40; En Mode natif de SSRS &#41; ](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne. Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
+ Pour plus d’informations sur le stockage et la gestion des URL, ou sur les problèmes d’interopérabilité, consultez [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) et [Installer côte à côte Reporting Services et Internet Information Services &#40;SSRS en mode natif&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir des exemples d'URL souvent utilisées dans une installation Reporting Services, consultez [Exemples d'URL](#URLExamples) dans cette rubrique.  
   
 ## <a name="prerequisites"></a>Conditions préalables  
  Avant de créer ou de modifier une URL, souvenez-vous des points suivants :  
@@ -76,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
     -   **::1** désigne l'adresse de bouclage au format IPv6.  
   
-    -   Les adresses IP spécifiques apparaissent également dans cette liste. Les adresses IP peuvent être aux formats IPv4 et IPv6. *Nnn.nnn.nnn.nnn* est l’adresse IPv4 32 bits d’une carte réseau sur votre ordinateur. Les adresses IPv6 sont de 128 bits, avec huit champs de 4 octets séparés par un signe deux-points : \<préfixe > :*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Les adresses IP spécifiques apparaissent également dans cette liste. Les adresses IP peuvent être aux formats IPv4 et IPv6. *Nnn.nnn.nnn.nnn* est l’adresse IPv4 32 bits d’une carte réseau sur votre ordinateur. Les adresses IPv6 ont une taille de 128 bits et sont formées de huit champs de 4 octets séparés par le signe deux-points : <préfixe\<:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Si vous avez plusieurs cartes ou si votre réseau prend en charge les adresses IPv4 et les adresses IPv6, vous visualisez plusieurs adresses IP. Si vous sélectionnez une seule adresse IP, elle limitera l'accès de l'application à la seule adresse IP (et à tout nom d'hôte qu'un serveur de noms de domaine mappe sur cette adresse). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports. En général, si vous sélectionnez cette valeur, c'est parce que vous configurez plusieurs réservations d'URL qui spécifient aussi des adresses IP explicites ou des noms d'hôte (par exemple, un premier pour une carte réseau utilisée pour les connexions intranet et un second utilisé pour les connexions extranet).  
   
@@ -159,7 +156,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Cliquez sur **Ajouter**.  
   
-3.  Cliquez sur l'adresse IP ou le nom d'en-tête de l'hôte. Si vous spécifiez un en-tête de l'hôte, veillez bien à spécifier un nom que le service DNS peut résoudre. Si vous spécifiez un nom de domaine disponible publiquement, incluez la totalité de l’URL, y compris `http://www`.  
+3.  Cliquez sur l'adresse IP ou le nom d'en-tête de l'hôte. Si vous spécifiez un en-tête de l'hôte, veillez bien à spécifier un nom que le service DNS peut résoudre. Si vous spécifiez un nom de domaine disponible publiquement, indiquez la totalité de l’URL, y compris `http://www`.  
   
 4.  Spécifiez le port. Si vous spécifiez un port personnalisé, l'URL de l'application doit toujours inclure le numéro de port.  
   
@@ -200,6 +197,5 @@ ms.lasthandoff: 08/09/2017
 -   `https://www.adventure-works.com:8080/reports`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Reporting Services Configuration Manager &#40; En Mode natif &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [Configurer des URL de Report Server &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
-
+ [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)

@@ -1,5 +1,5 @@
 ---
-title: "Génération de flux à partir de rapports (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Génération de flux de données à partir de rapports (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9e11ab920d6af6f09aa911f237ecf3a7c234b016
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
 
-  L’extension de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d’un rapport paginé et les flux de données des régions de données d’un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l’extension de rendu Atom pour les flux de données générées que vous pouvez ensuite utiliser dans Power Pivot ou Power BI.  
+  L’extension de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d’un rapport paginé et les flux de données des régions de données d’un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l’extension de rendu Atom pour générer des flux de données que vous pourrez ensuite utiliser dans Power Pivot ou Power BI.  
   
  Le document de service Atom répertorie au moins un flux de données pour chaque région de données d'un rapport. Selon le type de région de données et les données affichées par cette région, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut générer plusieurs flux de données à partir d'une région de données. Par exemple, une matrice ou un graphique peut fournir plusieurs flux de données. Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour chaque flux de données et vous utilisez cet identificateur dans l'URL pour accéder au contenu du flux de données.  
   
@@ -85,13 +83,13 @@ ms.lasthandoff: 08/09/2017
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Section de données  
- La section données de flux de données contient un \< **entrée**>, élément pour chaque ligne dans l’ensemble de lignes aplati généré par l’extension de rendu Atom.  
+ La section de données des flux de données contient un élément \<**entry**> pour chaque ligne de l’ensemble de lignes aplati généré par l’extension de rendu Atom.  
   
  Le diagramme suivant illustre un rapport utilisant des groupes et des totaux.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- Le code XML suivant montre un \< **entrée**> élément de ce rapport dans un flux de données. Notez que la \< **entrée**> élément inclut les totaux des ventes et des commandes pour le groupe et les totaux des ventes et des commandes de tous les groupes. Le \< **entrée**> élément inclut toutes les valeurs dans le rapport.  
+ Le code XML suivant illustre un élément \<**entry**> de ce rapport dans un flux de données. Notez que l’élément \<**entry**> inclut les totaux des chiffres des ventes et des commandes pour le groupe et les totaux des chiffres des ventes et des commandes pour tous les groupes. L’élément \<**entry**> inclut toutes les valeurs dans le rapport.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -120,11 +118,11 @@ ms.lasthandoff: 08/09/2017
   
  Les lignes de données pour les régions de données imbriquées sont en général larges, particulièrement si les tables et matrices imbriquées incluent des groupes et des totaux. Vous souhaiterez peut-être exporter le rapport vers un flux de données et afficher celui-ci pour vérifier que les données générées correspondent bien à vos attentes.  
   
- Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple de document de service de Atom ci-dessus inclut l’URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
+ Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple de document de service Atom ci-dessus inclut l’URL `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`. L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
   
  Les noms des éléments de rapport sont par défaut les noms d'élément RDL (Report Definition Language) des éléments de rapport et, souvent, ils ne sont pas intuitifs ni faciles à mémoriser. Par exemple, le nom par défaut de la première matrice placés dans un rapport est Tablix 1. Les flux de données utilisent ces noms.  
   
- Pour simplifier l’utilisation du flux de données, vous pouvez utiliser la propriété DataElementName de la région de données pour attribuer des noms conviviaux. Si vous fournissez une valeur pour DataElementName sous-élément du flux de données \< **d**> est le nom de région de données par défaut à la place. Par exemple, si le nom par défaut une régions de données est Tablix1 et DataElementName défini SalesByTerritoryYear le \< **d**> dans les données de flux utilisera SalesByTerritoryYear. Si les régions de données ont deux flux de données tels que le rapport de matrice décrit ci-dessus, les noms utilisés dans les flux de données seront SalesByTerritoryYear _Territory et SalesByTerritoryYear _Year.  
+ Pour simplifier l’utilisation du flux de données, vous pouvez utiliser la propriété DataElementName de la région de données pour attribuer des noms conviviaux. Si vous fournissez une valeur pour DataElementName, le sous-élément du flux de données \<**d**> l’utilisera à la place du nom par défaut de la région de données. Par exemple, si le nom par défaut d’une région de données est Tablix1 et que DataElementName a défini SalesByTerritoryYear, le sous-élément \<**d**> dans le flux de données utilise SalesByTerritoryYear. Si les régions de données ont deux flux de données tels que le rapport de matrice décrit ci-dessus, les noms utilisés dans les flux de données seront SalesByTerritoryYear _Territory et SalesByTerritoryYear _Year.  
   
  Si vous comparez les données affichées dans le rapport à celles du flux de données, vous remarquerez certainement quelques différences. Les rapports affichent souvent les données numériques et d'heure/date avec une mise en forme, tandis que le flux de données contient des données non mises en forme.  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Les régions de données d'homologue sont des régions de données ou des groupes dynamiques qui partagent une région de données commune ou un ancêtre dynamique commun. Les données d'homologue sont identifiées par une création de branche au niveau de l'arborescence aplatie.  
   
- Pour plus d'informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
 ##  <a name="AtomRendering"></a> Règles de rendu Atom  
@@ -198,5 +196,4 @@ ms.lasthandoff: 08/09/2017
 [Exportation vers un fichier CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
 [Exporter des rapports](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

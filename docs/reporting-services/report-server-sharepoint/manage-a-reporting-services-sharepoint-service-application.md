@@ -1,5 +1,5 @@
 ---
-title: "Gérer une Application de Service SharePoint Reporting Services | Documents Microsoft"
+title: "Gérer une application de service Reporting Services SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,25 +14,24 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 22270e6f1aa209ef9a6938b92d0252678c2ad7e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service SharePoint de Reporting Services
+# <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service Reporting Services SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]les applications de service sont gérées à partir de l’Administration centrale de SharePoint. Les pages de gestion et des propriétés vous permettent de mettre à jour la configuration de l'application de service ainsi que les tâches d'administration courantes.  
+  Les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont gérées à partir de l’Administration centrale de SharePoint. Les pages de gestion et des propriétés vous permettent de mettre à jour la configuration de l'application de service ainsi que les tâches d'administration courantes.  
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-## <a name="open-service-application-properties-page"></a>Page Propriétés du service en cours
+## <a name="open-service-application-properties-page"></a>Ouvrir la page des propriétés d’une application de service
 
  Pour ouvrir la page des propriétés pour une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , procédez comme suit :  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 10/06/2017
   
  Pour plus d'informations sur les propriétés d'application de service, consultez [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
-## <a name="open-service-application-management-pages"></a>Pages de gestion des applications service en cours
+## <a name="open-service-application-management-pages"></a>Ouvrir les pages de gestion d’une application de service
 
  Pour ouvrir les pages de gestion d'une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , procédez comme suit :  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 10/06/2017
 |Paramètre|Commentaires|  
 |-------------|--------------|  
 |Activer le téléchargement du Générateur de rapports|La valeur par défaut est TRUE.<br /><br /> Spécifie si les clients peuvent voir le bouton de téléchargement de l'application du générateur de rapports.|  
-|URL de lancement du Générateur de rapports|Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut est utilisée, laquelle lance le Générateur de rapports. Pour lancer le Générateur de rapports version 3.0 à un clic-application, entrez la valeur suivante : http://\<nom_ordinateur > / ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
+|URL de lancement du Générateur de rapports|Spécifie une URL personnalisée lorsque le serveur de rapports n'utilise pas l'URL par défaut du Générateur de rapports. Ce paramètre est facultatif. Si vous ne spécifiez pas de valeur, l'URL par défaut est utilisée, laquelle lance le Générateur de rapports. Pour lancer le Générateur de rapports 3.0 en tant qu’application ClickOnce, entrez la valeur suivante : http://\<nom_ordinateur>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
 |Activer l'impression cliente|La valeur par défaut est TRUE.<br /><br /> Spécifie si les utilisateurs peuvent télécharger le contrôle côté client, qui fournit des options d'impression.|  
 |Modifier le délai d'expiration de la session|La valeur par défaut est 7200 secondes.|  
 |Modifier la limite du cache de sessions|La valeur par défaut est 5.|  
@@ -152,7 +151,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Sélectionnez un compte.  
   
  **Compte**  
- Entrez un compte d'utilisateur de domaine Windows. Utilisez ce format :  *\<domaine >\\< compte d’utilisateur\>*.  
+ Entrez un compte d'utilisateur de domaine Windows. Utilisez le format suivant : *\<domaine>\\<compte_utilisateur\>*.  
   
  **Mot de passe**  
  Tapez le mot de passe.  
@@ -160,7 +159,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **Confirmer le mot de passe**  
  Tapez de nouveau le mot de passe.  
 
-## <a name="e-mail-settings"></a>Paramètres de messagerie
+## <a name="e-mail-settings"></a>Paramètres d’e-mail
 
  Utilisez cette page pour spécifier les paramètres du protocole SMTP (Simple Mail Transfer Protocol) qui activent la remise du courrier électronique à partir du serveur de rapports. Vous pouvez utiliser l'extension de remise du courrier électronique Report Server pour distribuer des rapports ou des notifications de traitement de rapport par le biais d'abonnements à la messagerie. L'extension de remise par messagerie Report Server nécessite un serveur SMTP et une adresse de messagerie à utiliser dans le champ De :.  
 
@@ -194,4 +193,3 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  Activez la zone pour votre proxy et cliquez sur **OK**.  
   
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

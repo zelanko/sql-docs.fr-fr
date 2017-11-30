@@ -1,26 +1,24 @@
 ---
-title: "Ajouter des visualisations à des rapports mobiles Reporting Services | Documents Microsoft"
+title: Ajouter des visualisations aux rapports mobiles Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Ajouter des visualisations aux rapports mobiles Reporting Services
 Les graphiques sont une partie essentielle de la visualisation des données. Découvrez les graphiques que vous pouvez utiliser dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour couvrir un large éventail de scénarios. 
@@ -45,7 +43,7 @@ Chaque métrique ou valeur individuelle affichée sur un graphique est appelée 
 ### <a name="change-aggregation"></a>Modifier l’agrégation 
 Pour les champs numériques dans les graphiques, l’agrégation par défaut est la somme. Vous pouvez la modifier et choisir Moyenne, Nombre, Minimum, Maximum, Premier ou Dernier.
 
-* Sélectionnez l’onglet **Données** et, dans **Propriétés des données**, sélectionnez **Options** en regard du champ numérique > sélectionnez une agrégation différente.
+* Sélectionnez l’onglet **Données** puis, dans **Propriétés des données**, sélectionnez **Options** en regard du champ numérique > sélectionnez une agrégation différente.
 
 ### <a name="set-or-clear-filters"></a>Définir ou effacer des filtres
 
@@ -67,11 +65,11 @@ Le graphique de temps est le graphique le plus basique dans [!INCLUDE[SS_MobileR
 
 2. Par défaut, il s’agit d’un graphique à barres empilées. Vous pouvez changer le type dans **Visualisation des séries**.
 
-3. Si le graphique a besoin de données qui ne sont pas encore dans le rapport, sélectionnez l’onglet **Données** > **Ajouter des données** pour [obtenir des données à partir d’Excel ou d’un dataset partagé](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Si le graphique a besoin de données qui ne sont pas encore dans le rapport, sélectionnez l’onglet **Données** > **Ajouter des données** pour [obtenir des données à partir d’Excel ou d’un jeu de données partagé](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
-3. Dans le volet **Propriétés des données**, **Série principale** est **SimulatedTable**. Cliquez sur la flèche dans la zone > sélectionnez votre table.
+3. Dans le volet **Propriétés des données** , la **Série principale** est **SimulatedTable**. Cliquez sur la flèche dans la zone > sélectionnez votre table.
 
-5. Si vous affectez la valeur **Par colonnes** à **Structure des données** (sous l’onglet **Disposition** > volet **Propriétés visuelles**), ici dans le volet **Propriétés des données** vous pouvez sélectionner plusieurs colonnes de valeurs numériques.
+5. Si vous affectez la valeur **Par colonnes** à **Structure des données** (sous l’onglet **Disposition** > volet **Propriétés visuelles**), ici dans le volet **Propriétés des données** vous pouvez sélectionner plusieurs colonnes de valeurs numériques.
 
    Si vous affectez la valeur **Par lignes** à **Structure des données**, ici dans le volet **Propriétés des données** vous pouvez sélectionner un **Champ de nom de la série** et une colonne de valeurs numériques.
    
@@ -123,7 +121,7 @@ Dans les graphiques de comparaison, vous pouvez choisir d’avoir les mêmes cou
 ## <a name="pie-and-funnel-charts"></a>Graphiques en secteurs et graphiques en entonnoir  
   
 Les graphiques en secteurs et les graphiques en entonnoir font partie des visualisations les plus simples. Vous pouvez structurer les données par lignes ou par colonnes. 
-* Les**graphiques en secteurs** dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] mobile reports can be pies, donuts, or donuts with a total dans les rapports mobiles the center. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
+* Les**graphiques en secteurs** dans les rapports mobiles  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]mobile reports can be pies, donuts, or donuts with a total dans les rapports mobiles the center. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
 * Les**graphiques en entonnoir** sont souvent utilisés pour afficher les étapes d’un processus, tel que les ventes.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)
@@ -200,5 +198,4 @@ Les graphiques en cascade constituent un bon choix :
 * [Grilles de données dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Jauges dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 

@@ -1,33 +1,30 @@
 ---
-title: "Configurer une connexion de base de données de serveur de rapports (Gestionnaire de Configuration de SSRS) | Documents Microsoft"
+title: "Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 7faf4e41db0b37dddbdc28b33b3abf621ecad24b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: 75e8a98156714dd94582aa5f87daabc8f03d093c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions sur la création de la base de données et de configurer la connexion, consultez [créer une base de données de serveur de rapports en Mode natif &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
+Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions détaillées sur la création de la base de données et la configuration de la connexion, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).
 
  Vous devez configurer une connexion à la base de données du serveur de rapports dans les circonstances suivantes :  
   
@@ -37,10 +34,10 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
   
 -   Modification du compte ou du mot de passe de l'utilisateur permettant d'établir la connexion à la base de données. Vous devez uniquement mettre à jour la connexion de base de données lorsque les informations du compte sont stockées dans le fichier RSReportServer.config. Si vous utilisez le compte de service pour la connexion (qui utilise la sécurité intégrée de Windows comme type d'informations d'identification), le mot de passe n'est pas stocké, ce qui évite de mettre à jour les informations de connexion. Pour plus d’informations sur la modification des comptes, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
--   Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur la façon d’effectuer cette opération en plusieurs étapes, consultez [configurer un déploiement de montée en puissance parallèle de serveur de rapports en Mode natif &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur cette opération à plusieurs étapes, consultez [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Comment Reporting Services se connecte au moteur de base de données  
- L'accès du serveur de rapports à une base de données de serveur de rapports dépend des informations d'identification et de connexion, ainsi que de la validité des clés de chiffrement de l'instance de serveur de rapports qui utilise cette base de données. Il est nécessaire de recourir à des clés de chiffrement valides pour stocker et extraire des données sensibles. Des clés de chiffrement sont créées automatiquement lors de la première configuration de la base de données. Une fois les clés créées, vous devez les mettre à jour si vous changez l'identité du service Report Server. Pour plus d’informations sur l’utilisation des clés de chiffrement, consultez [configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ L'accès du serveur de rapports à une base de données de serveur de rapports dépend des informations d'identification et de connexion, ainsi que de la validité des clés de chiffrement de l'instance de serveur de rapports qui utilise cette base de données. Il est nécessaire de recourir à des clés de chiffrement valides pour stocker et extraire des données sensibles. Des clés de chiffrement sont créées automatiquement lors de la première configuration de la base de données. Une fois les clés créées, vous devez les mettre à jour si vous changez l'identité du service Report Server. Pour plus d’informations sur l’utilisation des clés de chiffrement, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
  La base de données du serveur de rapports est un composant interne, accessible uniquement par le serveur de rapports. Les informations d'identification et de connexion que vous spécifiez pour la base de données du serveur de rapports sont utilisées exclusivement par le serveur de rapports. Les utilisateurs qui demandent des rapports n'ont pas besoin d'autorisations de base de données ou d'une connexion de base de données pour la base de données du serveur de rapports.  
   
@@ -66,7 +63,7 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
 ### <a name="storing-database-connection-information"></a>Stockage des informations de connexion à la base de données  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke et chiffre les informations de connexion dans les paramètres RSreportserver.config suivants. Vous devez recourir à l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou à l'utilitaire rsconfig.exe pour créer des valeurs chiffrées pour ces paramètres.  
   
- Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion en utilisant les valeurs par défaut (c'est-à-dire, en utilisant les comptes de service pour établir la connexion), \< **LogonUser**>, \< **LogonDomain**>, et \< **LogonCred**> sera vide, comme suit :  
+ Certaines valeurs ne sont pas définies pour tous les types de connexion. Si vous configurez la connexion à l’aide de valeurs par défaut (c’est-à-dire avec des comptes de service pour établir la connexion), \<**LogonUser**>, \<**LogonDomain**> et <\<**LogonCred**> seront vides, comme ceci :  
   
 ```  
 <Dsn></Dsn>  
@@ -127,7 +124,6 @@ Chaque instance de serveur de rapports requiert une connexion à la base de donn
 
 [Créer une base de données du serveur de rapports](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
 [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Configurer le compte de Service Report Server](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[Configurer le compte de service Report Server](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

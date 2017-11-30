@@ -1,5 +1,5 @@
 ---
-title: "Propriété de DatabaseServerName (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "DatabaseServerName, propriété (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseServerName Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseServerName Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseServerName property
+helpviewer_keywords: DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e3d1aa08bbef7d0baeb0962ff3f3352fa954aa60
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7c286f222666386fcc47fdd357c266767618290f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-property---databaseservername"></a>Propriété ConfigurationSetting - DatabaseServerName
   Spécifie le nom du serveur sur lequel la base de données du serveur de rapports est installée. En lecture/écriture.  
@@ -56,4 +52,3 @@ public string DatabaseServerName;
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

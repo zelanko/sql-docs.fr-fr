@@ -1,28 +1,26 @@
 ---
-title: Ajouter des navigateurs pour les rapports mobiles Reporting Services | Documents Microsoft
+title: Ajouter des navigateurs aux rapports mobiles Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Ajouter des navigateurs pour les rapports mobiles Reporting Services
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 Dans [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], vous ajoutez des *navigateurs* pour filtrer les données dans les visualisations en fonction d’une période ou d’une sélection. 
 
 Les navigateurs sont semblables aux segments dans Power BI et les tableaux croisés dynamiques Excel, mais présentent également certaines caractéristiques.
@@ -38,7 +36,7 @@ Les**navigateurs par sélection** filtrent les tables en sélectionnant les lign
 Comme son nom l’indique, vous utilisez le navigateur de temps pour filtrer une plage de données délimitée par une plage de temps.   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*Les graphiques en quatre courbes sur la gauche sont définies dans les présélections de plage de temps. Le graphique en courbes à droite est le filtre.*  
+*Les quatre graphiques en courbes sur la gauche sont définis dans les présélections d’intervalles de temps. Le graphique en courbes à droite est le filtre.*  
   
 Quand vous affichez le rapport en mode aperçu ou dans le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous déplacez les flèches dans le navigateur de temps pour filtrer le reste du rapport.  
   
@@ -132,4 +130,3 @@ Les filtres peuvent également être mis en cascade les uns avec les autres de f
 * [Visualisations dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Jauges dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Grilles de données dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

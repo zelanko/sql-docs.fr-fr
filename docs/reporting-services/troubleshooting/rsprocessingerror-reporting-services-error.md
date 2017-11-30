@@ -1,5 +1,5 @@
 ---
-title: rsProcessingError - erreur Reporting Services | Documents Microsoft
+title: rsProcessingError - Erreur Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsProcessingError
+helpviewer_keywords: rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1ceb80c23e3c5e6d71d6857319da424a8815d504
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -78,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Si vous affichez un rapport sur le serveur de rapports et que vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, vous pouvez consulter la pile des appels en cliquant avec le bouton droit sur la page et en sélectionnant **Afficher la source**. La pile des appels contient des informations supplémentaires.  
   
--   Si vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, recherchez `ReportProcessingException`dans le fichier journal. Les entrées du journal contiennent des informations supplémentaires. Le fichier journal de serveur de rapports se trouve généralement à \< *lecteur*> : \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*datetimestamp*. journal. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Si vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, recherchez `ReportProcessingException`dans le fichier journal. Les entrées du journal contiennent des informations supplémentaires. Le fichier journal du serveur de rapports se trouve généralement à l’emplacement suivant : \<*lecteur*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*horodatage*.log. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Échec du chargement de l'assembly hôte d'expressions  
  Les assemblys personnalisés doivent être signés par un nom fort et disposer de l’attribut AllowPartiallyTrustedCallers. Pour plus d’informations, consultez [Utilisation d’assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) et [Présentation des stratégies de sécurité](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -102,28 +100,28 @@ ms.lasthandoff: 08/09/2017
  Vérifiez que les appels de fonction effectués dans la requête et les expressions sont valides.  
   
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossible de comparer des types de données pour un filtre  
- Dans une équation de filtre, l'expression de filtre qui définit le contenu du filtre et la valeur du filtre doit être le même type de données pour être comparé. Si l'une des erreurs suivantes s'affichent, modifiez l'expression de champ ou la valeur de filtre pour que les types de données correspondent :  
+ Dans une équation de filtre, l'expression de filtre qui définit le contenu du filtre et la valeur du filtre doit être le même type de données pour être comparé. Si l'une des erreurs suivantes s'affichent, modifiez l'expression de champ ou la valeur de filtre pour que les types de données correspondent :  
   
--   Le traitement de  *\<type d’élément de rapport >* pour le  *\<nom d’élément de rapport >* ne peut pas être effectuée. Impossible de comparer des types de données  *\<type >* et  *\<type >*. Vérifiez le type de données retourné par la  *\<nom d’élément de rapport >*.  
+-   Impossible d’effectuer le traitement de *\<type_élément_rapport>* pour l’élément *\<nom_élément_rapport>*. Impossible de comparer les données de types *\<type>* et *\<type>*. Vérifiez le type de données retourné par l’élément *\<nom_élément_rapport>*.  
   
--   Impossible d’évaluer la  *\<nom de la propriété >*.  
+-   Échec de l’évaluation de *\<nom de propriété>*.  
   
--   Impossible d’évaluer la  *\<nom de la propriété >*. Il fait référence à un champ de dataset qui contient une erreur :  *\<chaîne d’erreur >*.  
+-   Échec de l’évaluation de *\<nom de propriété>*. Il fait référence à un champ de dataset qui contient une erreur : *\<>*.  
   
  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ### <a name="invalid-or-conflicting-scope-specification-in-an-aggregate-function-call"></a>Spécification d'étendue non valide et incompatible dans un appel de fonction d'agrégation  
  Lorsque vous incluez des appels de fonction d'agrégation à une expression dans une cellule de tableau matriciel, le processeur de rapports évalue l'expression dans l'étendue des groupes intimes auxquels la cellule appartient.  
   
- Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
+ Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
   
--   Le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*' a une portée non valide «*\<Nom_Étendue >*». L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
+-   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* '*\<nom_élément_rapport>*' n’est pas valide. L'étendue doit être active ou contenue au sein de l'étendue active.  
   
--   Le  *\<nom de la propriété >* expression pour le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*' a un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
+-   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* '*\<nom_élément_rapport>*' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   
  Pour les fonctions d’agrégation qui calculent des totaux cumulés (**Previous**, **RunningValue**, or **RowNumber**), vous pouvez spécifier un paramètre d’étendue qui est un nom de groupe de lignes ou un nom de groupe de colonnes, mais pas les deux. Cela s'applique au message d'erreur suivant :  
   
--   **Précédent**, **RunningValue** ou **RowNumber** utilisées dans les cellules de données des fonctions d’agrégation le  *\<type d’élément de rapport >* '*\<nom d’élément de rapport >*» font référence aux étendues de regroupement dans les colonnes et les lignes de la  *\<type d’élément de rapport >*. Les paramètres d’étendue de toutes les **précédent**, **RunningValue** et **RowNumber** dans les fonctions d’agrégation un  *\<type d’élément de rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
+-   Les fonctions d’agrégation **Previous**, **RunningValue** ou **RowNumber** utilisées dans les cellules de données de l’élément *\<type_élément_rapport>* '*\<nom_élément_rapport>*' font référence à des étendues de regroupement dans des colonnes et des lignes de *\<type_élément_rapport>*. Les paramètres d’étendue de toutes les fonctions d’agrégation **Previous**, **RunningValue** et **RowNumber** de *\<type_élément_rapport>* peuvent faire référence à des regroupements de lignes ou à des regroupements de colonnes de données, mais pas aux deux.  
   
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -131,14 +129,13 @@ ms.lasthandoff: 08/09/2017
  N'utilisez pas d'étendue par défaut pour une zone de texte ajoutée à l'aire de conception du rapport lorsque le rapport a plusieurs dataset. Utilisez une expression qui inclut le nom du dataset comme étendue, et une fonction d'agrégation. Par exemple, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Référence des fonctions d’agrégation &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Filtres couramment utilisés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Collection de champs de DataSet &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Code personnalisé et références d’Assembly dans les Expressions dans le Concepteur de rapports &#40; SSRS &#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Références à la Collection Parameters &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Références à la collection Parameters &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   
-

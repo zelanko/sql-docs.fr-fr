@@ -2,9 +2,12 @@
 title: "Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05eb9c6483d0cee73d7f9511e19d60e0f0070d87
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4184dc4785b7d53d32c64069d53aef8c6a1e2fa1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 La fonctionnalité [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) de SQL Server capture automatiquement un historique des requêtes, des plans et des statistiques d’exécution, et conserve ces informations dans la base de données. L’[Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md) prend en charge une nouvelle option permettant d’utiliser le magasin de requêtes pour sélectionner automatiquement une charge de travail appropriée pour le paramétrage. Pour de nombreux utilisateurs, cela peut supprimer la nécessité de collecter de manière explicite une charge de travail pour le paramétrage. Cette fonctionnalité est disponible uniquement si la fonctionnalité de magasin de requêtes est activée pour la base de données. 

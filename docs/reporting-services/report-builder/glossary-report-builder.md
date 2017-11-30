@@ -1,5 +1,5 @@
 ---
-title: "Glossaire (Générateur de rapports) | Documents Microsoft"
+title: "Glossaire (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69a348a8f2f2d44dbe17f5500557db03b95e5b04
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d58372b901950fa8a7f674a417aa76457e80c466
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="glossary-report-builder"></a>Glossaire (Générateur de rapports)
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 08/09/2017
 |règles de couleur|Algorithme qui assigne automatiquement des couleurs à chaque élément cartographique sur une couche.|  
 |échelle de couleurs|Type de légende de carte qui permet d'interpréter ce que les couleurs représentent sur une carte.|  
 |Common Language Runtime|Moteur situé au cœur de l'exécution du code managé. Le Runtime fournit du code managé avec des services tels que l'intégration interlangage, la sécurité d'accès du code, la gestion de la durée de vie des objets, ainsi que la prise en charge du débogage et des profils.|  
-|expression complexe|Une expression qui ne peut pas être représentée comme une référence de champ prédéfini unique et est affichée sur l’aire de conception en tant que <\<Expr >>.|  
+|expression complexe|Expression qui ne peut pas être représentée comme référence de champ prédéfini unique et qui s’affiche sur l’aire de conception sous la forme <\<Expr>>.|  
 |Concatenation|Combinaison d'au moins deux expressions ou chaînes de caractères en une seule expression ou chaîne de caractères, ou combinaison d'au moins deux expressions ou chaînes binaires en une seule expression ou chaîne binaire.|  
 |concurrence|Processus permettant à plusieurs utilisateurs d'accéder aux mêmes données en même temps. SQL Server a recours au verrouillage pour permettre à plusieurs utilisateurs d'accéder simultanément à des données partagées et de les modifier sans risque de conflit.|  
 |fichier config|Voir le terme : fichier de configuration|  
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 |script de base de données|Collection d'instructions permettant de créer des objets de base de données.|  
 |image liée aux données|Image qui existe dans une base de données, par exemple un champ d'une base de données qui contient des images.|  
 |abonnement piloté par les données|Abonnement dans Reporting Services qui utilise une requête pour récupérer les données d'abonnement à partir d'une source de données externe au moment de l'exécution.|  
-|dataset|1. Dans OLE DB pour OLAP, il s'agit du jeu de données multidimensionnelles résultant de l'exécution d'une instruction MDX (Multidimensional Expressions) SELECT.   <br />2. Dans Reporting Services, il s'agit d'une spécification nommée qui inclut une définition de source de données, une définition de requête et des valeurs de paramètres facultatifs, des champs calculés, ainsi que des informations de filtrage et de classement dans un fichier de définition de rapport (.rdl). Un fichier .rdl peut comporter plusieurs datasets.|  
+|dataset|1. Dans OLE DB pour OLAP, il s'agit du jeu de données multidimensionnelles résultant de l'exécution d'une instruction MDX (Multidimensional Expressions) SELECT.   <br />2. Dans Reporting Services, il s'agit d'une spécification nommée qui inclut une définition de source de données, une définition de requête et des valeurs de paramètres facultatifs, des champs calculés, ainsi que des informations de filtrage et de classement dans un fichier de définition de rapport (.rdl). Un fichier .rdl peut comporter plusieurs datasets.|  
 |DBCS|jeu de caractères codés sur deux octets|  
 |par défaut|1. Valeur, paramètre d'option, classement ou nom affectés automatiquement par le système si l'utilisateur ne les définit pas lui-même. 2. Action réalisée automatiquement lors de certains événements si l'utilisateur n'a pas spécifié l'action à entreprendre.|  
 |base de données par défaut|Base de données à laquelle l'utilisateur est automatiquement connecté à l'ouverture d'une session SQL Server.|  
@@ -364,7 +363,7 @@ ms.lasthandoff: 08/09/2017
 |instance utilisateur|Instance de SQL Server Express qui est générée par l'instance parente pour le compte d'un utilisateur.|  
 |axe des ordonnées (y)|Axe pour l'affichage de valeurs de données numériques dans un graphique. Il s'agit en général de l'axe vertical. Exception : dans les graphiques à barres, les axes sont inversés et l'axe Y affiche le regroupement des données.|  
 |expression de valeur|Expression MDX (Multidimensional Expressions) qui retourne une valeur. Les expressions de valeur peuvent être exécutées sur des ensembles, des tuples, des membres, des niveaux, des nombres ou des chaînes.|  
-|variable|1. Dans Integration Services, une variable stocke des valeurs qui peuvent être utilisées dans des scripts, des expressions et des expressions de propriété pour définir des valeurs de colonne et les propriétés des objets de package. <br />2. Entités définies auxquelles sont affectées des valeurs. Une variable locale est définie avec un DECLARE@localvariable instruction et reçoit une valeur initiale dans le lot d’instructions où il est déclaré avec une instruction SELECT ou SET@localvariable instruction.|  
+|variable|1. Dans Integration Services, une variable stocke des valeurs qui peuvent être utilisées dans des scripts, des expressions et des expressions de propriété pour définir des valeurs de colonne et les propriétés des objets de package. <br />2. Entités définies auxquelles sont affectées des valeurs. Une variable locale est définie à l’aide d’une instruction DECLARE@localvariable et reçoit une valeur initiale dans le lot d’instructions où elle est déclarée à l’aide d’une instruction SET@localvariable.|  
 |intervalle variable|Option sur un graphique Reporting Services qui peut être spécifiée pour calculer automatiquement le nombre optimal d'étiquettes qui peuvent être placées sur un axe, selon la largeur ou la hauteur du graphique.|  
 |visualisation|Dans les cartes, graphiques et jauges, choix d'un utilisateur pour visualiser des données analytiques.|  
 |Service Web|Dans Reporting Services, service qui utilise le protocole SOAP (Simple Object Access Protocol) sur HTTP et agit comme une interface de communication entre les programmes clients et le serveur de rapports.|  
@@ -379,4 +378,3 @@ ms.lasthandoff: 08/09/2017
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
-

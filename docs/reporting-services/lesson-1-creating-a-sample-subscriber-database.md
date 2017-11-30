@@ -1,35 +1,31 @@
 ---
-title: "Leçon 1 : Création d’une base de données exemple abonné | Documents Microsoft"
+title: "Leçon 1 : création d’un exemple de base de données de l’abonné | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0a65cf856e571a25f985846c185c207e59375cc2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d'un exemple de base de données de l'abonné
 
 Dans cette leçon de didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous allez créer une petite base de données d’« abonnés » pour stocker des données d’abonnement qui seront utilisées par un abonnement piloté par les données. Quand l’abonnement est traité, le serveur de rapports extrait ces données et les utilise pour personnaliser le résultat du rapport. Par exemple, les lignes de données incluent des numéros de commande spécifiques à utiliser pour les filtres, ainsi que le format de fichier des rapports générés.  
   
-Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] pour créer une base de données SQL Server.  
+Cette leçon part du principe que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] pour créer une base de données SQL Server.  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>Pour créer une base de données d'abonnés exemple  
   
@@ -42,7 +38,7 @@ Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes
   
 5.  Cliquez sur le bouton **Nouvelle requête** dans la barre d’outils.  
   
-6.  Copiez les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] suivantes dans la requête vide :  
+6.  Copiez les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] suivantes dans la requête vide :  
   
     ```  
     Use Subscribers  
@@ -65,7 +61,7 @@ Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes
     GO  
     ```  
   
-7.  Cliquez sur **! Exécuter** dans la barre d’outils.  
+7.  Cliquez sur  **Exécuter** dans la barre d’outils.  
   
 8.  Utilisez une instruction SELECT pour vérifier que votre table comporte bien trois lignes de données. Par exemple : `select * from OrderInfo`  
   
@@ -80,5 +76,4 @@ Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudioFull_md](../includes
 [Créer une base de données](../relational-databases/databases/create-a-database.md)  
 [Créer un rapport de tableau de base](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

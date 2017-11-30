@@ -1,30 +1,27 @@
 ---
-title: "Utilisation des indicateurs de performance clés dans Reporting Services | Documents Microsoft"
+title: "Utilisation des indicateurs de performance clés dans Reporting Services | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
 
 Un indicateur de performance clé (KPI) est un indice visuel qui représente la progression vers un objectif.  Les Indicateurs de performance clés sont utiles pour les équipes, les responsables et les entreprises pour évaluer rapidement l’état d’avancement par rapport à des objectifs mesurables.   
   
@@ -75,7 +72,7 @@ Procédez comme suit pour utiliser les données d’un dataset partagé.
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Sélectionnez le **points de suspension (...)**  dans la zone de données. L’écran **Choisir un dataset** s’affiche.  
+2.  Sélectionnez les **points de suspension (...)** dans la zone de données. L’écran **Choisir un dataset** s’affiche.  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ Procédez comme suit pour utiliser les données d’un dataset partagé.
   
 Pour supprimer un indicateur de performance clé, vous pouvez effectuer les opérations suivantes.  
   
-1.  Sélectionnez le **points de suspension (...)**  de l’indicateur de performance clé à supprimer. Sélectionnez **Gérer**.  
+1.  Sélectionnez les **points de suspension (...)** de l’indicateur de performance clé à supprimer. Sélectionnez **Gérer**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ Pour supprimer un indicateur de performance clé, vous pouvez effectuer les opé
   
 ## <a name="refreshing-a-kpi"></a>Actualisation d’un indicateur de performance clé  
   
-Pour actualiser l’indicateur de performance clé, vous devez configurer une mise en cache pour le dataset partagé. Pour plus d’informations sur le cache de plans d’actualisation, consultez [fonctionne avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md).  
+Pour actualiser l’indicateur de performance clé, vous devez configurer une mise en cache pour le dataset partagé. Pour plus d’informations sur les plans d’actualisation du cache, consultez [Utiliser des datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="next-steps"></a>Étapes suivantes
   
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Travailler avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Utiliser des datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

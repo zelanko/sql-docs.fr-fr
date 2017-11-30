@@ -1,5 +1,5 @@
 ---
-title: "Propriété de détail | Documents Microsoft"
+title: "Detail, propriété | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 0ec158ac41b62beef9f59b6378633e8926e4116a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="detail-property"></a>Propriété Detail
-  Le **détail** propriété de la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** classe a la structure XML suivante :  
+  La propriété **Detail** de la classe [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** possède la structure XML suivante :  
   
 ## <a name="elements"></a>Éléments  
- **Détail**  
+ **Detail**  
  Élément de niveau supérieur qui contient tous les autres éléments de détail de l'erreur.  
   
  **ErrorCode**  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/12/2017
  Message d'erreur et code d'erreur attribués par le serveur de rapports.  
   
  **HelpLink**  
- URL du lien d'aide vers un site Web sur lequel des informations complémentaires sur l'erreur sont disponibles. Pour plus d’informations, consultez [HelpLink élément](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
+ URL du lien d'aide vers un site Web sur lequel des informations complémentaires sur l'erreur sont disponibles. Pour plus d’informations, consultez [HelpLink, élément](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md).  
   
  **LinkID**  
  ID assigné au lien.  
@@ -53,34 +51,33 @@ ms.lasthandoff: 08/12/2017
  **ProductName**  
  Nom du produit. La valeur par défaut est **Microsoft SQL Server Reporting Services**.  
   
- **Version de produit**  
+ **ProductVersion**  
  Version de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La longueur maximale autorisée s'élève à 15 caractères. Le format du numéro de version doit être comme suit : 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  ID des paramètres régionaux ou ID de la langue de la DLL INTL de l'application (par exemple, 0x41A).  
   
- **Système d’exploitation**  
- Système d'exploitation sur lequel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est installé. Les valeurs valides sont **0** pour système d’exploitation indépendant, **1** pour [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], et **16** pour Windows XP.  
+ **OperatingSystem**  
+ Système d'exploitation sur lequel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est installé. Les valeurs valides incluent **0** pour un système d’exploitation indépendant, **1** pour [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] et **16** pour Windows XP.  
   
  **CountryLocaleId**  
  ID des paramètres régionaux ou ID de la langue du système d'exploitation. Par exemple, la valeur de la version française de Windows est 0x040c.  
   
- **Informations supplémentaires**  
+ **MoreInformation**  
  Chaîne XML qui contient des exceptions imbriquées qui se sont produites pendant l'exécution de la méthode.  
   
  **Source**  
- Un élément enfant de **MoreInformation**. La source de l’erreur.  
+ Élément enfant de **MoreInformation**. Source de l’erreur.  
   
  **Message**  
- Un élément enfant de **MoreInformation**. Message d'erreur de l'exception imbriquée. Cet élément comprend des attributs XML pour **ErrorCode** et **HelpLink**.  
+ Élément enfant de **MoreInformation**. Message d'erreur de l'exception imbriquée. Cet élément inclut des attributs XML pour **ErrorCode** et **HelpLink**.  
   
  **Avertissements**  
  Chaîne XML qui contient les avertissements retournés par le traitement des rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation de gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
- [Classe SoapException Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
- [À l’aide de la propriété Detail pour gérer les erreurs spécifiques](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Présentation de la gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
+ [SoapException, classe Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
+ [Utilisation de la propriété des détails pour gérer des erreurs spécifiques](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   
-

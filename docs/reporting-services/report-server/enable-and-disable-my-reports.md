@@ -1,5 +1,5 @@
 ---
-title: "Activer et désactiver Mes rapports | Documents Microsoft"
+title: "Activer et désactiver Mes rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e04d57e159b255567ebde31308db68bfed33946
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c40e45fad4833f89154ea7b0338677251437b7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-and-disable-my-reports"></a>Activer et désactiver Mes rapports
   La fonctionnalité Mes rapports alloue un espace de stockage personnel dans la base de données du serveur de rapports afin que les utilisateurs puissent enregistrer les rapports qu'ils possèdent dans un dossier privé. En tant qu'administrateur du serveur de rapports, vous pouvez activer ou désactiver cette fonctionnalité, ou modifier la façon dont elle opère en modifiant les paramètres de sécurité qui déterminent ce que les utilisateurs sont autorisés à faire avec cet espace de travail.  
@@ -57,8 +56,7 @@ ms.lasthandoff: 08/09/2017
  Remarque : Si vous activez Mes rapports, le serveur de rapports crée un dossier Mes rapports pour chaque utilisateur doté d'un compte de domaine qui clique sur le lien Mes rapports, même si cet utilisateur ne souhaite pas utiliser un tel dossier, ou n'en a pas besoin. Il n'existe pas de procédure systématique pour déterminer quels sont les dossiers utilisés. Vous devez vérifier les dossiers manuellement pour déterminer s'ils contiennent des informations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécuriser mes rapports](../../reporting-services/security/secure-my-reports.md)   
- [Gestion de contenu de serveur de rapports &#40; En Mode natif de SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Sécuriser Mes rapports](../../reporting-services/security/secure-my-reports.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   
-

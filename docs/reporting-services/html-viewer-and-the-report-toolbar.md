@@ -1,5 +1,5 @@
 ---
-title: "Visionneuse HTML et la barre d’outils rapport | Documents Microsoft"
+title: "Visionneuse HTML et barre d’outils Rapport | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -13,17 +13,16 @@ helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML utilisée pour afficher des rapports sur demande lorsqu'ils sont demandés auprès du serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="report-toolbar"></a>Barre d'outils Rapport  
  Cette barre d'outils offre des fonctionnalités de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de source de donnés pour les rapports affichés dans l'extension de rendu HTML.  
   
- La fonction d'impression est facultative. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez un contrôle ActiveX que vous devez installer. Lorsque ce contrôle est installé, en cliquant sur l'icône Imprimante, vous ouvrez la boîte de dialogue Imprimer qui permet de sélectionner une imprimante parmi celles qui sont configurées sur votre ordinateur. Les paramètres du serveur et du navigateur déterminent la disponibilité de la fonction d'impression. Pour plus d’informations, consultez [imprimer les rapports à partir d’un navigateur avec le contrôle d’impression &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) et [activer et désactiver l’impression côté Client pour Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ La fonction d'impression est facultative. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez un contrôle ActiveX que vous devez installer. Lorsque ce contrôle est installé, en cliquant sur l'icône Imprimante, vous ouvrez la boîte de dialogue Imprimer qui permet de sélectionner une imprimante parmi celles qui sont configurées sur votre ordinateur. Les paramètres du serveur et du navigateur déterminent la disponibilité de la fonction d'impression. Pour plus d’informations, consultez [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) et [Activer et désactiver l’impression côté client pour Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  La barre d'outils Rapport est identique à celle illustrée ci-dessous. Elle peut être toutefois différente selon les fonctionnalités de rapport ou les options de rendu disponibles.  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
 |![Icône Explorateur de documents](../reporting-services/media/htmlviewer-docmap.GIF "Icône Explorateur de documents")|**Icône Explorateur de documents**|Afficher ou masquer le volet de l'explorateur de documents dans un rapport qui comprend un explorateur de documents. Un explorateur de documents est un contrôle de navigation entre les rapports similaire au volet de navigation d'un site Web. Vous pouvez cliquer sur des éléments dans l'explorateur de documents pour naviguer jusqu'à un groupe, une page ou un sous-rapport spécifique.|  
 |![Icône Imprimante](../reporting-services/media/printer-icon.gif "Icône Imprimante")|**Icône Imprimante**|Ouvre la boîte de dialogue Imprimer qui permet de spécifier les options d'impression et d'imprimer un rapport. À la première utilisation, lorsque vous cliquez sur cette icône, vous téléchargez le contrôle de l'impression.|  
 ||**Icônes d'affichage ou de masquage**|Afficher ou masquer les champs de valeurs de paramètre et le bouton **Afficher le rapport** dans un rapport qui contient des paramètres.|  
-|![Bouton Actualiser du navigateur sur la barre d’outils rapport](../reporting-services/media/htmlviewer-refresh.GIF "bouton Actualiser du navigateur sur la barre d’outils rapport")|**Icône d'actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
+|![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](../reporting-services/media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|**Icône d'actualisation de rapport**|Actualiser le rapport. Les données des rapports actifs seront actualisées. Les rapports mis en cache sont rechargés à partir de l'emplacement où ils sont stockés.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**Icône de source de données**|Sources de données générées à partir de rapports.|  
 |![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Épingler au tableau de bord Power BI**|Épingler des éléments de rapport à un [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Si le bouton n’est pas visible, cela signifie que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).|  
   
@@ -80,8 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   
-

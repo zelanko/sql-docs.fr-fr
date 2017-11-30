@@ -1,5 +1,5 @@
 ---
-title: "Désactiver ou suspendre des rapports et le traitement des abonnements | Documents Microsoft"
+title: "Désactiver ou suspendre le traitement des rapports et des abonnements | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2015
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9fa43a5766fc82bfb716f275600b50eaab6c1ed0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7c8a74891d7629293de30b0929e323febec0ac17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements
   Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cette rubrique couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Certaines approches ne sont pas possibles avec les deux modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les tableaux suivants récapitulent les méthodes et les modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pris en charge :  
@@ -53,9 +52,9 @@ ms.lasthandoff: 08/09/2017
 > [!TIP]  
 >  Nouveauté de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]! **Activation et désactivation des abonnements**. De nouvelles options de l'interface utilisateur vous permettent de rapidement désactiver et activer les abonnements. Les abonnements désactivés conservent leurs autres propriétés de configuration comme la planification, et peuvent être facilement activés. Vous pouvez également programmer l’activation et la désactivation des abonnements ou faire un audit des abonnements désactivés.  
   
- ![ruban de l’abonnement de Reporting services](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "ruban de l’abonnement de reporting services")  
+ ![ruban des abonnements Reporting Services](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "ruban des abonnements Reporting Services")  
   
- Dans le Gestionnaire de rapports en mode natif, accédez à l'abonnement sur la page **Mes abonnements** ou **Gérer** d'un abonnement individuel. Sélectionnez un ou plusieurs abonnements, puis cliquez soit la désactivation ![désactiver un abonnement services de création de rapports](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "désactiver un abonnement services de création de rapports") bouton ou activer le bouton ![activer un abonnement services de création de rapports](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "activer un abonnement services de création de rapports") sur le ruban. Abonnements désactivés sont signalés par une icône d’avertissement ![avertissement concernant l’état d’un reporting services subscriptio](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "avertissement concernant l’état d’un reporting services subscriptio") et l’état est répertorié en tant que **désactivé**.  
+ Dans le Gestionnaire de rapports en mode natif, accédez à l'abonnement sur la page **Mes abonnements** ou **Gérer** d'un abonnement individuel. Sélectionnez un ou plusieurs abonnements, puis cliquez sur le bouton de désactivation ![désactiver un abonnement Reporting Services](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "désactiver un abonnement Reporting Services") ou sur le bouton d’activation ![activer un abonnement Reporting Services](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "activer un abonnement Reporting Services") dans le ruban. Les abonnements désactivés sont signalés par une icône d’avertissement ![avertissement concernant l’état d’un abonnement Reporting Services](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "avertissement concernant l’état d’un abonnement Reporting Services") et affichent l’état **Désactivé**.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inscrit une ligne dans le journal [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lorsqu'un abonnement est désactivé, et une autre entrée lorsque l'abonnement est activé. Par exemple, dans le fichier journal du serveur de rapports :  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
  `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell") **utiliser Windows PowerShell pour désactiver un abonnement unique :** le script PowerShell suivant permet de désactiver un abonnement spécifique. Mettez à jour le nom du serveur et l’ID d’abonnement.  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour désactiver un abonnement unique :** utilisez le script PowerShell suivant pour désactiver un abonnement spécifique. Mettez à jour le nom du serveur et l’ID d’abonnement.  
   
 ```  
 #disable specific subscription  
@@ -87,7 +86,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell") **utiliser Windows PowerShell pour répertorier tous les abonnements désactivés :** utiliser le script PowerShell suivant pour répertorier tous les abonnements désactivés sur le serveur de rapports en mode natif en cours. Mettez à jour le nom du serveur.  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour répertorier tous les abonnements désactivés :** utilisez le script PowerShell suivant pour répertorier tous les abonnements désactivés sur le serveur de rapports en mode natif actuel. Mettez à jour le nom du serveur.  
   
 ```  
 #list all disabled subscriptions  
@@ -98,7 +97,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell") **utiliser Windows PowerShell pour activer tous les abonnements désactivés :** le script PowerShell suivant permet d’activer tous les abonnements qui sont actuellement désactivées. Mettez à jour le nom du serveur.  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour activer tous les abonnements désactivés :** utilisez le script PowerShell suivant pour activer tous les abonnements actuellement désactivés. Mettez à jour le nom du serveur.  
   
 ```  
 #enable all subscriptions  
@@ -112,7 +111,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell") **utiliser Windows PowerShell pour désactiver tous les abonnements :** utiliser le script PowerShell suivant pour répertorier **tous les** abonnements.  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour DÉSACTIVER tous les abonnements :** utilisez le script PowerShell suivant pour répertorier **TOUS** les abonnements.  
   
 ```  
 #DISABLE all subscriptions  
@@ -128,7 +127,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="bkmk_pause_schedule"></a> Suspendre une planification partagée  
  Si un rapport ou un abonnement s'exécute à partir d'une planification partagée, vous pouvez suspendre la planification pour empêcher le traitement. Tous les traitements de rapports et d'abonnements pilotés par la planification sont reportés jusqu'à la reprise de la planification.  
   
--   **Mode SharePoint :** ![paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint") dans **paramètres du Site**, sélectionnez **gérer les planifications partagées**. Sélectionnez la planification, puis cliquez sur **Suspendre les planifications sélectionnées**.  
+-   **Mode SharePoint :** ![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") Dans **Paramètres du site**, sélectionnez **Gérer les planifications partagées**. Sélectionnez la planification, puis cliquez sur **Suspendre les planifications sélectionnées**.  
   
 -   **Mode natif :** dans le gestionnaire de rapports, cliquez sur **Paramètres du site**. Sélectionnez la planification puis cliquez sur **Suspendre**.  
   
@@ -137,7 +136,7 @@ ForEach ($subscription in $subscriptions)
   
  Notez que le rapport continue à se charger même si la source de données n'est pas disponible. Le rapport ne contient pas de données, mais les utilisateurs dotés des autorisations appropriées peuvent accéder aux pages des propriétés, aux paramètres de sécurité, à l'historique de rapport et aux informations d'abonnement associés à ce rapport.  
   
--   **Mode SharePoint :** pour désactiver une source de données partagée sur un serveur de rapports en mode SharePoint, accédez à la bibliothèque de documents qui contient la source de données. ![Icône de source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "icône de source de données partagée") sur la source de données, puis désactivez la **activer cette source de données** case à cocher.  
+-   **Mode SharePoint :** pour désactiver une source de données partagée sur un serveur de rapports en mode SharePoint, accédez à la bibliothèque de documents qui contient la source de données. ![Icône de source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "Icône de source de données partagée") Cliquez sur la source de données, puis décochez la case **Activer cette source de données**.  
   
 -   **Mode natif :** pour désactiver une source de données partagée sur un serveur de rapports en mode natif, ouvrez-la dans le Gestionnaire de rapports et désactivez la case à cocher **Activer cette source de données** .  
   
@@ -172,11 +171,10 @@ ForEach ($subscription in $subscriptions)
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Fichiers de Configuration Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Configurer le Gestionnaire de rapports &#40; En Mode natif &#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
- [Reporting Services Report Server &#40; En Mode natif &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Page de propriétés de sécurité, les éléments &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   
-

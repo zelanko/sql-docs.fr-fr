@@ -1,5 +1,5 @@
 ---
-title: "Utiliser une Source de données externe pour les données de l’abonné (abonnement piloté par les données) | Documents Microsoft"
+title: "Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données)
   Dans un abonnement piloté par les données, les données d'abonnement dynamiques sont fournies par une requête ou une commande qui récupère les données à partir d'une source de données externe. Il est possible de récupérer les données d'abonnement à partir de n'importe quelle source de données gérée qui répond aux impératifs du traitement des abonnements pilotés par les données. La syntaxe de la requête ou de la commande doit être valide pour l'extension de traitement de données installée avec votre serveur de rapports.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmission de valeurs de paramètres de la base de données d'abonnés au rapport  
  Si vous créez un abonnement piloté par les données pour un rapport paramétrable, vous pouvez utiliser des valeurs de paramètres de variable pour personnaliser la production de chaque rapport. Par exemple, une base de données d'abonnés peut contenir des numéros d'identification d'employés, des dates d'embauche, des titres de fonction et des adresses de lieux de travail dont vous pouvez vous servir pour filtrer les données du rapport. Si le rapport accepte des paramètres basés sur ces données de colonnes, vous pouvez mapper le paramètre à la colonne appropriée.  
   
- Lors du mappage de champs d'abonné à des paramètres de rapport, vérifiez que les types de données et les longueurs de colonnes sont compatibles. En cas de non-correspondance du type de données, une erreur se produit lors du traitement des abonnements. Pour plus d’informations sur l’utilisation des données dans un rapport paramétrable, consultez [créer un abonnement piloté &#40; Didacticiel SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Lors du mappage de champs d'abonné à des paramètres de rapport, vérifiez que les types de données et les longueurs de colonnes sont compatibles. En cas de non-correspondance du type de données, une erreur se produit lors du traitement des abonnements. Pour en savoir plus sur l’utilisation des données dans un rapport paramétrable, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Modification de la source de données des abonnés  
  Les modifications suivantes apportées à la source de données peuvent empêcher l'exécution de l'abonnement :  
@@ -87,7 +86,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Créer, modifier ou supprimer des abonnements pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

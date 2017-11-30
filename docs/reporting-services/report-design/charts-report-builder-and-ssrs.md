@@ -1,5 +1,5 @@
 ---
-title: "Graphiques (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Graphiques (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -21,49 +21,49 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ca57a00afd7256fce9c620099277a9894cbf59a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d7c46a132a6d559e6299910d6b2e4e117e650f45
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
-En savoir plus sur l’aide de régions de données de graphique pour aider les lecteurs de votre [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] rapports paginés comprennent des volumes importants de données agrégées en un coup de œil.  
+Apprenez à utiliser les régions de données de graphique pour aider les lecteurs de vos rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] à comprendre en un coup d’œil des volumes importants de données agrégées.  
 
-Plus le temps passé avec soin de préparation et de comprendre vos données avant de créer un graphique, plus il sera à concevoir vos graphiques rapidement et efficacement. Pour choisir le graphique à utiliser, consultez [Types de graphiques](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md) pour commencer à expérimenter avec des graphiques immédiatement, consultez la barre, colonne, graphique sparkline et des didacticiels de graphique à secteurs dans [didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md).  
+Plus vous passerez du temps à préparer avec soin vos données et à les comprendre, plus il sera facile et rapide de créer vos graphiques. Pour vous aider à choisir quel graphique utiliser, consultez [Types de graphiques](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md). Pour commencer à utiliser des graphiques tout de suite, consultez les didacticiels portant sur les graphiques à barres, les histogrammes, les graphiques sparkline et les graphiques à secteurs dans les [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md).  
   
  L'illustration suivante affiche un grand nombre des différents éléments utilisés dans le graphique.  
   
- ![Diagramme d’éléments de graphique](../../reporting-services/report-design/media/rs-chartelementsc.gif "diagramme d’éléments de graphique")  
+ ![Schéma des éléments du graphique](../../reporting-services/report-design/media/rs-chartelementsc.gif "Schéma des éléments du graphique")  
   
- Vous pouvez publier des graphiques hors d’un rapport en tant que *parties de rapports*. Pour plus d’informations, consultez [parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
+ Vous pouvez publier des graphiques indépendamment d’un rapport en tant que *parties de rapport*. Pour plus d’informations, consultez [Parties de rapport](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
   
  
 ##  <a name="DesigningChart"></a> Conception d'un graphique  
- Après avoir ajouté une région de données de graphique à l'aire de conception, vous pouvez faire glisser des champs de dataset du rapport pour les données numériques et non numériques vers le volet Données du graphique du graphique. Lorsque vous cliquez sur le graphique sur l'aire de conception, le volet Données du graphique s'affiche avec trois zones : Groupes d'abscisses, Groupes de séries et Valeurs. Si le rapport comporte un dataset partagé ou incorporé, les champs du dataset s'affichent dans le volet Données du rapport. Faites glisser les champs du DataSet vers la zone appropriée du volet données du graphique. Par défaut, lorsqu'un champ est ajouté à l'une des zones du graphique, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcule un agrégat pour ce champ. Vous pouvez également regrouper des séries pour générer dynamiquement des séries. Un graphique est [organisées comme une matrice](#SimilarMatrix).  
+ Après avoir ajouté une région de données de graphique à l'aire de conception, vous pouvez faire glisser des champs de dataset du rapport pour les données numériques et non numériques vers le volet Données du graphique du graphique. Lorsque vous cliquez sur le graphique sur l'aire de conception, le volet Données du graphique s'affiche avec trois zones : Groupes d'abscisses, Groupes de séries et Valeurs. Si le rapport comporte un dataset partagé ou incorporé, les champs du dataset s'affichent dans le volet Données du rapport. Faites glisser les champs du dataset vers la zone appropriée du volet Données du graphique. Par défaut, lorsqu'un champ est ajouté à l'une des zones du graphique, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcule un agrégat pour ce champ. Vous pouvez également regrouper des séries pour générer dynamiquement des séries. Un graphique est [organisé comme une matrice](#SimilarMatrix).  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
   
 > [!NOTE]  
 >  Les données dans le graphique au moment de la conception sont différentes de celles au moment du traitement du rapport. Il ne s'agit pas de vos vraies données. Ce sont des données générées qui ont été ajoutées pour que vous puissiez concevoir votre graphique et vous faire une idée de son aspect final.  
   
-##  <a name="SimilarMatrix"></a>Comment un graphique est comme une matrice  
+##  <a name="SimilarMatrix"></a>En quoi un graphique est-il comparable à une matrice ?  
  Une façon de réfléchir au fonctionnement des graphiques consiste à les comparer aux matrices.  
   
- ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
+ ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
   
  D'un point de vue conceptuel, leur organisation est identique :  
   
--   Le groupe de colonnes dans la matrice ressemble à la zone groupes d’abscisses dans le graphique.  
+-   Le groupe Colonnes dans la matrice est semblable à la zone Groupes de coordonnées dans le graphique.  
   
--   Le groupe de lignes dans la matrice ressemble à la zone groupes de séries dans le graphique.  
+-   Le groupe Lignes dans la matrice est semblable à la zone Groupes de séries dans le graphique.  
   
--   La zone de données dans la matrice ressemble à la zone de valeurs dans le graphique.  
+-   La zone Données dans la matrice est semblable à la zone Valeurs dans le graphique.  
   
  
 ##  <a name="AddingData"></a> Ajout de données au graphique  
@@ -144,10 +144,10 @@ Plus le temps passé avec soin de préparation et de comprendre vos données ava
   
 ## <a name="see-also"></a>Voir aussi  
  [Images, zones de texte, rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
- [Tri interactif, explorateurs de documents et liens &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Didacticiel : Ajouter un histogramme à votre rapport &#40; Le Générateur de rapports &#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Didacticiel : ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Didacticiel : Ajouter un graphique à barres à votre rapport &#40; Le Générateur de rapports &#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

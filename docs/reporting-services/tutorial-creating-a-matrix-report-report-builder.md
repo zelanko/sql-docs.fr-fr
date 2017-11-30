@@ -1,27 +1,25 @@
 ---
-title: "Didacticiel : Création d’un rapport de matrice (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : création d’un rapport de matrice (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ee61088e30c0c2be4caa7a6989e56812c77fe0e3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : création d'un rapport de matrice (Générateur de rapports)
 Ce didacticiel vous montre comment créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec une matrice d’exemples de données de ventes dans des groupes de lignes et de colonnes imbriqués. 
@@ -57,7 +55,7 @@ Dans cette section, vous choisissez une source de données partagée, vous crée
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou accédez au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -162,7 +160,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 2.  Appuyez sur la touche Ctrl, puis sélectionnez les neuf cellules contenant `[Sum(Sales)]`.  
   
-3.  Sur le **accueil** onglet > **nombre** > **devise**. Les cellules changent pour afficher le format de devise.  
+3.  Sous l’onglet **Accueil** > **Nombre** > **Devise**. Les cellules changent pour afficher le format de devise.  
   
     Si vos paramètres régionaux sont Anglais (États-Unis), le texte de l’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
     
@@ -170,7 +168,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 4.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
-5.  Dans le **nombre** groupe > **Date**.  
+5.  Dans le groupe **Nombre** > **Date**.  
   
     La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
@@ -268,7 +266,7 @@ La zone d'angle se trouve dans le coin supérieur gauche de la matrice. Selon le
   
 5.  Cliquez avec le bouton droit dans la cellule fusionnée, puis cliquez sur **Propriétés de la zone de texte**.  
   
-6.  Sur le **bordure** onglet > **Présélections** > **aucun**.
+6.  Sous l’onglet **Bordure** > **Valeurs prédéfinies** > **Aucun**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +283,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 2.  Sélectionnez la zone de texte en haut du corps du rapport qui contient **Cliquez pour ajouter un titre**, puis appuyez sur la touche Suppr.  
   
-3.  Sur le **insérer** onglet > **en-tête** > **ajouter un en-tête**.  
+3.  Sous l’onglet **Insérer** > **En-tête** > **Ajouter un en-tête**.  
   
     Un en-tête est ajouté en haut du corps du rapport.  
   
@@ -335,7 +333,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 ## <a name="RotateTextBox"></a>9. (Facultatif) Faire pivoter la zone de texte de 270 degrés  
 Un rapport avec des matrices peut s'étendre horizontalement et verticalement lorsqu'il s'exécute. En faisant pivoter les zones de texte verticalement, ou de 270 degrés, vous pouvez gagner de l'espace horizontal. Le rapport rendu sera alors plus étroit, et s'il est exporté dans un format tel que Microsoft Word, il rentrera plus facilement sur une page imprimée.  
   
-Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [zones de texte &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+Une zone de texte peut également afficher du texte horizontal dans le sens vertical (de haut en bas). Pour plus d’informations, consultez [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>Pour faire pivoter la zone de texte de 270 degrés  
   
@@ -371,5 +369,4 @@ Ainsi s'achève le didacticiel de création d'un rapport de matrice. Pour plus d
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

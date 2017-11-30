@@ -1,5 +1,5 @@
 ---
-title: "Mettre en forme le texte dans une zone de texte (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Mettre en forme du texte dans une zone de texte (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cc81cc2f3f19b6ce326d11db6114deeeb907
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab1c264ec07230bd81769ab2886177552095e636
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Mettre en forme du texte dans une zone de texte (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme indépendamment toute partie du texte dans une zone de texte, et mélanger le texte de l'espace réservé à du texte statique dans une zone de texte. Cette possibilité de mélanger les formats et d'ajouter le texte d'espace réservé vous permet de créer des publipostages ou des modèles de texte dans votre rapport. Toute expression peut être définie et mise en forme séparément à l'aide d'un espace réservé.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Faites glisser un champ de votre dataset dans la zone de texte. Un espace réservé est créé pour votre champ.  
   
-5.  Pour appliquer une mise en forme simple, sélectionnez le texte de l’espace réservé, puis cliquez sur l’une des options de mise en forme dans le groupe **Police** sous l’onglet **Accueil** . Par exemple, cliquez sur le bouton **Gras** .  
+5.  Pour appliquer une mise en forme simple, sélectionnez le texte de l’espace réservé, puis cliquez sur l’une des options de mise en forme dans le groupe **Police** sous l’onglet **Accueil** . Par exemple, cliquez sur le bouton **Gras**.  
   
      Pour afficher davantage d’options de mise en forme, cliquez avec le bouton droit sur le texte de l’espace réservé, puis cliquez sur **Propriétés de l’espace réservé**.  
   
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/09/2017
  La liste se répète une fois pour chaque valeur du champ, et l’espace réservé *NomChamp* est automatiquement remplacé par la valeur de ce champ dans le dataset.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Zones de texte &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Mise en forme du texte et des espaces réservés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Utilisation d’expressions dans les rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Ajouter du code HTML dans un rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Mise en forme des nombres et Dates &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Boîte de dialogue de propriétés espace réservé, général &#40; Le Générateur de rapports et SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
+ [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Ajouter du code HTML à un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   
   

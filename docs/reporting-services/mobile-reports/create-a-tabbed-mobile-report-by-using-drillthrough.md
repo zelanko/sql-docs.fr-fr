@@ -1,37 +1,35 @@
 ---
-title: "Créer un rapport mobile à onglets à l’aide de l’extraction | Rapports Reporting Services mobiles | Documents Microsoft"
+title: "Créer un rapport mobile tabulé à l’aide de l’extraction | Rapports mobiles Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6554f808c19540d2a3b7cbe3fdf4e86c5fe7a357
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 465c9c79016cf6a4770074bbfdab2b9fbd0a0e41
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Créer un rapport mobile à onglets à l’aide de l’extraction
+# <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Créer un rapport mobile tabulé à l’aide de l’extraction
 Découvrez comment créer un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] qui apparaît et fonctionne comme un rapport tabulé à l’aide de l’extraction et des paramètres.
 
 Par exemple, dans ce rapport, les jauges de la partie supérieure fonctionnent comme des onglets. Quand vous cliquez sur la jauge des transports, les données qui se trouvent dans le reste du graphique sont filtrées sur les données relatives aux transports.
 
 ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/tabbed-mobile-report-web-viewer-transportation-complete.png)
 
-En réalité, il s’agit d’un ensemble de cinq rapports, ayant chacun un paramètre différent qui permet de filtrer les données en fonction de la jauge sélectionnée en haut du rapport. Vous créez d’abord toutes les cinq rapports, puis pour chacun des cinq rapports, apportez les quatre autres jauges dans drillthroughs pour les quatre autres rapports.
+En réalité, il s’agit d’un ensemble de cinq rapports, ayant chacun un paramètre différent qui permet de filtrer les données en fonction de la jauge sélectionnée en haut du rapport. Vous commencez par créer cinq rapports. Ensuite, pour chacun des cinq rapports, vous faites des quatre autres jauges des extractions pour les quatre autres rapports.
 
-Voici les étapes de cet exemple.
+Voici les étapes de cet exemple :
 
 ## <a name="create-the-basic-report"></a>Créer le rapport de base
 
@@ -43,64 +41,64 @@ Voici les étapes de cet exemple.
     * Stockage
     * Dépenses diverses
 
-   ![01-ventes-Mobile--éditeur de rapports](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
+   ![01-Sales-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01-sales-mobile-report-publisher.png)
     
-2. Définir **Accent** à **sur** de la jauge de ventes, par conséquent, il sera contraste avec le le reste du rapport--dans ce cas, blanc sur noir.
+2. Définissez **Accentuation** sur **On** pour la jauge Ventes afin qu’elle contraste avec le reste du rapport ; dans le cas présent, blanc sur noir.
 
-    ![01a-Sales-accent-mobile-report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
+    ![01a-Sales-Accent-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/01a-sales-accent-mobile-report-publisher.png)
     
-3. Pour enregistrer un [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] serveur de rapports.
+3. Enregistrez le rapport sur un serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
 ## <a name="make-copies-of-the-report"></a>Effectuer des copies du rapport
 
-1. Effectuer des quatre copies du rapport de ventes et les nommer : 
+1. Faites quatre copies du rapport Ventes et nommez-les : 
 
     * Transport
     * Carburant
     * Stockage
     * Dépenses diverses
 
-3. Pour enregistrer le [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] serveur de rapports.
+3. Enregistrez-les sur le serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
 
-## <a name="set-the-gauge-as-a-drillthrough"></a>Définir la jauge en tant qu’une extraction
+## <a name="set-the-gauge-as-a-drillthrough"></a>Définir la jauge comme extraction
 
-Dans cette section, vous définissez chaque jauge (autre que la jauge Sales) comme une extraction à son rapport respectif.
+Dans cette section, vous définissez chaque jauge (à part la jauge Ventes) comme extraction pour son propre rapport.
 
-1. Dans le rapport des ventes, sélectionnez l’indicateur de transport.
+1. Dans le rapport Ventes, sélectionnez la jauge Transport.
 
-    ![02-Sales-Create-Drillthrough-mobile-report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
+    ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. Avec le **disposition** onglet sélectionné, dans le **propriétés visuelles** panneau, sélectionnez **d’extraction cible**.
+2. Sélectionnez l’onglet **Disposition**, puis dans le volet **Propriétés visuelles**, sélectionnez **Cible d’extraction**.
 
-3. Sélectionnez **rapport Mobile**.
+3. Sélectionnez **Rapport mobile**.
 
-4. Accédez à et sélectionnez le rapport à la destination pour l’extraction--dans ce cas, « Finances - transport ».
+4. Accédez au rapport qui sera la destination de l’extraction et sélectionnez-le ; dans le cas présent « Finances - Transport ».
 
-    ![03-Sales-Select-Dashboard-mobile-report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
+    ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. Dans **configurer le rapport cible**, sélectionnez le paramètre pour filtrer le rapport, puis sélectionnez **appliquer**.
+5. Dans **Configurer le rapport cible**, sélectionnez le paramètre de filtrer du rapport, puis sélectionnez **Appliquer**.
 
-   ![04-Sales-Apply-Parameters-mobile-report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
+   ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    
-6. Répétez ces étapes pour chacun des autres les jauges dans le rapport des ventes. 
+6. Répétez ces étapes pour chaque autre jauge du rapport Ventes. 
 
 ## <a name="set-the-gauges-for-the-other-reports"></a>Définir les jauges pour les autres rapports
 
-1.  Ouvrez le rapport de transport, définir l’indicateur de ventes comme une extraction dans le rapport des ventes et les trois autres jauges comme drillthroughs à leurs rapports respectifs.
+1.  Ouvrez le rapport Transport, définissez la jauge Ventes comme extraction pour le rapport Ventes, et les trois autres jauges comme des extractions pour leurs propres rapports.
 
-2. Toujours dans le rapport de transport, définissez **Accent** pour l’indicateur de transport pour **sur**, par contraste avec le le reste du rapport.
+2. Dans le rapport Transport, définissez le paramètre **Accentuation** de la jauge Transport sur **On** de sorte qu’elle contraste avec le reste du rapport.
 
-3. Répétez ces étapes pour les rapports de carburant, de stockage et les frais divers. 
+3. Répétez ces étapes pour les rapports Carburant, Stockage et Dépenses diverses. 
 
 ## <a name="view-the-report-in-the-web-portal"></a>Afficher le rapport dans le portail web
 
-1. Accédez à la [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] le serveur de rapports et ouvrez un des rapports. 
+1. Accédez au serveur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et ouvrez l’un des rapports. 
 
-2. Notez que chacun de jauge une icône d’extraction dans le coin supérieur droit.
+2. Notez que chaque jauge présente une icône d’extraction en haut à droite.
 
     ![Web-Viewer-drillthrough-icon-mobile-report-builder](../../reporting-services/mobile-reports/media/web-viewer-drillthrough-icon-mobile-report-builder.png)
 
-3. Vous avez le choix entre les jauges pour accéder à l’état filtré pour les données de cette jauge.
+3. Sélectionnez l’une des jauges pour accéder au rapport filtré des données de cette jauge.
 
    ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
@@ -113,5 +111,4 @@ Dans cette section, vous définissez chaque jauge (autre que la jauge Sales) com
 
 
   
-
 

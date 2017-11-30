@@ -1,5 +1,5 @@
 ---
-title: "Régions de données (Générateur de rapports et SSRS) imbriquées | Documents Microsoft"
+title: "Régions de données imbriquées (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c8c0ce2fe9fcbdeb417770aba60e356ef889b667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Régions de données imbriquées (Générateur de rapports et SSRS)
   En règle générale, vous pouvez imbriquer une région de données (par exemple un graphique) dans une autre région de données (par exemple une matrice) pour afficher des synthèses de données de façon concise ou pour proposer une représentation visuelle, ainsi qu'un tableau ou une matrice.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="understanding-scope-for-a-nested-data-region"></a>Présentation de l'étendue d'une région de données imbriquée  
  L'étendue des données d'une région de données imbriquée est automatiquement définie par son positionnement dans la région de données parente. Par exemple, l'étendue des données d'un graphique imbriqué dans une cellule d'angle de tableau matriciel correspond aux données du dataset lié à la région de données de tableau matriciel une fois que les filtres ont été appliqués au dataset, à la région de données de tableau matriciel et à la région de données de graphique. L'étendue d'un tableau matriciel imbriqué dans une cellule de tableau matriciel est la même que l'étendue de la cellule d'angle, tout en s'étendant jusqu'aux membres des groupes de lignes et de colonnes de la cellule dans laquelle elle est imbriquée, une fois les filtres de groupe correspondants appliqués. Pour plus d’informations sur l’étendue, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- L'étendue des cellules des zones de tableau matriciel suivantes est décrite dans la liste ci-dessous :  
+ L'étendue des cellules des zones de tableau matriciel suivantes est décrite dans la liste ci-dessous :  
   
 -   **Angle de tableau matriciel** L’étendue correspond aux données de la région de données liée à la région de données de tableau matriciel, une fois les expressions de filtre et de tri appliquées au dataset et au tableau matriciel externe.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Groupe de lignes de tableau matriciel** Données figurant dans le groupe de lignes le plus profond, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes.  
   
--   **Corps de tableau matriciel**Données figurant dans le groupe le plus profond représenté par l’intersection des groupes de lignes et des groupes de colonnes, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes et de colonnes.  
+-   **Corps de tableau matriciel** Données figurant dans le groupe le plus profond représenté par l’intersection des groupes de lignes et des groupes de colonnes, une fois les expressions de filtre et de tri appliquées au dataset, au tableau matriciel externe et aux groupes de lignes et de colonnes.  
   
  Pour plus d’informations, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Pour bénéficier d'un contrôle accru sur la taille d'un graphique dans une cellule de tableau matriciel, commencez par ajouter le graphique à un rectangle, puis ajoutez le rectangle à la cellule de tableau matriciel.  
   
- Par défaut, les couleurs de légende du graphique sont déterminées par la couleur des points de données qui figurent dans la série du graphique. Pour contrôler les couleurs de telle sorte que les régions de données de graphique imbriquées utilisent toutes la même couleur pour la même catégorie de données, vous devez utiliser des couleurs personnalisées et définir des expressions de tri pour les données. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)[Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Par défaut, les couleurs de légende du graphique sont déterminées par la couleur des points de données qui figurent dans la série du graphique. Pour contrôler les couleurs de telle sorte que les régions de données de graphique imbriquées utilisent toutes la même couleur pour la même catégorie de données, vous devez utiliser des couleurs personnalisées et définir des expressions de tri pour les données. Pour plus d’informations, consultez [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md) et [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="nesting-a-gauge-or-an-indicator-in-a-tablix"></a>Imbrication d'une jauge ou d'un indicateur dans un tableau matriciel  
  Vous pouvez imbriquer une jauge ou un indicateur dans un tableau, une matrice ou une liste pour afficher un indicateur de performance clé. Lorsque vous placez une jauge ou un indicateur dans un tableau, la jauge ou l'indicateur s'affiche pour chaque ligne du tableau matriciel. Pour plus d’informations sur l’ajout d’indicateurs à un tableau matriciel, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
@@ -85,16 +85,16 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Par défaut, lorsque vous ajoutez une région de données de liste à l'aire de conception, la liste inclut une ligne de détails. Vous pouvez modifier cette valeur par défaut en ajoutant une ligne de groupe et en supprimant la ligne de détails. Pour plus d’informations, consultez [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
- Pour plus d’informations, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) et [Ajouter, déplacer ou supprimer une table, une matrice ou une liste &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Présentation des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) et [Ajouter, déplacer ou supprimer une table, une matrice ou une liste &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Jauges &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Mise en forme des éléments de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Didacticiel : Ajout d’un indicateur de performance clé à votre rapport &#40; Le Générateur de rapports &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [Mise en forme des échelles sur une jauge &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

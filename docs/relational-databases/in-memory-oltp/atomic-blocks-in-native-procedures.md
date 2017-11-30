@@ -1,28 +1,28 @@
 ---
 title: Blocs atomiques | Microsoft Docs
 ms.custom: 
-ms.date: 12/02/2016
+ms.date: 10/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c1b939850a3df6404f7ff5a21c1784eef38b24c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40d88b09043e3b21326dde6cb85ced071f2b89b5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocs atomiques dans des procédures en mode natif
+[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+
   **BEGIN ATOMIC** fait partie de la norme SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les blocs atomiques au niveau supérieur des procédures stockées compilées en mode natif, ainsi que des fonctions scalaires définies par l’utilisateur compilées en mode natif. Pour plus d’informations sur ces fonctions, consultez [Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
 -   Chaque procédure stockée compilée en mode natif contient précisément un bloc d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il s'agit d'un bloc ATOMIC.  
@@ -128,7 +128,7 @@ ORDER BY c1
 GO  
 ```  
   
- Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S'ils apparaissent dans l'étendue d'un bloc Atomic, ils entraînent l'abandon de la transaction : 10772, 41301, 41302, 41305, 41325, 41332 et 41333.  
+ Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S’ils apparaissent dans l’étendue d’un bloc Atomic, ils entraînent l’abandon de la transaction : 10772, 41301, 41302, 41305, 41325, 41332, 41333 et 41839.  
   
 ## <a name="session-settings"></a>Paramètres de session  
  Les paramètres de session dans les blocs Atomic sont fixes lorsque la procédure stockée est compilée. Certains paramètres peuvent être spécifiés avec **BEGIN ATOMIC** tandis que les autres paramètres sont toujours fixes avec la même valeur.  
@@ -170,4 +170,3 @@ GO
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
-

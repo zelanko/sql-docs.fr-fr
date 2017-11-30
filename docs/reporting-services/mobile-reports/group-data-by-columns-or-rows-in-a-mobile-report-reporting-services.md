@@ -1,25 +1,24 @@
 ---
-title: "Regrouper des données en colonnes ou lignes dans un rapport mobile | Reporting Services | Documents Microsoft"
+title: "Regrouper des données par colonnes ou par lignes dans un rapport mobile | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Regrouper des données par colonnes ou par lignes dans un rapport mobile | Reporting Services
 L’ [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]vous permet d’organiser vos données par colonnes ou par lignes dans de nombreux types de graphiques. La procédure détaillée qui suit vous indique la marche à suivre.
@@ -32,7 +31,7 @@ Les étapes suivantes utilisent une table de totaux de comparaison avec les donn
 
 1. Faites glisser un **Graphique de totaux de comparaison** de l’onglet **Disposition** jusqu’à l’aire de conception et agrandissez-le.
 
-2. Sélectionnez l’onglet **Données** . La table SimulatedTable contient une série de colonnes : des métriques (de **Metric1** à **Metric5** ) et des comparaisons (de **Comparison1** à **Comparison5**). 
+2. Sélectionnez l’onglet **Données** . La table SimulatedTable contient une série de colonnes : des métriques (de **Metric1** à **Metric5**) et des **comparaisons** (de **Comparison1 à Comparison5**). 
 
    ![mobile-report-data-group-column](../../reporting-services/mobile-reports/media/mobile-report-data-group-column.png)
 
@@ -40,7 +39,7 @@ Les étapes suivantes utilisent une table de totaux de comparaison avec les donn
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   De même pour **série de comparaison** -- **Comparison1** via **Comparison5** sont sélectionnés.
+   De même, pour **Série de comparaison** -- , les comparaisons (de **Comparison1** à **Comparison5**) sont sélectionnées.
    
 4. Sélectionnez **Aperçu**.
 
@@ -52,7 +51,7 @@ Les étapes suivantes utilisent une table de totaux de comparaison avec les donn
 
 6. Sous l’onglet **Disposition** , dans le volet **Propriétés visuelles** , faites passer la **Structure des données** de **Par colonnes** à **Par lignes**.  
 
-7. Sélectionnez l’onglet **Données** . La table SimulatedTable comprend désormais une colonne **Catégorie** (catégories A à E), suivie des colonnes **Métrique** et **Comparaison** . 
+7. Sélectionnez l’onglet **Données** . La table SimulatedTable comprend désormais une colonne **Catégorie** (catégories A à E), suivie des colonnes **Métrique** et **Comparaison**. 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 

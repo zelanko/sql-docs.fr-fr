@@ -1,5 +1,5 @@
 ---
-title: "Attributions de rôles | Documents Microsoft"
+title: "Attributions de rôles | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d848092b028ce827c1c2c56c5216f6ba3b1f4c45
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-assignments"></a>Attributions de rôles
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les *attributions de rôles* déterminent l’accès aux éléments stockés et au serveur de rapports proprement dit. Une attribution de rôle est composée des parties suivantes :  
@@ -40,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
  Les attributions de rôles sont héritées dans la hiérarchie des dossiers. L'attribution de rôle qui est définie pour un dossier est automatiquement héritée par tous les rapports, les sources de données partagées, les ressources et les sous-dossiers contenus dans ce dossier. Vous pouvez passer outre la sécurité héritée en définissant les attributions de rôles des éléments individuels. Toutes les parties de la hiérarchie de dossiers doivent être sécurisées par au moins une attribution de rôle. Vous ne pouvez pas créer d'élément non sécurisé ou manipuler des paramètres d'une manière qui produise un élément non sécurisé.  
   
- La diagramme suivant illustre une attribution de rôle qui mappe un groupe et un utilisateur spécifique au rôle **Serveur de publication** du dossier B.  
+ Le diagramme suivant illustre une attribution de rôle qui mappe un groupe et un utilisateur spécifique au rôle **Serveur de publication** du dossier B.  
   
- ![Diagramme des attributions de rôle](../../reporting-services/security/media/report-securityarch.gif "diagramme des attributions de rôle")  
+ ![Diagramme des attributions de rôles](../../reporting-services/security/media/report-securityarch.gif "Diagramme des attributions de rôles")  
 Diagramme des attributions de rôles  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Attributions de rôles de niveau système et de niveau élément  
@@ -67,11 +66,10 @@ Diagramme des attributions de rôles
  Pour plus d'informations sur les attributions de rôles prédéfinies qui assurent la sécurité par défaut, consultez [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer, supprimer ou modifier un rôle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Accorder l’accès de l’utilisateur à un serveur de rapports &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modifier ou supprimer une attribution de rôle &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Définir des autorisations pour les éléments de serveur de rapports sur un Site SharePoint &#40; Reporting Services dans SharePoint intégré en Mode &#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

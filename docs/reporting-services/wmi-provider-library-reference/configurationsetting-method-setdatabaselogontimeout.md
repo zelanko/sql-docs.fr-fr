@@ -1,5 +1,5 @@
 ---
-title: "Méthode de SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "SetDatabaseLogonTimeout, méthode (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetDatabaseLogonTimeout method
+helpviewer_keywords: SetDatabaseLogonTimeout method
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b9cb3569867b2e6cda8a42c3860c65337ad8cbe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6362913c89187ba66ede8ee15c578ffe7d5d69e2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---setdatabaselogontimeout"></a>Méthode ConfigurationSetting - SetDatabaseLogonTimeout
   Spécifie la valeur de délai par défaut pour l'établissement d'une connexion à la base de données du serveur de rapports.  
@@ -62,4 +58,3 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Collection de champs de DataSet (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Collection de champs de dataset (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  Les sources de données qui prennent en charge des requêtes multidimensionnelles, comme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], prennent en charge les propriétés de champ sur les champs. Les propriétés de champ apparaissent dans le jeu de résultats d'une requête, mais ne sont pas visibles dans le volet **Données du rapport** . Elles sont néanmoins disponibles pour les utiliser dans votre rapport. Pour vous référer à la propriété d'un champ, faites glisser le champ dans le rapport et remplacez la propriété par défaut **Value** par le nom de champ de la propriété souhaitée. Dans un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] par exemple, vous pouvez définir des formats pour les valeurs dans les cellules de cube. La valeur mise en forme est disponible à l'aide de la propriété de champ **FormattedValue**. Pour utiliser directement la valeur au lieu d'utiliser une valeur, puis de définir la propriété de format de la zone de texte, faites glisser le champ vers la zone de texte et remplacez l'expression par défaut `=Fields!FieldName.Value` par `=Fields!FieldName.FormattedValue`.  
   
 > [!NOTE]  
->  Certaines propriétés **Field** ne peuvent pas être utilisées pour toutes les sources de données. Les propriétés **Value** et **IsMissing** sont définies pour toutes les sources de données. D’autres propriétés prédéfinies (comme **Key**, **UniqueName**et **ParentUniqueName** pour les sources de données multidimensionnelles) sont prises en charge uniquement si la source de données les fournit. Certains fournisseurs de données prennent en charge les propriétés personnalisées. Pour plus d’informations, consultez les rubriques spécifiques relatives aux propriétés de champ étendues correspondant à votre type de source de données dans [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Par exemple, pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] source de données, consultez [propriétés de champ étendues pour une base de données Analysis Services &#40; SSRS &#41; ](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+>  Certaines propriétés **Field** ne peuvent pas être utilisées pour toutes les sources de données. Les propriétés **Value** et **IsMissing** sont définies pour toutes les sources de données. D’autres propriétés prédéfinies (comme **Key**, **UniqueName**et **ParentUniqueName** pour les sources de données multidimensionnelles) sont prises en charge uniquement si la source de données les fournit. Certains fournisseurs de données prennent en charge les propriétés personnalisées. Pour plus d’informations, consultez les rubriques spécifiques relatives aux propriétés de champ étendues correspondant à votre type de source de données dans [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md). Pour obtenir un exemple relatif à une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
 ##  <a name="Defaults"></a> Présentation des expressions par défaut pour les champs  
@@ -110,13 +109,12 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="MissingFields"></a> Détection de champs manquants lors de l'exécution  
- Lorsque le rapport est traité, le jeu de résultats pour un dataset peut ne pas contenir de valeurs pour toutes les colonnes spécifiées, car les colonnes n'existent plus dans la source de données. Vous pouvez utiliser la propriété de champ IsMissing pour détecter si des valeurs ont été retournées pour un champ au moment de l’exécution. Pour plus d’informations, consultez [Références à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
+ Lorsque le rapport est traité, le jeu de résultats pour un dataset peut ne pas contenir de valeurs pour toutes les colonnes spécifiées, car les colonnes n'existent plus dans la source de données. Vous pouvez utiliser la propriété de champ IsMissing pour détecter si des valeurs ont été retournées pour un champ au moment de l’exécution. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Boîte de dialogue Propriétés du dataset, Champs &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
- [Parties de rapports et jeux de données dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Rapport incorporé des jeux de données et des Datasets partagés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

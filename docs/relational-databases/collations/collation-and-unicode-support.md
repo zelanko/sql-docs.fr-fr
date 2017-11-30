@@ -1,12 +1,11 @@
 ---
 title: "Prise en charge d’Unicode et du classement | Microsoft Docs"
 ms.custom: 
-ms.date: 08/04/2017
-ms.prod: sql-server-2016
+ms.date: 10/24/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b165344ccc0f06c8de77633069ff4bd59ad8d4a5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
-ms.openlocfilehash: 03e346a8f89d923525951ec8b8683527b611d8f5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
   Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les types de données character, tels que **char** et **varchar** , déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. Qu’il s’agisse d’installer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de restaurer une sauvegarde de base de données ou de connecter un serveur à des bases de données clientes, vous devez bien comprendre les exigences en termes de paramètres régionaux, d’ordre de tri et de respect de la casse et des accents des données que vous utilisez. Pour répertorier les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -133,7 +131,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  Vous pouvez également essayer d'utiliser un autre classement pour les données du serveur. Choisissez un classement qui établit un mappage à une page de codes du client.    
     
- Pour utiliser les classements UTF-16 disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sélectionnez l'un des classements `_SC` de caractères supplémentaires (classements Windows uniquement) afin d'améliorer la recherche et le tri de certains caractères Unicode.    
+ Pour utiliser les classements UTF-16 disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] afin d’améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous pouvez sélectionner l’un des classements (_SC) de caractères supplémentaires ou l’un des classements version 140.    
     
  Pour déterminer les problèmes qui sont liés à l'utilisation des types de données Unicode ou non-Unicode, testez votre scénario pour mesurer les écarts de performances dans votre environnement. Vous devez normaliser le classement utilisé sur les systèmes de votre organisation et déployer des serveurs et clients Unicode partout où vous le pouvez.    
     
@@ -155,35 +153,39 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ##  <a name="Supplementary_Characters"></a> Caractères supplémentaires    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des types de données tels que **nchar** et **nvarchar** pour stocker des données Unicode. Ces types de données encodent le texte dans un format appelé *UTF-16*. Le Consortium Unicode alloue à chaque caractère un codepoint unique, qui est une valeur comprise entre 0x0000 et 0x10FFFF. Les caractères utilisés le plus souvent ont des valeurs codepoint qui correspondent à un mot de 16 bits en mémoire et sur le disque, mais les caractères dont les valeurs codepoint sont supérieures à 0xFFFF nécessitent deux mots de 16 bits consécutifs. Ces caractères sont appelés des *caractères supplémentaires*et les deux mots de 16 bits consécutifs sont appelés des *paires de substitution*.    
     
+ À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez utiliser une nouvelle famille de classements de caractères supplémentaires (_SC) avec les types de données **nchar**, **nvarchar** et **sql_variant**. Par exemple : `Latin1_General_100_CI_AS_SC` ou si vous utilisez un classement japonais, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
+
+ À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tous les nouveaux classements prennent en charge automatiquement les caractères supplémentaires.
+
  Si vous utilisez des caractères supplémentaires :    
     
 -   Les caractères supplémentaires peuvent être utilisés dans des opérations de tri et de comparaison dans les versions de classement 90 ou versions supérieures.    
     
--   Tous les nouveaux classements de niveau _100 prennent en charge le tri linguistique avec les caractères supplémentaires.    
+-   Tous les classements version 100 prennent en charge le tri linguistique avec les caractères supplémentaires.    
     
 -   Les caractères supplémentaires ne sont pas utilisables dans les métadonnées, telles que les noms d'objets de base de données.    
     
--   À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez utiliser une nouvelle famille de classements de caractères supplémentaires (SC) avec les types de données **nchar**, **nvarchar** et **sql_variant**. Par exemple : `Latin1_General_100_CI_AS_SC` ou si vous utilisez un classement japonais, `Japanese_Bushu_Kakusu_100_CI_AS_SC`.    
-  > [!NOTE]    
-  >  Les bases de données qui utilisent des classements avec des caractères supplémentaires (\_SC) ne peuvent pas être activées pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. C’est parce que certaines des tables système et des procédures stockées créées pour la réplication utilisent le type de données **ntext** hérité qui ne prend pas en charge les caractères supplémentaires.  
+-   Les bases de données qui utilisent des classements avec des caractères supplémentaires (\_SC) ne peuvent pas être activées pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. C’est parce que certaines des tables système et des procédures stockées créées pour la réplication utilisent le type de données **ntext** hérité qui ne prend pas en charge les caractères supplémentaires.  
     
-     L’indicateur SC peut s’appliquer aux éléments suivants :    
+-   L’indicateur SC peut s’appliquer aux éléments suivants :    
     
-    -   Classements Windows version 90    
+    -   Classements version 90    
     
-    -   Classements Windows version 100    
+    -   Classements version 100    
     
-     L’indicateur SC ne peut pas s’appliquer aux éléments suivants :    
+-   L’indicateur SC ne peut pas s’appliquer aux éléments suivants :    
     
     -   Classements Windows version 80 et sans version    
     
     -   Classements binaires BIN ou BIN2    
     
-    -   Classements SQL*    
+    -   Classements SQL\*    
     
- Le tableau suivant compare le comportement de quelques fonctions de chaîne et opérateurs d'enchaînement lorsqu'ils utilisent des caractères supplémentaires avec et sans classement SC.    
+    -   Classements version 140 (ces derniers n’ont pas besoin de l’indicateur SC, car ils prennent déjà en charge les caractères supplémentaires)    
     
-|Fonction de chaîne ou opérateur|Avec un classement SC|Sans classement SC|    
+ Le tableau suivant compare le comportement de quelques fonctions de chaîne et opérateurs de chaîne quand ils utilisent des caractères supplémentaires avec et sans classement sensible aux caractères supplémentaires :    
+    
+|Opérateur ou fonction de chaîne|Avec un classement sensible aux caractères supplémentaires|Sans classement sensible aux caractères supplémentaires|    
 |---------------------------------|--------------------------|-----------------------------|    
 |[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)<br /><br /> [LEN](../../t-sql/functions/len-transact-sql.md)<br /><br /> [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|La paire de substitution UTF-16 est comptée comme un codepoint unique.|La paire de substitution UTF-16 est comptée comme deux codepoints.|    
 |[LEFT](../../t-sql/functions/left-transact-sql.md)<br /><br /> [REPLACE](../../t-sql/functions/replace-transact-sql.md)<br /><br /> [REVERSE](../../t-sql/functions/reverse-transact-sql.md)<br /><br /> [RIGHT](../../t-sql/functions/right-transact-sql.md)<br /><br /> [SUBSTRING](../../t-sql/functions/substring-transact-sql.md)<br /><br /> [STUFF](../../t-sql/functions/stuff-transact-sql.md)|Ces fonctions traitent chaque paire de substitution comme un codepoint unique et fonctionnent comme attendu.|Ces fonctions peuvent fractionner toutes les paires de substitution et conduire à des résultats inattendus.|    
@@ -205,13 +207,15 @@ Les applications de base de données qui interagissent avec [!INCLUDE[ssNoVersio
 
 ##  <a name="Japanese_Collations"></a> Classements japonais ajoutés dans  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
-À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], deux nouvelles familles de classement japonais sont prises en charge, avec les permutations de diverses options (_CS, _AS, _KS, _WS, _VSS, etc). 
+À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], deux nouvelles familles de classement japonais sont prises en charge, avec les permutations de diverses options (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
-Pour répertorier ces classements, vous pouvez interroger le moteur de base de données SQL Server :
+Pour lister ces classements, vous pouvez interroger le moteur de base de données SQL Server :
 ``` 
 SELECT Name, Description FROM fn_helpcollations()  
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
+
+Tous les nouveaux classements prenant automatiquement en charge les caractères supplémentaires, aucun d’eux n’a (ou ne requiert) l’indicateur SC.
 
 Ces classements sont pris en charge dans les index de moteur de base de données, les tables optimisées en mémoire, les index columnstore et les modules compilés en mode natif.
     
@@ -239,5 +243,4 @@ Ces classements sont pris en charge dans les index de moteur de base de données
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
-
 

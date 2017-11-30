@@ -1,5 +1,5 @@
 ---
-title: "Code de sécurité d’accès dans Reporting Services | Documents Microsoft"
+title: "Sécurité d’accès du code dans Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - code access security [Reporting Services]
@@ -20,23 +19,23 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: d34c2136e148bcd5297160f1776b13b86c343a7f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sécurité d'accès du code dans Reporting Services
-  La sécurité d'accès du code est axée sur les concepts principaux suivants : preuve, groupes de codes et jeux d'autorisations nommés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les composants du Gestionnaire de rapports, du Concepteur de rapports et de Report Server ont chacun un fichier de stratégie qui configure la sécurité d'accès du code pour les assemblys personnalisés, ainsi que pour les extensions de remise des données, de rendu et de sécurité. Les sections suivantes fournissent une vue d'ensemble de la sécurité d'accès du code. Pour plus d’informations sur les sujets abordés dans cette section, consultez « Modèle de stratégie de sécurité » dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] documentation du Kit de développement logiciel.  
+  La sécurité d'accès du code est axée sur les concepts principaux suivants : preuve, groupes de codes et jeux d'autorisations nommés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les composants du Gestionnaire de rapports, du Concepteur de rapports et de Report Server ont chacun un fichier de stratégie qui configure la sécurité d'accès du code pour les assemblys personnalisés, ainsi que pour les extensions de remise des données, de rendu et de sécurité. Les sections suivantes fournissent une vue d'ensemble de la sécurité d'accès du code. Pour obtenir des détails sur les rubriques traitées dans cette section, consultez les informations relatives au modèle de stratégie de sécurité dans la documentation du SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise la sécurité d'accès du code, car bien que le serveur de rapports repose sur la technologie [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], il existe une différence considérable entre une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique et le serveur de rapports. Une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique n'exécute pas de code utilisateur. En revanche, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise une architecture ouverte et extensible qui permet aux utilisateurs de programmer les fichiers de définition de rapport à l’aide de la **Code** élément du langage de définition de rapport et à développer des fonctionnalités spécialisées dans un assembly personnalisé à utiliser dans les rapports. En outre, les développeurs peuvent concevoir et déployer de puissantes extensions visant à améliorer les fonctionnalités du serveur de rapports. Cette puissance et cette souplesse doivent être complétées par un niveau de protection et de sécurité optimal.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise la sécurité d'accès du code, car bien que le serveur de rapports repose sur la technologie [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], il existe une différence considérable entre une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique et le serveur de rapports. Une application [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] classique n'exécute pas de code utilisateur. En revanche, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se sert d’une architecture ouverte et extensible qui permet aux utilisateurs de programmer des fichiers de définitions de rapports à l’aide de l’élément **Code** du langage RDL (Report Definition Language), et de développer des fonctionnalités spécialisées dans un assembly personnalisé à utiliser dans les rapports. En outre, les développeurs peuvent concevoir et déployer de puissantes extensions visant à améliorer les fonctionnalités du serveur de rapports. Cette puissance et cette souplesse doivent être complétées par un niveau de protection et de sécurité optimal.  
   
- Les développeurs [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peuvent utiliser n'importe quel assembly du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans leurs rapports et faire appel en mode natif à toutes les fonctionnalités des assemblys déployés dans le Global Assembly Cache. La seule chose que le serveur de rapports peut contrôler est l'autorisation accordée aux expressions de rapport et aux assemblys personnalisés chargés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les assemblys personnalisés reçoivent **Execute**-uniquement les autorisations par défaut.  
+ Les développeurs [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peuvent utiliser n'importe quel assembly du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] dans leurs rapports et faire appel en mode natif à toutes les fonctionnalités des assemblys déployés dans le Global Assembly Cache. La seule chose que le serveur de rapports peut contrôler est l'autorisation accordée aux expressions de rapport et aux assemblys personnalisés chargés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les assemblys personnalisés reçoivent les autorisations **Execute** uniquement par défaut.  
   
 ## <a name="evidence"></a>Preuve  
  Une preuve représente l'information que le Common Language Runtime (CLR) utilise pour définir une stratégie de sécurité relative aux assemblys de code. Une preuve indique au runtime que le code possède une caractéristique particulière. Les formes communes de preuve incluent les signatures numériques et l'emplacement d'un assembly. Une preuve peut également être personnalisée pour représenter d'autres informations ayant une importance pour l'application.  
@@ -64,10 +63,10 @@ ms.lasthandoff: 08/12/2017
  Contactez votre administrateur système ou votre expert en déploiement d'applications pour déterminer le type de sécurité d'accès du code et les groupes de codes requis par vos assemblys personnalisés ou extensions [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="named-permission-sets"></a>Jeux d'autorisations nommés  
- Un jeu d'autorisations nommé est un jeu d'autorisations que les administrateurs peuvent associer à un groupe de codes. La plupart des jeux d'autorisations nommés comprennent au moins une autorisation, un nom et une description pour le jeu d'autorisations. Les administrateurs peuvent utiliser des jeux d'autorisations nommés pour établir ou modifier la stratégie de sécurité des groupes de codes. Plusieurs groupes de codes peuvent être associés au même jeu d'autorisations nommé. Le CLR fournit les jeux d’autorisations nommés ; parmi celles-ci sont **rien**, **exécution**, **Internet**, **LocalIntranet**, **tout**, et **FullTrust**.  
+ Un jeu d'autorisations nommé est un jeu d'autorisations que les administrateurs peuvent associer à un groupe de codes. La plupart des jeux d'autorisations nommés comprennent au moins une autorisation, un nom et une description pour le jeu d'autorisations. Les administrateurs peuvent utiliser des jeux d'autorisations nommés pour établir ou modifier la stratégie de sécurité des groupes de codes. Plusieurs groupes de codes peuvent être associés au même jeu d'autorisations nommé. Le CLR fournit des jeux d’autorisations nommés intégrés, par exemple **Nothing**, **Execution**, **Internet**, **LocalIntranet**, **Everything** et **FullTrust**.  
   
 > [!NOTE]  
->  Extensions de données, de remise, de rendu et de sécurité personnalisées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] doit s’exécuter sous le **FullTrust** jeu d’autorisations. Contactez votre administrateur système pour ajouter le groupe de codes et les conditions d'appartenance appropriés pour vos extensions [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+>  Les extensions relatives aux données personnalisées, à la remise, au rendu et à la sécurité dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] doivent s’exécuter sous le jeu d’autorisations **FullTrust**. Contactez votre administrateur système pour ajouter le groupe de codes et les conditions d'appartenance appropriés pour vos extensions [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  Vous pouvez associer vos propres niveaux personnalisés d'autorisations pour les assemblys personnalisés que vous utilisez avec des rapports. Par exemple, si vous souhaitez permettre à un assembly d'accéder à un fichier spécifique, vous pouvez créer un jeu d'autorisations nommé disposant d'un accès d'E/S de fichier spécifique, puis assigner ce jeu d'autorisations à votre groupe de codes. Le jeu d'autorisations suivant accorde l'accès en lecture seule au fichier MyFile.xml :  
   
@@ -100,6 +99,6 @@ ms.lasthandoff: 08/12/2017
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sécuriser le développement &#40; Reporting Services &#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+ [Développement sécurisé &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

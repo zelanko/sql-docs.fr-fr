@@ -1,26 +1,24 @@
 ---
 title: "Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2017
+ms.date: 10/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 09744996c2fddd8ca88570922a06783e5d9b04a9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -195,8 +193,8 @@ Les instructions DML suivantes sont prises en charge.
 -   Opérateurs au niveau du bit ~, &, |, et ^  
 
 -   APPLY (opérateur)
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], l’opérateur APPLY est pris en charge dans les modules compilés en mode natif.
 
 ##  <a name="bfncsp"></a> Fonctions intégrées dans les modules compilés en mode natif  
  Les fonctions suivantes sont prises en charge dans les contraintes sur les tables optimisées en mémoire et dans les modules T-SQL compilés en mode natif.  
@@ -206,8 +204,8 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
 
 -   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING.  
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions intégrées suivantes sont également prises en charge : TRIM, TRANSLATE et CONCAT_WS.  
 
 -   Fonction d’identité : SCOPE_IDENTITY  
 
@@ -216,12 +214,12 @@ Les instructions DML suivantes sont prises en charge.
 -   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
 
 -   Fonctions JSON  
-    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fonctions JSON sont prises en charge dans les modules compilés en mode natif.
+    - **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], les fonctions JSON sont prises en charge dans les modules compilés en mode natif.
 
 -   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
 
--   Fonctions système : @@rowcount.  Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
+-   Fonctions système : @@rowcount. Les instructions dans les procédures stockées compilées en mode natif mettent à jour @@rowcount et vous pouvez utiliser @@rowcount dans une procédure stockée compilée en mode natif pour déterminer le nombre de lignes affectées par la dernière instruction exécutée dans cette procédure stockée compilée en mode natif. Cependant, @@rowcount est réinitialisé à 0 au début et à la fin de l’exécution d’une procédure stockée compilée en mode natif.  
 
 -   Fonctions de sécurité : IS_MEMBER({'group' | 'role'}), IS_ROLEMEMBER ('role' [, 'database_principal’]), IS_SRVROLEMEMBER ('role' [, 'login’]), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['login’]), SUSER_SID(['login’] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['user']), USER_NAME([id]), CONTEXT_INFO().
 
@@ -307,6 +305,5 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

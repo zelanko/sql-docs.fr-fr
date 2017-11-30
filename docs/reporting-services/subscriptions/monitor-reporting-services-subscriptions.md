@@ -1,5 +1,5 @@
 ---
-title: Moniteur de Reporting Services abonnements | Documents Microsoft
+title: Analyser les abonnements Reportions Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d1d01e4c59bba393ddc713c24f7ba829b3420b3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  
@@ -55,17 +54,17 @@ ms.lasthandoff: 08/09/2017
 |------------|-----------------|  
 |Nouvel abonnement|Apparaît la première fois que vous créez l'abonnement.|  
 |Inactif|Apparaît lorsqu'un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cette rubrique.|  
-|Effectué : \< *nombre*> traité de \< *nombre*> totale ; \< *nombre*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
+|Terminé : \<*nombre*> traité(s) sur un total de \<*nombre*> ; \<*nombre*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
 |\<*nombre*> traités|Nombre de notifications que le processeur de planification et de livraison a réussi à remettre ou n'essaie plus de remettre. Lorsqu'une remise pilotée par les données est terminée, le nombre de notifications traitées doit être égal au nombre total de notifications générées.|  
-|\<*nombre*> total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
-|\<*nombre*> erreur|Nombre de notifications que le processeur de planification et de livraison n'a pas réussi à remettre ou n'essaie plus de remettre.|  
-|Échec de l'envoi du message électronique : le transport a échoué dans sa connexion au serveur.|Indique que le serveur de rapports ne s'est pas connecté au serveur de messagerie ; ce message provient de l'extension de remise par messagerie électronique.|  
-|Fichier \< *nom de fichier*> a été écrite dans \<chemin d’accès >.|Indique que la remise à l'emplacement du partage de fichiers a réussi ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|\<*nombre*> au total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
+|\<*nombre*> erreurs|Nombre de notifications que le processeur de planification et de livraison n'a pas réussi à remettre ou n'essaie plus de remettre.|  
+|Échec de l'envoi du message électronique : le transport a échoué dans sa connexion au serveur.|Indique que le serveur de rapports ne s'est pas connecté au serveur de messagerie ; ce message provient de l'extension de remise par messagerie électronique.|  
+|Le fichier \<*nom_fichier*> a été écrit dans \<chemin>.|Indique que la remise à l'emplacement du partage de fichiers a réussi ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |Une erreur inconnue s'est produite lors de l'écriture du fichier.|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|Impossible de se connecter au dossier de destination, \<chemin d’accès >. Assurez-vous que le dossier de destination ou le partage de fichiers existe.|Indique que le dossier que vous avez spécifié n'a pas pu être trouvé ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|Le fichier \<nom de fichier > ne peut pas être écrite dans \<chemin d’accès >. Nouvelle tentative d'écriture en cours.|Indique que le fichier n'a pas pu être mis à jour avec une version plus récente ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|Échec de l’écriture du fichier \<filename > : \<message >|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|\<messages d’état personnalisés >|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
+|Échec lors de la connexion au dossier de destination, \<chemin>. Assurez-vous que le dossier de destination ou le partage de fichiers existe.|Indique que le dossier que vous avez spécifié n'a pas pu être trouvé ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|Impossible d’écrire le fichier \<nom_fichier> dans \<chemin>. Nouvelle tentative d'écriture en cours.|Indique que le fichier n'a pas pu être mis à jour avec une version plus récente ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|Échec lors de l’écriture dans le fichier \<nom_fichier>: \<message>|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|\<messages d’état personnalisés>|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
   
  Les administrateurs de serveur de rapports peuvent également surveiller les abonnements standard en cours de traitement. Les abonnements pilotés par les données ne peuvent pas être analysés. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -127,7 +126,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

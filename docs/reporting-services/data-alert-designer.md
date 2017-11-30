@@ -1,5 +1,5 @@
 ---
-title: "Concepteur d’alerte de données | Documents Microsoft"
+title: "Concepteur d’alertes de données | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 67b7bf50b5773ee52651942345e40146a7e70fb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-designer"></a>Concepteur d'alertes de données
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
 Vous pouvez créer et modifier les définitions d'alerte de données dans le Concepteur d'alertes de données. Une définition d'alerte est une collection de métadonnées, comprenant les données de rapport qui vous intéressent, les règles que les données de rapport doivent satisfaire pour créer des instances d'alerte de données et pour envoyer des messages d'alerte de données, les destinataires du message d'alerte, etc.  
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
  Pour créer une définition d'alerte, plusieurs tâches sont associées :  
   
@@ -64,7 +64,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ##  <a name="AlertDesigner"></a> Interface utilisateur du Concepteur d'alertes de données  
  Le Concepteur d'alertes de données est divisé en zones. La zone où vous sélectionnez le flux des données de rapport, la zone où vous créez des conditions simples ou complexes en ajoutant des règles aux conditions, et ainsi de suite. L'image suivante affiche les zones du Concepteur d'alertes de données.  
   
- ![Zones dans l’interface utilisateur du Concepteur d’alertes](../reporting-services/media/rs-alertdesigner.gif "zones dans l’interface utilisateur du Concepteur d’alertes")  
+ ![Zones dans l’interface utilisateur du Concepteur alertes](../reporting-services/media/rs-alertdesigner.gif "Zones dans l’interface utilisateur du Concepteur alertes")  
   
   
 ### <a name="alert-data"></a>Données d'alerte  
@@ -177,7 +177,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ### <a name="email-settings"></a>Paramètres de messagerie  
  Utilisez l’option **Destinataire(s)** pour spécifier les adresses e-mail des destinataires à qui envoyer les messages d’alerte de données par e-mail. Séparez les adresses de messagerie par des points-virgules, comme vous le feriez dans un courrier électronique Microsoft Office Outlook. Vous pouvez également spécifier des groupes de distribution comme destinataires, pour simplifier et accélérer la gestion de la liste des destinataires. Si SharePoint peut déterminer votre adresse de messagerie lorsque vous créez une définition d'alerte, celle-ci est ajoutée automatiquement aux destinataires répertoriés ; sinon, vous devez vous ajouter explicitement comme destinataire.  
   
- L’objet du courrier électronique par défaut est **d’alerte de données pour \<nom de l’alerte >**. Vous pouvez changer l'objet selon vos besoins.  
+ L’objet par défaut de l’e-mail est **Alerte de données pour \<nom_alerte>**. Vous pouvez changer l'objet selon vos besoins.  
   
  Vous pouvez aussi fournir une description à l’aide de l’option **Description** . Cette description sera incluse dans le message d’alerte de données. En incluant une description, surtout si vous avez créé des alertes de données similaires, vous aidera à différencier rapidement les messages d'alerte et à mieux les comprendre. En plus du message d'alerte envoyé lorsque les données du rapport suivent les règles spécifiées, un message d'alerte est envoyé à tous les destinataires lorsqu'une erreur se produit. Pour plus d’informations, consultez [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   
@@ -186,7 +186,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ##  <a name="CreateAlert"></a> Créer une définition d'alerte de données  
  Si vous avez accordé des autorisations permettant de consulter des éléments et de créer des alertes dans SharePoint, vous pouvez créer une définition d'alerte de données pour tout rapport que vous êtes autorisé à afficher, tant que le rapport utilise des informations d'identification stockées ou bien aucune information d'identification. Vous exécutez le rapport à partir d'une bibliothèque SharePoint. Les données que vous pouvez utiliser dans le Concepteur d'alertes de données proviennent du rapport. Si le rapport est paramétré, vous devrez peut-être exécuter le rapport en utilisant des valeurs de paramètre différentes pour vous assurer que les données qui vous intéressent s'affichent dans le rapport. Après avoir ouvert le rapport, cliquez sur l’option **Nouvelle alerte de données** dans le menu **Actions** de la barre d’outils Rapport pour ouvrir le Concepteur d’alertes de données. L'image suivante vous indique comment ouvrir le Concepteur d'alertes de données.  
   
- ![Ouvrez le Concepteur d’alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "ouvrir le concepteur alerte à partir de la bibliothèque SharePoint")  
+ ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
   
  Pour plus d’informations, consultez [Créer une alerte de données dans le Concepteur d’alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md).  
   
@@ -205,7 +205,7 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
   
  Pour modifier une définition d’alerte de données, cliquez avec le bouton droit dans le Gestionnaire des alertes de données et sélectionnez **Modifier**. L'image suivante montre le menu contextuel d'une alerte de données dans le Gestionnaire des alertes de données.  
   
- ![Ouvrez le Concepteur d’alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Concepteur d’alertes de données ouverte en cliquant sur Modifier")  
+ ![Ouvrir le Concepteur d’alertes de données en cliquant sur Modifier](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Ouvrir le Concepteur d’alertes de données en cliquant sur Modifier")  
   
  Pour plus d’informations, consultez [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md).  
   
@@ -220,6 +220,6 @@ Vous pouvez créer et modifier les définitions d'alerte de données dans le Con
 ## <a name="see-also"></a>Voir aussi
 
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)   
-[Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

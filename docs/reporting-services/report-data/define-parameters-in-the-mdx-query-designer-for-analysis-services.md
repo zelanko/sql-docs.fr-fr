@@ -1,5 +1,5 @@
 ---
-title: "Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services | Documents Microsoft"
+title: "Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e3a54629b97f7e774a75d33711d34ba866b86c6c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services
   Pour paramétrer une requête MDX pour une source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous devez ajouter un paramètre de requête à la requête. Dans le Concepteur de requêtes MDX, vous pouvez ajouter un paramètre de requête à la fois en mode Création et en mode Requête en spécifiant un filtre. Après avoir défini la requête avec un paramètre de requête, Reporting Services crée automatiquement un paramètre de rapport et un dataset pour fournir la liste des valeurs valides. Cela permet à un utilisateur de spécifier une valeur transmise directement à la requête.  
@@ -65,11 +64,11 @@ ms.lasthandoff: 08/09/2017
   
 2.  Dans la barre d'outils, cliquez sur **Création** pour passer au mode Requête.  
   
-3.  Dans la barre de Concepteur de requêtes MDX, cliquez sur **paramètres de requête** (![icône de la boîte de dialogue Paramètres de requête](../../reporting-services/report-data/media/iconqueryparameter.gif "icône de la boîte de dialogue Paramètres de requête")). La boîte de dialogue Paramètres de la requête s'ouvre.  
+3.  Dans la barre d’outils du Concepteur de requêtes MDX, cliquez sur **Paramètres de la requête** (![Icône de la boîte de dialogue Paramètres de la requête](../../reporting-services/report-data/media/iconqueryparameter.gif "Icône de la boîte de dialogue Paramètres de la requête")). La boîte de dialogue Paramètres de la requête s'ouvre.  
   
-4.  Dans le **paramètre** colonne, cliquez sur  **\<Entrez le paramètre >**, puis tapez le nom d’un paramètre.  
+4.  Dans la colonne **Paramètre**, cliquez sur **\<Entrez le paramètre**, puis tapez le nom d’un paramètre.  
   
-5.  Dans la colonne **Dimension**, choisissez une valeur dans la liste déroulante.  
+5.  Dans la colonne **Dimension** , choisissez une valeur dans la liste déroulante.  
   
 6.  Dans la colonne **Hiérarchie** , choisissez une valeur dans la liste déroulante.  
   
@@ -88,8 +87,7 @@ ms.lasthandoff: 08/09/2017
      Pour afficher le dataset qui fournit des valeurs disponibles pour le paramètre de rapport, cliquez avec le bouton droit sur tout espace vide dans le volet des données de rapport, puis cliquez sur **Afficher les datasets masqués**. Le volet des données de rapport affiche tous les datasets dans le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de connexion Analysis Services pour MDX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interface utilisateur du Concepteur de requêtes Analysis Services MDX](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
+ [Type de connexion Analysis Services pour MDX (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Interface utilisateur du concepteur de requêtes MDX Analysis Services](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Bibliothèques de classes élément de rapport personnalisé | Documents Microsoft"
+title: "Bibliothèques de classes d’éléments de rapport personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,24 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f216228c01e835e88cd9d4c7d7d4190648a386db
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fbd23c312a441fe7df7b85033e95c96ff2d3a8a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
-  Éléments de rapport personnalisés utilisent les classes de la **Microsoft.ReportDesigner** espace de noms. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour voir un exemple de code sur l’utilisation de ces classes, [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Les éléments de rapport personnalisés utilisent des classes de l’espace de noms **Microsoft.ReportDesigner**. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="custom-report-item-infrastructure-classes"></a>Classes d'infrastructure d'éléments de rapport personnalisés  
  Les classes suivantes sont utilisées pour implémenter un élément de rapport personnalisé.  
@@ -48,32 +46,32 @@ ms.lasthandoff: 08/09/2017
 |**Type**|Type de l'élément de rapport personnalisé.|  
 |**CustomData**|Objet <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> qui encapsule les propriétés des données de l'élément de rapport personnalisé, spécifiées au moment de la conception.|  
 |**CustomProperties**|Collection de propriétés personnalisées destinées à l'élément de rapport personnalisé.|  
-|**Hauteur**|Hauteur du contrôle de l'élément de rapport personnalisé.|  
-|**Largeur**|Largeur du contrôle de l'élément de rapport personnalisé.|  
+|**Height**|Hauteur du contrôle de l'élément de rapport personnalisé.|  
+|**Width**|Largeur du contrôle de l'élément de rapport personnalisé.|  
 |**Rapport**|Conteneur pour les propriétés figurant au niveau du rapport, telles que la liste des datasets contenus dans ce rapport.|  
-|**Élément AltReportItem**|Objet de remplacement d'élément de rapport, à utiliser lorsque le contrôle DTC de l'élément de rapport personnalisé n'est pas pris en charge.|  
+|**AltReportItem**|Objet de remplacement d'élément de rapport, à utiliser lorsque le contrôle DTC de l'élément de rapport personnalisé n'est pas pris en charge.|  
 |**Style**|Propriétés de style destinées à l'élément de rapport personnalisé.|  
-|**Ornement**|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  
-|**Site**|Le **ISite** du composant.|  
+|**Adornment**|Fenêtre d'ornement utilisée pour modifier de manière interactive le contrôle.|  
+|**Site**|**ISite** du composant.|  
 |**DesignerVerbCollection**|Tableau de verbes personnalisés destinés au menu contextuel du contrôle.|  
   
 #### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |||  
 |-|-|  
-|**Échec de BeginEdit**|Active la modification interactive du contrôle.|  
+|**BeginEdit**|Active la modification interactive du contrôle.|  
 |**DoDefaultAction**|Appelé en cas de double-clic ou lorsque le bouton de retour du contrôle est enfoncé.|  
 |**EndEdit**|Désactive la modification interactive du contrôle.|  
 |**GetService**|Retourne un objet qui représente un service.|  
 |**InitializeNewComponent**|Appelé lorsqu'un nouvel élément de rapport personnalisé est créé.|  
-|**Invalider**|Repeint l'intégralité de la surface du contrôle.|  
+|**Invalidate**|Repeint l'intégralité de la surface du contrôle.|  
 |**OnDragEnter**<br /><br /> **OnDragDrop**|Appelé lorsqu'un objet est déplacé jusqu'au contrôle.|  
-|**OnPaint**|Appelé en réponse à la **peinture** événement.|  
+|**OnPaint**|Appelé en réponse à l’événement **Paint**.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Cet attribut est utilisé afin d'identifier le type de l'élément de rapport personnalisé. Le nom doit correspondre à la valeur de la \< **nom**> attribut de la **ReportItem** élément dans le fichier de configuration du Concepteur de rapports.  
+ Cet attribut est utilisé afin d'identifier le type de l'élément de rapport personnalisé. Le nom doit correspondre à la valeur de l’attribut \<**Name**> de l’élément **ReportItem** figurant dans le fichier de configuration du Concepteur de rapports.  
   
-#### <a name="public-methods"></a>M&#233;thodes publiques  
+#### <a name="public-methods"></a>Méthodes publiques  
   
 |||  
 |-|-|  
@@ -89,21 +87,21 @@ ms.lasthandoff: 08/09/2017
 |**LocalizedNameAttribute**|Construit l'objet LocalizedNameAttribute.|  
   
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
- Le **ornement** classe est utilisée par le composant de conception de rapport personnalisé élément pour définir des zones en dehors du rectangle principal de l’aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer.  
+ La classe **Adornment** est utilisée par le composant de conception de l’élément de rapport personnalisé pour définir des zones en dehors du rectangle principal de l’aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer.  
   
-#### <a name="public-methods"></a>M&#233;thodes publiques  
+#### <a name="public-methods"></a>Méthodes publiques  
   
 |||  
 |-|-|  
-|**OnShow**|Appelée lorsque le **ornement** est activé.|  
-|**OnHide**|Appelée lorsque le **ornement** est désactivé.|  
-|**Peinture**|Appelé en réponse à la **peinture** événement.|  
-|**OnDragEnter**<br /><br /> **OnDragOver**<br /><br /> **OnDragLeave**<br /><br /> **OnDragDrop**|Appelé lorsqu’un objet est déplacé dans le **ornement**.|  
+|**OnShow**|Appelé quand **Adornment** est activé.|  
+|**OnHide**|Appelé quand **Adornment** est désactivé.|  
+|**Paint**|Appelé en réponse à l’événement **Paint**.|  
+|**OnDragEnter**<br /><br /> **OnDragOver**<br /><br /> **OnDragLeave**<br /><br /> **OnDragDrop**|Appelé quand un objet est déplacé jusqu’à **Adornment**.|  
   
 ### <a name="microsoftreportdesigneradornerservice"></a>Microsoft.ReportDesigner.AdornerService  
- Cette classe est utilisée pour fournir une collection de services d’affichage utilisé par l’élément de rapport personnalisé pour prendre en charge **ornement** objets pour le composant au moment du design article de rapport personnalisé.  
+ Cette classe est utilisée pour fournir la collection de services d’affichage utilisée par l’élément de rapport personnalisé, et ce afin de prendre en charge les objets **Adornment** destinés à son composant de conception.  
   
-#### <a name="public-properties"></a>Propri&#233;t&#233;s publiques  
+#### <a name="public-properties"></a>Propriétés publiques  
   
 |||  
 |-|-|  
@@ -122,7 +120,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="microsoftreportdesignerexpressioneditor"></a>Microsoft.ReportDesigner.ExpressionEditor  
  Cette classe peut être utilisée à partir du contrôle DTC de l'élément de rapport personnalisé afin d'appeler l'Éditeur d'expressions.  
   
-#### <a name="public-methods"></a>M&#233;thodes publiques  
+#### <a name="public-methods"></a>Méthodes publiques  
   
 |||  
 |-|-|  
@@ -136,12 +134,11 @@ ms.lasthandoff: 08/09/2017
 |||  
 |-|-|  
 |**DataSetName**|Nom du dataset qui contient les champs à déplacer.|  
-|**Champs**|La collection de champs (**Microsoft.ReportDesigner.Field**) à supprimer.|  
+|**Fields**|Collection de champs (**Microsoft.ReportDesigner.Field**) à déplacer.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Langage de définition de rapport &#40; SSRS &#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [Création d’un composant d’exécution de rapport personnalisé élément](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Création d’un composant au moment du Design d’élément rapport personnalisé](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
+ [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
+ [Création d’un composant d’exécution d’éléments de rapport personnalisé](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
   
   
-

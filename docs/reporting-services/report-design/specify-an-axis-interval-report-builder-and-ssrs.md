@@ -1,5 +1,5 @@
 ---
-title: "Spécifiez un intervalle d’axe (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Spécifier un intervalle d’axe (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e86de97e19273c282f6cfe8d845eb11a20b98a5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>Spécifier un intervalle d'axe (Générateur de rapports et SSRS)
 Apprenez à modifier le nombre d’étiquettes et les graduations sur l’axe des catégories (abscisses) dans un graphique, en définissant l’intervalle d’axe dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .
@@ -29,7 +29,7 @@ Sur l’axe des valeurs (généralement, l’axe des ordonnées), les intervalle
 
 Mais sur l’axe des catégories (généralement l’axe des abscisses), un intervalle d’axe automatique se traduit parfois par des catégories sans étiquettes des axes. Vous pouvez spécifier le nombre d’intervalles souhaité dans la propriété Intervalle de l’axe. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcule le nombre d'intervalles au moment de l'exécution en fonction des données contenues dans le jeu de résultats. Pour plus d’informations sur le calcul des intervalles de l’axe, consultez [Mise en forme des étiquettes des axes sur un graphique](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
 
-Pour essayer de définir l’intervalle d’axe avec des exemples de données, consultez [didacticiel : ajouter un histogramme à votre rapport (Générateur de rapports)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
+Pour essayer de définir l’intervalle d’axe avec des exemples de données, consultez [Didacticiel : ajouter un histogramme à un rapport](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md).
   
 > [!NOTE]  
 >  L'axe des abscisses est généralement l'axe horizontal, ou axe des X. Toutefois, pour les graphiques à barres, l'axe des abscisses est l'axe vertical, ou axe des Y.  
@@ -48,7 +48,7 @@ Dans cet histogramme, l’intervalle des étiquettes horizontales est défini su
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  Dans le **propriétés de l’axe Horizontal** boîte de dialogue > **Options de l’axe** onglet, définissez **intervalle** à **1** pour afficher chaque étiquette de groupe de catégories. Pour afficher une étiquette de groupe de catégories sur deux sur l’axe des abscisses, tapez **2**. 
+2.  Dans la boîte de dialogue **Propriétés de l’axe horizontal** > onglet **Options de l’axe**, définissez **Intervalle** sur **1** pour afficher chaque étiquette de groupe de catégorie. Pour afficher une étiquette de groupe de catégories sur deux sur l’axe des abscisses, tapez **2**. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -83,19 +83,18 @@ Vous pouvez également définir l’intervalle des étiquettes dans le volet Pro
 
 Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] définit l’intervalle d’axe sur Auto. Cette procédure explique comment réaffecter la valeur par défaut. 
   
-1.  Cliquez avec le bouton droit sur l'axe de graphique à modifier, puis cliquez sur **Propriétés de l'axe**. 
+1.  Cliquez avec le bouton droit sur l’axe de graphique à modifier, puis cliquez sur **Propriétés de l’axe**. 
   
-2.  Dans le **propriétés de l’axe Horizontal** boîte de dialogue > **Options de l’axe** onglet, définissez **intervalle** à **automatique**. Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
+2.  Dans la boîte de dialogue **Propriétés de l’axe horizontal** > onglet **Options de l’axe**, définissez **Intervalle** sur **Auto**. Le graphique affiche le nombre optimal d'étiquettes de catégories qui peuvent s'ajuster le long de l'axe.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique (Générateur de rapports et SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Trier des données dans une région de données (Générateur de rapports et SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Boîte de dialogue de propriétés axe, Options de l’axe &#40; Le Générateur de rapports et SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [Spécifier une échelle logarithmique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [Tracer des données sur un axe secondaire &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [Spécifier une échelle logarithmique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [Tracer des données sur un axe secondaire &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
-

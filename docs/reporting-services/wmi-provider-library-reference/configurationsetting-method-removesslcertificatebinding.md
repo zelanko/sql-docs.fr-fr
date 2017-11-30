@@ -1,5 +1,5 @@
 ---
-title: "Méthode de RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "RemoveSSLCertificateBindings, méthode (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RemoveSSLCertificateBindings method
+helpviewer_keywords: RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2a4c9fe3ff515e9c6dce2986d19b75a61ac0b548
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 09a6c39747e353d4b531ab356f88cab1766b19c4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Méthode ConfigurationSetting - RemoveSSLCertificateBinding
   Supprime une liaison de certificat SSL.  
@@ -78,4 +76,3 @@ public void RemoveSSLCertificateBindings(string Application,
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

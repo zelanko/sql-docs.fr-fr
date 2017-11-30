@@ -1,5 +1,5 @@
 ---
-title: Utilitaire RSKEYMGMT (SSRS) | Documents Microsoft
+title: Utilitaire rskeymgmt (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5e71c6c5cb692355df51b2d9b7e2caa8c330f5b0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
   Extrait, restaure, crée et supprime la clé symétrique utilisée pour protéger les données sensibles de serveur de rapports contre un accès non autorisé. Cet utilitaire sert également à joindre des instances de serveur de rapports dans un déploiement évolutif. Un *déploiement évolutif de serveurs de rapports* correspond à plusieurs instances de serveur de rapports qui partagent une base de données de serveur de rapports unique.  
@@ -155,7 +154,7 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Jonction d'instances de serveur de rapports sur un même ordinateur  
  Vous pouvez créer un déploiement évolutif à partir de plusieurs instances de serveur de rapports installées sur un même ordinateur. Ne définissez pas les arguments **-u** et **-v** si vous joignez des instances de serveur de rapports installées localement. Utilisez les arguments **-u** et **-v** uniquement si vous joignez une instance d’un ordinateur distant. Si vous spécifiez ces arguments, l'erreur suivante s'affiche : « Les références utilisateur ne peuvent pas être utilisées pour des connexions locales ».  
   
- L'exemple suivant illustre la syntaxe de création d'un déploiement évolutif à l'aide de plusieurs instances locales. Dans cet exemple, \< **initializedinstance**> est le nom d’une instance est déjà initialisé pour utiliser la base de données du serveur de rapports, et \< **newinstance**> est le nom de l’instance que vous souhaitez ajouter au déploiement :  
+ L'exemple suivant illustre la syntaxe de création d'un déploiement évolutif à l'aide de plusieurs instances locales. Dans cet exemple, \<**initializedinstance**> est le nom d’une instance qui est déjà initialisée pour utiliser la base de données du serveur de rapports, et \<**newinstance**> est le nom de l’instance à ajouter au déploiement :  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -171,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Emplacement du fichier  
- RSKEYMGMT.exe se trouve dans  **\<* lecteur*> : \Program Files\Microsoft SQL Server\110\Tools\Binn ** ou au  **\<* lecteur*> : \Program fichiers (x86) \Microsoft SQL Server\110\Tools\Binn**. Vous pouvez exécuter l'utilitaire à partir de n'importe quel dossier de votre système de fichiers.  
+ Rskeymgmt.exe se trouve dans **\<*lecteur*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** ou dans **\<*lecteur*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Vous pouvez exécuter l'utilitaire à partir de n'importe quel dossier de votre système de fichiers.  
   
 ## <a name="remarks"></a>Notes  
  Un serveur de rapports chiffre les informations d'identification et les informations de connexion stockées. Une clé publique et une clé symétrique sont utilisées pour chiffrer les données. La base de données d'un serveur de rapports doit posséder les clés valides pour que le serveur de rapports puisse s'exécuter. Vous pouvez utiliser **rskeymgmt** pour sauvegarder, supprimer ou restaurer des clés. Si les clés ne peuvent pas être restaurées, cet outil permet de supprimer un contenu chiffré qui ne peut plus être utilisé.  
@@ -182,9 +181,8 @@ rskeymgmt -r <installationID>
   
 ## <a name="see-also"></a>Voir aussi  
  [Déploiement avec montée en puissance parallèle - Mode natif de Reporting Services &#40;Gestionnaire de configuration&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services Report Server &#40; En Mode natif &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Utilitaires d’invite de commandes de serveur de rapports &#40; SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

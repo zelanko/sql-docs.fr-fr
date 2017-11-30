@@ -1,5 +1,5 @@
 ---
-title: "Mise à niveau des rapports | Documents Microsoft"
+title: "Mettre à niveau des rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -20,20 +20,18 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: bdadf0d9fbbc3ef63716ee1745773de97aa7450f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="upgrade-reports"></a>Rapports de mise à niveau
+# <a name="upgrade-reports"></a>Mettre à niveau des rapports
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -45,9 +43,9 @@ ms.lasthandoff: 09/27/2017
   
  Les rapports ne sont pas mis à niveau lorsque vous téléchargez un fichier de définition de rapport directement vers le serveur de rapports ou le site SharePoint. La mise à niveau d'une définition de rapport dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est le seul moyen de mettre à niveau le fichier. rdl.  
   
- Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "la compatibilité descendante | Reporting Services").  
+ Après la mise à niveau d'un rapport en local ou sur le serveur de rapports, vous pouvez noter la présence d'erreurs, d'avertissements et de messages. Cette présence est liée aux améliorations apportées au modèle objet de rapport interne et aux composants de traitement. En effet, des messages apparaissent lors de la détection de problèmes sous-jacents dans le rapport. Pour plus d’informations, consultez [[Compatibilité descendante de Reporting Services]](../../reporting-services/reporting-services-backward-compatibility.md "Compatibilité descendante | Reporting Services").  
   
- Pour plus d’informations sur les nouvelles fonctionnalités pour [ ! INCLURE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
+ Pour plus d’informations sur les nouvelles fonctionnalités de [!INCLUDE[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md).  
 
 ##  <a name="bkmk_versionsupported"></a> Versions prises en charge par la mise à niveau  
  Les rapports créés dans une version précédente de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être mis à niveau. Les versions concernées sont les suivantes :  
@@ -67,12 +65,12 @@ ms.lasthandoff: 09/27/2017
   
  Les propriétés de déploiement que vous définissez peuvent affecter le choix du schéma d'enregistrement du fichier de définition de rapport. Pour plus d’informations, consultez [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
- Vous pouvez télécharger un fichier .rdl créé dans une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la nouvelle version et qu’il est automatiquement mis à niveau la première utilisation. Le serveur de rapports stocke le fichier de définition de rapport dans le format d'origine. Le rapport est automatiquement mis à niveau la première fois où il est affiché, mais le fichier de définition de rapport stocké demeure inchangé.  
+ Vous pouvez télécharger un fichier .rdl créé dans une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur la nouvelle et il est automatiquement mis à niveau lors de la première utilisation. Le serveur de rapports stocke le fichier de définition de rapport dans le format d'origine. Le rapport est automatiquement mis à niveau la première fois où il est affiché, mais le fichier de définition de rapport stocké demeure inchangé.  
   
- Pour identifier le schéma RDL actuel d’un rapport, pour un serveur de rapports ou du Concepteur de rapports, consultez [rechercher la Version de schéma de définition de rapport &#40; SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Pour identifier le schéma RDL actuel d’un rapport, d’un serveur de rapports ou du Concepteur de rapports, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ##  <a name="bkmk_publishedreports_and_snapshots"></a> Rapports publiés et instantanés de rapport  
- Lors de la première utilisation, le serveur de rapports essaie de mettre à niveau les rapports publiés et les instantanés de rapport existants vers le nouveau schéma de définition de rapport, en ne requérant aucune action spécifique de votre part. Lorsqu'un utilisateur affiche un rapport ou un instantané de rapport, ou lorsque le serveur de rapports traite un abonnement, la mise à niveau s'effectue. La définition de rapport n’est pas remplacée, mais continue à être stockées sur le serveur de rapports dans son schéma d’origine. Si un rapport ne peut pas être mis à niveau, le rapport s'exécute en mode compatibilité descendante.  
+ Lors de la première utilisation, le serveur de rapports essaie de mettre à niveau les rapports publiés et les instantanés de rapport existants vers le nouveau schéma de définition de rapport, en ne requérant aucune action spécifique de votre part. Lorsqu'un utilisateur affiche un rapport ou un instantané de rapport, ou lorsque le serveur de rapports traite un abonnement, la mise à niveau s'effectue. La définition de rapport n’est pas remplacée, mais continue à être stockée sur le serveur de rapports dans son schéma d’origine. Si un rapport ne peut pas être mis à niveau, le rapport s'exécute en mode compatibilité descendante.  
   
 ##  <a name="bkmk_backcompat"></a> Mode compatibilité descendante  
  Un rapport mis à niveau avec succès est traité par le processeur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Un rapport qui ne peut pas être mis à niveau est traité par le processeur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode compatibilité descendante. Un rapport ne peut pas être traité par les deux processeurs de rapports. Lors de la première utilisation, un rapport est mis à niveau avec succès ou marqué pour la compatibilité descendante.  
@@ -109,7 +107,7 @@ ms.lasthandoff: 09/27/2017
   
      Pour plus d'informations, consultez [Ouverture d'un rapport dans le Concepteur de rapports](#OpeningaReport) plus bas dans cette rubrique.  
   
- Pour plus d’informations sur l’identification de l’espace de noms RDL en cours pour un serveur de rapports, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou un rapport, consultez [rechercher la Version de schéma de définition de rapport &#40; SSRS &#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+ Pour plus d’informations sur l’identification de l’espace de noms RDL en cours d’un serveur de rapports, de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou d’un rapport, consultez [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>Mise à niveau des rapports sur un serveur de rapports  
  La première fois qu’un rapport [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s’exécute sur un serveur de rapports mis à niveau vers un serveur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] , le rapport est automatiquement mis à niveau vers l’espace de noms de définition de rapport actuel pris en charge par le serveur de rapports. Le rapport aurait pu exister sur le serveur de rapports avant la mise à niveau, être chargé par le biais du Gestionnaire de rapports ou publié sur le serveur de rapports à partir du Concepteur de rapports de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -139,9 +137,9 @@ ms.lasthandoff: 09/27/2017
   
 -   **Non** Choisissez **Non** si vous ne souhaitez pas convertir les CRI dans le rapport. Ces CRI ne peuvent pas être affichés par le processeur de rapports dans leur version actuelle. Si votre administrateur système projette d’installer une nouvelle version du CRI de l’éditeur de logiciels tiers compatible avec le nouveau format de définition de rapport, vous devez choisir **Non**. Tant que de nouvelles versions ne sont pas disponibles, les CRI apparaissent dans le rapport sous la forme d'une zone de texte vide marquée d'une croix (X) rouge.  
   
- Dans les deux cas, le rapport est mis à niveau vers le nouveau format de définition de rapport et une copie de sauvegarde de l’état d’origine est enregistrée en tant que  *\<nom du rapport >* `-` Backup.rdl. Si vous enregistrez le rapport dans votre outil de création de rapports, vous enregistrez le rapport mis à niveau dans le nouveau format de définition de rapport. Si vous publiez le rapport, celui-ci est d'abord enregistré sur votre ordinateur, puis publié sur le serveur de rapports. Vous publiez la version mise à niveau du rapport sur le serveur de rapports.  
+ Dans les deux cas, le rapport est mis à niveau vers le nouveau format de définition de rapport et une copie de sauvegarde du rapport d’origine est enregistrée au format *\<nom rapport>* `-` Backup.rdl. Si vous enregistrez le rapport dans votre outil de création de rapports, vous enregistrez le rapport mis à niveau dans le nouveau format de définition de rapport. Si vous publiez le rapport, celui-ci est d'abord enregistré sur votre ordinateur, puis publié sur le serveur de rapports. Vous publiez la version mise à niveau du rapport sur le serveur de rapports.  
   
- Si vous n'enregistrez pas le rapport, le rapport d'origine reste inchangé. Toutefois, vous ne pouvez pas modifier ce rapport dans la version de SQL Server 2016 de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou d’un environnement qui utilise un format de définition de rapport plus récent de la création de rapports. Vous pouvez continuer à exécuter la version d’origine du rapport en téléchargeant sur un [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] serveur de rapports à l’aide du portail web. Pour plus d’informations, consultez [portail Web](../../reporting-services/web-portal-ssrs-native-mode.md).  
+ Si vous n'enregistrez pas le rapport, le rapport d'origine reste inchangé. Toutefois, vous ne pouvez pas modifier ce rapport dans la version SQL Server 2016 de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou dans un environnement de création de rapports qui utilise un format de définition de rapport plus récent. Vous pouvez continuer à exécuter la version d’origine du rapport en le téléchargeant sur un serveur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] à l’aide du portail web. Pour plus d’informations, consultez [Portail web](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
  Pour les rapports que vous téléchargez au lieu de les publier sur un serveur de rapports, le processeur de rapports détermine si le rapport peut être mis à niveau à la première utilisation. Les rapports qui ne peuvent pas être mis à niveau sont traités en mode de compatibilité descendante et continuent à s'afficher comme dans la version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
@@ -155,4 +153,3 @@ ms.lasthandoff: 09/27/2017
 [Mettre à niveau une base de données de serveurs de rapports](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
