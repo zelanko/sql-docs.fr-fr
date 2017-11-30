@@ -8,28 +8,23 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNMEMBERTOP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownMemberTop function
+f1_keywords: DRILLDOWNMEMBERTOP
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownMemberTop function
 ms.assetid: b6575544-1fd3-4fa1-aa2e-272d307c7750
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 55b689ce0a3095defd57fe0a84edaf6d83b0c870
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da7f8a1c315d9ff3eb60c69e88726b521a59d17d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,13 +45,13 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Compter*  
+ *Nombre*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
  *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
- *Hiérarchie*  
+ *Hierarchy*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
  *Récursive*  
@@ -98,4 +93,3 @@ WHERE [Measures].[Reseller Order Quantity]
  [Référence des fonctions MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

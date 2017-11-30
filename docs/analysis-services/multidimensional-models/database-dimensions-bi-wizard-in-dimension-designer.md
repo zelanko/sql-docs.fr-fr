@@ -28,7 +28,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Dimensions - Assistant BI dans le Concepteur de dimensions de base de données
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business Danstelligence Wizard or Dimension Designer. Vous pouvez démarrer l'Assistant Business Intelligence à partir de l'Explorateur de solutions ou du Concepteur de cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le Concepteur de dimensions est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous créez des opérateurs de cumul personnalisés et des formules de membre personnalisées, et vous configurez des dimensions pour l'écriture différée à l'aide de l'Assistant Business Intelligence ou du Concepteur de dimensions. Vous pouvez démarrer l'Assistant Business Intelligence à partir de l'Explorateur de solutions ou du Concepteur de cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le Concepteur de dimensions est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Pour démarrer l'Assistant Business Intelligence  
   

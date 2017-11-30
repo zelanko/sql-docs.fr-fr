@@ -16,11 +16,11 @@ manager: erikre
 ms.workload: Inactive
 ms.openlocfilehash: 6030bbac7cced5ed1ee60a2a34d505074a4a5f04
 ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Add a custom map to a Reporting Services mobile report
+# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Ajouter une carte personnalisée à un rapport mobile Reporting Services
 Les cartes personnalisées requièrent deux fichiers :  
 * Un fichier SHP pour les géométries de forme  
 * Un fichier DBF pour les métadonnées  

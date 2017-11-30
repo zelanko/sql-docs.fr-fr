@@ -8,26 +8,22 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- unary operators
+dev_langs: kbMDX
+helpviewer_keywords: unary operators
 ms.assetid: bf1b5518-6040-4484-9ce8-79c0eb4373a9
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: a2dd50160dbe0185056988cfd866f119d7e330c4
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5b5aea52fb028a9c1d5345e60d4bfa400ecaa735
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="unary-operators"></a>Opérateurs unaires
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +34,7 @@ ms.lasthandoff: 08/02/2017
   
 |Opérateur| Description|  
 |--------------|-----------------|  
-|[-(Négatif)](../mdx/negative-mdx.md)|Retourne la valeur négative d'une expression numérique.|  
+|[- (Négatif)](../mdx/negative-mdx.md)|Retourne la valeur négative d'une expression numérique.|  
 |[+ (Positif)](../mdx/positive-mdx.md)|Retourne la valeur positive d'une expression numérique.|  
   
  L'exemple suivant illustre l'utilisation d'un opérateur unaire pour retourner la valeur négative d'une mesure :  
@@ -60,4 +56,3 @@ WHERE [Product].[Category].[Bikes]
  [Opérateurs &#40; La syntaxe MDX &#41;](../mdx/operators-mdx-syntax.md)  
   
   
-
