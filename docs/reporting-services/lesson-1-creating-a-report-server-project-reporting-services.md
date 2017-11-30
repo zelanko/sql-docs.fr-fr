@@ -1,30 +1,28 @@
 ---
-title: "Leçon 1 : Création d’un projet Report Server (Reporting Services) | Documents Microsoft"
+title: "Leçon 1 : création d’un projet Report Server (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3968a5183de7cc1ee81c7ee09faba79d06990884
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [leçon 1 : création d’un projet de serveur de rapports (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server Reporting Services, consultez [Leçon 1 : Création d’un projet Report Server (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
 
 Dans cette leçon, vous créez un *projet Report Server* et un fichier de *définition de rapport (.rdl)* dans [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dans Visual Studio. 
 
@@ -38,7 +36,7 @@ Dans les leçons suivantes, vous définissez une source de données pour votre r
   
 1.  Ouvrez [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
   
-2.  Sur le **fichier** menu > **nouveau** > **projet**.  
+2.  Dans le menu **Fichier** > **Nouveau** > **Projet**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +46,7 @@ Dans les leçons suivantes, vous définissez une source de données pour votre r
 
 5. Cliquez sur **Projet Report Server** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Remarque**: Si vous ne voyez pas le **Business Intelligence** ou **projet Report Server** options, vous devez mettre à jour de SSDT avec les modèles Business Intelligence. Voir [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).  
+   >**Remarque** : Si vous ne voyez pas les options **Business Intelligence** ou **Projet Report Server**, vous devez mettre à jour SSDT avec les modèles Business Intelligence. Voir [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 5.  Dans la zone **Nom**, tapez **Didacticiel**.  
 
@@ -81,10 +79,9 @@ Dans les leçons suivantes, vous définissez une source de données pour votre r
     Vous définissez vos données dans le volet **Données du rapport** . Vous définissez la mise en page de votre rapport en mode **Conception** . Vous pouvez exécuter le rapport et visualiser son aspect en mode **Aperçu** .  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-Vous avez créé avec succès un projet de rapport appelé « Didacticiel » et ajouté un fichier de définition de rapport (.rdl) au projet de rapport. Vous allez ensuite spécifier la source de données à utiliser pour le rapport. Consultez [leçon 2 : spécification des informations de connexion &#40; Reporting Services &#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Vous avez créé avec succès un projet de rapport appelé « Didacticiel » et ajouté un fichier de définition de rapport (.rdl) au projet de rapport. Vous allez ensuite spécifier la source de données à utiliser pour le rapport. Consultez [Leçon 2 : Spécification des informations de connexion &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

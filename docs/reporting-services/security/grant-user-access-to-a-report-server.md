@@ -1,5 +1,5 @@
 ---
-title: "Accorder l’accès utilisateur à un serveur de rapports | Documents Microsoft"
+title: "Accorder à un utilisateur l’accès à un serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Accorder à un utilisateur l'accès à un serveur de rapports
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
 
  **Serveurs de rapports en mode SharePoint :** pour un serveur de rapports configuré en mode intégré SharePoint, vous configurez l’accès à partir d’un site SharePoint à l’aide d’autorisations SharePoint. Les niveaux d'autorisation du site SharePoint déterminent l'accès au contenu du serveur de rapports et son bon fonctionnement. Vous devez être un administrateur de site pour pouvoir accorder des autorisations sur un site SharePoint. Pour plus d’informations, consultez [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Serveurs de rapports en mode natif :** cette rubrique se concentre sur un serveur de rapports est configuré en mode natif et l’utilisation du portail web pour affecter des utilisateurs à un rôle. Il existe deux types de rôles :
+ **Serveurs de rapports en mode natif :** cette rubrique traite d’un serveur de rapports configuré pour le mode natif et de l’utilisation du portail web pour affecter des utilisateurs à un rôle. Il existe deux types de rôles :
 
 - Les rôles au niveau élément permettent d'afficher, d'ajouter et de gérer le contenu du serveur de rapports, les abonnements, le traitement des rapports et l'historique de rapport. Les attributions de rôles au niveau élément sont définies sur le nœud racine (dossier de base) mais aussi sur des dossiers ou des éléments spécifiques situés plus bas dans l'arborescence.
 
@@ -52,7 +51,7 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
 
 - Pour déléguer cette tâche à d'autres utilisateurs, créez des attributions de rôles qui mappent des comptes d'utilisateurs aux rôles Gestionnaire de contenu et Administrateur système. Les utilisateurs qui disposent d'autorisations liées aux rôles Gestionnaire de contenu et Administrateur système peuvent ajouter des utilisateurs à un serveur de rapports.
 
-- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], passez en revue les rôles prédéfinis pour les rôles système et les rôles d’utilisateurs pour vous familiariser avec les types de tâches de chaque rôle. Description des tâches ne sont pas visibles dans le portail web, donc vous devez être familiarisé avec les rôles avant de commencer l’ajout d’utilisateurs.
+- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], passez en revue les rôles prédéfinis pour les rôles système et les rôles d’utilisateurs pour vous familiariser avec les types de tâches de chaque rôle. Les descriptions des tâches ne sont pas visibles dans le portail web ; par conséquent, familiarisez-vous avec les rôles avant de commencer à ajouter des utilisateurs.
 
 - Vous pouvez éventuellement personnaliser les rôles ou définir des rôles supplémentaires pour inclure la collection de tâches dont vous avez besoin. Par exemple, si vous envisagez d'utiliser des paramètres de sécurité personnalisés pour des éléments individuels, vous pouvez créer une définition de rôle qui permet d'afficher les dossiers.
 
@@ -60,20 +59,20 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
 
 1. Démarrer le [portail web](../web-portal-ssrs-native-mode.md).
 
-2. Sélectionnez le *icône d’engrenage* dans le coin supérieur droit.
+2. Sélectionnez l’*icône d’engrenage* située en haut à droite.
 
 3. Sélectionnez **Paramètres du site**.
 
 4. Sélectionnez **Sécurité**.
 
-5. Sélectionnez **ajouter un groupe ou utilisateur**.
+5. Sélectionnez **Ajouter un groupe ou un utilisateur**.
 
-6. Dans **groupe ou utilisateur**, entrez un utilisateur de domaine Windows ou de groupe dans ce format : \<domaine >\\< compte\>. 
+6. Dans **Groupe ou utilisateur**, entrez un compte de groupe ou d’utilisateur de domaine Windows au format suivant : \<domaine>\\<compte\>. 
 
     > [!NOTE]
     > Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.
 
-7. Sélectionnez un rôle de système, puis **OK**.
+7. Sélectionnez un rôle système, puis **OK**.
 
     Les rôles sont cumulatifs ; par conséquent, si vous sélectionnez à la fois le rôle Administrateur système et le rôle Utilisateur système, un utilisateur ou un groupe pourra effectuer les tâches incluses dans les deux rôles.
 
@@ -81,31 +80,31 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>Pour ajouter un utilisateur ou un groupe à un rôle au niveau élément
 
-1. Démarrer le **portail web** et recherchez l’élément de rapport pour lequel vous souhaitez ajouter un utilisateur ou un groupe.
+1. Démarrez le **portail web**, puis recherchez l’élément de rapport pour lequel vous souhaitez ajouter un utilisateur ou un groupe.
 
-2. Sélectionnez le **...**  (ellipse) sur un élément.
+2. Sélectionnez les points de suspension (**...**) sur un élément.
 
-3. Dans le menu déroulant, sélectionnez **gérer**.
+3. Dans le menu déroulant, sélectionnez **Gérer**.
 
 4. Sélectionnez **Sécurité**.
 
-5. Sélectionnez **ajouter un groupe ou utilisateur**.
+5. Sélectionnez **Ajouter un groupe ou un utilisateur**.
 
     > [!NOTE]
-    > Si un élément hérite actuellement de sécurité à partir d’un élément parent, sélectionnez **personnaliser la sécurité** dans la barre d’outils pour modifier les paramètres de sécurité. Puis sélectionnez **ajouter un groupe ou utilisateur**.
+    > Si un élément hérite actuellement de la sécurité de l’un de ses parents, sélectionnez **Personnaliser la sécurité** dans la barre d’outils pour changer les paramètres de sécurité. Sélectionnez ensuite **Ajouter un groupe ou un utilisateur**.
 
-6. Dans **groupe ou utilisateur**, entrez un utilisateur de domaine Windows ou de groupe dans ce format : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.
+6. Dans **Groupe ou utilisateur**, entrez un compte de groupe ou d’utilisateur de domaine Windows au format suivant : \<domaine>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.
 
-7. Sélectionnez un ou plusieurs définitions de rôles qui décrivent la façon dont l’utilisateur ou le groupe doit accéder à l’élément, puis sélectionnez **OK**.
+7. Sélectionnez une ou plusieurs définitions de rôles décrivant la façon dont l’utilisateur ou le groupe doit accéder à l’élément, puis **OK**.
 
 8. Répétez l'opération afin de créer des attributions pour des utilisateurs ou des groupes supplémentaires.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Nouvelle attribution de rôle : Modifier la Page de l’attribution de rôle &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Page de propriétés de sécurité, les éléments &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[Page Nouvelle attribution de rôle : Modifier l’attribution de rôle &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Attributions de rôles](../../reporting-services/security/role-assignments.md)   
 [Définitions de rôles](../../reporting-services/security/role-definitions.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

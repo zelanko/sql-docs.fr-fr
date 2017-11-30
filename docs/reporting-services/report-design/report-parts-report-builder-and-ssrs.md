@@ -1,5 +1,5 @@
 ---
-title: "Signaler les parties (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Parties de rapports (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10543"
+f1_keywords: "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 817f519ef87ae764f41634f467a554cbae04baed
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4b2b6d82d897af5f41163257bd129df1ef538ecd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="what-comes-with-a-report-part"></a>Éléments associés à une partie de rapport  
  Lorsque vous ajoutez une partie de rapport à votre rapport, vous ajoutez également tout ce qu'elle doit comporter pour fonctionner. Par exemple, tout objet qui affiche des données dépend d'un dataset, autrement dit, une requête et une connexion à une source de données. Elle peut également avoir un ou plusieurs paramètres. Tous les éléments dont elle dépend sont ses *dépendances*, et l’ensemble de ces éléments, ou les pointeurs vers ces derniers, sont inclus avec la partie de rapport du moment où vous l’ajoutez à votre rapport. Le dataset et les paramètres apparaissent dans le volet des données de rapport de votre rapport.  
   
- Le dataset pour la partie de rapport peut être incorporé dans la partie de rapport, ou il peut s'agir d'un dataset séparé et partagé vers lequel la partie de rapport pointe. S'il est incorporé dans la partie de rapport, vous êtes peut-être en mesure de le modifier. Dans le cas d'un dataset partagé, il s'agit d'un objet séparé pour lequel vous avez besoin d'autorisations. Pour plus d’informations sur les partagés et datasets incorporés, consultez [Datasets de rapport &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
+ Le dataset pour la partie de rapport peut être incorporé dans la partie de rapport, ou il peut s'agir d'un dataset séparé et partagé vers lequel la partie de rapport pointe. S'il est incorporé dans la partie de rapport, vous êtes peut-être en mesure de le modifier. Dans le cas d'un dataset partagé, il s'agit d'un objet séparé pour lequel vous avez besoin d'autorisations. Pour plus d’informations sur les datasets incorporés et partagés, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 ### <a name="resolving-naming-conflicts"></a>Résolution de conflits d'attribution de noms  
  Lorsque vous ajoutez une partie de rapport, le Générateur de rapports résout tous les conflits de noms. Par exemple, si vous avez déjà un élément Chart1 dans votre rapport et que vous ajoutez une partie de rapport appelée Chart1, le Générateur de rapports renomme automatiquement la nouvelle partie de rapport Chart2. Si vous avez déjà un élément Dataset1 dans votre rapport et que vous ajoutez une partie de rapport qui fait référence à un dataset différent qui est également appelé Dataset1, le Générateur de rapports renomme le nouveau dataset Dataset2 et met à jour les références.  
@@ -137,7 +135,7 @@ ms.lasthandoff: 08/09/2017
   
   
 ##  <a name="RptPartsRptDesigner"></a> Utilisation de parties de rapports dans le Concepteur de rapports  
- Les parties de rapports fonctionnent un peu différemment dans le Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dans le Concepteur de rapports, la publication est unidirectionnelle : vous pouvez publier une partie de rapport à partir du Concepteur de rapports, mais vous ne pouvez pas réutiliser une partie de rapport existante à partir de ce même Concepteur. Pour plus d’informations, consultez [Parties de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+ Les parties de rapports fonctionnent un peu différemment dans le Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dans le Concepteur de rapports, la publication est unidirectionnelle : vous pouvez publier une partie de rapport à partir du Concepteur de rapports, mais vous ne pouvez pas réutiliser une partie de rapport existante à partir de ce même Concepteur. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
  [Publier et republier des parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
@@ -152,4 +150,3 @@ ms.lasthandoff: 08/09/2017
  [Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
   
   
-

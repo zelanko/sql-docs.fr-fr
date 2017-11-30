@@ -1,5 +1,5 @@
 ---
-title: "Inscrire un fournisseur de données Standard de .NET Framework (SSRS) | Documents Microsoft"
+title: "Inscrire un fournisseur de données .NET Framework standard (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
-  Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
+  Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
   
- Les fournisseurs de données tiers ne prennent pas nécessairement en charge toutes les fonctionnalités fournies par les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Pour en savoir plus sur l'extension des fonctionnalités d'un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Les fournisseurs de données tiers ne prennent pas nécessairement en charge toutes les fonctionnalités fournies par les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Pour en savoir plus sur l’extension des fonctionnalités d’un[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournisseur de données, consultez [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Vous devez disposer des informations d'identification de l'administrateur pour installer et inscrire des fournisseurs de données.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Pour installer un assembly de fournisseur de données sur le serveur de rapports  
   
-1.  Accédez à l’emplacement par défaut du répertoire bin sur le serveur de rapports sur lequel vous souhaitez utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. L’emplacement par défaut du répertoire bin de serveur de rapports est  *\<lecteur >*: \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Accédez à l’emplacement par défaut du répertoire bin sur le serveur de rapports sur lequel vous souhaitez utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . L’emplacement par défaut du répertoire bin du serveur de rapports est le suivant : *\<lecteur>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Copiez votre assembly à partir de votre emplacement sur le répertoire bin du serveur de rapports. Une autre solution consiste à charger votre assembly dans le Global Assembly Cache (GAC). Pour plus d’informations, consultez [Utilisation d’assemblys et du Global Assembly Cache](http://go.microsoft.com/fwlink/?linkid=63912) dans la documentation du SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sur MSDN.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Pour installer un assembly de fournisseur de données sur le client du Concepteur de rapports  
   
-1.  Accédez à l’emplacement par défaut du répertoire PrivateAssemblies sur le client du Concepteur de rapports sur lequel vous souhaitez utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. L’emplacement par défaut du répertoire PrivateAssemblies est  *\<lecteur >*: \Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Accédez à l’emplacement par défaut du répertoire PrivateAssemblies sur le client du Concepteur de rapports sur lequel vous souhaitez utiliser le fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . L’emplacement par défaut du répertoire PrivateAssemblies est *\<lecteur>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Copiez votre assembly à partir de votre emplacement sur le répertoire PrivateAssemblies du client du Concepteur de rapports. Une autre solution consiste à charger votre assembly dans le Global Assembly Cache (GAC). Pour plus d’informations, consultez [Utilisation d’assemblys et du Global Assembly Cache](http://go.microsoft.com/fwlink/?linkid=63912) dans la documentation du SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] sur MSDN.  
   
@@ -201,14 +201,14 @@ ms.lasthandoff: 08/09/2017
 ## <a name="platform-considerations"></a>Considérations relatives à la plateforme  
  Sur une plateforme 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] s'exécute en mode WOW 32 bits. Lorsque vous publiez des rapports sur une plateforme x64, vous devez disposer de fournisseurs de données 32 bits sur le client de création de rapports pour prévisualiser vos rapports. Si vous publiez le rapport sur le même système, il vous faut des fournisseurs de données x64 pour prévisualiser le rapport à l'aide du Gestionnaire de rapports.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n'est pas pris en charge pour les plateformes [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas pris en charge pour les plateformes [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
  Les extensions pour le traitement des données installées à l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être compilées en mode natif pour chaque plateforme et installées dans les emplacements corrects. Si vous inscrivez un fournisseur de données personnalisé ou un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard, celui-ci doit être compilé en mode natif pour la plateforme appropriée et installé dans les emplacements corrects. Si votre système s'exécute sur une plateforme 32 bits, le fournisseur de données doit être compilé pour une plateforme 32 bits. Si votre système s'exécute sur une plateforme 64 bits, le fournisseur de données doit être compilé pour la plateforme 64 bits. Si vous ne pouvez pas utiliser de fournisseur de données 32 bits intégré à des interfaces 64 bits sur une plateforme 64 bits. Vérifiez les informations sur votre logiciel tiers pour déterminer si le fournisseur de données fonctionne sur la plateforme installée. Pour plus d’informations sur les fournisseurs de données et la prise en charge de plateforme, consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et administrer un serveur de rapports &#40; En Mode natif SSRS &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implémentation d’une Extension de traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Fichiers de Configuration Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Sécurité d’accès du code dans Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
+ [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [Implémentation d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Sécurité d'accès du code dans Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
   
   

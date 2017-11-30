@@ -1,5 +1,5 @@
 ---
-title: "Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7022c0f2662d62f5ff74a1c1d67a2e4f85f5a681
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
   Les zones de texte peuvent être des éléments de rapport ou correspondre aux cellules individuelles d'une région de données dans lesquelles figure du texte, un champ calculé, un pointeur renvoyant au champ d'une base de données ou une combinaison de ces trois éléments. Vous pouvez associer des polices et des couleurs, ajouter des styles gras et italiques et appliquer des styles de paragraphe (par exemple, un alignement et des retraits négatifs). Vous pouvez mettre en forme une zone de texte tout entière ou bien mettre en forme un texte spécifique, des nombres, des expressions ou des champs à l'intérieur de la zone de texte.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Tapez toute expression simple ou complexe dans la zone de texte. Par exemple, si vous tapez **Nom : [Nom]** dans la zone de texte, le texte **[Nom]** sera affiché sous la forme d’un espace réservé qui représentera l’expression `=Fields!Name.Value`.  
   
--   Tapez une expression dans une zone de texte vide en entrant d'abord le signe égal (=). Lorsque la zone de texte cesse d'être en surbrillance, l'expression qui en résulte est convertie en un espace réservé modifiable. Si la zone de texte n'est pas vide ou si le signe égal n'a pas été inséré en premier comme indiqué, ce signe est alors considéré comme étant un littéral de chaîne, auquel cas aucun espace réservé ne peut être créé. Pour plus d’informations sur la définition des expressions simples et complexes, consultez [Expression utilise de rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+-   Tapez une expression dans une zone de texte vide en entrant d'abord le signe égal (=). Lorsque la zone de texte cesse d'être en surbrillance, l'expression qui en résulte est convertie en un espace réservé modifiable. Si la zone de texte n'est pas vide ou si le signe égal n'a pas été inséré en premier comme indiqué, ce signe est alors considéré comme étant un littéral de chaîne, auquel cas aucun espace réservé ne peut être créé. Pour plus d’informations sur la définition des expressions simples et complexes, consultez [Utilisation d’expressions dans les rapports &#41;Générateur de rapports et SSRS&#40;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>Mise en forme des espaces réservés et du texte statique dans une zone de texte  
  La boîte de dialogue **Propriétés de l’espace réservé** permet de mettre en forme les espaces réservés. La mise en forme des espaces réservés ne peut s'effectuer que globalement et non par sections distinctes. Si vous souhaitez consulter l'expression sous-jacente de votre espace réservé, il vous suffit de déplacer le pointeur de votre souris jusqu'à cette espace. Vous pouvez modifier l’expression sous-jacente en double-cliquant sur l’espace réservé ou en cliquant avec le bouton droit sur cet espace, puis en sélectionnant **Propriétés de l’espace réservé**. Vous pouvez également spécifier une étiquette d’interface utilisateur à l’aide de la propriété **Étiquette** sous l’onglet **Général** de la boîte de dialogue **Propriétés de l’espace réservé** . Le texte de cette étiquette sera alors affiché pour l'espace réservé lors de la phase de conception.  
@@ -71,19 +70,18 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Les actions définies pour la zone de texte sont prioritaires par rapport aux actions définies pour le texte contenu dans cette zone.  
   
- Pour plus d’informations sur la mise en forme mixte, consultez [Format du texte dans une zone de texte &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur la mise en forme mixte, consultez [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>Alignement du texte horizontal à l'aide de l'option Général  
  Dans la zone **Alignement** de la boîte de dialogue **Propriétés de la zone de texte** , vous pouvez indiquer comment le texte doit être aligné au niveau horizontal. Si vous ne spécifiez pas de valeur d’alignement, la valeur d’alignement appliquée par défaut est **Par défaut**. Cela signifie que le texte sera aligné en fonction du type de champ utilisé pour la valeur de votre espace réservé. Si vous spécifiez une expression dont la valeur n'est pas une chaîne (pas un nombre), le texte est aligné à droite. Si, en revanche, votre expression a une valeur de chaîne (un nombre, par exemple), le texte est aligné à gauche.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Mise en forme les étiquettes des axes sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des échelles sur une jauge &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Boîte de dialogue de propriétés espace réservé, général &#40; Le Générateur de rapports et SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Exportation vers Microsoft Excel &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [Zones de texte &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   
-

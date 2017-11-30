@@ -1,5 +1,5 @@
 ---
-title: "Modifier la hauteur de ligne ou de la largeur de colonne (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Modifier la hauteur de ligne ou la largeur de colonne (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Modifier la hauteur de ligne ou la largeur de colonne (Générateur de rapports et SSRS)
   Lorsque vous définissez la hauteur d'une ligne, vous spécifiez sa hauteur maximale dans le rapport rendu. Toutefois, par défaut, les zones de texte de la ligne sont définies de manière à s'étendre verticalement pour accueillir toutes les données requises au moment de l'exécution, ce qui peut entraîner le développement d'une ligne au-delà de la hauteur spécifiée. Pour définir une hauteur de ligne fixe, vous devez modifier les propriétés des zones de texte afin qu'elles ne se développent pas automatiquement.  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  Dans la vue Conception, cliquez sur une cellule dans la ligne de table.  
   
-     ![Sélectionné la cellule dans une Table](../../reporting-services/report-design/media/table-selectcell.png "sélectionné la cellule dans une Table")  
+     ![Cellule sélectionnée dans une table](../../reporting-services/report-design/media/table-selectcell.png "Cellule sélectionnée dans une table")  
   
 2.  Dans le volet **Propriétés** qui s’affiche, modifiez la propriété **Hauteur** , puis cliquez n’importe où en dehors du volet **Propriétés** .  
   
-     ![Volet Propriétés de cellule de tableau sélectionnée](../../reporting-services/report-design/media/cell-propertiespane.png "volet Propriétés de cellule de la table sélectionnée")  
+     ![Volet Propriétés pour la cellule de table sélectionnée](../../reporting-services/report-design/media/cell-propertiespane.png "Volet Propriétés pour la cellule de table sélectionnée")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>Pour empêcher le développement vertical automatique d'une ligne  
   
@@ -72,11 +71,10 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Région de données de tableau matriciel (Générateur de rapports et SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Les cellules de région de données de tableau matriciel, lignes et colonnes (Générateur de rapports) et SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tables (Générateur de rapports et SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Matrices (Générateur de rapports et SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
  [Listes (Générateur de rapports et SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes (Générateur de rapports et SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tables, matrices et listes (Générateur de rapports et SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

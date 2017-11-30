@@ -1,5 +1,5 @@
 ---
-title: "Créer, modifier et supprimer des abonnements pilotés par les données | Documents Microsoft"
+title: "Créer, modifier ou supprimer des abonnements pilotés par les données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 0c9cdf45f989d471d7454914e7298bb504d20288
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eb66b6e5590408b1fa8c67c01989bb537436283
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Créer, modifier ou supprimer des abonnements pilotés par les données
   Un abonnement piloté par les données est un abonnement qui a recours à une requête pour obtenir les valeurs de données qui seront utilisées dans le traitement de l'abonnement au moment de l'exécution. Lorsque l'abonnement est déclenché, une requête est traitée pour récupérer des informations récentes sur les destinataires, les options de remise de rapport, les formats de rendu et les valeurs de paramètre. Les résultats de la requête sont combinées à la définition de l'abonnement pour créer un abonnement dynamique utilisant les données que vous avez conservées dans une base de données employés, une base de données clients ou dans toute autre base de données contenant des informations utilisables comme données d'abonnés.  
   
- Pour créer un abonnement piloté par les données ou modifier un abonnement existant, recourez aux pages Créer un abonnement piloté par les données dans le Gestionnaire de rapports. Ces pages vous guident tout au long du processus de création ou de modification d'un abonnement. Pour accéder à un abonnement après qu'il a été créé, utilisez la page Mes abonnements et la liste Abonnements d'un rapport. Pour savoir comment créer un abonnement piloté par les données, consultez [créer un abonnement piloté &#40; Didacticiel SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Pour créer un abonnement piloté par les données ou modifier un abonnement existant, recourez aux pages Créer un abonnement piloté par les données dans le Gestionnaire de rapports. Ces pages vous guident tout au long du processus de création ou de modification d'un abonnement. Pour accéder à un abonnement après qu'il a été créé, utilisez la page Mes abonnements et la liste Abonnements d'un rapport. Pour savoir comment créer un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
  Dans cette rubrique :  
   
@@ -70,9 +70,9 @@ ms.lasthandoff: 08/09/2017
   
 1.  Dans le Gestionnaire de rapports, naviguez jusqu'au dossier qui contient le rapport, pointez sur le rapport, ouvrez le menu d'options et cliquez sur **Gérer**.  
   
-2.  Cliquez sur l'onglet **Abonnements** . Vous pouvez également cliquer sur le lien **Mes abonnements** dans la partie supérieure du gestionnaire de rapports  
+2.  Cliquez sur l'onglet **Abonnements** . Vous pouvez également cliquer sur le lien **Mes abonnements** situé en haut du gestionnaire de rapports.  
   
-3.  Sélectionnez l'abonnement à modifier. L’icône suivante indique un abonnement piloté par les données : ![icône abonnement piloté par les données](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "icône abonnement piloté par les données")  
+3.  Sélectionnez l'abonnement à modifier. L’icône suivante indique un abonnement piloté par les données : ![Icône Abonnement piloté par les données](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Icône Abonnement piloté par les données")  
   
 #### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Pour modifier un abonnement piloté par les données existant (mode SharePoint)  
   
@@ -107,10 +107,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Page abonnements &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Page Mes abonnements &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Page Abonnements &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [Page Mes abonnements &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Aperçu des rapports dans le Générateur de rapports | Documents Microsoft"
+title: "Aperçu des rapports dans le Générateur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f28003b3e3460e2450c17f68ab944ae2aeab55e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1635c00223ae559c703a56e528f8e4f74f5a67ef
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="previewing-reports-in-report-builder"></a>Aperçu des rapports dans le Générateur de rapports
   Quand vous créez un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est utile d’afficher fréquemment un aperçu du rapport pour vérifier qu’il s’affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
  D'autres avantages des sessions d'édition sont la capacité de modifier des rapports qui utilisent des sources de données incorporées ou de faire référence à des éléments tels que des images ou des sous-rapports stockés sur le serveur de rapports.  
   
 > [!NOTE]  
-> Il existe certaines différences entre l’aperçu du Générateur de rapports et l’affichage dans un navigateur. Par exemple, un contrôle de calendrier, qui est ajouté à un rapport lorsque vous spécifiez un paramètre de type Date/heure, est différent dans le Générateur de rapports et dans un navigateur. 
+> Il existe des différences entre l’aperçu dans le Générateur de rapports et l’affichage dans un navigateur. Par exemple, un contrôle de calendrier, qui est ajouté à un rapport lorsque vous spécifiez un paramètre de type Date/heure, est différent dans le Générateur de rapports et dans un navigateur. 
   
 ## <a name="improving-preview-performance"></a>Amélioration de la performance d'aperçu  
  Le mode de création et de mise à jour d'un rapport affecte la rapidité de rendu de l'aperçu du rapport. La première fois que vous affichez un aperçu d'un rapport qui repose sur une référence de serveur, une session d'édition est créée pour vous et les données utilisées lorsque le rapport est exécuté sont ajoutées à un cache de données stocké sur le serveur de rapports. Lorsque vous apportez des modifications au rapport qui n'affectent pas les données, la copie mise en cache des données est utilisée par le rapport. Cela signifie que vous ne verrez pas vos données changer chaque fois que vous afficherez un aperçu du rapport. Si vous souhaitez afficher les nouvelles données, cliquez sur le bouton **Actualiser** sur le ruban.  
@@ -82,11 +82,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Mise en forme des éléments de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [L’enregistrement de rapports &#40; Le Générateur de rapports &#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
+ [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Enregistrement des rapports &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)  
   
   
-

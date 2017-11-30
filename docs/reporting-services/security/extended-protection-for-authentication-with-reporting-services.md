@@ -1,5 +1,5 @@
 ---
-title: "Protection étendue pour l’authentification avec Reporting Services | Documents Microsoft"
+title: "Protection étendue de l’authentification avec Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
 
   La protection étendue est un ensemble d'améliorations apportées aux dernières versions du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protection étendue améliore la manière dont les applications protègent les informations d'identification et l'authentification. La fonctionnalité ne fournit pas directement de protection contre des attaques spécifiques telles que le transfert d'informations d'identification, mais offre une infrastructure aux applications telles que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin d'appliquer la protection étendue de l'authentification.  
   
  La liaison de service et la liaison de canal figurent parmi les améliorations d'authentification les plus importantes de la protection étendue. La liaison de canal utilise un jeton de liaison de canal (FAO) afin de vérifier que le canal établi entre deux points d'arrêt n'a pas été compromis. La liaison de service utilise les noms de principaux du service (SPN) pour valider la destination prévue de jetons d'authentification. Pour plus d’informations générales sur la protection étendue, consultez [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)(Authentification Windows intégrée avec protection étendue).  
   
-SQL Server Reporting Services (SSRS) prend en charge et applique la Protection étendue qui a été activée dans le système d’exploitation et configuré dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM et peut donc tirer parti de la prise en charge de la protection étendue dans le système d'exploitation et des fonctionnalités de la protection étendue de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+SQL Server Reporting Services (SSRS) prend en charge et applique la protection étendue qui a été activée dans le système d’exploitation et configurée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM et peut donc tirer parti de la prise en charge de la protection étendue dans le système d'exploitation et des fonctionnalités de la protection étendue de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Par défaut, Windows n'active pas la protection étendue. Pour plus d'informations sur l'activation de la protection étendue dans Windows, consultez [Protection étendue de l'authentification](http://go.microsoft.com/fwlink/?LinkID=178431). Le système d'exploitation et la pile d'authentification du client doivent tous les deux prendre en charge la protection étendue pour que l'authentification aboutisse. Vous devrez peut-être installer plusieurs mises à jour sur les systèmes d'exploitation plus anciens pour bénéficier d'une protection étendue à jour et prête à l'emploi sur l'ordinateur. Pour plus d’informations sur les développements les plus récents de la protection étendue, consultez les [informations mises à jour relatives à la protection étendue](http://go.microsoft.com/fwlink/?LinkId=183362).  
@@ -39,7 +37,7 @@ SQL Server Reporting Services (SSRS) prend en charge et applique la Protection �
 SSRS prend en charge et applique la protection étendue qui a été activée dans le système d’exploitation. Si le système d'exploitation ne prend pas en charge la protection étendue ou si la fonctionnalité n'a pas été activée dans le système d'exploitation, la fonctionnalité de protection étendue de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne parviendra pas à effectuer l'authentification. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiert également un certificat SSL. Pour plus d’informations, consultez [Configurer des connexions SSL sur un serveur de rapports en mode natif](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'active pas la protection étendue par défaut. La fonctionnalité peut être activée en modifiant le fichier de configuration **rsreportserver.config** ou en utilisant les API WMI pour mettre le fichier de configuration à jour. SSRS ne fournit pas une interface utilisateur pour modifier ou afficher étendue des paramètres de protection. Pour plus d'informations, consultez la section des [paramètres de configuration](#ConfigurationSettings) dans cette rubrique.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'active pas la protection étendue par défaut. La fonctionnalité peut être activée en modifiant le fichier de configuration **rsreportserver.config** ou en utilisant les API WMI pour mettre le fichier de configuration à jour. SSRS ne propose pas d’interface utilisateur pour modifier ou visualiser les paramètres de protection étendus. Pour plus d'informations, consultez la section des [paramètres de configuration](#ConfigurationSettings) dans cette rubrique.  
   
  Les problèmes courants qui se produisent à cause des modifications des paramètres de protection étendue ou de paramètres mal configurés ne décrivent pas les messages d'erreur ou les boîtes de dialogue habituelles. Les problèmes sur la configuration et la compatibilité de la protection étendue aboutissent à des échecs et des erreurs d'authentification dans les journaux de trace [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -53,7 +51,7 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
   
 ### <a name="upgrade"></a>Mise à niveau  
   
--   La mise à niveau un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server vers SQL Server 2016 ajoute des paramètres de configuration avec les valeurs par défaut pour le **rsreportserver.config** fichier. Si les paramètres étaient déjà présents, l’installation de SQL Server 2016 conserve dans le **rsreportserver.config** fichier.  
+-   La mise à niveau d’un serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers SQL Server 2016 ajoute des paramètres de configuration avec les valeurs par défaut au fichier **rsreportserver.config**. Si les paramètres y figurent déjà, l’installation de SQL Server 2016 les laisse dans le fichier **rsreportserver.config**.  
   
 -   Quand les paramètres de configuration sont ajoutés au fichier de configuration **rsreportserver.config** , le comportement par défaut de la fonctionnalité de protection étendue de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est désactivé et vous devez activer la fonction comme indiqué dans cette rubrique. Pour plus d'informations, consultez la section des [paramètres de configuration](#ConfigurationSettings) dans cette rubrique.  
   
@@ -179,4 +177,4 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Méthode SetExtendedProtectionSettings &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

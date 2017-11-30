@@ -5,23 +5,21 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6e9485840cba88623f686d33899475f0f572babe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
   Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Suppression de fichiers et de répertoires dans un FileTable  
  Toute la sémantique des API d'E/S de fichier Windows est appliquée lorsque vous supprimez un fichier ou un répertoire.  
   
--   La suppression d'un répertoire échoue si le répertoire contient des fichiers ou des sous-répertoires.  
+-   La suppression d’un répertoire échoue si le répertoire contient des fichiers ou des sous-répertoires.  
   
 -   La suppression d'un fichier ou d'un répertoire entraîne la suppression de la ligne correspondante dans le FileTable. Cela équivaut à supprimer la ligne via une opération [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -131,9 +129,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL, fonctions, procédures stockées et vues FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Formules dans les rapports de modèle requêtes (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Formules dans les requêtes de modèle de rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formules dans les requêtes de modèle de rapport (Générateur de rapports et SSRS)
   Les formules sont des calculs effectués sur les valeurs d'un rapport utilisant un modèle de rapport comme source de données. Vous définissez des formules dans la **boîte de dialogue Définir la formule** du concepteur de requêtes Modèle de rapport quand vous définissez une requête pour une source de données de modèle de rapport. Une formule peut contenir des fonctions, des opérateurs, des constantes et des références à des champs ou des entités. Les formules vous permettent de combiner, d'agréger, de filtrer et d'évaluer des données numériques et de texte. Vous pouvez créer des formules et les enregistrer en tant que nouveaux champs, ou vous pouvez modifier les formules des champs existants.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Les fonctions peuvent être utilisées pour exécuter des calculs simples ou complexes. La structure d'une fonction commence par le nom de la fonction, suivi d'une parenthèse ouvrante, des arguments de la fonction séparés par des virgules, et d'une parenthèse fermante.  
   
- ![Un exemple d’une fonction. ] (../../reporting-services/report-design/media/functionexample.gif "Un exemple d’une fonction.")  
+ ![Exemple de fonction](../../reporting-services/report-design/media/functionexample.gif "Exemple de fonction")  
   
  Les arguments peuvent être des références de champs, des nombres, du texte et des valeurs logiques telles que **TRUE** ou **FALSE**. Ce sont également des constantes, des formules ou d'autres fonctions. Les arguments que vous entrez doivent produire une valeur correcte pour cet argument. Par exemple, si la formule multiplie deux entiers, le résultat ne peut pas être une chaîne de texte.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |Fonctions de texte|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

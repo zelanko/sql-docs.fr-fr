@@ -1,5 +1,5 @@
 ---
-title: "Créer une matrice (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Créer une matrice (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 994d0d61ac4a591445285b4f967d5c3c74a820ad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Créer une matrice (Générateur de rapports et SSRS)
   Utilisez une matrice pour afficher des données groupées et des informations récapitulatives. Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Une matrice fournit des fonctionnalités similaires à celles des analyses croisées et des tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Vous pouvez mettre en forme les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez également inclure des bascules d'extraction qui permettent initialement de masquer les données de détail ; l'utilisateur peut ensuite cliquer sur ces bascules pour afficher plus ou moins de détails, en fonction de ses besoins.  
@@ -40,11 +40,11 @@ ms.lasthandoff: 08/09/2017
   
  Pour décrire le mode de configuration d'une table du début à la fin, cette rubrique utilise le modèle de matrice.  Au départ, la matrice contient un groupe de lignes, un groupe de colonnes, une cellule d'angle et une cellule de données, comme indiqué dans l'illustration suivante.  
   
- ![Vide la matrice avec 1 ligne et le groupe de 1 colonnes](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "matrice vide avec 1 ligne et 1 groupe de colonnes")  
+ ![Matrice vide avec 1 groupe de lignes et 1 groupe de colonnes](../../reporting-services/report-design/media/rs-matrixtemplatenew.gif "Matrice vide avec 1 groupe de lignes et 1 groupe de colonnes")  
   
  Lorsque vous sélectionnez une matrice sur l'aire de conception, des descripteurs de ligne et de colonne apparaissent, comme indiqué dans l'illustration suivante.  
   
- ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
+ ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
   
  Ajoutez des groupes en faisant glisser des champs de dataset vers les zones de groupes de lignes et de groupes de colonnes du volet de regroupement. Le premier champ que vous faites glisser vers le volet des groupes de lignes ou des groupes de colonnes remplace le groupe par défaut vide initial. Vous pouvez alors appliquer une mise en forme à chaque cellule, en fonction des données.  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 08/09/2017
   
  Au cours de l'exécution du rapport, des en-têtes de colonnes dynamiques se développent vers la droite (ou vers la gauche, si la propriété Direction de la matrice a la valeur RTL), pour autant de colonnes que de valeurs de groupe uniques. Des lignes dynamiques se développent vers le bas de la page. Les données qui apparaissent dans les cellules du corps du tableau matriciel sont des agrégats basés sur les intersections des groupes de colonnes et des groupes de lignes, comme indiqué dans l'illustration suivante.  
   
- ![Matrice, les lignes imbriqués et les groupes de colonnes avec des totaux](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "matrice, les groupes de lignes et de colonnes avec des totaux imbriqués")  
+ ![Matrice, groupes de lignes et de colonnes imbriqués avec totaux](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalsdesign.gif "Matrice, groupes de lignes et de colonnes imbriqués avec totaux")  
   
  Dans l'aperçu, le rapport s'affiche comme illustré ci-dessous.  
   
- ![Groupes dans l’aperçu imbriqués](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "imbriquée de groupes dans l’aperçu")  
+ ![Groupes imbriqués en mode Aperçu](../../reporting-services/report-design/media/rs-basicmatrixnestedgroupstotalspreview.gif "Groupes imbriqués en mode Aperçu")  
   
  Pour écrire des expressions qui spécifient une étendue autre que l'étendue par défaut, vous devez spécifier le nom d'un dataset, d'une région de données ou d'un groupe dans la fonction d'agrégation. Pour calculer le pourcentage de chaque sous-catégorie dans les valeurs de groupe de la catégorie Habillement, ajoutez une colonne dans le groupe Catégorie à côté de la colonne Total, mettez en forme la zone de texte pour l'affichage du pourcentage et ajoutez une expression qui utilise l'étendue par défaut dans le numérateur, ainsi que l'étendue du groupe Catégorie dans le dénominateur, comme indiqué dans l'exemple suivant.  
   
@@ -88,17 +88,17 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="AddingAdjacentGroup"></a> Ajout d'un groupe adjacent à une matrice  
  Pour ajouter un groupe adjacent selon un champ de dataset unique, utilisez le menu contextuel du volet de regroupement. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). L'illustration suivante présente un groupe basé sur la géographie et un groupe adjacent basé sur l'année.  
   
- ![Groupes de colonnes adjacents pour Geography et Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "groupes de colonnes adjacents pour Geography et Year")  
+ ![Groupes de colonnes adjacents pour Geography et Year](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupsdesign.gif "Groupes de colonnes adjacents pour Geography et Year")  
   
  Dans cet exemple, la requête a filtré des valeurs de données de sorte à inclure uniquement les valeurs pour l'Europe et correspondant aux années 2003 et 2004. Toutefois, vous pouvez définir des filtres sur chaque de groupe indépendamment. Dans l'aperçu, le rapport s'affiche comme illustré ci-dessous.  
   
- ![Aperçu de groupes de colonnes adjacents](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "aperçu de groupes de colonnes adjacents")  
+ ![Aperçu de groupes de colonnes adjacents](../../reporting-services/report-design/media/rs-basicmatrixadjacentgroupspreview.gif "Aperçu de groupes de colonnes adjacents")  
   
  Pour ajouter une colonne de total à un groupe de colonnes adjacent, cliquez dans la cellule de définition du groupe de colonnes et utilisez la commande **Ajouter un total** . Une nouvelle colonne statique est ajoutée à côté du groupe de colonnes, avec une somme agrégée par défaut pour chaque champ numérique des lignes existantes. Pour modifier l'expression, modifiez manuellement l'agrégat par défaut, par exemple, `Avg([Sales])`. Pour plus d’informations, consultez [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions d’agrégation &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

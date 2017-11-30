@@ -1,5 +1,5 @@
 ---
-title: "Méthode de ListSSLCertificates (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "ListSSLCertificates, méthode (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ListSSLCertificates method
+helpviewer_keywords: ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7f03453aa500c3eeccbede26dd45d93d6c6ba1c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d4a42a79aa45024706a9d2557acd8bb72f147fc5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-method---listsslcertificates"></a>Méthode ConfigurationSetting - ListSSLCertificates
   Retourne la liste des certificats installés sur l'ordinateur serveur de rapports.  
@@ -70,4 +68,3 @@ public void ListSSLCertificates(out string[] CertificateHash,
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

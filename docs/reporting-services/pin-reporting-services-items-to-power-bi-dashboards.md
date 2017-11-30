@@ -1,13 +1,11 @@
 ---
-title: "Épingler des éléments Reporting Services aux tableaux de bord Power BI | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Épingler des éléments Reporting Services aux tableaux de bord Power BI | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Épingler des éléments Reporting Services aux tableaux de bord Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permet aux utilisateurs d’épingler des éléments de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à partir de la barre d’outils de la visionneuse de rapports à un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] en tant que nouvelle vignette.   Pour que vous puissiez épingler des éléments, il faut que votre administrateur intègre au préalable votre serveur de rapports à Azure Active Directory et [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -42,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Vous épinglez à partir de la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] visionneuse de rapports de t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]il, par exemple `http://myserver/Reports`.  Vous ne pouvez pas épingler d’éléments à partir de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], du Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou d’une URL de serveur de rapports.  Par exemple `http://myserver/ReportServer`.  
+-   Vous épinglez les éléments à partir de la visionneuse de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ; par exemple, `http://myserver/Reports`.  Vous ne pouvez pas épingler d’éléments à partir de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], du Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ou d’une URL de serveur de rapports.  Par exemple, `http://myserver/ReportServer`.  
   
 -   Votre navigateur doit être configuré pour autoriser l’affichage des fenêtres contextuelles en provenance du site de votre serveur de rapports.  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 4. Sélectionnez l’élément de rapport que vous voulez épingler à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Vous ne pouvez épingler qu’un seul élément à la fois.  La visionneuse de rapports présente un affichage ombré de votre rapport. Les éléments que vous pouvez épingler apparaissent en surbrillance, tandis que ceux que vous ne pouvez pas épingler, sont ombrés.  
   
-    **(1)** Sélectionnez le groupe qui contient le tableau de bord sur lequel vous souhaitez épingler l’élément, **(2)** sélectionnez le tableau de bord sur lequel vous souhaitez épingler l’élément et **(3)** sélectionnez la fréquence à laquelle vous voulez que la vignette soit mise à jour sur le tableau de bord.   ![Remarque](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Remarque") l’actualisation est gérée par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abonnements et une fois l’élément épinglé, vous pouvez modifier l’abonnement et configurer une planification d’actualisation différentes.  
+    **(1)** Sélectionnez le groupe qui contient le tableau de bord sur lequel vous souhaitez épingler l’élément, **(2)** sélectionnez le tableau de bord sur lequel vous souhaitez épingler l’élément et **(3)** sélectionnez la fréquence à laquelle vous voulez que la vignette soit mise à jour sur le tableau de bord.   ![remarque](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "e") L’actualisation est gérée par les abonnements [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et, une fois l’élément épinglé, vous pouvez modifier l’abonnement et configurer une autre planification de l’actualisation.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -136,7 +133,7 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-     Vous pouvez également modifier les propriétés de l’abonnement et remplacer le **Nom de l’élément visuel du rapport** par le nom d’élément de rapport approprié. ![modifier l’élément visuel utilisé pour l’actualisation de power bi](../reporting-services/media/ssrs-powerbi-subscription-visual.png "modifier l’élément visuel utilisé pour l’actualisation de power bi")  
+     Vous pouvez également modifier les propriétés de l’abonnement et remplacer le **Nom de l’élément visuel du rapport** par le nom d’élément de rapport approprié. ![changer les éléments visuels utilisés pour l’actualisation de Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "changer les éléments visuels utilisés pour l’actualisation de Power BI")  
   
 -   **Supprimer une vignette**. Si vous supprimez une vignette dans [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], l’abonnement associé n’est pas supprimé dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et dans la page **Mes abonnements**. Un message d’erreur similaire au suivant s’affiche. Vous pouvez supprimer l’abonnement  
   
@@ -153,5 +150,4 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

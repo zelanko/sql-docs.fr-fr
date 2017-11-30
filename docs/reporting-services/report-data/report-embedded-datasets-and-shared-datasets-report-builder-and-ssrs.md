@@ -1,5 +1,5 @@
 ---
-title: "Rapport Datasets incorporés et Datasets partagés (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,19 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10420"
+f1_keywords: "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b58eb34183d3ec9c1aaafaacb802a4507395d262
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS)
   Un dataset spécifie les données que vous souhaitez utiliser à partir d'une connexion de données. Un dataset est basé sur une connexion de données enregistrée dans le rapport en tant que source de données incorporée ou référence à une source de données partagée sur un serveur de rapports. Le dataset inclut une requête qui spécifie un ensemble de champs. Lorsque vous faites glisser ces champs vers l'aire de conception, vous créez des expressions qui correspondent aux données effectives lorsque le rapport s'exécute.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Métadonnées du schéma** Le fournisseur de données exécute une commande de requête de schéma indépendamment de la requête afin de récupérer des métadonnées pour la collection de champs de dataset. Par exemple, une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** retourne les noms de colonnes d’une table de base de données. Utilisez le volet Données du rapport pour développer le dataset afin d'afficher la collection de champs de dataset.  
   
- Il est également possible d'inclure des données dans un rapport à l'aide de datasets partagés et de parties de rapports partagées. Ces éléments possèdent déjà les informations de connexion de données dont vous avez besoin. Pour plus d’informations, consultez [Datasets de rapport &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md) et [rapports parties &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ Il est également possible d'inclure des données dans un rapport à l'aide de datasets partagés et de parties de rapports partagées. Ces éléments possèdent déjà les informations de connexion de données dont vous avez besoin. Pour plus d’informations, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) et [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
  Pour plus d’informations sur les types de sources de données intégrés et les extensions de données, consultez [Ajouter des données depuis des sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
   
@@ -131,17 +130,17 @@ ms.lasthandoff: 08/09/2017
   
 |Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Source de données|  
 |-----------------|------------------------------|----------------------------|  
-|La connexion de données est incorporée dans la définition de rapport.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")||  
-|Le pointeur vers la connexion de données sur le serveur de rapports est incorporé dans la définition de rapport.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
-|Gestion sur le serveur de rapports|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
-|Obligatoire pour les datasets partagés||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
-|Obligatoire pour les composants||![Disponible](../../reporting-services/report-data/media/greencheck.gif "disponibles")|  
+|La connexion de données est incorporée dans la définition de rapport.|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")||  
+|Le pointeur vers la connexion de données sur le serveur de rapports est incorporé dans la définition de rapport.||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
+|Gestion sur le serveur de rapports|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
+|Obligatoire pour les datasets partagés||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
+|Obligatoire pour les composants||![Disponible](../../reporting-services/report-data/media/greencheck.gif "Disponible")|  
   
  Dans le Concepteur de rapports, vous pouvez créer des datasets partagés dans le cadre d'un projet de rapport, et contrôler s'il convient de les déployer sur un serveur de rapports. Vous ne pouvez pas rechercher et sélectionner un dataset partagé sur un serveur de rapports, et l'ajouter à votre rapport.  
   
  Dans le Générateur de rapports, vous pouvez effectuer les actions suivantes :  
   
--   Pour créer un dataset partagé, utilisez le mode création de dataset partagé. Vous pouvez l'enregistrer sur un serveur de rapports ou un site SharePoint pour le partager avec d'autres rapports. Vous pouvez également accéder au serveur de rapports et modifier tout dataset partagé existant. Dans ce mode, vous pouvez créer une requête et définir toutes les options de dataset. Pour plus d’informations, consultez [mode de création de Dataset partagé &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
+-   Pour créer un dataset partagé, utilisez le mode création de dataset partagé. Vous pouvez l'enregistrer sur un serveur de rapports ou un site SharePoint pour le partager avec d'autres rapports. Vous pouvez également accéder au serveur de rapports et modifier tout dataset partagé existant. Dans ce mode, vous pouvez créer une requête et définir toutes les options de dataset. Pour plus d’informations, consultez [Mode création de dataset partagé &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md).  
   
 -   Pour ajouter un dataset partagé à votre rapport, ouvrez le Générateur de rapports en mode création de rapport. Depuis un Assistant ou le volet Données du rapport, accédez au serveur de rapports et sélectionnez le dataset partagé à ajouter à votre rapport. Dans ce mode, vous ne pouvez pas modifier la requête sauf pour ajouter des champs. Vous pouvez remplacer d'autres options de données et ajouter des filtres. Vous ne pouvez pas supprimer de filtres.  
   
@@ -173,7 +172,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="sorting-data-in-a-dataset"></a>Tri des données dans un dataset  
  Dans un dataset, l'ordre des données est celui dans lequel elles sont récupérées de la source de données externe. Il s'agit du même ordre que celui que vous voyez quand vous exécutez la requête dans le concepteur de requêtes. Si la syntaxe de commande de requête prend en charge le tri, vous pouvez modifier la requête pour trier les données à la source, avant qu'elles ne soient retournées comme données de rapport. Par exemple, pour une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] , l'instruction ORDER BY contrôle l'ordre de tri.  
   
- Pour trier les données après qu'elles ont été retournées au rapport, définissez des expressions de tri sur les régions de données et les groupes de régions de données. Pour plus d’informations, consultez la rubrique pour le type spécifique de la région de données, par exemple, [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ Pour trier les données après qu'elles ont été retournées au rapport, définissez des expressions de tri sur les régions de données et les groupes de régions de données. Pour plus d’informations, consultez la rubrique relative au type spécifique de région de données, par exemple [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
  Vous pouvez également utiliser une combinaison de paramètres et d'expressions de tri pour permettre aux utilisateurs de choisir l'ordre de tri pour les données dans un rapport. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -181,7 +180,7 @@ ms.lasthandoff: 08/09/2017
  Vous ne pouvez pas regrouper de données dans un dataset. Pour agréger des données dans un dataset, vous pouvez modifier la commande de requête pour calculer des agrégats avant que les données ne soient récupérées pour un rapport. Elles sont connues sous le nom d' *agrégats de serveur*. Dans les expressions, pour identifier ces valeurs comme agrégats calculés à l'avance, utilisez la fonction Aggregate. Pour plus d’informations, consultez [Fonction d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Utilisation de paramètres et de datasets  
- Pour une requête de dataset incorporé qui comprend des variables de requête, des paramètres de requête et paramètres de rapport correspondants sont créés automatiquement. Lors de l'exécution du rapport, la valeur du paramètre de rapport est liée au paramètre de requête du dataset. De cette façon, la commande de requête qui s'exécute sur la source de données externe inclut les valeurs spécifiées pour les paramètres de rapport. Les paramètres de rapport permettent à un utilisateur de choisir les données qu'il souhaite voir dans le rapport. Vous pouvez afficher la façon dont les paramètres de requête et les paramètres de rapport sont liées dans la [boîte de dialogue Propriétés du Dataset, paramètres &#40; Le Générateur de rapports &#41; ](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) page.  
+ Pour une requête de dataset incorporé qui comprend des variables de requête, des paramètres de requête et paramètres de rapport correspondants sont créés automatiquement. Lors de l'exécution du rapport, la valeur du paramètre de rapport est liée au paramètre de requête du dataset. De cette façon, la commande de requête qui s'exécute sur la source de données externe inclut les valeurs spécifiées pour les paramètres de rapport. Les paramètres de rapport permettent à un utilisateur de choisir les données qu'il souhaite voir dans le rapport. Vous pouvez voir la manière dont les paramètres de requête et les paramètres de rapport sont liés dans la page [Boîte de dialogue Propriétés du dataset, Paramètres &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda).  
   
  Pour un dataset partagé, les paramètres de requête font partie de la définition de dataset partagé qui peut être gérée sur le serveur de rapports indépendamment d'un rapport. La liste suivante décrit la prise en charge des valeurs de paramètres de requête :  
   
@@ -193,7 +192,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Ne peut pas inclure de références à la collection intégrée Parameters, qui représente des paramètres de rapport.  
   
- Pour configurer les valeurs de paramètre de requête pour un dataset partagé, en mode de création de jeu de données, accédez à ouvrir un dataset partagé à partir du serveur de rapports et définir des options sur la [boîte de dialogue Propriétés du Dataset, paramètres &#40; Le Générateur de rapports &#41; ](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) page. Pour plus d’informations, consultez [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ Pour configurer des valeurs de paramètres de requête pour un dataset partagé, en mode Création de dataset, recherchez et ouvrez un dataset partagé du serveur de rapports et définissez des options dans la page [Boîte de dialogue Propriétés du dataset, Paramètres &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda). Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Pour certaines sources de données multidimensionnelles, telles que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le concepteur de requêtes graphique vous permet de spécifier des filtres de requête et de sélectionner une option pour créer un paramètre de requête correspondant. Lorsque vous sélectionnez l'option de paramètre, l'extension de données crée automatiquement un dataset de rapport séparé afin de fournir des valeurs disponibles pour une liste déroulante pour ce paramètre. Par défaut, ces datasets masqués n'apparaissent pas dans le volet Données du rapport.  
   
@@ -208,13 +207,13 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Multiple"></a> Affichage de données de plusieurs datasets  
  Un rapport comporte généralement plusieurs datasets. La liste suivante décrit la manière dont vous pouvez utiliser les datasets dans un rapport :  
   
--   Vous affichez les données provenant de chaque dataset à l'aide d'une région de données distincte. Pour plus d’informations, consultez [des régions de données et cartes &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
+-   Vous affichez les données provenant de chaque dataset à l'aide d'une région de données distincte. Pour plus d’informations, consultez [Régions de données et cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md).  
   
 -   Vous pouvez lier plusieurs régions de données à un dataset et fournir plusieurs vues des mêmes données. Pour plus d’informations, consultez [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 -   Vous pouvez utiliser des datasets pour fournir une liste déroulante des valeurs disponibles et des valeurs par défaut pour un paramètre de rapport. Pour plus d’informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
--   À l'aide de paramètres, vous pouvez associer des données liées provenant de plusieurs datasets à des rapports ou des sous-rapports d'extraction. Par exemple, un état des ventes peut afficher les données de synthèse pour tous les magasins et un lien d'extraction peut spécifier l'identificateur de magasin en tant que paramètre à un rapport avec une requête de dataset qui extrait les ventes individuelles pour le magasin spécifié. Pour plus d’informations, consultez [extraction, exploration, sous-rapports et les régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) et [sous-rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
+-   À l'aide de paramètres, vous pouvez associer des données liées provenant de plusieurs datasets à des rapports ou des sous-rapports d'extraction. Par exemple, un état des ventes peut afficher les données de synthèse pour tous les magasins et un lien d'extraction peut spécifier l'identificateur de magasin en tant que paramètre à un rapport avec une requête de dataset qui extrait les ventes individuelles pour le magasin spécifié. Pour plus d’informations, consultez [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) et [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
 -   Vous ne pouvez pas afficher de données de détail provenant de plusieurs datasets dans une région de données unique. Toutefois, vous pouvez afficher des valeurs de fonction d'agrégation ou de fonction intégrée pour plusieurs datasets dans une région de données. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md). Si vous devez combiner les données de détail de plusieurs datasets en une région de données unique, vous devez réécrire votre requête pour extraire les données sous la forme d'un dataset unique.  
   
@@ -222,11 +221,11 @@ ms.lasthandoff: 08/09/2017
  Durant le traitement du rapport, lorsque la requête pour un dataset s'exécute, le jeu de résultats peut ne contenir aucune ligne. Dans le rapport rendu, une région de données liée à un dataset vide s'affiche comme une région de données vide. Vous pouvez spécifier le texte à afficher à la place de la région de données vide dans le rapport rendu. Vous pouvez également spécifier un message pour les sous-rapports lorsque les requêtes pour tous les datasets ne produisent aucune donnée lors de l'exécution. Pour plus d’informations, consultez [Définir un message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Définition des options de dataset  
- Pour les sources de données qui prennent en charge des données internationales, vous devrez éventuellement modifier les propriétés d'un dataset qui affectent l'ordre de tri, les propriétés des caractères internationaux et le respect de la casse. Ces propriétés incluent : casse, jeu de caractères Kana, largeur, accent et classement. Pour plus d'informations, consultez « Considérations relatives à la prise en charge internationale des bases de données et des applications de moteur de base de données » et « Utilisation des classements » dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Pour plus d’informations sur la façon de définir ces propriétés, consultez [boîte de dialogue Propriétés du Dataset, Options &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ Pour les sources de données qui prennent en charge des données internationales, vous devrez éventuellement modifier les propriétés d'un dataset qui affectent l'ordre de tri, les propriétés des caractères internationaux et le respect de la casse. Ces propriétés incluent : casse, jeu de caractères Kana, largeur, accent et classement. Pour plus d'informations, consultez « Considérations relatives à la prise en charge internationale des bases de données et des applications de moteur de base de données » et « Utilisation des classements » dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Pour plus d’informations sur la façon de définir ces propriétés, consultez [Boîte de dialogue Propriétés du dataset, Options &#40;Générateur de rapports&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

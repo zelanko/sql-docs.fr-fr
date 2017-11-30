@@ -1,13 +1,11 @@
 ---
 title: "Always Encrypted (moteur de base de données) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - Always Encrypted, about
 - SQL13.SWB.COLUMNMASTERKEY.CLEANUP.F1
 ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
+ms.openlocfilehash: 874cea214cb14c0dbfb5cffdff3035970a6e259d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ Pour accéder aux données stockées dans une colonne chiffrée en texte clair, 
 
 Ensuite, le pilote contacte le magasin de clés, qui contient la clé principale de colonne, afin de déchiffrer la valeur de la clé de chiffrement de colonne chiffrée, puis il utilise la clé de chiffrement de colonne en texte clair pour chiffrer le paramètre. La clé de chiffrement de colonne en texte clair résultante est mise en cache pour réduire le nombre d’allers-retours vers le magasin de clés lors des utilisations ultérieures de la même clé de chiffrement de colonne. Le pilote remplace les valeurs de texte en clair des paramètres ciblant des colonnes chiffrées par leurs valeurs chiffrées, et il envoie la requête au serveur pour traitement.
 
-Le serveur calcule le jeu de résultats et, pour toute valeur chiffrée dans le jeu de résultats, le pilote attache les métadonnées de chiffrement pour la colonne, notamment les informations sur l’algorithme de chiffrement et les clés correspondantes. Le pilote tente d’abord de trouver la clé de chiffrement de colonne en texte clair dans le cache local, et il accède à la clé principale de colonne uniquement s’il ne peut pas trouver la clé dans le cache. Ensuite, le pilote déchiffre les résultats et retourne des valeurs en texte clair à l’application.
+Le serveur calcule le jeu de résultats et, pour toutes les colonnes chiffrées dans le jeu de résultats, le pilote attache les métadonnées de chiffrement pour la colonne, notamment les informations sur l’algorithme de chiffrement et les clés correspondantes. Le pilote tente d’abord de trouver la clé de chiffrement de colonne en texte clair dans le cache local, et il accède à la clé principale de colonne uniquement s’il ne peut pas trouver la clé dans le cache. Ensuite, le pilote déchiffre les résultats et retourne des valeurs en texte clair à l’application.
 
  Un pilote client interagit avec un magasin de clés, qui contient une clé principale de colonne, à l’aide d’un fournisseur de magasins de clé principale de colonne, qui est un composant logiciel côté client qui encapsule un magasin de clé contenant la clé principale de colonne. Les fournisseurs pour les types courants de magasins de clés sont disponibles dans des bibliothèques de pilotes côté client à partir de Microsoft ou sous forme de téléchargements autonomes. Vous pouvez également implémenter votre propre fournisseur. Les fonctionnalités d’Always Encrypted, notamment les fournisseurs de magasins de clé principale de colonne intégrés, varient en fonction de la bibliothèque de pilote et de sa version. 
 
@@ -254,4 +251,3 @@ GO
 [sp_refresh_parameter_encryption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-refresh-parameter-encryption-transact-sql.md)   
   
   
-

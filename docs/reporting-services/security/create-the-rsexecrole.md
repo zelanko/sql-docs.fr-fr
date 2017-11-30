@@ -1,5 +1,5 @@
 ---
-title: "Créer le rôle RSExecRole | Documents Microsoft"
+title: "Créer le rôle RSExecRole | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,21 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RSExecRole
+helpviewer_keywords: RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-the-rsexecrole"></a>Créer le rôle RSExecRole
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise un rôle de base de données prédéfini appelé **RSExecRole** pour octroyer des autorisations de serveur de rapports à la base de données du serveur de rapports. Le rôle **RSExecRole** est créé automatiquement avec la base de données du serveur de rapports. En règle générale, ne modifiez ou n'assignez jamais d'autres utilisateurs au rôle. Toutefois, lorsque vous déplacez une base de données du serveur de rapports vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]nouveau ou différent, vous devez recréer le rôle dans les bases de données système Master ou MSDB.  
@@ -101,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 20. Répétez ces étapes pour chacune des procédures stockées restantes. **RSExecRole** doit disposer des autorisations d'exécution pour les trois procédures stockées.  
   
- ![Page de propriétés du rôle de base de données](../../reporting-services/security/media/rsexecroledbproperties.gif "page de propriétés du rôle de base de données")  
+ ![Page de propriétés du rôle de base de données](../../reporting-services/security/media/rsexecroledbproperties.gif "Page de propriétés du rôle de base de données")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>Création du rôle RSExecRole dans la base de données MSDB  
  Reporting Services utilise des procédures stockées associées au service Agent SQL Server et extrait des informations sur les travaux à partir de tables système pour prendre en charge les opérations planifiées. Les étapes suivantes expliquent comment octroyer au rôle RSExecRole des autorisations Execute pour les procédures et des autorisations Select sur les tables.  
@@ -193,11 +190,11 @@ ms.lasthandoff: 08/09/2017
 30. Répétez ces étapes pour la table sysjobs. Des autorisations Select doivent être octroyées à RSExecRole pour les deux tables.  
   
 ## <a name="move-the-report-server-database"></a>Déplacement de la base de données du serveur de rapports  
- Une fois les rôles créés, vous pouvez déplacer la base de données du serveur de rapports vers une nouvelle instance de SQL Server. Pour plus d’informations, consultez [déplacement des bases de données du serveur de rapports vers un autre ordinateur](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Une fois les rôles créés, vous pouvez déplacer la base de données du serveur de rapports vers une nouvelle instance de SQL Server. Pour plus d’informations, consultez [Déplacement des bases de données du serveur de rapports vers un autre ordinateur](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Si vous mettez à niveau le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers SQL Server 2016, vous pouvez effectuer cette opération avant ou après le déplacement de la base de données.  
   
- La base de données du serveur de rapports est mis à niveau automatiquement lorsque le serveur de rapports se connecte à ce dernier. Il n'y a pas d'étapes spécifiques requises pour mettre à niveau la base de données.  
+ La base de données du serveur de rapports sera automatiquement mise à niveau quand le serveur de rapports s’y connectera. Il n'y a pas d'étapes spécifiques requises pour mettre à niveau la base de données.  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>Restauration des clés de chiffrement et vérification de votre travail  
  Si vous avez attaché les bases de données du serveur de rapports, vous devez maintenant être en mesure d'effectuer les étapes suivantes pour vérifier votre travail.  
@@ -212,7 +209,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Cliquez sur **Choisir une base de données de serveur de rapports existante**.  
   
-5.  Entrez le nom de serveur du moteur de base de données. Si vous avez attaché les bases de données de serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<nom_serveur >\\< nom_instance\>.  
+5.  Entrez le nom de serveur du moteur de base de données. Si vous avez attaché les bases de données du serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<nom_serveur>\\<nom_instance\>.  
   
 6.  Cliquez sur **Tester la connexion**.  
   
@@ -241,4 +238,4 @@ ms.lasthandoff: 08/09/2017
 [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

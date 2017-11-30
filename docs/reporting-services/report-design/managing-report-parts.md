@@ -1,5 +1,5 @@
 ---
-title: La gestion des parties de rapports | Documents Microsoft
+title: Gestion des parties de rapports | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="managing-report-parts"></a>Gestion de parties de rapport
+# <a name="managing-report-parts"></a>Gestion des parties de rapport
   Les parties de rapports peuvent être réutilisées dans les rapports paginés par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
   
 ## <a name="managing-report-parts"></a>Gestion de parties de rapport  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  Lorsque les parties de rapports sont publiées à partir d'une application de création de rapports telle que le Générateur de rapports, sur un serveur de rapports en mode intégré SharePoint, le catalogue du serveur de rapports est également mis à jour et les recherches à partir de la bibliothèque reflètent précisément la partie de rapport nouvelle ou mise à jour.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Téléchargement direct de parties de rapports dans un dossier SharePoint  
- Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d'informations, consultez [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d'informations, consultez [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Les fichiers peuvent également être synchronisés en appelant certaines API d'administration Reporting Services telles que GetProperties et SetProperties.  
   
@@ -96,9 +95,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Gestion de contenu de serveur de rapports &#40; En Mode natif SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Parties de rapport dans le Concepteur de rapports &#40; SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

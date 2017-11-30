@@ -1,5 +1,5 @@
 ---
-title: "Propriété de EditionID (WMI MSReportServer_Instance) | Documents Microsoft"
+title: "EditionID, propriété (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- EditionID property
+helpviewer_keywords: EditionID property
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a69163ee7108ff7c1328cf65dac27b6b0af99d7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a0fe6ec6d4fcff7a1e363d3e764ec35be09a9a2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverinstance-properties---editionid"></a>Propriétés MSReportServer_Instance - EditionID
   Retourne l'édition du serveur de rapports. En lecture seule.  
@@ -51,4 +49,3 @@ public uint EditionID;
  [Membres MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

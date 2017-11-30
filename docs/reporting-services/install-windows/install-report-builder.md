@@ -1,31 +1,29 @@
 ---
-title: "Installer le Générateur de rapports | Documents Microsoft"
+title: "Installer le Générateur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 09/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d2d84a84ef5abf6f048fe5f0d73e5724ae32950
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03ea560675e5b89228ab3faa99a9d2c37586b4b9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-report-builder"></a>Installer le Générateur de rapports
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] est une application autonome installée sur votre ordinateur par vos propres soins ou par un administrateur. Vous pouvez l’installer à partir du Centre de téléchargement Microsoft, d’un serveur de rapport [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] le serveur de rapports ou d’un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Un administrateur installe et configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], accorde l’autorisation de télécharger l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du portail web, et gère les dossiers et les autorisations d’accès aux rapports, les parties des rapports et les datasets partagés enregistrés sur le serveur de rapports. Pour plus d’informations sur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, consultez [Reporting Services Report Server &#40; En Mode natif &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Un administrateur installe et configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], accorde l’autorisation de télécharger l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du portail web, et gère les dossiers et les autorisations d’accès aux rapports, les parties des rapports et les datasets partagés enregistrés sur le serveur de rapports. Pour plus d’informations sur l’administration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Reporting Services Report Server &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversion-mdmd-from--a--web-portal-or-sharepoint-library"></a>Installez l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir d’un portail web ou d’une bibliothèque SharePoint 
   
@@ -111,7 +109,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   
- [Désinstaller le Générateur de rapports](../../reporting-services/install-windows/uninstall-report-builder.md)  
+ [Désinstaller le générateur de rapports](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
   
-

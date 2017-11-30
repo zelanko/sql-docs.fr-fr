@@ -1,7 +1,6 @@
 ---
-title: Prise en charge des navigateurs pour Reporting Services et Power View | Documents Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Prise en charge des navigateurs pour Reporting Services et Power View | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,28 +20,27 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="browser-support-for-reporting-services-and-power-view"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
+# <a name="browser-support-for-reporting-services-and-power-view"></a>Prise en charge des navigateurs pour Reporting Services et Power View
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
 
-En savoir plus sur le navigateur que les versions sont prises en charge pour la gestion et l’affichage de SQL Server Reporting Services, les contrôles ReportViewer et Power View.
+Découvrez les versions de navigateurs prises en charge pour la gestion et l’affichage de SQL Server Reporting Services, des contrôles ReportViewer Controls et de Power View.
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Configuration requise pour le portail web
+## <a name="browser-requirements-for-the-web-portal"></a>Navigateurs exigés pour le portail web
 
 Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
@@ -155,12 +153,11 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Recherche et affichage de rapports dans le portail web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Recherche et affichage de rapports dans le portail Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portail web (SSRS en mode natif)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
-[Référence de paramètre d'accès URL](../reporting-services/url-access-parameter-reference.md)  
+[Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
 

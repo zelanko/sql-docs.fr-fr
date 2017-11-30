@@ -1,5 +1,5 @@
 ---
-title: "Domaines d’application pour les Applications de serveur de rapports | Documents Microsoft"
+title: "Domaines d’application des applications du serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0cec89b68c69b5e5ae6875d5d5d5e721008844cd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fa12c471b2074cc5aface50b6604f0ca1d14e954
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domaines d'application des applications du serveur de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le serveur de rapports est implémenté comme un service unique qui contient le service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan. Chaque application s'exécute dans son propre domaine d'application au sein du processus unique du serveur de rapports. Pour la plupart, les domaines d'application sont créés, configurés et gérés de façon interne. Toutefois, il peut s'avérer utile de savoir comment les opérations de recyclage se produisent pour les domaines d'application du serveur de rapports, si vous cherchez à résoudre des problèmes de performances ou de mémoire, ou si vous dépannez des interruptions de service.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Modifications de configuration sur le serveur de rapports.  
   
--   Modifications de configuration [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)].  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] .  
   
 -   Échecs d'allocation de mémoire.  
   
@@ -48,8 +47,8 @@ ms.lasthandoff: 08/09/2017
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |Opérations de recyclage planifiées qui se produisent à des intervalles prédéfinis|Par défaut, les domaines d'application sont recyclés toutes les 12 heures.<br /><br /> Les opérations de recyclage planifiées sont fréquentes pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] qui favorisent l'intégrité de l'ensemble du processus.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Oui. Le paramètre de configuration**RecycleTime** du fichier RSReportServer.config détermine l'intervalle de recyclage.<br /><br /> **MaxAppDomainUnloadTime** définit le temps d'attente pendant lequel le traitement en arrière-plan est autorisé à s'effectuer.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération de recyclage pour le service Web et le Gestionnaire de rapports.<br /><br /> Pour l'application de traitement en arrière-plan, le serveur de rapports crée un domaine d'application des nouveaux travaux ayant démarré à partir de planifications. Les travaux actifs sont autorisés à terminer leur exécution dans le domaine d'application actuel jusqu'à l'expiration du délai.|  
 |Modifications de configuration sur le serveur de rapports|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recycle les domaines d'application en réponse aux modifications du fichier RSReportServer.config.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Vous ne pouvez pas empêcher les opérations de recyclage d'avoir lieu. Toutefois, les opérations de recyclage qui se produisent en réponse à des modifications de configuration sont gérées de la même façon que les opérations de recyclage planifiées. Des domaines d'application sont créés pour les nouvelles requêtes tandis que les requêtes et travaux actifs finissent de s'exécuter dans le domaine d'application actuel.|  
-|Modifications de configuration [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]recycle les domaines d’application si des modifications sont apportées aux fichiers qu’il surveille (par exemple, fichiers machine.config et Web.config, et [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] fichiers programme).|Service Web Report Server<br /><br /> Gestionnaire de rapports|Non.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]gère l’opération.<br /><br /> Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] n'affectent pas le domaine d'application de traitement en arrière-plan.|  
-|Sollicitation de la mémoire et échecs d'allocation de mémoire|Le Common Language Runtime [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recycle immédiatement les domaines d'application en cas d'échec d'allocation de mémoire ou lorsque le serveur est soumis à une forte sollicitation de la mémoire.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Lorsque la sollicitation de la mémoire est élevée, le serveur de rapports n'accepte pas de nouvelles requêtes dans le domaine d'application actuel. Pendant la période où le serveur refuse les nouvelles requêtes, des erreurs HTTP 503 se produisent. Aucun domaine d'application n'est créé tant que l'ancien domaine d'application n'est pas déchargé. Cela signifie que si vous modifiez un fichier de configuration alors que le serveur est soumis à une forte sollicitation de la mémoire, les requêtes et travaux en cours d'exécution risquent de ne pas démarrer ou de ne pas se terminer.<br /><br /> En cas d'échec d'allocation de mémoire, tous les domaines d'application redémarrent immédiatement. Les travaux et requêtes en cours d'exécution sont supprimés. Vous devez les redémarrer manuellement.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Modifications de configuration|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] recycle les domaines d’application si des modifications sont apportées aux fichiers qu’il surveille (par exemple les fichiers machine.config et Web.config, ainsi que les fichiers programme [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ).|Service Web Report Server<br /><br /> Gestionnaire de rapports|Non.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gère l'opération.<br /><br /> Les opérations de recyclage débutées par [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] n'affectent pas le domaine d'application de traitement en arrière-plan.|  
+|Sollicitation de la mémoire et échecs d'allocation de mémoire|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recycle immédiatement les domaines d'application en cas d'échec d'allocation de mémoire ou lorsque le serveur est soumis à une forte sollicitation de la mémoire.|Service Web Report Server<br /><br /> Gestionnaire de rapports<br /><br /> Application de traitement en arrière-plan|Non.|Lorsque la sollicitation de la mémoire est élevée, le serveur de rapports n'accepte pas de nouvelles requêtes dans le domaine d'application actuel. Pendant la période où le serveur refuse les nouvelles requêtes, des erreurs HTTP 503 se produisent. Aucun domaine d'application n'est créé tant que l'ancien domaine d'application n'est pas déchargé. Cela signifie que si vous modifiez un fichier de configuration alors que le serveur est soumis à une forte sollicitation de la mémoire, les requêtes et travaux en cours d'exécution risquent de ne pas démarrer ou de ne pas se terminer.<br /><br /> En cas d'échec d'allocation de mémoire, tous les domaines d'application redémarrent immédiatement. Les travaux et requêtes en cours d'exécution sont supprimés. Vous devez les redémarrer manuellement.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>Opérations de recyclage planifiées et non planifiées  
  Les opérations de recyclage sont planifiées ou non planifiées en fonction des conditions qui en sont à l'origine :  
@@ -83,12 +82,11 @@ ms.lasthandoff: 08/09/2017
 |**MaxAppDomainUnloadTime**|Un domaine d'application de traitement en arrière-plan uniquement|Par défaut, un serveur de rapports alloue un délai d'attente de 30 minutes, durant lequel un domaine d'application est autorisé à s'arrêter au cours d'une opération de recyclage. Si les travaux en cours de traitement ne peuvent pas s'accomplir dans le délai imparti (ou si un travail prend plus de temps que ce qui a été accordé), l'instance du domaine d'application est redémarrée immédiatement. Tous les travaux inachevés prennent fin.<br /><br /> Pour plus d’informations sur l’état ou l’annulation des travaux qui s’exécutent sur le serveur de rapports, consultez [Annuler les travaux du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md).|  
   
 > [!NOTE]  
->  Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)], aucune d'entre elles ne répond au recyclage de domaine d'application planifié qui peut être spécifié dans machine.config pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] hébergées dans les services IIS (Internet Information Services).  
+>  Bien que le service Web Report Server et le Gestionnaire de rapports soient des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , aucune d'entre elles ne répond au recyclage de domaine d'application planifié qui peut être spécifié dans machine.config pour les applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] hébergées dans les services IIS (Internet Information Services).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modifier un fichier de Configuration Reporting Services &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configurer la mémoire disponible pour les Applications de serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
+ [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   
   
-

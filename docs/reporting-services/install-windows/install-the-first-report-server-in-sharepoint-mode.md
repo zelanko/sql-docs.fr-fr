@@ -1,89 +1,86 @@
 ---
-title: Installez le premier serveur de rapports en mode SharePoint | Documents Microsoft
-ms.custom:
-- SQL2016_New_Updated
+title: Installer le premier serveur de rapports en mode SharePoint | Microsoft Docs
+ms.custom: SQL2016_New_Updated
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 140c0f085919b504ab2263abbc944b80897751fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 83a4392c267f4981ec79ff3b1b7d7febfeab9572
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installez le premier serveur de rapports en mode SharePoint
+# <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installer le premier serveur de rapports en mode SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
 
-  Les procédures décrites dans cette rubrique vous guident dans une installation de serveur unique de Reporting Services en mode SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint. La rubrique peut également être utilisée pour des procédures individuelles pour mettre à jour une installation existante, par exemple pour créer une application de service Reporting Services.  
+  Les procédures de cette rubrique constituent un guide d’installation sur un serveur unique de Reporting Services en mode SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint. La rubrique peut également être utilisée pour des procédures individuelles dans le cadre de la mise à jour d’une installation existante, par exemple, pour créer une application de service Reporting Services.  
   
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
   
- Pour plus d’informations sur l’ajout de plusieurs serveurs de Reporting Services à une batterie de serveurs existante, consultez les rubriques suivantes :  
+ Pour plus d’informations sur l’ajout de serveurs Reporting Services supplémentaires à une batterie de serveurs existante, consultez les rubriques suivantes :  
   
 -   [Ajouter un serveur de rapports supplémentaire à une batterie &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
--   [Ajouter un serveur Web frontal Reporting Services supplémentaire à une batterie](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
+-   [Ajouter un serveur web frontal Reporting Services supplémentaire à une batterie](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
  Une installation sur un serveur unique est utile pour les scénarios de développement et de tests, mais n'est pas recommandée pour les environnements de production.  
   
-##  <a name="bkmk_singleserver"></a>Exemple de déploiement de serveur unique
+##  <a name="bkmk_singleserver"></a> Exemple de déploiement sur un serveur unique
 
- Une installation sur un serveur unique est utile pour les scénarios de développement et de tests, mais n'est pas recommandée pour un environnement de production. L’environnement de serveur unique fait référence à un ordinateur sur lequel les composants SharePoint et Reporting Services sur le même ordinateur. La rubrique ne couvre pas la montée en puissance parallèle avec plusieurs serveurs de Reporting Services.  
+ Une installation sur un serveur unique est utile pour les scénarios de développement et de tests, mais n'est pas recommandée pour un environnement de production. Un environnement à serveur unique fait référence à un seul ordinateur sur lequel SharePoint et les composants Reporting Services sont installés. La rubrique ne couvre pas la montée en puissance parallèle avec plusieurs serveurs Reporting Services.  
   
- Le diagramme suivant illustre les composants qui font partie d’un seul serveur de déploiement de Reporting Services.  
+ Le diagramme suivant montre les composants qui font partie d’un déploiement de Reporting Services sur un serveur unique.  
  
  > [!NOTE]
- > Pour SharePoint 2016, Excel Services a été déplacé vers Office Online Server et ne peut pas être utilisé dans un déploiement de serveur unique. Office Online Server doit être déployé sur un autre serveur. Pour plus d’informations, consultez [Office Online Server overview](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) (Vue d’ensemble d’Office Online Server) et [Configure Excel Online administrative settings](https://technet.microsoft.com/library/jj219698\(v=office.16\).aspx)(Configurer les paramètres d’administration Excel Online).
+ > Pour SharePoint 2016, Excel Services a été déplacé vers Office Online Server et ne peut pas être utilisé dans un déploiement de serveur unique. Office Online Server doit être déployé sur un autre serveur. Pour plus d’informations, consultez [Vue d’ensemble d’Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) et [Configurer les paramètres d’administration Excel Online](https://technet.microsoft.com/library/jj219698\(v=office.16\).aspx).
   
 |||  
 |-|-|  
 |**(1)**|Service SharePoint installé à partir d'une installation SQL Server. Vous pouvez créer une ou plusieurs applications de service Reporting Services.|  
-|**(2)**|Reporting Services macro complémentaire pour les produits SharePoint fournit les composants d’interface à l’utilisateur sur les serveurs SharePoint.|  
+|**(2)**|Le complément Reporting Services pour les produits SharePoint fournit les composants d’interface utilisateur sur les serveurs SharePoint.|  
 |**(3)**|L’application Excel Services est utilisée par Power View et [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Elle n’est pas disponible dans le déploiement d’un seul serveur pour SharePoint 2016. Un serveur [Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) est nécessaire.|  
 |**(4)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
   
- ![Déploiement de serveur unique en Mode SharePoint SSRS](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "déploiement de serveur unique en Mode SharePoint SSRS")  
+ ![Déploiement de SSRS en mode SharePoint sur un serveur unique](../../reporting-services/install-windows/media/rs-sharepoint-1server-deployment.gif "Déploiement de SSRS en mode SharePoint sur un serveur unique")  
   
 > [!TIP]  
 >  Pour obtenir des exemples de déploiement plus complexes, consultez [Topologies de déploiement pour les fonctionnalités SQL Server BI dans SharePoint](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).  
   
 ##  <a name="bkmk_setupaccounts"></a> Comptes d'installation
 
- Cette section décrit les comptes et les autorisations utilisées pour les étapes de déploiement principal de Reporting Services en mode SharePoint.  
+ Cette section décrit les comptes et les autorisations utilisés pour les étapes de déploiement principales de Reporting Services en mode SharePoint.  
   
- **Installation et inscription du Service Reporting Services :**  
+ **Installation et inscription du service Reporting Services :**  
   
--   Le compte actif lors de l’installation (appelé compte de « installation ») de Reporting Services en mode SharePoint doit disposer des droits d’administration sur l’ordinateur local. Si vous installez Reporting Services une fois que SharePoint est installé et le compte de « installation » est également membre du groupe Administrateurs de batterie de serveurs SharePoint, l’installation de Reporting Services inscrira le service Reporting Services pour vous. Si vous installez Reporting Services avant d’installer SharePoint ou si le compte de « installation » n’est pas un membre du groupe Administrateurs de batterie de serveurs, vous devez inscrire manuellement le service. Consultez la section [Étape 2 : inscrire et démarrer le service SharePoint Reporting Services](#bkmk_install_SSRS_sharedservice).  
+-   Le compte actif lors de l’installation (appelé compte d’« installation ») de Reporting Services en mode SharePoint doit disposer des droits d’administration sur l’ordinateur local. Si vous installez Reporting Services après avoir installé SharePoint et si le compte d’installation est également membre du groupe d’administrateurs de la batterie de serveurs SharePoint, l’installation de Reporting Services inscrit le service Reporting Services pour vous. Si vous installez Reporting Services avant d’installer SharePoint ou si le compte d’installation n’est pas membre du groupe d’administrateurs de la batterie de serveurs, vous devez inscrire le service manuellement. Consultez la section [Étape 2 : inscrire et démarrer le service SharePoint Reporting Services](#bkmk_install_SSRS_sharedservice).  
   
- **Création de Reporting Services des Applications de Service**  
+ **Création d’applications de service Reporting Services**  
   
--   Après l’installation et l’inscription du service Reporting Services, créez une ou plusieurs applications de service Reporting Services. Le « compte de service de la batterie de serveurs SharePoint » doit être temporairement membre du groupe des administrateurs locaux pour permettre la création de l'application de service Reporting Services. Pour plus d’informations sur les autorisations de compte SharePoint 2013, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/fr-fr/library/cc678863.aspx) ou, pour SharePoint 2016, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
+-   Après avoir installé et inscrit le service Reporting Services, créez une ou plusieurs applications de service Reporting Services. Le « compte de service de la batterie de serveurs SharePoint » doit être temporairement membre du groupe des administrateurs locaux pour permettre la création de l'application de service Reporting Services. Pour plus d’informations sur les autorisations de compte SharePoint 2013, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2013](http://technet.microsoft.com/library/cc678863.aspx) (http://technet.microsoft.com/fr-fr/library/cc678863.aspx) ou, pour SharePoint 2016, consultez [Autorisations de compte et paramètres de sécurité dans SharePoint 2016](https://technet.microsoft.com/library/cc678863\(v=office.16\).aspx).  
   
      Pour des raisons de sécurité, il est recommandé que les comptes d'administrateur de la batterie de serveurs SharePoint ne soient pas également des comptes d'administrateurs locaux du système d'exploitation. Si vous ajoutez un compte d'administrateur de batterie de serveurs au groupe des administrateurs locaux dans le cadre du processus d'installation, nous vous recommandons de supprimer le compte du groupe des administrateurs locaux une fois l'installation terminée.  
   
 ##  <a name="bkmk_install_SSRS"></a> Étape 1 : installer un serveur de rapports Reporting Services en mode SharePoint
 
- Cette étape installe un serveur de rapports Reporting Services en mode SharePoint et le complément Reporting Services pour les produits SharePoint. En fonction des éléments déjà installés sur votre ordinateur, il est possible que certaines pages d'installation décrites dans les étapes suivantes ne s'affichent pas.  
+ Cette étape permet d’installer un serveur de rapports Reporting Services en mode SharePoint, ainsi que le complément Reporting Services pour les produits SharePoint. En fonction des éléments déjà installés sur votre ordinateur, il est possible que certaines pages d'installation décrites dans les étapes suivantes ne s'affichent pas.  
  
  > [!IMPORTANT]
- > Pour SharePoint 2016, le serveur SharePoint que Reporting Services est installé doit avoir le **personnalisé** rôle de serveur. Le déploiement de Reporting Services est effectuée sur un serveur SharePoint qui n’est pas le **personnalisé** rôle, mais au cours de la fenêtre de maintenance SharePoint, MinRole arrête le service Reporting Services, car il détecte que Reporting Services en mode intégré SharePoint n’indique pas de prise en charge pour une des autres rôles de serveur SharePoint. Prend en charge uniquement l’application de service Reporting Services le **personnalisé** rôle.
+ > Pour SharePoint 2016, le serveur SharePoint sur lequel Reporting Services est installé doit avoir le rôle serveur **Personnalisé**. Le déploiement de Reporting Services réussira sur un serveur SharePoint qui n’est pas dans le rôle **Personnalisé**, mais lors de la prochaine fenêtre de maintenance SharePoint, MinRole arrêtera le service Reporting Services, car il détectera que Reporting Services en mode intégré SharePoint ne prend en charge aucun autre rôle serveur SharePoint. L’application de service Reporting Services prend uniquement en charge le rôle **Personnalisé**.
  
  > [!NOTE]
  > Si vous prévoyez aussi d’installer le service Power Pivot sur SharePoint 2016, installez-le avant Reporting Services. Le service Power Pivot ne peut pas être installé sur un serveur SharePoint avec le rôle **Personnalisé** . Il n’est ainsi pas nécessaire de basculer à plusieurs reprises entre les rôles.
  
- ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>Appliquer le rôle de serveur personnalisé à un serveur SharePoint 2016
+ ### <a name="apply-the-custom-server-role-to-a-sharepoint-2016-server"></a>Appliquer le rôle serveur Personnalisé à un serveur SharePoint 2016
  
  > [!NOTE]
  > Cela ne s’applique pas à SharePoint 2013.
@@ -149,18 +146,18 @@ ms.lasthandoff: 10/06/2017
   
 9. Si vous avez sélectionné les services de moteur de base de données, acceptez l'instance par défaut de **MSSQLSERVER** dans la page **Configuration de l'instance** et cliquez sur **Suivant**.  
   
-     ![Remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Remarque")architecture de service Reporting Services SharePoint n’est pas basé sur un serveur SQL Server « instance » comme l’était la précédente architecture de Reporting Services.  
+     ![remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")L’architecture de service SharePoint Reporting Services n’est pas basée sur une « instance » SQL Server comme l’était la précédente architecture de Reporting Services.  
   
-10. Si la page **Configuration du serveur** s'affiche, entrez les informations d'identification appropriées. Si vous souhaitez utiliser les fonctionnalités d’abonnement ou de la génération d’alertes de données Reporting Services, vous devez modifier le **Type de démarrage** pour l’Agent SQL Server **automatique**. En fonction des éléments déjà installés sur votre ordinateur, la page **Configuration du serveur** peut ne pas s'afficher.  
+10. Si la page **Configuration du serveur** s'affiche, entrez les informations d'identification appropriées. Si vous souhaitez utiliser les fonctionnalités d’alerte de données ou d’abonnement de Reporting Services, vous devez modifier le **Type de démarrage** de SQL Server Agent et choisir **Automatique**. En fonction des éléments déjà installés sur votre ordinateur, la page **Configuration du serveur** peut ne pas s'afficher.  
   
      Sélectionnez **Suivant**.  
   
 11. Si vous avez sélectionné les services Moteur de base de données, la page **Configuration du moteur de base de données** s’affiche. Ajoutez les comptes appropriés à la liste des administrateurs SQL, puis sélectionnez **Suivant**.  
   
-12. Dans la page **Configuration de Reporting Services** , l'option **Installer uniquement** devrait être sélectionnée. Cette option installe les fichiers de serveur de rapports et ne configure pas l’environnement SharePoint pour Reporting Services.  
+12. Dans la page **Configuration de Reporting Services** , l'option **Installer uniquement** devrait être sélectionnée. Cette option installe les fichiers du serveur de rapports mais ne configure pas l’environnement SharePoint pour Reporting Services.  
   
     > [!NOTE]
-    > Lorsque l'installation de SQL Server est terminée, suivez les sections suivantes de cette rubrique pour configurer l'environnement SharePoint. Cela inclut l’installation du service partagé Reporting Services et la création d’applications de service Reporting Services.  
+    > Lorsque l'installation de SQL Server est terminée, suivez les sections suivantes de cette rubrique pour configurer l'environnement SharePoint. Cela consiste notamment à installer le service partagé Reporting Services et à créer des applications de service Reporting Services.  
   
      ![ssRS-2016-setup-configuration](../../reporting-services/install-windows/media/ssrs-2016-setup-configuration.png)
   
@@ -170,17 +167,17 @@ ms.lasthandoff: 10/06/2017
   
 15. L'installation prend plusieurs minutes. Vous verrez la page **Terminé** avec les fonctionnalités répertoriées et l'état de chaque fonctionnalité. Une boîte de dialogue d'informations peut s'afficher indiquant que l'ordinateur doit être redémarré.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a>Étape 2 : Inscrire et démarrer le SharePoint Service Reporting Services  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell")  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> Étape 2 : inscrire et démarrer le service Reporting Services SharePoint  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
 > [!NOTE]
-> Si vous procédez à une installation dans une batterie de serveurs SharePoint existante, vous pouvez ignorer les étapes de cette section. Le service SharePoint de Reporting Services est installé et démarré lors de l’exécution de l’Assistant installation de SQL Server dans le cadre de la section précédente de ce document.  
+> Si vous procédez à une installation dans une batterie de serveurs SharePoint existante, vous pouvez ignorer les étapes de cette section. Le service Reporting Services SharePoint est installé et démarré lors de l’exécution de l’Assistant Installation de SQL Server, comme décrit dans la section précédente de ce document.  
   
- Voici les raisons courantes pour lesquelles vous devez inscrire manuellement le service Reporting Services.  
+ Vous pouvez avoir besoin d’inscrire manuellement le service Reporting Services notamment pour les raisons suivantes :  
   
--   Vous avez installé Reporting Services en mode SharePoint avant d’installer SharePoint.  
+-   Vous avez installé le mode SharePoint de Reporting Services avant d’installer SharePoint.  
   
--   Le compte utilisé pour installer le mode SharePoint de Reporting Services, n’était pas membre du groupe Administrateurs de batterie de serveurs SharePoint. Pour plus d'informations, consultez la section [Setup accounts](#bkmk_setupaccounts).  
+-   Le compte utilisé pour l’installation du mode SharePoint de Reporting Services n’était pas membre du groupe d’administrateurs de la batterie de serveurs SharePoint. Pour plus d'informations, consultez la section [Setup accounts](#bkmk_setupaccounts).  
   
  Les fichiers nécessaires ont été installés dans le cadre de l'assistant Installation de SQL Server, mais les services doivent être enregistrés dans la batterie de serveurs SharePoint.  
   
@@ -216,9 +213,9 @@ ms.lasthandoff: 10/06/2017
     > [!IMPORTANT]
     > Si un message d'erreur semblable au suivant s'affiche :  
     >   
-    >     Install-SPRSService : Le terme 'Install-SPRSService' **n’est pas reconnu** comme nom de l’applet de commande, fonction, fichier de script ou programme exécutable. Vérifiez l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct et réessayez.  
+    >     Install-SPRSService : le terme « Install-SPRSService » **n’est pas reconnu** comme nom d’une applet de commande, d’une fonction, d’un fichier de script ou d’un programme exécutable. Vérifiez l'orthographe du nom, ou si un chemin d'accès existe, vérifiez que le chemin d'accès est correct et réessayez.  
     >
-    > Soit vous êtes dans Windows Powershell au lieu de SharePoint Management Shell, soit le mode SharePoint de Reporting Services n’est pas installé. Pour plus d’informations sur Reporting Services et de PowerShell, consultez [applets de commande PowerShell pour Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+    > Soit vous êtes dans Windows Powershell au lieu de SharePoint Management Shell, soit le mode SharePoint de Reporting Services n’est pas installé. Pour plus d’informations sur Reporting Services et PowerShell, consultez [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
  Vous pouvez également démarrer le service depuis l'Administration centrale de SharePoint au lieu d'exécuter la troisième commande PowerShell. Les étapes suivantes sont également utiles pour vérifier que le service fonctionne.  
   
@@ -231,7 +228,7 @@ ms.lasthandoff: 10/06/2017
     > [!NOTE]  
     >  Si le service Reporting Services reste à l’état **Démarrage** et ne passe pas à **Démarré**, vérifiez que le service « Administration SharePoint 2013 » est démarré dans le Gestionnaire de serveur Windows.  
   
-##  <a name="bkmk_create_serrviceapplication"></a>Étape 3 : Créer une application de service Reporting Services  
+##  <a name="bkmk_create_serrviceapplication"></a> Étape 3 : créer une application de service Reporting Services  
  Cette section fournit les étapes pour créer une application de service et une description des propriétés, si vous consultez une application de service existante.  
   
 1.  Dans l’Administration centrale de SharePoint, dans le groupe **Gestion des applications** , sélectionnez **Gérer les applications de service**.  
@@ -241,7 +238,7 @@ ms.lasthandoff: 10/06/2017
 3.  Dans le menu Nouveau, sélectionnez **Application de service SQL Server Reporting Services**.  
   
     > [!IMPORTANT]  
-    >  Si l’option de Reporting Services n’apparaît pas dans la liste, il est un **indication que service partagé Reporting Services n’est pas installée**. Passez en revue la section précédente sur l’utilisation des applets de commande PowerShell pour installer le service Reporting Services.  
+    >  Si l’option Reporting Services ne figure pas dans la liste, cela **indique que le service partagé Reporting Services n’est pas installé**. Examinez la section précédente sur l’utilisation des applets de commande PowerShell pour installer le service Reporting Services.  
   
 4.  Dans la page **Créer une application de service SQL Server Reporting Services** , entrez un nom pour l'application. Si vous créez plusieurs applications de service Reporting Services, un nom descriptif ou une convention d'affectation de noms peut vous aider à organiser vos opérations d'administration et de gestion.  
   
@@ -259,27 +256,27 @@ ms.lasthandoff: 10/06/2017
   
 10. Sélectionnez **OK**.  
   
-11. Le processus de création d'une application de service peut durer plusieurs minutes. Lorsqu'il est terminé, vous voyez s'afficher un message de confirmation et un lien vers la page **Configurer les abonnements et les alertes** . Terminez l’étape de configuration si vous souhaitez utiliser la fonctionnalité d’abonnements Reporting Services ou de la fonctionnalité d’alertes de données. Pour plus d’informations, consultez [Provision Subscriptions and Alerts for SSRS Service Applications](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+11. Le processus de création d'une application de service peut durer plusieurs minutes. Lorsqu'il est terminé, vous voyez s'afficher un message de confirmation et un lien vers la page **Configurer les abonnements et les alertes** . Réalisez l’étape de configuration si vous souhaitez utiliser la fonctionnalité d’abonnement de Reporting Services ou la fonctionnalité d’alertes de données. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell") pour plus d’informations sur l’utilisation de PowerShell pour créer une application de service Reporting Services, consultez :  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Pour plus d’informations sur l’utilisation de PowerShell pour créer une application de service Reporting Services, consultez :  
   
 -   Consultez la section [Script Windows PowerShell pour les étapes 1 à 4](#bkmk_full_script).  
   
--   Rubrique [pour créer une Application de Service de Services de création de rapports à l’aide de PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+-   Rubrique [Pour créer une application de service Reporting Services à l’aide de PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="bkmk_powerview"></a>Étape 4 : Activer la fonctionnalité de collection de sites Power View.
+##  <a name="bkmk_powerview"></a> Étape 4 : activer la fonctionnalité de collection de sites Power View
 
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité de SQL Server 2016 Reporting Services complément pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] des produits SharePoint, est une fonctionnalité de collection de sites. La fonctionnalité est activée automatiquement pour les collections de sites racine et les collections de sites créées après que le complément Reporting Services est installé. Si vous envisagez d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez vérifier que la fonctionnalité est activée.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], fonctionnalité du complément SQL Server 2016 Reporting Services pour les produits [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, est une fonctionnalité de collection de sites. Elle est activée automatiquement pour les collections de sites racine et les collections de sites créées après l’installation du complément Reporting Services. Si vous envisagez d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez vérifier que la fonctionnalité est activée.  
   
- Si vous installez le complément Reporting Services pour les produits SharePoint après l’installation du serveur SharePoint, puis la fonctionnalité d’intégration de serveur de rapports et la fonctionnalité d’intégration Power View sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, activez manuellement les fonctionnalités.  
+ Si vous installez le complément Reporting Services pour les produits SharePoint après l’installation du serveur SharePoint, la fonctionnalité d’intégration Report Server et la fonctionnalité d’intégration Power View sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, activez manuellement les fonctionnalités.  
   
 #### <a name="to-activate-or-verify-the-power-view-site-collection-feature"></a>Pour activer ou vérifier la fonctionnalité de collection de sites Power View  
   
 1.  Les étapes suivantes considèrent que votre site SharePoint est configuré pour la **version d’affichage**2013, pour SharePoint 2013.  
   
-     Ouvrez votre navigateur sur le site SharePoint souhaité. Par exemple http://\<nom_serveur >/sites/bi  
+     Ouvrez votre navigateur sur le site SharePoint souhaité. Par exemple, http://\<nom_serveur>/sites/bi  
   
-2.  Sélectionnez **paramètres**![paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint").  
+2.  Sélectionnez **Paramètres**![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint").  
   
 3.  Sélectionnez **Paramètres du site**.  
   
@@ -291,14 +288,14 @@ ms.lasthandoff: 10/06/2017
   
  Cette procédure doit être exécutée par collection de sites. Pour plus d'informations, consultez [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md).  
   
-##  <a name="bkmk_full_script"></a>Script Windows PowerShell pour les étapes 1 à 4  
+##  <a name="bkmk_full_script"></a> Script Windows PowerShell pour les étapes 1 à 4  
  Le script PowerShell de cette section correspond à l'exécution des étapes 1 à 4 des sections précédentes. Le script effectue les tâches suivantes :  
   
--   Installe le service Reporting Services et proxy de service, puis démarre le service.  
+-   Installe le service Reporting Services et le proxy de service, puis démarre le service.  
   
 -   Crée un proxy de service nommé « Reporting Services ».  
   
--   Crée une application de service Reporting Services nommée « Application de Reporting Services ».  
+-   Crée une application de service Reporting Services nommée « Application Reporting Services ».  
   
 -   Active les fonctionnalités [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] pour une collection de sites.  
   
@@ -390,7 +387,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 ```  
   
-##  <a name="bkmk_additional_config"></a>Configuration supplémentaire  
+##  <a name="bkmk_additional_config"></a> Configuration supplémentaire  
  Cette section décrit les étapes de configuration supplémentaires qui sont importantes dans la plupart des déploiements de SharePoint.  
   
 ###  <a name="bkmk_configure_ECS"></a> Configurer Excel Services et PowerPivot  
@@ -408,26 +405,26 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
 -   [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx).  
 
-En outre, le compte utilisé par l’application de service Reporting Services, de la sécurité de pool d’applications doit être un administrateur sur le serveur Analysis Services.
+De plus, le compte de sécurité du pool d’applications utilisé par l’application de service Reporting Services doit être administrateur sur le serveur Analysis Services.
   
-###  <a name="bkmk_provision_agent"></a>Configurer les abonnements et les alertes  
- L’abonnement de Reporting Services et les fonctionnalités d’alerte de données peuvent nécessiter la configuration des autorisations de l’Agent SQL Server. Si un message d'erreur apparaît indiquant que SQL Server Agent est obligatoire alors que vous avez vérifié qu'il s'exécute, mettez à jour les autorisations. Cliquez sur le lien **Configurer les abonnements et les alertes** dans la page de création réussie d'application de service pour accéder à une autre page dans laquelle vous pouvez configurer SQL Server Agent. L’étape de configuration est nécessaire si votre déploiement dépasse les limites des ordinateurs, par exemple lorsque l’instance de base de données SQL Server se trouve sur un autre ordinateur. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+###  <a name="bkmk_provision_agent"></a> Mettre en service les abonnements et les alertes  
+ Les fonctionnalités d’abonnement et d’alerte de données de Reporting Services peuvent exiger la configuration d’autorisations SQL Server Agent. Si un message d'erreur apparaît indiquant que SQL Server Agent est obligatoire alors que vous avez vérifié qu'il s'exécute, mettez à jour les autorisations. Cliquez sur le lien **Configurer les abonnements et les alertes** dans la page de création réussie d'application de service pour accéder à une autre page dans laquelle vous pouvez configurer SQL Server Agent. L’étape de configuration est nécessaire si votre déploiement dépasse les limites des ordinateurs, par exemple lorsque l’instance de base de données SQL Server se trouve sur un autre ordinateur. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
-### <a name="configure-e-mail-for-ssrs-service-applications"></a>Configurer la messagerie électronique pour les applications de service SSRS  
- La fonctionnalité d’alertes de données Reporting Services envoie des messages électroniques. Pour envoyer un courrier électronique, vous devrez peut-être configurer votre application de service Reporting Services et vous devrez peut-être modifier l’extension de remise par courrier électronique pour l’application de service. Si vous envisagez d’utiliser l’extension de remise de courrier électronique pour la fonctionnalité d’abonnement de Reporting Services, les paramètres de messagerie sont requis. Pour plus d’informations, consultez [configurer la messagerie électronique pour une Application de Service Reporting Services &#40; SharePoint 2013 et SharePoint 2016 &#41; ](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
+### <a name="configure-e-mail-for-ssrs-service-applications"></a>Configurer l’e-mail pour les applications de service SSRS  
+ La fonctionnalité d’alertes de données de Reporting Services envoie des alertes dans des e-mails. Pour envoyer un e-mail, vous devrez peut-être configurer votre application de service Reporting Services et modifier l’extension de remise d’e-mail pour l’application de service. Si vous prévoyez d’utiliser l’extension de remise d’e-mail pour la fonctionnalité d’abonnement de Reporting Services, les paramètres d’e-mail sont nécessaires. Pour plus d’informations, consultez [Configurer l’e-mail pour une application de service Reporting Services &#40;SharePoint 2013 et SharePoint 2016&#41;](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f). 
   
-### <a name="add-reporting-services-content-types-to-content-libraries"></a>Ajouter des types de contenu Reporting Services aux bibliothèques de contenu  
- Reporting Services fournit les types de contenu prédéfinis qui permettent de gérer les fichiers source (.rsds) de données partagées, modèles de rapport (.smdl) et les fichiers de définition (.rdl) de rapport Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+### <a name="add-reporting-services-content-types-to-content-libraries"></a>Ajouter les types de contenu Reporting Services aux bibliothèques de contenu  
+ Reporting Services fournit des types de contenu prédéfinis pour gérer les fichiers de sources de données partagées (.rsds), les modèles de rapports (.smdl) et les fichiers de définition de rapport (.rdl) du Générateur de rapports. L'ajout à une bibliothèque des types de contenu **Rapport du Générateur de rapports**, **Modèle de rapport**et **Source de données du rapport** active la commande **Nouveau** , qui permet de créer de nouveaux documents de ce type. Pour plus d’informations, consultez [Ajouter des types de contenus Reporting Services à une bibliothèque SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Activer la fonctionnalité de synchronisation des fichiers de serveur de rapports  
  Si vos utilisateurs téléchargent fréquemment des éléments de rapport publiés directement vers des bibliothèques de documents SharePoint, la fonctionnalité de niveau de site **Synchronisation de fichiers de serveur de rapports** est très utile. La fonctionnalité de synchronisation de fichiers synchronise le catalogue du serveur de rapports avec les éléments des bibliothèques de documents à des intervalles plus fréquents. Pour plus d'informations, consultez [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Vérifier l'installation  
- Voici les étapes suggérées et procédures pour vérifier le déploiement en mode SharePoint de Reporting Services.  
+ Les mesures et procédures suggérées suivantes permettent de vérifier le déploiement du mode SharePoint de Reporting Services.  
   
 -   Consultez la section SharePoint dans la rubrique de contrôle [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
--   Dans une bibliothèque de documents SharePoint, créez un rapport Reporting Services de base qui contient uniquement une zone de texte, par exemple un titre. Le rapport ne contient aucune source de données ni aucun dataset. Le but est de vérifier que vous pouvez ouvrir le Générateur de rapports, créer un rapport de base et afficher un aperçu du rapport.  
+-   Dans une bibliothèque de documents SharePoint, créez un rapport de base Reporting Services qui ne contient qu’une zone de texte, un titre par exemple. Le rapport ne contient aucune source de données ni aucun dataset. Le but est de vérifier que vous pouvez ouvrir le Générateur de rapports, créer un rapport de base et afficher un aperçu du rapport.  
   
      Enregistrez le rapport dans la bibliothèque de documents, puis exécutez le rapport depuis la bibliothèque. Pour plus d’informations sur la création de rapports avec le Générateur de rapports, consultez [Démarrer le Générateur de rapports](http://technet.microsoft.com/library/ms159221.aspx).  
   
@@ -439,4 +436,3 @@ En outre, le compte utilisé par l’application de service Reporting Services, 
 [Services Reporting Services SharePoint et applications de service](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

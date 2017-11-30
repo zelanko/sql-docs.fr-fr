@@ -1,5 +1,5 @@
 ---
-title: Publication de rapports sur un serveur de rapports | Documents Microsoft
+title: Publication de rapports sur un serveur de rapports | Microsoft Docs
 ms.custom: 
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f7e44b6527c90419e5ae220260ab08a706c2372
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c19bf5cffb0330cde3e8f9125c5f1c5cac55ad24
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
   Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier les rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server qui peut inclure plusieurs rapports et sources de données. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*à la place du terme *publier*. Les deux termes sont interchangeables.  
@@ -58,7 +57,7 @@ L'autorisation est déterminée via la sécurité basée sur les rôles définie
   
 ## <a name="to-publish-all-reports-in-a-project"></a>Pour publier tous les rapports d'un projet  
   
-Sur le **générer** menu, cliquez sur **déployer \<nom de projet de rapport >**. Vous pouvez également, dans l’Explorateur de solutions, cliquer avec le bouton droit sur le projet de rapport, puis cliquer sur **Déployer**. Vous pouvez consulter l'état du processus de publication dans la fenêtre Sortie.  
+Dans le menu **Générer**, cliquez sur **Déployer \<nom_projet_rapport>**. Vous pouvez également, dans l’Explorateur de solutions, cliquer avec le bouton droit sur le projet de rapport, puis cliquer sur **Déployer**. Vous pouvez consulter l'état du processus de publication dans la fenêtre Sortie.  
   
 Lorsque vous déployez un projet Report Server, les sources de données partagées dans le projet de rapport sont également déployées. Tous les rapports sont déployés à l'aide de la même configuration de projet : sur le même serveur de rapports, le même dossier sur le serveur, et ainsi de suite. Pour publier des rapports sur différents serveurs, publiez-les un par un ou incluez uniquement les rapports que vous souhaitez dans le projet Report Server. Une solution peut inclure plusieurs projets Report Server et l'utilisation de plusieurs projets peut simplifier la gestion du déploiement des rapports, car vous pouvez utiliser une configuration différente pour déployer des projets différents. 
   
@@ -76,8 +75,7 @@ Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le rapport, 
   
 ## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés du projet, boîte de dialogue](../../reporting-services/tools/project-property-pages-dialog-box.md)   
- [Gestion de contenu de serveur de rapports &#40; En Mode natif SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md)  
   
   
-

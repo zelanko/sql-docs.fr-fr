@@ -3,10 +3,9 @@ title: "Ajouter le basculement de base de données amélioré à un groupe de di
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
-ms.reviewer: 
+ms.reviewer: mikeray
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: cd058f11f860682754f9dfe06830fafb087b1fe7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Ajouter le basculement de base de données amélioré à un groupe de disponibilité (SQL Server)
 
 Dans SQL Server 2012 et 2014, si une base de données membre d’un groupe de disponibilité sur le réplica principal perd la possibilité d’écrire des transactions, elle ne déclenche pas de basculement même si les réplicas sont synchronisés et configurés pour le basculement automatique.
@@ -44,7 +41,7 @@ La configuration du groupe de disponibilité est la même que celle du scénario
 
 Un groupe de disponibilité est configuré entre l’instance A et l’instance B, contenant deux bases de données : DB1 et DB2. Le mode de disponibilité défini est la validation synchrone avec un mode de basculement automatique. Le basculement de base de données amélioré est activé. L’accès au disque contenant les données de DB2 et les fichiers journaux des transactions est perdu. Quand le problème est détecté, le groupe de disponibilité bascule automatiquement vers l’instance B.
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>Configuration et affichage de l’option de basculement de base de données amélioré
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Configurer et afficher l’option de basculement de base de données amélioré
 
 Le basculement de base de données amélioré peut être configuré à l’aide de SQL Server Management Studio ou Transact-SQL. Les applets de commande PowerShell n’ont pas cette possibilité. Par défaut, le basculement de base de données amélioré est désactivé.
 
@@ -63,17 +60,18 @@ Utilisez les instructions figurant dans la rubrique [Utiliser l’Assistant Grou
 ### <a name="transact-sql"></a>Transact-SQL
 
 Pour configurer le comportement de basculement de base de données amélioré pendant la création d’un groupe de disponibilité, DB_FAILOVER doit être défini sur ON comme suit :
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 Pour ajouter ce comportement après avoir configuré un groupe de disponibilité, utilisez la commande ALTER AVAILABILITY GROUP :
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 Pour désactiver ce comportement, exécutez la commande ALTER AVAILABILITY GROUP suivante :
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Vue de gestion dynamique
@@ -88,5 +86,4 @@ Pour déterminer si le basculement de base de données amélioré est activé po
 - [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Créer un groupe de disponibilité avec Transact-SQL](create-an-availability-group-transact-sql.md)
-
 

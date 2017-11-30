@@ -1,5 +1,5 @@
 ---
-title: "Personnaliser le rendu des paramètres d’Extension dans RSReportServer.Config | Documents Microsoft"
+title: "Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config
   Vous pouvez spécifier des paramètres d'extension de rendu dans le fichier de configuration RSReportServer afin de remplacer le comportement de la génération de rapport par défaut pour les rapports exécutés sur un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous pouvez modifier les paramètres d'extension de rendu pour obtenir les résultats suivants :  
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   La structure XML **DeviceInfo** définit les paramètres d’informations sur l’appareil qui sont utilisés par une extension de rendu. La plupart des paramètres d'extension de rendu sont spécifiés en tant que paramètres d'informations de périphérique.  
   
- Vous pouvez utiliser un éditeur de texte pour modifier le fichier. Le fichier RSReportServer.config est situé dans le dossier \Reporting Services\Report Server\Bin. Pour plus d’informations sur la modification des fichiers de configuration, consultez [modifier un fichier de Configuration Reporting Services &#40; RSreportserver.config &#41; ](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
+ Vous pouvez utiliser un éditeur de texte pour modifier le fichier. Le fichier RSReportServer.config est situé dans le dossier \Reporting Services\Report Server\Bin. Pour plus d’informations sur la modification des fichiers de configuration, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="changing-the-display-name"></a>Modification du nom complet  
  Le nom complet d'une extension de rendu apparaît dans la liste Exporter de la barre d'outils Rapport. Un nom complet par défaut peut être, par exemple, au format archive Web, fichier TIFF et fichier Acrobat (PDF). Vous pouvez remplacer le nom complet par défaut par une valeur personnalisée en indiquant l’élément **OverrideNames** dans les fichiers de configuration. De plus, si vous définissez deux instances d’une même extension de rendu, vous pouvez utiliser l’élément **OverrideNames** pour faire la distinction entre chaque instance dans la liste Exporter.  
@@ -136,14 +135,13 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de configuration RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Fichier de Configuration RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
+ [Fichier de configuration RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [Paramètres d’informations de périphérique CSV](../reporting-services/csv-device-information-settings.md)   
- [Excel Device Information Settings](../reporting-services/excel-device-information-settings.md)   
+ [Paramètres d’informations de périphérique Excel](../reporting-services/excel-device-information-settings.md)   
  [Paramètres d’informations de périphérique HTML](../reporting-services/html-device-information-settings.md)   
- [Image Device Information Settings](../reporting-services/image-device-information-settings.md)   
- [MHTML Device Information Settings](../reporting-services/mhtml-device-information-settings.md)   
+ [Paramètres d’informations de périphérique pour l’image](../reporting-services/image-device-information-settings.md)   
+ [Paramètres d’informations de périphérique pour le format de rendu MHTML](../reporting-services/mhtml-device-information-settings.md)   
  [Paramètres d’informations de périphérique PDF](../reporting-services/pdf-device-information-settings.md)   
- [Paramètres d’informations de périphérique XML](../reporting-services/xml-device-information-settings.md)  
+ [Paramètres des informations de périphériques XML](../reporting-services/xml-device-information-settings.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "À l’aide d’un Dataset externe avec Reporting Services | Documents Microsoft"
+title: "Utilisation d’un jeu de données externe avec Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilisation d'un dataset externe avec Reporting Services
-  Le **DataSet** objet est essentiel à la prise en charge déconnectées et distribuées avec des scénarios de données [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Le **DataSet** objet est une représentation résidente en mémoire de données qui fournit un modèle de programmation relationnel cohérent, quelle que soit la source de données. Il peut être utilisé avec plusieurs sources de données différentes, avec des données XML ou pour gérer des données locales à l'application. Le **DataSet** objet représente un jeu complet de données, y compris les tables associées, des contraintes et des relations entre les tables. Raison de la **DataSet** polyvalence de l’objet dans le stockage et l’exposition de données, vos données peut-être souvent être traitée et transformée en un **DataSet** avant toute création de rapports sur ces données de l’objet.  
+  L’objet **DataSet** joue un rôle essentiel dans la prise en charge de scénarios de données déconnectés et distribués avec [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L’objet **DataSet** est une représentation résidant en mémoire de données qui fournit un modèle de programmation relationnel cohérent indépendamment de la source de données. Il peut être utilisé avec plusieurs sources de données différentes, avec des données XML ou pour gérer des données locales à l'application. L’objet **DataSet** représente un jeu complet de données, y compris des tables associées, des contraintes et des relations entre les tables. En raison de la polyvalence de l’objet **DataSet** concernant le stockage et l’exposition des données, il est probable que vos données soient traitées et transformées en objet **DataSet** avant toute création de rapport sur ces données.  
   
- Avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensions pour le traitement de données, vous pouvez intégrer personnalisés **DataSet** les objets créés par des applications externes. Pour ce faire, vous créez une extension de traitement de données personnalisées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] qui agit comme un pont entre votre **DataSet** objet et le serveur de rapports. La plupart du code pour traiter cet **DataSet** objet est contenu dans le **DataReader** classe que vous créez.  
+ Avec les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous pouvez intégrer n’importe quel objet **DataSet** personnalisé ayant été créé par des applications externes. Pour ce faire, vous créez une extension pour le traitement des données personnalisée dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] qui agit comme un pont entre votre objet **DataSet** et le serveur de rapports. La majeure partie du code nécessaire pour traiter cet objet **DataSet** est contenue dans la classe **DataReader** que vous créez.  
   
- La première étape à l’exposition votre **DataSet** objet sur le serveur de rapports consiste à implémenter une méthode spécifique du fournisseur dans votre **DataReader** classe peut remplir une **DataSet** objet. L’exemple suivant montre comment charger des données statiques dans une **DataSet** objet à l’aide d’une méthode spécifique au fournisseur dans votre **DataReader** classe.  
+ La première étape à suivre pour exposer votre objet **DataSet** au serveur de rapports consiste à implémenter une méthode spécifique au fournisseur dans votre classe **DataReader** capable de remplir un objet **DataSet**. L’exemple suivant indique comment charger des données statiques dans un objet **DataSet** en utilisant une méthode spécifique du fournisseur dans votre classe **DataReader**.  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,12 +166,11 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- Une fois que vous créez ou que vous récupérez votre jeu de données, vous pouvez utiliser la **DataSet** objet dans vos implémentations de la **en lecture**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, et **FieldCount** membres de la **DataReader** classe.  
+ Après avoir créé ou récupéré votre dataset, vous pouvez utiliser l’objet **DataSet** dans vos implémentations des membres **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, et **FieldCount** de la classe **DataReader**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implémentation d’une Extension de traitement des données](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Bibliothèque d’Extension de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Implémentation d’une extension pour le traitement des données](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

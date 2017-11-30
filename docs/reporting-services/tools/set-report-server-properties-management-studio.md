@@ -1,5 +1,5 @@
 ---
-title: "Définir les propriétés du serveur de rapports (Management Studio) | Documents Microsoft"
+title: "Définir les propriétés du serveur de rapports (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report servers [Reporting Services], properties
+helpviewer_keywords: report servers [Reporting Services], properties
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 729aad553e15f0169f8144f21809c828a8058d56
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 21b1dd73eb8f98d2c9a853e7886d81f4ee4a8454
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-report-server-properties-management-studio"></a>Définir les propriétés du serveur de rapports (Management Studio)
   Vous pouvez définir les propriétés système du serveur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] afin d’activer des fonctionnalités ou de définir les valeurs par défaut du serveur.  
@@ -32,11 +30,10 @@ ms.lasthandoff: 08/09/2017
   
 1.  Démarrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et connectez-vous à une instance de serveur de rapports.  
   
-2.  Cliquez avec le bouton droit sur le nœud du serveur de rapports, puis sélectionnez **Propriétés**. Cliquez sur **Avancé** pour ouvrir la page de propriétés. Consultez [Propriétés du serveur &#40;page Avancé&#41;](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) pour obtenir une description de chaque propriété.  
+2.  Cliquez avec le bouton droit sur le nœud du serveur de rapports, puis sélectionnez **Propriétés**. Cliquez sur **Avancé** pour ouvrir la page de propriétés. Consultez [Propriétés du serveur &#40;page Avancé&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) pour obtenir une description de chaque propriété.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propriétés de système de serveur de rapports](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Propriétés système du serveur de rapports](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

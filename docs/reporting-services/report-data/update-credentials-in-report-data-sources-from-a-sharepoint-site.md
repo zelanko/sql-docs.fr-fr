@@ -1,5 +1,5 @@
 ---
-title: "Mettre à jour les informations d’identification dans les Sources de données de rapport à partir d’un Site SharePoint | Documents Microsoft"
+title: "Mettre à jour les informations d’identification dans les sources de données de rapport à partir d’un site SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a51aa3ec7297ff2c183057f32e35a9012dddc6af
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Mettre à jour les informations d'identification dans les sources de données de rapport à partir d'un site SharePoint
   Cette rubrique explique comment mettre à jour les sources de données incorporées dans les rapports et les sources de données partagées enregistrées dans une bibliothèque de documents SharePoint.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  Tapez un nom d'utilisateur et un mot de passe.  
   
-    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le dans ce format : \<domaine >\\< compte\>, puis sélectionnez **utiliser comme informations d’identification Windows lors de la connexion à la source de données**.  
+    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le en respectant le format suivant : \<domaine>\\<compte\>, puis sélectionnez **Utiliser comme informations d’identification Windows lors de la connexion à la source de données**.  
   
     -   Si le nom d'utilisateur et le mot de passe sont des informations d'identification de base de données, ne sélectionnez pas **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**. Si le serveur de base de données prend en charge l'emprunt d'identité ou la délégation, vous pouvez sélectionner **Définir le contexte d'exécution pour ce compte**.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  Tapez un nom d'utilisateur et un mot de passe.  
   
-    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le dans ce format : \<domaine >\\< compte\>, puis sélectionnez **utiliser comme informations d’identification Windows lors de la connexion à la source de données.**  
+    -   Si le compte est un compte d’utilisateur de domaine Windows, spécifiez-le en respectant le format suivant : \<domaine>\\<compte\>, puis sélectionnez **Utiliser comme informations d’identification Windows lors de la connexion à la source de données**.  
   
     -   Si le nom d'utilisateur et le mot de passe sont des informations d'identification de base de données, ne sélectionnez pas **Utiliser comme informations d'identification Windows lors de la connexion à la source de données**. Si le serveur de base de données prend en charge l'emprunt d'identité ou la délégation, vous pouvez sélectionner **Définir le contexte d'exécution pour ce compte**.  
   
@@ -94,4 +93,3 @@ ms.lasthandoff: 08/09/2017
  [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   
-

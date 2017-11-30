@@ -1,5 +1,5 @@
 ---
-title: "Préparation à l’implémentation d’une Extension de traitement de données | Documents Microsoft"
+title: "Préparation à l’implémentation d’une extension pour le traitement des données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,32 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6d516201d8018b1d58b77be8e3cf543745da037a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/14/2017
-
+ms.openlocfilehash: cacd1a989748897d369d9e920a5b6e0410d7f063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Préparation à l'implémentation d'une extension pour le traitement des données
-  Avant d’implémenter votre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extension pour le traitement de données, vous devez définir les interfaces à implémenter. Vous souhaiterez peut-être fournissent des implémentations spécifiques à l’extension de l’ensemble des interfaces, ou vous pouvez simplement vouloir concentrer votre implémentation sur un sous-ensemble, tel que le <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> interfaces dans lequel les clients interagissent essentiellement avec un jeu de résultats comme un **DataReader** de l’objet et utilisez votre [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] extension pour le traitement des données comme un pont entre le jeu de résultats et votre source de données.  
+  Avant d’implémenter votre extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] comme un pont entre le jeu de résultats et votre source de données.  
   
  Vous pouvez implémenter des extensions pour le traitement des données selon l'une des deux manières suivantes :  
   
--   Vos classes d’extension de traitement des données peuvent implémenter la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] interfaces de fournisseur de données et éventuellement les interfaces d’extension pour le traitement des données étendues fournies par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+-   Vos classes d’extension pour le traitement des données peuvent implémenter les interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] et, le cas échéant, les interfaces d’extension pour le traitement des données étendues fournies par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 -   Vos classes d'extension pour le traitement des données peuvent implémenter les interfaces d'extension pour le traitement des données fournies par [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et, le cas échéant, les interfaces d'extension pour le traitement des données étendues.  
   
- Si votre extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne prend pas en charge une propriété ou méthode particulière, implémentez la propriété ou la méthode comme une non opération. Si un client attend un comportement particulier, levez une **NotSupportedException** exception.  
+ Si votre extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne prend pas en charge une propriété ou méthode particulière, implémentez la propriété ou la méthode comme une non opération. Si un client attend un comportement particulier, levez une exception **NotSupportedException**.  
   
 > [!NOTE]  
 >  L' implémentation d'une propriété ou méthode sous la forme d'une non opération est limitée aux propriétés et méthodes des interfaces que vous choisissez d'implémenter. Les interfaces que vous choisissez éventuellement de ne pas implémenter doivent être ignorées par votre assembly d'extension pour le traitement des données. Pour plus d'informations sur l'utilisation nécessaire ou facultative d'une interface, consultez le tableau plus loin dans cette section.  
@@ -90,8 +88,7 @@ ms.lasthandoff: 08/14/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Implémentation d’une Extension de traitement des données](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Bibliothèque d’Extension de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Mise en œuvre d’une extension pour le traitement des données](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

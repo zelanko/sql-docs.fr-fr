@@ -1,5 +1,5 @@
 ---
-title: "Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e1d41386fc5cea7f7356e5d2d39fe9ea9082d608
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -72,21 +72,21 @@ ms.lasthandoff: 08/09/2017
   
 -   créer des dossiers sur le serveur pour organiser vos rapports comme vous le souhaitez.  
   
- Certaines de ces tâches peuvent être effectuées pour vous par l'administrateur du serveur de rapports. Pour en savoir plus sur les tâches effectuées sur un serveur de rapports, consultez [Reporting Services Report Server &#40; En Mode natif &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
+ Certaines de ces tâches peuvent être effectuées pour vous par l'administrateur du serveur de rapports. Pour en savoir plus sur les tâches effectuées sur un serveur de rapports, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données et des modèles de rapport, ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports. Pour plus d’informations, consultez [Utilisation du dossier Mes rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
   
  Le Gestionnaire de rapports affiche les rapports dans la visionneuse HTML Reporting Services. La visionneuse HTML fournit une infrastructure pour l'affichage des rapports au format HTML et inclut une barre d'outils Rapports, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. La barre d'outils Rapports fournit les fonctions de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de flux de données. La barre d'outils Rapport apparaît également dans les fenêtres des navigateurs, en haut des rapports, lorsque vous accédez aux rapports au moyen d'une URL. La fonction d'impression est facultative et doit être activée par votre administrateur. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. Les illustrations suivantes montrent la barre d'outils Rapport dans une fenêtre du Gestionnaire de rapports et un agrandissement des fonctionnalités de la barre d'outils Rapport.  
   
- ![La barre d’outils de rapport dans le Gestionnaire de rapports](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "la barre d’outils de rapport dans le Gestionnaire de rapports")  
+ ![Barre d’outils Rapport dans le Gestionnaire de rapports](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Barre d’outils Rapport dans le Gestionnaire de rapports")  
 Fenêtre Gestionnaire de rapports  
   
- ![Barre d’outils rapport](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "barre d’outils rapport")  
+ ![Barre d’outils Rapport](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barre d’outils Rapport")  
 Barre d'outils Rapports  
   
- Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Vous pouvez également exporter le rapport à l'aide d'une extension de rendu de données, telle que l'extension CSV (Comma-Separated Value), puis utiliser le fichier de données CSV comme entrée pour une autre application. Pour plus d’informations sur l’exportation de rapports, consultez [exportation de rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) et [exporter un rapport en tant que Type d’un autre fichier &#40; Le Générateur de rapports et SSRS &#41; ](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
+ Après avoir exécuté un rapport, vous pouvez l'exporter sous un autre format, tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ou PDF. Vous pouvez également exporter le rapport à l'aide d'une extension de rendu de données, telle que l'extension CSV (Comma-Separated Value), puis utiliser le fichier de données CSV comme entrée pour une autre application. Pour plus d’informations sur l’exportation de rapports, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) et [Exporter un rapport dans un autre type de fichier &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- La méthode la plus simple pour sélectionner et exécuter un rapport consiste à ouvrir le Gestionnaire de rapports, puis à rechercher le rapport à afficher. Pour obtenir des instructions détaillées sur la façon d’ouvrir des rapports, consultez [ouvrir et fermer un rapport &#40; Le Gestionnaire de rapports &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ La méthode la plus simple pour sélectionner et exécuter un rapport consiste à ouvrir le Gestionnaire de rapports, puis à rechercher le rapport à afficher. Pour obtenir des instructions détaillées sur l’ouverture des rapports, consultez [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  Après avoir exécuté un rapport, vous pouvez l'actualiser pour afficher les nouvelles données.  
   
@@ -96,7 +96,7 @@ Barre d'outils Rapports
 |Option|Résultat|  
 |------------|------------|  
 |Bouton**Actualiser** de la fenêtre du navigateur|Affiche le rapport stocké dans le cache de sessions. Un cache de session est créé lorsqu'un utilisateur ouvre un rapport. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des sessions de navigateur pour assurer un affichage cohérent lorsqu'un rapport est ouvert.|  
-|![Bouton Actualiser du navigateur sur la barre d’outils rapport](../../reporting-services/media/htmlviewer-refresh.GIF "bouton Actualiser du navigateur sur la barre d’outils rapport")|Quand vous cliquez dans la barre d’outils Rapports sur le bouton **Actualiser** , le serveur de rapports réexécute la requête et met à jour les données du rapport si ce dernier s’exécute à la demande. Si le rapport est mis en cache ou s'il s'agit d'un instantané, la commande **Actualiser** permet d'afficher le rapport stocké dans la base de données du serveur de rapports.|  
+|![Bouton d’actualisation du navigateur sur la barre d’outils du rapport](../../reporting-services/media/htmlviewer-refresh.GIF "Bouton d’actualisation du navigateur sur la barre d’outils du rapport")|Quand vous cliquez dans la barre d’outils Rapports sur le bouton **Actualiser** , le serveur de rapports réexécute la requête et met à jour les données du rapport si ce dernier s’exécute à la demande. Si le rapport est mis en cache ou s'il s'agit d'un instantané, la commande **Actualiser** permet d'afficher le rapport stocké dans la base de données du serveur de rapports.|  
 |Combinaison de touches CTRL+F5|Produit le même résultat qu'un clic sur le bouton **Actualiser** dans la barre d'outils Rapports.|  
   
   
@@ -107,7 +107,7 @@ Barre d'outils Rapports
   
  Pour accéder aux pages d'application, sélectionnez des actions spécifiques à l'élément dans un menu déroulant sur un rapport ou autre élément de serveur de rapports que vous avez ajouté précédemment à une bibliothèque SharePoint. Selon l'élément et vos autorisations, vous pouvez être également en mesure de créer des rapports dans le Générateur de rapports, de générer des modèles et de définir la sécurité des éléments de modèle.  
   
- Pour plus d’informations sur les technologies SharePoint et Reporting Services, consultez [Configuration et Administration d’un serveur de rapports &#40; Reporting Services en Mode SharePoint &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
+ Pour plus d’informations sur la technologie Reporting Services et SharePoint, consultez [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Recherche d'éléments de serveur de rapports sur un site SharePoint  
  Avant de pouvoir définir des propriétés, vous devez être en mesure de localiser l'élément. Les éléments de serveur de rapports sont toujours stockés dans des bibliothèques ou dans un dossier d'une bibliothèque.  
@@ -116,7 +116,7 @@ Barre d'outils Rapports
   
  Pour distinguer les éléments de serveur de rapports d'autres éléments sur un site SharePoint, vous pouvez utiliser l'icône pour identifier visuellement un élément ou placer le curseur de la souris sur le type et examiner l'extension du fichier. L'image suivante montre des dossiers, un modèle de rapport et une définition de rapport dans la bibliothèque **Rapports** :  
   
- ![Bibliothèque SharePoint avec des éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "bibliothèque Sharepoint avec des éléments de serveur de rapports")  
+ ![Bibliothèque SharePoint avec éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Bibliothèque Sharepoint avec éléments de serveur de rapports")  
   
 ### <a name="viewing-reports"></a>Affichage de rapports  
  Les définitions de rapport (fichiers .rdl) que vous téléchargez vers une bibliothèque SharePoint sont affichées par le biais d'un composant WebPart de visionneuse de rapports qui est installé par le complément Reporting Services. Une association aux fichiers .rdl est définie automatiquement lorsque vous installez le complément. Lorsque vous sélectionnez un rapport, il s'ouvre automatiquement dans le composant WebPart. Une fois le rapport ouvert, vous pouvez utiliser la barre d'outils de rapport qui est incluse dans le composant WebPart pour imprimer le rapport, parcourir les pages du rapport, ainsi qu'effectuer des recherches et zoomer dans le rapport. La barre d'outils inclut l'option Exporter vers un flux, qui permet d'exporter le rapport en tant que flux Atom ; elle comprend également un menu **Actions** avec des options permettant d'imprimer, de s'abonner et d'exporter le rapport vers divers formats tels que PDF, Word et Excel. À partir du menu **Actions** , vous pouvez également ouvrir le rapport dans le Générateur de rapports. L'image suivante montre un rapport et les options d'exportation du menu **Action** .  
@@ -126,7 +126,7 @@ Barre d'outils Rapports
 ### <a name="managing-items-through-actions"></a>Gestion des éléments par le biais d'actions  
  Les tâches de gestion sont prises en charge par le biais des actions proposées dans un menu déroulant pour chaque élément. Selon vos autorisations, chaque élément possède des actions communes qui sont standard pour des éléments stockés dans une bibliothèque SharePoint. **Afficher les propriétés** et **Modifier les propriétés** sont des exemples d'actions communes. Les actions personnalisées fournissent des fonctionnalités de gestion spécifiques aux éléments. L'image ci-dessous montre les actions possibles pour une définition de rapport. **Gérer les abonnements** et **Gérer les options de traitement**sont des exemples d'actions personnalisées proposées pour une définition de rapport :  
   
- ![Commandes de menu pour les éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "des commandes de Menu pour les éléments de serveur de rapports")  
+ ![Commandes de menu pour les éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Commandes de menu pour les éléments de serveur de rapports")  
   
   
 ##  <a name="DeskTop"></a> Affichage des rapports dans une application bureautique  

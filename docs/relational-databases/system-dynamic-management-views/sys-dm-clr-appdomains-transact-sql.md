@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  Il existe plusieurs types d'objets de base de données managés d'intégration CLR. Pour obtenir des informations générales sur ces objets, consultez [création d’objets de base de données avec l’intégration du Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Chaque fois que ces objets sont exécutés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un **AppDomain** dans lequel il peut charger et exécuter le code requis. Le niveau d’isolation pour une **AppDomain** est un **AppDomain** par base de données par le propriétaire. Autrement dit, tous les objets CLR détenus par un utilisateur sont toujours exécutés dans le même **AppDomain** par base de données (si un utilisateur enregistre les objets de base de données CLR dans différentes bases de données, la base de données CLR objets s’exécuteront dans différents domaines d’application). Un **AppDomain** n’est pas détruit une fois que le code termine son exécution. Il est mis en cache dans la mémoire pour les prochaines exécutions. Cela améliore les performances.  
   
  Pour plus d’informations, consultez [domaines d’Application](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  

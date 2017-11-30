@@ -2,37 +2,31 @@
 title: "Définir des propriétés de domaine | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainproperties.f1
+f1_keywords: sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 425137ae60d9cc7378483f7e26d036cdecf1407b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-domain-properties"></a>Définir des propriétés de domaine
   Cette rubrique décrit comment définir des propriétés de domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a>  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Pour définir les propriétés d'un domaine, vous devez avoir créé une base de connaissances et un domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -42,11 +36,11 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="Set"></a> Définir des propriétés de domaine  
   
-1.  Définissez des propriétés sur un domaine existant en ouvrant une base de connaissances dans l'activité de gestion de l'arborescence du domaine (consultez [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md)), puis en sélectionnant le domaine approprié dans la liste **Domaine** . La page Propriétés du domaine sera affichée par défaut.  
+1.  Définissez des propriétés sur un domaine existant en ouvrant une base de connaissances dans l'activité de gestion de l'arborescence du domaine (consultez [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)), puis en sélectionnant le domaine approprié dans la liste **Domaine** . La page Propriétés du domaine sera affichée par défaut.  
   
-2.  Définissez des propriétés sur un nouveau domaine après sa création comme décrit dans [Créer un domaine](../data-quality-services/create-a-domain.md).  
+2.  Définissez des propriétés sur un nouveau domaine après sa création comme décrit dans [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [Terminer l’activité de gestion de l’arborescence du domaine](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir défini les propriétés de domaine  
  Après avoir défini les propriétés de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
@@ -57,7 +51,7 @@ ms.lasthandoff: 09/09/2017
  Une fois qu'un domaine a été créé, le nom ou la description du domaine peut être modifié. Le nom de domaine doit être unique pour la base de connaissances. La description peut comporter jusqu'à 256 caractères.  
   
 ###  <a name="Type"></a> Type de données  
- Lorsque vous créez le domaine, sélectionnez l'un des types de données suivants pour les valeurs du domaine : **Chaîne** (valeur par défaut), **Date**, **Entier**, ou **Décimal**. Après avoir créé le domaine, vous pouvez afficher le type de données, mais vous ne pouvez pas le modifier. Le type de données sélectionné pour un domaine définit le type de données source qui peut être mappé au domaine. Pour plus d'informations sur les types de données pris en charge pour chacun des quatre types de données de domaine dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Lorsque vous créez le domaine, sélectionnez l'un des types de données suivants pour les valeurs du domaine : **Chaîne** (valeur par défaut), **Date**, **Entier**, ou **Décimal**. Après avoir créé le domaine, vous pouvez afficher le type de données, mais vous ne pouvez pas le modifier. Le type de données sélectionné pour un domaine définit le type de données source qui peut être mappé au domaine. Pour plus d’informations sur les types de données pris en charge pour chacun des quatre types de données de domaine dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Utiliser des valeurs de début  
  Activez cette case à cocher pour spécifier que la valeur de début dans un groupe de synonymes sera générée au lieu d'une valeur qui en est un synonyme. Désélectionnez **Utiliser des valeurs de début** pour spécifier que chaque valeur de synonyme est générée sous sa forme correcte ou corrigée, et n'est pas remplacée par la valeur de début de son groupe.  
@@ -80,7 +74,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Pour une valeur décimale, vous pouvez spécifier la précision et le type de masque de format à appliquer.  
   
-###  <a name="Language"></a> Langue  
+###  <a name="Language"></a> Langage  
  Si le type de données est **Chaîne**, sélectionnez la langue que vous souhaitez associer au domaine pour passer le vérificateur d'orthographe. Cette sélection s'applique uniquement au vérificateur d'orthographe, car les résultats de ce vérificateur d'orthographe dépendent de la langue utilisée. La sélection s'applique uniquement à un seul domaine dont le type de données est chaîne. La propriété de langue n'est pas pertinente pour les domaines composites. La langue pour chaque partie d'un domaine composite est déterminée par le domaine unique approprié.  
   
  La langue par défaut est l'anglais. Si vous affectez à la propriété **Langue** la valeur **Autre** , le vérificateur d'orthographe est désactivé pour le domaine.  
@@ -91,10 +85,9 @@ ms.lasthandoff: 09/09/2017
 ###  <a name="Speller"></a> Activer le vérificateur d'orthographe  
  Si le type de données est **Chaîne**, cliquez pour activer le vérificateur d'orthographe DQS pour le domaine. Le vérificateur d'orthographe fonctionne uniquement sur les domaines dont le type de données est chaîne. La case à cocher **Activer le vérificateur d'orthographe** active le vérificateur d'orthographe uniquement pour le seul domaine associé à la case à cocher. La case à cocher ne s'applique pas à un domaine composite.  
   
- Le vérificateur d'orthographe propose des corrections de syntaxe et de validation pour les valeurs du domaine. Pour plus d'informations, consultez [Utiliser le vérificateur d’orthographe DQS](../data-quality-services/use-the-dqs-speller.md).  
+ Le vérificateur d'orthographe propose des corrections de syntaxe et de validation pour les valeurs du domaine. Pour plus d'informations, consultez [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md).  
   
 ###  <a name="Syntax"></a> Désactiver les algorithmes d'erreur de syntaxe  
  Si le type de données est **Chaîne**, activez cette case à cocher pour spécifier que les erreurs de syntaxe ne sont pas identifiées par DQS dans le domaine lors du nettoyage. Activez cette case à cocher lorsque l'identification des erreurs de syntaxe pour ce domaine n'est pas nécessaire. Par exemple, l'identification des erreurs de syntaxe peut ne pas être importante pour un numéro de série. Ce contrôle est uniquement disponible pour le type de données chaîne. DQS ne recherche pas les erreurs de syntaxe dans les types de données autres que chaîne.  
   
   
-

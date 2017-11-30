@@ -1,26 +1,24 @@
 ---
-title: Ajouter des jauges aux rapports mobiles | Reporting Services | Documents Microsoft
+title: Ajouter des jauges aux rapports mobiles | Reporting Services| Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Ajouter des jauges aux rapports mobiles | Reporting Services
 Les jauges sont les éléments visuels les plus simples et les plus utilisés dans les rapports mobiles. Elles affichent une seule valeur dans un dataset (la valeur seule ou la valeur comparée à un objectif).
@@ -29,7 +27,7 @@ Les jauges sont les éléments visuels les plus simples et les plus utilisés da
   
 *Visualisation des jauges sous l’onglet Disposition*  
   
-Toutes les jauges dans SQL Server Mobile Report Publisher ont au moins une propriété en commun : une valeur principale, définie à un champ numérique dans une des tables de données dans le rapport mobile.  
+Dans l’Éditeur de rapports mobiles SQL Server, toutes les jauges ont au moins une propriété en commun : une valeur principale définie dans un champ numérique d’une des tables de données d’un rapport mobile.  
 
 Toutes les jauges, à l’exception de la jauge Nombre , peuvent aussi présenter une comparaison, c’est-à-dire une valeur *d’écart*(rapport entre la valeur principale et une valeur de comparaison). La valeur de comparaison correspond souvent à l’objectif, et la jauge est un indicateur visuel de la progression vers cet objectif, ou l’écart entre la valeur réelle et l’objectif.
 
@@ -95,4 +93,3 @@ Ce paramètre détermine la façon dont les nombres de la jauge sont mis en form
 * [Navigateurs dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualisations dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Grilles de données dans les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

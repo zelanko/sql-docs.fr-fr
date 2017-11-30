@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], Transact-SQL
+helpviewer_keywords: FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55caf01faba0be9c5277cbea435b256910e3dfc5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 591458b887a62a0bd72ab46bcd9a9d3e56a7e9d8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Accéder aux données FILESTREAM avec Transact-SQL
   Cette rubrique explique comment utiliser les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE et DELETE pour gérer des données FILESTREAM.  
@@ -47,9 +45,9 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[FILESTREAM#FS_InsertData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_3.sql)]  
   
- Quand vous sélectionnez toutes les données de la table `Archive`,`dbo.Records` les résultats sont semblables à ceux affichés dans le tableau suivant. Toutefois, la colonne `Id` contiendra des GUID différents.  
+ Quand vous sélectionnez toutes les données de la table `Archive.dbo.Records`, les résultats sont semblables à ceux affichés dans le tableau suivant. Toutefois, la colonne `Id` contiendra des GUID différents.  
   
-|Id|SerialNumber|Reprendre|  
+|Id|SerialNumber|Graphique|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
@@ -71,7 +69,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-sql[FILESTREAM#FS_DeleteData](../../relational-databases/blob/codesnippet/tsql/access-filestream-data-w_1_5.sql)]  
   
- Lorsque vous sélectionnez toutes les données de la table `dbo.Archive` , la ligne disparaît. Vous ne pouvez plus utiliser le fichier associé.  
+ Quand vous sélectionnez toutes les données de la table `Archive.dbo.Records`, la ligne disparaît et vous ne pouvez plus utiliser le fichier associé.  
   
 > [!NOTE]  
 >  Les fichiers sous-jacents sont supprimés par le garbage collector FILESTREAM.  

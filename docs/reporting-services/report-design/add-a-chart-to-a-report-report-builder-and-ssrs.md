@@ -1,5 +1,5 @@
 ---
-title: "Ajouter un graphique à un rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter un graphique à un rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8615ca29e17ae25e04030917049df7e0b3894041
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Ajouter un graphique à un rapport (Générateur de rapports et SSRS)
   Quand vous souhaitez résumer des données sous un format visuel dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , utilisez une région de données de graphique. Il est important de choisir un type de graphique approprié au type des données que vous présentez. Cela affecte l'interprétation des données lorsqu'elles sont transformées en graphique. Pour plus d’informations, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>Pour ajouter un graphique à un rapport  
   
-1.  Créez un rapport et définissez un dataset. Pour plus d’informations, consultez [Datasets de rapport &#40; SSRS &#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
+1.  Créez un rapport et définissez un dataset. Pour plus d’informations, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 2.  Sous l’onglet **Insérer** , cliquez sur **Graphique**, puis sur **Insérer un graphique**.  
   
@@ -70,16 +69,15 @@ ms.lasthandoff: 08/09/2017
   
 10. Sous l’onglet **Exécuter** , cliquez sur **Conception** pour continuer à utiliser le rapport.  
   
- Sur les graphiques avec des axes, tels que les graphiques à barres et histogrammes, il est possible que l'axe des abscisses n'affiche pas toutes les étiquettes de catégorie. Pour plus d’informations sur la façon de modifier les étiquettes d’axe, consultez [spécifier un intervalle d’axe &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Sur les graphiques avec des axes, tels que les graphiques à barres et histogrammes, il est possible que l'axe des abscisses n'affiche pas toutes les étiquettes de catégorie. Pour plus d’informations sur la façon de modifier les étiquettes d’axe, consultez [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Types de graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Points de données vides et Null dans les graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Didacticiel : Ajout d’un graphique à barres à votre rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Didacticiel : Ajout d’un graphique à barres à un rapport (Concepteur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [Didacticiel : Ajout d’un graphique à secteurs à votre rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [Didacticiel : Ajout d’un graphique à secteurs à un rapport (Concepteur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Concepteur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Didacticiel : ajout d’un graphique à secteurs à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Didacticiel : ajout d’un graphique à secteurs à un rapport (Concepteur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   
-

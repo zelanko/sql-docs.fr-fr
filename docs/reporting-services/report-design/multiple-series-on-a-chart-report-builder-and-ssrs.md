@@ -1,5 +1,5 @@
 ---
-title: "Plusieurs séries sur un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Plusieurs séries sur un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e3e3fa82b79529b1e128260f020b8e98225e26fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd942ab8b1aee3047c693f40a99453cd79981dc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Plusieurs séries sur un graphique (Générateur de rapports et SSRS)
   Lorsque plusieurs séries sont affichées sur un graphique, vous devez déterminer la meilleure méthode de comparaison de ces séries. Vous pouvez utiliser un graphique empilé pour afficher les proportions relatives de chaque série. Si vous comparez uniquement deux séries qui partagent un axe des abscisses commun (x), utilisez l'axe secondaire. Cela peut s'avérer utile lorsque vous affichez deux séries de données associées (le prix et le volume ou les recettes et les taxes, par exemple). Si le graphique devient illisible, envisagez d'utiliser plusieurs zones de graphique pour produire davantage de séparation visuelle entre chaque série.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="using-chart-areas"></a>Utilisation de zones de graphique  
  Le graphique est le conteneur de niveau supérieur qui inclut la bordure externe, le titre du graphique et la légende. Par défaut, le graphique contient une zone de graphique par défaut. La zone de graphique n'est pas visible à la surface du graphique, mais vous pouvez la considérer comme un conteneur qui comprend uniquement les étiquettes d'axe, le titre de l'axe et la zone de traçage d'une ou plusieurs séries. L'illustration suivante montre le concept de zones de graphique dans un unique graphique.  
   
- ![Affiche un diagramme d’une zone de graphique](../../reporting-services/report-design/media/chartareasdiagram.gif "montre le schéma d’une zone de graphique")  
+ ![Affiche un diagramme d’une zone de graphique](../../reporting-services/report-design/media/chartareasdiagram.gif "Affiche un diagramme d’une zone de graphique")  
   
  Dans la boîte de dialogue **Propriétés de la zone de graphique** , vous pouvez spécifier l’orientation 2D et 3D de toutes les séries figurant dans la zone de graphique, aligner plusieurs zones de graphique dans le même graphique et définir les couleurs de la zone de traçage. Lorsqu'une nouvelle zone de graphique est définie sur un graphique qui contient une seule zone de graphique par défaut, l'espace disponible pour une zone de graphique est divisé horizontalement par deux et la nouvelle zone de graphique est positionnée au-dessous de la première zone de graphique.  
   
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
  Les graphiques d'étendue possèdent deux valeurs par point de données. Si le graphique comporte deux séries qui partagent le même axe des abscisses (x), vous pouvez utiliser un graphique d'étendue pour afficher la différence entre ces deux séries. Les graphiques d'étendue sont particulièrement bien adaptés pour afficher des valeurs minimale et maximale. Par exemple, si votre première série contient la plus forte vente pour chaque jour de janvier et votre deuxième série contient la vente la plus faible pour chaque jour de janvier, vous pouvez utiliser un graphique d'étendue pour afficher la différence entre la vente la plus forte et la vente la plus faible pour chaque jour. Pour plus d’informations, consultez [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Affichage d’une série avec plusieurs plages de données sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
- [Types de graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Affichage d’une série avec plusieurs plages de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  
   
   
-

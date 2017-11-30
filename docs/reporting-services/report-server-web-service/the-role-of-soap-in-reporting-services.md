@@ -1,5 +1,5 @@
 ---
-title: "Le rôle de SOAP dans Reporting Services | Documents Microsoft"
+title: "Rôle de SOAP dans Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], role in Reporting Services
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: ae2242cc79e7fb3d5719e374a45751d27d5c2b5c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Rôle de SOAP dans Reporting Services
   Le service Web Report Server utilise la messagerie SOAP (Simple Object Access Protocol) pour envoyer des commandes textuelles sur un réseau. Ces commandes prennent la forme de texte XML envoyé sur le Web à l'aide du protocole HTTP. En utilisant SOAP en tant que protocole de communication, le service Web Report Server permet aux applications et aux composants d'échanger des données avec le serveur de rapports à l'aide d'une infrastructure ouverte et largement reconnue. La norme SOAP est définie sur le site www.w3.org/TR/SOAP.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/12/2017
 </soap:Envelope>  
 ```  
   
- Le protocole SOAP requiert que les messages soient placés dans un **enveloppe** élément, avec le plus gros du message à l’intérieur d’un **corps** élément. Dans cet exemple, le corps contient un appel de la méthode <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, qui prend un paramètre de chaîne représentant le chemin d'accès de l'élément à supprimer. Vous pouvez créer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] classe du proxy client qui encapsule toutes les opérations SOAP dans des méthodes. Les éléments suivants [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] méthode représente l’exemple SOAP donné précédemment.  
+ Le protocole SOAP exige que les messages soient placés dans un élément **Envelope**, avec l’essentiel du message à l’intérieur d’un élément **Body**. Dans cet exemple, le corps contient un appel de la méthode <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, qui prend un paramètre de chaîne représentant le chemin d'accès de l'élément à supprimer. Vous pouvez créer une classe proxy de client [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui encapsule toutes les opérations SOAP dans des méthodes. La méthode [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] suivante représente l’exemple SOAP donné précédemment.  
   
 ```  
 public void DeleteItem(string item);  
@@ -67,10 +65,9 @@ public void DeleteItem(string item);
  La méthode <xref:ReportService2010.ReportingService2010.DeleteItem%2A> n'a aucune valeur de retour, donc une réponse vide est retournée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’accès à l’API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Accès à l’API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
- [Service Web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Service Web des serveurs de rapports](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

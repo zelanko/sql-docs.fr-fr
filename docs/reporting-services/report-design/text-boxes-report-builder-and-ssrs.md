@@ -1,5 +1,5 @@
 ---
-title: "Zones de texte (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Zones de texte (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 932f2277845e4e47032baf80443c0d339cb45ea7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Zones de texte (Générateur de rapport et SSRS)
   Pour vous, une zone de texte désigne probablement une zone autonome qui contient du texte sur une surface comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent des zones de texte de ce type pour afficher le texte statique des titres, des descriptions et des étiquettes, ou le texte dynamique basé sur des expressions. Toutefois, chaque cellule d’une table ou d’une matrice (région de données de tableau matriciel) contient également une zone de texte, que vous pouvez mettre en forme de la même manière que les zones de texte autonomes de votre rapport.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  Pour afficher du texte récurrent dans une disposition de forme libre, créez une région de données de liste et placez-y la zone de texte. Utilisez une liste lorsque vous souhaitez répéter un formulaire pour plusieurs valeurs, par exemple une facture client utilisée une seule fois pour chaque client. En savoir plus sur la [création de factures et de formulaires avec des listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Utilisez un conteneur rectangle lorsque vous souhaitez contrôler la disposition des zones de texte et l'espace blanc en dessous de la dernière zone de texte. Pour plus d’informations, consultez [Rectangles et lignes &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Utilisez un conteneur rectangle lorsque vous souhaitez contrôler la disposition des zones de texte et l'espace blanc en dessous de la dernière zone de texte. Pour plus d’informations, consultez [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  Les expressions dans une zone de texte peuvent contenir du texte littéral, pointer vers un champ de la base de données ou calculer des données. Toutes les expressions sont affichées sous la forme de texte d'espace réservé de sorte que vous pouvez mettre en forme des nombres, des couleurs et d'autres propriétés d'apparence. Vous pouvez également combiner des espaces réservés avec le texte littéral dans la même zone de texte.  
   
@@ -72,7 +71,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Mise en forme des nombres et Dates &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   
-

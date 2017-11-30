@@ -10,7 +10,7 @@ Cet article traite en particulier des scénarios de disponibilité dans SQL Serv
 
 Les groupes de disponibilité, les instances FCI et la copie des journaux de transaction peuvent être utilisés de plusieurs façons et pas seulement à des fins de disponibilité. Les fonctionnalités de disponibilité sont utilisées dans quatre contextes principaux :
 
-* La haute disponibilité
+* Haute disponibilité
 * La récupération d’urgence
 * Les migrations et les mises à niveau
 * La mise à plus haute échelle des copies accessibles en lecture d’une ou plusieurs bases de données
@@ -67,8 +67,8 @@ Il y a davantage de similitudes que de différences entre un cluster WSFC et Pac
 Parce que la pile de cluster est différente, les groupes de disponibilité sont modifiés, car SQL Server doit gérer une partie des métadonnées qui sont gérées en mode natif par un cluster WSFC. Le changement le plus [!IMPORTANT] est l’introduction d’un type de cluster pour un groupe de disponibilité. Il est stocké dans sys.availability_groups dans les colonnes cluster_type et cluster_type_desc. Il existe trois types de cluster :
 
 * WSFC 
-* Externe
-* Aucun
+* External
+* Aucune
 
 Tous les groupes de disponibilité qui ont besoin de disponibilité doivent utiliser un cluster sous-jacent. Dans le cas de SQL Server 2017, il s’agit d’un cluster WSFC ou de Pacemaker. Pour les groupes de disponibilité de base Windows Server qui utilisent un cluster WSFC sous-jacent, le type de cluster par défaut est WSFC et ne doit pas nécessairement être défini. Pour les groupes de disponibilité Linux, lors de la création du groupe de disponibilité, vous devez définir le type de cluster sur Externe. L’intégration à Pacemaker est configurée après la création du groupe de disponibilité, tandis que sur un cluster WSFC, elle est effectuée au moment de la création.
 
@@ -77,7 +77,7 @@ Le type de cluster Aucun peut être utilisé avec les groupes de disponibilité 
 > [!IMPORTANT] 
 > SQL Server 2017 ne permet pas de modifier le type de cluster d’un groupe de disponibilité après sa création. Cela signifie qu’un groupe de disponibilité ne peut pas passer du type Aucun à Externe ou WSFC, et inversement. 
 
-Pour ceux qui veulent simplement ajouter des copies de base de données en lecture seule, ou qui sont intéressés par les options de migration ou de mise à niveau qu’offrent les groupes de disponibilité, mais ne veulent pas assumer la complexité de gérer un cluster sous-jacent ou la réplication, un groupe de disponibilité avec le type de cluster Aucun est la solution idéale. Pour plus d’informations, consultez les sections [Migrations et mises à niveau](#Migrations) et [Mise à plus haute échelle lecture](#ReadScaleOut). 
+Pour ceux qui veulent simplement ajouter des copies de base de données en lecture seule, ou qui sont intéressés par les options de migration ou de mise à niveau qu’offrent les groupes de disponibilité, mais ne veulent pas assumer la complexité de gérer un cluster sous-jacent ou la réplication, un groupe de disponibilité avec le type de cluster Aucun est la solution idéale. Pour plus d’informations, consultez les sections [Migrations et mises à niveau](#Migrations) et [Échelle lecture](#ReadScaleOut). 
 
 La capture d’écran ci-dessous montre la prise en charge des différents types de cluster dans SSMS. Vous devez exécuter la version 17.1 ou ultérieure. La capture d’écran ci-dessous concerne la version 17.2.
 
@@ -226,7 +226,7 @@ Si un groupe de disponibilité est configuré avec un type de cluster Aucun, il 
 
 La copie des journaux de transaction est uniquement basée sur la sauvegarde et la restauration, et il n’existe aucune différence entre les bases de données, les structures de fichiers, etc., entre SQL Server sur Windows Server et SQL Server sur Linux. Par conséquent, la copie des journaux de transaction peut être configurée entre des installations SQL Server Windows Server et Linux ainsi qu’entre des distributions de Linux. Rien d’autre ne change. Le seul inconvénient est que la copie des journaux de transaction, comme les groupes de disponibilité, ne peut pas fonctionner quand la source utilise une version majeure de SQL Server supérieure à celle de la cible. 
 
-## <a name = "ReadScaleOut"></a> Mise à plus haute échelle lecture
+## <a name = "ReadScaleOut"></a> Échelle lecture
 
 Depuis leur introduction dans SQL Server 2012, les réplicas secondaires peuvent être utilisés pour les requêtes en lecture seule. Il existe deux manières de le faire avec un groupe de disponibilité : en autorisant un accès direct au réplica secondaire et en [configurant un routage en lecture seule](http://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) qui nécessite l’utilisation de l’écouteur.  SQL Server 2016 a introduit la possibilité d’équilibrer la charge des connexions en lecture seule via l’écouteur à l’aide d’un algorithme de type tourniquet (Round Robin), ce qui permet aux demandes en lecture seule d’être réparties sur tous les réplicas accessibles en lecture. 
 
@@ -243,7 +243,7 @@ Le seul grand inconvénient est qu’en raison de l’absence de cluster sous-ja
 
 Un secours semi-automatique de copie des journaux de transaction peut techniquement être configuré pour l’accessibilité en lecture en restaurant la base de données WITH STANDBY. Toutefois, parce que les journaux de transaction nécessitent l’utilisation exclusive de la base de données pour la restauration, les utilisateurs ne peuvent pas accéder à la base de données pendant l’opération. De ce fait, la copie des journaux de transaction est une solution moins idéale, en particulier si vous avez besoin des données quasiment en temps réel. 
 
-Notez que dans tous les scénarios de mise à plus haute échelle lecture avec les groupes de disponibilité, contrairement à la réplication transactionnelle où les données ne sont pas en ligne, chaque réplica secondaire n’est pas dans un état où des index uniques peuvent être appliqués, le réplica est une copie exacte du principal. Cela signifie que si un index est nécessaire pour créer des rapports ou que les données doivent être manipulées, l’opération doit être effectuée sur la ou les bases de données du réplica principal. Si vous avez besoin de cette flexibilité, la réplication est une meilleure solution pour les données accessibles en lecture.
+Notez que dans tous les scénarios de mise à échelle lecture avec les groupes de disponibilité, contrairement à la réplication transactionnelle où les données ne sont pas en ligne, chaque réplica secondaire n’est pas dans un état où des index uniques peuvent être appliqués, le réplica est une copie exacte du principal. Cela signifie que si un index est nécessaire pour créer des rapports ou que les données doivent être manipulées, l’opération doit être effectuée sur la ou les bases de données du réplica principal. Si vous avez besoin de cette flexibilité, la réplication est une meilleure solution pour les données accessibles en lecture.
 
 ## <a name="summary"></a>Résumé
 

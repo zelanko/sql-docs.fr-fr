@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
 Dans un environnement multi-utilisateur, des modifications peuvent être apportées à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l'objet dans le Concepteur de tables ou dans le Concepteur de schémas de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  
@@ -35,7 +34,7 @@ Elle affiche également la liste des objets de base de données qui seront affec
   
 -   Choisissez **Oui** pour enregistrer la table et mettre à jour la base de données avec toutes les modifications de la liste.  
   
-    Cette action peut affecter les tables partageant les mêmes objets de base de données. Par exemple, supposons que vous modifiez la colonne `au`_`id` de la table `titleauthors` alors qu’un autre utilisateur travaille sur la table `authors` , reliée à la table `titleauthors` par la colonne `au`\_`id` . L'enregistrement de votre table affecte la table de l'autre utilisateur. De façon similaire, quelqu'un d'autre a défini une contrainte de validation de la colonne `qty` de la table `sales` . Si vous supprimez la colonne `qty` , puis enregistrez la table `sales` , la contrainte de validation de l'autre utilisateur est affectée.  
+    Cette action peut affecter les tables partageant les mêmes objets de base de données. Par exemple, supposons que vous modifiez la colonne `au_id` de la table `titleauthors` alors qu’un autre utilisateur travaille sur la table `authors`, reliée à la table `titleauthors` par la colonne `au_id`. L'enregistrement de votre table affecte la table de l'autre utilisateur. De façon similaire, quelqu'un d'autre a défini une contrainte de validation de la colonne `qty` de la table `sales` . Si vous supprimez la colonne `qty` , puis enregistrez la table `sales` , la contrainte de validation de l'autre utilisateur est affectée.  
   
 -   Choisissez **Non** pour annuler l’enregistrement.  
   
@@ -65,4 +64,3 @@ Par exemple, supposons qu'une collègue et vous-même exécutiez chacun une requ
 ## <a name="see-also"></a>Voir aussi  
 [Boîte de dialogue Modifications détectées dans la base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-
