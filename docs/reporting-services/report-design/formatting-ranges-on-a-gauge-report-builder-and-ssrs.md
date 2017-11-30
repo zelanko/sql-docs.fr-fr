@@ -1,5 +1,5 @@
 ---
-title: "Mise en forme de plages sur une jauge (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Mise en forme de plages sur une jauge (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 851b829cf66a2d89ba2753381dc1598e5bc439b6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4c28739a1b35655f74a16a6757958e0e1bc6e47
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme de plages sur une jauge (Générateur de rapports et SSRS)
  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une plage de jauge est une zone ou une partie de l’échelle de la jauge qui indique une sous-section importante de valeurs sur la jauge. Une plage de jauge vous permet d'indiquer visuellement lorsque la valeur de pointeur entre dans une certaine plage de valeurs. Les plages sont délimitées par une valeur de début et une valeur de fin.  
@@ -33,10 +33,10 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme des échelles sur une jauge &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [Mise en forme des pointeurs sur une jauge &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Définir un Minimum ou un Maximum sur une jauge &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Didacticiel : Ajout d’un indicateur de performance clé à votre rapport &#40; Le Générateur de rapports &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [Jauges &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Définir un minimum ou un maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
+ [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

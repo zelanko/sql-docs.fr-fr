@@ -1,5 +1,5 @@
 ---
-title: "Spécifiez la taille d’un indicateur à l’aide d’une Expression (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Spécifier la taille d’un indicateur à l’aide d’une expression (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eecb47d77b7e8b484071ea33e5111b0326f6fed2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Spécifier la taille d'un indicateur à l'aide d'une expression (Générateur de rapports et SSRS)
   Outre la couleur, la direction et la forme, vous pouvez utiliser la taille pour optimiser l'impact visuel des indicateurs.  
@@ -70,4 +69,3 @@ ms.lasthandoff: 08/09/2017
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

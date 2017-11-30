@@ -1,28 +1,27 @@
 ---
 title: Didacticiels pour SQL Server | Microsoft Docs
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 10/31/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
+
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] fournit des didacticiels pour vous aider à apprendre les nouvelles technologies et fonctionnalités. Les didacticiels pour les versions antérieures peuvent généralement être utilisés avec les versions plus récentes. Quand des didacticiels traitent d’une fonctionnalité plus récente, ils indiquent la version minimale nécessaire pour suivre le didacticiel.  
      
 -   Si un didacticiel utilise une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], vous devez télécharger et utiliser la version la plus récente disponible auprès de CodePlex. Pour plus d’informations, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
@@ -40,9 +39,9 @@ ms.lasthandoff: 07/31/2017
 |[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Didacticiels sur la réplication](../relational-databases/replication/replication-tutorials.md)|Apprenez comment installer et exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
-|[Didacticiels pour SQL Server R Services](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Apprenez à utiliser des données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide du langage R et exécutez des scripts R avec [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Didacticiel sur SQL Server Machine Learning](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Apprenez à exploiter des données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide de R ou Python. Exécutez des scripts R ou Python à partir de [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
- ## <a name="previously-published-tutorials"></a>Didacticiels déjà publiés :  
+ ## <a name="previously-published-tutorials"></a>Didacticiels déjà publiés 
   
  - [Didacticiels pour SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
   
@@ -51,4 +50,3 @@ ms.lasthandoff: 07/31/2017
  - [Didacticiels pour SQL Server 2008 R2](http://msdn.microsoft.com/library/ms167593.aspx)   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

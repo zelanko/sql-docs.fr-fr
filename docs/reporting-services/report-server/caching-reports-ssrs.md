@@ -1,5 +1,5 @@
 ---
-title: Mise en cache de rapports (SSRS) | Documents Microsoft
+title: Mise en cache des rapports | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - expiration [Reporting Services]
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 799f6c8803852baf8b4c2262d85826167f55ed5c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 79a60b96277352c51ce19d24d9504735e5fdb91f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="caching-reports-ssrs"></a>Mise en cache de rapports (SSRS)
   Un serveur de rapports peut mettre en mémoire cache la copie d'un rapport traité et retourner cette copie lorsqu'un utilisateur ouvre le rapport. Pour cet utilisateur, la date et l'heure de l'exécution du rapport sont les seules informations qui lui permettent de savoir que ce rapport est une copie en cache. Si la date ou l'heure n'est pas celle en cours et que le rapport n'est pas un instantané, ceci signifie que le rapport a été extrait du cache.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
  La mise en cache est une technique d'optimisation des performances. Le contenu du cache est volatile et peut changer à mesure que les rapports sont ajoutés, remplacés ou supprimés. Si vous avez besoin d'une stratégie de mise en cache moins aléatoire, créez un instantané de rapport. Pour plus d’informations, consultez [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]stocke les fichiers temporaires dans une base de données pour prendre en charge les sessions utilisateur et le traitement du rapport. Ces fichiers sont mis en cache pour être utilisés en interne et pour assurer un affichage constant durant une même session de navigateur. Pour plus d’informations sur la façon dont les fichiers temporaires à usage interne sont mis en cache, consultez [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les fichiers temporaires dans une base de données afin de prendre en charge les sessions utilisateur et le traitement des rapports. Ces fichiers sont mis en cache pour être utilisés en interne et pour assurer un affichage constant durant une même session de navigateur. Pour plus d’informations sur la façon dont les fichiers temporaires à usage interne sont mis en cache, consultez [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md).  
   
 ## <a name="cached-instances"></a>Instances mises en cache  
  L'instance mise en cache d'un rapport est basée sur le format intermédiaire d'un rapport. Le serveur de rapports met généralement en cache l'instance d'un rapport sur la base du nom du rapport. Si toutefois un rapport peut contenir des données différentes basées sur des paramètres de requête, plusieurs versions du rapport peuvent être mises en cache à un moment donné. Supposons, par exemple, que vous disposez d'un rapport paramétrable qui prend un code de région en tant que valeur de paramètre. Si quatre utilisateurs différents spécifient quatre codes de région différents, quatre copies mises en cache sont créées.  
@@ -76,13 +75,12 @@ ms.lasthandoff: 08/09/2017
  Si un rapport ne peut pas faire l'objet d'un rendu à partir d'une instance mise en cache pour une raison quelconque (par exemple, si les valeurs de paramètres spécifiées par un utilisateur sont différentes de celles utilisées pour produire le rapport mis en cache), le serveur de rapports réexécute le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des Options de traitement &#40; Reporting Services dans SharePoint intégré en Mode &#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Définir les propriétés de traitement des rapports](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Reporting Services Concepts &#40; SSRS &#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Précharger le Cache &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
+ [Précharger le cache &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
- [Mettre en cache les Datasets partagés &#40; SSRS &#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Actualisation du cache Options &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
+ [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
-

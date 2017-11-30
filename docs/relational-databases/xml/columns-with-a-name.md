@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- names [SQL Server], columns with
+helpviewer_keywords: names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: b4b9a8774565dd0e31caf940cf3e8254b0987205
 ms.openlocfilehash: 3a2651e6e67cceb648049f99ab9588a44b7f3fb0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columns-with-a-name"></a>Colonnes avec nom
   Les conditions suivantes sont celles dans lesquelles les colonnes de l'ensemble de lignes avec nom sont mappées, avec respect de la casse, au document XML obtenu :  
@@ -38,7 +35,7 @@ ms.lasthandoff: 11/08/2017
 -   Une colonne porte un nom différent.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Le nom de colonne commence par un arobase (@)  
- Si le nom de colonne commence par un arobase (@) et ne contient pas une barre oblique (/), un attribut de la `row` élément qui a la valeur de colonne correspondante est créée. Par exemple, la requête suivante renvoie un ensemble de lignes de deux colonnes (@PmId, Name). Dans le document XML obtenu, un **PmId** attribut est ajouté à la correspondant `row` élément et une valeur de ProductModelID lui est affectée.  
+ Si le nom de colonne commence par un arobase (@) et qu’il ne contient pas de barre oblique (/), un attribut de l’élément `row` possédant la valeur de colonne correspondante est créé. Par exemple, la requête suivante renvoie un ensemble de lignes de deux colonnes (@PmId, Name). Dans le document XML obtenu, un attribut **PmId** est ajouté à l’élément `row` correspondant et une valeur de ProductModelID lui est affectée.  
   
 ```  
   
@@ -71,9 +68,9 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Le nom de colonne ne commence pas par un arobase (@)  
- Si le nom de colonne ne commence pas par un arobase (@), n’est pas un des tests de nœud XPath et ne contient pas une barre oblique (/), un élément XML qui est un sous-élément de l’élément de ligne, `row` par défaut, est créé.  
+ Si le nom de colonne ne commence pas par un arobase (@), qu’il n’est pas l’un des tests de nœud XPath et qu’il ne contient pas de barre oblique (/), un élément XML sous-élément de l’élément de ligne, par défaut `row`, est créé.  
   
- La requête suivante spécifie le nom de colonne, qui est le résultat. Par conséquent, un `result` élément enfant est ajouté à la `row` élément.  
+ La requête suivante spécifie le nom de colonne, qui est le résultat. Un élément enfant `result` est donc ajouté à l’élément `row`.  
   
 ```  
 SELECT 2+2 as result  
@@ -88,7 +85,7 @@ for xml PATH
 </row>  
 ```  
   
- La requête suivante spécifie le nom de colonne ManuWorkCenterInformation pour le document XML retourné par la requête XQuery portant sur la colonne Instruction de type **xml**. Par conséquent, un `ManuWorkCenterInformation` élément est ajouté en tant qu’enfant de le `row` élément.  
+ La requête suivante spécifie le nom de colonne ManuWorkCenterInformation pour le document XML retourné par la requête XQuery portant sur la colonne Instruction de type **xml**. Un élément `ManuWorkCenterInformation` est donc ajouté en tant qu’enfant de l’élément `row`.  
   
 ```  
 SELECT   
@@ -133,7 +130,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Les noms de colonnes sont utilisés comme chemin d'accès dans la construction du document XML en mode PATH. Le nom de colonne qui contient les valeurs d’ID d’employé commence par '\@'. Par conséquent, un attribut, **EmpID**, est ajouté à la `row` élément. Le nom de toutes les autres colonnes contient une barre oblique (/) qui indique la hiérarchie. Le document XML obtenu possède le `EmpName` enfant sous le `row` élément et le `EmpName` enfant aura `First`, `Middle` et `Last` éléments enfants.  
+ Les noms de colonnes sont utilisés comme chemin d'accès dans la construction du document XML en mode PATH. Le nom de colonne qui contient les valeurs d’ID d’employé commence par « \@ ». Ainsi, un attribut, **EmpID**, est ajouté à l’élément `row`. Le nom de toutes les autres colonnes contient une barre oblique (/) qui indique la hiérarchie. Le document XML obtenu possède l’enfant `EmpName` sous l’élément `row`, et l’enfant `EmpName` possède les éléments enfants `First`, `Middle` et `Last`.  
   
 ```  
 <row EmpID="1">  
@@ -172,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Par défaut, le mode PATH génère des données XML centrées sur l'attribut. Par conséquent, la spécification de la directive ELEMENTS dans une requête en mode PATH est sans effet. Toutefois, comme le montre l'exemple précédent, la directive ELEMENTS, associée à XSINIL, permet de générer des éléments pour les valeurs NULL.  
   
- Outre l'ID et le nom, la requête suivante extrait l'adresse d'un employé. Selon le chemin d’accès dans les noms des colonnes d’adresses, un `Address` élément enfant est ajouté à la `row` élément et les détails de l’adresse sont ajoutés en tant qu’éléments enfants de le `Address` élément.  
+ Outre l'ID et le nom, la requête suivante extrait l'adresse d'un employé. Conformément au chemin d’accès indiqué dans les noms des colonnes d’adresses, un élément enfant `Address` est ajouté à l’élément `row` et les détails de l’adresse sont ajoutés en tant qu’éléments enfants de l’élément `Address`.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -205,7 +202,7 @@ FOR XML PATH
 ```  
   
 ## <a name="several-columns-share-the-same-path-prefix"></a>Plusieurs colonnes partagent le même préfixe de chemin d'accès  
- Si plusieurs colonnes partagent le même préfixe de chemin d'accès, elles sont regroupées sous le même nom. Si différents préfixes d'espace de noms sont utilisés alors qu'ils sont liés au même espace de noms, un chemin d'accès est considéré comme différent. Dans la requête précédente, les colonnes FirstName, MiddleName et LastName partagent le même préfixe EmpName. Par conséquent, ils sont ajoutés en tant qu’enfants de le `EmpName` élément. C’est également le cas lors de la création du `Address` élément dans l’exemple précédent.  
+ Si plusieurs colonnes partagent le même préfixe de chemin d'accès, elles sont regroupées sous le même nom. Si différents préfixes d'espace de noms sont utilisés alors qu'ils sont liés au même espace de noms, un chemin d'accès est considéré comme différent. Dans la requête précédente, les colonnes FirstName, MiddleName et LastName partagent le même préfixe EmpName. Elles sont donc ajoutées en tant qu’enfants de l’élément `EmpName`. Cela était également le cas au moment de la création de l’élément `Address` dans l’exemple précédent.  
   
 ## <a name="one-column-has-a-different-name"></a>Une colonne porte un nom différent  
  Si une colonne intermédiaire et portant un nom différent apparaît, elle rompt le regroupement, comme le montre la requête modifiée suivante. La requête rompt le regroupement de FirstName, MiddleName et LastName, tel que spécifié dans la requête précédente, en ajoutant des colonnes d'adresse entre les colonnes FirstName et MiddleName.  
@@ -225,7 +222,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Par conséquent, la requête crée deux `EmpName` éléments. La première `EmpName` élément a le `FirstName` élément enfant et la seconde `EmpName` élément a le `MiddleName` et `LastName` éléments enfants.  
+ La requête crée donc deux éléments `EmpName`. Le premier élément `EmpName` possède l’élément enfant `FirstName` et le second élément `EmpName` possède les éléments enfants `MiddleName` et `LastName`.  
   
  Voici le résultat obtenu :  
   
@@ -248,4 +245,3 @@ FOR XML PATH
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   
-

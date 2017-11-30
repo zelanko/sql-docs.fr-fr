@@ -1,5 +1,5 @@
 ---
-title: "Les Points de données dans les graphiques (Générateur de rapports et SSRS) vides et Null | Documents Microsoft"
+title: "Points de données vides et Null dans les graphiques (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: faddd29d-4cc1-4c2c-8e29-d3d9918fe22a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cce213fa628dfed0d57304de308377520f60c3d0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a7dfe4ef13fee71b13734a12bee72ba0d3e8951f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>Points de données vides et Null dans les graphiques (Générateur de rapports et SSRS)
 
   Si vous affichez des champs avec des valeurs vides ou null dans un graphique de votre rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , l’aspect du graphique peut ne pas correspondre à vos attentes. Les graphiques traitent les valeurs vides différemment en fonction du type de graphique spécifié :  
@@ -36,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Dans les types de graphiques à base de formes, les valeurs Null sont omises.  
   
- Un exemple de graphique avec des points de données vides est disponible sous forme d'exemple de rapport. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un exemple de graphique avec des points de données vides est disponible sous forme d'exemple de rapport. Pour plus d'informations sur le téléchargement de cet exemple de rapport et d'autres rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -47,14 +45,13 @@ ms.lasthandoff: 08/09/2017
 ## <a name="fields-with-no-values-in-a-chart"></a>Champs sans valeurs dans un graphique  
  Si un champ ne contient aucune valeur dans le dataset retourné, le graphique affiche un graphique vide sans point de données, mais le nom de la série (en général, le nom du champ) est ajouté en tant qu'élément de légende.  
   
- Ce comportement est différent du cas où il n'y a aucune ligne de données dans le dataset retourné, ce qui peut se produire lorsque le rapport est paramétré et que la valeur sélectionnée retourne un jeu de résultats vide. Si votre requête de dataset retourne zéro ligne de données, un message s'affiche au moment de l'exécution pour indiquer qu'aucune donnée ne peut être présentée. Vous pouvez personnaliser ce message en modifiant la légende NoDataMessage pour le rapport dans le volet **Propriétés**. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Ce comportement est différent du cas où il n'y a aucune ligne de données dans le dataset retourné, ce qui peut se produire lorsque le rapport est paramétré et que la valeur sélectionnée retourne un jeu de résultats vide. Si votre requête de dataset retourne zéro ligne de données, un message s'affiche au moment de l'exécution pour indiquer qu'aucune donnée ne peut être présentée. Vous pouvez personnaliser ce message en modifiant la légende NoDataMessage pour le rapport dans le volet **Propriétés** . Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Graphiques](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Mise en forme d’un graphique](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [Ajouter un graphique à un rapport](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)   
-[Résoudre les problèmes graphiques](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
+[Dépanner les graphiques](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: be3ac5ed46a8807d6d78296d142ae36b9eb7664d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fc07c41e5bb9244ecbe5456e7f9944f460a73488
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-reporting-services"></a>Désinstaller Reporting Services
   La désinstallation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne supprime pas le contenu que vous avez créé ou la configuration que vous avez modifiée. Toutefois, s'il existe du contenu dont vous avez besoin une fois la désinstallation terminée, il est recommandé de faire des copies de contenu avant de commencer le processus de désinstallation.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Dans le Panneau de configuration Windows, cliquez sur **Programmes et fonctionnalités**.  
   
-2.  Dans **Programmes et fonctionnalités** , sélectionnez **Microsoft SQL Server 2012**.  
+2.  Dans **Programmes et fonctionnalités**, sélectionnez **Microsoft SQL Server 2016**.  
   
 3.  Dans l'Assistant Désinstallation, sélectionnez l'instance qui inclut la fonctionnalité d'instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **RS**.  
   

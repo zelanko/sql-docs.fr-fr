@@ -1,11 +1,10 @@
 ---
 title: "Spécifications des capacités maximales pour SQL Server | Microsoft Docs"
-ms.date: 03/09/2017
+ms.date: 11/6/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: c56b0a570f295896e76c5d0b3441042543445178
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 
@@ -81,12 +79,12 @@ ms.lasthandoff: 08/11/2017
 |Fichiers par base de données||32,767||  
 |Taille de fichier (données)||16 téraoctets||  
 |Taille de fichier (journal)||2 téraoctets||  
-|Fichiers de données pour les données optimisées en mémoire par base de données||4.096||  
+|Fichiers de données pour les données optimisées en mémoire par base de données||4 096 dans [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Les versions ultérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’imposent pas une telle limite stricte.||  
 |Fichier delta par fichier de données pour les données optimisées en mémoire||1||  
 |Références de table de clé étrangère par table||Sortantes = 253. Entrantes = 10 000.|Pour connaître les restrictions associées, consultez [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Longueur d'identificateur (en caractères)||128||  
 |Instances par ordinateur||50 instances sur un serveur autonome.<br /><br /> 25 instances sur un cluster de basculement si vous utilisez un disque de cluster partagé, car l'option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 50 instances sur un cluster de basculement si vous choisissez les partages SMB comme option de stockage de votre installation de cluster.||  
-|Index par table optimisée en mémoire||8||  
+|Index par table optimisée en mémoire||999 à partir de [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] et dans [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 dans [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] et [!INCLUDE[ssSQL15](../includes/ssSQL15-md.md)]||  
 |Longueur d’une chaîne contenant des instructions SQL (taille du traitement)||65 536 * Taille des paquets réseau|La taille des paquets réseau représente la taille des paquets TDS (Tabular Data Stream) utilisés pour la communication entre des applications et le [!INCLUDE[ssDE](../includes/ssde-md.md)]relationnel. La taille par défaut s'élève à 4 Ko ; elle est contrôlée par l'option de configuration Taille du paquet réseau.|  
 |Verrous par connexion||Verrous maximaux par serveur||  
 |Verrous par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limité uniquement par la mémoire|Cette valeur s’applique à l’allocation de verrouillage statique. Les verrous dynamiques sont uniquement limités par la mémoire.|  
@@ -159,4 +157,3 @@ ms.lasthandoff: 08/11/2017
  [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
-

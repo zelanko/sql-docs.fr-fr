@@ -1,5 +1,5 @@
 ---
-title: "Ajouter des effets 3D à un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter des effets 3D à un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7170699a3f0cbb26dd2376a8805978fe792223f0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 03dd78db6811c25fec35dcdb8b45ecf343194828
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-3d-effects-report-builder"></a>Graphique des effets - ajouter des effets 3D (Générateur de rapports)
+# <a name="chart-effects---add-3d-effects-report-builder"></a>Effets de graphiques - Ajouter des effets 3D (Générateur de rapports)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l’impact visuel des graphiques de vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  
   
 > [!NOTE]  
@@ -91,8 +90,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Effets 3D, de relief et autres dans un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
- [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

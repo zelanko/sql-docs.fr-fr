@@ -13,14 +13,13 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: partners
-ms.date: 17/09/2017
+ms.date: 11/02/2017
 ms.author: mikeray
+ms.openlocfilehash: 8f87a7096099356b6480302e2b08592b8e76d917
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 0df55369eb60f746409d1e4f9353db44f5cbe3bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-monitoring-partners"></a>Partenaires pour la surveillance de SQL Server
 Pour surveiller vos services SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de surveillance qui prennent en charge Microsoft SQL Server.
@@ -32,14 +31,19 @@ Pour surveiller vos services SQL Server, vous pouvez choisir parmi un large éve
 ## <a name="our-monitoring-partners"></a>Nos partenaires pour la surveillance
 | Partenaire |  Description | Liens |
 | --- | --- | --- | --- |
-|![idera][1] |**IDERA**<br>SQL Diagnostic Manager est une solution puissante de surveillance et de diagnostic des performances, qui avertit de façon proactive les administrateurs des problèmes d’intégrité, de performances et de disponibilité dans les environnements SQL Server, le tout à partir d’une console centrale.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] | |
+|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager est une solution puissante de surveillance et de diagnostic des performances, qui avertit de façon proactive les administrateurs des problèmes d’intégrité, de performances et de disponibilité dans les environnements SQL Server, le tout à partir d’une console centrale.<br><br>[Configuration système requise][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Site web][idera_website]<br>[Twitter][idera_twitter]<br>[Vidéo][idera_youtube] | |
+|[![quest][3]][quest_website] |**Quest**<br>Spotlight sur SQL Server Entreprise : garantissez un niveau de performance maximal en continu avec une surveillance, des diagnostics et une optimisation sans précédent des environnements SQL Server. Spotlight vous permet d’accéder aux détails dont vous avez besoin pour adapter vos bases de données SQL Server de façon optimale. Profitez de vues d’ensemble intuitives sur l’intégrité et les performances, d’alertes et d’actions automatisées, ainsi que de la prise en charge des appareils mobiles.|[Place de marché][quest_marketplace]<br>[Site web][quest_website]<br>[Vidéo][quest_video] | |
+|[![redgate][4]][redgate_website]| **Redgate**<br>SQL Monitor de Redgate est un outil de surveillance de SQL Server qui permet aux équipes en charge de SQL Server d’être plus proactives. Non seulement SQL Monitor vous avertit des problèmes actuels, mais il vous donne aussi les informations nécessaires pour qu’ils ne se produisent plus. Idéal pour les grandes infrastructures SQL Server, SQL Monitor veille à toujours vous donner une réponse aux questions que vous vous posez sur les performances. |[Site web][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Vidéo][redgate_video]| |
+|[![sentryone][2]][sentryone_website] |**SentryOne**<br>Avec les solutions SentryOne, les professionnels des données Microsoft atteignent un niveau de performance élevé dans les environnements physiques, virtuels et cloud. Ils peuvent ainsi regrouper leurs jeux d’outils, réduire les coûts d’infrastructure et accroître la vitesse et l’efficacité des bases de données afin d’obtenir un niveau de performance optimal dans leurs environnements de plateforme de données Microsoft, quelles que soient leur taille ou leur complexité.|<!--[Marketplace][idera_marketplace]<br>-->[Site web][sentryone_website]<br>[Feuille de données][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur quelques autres de nos partenaires, consultez [Partenaires pour la haute disponibilité et la récupération d’urgence][hadr_partners], [partenaires pour la gestion][management_partners] et [partenaires pour le développement][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
-
+[2]:  ./media/partner-hadr-sql-server/sentryone.png
+[3]:  ./media/partner-hadr-sql-server/quest.png
+[4]:  ./media/partner-hadr-sql-server/redgate.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -49,22 +53,32 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [Pa
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-
+[sentryone_website]:http://www.sentryone.com 
+[quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
+[redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->
+[sentryone_datasheet]:https://www.sentryone.com/platform 
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-
+[quest_marketplace]:http://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview 
 <!--Press links-->
 <!--[idera_press]:-->
 
-<!--YouTube links-->
+<!--Video links-->
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/an-overview-of-sql-diagnostic-manager
-
+[quest_video]:https://www.quest.com/webcast-ondemand/optimizing-and-tuning-sql-server8122701/
+[redgate_video]:https://youtu.be/EYCLM9hTyME 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
+[sentryone_twitter]:https://twitter.com/sentryone
+[redgate_twitter]:https://twitter.com/redgate  
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements
+
+<!--LinkedIn-->
+[sentryone_linkedin]:https://www.linkedin.com/company/sentryone 
+[redgate_linkedin]:https://www.linkedin.com/company/red-gate-software/

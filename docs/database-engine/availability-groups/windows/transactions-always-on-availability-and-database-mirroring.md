@@ -1,12 +1,13 @@
 ---
 title: "Transactions - Groupes de disponibilité Always On et mise en miroir de bases de données | Microsoft Docs"
 ms.custom: 
-ms.date: 07/06/2017
-ms.prod: sql-server-2016
+ms.date: 11/01/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 5824a75732ff37b76f41d3b9c609f874d0e3dba7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bc86ef8e495bacaaaebf2470306b25d38d5158e5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transactions - Groupes de disponibilité Always On et mise en miroir de bases de données
 [!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -65,7 +65,7 @@ SQL Server 2016 introduit la possibilité d’utiliser des transactions distribu
   
 -   Les groupes de disponibilité doivent s’exécuter sur Windows Server 2016 ou Windows Server 2012 R2. Pour Windows Server 2012 R2, vous devez installer la mise à jour KB3090973 disponible à l’adresse [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
   
--   Availability groups must be created with the **CREATE AVAILABILITY GROUP** et la clause **WITH DTC_SUPPORT = PER_DB** . Actuellement, vous ne pouvez pas modifier un groupe de disponibilité.  
+-   Les groupes de disponibilité doivent être créés avec la commande **CREATE AVAILABILITY GROUP** et la clause **WITH DTC\_SUPPORT = PER_DB**. Actuellement, vous ne pouvez pas modifier un groupe de disponibilité.  
 
 - Toutes les instances de SQL Server incluses dans le groupe de disponibilité doivent être équipées de SQL Server 2016 ou version ultérieure.
  
@@ -93,8 +93,7 @@ SQL Server 2016 introduit la possibilité d’utiliser des transactions distribu
 > [!NOTE]  
 >  L’utilisation de la mise en miroir de bases de données ou de groupes de disponibilité avec DTC d’une façon non approuvée dans cette rubrique n’est pas prise en charge.  Cela ne signifie pas que certains aspects du produit sans rapport avec DTC ne sont pas pris en charge, mais qu’aucun problème résultant de l’utilisation incorrecte des transactions distribuées ne sera traité.  
   
-## <a name="see-also"></a>Voir aussi  
- [Groupes de disponibilité Always On : interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+## <a name="next-steps"></a>Étapes suivantes  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   
-

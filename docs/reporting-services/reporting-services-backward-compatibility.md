@@ -1,5 +1,5 @@
 ---
-title: "Compatibilité descendante | Reporting Services | Documents Microsoft"
+title: "Compatibilité descendante | Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 56d5565743d458312d197670f4304d3b06374fde
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 09a42f0abaf2f9ef1dd059bc6336d4b28aa6b6eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilité descendante de Reporting Services
 En savoir plus sur les changements de comportement de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette rubrique traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures.
@@ -46,4 +45,3 @@ Elle décrit également les changements importants apportés au produit, connus 
  [Compatibilité descendante | Analysis Services](http://msdn.microsoft.com/en-us/618b6c3a-e20d-47a9-b2c6-6d848dfba05a)  
   
   
-

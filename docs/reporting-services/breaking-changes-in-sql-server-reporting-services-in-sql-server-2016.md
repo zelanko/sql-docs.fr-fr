@@ -1,5 +1,5 @@
 ---
-title: Modifications avec rupture dans SQL Server Reporting Services dans SQL Server 2016 | Documents Microsoft
+title: "Changements essentiels apportés à SQL Server Reporting Services dans SQL Server 2016 | Microsoft Docs"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -14,22 +14,20 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 6348d05b8dbe6c8ab1a682388b4e69ce438e6a12
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c82355e6ceb86d20bc17747edf637e4ddd2a440b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
+# <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>Changements essentiels apportés à SQL Server Reporting Services dans SQL Server 2016
 
-# <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>Modifications importantes de SQL Server Reporting Services dans SQL Server 2016
-
-[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)])
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
@@ -45,10 +43,9 @@ Le nom de l’application [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Changements de comportement SQL Server Reporting Services dans SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Quelles sont les nouveautés de Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
-[Fonctionnalités déconseillées dans SQL Server Reporting Services dans SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
+[Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+[Nouveautés de Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)   
+[Fonctions dépréciées de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)    
 [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Éléments de Dataset partagé sécurisé | Documents Microsoft"
+title: "Sécuriser les éléments de dataset partagé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a8f5d95f21c220a5039945a06204fd2a0e9a3c66
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 40a9f5257e09cf35129c0f11d89675fdeb285c94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-shared-dataset-items"></a>Sécuriser les éléments de dataset partagés
   Sur un serveur de rapports, les éléments de dataset partagés peuvent être utilisés par plusieurs rapports. Vous pouvez sécuriser des datasets partagés pour contrôler le degré d'accès dont disposent les utilisateurs. Par défaut, seuls les utilisateurs qui sont membres du groupe prédéfini **Administrateurs** peuvent consulter des datasets partagés, modifier des propriétés, activer la mise en cache, créer des plans d’actualisation du cache et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un dataset partagé.  
@@ -55,11 +54,10 @@ ms.lasthandoff: 08/09/2017
  Pour plus d’informations, consultez [Tâches au niveau élément](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) et [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les Datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)   
+ [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)   
  [Dossiers sécurisés](../../reporting-services/security/secure-folders.md)   
  [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

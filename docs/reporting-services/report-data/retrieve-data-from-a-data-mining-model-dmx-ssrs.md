@@ -1,5 +1,5 @@
 ---
-title: "Récupérer des données à partir d’un modèle d’exploration de données (DMX) (SSRS) | Documents Microsoft"
+title: "Récupérer des données d’un modèle d’exploration de données (DMX) (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,24 +16,23 @@ helpviewer_keywords:
 - datasets [Reporting Services], Analysis Services
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c12f8637430ef42d794cf2cf54100e0b9c6d58cf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 576c7729da4cc395588d00a613dad2942e4cfa64
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Récupérer des données d'un modèle d'exploration de données (DMX) (SSRS)
   Pour utiliser les données d’un modèle d’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez définir une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ainsi qu’un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  
   
  Vous pouvez créer une définition de source de données incorporée à utiliser par un seul rapport ou une définition de source de données partagée utilisable par plusieurs rapports. Les procédures de cette rubrique décrivent la création d'une source de données incorporée. Pour plus d’informations sur les sources de données partagées, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) et [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Après avoir créé une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez créer un ou plusieurs datasets. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
+ Après avoir créé une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous pouvez créer un ou plusieurs datasets. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
  Le nom du dataset créé apparaît dans le volet des données de rapport sous la forme d'un nœud sous la source de données correspondante.  
   
@@ -76,7 +75,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Dans la zone **Source de données**, vérifiez que le nom est celui d’une source de données qui se connecte à une source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-4.  Cliquez sur **Concepteur de requêtes** pour ouvrir le concepteur de requêtes graphique afin de créer une requête de manière interactive. Si le Concepteur de requêtes s’ouvre en mode MDX, cliquez sur **Type de commande DMX** (![modifier en vue de langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "modifier en vue de langage de requête DMX")) dans la barre d’outils pour basculer vers le Concepteur de requêtes de données d’exploration de données. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
+4.  Cliquez sur **Concepteur de requêtes** pour ouvrir le concepteur de requêtes graphique afin de créer une requête de manière interactive. Si le concepteur de requêtes s’ouvre en mode MDX, cliquez sur **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers la vue langage de requête DMX")) dans la barre d’outils pour basculer vers le concepteur de requêtes d’exploration de données. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
      Vous pouvez également importer une requête DMX existante à partir d’un autre rapport. Pour ce faire, cliquez sur **Importer**, puis naviguez jusqu’au fichier .rdl contenant la requête DMX. L'importation d'une requête à partir d'un fichier .dmx n'est pas prise en charge.  
   
@@ -89,8 +88,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Collection de champs de DataSet &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Rapport incorporé des jeux de données et des Datasets partagés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
-

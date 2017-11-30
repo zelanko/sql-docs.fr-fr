@@ -1,5 +1,5 @@
 ---
-title: "Sous-rapports (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Sous-rapports (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1ef1efaa3eb6e369e4b46766b3ed13fcbd2c0725
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sous-rapports (Générateur de rapports et SSRS)
   Un sous-rapport est un élément de rapport qui affiche un autre rapport à l'intérieur du corps d'un rapport principal. D'un point de vue conceptuel, un sous-rapport d'un rapport ressemble à un cadre d'une page Web. Il est utilisé pour incorporer un rapport dans un autre. Vous pouvez utiliser tout rapport comme un sous-rapport. Le rapport affiché en tant que sous-rapport est stocké sur un serveur de rapports, en général dans le même dossier que le rapport parent. Vous pouvez concevoir le rapport parent de sorte qu'il passe des paramètres au sous-rapport. Un sous-rapport peut être répété au sein de régions de données, en utilisant un paramètre pour filtrer les données de chaque instance du sous-rapport.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  Vous pouvez placer un sous-rapport dans le corps principal du rapport ou dans une région de données. Si vous le placez dans une région de données, il se répétera avec chaque instance du groupe ou chaque ligne de la région de données. Pour passer au sous-rapport une valeur à partir du groupe ou de la ligne, dans la propriété de la valeur, utilisez une expression de champ pour le champ qui contient la valeur à passer au paramètre du sous-rapport.  
   
- Pour plus d’informations sur l’utilisation des sous-rapports, consultez [ajouter un sous-rapport et des paramètres de &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur l’utilisation des sous-rapports, consultez [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>Spécification des noms et emplacements de sous-rapports  
  Vous pouvez concevoir un rapport principal de manière à spécifier un sous-rapport se trouvant dans un dossier différent sur le même serveur de rapports.  
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/09/2017
  Dans le Générateur de rapports, pour afficher un aperçu d'un sous-rapport dans un rapport principal, les deux rapports doivent se trouver sur le même serveur de rapports ou vous devez spécifier un chemin d'accès complet au sous-rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’extraction, exploration, sous-rapports et les régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

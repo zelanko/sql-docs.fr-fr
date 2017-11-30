@@ -1,5 +1,5 @@
 ---
-title: Fichier de Configuration ReportingServicesService | Documents Microsoft
+title: Fichier de configuration ReportingServicesService | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 72985f45d29d0f7f2d5a40494da929dfdfbbdc12
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 437760484aa49e7e4a8f806a2fd7bc64ec405f33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reportingservicesservice-configuration-file"></a>fichier de configuration ReportingServicesService
  ||  
@@ -95,8 +94,7 @@ Le fichier ReportingServicesService.exe.config contient les paramètres de confi
 |**Runtime**|Spécifie les paramètres de configuration qui prennent en charge la compatibilité descendante avec la version précédente. Des paramètres d'exécution sont utilisés pour rediriger vers la nouvelle version les demandes qui ciblent la version précédente de Microsoft.ReportingServices.Interfaces.<br /><br /> Tous les paramètres de configuration de cette section sont décrits dans la documentation de produit du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Pour plus d'informations, recherchez « Runtime Schema Settings » (en anglais) sur le site Web MSDN ou dans la documentation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers de Configuration Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Journal de Trace de Service de serveur de rapports](../../reporting-services/report-server/report-server-service-trace-log.md)  
+ [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Journal de suivi de service du serveur de rapports](../../reporting-services/report-server/report-server-service-trace-log.md)  
   
   
-

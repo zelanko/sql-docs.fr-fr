@@ -2,30 +2,24 @@
 title: "Créer des relations à base de termes | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.kbtermsbased.f1
+f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bdb1f4375ca80534e5b574d9b298fe053f2d4ec2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-term-based-relations"></a>Créer des relations à base de termes
   Cette rubrique décrit comment créer des relations à base de termes pour un domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une relation à base de termes (TBR) vous permet d'effectuer une correction sur un terme qui fait partie d'une valeur d'un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, vous pouvez installer une relation à base de termes qui remplace le terme « Inc. » par « Incorporated ». Le terme « Inc. » est modifié chaque fois qu’il apparaît dans le domaine. Les instances de « Contoso, Inc. » sont remplacées par « Contoso, Incorporated », et les deux valeurs sont considérées comme des synonymes exacts.  
@@ -60,7 +54,7 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Pour créer des relations à base de termes, vous devez avoir un domaine ouvert dans l'activité de gestion de l'arborescence du domaine.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -70,14 +64,14 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="Create"></a> Créer des relations à base de termes  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d'informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
+2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d’informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  La gestion de domaine est exécutée dans une page du client Data Quality Service qui contient cinq onglets pour les opérations distinctes de gestion de domaine. Ce n'est pas un processus piloté par l'Assistant ; toute opération de gestion peut être exécutée séparément.  
   
-3.  Dans **Liste des domaines** de la page **Gestion de l'arborescence du domaine** , sélectionnez le domaine pour lequel vous souhaitez créer une règle de domaine, ou créez un nouveau domaine. Si vous devez créer un domaine, consultez [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  Dans **Liste des domaines** de la page **Gestion de l'arborescence du domaine** , sélectionnez le domaine pour lequel vous souhaitez créer une règle de domaine, ou créez un nouveau domaine. Si vous devez créer un domaine, consultez [Créer un domaine](../data-quality-services/create-a-domain.md).  
   
 4.  Cliquez sur l'onglet **Relations à base de termes** .  
   
@@ -111,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  Après avoir créé les relations à base de termes, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   
-

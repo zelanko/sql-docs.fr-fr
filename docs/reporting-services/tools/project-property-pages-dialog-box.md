@@ -1,5 +1,5 @@
 ---
-title: "Boîte de dialogue Pages de propriétés de projet | Documents Microsoft"
+title: "Pages de propriétés du projet, boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.rpt.rptdesigner.projectpropertypages.general.f1
-helpviewer_keywords:
-- Project Property Pages dialog box
+f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62b7abef277143c52d2431e97420812b595347d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
 
-  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue à partir de la **projet** menu, cliquez sur  *\<nom du projet de rapport >***propriétés**.  
+  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur *\<Nom du projet de rapport>***Propriétés**.  
   
  Après avoir défini les propriétés de configuration, sélectionnez une configuration dans la liste déroulante **Configurations de solutions** de la barre d’outils.  
 
@@ -93,8 +89,7 @@ ms.lasthandoff: 08/09/2017
 
 [Publier des rapports](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [publier un rapport dans une bibliothèque SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Définir les propriétés de déploiement &#40; Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Aide sur le Concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)  
+[Définir des propriétés de déploiement &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Aide sur le concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

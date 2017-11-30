@@ -1,12 +1,11 @@
 ---
-title: "Stocker des données de serveur de rapports chiffrée (Gestionnaire de Configuration de SSRS) | Documents Microsoft"
+title: "Stocker des données chiffrées du serveur de rapports (Gestionnaire de configuration de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42709e27ef13cadc3be92ce5afcbbf9ea35ab1f7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0727e4e4fa6290396d08bedbd1404722c18e6807
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Les clés de chiffrement SSRS - stocker des données de serveur de rapports chiffrée
+# <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  
   
 ## <a name="encrypted-values"></a>Valeurs chiffrées  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/09/2017
   
      Ce compte est utilisé lorsqu'une connexion à un ordinateur distant est requise et qu'aucune autre information d'identification n'est disponible pour établir la connexion. Ce compte est principalement utilisé pour gérer le traitement de rapports sans assistance qui n'utilise pas d'informations d'identification pour accéder à une source de données. Si vous créez des rapports basés sur des sources de données qui ne nécessitent pas ou n'utilisent pas d'informations d'identification lors de l'accès aux données, vous devez configurer ce compte pour permettre son utilisation par le serveur de rapports.  
   
-     Ce compte se révèle indispensable dans certains cas et seul l’outil de configuration de Reporting Services ou l’utilitaire **rsconfig**peut créer un tel compte. Cette valeur est également stockée dans le fichier rsreportserver.config. Vous devez créer ce compte manuellement. Pour plus d’informations sur ce compte et sur son utilisation, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Ce compte se révèle indispensable dans certains cas et seul l’outil de configuration de Reporting Services ou l’utilitaire **rsconfig**peut créer un tel compte. Cette valeur est également stockée dans le fichier rsreportserver.config. Vous devez créer ce compte manuellement. Pour plus d’informations sur ce compte et sur son utilisation, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   Clé symétrique utilisée pour un chiffrement.  
   
@@ -67,10 +65,9 @@ ms.lasthandoff: 08/09/2017
  Un serveur de rapports stocke d'autres données non chiffrées, mais qui contiennent des informations sensibles que vous voulez protéger. Plus particulièrement, les instantanés d'historique de rapport et d'exécution de rapport contiennent des résultats de requêtes pouvant inclure des données destinées exclusivement à des utilisateurs autorisés. Si vous utilisez la fonction d'instantané pour des rapports qui contiennent des données confidentielles, sachez que les utilisateurs capables d'ouvrir des tables dans une base de données du serveur de rapports peuvent être en mesure d'afficher des parties d'un rapport stocké en inspectant le contenu de la table.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ne prend pas en charge la mise en cache ou identité de l’historique de rapport pour les rapports qui utilisent des paramètres en fonction de la sécurité de l’utilisateur.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge la mise en cache ou l’historique de rapport pour les rapports basés sur l’identité de sécurité de l’utilisateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et gérer les clés de chiffrement &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

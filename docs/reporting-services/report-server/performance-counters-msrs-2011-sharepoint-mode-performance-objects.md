@@ -1,5 +1,5 @@
 ---
-title: Compteurs de performance des objets de Performance MSRS 2011 SharePoint Mode | Documents Microsoft
+title: "Compteurs de performances - MSRS 2011 en mode SharePoint, objets de performance | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 78bd4357f5e6de5706a536c44bddac7f3e33ade6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 299a0dfb30834898a9efc59d80add9e1906c5f0e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Objets de performances MSRS 2011 SharePoint en Mode de compteurs de performance
+# <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Compteurs de performances - MSRS 2011 en mode SharePoint, objets de performance
   Cette rubrique décrit les compteurs de performance des objets de performance du **service Web MSRS 2011 en mode SharePoint** et du **service Windows MSRS 2011 en mode SharePoint** qui font partie d’un déploiement de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en mode SharePoint.  
   
 > [!NOTE]  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
  Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Génération de profils d’exécution](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Pour plus d’informations sur les compteurs de performance et les serveurs de rapports en mode natif, consultez [des compteurs de Performance pour le Service Web MSRS 2011 et objets de Performance MSRS 2011 Windows Service &#40; En Mode natif &#41; ](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [Compteurs de performances pour les MSRS 2011 Web Service SharePoint Mode MSRS 2011 Windows Service SharePoint Mode objets de Performance (Mode SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ Pour obtenir des informations sur les compteurs de performance et les serveurs de rapports en mode natif, consultez [Compteurs de performance du service web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) et [Compteurs de performance du service web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint (mode SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
  Dans cette rubrique :  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/09/2017
 |**Total des mises à jour d’instantanés**|Nombre total de mises à jour d'instantanés d'exécution de rapport.|  
   
 ##  <a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "contenu relatif à PowerShell")le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr »  
+ ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")Le script Windows PowerShell suivant retourne les ensembles de compteurs dans lesquels CounterSetName commence par « msr » :  
   
 ```  
 get-counter -listset msr*  
@@ -143,8 +142,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>Voir aussi  
  [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Compteurs de performances pour le Service Web MSRS 2011 et objets de Performance MSRS 2011 Windows Service &#40; En Mode natif &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Compteurs de performances du service web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Compteurs de performances pour des objets de performances ReportServer:Service  et ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

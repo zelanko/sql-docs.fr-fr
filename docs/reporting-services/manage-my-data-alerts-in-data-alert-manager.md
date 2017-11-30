@@ -1,5 +1,5 @@
 ---
-title: "Gérer mes alertes de données dans le Gestionnaire des alertes de données | Documents Microsoft"
+title: "Gérer mes alertes de données dans le Gestionnaire des alertes de données | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -14,28 +14,27 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: de78105e53535a100792126ff762cdfab2f691c2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Gérer mes alertes de données dans le Gestionnaire des alertes de données
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
 
 Les utilisateurs SharePoint peuvent consulter la liste des alertes de données qu'ils ont créées et les informations sur les alertes. Ils peuvent également supprimer leurs alertes, ouvrir les définitions d'alerte pour les modifier dans le Concepteur d'alertes de données et les exécuter. L'image suivante affiche les fonctionnalités disponibles aux utilisateurs dans le Gestionnaire des alertes de données.
 
- ![Fonctionnalités du gestionnaire pour les utilisateurs SharePoint d’alerte](../reporting-services/media/rs-alertmanageriw.gif "des fonctionnalités de gestionnaire d’alertes pour les utilisateurs SharePoint")
+ ![Fonctionnalités du Gestionnaire d’alertes pour les utilisateurs SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Fonctionnalités du Gestionnaire d’alertes pour les utilisateurs SharePoint")
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
 ### <a name="to-view-a-list-of-your-alerts"></a>Pour consulter la liste de vos alertes  
   
@@ -43,7 +42,7 @@ Les utilisateurs SharePoint peuvent consulter la liste des alertes de données q
   
 2.  Cliquez sur l’icône pour développer le menu déroulant sur un rapport et cliquez sur **Gérer les alertes de données**. L'image suivante montre le menu déroulant.  
   
-     ![Ouvrez le Gestionnaire des alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrez Gestionnaire des alertes à partir du menu contextuel du rapport")  
+     ![Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport")  
   
      Le Gestionnaire des alertes de données s'ouvre. Par défaut, il répertorie les alertes du rapport que vous avez sélectionné dans la bibliothèque.  
   
@@ -80,8 +79,7 @@ Les utilisateurs SharePoint peuvent consulter la liste des alertes de données q
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

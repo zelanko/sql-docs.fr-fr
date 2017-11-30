@@ -1,5 +1,5 @@
 ---
-title: "Tables, Matrices et listes (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Tables, matrices et listes (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -36,22 +36,21 @@ f1_keywords:
 - "10043"
 - sql13.rtp.rptdesigner.groupproperties.pagebreaks.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aa7d5ba489e0f23c6802a1d6596a22f2263decd8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fe304f126caffb096e5cd5a4610225f373fde504
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tables, matrices et listes (Générateur de rapports et SSRS)
  Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], les tables, matrices et listes sont des *régions de données* qui affichent les données du rapport paginé dans des cellules organisées en lignes et colonnes. Les cellules contiennent en général des données texte, telles que du texte, des dates et des nombres, mais elles peuvent également contenir des jauges, des graphiques ou des éléments de rapport, par exemple des images. Ensemble, les tables, matrices et listes sont fréquemment connues sous le nom de régions de données de *tableau matriciel* .  
   
- Les modèles de table, de matrice et de liste sont basés sur la région de données de tableau matriciel, qui est une grille flexible pouvant afficher des données dans les cellules. Dans les modèles de table et de matrice, les cellules sont organisées en lignes et en colonnes. Étant donné que les modèles sont des variantes de la région de données de tableau matriciel générique sous-jacente, vous pouvez afficher des données dans une combinaison de formats de modèles et modifier la table, matrice ou liste pour inclure les fonctionnalités d’une autre région de données que vous développez votre rapport. Par exemple, si vous ajoutez une table et trouvez qu'elle ne répond pas à vos besoins, vous pouvez ajouter des groupes de colonnes pour transformer la table en matrice.  
+ Les modèles de table, de matrice et de liste sont basés sur la région de données de tableau matriciel, qui est une grille flexible pouvant afficher des données dans les cellules. Dans les modèles de table et de matrice, les cellules sont organisées en lignes et en colonnes. Étant donné que les modèles sont des variantes de la région de données de tableau matriciel générique sous-jacente, vous pouvez afficher des données dans une combinaison de formats de modèles et modifier la table, la matrice ou la liste pour inclure les fonctionnalités d’une autre région de données pendant que vous développez votre rapport. Par exemple, si vous ajoutez une table et trouvez qu'elle ne répond pas à vos besoins, vous pouvez ajouter des groupes de colonnes pour transformer la table en matrice.  
   
  Les régions de données de matrice et de table peuvent afficher des relations de données complexes en incluant des tables imbriquées, matrices, listes, graphiques et jauges. Les tables et matrices ont une disposition tabulaire et leurs données proviennent d'un seul dataset, basé sur une source de données unique. La principale différence entre les tables et les matrices est que les tables peuvent inclure uniquement des groupes de lignes, alors que les matrices ont des groupes de lignes et des groupes de colonnes.  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Table"></a> Table  
  Utilisez une table pour afficher des données de détail, organiser les données dans des groupes de lignes, ou les deux. Le modèle Table comporte trois colonnes avec une ligne d'en-tête de table et une ligne de détails pour les données. L'illustration suivante montre le modèle de table initial sélectionné sur l'aire de conception :  
   
- ![Modèle de table sur l’aire de conception, sélectionné](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "modèle de Table sur l’aire de conception, sélectionné")  
+ ![Modèle de table sur l’aire de conception, sélectionné](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modèle de table sur l’aire de conception, sélectionné")  
   
  Vous pouvez grouper des données selon un champ unique, selon plusieurs champs ou en écrivant votre propre expression. Vous pouvez créer des groupes imbriqués ou des groupes indépendants et adjacents, et afficher des valeurs agrégées pour les données groupées, ou ajouter des totaux aux groupes. Par exemple, si votre table a un groupe de lignes appelé [Category], vous pouvez ajouter un sous-total pour chaque groupe ainsi qu'un total général pour le rapport. Pour améliorer l'apparence de la table et mettre en surbrillance les données que vous souhaitez mettre en évidence, vous pouvez fusionner les cellules et appliquer une mise en forme aux données et titres de table.  
   
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Matrix"></a> Matrice  
  Utilisez une matrice pour afficher des résumés de données agrégées, regroupés dans des lignes et des colonnes, et qui s'apparentent à un tableau croisé dynamique ou à une analyse croisée. Le nombre de lignes et de colonnes des groupes est déterminé par le nombre de valeurs uniques de chaque groupe de lignes et de colonnes. L'illustration suivante montre le modèle de matrice initial sélectionné sur l'aire de conception :  
   
- ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
+ ![Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nouvelle matrice ajoutée à partir de la boîte à outils, sélectionnée")  
   
  Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Au moment de l'exécution, lorsque les régions de données et données de rapport sont combinées, une matrice se développe horizontalement et verticalement sur la page à mesure que des colonnes pour les groupes de colonnes et des lignes pour les groupes de lignes sont ajoutées. Les cellules de matrice affichent des valeurs d'agrégation limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Par exemple, si votre matrice a un groupe de lignes (Category) et deux groupes de colonnes (Territory et Year) qui affichent la somme des ventes, le rapport affiche deux cellules avec les sommes des ventes pour chaque valeur dans le groupe Category. L'étendue des cellules au niveau des deux intersections est : Category et Territory, Category et Year. La matrice peut inclure des groupes imbriqués et adjacents. Les groupes imbriqués ont une relation parent-enfant et les groupes adjacents ont une relation d'égal à égal. Vous pouvez ajouter des sous-totaux pour tous les niveaux de groupes de lignes et de colonnes imbriqués dans la matrice.  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="List"></a> Liste  
  Utilisez une liste pour créer une disposition de forme libre. Comme vous n'êtes pas limité à une disposition sous forme de grille, vous pouvez placer librement des champs à l'intérieur de la liste. Vous pouvez utiliser une liste pour concevoir un formulaire permettant d'afficher de nombreux champs du dataset ou en tant que conteneur permettant d'afficher côte à côte plusieurs régions de données pour les données groupées. Par exemple, vous pouvez définir un groupe pour une liste, ajouter une table, un graphique et une image, et afficher les valeurs sous forme de table et de graphique pour chaque valeur de groupe, comme vous le feriez pour un fichier d'employés ou de patients.  
   
- ![Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée")  
+ ![Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Nouvelle liste ajoutée à partir de la boîte à outils, sélectionnée")  
   
  Pour plus d’informations, consultez [Créer des formulaires et des factures avec des listes].  
   
@@ -168,13 +167,12 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Liaison de plusieurs régions de données pour le même jeu de données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Jauges &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

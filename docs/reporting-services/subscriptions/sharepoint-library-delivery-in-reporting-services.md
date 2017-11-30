@@ -1,5 +1,5 @@
 ---
-title: "Remise de bibliothèque SharePoint dans Reporting Services | Documents Microsoft"
+title: "Remise à une bibliothèque SharePoint dans Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Remise à une bibliothèque SharePoint dans Reporting Services
   Un serveur de rapports configuré en mode intégré SharePoint inclut une extension de remise que vous pouvez utiliser pour envoyer un rapport à une bibliothèque SharePoint.  
@@ -74,13 +73,13 @@ ms.lasthandoff: 08/09/2017
  Remarquez que vous ne pouvez pas spécifier des formats de sortie réservés à un usage interne ou qui ne sont pas pris en charge par des serveurs de rapport qui s'exécutent en mode intégré SharePoint. Ces formats sont Null, RGDI et HTMLOWC.  
   
  Nom et extension de fichier  
- Spécifiez le nom et l'extension de fichier du rapport tel que vous souhaitez qu'ils apparaissent dans la bibliothèque cible. Si vous ne spécifiez d'extension de fichier, le serveur de rapports va en créer une basée sur le format de sortie du rapport. Cette valeur est requise. Le nom de fichier ne doit pas inclure les caractères suivants : : \ / * ? " < > | # { } %  
+ Spécifiez le nom et l'extension de fichier du rapport tel que vous souhaitez qu'ils apparaissent dans la bibliothèque cible. Si vous ne spécifiez d'extension de fichier, le serveur de rapports va en créer une basée sur le format de sortie du rapport. Cette valeur est requise. Le nom de fichier ne doit pas inclure les caractères suivants : : \ / * ? " < > | # { } %  
   
  Titre  
  Spécifie une propriété **Titre** facultative pour le rapport dans la bibliothèque cible. Il s'agit d'une propriété standard pour tous les éléments stockés dans une bibliothèque. Les utilisateurs peuvent choisir de montrer ou de masquer cette propriété lorsqu'ils consultent le contenu de la bibliothèque sur un site SharePoint.  
   
  Chemin d'accès  
- Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : `http://mySharePointWeb/MySite/MyDocLib`; où `http://mySharePointWeb` indique l’application Web, « MySite » est le site SharePoint, et « MyDocLib » est la bibliothèque SharePoint où le rapport est remis.  
+ Spécifie une URL complète vers la bibliothèque SharePoint, notamment l'application et le site Web SharePoint. Par exemple : `http://mySharePointWeb/MySite/MyDocLib`, où `http://mySharePointWeb` indique l’application web, « MySite » est le site SharePoint et « MyDocLib » est la bibliothèque SharePoint où est remis le rapport.  
   
  Vous ne pouvez pas spécifier une page, un site ou une liste. Le conteneur cible doit être une bibliothèque dans le même site ou batterie de serveurs.  
   
@@ -91,9 +90,8 @@ ms.lasthandoff: 08/09/2017
  Si vous utilisez cette fonctionnalité pour copier automatiquement la dernière version d’un fichier dans plusieurs emplacements, le fichier est copié si l’option **Remplacer** est activée. Si vous utilisez l’option **Auto-incrément** ou **Aucun**, la remise échoue et l’erreur **rsDeliveryError** se produit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer des abonnements pour les serveurs de rapports en Mode SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Spécifiez les informations d’identification et les informations de connexion pour les Sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Create and Manage Subscriptions for SharePoint Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

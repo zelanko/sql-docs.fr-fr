@@ -1,5 +1,5 @@
 ---
-title: "Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports | Documents Microsoft"
+title: "Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79f8068d11d707c4b0237d32e1645a80a12cdbbb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ce0f42a909f61530da5c614a87fb6633001fa903
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports
   Un serveur de rapports utilise toujours l'heure locale de l'ordinateur sur lequel il est installé. Vous ne pouvez pas le configurer de manière à utiliser un autre fuseau horaire. Si une application cliente pointe vers un serveur de rapports se trouvant dans un autre fuseau horaire, c'est le fuseau horaire du serveur de rapports qui sera utilisé pour effectuer une opération planifiée. Dans les pages de gestion SharePoint et le Gestionnaire de rapports, le fuseau horaire est indiqué sur chaque page de planification de sorte que vous savez exactement à quel moment doit se produire une opération planifiée. Par exemple, la page consacrée à la création de planifications personnalisées indiquera « Les heures sont exprimées en (UTC-08:00) Heure du Pacifique (États-Unis et Canada). »  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="changing-the-time-zone-native-mode"></a>Modification du fuseau horaire (mode natif)  
  Si vous changez le fuseau horaire sur un ordinateur qui héberge un serveur de rapports, vous devez redémarrer le service Report Server pour que le changement de fuseau horaire soit pris en compte.  
   
- Les valeurs d'horodateur des instantanés d'historique de rapport existants sont synchronisées au nouveau paramètre de fuseau horaire. Si vous avez créé un instantané de l'historique d'un rapport à 09h00 et que vous avez ensuite avancé d'un fuseau horaire, l'horodateur qui figure sur l'instantané produit passe de 09h00 à 10h00. à 10h00.  
+ Les valeurs d'horodateur des instantanés d'historique de rapport existants sont synchronisées au nouveau paramètre de fuseau horaire. Si vous avez créé un instantané de l'historique d'un rapport à 09h00 et que vous avez ensuite avancé d'un fuseau horaire, l'horodateur qui figure sur l'instantané produit passe de 09h00 à 10h00.  
   
  Les planifications conservent les paramètres existants, mais ceux-ci sont mappés sur le nouveau fuseau horaire. Par exemple, si une planification s'exécute à 2h00 du matin. Heure standard du Pacifique et vous modifiez le fuseau horaire à l'heure standard est d'Australie, la planification s'exécute à 2h00 du matin Heure standard est d'Australie.  
   
@@ -47,8 +46,7 @@ ms.lasthandoff: 08/09/2017
  Le changement de l'heure de l'horloge de l'ordinateur est sans effet sur les valeurs d'horodatage existantes (par exemple, si vous avancez l'horloge d'une heure, les valeurs d'horodatage des instantanés d'historique de rapport ne changent pas). On peut constater un délai de 10 secondes avant que le processeur de planification et de remise utilise le nouveau paramètre. Le délai véritable peut varier si vous avez modifié les paramètres de fréquence d'interrogation dans les fichiers de configuration.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer et arrêter le Service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+ [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)  
   
   
-

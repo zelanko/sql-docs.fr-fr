@@ -1,5 +1,5 @@
 ---
-title: Traiter les rapports volumineux | Documents Microsoft
+title: Traiter les rapports volumineux | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53bf81960ca2faca6d14be007966a0713166d19e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="process-large-reports"></a>Traiter les rapports volumineux
   Les rapports volumineux présentent certains problèmes de traitement. Ils nécessitent un certain nombre de configurations pour garantir leur fonctionnement correct. Ils ne doivent pas être exécutés à la demande, à moins d'être configurés pour prendre en charge la pagination.  
@@ -76,10 +75,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Définir les propriétés de traitement des rapports](../../reporting-services/report-server/set-report-processing-properties.md)   
- [Spécifiez les informations d’identification et les informations de connexion pour les Sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Gestion de contenu de serveur de rapports &#40; En Mode natif SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Précharger le Cache &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
+ [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Précharger le cache &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
-

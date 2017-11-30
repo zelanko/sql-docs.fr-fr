@@ -1,12 +1,11 @@
 ---
-title: "Configurer un déploiement de montée en puissance parallèle de serveur de rapports en Mode natif | Documents Microsoft"
+title: "Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,23 +13,22 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 39de4778d781c1d98c93b3ab802c0ca09d39eeb2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
   Le mode natif de Reporting Services prend en charge un modèle de déploiement par montée en puissance parallèle qui vous permet d'exécuter plusieurs instances de serveur de rapports partageant une base de données du serveur de rapports unique. Les déploiements avec montée en puissance parallèle sont utilisés pour augmenter l'évolutivité des serveurs de rapports afin de gérer davantage d'utilisateurs simultanés et de plus grandes charges d'exécution de rapport. Ils peuvent également être utilisés pour dédier des serveurs spécifiques au traitement des rapports interactifs ou planifiés.  
   
- Les serveurs de rapports en mode SharePoint utilisent l'infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+ Les serveurs de rapports en mode SharePoint utilisent l'infrastructure de produits SharePoint pour la montée en puissance parallèle. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
  
   Un *déploiement avec montée en puissance parallèle* est utilisé dans les scénarios suivants :  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
  **Pour planifier, installer et configurer un déploiement avec montée en puissance parallèle, suivez ces étapes :**  
   
--   Révision [installer SQL Server 2016 à partir de l’Assistant Installation &#40; Le programme d’installation &#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne pour obtenir des instructions sur la façon d’installer des instances de serveur de rapports.  
+-   Pour obtenir des instructions sur l’installation d’instances de serveur de rapports, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Si vous prévoyez d'héberger le déploiement avec montée en puissance parallèle sur un cluster à charge réseau équilibrée, vous devez configurer le cluster avant de configurer le déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un serveur de rapports sur un cluster avec équilibrage de la charge réseau](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
     -   Utilisez le programme d'installation pour installer chaque instance de serveur de rapports qui sera jointe au déploiement avec montée en puissance parallèle.  
   
-         Pour éviter des erreurs de compatibilité de base de données lorsque vous connectez les instances du serveur à la base de données partagée, assurez-vous que toutes les instances soient de la même version. Par exemple, si vous créez la base de données du serveur de rapports à l’aide d’une instance de serveur de rapports SQL Server 2016, toutes les autres instances dans le même déploiement doivent également être SQL Server 2016.  
+         Pour éviter des erreurs de compatibilité de base de données lorsque vous connectez les instances du serveur à la base de données partagée, assurez-vous que toutes les instances soient de la même version. Par exemple, si vous créez la base de données du serveur de rapports à l’aide d’une instance du serveur de rapports SQL Server 2016, l’édition de toutes les autres instances du même déploiement doit également être SQL Server 2016.  
   
     -   Utilisez le gestionnaire de configuration de Reporting Services pour connecter chaque serveur de rapports à la base de données partagée. Vous ne pouvez connecter et configurer qu'un seul serveur de rapports à la fois.  
   
@@ -70,23 +68,23 @@ ms.lasthandoff: 08/09/2017
   
 1.  Installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur qui hébergera les bases de données du serveur de rapports. Au minimum, installez [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-2.  Si nécessaire, activez le serveur de rapports pour les connexions distantes. Certaines versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorisent pas les connexions TCP/IP et Canaux nommés distantes par défaut. Pour déterminer si les connexions distantes sont autorisées ou non, utilisez l'outil Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et vérifiez les paramètres de configuration réseau de l'instance cible. Si l'instance distante est également une instance nommée, vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est activé et en cours d'exécution sur le serveur cible. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fournit le numéro de port utilisé pour se connecter à l'instance nommée. 
+2.  Si nécessaire, activez le serveur de rapports pour les connexions distantes. Certaines versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorisent pas les connexions TCP/IP et Canaux nommés distantes par défaut. Pour déterminer si les connexions distantes sont autorisées ou non, utilisez l'outil Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et vérifiez les paramètres de configuration réseau de l'instance cible. Si l'instance distante est également une instance nommée, vérifiez que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser est activé et en cours d'exécution sur le serveur cible. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser fournit le numéro de port utilisé pour se connecter à l’instance nommée. 
 
 ## <a name="service-accounts"></a>Comptes de service
 
-Les comptes de service utilisés pour l’instance de Reporting Services sont importantes lors du traitement d’un déploiement avec montée en charge. Vous devez effectuer l’une des options suivantes lors du déploiement de vos instances de Reporting Services.
+Les comptes de service utilisés pour l’instance de Reporting Services sont importants dans le contexte d’un déploiement avec montée en puissance parallèle. Vous devez effectuer l’une des actions suivantes lors du déploiement de vos instances de Reporting Services.
 
-**Option 1 :** toutes les instances de Reporting Services doivent être configuré avec le même compte d’utilisateur de domaine pour le compte de service.
+**Option 1 :** toutes les instances de Reporting Services doivent être configurées avec le même compte d’utilisateur de domaine pour le compte de service.
 
-**Option 2 :** chaque compte de service, le compte de domaine ou non, doivent être accordées les autorisations dbadmin au sein de l’instance de base de données SQL Server qui héberge la base de données de catalogues ReportServer.
+**Option 2 :** chaque compte de service individuel, qu’il s’agisse ou non d’un compte de domaine, doit disposer des autorisations dbadmin au sein de l’instance de base de données SQL Server qui héberge la base de données de catalogues ReportServer.
 
-Si vous avez configuré une configuration différente à une des options ci-dessus, vous pouvez rencontrer des échecs intermittents de modification des tâches avec l’Agent SQL. Il apparaît comme une erreur dans les deux Services Reporting des journaux et sur le portail web lors de la modification d’un abonnement aux rapports.
+Si votre configuration est différente des options ci-dessus, vous risquez de rencontrer des échecs intermittents lors de la modification de tâches avec l’Agent SQL. Une erreur sera alors consignée à la fois dans le journal Reporting Services et sur le portail web lors de la modification d’un abonnement aux rapports.
 
 ```
 An error occurred within the report server database.  This may be due to a connection failure, timeout or low disk condition within the database.
 ``` 
 
-Le problème est intermittent qui est le serveur qui a créé la tâche de l’Agent SQL aura des droits nécessaires pour afficher, supprimer ou modifier l’élément. Si vous n’effectuez l’une des options ci-dessus, les opérations réussissent uniquement lors de l’équilibrage de charge toutes vos requêtes pour cet abonnement envoie au serveur ayant créé la tâche de l’Agent SQL. 
+Ce problème est intermittent dans le sens où seul le serveur qui a créé la tâche de l’Agent SQL aura les droits nécessaires pour afficher, supprimer ou modifier l’élément. Si vous ne choisissez pas l’une des options ci-dessus, les opérations ne réussissent que si l’équilibreur de charge envoie toutes vos requêtes pour cet abonnement au serveur ayant créé la tâche de l’Agent SQL. 
   
 ## <a name="to-install-the-first-report-server-instance"></a>Pour installer la première instance du serveur de rapports  
   
@@ -94,7 +92,7 @@ Le problème est intermittent qui est le serveur qui a créé la tâche de l’A
   
 2.  Démarrez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configurer l’URL du service Web Report Server, l’URL du portail Web et la base de données du serveur de rapports. Pour plus d’informations, consultez [Configurer un serveur de rapports &#40;mode natif de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configurez l’URL de service web Report Server, l’URL du portail web et la base de données du serveur de rapports. Pour plus d’informations, consultez [Configurer un serveur de rapports &#40;mode natif de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 4.  Vérifiez le fonctionnement du serveur de rapports. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -132,7 +130,7 @@ Le problème est intermittent qui est le serveur qui a créé la tâche de l’A
   
 2.  Cliquez sur **Déploiement avec montée en puissance parallèle** pour ouvrir la page du même nom. Vous devez voir deux entrées, l'une pour chaque instance de serveur de rapports connectée à la base de données du serveur de rapports. La première instance de serveur de rapports doit être jointe. Le deuxième serveur de rapports doit être en attente de rattachement. Si vous ne voyez pas de telles entrées pour votre déploiement, vérifiez que vous êtes connecté au premier serveur de rapports qui est déjà configuré et initialisé pour utiliser la base de données du serveur de rapports.  
   
-     ![Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle](../../reporting-services/install-windows/media/scaloutscreen.gif "une capture d’écran partielle de la page de déploiement avec montée en puissance parallèle")  
+     ![Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle](../../reporting-services/install-windows/media/scaloutscreen.gif "Capture d’écran partielle de la page de déploiement avec montée en puissance parallèle")  
   
 3.  Dans la page Déploiement avec montée en puissance parallèle, sélectionnez l’instance de serveur de rapports qui doit joindre le déploiement, puis sélectionnez **Ajouter le serveur**.  
   
@@ -147,12 +145,12 @@ Le problème est intermittent qui est le serveur qui a créé la tâche de l’A
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer un compte de Service](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+[Configurer un compte de service](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
 [Configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
-[Créer une base de données du serveur de rapports en Mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Configurer des URL de serveur de rapports](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
-[Configurer une connexion de base de données de serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Gérer un serveur de rapports Reporting Services en Mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Configurer des URL de serveurs de rapports](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+[Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Ajouter et supprimer des clés de chiffrement pour un déploiement avevc montée en puissance prallèle](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+[Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

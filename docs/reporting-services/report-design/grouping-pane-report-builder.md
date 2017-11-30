@@ -1,5 +1,5 @@
 ---
-title: "Volet (Générateur de rapports) de regroupement | Documents Microsoft"
+title: "Volet de regroupement (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,45 +10,42 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10033"
-helpviewer_keywords:
-- Grouping Pane dialog box
+f1_keywords: "10033"
+helpviewer_keywords: Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f8017dd30a085519f9dd5d3593aaa3d59329f8c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3766308293310541636462adc6b44de34ca7d703
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grouping-pane-report-builder"></a>Volet de regroupement (Générateur de rapports)
   Le volet de regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel actuellement sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement contient un volet Groupes de lignes et un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Si le volet Regroupement n’est pas visible, sous l’onglet **Affichage**, dans le groupe **Afficher/Masquer**, cliquez sur **Regroupement**.  
+>  Si le volet Regroupement n’est pas visible, sous l’onglet **Affichage** , dans le groupe **Afficher/Masquer**, cliquez sur **Regroupement**.  
   
  Les cellules situées dans les zones de groupes de lignes et de colonnes peuvent être des membres statiques ou dynamiques d'un groupe de lignes ou de colonnes de tableau matriciel. Les membres statiques ne sont utilisés qu'à une seule reprise par groupe et ne contiennent généralement que des étiquettes ou des totaux. Les membres dynamiques ne sont utilisés qu'à une seule reprise par instance de groupe et contiennent généralement les valeurs uniques de l'expression de groupe. Lorsque vous sélectionnez des cellules de tableau matriciel dans la zone de groupes de lignes ou de groupes de colonnes, le membre du groupe correspondant est sélectionné dans le volet Groupes de lignes ou Groupes de colonnes. Inversement, si vous sélectionnez des groupes dans le volet de regroupement, la cellule correspondante associée au membre du groupe est sélectionnée sur l'aire de conception. Pour plus d’informations sur les zones de groupes de lignes et de colonnes de tableau matriciel, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  Le volet de regroupement prend en charge les modes suivants :  
   
--   **Par défaut** : utilisez le mode par défaut pour ajouter, modifier ou supprimer des groupes. Vous pouvez ajouter des groupes parents, enfants et des groupes de détails en faisant glisser des champs du volet des données de rapport et en les insérant dans la hiérarchie des groupes. Pour ajouter un groupe adjacent, vous devez utiliser le raccourci **Ajouter un groupe**. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Par défaut** : utilisez le mode par défaut pour ajouter, modifier ou supprimer des groupes. Vous pouvez ajouter des groupes parents, enfants et des groupes de détails en faisant glisser des champs du volet des données de rapport et en les insérant dans la hiérarchie des groupes. Pour ajouter un groupe adjacent, vous devez utiliser le raccourci **Ajouter un groupe** . Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avancé** : utilisez le **Mode avancé** pour afficher tous les membres des groupes de lignes et de colonnes et pour définir des propriétés sur les membres statiques. Lorsque vous créez des groupes ou ajoutez des totaux, les propriétés qui contrôlent la manière dont la région de données de tableau matriciel génère les lignes et les colonnes sur chaque page de rapport sont définies automatiquement. Pour modifier ces propriétés manuellement, vous devez les définir sur le membre du tableau matriciel. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
+-   **Avancé**: utilisez le **Mode avancé** pour afficher tous les membres des groupes de lignes et de colonnes et pour définir des propriétés sur les membres statiques. Lorsque vous créez des groupes ou ajoutez des totaux, les propriétés qui contrôlent la manière dont la région de données de tableau matriciel génère les lignes et les colonnes sur chaque page de rapport sont définies automatiquement. Pour modifier ces propriétés manuellement, vous devez les définir sur le membre du tableau matriciel. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Mode par défaut  
  Dans le mode par défaut, les volets Groupes de lignes et Groupes de colonnes affichent une vue hiérarchique pour tous les groupes parents, enfants et adjacents. Un groupe enfant apparaît en retrait sous son groupe parent. Un groupe adjacent apparaît au même niveau de retrait que ses groupes frères. L'illustration suivante montre une région de données de tableau matriciel avec des groupes de lignes imbriqués et des groupes de colonnes imbriqués et adjacents.  
   
- ![Tableau matriciel, groupes de colonnes et de lignes imbriqué et adjacent](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "tableau matriciel, groupes de colonnes et de lignes imbriqué et adjacent")  
+ ![Tableau matriciel, groupes de lignes et de colonnes adjacentes imbriqués](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpane.gif "Tableau matriciel, groupes de lignes et de colonnes adjacentes imbriqués")  
   
  Le volet de regroupement affiche les groupes de lignes et de colonnes correspondants. Dans l’illustration suivante, le groupe basé sur la sous-catégorie a été sélectionné dans le volet Groupes de lignes, et la cellule de regroupement [Subcat] est sélectionnée dans la région de données de tableau matriciel :  
   
- ![Volet de regroupement pour les groupes de lignes et de colonnes imbriqués](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "volet de regroupement pour les groupes de lignes et de colonnes imbriqués")  
+ ![Volet de regroupement pour les groupes de lignes et de colonnes imbriqués](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Volet de regroupement pour les groupes de lignes et de colonnes imbriqués")  
   
  Dans le volet Groupes de lignes, le groupe basé sur la sous-catégorie est un enfant du groupe basé sur la catégorie. Dans le volet Groupes de colonnes, le groupe de pays/région est un enfant du groupe de géographie. Le groupe d'année et les groupes de pays/région sont des groupes adjacents.  
   
@@ -85,9 +82,8 @@ ms.lasthandoff: 08/09/2017
 -   **(Static)** : indique un membre statique sans cellule d’en-tête, également appelé statique masqué.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, volets et les Assistants](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

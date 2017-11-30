@@ -1,27 +1,25 @@
 ---
-title: "Leçon 4 : Ajout d’une Table au rapport (Reporting Services) | Documents Microsoft"
+title: "Leçon 4 : ajout d’une table au rapport (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: c073de93cfb1abee01a05e207fbce087ec44ade0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajout d'une table au rapport (Reporting Services)
 Une fois le dataset défini, vous pouvez commencer à concevoir le rapport. Pour créer une mise en page de rapport, faites glisser les régions de données, les zones de texte, les images et autres éléments que vous souhaitez inclure dans un rapport vers l'aire de conception.  
@@ -30,7 +28,7 @@ Les éléments qui contiennent des lignes de données répétées de datasets so
   
 ### <a name="to-add-a-table-data-region-and-fields-to-a-report-layout"></a>Pour ajouter une région de données de table et des champs à une mise en page de rapport  
   
-1.  Dans la **Boîte à outils**, cliquez sur **Table**, puis sur l’aire de conception et faites glisser la souris. Le Concepteur de rapports trace une région de donnée de table composée de trois colonnes au centre de l'aire de conception. La **Boîte à outils** peut s’afficher sous la forme d’un onglet situé à gauche du volet **Données du rapport** . Pour ouvrir la **Boîte à outils**, positionnez le pointeur au-dessus de l’onglet **Boîte à outils** . Si la **Boîte à outils** n’est pas visible, cliquez sur l’option **Boîte à outils** dans le menu **Affichage**.
+1.  Dans la **Boîte à outils**, cliquez sur **Table**, puis sur l’aire de conception et faites glisser la souris. Le Concepteur de rapports trace une région de donnée de table composée de trois colonnes au centre de l'aire de conception. La **Boîte à outils** peut s’afficher sous la forme d’un onglet situé à gauche du volet **Données du rapport** . Pour ouvrir la **Boîte à outils**, positionnez le pointeur au-dessus de l’onglet **Boîte à outils** . Si la **Boîte à outils** n’est pas visible, cliquez sur **Boîte à outils** dans le menu **Affichage**.
   
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
@@ -64,7 +62,7 @@ L'affichage d'un aperçu d'un rapport vous permet de visualiser le rapport rendu
   
     Le diagramme suivant représente une partie du rapport en mode Aperçu.  
   
-    ![Aperçu, lignes de détails de la table avec 5 colonnes](../reporting-services/media/rs-basictabledetailspreview.png "aperçu, lignes de détails de la table avec 5 colonnes")  
+    ![Aperçu, lignes de détails d’une table comportant 5 colonnes](../reporting-services/media/rs-basictabledetailspreview.png "Aperçu, lignes de détails d’une table comportant 5 colonnes")  
   
     Remarquez que la devise (dans la colonne Line Total) possède six décimales après la virgule et que la date comporte un horodatage. Vous allez reprendre cette mise en forme dans la leçon suivante.  
   
@@ -72,9 +70,8 @@ L'affichage d'un aperçu d'un rapport vous permet de visualiser le rapport rendu
 > Dans le menu **Fichier** , cliquez sur **Enregistrer tout** pour enregistrer le rapport.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Vous avez ajouté avec succès une région de données de table à votre rapport, ajouté des champs à la région de données et affiché un aperçu du rapport. Vous allez ensuite mettre en forme des en-têtes de colonnes et des valeurs de devise et de date. Consultez [leçon 5 : mise en forme d’un rapport &#40; Reporting Services &#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Vous avez ajouté avec succès une région de données de table à votre rapport, ajouté des champs à la région de données et affiché un aperçu du rapport. Vous allez ensuite mettre en forme des en-têtes de colonnes et des valeurs de devise et de date. Consultez [Leçon 5 : mise en forme d’un rapport &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Tables &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
 [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
-

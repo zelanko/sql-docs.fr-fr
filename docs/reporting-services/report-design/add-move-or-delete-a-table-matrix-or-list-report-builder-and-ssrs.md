@@ -1,5 +1,5 @@
 ---
-title: "Ajouter, déplacer ou supprimer une Table, matrice ou liste (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter, déplacer ou supprimer une table, une matrice ou une liste (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 52df1c4404f761f58189e5bfc05e23359f053808
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eb1487fb02db3d644cccfd7b0e982ee3dcadb206
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Ajouter, déplacer ou supprimer une table, une matrice ou une liste (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données affiche les données d’un dataset de rapport. Les tables, matrices, listes, graphiques et jauges sont des régions de données. Pour imbriquer une région de données dans une autre, ajoutez une à une chaque région de données, puis faites glisser la région de données enfant dans la région de données parente.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Cliquez sur l'aire de conception, puis faites glisser la souris pour créer une zone de la taille voulue pour la région de données.  
   
-3.  Faites glisser un champ de dataset de rapport à partir du volet des données de rapportvers une cellule de la région de données. La région de données est maintenant liée à des données du dataset de rapport.  
+3.  Faites glisser un champ de dataset de rapport à partir du volet des données de rapport vers une cellule de la région de données. La région de données est maintenant liée à des données du dataset de rapport.  
   
 ## <a name="to-select-a-data-region"></a>Pour sélectionner une région de données  
   
@@ -68,7 +67,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

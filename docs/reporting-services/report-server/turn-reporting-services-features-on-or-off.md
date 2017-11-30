@@ -1,5 +1,5 @@
 ---
-title: "Activer les fonctionnalités Reporting Services ou désactiver | Documents Microsoft"
+title: "Activer ou désactiver les fonctionnalités Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1df708ed8e384371ea97b683b97733e0bcacb6e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activer ou désactiver les fonctionnalités Reporting Services
   Vous pouvez désactiver les fonctionnalités de serveur de rapports que vous n'utilisez pas dans le cadre d'une stratégie de verrouillage pour réduire l'exposition aux attaques d'un serveur de rapports de production. Dans la plupart des cas, vous préférerez exécuter les fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjointement afin de bénéficier de toutes les fonctionnalités offertes dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Toutefois, vous pouvez désactiver les fonctionnalités dont vous n'avez pas besoin, selon votre modèle de déploiement. Par exemple, vous pouvez activer le traitement en arrière-plan uniquement si le traitement de tous les rapports a été planifié. De même, vous pouvez exécuter simplement le service Web Report Server si vous souhaitez disposer uniquement de rapports interactifs à la demande.  
@@ -123,9 +122,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Vous ne pouvez pas désactiver complètement le traitement en arrière-plan car il fournit des fonctionnalités de maintenance de base de données requises pour les opérations de serveur.  
   
-##  <a name="WebPortal"></a>Portail Web
+##  <a name="WebPortal"></a>Portail web
   
-Les versions précédentes, vous pouvez de désactiver le Gestionnaire de rapports en définissant **IsReportManagerEnabled** avec la valeur false. **IsReportManagerEnabled** est déconseillée à compter de SQL Server 2016 Reporting Services Cumulative Update 2. Le portail web est toujours activé.
+Dans les versions précédentes, vous pouviez de désactiver le Gestionnaire de rapports en définissant **IsReportManagerEnabled** sur false. Ce paramètre est déprécié à compter de SQL Server 2016 Reporting Services Cumulative Update 2. Le portail web sera toujours activé.
   
 ##  <a name="ReportBuilder"></a> Générateur de rapports  
   
@@ -164,4 +163,3 @@ Les versions précédentes, vous pouvez de désactiver le Gestionnaire de rappor
  D’autres questions ? [Essayez le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

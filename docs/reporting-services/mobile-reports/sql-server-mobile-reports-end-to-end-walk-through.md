@@ -1,27 +1,24 @@
 ---
-title: "Rapports mobiles SQL Server : procédure pas à pas de bout en bout | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: "Rapports mobiles SQL Server : procédure pas à pas de bout en bout | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
@@ -38,11 +35,11 @@ Cet article explique comment :
 ## <a name="before-we-start"></a>Avant de commencer  
 Pour suivre la procédure, vous avez besoin de ces produits :  
   
-* Pour créer des sources de données et des indicateurs de performance clés et publier des jeux de données et les rapports mobiles, vous devez avoir accès à un [ ! INCLURE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* Pour [créer des datasets partagés](../install-windows/install-report-builder.md).  
+* Pour créer des sources de données et des indicateurs de performance clés, et publier des jeux de données et des rapports mobiles, vous devez accéder à un [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* Pour [créer des jeux de données partagés](../install-windows/install-report-builder.md).  
 * Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
-* [Exemple de base de données AdventureWorks et scripts](http://msftdbprodsamples.codeplex.com/).  
-*  OR : Quatre coins du monde exemple base de données, disponible à partir de la [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
+* [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+*  OU : exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Pour afficher le résultat 
   *   [Inscrivez-vous au service Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) et
   *  [Téléchargez l’application mobile Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
@@ -50,12 +47,12 @@ Pour suivre la procédure, vous avez besoin de ces produits :
   
 ## <a name="create-a-shared-data-source"></a>Créer une source de données partagée  
   
-Vous pouvez créer une source de données partagée pour vos rapports mobiles à partir de n’importe quelle source de données prise en charge par Reporting Services. Consultez le [la liste des sources de données pris en charge](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Vous pouvez créer une source de données partagée pour vos rapports mobiles à partir de n’importe quelle source de données prise en charge par Reporting Services. Consultez la [liste des sources de données prises en charge](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Source de données**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Entrez vos informations de source de données > **OK**.  
+3. Entrez vos informations de source de données > **OK**.  
   
     Par défaut, les sources de données ne sont pas affichées sur le portail.    
    
@@ -236,7 +233,7 @@ Les listes de sélection jouent le rôle de filtres dans Power BI et Excel. Nous
   
 Maintenant que vous avez créé des visuels sur la présentation principale, vous pouvez créer un rapport mobile avec une présentation spécialement optimisée pour vos utilisateurs de téléphone.    
   
-1. Dans le coin supérieur droit, cliquez sur l’icône de zone de dessin > **téléphone**.  
+1. Dans le coin supérieur droit, cliquez sur l’icône de zone de dessin > **Téléphone**.  
   
 2. Sous l’onglet Disposition sous **Instances de contrôles**sont affichés les deux graphiques que vous avez créés.   
   
@@ -313,5 +310,4 @@ Les indicateurs de performance clés et les rapports mobiles sont affichés dans
 -  Affichez les [rapports mobiles Reporting Services et les indicateurs de performance clés dans l’application Power BI pour téléphones Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
    
-
 

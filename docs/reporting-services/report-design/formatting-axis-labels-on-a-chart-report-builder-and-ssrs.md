@@ -1,5 +1,5 @@
 ---
-title: "Mise en forme les étiquettes des axes sur un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -25,20 +25,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords:
-- "10140"
+helpviewer_keywords: "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bb6bc91b9b96830074bac3de28fc6a5f6b0143
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7cc9e4800d6fd00cd0934bc2c1eeac04f7a68fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="types-of-axes"></a>Types d'axes  
  Le graphique comprend deux axes principaux : l'axe des ordonnées et l'axe des abscisses.  
   
- ![Par catégorie du graphique et que la valeur des axes](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "par catégorie du graphique et que la valeur des axes")  
+ ![Axes de valeurs et de catégories de graphique](../../reporting-services/report-design/media/rsaxes-categorical-vs-value.gif "Axes de valeurs et de catégories de graphique")  
   
  Lorsque vous faites glisser un champ de votre dataset sur la surface du graphique, le graphique détermine si ce champ appartient à l'axe des abscisses ou à l'axe des ordonnées.  
   
@@ -106,14 +104,14 @@ ms.lasthandoff: 08/09/2017
  Le graphique calcule environ cinq intervalles d'étiquettes d'axe, quelle que soit la taille du graphique. Sur les graphiques larges ou hauts, si vous affichez uniquement cinq étiquettes sur un axe, de grands espaces peuvent apparaître entre chaque étiquette. Cela le rend plus difficile l'identification de la valeur de chaque point de données sur l'axe. Pour éviter ce comportement sur les graphiques larges ou hauts, vous pouvez définir un intervalle d'axe variable. Le graphique calculera le nombre optimal d'étiquettes qui peuvent apparaître sur l'axe en fonction de la largeur ou de la hauteur du graphique, suivant l'axe correspondant. Pour plus d’informations, consultez [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Tri de valeurs d'axe  
- Les catégories s'affichent le long de l'axe des abscisses dans l'ordre dans lequel elles apparaissent dans le jeu de résultats. Vous pouvez modifier l'ordre de groupe en ajoutant une commande SORT à la requête ou en triant le dataset à l'aide d'une expression. Les régions des données graphiques sont triées de la même manière que toutes les autres régions de données. Pour plus d’informations sur la façon de trier les données, consultez [trier des données dans une région de données &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Les catégories s'affichent le long de l'axe des abscisses dans l'ordre dans lequel elles apparaissent dans le jeu de résultats. Vous pouvez modifier l'ordre de groupe en ajoutant une commande SORT à la requête ou en triant le dataset à l'aide d'une expression. Les régions des données graphiques sont triées de la même manière que toutes les autres régions de données. Pour plus d’informations sur le tri des données, consultez [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-scalar-values-on-the-category-axis"></a>Spécification de valeurs scalaires sur l'axe es abscisses  
  Par défaut, le graphique affichera uniquement les étiquettes d'axe correspondant aux points de données du dataset qui contiennent des valeurs valides. Par exemple, si vous avez les valeurs 1, 2 et 6 sur l'axe des abscisses, le graphique affichera uniquement des catégories 1, 2 et 6. Pour maintenir l'échelle des valeurs de catégories, vous pouvez spécifier que le graphique doit utiliser un axe scalaire. Dans ce scénario, le graphique affichera des étiquettes pour les valeurs de 1 à 6 sur l'axe des abscisses du graphique, bien que votre dataset ne contienne pas les valeurs de 3 à 5.  
   
  Vous pouvez définir un axe scalaire de deux façons :  
   
--   Sélectionnez l’option **Axe scalaire** de la boîte de dialogue **Propriétés de l’axe** . Cela ajoutera des valeurs numérique ou de date/d'heure à l'axe où il n'existe aucune valeur de regroupement de données. Pour plus d’informations, consultez [boîte de dialogue de propriétés axe, Options de l’axe &#40; Le Générateur de rapports et SSRS &#41; ](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Sélectionnez l’option **Axe scalaire** de la boîte de dialogue **Propriétés de l’axe** . Cela ajoutera des valeurs numérique ou de date/d'heure à l'axe où il n'existe aucune valeur de regroupement de données. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
   
 -   Sélectionnez un champ ou tapez une expression pour l’option **Champ de catégorie** de la boîte de dialogue **Propriétés de la série** . Le graphique ajoutera des intervalles d'axe pour toutes les valeurs du champ de catégorie que vous avez spécifié.  
   
@@ -133,8 +131,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

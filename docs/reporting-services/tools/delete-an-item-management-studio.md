@@ -1,5 +1,5 @@
 ---
-title: "Supprimer un élément (Management Studio) | Documents Microsoft"
+title: "Supprimer un élément (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - deleting report items
 - report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 454b2f64f2f2ae1e4fdbda0d34b0da058855aef3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="delete-an-item-management-studio"></a>Supprimer un élément (Management Studio)
   Quand vous êtes connecté à une instance de serveur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez supprimer les définitions de rôles et les planifications partagées. Vous ne pouvez pas supprimer les rapports, modèles ou autres éléments d'un serveur de rapports. Pour supprimer le contenu d'un serveur de rapports, utilisez le Gestionnaire de rapports à la place. Si le serveur de rapports est configuré en mode intégré SharePoint, utilisez les fonctionnalités de gestion des éléments de la bibliothèque SharePoint où se trouve votre contenu.  
@@ -38,12 +37,11 @@ ms.lasthandoff: 08/09/2017
   
 3.  Cliquez avec le bouton droit sur l'élément, puis cliquez sur **Supprimer**.  
   
-4.  Lorsque vous y êtes invité,[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  Lorsque vous y êtes invité, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Supprimer des éléments de catalogue &#40; Management Studio &#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [Reporting Services dans SQL Server Management Studio &#40; SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Suppression des éléments du catalogue &#40;Management Studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [Reporting Services pour SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
-

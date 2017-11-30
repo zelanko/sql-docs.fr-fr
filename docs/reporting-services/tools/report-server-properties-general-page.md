@@ -1,5 +1,5 @@
 ---
-title: "Propriétés du serveur (Page Général) | Documents Microsoft"
+title: "Propriétés du serveur (page Général) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/08/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ca680b434f4b483fb2f3cc3d99df5598a0766f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-server-properties-general-page"></a>Propriétés de Report Server (Page Général)
+# <a name="report-server-properties-general-page"></a>Propriétés du serveur de rapports (page Général)
   Utilisez cette page pour afficher ou modifier le titre utilisé dans le Gestionnaire de rapports, activer ou désactiver Mes rapports, sélectionner une définition de rôle pour la sécurité de Mes rapports, et activer ou désactiver le contrôle d'impression du client.  
   
  **Pour ouvrir cette page**
@@ -59,12 +57,11 @@ ms.lasthandoff: 08/09/2017
 
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de Report Server &#40; Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Activer et désactiver Mes rapports](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Serveur de rapports dans l’aide de Management Studio (F1)](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Sécuriser Mes Rapports](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

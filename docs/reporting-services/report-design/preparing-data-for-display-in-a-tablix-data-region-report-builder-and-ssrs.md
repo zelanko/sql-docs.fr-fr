@@ -1,5 +1,5 @@
 ---
-title: "Préparation des données à afficher dans une région de données de tableau matriciel (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Préparation des données à afficher dans une région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2d206770f54c16f08b958dbc06e7d613a960ad7a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6fafd7952d245d7292f3e0f54ae7bbcce864c1ee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Préparation des données à afficher dans une région de données de tableau matriciel (Générateur de rapports et SSRS)
   Une région de données de tableau matriciel affiche les données d'un dataset. Vous pouvez afficher toutes les données récupérées pour le dataset ou créer des filtres afin d'afficher uniquement un sous-ensemble de données. Vous pouvez également ajouter des expressions conditionnelles pour combler des valeurs NULL ou modifier la requête de dataset afin d'inclure des colonnes qui définissent l'ordre de tri d'une colonne existante.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
  Pour plus d’informations sur la suppression des valeurs null dans vos données avant d’extraire les données d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , consultez « Valeurs Null » et « Valeurs Null et jointures » dans la documentation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au sein de la [documentation en ligne SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="handling-null-field-names"></a>Gestion de noms de champ NULL  
- Il est acceptable de tester une expression à la recherche de valeurs NULL tant que le champ lui-même existe dans le jeu de résultats de la requête. À partir de code personnalisé, vous pouvez vérifier si le champ lui-même est présent dans la collection de champs retournée par la source de données au moment de l'exécution. Pour plus d’informations, consultez [Références à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
+ Il est acceptable de tester une expression à la recherche de valeurs NULL tant que le champ lui-même existe dans le jeu de résultats de la requête. À partir de code personnalisé, vous pouvez vérifier si le champ lui-même est présent dans la collection de champs retournée par la source de données au moment de l'exécution. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
 ## <a name="adding-a-sort-order-column"></a>Ajout d'une colonne Ordre de tri  
  Par défaut, vous pouvez trier alphabétiquement les valeurs dans un champ de dataset. Pour les trier dans un ordre différent, vous pouvez ajouter une nouvelle colonne à votre dataset qui définit l'ordre de tri souhaité dans une région de données. Par exemple, pour trier les données en fonction du champ `[Color]` en commençant par les éléments noirs et blancs, vous pouvez ajouter une colonne `[ColorSortOrder]`, comme le montre la requête suivante :  
@@ -58,12 +57,11 @@ SELECT ProductID, p.Name, Color,
 FROM Production.Product p  
 ```  
   
- Pour trier une région de données de table conformément à cet ordre de tri, affectez la valeur `=Fields!ColorSortOrder.Value` à l’expression de tri sur le groupe de détails. Pour plus d’informations, consultez [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
+ Pour trier une région de données de table conformément à cet ordre de tri, affectez la valeur `=Fields!ColorSortOrder.Value`à l’expression de tri sur le groupe de détails. Pour plus d’informations, consultez [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection de champs de DataSet &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
-

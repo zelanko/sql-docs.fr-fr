@@ -25,20 +25,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33d2cc30ca46ab172e1a9db4fceb639709e06779
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a0f99180f5b55808bc1bb7602d7dec7800febe68
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retourne des mappages entre identificateurs de document (DocIds) et valeurs de clé de texte intégral. La colonne DocId contient des valeurs pour un **bigint** entier qui correspond à une valeur de clé de recherche en texte intégral particulière dans une table indexée en texte intégral. Les valeurs de DocId qui répondent à une condition de recherche sont transmises du moteur de texte intégral au moteur de base de données, où elles sont mappées aux valeurs de clé de texte intégral de la table de base interrogée. La colonne clé de texte intégral est un index unique qui est requis sur une seule colonne de la table.  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

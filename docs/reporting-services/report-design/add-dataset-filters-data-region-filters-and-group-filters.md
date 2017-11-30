@@ -1,5 +1,5 @@
 ---
-title: "Ajouter des filtres de Dataset, filtres de régions de données et regrouper les filtres | Documents Microsoft"
+title: "Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ed3e111ebce37b58c5a76a0dcb56a5a87d6c8810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes
   Dans un rapport, un filtre est une partie d'un dataset, d'une région de données ou d'un groupe de régions de données que vous créez pour limiter les données utilisées dans le rapport. Les filtres vous aident à contrôler les données de rapport si vous ne pouvez pas modifier la requête de dataset, par exemple, si vous utilisez un dataset partagé.  
@@ -105,8 +104,7 @@ ms.lasthandoff: 08/09/2017
  Retour au début  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

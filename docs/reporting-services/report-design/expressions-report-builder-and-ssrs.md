@@ -1,5 +1,5 @@
 ---
-title: "Expressions (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Expressions (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 326b542108214956c9ef51bc370d7ee36212a40d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressions (Générateur de rapports et SSRS)
   Les expressions sont couramment utilisées dans des rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour récupérer, calculer, afficher, regrouper, trier, filtrer, paramétrer et mettre en forme les données d’un rapport. 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Simple** : une expression simple contient une référence à un élément unique dans une collection intégrée, par exemple un champ de dataset, un paramètre ou un champ prédéfini. Sur l'aire de conception, une expression simple apparaît entre parenthèses. Par exemple, `[FieldName]` correspond à l’expression sous-jacente `=Fields!FieldName.Value`. Les expressions simples sont créées automatiquement lorsque vous créez la mise en page du rapport et que vous faites glisser des éléments du volet des données de rapport vers l'aire de conception. Pour plus d’informations sur les symboles qui représentent les différentes collections intégrées, consultez [Présentation des symboles de préfixe dans les expressions simples](#DisplayText).  
   
--   **Complexe** : une expression complexe contient des références à plusieurs références intégrées, opérateurs et appels de fonction. Une expression complexe apparaît sous la forme <\<Expr >> lorsque la valeur d’expression inclut plusieurs références simples. Pour consulter l'expression, pointez sur cette dernière et utilisez l'info-bulle. Pour modifier l’expression, ouvrez-la dans la boîte de dialogue **Expression** .  
+-   **Complexe** : une expression complexe contient des références à plusieurs références intégrées, opérateurs et appels de fonction. Une expression complexe se présente sous la forme <\<Expr>> quand la valeur d’expression inclut plusieurs références simples. Pour consulter l'expression, pointez sur cette dernière et utilisez l'info-bulle. Pour modifier l’expression, ouvrez-la dans la boîte de dialogue **Expression** .  
   
  L'illustration suivante montre des expressions simples et complexes classiques pour des zones de texte et du texte d'espace réservé.  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 |[Opérateurs](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Décrit les opérateurs que vous pouvez utiliser pour combiner des références dans une expression. Par exemple, l’opérateur **&** sert à concaténer des chaînes.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Collections intégrées](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)|Décrit les collections intégrées que vous pouvez inclure dans une expression ; par exemple, `Fields`, `Parameters`et `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Fonctions de rapport et d'agrégation intégrées](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Décrit les fonctions intégrées, telles que `Sum` ou `Previous`, auxquelles vous pouvez accéder à partir d’une expression.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Explique comment vous pouvez accéder aux classes CLR intégrées <xref:System.Math> et <xref:System.Convert>, autres classes CLR, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] des fonctions de bibliothèque Runtime ou des méthodes à partir d’un assembly externe.<br /><br /> Explique comment vous pouvez accéder à du code personnalisé qui est incorporé dans votre rapport ou que vous compilez et installez en tant qu'assembly personnalisé à la fois sur le client de rapports et sur le serveur de rapports.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Explique comment vous pouvez accéder aux classes CLR intégrées <xref:System.Math> et <xref:System.Convert>et à d’autres classes CLR, à des fonctions de la bibliothèque runtime [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ou à des méthodes à partir d’un assembly externe.<br /><br /> Explique comment vous pouvez accéder à du code personnalisé qui est incorporé dans votre rapport ou que vous compilez et installez en tant qu'assembly personnalisé à la fois sur le client de rapports et sur le serveur de rapports.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> Validation d'expressions  
  Lorsque vous créez une expression pour une propriété d'élément de rapport spécifique, les références que vous pouvez inclure dans l'expression dépendent des valeurs que la propriété d'élément de rapport peut accepter et de l'étendue dans laquelle la propriété est évaluée. Par exemple :  
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/09/2017
 -   [Didacticiel : introduction aux expressions](Tutorial:%20Introducing%20Expressions.md)
 -   [Exemples de rapports (Générateur de rapports et SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
-

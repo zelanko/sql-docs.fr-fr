@@ -1,5 +1,5 @@
 ---
-title: "Action d’extraction (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Action d’exploration (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -41,17 +41,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
 - sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 546f4fda3c98349fd20fc261f7405d19e2f94d74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Action d'exploration (Générateur de rapports et SSRS)
   En fournissant des icônes plus et moins (+/-) dans une zone de texte, vous pouvez permettre aux utilisateurs de masquer et d'afficher des éléments de manière interactive. Cela s'appelle une action d' *exploration* . Pour une table ou une matrice, vous pouvez afficher ou masquer des colonnes et des lignes statiques ou des colonnes et des lignes qui sont associées à des groupes.  
@@ -69,9 +68,9 @@ ms.lasthandoff: 08/09/2017
 >   
 >  Par exemple, pour masquer une ligne associée à un groupe imbriqué, la zone de texte doit figurer dans une ligne associée au groupe parent ou à un niveau plus élevé dans la hiérarchie de la relation contenant-contenu.  
 >   
->  Pour plus d’informations sur les informations de visibilité de paramètre sur le groupe, la colonne ou la ligne, consultez [ajouter une Action développer ou réduire à un élément &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
+>  Pour plus d’informations sur la configuration des informations de visibilité d’un groupe, d’une colonne ou d’une ligne, consultez [Ajouter une action Développer ou Réduire à un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur le masquage d’éléments de rapport, consultez [masquer un élément &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur le masquage des éléments de rapport, consultez [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -92,8 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Extraction, exploration, sous-rapports et régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [Tri interactif, explorateurs de documents et liens &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

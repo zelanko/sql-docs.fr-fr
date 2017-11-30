@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4bf58c072369f3c91e721bcefd3d3af9b5dbc06b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2786493aeb75402eae5d7e91458e97436f3435a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   Affiche tous les objets sans relation contenant-contenu utilisés dans la base de données. Les objets sans relation contenant-contenu sont des objets qui traversent la limite de la base de données dans une base de données à relation contenant-contenu. Cette vue est accessible depuis une base de données à relation contenant-contenu et une base de données sans relation contenant-contenu. Si sys.dm_db_uncontained_entities est vide, votre base de données n’utilise pas toutes les entités de relation contenant-contenues.  
   
  Si un module traverse la limite de la base de données plusieurs fois, seule la première traversée découverte est signalée.  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ||||  
 |-|-|-|  

@@ -1,5 +1,5 @@
 ---
-title: "Déploiement d’une Extension de rendu | Documents Microsoft"
+title: "Déploiement d’une extension de rendu | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,27 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 3fbab7c48a0d522519a9e7ada9cf9c8cb1d40c7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 396fe5513bb713b1d3296a7edfaff386708de052
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-rendering-extension"></a>Déploiement d'une extension de rendu
-  Après avoir écrit et compilé votre [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] signaler l’extension de rendu dans une [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bibliothèque, vous devez rendre détectable par le serveur de rapports et par le Concepteur de rapports. Pour cela, copiez l'extension dans le répertoire approprié et ajoutez des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
+  Après avoir écrit et compilé votre extension de génération de rapport [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la rendre détectable par le serveur de rapports et par le Concepteur de rapports. Pour cela, copiez l'extension dans le répertoire approprié et ajoutez des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Élément Extension de rendu de fichier de configuration  
- Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, l’emplacement est %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting. L’élément parent est \<restituer >. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. L'élément **Extension** contient deux attributs, Name et Type.  
+ Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, celui-ci se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer. L’élément parent est \<Render>. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. L'élément **Extension** contient deux attributs, Name et Type.  
   
  La table suivante décrit les attributs de l'élément **Extension** pour les extensions de rendu.  
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/12/2017
   
 ### <a name="to-deploy-the-assembly"></a>Pour déployer l'assembly  
   
-1.  Copiez votre assembly depuis votre emplacement dans le répertoire bin du serveur de rapports sur lequel l'extension de rendu doit être utilisée. L’emplacement par défaut du répertoire Bin de serveur de rapports est %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting.  
+1.  Copiez votre assembly depuis votre emplacement dans le répertoire bin du serveur de rapports sur lequel l'extension de rendu doit être utilisée. L’emplacement par défaut du répertoire Bin du serveur de rapports est le suivant : %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer\Bin.  
   
 2.  Une fois le fichier d'assembly copié, ouvrez le fichier rsreportserver.config. Ce fichier se trouve aussi dans le répertoire bin du serveur de rapports. Vous devez créer une entrée dans le fichier de configuration pour votre fichier d'assembly d'extension. Vous pouvez ouvrir le fichier avec [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ou un éditeur de texte simple.  
   
@@ -72,16 +70,15 @@ ms.lasthandoff: 08/12/2017
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     La valeur définie pour **Name** correspond au nom unique de l'extension de rendu. La valeur de **Type** est une liste séparée par des virgules qui comporte une entrée pour l’espace de noms qualifié complet de votre <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> implémentation, suivie du nom de votre assembly (sans l’extension de fichier .dll). Par défaut, les extensions de rendu sont visibles. Pour les masquer des interfaces utilisateur, comme le Gestionnaires de rapports, ajoutez un attribut **Visible** à l'élément **Extension** , et affectez-lui la valeur **false**.  
+     La valeur définie pour **Name** correspond au nom unique de l'extension de rendu. La valeur définie pour **Type** est une liste séparée par des virgules comportant une entrée pour l’espace de noms complet de votre implémentation <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, suivi du nom de votre assembly (l’extension de fichier .dll ne doit pas figurer dans cette entrée). Par défaut, les extensions de rendu sont visibles. Pour les masquer des interfaces utilisateur, comme le Gestionnaires de rapports, ajoutez un attribut **Visible** à l'élément **Extension** , et affectez-lui la valeur **false**.  
   
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Vous pouvez également ouvrir le Gestionnaire de rapports et vérifier que votre extension est répertoriée dans la liste des types d'exportation pour un rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémentation d’une Extension de rendu](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
- [Vue d’ensemble des Extensions de rendu](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
- [Implémentation de l’Interface IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
+ [Mise en œuvre d’une extension de rendu](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
+ [Vue d’ensemble des extensions de rendu](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
+ [Mise en œuvre de l’interface IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   
  [Considérations sur la sécurité pour les extensions](../../../reporting-services/extensions/security-considerations-for-extensions.md)  
   
   
-

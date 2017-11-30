@@ -1,5 +1,5 @@
 ---
-title: "Configurer l’accès au Générateur de rapports | Documents Microsoft"
+title: "Configurer l’accès au Générateur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a85ea590db7794e4a8c09aac7d3f97df5b6d29b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d6553ed94b16c1811b4f7b8e8129367acf9c1089
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
   Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -54,14 +53,14 @@ ms.lasthandoff: 08/09/2017
   
  Pour définir les propriétés système du serveur de rapports, vous pouvez utiliser Management Studio ou un script :  
   
--   Pour utiliser Management Studio, connectez-vous au serveur de rapports et utilisez la page de propriétés avancées du serveur pour définir **EnableReportDesignClientDownload** sur **false**. Pour plus d’informations sur la façon d’ouvrir cette page, consultez [définir les propriétés de Report Server &#40; Management Studio &#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+-   Pour utiliser Management Studio, connectez-vous au serveur de rapports et utilisez la page de propriétés avancées du serveur pour définir **EnableReportDesignClientDownload** sur **false**. Pour plus d’informations sur l’ouverture de cette page, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 -   Pour voir un exemple de script qui définit une propriété du serveur de rapports, consultez [Écrire des scripts pour les tâches d’administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
   
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Attributions de rôles qui octroient l'accès au Générateur de rapports sur un serveur de rapports en mode natif  
  Sur un serveur de rapports en mode natif, créez des attributions de rôles d'utilisateur qui incluent des tâches pour l'utilisation du Générateur de rapports. Vous devez être Gestionnaire de contenu et Administrateur système pour créer ou modifier des définitions de rôles et des attributions de rôles sur les éléments et au niveau du site.  
   
- Les instructions suivantes supposent que vous utilisez des rôles prédéfinis. Si vous avez modifié les définitions de rôle ou si vous avez effectué une mise à niveau de SQL Server 2000, examinez les rôles pour vérifier s'ils contiennent les tâches nécessaires. Pour plus d’informations sur la création des attributions de rôles, consultez [accorder l’accès utilisateur à un serveur de rapports &#40; Le Gestionnaire de rapports &#41; ](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Les instructions suivantes supposent que vous utilisez des rôles prédéfinis. Si vous avez modifié les définitions de rôle ou si vous avez effectué une mise à niveau de SQL Server 2000, examinez les rôles pour vérifier s'ils contiennent les tâches nécessaires. Pour plus d’informations sur la création d’attributions de rôles, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
  Une fois les attributions de rôles créées, les utilisateurs seront autorisés à effectuer les opérations suivantes :  
   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Si une attribution de rôle existe déjà pour l’utilisateur ou le groupe pour lequel vous voulez configurer l’accès au Générateur de rapports, cliquez sur **Modifier**.  
   
-     Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans le groupe ou utilisateur, entrez un utilisateur ou un groupe compte de domaine Windows au format suivant : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
+     Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur, entrez un compte d’utilisateur ou de groupe d’un domaine Windows au format suivant : \<domaine>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
   
 5.  Sélectionnez **Utilisateur système**, puis cliquez sur **OK**.  
   
@@ -139,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Si une attribution de rôle existe déjà pour l’utilisateur ou le groupe pour lequel vous voulez configurer l’accès au Générateur de rapports, cliquez sur **Modifier**.  
   
-     Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans le groupe ou utilisateur, entrez un utilisateur ou un groupe compte de domaine Windows au format suivant : \<domaine >\\< compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
+     Sinon, cliquez sur **Nouvelle attribution de rôle**. Dans Groupe ou utilisateur, entrez un compte d’utilisateur ou de groupe d’un domaine Windows au format suivant : \<domaine>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.  
   
 10. Sélectionnez **Générateur de rapports**, puis cliquez sur **Appliquer**.  
   
@@ -172,9 +171,8 @@ ms.lasthandoff: 08/09/2017
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Propriétés de système de serveur de rapports](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
+ [Propriétés système du serveur de rapports](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   
-

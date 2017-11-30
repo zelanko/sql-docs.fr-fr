@@ -1,5 +1,5 @@
 ---
-title: "Recherche et affichage de rapports avec un navigateur (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Recherche et affichage de rapports à l’aide d’un navigateur (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 981003ec6e3520053dca8e5467d0c7def217c29a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Recherche et affichage de rapports à l'aide d'un navigateur (Générateur de rapports et SSRS)
   Vous pouvez utiliser n'importe quel navigateur Web pris en charge pour afficher un rapport par le biais d'une connexion directe avec le serveur de rapports. Sur un serveur de rapports, tous les rapports ont une adresse URL. Vous pouvez entrer l'adresse Web d'un rapport pour l'ouvrir dans une fenêtre de navigateur indépendamment d'une application Web. Le rapport s'ouvre au format HTML et comprend la barre d'outils Rapport afin que vous puissiez naviguer entre les pages ou effectuer des recherches sur les valeurs de données dans le rapport. Dans l'URL, vous pouvez définir des paramètres pour masquer la barre d'outils ou sélectionner le format de sortie du rapport.  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Si vous ne connaissez pas l'adresse Web d'un rapport, vous pouvez ouvrir l'adresse Web du serveur de rapports puis parcourir l'arborescence des dossiers du serveur de rapports pour sélectionner le rapport vous souhaitez afficher. Le diagramme qui suit représente une arborescence des dossiers telle qu'elle apparaît dans la fenêtre d'un navigateur.  
   
- ![Dossiers dans un navigateur](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![Dossiers dans un navigateur](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Dossiers dans un navigateur")  
 Dossiers dans un navigateur  
   
 > [!NOTE]  
@@ -48,9 +47,9 @@ Dossiers dans un navigateur
   
 -   Un lien sans autre indicateur signale un rapport ou un modèle.  
   
--   La balise \<ds > indique une source de données partagée.  
+-   La balise \<ds> indique une source de données partagée.  
   
--   La balise \<dir > indique un élément de dossier.  
+-   La balise \<dir> indique un élément de dossier.  
   
 -   Une extension de nom de fichier indique une ressource. L'extension de nom de fichier identifie le type MIME de la ressource. Par exemple, l'extension .jpg indique une image au format JPEG.  
   
@@ -64,4 +63,3 @@ Dossiers dans un navigateur
  Pour plus d'informations sur l'accès à un rapport via une URL, notamment des informations sur la construction d'une URL, consultez « Accès URL » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
   
   
-

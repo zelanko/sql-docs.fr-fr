@@ -1,5 +1,5 @@
 ---
-title: "Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport | Documents Microsoft"
+title: "Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport (Générateur de rapports version 3.0) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 27f2dab25bd2c5e956b847666836de8757a65911
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ea832d4470d5a7cdca520cd568baf8df32fa390c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport
 Découvrez les propriétés que vous pouvez définir dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour une région de données de table, de matrice ou de liste, pour modifier la façon dont elle apparaît quand vous affichez le rapport.  
@@ -31,7 +30,7 @@ Les régions de données de table, de matrice et de liste sont toutes des exempl
   
 -   **Mise en forme de données.** Pour mettre en forme les données d'une table, d'une matrice ou d'une liste, définissez les propriétés de format de la zone de texte dans la cellule. Vous pouvez définir les propriétés pour plusieurs cellules à la fois. Pour mettre en forme les données dans un graphique, définissez les propriétés de mise en forme sur la série. Pour plus d’informations, consultez [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md) et [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md).  
   
--   **Écriture d'expressions**. Pour plus d’informations, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) et [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
+-   **Écriture d'expressions**. Pour plus d’informations, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) et [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
 -   **Contrôle de l'ordre de tri**. Pour contrôler l’ordre de tri, vous définissez des expressions de tri sur la région de données. Pour contrôler l’ordre de tri pour les lignes et colonnes associées à un groupe, vous définissez des expressions de tri sur le groupe, y compris les groupes de détails. Vous pouvez également ajouter des boutons de tri interactifs pour permettre à l'utilisateur de trier une région de données de tableau matriciel ou ses groupes. Pour plus d’informations, consultez [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -75,15 +74,14 @@ Les régions de données de table, de matrice et de liste sont toutes des exempl
  Pour plus d’informations sur la façon dont l’exportation d’un rapport dans différents formats influe sur le rendu d’une région de données de tableau matriciel sur une page, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Liaison de plusieurs régions de données pour le même jeu de données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Régions de données imbriquées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Contrôle des sauts de Page, des en-têtes, des colonnes et lignes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Région de données de tableau matriciel &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [Tables &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Créer une matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Créer des factures et des formulaires avec des listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -8,22 +8,20 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/02/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
-|[Filtre](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge|**\*\*Avertissement \* \***  MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **\*\*Avertissement \* \***  DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
+|[Filter](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge|**\*\*Avertissement \* \***  MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **\*\*Avertissement \* \***  DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
 |[Correctif](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[Format (Visual Basic pour Applications)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/02/2017
 |[AMORT](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007597&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[IsArray](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007598&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[IsDate](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007599&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
-|[La fonction IsEmpty](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007600&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
+|[IsEmpty](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007600&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[La fonction IsError](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007601&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
 |[IsMissing](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007602&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[IsNull](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007603&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/02/2017
 |[StrConv](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007651&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[Chaîne](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007652&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[StrReverse](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007653&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
-|[Switch](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007654&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
+|[Commutateur](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007654&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[SYD](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007655&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
 |[Onglet](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007656&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Non pris en charge||  
 |[Tan](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007657&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|MDX uniquement||  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/02/2017
 |[Année](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, MDX||  
   
   
-

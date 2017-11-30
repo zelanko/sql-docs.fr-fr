@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0092bd724345f8e70faa9c84636d56206ecdcc8b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,10 +39,6 @@ ms.lasthandoff: 11/21/2017
   
 > [!CAUTION]  
 >  La modification d'une partie du nom de l'objet peut provoquer des problèmes dans des scripts et des procédures stockées. Nous vous recommandons de ne pas utiliser cette instruction pour renommer des procédures stockées, des déclencheurs, des fonctions définies par l'utilisateur ou des vues ; supprimez plutôt l'objet et recréez-le avec le nouveau nom.  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -201,10 +197,6 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
   
 ### <a name="f-renaming-statistics"></a>F. Renommer des statistiques  
  L’exemple suivant crée un objet de statistiques nommé contactMail1 et renomme la statistique pour NewContact à l’aide de sp_rename. Lorsque vous renommez des statistiques, l'objet doit être spécifié en respectant le format schema.table.statistics_name.  
-  
-||  
-|-|  
-|**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).|  
   
 ```  
 CREATE STATISTICS ContactMail1  

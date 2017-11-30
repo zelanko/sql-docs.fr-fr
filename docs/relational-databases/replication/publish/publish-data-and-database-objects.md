@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -41,16 +40,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 322e73b7f01d2fdbe8dade75183fdb6376a78eaf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
   Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
@@ -121,7 +120,7 @@ ms.lasthandoff: 06/22/2017
   
  Lors de la publication d'une table pour la réplication, vous pouvez spécifier les objets de schéma qui doivent être copiés vers l'Abonné, tels que l'intégrité référentielle déclarée (contraintes de clé primaire, contraintes référentielles, contraintes uniques), des index, des déclencheurs DML utilisateur (des déclencheurs DDL qui ne peuvent pas être répliqués), des propriétés étendues et des classements. Les propriétés étendues sont répliquées uniquement dans la synchronisation initiale entre le serveur de publication et l'Abonné. Si vous ajoutez ou modifiez une propriété étendue après la synchronisation initiale, la modification n'est pas répliquée.  
   
- Pour spécifier les options de schéma, consultez [Spécifier des options de schéma](../../../relational-databases/replication/publish/specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
+ Pour spécifier des options de schéma, consultez [Spécifier des options de schéma](../../../relational-databases/replication/publish/specify-schema-options.md) ou <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
 ### <a name="partitioned-tables-and-indexes"></a>Tables et index partitionnés  
  La réplication prend en charge la publication de tables et d'index partitionnés. Le niveau de prise en charge dépend du type de réplication utilisé, ainsi que des options que vous spécifiez pour la publication et les articles associés aux tables partitionnées. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).  
@@ -262,4 +261,3 @@ ms.lasthandoff: 06/22/2017
  [S’abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

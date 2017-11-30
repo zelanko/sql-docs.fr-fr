@@ -1,5 +1,5 @@
 ---
-title: "Région de données de tableau matriciel (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Région de données de tableau matriciel (Générateur de rapports et SSRS)
   Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], une région de données de tableau matriciel est un élément de rapport à disposition généralisée qui affiche les données d’un rapport paginé dans des cellules organisées en lignes et colonnes. Les données du rapport peuvent être des données de détail récupérées à partir de la source de données ou des données de détail agrégées organisées en groupes de votre invention. Chaque cellule de tableau matriciel peut contenir un élément de rapport, par exemple une zone de texte ou une image, ou une autre région de données telle qu'une région de tableau matriciel, un graphique ou une jauge. Pour ajouter plusieurs éléments de rapport à une cellule, commencez par ajouter un rectangle pour servir de conteneur. Ajoutez ensuite les éléments de rapport au rectangle.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 *  les lignes et les colonnes statiques et dynamiques, et leur relation aux groupes.  
   
- Cet article décrit en détail ces concepts pour expliquer la structure que le Générateur de rapports et le Concepteur de rapports ajoutent quand vous ajoutez des modèles et créez des groupes, de façon à vous permettre de modifier la structure en fonction de vos propres besoins. Le Générateur de rapports et le Concepteur de rapports fournit plusieurs indicateurs visuels pour vous aider à reconnaître la structure de la région de données de tableau matriciel. Pour plus d’informations, consultez [Cellules, lignes et colonnes d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Cet article décrit en détail ces concepts pour expliquer la structure que le Générateur de rapports et le Concepteur de rapports ajoutent quand vous ajoutez des modèles et créez des groupes, de façon à vous permettre de modifier la structure en fonction de vos propres besoins. Le Générateur de rapports et le Concepteur de rapports fournit plusieurs indicateurs visuels pour vous aider à reconnaître la structure de la région de données de tableau matriciel. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -50,12 +49,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="understanding-detail-and-grouped-data"></a>Fonctionnement des données de détail et des données groupées  
  Les données de détail sont toutes les données d'un dataset de rapport telles qu'extraites de la source de données. Les données de détail correspondent essentiellement à ce que vous voyez dans le volet Résultats du Concepteur de requêtes lorsque vous exécutez une requête de dataset. Les données de détail réelles incluent des champs calculés que vous créez et sont restreintes par des filtres définis sur le dataset, la région de données, et le groupe de détails. Vous affichez les données de détail sur une ligne de détail en utilisant une expression simple telle que [Quantity]. Lorsque le rapport s'exécute, la ligne de détail se répète une fois pour chaque ligne dans les résultats de la requête au moment de l'exécution.  
   
- Les données groupées sont des données de détail organisées par une valeur que vous spécifiez dans la définition de groupe, telles que [SalesOrder]. Vous affichez les données groupées dans des lignes et des colonnes de groupe en utilisant des expressions simples qui agrègent les données groupées, par exemple [Sum(Quantity)]. Pour plus d’informations, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Les données groupées sont des données de détail organisées par une valeur que vous spécifiez dans la définition de groupe, telles que [SalesOrder]. Vous affichez les données groupées dans des lignes et des colonnes de groupe en utilisant des expressions simples qui agrègent les données groupées, par exemple [Sum(Quantity)]. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-group-hierarchies"></a>Fonctionnement des hiérarchies de groupes  
  Les groupes sont organisés comme des membres de hiérarchies de groupes. Les hiérarchies de groupes de lignes et de groupes de colonnes sont des structures identiques sur des axes différents. Pensez aux groupes de lignes comme à des groupes qui se développent vers le bas de la page et aux groupes de colonnes comme à des groupes qui se développent à travers la page.  
   
- Une arborescence représente des groupes de lignes et de colonnes imbriqués qui ont une relation de parent à enfant, comme par exemple une catégorie avec des sous-catégories. Le groupe parent est la racine de l'arborescence et les groupes enfants sont ses branches. Les groupes peuvent également avoir une relation adjacente indépendante, comme par exemple les ventes par secteur et les ventes par année. On appelle « forêt » plusieurs hiérarchies d'arborescence sans relation. Dans une région de données de tableau matriciel, les groupes de lignes et les groupes de colonnes sont représentés comme une forêt indépendante. Pour plus d’informations, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Une arborescence représente des groupes de lignes et de colonnes imbriqués qui ont une relation de parent à enfant, comme par exemple une catégorie avec des sous-catégories. Le groupe parent est la racine de l'arborescence et les groupes enfants sont ses branches. Les groupes peuvent également avoir une relation adjacente indépendante, comme par exemple les ventes par secteur et les ventes par année. On appelle « forêt » plusieurs hiérarchies d'arborescence sans relation. Dans une région de données de tableau matriciel, les groupes de lignes et les groupes de colonnes sont représentés comme une forêt indépendante. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-tablix-data-region-areas"></a>Présentation des zones de régions de données de tableau matriciel  
  Une région de données de tableau matriciel peut comprendre quatre zones de cellules : l'angle, la hiérarchie de groupes de lignes, la hiérarchie de groupes de colonnes et le corps. Le corps de tableau matriciel existe toujours. Les autres zones sont facultatives.  
@@ -81,13 +80,12 @@ ms.lasthandoff: 08/09/2017
   
  Des lignes de groupe dynamiques sont créées automatiquement lorsque vous ajoutez un groupe de lignes ou un groupe de colonnes à une région de données de tableau matriciel existante. Les cellules des lignes de groupe dynamiques affichent des valeurs agrégées pour l'étendue par défaut.  
   
- La fonction Ajouter un total crée automatiquement une ligne à l'extérieur du groupe actuel dans laquelle afficher les valeurs dont la portée est étendue au groupe. Vous pouvez également ajouter manuellement des lignes statiques et dynamiques. Des indicateurs visuels vous aident à comprendre quelles lignes sont statiques et quelles lignes sont dynamiques. Pour plus d’informations, consultez [Cellules, lignes et colonnes d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ La fonction Ajouter un total crée automatiquement une ligne à l'extérieur du groupe actuel dans laquelle afficher les valeurs dont la portée est étendue au groupe. Vous pouvez également ajouter manuellement des lignes statiques et dynamiques. Des indicateurs visuels vous aident à comprendre quelles lignes sont statiques et quelles lignes sont dynamiques. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Liaison de plusieurs régions de données pour le même jeu de données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Contrôle de l’affichage de la région de données de tableau matriciel sur une Page de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Exploration de la souplesse d’une région de données de tableau matriciel &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

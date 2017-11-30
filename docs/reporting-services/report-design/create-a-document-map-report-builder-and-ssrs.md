@@ -1,5 +1,5 @@
 ---
-title: "Créer un Explorateur de documents (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Créer une carte de documents (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3abd0b8ce2b463cf793b6b75c908a69308cb68a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0dc1672f1c03db4e7e5b4d7a6a8e11e9f6a9a66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
 
 Un explorateur de documents fournit un ensemble de liens de navigation permettant d'accéder aux éléments de rapport dans un rapport rendu. Lorsque vous visualisez un rapport qui comprend un explorateur de document, un volet latéral distinct apparaît en regard du rapport. L'utilisateur peut cliquer sur les liens de l'explorateur de documents pour accéder à la page du rapport qui affiche l'élément en question. Les sections et les groupes du rapport sont organisés en une hiérarchie de liens. Lorsque vous cliquez sur un de ses éléments, le rapport est actualisé de façon à afficher la zone du rapport correspondant à l'élément sélectionné.  
@@ -117,10 +115,9 @@ Un explorateur de documents fournit un ensemble de liens de navigation permettan
 4.  Collez l'URL dans le Gestionnaire de rapports et appuyez sur ENTRÉE. Le rapport est exécuté et l'explorateur de documents est masqué.  
   
 > [!NOTE]  
->  Pour plus d’informations sur le téléchargement des exemples de rapports, consultez [exemples Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Pour plus d'informations sur le téléchargement de ces exemples de rapports, consultez [Exemples de rapports du Générateur de rapports et du Concepteur de rapports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Pour plus d'informations, consultez « Accès URL » dans la [documentation de Reporting Services](http://go.microsoft.com/fwlink/?linkid=121312) dans la documentation en ligne de SQL Server.  
 
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

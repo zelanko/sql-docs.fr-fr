@@ -1,5 +1,5 @@
 ---
-title: "Comportement de rendu (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Comportements de rendu (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4cf19162ddf8e94b897de746e311f218a94b9dda
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportements de rendu (Générateur de rapports et SSRS)
   En fonction du convertisseur que vous sélectionnez, certaines règles sont appliquées au corps du rapport et à son contenu lors du rendu d'un rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="page-headers-and-footers"></a>En-têtes et pieds de page  
  Les en-têtes et pieds de page apparaissent au haut et en bas de chaque page rendue. Vous pouvez mettre en forme l'en-tête et le pied de page en définissant une couleur de bordure, un style de bordure et une largeur de bordure. Vous pouvez également ajouter une couleur d'arrière-plan ou une image d'arrière-plan. Ces options de mise en forme sont toutes rendues, en fonction du format que vous choisissez.  
   
- Les règles suivantes s'appliquent aux en-têtes et pieds de page lorsqu'ils sont rendus au format HTML ou MHTML :  
+ Les règles suivantes s'appliquent aux en-têtes et pieds de page lorsqu'ils sont rendus au format HTML ou MHTML :  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la façon dont Excel rend les en-têtes et les pieds de page, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md). Pour plus d’informations sur la façon dont Word rend les en-têtes et les pieds de page, consultez [Exportation vers Microsoft Word &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).  
@@ -134,9 +133,8 @@ ms.lasthandoff: 08/09/2017
 -   Les sauts de page logiques définis sur les éléments de cellules de tableau ou de matrice ne sont pas conservés. Cela ne s'applique pas aux éléments de listes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalité interactive des différentes Extensions &#40; de rendu de rapport Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendu HTML &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [Mise en page et rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendu au format HTML &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   
-

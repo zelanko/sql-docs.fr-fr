@@ -2,31 +2,26 @@
 title: "Modèle d’application pour partitionner des tables mémoire optimisées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: in-memory-oltp
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.suite: 
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8b6593ff770d40500cf7f40c500db9f9bfa59ee8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En général, c'est un scénario où les données sont stockées en fonction d'une clé **datetime** .  
   
@@ -44,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Ajoutez la partition active.  
   
- ![Basculement de partition](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Partition switch.")  
+ ![Basculement de partition](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Basculement de partition")  
 Maintenance de données actives  
   
  Les actions qui commencent par Deleting ActiveOrders doivent être effectuées pendant une période de maintenance pour éviter des requêtes sans données pendant l'intervalle entre la suppression des données et le basculement dans la table de mise en lots.  
@@ -223,4 +218,3 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
-

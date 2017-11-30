@@ -1,5 +1,5 @@
 ---
-title: "Les en-têtes et pieds de page (Générateur de rapports et SSRS) page | Documents Microsoft"
+title: "En-têtes et pieds de page (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>En-têtes et pieds de page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page. Ces informations sont situées respectivement le long des bords supérieur et inférieur de chaque page. Les en-têtes et pieds de page peuvent contenir du texte statique, des images, des rectangles, des bordures, une couleur d'arrière-plan, des images d'arrière-plan et des expressions. Les expressions contiennent des références de champs de dataset pour des rapports qui utilisent un seul dataset, ainsi que des appels de fonction d'agrégation qui intègrent le dataset sous forme d'étendue.  
@@ -133,8 +132,7 @@ ms.lasthandoff: 08/09/2017
  Pour plus d’informations, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Incorporer une Image dans un rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Rectangles et lignes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Fusionner des cellules dans une région de données (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Fusionner des cellules dans une région de données (Générateur de rapports et SSRS)| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c643b94c86109a99e1448093b4b9744924fcd7f7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 967d5771d1c6a718771fd19080d8b6f508af2f78
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Fusionner des cellules dans une région de données (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez fusionner des cellules dans une région de données pour les combiner, améliorer l’apparence de la région de données ou fournir des étiquettes étendues pour les groupes de colonnes et de lignes.  
@@ -41,10 +40,9 @@ Vous pouvez fusionner les cellules uniquement à l’intérieur de chaque zone d
   
 ## <a name="see-also"></a>Voir aussi  
 [Région de données de tableau matriciel](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
- [Tables &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Créer une matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Créer des factures et des formulaires avec des listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
 [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

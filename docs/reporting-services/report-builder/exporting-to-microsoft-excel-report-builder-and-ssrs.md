@@ -1,5 +1,5 @@
 ---
-title: "Exportation vers Microsoft Excel (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Exportation vers Microsoft Excel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 74bec215687c17d121e0c77b23fbdef2e482f9db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportation vers Microsoft Excel (Générateur de rapports et SSRS)
   L’extension de rendu Excel de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restitue un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] au format [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xlsx). Avec l'extension de rendu Excel, la largeur des colonnes dans Excel correspond plus précisément à la largeur des colonnes dans les rapports.  
   
  Il s'agit du format Office Open XML. Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** et l’extension des fichiers est .xlsx.  
   
- Vous pouvez modifier certains paramètres par défaut pour ce convertisseur en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, voir [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md).  
+ Vous pouvez modifier certains paramètres par défaut pour ce convertisseur en modifiant les paramètres d'informations de périphérique. Pour plus d’informations, voir [Paramètres d’informations de périphérique Excel](../../reporting-services/excel-device-information-settings.md).  
   
- Consultez [exporter des rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) pour plus d’informations sur l’exportation vers Excel.  
+ Pour plus d’informations sur l’exportation vers Excel, consultez [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  Lorsque vous définissez un paramètre de type **String**, la zone de texte qui apparaît vous permet d'entrer n'importe quelle valeur. Si un paramètre de rapport n'est pas directement lié à un paramètre de requête et les valeurs de paramètre sont incluses dans le rapport, un utilisateur de rapport peut taper une syntaxe d'expression, un script ou une URL dans la valeur de paramètre et effectuer le rendu du rapport dans Excel. Si un autre utilisateur affiche ensuite le rapport et clique sur le contenu du paramètre de rendu, celui-ci peut exécuter accidentellement le lien ou le script malveillant.  
@@ -43,9 +43,9 @@ ms.lasthandoff: 08/09/2017
   
 -   Le nombre de caractères maximum dans une cellule est limité à 32 767. Si cette valeur est dépassée, le convertisseur affiche un message d'erreur.  
   
--   La hauteur de ligne maximum est de 409 points. Si la hauteur de ligne dépasse les 409 points se le contenu de la ligne, la cellule Excel montre une partie du montant de texte jusqu'à 409 points. Le reste du contenu de la cellule est toujours dans la cellule (jusqu'à max nombre d’Excel de caractères de 32 767).
+-   La hauteur de ligne maximum est de 409 points. Si la hauteur de ligne dépasse 409 points afin de s’ajuster au contenu de la ligne, la cellule Excel affiche une partie du texte jusqu’à 409 points. Le reste du contenu de la cellule se trouve toujours dans la cellule (jusqu’au nombre maximal de caractères dans Excel qui est de 32 767).
 
--  Étant donné que la hauteur de ligne maximale est de 409 points, si la hauteur de la cellule dans le rapport est supérieure à 409 points, Excel fractionne le contenu de la cellule en plusieurs lignes.
+-  Étant donné que la hauteur de ligne maximale est de 409 points, si la hauteur de cellule dans le rapport est supérieure à 409 points, Excel fractionne le contenu de la cellule en plusieurs lignes.
   
 -   Le nombre maximal de feuilles de calcul n'est pas défini dans Excel, mais des facteurs externes, tels que la mémoire et l'espace disque, peuvent entraîner des limitations.  
   
@@ -116,15 +116,15 @@ ms.lasthandoff: 08/09/2017
 ### <a name="report-row-groups-and-column-groups"></a>Groupes de lignes et groupes de colonnes de rapport  
  Les rapports qui incluent des groupes de lignes ou des groupes de colonnes contiennent des cellules vides en cas d'exportation vers Excel. Imaginez un rapport qui regroupe des lignes relatives à des distances de trajet domicile-travail. Chaque distance de trajet domicile-travail peut contenir plusieurs clients. L'illustration suivante montre ce rapport.  
   
- ![Rapport dans le portail web Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "rapport dans le portail web Reporting Services")  
+ ![Rapport dans le portail web Reporting Services](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Rapport dans le portail web Reporting Services")  
   
  Quand le rapport est exporté vers Excel, la distance de trajet domicile-travail s’affiche dans une seule cellule de la colonne Commute Distance (distance de trajet domicile-travail). Suivant l'alignement du texte dans le rapport (en haut, au milieu ou en bas), la valeur est dans la première cellule, dans la cellule du milieu ou dans la dernière cellule. Les autres cellules sont vides. La colonne Name qui contient le nom des clients ne compte aucune cellule vide. L'image suivante présente le rapport après son exportation vers Excel. Les bordures de cellules rouges ont été ajoutées pour les mettre en évidence. Les zones grises sont les cellules vides. (Ni les lignes rouges ni les zones grises ne figurent dans le rapport exporté.)  
   
- ![Rapports exportés vers Excel, avec des lignes](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "rapport exporté vers Excel, avec des lignes")  
+ ![Rapport exporté vers Excel, avec des lignes](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Rapport exporté vers Excel, avec des lignes")  
   
  Cela signifie que les rapports avec des groupes de lignes ou des groupes de colonnes nécessitent d'être modifiés après leur exportation vers Excel et avant que vous puissiez afficher les données exportées dans le tableau croisé dynamique. Vous devez ajouter la valeur de groupe aux cellules dans lesquelles elle est manquante pour transformer la feuille de calcul en une table plate avec des valeurs dans toutes les cellules. L’image suivante correspond à la feuille de calcul mise à jour.  
   
- ![Rapports exportés vers Excel, aplatie](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "rapport exporté vers Excel, aplatie")  
+ ![Rapport exporté vers Excel, aplati](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Rapport exporté vers Excel, aplati")  
   
  Donc si vous créez un rapport à la seule fin de l’exporter vers Excel en vue d’une analyse plus approfondie des données du rapport, évitez d’effectuer un regroupement sur des lignes ou des colonnes de votre rapport.  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Utilisation du Générateur de rapports en mode déconnecté et affichage de l'aperçu d'un rapport dans le Générateur de rapports. Dans la mesure où le fichier de configuration RSReportServer réside sur le serveur de rapports, les outils ou produits à partir desquels vous exportez les rapports doivent être connectés à un serveur de rapports pour permettre la lecture du fichier de configuration.  
   
--   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [en Mode Local vs. rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Utilisation du composant WebPart Visionneuse de rapports en mode local alors que la batterie de serveurs SharePoint n'est pas intégrée à un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Si le convertisseur relatif à l'option de menu **Excel 2003** est configuré pour être visible, les options Excel et Excel 2003 sont disponibles dans les scénarios suivants :  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 08/09/2017
   
  Les graphiques, les graphiques sparkline, les barres de données, les cartes, les jauges et les indicateurs sont exportés sous forme d'images. Les données qu'ils représentent, par exemple les étiquettes de membres et de valeurs d'un graphique, ne sont pas exportées et ne sont pas disponibles dans le classeur Excel, à moins qu'elles ne soient incluses dans une colonne ou une ligne d'une région de données au sein d'un rapport.  
   
- Si vous souhaitez utiliser des données de graphiques, de graphiques sparkline, de barres de données, de cartes, de jauges et d'indicateurs, exportez le rapport vers un fichier .csv ou générez des flux de données conformes à Atom à partir du rapport. Pour plus d’informations, consultez [exportation vers un fichier CSV &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) et [génération de flux de données à partir de rapports &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
+ Si vous souhaitez utiliser des données de graphiques, de graphiques sparkline, de barres de données, de cartes, de jauges et d'indicateurs, exportez le rapport vers un fichier .csv ou générez des flux de données conformes à Atom à partir du rapport. Pour plus d’informations, consultez [Exportation vers un fichier CSV &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) et [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>Dimensionnement de page  
  L'extension de rendu Excel utilise les paramètres de hauteur et de largeur de page pour déterminer le paramètre du papier à définir dans la feuille de calcul Excel. Excel essaie de faire correspondre le paramétrage des propriétés PageHeight et PageWidth à l’un des formats de papier les plus courants.  
@@ -255,7 +255,7 @@ ms.lasthandoff: 08/09/2017
   
  Le plan de l'explorateur de documents est rendu sous la forme d'un plan réductible Excel. La structure du plan correspond à la structure imbriquée de l'explorateur de documents. L'état développé ou réduit du plan commence au deuxième niveau.  
   
- Le nœud racine de la carte est le nom du rapport, le \< *reportname*> .rdl et il n’est pas interactif. La police des liens de l'explorateur de documents est Arial, 10pt.  
+ Le nœud racine de la carte est le nom de rapport, \<*nom_rapport*>.rdl, qui n’est pas interactif. La police des liens de l'explorateur de documents est Arial, 10pt.  
   
 ### <a name="drillthrough-links"></a>Liens d'extraction  
  Les liens d'extraction qui s'affichent dans les zones de texte sont rendus sous forme de liens hypertexte Excel dans la cellule dans laquelle le texte est rendu. Les liens d'extraction des images et des graphiques sont rendus sous forme de liens hypertexte Excel dans l'image lors du rendu. Lors d'un clic, le lien d'extraction ouvre le navigateur par défaut du client et ouvre la vue HTML de la cible.  
@@ -273,11 +273,10 @@ ms.lasthandoff: 08/09/2017
  Si un rapport doit être restitué dans plusieurs formats et qu'il n'est pas possible de créer une mise en page de rapport qui restitue le rapport comme vous le souhaitez dans tous les formats requis, envisagez peut-être d'utiliser la valeur de la fonction globale intégrée RenderFormat pour modifier l'apparence du rapport de manière conditionnelle au moment de l'exécution. De cette façon, vous pouvez masquer ou afficher des éléments de rapport en fonction du convertisseur utilisé afin d'obtenir un résultat optimal dans chaque format. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pagination dans Reporting Services &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportements de rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions &#40; de rendu de rapport Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendu des éléments de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

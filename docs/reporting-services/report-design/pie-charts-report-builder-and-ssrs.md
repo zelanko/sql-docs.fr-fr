@@ -1,5 +1,5 @@
 ---
-title: "Les graphiques à secteurs (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Graphiques à secteurs (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b7f623c58e745f8509f27adc21076c1b15d36f53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Graphiques à secteurs (Générateur de rapports et SSRS)
-  Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphiques à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, comprennent un groupe de graphiques connu sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total. Pour plus d’informations sur les graphiques de forme, consultez [graphiques de la forme &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphiques à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, comprennent un groupe de graphiques connu sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total. Pour plus d’informations sur les graphiques à base de formes, consultez [Graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre un graphique à secteurs 3D avec des étiquettes de données mises en forme sous forme de pourcentages.  La légende est positionnée au centre à droite.  
   
- ![Graphique à secteurs](../../reporting-services/report-design/media/piechart.gif "graphique à secteurs")  
+ ![Graphique à secteurs](../../reporting-services/report-design/media/piechart.gif "Graphique à secteurs")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Affichage de valeurs en pourcentage sur un graphique en secteurs  
  Comme les autres graphiques à base de formes, les graphiques en secteurs représentent des proportions du total. En conséquence, il est courant de mettre en forme les étiquettes de graphique en secteurs en tant que pourcentages. Pour être cohérent avec d'autres types de graphiques, le graphique n'affiche pas les étiquettes de pourcentage par défaut. Pour plus d’informations sur l’affichage des valeurs sous forme de pourcentages dans le graphique, consultez [Afficher des valeurs en pourcentage dans un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Pour plus d’informations sur la mise en forme de nombres en pourcentages dans votre rapport, consultez [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- ![Graphique à secteurs avec données d’étiquettes sous forme de pourcentages de points](../../reporting-services/report-design/media/rs-piechartpercentages.gif "étiquettes sous forme de pourcentages de points du graphique à secteurs avec données")  
+ ![Graphique à secteurs avec étiquettes de données sous forme de pourcentages](../../reporting-services/report-design/media/rs-piechartpercentages.gif "Graphique à secteurs avec étiquettes de données sous forme de pourcentages")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>Empêcher les étiquettes qui se chevauchent sur un graphique à secteurs  
  Si votre graphique à secteurs affiche de nombreux points de données, les étiquettes des données se chevaucheront. Il y a plusieurs méthodes pour empêcher le chevauchement des étiquettes :  
@@ -93,12 +92,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher des étiquettes de points de données à l’extérieur d’un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Regrouper des petits secteurs sur un graphique à secteurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Afficher les valeurs en pourcentage sur un graphique à secteurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Regrouper des petits secteurs sur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Afficher des valeurs en pourcentage sur un graphique à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Didacticiel : ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Mise en forme de la légende sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [Points de données vides et Null dans les graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

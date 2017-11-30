@@ -1,29 +1,27 @@
 ---
-title: "Leçon 6 : Ajout de regroupement et totaux (Reporting Services) | Documents Microsoft"
+title: "Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 742ebc4024e30ca7f18020ef6d4ffc29e3a3c635
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services)
 Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des totaux à votre rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour organiser et synthétiser vos données.  
   
   
@@ -37,7 +35,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
     Notez que le descripteur de ligne comporte maintenant un crochet, qui indique un groupe. En outre, le tableau présente désormais deux colonnes Date, placées de part et d'autre d'une ligne verticale en pointillé.  
   
-    ![date de groupe ajouté](../reporting-services/media/rs-basictablegroups1design.png "groupe date ajoutée")  
+    ![groupe date ajouté](../reporting-services/media/rs-basictablegroups1design.png "groupe date ajouté")  
   
 4.  Faites glisser le champ **Order** du volet des **données de rapport** vers le volet **Groupes de lignes** . Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.
 
@@ -47,7 +45,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 5.  Supprimez les colonnes **Date** et **Order** d’origine, à **droite** du double trait. Cette opération supprime les différentes valeurs d'enregistrement afin que seule la valeur de groupe soit affichée. Sélectionnez les descripteurs des deux colonnes, cliquez avec le bouton droit, puis cliquez sur **Supprimer les colonnes**.  
   
-    ![Sélectionnez les colonnes à supprimer](../reporting-services/media/rs-basictablegroupsdeletecols.gif "sélectionner les colonnes à supprimer")  
+    ![Sélectionnez les colonnes à supprimer](../reporting-services/media/rs-basictablegroupsdeletecols.gif "Sélectionnez les colonnes à supprimer")  
   
 6.  Pour mettre en forme la nouvelle colonne de dates, cliquez avec le bouton droit sur la cellule qui contient l’expression de champ `[Date]` , puis sélectionnez **Propriétés de la zone de texte**.  
   
@@ -78,7 +76,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 6.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Gris clair**, puis sur **OK**.  
   
-    ![En mode conception : table de base avec total de la commande](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "en mode conception : table de base avec total de la commande")  
+    ![Mode Création : table de base avec total des commandes](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Mode Création : table de base avec total des commandes")  
   
 ## <a name="bkmk_adddailytotal"></a>Pour ajouter un total quotidien à un rapport  
   
@@ -106,13 +104,13 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 4.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Bleu clair**, puis sur **OK**.  
   
-    ![En mode conception : total général dans la table de base](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "en mode conception : total général dans la table de base")  
+    ![Mode Création : total général dans la table de base](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Mode Conception : total général dans la table de base")  
   
 5.  Cliquez sur **Aperçu**.  
   
     La dernière page doit ressembler à l’image suivante. Dans la barre d’outils, cliquez sur le bouton Dernière page ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Aperçu : Base de la table avec le total général](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "aperçu : table de base avec total général")  
+    ![Aperçu : table de base avec total général](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : table de base avec total général")  
   
 ## <a name="bkmk_publishreport"></a>Pour publier le rapport sur le serveur de rapports (facultatif)  
   
@@ -159,12 +157,11 @@ Cliquez sur le nom du rapport **Sales Orders** afin de consulter le rapport rend
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** Vous avez terminé la création un rapport de base tutorial.* *  
+** Vous avez correctement mené à terme le didacticiel de création d’un rapport de tableau de base.**  
   
 ## <a name="see-also"></a>Voir aussi  
 [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
-
 

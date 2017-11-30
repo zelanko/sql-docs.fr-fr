@@ -1,5 +1,5 @@
 ---
-title: "Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2adde1d53084f92ee16822c5b6d04a886f31fe28
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e61ce0c404a8544ac95b505f40f34d070543908b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un groupe de hiérarchies récursives organise les données d’un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques, tels que la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d’organisation.  
@@ -56,7 +55,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
     > [!NOTE]  
     >  Si vous ne voyez pas le volet Propriétés, cliquez sur **Propriétés** sous l’onglet **Affichage** .  
   
-2.  Dans le volet Propriétés, développez le **remplissage** nœud, cliquez sur **gauche**et dans la liste déroulante, sélectionnez  **\<Expression... >**.  
+2.  Dans le volet Propriétés, développez le nœud **Remplissage**, cliquez sur **Gauche**, puis, dans la liste déroulante, sélectionnez **\<Expression…>**.  
   
 3.  Dans le volet Expression, tapez l'expression suivante :  
   
@@ -69,13 +68,12 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
      Exécutez le rapport. Le rapport affiche une vue hiérarchique des données groupées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de groupes de hiérarchies récursives &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Référence des fonctions d’agrégation &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [Tables &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [Listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Matrices &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [Listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Télécharger les fichiers dans un dossier | Documents Microsoft"
+title: "Télécharger des fichiers dans un dossier | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6381fa38e39b7b8730a90eebcdd557f2e30da8f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upload-files-to-a-folder"></a>Télécharger des fichiers dans un dossier
   Vous pouvez télécharger des fichiers à partir du système de fichiers, puis les stocker comme éléments gérés dans une base de données de serveur de rapports. Ce qui se produit lorsque vous téléchargez un fichier dépend du type du fichier.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
  ![Icône Rapport](../../reporting-services/report-server/media/hlp-16doc.gif "Icône Rapport")  
 icône de rapport  
   
- ![Icône de modèle](../../reporting-services/report-server/media/model-icon.gif "icône de modèle")  
+ ![Icône de modèle](../../reporting-services/report-server/media/model-icon.gif "Icône de modèle")  
 icône de modèle de rapport  
   
  ![Icône Ressource générique](../../reporting-services/report-server/media/hlp-16file.gif "Icône Ressource générique")  
@@ -65,10 +64,9 @@ icône de ressource générique
 |Afficher le contenu d'un dossier|Afficher les ressources, afficher les rapports|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
- [Télécharger un fichier ou rapport &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
+ [Télécharger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  
   
   
-

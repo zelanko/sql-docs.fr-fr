@@ -2,33 +2,26 @@
 title: MSSQLSERVER_3313 | Microsoft Docs
 ms.custom: 
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine
+ms.suite: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3313 (Database Engine error)
+helpviewer_keywords: 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
-manager: craigg
+manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e8b07b5a12de6b011ee581e0d869c4ec30427e3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c0eec92749b8a15bd87b434593ab4f92e5962fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver3313"></a>MSSQLSERVER_3313
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Détails  
   
@@ -60,4 +53,3 @@ Pour plus d’informations sur la cause de l’occurrence de l’erreur 3313, ex
 [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
 [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
-

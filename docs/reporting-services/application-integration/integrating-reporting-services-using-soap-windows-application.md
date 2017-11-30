@@ -1,5 +1,5 @@
 ---
-title: "À l’aide de l’API SOAP dans une Application Windows | Documents Microsoft"
+title: "Utilisation de l’API SOAP dans une application Windows | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,28 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7dd1e6d2ddd35132ab1a9f297621218aab268e39
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: a577d15cbc8f3e11ea3672dd3fb6afe823f3bc35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Intégration de Reporting Services à l’aide de SOAP - Application Windows
-  Vous pouvez accéder aux fonctionnalités complètes du serveur de rapports via l'API SOAP de Reporting Services. L'API SOAP est un service Web et, en tant que tel, est facilement accessible afin de fournir des fonctionnalités de création de rapports d'entreprise à vos applications de gestion personnalisées. Pour accéder au service Web dans une application Windows, il suffit d'écrire un code qui permet d'appeler le service. À l’aide de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez générer une classe proxy qui expose les propriétés et méthodes du site Web service et vous permet de créer des applications de gestion basées une infrastructure et familiers outils [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technologie.  
+  Vous pouvez accéder aux fonctionnalités complètes du serveur de rapports via l'API SOAP de Reporting Services. L'API SOAP est un service Web et, en tant que tel, est facilement accessible afin de fournir des fonctionnalités de création de rapports d'entreprise à vos applications de gestion personnalisées. Pour accéder au service Web dans une application Windows, il suffit d'écrire un code qui permet d'appeler le service. À l’aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez générer une classe proxy qui expose les propriétés et méthodes du service web et vous permet d’utiliser une infrastructure et des outils familiers pour générer des applications métier basées sur la technologie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="integrating-report-management-functionality-using-windows-forms"></a>Intégration de fonctionnalités de gestion de rapports à l'aide de Windows Forms  
  Contrairement à l'accès URL, l'API SOAP expose le jeu complet des fonctions de gestion qui sont disponibles via le serveur de rapports. Cela signifie que toutes les fonctionnalités d'administration du Gestionnaire de rapports sont disponibles pour les développeurs via SOAP. Ainsi, vous pouvez développer un outil de gestion et d'administration complet à l'aide de Windows Forms. Par exemple, dans votre application Windows, vous pouvez souhaiter permettre à vos utilisateurs d'extraire le contenu de l'espace de noms du serveur de rapports. Pour cela, vous pouvez utiliser la méthode <xref:ReportService2010.ReportingService2010.ListChildren%2A> du service Web pour répertorier tous les éléments contenus dans la base de données du serveur de rapports, puis utiliser un contrôle ListView, TreeView ou ComboBox pour présenter ces éléments à vos utilisateurs. Vous pouvez utiliser le code de service Web suivant pour extraire la liste actuelle des rapports disponibles dans le dossier Mes rapports d'un utilisateur lorsqu'il clique sur un bouton sur un formulaire :  
@@ -97,16 +95,15 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Toutefois, la méthode <xref:ReportExecution2005.ReportExecutionService.Render%2A> de l'API SOAP peut être utilisée pour effectuer le rendu de rapports et les enregistrer sous divers formats de sortie par programme. Il s'agit d'un avantage par rapport à l'accès URL, qui requiert l'intervention de l'utilisateur. Lorsque vous effectuez le rendu d'un rapport à l'aide de la méthode <xref:ReportExecution2005.ReportExecutionService.Render%2A> de l'API SOAP, vous pouvez le faire dans tous les formats de sortie pris en charge.  
   
- Vous pouvez également utiliser les contrôles ReportViewer librement distribuables inclus avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Les contrôles ReportViewer facilitent l'incorporation de fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans les applications personnalisées. Les contrôles ReportViewer sont destinés aux développeurs qui souhaitent fournir des rapports prédéfinis et entièrement créés dans un ensemble de fonctionnalités d'une application (par exemple, une application de gestion de sites Web peut contenir des rapports qui comportent une analyse du parcours des internautes sur les sites Web de sociétés). L'incorporation des contrôles dans une application offre une solution plus rationnelle que l'ajout de composants serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le déploiement de votre application. Les contrôles offrent les fonctionnalités des rapports sans la prise en charge de la création, de la publication, de la distribution et de la fourniture qu'offre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Vous pouvez également utiliser les contrôles ReportViewer en distribution libre inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Les contrôles ReportViewer facilitent l'incorporation de fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans les applications personnalisées. Les contrôles ReportViewer sont destinés aux développeurs qui souhaitent fournir des rapports prédéfinis et entièrement créés dans un ensemble de fonctionnalités d'une application (par exemple, une application de gestion de sites Web peut contenir des rapports qui comportent une analyse du parcours des internautes sur les sites Web de sociétés). L'incorporation des contrôles dans une application offre une solution plus rationnelle que l'ajout de composants serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le déploiement de votre application. Les contrôles offrent les fonctionnalités des rapports sans la prise en charge de la création, de la publication, de la distribution et de la fourniture qu'offre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Il existe deux versions des contrôles ReportViewer : une version est destinée aux applications clientes Windows, l'autre aux applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Les contrôles prennent en charge les modes de traitement local et distant. En mode de traitement local, votre application fournit la définition de rapport et les datasets et déclenche le traitement des rapports.  En mode de traitement distant, la récupération des données et le traitement des rapports sont effectués sur le serveur de rapports et le contrôle est utilisé à des fins d'affichage et de navigation dans les rapports. Ce modèle vous permet de créer des applications puissantes à l'échelle d'un Bureau ou d'une entreprise.  
   
  Les contrôles ReportViewer sont décrits dans l'aide en ligne de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pour plus d'informations, consultez la documentation produit de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Intégration de Reporting Services dans des Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [À l’aide de l’API SOAP dans une Application Web](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
+ [Création d’applications à l’aide du service web et du .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Intégration de Reporting Services dans des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [Utilisation de l’API SOAP dans une application web](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
   
   
-

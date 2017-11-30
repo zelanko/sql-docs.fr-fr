@@ -1,5 +1,5 @@
 ---
-title: "Ajouter de biseau, du relief, Styles et des textures à un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter des styles de biseau, du relief et des textures à un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 204e67c4b1fb62e3e38188f155196d8edc095356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Effets de graphique - ajouter biseau, relief, ou de la Texture (Générateur de rapports)
+# <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>Effets de graphiques - Ajouter un biseau, un relief ou une texture (Générateur de rapports)
   Lorsque vous utilisez certains types de graphiques, vous pouvez spécifier un effet de dessin pour augmenter l'impact visuel de votre graphique. Ces effets de dessins ne sont appliquées qu'aux series de votre graphique. Ils n'ont pas d'effet sur les autres éléments d'un graphique.  
   
  Lorsque vous utilisez une variante d'un graphique en secteurs ou d'un graphique en anneau, vous pouvez spécifier une bordure arrondie ou un style de dessin concave semblable à des effets de biseau ou de relief qui peuvent être appliqués à une image.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Vous ne pouvez pas avoir les styles 3D et de biseau ou de relief sur le même graphique. Si vous avez activé le style 3D pour le graphique, la propriété PieDrawingStyle n’y figure pas.  
   
- ![Graphique à secteurs avec style de dessin concave](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "graphique à secteurs avec style de dessin concave")  
+ ![Graphique à secteurs avec style de dessin concave](../../reporting-services/report-design/media/rs-piedrawingeffects-concave.gif "Graphique à secteurs avec style de dessin concave")  
   
 ### <a name="to-add-texture-styles-to-a-bar-or-column-chart"></a>Pour ajouter des styles de texture à un graphique à barres ou un histogramme  
   
@@ -63,13 +62,12 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Vous ne pouvez pas avoir les styles 3D et de biseau ou de relief sur le même graphique. Si vous avez activé le style 3D pour le graphique, la propriété PieDrawingStyle n’y figure pas.  
   
- ![Graphique à barres avec effet de dessin LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "graphique à barres avec effet de dessin LightToDark")  
+ ![Graphique à barres avec effet de dessin LightToDark](../../reporting-services/report-design/media/rs-bardrawingeffects-lighttodark.gif "Graphique à barres avec effet de dessin LightToDark")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Histogrammes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Les graphiques en secteurs &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [Histogrammes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

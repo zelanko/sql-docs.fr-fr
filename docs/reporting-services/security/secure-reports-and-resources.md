@@ -1,5 +1,5 @@
 ---
-title: "Sécuriser des rapports et des ressources | Documents Microsoft"
+title: "Sécuriser des rapports et des ressources | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
   Vous pouvez définir la sécurité pour des rapports et des ressources individuels afin de contrôler le degré d'accès dont disposent les utilisateurs à ces éléments. Par défaut, seuls les utilisateurs qui sont membres du groupe intégré **Administrateurs** peuvent exécuter les rapports, afficher les ressources, modifier les propriétés et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un rapport ou une ressource.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Le rapport est publié sur un serveur de rapports ou mis à disposition de telle façon que la valeur du paramètre de rapport est contrôlable par l'URL d'une page Web.  
   
-3.  Un intrus crée un lien vers la page web ou un serveur de rapports en spécifiant la valeur du paramètre sous la forme « javascript :\<script malveillant ici > » et envoie ce lien à quelqu'un d’autre dans une attaque par ruse.  
+3.  Un intrus crée un lien vers la page web ou le serveur de rapports en spécifiant la valeur du paramètre sous la forme « javascript:\<script malveillant ici> » et envoie ce lien à une autre personne en vue d’une attaque par ruse.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Limitation des attaques par injection de script dans un lien hypertexte figurant dans un rapport ou un document publié  
  Les rapports peuvent contenir des liens hypertexte incorporés dans la valeur de la propriété Action sur un élément de rapport ou une partie d’un élément de rapport. Les liens hypertexte peuvent être liés aux données extraites d'une source de données externe au moment du traitement du rapport. Si un utilisateur mal intentionné modifie les données sous-jacentes, le lien hypertexte risque d'être utilisé pour écrire des exploits. Si un utilisateur clique sur le lien dans le rapport publié ou exporté, le script malveillant peut ensuite s'exécuter.  
@@ -81,10 +80,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurer l’accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Éléments de Source de données partagée sécurisée](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Stocker des informations d’identification dans une Source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Configurer l'accès au Générateur de rapports](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Sécuriser les éléments de source de données partagée](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Stocker des informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

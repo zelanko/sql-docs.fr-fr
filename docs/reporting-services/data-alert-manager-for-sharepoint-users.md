@@ -1,5 +1,5 @@
 ---
-title: "Alerte de données pour les utilisateurs de SharePoint | Documents Microsoft"
+title: "Gestionnaire des alertes de données pour les utilisateurs SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,31 +14,29 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 65e857b83f1f9821601492542ef87aa9fa57fddb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="data-alert-manager-for-sharepoint-users"></a>Gestionnaire des alertes de données pour les utilisateurs SharePoint
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]fournit le Gestionnaire des alertes de données pour les travailleurs de SharePoint gérer les alertes de données. Ces derniers peuvent afficher les informations relatives aux alertes qu'ils ont créées, supprimer des alertes, ouvrir les définitions d'alerte pour les modifier et exécuter des alertes à la demande. Il peuvent choisir de consulter les alertes d'un seul rapport ou les alertes de tous les rapports. L'illustration suivante montre les fonctionnalités dont les travailleurs de l'information disposent dans le Gestionnaire des alertes de données.
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit le Gestionnaire des alertes de données pour permettre aux travailleurs de l’information SharePoint de gérer les alertes de données. Ces derniers peuvent afficher les informations relatives aux alertes qu'ils ont créées, supprimer des alertes, ouvrir les définitions d'alerte pour les modifier et exécuter des alertes à la demande. Il peuvent choisir de consulter les alertes d'un seul rapport ou les alertes de tous les rapports. L'illustration suivante montre les fonctionnalités dont les travailleurs de l'information disposent dans le Gestionnaire des alertes de données.
 
-![Fonctionnalités du gestionnaire pour les utilisateurs SharePoint d’alerte](../reporting-services/media/rs-alertmanageriw.gif "des fonctionnalités de gestionnaire d’alertes pour les utilisateurs SharePoint")  
+![Fonctionnalités du Gestionnaire d’alertes pour les utilisateurs SharePoint](../reporting-services/media/rs-alertmanageriw.gif "Fonctionnalités du Gestionnaire d’alertes pour les utilisateurs SharePoint")  
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
 Quand le site SharePoint autorise les alertes de données, deux pages SharePoint, MyDataAlerts.aspx et SiteDataAlerts.aspx sont créées et ajoutées au site SharePoint. MyDataAlerts.aspx est le Gestionnaire des alertes de données pour les travailleurs de l'information SharePoint. Les travailleurs de l'information peuvent ouvrir le Gestionnaire des alertes de données d'un clic droit sur les rapports sur lesquels ils ont créé des alertes.  
 
@@ -52,7 +50,7 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 ##  <a name="ViewingAlerts"></a> Consulter les informations relatives aux alertes de données  
  Vous pouvez afficher la liste des alertes de données que vous avez créées dans le Concepteur d'alertes de données. Pour ouvrir le Gestionnaire des alertes de données, cliquez avec le bouton droit sur un rapport publié dans une bibliothèque SharePoint. L’image suivante présente l’option **Gérer les alertes de données** dans le menu contextuel du rapport.  
   
- ![Ouvrez le Gestionnaire des alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrez Gestionnaire des alertes à partir du menu contextuel du rapport")  
+ ![Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport](../reporting-services/media/rs-openalertmanager.gif "Ouvrir le Gestionnaire d’alertes à partir du menu contextuel du rapport")  
   
  Le Gestionnaire des alertes de données inclut une table qui répertorie le nom de l'alerte, le nom du rapport, votre nom en tant que créateur de la définition d'alerte, le nombre de messages d'alerte envoyés, la dernière fois que la définition d'alerte a été exécutée, la dernière fois qu'elle a été modifiée et l'état du dernier message d'alerte. Si le message d'alerte ne peut pas être généré ou envoyé, la colonne d'état contient des informations sur l'erreur et vous aide à dépanner l'alerte. Pour plus d’informations, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).  
   
@@ -93,8 +91,7 @@ Quand le site SharePoint autorise les alertes de données, deux pages SharePoint
 ## <a name="see-also"></a>Voir aussi
 
 [Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
-[Créer une alerte de données dans le Concepteur d’alertes de données](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
+[Créer une alerte de données dans le Concepteur d'alertes](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

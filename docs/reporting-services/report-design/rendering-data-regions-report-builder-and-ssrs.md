@@ -1,5 +1,5 @@
 ---
-title: "Rendu des régions de données (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Rendu des régions de données (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 99ca6c9509f25c118931ccab981987b3427e4b2d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: fdbf64f9ab101eccfc3cfb4fdbf70d73a04fb3b5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendu des régions de données (Générateur de rapports et SSRS)
   En plus des comportements de rendu généraux qui s'appliquent à tous les éléments de rapport, les régions de données suivent des comportements de pagination et de rendu supplémentaires. Les règles de rendu spécifiques aux régions de données comprennent la croissance d'une région de données, le rendu de cellules spéciales, telles que la cellule d'angle ou les cellules d'en-tête, le rendu de la lecture de droite à gauche d'une région de données. Cette rubrique présente le rendu des différents composants d'une région de données.  
@@ -53,13 +52,12 @@ ms.lasthandoff: 08/09/2017
  Les régions de données de graphique, jauge et plan se comportent comme des images lorsqu'elles sont rendues et affichées dans le corps du rapport. Les valeurs au sein de la région de données peuvent avoir des actions associées, telles que la liaison à un autre rapport ou l'ouverture d'un signet, et ces actions peuvent également être rendues, si le convertisseur le prend en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pagination dans Reporting Services &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportements de rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions &#40; de rendu de rapport Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendu des éléments de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Jauges &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   
-

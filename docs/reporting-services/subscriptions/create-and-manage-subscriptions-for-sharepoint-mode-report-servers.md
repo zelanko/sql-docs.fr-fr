@@ -1,5 +1,5 @@
 ---
-title: "Créer et gérer des abonnements pour les serveurs de rapports en Mode SharePoint | Documents Microsoft"
+title: "Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56e19fe33a42086ef25001f605220f970d8b226a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b34e48d7cda4b55a4162c2229f99e2bcdbcbb90e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
  Lorsque vous créez un abonnement, vous pouvez sélectionner un format de fichier de sortie. Tous les rapports ne fonctionnent pas de manière optimale dans tous les formats. Avant de sélectionner un format dans un abonnement, ouvrez le rapport et exportez-le vers différents formats afin de vous assurer qu'il s'affiche comme vous le souhaitez.  
   
- Les utilisateurs ont besoin de l'autorisation de liste **Modifier des éléments** dans SharePoint s'ils souhaitent pouvoir créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [Référence autorisations de sites et de listes SharePoint pour des éléments de serveur de rapports](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ Les utilisateurs ont besoin de l'autorisation de liste **Modifier des éléments** dans SharePoint s'ils souhaitent pouvoir créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations, consultez [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  Un abonnement qui remet un rapport dans une bibliothèque ou dans un dossier partagé crée un nouveau fichier statique basé sur le rapport d'origine, mais ce n'est pas une véritable définition de rapport qui s'exécute dans le composant WebPart de visionneuse de rapports. Si le rapport d'origine dispose de fonctionnalités interactives (par exemple de liens d'extraction) ou d'un contenu dynamique, ces fonctionnalités ne sont pas disponibles dans le fichier statique remis à l'emplacement cible. Si vous sélectionnez une « page Web », vous pouvez préserver une certaine interactivité, mais comme le document n'est pas un fichier .rdl qui s'exécute dans la visionneuse de rapports, cliquer dans un rapport crée de nouvelles pages dans la session du navigateur que vous devez parcourir pour retourner au site.  
@@ -92,7 +91,7 @@ ms.lasthandoff: 08/09/2017
   
 8.  Dans **Options de remplacement**, spécifiez l'option qui détermine si les remises ultérieures doivent entraîner le remplacement du fichier. Si vous souhaitez conserver les remises antérieures, sélectionnez **Créer un fichier avec un nom unique**. Un nombre est ajouté aux nouveaux fichiers pour permettre la création d'un nom de fichier unique.  
   
-9. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [définir les Options de traitement &#40; Reporting Services dans SharePoint intégré en Mode &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Dans **Paramètres**, si vous créez un abonnement à un rapport paramétrable, spécifiez les valeurs à utiliser avec le rapport lors du traitement de l'abonnement. La section de paramètres n'est pas visible dans cette page si le rapport que vous sélectionnez ne contient pas de paramètres. Pour plus d’informations sur les paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -118,7 +117,7 @@ ms.lasthandoff: 08/09/2017
   
 10. Dans **Nom d'utilisateur** et **Mot de passe**, entrez les informations d'identification permettant de bénéficier d'autorisations d'accès en écriture sur le dossier partagé.  
   
-11. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [définir les Options de traitement &#40; Reporting Services dans SharePoint intégré en Mode &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+11. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 12. Dans **Paramètres**, si vous créez un abonnement à un rapport paramétrable, spécifiez les valeurs à utiliser avec le rapport lors du traitement de l'abonnement. Pour plus d’informations sur les paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -142,7 +141,7 @@ ms.lasthandoff: 08/09/2017
   
      Le format de rendu et le navigateur déterminent si le rapport est incorporé ou joint. Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous sélectionnez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport ne sera pas remis. Choisissez une des autres options de remise (URL ou notification) pour les rapports volumineux.  
   
-9. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [définir les Options de traitement &#40; Reporting Services dans SharePoint intégré en Mode &#41; ](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
+9. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
 10. Dans **Paramètres**, si vous créez un abonnement à un rapport paramétrable, spécifiez les valeurs à utiliser avec le rapport lors du traitement de l'abonnement. Pour plus d’informations sur les paramètres, consultez [Définir les paramètres sur un rapport publié &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
@@ -164,10 +163,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Remise du courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Remise par e-mail dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Remise de bibliothèque SharePoint dans Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
+ [Remise à une bibliothèque SharePoint dans Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
  [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

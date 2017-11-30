@@ -2,30 +2,24 @@
 title: "Créer un domaine lié | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.linkeddomain.f1
+f1_keywords: sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 68a7e937e1c1f0f753779f267cf1fffa16fc3b8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
   Cette rubrique explique comment créer un domaine lié dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine lié est créé à partir d'un autre domaine existant, et hérite de toutes les valeurs, règles et propriétés du domaine auquel il est lié, à l'exception du nom et de la description. Vous pouvez gérer un ensemble de domaines liés comme un seul domaine. En liant un domaine à l'autre, vous créez un domaine qui hérite son contenu de l'autre domaine.  
@@ -34,7 +28,7 @@ ms.lasthandoff: 09/09/2017
  Les domaines liés sont particulièrement utiles dans les scénarios suivants.  
   
 ### <a name="mapping-multiple-fields-to-domains-that-share-values-rules-and-properties"></a>Mappage de plusieurs champs à des domaines qui partagent des valeurs, des règles et des propriétés  
- Vous ne pouvez pas mapper deux champs au même domaine, mais vous pouvez mapper un champ à un domaine, puis mapper un deuxième champ à un domaine lié au premier domaine. Les champs sont ainsi mappés à deux domaines différents qui ont le même contenu et les mêmes propriétés (à l'exception du nom et de la description). Pour plus d’informations, consultez [Mapper deux champs à des domaines liés](#Map).  
+ Vous ne pouvez pas mapper deux champs au même domaine, mais vous pouvez mapper un champ à un domaine, puis mapper un deuxième champ à un domaine lié au premier domaine. Les champs sont ainsi mappés à deux domaines différents qui ont le même contenu et les mêmes propriétés (à l'exception du nom et de la description). Pour plus d’informations, consultez [Map two fields to linked domains](#Map).  
   
 ### <a name="controlling-data-flow-to-composite-domains"></a>Contrôle du flux de données dans des domaines composites  
  Les domaines liés vous permettent de contrôler le flux de données entre les champs et les domaines composites. Vous pouvez distinguer le moment où des données d'un champ passent dans un domaine composite du moment où les données d'un autre champ très similaire ne passent pas dans un domaine composite. Pour ce faire, spécifiez qu'entre deux domaines liés, l'un fait partie d'un domaine composite, et l'autre non. Du point de vue des domaines, les domaines liés sont identiques. Ils contiennent les mêmes connaissances. Toutefois, du point de vue des domaines composites, les domaines liés sont différents. L'un participe au domaine composite, et l'autre non.  
@@ -43,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
-###  <a name="Prerequisites"></a> Prérequis  
+###  <a name="Prerequisites"></a> Conditions préalables  
  Pour créer un domaine lié, vous devez disposer d'une base de connaissances et d'un domaine existant auquel établir un lien.  
   
 ###  <a name="Security"></a> Sécurité  
@@ -53,9 +47,9 @@ ms.lasthandoff: 09/09/2017
   
 ##  <a name="Create"></a> Créer un domaine lié  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécuter l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d'informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
+2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , ouvrez ou créez une base de connaissances. Sélectionnez **Gestion de l'arborescence du domaine** comme activité, puis cliquez sur **Ouvrir** ou **Créer**. Pour plus d’informations, consultez [Créer une base de connaissances](../data-quality-services/create-a-knowledge-base.md) ou [Ouvrir une base de connaissances](../data-quality-services/open-a-knowledge-base.md).  
   
 3.  Dans la liste **Domaine** de la page **Gestion de l'arborescence du domaine** , cliquez avec le bouton droit sur le domaine auquel vous voulez lier un nouveau domaine, puis cliquez sur **Créer un domaine lié**.  
   
@@ -68,9 +62,9 @@ ms.lasthandoff: 09/09/2017
   
 6.  Si nécessaire, vous pouvez modifier le nom ou la description du domaine lié sous l'onglet Propriétés du domaine.  
   
-7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [Terminer l’activité de gestion de l’arborescence du domaine](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="Map"></a> Mapper deux champs à des domaines liés  
+##  <a name="Map"></a> Map two fields to linked domains  
   
 1.  Ouvrez une base de connaissances dans l'activité de découverte des connaissances, puis mappez la base de connaissances à la base de données et à la table ou à la vue.  
   
@@ -88,7 +82,7 @@ ms.lasthandoff: 09/09/2017
   
 -   Vous pouvez modifier le nom et la description d'un domaine lié.  
   
--   Pour modifier les propriétés **Type de données**, **Utiliser des valeurs par défaut**ou **Mettre en forme la sortie vers** du domaine, sélectionnez le domaine auquel vous avez établi le lien, puis modifiez ces paramètres sous l'onglet **Propriétés du domaine** pour ce domaine. Vous ne pouvez pas modifier ces paramètres dans les propriétés du domaine lié. Pour plus d’informations, consultez [Create a Domain](../data-quality-services/create-a-domain.md).  
+-   Pour modifier les propriétés **Type de données**, **Utiliser des valeurs par défaut**ou **Mettre en forme la sortie vers** du domaine, sélectionnez le domaine auquel vous avez établi le lien, puis modifiez ces paramètres sous l'onglet **Propriétés du domaine** pour ce domaine. Vous ne pouvez pas modifier ces paramètres dans les propriétés du domaine lié. Pour plus d’informations, consultez [Créer un domaine](../data-quality-services/create-a-domain.md).  
   
 -   Les paramètres disponibles sous les onglets **Données de référence**, **Règles du domaine**, **Valeurs du domaine**et **Relations à base de termes** de la page Gestion de l'arborescence du domaine peuvent être modifiés pour le domaine lié ou pour le domaine auquel il a été lié, et les modifications apportées seront héritées par l'autre domaine.  
   
@@ -107,4 +101,3 @@ ms.lasthandoff: 09/09/2017
 -   Lorsque vous double-cliquez sur un domaine lié sous n'importe lequel des onglets Gestion de l'arborescence du domaine, le domaine s'ouvre pour modification, avec la chaîne de nom indiquant qu'il s'agit d'un domaine lié.  
   
   
-

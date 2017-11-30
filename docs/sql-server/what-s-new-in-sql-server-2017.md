@@ -1,32 +1,32 @@
 ---
 title: "Nouveautés de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- server-general
+ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: 71
+caps.latest.revision: "71"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
+ms.openlocfilehash: 9abddcd8544221c5d6dff0eeb12dc441df632933
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
-ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
-SQL Server 2017 représente une étape importante pour faire de SQL Server une plateforme vous offrant des choix en matière de langages de développement, de types de données, d’utilisation locale ou dans le cloud et de systèmes d’exploitation, en apportant la puissance de SQL Server à Linux, aux conteneurs Docker basés sur Linux et à Windows. Cette rubrique récapitule les nouveautés pour des domaines de fonctionnalités spécifiques et inclut des liens vers des informations supplémentaires.
+SQL Server 2017 représente une étape importante pour faire de SQL Server une plateforme vous offrant des choix en matière de langages de développement, de types de données, d’utilisation locale ou dans le cloud et de systèmes d’exploitation, en apportant la puissance de SQL Server à Linux, aux conteneurs Docker basés sur Linux et à Windows. Cette rubrique récapitule les nouveautés pour des domaines de fonctionnalités spécifiques et inclut des liens vers des informations supplémentaires. Pour plus d’informations sur SQL Server sur Linux, consultez [Documentation de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/).
 
 [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Faites un essai :** [Téléchargez la version de SQL Server 2017 - octobre 2017](http://go.microsoft.com/fwlink/?LinkID=829477).
 
->**Exécutez SQL Server sur Linux !** Pour plus d’informations, consultez [Documentation de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/).
+> [!NOTE]
+> En plus des modifications ci-dessous, des mises à jour cumulatives sont publiées à intervalles réguliers après la version en disponibilité générale. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version des mises à jour cumulatives, consultez [Mises à jour cumulatives de SQL Server 2017](http://aka.ms/sql2017cu).
 
 ## <a name="sql-server-2017-database-engine"></a>Moteur de base de données SQL Server 2017
 
@@ -95,9 +95,10 @@ SQL Server Analysis Services 2017 introduit de nombreuses améliorations pour l
 Pour plus d’informations, consultez [Nouveautés de SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md).
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
-À partir de CTP 2.1, SSRS n’est plus disponible pour une installation via le programme d’installation de SQL Server. Accédez au Centre de téléchargement Microsoft pour [télécharger la version Release Candidate de Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
-- Des commentaires sont maintenant disponibles pour les rapports, pour ajouter une perspective et collaborer avec d’autres utilisateurs. Vous pouvez également inclure des pièces jointes avec des commentaires. (CTP 2.1)
+SQL Server Reporting Services n’est plus disponible pour une installation via le programme d’installation de SQL Server. Accédez au Centre de téléchargement Microsoft pour [télécharger Microsoft SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252). 
+- Des commentaires sont maintenant disponibles pour les rapports, pour ajouter une perspective et collaborer avec d’autres utilisateurs. Vous pouvez également inclure des pièces jointes avec des commentaires.
 - Dans les dernières versions du Générateur de rapports et SQL Server Data Tools, vous pouvez créer des requêtes DAX natives sur des modèles de données tabulaires SQL Server Analysis Services pris en charge en faisant glisser les champs voulus dans les concepteurs de requêtes. Consultez le [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+- Pour permettre le développement d’applications modernes et la personnalisation, SSRS prend désormais en charge une API RESTful entièrement conforme à OpenAPI. La spécification et la documentation complètes de l’API se trouvent désormais sur [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 Pour plus d’informations, consultez [Nouveautés de SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
@@ -125,3 +126,4 @@ Pour plus d’informations, consultez [Nouveautés de SQL Server Machine Learnin
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
+![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

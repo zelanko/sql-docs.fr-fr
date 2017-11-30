@@ -1,5 +1,5 @@
 ---
-title: "Définitions de rôles | Documents Microsoft"
+title: "Définitions de rôles | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 890a94891df3bbae4e65b7733752f99ba458e3e8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 53968d85370c60720f4d6caf72054a869348b27d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-definitions"></a>Définitions de rôles
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une *définition* de *rôle* est une collection nommée de tâches définissant les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  
@@ -62,11 +61,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Créer, supprimer ou modifier un rôle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Accorder l’accès de l’utilisateur à un serveur de rapports &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modifier ou supprimer une attribution de rôle &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   
-

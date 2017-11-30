@@ -1,5 +1,5 @@
 ---
-title: "Graphiques (Générateur de rapports et SSRS) de la ligne | Documents Microsoft"
+title: "Graphiques en courbes (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309753291bfae573be58b124c033d021adb254c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fd410e360eac7fa3b7bda2a4b63abee459740d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>Graphiques en courbes (Générateur de rapports et SSRS)
   Un graphique en courbes affiche une série sous la forme d'un ensemble de points reliés par une ligne. Les graphiques en courbes sont utilisés pour représenter de grands volumes de données qui se produisent sur une période de temps continue. Pour plus d’informations sur l’ajout de données à un graphique en courbes, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre un graphique en courbes qui contient trois séries.  
   
- ![Graphique en courbes](../../reporting-services/report-design/media/rs-linechart.gif "graphique en courbes")  
+ ![Graphique en courbes](../../reporting-services/report-design/media/rs-linechart.gif "Graphique en courbes")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,12 +52,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
- [Histogrammes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Types de graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Graphiques en aires &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)   
- [Points de données vides et Null dans les graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Histogrammes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Graphiques en aires &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/area-charts-report-builder-and-ssrs.md)   
+ [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

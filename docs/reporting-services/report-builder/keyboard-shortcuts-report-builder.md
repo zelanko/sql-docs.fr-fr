@@ -1,5 +1,5 @@
 ---
-title: "Raccourcis (Générateur de rapports) | Documents Microsoft"
+title: "Raccourcis clavier (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f8a493830a49bbd083fdea72aa215bd2d084c9a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Quand vous créez et modifiez des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l’environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Mode de création de rapports &#40; Le Générateur de rapports &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glossaire &#40; Le Générateur de rapports &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [Vue Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Glossaire &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

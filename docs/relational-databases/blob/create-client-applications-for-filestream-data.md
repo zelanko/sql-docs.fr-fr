@@ -5,26 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], Win32
+helpviewer_keywords: FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c8ae3ba00110ba3441ac5bfa6dc2e06979f59ee0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: d0b98d5c89164b220ff4cec69a3a3a2f33af5688
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Créer des applications clientes pour les données FILESTREAM
-  Vous pouvez utiliser Win32 pour lire et écrire des données dans un objet BLOB FILESTREAM. Les étapes suivantes sont nécessaires :  
+  Vous pouvez utiliser des API Win32 pour lire et écrire des données dans un objet BLOB FILESTREAM. Les étapes suivantes sont nécessaires :  
   
 -   Lecture du chemin d'accès au fichier FILESTREAM.  
   
@@ -69,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/create-client-applicatio_5.cpp)]  
   
-##  <a name="best"></a> Bonnes pratiques pour la conception et l'implémentation d'applications  
+##  <a name="best"></a> Meilleures pratiques pour la conception et l'implémentation d'applications  
   
 -   Lorsque vous concevez et implémentez des applications qui utilisent FILESTREAM, prenez en compte les recommandations suivantes :  
   

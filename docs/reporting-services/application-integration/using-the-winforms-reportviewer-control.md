@@ -1,5 +1,5 @@
 ---
-title: "À l’aide du contrôle WinForms ReportViewer | Documents Microsoft"
+title: "Utilisation du contrôle WinForms ReportViewer| Microsoft Docs"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,56 +10,53 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>Utilisation du contrôle Windows Forms ReportViewer
+# <a name="using-the-winforms-reportviewer-control"></a>Utilisation du contrôle WinForms ReportViewer
   Pour consulter des rapports déployés sur un serveur de rapports ou situés sur le système de fichiers local, vous pouvez utiliser le contrôle WinForms ReportViewer afin de les restituer dans une application Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Pour ajouter le contrôle ReportViewer dans une application Windows  
   
-1.  Créez une application Windows à l’aide [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Créez une application Windows à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-Ou -  
+     \- Ou -  
   
      Ouvrez un projet d'application Windows existant et ajoutez un nouveau formulaire.  
   
-2.  Localisez le contrôle ReportViewer dans le **boîte à outils**. Si le **boîte à outils** est visible, vous pouvez y accéder à partir de la **vue** menu en sélectionnant **boîte à outils**.  
+2.  Localisez le contrôle ReportViewer dans la **Boîte à outils**. Si la **Boîte à outils** n’est pas visible, vous pouvez y accéder à partir du menu **Affichage** en sélectionnant **Boîte à outils**.  
   
-     ![Sélection du contrôle ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "contrôle ReportViewer de sélection")  
+     ![Sélection du contrôle ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Sélection du contrôle ReportViewer")  
   
 3.  Faites glisser le contrôle ReportViewer vers l'aire de conception du Windows Form.  
   
      Un contrôle ReportViewer nommé reportViewer1 est ajouté au formulaire.  
   
- Une fois que le contrôle est ajouté au formulaire, le **tâches ReportViewer** balises actives s’affiche et vous invite à sélectionner un rapport.  
+ Une fois le contrôle ajouté au formulaire, la balise active **Tâches ReportViewer** s’affiche et vous invite à sélectionner un rapport.  
   
- Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez le  **\<rapport du serveur >** option à partir de la **choisir un rapport** liste déroulante. Après le  **\<rapport du serveur >** option est sélectionnée, deux propriétés supplémentaires apparaissent : **Url de Report Server** et **chemin d’accès du rapport**. Le **Url de Report Server** est l’adresse sur le serveur de rapports et le **chemin d’accès du rapport** est le chemin d’accès complet pour le rendu du rapport.  
+ Si le rapport que vous souhaitez afficher a été déployé sur un serveur de rapports, sélectionnez l’option **\<Rapport du serveur>** dans la liste déroulante **Choisir un rapport**. Une fois l’option **\<Rapport du serveur>** sélectionnée, deux propriétés supplémentaires apparaissent : **URL de Report Server** et **Chemin d’accès au rapport**. **L’URL de Report Server** correspond à l’adresse du serveur de rapports et le **Chemin d’accès au rapport** correspond au chemin complet au rapport à restituer.  
   
- ![Sélectionnez le rapport de serveur](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "sélectionner rapport du serveur")  
+ ![Sélectionner le rapport du serveur](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Sélectionner le rapport du serveur")  
   
- Si le rapport que vous souhaitez afficher un rapport en mode local, sélectionnez le **concevoir un nouveau rapport** option pour lancer le Concepteur de rapports, ou sélectionnez un rapport qui fait déjà partie du projet existant.  
+ Si vous souhaitez afficher un rapport en mode local, sélectionnez l’option **Concevoir un nouveau rapport** afin de lancer le Concepteur de rapports, ou sélectionnez un rapport faisant déjà partie du projet existant.  
   
- ![Sélectionner le rapport local](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "sélectionner le rapport local")  
+ ![Sélectionner le rapport local](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Sélectionner le rapport local")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Affichage de rapports en mode de traitement à distance  
  L'exemple suivant montre comment restituer un rapport déployé sur un serveur de rapports à l'aide du contrôle WinForms ReportViewer. Cet exemple utilise le rapport Sales Order Detail inclus avec le projet d'exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
  
-**LANGAGE C#**
+**C#**
 ```csharp  
 public partial class Form1 : Form  
 {  
@@ -157,34 +154,34 @@ End Class
   
 1.  Ouvrez le projet Windows auquel le rapport doit être ajouté.  
   
-2.  À partir de la **projet** menu, sélectionnez **ajouter un élément existant**.  
+2.  Dans le menu **Projet**, sélectionnez **Ajouter un élément existant**.  
   
 3.  Accédez à l'emplacement où vous avez installé le projet d'exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Les exemples de rapports, le téléchargement atteindre [exemples de rapports AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Pour télécharger les exemples de rapports, accédez à [Exemples de rapports AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153).  
   
-4.  Sélectionnez le fichier Sales Order Detail.rdl et cliquez sur le **ajouter** bouton.  
+4.  Sélectionnez le fichier Sales Order Detail.rdl et cliquez sur le bouton **Ajouter**.  
   
      Le fichier Sales Order Detail.rdl doit maintenant faire partie du projet.  
   
-     ![Rapport détaillé des commandes](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "rapport détaillé des ventes")  
+     ![Rapport Sales Order Detail (Détail de la commande)](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Rapport Sales Order Detail (Détail de la commande)")  
   
-5.  Cliquez sur le fichier Sales Order Detail.rdl dans l’Explorateur de solutions et sélectionnez **renommer**. Renommez le rapport en **Sales Order Detail.rdlc** et appuyez sur ENTRÉE.  
+5.  Cliquez avec le bouton droit sur le fichier Sales Order Detail.rdl dans l’Explorateur de solutions et sélectionnez **Renommer**. Renommez le rapport en **Sales Order Detail.rdlc** et appuyez sur Entrée.  
   
-     Si l’Explorateur de solutions n’est pas visible, vous pouvez l’ouvrir à partir de la **vue** menu en sélectionnant **l’Explorateur de solutions**.  
+     Si l’Explorateur de solutions n’est pas visible, vous pouvez l’ouvrir à partir du menu **Affichage** en sélectionnant **Explorateur de solutions**.  
   
     > [!NOTE]  
-    >  Modification du nom de l’extension de fichier rdl en rdlc vous permettra de modifier le rapport à l’aide du Concepteur de rapports pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
+    >  Le renommage de l’extension de fichier de rdl en rdlc vous permet de modifier le rapport à l’aide du Concepteur de rapports pour [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
   
-6.  Après avoir renommé le rapport, sélectionnez le fichier et localisez la fenêtre Propriétés. Modifier la **copier dans le répertoire de sortie** propriété **Copier si plus récent**.  
+6.  Après avoir renommé le rapport, sélectionnez le fichier et localisez la fenêtre Propriétés. Affectez à la propriété **Copier dans le répertoire de sortie** la valeur **Copier si plus récent**.  
   
-     ![Configuration de copie vers la sortie paramètre](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "paramètre de configuration de copie vers la sortie")  
+     ![Paramètre de configuration de la copie vers la sortie](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Paramètre de configuration de la copie vers la sortie")  
   
-     Si le **propriétés** fenêtre n’est pas visible, vous pouvez l’ouvrir à partir de la **vue** menu en sélectionnant **fenêtre Propriétés**.  
+     Si la fenêtre **Propriétés** n’est pas visible, vous pouvez l’ouvrir à partir du menu **Affichage** en sélectionnant **Fenêtre Propriétés**.  
   
  L'exemple de code suivant permet de créer un dataset pour les données de commande client et d'effectuer un rendu du rapport Sales Order Detail (détail de la commande) en mode local.  
 
-**LANGAGE C#**
+**C#**
 ```csharp  
 public partial class Form1 : Form  
 {  
@@ -512,7 +509,6 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Intégration de Reporting Services à l’aide de contrôles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ [Intégration de Reporting Services à l’aide des contrôles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

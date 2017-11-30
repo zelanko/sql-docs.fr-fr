@@ -1,5 +1,5 @@
 ---
-title: Configurer un serveur de rapports (Reporting Services en Mode natif) | Documents Microsoft
+title: Configurer un serveur de rapports (mode natif de Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da2a367b582d39ea8cc8dc7ffc281a3515bb2d8b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8e8d5b90c912d0789cd0af7d97309de8c55931f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
   Selon les options que vous avez sélectionnées pendant l'installation, le serveur de rapports peut requérir une configuration supplémentaire avant de pouvoir fonctionner. Dans sa configuration minimale, un serveur de rapports se compose des éléments suivants :  
@@ -47,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Démarrez l'outil de configuration de Reporting Services, puis connectez-vous à l'instance du serveur de rapports. Pour obtenir des instructions, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Cliquez sur **URL du service Web** pour ouvrir la page de configuration d'une URL pour le serveur de rapports. Pour obtenir des instructions sur la façon de définir l’URL, consultez [configurer une URL &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2.  Cliquez sur **URL du service Web** pour ouvrir la page de configuration d'une URL pour le serveur de rapports. Pour obtenir des instructions sur la définition de l’URL, consultez [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3.  Cliquez sur **Base de données** pour créer la base de données du serveur de rapports. Pour obtenir des instructions, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurer un pare-feu pour accéder au serveur de rapports](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
- [Configurer un serveur de rapports en Mode natif pour l’Administration locale &#40; SSRS &#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [Configurer un serveur de rapports pour l’Administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
- [Reporting Services Configuration Manager &#40; En Mode natif &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [Configurer un serveur de rapports pour l’administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
+ [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

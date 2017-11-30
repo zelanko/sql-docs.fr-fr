@@ -1,31 +1,30 @@
 ---
 title: "Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/25/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.manualfailover.f1
+f1_keywords: sql13.swb.availabilitygroup.manualfailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: cba9c53e2ce51f12ea806337ec7a5923bbd17efc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5017d65bb6324f7137c4b5a2a2e0e59b95829748
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d'un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment effectuer un basculement manuel sans perte de données ( *basculement manuel planifié*) sur un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un basculement manuel planifié, à l'instar de tout basculement [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , entraîne la transition d'un réplica secondaire vers le rôle principal et, simultanément, celle de l'ancien réplica principal vers le rôle secondaire.  
@@ -54,7 +53,10 @@ ms.lasthandoff: 08/02/2017
 -   **Suivi :**  [Après avoir manuellement basculé un groupe de disponibilité](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
+
+>[!IMPORTANT]
+>Il existe des procédures spécifiques pour basculer un groupe de disponibilité avec échelle lecture sans gestionnaire de cluster. Quand un groupe de disponibilité a CLUSTER_TYPE = NONE, suivez les procédures sous [Basculer le réplica principal sur le groupe de disponibilité avec échelle lecture](#ReadScaleOutOnly).
+
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   Une commande de basculement retourne dès que le réplica secondaire cible a accepté la commande. Toutefois, la récupération de la base de données est asynchrone après que le basculement du groupe de disponibilité est terminé.  
@@ -129,14 +131,19 @@ ms.lasthandoff: 08/02/2017
 -   [fournisseur PowerShell SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
+
 ##  <a name="FollowUp"></a> Suivi : Après avoir basculé manuellement un groupe de disponibilité  
  Si vous avez effectué le basculement en dehors de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] du groupe de disponibilité, ajustez les votes de quorum des nœuds WSFC afin de refléter la nouvelle configuration du groupe de disponibilité. Pour plus d’informations, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
+<a name = "ReadScaleOutOnly"><a/>
+
+##<a name="fail-over-primary-replica-on-read-scale--availability-group"></a>Basculer le réplica principal sur le groupe de disponibilité avec échelle lecture
+
+[!INCLUDE[Force Failover](../../../includes/ss-force-failover-read-scale-out.md)]
+
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
   
-

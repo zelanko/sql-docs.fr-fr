@@ -1,5 +1,5 @@
 ---
-title: "Mise en forme de la légende sur un graphique (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Mise en forme de la légende sur un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -28,22 +28,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bae3ff2a5111c020fdfaa20c3c3e4fc0d905558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-legend---formatting-report-builder"></a>Légende de graphique - la mise en forme (Générateur de rapports)
+# <a name="chart-legend---formatting-report-builder"></a>Légende de graphique - Mise en forme (Générateur de rapports)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
   
- ![Diagramme d’une légende de graphique](../../reporting-services/report-design/media/rs-legenddiagram.gif "diagramme d’une légende de graphique")  
+ ![Diagramme d’une légende de graphique](../../reporting-services/report-design/media/rs-legenddiagram.gif "Diagramme d’une légende de graphique")  
   
  Un élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, où la légende est reliée aux points de données individuels. Le graphique ajoute automatiquement des éléments à la légende en fonction des séries générées à partir de vos données.  
   
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="ordering-legend-items-in-the-legend"></a>Ordre des éléments de légende dans la légende  
  Les séries sont ordonnées dans la légende d'après l'ordre dans lequel le moteur de traitement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] les traite. Vous pouvez modifier cet ordre en modifiant l'ordre des champs dans la zone de dépôt des champs de données. Si vous utilisez un regroupement de séries, les données de série sont inconnues jusqu'au traitement. Vous ne disposez donc d'aucun moyen pour réordonner ces éléments. Les modifications peuvent être vues dans l'Aperçu. Pour plus d’informations sur le regroupement de séries, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
- Vous pouvez masquer l'affichage des séries dans la légende. Si vous utilisez un regroupement de séries, toutes les séries en rapport avec le champ de données seront masquées. Pour plus d’informations, consultez [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
+ Vous pouvez masquer l'affichage des séries dans la légende. Si vous utilisez un regroupement de séries, toutes les séries en rapport avec le champ de données seront masquées. Pour plus d’informations, consultez [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>Modification du texte ou de la couleur d'un élément de légende dans la légende  
  Lorsqu'un champ est placé dans la zone de dépôt du champ de données d'un graphique, un élément de légende contenant le nom de ce champ est automatiquement généré. Par défaut, le texte de chaque élément de légende est tiré du nom du champ de données. Chaque élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, pour lesquels la légende est reliée à des points de données individuels et non à des séries individuelles. Lorsqu'un groupe de catégories est défini sur un graphique à base de formes, le texte de chaque élément de légende est tiré de la représentation de chaîne du groupe de catégories. Vous pouvez spécifier un texte d'étiquette personnalisé pour les graphiques à secteurs, en anneau ou en entonnoir afin d'afficher des informations autres que l'étiquette du groupe de catégories pour chaque point de données de la légende. Pour ce faire, sélectionnez la légende et spécifiez le texte de la légende dans la boîte de dialogue **Propriétés de la série** ou la propriété **LegendText** du volet Propriétés. Pour plus d’informations, consultez [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
@@ -86,12 +85,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Boîte de dialogue Propriétés de la légende, Général &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [Modifier le texte d’un élément de légende &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Mise en forme d’un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Masquer des éléments de légende dans le graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   
-

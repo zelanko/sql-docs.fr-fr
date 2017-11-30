@@ -1,12 +1,13 @@
 ---
 title: "Modes de disponibilité (Groupes de disponibilité Always On) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 10/16/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
+ms.openlocfilehash: a2e011db2b5d3e1b82f2b1fca6497128676d8eb1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: cec987001aa2242861da91b0815c8cc6455b9efd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modes de disponibilité (Groupes de disponibilité Always On)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le *mode de disponibilité* est une propriété de réplica qui détermine si un réplica de disponibilité donné peut fonctionner en mode de validation synchrone. Pour chaque réplica de disponibilité, le mode de disponibilité doit être configuré pour le mode de validation synchrone ou pour le mode de validation asynchrone.  Si le réplica principal est configuré pour le *mode de validation asynchrone*, il n’attend pas que le réplica secondaire écrive des enregistrements dans le journal des transactions entrantes sur le disque (pour *renforcer le journal*). Si un réplica secondaire donné est configuré en mode de validation asynchrone, le réplica principal n'attend pas que ce réplica secondaire renforce le journal. Si le réplica principal et un réplica secondaire donné sont configurés pour le *mode de validation synchrone*, le réplica principal attend que le réplica secondaire confirme qu’il a renforcé le journal (sauf si le réplica secondaire n’envoie pas de commande ping au réplica principal pendant la *période d’expiration de session*du réplica principal).  
+  Dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le *mode de disponibilité* est une propriété de réplica qui détermine si un réplica de disponibilité donné peut fonctionner en mode de validation synchrone. Pour chaque réplica de disponibilité, le mode de disponibilité doit être configuré pour le mode de validation synchrone, pour le mode de validation asynchrone ou pour le mode de configuration uniquement.  Si le réplica principal est configuré pour le *mode de validation asynchrone*, il n’attend pas que le réplica secondaire écrive des enregistrements dans le journal des transactions entrantes sur le disque (pour *renforcer le journal*). Si un réplica secondaire donné est configuré en mode de validation asynchrone, le réplica principal n'attend pas que ce réplica secondaire renforce le journal. Si le réplica principal et un réplica secondaire donné sont configurés pour le *mode de validation synchrone*, le réplica principal attend que le réplica secondaire confirme qu’il a renforcé le journal (sauf si le réplica secondaire n’envoie pas de commande ping au réplica principal pendant la *période d’expiration de session*du réplica principal). 
   
+
 > [!NOTE]  
 >  Si la période d'expiration de session du réplica principal est dépassée par un réplica secondaire, le réplica principal passe temporairement en mode de validation asynchrone pour ce réplica secondaire. Lorsque le réplica secondaire se reconnecte au réplica principal, ils reprennent le mode de validation synchrone.  
   
@@ -58,6 +60,8 @@ ms.lasthandoff: 08/02/2017
 -   Le*mode avec validation synchrone* privilégie la haute disponibilité par rapport aux performances, mais au prix d’une latence accrue des transactions. En mode avec validation synchrone, les transactions attendent que le réplica secondaire ait renforcé le journal sur le disque avant d'envoyer la confirmation de transaction au client. Lorsque la synchronisation des données démarre sur une base de données secondaire, le réplica secondaire commence à appliquer les enregistrements de journal entrants à partir de la base de données primaire correspondante. Dès que tous les enregistrements de journal sont renforcés, la base de données secondaire passe à l'état SYNCHRONIZED. Ensuite, chaque nouvelle transaction est renforcée par le réplica secondaire avant que l'enregistrement du journal soit écrit dans le journal local. Lorsque toutes les bases de données secondaires d'un réplica secondaire sont synchronisées, le mode avec validation synchrone prend en charge le basculement manuel et, éventuellement, le basculement automatique.  
   
      Pour plus d’informations, consultez [Mode de disponibilité avec validation synchrone](#SyncCommitAvMode)plus loin dans cette rubrique.  
+
+-   Le *mode de configuration uniquement* s’applique aux groupes de disponibilité qui ne sont pas sur un cluster de basculement Windows Server. Un réplica en mode de configuration uniquement ne contient pas de données utilisateur. En mode de configuration uniquement, la base de données master du réplica stocke les métadonnées de configuration du groupe de disponibilité. Pour plus d’informations, consultez [Groupe de disponibilité avec réplica en mode de configuration uniquement](../../../linux/sql-server-linux-availability-group-ha.md).
   
  L'illustration suivante montre un groupe de disponibilité avec cinq réplicas de disponibilité. Le réplica principal et un réplica secondaire sont configurés pour le mode avec validation synchrone et basculement automatique. Un autre réplica secondaire est configuré pour le mode avec validation synchrone pour un basculement manuel planifié uniquement, et deux réplicas secondaires sont configurés pour le mode avec validation asynchrone qui prend en charge uniquement le basculement manuel forcé (généralement appelé *basculement forcé*).  
   
@@ -185,4 +189,3 @@ ms.lasthandoff: 08/02/2017
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

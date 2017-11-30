@@ -1,5 +1,5 @@
 ---
-title: "Pagination dans Reporting Services (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Pagination dans Reporting Services (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: ad24564f035952b3bf4834162e1039370efb3f2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9e295143b577d99732186b0cefda5be908c1c34
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Pagination dans Reporting Services (Générateur de rapports et SSRS)
   La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport. Lorsque vous exécutez un rapport sur le serveur de rapports, le rapport utilise le convertisseur HTML. HTML suit un ensemble spécifique de règles de pagination. Par exemple, si vous exportez le même rapport en PDF, le convertisseur PDF est utilisé et un ensemble différent de règles est appliqué ; par conséquent, le rapport est paginé différemment. Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,14 +50,14 @@ ms.lasthandoff: 08/09/2017
   
  La zone de la page physique qui reste après avoir alloué l'espace pour les marges, l'espacement des colonnes et l'en-tête et le pied de page de la page, est appelée la *zone de page utilisable*. Les marges sont appliquées uniquement lorsque vous affichez et imprimez des rapports dans les formats du convertisseur de saut de page manuel. L'image suivante montre la marge et la zone de page utilisable d'une page physique.  
   
- ![Page physique avec marges et zone utilisable. ] (../../reporting-services/report-design/media/rspagemargins.gif "Page physique avec marges et zone utilisable.")  
+ ![Page physique avec marges et zone utilisable](../../reporting-services/report-design/media/rspagemargins.gif "Page physique avec marges et zone utilisable")  
   
 ### <a name="newsletter-style-columns"></a>Colonnes de style bulletin d'informations  
  Votre rapport peut être divisé en colonnes, telles que les colonnes d'un journal, qui sont considérées comme des pages logiques affichées sur la même page physique. Elles sont organisées de gauche à droite, de haut en bas et sont séparées par un espace vide entre chaque colonne. Si le rapport est divisé en plusieurs colonnes, chaque page physique est divisée verticalement en colonnes, chacune d'entre elles étant considérée comme une page logique. Par exemple, vous avez deux colonnes sur une page physique. Le contenu de votre rapport remplit la première colonne, puis la deuxième colonne. Si le rapport ne s'ajuste pas entièrement dans les deux premières colonnes, le rapport remplit la première colonne, puis la deuxième colonne de la page suivante. Les colonnes continuent à être remplies, de gauche à droite, de haut en bas jusqu'à ce que tous les éléments du rapport soient affichés. Si vous spécifiez des tailles de colonne qui équivalent à une largeur horizontale ou verticale de la page égale à zéro, l'espacement entre les colonnes prend la valeur par défaut zéro.  
   
  Les colonnes sont spécifiées à l’aide du volet **Propriétés de rapport** , de la boîte de dialogue **Mise en page** ou en modifiant les propriétés TopMargin, BottomMargin, LeftMargin et RightMargin dans le volet **Propriétés** . Si vous souhaitez utiliser une taille de marge qui n'est pas définie, vous pouvez la spécifier en utilisant les paramètres d'informations de périphérique pour le convertisseur spécifique que vous utilisez pour exporter le rapport. Les colonnes sont appliquées uniquement lorsque vous affichez et imprimez des rapports aux formats PDF ou Image. L'image suivante montre la zone de page utilisable d'une page qui contient des colonnes.  
   
- ![Page physique avec colonnes illustrées. ] (../../reporting-services/report-design/media/rspagecolumns.gif "Page physique avec colonnes illustrées.")  
+ ![Page physique avec colonnes illustrées](../../reporting-services/report-design/media/rspagecolumns.gif "Page physique avec colonnes illustrées")  
   
 ## <a name="page-breaks-and-page-names"></a>Sauts de page et noms de pages  
  Un rapport peut être plus lisible et ses données plus faciles à auditer et exporter lorsque les pages du rapport ont un nom. Reporting Services fournit des propriétés pour les rapports et régions de données de tableau matriciel (table, matrice et liste), groupes et rectangles dans le rapport pour contrôler la pagination, réinitialiser les numéros de page et fournir de nouveaux noms de pages de rapport sur les sauts de page. Ces fonctionnalités peuvent améliorer les rapports indépendamment du format dans lequel les rapports sont rendus, mais sont particulièrement utiles lors de l'exportation de rapports vers les classeurs Excel.  
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
  Pour plus d’informations sur le fonctionnement de ces propriétés quand les rapports sont exportés vers Excel, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en page et rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

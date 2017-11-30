@@ -1,28 +1,25 @@
 ---
-title: "Leçon 3 : Définition d’un abonnement piloté par les données | Documents Microsoft"
+title: "Leçon 3 : définition d’un abonnement piloté par les données | Microsoft Docs"
 ms.custom: 
 ms.date: 05/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ae87a509d3d5d1eb55645408b63f8267498efbd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c092a13ee59f483a993810e558be4e11f88c3716
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
 Au cours de cette leçon du didacticiel [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez les pages d’abonnement pilotées par les données des portails web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour vous connecter à une source de données d’abonnement, créer une requête qui extrait des données d’abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
@@ -88,7 +85,7 @@ Paramètre  |Source de la valeur  | Valeur/champ
 **Format du rendu** | Obtenir la valeur à partir du dataset | Format
 **Mode écriture**| Entrez la valeur| Auto-incrément    
 **Extension de fichier** |Entrez la valeur |True
-**Nom d'utilisateur** | Entrez la valeur | Tapez votre compte d'utilisateur de domaine Entrez-le au format suivant : \<domaine >\\\<compte >. Le compte d’utilisateur doit avoir des autorisations sur le chemin que vous avez configuré. 
+**Nom d'utilisateur** | Entrez la valeur | Tapez votre compte d'utilisateur de domaine Entrez-le au format suivant : \<domaine>\\\<>. Le compte d’utilisateur doit avoir des autorisations sur le chemin que vous avez configuré. 
 **Mot de passe** | Entrez la valeur | Tapez votre mot de passe
 
 ## <a name="report-parameters"></a>Paramètres du rapport
@@ -98,12 +95,12 @@ Paramètre  |Source de la valeur  | Valeur/champ
 ## <a name="next-steps"></a>Étapes suivantes  
 Lors de l'exécution de l'abonnement, quatre fichiers de rapport sont remis au partage de fichiers que vous avez défini, un pour chaque commande dans la source de données *Abonnés* . Chaque remise doit être unique en termes de données (les données doivent être propres à chaque commande), de format de rendu et de format de fichier. Vous pouvez ouvrir chaque rapport à partir du dossier partagé pour vérifier que chaque version est personnalisée en fonction des options d'abonnement que vous avez définies.  
   
-![Liste des fichiers créés par l’abonnement](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "la liste des fichiers créés par l’abonnement")  
+![Liste de fichiers créée par l’abonnement](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Liste de fichiers créée par l’abonnement")  
   
 La page des abonnements dans le portail web contiendra la date de **Dernière exécution** et **l’État** de l’abonnement. 
 **Remarque :** Actualisez la page après l’exécution de l’abonnement pour voir les informations mises à jour.  
     
-![Résultats de l’abonnement dans le Gestionnaire de rapports](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "abonnement des résultats dans le Gestionnaire de rapports")  
+![Résultats d’abonnement dans le Gestionnaire de rapports](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Résultats d’abonnement dans le Gestionnaire de rapports")  
   
 Cette étape est la dernière du didacticiel « Définir un abonnement piloté par les données ».   
   
@@ -115,5 +112,4 @@ Cette étape est la dernière du didacticiel « Définir un abonnement piloté p
   
   
   
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Utiliser une connexion de données Office (.odc) avec les rapports | Documents Microsoft"
+title: "Utiliser une connexion de données Office (.odc) avec les rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 2d6f6fa222bb8d4c5c9cd53a560c093c814ccd01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Utiliser une connexion de données Office (.odc) avec les rapports
   Pour certains scénarios, vous pouvez utiliser un fichier .odc (Office Data Connection) existant pour fournir des informations de connexion à un rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Un fichier .odc peut être utilisé à la place d’un fichier .rsds quand vous créez une source de données partagée. Le serveur de rapports utilise le fichier .odc de la même manière qu'un fichier .rsds ; il le lit pour obtenir le type de sources de données, une chaîne de connexion et les informations d'identification.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
  Si vous n'êtes pas familier des fichiers .odc, vous pouvez utiliser les instructions suivantes pour en créer un et l'exporter. Pour créer facilement un fichier .odc pour une source de données OLE DB, un des moyens consiste à utiliser Excel 2007 et l'Assistant Connexion de données. Notez que l'Assistant ne crée pas de source de données ; une source de données externe doit être déjà définie.  
   
- Un fichier .odc doit être utilisé uniquement s'il est totalement compatible avec le rapport et les requêtes. Si vous rencontrez des erreurs qui imposent d'importantes modifications au rapport ou au fichier .odc, vous devez créer un nouveau fichier .rsds pour le rapport. Pour plus d’informations sur la création d’une source de données partagée qui utilise un fichier .rsds, consultez [créer et gérer des Sources de données partagées &#40; Reporting Services dans SharePoint intégré en Mode &#41; ](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Un fichier .odc doit être utilisé uniquement s'il est totalement compatible avec le rapport et les requêtes. Si vous rencontrez des erreurs qui imposent d'importantes modifications au rapport ou au fichier .odc, vous devez créer un nouveau fichier .rsds pour le rapport. Pour plus d’informations sur la manière de créer une source de données partagée qui utilise un fichier .rsds, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### <a name="to-create-and-export-an-odc-file"></a>Pour créer et exporter un fichier .odc  
   

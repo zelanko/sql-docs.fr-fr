@@ -1,5 +1,5 @@
 ---
-title: "Graphiques à barres (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Graphiques à barres (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1c5e74cfac92dc9ed1461e0bc537fdac8e10af0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
   Un graphique à barres affiche les séries sous la forme d'ensembles de barres horizontales. Le graphique à barres ordinaire est étroitement lié à l'histogramme, qui affiche les séries sous la forme d'ensembles de barres verticales, ainsi qu'au graphique d'étendue à barres, qui affiche les séries sous la forme d'ensembles de barres horizontales avec des points de départ et de fin variables.  
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  L'illustration suivante montre un graphique à barres. Le graphique à barres convient bien pour ce type de données, car les trois séries partagent une période de temps commune, ce qui permet d'effectuer des comparaisons valables.  
   
- ![Graphique à barres](../../reporting-services/report-design/media/barchart.gif "graphique à barres")  
+ ![Graphique à barres](../../reporting-services/report-design/media/barchart.gif "Graphique à barres")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,17 +63,16 @@ ms.lasthandoff: 08/09/2017
 -   Par exemple, si votre dataset contient de nombreux points de données par rapport à la taille du graphique, la taille des colonnes ou barres et l'espacement entre ces éléments seront alors réduits. Pour définir manuellement la largeur des colonnes dans un graphique, modifiez leur largeur, en pixels, en changeant la valeur de la propriété **PointWidth** . Par défaut, la valeur de cette propriété est 0,8. Lorsque vous augmentez la largeur des colonnes ou barres dans un graphique, l'espace entre chaque colonne ou barre diminue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Types de graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Points de données vides et Null dans les graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Histogrammes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
- [Les graphiques d’étendue &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
- [Mise en forme des couleurs des séries sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme les étiquettes des axes sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme de la légende sur un graphique &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Histogrammes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
+ [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)   
+ [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
  [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [Didacticiel : Ajout d’un graphique à barres à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [Didacticiel : Ajout d’un graphique à barres à un rapport](http://go.microsoft.com/fwlink/?LinkId=198042)  
+ [Didacticiel : ajout d’un graphique à barres à un rapport (Générateur de rapports)](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Didacticiel : ajout d’un graphique à barres dans un rapport](http://go.microsoft.com/fwlink/?LinkId=198042)  
   
   
-

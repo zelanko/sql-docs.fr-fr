@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Créer des requêtes Make Table (Visual Database Tools)
 Vous pouvez copier des lignes dans une nouvelle table à l'aide d'une requête Make Table, très utile pour créer des sous-ensembles de données que vous pouvez par la suite manipuler ou pour copier le contenu d'une table d'une base de données vers une autre. Une requête Make Table ressemble à une requête Insert Results à cette différence près qu'elle crée une nouvelle table vers laquelle copier les lignes.  
@@ -44,7 +43,7 @@ Lorsque vous créez une requête Make Table, spécifiez :
   
 -   les options Group By, si vous ne souhaitez copier que des informations de synthèse.  
   
-Dans l'exemple suivant, la requête crée une nouvelle table appelée `uk`_`customers` et copie les informations de la table `customers` vers celle-ci :  
+Dans l’exemple suivant, la requête crée une nouvelle table appelée `uk_customers` et copie les informations de la table `customers` vers celle-ci :  
   
 ```  
 SELECT *   
@@ -90,4 +89,3 @@ Quand vous exécutez une requête Make Table, aucun résultat n’apparaît dans
 [Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Types de requêtes (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 10/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 605875c9ed6e60861f899ec88e465c636a5976d6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5403ba768ce8c511b2054b7b34a32b66546d019e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
   La fonctionnalité FileTable apporte une prise en charge de l'espace de noms de fichier Windows et la compatibilité des applications Windows avec les données de fichier stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable permet à une application d'intégrer ses composants de stockage et de gestion des données, et fournit des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégrés (notamment la recherche sémantique et en texte intégral) sur des données et des métadonnées non structurées.  
@@ -63,9 +61,9 @@ ms.lasthandoff: 06/22/2017
   
 -   Chaque ligne contient les éléments suivants. Pour plus d'informations sur le schéma d’un FileTable, consultez [Schéma de FileTable](../../relational-databases/blob/filetable-schema.md).  
   
-    -   Une colonne**file_stream** pour les données de flux et un identificateur **stream_id** (GUID). (La colonne **file_stream** a la valeur NULL pour un répertoire.)  
+    -   Une colonne **file_stream** pour les données de flux et un identificateur **stream_id** (GUID). (La colonne **file_stream** a la valeur NULL pour un répertoire.)  
   
-    -   Les colonnes **path_locator** et **parent_path_locator** pour la représentation et la maintenance de la hiérarchie de répertoires et de fichiers.  
+    -   Les colonnes **path_locator** et **parent_path_locator** pour la représentation et la maintenance de l’élément actif (fichier ou répertoire) et de la hiérarchie de répertoires.  
   
     -   10 attributs de fichier tels que la date de création et la date de modification utiles avec les API d'E/S de fichier.  
   
@@ -138,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  Répertorie les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et les objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été ajoutés ou modifiés afin de prendre en charge la fonctionnalité FileTable.  
   
   
-

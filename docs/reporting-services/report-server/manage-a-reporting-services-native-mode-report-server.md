@@ -1,5 +1,5 @@
 ---
-title: "Gérer un serveur de rapports Reporting Services en Mode natif | Documents Microsoft"
+title: "Gérer un serveur de rapports Reporting Services (SSRS) en mode natif | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -15,19 +15,18 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: aadfbe555fa1334f9101f799e60cccdcca7e68fd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b070f5ee2eaad2fbe831b281505189766a0e4e7d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="manage-a-reporting-services-native-mode-report-server"></a>gérer un serveur de rapports Reporting Services (SSRS) en mode natif
+# <a name="manage-a-reporting-services-native-mode-report-server"></a>Gérer un serveur de rapports Reporting Services (SSRS) en mode natif
   Cette section contient des procédures qui indiquent comment configurer une instance de serveur de rapports en mode natif à l'aide du Gestionnaire de configuration de Reporting Services.  
   
 ## <a name="in-this-section"></a>Dans cette section  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
  Explique comment ouvrir les ports utilisés pour les demandes entrantes et les réponses sortantes d'un serveur de rapports.  
   
  [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Décrit les étapes supplémentaires requises pour se connecter au Gestionnaire de rapports ou un serveur de rapports à l’aide de `http://localhost`.  
+ Décrit les étapes supplémentaires requises pour se connecter au Gestionnaire de rapports ou à un serveur de rapports en utilisant `http://localhost`.  
   
  [Configurer un serveur de rapports pour l'administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explique comment configurer une instance de serveur de rapports distante afin que vous puissiez vous y connecter et le configurer à partir d'un autre ordinateur.  
@@ -73,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Configuration et Administration d’un serveur de rapports &#40; Reporting Services en Mode SharePoint &#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
+ [Configuration et administration d’un serveur de rapports &#40;mode SharePoint de Reporting Services&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)  
   
   
-

@@ -1,31 +1,26 @@
 ---
-title: "Où trouver le complément Reporting Services pour les produits SharePoint | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Où trouver le complément Reporting Services pour les produits SharePoint | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsSharePoint
+helpviewer_keywords: rsSharePoint
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a23cb8cb401de31b69049a065b5bd34cc29e9b1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 950b4a8752cacb863b8e345d2e7d96efe6d28b83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Où trouver le complément Reporting Services pour les produits SharePoint
 
 Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) pour les produits et les technologies SharePoint (rssharepoint.msi) est téléchargeable sur le web et fournit des fonctionnalités pour intégrer un serveur de rapports avec un déploiement de SharePoint.  
@@ -60,18 +55,17 @@ Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssN
   
  Pour télécharger et installer le complément, consultez le centre de téléchargement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   **SP1 add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/download/details.aspx?id=35583).  
+-   **Complément SP1 :**  [Complément Microsoft® SQL Server® 2012 SP1 Reporting Services pour Microsoft® SharePoint®](http://www.microsoft.com/download/details.aspx?id=35583)(http://www.microsoft.com/en-us/download/details.aspx?id=35583).  
   
--   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
+-   **SP1 :**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](http://go.microsoft.com/fwlink/p/?LinkID=255906) (http://go.microsoft.com/fwlink/p/?LinkID=255906).  
 
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complément Reporting Services pour les produits SharePoint 2010
 
-Dans la version de SQL Server 2016, le complément peut être installé dans le cadre de l’Assistant Installation de SQL Server, dans la page Sélection de fonctionnalité. Si vous souhaitez télécharger et installer le complément séparément, la version la plus à jour de ce fichier est disponible en ligne dans le Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , page [Complément Reporting Services Microsoft® SQL Server 2012 pour les technologies Microsoft® SharePoint® 2010](http://go.microsoft.com/fwlink/?LinkID=207242) .
+Dans SQL Server 2016, le complément peut être installé avec l’Assistant Installation de SQL Server, dans la page Sélection de composant. Si vous souhaitez télécharger et installer le complément séparément, la version la plus à jour de ce fichier est disponible en ligne dans le Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , page [Complément Reporting Services Microsoft® SQL Server 2012 pour les technologies Microsoft® SharePoint® 2010](http://go.microsoft.com/fwlink/?LinkID=207242) .
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Vous n’êtes pas en mesure de parcourir les pages SharePoint dans la zone non définie par défaut après avoir désinstallé le complément Reporting Services](http://support.microsoft.com/kb/2009212)  
+[Vous ne pouvez pas parcourir les pages SharePoint dans une zone non définie par défaut après avoir désinstallé le complément Reporting Services](http://support.microsoft.com/kb/2009212)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Rectangles et lignes (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Rectangles et lignes (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 867fbfb3ed5bf9afd834ed4f08c5ccf83b068734
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectangles et lignes (Générateur de rapports et SSRS)
   Les rectangles et les lignes permettent de créer des effets visuels dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Vous pouvez afficher des propriétés sur ces éléments de rapports à partir de la section Bordure sous l’onglet Dossier de base, puis définir d’autres propriétés dans le volet Propriétés. Vous pouvez ajouter des fonctionnalités, telles qu'une couleur ou une image d'arrière-plan, une info-bulle ou un signet, à un rectangle.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
  Vous ne pouvez pas publier les éléments de rapport dans un rectangle en tant que parties de rapports. Lorsque des utilisateurs ajoutent le rectangle à un rapport, ils obtiennent le rectangle et les éléments qu'il contient.  En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
   
 ##  <a name="RectangleAsContainer"></a> Utilisation d'un rectangle en tant que conteneur  
- Vous pouvez utiliser un rectangle comme conteneur d'autres éléments. Lorsque vous le déplacez, les éléments qu'il contient se déplacent avec lui. Un élément dans le rectangle indique le nom du rectangle dans sa propriété **Parent** . Pour plus d’informations sur l’utilisation d’un rectangle comme conteneur, consultez [ajouter un Rectangle ou conteneur &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md) et [affichent les mêmes données sur une matrice et un graphique &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
+ Vous pouvez utiliser un rectangle comme conteneur d'autres éléments. Lorsque vous le déplacez, les éléments qu'il contient se déplacent avec lui. Un élément dans le rectangle indique le nom du rectangle dans sa propriété **Parent** . Pour plus d’informations sur l’utilisation d’un rectangle comme conteneur, consultez [Ajouter un rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md) et [Afficher les mêmes données dans une matrice et sur un graphique &#40;Générateur de rapports&#41;](../../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
   
 > [!NOTE]  
 >  Un rectangle est uniquement un conteneur pour les éléments que vous créez dans le rectangle ou que vous faites glisser dans le rectangle. Si vous dessinez un rectangle autour d'un élément qui existe déjà dans l'aire de conception, le rectangle n'agit pas comme son conteneur. Le rectangle n'est pas répertorié dans la propriété Parent de l'élément.  

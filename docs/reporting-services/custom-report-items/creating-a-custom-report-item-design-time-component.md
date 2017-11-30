@@ -1,5 +1,5 @@
 ---
-title: "Création d’un composant de conception de rapport personnalisé élément | Documents Microsoft"
+title: "Création d’un composant au moment de la conception d’éléments de rapport personnalisé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Création d'un composant au moment de la conception d'élément de rapport personnalisé
   Un composant au moment de la conception d'élément de rapport personnalisé est un contrôle qui peut être utilisé dans l'environnement du Concepteur de rapports Visual Studio. Le composant au moment de la conception d'élément de rapport personnalisé fournit une aire de conception activée qui prend en charge les opérations de glisser-déplacer et l'intégration avec l'Explorateur de propriétés [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], tout en fournissant des éditeurs de propriété personnalisée.  
@@ -35,12 +32,12 @@ ms.lasthandoff: 08/12/2017
  Les propriétés définies à l'aide du composant au moment de la conception dans l'environnement de développement sont sérialisées et désérialisées par l'environnement de conception hôte, puis stockées comme éléments dans le fichier RDL (Report Definition Language). Lorsque le rapport est exécuté par le processeur de rapports, les propriétés définies à l'aide du composant au moment de la conception sont passées par le processeur de rapports à un composant d'exécution d'élément de rapport personnalisé, qui génère l'élément de rapport personnalisé et le repasse au processeur de rapports.  
   
 > [!NOTE]  
->  Le composant au moment du design article de rapport personnalisé est implémenté comme un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] composant. Ce document décrit les détails d'implémentation spécifiques au composant au moment de la conception d'élément de rapport personnalisé. Pour plus d’informations sur le développement de composants à l’aide de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [composants dans Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) dans MSDN library.  
+>  Le composant au moment de la conception d’élément de rapport personnalisé est implémenté en tant que composant [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Ce document décrit les détails d'implémentation spécifiques au composant au moment de la conception d'élément de rapport personnalisé. Pour plus d’informations sur le développement de composants à l’aide de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez [Composants dans Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) dans MSDN Library.  
   
- Pour voir un exemple d’un élément de rapport personnalisé totalement implémenté, [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Pour un exemple d’élément de rapport personnalisé totalement implémenté, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="implementing-a-design-time-component"></a>Implémentation d'un composant au moment de la conception  
- La classe principale d’un composant au moment du design d’élément rapport personnalisé est héritée de la **Microsoft.ReportDesigner.CustomReportItemDesigner** classe. Outre les attributs standards utilisés pour un [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] contrôle, votre classe de composant doit définir un **CustomReportItem** attribut. Cet attribut doit correspondre au nom de l'élément de rapport personnalisé tel que défini dans le fichier reportserver.config. Pour obtenir une liste des attributs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez la section Attributs dans la documentation du SDK du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+ La classe principale d’un composant au moment de la conception d’élément de rapport personnalisé est héritée de la classe **Microsoft.ReportDesigner.CustomReportItemDesigner**. En plus des attributs standard utilisés pour un contrôle [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], votre classe de composant doit définir un attribut **CustomReportItem**. Cet attribut doit correspondre au nom de l'élément de rapport personnalisé tel que défini dans le fichier reportserver.config. Pour obtenir une liste des attributs [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], consultez la section Attributs dans la documentation du SDK du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  L'exemple de code suivant illustre l'application d'attributs à un contrôle au moment de la conception d'élément de rapport personnalisé :  
   
@@ -58,9 +55,9 @@ namespace PolygonsCRI
 ```  
   
 ### <a name="initializing-the-component"></a>Initialisation du composant  
- Pour passer des propriétés spécifiées par l'utilisateur pour un élément de rapport personnalisé, une classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> doit être utilisée. Votre implémentation de la **CustomReportItemDesigner** classe doit substituer la **InitializeNewComponent** méthode pour créer une nouvelle instance de votre composant <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> classe et définir les valeurs par défaut.  
+ Pour passer des propriétés spécifiées par l'utilisateur pour un élément de rapport personnalisé, une classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> doit être utilisée. Votre implémentation de la classe **CustomReportItemDesigner** doit se substituer à la méthode **InitializeNewComponent** pour créer une instance de la classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> de votre composant et lui attribuer les valeurs par défaut.  
   
- L’exemple de code suivant montre un exemple d’une substitution de classe rapport personnalisé élément composant de conception du **CustomReportItemDesigner.InitializeNewComponent** méthode d’initialisation du composant <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> classe :  
+ L’exemple de code suivant illustre la substitution de la méthode **CustomReportItemDesigner.InitializeNewComponent** par une classe de composant au moment de la conception d’élément de rapport personnalisé pour initialiser la classe <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> du composant :  
   
 ```csharp  
 public override void InitializeNewComponent()  
@@ -94,9 +91,9 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>Modification des propriétés du composant  
- Vous pouvez modifier **CustomData** propriétés dans l’environnement de conception de plusieurs façons. Vous pouvez modifier toute propriété exposée par le composant au moment de la conception et marquée avec l'attribut <xref:System.ComponentModel.BrowsableAttribute>, à l'aide de l'Explorateur de propriétés [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. En outre, vous pouvez modifier les propriétés en faisant glisser des éléments sur l’aire de conception de l’élément de rapport personnalisé, ou en cliquant sur le contrôle dans l’environnement de conception et en sélectionnant **propriétés** dans le menu contextuel pour afficher une fenêtre de propriétés personnalisées.  
+ Vous pouvez modifier les propriétés **CustomData** de plusieurs façons dans l’environnement de conception. Vous pouvez modifier toute propriété exposée par le composant au moment de la conception et marquée avec l'attribut <xref:System.ComponentModel.BrowsableAttribute>, à l'aide de l'Explorateur de propriétés [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Vous pouvez également modifier des propriétés en faisant glisser des éléments vers l’aire de conception de l’élément de rapport personnalisé ou en cliquant avec le bouton droit sur le contrôle dans l’environnement de conception et en sélectionnant **Propriétés** dans le menu contextuel pour afficher une fenêtre de propriétés personnalisées.  
   
- Le code suivant montre d’exemple un **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** propriété qui a le <xref:System.ComponentModel.BrowsableAttribute> attribut appliqué :  
+ L’exemple de code suivant montre une propriété **Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData** dont l’attribut <xref:System.ComponentModel.BrowsableAttribute> est appliqué :  
   
 ```csharp  
 [Browsable(true), Category("Data")]  
@@ -160,7 +157,7 @@ private void EditableCombo_SelectedIndexChanged(object sender,
 ```  
   
 ### <a name="using-designer-verbs"></a>Utilisation des verbes de concepteur  
- Un verbe de concepteur est une commande de menu liée à un gestionnaire d'événements. Vous pouvez ajouter des verbes de concepteur qui apparaîtront dans le menu contextuel d'un composant lorsque votre contrôle au moment de l'exécution d'élément de rapport personnalisé est utilisé dans l'environnement de conception. Vous pouvez retourner la liste des verbes de concepteur disponibles à partir de votre composant d’exécution à l’aide de la **verbes** propriété.  
+ Un verbe de concepteur est une commande de menu liée à un gestionnaire d'événements. Vous pouvez ajouter des verbes de concepteur qui apparaîtront dans le menu contextuel d'un composant lorsque votre contrôle au moment de l'exécution d'élément de rapport personnalisé est utilisé dans l'environnement de conception. Vous pouvez retourner la liste des verbes de concepteur disponibles de votre composant d’exécution à l’aide de la propriété **Verbs**.  
   
  L'exemple de code suivant illustre l'ajout d'un verbe de concepteur et d'un gestionnaire d'événements au <xref:System.ComponentModel.Design.DesignerVerbCollection>, ainsi que le code du gestionnaire d'événements :  
   
@@ -192,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Utilisation d'ornements  
- Classes d’éléments de rapport personnalisés peuvent également implémenter un **Microsoft.ReportDesigner.Design.Adornment** classe. Un ornement permet au contrôle d'élément de rapport personnalisé de fournir des zones à l'extérieur du rectangle principal de l'aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer. Le **ornement** classe qui est définie dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** espace de noms est une implémentation directe de la <xref:System.Windows.Forms.Design.Behavior.Adorner> classe trouvé dans les Windows Forms. Pour obtenir une documentation complète sur le **ornement** de classe, consultez [vue d’ensemble du Service de comportement](http://go.microsoft.com/fwlink/?LinkId=116673) dans MSDN library. Pour un exemple de code qui implémente un **Microsoft.ReportDesigner.Design.Adornment** de classe, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Les classes d’éléments de rapports personnalisés peuvent également implémenter une classe **Microsoft.ReportDesigner.Design.Adornment**. Un ornement permet au contrôle d'élément de rapport personnalisé de fournir des zones à l'extérieur du rectangle principal de l'aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer. La classe **Adornment** définie dans l’espace de noms [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Microsoft.ReportDesigner** est une implémentation directe de la classe <xref:System.Windows.Forms.Design.Behavior.Adorner> dans Windows Forms. Pour obtenir la documentation complète de la classe **Adorner**, consultez [Vue d’ensemble du service de comportement](http://go.microsoft.com/fwlink/?LinkId=116673) dans MSDN Library. Pour un exemple de code qui implémente une classe **Microsoft.ReportDesigner.Design.Adornment**, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
  Pour plus d'informations sur la programmation et l'utilisation de Windows Forms dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], consultez les rubriques suivantes dans MSDN Library :  
   
@@ -203,10 +200,9 @@ private void OnProportionalScaling(object sender, EventArgs e)
 -   Procédure pas à pas : création d'un contrôle Windows Forms qui tire parti des fonctionnalités au moment de la conception de Visual Studio  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture d’élément de rapport personnalisé](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Création d’un composant d’exécution de rapport personnalisé élément](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
- [Bibliothèques de classes élément de rapport personnalisé](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Comment : déployer un élément de rapport personnalisé](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Architecture des éléments de rapports personnalisés](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Création d’un composant d’exécution d’éléments de rapport personnalisé](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
+ [Bibliothèques de classes d’éléments de rapports personnalisés](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [Procédure : déployer un élément de rapport personnalisé](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

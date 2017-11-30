@@ -1,28 +1,26 @@
 ---
-title: Cartes dans les rapports Reporting Services mobiles | Documents Microsoft
+title: Cartes dans les rapports mobiles Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
+# <a name="maps-in-reporting-services-mobile-reports"></a>Cartes dans les rapports mobiles Reporting Services
 Les cartes sont un excellent moyen de visualiser des données géographiques. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] offre trois types de visualisation de carte, et des cartes intégrées pour les continents ainsi qu’un certain nombre de pays. Vous pouvez également [télécharger et utiliser des cartes personnalisées](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
   
 ## <a name="types-of-maps"></a>Types de cartes  
@@ -63,7 +61,7 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
   
 1. Sélectionnez l’onglet **Données** dans le coin supérieur gauche.  
   
-2. Sélectionnez **ajouter des données**, puis **Excel Local** ou **serveur SSRS**.  
+2. Sélectionnez **Ajouter des données**, puis **Excel local** ou **Serveur SSRS**.  
   
    > **Conseil**: Vérifiez que les [données sont dans un format compatible pour les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -89,4 +87,3 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
 - [Créer et publier des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a7147621db09dfc1c29077f82cc3eadb39b3c5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,6 @@ ms.lasthandoff: 11/17/2017
  Utilisez cette vue lorsque vous voulez voir combien de messages se trouvent dans la file d'attente des messages et depuis combien de temps ils s'y trouvent. Normalement, le nombre de **non envoyé** messages sera faibles. Procédez à un test d'évaluation au cours d'opérations normales pour déterminer un nombre approprié de messages en file d'attente pour vos opérations.  
   
  Pour afficher tous les messages traités par la messagerie de base de données, utilisez [sysmail_allitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Pour afficher uniquement les messages avec l’état d’échec, utilisez [sysmail_faileditems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Pour afficher uniquement les messages qui ont été envoyés, utilisez [sysmail_sentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  

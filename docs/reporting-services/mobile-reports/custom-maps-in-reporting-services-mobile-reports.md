@@ -1,31 +1,29 @@
 ---
-title: "Cartes personnalisées dans les rapports mobiles Reporting Services | Documents Microsoft"
+title: "Cartes personnalisées dans les rapports mobiles Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>cartes personnalisées dans les rapports pour mobiles Reporting Services
-Dans SQL Server Mobile Report Publisher des cartes géographiques sont définies dans un format appelé *fichiers de forme ESRI*.  
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Cartes personnalisées dans les rapports mobiles Reporting Services
+Dans l’Éditeur de rapports mobiles SQL Server, les cartes géographiques sont définies dans un format appelé *fichiers de forme ESRI*.  
   
-Ce format semi-ouvert étendu initialement conçu par une société privée est utilisé dans une grande partie des applications GIS. Conformément à ce format, éditeur de rapports mobiles requiert deux fichiers doivent être fournies lors de la définition d’une carte :  
+Ce format semi-ouvert étendu initialement conçu par une société privée est utilisé dans une grande partie des applications GIS. Pour se conformer à ce format, l’Éditeur de rapports mobiles requiert la fourniture de deux fichiers lors de la définition d’une carte :  
   
 - Un fichier .SHP pour les géométries de forme  
 - Un fichier .DBF pour les métadonnées  
@@ -39,7 +37,7 @@ Découvrez comment [ajouter des mappages personnalisés aux rapports mobiles](..
 ## <a name="technical-information"></a>Informations techniques  
   
 - La spécification officielle : [http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)  
-- L’article de Wikipédia sur le fichier de forme : [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
+- L’article de Wikipédia sur le fichier de forme : [http://en.wikipedia.org/wiki/Shapefile](http://en.wikipedia.org/wiki/Shapefile)  
   
 ## <a name="creating--editing-map-geometry"></a>Création et modification d’une géométrie de carte  
   
@@ -63,4 +61,3 @@ Il est possible de télécharger plusieurs fichiers de forme existants sur Inter
   
   
   
-

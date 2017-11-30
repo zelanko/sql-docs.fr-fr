@@ -1,5 +1,5 @@
 ---
-title: "Désinstaller le Générateur de rapports | Documents Microsoft"
+title: "Désinstaller le Générateur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>Désinstaller le Générateur de rapports
 
 Vous pouvez désinstaller la version autonome du Générateur de rapports à partir du Panneau de configuration ou de la ligne de commande.
@@ -37,7 +36,7 @@ Si les dossiers utilisés par le Générateur de rapports incluent des fichiers 
   
 2.  Dans le Panneau de configuration, cliquez sur **Programmes et fonctionnalités**.  
   
-3.  Recherchez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Générateur de rapports SQL Server 2016 dans les **nom** liste et cliquez dessus.  
+3.  Recherchez Générateur de rapports [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 dans la liste **Nom**, puis cliquez dessus.  
   
 4.  Cliquez sur **Désinstaller**.  
   
@@ -63,6 +62,6 @@ Si les dossiers utilisés par le Générateur de rapports incluent des fichiers 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Installer le Générateur de rapports](../../reporting-services/install-windows/install-report-builder.md)  
+[Installer le générateur de rapports](../../reporting-services/install-windows/install-report-builder.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10093"
 - sql13.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c4652d1d6edb34aafcbebee7bbb2b26b95c3944
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS)
   Ajoutez des sous-rapports à un rapport pour créer un rapport principal servant de conteneur à plusieurs rapports connexes. Un sous-rapport est une référence à un autre rapport. Pour connecter les rapports par des valeurs de données (par exemple, pour que plusieurs rapports indiquent des données pour le même client), vous devez désigner un rapport paramétrable (par exemple, un rapport qui affiche les renseignements concernant un client spécifique) en tant que sous-rapport. Lorsque vous ajoutez un sous-rapport au rapport principal, vous pouvez spécifier des paramètres à passer au sous-rapport.  
@@ -79,7 +78,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Sous-rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [Comportements de rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   
-

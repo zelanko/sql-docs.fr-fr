@@ -1,5 +1,5 @@
 ---
-title: "Autoriser une zone de texte s’agrandissent ou réduisent (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Autoriser l’agrandissement ou la réduction d’une zone de texte (Générateur de rapports et SSRS)| Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: abb928e42a7420b421c91f6b5f78256213cb5df9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1bdcf9e8abfc51cf514bcc57b8591186a4768ac2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Autoriser l'agrandissement ou la réduction d'une zone de texte (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les zones de texte ne se limitent pas aux zones autonomes situées sur l’aire de conception. Chaque cellule d’une table ou d’une matrice (région de données de tableau matriciel) contient également une zone de texte, que vous pouvez mettre en forme de la même manière que les zones de texte autonomes. Par défaut, les zones de texte ont une taille fixe. Vous pouvez définir les options qui autorisent la réduction ou l’agrandissement de la zone de texte en fonction de son contenu. Ces options correspondent aux propriétés **CanGrow** ou **CanShrink** du volet Propriétés.  
@@ -40,4 +39,3 @@ ms.lasthandoff: 08/09/2017
  [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   
-

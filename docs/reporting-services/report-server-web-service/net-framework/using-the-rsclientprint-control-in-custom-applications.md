@@ -1,5 +1,5 @@
 ---
-title: "Dans des Applications personnalisées à l’aide de la commande RSClientPrint | Documents Microsoft"
+title: "Utilisation du contrôle RSClientPrint dans des applications personnalisées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,38 +10,36 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - RSPrintClient control
 - print controls [Reporting Services]
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab24b29b32d1c2b5e37e5645e6ae449486b4c8ba
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
-  Le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] contrôle ActiveX, **RSPrintClient**, permet une impression côté client pour les rapports affichés dans la visionneuse HTML. Il fournit un **imprimer** boîte de dialogue afin qu’un utilisateur peut initier un travail d’impression, aperçu d’un rapport, spécifiez les pages à imprimer et modifier les marges. Lors d'une impression côté client, le serveur de rapports génère le rendu du rapport dans l'extension de rendu (EMF) d'image, puis utilise les fonctionnalités d'impression du système d'exploitation afin de créer le travail d'impression et de l'envoyer à une imprimante.  
+# <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans des applications personnalisées
+  Le contrôle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** permet une impression côté client des rapports affichés dans la Visionneuse HTML. À partir de la boîte de dialogue **Imprimer** de ce contrôle, un utilisateur peut démarrer un travail d’impression, afficher l’aperçu d’un rapport, spécifier les pages à imprimer et modifier les marges. Lors d'une impression côté client, le serveur de rapports génère le rendu du rapport dans l'extension de rendu (EMF) d'image, puis utilise les fonctionnalités d'impression du système d'exploitation afin de créer le travail d'impression et de l'envoyer à une imprimante.  
   
  L'impression côté client permet de contrôler et d'améliorer la qualité d'impression d'un rapport HTML en laissant de côté les paramètres d'impression du navigateur sur l'ordinateur de l'utilisateur et en utilisant à la place le format de page, les marges, l'en-tête et le pied de page du rapport afin de créer la sortie imprimée. Le contrôle d'impression lit les valeurs de propriétés du rapport afin de définir la taille et les marges des pages.  
   
- Les développeurs qui souhaitent activer la fonctionnalité d’impression côté client dans les barres d’outils tiers ou des visionneuses peuvent accéder au contrôle ActiveX via le **RSClientPrint** objet COM. Le contrôle peut être distribué librement. La liste suivante fournit des recommandations relatives à l'utilisation du contrôle :  
+ Les développeurs qui souhaitent activer la fonctionnalité d’impression côté client dans des barres d’outils ou Visionneuses tierces peuvent accéder au contrôle ActiveX via l’objet COM **RSClientPrint**. Le contrôle peut être distribué librement. La liste suivante fournit des recommandations relatives à l'utilisation du contrôle :  
   
--   Utilisez le contrôle pour améliorer l'impression des rapports basés sur le Web. Vous pouvez spécifier l’objet dans un de le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-des langages de programmation compatibles ou dans un script. Le contrôle n'est pas destiné aux applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms.  
+-   Utilisez le contrôle pour améliorer l'impression des rapports basés sur le Web. Vous pouvez spécifier l’objet dans n’importe quel langage de programmation compatible avec [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ou dans un script. Le contrôle n'est pas destiné aux applications [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms.  
   
 -   Copiez le fichier .cab des fichiers programmes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et ajoutez-le au code de base de votre application personnalisée.  
   
--   Utilisez un \<objet > balise pour spécifier le contrôle.  
+-   Utilisez une balise \<OBJECT> pour spécifier le contrôle.  
   
 -   Spécifiez une URL relative ou complète pointant vers le fichier .cab dans l'attribut OBJECT CODEBASE.  
   
@@ -50,47 +48,47 @@ ms.lasthandoff: 08/09/2017
 -   Consultez les rubriques de la documentation en ligne en matière de rendu d'image (EMF) pour comprendre la façon dont les pages sont rendues lors de l'aperçu avant impression et de la sortie.  
   
 ## <a name="rsprintclient-overview"></a>Présentation de RSPrintClient   
- Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte dans le **impression** boîte de dialogue est localisée dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** contrôle ActiveX utilise l’extension de rendu Image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
+ Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte de la boîte de dialogue**Imprimer** est localisé dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le contrôle ActiveX **RSPrintClient** utilise l’extension de rendu d’image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
   
 ### <a name="language-support"></a>Prise en charge de la langue  
- Le contrôle d'impression fournit une interface utilisateur en plusieurs langues ; par ailleurs, il accepte les valeurs d'entrée calibrées selon les différents systèmes de mesure. Le système de langue et de mesure utilisé sont déterminés par le **Culture** et **UICulture** propriétés. Les deux propriétés acceptent les valeurs LCID. Si vous spécifiez une valeur LCID pour une langue qui représente une variante d'une autre langue prise en charge, vous obtiendrez la langue la plus proche. Si vous spécifiez une valeur LCID qui n'est pas prise en charge et pour laquelle il n'existe aucune valeur LCID approchante, vous obtiendrez l'anglais (États-Unis).  
+ Le contrôle d'impression fournit une interface utilisateur en plusieurs langues ; par ailleurs, il accepte les valeurs d'entrée calibrées selon les différents systèmes de mesure. La langue et le système de mesure utilisés sont déterminés par les propriétés **Culture** et **UICulture**. Les deux propriétés acceptent les valeurs LCID. Si vous spécifiez une valeur LCID pour une langue qui représente une variante d'une autre langue prise en charge, vous obtiendrez la langue la plus proche. Si vous spécifiez une valeur LCID qui n'est pas prise en charge et pour laquelle il n'existe aucune valeur LCID approchante, vous obtiendrez l'anglais (États-Unis).  
   
 ## <a name="using-rsclientprint-in-code"></a>Utilisation de RSClientPrint dans le code  
- Le **RSClientPrint** objet est utilisé pour accéder par programme pour le contrôle ActiveX et de ses méthodes et propriétés. Le contrôle fournit une boîte de dialogue modale pour l'aperçu avant impression.  
+ L’objet **RSClientPrint** sert à accéder par programmation au contrôle ActiveX, ainsi qu’à ses méthodes et propriétés. Le contrôle fournit une boîte de dialogue modale pour l'aperçu avant impression.  
   
 ### <a name="specifying-default-values"></a>Spécification des valeurs par défaut  
- Vous pouvez initialiser la **impression** boîte de dialogue avec des valeurs de marge et la page du rapport. Par défaut, le **impression** boîte de dialogue est initialisée avec les valeurs de la définition de rapport. Vous pouvez utiliser les valeurs par défaut ou en spécifier d'autres en définissant les propriétés de l'objet.  
+ Vous pouvez initialiser la boîte de dialogue **Imprimer** avec les valeurs relatives aux marges et aux pages du rapport. Par défaut, la boîte de dialogue **Imprimer** est initialisée à l’aide des valeurs provenant de la définition de rapport. Vous pouvez utiliser les valeurs par défaut ou en spécifier d'autres en définissant les propriétés de l'objet.  
   
- Toutes les dimensions sont définies en millimètres. Conversion des mesures se produit au moment de l’exécution si le **Culture** et **UICulture** sont définies sur les paramètres régionaux qui n’utilisent pas de mesures métriques.  
+ Toutes les dimensions sont définies en millimètres. La conversion des mesures se produit au moment de l’exécution si **Culture** et **UICulture** ont pour valeurs des paramètres régionaux non basés sur des mesures métriques.  
   
- Pour comprendre quelles valeurs sont utilisées pour les marges et les dimensions de page, vous pouvez utiliser la **GetProperties** pour récupérer les valeurs par défaut :  
+ Pour comprendre quelles sont les valeurs utilisées pour les dimensions et les marges des pages, vous pouvez utiliser la méthode **GetProperties** afin de récupérer les valeurs par défaut :  
   
--   **PageHeight** et **PageWidth** spécifier la hauteur de page par défaut et la largeur. Lorsque le contrôle d'impression est lancé, ces valeurs de propriétés servent à sélectionner le format de papier le plus approprié à l'imprimante actuellement sélectionnée. Si **PageWidth** est supérieur à **PageHeight**, l’orientation est définie sur Paysage. Dans le cas contraire, elle est définie au format Portrait.  
+-   **PageHeight** et **PageWidth** spécifient la hauteur et la largeur de page par défaut. Lorsque le contrôle d'impression est lancé, ces valeurs de propriétés servent à sélectionner le format de papier le plus approprié à l'imprimante actuellement sélectionnée. Si **PageWidth** est supérieur à **PageHeight**, l’orientation est définie sur Paysage. Dans le cas contraire, elle est définie au format Portrait.  
   
--   **LeftMargin**, **RightMargin**, **TopMargin**, et **BottomMargin** ont la valeur 12,2 millimètres par défaut.  
+-   **LeftMargin**, **RightMargin**, **TopMargin** et **BottomMargin** ont tous par défaut la valeur 12,2 millimètres.  
   
- Ces propriétés sont stockées dans le **élément** collection de propriétés sur le serveur de rapports. Les valeurs sont remplacées chaque fois qu'une définition de rapport est mise à jour.  
+ Ces propriétés sont stockées dans la collection de propriétés **Item** sur le serveur de rapports. Les valeurs sont remplacées chaque fois qu'une définition de rapport est mise à jour.  
   
 ### <a name="rsclientprint-properties"></a>Propriétés de RSClientPrint  
   
-|Propriété|Type|L/E|Par défaut| Description|  
+|Propriété|Type|L/E|Valeur par défaut| Description|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Double|L/E|paramètre de rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|MarginRight|Double|L/E|paramètre de rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|MarginTop|Double|L/E|paramètre de rapport|Obtient ou définit la marge supérieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|MarginBottom|Double|L/E|paramètre de rapport|Obtient ou définit la marge inférieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
-|PageWidth|Double|L/E|paramètre de rapport|Obtient ou définit la largeur de page. La valeur par défaut si millimètres 215,9 n’est pas définie par le développeur ou la définition de rapport.|  
-|PageHeight|Double|L/E|paramètre de rapport|Obtient ou définit la hauteur de page. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 279,4 millimètres.|  
-|Culture|Int32|L/E|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape **3**, la valeur sera mesurée en millimètres si la langue est le Français ou en pouces lorsque la langue est anglais (États-Unis). Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|MarginLeft|Double|L/E|paramètre du rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|MarginRight|Double|L/E|paramètre du rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|MarginTop|Double|L/E|paramètre du rapport|Obtient ou définit la marge supérieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|MarginBottom|Double|L/E|paramètre du rapport|Obtient ou définit la marge inférieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
+|PageWidth|Double|L/E|paramètre du rapport|Obtient ou définit la largeur de page. La valeur par défaut, si elle n’est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 215,9 millimètres.|  
+|PageHeight|Double|L/E|paramètre du rapport|Obtient ou définit la hauteur de page. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 279,4 millimètres.|  
+|Culture|Int32|L/E|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape **3**, la valeur est mesurée en millimètres quand la langue est le français, ou en pouces quand la langue est l’anglais des États-Unis. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|Chaîne|L/E|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue d'impression est disponible dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen, et espagnol. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Booléen|L/E|False|Spécifie si le contrôle émet une commande GET destinée au serveur de rapports pour établir une connexion pour l'impression hors session.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quand définir la propriété Authenticate  
- Lorsque vous imprimez à partir d’une session de navigateur, vous n’avez pas besoin de définir la **authentifier** propriété. Dans le contexte d'une session active, toutes les demandes adressées au serveur de rapports par le contrôle d'impression sont gérées via le navigateur. Le navigateur définit les variables de session nécessaires pour communiquer avec le serveur de rapports.  
+ Quand vous effectuez une impression dans une session de navigateur, vous n’avez pas besoin de définir la propriété **Authenticate**. Dans le contexte d'une session active, toutes les demandes adressées au serveur de rapports par le contrôle d'impression sont gérées via le navigateur. Le navigateur définit les variables de session nécessaires pour communiquer avec le serveur de rapports.  
   
- Si vous imprimez hors de la session (par exemple, l’envoi d’un rapport directement vers une imprimante sans l’ouvrir préalablement), le contrôle d’impression doit émettre un HTTP **obtenir** demande à configurer la session avec le serveur de rapports. Pour émettre le **obtenir** demande, vous définissez **authentifier** à **True**.  
+ Si vous effectuez une impression hors session (par exemple, si vous envoyez un rapport directement à l’imprimante sans l’ouvrir préalablement), le contrôle d’impression doit émettre une requête HTTP **GET** pour configurer la session avec le serveur de rapports. Pour émettre la requête **GET**, vous définissez **Authenticate** sur **True**.  
   
- Vous ne devez émettre la **obtenir** demande si vous utilisez Windows intégrée de sécurité ou l’authentification de base. Si vous utilisez l’authentification par formulaire, le **authentifier** propriété est ignorée. Le code de votre application doit définir la session et authentifier l'utilisateur avec l'extension de sécurité personnalisée que vous fournissez. Si vous utilisez l'authentification par formulaires, veillez à définir la valeur d'expiration sur les cookie d'authentification de manière à protéger les sessions pendant une durée suffisante. En effet, si la valeur est trop faible, il est demandé aux utilisateurs de fournir des informations d'identification de connexion à chaque expiration du cookie.  
+ Vous ne devez émettre la requête **GET** que si vous utilisez la sécurité intégrée Windows ou l’authentification de base. Si vous utilisez l’authentification par formulaire, la propriété **Authenticate** est ignorée. Le code de votre application doit définir la session et authentifier l'utilisateur avec l'extension de sécurité personnalisée que vous fournissez. Si vous utilisez l'authentification par formulaires, veillez à définir la valeur d'expiration sur les cookie d'authentification de manière à protéger les sessions pendant une durée suffisante. En effet, si la valeur est trop faible, il est demandé aux utilisateurs de fournir des informations d'identification de connexion à chaque expiration du cookie.  
   
 ### <a name="clsids"></a>CLSID  
  Lorsque vous exécutez le rapport sur site, utilisez les valeurs CLSID suivantes.  
@@ -108,7 +106,7 @@ ms.lasthandoff: 08/09/2017
 -   05662494-ACF9-446A-BE4C-7D3F7EA7F62F  
   
 ### <a name="rsprintclient-support-for-the-print-method"></a>Prise en charge de RSPrintClient pour la méthode d'impression  
- Le **RSClientPrint** objet prend en charge la **impression** méthode utilisée pour lancer la boîte de dialogue Imprimer. Le **impression** méthode accepte les arguments suivants.  
+ L’objet **RSClientPrint** prend en charge la méthode **Print** qui est utilisée pour lancer la boîte de dialogue Imprimer. La méthode **Print** dispose des arguments suivants.  
   
 |Argument|E/S|Type| Description|  
 |--------------|----------|----------|-----------------|  
@@ -117,7 +115,7 @@ ms.lasthandoff: 08/09/2017
 |ReportName|Dans|Chaîne|Nom court du rapport (dans l'exemple ci-dessus, le nom court est Employee Sales Summary). Il s'affiche dans la boîte de dialogue Imprimer ainsi que dans la file d'attente à l'impression.|  
   
 ### <a name="example"></a>Exemple  
- L’exemple HTML suivant montre comment spécifier le fichier .cab, **impression** (méthode) et des propriétés dans JavaScript :  
+ L’exemple HTML suivant montre comment spécifier le fichier .cab, la méthode **Print** et les propriétés dans JavaScript :  
   
  `<BODY onload="Print()">`  
   
@@ -150,9 +148,8 @@ ms.lasthandoff: 08/09/2017
  `</BODY>`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Imprimer des rapports à partir d’un navigateur avec le contrôle d’impression &#40; Le Générateur de rapports et SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [Impression de rapports &#40; Le Générateur de rapports et SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [Image Device Information Settings](../../../reporting-services/image-device-information-settings.md)  
+ [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [Paramètres d’informations de périphérique pour l’image](../../../reporting-services/image-device-information-settings.md)  
   
   
-

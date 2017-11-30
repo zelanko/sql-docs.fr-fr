@@ -1,5 +1,5 @@
 ---
-title: "Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Inclure des indicateurs et des jauges dans un panneau de jauge (Générateur de rapports et SSRS)
   Le panneau de jauge est le conteneur de niveau supérieur qui contient un ou plusieurs jauges et indicateurs. Les indicateurs peuvent être incorporés dans les jauges ou placés en regard de celles-ci dans le panneau de jauge.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Insérez une colonne dans votre table ou matrice. Pour plus d’informations, consultez [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Sous l’onglet **Insérer**, dans le groupe **Régions de données**, cliquez sur **Jauge**, puis sur une cellule dans la nouvelle colonne. La boîte de dialogue **Sélectionner le type de jauge** s’affiche.  
+3.  Sous l’onglet **Insérer** , dans le groupe **Régions de données** , cliquez sur **Jauge**, puis sur une cellule dans la nouvelle colonne. La boîte de dialogue **Sélectionner le type de jauge** s’affiche.  
   
 4.  Cliquez sur **Radial**. La première jauge radiale est sélectionnée.  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Insérez une colonne dans votre table ou matrice. Pour plus d’informations, consultez [Insérer ou supprimer une colonne &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   
-3.  Sous l’onglet **Insérer**, dans le groupe **Régions de données**, cliquez sur **Jauge**, puis sur une cellule dans la colonne que vous avez insérée. La boîte de dialogue **Sélectionner le type de jauge** s’affiche.  
+3.  Sous l’onglet **Insérer** , dans le groupe **Régions de données** , cliquez sur **Jauge**, puis sur une cellule dans la colonne que vous avez insérée. La boîte de dialogue **Sélectionner le type de jauge** s’affiche.  
   
 4.  Cliquez sur **Radial**. La première jauge radiale est sélectionnée.  
   
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/09/2017
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

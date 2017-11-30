@@ -1,5 +1,5 @@
 ---
-title: "Les rapports générés interactifs (SSRS) | Documents Microsoft"
+title: "Rapports générés interactifs (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 55d22d2fd64faef6e913bf226c831546d71665ca
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d38ad40a53843dbc1a1c636e37d3e4d9ada21b40
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="clickthrough-reports-ssrs"></a>Rapports générés interactifs (SSRS)
   Dans le Générateur de rapports, un rapport généré interactif est un rapport qui fournit des informations détaillées sur les données contenues dans le rapport principal. Un rapport consultable à l'aide de clics est affiché lorsque l'utilisateur clique sur des données interactives apparaissant dans le rapport principal. Ces rapports sont automatiquement générés par le serveur de rapports. En tant que concepteur de modèle, vous déterminez ce qui est affiché dans les rapports générés interactifs en définissant les propriétés **DefaultDetailAttribute** et **DefaultAggregateAttribute** que vous affectez à une entité dans le modèle de rapport.  
@@ -39,12 +38,12 @@ ms.lasthandoff: 08/09/2017
 #### <a name="single-instance-templates"></a>Modèles à instance unique  
  Un modèle à instance unique affiche tous les attributs de l'entité cible et tous les attributs d'agrégation par défaut qui sont spécifiés pour les entités associées ayant une relation un-à-plusieurs à partir de l'entité cible. Un modèle à instance unique est similaire à l'illustration suivante.  
   
- ![Plusieurs à un rapport généré interactif 1. ] (../../reporting-services/reports/media/manytooneclickthrough.gif "Plusieurs à un rapport généré interactif 1.")  
+ ![Rapport généré interactif 1 à plusieurs](../../reporting-services/reports/media/manytooneclickthrough.gif "Rapport généré interactif 1 à plusieurs")  
   
 #### <a name="multiple-instance-templates"></a>Modèles à plusieurs instances  
  Un modèle à plusieurs instances affiche uniquement les attributs de détails par défaut de l'entité cible et tous les attributs d'agrégation par défaut qui sont spécifiés pour les entités associées ayant une relation un-à-plusieurs à partir de l'entité cible. Un modèle à plusieurs instances est similaire à l'illustration suivante.  
   
- ![Plusieurs à un rapport généré interactif 1. ] (../../reporting-services/reports/media/onetomanyclickthrough.gif "Plusieurs à un rapport généré interactif 1.")  
+ ![Rapport généré interactif 1 à plusieurs](../../reporting-services/reports/media/onetomanyclickthrough.gif "Rapport généré interactif 1 à plusieurs")  
   
 ## <a name="customizing-clickthrough-reports"></a>personnalisation de rapports consultables à l'aide de clics  
  Au lieu d'utiliser les modèles par défaut générés par le serveur de rapports, vous pouvez créer un rapport dans le Générateur de rapports et l'utiliser comme rapport généré interactif personnalisé. Vous pouvez ensuite lier votre rapport au modèle en tant que rapport d'extraction dans le Gestionnaire de rapports.  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Lier un rapport à un modèle en tant que rapport généré interactif](http://msdn.microsoft.com/library/3af42de3-67ef-41c2-bc8a-7045baec6f63)  
   
   
-

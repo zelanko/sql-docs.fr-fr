@@ -1,28 +1,25 @@
 ---
-title: "Ajouter un serveur de rapports supplémentaire à une batterie de serveurs (montée en puissance SSRS) | Documents Microsoft"
+title: "Ajouter un serveur de rapports supplémentaire à un pool (montée en puissance SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b810d42e1d7e74db8aa81939cfe83f81a1694c36
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d1a4e4da2f35e6bea1acebb686c7395bfc12b25b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Ajouter un serveur de rapports supplémentaire à une batterie (montée en puissance SSRS)
 
   L'ajout d'un second serveur de rapports en mode SharePoint, ou plus, à votre batterie de serveurs SharePoint peut améliorer les performances et le temps de réponse du traitement du serveur de rapports. Si vous avez trouvé que les performances ralentissaient alors que vous ajoutiez des utilisateurs, des rapports et autres applications au serveur de rapports, l'ajout de serveurs de rapports peut améliorer les performances. Il est également recommandé d'ajouter un second serveur de rapports pour augmenter la disponibilité des serveurs de rapports lorsqu'il existe des problèmes liés au matériel ou lorsque vous effectuez la maintenance générale sur des serveurs individuels de votre environnement. À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les étapes de la montée en puissance parallèle d'un environnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint suivent le déploiement standard d'une batterie de serveurs SharePoint et exploitent les fonctionnalités d'équilibrage de charge SharePoint.  
@@ -68,17 +65,17 @@ ms.lasthandoff: 08/09/2017
 |Étape|Description et lien|  
 |----------|--------------------------|  
 |Ajoutez un serveur SharePoint à une batterie de serveurs.|Vous devez installer SharePoint pour déployer une autre application Reporting Services.<br/><br/>Pour SharePoint 2013, consultez [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Pour SharePoint 2016, consultez [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Installez et configurez le mode SharePoint de Reporting Services.|Exécutez l’installation de SQL Server. Pour plus d’informations sur l’installation du mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).<br /><br /> Si le serveur ne doit être utilisé qu’en tant que serveur d’applications et non en tant que serveur Web frontal, vous n’avez pas besoin de sélectionner **Complément Reporting Services pour les produits SharePoint**.<br /><br /> 1) Dans la page **Rôle d’installation** , sélectionnez **Installation de fonctionnalités SQL Server**.<br /><br /> 2) Dans la page **Sélection des fonctionnalités** , sélectionnez **Reporting Services - SharePoint**.<br /><br /> 3) Dans la page **Configuration de Reporting Services**  , vérifiez que l’option **Installer uniquement** est sélectionnée pour **Mode SharePoint de Reporting Services**.|  
+|Installez et configurez le mode SharePoint de Reporting Services.|Lancez l’installation de SQL Server. Pour plus d’informations sur l’installation du mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).<br /><br /> Si le serveur ne doit être utilisé qu’en tant que serveur d’applications et non en tant que serveur Web frontal, vous n’avez pas besoin de sélectionner **Complément Reporting Services pour les produits SharePoint**.<br /><br /> 1) Dans la page **Rôle d’installation** , sélectionnez **Installation de fonctionnalités SQL Server**.<br /><br /> 2) Dans la page **Sélection des fonctionnalités** , sélectionnez **Reporting Services - SharePoint**.<br /><br /> 3) Dans la page **Configuration de Reporting Services**  , vérifiez que l’option **Installer uniquement** est sélectionnée pour **Mode SharePoint de Reporting Services**.|  
 |Vérifiez que Reporting Services est opérationnel.|1) Dans l’Administration centrale de SharePoint, cliquez sur **Gérer les serveurs de cette batterie** dans le groupe **Paramètres système** .<br /><br /> 2) Vérifiez le service **SQL Server Reporting Services**.<br /><br />Pour plus d'informations, consultez [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
 ##  <a name="bkmk_additional"></a> Configuration supplémentaire  
  Vous pouvez optimiser des serveurs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] individuels dans un déploiement avec montée en puissance parallèle afin d'effectuer un traitement en arrière-plan uniquement, de sorte que ces serveurs ne soient pas en concurrence en matière d'utilisation des ressources pour l'exécution de rapports interactifs. Le traitement en arrière-plan comprend les planifications, les abonnements et les alertes de données.  
   
- Pour modifier le comportement de serveurs de rapports individuels, définissez  **\<IsWebServiceEnable >** avec la valeur false dans le **RSreportServer.config** fichier de configuration.  
+ Pour modifier le comportement de serveurs de rapports individuels, attribuez à **\<IsWebServiceEnable>** la valeur false dans le fichier de configuration **RSreportServer.config**.  
   
- Par défaut, les serveurs de rapports sont configurés avec \<IsWebServiceEnable > défini sur TRUE. Lorsque tous les serveurs sont configurés avec la valeur TRUE, les charges de traitement interactif et de traitement en arrière-plan sont équilibrées sur tous les nœuds de la batterie de serveurs.  
+ Par défaut, les serveurs de rapports sont configurés avec \<IsWebServiceEnable> défini à TRUE. Lorsque tous les serveurs sont configurés avec la valeur TRUE, les charges de traitement interactif et de traitement en arrière-plan sont équilibrées sur tous les nœuds de la batterie de serveurs.  
   
- Si vous configurez tous les serveurs de rapports avec \<IsWebServiceEnable > défini à False, vous verrez un message d’erreur semblable au suivant lorsque vous essayez d’utiliser [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fonctionnalités :  
+ Si vous configurez tous les serveurs de rapports avec \<IsWebServiceEnable> défini à False, un message d’erreur semblable à ce qui suit s’affiche quand vous essayez d’utiliser les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
       The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
  
@@ -89,5 +86,4 @@ ms.lasthandoff: 08/09/2017
 [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
 [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

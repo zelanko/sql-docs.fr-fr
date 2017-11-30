@@ -1,5 +1,5 @@
 ---
-title: "Déplacer ou supprimer un élément (Gestionnaire de rapports) | Documents Microsoft"
+title: "Déplacer ou supprimer un élément (Gestionnaire de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6b2c78c1794c54fe116d745ef0561cd93a6339c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Déplacer ou supprimer un élément (Gestionnaire de rapports)
   Les rapports et les éléments connexes que vous publiez sur un serveur de rapports sont stockés dans des dossiers. Vous pouvez déplacer ces éléments dans un dossier différent de sorte que les références à ces éléments soient gérées automatiquement par le serveur de rapports. Avant de supprimer un élément, demandez-vous si d'autres éléments en dépendent.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu**, puis recherchez l’élément à déplacer.  
+2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis recherchez l’élément à déplacer.  
   
 3.  Pointez sur l'élément et cliquez sur la flèche déroulante.  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
-2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu**, puis recherchez l’élément à supprimer.  
+2.  Dans le Gestionnaire de rapports, accédez à la page **Contenu** , puis recherchez l’élément à supprimer.  
   
 3.  Pointez sur l'élément et cliquez sur la flèche déroulante.  
   
@@ -79,8 +78,7 @@ ms.lasthandoff: 08/09/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page contenu &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Recherche, affichage et la gestion des rapports &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Accéder aux éléments de serveur de rapports à l’aide de l’accès URL | Documents Microsoft"
+title: "Accéder à des éléments de serveurs de rapports à l’aide de l’accès URL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 010d16c1114ea7b8d7a1c7c0274aba2ecd44b8d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-report-server-items-using-url-access"></a>Accéder à des éléments de serveur de rapports à l'aide de l'accès URL
-  Cette rubrique décrit comment accéder aux éléments de catalogue de types différents dans un rapport de données du serveur de base ou dans un site SharePoint à l’aide de *rs : Command*=*valeur*. Il n'est pas nécessaire d'ajouter cette chaîne de paramètres. Si vous l'omettez, le serveur de rapports évalue le type d'élément et sélectionne automatiquement la valeur du paramètre appropriée. Toutefois, l’utilisation de la chaîne *rs:Command*=*Valeur* dans l’URL améliore les performances du serveur de rapports.  
+  Cette rubrique explique comment accéder aux éléments du catalogue de types différents dans une base de données du serveur de rapports ou dans un site SharePoint en utilisant *rs:Command*=*Value*. Il n'est pas nécessaire d'ajouter cette chaîne de paramètres. Si vous l'omettez, le serveur de rapports évalue le type d'élément et sélectionne automatiquement la valeur du paramètre appropriée. Toutefois, l’utilisation de la chaîne *rs:Command*=*Valeur* dans l’URL améliore les performances du serveur de rapports.  
   
  Notez la syntaxe de proxy `_vti_bin` dans les exemples ci-dessous. Pour plus d’informations sur l’utilisation de la syntaxe de proxy, consultez [Informations de référence sur les paramètres d’accès URL](../reporting-services/url-access-parameter-reference.md).  
   
@@ -79,6 +79,5 @@ ms.lasthandoff: 08/09/2017
  L'interface utilisateur qui s'affiche est similaire au mode d'exploration de répertoires utilisé par [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). Le numéro de version, y compris le numéro de build spécifique, du serveur de rapports est aussi affiché sous la liste des dossiers.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès URL &#40; SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [Référence de paramètre d’accès URL](../reporting-services/url-access-parameter-reference.md) 
-
+ [Accès URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md) 

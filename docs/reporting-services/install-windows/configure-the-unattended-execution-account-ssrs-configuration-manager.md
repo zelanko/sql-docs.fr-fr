@@ -1,12 +1,11 @@
 ---
-title: "Configurer le compte d’exécution sans assistance (Gestionnaire de Configuration de SSRS) | Documents Microsoft"
+title: "Configurer le compte d’exécution sans assistance (Gestionnaire de configuration de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 1a5f61d6a94b80b2745f386ab16ff32a4ce0d778
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
@@ -61,9 +60,9 @@ ms.lasthandoff: 08/09/2017
   
 3.  Tapez la commande suivante pour configurer le compte sur une instance de serveur de rapports locale :  
   
-     **rsconfig -e -u\<domaine/nom d’utilisateur > -p\<mot de passe >**  
+     **rsconfig -e -u\<domaine/nom utilisateur> -p\<mot de passe>**  
   
- **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [rsconfig utilitaire &#40; SSRS &#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
+ **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) dans la documentation en ligne de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Comment les informations sur le compte sont stockées  
  Lorsque vous définissez le compte, les paramètres suivants sont spécifiés comme valeurs chiffrées dans le fichier RSreportserver.config sur une instance de serveur de rapports locale ou distante :  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/09/2017
  [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
   
   
-

@@ -1,12 +1,11 @@
 ---
-title: Gestionnaire de Configuration (Mode natif) Reporting Services | Documents Microsoft
+title: Gestionnaire de configuration de Reporting Services (mode natif) | Microsoft Docs
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestionnaire de configurations de Reporting Services (mode natif)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
@@ -54,7 +51,7 @@ Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../incl
   
 -   Configurer la messagerie Report Server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par messagerie de serveur de rapports qui utilise un protocole SMTP (Simple Mail Transfer Protocol) pour remettre des rapports ou une notification de traitement des rapports à une boîte aux lettres électronique. Vous pouvez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour spécifier le serveur ou la passerelle SMTP sur votre réseau à utiliser pour cette remise.  
   
- Vous ne pouvez pas utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer le contenu du serveur de rapports, activer des fonctionnalités supplémentaires ou accorder l'accès au serveur. Déploiement complet requiert que vous utilisiez également [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour activer des fonctionnalités supplémentaires ou de modifier les valeurs par défaut et le portail web pour accorder l’accès utilisateur au serveur.
+ Vous ne pouvez pas utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer le contenu du serveur de rapports, activer des fonctionnalités supplémentaires ou accorder l'accès au serveur. Le déploiement complet requiert que vous utilisiez également [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour activer des fonctionnalités supplémentaires ou modifier des valeurs par défaut, ainsi que le portail web pour accorder aux utilisateurs l’accès au serveur.
 
 ##  <a name="bkmk_requirements"></a> Spécifications
 
@@ -70,13 +67,13 @@ Pour utiliser le gestionnairel de configuration d' [!INCLUDE[ssRSnoversion](../.
 
 - Pour pouvoir configurer une instance de serveur de rapports distante et vous y connecter, vous devez permettre aux appels WMI (Windows Management Instrumentation) distants de traverser le Pare-feu Windows. Pour plus d’informations, consultez [Configurer un serveur de rapports pour l’administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-Le Gestionnaire de Configuration de Reporting Services est installé automatiquement lorsque vous installez SQL Server Reporting Services.
+Le Gestionnaire de configuration de Reporting Services est installé automatiquement lorsque vous installez SQL Server Reporting Services.
 
 ##  <a name="bkmk_start_configuration_manager"></a> Pour démarrer le gestionnaire de configuration de Reporting Services
 
 1.  Suivez l'étape appropriée pour votre version de Microsoft Windows :
 
-    - À partir de l’écran d’accueil Windows, tapez **Reporting** et sélectionnez **Gestionnaire de Configuration de Reporting Services** dans les résultats de recherche.
+    - Dans l’écran de démarrage de Windows, tapez **Reporting** et cliquez sur **Gestionnaire de configuration de Reporting Services** dans les résultats de la recherche.
 
     - Sélectionnez **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis sur **Outils de configuration**.
 
@@ -96,11 +93,10 @@ Le Gestionnaire de Configuration de Reporting Services est installé automatique
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Portail Web](../../reporting-services/web-portal-ssrs-native-mode.md)   
+[Portail web](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
-[Configurer une connexion de base de données de serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
 [Configurer et administrer un serveur de rapports](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

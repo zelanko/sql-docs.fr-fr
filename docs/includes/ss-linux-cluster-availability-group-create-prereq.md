@@ -2,30 +2,30 @@
 
 Avant de créer le groupe de disponibilité, vous devez :
 
-- Définir votre environnement de sorte que tous les serveurs qui hébergeront des réplicas de disponibilité puissent communiquer.
-- Installer SQL Server
+- Définissez votre environnement afin que tous les serveurs qui hébergeront les réplicas de disponibilité peuvent communiquer.
+- Installez SQL Server.
 
 >[!NOTE]
->Sur Linux, vous devez créer un groupe de disponibilité avant de l’ajouter en tant que ressource de cluster à gérer par le cluster. Ce document fournit un exemple qui crée le groupe de disponibilité. Pour des instructions spécifiques à la distribution pour créer le cluster et ajouter le groupe de disponibilité en tant que ressource de cluster, consultez les liens sous [Étapes suivantes](#next-steps).
+>Sur Linux, vous devez créer un groupe de disponibilité avant de vous ajoutez en tant que ressource de cluster pour être géré par le cluster. Ce document fournit un exemple qui crée le groupe de disponibilité. Pour obtenir des instructions spécifiques à la distribution créer le cluster et ajoutez le groupe de disponibilité en tant que ressource de cluster, consultez les liens sous « Étapes suivantes ».
 
-1. **Mettre à jour le nom de l’ordinateur pour chaque hôte**
+1. Mettre à jour le nom d’ordinateur pour chaque hôte.
 
    Chaque nom de serveur SQL Server doit :
    
-   - Comporter 15 caractères ou moins
-   - Être unique dans le réseau
+   - 15 caractères ou moins.
+   - Unique au sein du réseau.
    
-   Pour définir le nom de l’ordinateur, modifiez `/etc/hostname`. Le script suivant vous permet de modifier `/etc/hostname` avec `vi`.
+   Pour définir le nom de l’ordinateur, modifiez `/etc/hostname`. Le script suivant vous permet de modifier `/etc/hostname` avec `vi`:
 
    ```bash
    sudo vi /etc/hostname
    ```
 
-1. **Configurer le fichier hosts**
+2. Configurer le fichier hosts.
 
->[!NOTE]
->Si les noms d’hôte sont inscrits avec leur adresse IP dans le serveur DNS, il n’est pas nécessaire d’effectuer les étapes ci-dessous. Vérifiez que tous les nœuds destinés à faire partie de la configuration du groupe de disponibilité peuvent communiquer les uns avec les autres (un test ping vers le nom d’hôte doit normalement répondre avec l’adresse IP correspondante). Vérifiez aussi que ce fichier/etc/hosts ne contient pas un enregistrement qui mappe l’adresse IP 127.0.0.1 de localhost au nom d’hôte du nœud.
-
+    >[!NOTE]
+    >Si les noms d’hôte sont enregistrés avec leur adresse IP dans le serveur DNS, vous n’avez pas besoin de suivre les étapes ci-dessous. Vérifiez que tous les nœuds destinées à faire partie de la configuration de groupe de disponibilité peuvent communiquer avec eux. (Une commande ping sur le nom d’hôte doit répondre avec l’adresse IP correspondante.) En outre, assurez-vous que le fichier/etc/hosts ne contient pas un enregistrement qui mappe l’adresse IP de localhost 127.0.0.1 avec le nom d’hôte du nœud.
+    >
 
    Le fichier hosts sur chaque serveur contient les adresses IP et les noms de tous les serveurs qui seront inclus dans le groupe de disponibilité. 
 
@@ -35,56 +35,53 @@ Avant de créer le groupe de disponibilité, vous devez :
    sudo ip addr show
    ```
 
-   Mettez à jour `/etc/hosts`. Le script suivant vous permet de modifier `/etc/hosts` avec `vi`.
+   Mettez à jour `/etc/hosts`. Le script suivant vous permet de modifier `/etc/hosts` avec `vi`:
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   L’exemple suivant montre `/etc/hosts` sur **node1** avec des ajouts pour **node1**, **node2** et **node3**. Dans ce document **node1** fait référence au serveur qui héberge le réplica principal. **node2** et **node3** font référence aux serveurs qui hébergent des réplicas secondaires.
+   L’exemple suivant montre `/etc/hosts` sur **node1** avec des ajouts pour **node1**, **node2** et **node3**. Dans ce document, **node1** fait référence au serveur qui héberge le réplica principal. Et **node2** et **node3** font référence à des serveurs qui hébergent les réplicas secondaires.
 
-
-   ```
-   127.0.0.1   localhost localhost4 localhost4.localdomain4
-   ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.12 node1
-   10.128.16.77 node2
-   10.128.15.33 node3
-   ```
+    ```
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
+    10.128.18.12 node1
+    10.128.16.77 node2
+    10.128.15.33 node3
+    ```
 
 ### <a name="install-sql-server"></a>Installer SQL Server
 
-Installez SQL Server. Les liens suivants pointent vers les instructions d’installation de SQL Server pour différentes distributions. 
+Installez SQL Server. Les liens suivants pointent vers les instructions d’installation de SQL Server pour différentes distributions : 
 
 - [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
-
 - [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
-
 - [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
-## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Activer les groupes de disponibilité AlwaysOn et redémarrer SQL Server
+## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>Activer les groupes de disponibilité AlwaysOn et redémarrez mssql-serveur
 
-Activez les groupes de disponibilité AlwaysOn sur chaque nœud hébergeant une instance de SQL Server puis redémarrez `mssql-server`.  Exécutez le script suivant :
+Activer les groupes de disponibilité AlwaysOn sur chaque nœud qui héberge une instance de SQL Server. Puis redémarrez `mssql-server`. Exécutez le script suivant :
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##  <a name="enable-alwaysonhealth-event-session"></a>Activer la session d’événements AlwaysOn_health 
+##  <a name="enable-an-alwaysonhealth-event-session"></a>Activer une session d’événements AlwaysOn_health 
 
-Vous pouvez éventuellement activer les événements étendus des groupes de disponibilité Always On pour mieux diagnostiquer la cause principale quand vous résolvez les problèmes d’un groupe de disponibilité. Exécutez la commande suivante sur chaque instance de SQL Server. 
+Vous pouvez éventuellement activer les événements étendus des groupes de disponibilité AlwaysOn aider les causes diagnostic lors de la résolution d’un groupe de disponibilité. Exécutez la commande suivante sur chaque instance de SQL Server : 
 
 ```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Pour plus d’informations sur cette session XE, consultez [Événements étendus d’AlwaysOn](http://msdn.microsoft.com/library/dn135324.aspx).
+Pour plus d’informations sur cette session XE, consultez [AlwaysOn événements étendus](http://msdn.microsoft.com/library/dn135324.aspx).
 
-## <a name="create-db-mirroring-endpoint-user"></a>Créer un utilisateur de point de terminaison de mise en miroir de bases de données
+## <a name="create-a-database-mirroring-endpoint-user"></a>Créer un utilisateur de point de terminaison de mise en miroir de base de données
 
-Le script Transact-SQL suivant crée une connexion nommée `dbm_login` et un utilisateur nommé `dbm_user`. Mettez à jour le script avec un mot de passe fort. Exécutez la commande suivante sur toutes les instances de SQL Server pour créer l’utilisateur de point de terminaison de mise en miroir de bases de données.
+Le script Transact-SQL suivant crée une connexion nommée `dbm_login` et un utilisateur nommé `dbm_user`. Mettez à jour le script avec un mot de passe fort. Pour créer la base de données utilisateur de point de terminaison de mise en miroir, exécutez la commande suivante sur toutes les instances de SQL Server :
 
 ```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -95,7 +92,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 Le service SQL Server sur Linux utilise des certificats pour authentifier les communications entre les points de terminaison de mise en miroir. 
 
-Le script Transact-SQL suivant crée une clé principale et un certificat principal. Il sauvegarde ensuite le certificat et sécurise le fichier avec une clé privée. Mettez à jour le script avec des mots de passe forts. Connectez-vous à l’instance principale de SQL Server et exécutez la commande Transact-SQL suivante pour créer le certificat :
+Le script Transact-SQL suivant crée une clé principale et un certificat. Il sauvegarde le certificat et sécurise le fichier avec une clé privée. Mettez à jour le script avec des mots de passe forts. Se connecter à l’instance de SQL Server principal. Pour créer le certificat, exécutez le script Transact-SQL suivant :
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -108,16 +105,16 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-À ce stade votre réplica SQL Server principal a un certificat dans `/var/opt/mssql/data/dbm_certificate.cer` et une clé privée dans `var/opt/mssql/data/dbm_certificate.pvk`. Copiez ces deux fichiers au même emplacement sur tous les serveurs qui hébergeront les réplicas de disponibilité. Utilisez l’utilisateur mssql ou accordez à l’utilisateur mssql l’autorisation d’accéder à ces fichiers. 
+À ce stade, votre réplica principal de SQL Server possède un certificat à `/var/opt/mssql/data/dbm_certificate.cer` et un at de clé privée `var/opt/mssql/data/dbm_certificate.pvk`. Copiez ces deux fichiers au même emplacement sur tous les serveurs qui hébergeront les réplicas de disponibilité. Utilisez l’utilisateur mssql ou accorder l’autorisation à l’utilisateur de mssql pour accéder à ces fichiers. 
 
-Par exemple, sur le serveur source, la commande suivante copie les fichiers sur la machine cible. Remplacez les valeurs de  **<node2>** par les noms des instances de SQL Server qui hébergeront les réplicas. 
+Par exemple, sur le serveur source, la commande suivante copie les fichiers sur l’ordinateur cible. Remplacez le `**<node2>**` valeurs avec les noms des instances de SQL Server qui hébergeront les réplicas. 
 
 ```bash
 cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-Sur chaque serveur cible, accordez à l’utilisateur mssql l’autorisation d’accéder au certificat.
+Sur chaque serveur cible, accorder l’autorisation à l’utilisateur de mssql pour accéder au certificat.
 
 ```bash
 cd /var/opt/mssql/data
@@ -126,7 +123,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>Créer le certificat sur les serveurs secondaires
 
-Le script Transact-SQL suivant crée une clé principale et un certificat principal à partir de la sauvegarde que vous avez créée sur le réplica principal de SQL Server. La commande autorise également l’utilisateur à accéder au certificat. Mettez à jour le script avec des mots de passe forts. Le mot de passe de déchiffrement est le même mot de passe que celui que vous avez utilisé pour créer le fichier .pvk à une étape précédente. Exécutez le script suivant sur tous les serveurs secondaires pour créer le certificat.
+Le script Transact-SQL suivant crée une clé principale et un certificat à partir de la sauvegarde que vous avez créé sur le réplica principal de SQL Server. La commande autorise également l’utilisateur à accéder au certificat. Mettez à jour le script avec des mots de passe forts. Le mot de passe de déchiffrement est le même mot de passe que celui que vous avez utilisé pour créer le fichier .pvk à une étape précédente. Pour créer le certificat, exécutez le script suivant sur tous les serveurs secondaires :
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -141,11 +138,11 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Créer les points de terminaison de mise en miroir de bases de données sur tous les réplicas
 
-Les points de terminaison de mise en miroir de bases de données utilisent le protocole TCP (Transmission Control Protocol) pour l'envoi et la réception de messages entre les instances de serveur participant à des sessions de mise en miroir de bases de donnée ou hébergeant des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique. L’écouteur TCP requiert une adresse IP d’écouteur. L’adresse IP d’écouteur doit être une adresse IPv4. Vous pouvez également utiliser `0.0.0.0`. 
+Les points de terminaison de mise en miroir de base de données utilisent le protocole TCP (Transmission Control) pour envoyer et recevoir des messages entre les instances de serveur qui participent aux sessions de mise en miroir de base de données ou hébergeront des réplicas de disponibilité. Le point de terminaison de mise en miroir de bases de données écoute sur un numéro de port TCP unique. L’écouteur TCP requiert une adresse IP d’écouteur. L’adresse IP d’écouteur doit être une adresse IPv4. Vous pouvez également utiliser `0.0.0.0`. 
 
-L’instruction Transact-SQL suivante crée un point de terminaison d’écoute nommé `Hadr_endpoint` pour le groupe de disponibilité. Il démarre le point de terminaison et donne l’autorisation de connexion à l’utilisateur que vous avez créé. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`.
+Le script Transact-SQL suivant crée un point de terminaison écoute nommé `Hadr_endpoint` pour le groupe de disponibilité. Il démarre le point de terminaison et autorise la connexion à l’utilisateur que vous avez créé. Avant d’exécuter le script, remplacez les valeurs entre `**< ... >**`.
 
-Mise à jour de l’instruction Transact-SQL suivant pour votre environnement sur toutes les instances de SQL Server : 
+Mettre à jour le script Transact-SQL suivant pour votre environnement sur toutes les instances de SQL Server : 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -160,8 +157,9 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
 >[!NOTE]
->Si vous utilisez SQL Server Express Edition sur un nœud pour héberger un seul réplica de configuration, la seule valeur valide pour le rôle est `WITNESS`. Exécutez le script suivant dans SQL Server Express Edition.
->```SQL
+>Si vous utilisez SQL Server Express Edition sur un nœud pour héberger un réplica de configuration uniquement, la seule valeur valide pour `ROLE` est `WITNESS`. Exécutez le script suivant dans SQL Server Express Edition :
+
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -173,11 +171,13 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
-The TCP port on the firewall needs to be open for the listener port.
+Le port TCP sur le pare-feu doit être ouvert pour le port d’écoute.
 
 
 
 >[!IMPORTANT]
->For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
+>Pour la version de SQL Server 2017, est la seule méthode d’authentification pris en charge pour le point de terminaison de mise en miroir de base de données `CERTIFICATE`. Le `WINDOWS` option est activée dans une version ultérieure.
 
-For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Pour plus d’informations, consultez [la base de données mise en miroir du point de terminaison (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+
+

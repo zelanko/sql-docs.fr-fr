@@ -1,5 +1,5 @@
 ---
-title: "Paramètre Namespace de l’élément de la méthode GetProperties | Documents Microsoft"
+title: "Définition de l’espace de noms des éléments pour la méthode GetProperties | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - item properties [Reporting Services]
 - ItemNamespaceHeader SOAP header
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6c47c200899dbd25c9685817ea81a391364739c6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 4e1506d39a57a6f7f79d77bd61cf45d841ede895
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>Définition de l'espace de noms d'élément pour la méthode GetProperties
   Vous pouvez utiliser l'en-tête SOAP <xref:ReportService2010.ItemNamespaceHeader> dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour récupérer des propriétés d'élément selon deux identificateurs d'élément différents : le chemin d'accès complet de l'élément ou l'ID de l'élément.  
@@ -128,8 +126,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations techniques de référence &#40; SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [À l’aide de Reporting Services des en-têtes SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Informations techniques de référence &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [Utilisation d’en-têtes SOAP Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

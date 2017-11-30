@@ -13,17 +13,16 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80f13a760e8176eb0d0bafbac29cf162f473caf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>Visionneuse d’aide et contenu hors connexion pour SQL Server
   
@@ -66,7 +65,7 @@ Le tableau suivant répertorie les outils qui installent la visionneuse d’aide
   
    >[!IMPORTANT] 
    >Dans SQL Server Management Studio et Visual Studio, l’application Visionneuse d’aide peut se figer (se bloquer) pendant l’ajout de la documentation. Pour résoudre ce problème, procédez comme indiqué ci-dessous. Pour plus d’informations sur ce problème, consultez [La visionneuse d’aide Visual Studio se fige sur l’écran de démarrage](https://msdn.microsoft.com/library/mt654096.aspx).  
-   >>Ouvrez le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings dans le Bloc-notes et remplacez la date dans le code ci-dessous par une date future. Ce fichier n’est disponible sur votre ordinateur local qu’à partir du moment où vous avez installé Visual Studio. 
+   >>Ouvrez le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings dans le Bloc-notes et remplacez la date dans le code ci-dessous par une date future. Ce fichier n’est disponible sur votre ordinateur local qu’à partir du moment où vous avez installé Visual Studio. 
    >>>Dernière actualisation du cache = « 31/12/2017 00:00:00 »  
   
     La table des matières figurant dans le volet gauche se met automatiquement à jour pour inclure la documentation que vous avez ajoutée.  
@@ -139,7 +138,5 @@ Quand vous appuyez sur la touche F1, la rubrique correspondante s’affiche en l
 Par ailleurs, la visionneuse d’aide ne prend en charge ni les paramètres proxy ni le format ISO. 
 
 ## <a name="additional-information"></a>Autres informations
-[Visionneuse d’aide Microsoft - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Microsoft Help Viewer - Visual Studio](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

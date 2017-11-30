@@ -11,24 +11,23 @@ ms.topic: article
 helpviewer_keywords:
 - online index operations
 - source indexes [SQL Server]
-- preexisting indexes [SQL Server]
+- pre-existing indexes [SQL Server]
 - target indexes [SQL Server]
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e5965424f0cebc4429c5f799799ae71636b15f8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-online-index-operations-work"></a>Fonctionnement des opérations d'index en ligne
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.lasthandoff: 06/22/2017
   Cette rubrique définit les structures qui existent pendant une opération d'index en ligne et illustre les activités qui y sont associées.  
   
 ## <a name="online-index-structures"></a>Structures d'index en ligne  
- Pour permettre des activités d'utilisateurs simultanées lors d'une opération du langage de définition de données (DDL) d'index, les structures suivantes sont utilisées pendant l'opération d'index en ligne : index source et préexistants, cibles et, pour reconstruire un segment de mémoire ou supprimer un index cluster en ligne, un index de mappage temporaire.  
+ Pour permettre des activités d’utilisateurs simultanées durant une opération du langage de définition de données (DDL) d’index, les structures suivantes sont utilisées pendant l’opération d’index en ligne : index source et préexistants, cibles et, pour reconstruire un segment de mémoire ou supprimer un index cluster en ligne, un index de mappage temporaire.  
   
 -   **Index sources et préexistants**  
   
-     La source est la table d'origine ou les données de l'index cluster. Les index préexistants sont tout index non-cluster associé à la structure source. Par exemple, si l'opération d'index en ligne régénère un index cluster possédant quatre index non-cluster associés, la source est l'index cluster existant et les index préexistants sont les index non-cluster.  
+     La source est la table d'origine ou les données de l'index cluster. Les index préexistants sont tout index non-cluster associé à la structure source. Par exemple, si l’opération d’index en ligne régénère un index cluster possédant quatre index non-cluster associés, la source est l’index cluster existant et les index préexistants sont les index non-cluster.  
   
-     Les index préexistants sont mis à la disposition des utilisateurs simultanés pour les opérations de sélection, d'insertion, de mise à jour et de suppression. Cela comprend des insertions en bloc (prises en charge mais déconseillées), des mises à jour implicites par des déclencheurs ainsi que des contraintes d'intégrité référentielle. Tous les index préexistants sont disponibles pour les requêtes et les recherches. Cela signifie qu'ils peuvent être sélectionnés par l'optimiseur de requête et spécifiés le cas échéant dans des indicateurs d'index.  
+     Les index préexistants sont mis à la disposition des utilisateurs simultanés pour les opérations de sélection, d’insertion, de mise à jour et de suppression. Cela comprend des insertions en bloc (prises en charge mais déconseillées), des mises à jour implicites par des déclencheurs ainsi que des contraintes d'intégrité référentielle. Tous les index préexistants sont disponibles pour les requêtes et les recherches. Cela signifie qu'ils peuvent être sélectionnés par l'optimiseur de requête et spécifiés le cas échéant dans des indicateurs d'index.  
   
 -   **Cible**  
   
@@ -66,13 +65,13 @@ ms.lasthandoff: 06/22/2017
   
 |Phase|Activité de la source|Verrous de la source|  
 |-----------|---------------------|------------------|  
-|Préparation<br /><br /> Phase très courte|Préparation des métadonnées système afin de créer la nouvelle structure d'index vide.<br /><br /> Un instantané de la table est défini. Cela signifie que le contrôle de version de ligne est utilisé pour fournir une cohérence de lecture au niveau de la transaction.<br /><br /> Les opérations d'écriture d'utilisateurs simultanés sur la source sont bloquées pendant une période très courte.<br /><br /> Aucune opération DDL simultanée n'est autorisée, à l'exception de la création de plusieurs index non-cluster.|S (Partagé) sur la table*<br /><br /> IS (Partage intentionnel)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Build<br /><br /> Phase principale|Les données sont analysées, triées, fusionnées et insérées dans la cible au cours d'opérations de chargement en masse.<br /><br /> Les opérations de sélection, d'insertion, de mise à jour et de suppression effectuées par des utilisateurs simultanés sont appliquées à la fois aux index préexistants et à tout nouvel index en cours de régénération.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
-|Finale<br /><br /> Phase très courte|Pour que cette phase commence, toutes les transactions de mise à jour non validées doivent être terminées. Selon le verrou acquis, toutes les transactions de lecture ou d'écriture de nouveaux utilisateurs sont bloquées pendant une période très courte jusqu'à l'achèvement de cette phase.<br /><br /> Les métadonnées système sont mises à jour pour remplacer la source par la cible.<br /><br /> La source est supprimée le cas échéant. Par exemple, après la régénération ou la suppression d'un index cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S sur la table en cas de création d’un index non cluster.\*<br /><br /> SCH-M (Modification du schéma) en cas de suppression de toute structure source (index ou table).\*|  
+|Préparation<br /><br /> Phase courte|Préparation des métadonnées système afin de créer la nouvelle structure d'index vide.<br /><br /> Un instantané de la table est défini. Cela signifie que le contrôle de version de ligne est utilisé pour fournir une cohérence de lecture au niveau de la transaction.<br /><br /> Les opérations d’écriture d’utilisateurs simultanés sur la source sont bloquées pendant une période courte.<br /><br /> Aucune opération DDL simultanée n'est autorisée, à l'exception de la création de plusieurs index non-cluster.|S (Partagé) sur la table*<br /><br /> IS (Partage intentionnel)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
+|Build<br /><br /> Phase principale|Les données sont analysées, triées, fusionnées et insérées dans la cible au cours d'opérations de chargement en masse.<br /><br /> Les opérations de sélection, d’insertion, de mise à jour et de suppression effectuées par des utilisateurs simultanés sont appliquées à la fois aux index préexistants et à tout nouvel index en cours de régénération.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Finale<br /><br /> Phase courte|Pour que cette phase commence, toutes les transactions de mise à jour non validées doivent être terminées. Selon le verrou acquis, toutes les transactions de lecture ou d’écriture de nouveaux utilisateurs sont bloquées pendant une période courte jusqu’à l’achèvement de cette phase.<br /><br /> Les métadonnées système sont mises à jour pour remplacer la source par la cible.<br /><br /> La source est supprimée le cas échéant. Par exemple, après la régénération ou la suppression d'un index cluster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S sur la table en cas de création d’un index non cluster.\*<br /><br /> SCH-M (Modification du schéma) en cas de suppression de toute structure source (index ou table).\*|  
   
  \* L’opération d’index attend l’achèvement de toute transaction de mise à jour non validée avant d’acquérir le verrou S ou SCH-M sur la table.  
   
- ** Le verrou de ressource INDEX_BUILD_INTERNAL_RESOURCE empêche l'exécution d'opérations de langage de définition de données (DDL) simultanées sur les structures sources et préexistantes alors que l'opération d'index est en cours. Par exemple, ce verrou empêche la régénération simultanée de deux index sur la même table. Même si ce verrou de ressource est associé au verrou Sch-M, il n'empêche pas les instructions de manipulation de données.  
+ ** Le verrou de ressource INDEX_BUILD_INTERNAL_RESOURCE empêche l’exécution d’opérations de langage de définition de données (DDL) simultanées sur les structures sources et préexistantes alors que l’opération d’index est en cours. Par exemple, ce verrou empêche la régénération simultanée de deux index sur la même table. Même si ce verrou de ressource est associé au verrou Sch-M, il n'empêche pas les instructions de manipulation de données.  
   
  La table précédente représente un verrou partagé (S) unique acquis lors de la phase de génération d'une opération d'index en ligne impliquant un index unique. Lorsque des index cluster et non cluster sont générés ou régénérés au cours d'une opération d'index en ligne unique (par exemple, pendant la création d'un index cluster initial sur une table contenant un ou plusieurs index non cluster), deux verrous S à court terme sont acquis au cours de la phase de génération, suivis par des verrous de partage intentionnel (IS) à long terme. Un verrou S est d'abord acquis pour la création de l'index cluster et lorsque la création de l'index cluster est terminée, un deuxième verrou S à court terme est acquis pour la création des index non-cluster. Une fois les index non-cluster créés, le verrou S redevient un verrou IS jusqu'à la phase finale de l'opération d'index en ligne.  
   
@@ -87,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
  Les instructions SELECT émises par l'utilisateur n'accèdent pas à la cible aussi longtemps que l'opération d'index n'est pas terminée.  
   
- Une fois les phases de préparation et finale terminées, les plans de requête et de mise à jour stockés dans le cache de procédure sont invalidés. Les requêtes suivantes utiliseront le nouvel index.  
+ Une fois les phases de préparation et finale terminées, les plans de requête et de mise à jour stockés dans le cache de procédure sont invalidés. Les requêtes suivantes utilisent le nouvel index.  
   
  La durée de vie d'un curseur déclaré sur une table impliquée dans une opération d'index en ligne est limitée par les phases de l'index en ligne. Les curseurs de mise à jour sont invalidés à chaque phase. Les curseurs en lecture seule ne sont invalidés qu'après la phase finale.  
   
@@ -97,4 +96,3 @@ ms.lasthandoff: 06/22/2017
  [Instructions pour les opérations d'index en ligne](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
-

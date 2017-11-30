@@ -1,5 +1,5 @@
 ---
-title: "Signaler et regrouper des références à des Collections de Variables (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -20,19 +20,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b04a9bc443ac284afad9153f5f3196a8c9a4fc1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Collections intégrées - rapport et les références de Variables de groupe (Générateur de rapports)
+# <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Collections intégrées - Références à des variables de rapport et de groupe (Générateur de rapports)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  
   
 > [!NOTE]  
@@ -78,9 +77,8 @@ ms.lasthandoff: 08/09/2017
  Pour faire référence à la variable dans une expression, utilisez la syntaxe de collection globale, par exemple `=Variables!GroupDescription.Value`. Sur l’aire de conception, la valeur s’affiche dans une zone de texte sous la forme `<<Expr>>`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Collections intégrées dans les Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

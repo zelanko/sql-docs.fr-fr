@@ -1,5 +1,5 @@
 ---
-title: Journal des applications Windows | Documents Microsoft
+title: Journal des applications Windows | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - logs [Reporting Services], Windows application logs
 - application logs [Reporting Services]
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8e1716d9e81043992e5c92f260835cda7742972
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2f34c31f34b79a5e2f40cc88cbf57c35ce582558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-application-log"></a>Journal des applications Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] écrit des messages d’événements dans le journal des applications Windows. Vous pouvez vous servir des informations des messages écrits dans le journal des applications pour rechercher des événements générés par les applications du serveur de rapports s'exécutant sur le système local.  
@@ -54,8 +53,7 @@ ms.lasthandoff: 08/09/2017
 |Audit des échecs|Événement consigné en journal en cas d'échec d'une tentative d'ouverture de session.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers journaux des Services et des Sources de Reporting](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Erreurs et événements référence &#40; Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

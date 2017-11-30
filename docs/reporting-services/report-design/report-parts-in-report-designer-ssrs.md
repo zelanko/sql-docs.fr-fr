@@ -1,5 +1,5 @@
 ---
-title: Parties de rapports dans le Concepteur de rapports (SSRS) | Documents Microsoft
+title: Parties de rapport dans le Concepteur de rapports (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rtp.rptdesigner.components.f1
+f1_keywords: sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44d4d2ae5bf33c8a35c54659bd89a504e2bb58fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
 
   Dans le Concepteur de rapports, une fois que vous avez créé des tables, graphiques et autres éléments de rapport paginé dans un projet, vous pouvez les publier comme des *parties de rapport* sur un serveur de rapports ou sur le site SharePoint intégré avec un serveur de rapports afin que vous et d’autres personnes puissiez les réutiliser dans d’autres rapports.  
@@ -82,7 +79,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Déployez le rapport.  
   
- Lorsque vous déployez le rapport, la partie de rapport est publiée sur un site SharePoint ou un serveur de rapports, et d'autres personnes peuvent la réutiliser. Pour publier une partie de rapport, vous devez disposer une connexion et autorisations suffisantes sur un serveur de rapports lorsque vous déployez le rapport.  
+ Lorsque vous déployez le rapport, la partie de rapport est publiée sur un site SharePoint ou un serveur de rapports, et d'autres personnes peuvent la réutiliser. Pour publier une partie de rapport, vous devez disposer d’une connexion et d’autorisations suffisantes pour accéder à un serveur de rapports lorsque vous déployez le rapport.  
   
   
 ##  <a name="SearchReuseComponents"></a> Réutilisation de parties de rapport  
@@ -99,7 +96,6 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[La gestion des parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
+[Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

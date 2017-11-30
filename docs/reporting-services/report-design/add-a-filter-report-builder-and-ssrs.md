@@ -1,5 +1,5 @@
 ---
-title: "Ajouter un filtre (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter un filtre (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: b6692664b434161cce324e0e81f45f30361b30fa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Ajouter un filtre (Générateur de rapports et SSRS)
   Ajoutez un filtre à un dataset, une région de données ou un groupe lorsque vous souhaitez inclure ou exclure des valeurs spécifiques pour des calculs ou l'affichage. Les filtres sont appliqués dans un premier temps au moment de l'exécution sur le dataset, puis sur la région de données, puis sur le groupe, dans l'ordre de haut en bas des hiérarchies de groupe. Dans une table, une matrice ou une liste, les filtres des groupes de lignes, des groupes de colonnes et des groupes adjacents sont appliqués indépendamment. Dans un graphique, les filtres des groupes de catégories et des groupes de séries sont appliqués indépendamment.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Pour filtrer des points de données dans un graphique, vous pouvez définir un filtre sur un groupe de catégories ou un groupe de séries. Par défaut, le graphique utilise la fonction intégrée Sum pour agréger les valeurs appartenant au même groupe en un point de données individuel dans la série. Si vous modifiez la fonction d'agrégation d'une série, vous devez modifier la fonction d'agrégation dans l'expression de filtre.  
   
- Pour plus d’informations sur le filtrage de datasets incorporés et partagés, consultez [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41; ](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur le filtrage de datasets incorporés et partagés, consultez [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sélectionnez la région de données sur l’aire de conception et avec le bouton droit puis  *\<région de données >***propriétés**. Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. Le  *\<région de données >***propriétés** boîte de dialogue s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** *\<région_de_données>*. Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** *\<région_de_données>* s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  
@@ -132,10 +132,10 @@ ms.lasthandoff: 08/09/2017
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des filtres de Dataset, filtres de régions de données et les filtres de groupe &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Exemples d’expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Jauges &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

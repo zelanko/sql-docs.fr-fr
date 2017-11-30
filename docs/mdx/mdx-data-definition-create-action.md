@@ -8,8 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - Action
 - CREATE
 - CREATE_ACTION
-dev_langs:
-- kbMDX
+dev_langs: kbMDX
 helpviewer_keywords:
 - invocation types [MDX]
 - dimensions [Analysis Services], actions
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - actions [MDX]
 - hierarchies [Analysis Services], actions
 ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: d065e9163a85e366dbe51f964058e8627e278be7
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 195d9b9d166838a98f9e5c11e10aa9557c8ad0c6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - créer une ACTION
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -104,7 +101,7 @@ FOR
 ## <a name="action-types"></a>Types d’action  
  Le tableau suivant décrit les différents types d’actions disponibles dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Type d'action|Description|  
+|Type d'action| Description|  
 |-----------------|-----------------|  
 |**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : Si cette action ne commence pas par `http://` ou `https://`, l’action n’est pas disponible dans le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
@@ -148,4 +145,3 @@ FOR
  [Instructions MDX de définition de données &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
-

@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523d6a9be5164ad77b32b9c012aefa7b1038217d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 111fab345e7679745e72ebe874dabcca3bed62fb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>CDC.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/17/2017
   Retourne une ligne pour chaque modification appliquée à la table source dans la plage spécifiée de numéros séquentiels dans le journal. Si une ligne source est modifiée à plusieurs reprises pendant l'intervalle, chaque modification est représentée dans le jeu de résultats retourné. En plus de retourner les données de modification, quatre colonnes de métadonnées fournissent les informations nécessaires pour appliquer les modifications à une autre source de données. Les options de filtrage de lignes régissent le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats. Lorsque l'option de filtrage de lignes 'all' est spécifiée, chaque modification a exactement une ligne pour identifier la modification. Lorsque l'option 'all update old' est spécifiée, les opérations de mise à jour sont représentées sous la forme de deux lignes : une qui contient les valeurs des colonnes capturées avant la mise à jour et une autre qui contient les valeurs des colonnes capturées après la mise à jour.  
   
  Cette fonction d'énumération est créée lorsqu'une table source est activée pour la capture des données modifiées. Le nom de fonction est dérivé et utilise le format **cdc.fn_cdc_get_all_changes_***capture_instance* où *capture_instance* est la valeur spécifiée pour l’instance de capture lorsque la table source est activée pour la capture de données modifiées.  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

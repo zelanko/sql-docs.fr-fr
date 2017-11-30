@@ -1,26 +1,24 @@
 ---
 title: "Nouveautés du moteur de base de données - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 10/24/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 90dc32563dbf39ac98148965377aa81654980f34
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Nouveautés du moteur de base de données - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
@@ -67,7 +65,7 @@ Cette rubrique décrit les améliorations apportées à [!INCLUDE[ssdenoversion-
     - Opérateur`CROSS APPLY` dans des modules compilés en mode natif.   
 - De nouvelles fonctions de chaîne [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md) et [TRIM](../t-sql/functions/trim-transact-sql.md) sont ajoutées.   
 - La clause `WITHIN GROUP` est maintenant prise en charge pour la fonction [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md).
-- Deux nouvelles familles de classements japonais (Japanese_Bushu_Kakusu_140 et Japanese_XJIS_140) ont été ajoutées, et l’option de classement Variation-selector-sensitive (_VSS) a été ajoutée pour une utilisation dans les classements japonais. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md)   
+- Deux nouvelles familles de classements japonais (Japanese_Bushu_Kakusu_140 et Japanese_XJIS_140) ont été ajoutées, et l’option de classement Variation-selector-sensitive (_VSS) a été ajoutée pour une utilisation dans ces nouveaux classements japonais. En outre, tous les nouveaux classements prennent automatiquement en charge les caractères supplémentaires sans avoir à spécifier l’option _SC. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md)   
 - De nouvelles options d’accès en bloc ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) permettent d’accéder directement aux données à partir d’un fichier spécifié au format CSV et à partir de fichiers stockés dans Stockage Blob Azure avec la nouvelle option `BLOB_STORAGE` de [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - Le niveau de compatibilité ( **COMPATIBILITY_LEVEL** ) de base de données 140 a été ajouté.   Les clients qui exécutent ce niveau obtiendront les fonctionnalités de langage et les comportements de l’optimiseur de requêtes les plus récents. Cela comprend les modifications apportées à chaque version préliminaire publiée par Microsoft.
 - Améliorations apportées au mode de calcul des seuils de mise à jour des statistiques incrémentielles (mode de compatibilité 140 obligatoire).
@@ -86,5 +84,4 @@ Cette rubrique décrit les améliorations apportées à [!INCLUDE[ssdenoversion-
 - Nouvelles autorisations : `DATABASE SCOPED CREDENTIAL` est maintenant une classe d’éléments sécurisables, prenant en charge les autorisations `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`et `VIEW DEFINITION` . `ADMINISTER DATABASE BULK OPERATIONS`, qui est limité à SQL Database, est maintenant visible dans `sys.fn_builtin_permissions`.   
 - La DMV [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md) a été ajoutée pour fournir des informations sur les systèmes d’exploitation Windows et Linux.   
 - Les rôles de base de données sont créés avec R Services pour la gestion des autorisations associées aux packages. Pour plus d’informations, consultez [Gestion des packages R pour SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services de Type de connexion pour MDX (SSRS) | Documents Microsoft
+title: Type de connexion Analysis Services pour MDX (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 40bb8a57ac6f8204c6aeb81b6ab82cc2d8e4ab1b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f546aabd6854d1d022b80167144523840b16b278
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Type de connexion Analysis Services pour MDX (SSRS)
   Pour inclure des données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce type de source de données intégré est basé sur l'extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez récupérer les métadonnées relatives aux dimensions, hiérarchies, niveaux, indicateurs de performance clés (KPI), mesures et attributs d'un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de les utiliser comme données de rapport.  
@@ -67,7 +66,7 @@ data source=<server name>;initial catalog=<database name>
   
     -   **Mode Création** Faites glisser des dimensions, des membres, des propriétés de membre, des mesures et des indicateurs de performance clés du navigateur de métadonnées vers le volet **Données** dans le but de générer une requête MDX. Faites glisser les membres calculés du volet CalculatedMembers vers le volet Données pour définir d’autres champs de dataset.  
   
-    -   **Affichage des requêtes** Faites glisser des dimensions, des membres, des propriétés de membre, des mesures et des indicateurs de performance clés du navigateur de métadonnées vers le volet Requête dans le but de générer une requête MDX. Il est possible de modifier le texte MDX directement dans le volet Requête. Faites glisser les membres calculés du volet Membres calculés vers le volet Requête pour définir d’autres champs de dataset.  
+    -   **Affichage des requêtes** Faites glisser des dimensions, des membres, des propriétés de membre, des mesures et des indicateurs de performance clés du navigateur de métadonnées vers le volet Requête dans le but de générer une requête MDX. Il est possible de modifier le texte MDX directement dans le volet Requête. Faites glisser les membres calculés du volet CalculatedMembers vers le volet Requête pour définir d’autres champs de dataset.  
   
      Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes MDX Analysis Services &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
   
@@ -79,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="Parameters"></a> Paramètres  
- Pour inclure les paramètres de requête, créez un filtre dans la zone de filtre du concepteur de requêtes et marquez le filtre en tant que paramètre. Pour chaque filtre, un dataset est créé automatiquement afin de fournir les valeurs disponibles. Par défaut, ces datasets n'apparaissent pas dans le volet Données du rapport. Pour plus d’informations, consultez [définir les paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) et [afficher des Datasets masqués pour les valeurs de paramètre pour les données multidimensionnelles &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
+ Pour inclure les paramètres de requête, créez un filtre dans la zone de filtre du concepteur de requêtes et marquez le filtre en tant que paramètre. Pour chaque filtre, un dataset est créé automatiquement afin de fournir les valeurs disponibles. Par défaut, ces datasets n'apparaissent pas dans le volet Données du rapport. Pour plus d’informations, consultez [Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md) et [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
  Par défaut, chaque paramètre de rapport a le type de données **Texte**. Après avoir créé les paramètres de rapport, vous devrez peut-être modifier les valeurs par défaut. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
@@ -98,26 +97,25 @@ data source=<server name>;initial catalog=<database name>
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Fournit une vue d'ensemble de l'accès aux données pour votre rapport.  
   
- [Connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Fournit des informations sur les connexions de données et les sources de données.  
   
- [Rapport incorporé des jeux de données et des Datasets partagés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Fournit des informations sur les datasets incorporés et partagés.  
   
- [Collection de champs de DataSet &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Fournit des informations sur la collection de champs de dataset générée par la requête.  
   
  [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Fournit des informations sur les champs supplémentaires disponibles via le fournisseur de données XMLA.  
   
- [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](http://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.  
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Expressions &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-
