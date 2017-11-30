@@ -1,5 +1,5 @@
 ---
-title: "Comment : déployer un élément de rapport personnalisé | Documents Microsoft"
+title: "Procédure : déployer un élément de rapport personnalisé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, deploying
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 742e80b96e6887188620b4f2a7ab3808475ceda2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: fdb4225367a54cf9468536ba37b2ee4822aee969
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procédure : déployer un élément de rapport personnalisé
   Pour déployer un élément de rapport personnalisé dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez d'abord modifier les fichiers de configuration du serveur de rapports, puis copier les assemblys correspondant aux composants de conception et d'exécution dans les dossiers d'application appropriés, et ce à la fois pour le Concepteur de rapports et le serveur de rapports.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Pour déployer un élément de rapport personnalisé  
   
-1.  Modifiez le fichier Rsreportdesigner.config afin de configurer les composants de conception et d'exécution de l'élément de rapport personnalisé à utiliser dans le concepteur. Notez que la **ReportItemName** entrée doit correspondre à la **CustomReportItemAttribute** attribut utilisé dans votre **CustomReportItemDesigner** classe. Par exemple :  
+1.  Modifiez le fichier Rsreportdesigner.config afin de configurer les composants de conception et d'exécution de l'élément de rapport personnalisé à utiliser dans le concepteur. Notez que l’entrée **ReportItemName** doit correspondre à l’attribut **CustomReportItemAttribute** utilisé dans votre classe **CustomReportItemDesigner**. Exemple :  
   
     ```  
     <ReportItems>  
@@ -46,7 +43,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItemConverter>  
     ```  
   
-2.  Modifiez le fichier Rsreportserver.config pour inscrire le composant d'exécution de l'élément de rapport personnalisé. Par exemple :  
+2.  Modifiez le fichier Rsreportserver.config pour inscrire le composant d'exécution de l'élément de rapport personnalisé. Exemple :  
   
     ```  
     <ReportItems>  
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItems>  
     ```  
   
-3.  Modifiez le fichier rssrvpolicy.config pour ajouter un **CodeGroup** qui accorde des autorisations appropriées pour l’élément de rapport personnalisé. Par exemple :  
+3.  Modifiez le fichier Rssrvpolicy.config pour ajouter un **CodeGroup** octroyant les autorisations adéquates à l’élément de rapport personnalisé. Exemple :  
   
     ```  
     <CodeGroup   
@@ -74,8 +71,7 @@ ms.lasthandoff: 08/12/2017
 5.  Copiez le fichier DLL correspondant au composant de conception de l'élément de rapport personnalisé dans le répertoire PrivateAssemblies, lequel se trouve à l'emplacement suivant : %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fichiers de Configuration Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Bibliothèques de classes élément de rapport personnalisé](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+ [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Bibliothèques de classes d'éléments de rapports personnalisés](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
-

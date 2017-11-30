@@ -1,28 +1,25 @@
 ---
-title: "Didacticiel : Ajouter un histogramme à votre rapport (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b1768cbe53155ec37c5f6dd690542b90e22a59cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
@@ -37,7 +34,7 @@ L'illustration suivante montre l'histogramme que vous allez créer, avec une moy
   
 ![didacticiel-histogramme-générateur-de-rapports](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
@@ -56,7 +53,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
   
     La boîte de dialogue **Nouveau rapport ou dataset** s’ouvre.  
   
-    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou Dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
+    Si vous ne voyez pas la boîte de dialogue **Nouveau rapport ou dataset**, dans le menu **Fichier**, choisissez **Nouveau**.  
   
 2.  Dans le volet gauche, assurez-vous que **Nouveau rapport** est sélectionné.  
   
@@ -69,7 +66,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
     > [!NOTE]  
     > La source de données que vous choisissez n'a pas d'importance, tant que vous disposez des autorisations appropriées. Vous n'allez pas récupérer de données à partir de la source de données. Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Dans la page **Créer une requête**, cliquez sur **Modifier en tant que texte**.  
+6.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
 7.  Collez la requête suivante dans le volet de requête :  
   
@@ -130,7 +127,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 2.  Cliquez avec le bouton droit sur l’axe horizontal > **Propriétés de l’axe horizontal**.  
   
-3.  Sous l’onglet **Nombre**, dans **Catégorie**, sélectionnez **Date**.  
+3.  Sous l’onglet **Nombre** , dans **Catégorie**, sélectionnez **Date**.  
   
 5.  Dans la zone **Type** , sélectionnez **31 Jan 2000**.  
   
@@ -152,7 +149,7 @@ Vous pouvez personnaliser l'affichage des étiquettes en les faisant pivoter et 
   
 3.  Cliquez avec le bouton droit sur l’axe horizontal > **Propriétés de l’axe horizontal**.  
   
-5.  Sous l’onglet **Étiquettes**, sous **Modifier les options d’ajustement automatique des étiquettes d’axe**, sélectionnez **Désactiver l’ajustement automatique**.  
+5.  Sous l’onglet **Étiquettes** , sous **Modifier les options d’ajustement automatique des étiquettes d’axe**, sélectionnez **Désactiver l’ajustement automatique**.  
   
 7.  Dans **Angle de rotation des étiquettes**, sélectionnez **-90**.  
   
@@ -206,7 +203,7 @@ Par défaut, l'axe vertical affiche les valeurs dans un format général qui est
   
 5.  Cliquez avec le bouton droit sur l’axe vertical > **Propriétés de l’axe vertical**.  
   
-6.  Sous l’onglet **Nombre**, notez que **Devise** est déjà sélectionné dans la zone **Catégorie** et que **Nombre de décimales** est déjà **0** (zéro).  
+6.  Sous l’onglet **Nombre** , notez que **Devise** est déjà sélectionné dans la zone **Catégorie** et que **Nombre de décimales** est déjà **0** (zéro).  
   
 7.  Sélectionnez l’option **Afficher les valeurs en**. **Milliers** est déjà sélectionné.  
   
@@ -313,5 +310,4 @@ Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en 
 -    [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 
 -    [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

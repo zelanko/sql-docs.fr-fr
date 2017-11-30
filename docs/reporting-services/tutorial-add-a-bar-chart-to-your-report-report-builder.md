@@ -1,27 +1,25 @@
 ---
-title: "Didacticiel : Ajouter un graphique à barres à votre rapport (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
@@ -38,7 +36,7 @@ L’illustration suivante montre le graphique à barres que vous allez créer, a
   
  
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour des instructions détaillées sur l’accès à un serveur de rapports, créer un jeu de données et choisissez une source de données, consultez le premier didacticiel de cette série : [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, la création d’un dataset et le choix d’une source de données, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
@@ -55,7 +53,7 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
   
      La boîte de dialogue **Mise en route** s'affiche.  
   
-     ![Démarrer le Générateur de rapports](../reporting-services/media/rb-getstarted.png "démarrer le Générateur de rapports")  
+     ![Bien démarrer avec le Générateur de rapports](../reporting-services/media/rb-getstarted.png "Bien démarrer avec le Générateur de rapports")  
   
      Si vous ne voyez pas la boîte de dialogue **Mise en route** , cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** . 
       
@@ -220,7 +218,7 @@ Par défaut, l'axe horizontal affiche les valeurs dans un format général qui e
   
 2.  Cliquez sur l'axe horizontal en bas du graphique pour le sélectionner.  
   
-3.  Sur le **accueil** onglet > **nombre** groupe > **devise**. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
+3.  Sous l’onglet **Accueil** > groupe **Nombre** > **Devise**. Les étiquettes de l'axe horizontal changent et utilisent une devise.  
   
 3.  (Facultatif) Supprimez les chiffres décimaux. Près du bouton **Devise** , cliquez deux fois sur le bouton **Réduire les décimales** .  
   
@@ -308,5 +306,4 @@ Vous avez réalisé le didacticiel d'ajout d'un graphique à barres à votre rap
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

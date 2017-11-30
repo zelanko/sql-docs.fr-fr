@@ -1,5 +1,5 @@
 ---
-title: "Afficher les numéros de Page ou d’autres propriétés de rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Afficher les numéros de page ou d’autres propriétés de rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7f3761ae99fd13d1f69ed59719967797d9af0c51
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Afficher les numéros de page ou d'autres propriétés de rapport (Générateur de rapports et SSRS)
   Vous pouvez facilement ajouter des numéros de page, un titre de rapport, un nom de fichier, et d'autres propriétés de rapport aux en-têtes ou pieds de page de votre rapport. Ces propriétés sont stockées en tant que champs dans le dossier Champs prédéfinis du volet Données du rapport.  
@@ -60,17 +59,17 @@ ms.lasthandoff: 08/09/2017
 2.  Faites glisser le champ **Numéro de page** du volet des données de rapport vers l’en-tête ou le pied de page du rapport.  
   
     > [!NOTE]  
-    >  Le pied de page est ajouté automatiquement au rapport. Pour ajouter un en-tête de page, sous l’onglet **Insérer**, cliquez sur **En-tête**, puis sur **Ajouter un en-tête**.  
+    >  Le pied de page est ajouté automatiquement au rapport. Pour ajouter un en-tête de page, sous l’onglet **Insérer** , cliquez sur **En-tête**, puis sur **Ajouter un en-tête**.  
     >   
     >  Une zone de texte qui contient l'expression simple [&PageNumber] est ajoutée.  
   
-### <a name="to-add-the-word-page-before-the-page-number"></a>Pour ajouter le mot « Page » avant le numéro de page  
+### <a name="to-add-the-word-page-before-the-page-number"></a>Pour ajouter le mot « Page » avant le numéro de page  
   
 1.  Cliquez avec le bouton droit sur la zone de texte qui contient [&PageNumber] et cliquez sur **Expressions**.  
   
      La zone de texte **Définir l’expression pour : valeur** contient l’expression =Globals!PageNumber.  
   
-2.  Placez le curseur après le signe = et le type **« Page » &**.  
+2.  Placez le curseur après le signe =, puis tapez **"Page " &**.  
   
      L'expression est maintenant ="Page "&Globals!PageNumber  
   
@@ -89,8 +88,7 @@ ms.lasthandoff: 08/09/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [En-têtes et pieds de page &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Format du texte dans une zone de texte &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   
-

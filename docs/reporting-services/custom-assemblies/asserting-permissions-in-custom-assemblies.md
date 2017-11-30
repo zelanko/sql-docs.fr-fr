@@ -1,5 +1,5 @@
 ---
-title: "Déclaration des autorisations dans les assemblys personnalisés | Documents Microsoft"
+title: "Déclaration d’autorisations dans les assemblys personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - secure calls [Reporting Services]
 - custom assemblies [Reporting Services], permissions
@@ -21,30 +20,30 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: e98c186e950b5f4186aea4057fb63c0f27eaf1b3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Déclaration d'autorisations dans les assemblys personnalisés
-  Par défaut, code d’assembly personnalisé s’exécute avec la restriction **exécution** jeu d’autorisations. Dans certaines situations, vous voudrez peut-être implémenter un assembly personnalisé qui effectue des appels sécurisés à des ressources protégées au sein de votre système de sécurité (comme un fichier ou le Registre). Pour ce faire, vous devez procéder comme suit :  
+  Par défaut, le code d’assembly personnalisé s’exécute avec le jeu d’autorisations limité **Execution**. Dans certaines situations, vous voudrez peut-être implémenter un assembly personnalisé qui effectue des appels sécurisés à des ressources protégées au sein de votre système de sécurité (comme un fichier ou le Registre). Pour ce faire, vous devez procéder comme suit :  
   
-1.  Identifiez les autorisations exactes dont votre code a besoin pour effectuer l'appel sécurisé. Si cette méthode fait partie d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bibliothèque, ces informations doivent être incluses dans la documentation de la méthode.  
+1.  Identifiez les autorisations exactes dont votre code a besoin pour effectuer l'appel sécurisé. Si cette méthode fait partie d’une bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ces informations doivent être incluses dans la documentation de la méthode.  
   
-2.  Modifiez les fichiers de configuration de stratégie du serveur de rapports de manière à accorder les autorisations requises à l'assembly personnalisé. Pour plus d’informations sur les fichiers de configuration de stratégie de sécurité, consultez [à l’aide de Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
+2.  Modifiez les fichiers de configuration de stratégie du serveur de rapports de manière à accorder les autorisations requises à l'assembly personnalisé. Pour plus d’informations sur les fichiers de configuration de stratégie de sécurité, consultez [Utilisation des fichiers de stratégie de sécurité Reporting Services](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).  
   
-3.  Déclarez les autorisations requises dans le cadre de la méthode utilisée pour effectuer l'appel sécurisé. Cela est nécessaire car le code de l’assembly personnalisé qui est appelé par le serveur de rapports fait partie de l’assembly hôte d’expressions rapport, qui s’exécute avec **exécution** autorisation par défaut. Le **exécution** jeu d’autorisations permet au code à exécuter, mais ne pas d’utiliser des ressources protégées.  
+3.  Déclarez les autorisations requises dans le cadre de la méthode utilisée pour effectuer l'appel sécurisé. Cette étape est nécessaire car le code d’assembly personnalisé qui est appelé par le serveur de rapports fait partie de l’assembly hôte d’expressions du rapport, qui s’exécute par défaut avec l’autorisation **Execution**. Le jeu d’autorisations **Execution** permet au code de s’exécuter, mais pas d’utiliser des ressources protégées.  
   
-4.  Marquer l’assembly personnalisé avec **AllowPartiallyTrustedCallersAttribute** s’il est signé avec un nom fort. Cela est nécessaire car les assemblys personnalisés sont appelées à partir d’une expression de rapport qui fait partie de l’assembly hôte d’expressions rapport, qui, par défaut, n’est pas accordée **FullTrust**; il est donc un appelant « niveau de confiance partiel ». Pour plus d’informations, consultez [les assemblys avec nom fort personnalisé](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
+4.  Marquez l’assembly personnalisé avec **AllowPartiallyTrustedCallersAttribute** s’il est signé avec un nom fort. Cette étape est nécessaire car les assemblys personnalisés sont appelés à partir d’une expression de rapport qui fait partie de l’assembly hôte d’expressions du rapport, à qui, par défaut, l’autorisation **FullTrust** n’est pas accordée. Il s’agit donc d’un appelant d’un niveau de confiance partiel. Pour plus d’informations, consultez [Utilisation d’assemblys personnalisés avec noms forts](../../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md).  
   
 ## <a name="implementing-a-secure-call"></a>Implémentation d'un appel sécurisé  
- Vous pouvez modifier les fichiers de configuration de stratégie de manière à accorder des autorisations spécifiques à votre assembly. Par exemple, si vous écrivez un assembly personnalisé pour gérer la conversion de devises, vous aurez peut-être besoin de lire le taux de change de la devise actuelle dans un fichier. Pour récupérer les informations de fréquence, vous devez ajouter une autorisation de sécurité supplémentaire, **FileIOPermission**, pour le jeu d’autorisations de l’assembly. Vous pouvez ajouter l'entrée suivante au fichier de configuration de stratégie :  
+ Vous pouvez modifier les fichiers de configuration de stratégie de manière à accorder des autorisations spécifiques à votre assembly. Par exemple, si vous écrivez un assembly personnalisé pour gérer la conversion de devises, vous aurez peut-être besoin de lire le taux de change de la devise actuelle dans un fichier. Pour extraire les informations sur les taux de change, vous aurez besoin d’ajouter une autorisation de sécurité supplémentaire, **FileIOPermission**, au jeu d’autorisations de l’assembly. Vous pouvez ajouter l'entrée suivante au fichier de configuration de stratégie :  
   
 ```  
 <PermissionSet class="NamedPermissionSet"  

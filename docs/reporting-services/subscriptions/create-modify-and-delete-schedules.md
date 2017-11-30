@@ -1,5 +1,5 @@
 ---
-title: "Créer, modifier et supprimer des planifications | Documents Microsoft"
+title: "Créer, modifier et supprimer des planifications | Microsoft Docs"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -23,24 +23,23 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
+# <a name="create-modify-and-delete-schedules"></a>Créer, modifier et supprimer des planifications
   Cette rubrique est consacrée à la création, la modification et la suppression des planifications partagées [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Pour gérer des planifications partagées en mode natif, utilisez la page Planifications dans le portail web ou le dossier Planifications partagées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour le mode SharePoint, utilisez les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Pour déterminer si une planification partagée est utilisée de manière active, utilisez l’une des méthodes suivantes :  
   
--   **Portail web :** Dans la page Planifications partagées, passez en revue les valeurs des champs Date de la dernière exécution, Date de la prochaine exécution et États. Si une planification ne s'exécute plus parce qu'elle est arrivée à expiration, la date d'expiration apparaît dans le champ État. Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
+-   **Portail web :** Dans la page Planifications partagées, passez en revue les valeurs des champs Date de la dernière exécution, Date de la prochaine exécution et États. Si une planification ne s'exécute plus parce qu'elle est arrivée à expiration, la date d'expiration apparaît dans le champ État. Pour plus d’informations, consultez [Portail web (SSRS en mode natif)](../../reporting-services/web-portal-ssrs-native-mode.md).
   
 -   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Consultez la page Rapports d’une planification partagée donnée. Cette page répertorie tous les rapports et datasets partagés qui utilisent la planification partagée. Pour plus d’information, consultez [Reporting Services pour SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
   
@@ -145,10 +144,9 @@ Cliquez sur **Annuler**.
  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schedules](../../reporting-services/subscriptions/schedules.md)   
+ [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Suspendre et reprendre des planifications partagées](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [Mettre en cache un rapport &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [Ajouter un instantané de rapport historique des &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [Mettre en cache un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [Ajouter un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
-

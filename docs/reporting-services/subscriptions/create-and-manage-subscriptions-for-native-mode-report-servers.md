@@ -1,5 +1,5 @@
 ---
-title: "Créer et gérer des abonnements pour les serveurs de rapports en Mode natif | Documents Microsoft"
+title: "Créer et gérer des abonnements pour les serveurs de rapports en mode natif | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Naviguez jusqu’au rapport auquel vous voulez vous abonner. Cliquez sur le menu Rapport, puis sur **S’abonner**.  
   
-     ![menu rapport](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu rapport")  
+     ![Menu rapport](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "Menu Rapport")  
   
 3.  **Description**: entrez une description du rapport, 512 caractères maximum.  
   
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Ajouter une extension de fichier lorsque le fichier est créé**: cette option ajoute une extension de trois caractères au nom de fichier. L'extension de fichier est déterminée par le format de sortie sélectionné pour le rapport.  
   
-8.  **Chemin d’accès**: tapez un chemin d’accès UNC Universal Naming Convention () à un dossier existant dans lequel vous souhaitez remettre les rapports (par exemple, \\ \\< nom_serveur\>\\< mesrapports\>). Insérez deux barres obliques inverses au début du chemin d'accès. Ne spécifiez pas de barre oblique de fin.  
+8.  **Chemin** : tapez un chemin UNC (Universal Naming Convention) menant à un dossier existant qui doit contenir les rapports (par exemple, \\\\<nom_serveur\>\\<mes_rapports\>). Insérez deux barres obliques inverses au début du chemin d'accès. Ne spécifiez pas de barre oblique de fin.  
   
-     ![abonnement de partage de fichiers](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "abonnement de partage de fichiers")  
+     ![abonnement pour partage de fichiers](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "abonnement pour partage de fichiers")  
   
 9. **Format du rendu**: sélectionnez un format de sortie du rapport pour la remise de fichier. Choisissez un format qui correspond à l'application bureautique qui sera utilisée pour ouvrir le rapport. Évitez les formats qui n'effectuent pas le rendu d'un rapport en un seul flux ou qui introduisent une interactivité non prise en charge dans un fichier statique (par exemple le format HTML 4.0).  
   
-10. **Informations d’identification**: permet d’utiliser le compte Partage de fichiers ou des informations d'identification Windows spécifiques. L’option **Utiliser le compte Partage de fichiers** est désactivée si votre administrateur de rapports n’a pas configuré de compte de partage de fichiers. Pour plus d’informations, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Dans le **nom d’utilisateur** et **mot de passe** zones de texte, spécifiez les informations d’identification requises pour accéder au partage de fichiers, en utilisant le format  *\<domaine >*\\*\<nom d’utilisateur >* pour le nom d’utilisateur.  
+10. **Informations d’identification**: permet d’utiliser le compte Partage de fichiers ou des informations d'identification Windows spécifiques. L’option **Utiliser le compte Partage de fichiers** est désactivée si votre administrateur de rapports n’a pas configuré de compte de partage de fichiers. Pour plus d’informations, consultez [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Dans les zones de texte **Nom d’utilisateur** et **Mot de passe**, indiquez les informations d’identification nécessaires pour accéder au partage de fichiers en respectant le format *\<domaine>*\\*\<nom_utilisateur>* pour le nom d’utilisateur.  
   
 11. **Options de remplacement**  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Naviguez jusqu’au rapport auquel vous voulez vous abonner. Cliquez sur le menu Rapport, puis sur **S’abonner**.  
   
-     ![menu rapport](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu rapport")  
+     ![Menu rapport](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "Menu Rapport")  
   
 3.  **Description**: entrez une description du rapport, 512 caractères maximum.  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  En fonction de vos autorisations, vous pouvez taper l'adresse de messagerie à laquelle le rapport doit être remis. Si vous spécifiez plusieurs adresses, séparez-les par des points-virgules (;). Vous pouvez aussi taper des adresses e-mail supplémentaires dans les zones de texte **Cc**, **Cci**et **Répondre à** . Pour cela, vous devez disposer de l'autorisation de gestion de tous les abonnements.  
   
-7.  **Objet**: valeur par défaut est «@ReportName a été exécuté à @ExecutionTime». Vous pouvez modifier l’objet, mais notez que la @ReportName et @ExecutionTime sont les seules variables globales prises en charge dans les **sujet** champ.  
+7.  **Objet**: a pour valeur par défaut « @ReportName a été exécuté à @ExecutionTime ». Vous pouvez modifier l’objet, mais notez que @ReportName et @ExecutionTime sont les seules variables globales prises en charge dans le champ **Objet**.  
   
 8.  Sélectionnez les options de remise comme suit :  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Ouvrez sur le menu Rapport, puis cliquez sur **Supprimer**.  
   
-     ![menu rapport](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "menu rapport")  
+     ![Menu rapport](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "Menu Rapport")  
   
  Pour annuler un abonnement qui est en cours de traitement sur le serveur de rapports, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -189,9 +188,8 @@ ms.lasthandoff: 08/09/2017
  [Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Abonnements pilotés par les données](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Abonnements et remise &#40; Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Utiliser mes abonnements &#40; Serveur de rapports en Mode natif &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Utiliser Mes abonnements &#40;serveur de rapports en mode natif&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

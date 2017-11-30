@@ -1,5 +1,5 @@
 ---
-title: "Importation de données HTML dans un rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Importation de code HTML dans un rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2c1cefaa2ece7d13882c7807fefd5aa54367d84
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importation de données HTML dans un rapport (Générateur de rapports et SSRS)
   Vous pouvez utiliser une zone de texte pour insérer dans un rapport du texte au format HTML récupéré à partir de l'un des champs de votre dataset. Ce texte au format HTML peut être issu de toute expression simple ou complexe capable de transformer correctement des données au format HTML. Le texte ainsi mis en forme peut être converti dans tous les formats de sortie pris en charge, y compris au format PDF.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Lorsque vous importez du texte qui contient des balises HTML, les données de ce texte doivent toujours être analysées en premier par la zone de texte où elles sont importées. Seul un sous-ensemble de balises HTML étant pris en charge, les données HTML affichées dans le rapport rendu peuvent différer des données HTML d'origine.  
   
- Pour une prise en main rapide, consultez [Didacticiel : Mise en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,15 +40,15 @@ ms.lasthandoff: 08/09/2017
 ## <a name="supported-html-tags"></a>Balises HTML prises en charge  
  La liste suivante répertorie toutes les balises qui seront restituées sous forme de balises HTML lorsque définies comme texte de l'espace réservé :  
   
--   Liens hypertextes : \<A HREF >  
+-   Liens hypertexte : \<A HREF>  
   
--   Polices : \<police >  
+-   Polices : \<FONT>  
   
--   Éléments d’en-tête, de style et de bloc : \<H {n} >, \<DIV >, \<étendue >,\<P >, \<DIV >, \<LI >, \<HN >  
+-   Éléments d’en-tête, de style et de bloc : \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Format de texte : \<B >, \<I >, \<U >, \<S >  
+-   Format du texte : \<B>, \<I>, \<U>, \<S>  
   
--   Traitement des listes : \<OL >, \<UL >, \<LI >  
+-   Traitement des listes: \<OL>, \<UL>, \<LI>  
   
  Toutes les autres balises HTML ne seront pas prises en compte lorsque le rapport sera généré. Si le texte au format HTML de l'espace réservé représenté par son expression comporte des erreurs de langage, il apparaîtra au format texte simple. Aucune des balises HTML n'est sensible à la casse.  
   
@@ -84,12 +83,11 @@ ms.lasthandoff: 08/09/2017
   
 -   À l'instar des balises HTML erronées, les valeurs CSS incorrectes sont également ignorées.  
   
--   Lorsque des attributs de style CSS coexistent avec un attribut standard dans une même balise, la propriété CSS est prioritaire. Par exemple, si votre texte est  **\<style de p = « d’alignement du texte : droite « aligner = « left » >**, seul l’attribut Text-Align sera appliqué et le texte sera aligné à droite.  
+-   Lorsque des attributs de style CSS coexistent avec un attribut standard dans une même balise, la propriété CSS est prioritaire. Par exemple, si votre texte est **\<p style="text-align: right" align="left">**, seul l’attribut text-align est appliqué, et le texte est aligné à droite.  
   
--   Dans le cadre des styles CSS et des attributs, lorsqu'une propriété est spécifiée à plusieurs reprises, seule la dernière instance spécifiée est prise en compte et appliquée. Par exemple, si votre texte est  **\<p aligne = « left » align = « right » >**, le texte sera aligné à droite.  
+-   Dans le cadre des styles CSS et des attributs, lorsqu'une propriété est spécifiée à plusieurs reprises, seule la dernière instance spécifiée est prise en compte et appliquée. Par exemple, si votre texte est **\<p align="left" align="right"**, il est aligné à droite.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rendu au format HTML &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   
-

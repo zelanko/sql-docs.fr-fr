@@ -1,27 +1,25 @@
 ---
-title: "Didacticiel : Ajout d’un indicateur de performance clé à votre rapport (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : ajout d’un indicateur de performance clé à un rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 0ba9911d41a851ed51150d83e96b61c2e7ec2c2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6ff993552c5c5b8a3e48c672a29f6567107f2331
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
@@ -59,7 +57,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -163,7 +161,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 
 3. Appuyez sur la touche Ctrl, puis sélectionnez les quatre cellules contenant [Sum(Sales)].
 
-4. Sur le **accueil** onglet > **nombre** > **devise**. Les cellules changent pour afficher le format de devise.
+4. Sous l’onglet **Accueil** > **Nombre** > **Devise**. Les cellules changent pour afficher le format de devise.
 
    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [$12,345.00]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.
     
@@ -173,7 +171,7 @@ Pour chaque produit vendu à une date spécifique, le tableau affiche le nom du 
 
 6. Cliquez sur la cellule qui contient [SalesDate].
 
-6. Dans le **nombre** groupe > **Date**.
+6. Dans le groupe **Nombre** > **Date**.
 
    La cellule affiche la date d'exemple [1/31/2000]. 
 
@@ -213,13 +211,13 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
   
 1.  Rebasculez en mode Conception.  
   
-2.  Dans la table, cliquez sur la poignée de colonne pour la colonne Sales > **insérer une colonne** > **droite**. Une nouvelle colonne est ajoutée au tableau.  
+2.  Dans le tableau, cliquez avec le bouton droit sur la poignée de la colonne Sales > **Insérer une colonne** > **Droite**. Une nouvelle colonne est ajoutée au tableau.  
 
     ![report-builder-kpi-insert-column](../reporting-services/media/report-builder-kpi-insert-column.png)
   
 3.  Tapez **Linear KPI** dans l’en-tête de colonne.  
   
-4.  Sur le **insérer** onglet > **des visualisations de données** > **jauge**, puis cliquez sur l’aire de conception en dehors du tableau.   
+4.  Sous l’onglet **Insérer** > **Visualisations des données** > **Jauge**, puis cliquez sur l’aire de conception située en dehors du tableau.   
   
 5.  Dans la boîte de dialogue **Sélectionner le type de jauge** , sélectionnez le premier type de jauge linéaire, **Horizontal**.  
   
@@ -235,13 +233,13 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
    
 9. Dans le volet **Données de la jauge** , cliquez sur la flèche en regard **LinearPointer1** > **Propriétés du pointeur**.  
   
-10. Dans le **propriétés du pointeur linéaire** boîte de dialogue > **Options du pointeur** onglet > **Type pointeur**, assurez-vous que **barre** est sélectionnée. 
+10. Dans la boîte de dialogue **Propriétés du pointeur linéaire** > onglet **Options du pointeur** > **Type de pointeur**, vérifiez que **Barre** est sélectionné. 
  
 11. Cliquez sur **OK**.  
   
 12. Cliquez avec le bouton droit sur l’échelle de la jauge, puis cliquez sur **Propriétés de l’échelle**.  
   
-13. Dans le **des propriétés de l’échelle linéaire** boîte de dialogue > **général** onglet, définissez **maximale** à 25000.  
+13. Dans la boîte de dialogue **Propriétés de l’échelle linéaire** > onglet **Général**, définissez **Maximum** sur 25000.  
 
     > [!NOTE]  
     > Au lieu d’une constante comme 25000, vous pouvez utiliser une expression pour calculer dynamiquement la valeur de l’option **Maximum** . L'expression utilise alors la fonctionnalité d'agrégation et est semblable à l'expression `=Max(Sum(Fields!Sales.value), "Tablix1")`.  
@@ -262,19 +260,19 @@ Une jauge représente une valeur unique dans un dataset. Ce didacticiel utilise 
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
 ## <a name="Indicator"></a>5. Afficher un indicateur de performance clé à l'aide d'un indicateur  
-Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un coup d'œil des valeurs de données. En raison de leur taille et de leur simplicité, les indicateurs sont souvent utilisés dans les tableaux et les matrices. Pour plus d’informations, consultez [indicateurs &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un coup d'œil des valeurs de données. En raison de leur taille et de leur simplicité, les indicateurs sont souvent utilisés dans les tableaux et les matrices. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>Pour afficher l'état présent d'un KPI à l'aide d'un indicateur  
   
 1.  Basculez en mode Conception.  
   
-2.  Dans la table, cliquez sur la poignée de colonne pour la colonne d’indicateur de performance clé linéaire que vous avez ajoutée dans la dernière procédure > **insérer une colonne** > **droite**. Une nouvelle colonne est ajoutée au tableau.  
+2.  Dans le tableau, cliquez avec le bouton droit sur la poignée de la colonne Linear KPI que vous avez ajoutée au cours de la dernière procédure > **Insérer une colonne** > **Droite**. Une nouvelle colonne est ajoutée au tableau.  
   
 3.  Tapez **Stoplight KPI** dans l’en-tête de colonne.  
   
 4.  Cliquez sur la cellule qui contient le sous-total de la sous-catégorie, en regard de la jauge linéaire que vous avez ajoutée au cours de la dernière procédure.  
   
-5.  Sur le **insérer** onglet > **des visualisations de données** > Double-cliquez sur **indicateur.**  
+5.  Sous l’onglet **Insérer** > **Visualisations des données** > double-cliquez sur **Indicateur**.  
   
 6.  Dans la boîte de dialogue **Sélectionner un type d’indicateur** , sous **Formes**, sélectionnez le premier type de forme, **3 Indicateurs (sans bordure)**.  
   
@@ -352,5 +350,4 @@ Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à
 * [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)
 * [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

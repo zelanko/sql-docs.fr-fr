@@ -1,16 +1,14 @@
 ---
 title: "Concepts liés à Replication Management Objects | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - Replication Management Objects
 - programming [SQL Server replication], RMO
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 714dbb2c15192b10310f6acd21c592acefdba019
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e940ba8880aa2d1c4e4677c779b6984b2e6d4dde
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +185,10 @@ ms.lasthandoff: 08/03/2017
   
 > [!IMPORTANT]  
 >  Bien que la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> prenne en charge la déclaration de transactions explicites lors de la définition des propriétés, ces transactions peuvent interférer avec les transactions de réplication internes et produire des résultats inattendus. Par conséquent, elles ne doivent pas être utilisées avec RMO.  
-  
+
+### <a name="enabling-tls-12-support-for-rmo-components"></a>Activation de la prise en charge de TLS 1.2 pour les composants RMO 
+ Vous pouvez activer la prise en charge de TLS 1.2 pour les composants RMO sur Windows 2012 et versions antérieures en installant la mise à jour [KB 3140245](http://support.microsoft.com/help/3140245) et en créant des clés de Registre, comme indiqué dans l’article. Sur Windows 2012 R2 et versions ultérieures, seules doivent être créées les clés de Registre telles qu’indiquées dans l’article ci-dessus.
+ 
 ## <a name="example"></a>Exemple  
  Cet exemple illustre la mise en cache des modifications de propriété. Les modifications apportées aux attributs d'une publication transactionnelle sont mises en cache tant qu'elles n'ont pas été envoyées explicitement au serveur.  
   

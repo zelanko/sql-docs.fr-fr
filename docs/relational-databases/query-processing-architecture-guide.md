@@ -1,32 +1,33 @@
 ---
 title: "Guide d’architecture de traitement des requêtes | Microsoft Docs"
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c129951edea28bc36c2151d8b20d8502088653e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] traite les requêtes sur diverses architectures de stockage des données, telles que des tables locales, des tables partitionnées et des tables distribuées sur plusieurs serveurs. Les rubriques suivantes expliquent comment [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite les requêtes et optimise leur réutilisation grâce à la mise en cache du plan d’exécution.
 
@@ -38,9 +39,11 @@ Le traitement d'une instruction SQL unique est le cas le plus simple d'exécutio
 
 Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de la requête, parfois appelé plan de requête ou simplement plan. Le contenu d'un plan de requête est détaillé plus loin dans cette rubrique.
 
-Les entrées et les sorties de l’optimiseur de requête pendant l’optimisation d’une instruction `SELECT` unique sont illustrées dans le diagramme suivant : ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+Les entrées et les sorties de l’optimiseur de requête pendant l’optimisation d’une instruction `SELECT` unique sont illustrées dans le diagramme suivant :
 
-Une instruction `SELECT` ne définit que :  
+![query_processor_io](../relational-databases/media/query-processor-io.gif)
+
+Une instruction `SELECT` ne définit que :  
 * le format du jeu de résultats. Il est principalement spécifié dans la liste de sélection. Toutefois, d’autres clauses telles que `ORDER BY` et `GROUP BY` influencent également la syntaxe finale du jeu de résultats.
 * les tables contenant les données source. Ceci est spécifié dans la clause `FROM` .
 * la manière dont les tables sont reliées de façon logique pour les besoins de l’instruction `SELECT` . Elle est définie dans les spécifications de jointure, qui peuvent être présentes dans la clause `WHERE` ou dans une clause `ON` à la suite de `FROM`.
@@ -619,7 +622,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
   Chaque requête ou opération d’index nécessite un certain nombre de threads de travail. Pour être exécuté, un plan parallèle nécessite plus de threads de travail qu’un plan série, le nombre de threads de travail nécessaires allant de pair avec le degré de parallélisme. Quand les threads de travail disponibles sont insuffisants pour un certain degré de parallélisme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] diminue automatiquement le degré de parallélisme ou abandonne complètement le plan parallèle dans le contexte de charge de travail spécifié. Ensuite, il exécute le plan série (un thread de travail). 
 
 3. Le type de requête ou d'opération d'index exécutée.  
-  Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). Bien que ce ne soit pas recommandé, les utilisateurs peuvent modifier la valeur par défaut de 5 à l’aide de la procédure stockée [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). 
+  Les requêtes qui utilisent fortement les cycles microprocesseur et les opérations d'index qui créent ou reconstruisent un index, ou qui suppriment un index cluster, sont les candidates idéales pour un plan parallèle. Par exemple, les jointures de grandes tables, les agrégations importantes et le tri d'ensembles de résultats volumineux s'y prêtent bien. Pour les requêtes simples, typiques des applications de traitement de transactions, il s'avère que la coordination supplémentaire nécessaire à l'exécution d'une requête en parallèle n'est pas rentabilisée par l'augmentation potentielle des performances. Pour faire la distinction entre les requêtes qui tirent profit du parallélisme et les autres, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] compare le coût estimé de l’exécution de la requête ou de l’opération d’index à la valeur [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md). L’utilisateur peut changer la valeur par défaut (5) à l’aide de [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) si un test approprié a révélé qu’une valeur différente est mieux adaptée pour la charge de travail en cours d’exécution. 
 
 4. Le nombre de lignes à traiter.  
   Si l'optimiseur de requête détermine que le nombre de lignes est trop faible, il n'introduit pas les opérateurs d'échange qui servent à distribuer les lignes. Par conséquent, ces opérateurs sont exécutés en série. L'exécution des opérateurs dans un plan série permet d'éviter que les coûts de démarrage, de distribution et de coordination dépassent les bénéfices d'une exécution en parallèle.
@@ -716,9 +719,9 @@ Voici un plan d'exécution en parallèle possible, généré pour la requête il
          ([tpcd1G].[dbo].[LINEITEM].[L_ORDER_DATES_IDX]), ORDERED)
 ```
 
-![parallel_plan](../relational-databases/media/parallel-plan.gif) Plan de requête avec DOP 4 qui implique une jointure à deux tables
+L’illustration ci-après montre un plan de requête exécuté avec un degré de parallélisme de 4 et comprenant une jointure entre deux tables.
 
-L’illustration montre un plan d’optimiseur de requête exécuté avec un degré de parallélisme de 4 et comprenant une jointure entre deux tables.
+![plan en parallèle](../relational-databases/media/parallel-plan.gif)
 
 Le plan en parallèle comprend trois opérateurs de parallélisme. L’opérateur Index Seek de l’index `o_datkey_ptr` et l’opérateur Index Scan de l’index `l_order_dates_idx` sont exécutés en parallèle, ce qui produit plusieurs flux exclusifs. Cela peut être déterminé à partir des opérateurs Parallelism les plus proches des opérateurs Index Scan et Index Seek, respectivement. Dans les deux cas, le type d'échange est repartitionné. En d'autres termes, les données sont tout simplement distribuées aux flux en produisant le même nombre de flux en sortie qu'en entrée. Ce nombre de flux est égal au degré de parallélisme.
 
@@ -727,6 +730,8 @@ L’opérateur de parallélisme qui se trouve au-dessus de l’opérateur `L_ORD
 L’opérateur de parallélisme qui se trouve au-dessus de l’opérateur Index Seek repartitionne ses flux d’entrée en utilisant la valeur de `O_ORDERKEY`. Étant donné que son entrée n’est pas triée dans les valeurs de la colonne `O_ORDERKEY` et qu’il s’agit de la colonne de jointure de l’opérateur `Merge Join`, l’opérateur Sort qui se trouve entre les opérateurs de parallélisme et Merge Join s’assure que l’entrée est triée pour l’opérateur `Merge Join` dans les colonnes de jointure. L’opérateur `Sort`, tout comme l’opérateur Merge Join, est exécuté en parallèle.
 
 Le premier opérateur de parallélisme rassemble les résultats de plusieurs flux en un seul flux. Les agrégations partielles effectuées par l’opérateur Stream Aggregate situé sous l’opérateur de parallélisme sont ensuite accumulées dans une seule valeur `SUM` pour chaque valeur différente de `O_ORDERPRIORITY` dans l’opérateur Stream Aggregate qui se trouve au-dessus de l’opérateur de parallélisme. Étant donné que le plan comporte deux segments d’échange avec un degré de parallélisme de 4, il utilise huit threads de travail.
+
+Pour plus d’informations sur les opérateurs utilisés dans cet exemple, consultez le [Guide de référence des opérateurs Showplan logiques et physiques](../relational-databases/showplan-logical-and-physical-operators-reference.md).
 
 ### <a name="parallel-index-operations"></a>Opérations d’index parallèles
 
@@ -1040,4 +1045,3 @@ GO
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)
-

@@ -1,5 +1,5 @@
 ---
-title: "Ajouter une Image d’arrière-plan (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter une image d’arrière-plan (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 47029b9b4ed3508f9c937cac9c585e5c296e9ef4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 35b41f21f12487ef0ff32daa999ce4e4075c4180
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Ajouter une image d'arrière-plan (Générateur de rapports et SSRS)
   Vous pouvez ajouter une image d'arrière-plan à un élément de rapport, par exemple un rectangle, une zone de texte, une liste, une matrice, un tableau et certaines parties d'un graphique, ou à une section de rapport, par exemple l'en-tête de page, le pied de page ou le corps du rapport. Vous pouvez définir une image d’arrière-plan pour tout élément sélectionné sur l’aire de conception du rapport qui affiche **BackgroundImage** dans le volet Propriétés. Comme les autres images, l'image d'arrière-plan peut être une URL vers une image sur le serveur de rapports, une image d'un champ de dataset ou une image incorporée dans la définition de rapport. Pour utiliser une image incorporée dans le rapport, vous devez d'abord ajouter l'image à la définition de rapport avant d'ajouter l'image à l'aire de conception.  
@@ -55,13 +55,13 @@ ms.lasthandoff: 08/09/2017
   
          Affectez **External** à **Source**.  
   
-         Affectez le chemin valide d’une image à **Value** . Il peut s'agir d'un serveur de rapports en mode natif ou en mode intégré SharePoint, ou il peut s'agir d'un autre site Web. Pour plus d’informations, consultez [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
+         Affectez le chemin valide d’une image à **Value** . Il peut s'agir d'un serveur de rapports en mode natif ou en mode intégré SharePoint, ou il peut s'agir d'un autre site Web. Pour plus d’informations, consultez [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md).  
   
-    -   Pour une image contenue dans un champ de la base de données à laquelle l'élément de rapport est connecté :  
+    -   Pour une image contenue dans un champ de la base de données à laquelle l'élément de rapport est connecté :  
   
          Affectez **Database** à **Source**.  
   
-         Affectez le nom d’un champ dans le dataset du rapport à **Value**. Pour plus d’informations, consultez [Ajouter une image liée à des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
+         Affectez le nom d’un champ dans le dataset du rapport à **Value** . Pour plus d’informations, consultez [Ajouter une image liée à des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md).  
   
          Pour **MIMEType**, ou le format de fichier, sélectionnez le type MIME approprié pour l’image, par exemple .bmp.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
          Pour les images d’arrière-plan d’un graphique, **BackgroundRepeat** peut avoir la valeur **Default**, **Repeat**, **Fit** **Clip**, mais pas **RepeatX** ni **RepeatY**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Images &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Boîte de dialogue des propriétés image, général &#40; Le Générateur de rapports et SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+ [Images &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés de l’image, Général &#40;Générateur de rapports et SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

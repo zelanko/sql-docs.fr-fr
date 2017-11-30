@@ -1,10 +1,13 @@
 ---
 title: "Configuration du stockage des tables optimisées en mémoire | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e8375225727d88b2decb8c3256876f78f3f2872f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e72a08f08a3d6ad49c429739108e0e862d0e507
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuration du stockage des tables mémoire optimisées
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)] Vous devez configurer des opérations d’entrée/sortie par seconde (IOPS) et la capacité de stockage.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous devez configurer des opérations d’entrée/sortie par seconde (IOPS) et la capacité de stockage.  
   
 ## <a name="storage-capacity"></a>Capacité de stockage  
  Utilisez les informations contenues dans [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) pour estimer la taille en mémoire des tables durables optimisées en mémoire de la base de données. Les index n'étant pas conservés pour les tables mémoire optimisées, n'incluez pas la taille des index. Une fois que vous avez déterminé la taille, vous devez fournir l'espace disque correspondant à quatre fois la taille des tables durables en mémoire.  
@@ -35,14 +38,14 @@ ms.lasthandoff: 11/09/2017
   
      - Par exemple, si les tables à mémoire optimisée génèrent 500 Mo/s d’activité soutenue dans le journal des transactions, le stockage pour ces tables doit prendre en charge 1,5 Go/s d’IOPS. La nécessité de prendre en charge le triple du débit soutenu du journal des transactions s’explique par le fait que les paires de fichiers de données et delta sont d’abord écrites avec les données initiales, puis doivent être lues/réécrites dans le cadre d’une opération de fusion.  
   
-- Le temps de récupération des tables à mémoire optimisée est un autre facteur entrant en compte dans l’estimation des IOPS pour le stockage. Les données des tables durables doivent être lues en mémoire avant qu'une base de données puisse être mise à la disposition des applications. Généralement, le chargement de données dans les tables à mémoire optimisée peut être effectué à la vitesse des opérations d’E/S par seconde (IOPS). Si le stockage total des tables à mémoire optimisée durables est de 60 Go et que vous souhaitez pouvoir charger ces données en une minute, les IOPS du stockage doivent être définies à 1 Go/s.  
+- Le temps de récupération des tables optimisées en mémoire est un autre facteur entrant en compte dans l’estimation des IOPS pour le stockage. Les données des tables durables doivent être lues en mémoire avant qu'une base de données puisse être mise à la disposition des applications. Généralement, le chargement de données dans les tables mémoire optimisées peut être effectué à la vitesse des opérations d’E/S par seconde (IOPS). Si le stockage total des tables durables, mémoire optimisées, s'élève à 60 Go et que vous souhaitez pouvoir charger ces données en une minute, les IOPS du stockage doivent être définies à 1 Go/sec.  
   
 -   Les fichiers de point de contrôle sont généralement distribués uniformément entre tous les conteneurs, si l’espace disponible le permet. Avec SQL Server 2014, vous devez provisionner un nombre impair de conteneurs pour obtenir une distribution uniforme ; à partir de la version 2016, les nombres de conteneurs impairs comme pairs assurent une distribution uniforme.
   
 ## <a name="encryption"></a>Chiffrement  
- Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le stockage des tables à mémoire optimisée est chiffré dans le cadre de l’activation de TDE (Transparent Data Encryption) sur la base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les fichiers de point de contrôle ne sont pas chiffrés, même si TDE est activé sur la base de données.
+ Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le stockage des tables optimisées en mémoire est chiffré dans le cadre de l’activation de TDE (Transparent Data Encryption) sur la base de données. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md). Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les fichiers de point de contrôle ne sont pas chiffrés, même si TDE est activé sur la base de données.
   
 ## <a name="see-also"></a>Voir aussi  
- [Création et gestion du stockage des objets à mémoire optimisée](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

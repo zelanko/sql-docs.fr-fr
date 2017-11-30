@@ -1,5 +1,5 @@
 ---
-title: "Spécifiez les informations d’identification et les informations de connexion pour les Sources de données de rapports | Documents Microsoft"
+title: "Spécifier des informations d’identification et de connexion pour les sources de données de rapport | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: b16e0b6c380cfe47f2bc82ea0328d9386ada294c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c1c30915d5b9e78b9e8c33b33a2c66b91f47512
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
   Un serveur de rapports utilise des informations d'identification pour se connecter à des sources de données externes qui fournissent du contenu aux rapports ou des informations de destinataire aux abonnements pilotés par les données. Vous pouvez spécifier des informations d'identification qui utilisent l'authentification Windows, l'authentification de base de données, aucune authentification ou une authentification personnalisée. Lors de l'envoi d'une demande de connexion sur le réseau, le serveur de rapports emprunte l'identité d'un compte d'utilisateur ou du compte d'exécution sans assistance. Pour plus d’informations sur le contexte de sécurité sous lequel une demande de connexion est émise, consultez [Configuration d’une source de données et connexions réseau](#DataSourceConfigurationConnections) plus loin dans cette rubrique.  
@@ -51,21 +51,21 @@ ms.lasthandoff: 08/09/2017
 ## <a name="when-credentials-are-used-in-report-builder"></a>Lorsque les informations d’identification sont utilisées dans le Générateur de rapports  
  Dans le Générateur de rapports, les informations d'identification sont souvent utilisées lorsque vous vous connectez à un serveur de rapports ou pour des tâches liées aux données, par exemple la création d'une source de données incorporée, l'exécution d'une requête de dataset ou l'affichage de l'aperçu d'un rapport. Les informations d'identification ne sont pas enregistrées dans le rapport. Elles sont gérées séparément sur le serveur de rapports ou sur le client local. La liste suivante décrit les types d'informations d'identification que vous devrez peut-être fournir, leur emplacement et leur utilisation :  
   
--   Informations d’identification de serveur rapports que vous entrez dans la [boîte de dialogue Connexion de Services de création de rapports &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   Informations d’identification du serveur de rapports que vous entrez dans la [boîte de dialogue Ouverture de session Reporting Services &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
   
      Lorsque vous enregistrez, publiez ou naviguez vers un serveur de rapports ou un site SharePoint pour la première fois, vous devez éventuellement entrer vos informations d'identification. Les informations d'identification que vous entrez sont utilisées jusqu'à la fin de la session du Générateur de rapports. Si vous choisissez d'enregistrer les informations d'identification, elles sont stockées de manière sécurisée avec vos paramètres utilisateur sur votre ordinateur. Dans les sessions ultérieures du Générateur de rapports, les informations d'identification enregistrées sont utilisées pour la connexion au même serveur de rapports ou site SharePoint. L'administrateur du serveur de rapports ou l'administrateur SharePoint spécifie le type des informations d'identification à utiliser.  
   
--   Informations d’identification que vous entrez dans la source de données le [boîte de dialogue de propriétés de Source de données, les informations d’identification &#40; Le Générateur de rapports &#41; ](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) page pour une source de données incorporée.  
+-   Informations d’identification de la source de données que vous entrez dans la [boîte de dialogue Propriétés de la source de données, Informations d’identification &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) pour une source de données incorporée.  
   
      Ces informations d'identification sont utilisées par le serveur de rapports pour établir une connexion de données à la source de données externe. Pour certains types de sources de données, les informations d'identification peuvent être stockées de manière sécurisée sur le serveur de rapports. Ces informations d'identification permettent à d'autres utilisateurs d'exécuter le rapport sans fournir d'informations d'identification pour la connexion de données sous-jacente.  
   
--   Informations d’identification que vous entrez dans la source de données le [boîte dialogue informations d’identification de Source de données entrez &#40; Le Générateur de rapports &#41; ](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) lorsque vous exécutez une requête de dataset, actualiser des champs de dataset ou afficher un aperçu du rapport.  
+-   Informations d’identification de la source de données que vous entrez dans la [Boîte de dialogue Entrez les informations d’identification pour la source de données &#40;Générateur de rapports&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) quand vous exécutez une requête de dataset, actualisez des champs de dataset ou affichez un aperçu du rapport.  
   
      Ces informations d'identification sont utilisées pour établir une connexion de données entre le Générateur de rapports et la source de données externe, ou pour afficher l'aperçu d'un rapport configuré pour demander la saisie des informations d'identification. Les informations d'identification que vous entrez dans cette boîte de dialogue ne sont pas stockées sur le serveur de rapports et ne sont pas accessibles à d'autres utilisateurs. Le Générateur de rapports met en cache les informations d'identification pendant la session de modification du rapport afin que vous n'ayez pas besoin de les entrer chaque fois que vous exécutez la requête ou que vous affichez l'aperçu du rapport.  
   
      Pour les sources de données partagées, utilisez l'option **Enregistrer mon mot de passe** afin d'enregistrer les informations d'identification localement avec vos paramètres utilisateur sur votre ordinateur. Le Générateur de rapports utilise les informations d'identification enregistrées chaque fois qu'une connexion est établie vers la source de données externe correspondante.  
   
- Pour plus d’informations, consultez [boîte de dialogue de propriétés de Source de données, général &#40; Le Générateur de rapports &#41; ](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) et [aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ Pour plus d’informations, consultez [Boîte de dialogue Propriétés de la source de données, Général &#40;Générateur de rapports&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) et [Aperçu des rapports dans le Générateur de rapports](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="using-remote-data-sources"></a>Utilisation de sources de données distantes  
  Si le rapport récupère des données à partir d'un serveur de base de données distant, vérifiez les éléments suivants :  
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Le rapport est un sous-rapport qui utilise les informations d'identification du rapport parent.  
   
- Dans ces conditions, le serveur de rapports se connecte à une source de données distante à l'aide du compte d'exécution sans assistance qui doit être défini à l'avance. Étant donné que le serveur de rapports ne se connecte pas à un serveur distant en utilisant ses informations d'identification de service, vous devez spécifier un compte que le serveur de rapports peut utiliser pour établir la connexion. Pour plus d’informations sur la création de ce compte, consultez [configurer le compte d’exécution sans assistance &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Dans ces conditions, le serveur de rapports se connecte à une source de données distante à l'aide du compte d'exécution sans assistance qui doit être défini à l'avance. Étant donné que le serveur de rapports ne se connecte pas à un serveur distant en utilisant ses informations d'identification de service, vous devez spécifier un compte que le serveur de rapports peut utiliser pour établir la connexion. Pour plus d’informations sur la création de ce compte, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="user-name-and-password-login"></a>Connexion à l'aide d'un nom d'utilisateur et d'un mot de passe  
  Lorsque vous sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**, un nom d'utilisateur et un mot de passe doivent être fournis pour permettre l'accès à la source de données. Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les informations d'identification peuvent correspondre à une connexion de base de données. Les informations d'identification sont passées à la source de données pour authentification.  
@@ -169,9 +169,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Gérer les Sources de données de rapport](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Le Gestionnaire de rapports &#40; En Mode natif de SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Créer, supprimer ou modifier une Source de données partagée &#40; Le Gestionnaire de rapports &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurer les propriétés de Source de données pour un rapport &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

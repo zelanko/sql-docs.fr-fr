@@ -1,5 +1,5 @@
 ---
-title: "Propriété InstanceName (WMI MSReportServer_Instance) | Documents Microsoft"
+title: "InstanceName, propriété (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- InstanceName Property (WMI MSReportServer_Instance)
-apilocation:
-- reportingservices.mof
+apiname: InstanceName Property (WMI MSReportServer_Instance)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- InstanceName property
+helpviewer_keywords: InstanceName property
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c118660a88e43a98a97986f4d874169886a43066
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: efa99b21039349748eb144f590e5e65d9f03770d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverinstance-properties---instancename"></a>Propriétés MSReportServer_Instance - InstanceName
   Retourne le nom d'une instance du serveur de rapports sur un ordinateur spécifique. En lecture seule.  
@@ -56,4 +52,3 @@ public string InstanceName;
  [Membres MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   
-

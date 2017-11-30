@@ -1,30 +1,28 @@
 ---
-title: "Créer une base de serveur de rapports en Mode natif (Gestionnaire de Configuration de SSRS) | Documents Microsoft"
+title: "Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>Créer une base de données du serveur de rapports en mode natif
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -87,7 +85,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 4.  Connectez-vous à l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous allez utiliser pour créer et héberger la base de données du serveur de rapports :  
   
-    1.  Tapez l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que vous souhaitez utiliser. L'Assistant affiche un [!INCLUDE[ssDE](../../includes/ssde-md.md)] local qui s'exécute comme instance par défaut en cas de disponibilité. Sinon, vous devez entrer le serveur et l'instance à utiliser. Les instances nommées sont spécifiées dans ce format : \<nom_serveur >\\< nom_instance\>.  
+    1.  Tapez l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que vous souhaitez utiliser. L'Assistant affiche un [!INCLUDE[ssDE](../../includes/ssde-md.md)] local qui s'exécute comme instance par défaut en cas de disponibilité. Sinon, vous devez entrer le serveur et l'instance à utiliser. Les instances nommées sont spécifiées dans le format suivant : \<nom_ serveur>\\<nom_instance\>.  
   
     2.  Entrez les informations d’identification utilisées pour une connexion unique au [!INCLUDE[ssDE](../../includes/ssde-md.md)] en vue de créer les bases de données du serveur de rapports. Pour plus d'informations sur la façon dont ces informations d'identification sont utilisées, consultez [Avant de commencer](#rsdbrequirements) dans cette rubrique.  
   
@@ -155,8 +153,8 @@ Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrs
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer une connexion de base de données de serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Gérer un serveur de rapports Reporting Services en Mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

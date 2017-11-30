@@ -1,28 +1,25 @@
 ---
-title: URL dans les fichiers de Configuration (Gestionnaire de Configuration de SSRS) | Documents Microsoft
+title: URL des fichiers de configuration (Gestionnaire de configuration de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- URL configuration [Reporting Services]
+helpviewer_keywords: URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c3add6da899bdf6d62134d3df15db35aa5b1b569
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 44500883ca00cffafd720c7e66fa59f1ddf9409a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL des fichiers de configuration (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les paramètres d’application dans un fichier RSReportServer.config. Ce fichier contient des paramètres de configuration pour les URL et pour les réservations d'URL. Ces paramètres de configuration ont des règles de modification et des objectifs très différents. Si vous êtes habitué à la modification de fichiers de configuration pour régler un déploiement, cette rubrique peut vous aider à comprendre comment chaque paramètre URL est utilisé.  
@@ -35,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Pour afficher la description de chaque élément dans la section **URLReservations** , consultez [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Pour plus d’informations sur la syntaxe uniquement de la **UrlString** élément, consultez [syntaxe de réservation d’URL &#40; Gestionnaire de Configuration de SSRS &#41; ](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
+-   Pour plus d’informations sur la syntaxe de l’élément **UrlString**, consultez [Syntaxe de réservation d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 -   Pour obtenir des instructions sur la configuration des URL pour l’accès aux applications, consultez [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
@@ -60,10 +57,9 @@ ms.lasthandoff: 08/09/2017
   
 |Paramètre|Utilisation|Description|  
 |-------------|-----------|-----------------|  
-|**ReportServerUrl**|Ce paramètre est facultatif. Cet élément n'est pas inclus dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez vous-même.<br /><br /> Définissez cet élément uniquement si vous configurez l'un des scénarios suivants :<br /><br /> Le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] fournit un accès web frontal à un service Web Report Server qui s’exécute sur un autre ordinateur ou sur une instance différente du même ordinateur.<br /><br /> Quand vous avez plusieurs URL vers un serveur de rapports et que vous souhaitez que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] utilise une URL spécifique.<br /><br /> Vous avez une URL du serveur de rapports spécifique que vous souhaitez voir utilisée par toutes les connexions du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .<br /><br /> Par exemple, vous pouvez activer l’accès du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] pour tous les ordinateurs du réseau, tout en exigeant que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se connecte au serveur de rapports par le biais d’une connexion locale. Dans ce cas, vous pouvez configurer **ReportServerUrl** à «`http://localhost/reportserver`».|Cette valeur spécifie l'URL du service Web Report Server. Cette valeur est lue par l’application [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] au démarrage. Si cette valeur est définie, le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se connecte au serveur de rapports spécifié dans l’URL.<br /><br /> Par défaut, le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] fournit un accès web frontal à un service Web Report Server qui s’exécute sur la même instance du serveur de rapports que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Toutefois, si vous souhaitez utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] avec un service Web Report Server qui fait partie d’une autre instance ou qui s’exécute sur une instance d’un autre ordinateur, vous pouvez définir cette URL pour faire en sorte que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se connecte au service Web Report Server externe.<br /><br /> Si un certificat SSL (Secure Sockets Layer) est installé sur le serveur de rapports auquel vous êtes connecté, la valeur de l’élément **ReportServerUrl** doit être le nom du serveur inscrit pour ce certificat. Si l’erreur « La connexion sous-jacente a été fermée. Impossible d’établir une relation de confiance pour le canal sécurisé SSL/TLS » s’affiche, affectez à l’élément **ReportServerUrl** le nom de domaine complet du serveur pour lequel le certificat SSL a été émis. Par exemple, si le certificat est inscrit pour **https://adventure-works.com.onlinesales**, l’URL du serveur de rapports sera **https://adventure-works.com.onlinesales/reportserver**.|  
-|**ReportServerExternalUrl**|Ce paramètre est facultatif. Cet élément n'est pas inclus dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez vous-même.<br /><br /> Définissez cet élément uniquement si vous utilisez les composants WebPart de SharePoint 2.0 et que vous souhaitez que les utilisateurs soient en mesure d'extraire un rapport et de l'ouvrir dans une nouvelle fenêtre de navigateur.<br /><br /> Ajouter \< **ReportServerExternalUrl**> sous la \< **ReportServerUrl**> élément, puis affectez à un serveur de rapports complet nom qui se résout en une instance de serveur de rapports lors de l’accès dans une fenêtre de navigateur distincte. Ne supprimez pas \< **ReportServerUrl**>.<br /><br /> L'exemple suivant illustre la syntaxe :<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|Cette valeur est utilisée par les composants WebPart de SharePoint 2.0.<br /><br /> Dans les versions précédentes, il était recommandé que vous définissiez cette valeur pour déployer le Générateur de rapport sur un serveur de rapports Internet. Il s'agit d'un scénario de déploiement non testé. Si vous utilisiez ce paramètre par le passé pour gérer l'accès Internet au Générateur de rapports, vous devez prévoir une autre stratégie.|  
+|**ReportServerUrl**|Ce paramètre est facultatif. Cet élément n'est pas inclus dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez vous-même.<br /><br /> Définissez cet élément uniquement si vous configurez l'un des scénarios suivants :<br /><br /> Le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] fournit un accès web frontal à un service Web Report Server qui s’exécute sur un autre ordinateur ou sur une instance différente du même ordinateur.<br /><br /> Quand vous avez plusieurs URL vers un serveur de rapports et que vous souhaitez que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] utilise une URL spécifique.<br /><br /> Vous avez une URL du serveur de rapports spécifique que vous souhaitez voir utilisée par toutes les connexions du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .<br /><br /> Par exemple, vous pouvez activer l’accès du [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] pour tous les ordinateurs du réseau, tout en exigeant que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se connecte au serveur de rapports par le biais d’une connexion locale. Dans ce cas, vous pouvez configurer **ReportServerUrl** avec la valeur « `http://localhost/reportserver` ».|Cette valeur spécifie l'URL du service Web Report Server. Cette valeur est lue par l’application [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] au démarrage. Si cette valeur est définie, le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se connecte au serveur de rapports spécifié dans l’URL.<br /><br /> Par défaut, le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] fournit un accès web frontal à un service Web Report Server qui s’exécute sur la même instance du serveur de rapports que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Toutefois, si vous souhaitez utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] avec un service Web Report Server qui fait partie d’une autre instance ou qui s’exécute sur une instance d’un autre ordinateur, vous pouvez définir cette URL pour faire en sorte que le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se connecte au service Web Report Server externe.<br /><br /> Si un certificat SSL (Secure Sockets Layer) est installé sur le serveur de rapports auquel vous êtes connecté, la valeur de l’élément **ReportServerUrl** doit être le nom du serveur inscrit pour ce certificat. Si l’erreur « La connexion sous-jacente a été fermée. Impossible d’établir une relation de confiance pour le canal sécurisé SSL/TLS » s’affiche, affectez à l’élément **ReportServerUrl** le nom de domaine complet du serveur pour lequel le certificat SSL a été émis. Par exemple, si le certificat est inscrit pour **https://adventure-works.com.onlinesales**, l’URL du serveur de rapports sera **https://adventure-works.com.onlinesales/reportserver**.|  
+|**ReportServerExternalUrl**|Ce paramètre est facultatif. Cet élément n'est pas inclus dans le fichier RSReportServer.config à moins que vous ne l'ajoutiez vous-même.<br /><br /> Définissez cet élément uniquement si vous utilisez les composants WebPart de SharePoint 2.0 et que vous souhaitez que les utilisateurs soient en mesure d'extraire un rapport et de l'ouvrir dans une nouvelle fenêtre de navigateur.<br /><br /> Ajoutez l’élément \<**ReportServerExternalUrl**> sous l’élément \<**ReportServerUrl**>, puis affectez-lui un nom de serveur de rapports complet qui se résout en une instance de serveur de rapports en cas d’accès dans une fenêtre de navigateur distincte. Ne supprimez pas \<**ReportServerUrl**>.<br /><br /> L'exemple suivant illustre la syntaxe :<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|Cette valeur est utilisée par les composants WebPart de SharePoint 2.0.<br /><br /> Dans les versions précédentes, il était recommandé que vous définissiez cette valeur pour déployer le Générateur de rapport sur un serveur de rapports Internet. Il s'agit d'un scénario de déploiement non testé. Si vous utilisiez ce paramètre par le passé pour gérer l'accès Internet au Générateur de rapports, vous devez prévoir une autre stratégie.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de Report Server &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une URL &#40; Gestionnaire de Configuration de SSRS &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)

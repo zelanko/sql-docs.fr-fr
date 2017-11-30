@@ -1,5 +1,5 @@
 ---
-title: "Créer une alerte de données dans le Concepteur d’alertes de données | Documents Microsoft"
+title: "Créer une alerte de données dans le Concepteur d’alertes de données | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,28 +11,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 54f1cd4f907de0cd3511f1aa25ed8d6e49e2b54b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 3cbf24497be6bc9716678645568850297158c20f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d'alertes
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
 
 Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'alertes de données. Après les avoir enregistrées, vous pouvez les rouvrir, les modifier, puis les enregistrer de nouveau dans le Concepteur d'alertes de données. Pour plus d’informations sur la modification des définitions d’alerte, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) et [Modifier une alerte de données dans le Concepteur d’alertes](../reporting-services/edit-a-data-alert-in-alert-designer.md).
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-## <a name="create-a-data-alert-definition"></a>Créer une définition d’alerte
+## <a name="create-a-data-alert-definition"></a>Créer une définition d’alerte de données
  
 1.  Localisez la bibliothèque SharePoint qui contient le rapport pour lequel vous souhaitez créer une définition d'alerte de données.  
   
@@ -47,7 +46,7 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      L’image suivante affiche le menu **Actions** .  
   
-     ![Ouvrez le Concepteur d’alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "ouvrir le concepteur alerte à partir de la bibliothèque SharePoint")  
+     ![Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint](../reporting-services/media/rs-openalertdesigneriw.gif "Ouvrir le Concepteur d’alertes à partir de la bibliothèque SharePoint")  
   
      Le Concepteur d'alertes de données s'ouvre et affiche les 100 premières lignes du premier flux de données que le rapport génère dans une table.  
   
@@ -62,7 +61,7 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      Si aucun flux de données n'est généré à partir du rapport, vous ne pouvez pas créer de définition d'alerte pour le rapport. La mise en page du rapport détermine le contenu de chaque flux de données. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
-5.  Éventuellement, dans la zone de texte **Nom de l’alerte**, modifiez le nom par défaut pour qu’il soit plus explicite.  
+5.  Éventuellement, dans la zone de texte **Nom de l’alerte** , modifiez le nom par défaut pour qu’il soit plus explicite.  
   
      Le nom par défaut de la définition d'alerte est le nom du rapport. Les noms des définitions d'alerte ne sont pas nécessairement uniques ; par conséquent, ils peuvent être difficiles à distinguer lorsque vous consulterez ultérieurement la liste de vos alertes dans le Gestionnaire des alertes de données. Il est recommandé d'utiliser des noms explicites et uniques pour vos définitions d'alerte.  
   
@@ -119,19 +118,18 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
      Si l’adresse e-mail de la personne qui a créé la définition d’alerte est disponible, elle est ajouté à la zone **Destinataire** .  
   
-20. Éventuellement, dans la zone de texte **Objet**, mettez à jour la ligne Objet du message d’alerte.  
+20. Éventuellement, dans la zone de texte **Objet** , mettez à jour la ligne Objet du message d’alerte.  
   
-     La valeur par défaut est de l’objet **d’alerte de données pour \<nom de l’alerte données >**.  
+     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>**.  
   
-21. Éventuellement, dans la zone de texte **Description**, tapez une description pour le message d’alerte.  
+21. Éventuellement, dans la zone de texte **Description** , tapez une description pour le message d’alerte.  
   
 22. Cliquez sur **Enregistrer**.  
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepteur d’alertes de données](../reporting-services/data-alert-designer.md)   
-[Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
+[Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertes de données Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

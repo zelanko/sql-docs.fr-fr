@@ -1,24 +1,22 @@
 ---
 title: "Importer et exporter des données dans SQL Server et Azure SQL Database | Microsoft Docs"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 9ab07b5c374b20ce815c16f5346969d3517bbc26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importer et exporter des données dans SQL Server et Azure SQL Database
 Plusieurs méthodes sont possibles pour importer et exporter des données dans SQL Server et Azure SQL Database. Vous pouvez notamment utiliser des instructions Transact-SQL, des outils en ligne de commande et des Assistants.
@@ -35,6 +33,7 @@ Vous pouvez importer et exporter des données avec l’utilitaire en ligne de co
 
 ### <a name="use-the-import-flat-file-wizard"></a>Utilisation de l’Assistant Importation d’un fichier plat
 Si vous n’avez pas besoin de toutes les options de configuration disponibles dans l’Assistant Importation et Exportation et d’autres outils, vous pouvez importer un fichier texte dans SQL Server à l’aide de l**’Assistant Importation de fichier plat** dans SQL Server Management Studio (SSMS). Pour plus d’informations, consultez les articles suivants :
+- [Assistant Importation d’un fichier plat dans SQL](import-flat-file-wizard.md)
 - [Nouveautés de SQL Server Management Studio 17.3 ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Présentation du nouvel Assistant Importation de fichier plat dans SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -65,4 +64,3 @@ Il existe des exemples et des considérations spécifiques relatifs à certains 
 
 ## <a name="next-steps"></a>Étapes suivantes
 Si vous ne savez pas comment démarrer une importation ou une exportation, utilisez l’Assistant Importation et Exportation SQL Server. Pour avoir une présentation générale, consultez [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
-

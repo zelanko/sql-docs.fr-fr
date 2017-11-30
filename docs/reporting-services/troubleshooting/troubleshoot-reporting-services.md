@@ -1,5 +1,5 @@
 ---
-title: "Dépannage de Reporting Services | Documents Microsoft"
+title: "Résoudre les problèmes liés à Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/25/2016
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 2604d4a97574fa0c8860c338b625a87f5a9d2b30
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="troubleshoot-reporting-services"></a>Dépannage de Reporting Services
+# <a name="troubleshoot-reporting-services"></a>Résoudre les problèmes liés à Reporting Services
   Les rubriques répertoriées dans cette section visent à identifier et à résoudre les problèmes liés à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
-![Petite icône de dossier du fichier](../../reporting-services/troubleshooting/media/filefolder-small.png)**résoudre les problèmes avec Reporting Services**   
+![Petite icône de dossier de fichiers](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Résoudre les problèmes rencontrés avec Reporting Services**  
 + [Résoudre les problèmes avec les rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -40,14 +39,13 @@ ms.lasthandoff: 09/27/2017
 
 +  [Résolution des problèmes liés à la publication ou à l’affichage d’un rapport sur un serveur de rapports en mode natif](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Résoudre les problèmes de serveur et les problèmes de connexion de base de données avec Reporting Server](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Résoudre les problèmes de serveur et de connexion à la base de données avec Reporting Server](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![Icône de dossier petit fichier](../../reporting-services/troubleshooting/media/filefolder-small.png)**erreur et référence des événements**   
+ ![Petite icône de dossier de fichiers](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Guide de référence des erreurs et des événements**  
  + [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Cause et résolution des erreurs Reporting Services](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
 
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Activer des événements de Reporting Services pour le journal des traces SharePoint &#40; ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
-
+ [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  

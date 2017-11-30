@@ -1,33 +1,30 @@
 ---
-title: "Utilisation des instantanés (portail web) | Documents Microsoft"
+title: "Utilisation des instantanés (portail web) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 2bca4e3089bde763669c4fe518f509fbe94cb6eb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7498112d3822d18976ea6482c6014ce7bc69435f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-snapshots-web-portal"></a>Utilisation des instantanés (portail web)
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
 
-Vous pouvez contrôler si les instantanés sont créés pour un rapport en sélectionnant le **points de suspension (...)**  d’un rapport, en sélectionnant **gérer** et en sélectionnant **mise en cache** ou **instantanés d’historique**.  
+Pour contrôler la création d’instantanés pour un rapport, sélectionnez les **points de suspension (...)** correspondant à un rapport, sélectionnez **Gérer**, puis sélectionnez **Mise en cache** ou **Instantanés d’historique**.  
   
 > [!NOTE]
 > Le service SQL Server Agent doit être démarré.  
@@ -82,7 +79,6 @@ Vous pouvez sélectionner cette option pour copier un instantané de rapport que
 
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Utilisation des rapports paginés](working-with-paginated-reports-web-portal.md)  
-[Travailler avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Utiliser des datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

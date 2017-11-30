@@ -1,30 +1,27 @@
 ---
 title: "OLTP en mémoire (optimisation en mémoire) | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 11/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 106
+caps.latest.revision: "106"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f327c7d1cd25c726cddab633351f1b7568f21276
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b377f0c359751a5c970ceef2e1d7fa6bc556e3d7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
  
  Notez que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] est la technologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettant d’améliorer les performances du traitement des transactions. Pour découvrir la technologie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui améliore les performances des requêtes de création de rapports et analytiques, consultez le [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- Plusieurs améliorations ont récemment été apportées à la fonction OLTP en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La surface d’exposition Transact-SQL a été augmentée pour simplifier la migration des applications de base de données. Les opérations ALTER sur les tables optimisées en mémoire et les procédures stockées compilées en mode natif sont désormais prises en charge afin de simplifier la gestion des applications. Pour obtenir des informations sur les nouvelles fonctionnalités de [!INCLUDE[hek_2](../../includes/hek-2-md.md)], consultez [Index columnstore - Nouveautés](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
+ Plusieurs améliorations ont récemment été apportées à la fonction OLTP en mémoire dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], ainsi que dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La surface d’exposition Transact-SQL a été augmentée pour simplifier la migration des applications de base de données. Les opérations ALTER sur les tables optimisées en mémoire et les procédures stockées compilées en mode natif sont désormais prises en charge afin de simplifier la gestion des applications. Pour obtenir des informations sur les nouvelles fonctionnalités de [!INCLUDE[hek_2](../../includes/hek-2-md.md)], consultez [Index columnstore - Nouveautés](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
   
 > [!NOTE]  
 >  **À votre tour d’essayer**  
@@ -95,4 +92,3 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
  [Fonctionnalités de base de données](../../relational-databases/database-features.md)  
   
   
-

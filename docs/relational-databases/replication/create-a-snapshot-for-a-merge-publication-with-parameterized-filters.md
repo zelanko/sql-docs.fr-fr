@@ -5,8 +5,7 @@ ms.date: 05/03/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - snapshots [SQL Server replication], parameterized filters and
 - filters [SQL Server replication], parameterized
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 975801baee969fa3afea20be96606a816083260c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cee285edf0f8d203afa43489fb3859d6e83fa356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
   Cette rubrique explique comment créer un instantané pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -46,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d'informations, voir [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
+-   Lors de la génération d'un instantané pour une publication de fusion à l'aide de filtres paramétrables, vous devez commencer par générer un instantané standard (schéma) qui contient l'ensemble des données publiées, ainsi que les métadonnées de l'Abonné pour l'abonnement. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md). Après avoir créé l'instantané de schéma, vous pouvez générer l'instantané qui contient la partition des données publiées spécifique à l'Abonné.  
   
 -   Si le filtrage d'un ou plusieurs articles de la publication donne des partitions qui ne se chevauchent pas et sont uniques pour chaque abonnement, les métadonnées sont nettoyées à chaque exécution de l'Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à initialiser la génération et la remise d'instantané. Pour plus d’informations sur les options de filtrage, consultez la section « Définition des options de partition » dans [Instantanés des publications de fusion avec des filtres paramétrés](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
   
@@ -117,7 +116,7 @@ ms.lasthandoff: 06/22/2017
   
     -   (Facultatif) Le nombre de processus d'instantané dynamique qui peuvent s'exécuter simultanément pour **@max_concurrent_dynamic_snapshots**. Si le nombre maximal de processus en cours d'exécution est atteint et si un Abonné essaie de générer un instantané, le processus est placé en file d'attente. Par défaut, le nombre de processus simultanés est illimité.  
   
-2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 1 pour **@publication** et les informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l' [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) s'exécute pour **@job_login** et **@password**. Si l'agent doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@publisher_security_mode** et les informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 1 pour **@publication** et les informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lesquelles l' [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) s'exécute pour **@job_login** et **@password**. Si l'agent doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@publisher_security_mode** et les informations d'identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -132,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) pour créer la publication. Pour plus d’informations, consultez [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 1 pour **@publication** et les informations d'identification Windows sous lesquelles l'Agent d'instantané s'exécute pour **@job_login** et **@password**. Si l'agent doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@publisher_security_mode** et les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 1 pour **@publication** et les informations d'identification Windows sous lesquelles l'Agent d'instantané s'exécute pour **@job_login** et **@password**. Si l'agent doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@publisher_security_mode** et les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -164,7 +163,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Exécutez [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) pour créer la publication. Pour plus d’informations, consultez [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 1 pour **@publication** et les informations d'identification Windows sous lesquelles l'Agent d'instantané s'exécute pour **@job_login** et **@password**. Si l'agent doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@publisher_security_mode** et les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Sur le serveur de publication, exécutez [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Spécifiez le nom de publication utilisé à l'étape 1 pour **@publication** et les informations d'identification Windows sous lesquelles l'Agent d'instantané s'exécute pour **@job_login** et **@password**. Si l'agent doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@publisher_security_mode** et les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@publisher_login** et **@publisher_password**. Il s'ensuit la création d'un travail de l'Agent d'instantané pour la publication. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour tous les paramètres, y compris *job_login* et *job_password*, sont envoyées en texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'exécuter cette procédure stockée. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -173,7 +172,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  Si d’autres articles doivent être filtrés sur la base du filtre de lignes paramétrable, exécutez [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) pour définir la relation de jointure ou d’enregistrements logiques entre les articles. Cette procédure stockée doit être exécutée une fois pour chaque relation en cours de définition. Pour plus d'informations, voir [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-5.  Démarrez le travail d'instantané ou exécutez l'Agent d'instantané des réplications à partir de l'invite de commandes pour générer le schéma d'instantané standard et d'autres fichiers. Pour plus d'informations, voir [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+5.  Démarrez le travail d'instantané ou exécutez l'Agent d'instantané des réplications à partir de l'invite de commandes pour générer le schéma d'instantané standard et d'autres fichiers. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 6.  Exécutez de nouveau l'Agent d'instantané des réplications à partir de l'invite de commandes pour générer des fichiers de copie en bloc (.bcp), en spécifiant l'emplacement de l'instantané partitionné pour **- DynamicSnapshotLocation** et une des propriétés suivantes ou les deux qui définissent la partition :  
   
@@ -281,105 +280,105 @@ PAUSE
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Pour créer une publication qui permet aux Abonnés d'initialiser la génération et la remise d'instantanés  
   
-1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> sur l’instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l’étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne **false**, confirmez que la base de données existe.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> pour la base de données de publication, affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> l'instance de <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1, puis appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . If <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> retourne **false**, confirmez que la base de données existe.  
   
-3.  Si la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> a la valeur **false**, affectez-lui la valeur **true** et appelez <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
+3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> a la valeur **false**, affectez-lui la valeur **true** et appelez <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>.  
   
-4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> et définissez les propriétés suivantes pour cet objet :  
+4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> et définissez les propriétés suivantes pour cet objet :  
   
-    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l’étape 1 pour <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   La classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée à l'étape 1 pour la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
     -   Le nom de la base de données publiée pour <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>.  
   
     -   Le nom de la publication pour <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>.  
   
-    -   Le nombre maximal de travaux d’instantané dynamique à exécuter pour <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>. Comme des demandes d'instantané initialisées par l'Abonné peuvent se produire à tout moment, cette propriété limite le nombre des travaux de l'Agent d'instantané qui peuvent s'exécuter simultanément lorsque plusieurs Abonnés demandent leur instantané partitionné au même moment. Lorsque le nombre maximal de travaux s'exécute, des demandes d'instantanés partitionnés supplémentaires sont mises en file d'attente jusqu'à ce que l'un des travaux en cours d'exécution se termine.  
+    -   Le nombre maximal de travaux d'instantané dynamique à exécuter pour <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>. Comme des demandes d'instantané initialisées par l'Abonné peuvent se produire à tout moment, cette propriété limite le nombre des travaux de l'Agent d'instantané qui peuvent s'exécuter simultanément lorsque plusieurs Abonnés demandent leur instantané partitionné au même moment. Lorsque le nombre maximal de travaux s'exécute, des demandes d'instantanés partitionnés supplémentaires sont mises en file d'attente jusqu'à ce que l'un des travaux en cours d'exécution se termine.  
   
-    -   Utilisez l’opérateur OR logique au niveau du bit (**|** en Visual C# et **Or** en Visual Basic) pour ajouter la valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> à <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   Utilisez l'opérateur OR logique de bits (**|** dans Visual C# et **Or** dans Visual Basic) pour ajouter la valeur <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> à <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
-    -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> afin de fournir les informations d’identification pour le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel le travail de l’Agent d’instantané s’exécute.  
+    -   Les champs <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> pour fournir les informations d'identification pour le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel le travail de l'Agent d'instantané s'exécute.  
   
         > [!NOTE]  
-        >  La définition de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> est recommandée quand la publication est créée par un membre du rôle serveur fixe **sysadmin**. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+        >  La définition de <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> est recommandée lorsque la publication est créée par un membre du rôle serveur fixe **sysadmin** . Pour plus d'informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> pour créer la publication.  
   
     > [!IMPORTANT]  
-    >  Lors de la configuration d’un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d’appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Lors de la configuration d'un serveur de publication avec un serveur de distribution distant, les valeurs fournies pour toutes les propriétés, y compris <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, sont envoyées sous forme de texte brut au serveur de distribution. Vous devez chiffrer la connexion entre le serveur de publication et son serveur de distribution distant avant d'appeler la méthode <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 6.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable. (Facultatif) Créez des objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent des filtres de jointure entre les articles. Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-7.  Si <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> a la valeur **false**, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l’Agent d’instantané initial pour cette publication.  
+7.  Si <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> a la valeur **false**, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l'Agent d'instantané initial pour cette publication.  
   
-8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> de l’objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l’étape 4. Cela démarre le travail de l'agent qui génère l'instantané initial. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+8.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> de l'objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l'étape 4. Cela démarre le travail de l'agent qui génère l'instantané initial. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-9. (Facultatif) Recherchez la valeur **true** pour la propriété <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> afin de déterminer quand l’instantané initial est prêt à être utilisé.  
+9. (Facultatif) Cherchez une valeur **true** pour la propriété <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> afin de déterminer quand l'instantané initial est prêt à être utilisé.  
   
 10. Lorsque l'Agent de fusion pour un Abonné se connecte pour la première fois, un instantané partitionné est généré automatiquement.  
   
 #### <a name="to-create-a-publication-and-pregenerate-or-automatically-refresh-snapshots"></a>Pour créer une publication et prégénérer ou actualiser automatiquement des instantanés  
   
-1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d’informations, consultez [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d'informations, voir [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable et créez tous les objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent les filtres de jointure entre les articles. Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Si <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> a la valeur **false**, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l’Agent d’instantané pour cette publication.  
+3.  Si <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> a la valeur **false**, appelez <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> pour créer le travail de l'Agent d'instantané pour cette publication.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> de l’objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l’étape 1. Cette méthode démarre le travail de l'agent qui génère l'instantané initial. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> de l'objet <xref:Microsoft.SqlServer.Replication.MergePublication> créé à l'étape 1. Cette méthode démarre le travail de l'agent qui génère l'instantané initial. Pour plus d'informations sur la génération d'un instantané initial et la définition d'une planification personnalisée pour l'Agent d'instantané, consultez [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-5.  Recherchez la valeur **true** pour la propriété <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> afin de déterminer quand l’instantané initial est prêt à être utilisé.  
+5.  Cherchez une valeur **true** pour la propriété <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> afin de déterminer quand l'instantané initial est prêt à être utilisé.  
   
-6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePartition> et définissez les critères de filtrage paramétrable pour l’Abonné en utilisant une des propriétés suivantes, ou les deux :  
+6.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePartition> et définissez les critères de filtrage paramétrable pour l'Abonné en utilisant une des propriétés suivantes, ou les deux :  
   
     -   Si la partition de l’Abonné est définie par le résultat de [SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md), utilisez <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>.  
   
     -   Si la partition de l’Abonné est définie par le résultat de [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md) ou une surcharge de cette fonction, utilisez <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>.  
   
-7.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> et définissez la même propriété qu’à l’étape 6.  
+7.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> et définissez la même propriété qu'à l'étape 6.  
   
-8.  Utilisez la classe <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> afin de définir une planification pour générer l’instantané filtré pour la partition de l’Abonné.  
+8.  Utilisez la classe <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> pour définir une planification pour générer l'instantané filtré pour la partition de l'Abonné.  
   
-9. Appelez <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergePartition%2A> en utilisant l’instance de <xref:Microsoft.SqlServer.Replication.MergePublication> créée à l’étape 1. Passez l’objet <xref:Microsoft.SqlServer.Replication.MergePartition> créé à l’étape 6.  
+9. Utilisez l'instance de <xref:Microsoft.SqlServer.Replication.MergePublication> de l'étape 1 pour appeler <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergePartition%2A>. Passez l'objet <xref:Microsoft.SqlServer.Replication.MergePartition> créé à l'étape 6.  
   
-10. Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergeDynamicSnapshotJob%2A> en utilisant l’instance de <xref:Microsoft.SqlServer.Replication.MergePublication> créée à l’étape 1. Passez l’objet <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> créé à l’étape 7 et l’objet <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> créé à l’étape 8.  
+10. Utilisez l'instance de <xref:Microsoft.SqlServer.Replication.MergePublication> de l'étape 1 pour appeler la méthode <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergeDynamicSnapshotJob%2A> . Passez l'objet <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> créé à l'étape 7 et l'objet <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> créé à l'étape 8.  
   
-11. Appelez <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergeDynamicSnapshotJobs%2A> et localisez l’objet <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> correspondant au travail d’instantané partitionné nouvellement ajouté dans le tableau retourné.  
+11. Appelez <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergeDynamicSnapshotJobs%2A>et localisez l'objet <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> correspondant au travail d'instantané partitionné nouvellement ajouté dans le tableau retourné.  
   
 12. Obtenez la propriété <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob.Name%2A> pour le travail.  
   
-13. Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+13. Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-14. Créez une instance de la classe <xref:Microsoft.SqlServer.Management.Smo.Server> SMO (SQL Server Management Objects), en passant l’objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l’étape 13.  
+14. Créez une instance de la classe <xref:Microsoft.SqlServer.Management.Smo.Server> SMO (SQL Server Management Objects), en passant l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 13.  
   
-15. Créez une instance de la classe <xref:Microsoft.SqlServer.Management.Smo.Agent.Job>, en passant la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.JobServer%2A> de l’objet <xref:Microsoft.SqlServer.Management.Smo.Server> créé à l’étape 14 et le nom du travail obtenu à l’étape 12.  
+15. Créez une instance de la classe <xref:Microsoft.SqlServer.Management.Smo.Agent.Job> , en passant la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.JobServer%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server> créé à l'étape 14 et le nom du travail obtenu à l'étape 12.  
   
-16. Appelez la méthode <xref:Microsoft.SqlServer.Management.Smo.Agent.Job.Start%2A> pour démarrer le travail d’instantané partitionné.  
+16. Appelez la méthode <xref:Microsoft.SqlServer.Management.Smo.Agent.Job.Start%2A> pour démarrer le travail d'instantané partitionné.  
   
 17. Répétez les étapes 6 à 16 pour chaque Abonné.  
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>Pour créer une publication et créer manuellement des instantanés pour chaque partition  
   
-1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d’informations, consultez [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Utilisez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> pour définir une publication de fusion. Pour plus d'informations, voir [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
 2.  Utilisez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle> pour ajouter des articles à la publication. Spécifiez la propriété <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> pour au moins un article qui définit le filtre paramétrable et créez tous les objets <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> qui définissent les filtres de jointure entre les articles. Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  Générez l'instantané initial. Pour plus d'informations, voir [Créer et appliquer l'instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+3.  Générez l'instantané initial. Pour plus d'informations, voir [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
-4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> et définissez les propriétés requises suivantes :  
+4.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> et définissez les propriétés requises suivantes :  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - nom du serveur de publication  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> – nom du serveur de publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - nom de la base de données de publication  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> – nom de la base de données de publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - nom de la publication  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> – nom de la publication  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - nom du serveur de distribution  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> – nom du serveur de distribution  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - une valeur de <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l’authentification intégrée de Windows ou une valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l’authentification SQL Server.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification intégrée de Windows ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l'authentification SQL Server.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - une valeur de <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l’authentification intégrée de Windows ou une valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l’authentification SQL Server.  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> – valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour utiliser l'authentification intégrée de Windows ou valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour utiliser l'authentification SQL Server.  
   
 5.  Spécifiez la valeur <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> pour <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
@@ -389,7 +388,7 @@ PAUSE
   
     -   Si la partition de l’Abonné est définie par le résultat de [HOST_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md) ou une surcharge de cette fonction, utilisez <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DynamicFilterHostName%2A>.  
   
-7.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
+7.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
   
 8.  Répétez les étapes 4 à 7 pour chaque Abonné.  
   
@@ -419,4 +418,3 @@ PAUSE
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   
-

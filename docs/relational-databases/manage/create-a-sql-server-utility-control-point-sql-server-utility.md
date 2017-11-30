@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Create UCP
 - UCP
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbc03b0f57c516ab923bbc636df78e1e006b9797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f06506dffa7c0d8497a6fc0986e8a29a701d0415
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
   Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d’application de la couche Données est membre d’un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
@@ -106,7 +104,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>Étapes de l'Assistant  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- Les sections suivantes fournissent des informations sur chaque page du flux de travail de l'Assistant pour créer un UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour lancer l’Assistant pour créer un UCP, ouvrez le volet Explorateur de l’utilitaire dans le menu Affichage dans SSMS, puis cliquez sur le bouton ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Créer un UCP** en haut du volet Explorateur de l’utilitaire.  
+ Les sections suivantes fournissent des informations sur chaque page du flux de travail de l'Assistant pour créer un UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour lancer l’Assistant pour créer un UCP, ouvrez le volet Explorateur de l’utilitaire dans le menu Affichage dans SSMS, puis cliquez sur le bouton ![](../../relational-databases/manage/media/create-ucp.gif "Créer un UCP") **Créer un UCP** en haut du volet Explorateur de l’utilitaire.  
   
  Cliquez sur un lien dans la liste ci-dessous pour accéder aux détails d'une page dans l'Assistant :  
   
@@ -129,9 +127,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introduction à l'Assistant Créer un UCP  
  Si vous ouvrez l'Explorateur de l'utilitaire et qu'aucun point de contrôle d'utilitaire n'est connecté, vous devez en connecter un ou en créer un.  
   
- **Se connecter à un UCP existant** - Si un point de contrôle d’utilitaire existe déjà dans votre déploiement, vous pouvez vous y connecter en cliquant sur le bouton ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Se connecter à l’utilitaire** en haut du volet Explorateur de l’utilitaire. Pour se connecter à un UCP existant, vous devez disposer d'informations d'identification d'administrateur ou être membre du rôle de lecteur d'utilitaire. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous ne pouvez être connecté qu'à un UCP d'une instance de SSMS.  
+ **Se connecter à un UCP existant** - Si un point de contrôle d’utilitaire existe déjà dans votre déploiement, vous pouvez vous y connecter en cliquant sur le bouton ![](../../relational-databases/manage/media/connect-to-utility.gif "Se connecter à l’utilitaire")**Se connecter à l’utilitaire** en haut du volet Explorateur de l’utilitaire. Pour se connecter à un UCP existant, vous devez disposer d'informations d'identification d'administrateur ou être membre du rôle de lecteur d'utilitaire. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et que vous ne pouvez être connecté qu'à un UCP d'une instance de SSMS.  
   
- **Créer un UCP![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") - Pour créer un point de contrôle d’utilitaire, cliquez sur le bouton** **Créer un UCP** en haut du volet Explorateur de l’utilitaire. Pour créer un UCP, vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournir des informations d'identification d'administrateur dans le dialogue de connexion. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Créer un UCP** - Pour créer un point de contrôle d’utilitaire, cliquez sur le bouton ![](../../relational-databases/manage/media/create-ucp.gif "Créer un UCP")**Créer un UCP** en haut du volet Explorateur de l’utilitaire. Pour créer un UCP, vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournir des informations d'identification d'administrateur dans le dialogue de connexion. Notez qu'il ne peut y avoir qu'un seul UCP par utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="Instance_name"></a> Spécifier une instance  
  Spécifiez les informations suivantes à propos de l'UCP que vous créez :  
@@ -235,4 +233,3 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  [Résolution des problèmes liés à l'utilitaire SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

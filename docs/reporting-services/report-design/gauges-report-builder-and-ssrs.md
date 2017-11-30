@@ -1,5 +1,5 @@
 ---
-title: "Jauges (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Jauges (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -159,17 +159,16 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5c0b12e57fd5917ee91a4191d87c3e354248928a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de jauge affiche une valeur unique tirée de votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Dans un panneau de jauge, vous pouvez créer plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  
@@ -184,7 +183,7 @@ ms.lasthandoff: 08/09/2017
   
  Il existe deux types de jauges : la jauge radiale et la jauge linéaire. L'illustration suivante présente les éléments de base d'une jauge radiale unique dans le panneau de jauge.  
   
- ![Diagramme d’éléments de jauge](../../reporting-services/report-design/media/gauge-elements-diagram.gif "diagramme d’éléments de jauge")  
+ ![Diagramme d’éléments de jauge](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramme d’éléments de jauge")  
   
  Pour plus d’informations sur l’utilisation des jauges comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
@@ -198,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  Les jauges linéaires sont rectangulaires, orientées horizontalement ou verticalement, et ressemblent à des règles. Les pointeurs de la jauge sont souvent des thermomètres, mais peuvent être des marqueurs ou des barres. En raison de sa forme, ce type de jauge est utile pour l'intégration dans les régions de données de table ou de matrice pour afficher des données de progression.  
   
- Outre ces différences, les deux types de jauges sont interchangeables. Toutefois, si vous devez utiliser une jauge simple dans votre rapport, vous devez envisager d'utiliser un indicateur au lieu d'une jauge. Pour plus d’informations, consultez [indicateurs &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+ Outre ces différences, les deux types de jauges sont interchangeables. Toutefois, si vous devez utiliser une jauge simple dans votre rapport, vous devez envisager d'utiliser un indicateur au lieu d'une jauge. Pour plus d’informations, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Les illustrations suivantes montrent des jauges radiale et linéaire. La jauge radiale est ronde et utilise le pointeur de type aiguille. La jauge linéaire est horizontale et utilise le pointeur de type thermomètre.  
   
@@ -306,10 +305,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Filtre, groupe et trier des données &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Graphiques &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

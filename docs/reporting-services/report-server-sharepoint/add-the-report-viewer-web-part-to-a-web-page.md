@@ -1,5 +1,5 @@
 ---
-title: "Ajouter le composant WebPart Visionneuse de rapports à une page web | Documents Microsoft"
+title: "Ajouter le composant WebPart Visionneuse de rapports à une page web | Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 26080938c9849d6021f30d970ab2262f405df00c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 44bad69bf78e628806a25455dd4ff240e9ca0a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Ajouter le composant WebPart Visionneuse de rapports à une page web
 
@@ -27,22 +26,22 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s’exécutent sur le serveur de rapports qui est configuré pour s’exécuter dans SharePoint mode intégré. Vous pouvez utiliser le composant WebPart pour afficher les fichiers de définition (.rdl) de rapport que vous avez créé dans le Générateur de rapports ou le Concepteur de rapports téléchargés vers une bibliothèque.
+Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s’exécutent sur un serveur de rapports configuré en mode intégré SharePoint. Vous pouvez utiliser le composant WebPart pour afficher les fichiers de définition de rapport (.rdl) que vous avez créés dans le Générateur de rapports ou le Concepteur de rapports, et que vous avez téléchargés dans une bibliothèque.
 
-Si vous souhaitez incorporer un rapport sur cette page, vous pouvez ajouter le composant WebPart Visionneuse de rapports à une page web.
+Vous pouvez ajouter le composant WebPart Visionneuse de rapports à une page web si vous souhaitez incorporer un rapport dans cette page.
 
 > [!NOTE]
-> Cet article est spécifique au composant WebPart Visionneuse de rapports fournis avec le complément Reporting Services pour les produits SharePoint. Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> Cet article est spécifique au composant WebPart Visionneuse de rapports fourni avec le complément Reporting Services pour les produits SharePoint. L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-Pour ajouter un composant WebPart à une page web, vous devez disposer de l’autorisation Ajouter et personnaliser des Pages au niveau du site. Si vous utilisez des paramètres de sécurité par défaut, cette autorisation est accordée aux membres du groupe **Propriétaires** qui ont le niveau d’autorisation Contrôle total.
+Pour ajouter un composant WebPart à une page web, vous devez disposer de l’autorisation Ajouter et personnaliser les pages au niveau du site. Si vous utilisez des paramètres de sécurité par défaut, cette autorisation est accordée aux membres du groupe **Propriétaires** qui ont le niveau d’autorisation Contrôle total.
 
 ## <a name="to-embed-a-report-in-a-web-page"></a>Pour incorporer un rapport dans une page web
 
-1.  Ouvrez ou créez la page de composants WebPart ou d’un tableau de bord.  
+1.  Ouvrez ou créez la page ou le tableau de bord de composant WebPart.  
   
 2.  Dans **Actions de site**, cliquez sur **Modifier la page**.  
   
-3.  Cliquez sur **ajouter un composant WebPart**.  
+3.  Cliquez sur **Ajouter un composant WebPart**.  
   
 4.  Dans la liste de catégories WebPart, sélectionnez la catégorie **Divers** , puis **Visionneuse de rapports SQL Server Reporting Services**.  
   
@@ -61,8 +60,7 @@ Pour ajouter un composant WebPart à une page web, vous devez disposer de l’au
   
 ## <a name="see-also"></a>Voir aussi
 
- [Composant WebPart Visionneuse de rapports sur un SharePoint Site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Composant WebPart Visionneuse de rapports sur un site SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personnaliser le composant WebPart Visionneuse de rapports](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Installer ou désinstaller le complément Reporting Services pour SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-

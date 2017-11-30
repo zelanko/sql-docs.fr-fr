@@ -1,5 +1,5 @@
 ---
-title: "Références (Générateur de rapports et SSRS) de la Collection de champs de DataSet | Documents Microsoft"
+title: "Références à la collection Fields d’un dataset (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Collections intégrées - références à la Collection champs de Dataset (Générateur de rapports)
+# <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Collections intégrées - Références à la collection Fields d’un dataset (Générateur de rapports)
   Chaque dataset d’un rapport contient une collection Fields. La collection Fields comprend l’ensemble de champs spécifiés par la requête de dataset, ainsi que tous les champs calculés supplémentaires que vous créez. Après avoir créé un dataset, la collection de champs apparaît dans le volet **Données du rapport** .  
   
- Une référence de champ simple dans une expression s'affiche sur l'aire de conception comme une expression simple. Par exemple, lorsque vous faites glisser le champ `Sales` du volet des données de rapport vers une cellule de table sur l'aire de conception, `[Sales]` s'affiche. Cela représente l’expression sous-jacente `=Fields!Sales.Value` définie sur la propriété Value de la zone de texte. Lorsque le rapport s'exécute, le processeur de rapports évalue cette expression et affiche les données effectives de la source de données dans la zone de texte dans la cellule de table. Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) et [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
+ Une référence de champ simple dans une expression s'affiche sur l'aire de conception comme une expression simple. Par exemple, lorsque vous faites glisser le champ `Sales` du volet des données de rapport vers une cellule de table sur l'aire de conception, `[Sales]` s'affiche. Cela représente l’expression sous-jacente `=Fields!Sales.Value` définie sur la propriété Value de la zone de texte. Lorsque le rapport s'exécute, le processeur de rapports évalue cette expression et affiche les données effectives de la source de données dans la zone de texte dans la cellule de table. Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) et [Collection Fields d’un dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-the-field-collection-for-a-dataset"></a>Affichage de la collection de champs pour un dataset  
  Pour afficher les valeurs individuelles pour une collection de champs, faites glisser chaque champ vers une ligne de détails du tableau et exécutez le rapport. Les références de la ligne de détails d'une région de données de table ou de liste affichent une valeur pour chaque ligne du dataset.  
   
- Pour afficher des valeurs résumées pour un champ, faites glisser chaque champ numérique vers la zone de données d'une matrice. La fonction d'agrégation par défaut pour la ligne des totaux est Sum, par exemple `=Sum(Fields!Sales.Value)`. Vous pouvez modifier la fonction par défaut pour calculer des totaux différents. Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Pour afficher des valeurs résumées pour un champ, faites glisser chaque champ numérique vers la zone de données d'une matrice. La fonction d'agrégation par défaut pour la ligne des totaux est Sum, par exemple `=Sum(Fields!Sales.Value)`. Vous pouvez modifier la fonction par défaut pour calculer des totaux différents. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
  Pour afficher des valeurs résumées pour une collection de champs dans une zone de texte directement sur l'aire de conception (n'appartenant à aucune région de données), vous devez spécifier le nom du dataset comme une étendue pour la fonction d'agrégation. Par exemple, pour un dataset nommé `SalesData`, l’expression suivante spécifie le total de toutes les valeurs pour le champ `Sales`: `=Sum(Fields!Sales,"SalesData")`.  
   
@@ -46,7 +45,7 @@ ms.lasthandoff: 08/09/2017
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Détection de champs manquants pour les requêtes dynamiques au moment de l'exécution  
- Par défaut, les éléments de la collection Fields disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie avec un paramètre d’entrée, ou votre requête risque d’être `SELECT * FROM`  *\<table >* où la définition de la table a changé.  
+ Par défaut, les éléments de la collection Fields disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
   
 > [!NOTE]  
 >  IsMissing détecte les modifications du schéma de dataset entre le moment de la conception et celui de l’exécution pour tout type de source de données. IsMissing ne peut pas être utilisé pour détecter des membres vides dans un cube multidimensionnel et n’est pas lié aux concepts de langage de requête MDX **EMPTY** et **NON EMPTY**.  
@@ -101,4 +100,3 @@ End Function
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
-

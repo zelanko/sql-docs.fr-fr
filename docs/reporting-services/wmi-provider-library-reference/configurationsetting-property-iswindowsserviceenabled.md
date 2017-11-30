@@ -1,5 +1,5 @@
 ---
-title: "Propriété de IsWindowsServiceEnabled (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "IsWindowsServiceEnabled, propriété (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- IsWindowsServiceEnabled
-apilocation:
-- reportingservices.mof
+apiname: IsWindowsServiceEnabled
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- IsWindowsServiceEnabled property
+helpviewer_keywords: IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce08a70291bab3ae0192143658b52d939d506863
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7dd33bfc662626e2ab8d79a22a941ba88c2128ef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>Propriété ConfigurationSetting - IsWindowsServiceEnabled
   Indique si le service Windows Report Server est activé. En lecture seule.  
@@ -56,4 +52,3 @@ public boolean IsWindowsServiceEnabled;
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Propriété SMTPServer (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "SMTPServer, propriété (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SMTPServer
-apilocation:
-- reportingservices.mof
+apiname: SMTPServer
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SMTPServer property
+helpviewer_keywords: SMTPServer property
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9034d6214aa4dfb15c9111393ca57fffcf7b1d8f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0bbcf80114007fb3c475ea8a406cc1673da65d3b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-property---smtpserver"></a>Propriété ConfigurationSetting - sur le serveur SMTP
+# <a name="configurationsetting-property---smtpserver"></a>Propriété ConfigurationSetting - SMTPServer
   Obtient la propriété du serveur SMTP à partir du fichier de configuration du serveur de rapports. En lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -56,4 +52,3 @@ public string SMTPServer;
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

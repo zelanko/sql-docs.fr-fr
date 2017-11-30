@@ -1,7 +1,6 @@
 ---
-title: "Paramètres d’informations de périphérique pour les Extensions de rendu (Reporting Services) | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Paramètres d’informations de périphérique pour les extensions de rendu (Reporting Services) | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/15/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -12,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a5618026c0a8e3714eb33725195f5d891c3e467
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Paramètres d'informations de périphérique pour les extensions de rendu (Reporting Services)
   Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les paramètres d'informations de périphérique sont utilisés pour passer les paramètres de rendu à l'extension de rendu définie. Chaque extension de rendu reçoit un jeu de paramètres spécifique.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/09/2017
  [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
-

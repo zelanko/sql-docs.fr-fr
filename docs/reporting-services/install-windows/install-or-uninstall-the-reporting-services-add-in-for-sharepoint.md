@@ -1,38 +1,35 @@
 ---
-title: "Installer ou désinstaller le complément Services Reporting pour SharePoint | Documents Microsoft"
+title: "Installer ou désinstaller le complément Reporting Services pour SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: e10b1aadc6a89e0d18b55d577f075fcb04353fcb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 8fe9e32b81cdd92ab382912fef72c0e140f33e87
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
 
-  Exécutez le package d’installation du complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint (rsSharePoint.msi) sur les serveurs SharePoint pour activer les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un déploiement SharePoint. Ces fonctionnalités incluent Power View, un composant WebPart visionneuse de rapports, un point de terminaison de proxy d’URL, des types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et des pages d’application qui vous permettent de créer, d’afficher et de gérer des rapports, des modèles de rapport, des sources de données et tout autre contenu du serveur de rapports sur un site SharePoint. Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint est un composant requis pour un serveur de rapports qui s'exécute en mode SharePoint. Le complément peut être installé à partir de l’Assistant de programme d’installation de SQL Server 2016 ou en téléchargeant le fichier rsSharePoint.msi à partir de SQL Server 2016 feature pack. Pour obtenir la liste des versions du complément et les pages de téléchargement, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+  Exécutez le package d’installation du complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint (rsSharePoint.msi) sur les serveurs SharePoint pour activer les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un déploiement SharePoint. Ces fonctionnalités incluent Power View, un composant WebPart visionneuse de rapports, un point de terminaison de proxy d’URL, des types de contenu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et des pages d’application qui vous permettent de créer, d’afficher et de gérer des rapports, des modèles de rapport, des sources de données et tout autre contenu du serveur de rapports sur un site SharePoint. Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint est un composant requis pour un serveur de rapports qui s'exécute en mode SharePoint. Le complément peut être installé à partir de l’Assistant Installation SQL Server 2016 ou en téléchargeant le fichier rsSharePoint.msi du Feature Pack SQL Server 2016. Pour obtenir la liste des versions du complément et les pages de téléchargement, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
   
-##  <a name="bkmk_prereq"></a> Configuration requise  
+##  <a name="bkmk_prereq"></a> Conditions préalables  
  L'installation du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est l'une des nombreuses étapes nécessaires pour intégrer un serveur de rapports à une instance d'un produit SharePoint. Pour plus d’informations sur l’installation et la configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 -   Si vous intégrez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à une batterie de serveurs SharePoint qui possède plusieurs applications Web frontales, installez le complément sur chaque ordinateur de la batterie de serveurs qui possède un serveur Web frontal. Effectuez cette opération uniquement pour les serveurs Web frontaux qui seront utilisés pour accéder à du contenu de serveur de rapports.  
@@ -57,9 +54,9 @@ ms.lasthandoff: 08/17/2017
 >  L'avantage de l'installation du complément avant le produit SharePoint est que le complément Reporting Services est configuré et activé par la batterie de serveurs SharePoint à mesure que les nouveaux serveurs sont ajoutés à la batterie.  
   
 ##  <a name="bkmk_3ways_to_install"></a> Vue d'ensemble des méthodes d'installation  
- SQL Server 2016 Reporting Services-complément pour les produits SharePoint peut être installé à l’aide d’une des deux méthodes suivantes :  
+ Le complément SQL Server 2016 Reporting Services pour les produits SharePoint peut être installé en utilisant l’une des deux méthodes suivantes :  
   
--   **L’Assistant installation :** ![Remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Remarque")nouveau SQL Server 2016, le complément peut être installé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant installation. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
+-   **Assistant Installation :** ![remarque](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque")Nouveauté de SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
   
 -   **rsSharepoint.msi :** le complément peut être installé directement à partir du support d’installation ou téléchargé et installé. Le fichier rsSharepoint.msi prend en charge à la fois une interface utilisateur graphique et une installation à partir de la ligne de commande. Vous devez exécuter le fichier .msi avec les privilèges d'administrateur ; pour ce faire, commencez par ouvrir une fenêtre d'invite de commandes avec des autorisations élevées, puis exécutez rsSharepoint.msi à partir de la ligne de commande. Pour plus d’informations sur le téléchargement du complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -219,7 +216,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="bkmk_logfiles"></a> Fichiers journaux d'installation  
- Durant son exécution, le programme d’installation enregistre des informations dans un fichier journal, dans le dossier **%temp%** de l’utilisateur qui installe le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple **c:\Users\\< nom d’utilisateur\>\AppData\Local\Temp** . Le nom de fichier est **RS_SP_\<numéro > .log**, par exemple **RS_SP_0.log**. Chaque erreur consignée dans ce journal commence par la chaîne « SSRSCustomActionError ».  
+ Durant son exécution, le programme d’installation enregistre des informations dans un fichier journal, dans le dossier **%temp%** de l’utilisateur qui installe le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, **c:\Users\\\<nom_utilisateur\>\AppData\Local\Temp**. Le nom de fichier est **RS_SP_\<numéro>.log**, par exemple **RS_SP_0.log**. Chaque erreur consignée dans ce journal commence par la chaîne « SSRSCustomActionError ».  
   
 > [!NOTE]  
 >  AppData est un dossier masqué dans le système d'exploitation Windows. Vous devrez peut-être modifier vos paramètres des dossiers de l'Explorateur Windows afin de voir les fichiers masqués et des dossiers.  
@@ -255,7 +252,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_upgrade"></a> Mise à niveau  
  Si vous avez une installation existante du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez effectuer une mise à niveau vers la version actuelle. Le programme d'installation du complément détectera la version existante et vous invitera à confirmer la mise à jour. Le message ressemble au suivant :  
   
- **Une version antérieure de ce produit a été détectée sur votre système. Vous voulez mettre à niveau votre installation existante ?**  
+ **Une version antérieure de ce produit a été détectée sur votre système. Voulez-vous mettre à niveau votre installation existante ?**  
   
  Si vous confirmez, la version antérieure du complément sera supprimée, puis la nouvelle installée.  
   
@@ -280,5 +277,4 @@ Rssharepoint.msi /?
 [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
 [Serveur de rapports Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

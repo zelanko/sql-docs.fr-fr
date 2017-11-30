@@ -1,5 +1,5 @@
 ---
-title: "Propriété de DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting) | Documents Microsoft"
+title: "DatabaseLogonTimeout, propriété (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DatabaseLogonTimeout Property
-apilocation:
-- reportingservices.mof
+apiname: DatabaseLogonTimeout Property
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DatabaseLogonTimeout property
+helpviewer_keywords: DatabaseLogonTimeout property
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a8c1747fa53376dbe088f358cc47a13664d90bff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 647be6a2220580b611dfab1dce9a0a185596f0bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>Propriété ConfigurationSetting - DatabaseLogonTimeout
   Spécifie le délai d'attente, en secondes, avant l'échec d'une tentative de connexion à la base de données du serveur de rapports. La valeur **0** indique une durée d’attente illimitée. Lecture seule.  
@@ -56,4 +52,3 @@ public Int32 DatabaseLogonTimeout;
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

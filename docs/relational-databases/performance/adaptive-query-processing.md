@@ -2,7 +2,7 @@
 title: "Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs"
 description: "Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database."
 ms.custom: 
-ms.date: 10/13/2017
+ms.date: 11/13/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,12 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 64f0c0226ab040eb8b43c4b62a6784296d22c6aa
+ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
 ms.translationtype: HT
-ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
-ms.openlocfilehash: e2bbfc9a89d4ec2dd3cce5625adfb09c7f85efbe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/14/2017
 ---
-
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -183,7 +181,7 @@ Comparez le plan précédent au plan réel généré avec l’exécution entrela
 1. Notez également que nous n’avons plus d’avertissements de dépassement de capacité, car nous allouons davantage de mémoire en fonction du nombre de lignes réel de l’analyse de table MSTVF.
 
 ### <a name="interleaved-execution-eligible-statements"></a>Instructions éligibles pour l’exécution entrelacée
-Les instructions de référence MSTVF dans l’exécution entrelacée doivent être en lecture seule et ne pas faire partie d’une opération de modification de données. Par ailleurs, les MSTVF ne sont pas éligibles pour l’exécution entrelacée si elles sont utilisées à l’intérieur de CROSS APPLY.
+Les instructions de référence MSTVF dans l’exécution entrelacée doivent être en lecture seule et ne pas faire partie d’une opération de modification de données. De plus, les MSTVF ne sont pas éligibles pour l’exécution entrelacée si elles n’utilisent pas de constantes d’exécution.
 
 ### <a name="interleaved-execution-benefits"></a>Avantages de l’exécution entrelacée
 En règle générale, plus le décalage est important entre le nombre de lignes réel et estimé, associé au nombre d’opérations de plan en aval, plus l’impact sur les performances est élevé.
@@ -231,5 +229,4 @@ L’utilisation des plans qui utilisent l’exécution entrelacée peut être fo
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)
 
 [Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)      
-
 

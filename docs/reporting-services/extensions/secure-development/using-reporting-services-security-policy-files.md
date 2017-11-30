@@ -1,5 +1,5 @@
 ---
-title: "À l’aide de Reporting Services de fichiers de stratégie de sécurité | Documents Microsoft"
+title: "Utilisation des fichiers de stratégie de sécurité Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,32 +20,32 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilisation des fichiers de stratégie de sécurité Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stocke les informations de stratégie de sécurité dans trois fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Ces fichiers de configuration peuvent contenir une combinaison de stratégies de sécurité à usage interne et définies par l'utilisateur pour les assemblys de code dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les trois fichiers de configuration correspondent à trois composants sécurisables dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] : le service Windows Report Server, l'application Web du Gestionnaire de rapports et la fenêtre d'aperçu du Concepteur de rapports.  
   
 > [!NOTE]  
->  Il existe deux modes d’aperçu du Concepteur de rapports : l’onglet d’aperçu et de la fenêtre d’aperçu contextuelle qui s’affiche lorsque votre projet de rapport est démarré dans **DebugLocal** mode. Le **aperçu** onglet n’est pas un composant sécurisable et n’applique pas de paramètres de stratégie de sécurité. La fenêtre d'aperçu est destinée à simuler les fonctionnalités du serveur de rapports ; par conséquent, elle dispose d'un fichier de configuration de stratégie que vous ou un administrateur devez modifier pour utiliser les assemblys et extensions personnalisés dans le Concepteur de rapports.  
+>  Il y a deux modes d’aperçu pour le Concepteur de rapports : l’onglet d’aperçu et la fenêtre d’aperçu contextuelle, qui s’affiche quand votre projet de rapport démarre en mode **DebugLocal**. L’onglet **Aperçu** n’est pas un composant sécurisable et n’applique pas de paramètres de stratégie de sécurité. La fenêtre d'aperçu est destinée à simuler les fonctionnalités du serveur de rapports ; par conséquent, elle dispose d'un fichier de configuration de stratégie que vous ou un administrateur devez modifier pour utiliser les assemblys et extensions personnalisés dans le Concepteur de rapports.  
   
  Les fichiers de configuration de stratégie de sécurité contiennent des informations de classe de sécurité, quelques jeux d'autorisations nommés par défaut et les groupes de codes des assemblys dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les fichiers de configuration de stratégie de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont semblables au fichier Security.config qui détermine la hiérarchie des groupes de codes et les jeux d'autorisations associés aux stratégies de niveaux ordinateur et entreprise du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. L'emplacement de ce fichier est C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   
 ## <a name="policy-files-in-reporting-services"></a>Fichiers de stratégie dans Reporting Services  
  Le tableau suivant répertorie les fichiers de configuration de stratégie dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], leurs emplacements (dans une installation par défaut) et leurs fonctions respectives.  
   
-|Nom de fichier|Emplacement (installation par défaut)|Description|  
+|Nom de fichier|Emplacement (installation par défaut)| Description|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Fichier de configuration de stratégie du serveur de rapports. Ces stratégies de sécurité affectent principalement les expressions de rapport et les assemblys personnalisés, une fois qu'un rapport est déployé sur un serveur de rapports. Ce fichier de stratégie affecte également les extensions personnalisées en matière de données, de remise, de rendu et de sécurité, qui sont déployées sur le serveur de rapports.|  
-|rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager.|Fichier de configuration de stratégie du Gestionnaire de rapports. Ces stratégies de sécurité affectent tous les assemblys qui étendent le Gestionnaire de rapports, par exemple les extensions d'interface utilisateur d'abonnement pour une remise personnalisée.|  
+|rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Fichier de configuration de stratégie du Gestionnaire de rapports. Ces stratégies de sécurité affectent tous les assemblys qui étendent le Gestionnaire de rapports, par exemple les extensions d'interface utilisateur d'abonnement pour une remise personnalisée.|  
 |rspreviewpolicy.config|C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies|Fichier de configuration de stratégie de l'aperçu autonome du Concepteur de rapports. Ces stratégies de sécurité affectent les assemblys personnalisés et les expressions de rapport utilisés dans les rapports pendant l'aperçu et le développement. Ces stratégies affectent également les extensions personnalisées, par exemple les extensions pour le traitement des données, qui sont déployées sur le Concepteur de rapports.|  
   
 ## <a name="modifying-configuration-files"></a>Modification des fichiers de configuration  

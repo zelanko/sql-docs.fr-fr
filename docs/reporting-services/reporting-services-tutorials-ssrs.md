@@ -1,7 +1,7 @@
 ---
-title: Didacticiels (SSRS) de Reporting Services | Documents Microsoft
+title: Didacticiels sur Reporting Services (SSRS) | Microsoft Docs
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -10,22 +10,19 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tutorials [Reporting Services]
+applies_to: SQL Server 2016
+helpviewer_keywords: tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eebe70acfc915140f4d43a5a454ffcde6d572af7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d8b510b2f73d086fb3f1d37d94d2ee3178d3481a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Didacticiels sur Reporting Services (SSRS)
 
@@ -48,12 +45,11 @@ Ces didacticiels présentent les différents types de visualisations que vous po
   
   
 ## <a name="see-also"></a>Voir aussi  
-* [Exemples de bases de données Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550)  
-* [Exemples Reporting Services dans CodePlex](http://go.microsoft.com/fwlink/?LinkId=198283)  
+* [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases)  
+* [Exemples Reporting Services sur le Wiki TechNet](http://go.microsoft.com/fwlink/?LinkId=198283)  
 * [TechNet Wiki : exemples SQL Server 2012](http://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   
   
-
 

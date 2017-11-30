@@ -1,5 +1,5 @@
 ---
-title: "Suspendre et reprendre des planifications partagées | Documents Microsoft"
+title: "Suspendre et reprendre des planifications partagées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71dcd66394cf96bd6994e40de76b10a519f32a74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Suspendre et reprendre des planifications partagées
   Vous pouvez suspendre et reprendre une planification partagée en cours d'utilisation. Le fait de suspendre une planification partagée fournit un moyen de geler temporairement une planification qui est utilisée pour déclencher un traitement de rapport et des abonnements. Seules les planifications partagées peuvent être suspendues et reprises. Vous ne pouvez pas suspendre des planifications spécifiques aux rapports.  
@@ -70,9 +69,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
- [Créer, modifier et supprimer des planifications](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Gérer un processus en cours d'exécution](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

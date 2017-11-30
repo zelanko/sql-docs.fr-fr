@@ -1,5 +1,5 @@
 ---
-title: "Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a0d28c5a5210eef5f2f6eea857f9361bbe434ad6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
   Les paramètres en cascade permettent de gérer d'importantes quantités de données de rapport. Vous pouvez définir un ensemble de paramètres associés, de telle sorte que la liste des valeurs d'un paramètre dépende de la valeur choisie dans un autre paramètre. Par exemple, le premier paramètre est indépendant et peut présenter une liste de catégories de produits. Lorsque l'utilisateur sélectionne une catégorie, le deuxième paramètre dépend de la valeur du premier paramètre. Ses valeurs sont mises à jour avec une liste de sous-catégories au sein de la catégorie choisie. Lorsque l'utilisateur affiche le rapport, les valeurs des paramètres de catégorie et de sous-catégorie permettent de filtrer les données du rapport.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Pour créer des paramètres en cascade, commencez par définir la requête de dataset et incluez un paramètre de requête pour chaque paramètre en cascade dont vous avez besoin. Vous devez également créer un dataset distinct pour chaque paramètre en cascade pour fournir les valeurs disponibles. Pour plus d’informations, consultez [ajouter, modifier ou supprimer des valeurs disponibles pour un paramètre de rapport &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+ Pour créer des paramètres en cascade, commencez par définir la requête de dataset et incluez un paramètre de requête pour chaque paramètre en cascade dont vous avez besoin. Vous devez également créer un dataset distinct pour chaque paramètre en cascade pour fournir les valeurs disponibles. Pour plus d’informations, consultez [Ajouter, modifier ou supprimer les valeurs disponibles d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  L'ordre des paramètres en cascade est important, car la requête de dataset d'un paramètre situé plus bas dans la liste comporte une référence à chaque paramètre situé plus haut dans la liste. Au moment de l'exécution, l'ordre des paramètres dans le volet des données de rapport détermine l'ordre d'apparition des requêtes de paramètre dans le rapport et, par conséquent, l'ordre dans lequel un utilisateur choisit chaque valeur de paramètre consécutive.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 6.  Cliquez sur **Exécuter** (**!**). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
   
     > [!NOTE]  
-    >  L'ordre des paramètres de requête lors de la première exécution d'une requête détermine leur ordre de création dans le rapport. Pour modifier l’ordre, consultez [modifier l’ordre d’un paramètre de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+    >  L'ordre des paramètres de requête lors de la première exécution d'une requête détermine leur ordre de création dans le rapport. Pour modifier l’ordre, consultez [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
     WHERE (Category = @Category)  
     ```  
   
-     Dans la clause WHERE, catégorie est le nom d’un champ de \<table > et @Category est un paramètre de requête. Cette instruction génère la liste des sous-catégories de la catégorie spécifiée dans @Category. Au moment de l'exécution, cette valeur est remplie avec la valeur que l'utilisateur choisit pour le paramètre de rapport qui porte le même nom.  
+     Dans la clause WHERE, Category correspond au nom d’un champ de la \<table> et @Category à un paramètre de requête. Cette instruction génère la liste des sous-catégories de la catégorie spécifiée dans @Category. Au moment de l'exécution, cette valeur est remplie avec la valeur que l'utilisateur choisit pour le paramètre de rapport qui porte le même nom.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Paramètres de rapport &#40; Le Générateur de rapports et le Concepteur de rapports &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Didacticiel : Ajouter un paramètre à votre rapport &#40; Le Générateur de rapports &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
- [Ajouter des filtres de Dataset, filtres de régions de données et les filtres de groupe &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Rapport incorporé des jeux de données et des Datasets partagés &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

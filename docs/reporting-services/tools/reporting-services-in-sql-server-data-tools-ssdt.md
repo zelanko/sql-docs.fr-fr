@@ -1,5 +1,5 @@
 ---
-title: Reporting Services dans SQL Server Data Tools (SSDT) | Documents Microsoft
+title: Reporting Services dans SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Business Intelligence Development Studio, Reporting Services in
+helpviewer_keywords: Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Active
+ms.openlocfilehash: 31c39f4619f96163338986619f5e27804ac555ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
-# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans SQL Server Data Tools (SSDT)
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est un environnement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour créer des solutions d’aide à la décision. SSDT comprend l’environnement de création Concepteur de rapports, où vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer et déployer des définitions de rapport paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , des sources de données partagées, des datasets partagés et des parties de rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas fourni avec SQL Server. Téléchargez [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714). 
   
@@ -43,11 +41,11 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_ReportServerProjects"></a> Projets Report Server  
  Lorsque vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les modèles de projet suivants sont disponibles dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’informations, consultez [ajouter un nouveau ou un rapport existant à un projet de rapport &#40; SSRS &#41; ](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Propriétés du projet Report Server s’appliquent à tous les rapports et tous les fichiers sources de données dans un [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] projet. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ce faire, dans le menu **Projet** , cliquez sur **Propriétés**.  
+-   **Projet Report Server.** Lorsque vous sélectionnez un projet Report Server, le Concepteur de rapports s'ouvre. Un projet Report Server est un modèle de projets Business Intelligence installé par [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] et disponible dans la boîte de dialogue **Nouveaux projets** . Pour plus d’information, consultez [Ajouter un nouveau rapport ou un rapport existant à un projet de rapport &#40;SSRS&#41;](../../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md). Les propriétés du projet Report Server s’appliquent à tous les rapports et à toutes les sources de données partagées au sein d’un projet [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Ces propriétés incluent l'URL du serveur de rapports et les noms des dossiers des rapports et des sources de données partagées. Pour afficher les propriétés actuelles du projet, ouvrez la boîte de dialogue **Pages de propriétés du projet** . Pour ce faire, dans le menu **Projet** , cliquez sur **Propriétés**.  
   
 -   **Assistant Projet Report Server.** Lorsque vous sélectionnez l'Assistant Projet Report Server, un projet de serveur de rapports est automatiquement créé et l'Assistant Rapport s'ouvre. Dans l'Assistant, pour créer un rapport, suivez les instructions de chaque page pour créer une chaîne de connexion dans une source de données, définir les informations d'identification de la source de données, créer une requête, ajouter une région de données de table ou de matrice, spécifier des données de rapport et des groupes, choisir une police et un style de couleur, publier le rapport sur un serveur de rapports et afficher un aperçu local du rapport. Après avoir créé un rapport au moyen de l'Assistant, vous pouvez modifier les données du rapport et le Concepteur de rapports à l'aide de l'outil Concepteur de rapports dans le projet Report Server.  
   
- ![Nouveaux modèles de projet dans SSDT](../../analysis-services/media/ssdt-biprojects.png "des modèles de projet dans SSDT")  
+ ![Modèles Nouveau projet dans SSDT](../../analysis-services/media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
@@ -70,14 +68,14 @@ ms.lasthandoff: 08/09/2017
   
 -   **Images** La liste des images disponibles à inclure comme élément de rapport image dans un rapport.  
   
- Les sources de données et datasets dans le volet des données du rapport représentent les éléments dans la définition de rapport. Le volet des données du rapport est une fonctionnalité prise en charge par plusieurs environnements de création de rapports. Dans le Générateur de rapports, il s'agit du seul volet disponible pour gérer des sources de données et datasets. Dans le Concepteur de rapports, le volet des données du rapport s'exécute avec l'explorateur de solutions, qui répertorie les sources de données partagées et des datasets partagés en tant que fichiers. Les sources de données partagées et des datasets partagés dans le volet des données du rapport doivent indiquer leurs sources de données partagées et les datasets partagés correspondants dans l'explorateur de solutions. Les éléments du volet des données du rapport contiennent ensuite une référence aux fichiers de données dans l'explorateur de solutions. Les propriétés du projet déterminent si les sources de données partagées et des datasets partagés sont déployés sur le serveur de rapports ou site SharePoint. Pour plus d’informations, consultez [convertir des Sources de données &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ Les sources de données et datasets dans le volet des données du rapport représentent les éléments dans la définition de rapport. Le volet des données du rapport est une fonctionnalité prise en charge par plusieurs environnements de création de rapports. Dans le Générateur de rapports, il s'agit du seul volet disponible pour gérer des sources de données et datasets. Dans le Concepteur de rapports, le volet des données du rapport s'exécute avec l'explorateur de solutions, qui répertorie les sources de données partagées et des datasets partagés en tant que fichiers. Les sources de données partagées et des datasets partagés dans le volet des données du rapport doivent indiquer leurs sources de données partagées et les datasets partagés correspondants dans l'explorateur de solutions. Les éléments du volet des données du rapport contiennent ensuite une référence aux fichiers de données dans l'explorateur de solutions. Les propriétés du projet déterminent si les sources de données partagées et des datasets partagés sont déployés sur le serveur de rapports ou site SharePoint. Pour plus d’informations, consultez [Convertir des sources de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Si le volet des données de rapport n’est pas visible, cliquez dans la zone de conception, puis sur **Données du rapport** dans le menu **Affichage**. Si le volet des données de rapport est flottant, vous pouvez l'ancrer. Pour plus d’informations, consultez [Ancrer le volet des données de rapport dans le Concepteur de rapports &#40;SSRS&#41;](../../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md).  
   
   
 ###  <a name="bkmk_GroupingPane"></a> Volet de regroupement  
- Utilisez le volet de regroupement pour définir les groupes d'une région de données de tableau matriciel. Vous pouvez définir des groupes de lignes et de détails pour les tables et des groupes de lignes et de colonnes pour les matrices. Vous ne pouvez pas utiliser le volet de regroupement pour définir des groupes pour les graphiques ou d'autres régions de données. Pour plus d’informations, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ Utilisez le volet de regroupement pour définir les groupes d'une région de données de tableau matriciel. Vous pouvez définir des groupes de lignes et de détails pour les tables et des groupes de lignes et de colonnes pour les matrices. Vous ne pouvez pas utiliser le volet de regroupement pour définir des groupes pour les graphiques ou d'autres régions de données. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
  Le volet de regroupement comporte deux modes :  
   
@@ -101,11 +99,11 @@ ms.lasthandoff: 08/09/2017
   
  Utilisez le volet Propriétés pour :  
   
--   définir les propriétés pour l'élément actuellement sélectionné dans l'aire de conception. Certaines propriétés affichent une liste déroulante de valeurs. Vous pouvez aussi taper la valeur directement dans la cellule. Certaines propriétés contiennent une collection de valeurs désignée par la valeur **(Collection)**. La plupart des propriétés peuvent accepter une expression ; les expressions complexes sont signalées par la valeur  **\<Expression >**. Cliquez sur  **\<Expression >** pour ouvrir le **Expression** boîte de dialogue. Pour plus d'informations, consultez [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   définir les propriétés pour l'élément actuellement sélectionné dans l'aire de conception. Certaines propriétés affichent une liste déroulante de valeurs. Vous pouvez aussi taper la valeur directement dans la cellule. Certaines propriétés contiennent une collection de valeurs désignée par la valeur **(Collection)**. La plupart des propriétés peuvent accepter une expression ; les expressions complexes sont signalées par la valeur **\<Expression>**. Cliquez sur **\<Expression>** pour ouvrir la boîte de dialogue **Expression**. Pour plus d'informations, consultez [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Utilisez les boutons de la barre d'outils du volet Propriétés pour modifier la grille et la faire basculer de l'affichage des catégories vers un affichage alphabétique. En affichage des catégories, vous devrez peut-être développer une catégorie pour afficher toutes ses propriétés en dessous. Pour ouvrir la boîte de dialogue Propriétés d’un élément, cliquez sur le bouton **Pages de propriétés** de la barre d’outils, ou cliquez avec le bouton droit sur l’élément, puis cliquez sur **Propriétés**.  
   
--   Dans le volet de regroupement, définissez les propriétés pour le membre du groupe sélectionné actuellement. Les propriétés de membre de groupe aident à contrôler la répétition des lignes statiques d'en-tête de groupe et de pied de page pour chaque instance de groupe. Pour plus d’informations, consultez [affichage en-têtes et pieds de page avec un groupe &#40; Le Générateur de rapports et SSRS &#41; ](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
+-   Dans le volet de regroupement, définissez les propriétés pour le membre du groupe sélectionné actuellement. Les propriétés de membre de groupe aident à contrôler la répétition des lignes statiques d'en-tête de groupe et de pied de page pour chaque instance de groupe. Pour plus d’informations, consultez [Afficher des en-têtes et des pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Pour afficher le volet Propriétés, dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés**. Vous pouvez détacher ce volet et le déplacer vers une autre zone de la fenêtre [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ou bien l'afficher sous forme de fenêtre à onglets dans l'aire de conception.  
   
@@ -248,7 +246,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
- Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans l’emplacement suivant : `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
+ Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans l’emplacement suivant : `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
   
  Vous pouvez également ajouter des styles personnalisés à l'Assistant de rapport.  
   
@@ -316,7 +314,7 @@ ms.lasthandoff: 08/09/2017
 [Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
 [Explorateur de solutions](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
 [Rapports Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
-[Langage de définition de rapport](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[Langage de définition des rapports](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Prise en charge du déploiement et de la version dans les outils de données de serveur SQL](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

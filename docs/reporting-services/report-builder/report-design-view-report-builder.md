@@ -1,5 +1,5 @@
 ---
-title: "Le mode de création (Générateur de rapports) d’état | Documents Microsoft"
+title: "Mode Création de rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -22,21 +22,21 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports est conçu pour vous aider à organiser facilement vos ressources de rapport et à générer rapidement les rapports paginés dont vous avez besoin. L’aire de conception se trouve au centre de la fenêtre, avec le ruban et les volets autour d’elle. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Cet article décrit les volets que vous utilisez pour ajouter, sélectionner et organiser vos ressources de rapport, ainsi que pour modifier les propriétés des éléments de rapport.  
   
- ![Mode de création de générateur de rapport](../../reporting-services/report-builder/media/ssrb-designview.png "mode Générateur de rapports")  
+ ![Mode Création du Générateur de rapports](../../reporting-services/report-builder/media/ssrb-designview.png "Mode Création du Générateur de rapports")  
   
 1.  Ruban  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 -   les propriétés des éléments de rapport en cliquant dessus avec le bouton droit, puis en cliquant sur **Propriétés**.  
   
- Pour plus d’informations sur l’utilisation du clavier pour manipuler des éléments sur l’aire de conception, consultez [raccourcis clavier &#40; Le Générateur de rapports &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ Pour plus d’informations sur l’utilisation du clavier pour manipuler des éléments sur l’aire de conception, consultez [Raccourcis clavier &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md).  
   
 ### <a name="design-surface-size-and-print-area"></a>Taille et zone d'impression de l'aire de conception  
  La taille de l'aire de conception peut être différente de la zone d'impression de taille de page que vous spécifiez pour imprimer le rapport. Le fait de modifier la taille de l'aire de conception ne modifie pas la zone d'impression de votre rapport. Quelle que soit la taille que vous définissez pour la zone d'impression de votre rapport, la taille globale de l'aire de conception ne change pas. Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
@@ -152,7 +152,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="GroupPane"></a> Volet de regroupement (Générateur de rapports)  
  Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet de regroupement comprend deux volets : Groupes de lignes et Groupes de colonnes. Lorsque vous sélectionnez une région de données, le volet de regroupement affiche tous les groupes de cette région de données sous forme de liste hiérarchique : les groupes enfants apparaissent en retrait sous leurs groupes parents.  
   
- ![Groupes de lignes du Générateur de rapports](../../reporting-services/report-builder/media/ssrb-rowgroups.png "groupes de lignes du Générateur de rapports")  
+ ![Groupes de lignes du Générateur de rapports](../../reporting-services/report-builder/media/ssrb-rowgroups.png "Groupes de lignes du Générateur de rapports")  
   
  Vous pouvez créer des groupes en faisant glisser des champs du volet Données du rapport et en les plaçant sur l'aire de conception ou dans le volet de regroupement. Dans le volet de regroupement, vous pouvez ajouter des groupes parents, enfants et adjacents, modifier les propriétés de groupe et supprimer des groupes.  
   

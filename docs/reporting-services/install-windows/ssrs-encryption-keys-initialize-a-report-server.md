@@ -1,12 +1,11 @@
 ---
-title: Initialiser un serveur de rapports (Gestionnaire de Configuration de SSRS) | Documents Microsoft
+title: Initialiser un serveur de rapports (Gestionnaire de configuration de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1f915a96de6567369146030cefa4f126e74a53f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Les clés de chiffrement SSRS - initialiser un serveur de rapports
-  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un serveur initialisé est un serveur qui peut chiffrer et déchiffrer les données d'une base de données de serveur de rapports. L'initialisation est une condition obligatoire pour le fonctionnement d'un serveur de rapports. Cette opération s'effectue lorsque le service Report Server est démarré pour la première fois. Elle s'accomplit également lorsque vous intégrez le serveur de rapports au déploiement existant ou lorsque, manuellement, vous recréez les clés dans le cadre d'un processus de récupération. Pour savoir comment et pourquoi les clés de chiffrement sont utilisées, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) et [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+# <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Clés de chiffrement SSRS - Initialiser un serveur de rapports
+  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], un serveur initialisé est un serveur qui peut chiffrer et déchiffrer les données d'une base de données de serveur de rapports. L'initialisation est une condition obligatoire pour le fonctionnement d'un serveur de rapports. Cette opération s'effectue lorsque le service Report Server est démarré pour la première fois. Elle s'accomplit également lorsque vous intégrez le serveur de rapports au déploiement existant ou lorsque, manuellement, vous recréez les clés dans le cadre d'un processus de récupération. Pour savoir comment les clés de chiffrement sont utilisées et pour quelles raisons, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) et [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Les clés de chiffrement sont en partie basées sur les informations de profil du service Report Server. Si vous modifiez l'identité de l'utilisateur servant à exécuter le service Report Server, vous devez mettre à jour les clés en conséquence. Si vous utilisez l'outil de configuration de Reporting Services pour changer l'identité, cette opération s'effectue automatiquement.  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 5.  Le service Report Server se connecte à nouveau à la base de données du serveur de rapports et ajoute la clé symétrique aux valeurs de la clé publique et de l'identificateur d'installation stockées au cours de l'étape 3. Avant de la stocker, le service Report Server utilise sa clé publique pour chiffrer la clé symétrique. Une fois cette nouvelle clé stockée, le serveur de rapports est considéré comme initialisé et opérationnel.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>Initialisation d'un serveur de rapports pour un déploiement évolutif  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]prend en charge un modèle de déploiement avec montée en puissance parallèle qui partage une base de données du serveur de rapports unique entre plusieurs instances de serveur de rapports. Pour intégrer un déploiement évolutif, un serveur de rapports doit créer et stocker sa copie de la clé symétrique dans la base de données partagée. Bien qu'une seule clé symétrique soit utilisée par les serveurs utilisateurs de la base de données, chaque serveur de rapports possède un exemplaire de la clé. Chaque exemplaire est différent en soi puisqu’il est chiffré exclusivement à l’aide de la clé publique qu’il possède.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge le modèle de déploiement avec montée en puissance parallèle qui partage une seule base de données de serveur de rapports entre plusieurs instances de serveurs de rapports. Pour intégrer un déploiement évolutif, un serveur de rapports doit créer et stocker sa copie de la clé symétrique dans la base de données partagée. Bien qu'une seule clé symétrique soit utilisée par les serveurs utilisateurs de la base de données, chaque serveur de rapports possède un exemplaire de la clé. Chaque exemplaire est différent en soi puisqu’il est chiffré exclusivement à l’aide de la clé publique qu’il possède.  
   
  Les premières étapes assurant l'initialisation d'un serveur de rapports en vue d'un déploiement évolutif sont identiques aux trois premières étapes de l'initialisation d'une combinaison base de données et serveur unique.  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Pour initialiser un serveur de rapports, utilisez l'outil de configuration de Reporting Services. L'opération s'effectue automatiquement lorsque vous créez et configurez la base de données du serveur de rapports. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Pour initialiser un serveur de rapports en vue de l’intégrer à un déploiement évolutif, utilisez la page d’initialisation de l’outil de configuration de Reporting Services ou l’utilitaire **RSKeymgmt**. Pour obtenir des instructions détaillées, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Pour initialiser un serveur de rapports en vue de l’intégrer à un déploiement évolutif, utilisez la page d’initialisation de l’outil de configuration de Reporting Services ou l’utilitaire **RSKeymgmt**. Pour obtenir des instructions détaillées, consultez [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 > [!NOTE]  
 >  **RSKeymgmt** est une application console qui s’exécute à partir d’une ligne de commande sur un ordinateur hébergeant une instance de serveur de rapports déjà intégrée à un déploiement évolutif. Lorsque vous exécutez cet utilitaire, vous spécifiez des arguments pour sélectionner une instance de serveur de rapports distante à initialiser.  
@@ -73,10 +71,9 @@ ms.lasthandoff: 08/09/2017
 >  Vous pouvez également utiliser le fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour initialiser un serveur de rapports par programme. Pour plus d’informations, consultez [Accès au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>Confirmation de l'initialisation d'un serveur de rapports  
- Pour confirmer l’initialisation de serveur de rapports, un test ping du service Web Report Server en tapant **http://\<nom_serveur > / reportserver** dans la fenêtre de commande. Si l’erreur **RSReportServerNotActivated** se produit, l’initialisation a échoué.  
+ Pour confirmer l’initialisation d’un serveur de rapports, exécutez une commande ping pour le service web Report Server en tapant **http://\<nom_serveur>/reportserver** dans la fenêtre de commande. Si l’erreur **RSReportServerNotActivated** se produit, l’initialisation a échoué.  
   
 ## <a name="see-also"></a>Voir aussi
 [Configurer et gérer des clés de chiffrement (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)
   
   
-

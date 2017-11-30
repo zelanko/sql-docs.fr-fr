@@ -1,27 +1,25 @@
 ---
-title: "Didacticiel : Ajouter un graphique à secteurs à votre rapport (Générateur de rapports) | Documents Microsoft"
+title: "Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: f48e91fcf3ea24bacaf71649db1cb4d92c7f6962
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous créez un graphique à secteurs dans un rapport paginé Reporting Services. Vous ajoutez des pourcentages et combinez de petits secteurs en un seul secteur.
@@ -35,7 +33,7 @@ Cette illustration montre le graphique à secteurs que vous allez créer.
 Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez de combiner plusieurs petits secteurs en un secteur plus grand. Les graphiques à secteurs gagnent en lisibilité quand vos données sont agrégées en quelques points de données.  
  
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions sur la façon d’accéder à un serveur de rapports, ajouter une source de données et ajouter un dataset, consultez le premier didacticiel de cette série : [didacticiel : création d’un rapport de base &#40; Le Générateur de rapports &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, l’ajout d’une source de données et l’ajout d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Durée estimée pour effectuer le didacticiel : 10 minutes.  
   
@@ -143,7 +141,7 @@ Trois des secteurs du graphique à secteurs sont assez petits. Vous pouvez combi
 
 1.  Basculez en mode création de rapport.  
   
-2.  Si le volet Propriétés n’est pas visible, dans le **vue** onglet > **afficher/masquer** groupe > sélectionnez **propriétés**.  
+2.  Si le volet Propriétés n’est pas visible, sous l’onglet **Affichage** > groupe **Afficher/Masquer** > sélectionnez **Propriétés**.  
   
 3.  Dans l'aire de conception, cliquez sur un secteur du graphique. Les propriétés de la série sont affichées dans le volet Propriétés.  
   
@@ -197,7 +195,7 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
   
 3.  Sélectionnez **Ventes d’appareils photo et de caméscopes** puis, sous l’onglet **Accueil**, dans la section **Police**, cliquez sur **Gras**.  
   
-4.  Sélectionnez **en tant que pourcentage du Total des ventes**, puis, dans le **accueil** onglet > **police** section > définir la taille de police à **10**.  
+4.  Sélectionnez **En pourcentage du total des ventes**, puis, sous l’onglet **Accueil** > section **Police** > affectez la valeur **10** à la taille de la police.  
   
 5.  (Facultatif) Vous devrez peut-être agrandir la zone de texte Titre pour contenir les deux lignes de texte.  
   
@@ -220,11 +218,10 @@ Le graphique à secteurs étant la seule visualisation dans le rapport, il n’a
 Votre rapport est enregistré sur le serveur de rapports.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [graphiques &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [graphiques sparkline et barres de données &#40; Le Générateur de rapports et SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
+Vous avez terminé le didacticiel d'ajout d'un graphique à secteurs à votre rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

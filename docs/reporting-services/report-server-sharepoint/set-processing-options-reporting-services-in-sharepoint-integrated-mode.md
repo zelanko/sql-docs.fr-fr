@@ -1,5 +1,5 @@
 ---
-title: "Définir les options de traitement (Reporting Services en mode intégré SharePoint) | Documents Microsoft"
+title: "Définir les options de traitement (Reporting Services en mode intégré SharePoint)| Microsoft Docs"
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 645e4258f9185f748af496aa37aff13af08ce2a7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be09d11f5a9fcdddc49a092c37be720dad0581c0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Définir les options de traitement (Reporting Services en mode intégré SharePoint)
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Vous pouvez définir les options de traitement sur un rapport Reporting Services pour déterminer quand le traitement des données se produit. Vous pouvez également définir une valeur d'expiration pour le traitement des rapports, ainsi que des options qui déterminent si l'historique du rapport en cours est activé.  
+  Vous pouvez définir des options de traitement sur un rapport Reporting Services pour déterminer le moment où le traitement des données a lieu. Vous pouvez également définir une valeur d'expiration pour le traitement des rapports, ainsi que des options qui déterminent si l'historique du rapport en cours est activé.  
   
 -   Vous pouvez exécuter un rapport en tant qu'instantané de rapport afin d'éviter qu'il soit exécuté à des moments inopportuns (par exemple, pendant une sauvegarde programmée). En général, un instantané de rapport est créé et actualisé ultérieurement selon une planification, vous permettant ainsi de déterminer précisément le moment auquel le traitement du rapport et des données se produit. Si un rapport est basé sur des requêtes dont l'exécution est longue ou qui utilisent des données d'une source de données que vous ne souhaitez pas rendre accessible à certaines heures, vous devez exécuter le rapport en tant qu'instantané.  
   
@@ -35,12 +34,12 @@ ms.lasthandoff: 10/06/2017
   
 -   L'historique de rapport est un ensemble de copies d'un rapport ayant fait l'objet d'une exécution précédente. Vous pouvez utiliser l'historique de rapport pour conserver un enregistrement d'un rapport dans le temps. L'historique de rapport ne convient pas aux rapports contenant des données confidentielles ou des données personnelles. Pour cette raison, l'historique de rapport peut inclure uniquement les rapports qui interrogent une source de données à l'aide d'un ensemble unique d'informations d'identification (soit stockées, soit utilisées pour l'exécution de rapport sans assistance) qui sont mises à la disposition de tous les utilisateurs qui exécutent un rapport.  
 
-    Intégration de Reporting Services avec SharePoint utilise l’extraction et archiver des fonctionnalités de gestion de contenu de SharePoint pour enregistrer les mises à jour pour les types de contenu Reporting Services. Cela inclut la création d'instantanés de rapports. Par conséquent, si vous avez activé le contrôle de version sur une bibliothèque de documents, vous verrez la version actualisée du rapport lorsqu'une nouvelle capture instantanée d'historique de rapport est créée. Il s'agit d'un effet secondaire de la mise à jour des captures d'instantanés. Lorsqu'un instantané est mis à jour, la propriété LastExecution du rapport est modifiée, ce qui modifie la version du rapport.  
+    L’intégration de Reporting Services à SharePoint utilise les fonctionnalités de gestion du contenu Extraire et Archiver de SharePoint pour enregistrer les mises à jour des types de contenu Reporting Services. Cela inclut la création d'instantanés de rapports. Par conséquent, si vous avez activé le contrôle de version sur une bibliothèque de documents, vous verrez la version actualisée du rapport lorsqu'une nouvelle capture instantanée d'historique de rapport est créée. Il s'agit d'un effet secondaire de la mise à jour des captures d'instantanés. Lorsqu'un instantané est mis à jour, la propriété LastExecution du rapport est modifiée, ce qui modifie la version du rapport.  
 
 -   Vous pouvez spécifier des valeurs de délai d'attente pour fixer des limites à l'utilisation des ressources système.  
 
 > [!NOTE]
-> Intégration de Reporting Services avec SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
 ## <a name="set-data-refresh-options"></a>Définir les options d'actualisation des données
   
@@ -99,8 +98,7 @@ ms.lasthandoff: 10/06/2017
 ## <a name="next-steps"></a>Étapes suivantes
 
  [Définir les propriétés de traitement d'un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
- [La mise en cache des rapports](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Définition des valeurs de délai d’attente pour le traitement des rapports et Dataset partagé](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [Mise en cache de rapports](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un dataset partagé](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-

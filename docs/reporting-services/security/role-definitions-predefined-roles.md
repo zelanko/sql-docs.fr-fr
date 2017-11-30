@@ -1,5 +1,5 @@
 ---
-title: "Des rôles prédéfinis | Documents Microsoft"
+title: "Rôles prédéfinis | Microsoft Docs"
 ms.custom: 
 ms.date: 10/22/2015
 ms.prod: sql-server-2016
@@ -15,19 +15,18 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 64192b6a5cb00633c1a9f89096b77c9b9d5539bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-definitions---predefined-roles"></a>Définitions de rôles - rôles prédéfinis
+# <a name="role-definitions---predefined-roles"></a>Définitions de rôles - Rôles prédéfinis
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec des rôles prédéfinis que vous pouvez utiliser pour accorder l'accès aux opérations du serveur de rapports. Chaque rôle prédéfini décrit une collection de tâches associées. Vous pouvez assigner des groupes et des comptes d'utilisateurs à des rôles prédéfinis pour fournir l'accès immédiat aux opérations du serveur de rapports.  
   
 ## <a name="how-to-use-predefined-roles"></a>Comment utiliser des rôles prédéfinis  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Identifiez les utilisateurs et les groupes qui doivent accéder au serveur de rapports, et à quel niveau. Le rôle **Lecteur** ou le rôle **Générateur de rapports** doit être attribué à la plupart des utilisateurs. Le rôle **Serveur de publication** doit être attribué à un nombre restreint d'utilisateurs. Le rôle **Gestionnaire de contenu**ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
-3.  Lorsque vous êtes prêt à assigner des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le Gestionnaire de rapports. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
+3.  Lorsque vous êtes prêt à assigner des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le Gestionnaire de rapports. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
 ##  <a name="bkmk_rolelist"></a> Définition de rôles prédéfinis  
  Les rôles prédéfinis sont définis par les tâches qu'ils prennent en charge. Vous pouvez modifier ces rôles ou les remplacer par des rôles personnalisés.  
@@ -216,11 +215,10 @@ ms.lasthandoff: 08/09/2017
  Le rôle **Utilisateur système** peut être utilisé pour compléter la sécurité par défaut. Vous pouvez inclure le rôle dans de nouvelles attributions de rôles qui étendent l'accès du serveur de rapports aux utilisateurs des rapports. Pour plus d’informations, consultez [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer, supprimer ou modifier un rôle &#40; Management Studio &#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Accorder l’accès de l’utilisateur à un serveur de rapports &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Modifier ou supprimer une attribution de rôle &#40; Le Gestionnaire de rapports &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Octroi d’autorisations sur un serveur de rapports en Mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)  
   
   
-

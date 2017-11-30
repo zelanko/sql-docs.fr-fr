@@ -1,5 +1,5 @@
 ---
-title: "Ajouter et modifier une ligne (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Ajouter et modifier une ligne (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca5f80521b142435210737f2e6c971c8d6853510
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1854f90337ef413c330a121681fed369f80462b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Ajouter et modifier une ligne (Générateur de rapports et SSRS)
   Vous pouvez ajouter une ligne à un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] quand vous souhaitez qu’un élément graphique sépare des sections du rapport. Vous pouvez personnaliser l'apparence de la ligne en modifiant des propriétés telles que la couleur ou le style. Par exemple, vous pouvez incorporer les couleurs de la société dans le rapport.    
@@ -46,4 +45,3 @@ ms.lasthandoff: 08/09/2017
  [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)    
     
   
-

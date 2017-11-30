@@ -1,5 +1,5 @@
 ---
-title: "Résoudre les problèmes de publication ou affichage d’un rapport sur un serveur de rapports en Mode natif | Documents Microsoft"
+title: "Résoudre les problèmes liés à la publication ou à l’affichage d’un rapport sur un serveur de rapports en mode natif | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Résolution des problèmes liés à la publication ou à l’affichage d’un rapport sur un serveur de rapports en mode natif
   
@@ -42,7 +41,7 @@ Vérifiez que l’URL du serveur de rapports correspond à l’adresse du serveu
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Rien ne se produit lorsque je bascule des éléments dans mon rapport publié.  
   Lorsque vous affichez un rapport dans l'aperçu local, vous pouvez basculer des éléments dans le rapport et les afficher ou les masquer. Lorsque vous affichez le même rapport une fois que celui-ci a été publié sur le serveur de rapports, basculez les éléments qui ne fonctionnent plus.   
   
-\<nom de serveur de rapports > inclut un trait de soulignement (_)  
+\<nom du serveur de rapports> inclut un trait de soulignement (_)  
   
 Si un rapport s'exécute sans erreurs, mais que les éléments de bascule ne fonctionnent pas (par exemple, rien ne se produit lorsque vous cliquez sur une icône (+) de développement), vérifiez le nom de l'ordinateur qui héberge le serveur de rapports. Si le nom de l'ordinateur contient un caractère de soulignement, les éléments de bascule ne fonctionnent pas. Il s'agit d'un problème connu. Il n'existe aucune possibilité pour contourner ce problème.   
   
@@ -58,7 +57,7 @@ Dans certaines circonstances, lorsque vous utilisez le Gestionnaire de rapports 
 Vérifiez que vous êtes autorisé à accéder aux dossiers qui contiennent les fichiers mis en cache.   
     
 ## <a name="see-also"></a>Voir aussi  
-[Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+[Prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Dépanner des problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
@@ -66,5 +65,4 @@ Vérifiez que vous êtes autorisé à accéder aux dossiers qui contiennent les 
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

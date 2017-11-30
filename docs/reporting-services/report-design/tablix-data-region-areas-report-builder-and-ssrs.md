@@ -1,5 +1,5 @@
 ---
-title: "Zones de région de données de tableau matriciel (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Zones de région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1f264426872fea87eec1da8ab17243bbe82ae76
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 61ec2adb507793813554c1ec8c07418354f9e549
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zones de région de données de tableau matriciel (Générateur de rapports et SSRS)
  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de tableau matriciel a quatre zones qui contiennent des cellules de tableau matriciel :   
@@ -46,21 +45,20 @@ Sur l'aire de conception, les traits en pointillés délimitent les quatre zones
   
 -   **Zone du corps de tableau matriciel**. Le corps du tableau matriciel se trouve en bas, à droite (ou en bas, à gauche pour les dispositions RTL). Le corps du tableau matriciel affiche les données détaillées et les données groupées. Dans cet exemple, seules les données agrégées sont utilisées. L'étendue de l'expression est déterminée par les groupes, auxquels la zone de texte appartient, dont le niveau est le plus profond. Les cellules du corps du tableau matriciel affichent des données détaillées quand elles figurent dans des lignes de détail et des données agrégées quand elles appartiennent à des lignes ou colonnes associées à des groupes. Par défaut, les cellules des lignes ou colonnes de groupe qui contiennent des expressions simples ne comportant pas de fonction d'agrégation affichent la première valeur du groupe. Sur l'illustration donnée en exemple, les cellules affichent les totaux agrégés pour les totaux de ligne de l'intégralité des bons de commande.  
   
- Pendant l’exécution du rapport, les groupes de colonne s’affichent en détail sur la droite (ou sur la gauche, quand la propriété Direction de la région de données de tableau matriciel est définie sur RTL) pour chaque colonne définie, des valeurs uniques étant attribuées aux expressions de groupe. Les groupes de ligne s'affichent en détail en bas de la page. Pour plus d’informations, consultez [Cellules, lignes et colonnes d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Pendant l’exécution du rapport, les groupes de colonne s’affichent en détail sur la droite (ou sur la gauche, quand la propriété Direction de la région de données de tableau matriciel est définie sur RTL) pour chaque colonne définie, des valeurs uniques étant attribuées aux expressions de groupe. Les groupes de ligne s'affichent en détail en bas de la page. Pour plus d’informations, consultez [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre la région de données du tableau matriciel telle qu'elle apparaît dans l'Aperçu.  
   
- ![Groupes d’aperçu, angle de tableau matriciel, ligne et colonne, corps](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "groupes aperçu, angle de tableau matriciel, ligne et colonne, corps")  
+ ![Aperçu, angle de tableau matriciel, groupes de lignes et de colonnes, corps](../../reporting-services/report-design/media/rs-tablixareaspreview.gif "Aperçu, angle de tableau matriciel, groupes de lignes et de colonnes, corps")  
   
  La zone de groupe de lignes affiche deux instances de groupe de catégorie, l'une correspondant à la catégorie Clothing et l'autre à la catégorie Components. Le groupe de colonnes affiche une instance de groupe géographique correspondant à l'Amérique du Nord (North America) ainsi que des instances de groupe pays/région imbriquées correspondant respectivement au Canada (CA) et aux États-Unis (US). En outre, la colonne adjacente affiche deux instances de groupe pour les années 2003 et 2004. La ligne de colonne Total affiche les totaux de ligne, la ligne des totaux qui est répétée pour chaque groupe de catégorie affiche les totaux de sous-catégorie et la ligne du total global affiche les totaux de catégorie une seule fois pour la région de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
- [Tables &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Créer une matrice](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Créer des factures et des formulaires avec des listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
-

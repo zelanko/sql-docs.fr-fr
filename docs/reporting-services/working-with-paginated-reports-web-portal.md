@@ -1,31 +1,28 @@
 ---
-title: "Utilisation des rapports paginés (portail web) | Documents Microsoft"
+title: "Utilisation des rapports paginés (portail web) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62c2bbf3279d4c9f6303a394cc83c95e6418005c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
 
 Vous pouvez afficher et gérer les propriétés d’un rapport paginé dans le portail web. À partir du portail web, vous pouvez lancer le Générateur de rapports pour créer ou modifier des rapports paginés.  
    
@@ -50,7 +47,7 @@ Procédez comme suit pour gérer un rapport paginé existant.
 > [!NOTE]
 > Si vous ne voyez pas de rapports paginés dans le dossier, vérifiez que vous affichez bien les rapports paginés. Vous pouvez sélectionner **Afficher** dans la barre de menus dans le coin supérieur droit du portail web. Vérifiez que **Rapports paginés** est coché.  
   
-1.  Sélectionnez le **points de suspension (...)**  pour le jeu de données que vous souhaitez gérer.  
+1.  Sélectionnez les **points de suspension (...)** correspondant au dataset que vous souhaitez gérer.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
@@ -127,12 +124,12 @@ Ceci vous permet de ne pas fournir d’informations d’identification pour la s
 Pour utiliser cette option, vous devez avoir précédemment configuré le compte d’exécution sans assistance pour votre serveur de rapports. Le compte d’exécution sans assistance est utilisé pour se connecter à des sources de données externes quand d’autres sources d’informations d’identification ne sont pas disponibles. Si vous spécifiez cette option et que le compte n'est pas configuré, la connexion à la source de données de rapports échouera et le traitement de rapports ne se produira pas. Pour plus d’informations sur ce compte, consultez [Configurer le compte d’exécution sans assistance (Gestionnaire de configuration de SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Abonnements  
-Un abonnement Reporting Services est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous spécifiez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique. Pour plus d’informations, consultez [utilisation des abonnements](working-with-subscriptions-web-portal.md).
+Un abonnement Reporting Services est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous spécifiez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique. Pour plus d’informations, consultez [Utilisation des abonnements](working-with-subscriptions-web-portal.md).
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
 ## <a name="dependent-items"></a>Éléments dépendants  
-Utilisez la page Éléments dépendants pour afficher une liste d’éléments qui font référence à ce rapport. L’icône de chaque type d’élément indique ce qu’il est. Vous pouvez alors sélectionner le **points de suspension (...)**  sur chaque élément pour gérer ces éléments supplémentaires.  
+Utilisez la page Éléments dépendants pour afficher une liste d’éléments qui font référence à ce rapport. L’icône de chaque type d’élément indique ce qu’il est. Vous pouvez ensuite sélectionner les **points de suspension (...)** sur chaque élément pour gérer plus avant ces éléments.  
   
 ## <a name="caching"></a>Mise en cache  
 Vous disposez de différentes options de mise en cache des données pour un rapport paginé. Vous pouvez commencer avec une simple sélection.  
@@ -149,7 +146,7 @@ Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
 
-Pour plus d’informations, consultez [utilisation des instantanés](working-with-snapshots-web-portal.md).
+Pour plus d’informations, consultez [Utilisation des instantanés](working-with-snapshots-web-portal.md).
   
 ### <a name="cache-expiration"></a>Expiration du cache  
   
@@ -199,7 +196,6 @@ Sélectionnez cet élément pour modifier la façon dont la sécurité est défi
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Portail Web](../reporting-services/web-portal-ssrs-native-mode.md)  
-[Travailler avec les Datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
+[Utiliser des datasets partagés](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

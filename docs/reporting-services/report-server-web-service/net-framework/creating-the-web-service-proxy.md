@@ -1,5 +1,5 @@
 ---
-title: "Création du Proxy de Service Web | Documents Microsoft"
+title: "Création du proxy de service web | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -19,25 +18,24 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 1c39d81ec9a1d2cd24f01b9dccfed13e8560a770
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b3f80f446e3d68059d2337d6fa64e9e99022e24f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-the-web-service-proxy"></a>Création du proxy de service Web
   Un client et un service Web peuvent communiquer à l'aide de messages SOAP qui encapsulent les paramètres d'entrée et de sortie au format XML. Une classe proxy mappe des paramètres aux éléments XML puis envoie les messages SOAP sur un réseau. De cette manière, la classe proxy vous évite de devoir communiquer avec le service Web au niveau SOAP et vous permet d'appeler des méthodes de service Web dans tout environnement de développement qui prend en charge les proxies de service Web et SOAP.  
   
- Il existe deux façons d’ajouter une classe proxy dans votre projet de développement en utilisant le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: avec l’outil WSDL dans la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]et en ajoutant une référence Web dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Les sections suivantes approfondissent ce sujet.  
+ Il y a deux manières d’ajouter une classe proxy à votre projet de développement à l’aide du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] : avec l’outil WSDL dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], et en ajoutant une référence web dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Les sections suivantes approfondissent ce sujet.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Ajout du proxy à l'aide de l'outil WSDL  
- Le Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] inclut l'outil Web Services Description Language (Wsdl.exe) qui vous permet de générer un proxy de service Web pour une utilisation dans l'environnement de développement [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. La méthode la plus courante pour créer un proxy client dans les langages qui prennent en charge des services Web (actuellement c# et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) consiste à utiliser l’outil WSDL.  
+ Le Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] inclut l'outil Web Services Description Language (Wsdl.exe) qui vous permet de générer un proxy de service Web pour une utilisation dans l'environnement de développement [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. La méthode la plus courante pour créer un proxy client dans les langages qui prennent en charge des services web (actuellement C# et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) est d’utiliser l’outil WSDL.  
   
  **Pour ajouter une classe proxy à votre projet à l’aide de Wsdl.exe**  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
      Après avoir ajouté la classe proxy comme un élément à votre projet, le fichier associé s'affiche dans l'Explorateur de solutions.  
   
-3.  Pour appeler le service par programme, créez une instance de la classe proxy.  
+3.  Pour appeler le service par programmation, créez une instance de la classe proxy.  
   
      L'exemple de code suivant affiche la syntaxe permettant de créer une instance de la classe proxy <xref:ReportService2010.ReportingService2010> dans un projet :  
   
@@ -76,15 +74,15 @@ ReportingService2010 service = new ReportingService2010();
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Ajout du proxy à l'aide d'une référence Web dans Visual Studio  
  Une référence Web permet à un projet de faire appel à un ou plusieurs services Web [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] permet aux utilisateurs d'ajouter des références de service Web aux projets en suivant quelques étapes simples.  
   
- **Pour ajouter une référence Web à un projet**  
+ **Pour ajouter une référence web à un projet**  
   
-1.  Dans **l’Explorateur de solutions**, sélectionnez le projet qui utilisera le service Web.  
+1.  Dans l’**Explorateur de solutions**, sélectionnez le projet qui fera appel au service web.  
   
-2.  Sur le **projet** menu, cliquez sur **ajouter une référence Web**.  
+2.  Dans le menu **Projet**, cliquez sur **Ajouter une référence web**.  
   
-     Le **ajouter une référence Web** boîte de dialogue s’ouvre.  
+     La boîte de dialogue **Ajouter une référence web** s’ouvre.  
   
-3.  Dans le **URL** , entrez le chemin d’accès complet au service Web Report Server.  
+3.  Dans le champ **URL**, entrez le chemin complet du service web Report Server.  
   
      Voici une URL simplifiée pour le point de terminaison d'exécution du rapport du service Web Report Server :  
   
@@ -92,24 +90,24 @@ ReportingService2010 service = new ReportingService2010();
     http://<Server Name>/reportserver/reportexecution2005.asmx  
     ```  
   
-     L'URL contient le domaine de déploiement du service Web Report Server, le nom du dossier qui contient le service, et le nom du fichier de découverte pour le service. Pour obtenir une description complète des différents éléments d’URL, consultez [l’accès à l’API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
+     L'URL contient le domaine de déploiement du service Web Report Server, le nom du dossier qui contient le service, et le nom du fichier de découverte pour le service. Pour obtenir une description complète des différents éléments de l’URL, consultez [Accès à l’API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
      Une description des méthodes et propriétés fournies par le service Web apparaît dans le volet Navigateur sur la gauche.  
   
     > [!NOTE]  
-    >  Pour plus d’informations sur les éléments associés au service Web Report Server, consultez [méthodes de Service Web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md).  
+    >  Pour plus d’informations sur les éléments associés au service web Report Server, consultez [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md).  
   
 4.  Vérifiez que votre projet peut utiliser le service Web Report Server, et que vous avez l'autorisation appropriée d'accéder au serveur de rapports.  
   
-5.  Dans le **nom de référence Web** , entrez un nom que vous utiliserez dans votre code pour accéder par programme au service Web Report Server.  
+5.  Dans le champ **Nom de la référence web**, entrez un nom que vous utiliserez dans votre code pour accéder par programmation au service web Report Server sélectionné.  
   
-6.  Sélectionnez le **ajouter une référence** bouton permettant de créer une référence dans votre application au service Web.  
+6.  Sélectionnez le bouton **Ajouter une référence** pour créer une référence dans votre application destinée au service web.  
   
-     La nouvelle référence s’affiche dans **l’Explorateur de solutions** sous le nœud Références Web pour le projet actif, nommé comme spécifié dans le **nom de référence Web** champ.  
+     La nouvelle référence est affichée dans l’**Explorateur de solutions** sous le nœud Références web du projet actif ; elle est nommée en fonction des informations spécifiées dans le champ **Nom de la référence web**.  
   
-7.  Dans **l’Explorateur de solutions**, développez le dossier références Web pour noter l’espace de noms pour les classes de référence Web qui sont disponibles pour les éléments dans votre projet.  
+7.  Dans l’**Explorateur de solutions**, développez le dossier Références web pour noter l’espace de noms des classes de la référence web qui sont disponibles pour les éléments de votre projet.  
   
-     Après avoir ajouté une référence Web à votre projet, les fichiers associés sont affichés dans un dossier dans le dossier des références Web **l’Explorateur de solutions**.  
+     Après avoir ajouté une référence web à votre projet, les fichiers associés sont affichés dans un dossier au sein du dossier Références web de l’**Explorateur de solutions**.  
   
  Après avoir ajouté la référence Web, utilisez la syntaxe suivante pour créer une instance de la classe proxy :  
   
@@ -126,7 +124,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- Vous pouvez également ajouter un **à l’aide de** (**importation** dans [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) directive pour la référence de service Web Report Server. Si vous utilisez cette directive, il n'est pas nécessaire de qualifier complètement les types dans l'espace de noms. Pour cela, ajoutez le code suivant à votre fichier :  
+ Vous pouvez également ajouter une directive **using** (**Import** en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) à la référence de service web Report Server. Si vous utilisez cette directive, il n'est pas nécessaire de qualifier complètement les types dans l'espace de noms. Pour cela, ajoutez le code suivant à votre fichier :  
   
 ```vb  
 Import myNamespace.myReferenceName  
@@ -137,9 +135,8 @@ using myNamespace.myReferenceName;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Service Web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Génération d’Applications à l’aide du Service Web et le .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Informations techniques de référence &#40; SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Génération d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

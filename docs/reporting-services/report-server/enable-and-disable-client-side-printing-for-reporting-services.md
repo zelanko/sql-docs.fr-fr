@@ -1,7 +1,6 @@
 ---
-title: "Activer et désactiver l’impression côté Client pour Reporting Services | Documents Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Activer et désactiver l’impression côté client pour Reporting Services | Microsoft Docs"
+ms.custom: SQL2016_New_Updated
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -17,36 +16,34 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 633727df8bdb43072ab5780cfca394934c049801
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
 
   Le bouton d’impression dans la barre d’outils de la visionneuse de rapports utilise le format PDF pour l’impression côté client de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] affichés dans un navigateur. La nouvelle expérience d'impression à distance utilise l'extension de rendu PDF fournie avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]pour afficher le rapport au format PDF. Vous pouvez télécharger le rapport au format .PDF ou, si vous disposez d'une application pour l'affichage de fichiers PDF, le bouton d'impression affiche une boîte de dialogue d'impression comprenant les éléments courants de configuration de page, notamment la taille et l'orientation de la page et un aperçu du fichier .PDF. Bien que l'impression côté client soit activée par défaut, vous pouvez désactiver cette fonctionnalité pour l'empêcher d'être utilisée.  
   
- Les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisaient un contrôle ActiveX qui nécessitait un téléchargement sur l'ordinateur client à partir du serveur de rapports. Si vous mettez à niveau votre serveur de rapports vers SQL Server 2016 le contrôle d’impression n’est pas supprimé à partir du serveur de rapports ou les ordinateurs clients.  
+ Les versions précédentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisaient un contrôle ActiveX qui nécessitait un téléchargement sur l'ordinateur client à partir du serveur de rapports. Si vous mettez à niveau votre serveur de rapports vers SQL Server 2016, le contrôle d’impression n’est pas supprimé du serveur de rapports ou des ordinateurs clients.  
 
 ##  <a name="bkmk_clientside_printexpereince"></a> L'expérience d'impression  
- Lorsque vous cliquez sur le bouton ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") dans la barre d’outils rapport Observateur, l’expérience varie en fonction de ce que. Applications d’affichage PDF sont installées sur l’ordinateur client et ce que navigateur que vous utilisez.   Vous pouvez télécharger le fichier PDF ou configurer les options d'impression à partir d'une boîte de dialogue, ou les deux, en fonction de l'ordinateur client.  
+ Lorsque vous cliquez sur le bouton ![htmlviewer_print](../../reporting-services/report-server/media/htmlviewer-print.png "htmlviewer_print") d’impression dans la barre d’outils de la visionneuse de rapports, l’expérience varie en fonction des applications d’affichage .PDF installées sur l’ordinateur client et du navigateur que vous utilisez.   Vous pouvez télécharger le fichier PDF ou configurer les options d'impression à partir d'une boîte de dialogue, ou les deux, en fonction de l'ordinateur client.  
   
- ![Report toolbar](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![Barre d’outils Rapport](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barre d’outils Rapport")  
   
 |||  
 |-|-|  
 |La première boîte de dialogue, identique pour tous les navigateurs, vous permet de modifier les propriétés de disposition de base, par exemple l'orientation. Lorsque vous cliquez sur **Imprimer**, l'expérience sera légèrement différente selon le navigateur que vous utilisez.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Dans Chrome, une boîte de dialogue d’impression détaillée s'ouvre dans le navigateur.   Vous pouvez modifier la configuration d'impression, imprimer et ouvrir la boîte de dialogue d'impression du système d'exploitation.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |Si vous disposez d’une application de lecture de PDF, le bouton d'impression ouvrira une fenêtre d'aperçu du fichier PDF et vous pourrez enregistrer ou imprimer.||  
-|Si vous ne disposez pas d’une application de lecture de PDF, deux expériences utilisateur coexistent :<br /><br /> Le rapport sera affiché automatiquement et utilisera le processus de téléchargement de votre navigateur pour télécharger le fichier PDF.   **Remarque :** plus le rapport est compliqué, plus le délai est long entre le moment où vous cliquez sur **Imprimer** et celui où s’affiche la notification de téléchargement de votre navigateur. Vous pouvez également forcer à nouveau le téléchargement en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.<br /><br /> Forcez le téléchargement PDF en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|Si vous ne disposez pas d’une application de lecture de PDF, deux expériences utilisateur coexistent :<br /><br /> Le rapport sera affiché automatiquement et utilisera le processus de téléchargement de votre navigateur pour télécharger le fichier PDF.   **Remarque :** plus le rapport est compliqué, plus le délai est long entre le moment où vous cliquez sur **Imprimer** et celui où s’affiche la notification de téléchargement de votre navigateur. Vous pouvez également forcer à nouveau le téléchargement en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport.**.<br /><br /> Forcez le téléchargement PDF en cliquant sur **Cliquez ici pour afficher le fichier PDF de votre rapport.**.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> Résolution des problèmes d'impression côté client  
  Si le bouton d'impression de la barre d'outils de la visionneuse de rapports est désactivé, vérifiez les éléments suivants :  
@@ -121,5 +118,4 @@ Dim rs As New ReportingService()
 End Class 'Sample  
 ```
 
-D’autres questions ? [Essayez de poser le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

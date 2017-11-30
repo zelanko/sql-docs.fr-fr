@@ -1,5 +1,5 @@
 ---
-title: "Interface utilisateur du Concepteur de requêtes modèle de rapport | Documents Microsoft"
+title: "Interface utilisateur du concepteur de requêtes de modèle de rapport | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a7fd4f315f8fe171a6b5e8df47c5e5be5b01fb7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes de modèle de rapport
   Le Concepteur de rapports fournit deux Concepteurs de requêtes pour vous aider à spécifier les données d'une source de données de modèle de serveur de rapports à utiliser dans un rapport. Utilisez le concepteur de requêtes graphique pour explorer et choisir les entités de modèle et les champs d'entité. Utilisez le Concepteur de requêtes textuel pour travailler directement avec une spécification SMDL (Semantic Model Definition Language) au format XML.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  L'illustration suivante présente chaque volet.  
   
- ![Interface utilisateur du Concepteur de requêtes SMDL](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "interface utilisateur du Concepteur de requêtes SMDL")  
+ ![Interface utilisateur du Concepteur de requêtes SMDL](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Interface utilisateur du Concepteur de requêtes SMDL")  
   
  Le tableau ci-dessous décrit la fonction de chaque volet.  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 |----------|--------------|  
 |Volet Explorateur|Affiche des représentations graphiques des entités et des champs d'entité dans le modèle. Utilisez ce volet pour explorer des entités, les entités associées ainsi que des champs.|  
 |Zone de conception|Affiche une liste des champs du modèle. Utilisez ce volet pour organiser la disposition des champs sélectionnés.|  
-|Results pane|Affiche les résultats de la requête. Pour exécuter la requête, avec le bouton droit dans un volet, puis cliquez sur **exécuter**, ou cliquez sur le **exécuter** (![exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "exécuter la requête")) dans la barre d’outils.|  
+|Results pane|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** (![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")) dans la barre d’outils.|  
   
  Les modifications apportées aux informations dans les volets Explorateur ou Zone de conception sont répercutées dans le volet Résultat quand vous cliquez sur **Exécuter**.  
   
@@ -63,9 +62,9 @@ ms.lasthandoff: 08/09/2017
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. La requête pour une source de données modèle de Serveur de rapports est une spécification SMQL (Semantic Model Query Language) en XML.|  
 |**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Annuler action](../../reporting-services/report-data/media/rsqdicon-undo.gif "Annuler action")|Annule la dernière action.|  
-|![Action de restauration par progression](../../reporting-services/report-data/media/rsqdicon-redo.gif "rétablir action")|Rétablit la dernière action.|  
+|![Rétablir action](../../reporting-services/report-data/media/rsqdicon-redo.gif "Rétablir action")|Rétablit la dernière action.|  
 |![Exécuter la requête](../../reporting-services/report-data/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Résultat.|  
-|![Filtre graphique à côté de la colonne de filtre sélectionnée](../../reporting-services/report-data/media/rsqdicon-filter.gif "filtre graphique à côté de la colonne de filtre sélectionnée")|Ouvre la boîte de dialogue **Filtrer les données** qui permet de spécifier les données à filtrer. Vous pouvez spécifier des filtres indépendamment des données actuelles de la zone de conception.|  
+|![Filtre graphique à côté de la colonne de filtre sélectionnée](../../reporting-services/report-data/media/rsqdicon-filter.gif "Filtre graphique à côté de la colonne de filtre sélectionnée")|Ouvre la boîte de dialogue **Filtrer les données** qui permet de spécifier les données à filtrer. Vous pouvez spécifier des filtres indépendamment des données actuelles de la zone de conception.|  
   
 ## <a name="text-based-query-designer"></a>Concepteur de requêtes textuel  
  Lorsque vous créez un dataset de modèle de serveur de rapports, le concepteur de requêtes graphique est proposé par défaut. Pour basculer vers le concepteur de requêtes textuel, cliquez sur le bouton bascule **Modifier en tant que texte** dans la barre d’outils.  
@@ -95,8 +94,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Connexion de modèle de rapport &#40; SSRS &#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
- [Fichier de Configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
+ [Connexion à un modèle de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   
-

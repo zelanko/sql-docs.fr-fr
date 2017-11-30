@@ -1,5 +1,5 @@
 ---
-title: "Rendu au format HTML (Générateur de rapports et SSRS) | Documents Microsoft"
+title: "Rendu au format HTML (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendu au format HTML (Générateur de rapports et SSRS)
   L’extension de rendu HTML effectue le rendu d’un rapport paginé au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  Les étiquettes Explorateur de documents sont rendues et accessibles par navigation en utilisant l'Explorateur de documents dans le contrôle de visionneuse. Pour les en-têtes de région de données omis, les étiquettes sont rendues dans la première cellule enfant. En l'absence de cellule enfant, l'étiquette est rendue dans l'enfant qui précède.  
   
 ### <a name="bookmarks"></a>Signets  
- Les liens de signet sont rendus et apparaissent sous la forme de liens hypertexte. Les cibles de signet sont rendues et accessibles par navigation en cliquant sur les liens de signet. Lorsque l'utilisateur clique sur un lien de signet, le rapport accède à la première occurrence de l'étiquette de signet cible et, lorsque cela est possible, un défilement a lieu dans le navigateur afin que le lien de signet soit en haut de la fenêtre. Point d’ancrage HTML (\<un >) balises sont utilisées pour marquer les cibles de signet.  
+ Les liens de signet sont rendus et apparaissent sous la forme de liens hypertexte. Les cibles de signet sont rendues et accessibles par navigation en cliquant sur les liens de signet. Lorsque l'utilisateur clique sur un lien de signet, le rapport accède à la première occurrence de l'étiquette de signet cible et, lorsque cela est possible, un défilement a lieu dans le navigateur afin que le lien de signet soit en haut de la fenêtre. Des balises d’ancrage HTML (\<a>) sont utilisées pour marquer les cibles de signet.  
   
 ### <a name="interactive-sorting"></a>Tri interactif  
  Si un tri utilisateur est défini pour une zone de texte, l'extension de rendu HTML rend les icônes de tri dans la zone de texte à droite de son contenu. Si un rapport contient une zone de texte où le tri utilisateur est défini, du code JavaScript est rendu qui provoque une publication sur le serveur lorsque l'image de tri fait l'objet d'un clic.  
   
 ### <a name="hyperlinks-and-drillthrough"></a>Liens hypertexte et extraction  
- Les liens hypertexte et liens d’extraction sont rendus sous forme de liens hypertexte dans les éléments de rapport à l’aide d’ancrage HTML (\<un >) balises autour de l’élément sur lequel ils sont définis.  
+ Les liens hypertexte et les liens d’extraction sont rendus sous la forme de liens hypertexte dans les éléments de rapport à l’aide des balises d’ancrage HTML (\<a>) placées autour de l’élément sur lequel ils sont définis.  
   
 ### <a name="search"></a>Recherche  
  La fonctionnalité de recherche permet aux utilisateurs de rechercher une chaîne de texte dans le rapport.  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Pagination dans Reporting Services &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportements de rendu &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions &#40; de rendu de rapport Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendu des éléments de rapport &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Tables, Matrices et listes &#40; Le Générateur de rapports et SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-
