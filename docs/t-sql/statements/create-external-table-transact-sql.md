@@ -1,7 +1,7 @@
 ---
 title: "CRÉER une TABLE externe (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>CRÉER une TABLE externe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -142,8 +142,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Les définitions de colonne, y compris les types de données et le nombre de colonnes doit correspondre les données dans les fichiers externes. S’il existe une incompatibilité, les lignes du fichier sont rejetées lors de l’interrogation des données réelles.  
   
- Pour les tables externes qui référencent des fichiers sources de données externes, les définitions de colonne et le type doivent mapper le schéma exact du fichier externe. Lors de la définition des types de données qui font référence aux données stockées dans Hadoop/Hive, utiliser les mappages suivants entre les types de données SQL et de la ruche et un cast du type en un type de données SQL lors de la sélection à partir de celui-ci. Les types incluent toutes les versions de la ruche, sauf indication contraire.  
-  
+ Pour les tables externes qui référencent des fichiers sources de données externes, les définitions de colonne et le type doivent mapper le schéma exact du fichier externe. Lors de la définition des types de données qui font référence aux données stockées dans Hadoop/Hive, utiliser les mappages suivants entre les types de données SQL et de la ruche et un cast du type en un type de données SQL lors de la sélection à partir de celui-ci. Les types incluent toutes les versions de la ruche, sauf indication contraire.
+
+> [!NOTE]  
+>  SQL Server ne prend pas en charge la ruche _infini_ valeur de données dans toute conversion. PolyBase échoue avec une erreur de conversion de type de données.
+
+
 |Type de données SQL|Type de données .NET|Type de données Hive|Type de données Hadoop/Java|Commentaires|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Pour les nombres non signés.|  

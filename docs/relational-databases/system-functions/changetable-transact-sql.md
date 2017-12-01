@@ -24,20 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3ba3f82db367a7607163a67edae60b765d19980f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations de suivi des modifications pour une table. Vous pouvez utiliser cette instruction pour retourner toutes les modifications pour une table ou les informations de suivi des modifications pour une ligne spécifique.  
-  
-||  
-|-|  
-|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +76,7 @@ CHANGETABLE (
  *Table*  
  Table définie par l'utilisateur sur laquelle obtenir les informations de suivi des modifications. Le suivi des modifications doit être activé sur la table. Un nom de table en une, deux, trois ou quatre parties peut être utilisé. Le nom de table peut être un synonyme de la table.  
   
- *nom_colonne*  
+ *column_name*  
  Spécifie le nom de la colonne ou des colonnes clés primaires. Plusieurs noms de colonne peuvent être spécifiés dans un ordre quelconque.  
   
  *Valeur*  
