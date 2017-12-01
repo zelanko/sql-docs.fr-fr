@@ -31,7 +31,7 @@ ms.lasthandoff: 11/27/2017
 # <a name="mdx-scripting-statements-mdx"></a>Instructions de script MDX (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Dans MDX (Multidimensional Expressions), les instructions ci-après gèrent le contexte, l'étendue et le contrôle de flux au sein des scripts MDX..  
+  Dans MDX (Multidimensional Expressions), les instructions ci-après gèrent le contexte, l'étendue et le contrôle de flux au sein des scripts MDX.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
