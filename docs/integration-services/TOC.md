@@ -7,7 +7,7 @@
 ## [Fonctionnalités Integration Services prises en charge par les éditions de SQL Server](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Compatibilité descendante d’Integration Services](integration-services-backward-compatibility.md)
 
-# Guides de démarrage rapide
+# Démarrages rapides
 ## Déployer
 ### [Déployer avec SSMS](./ssis-quickstart-deploy-ssms.md)
 ### [Déployer avec Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
@@ -15,7 +15,7 @@
 ### [Déployer à partir de l’invite de commandes](./ssis-quickstart-deploy-cmdline.md)
 ### [Déployer avec PowerShell](ssis-quickstart-deploy-powershell.md)
 ### [Déployer avec C#](./ssis-quickstart-deploy-dotnet.md) 
-## Exécuter
+## Exécution
 ### [Exécuter avec SSMS](./ssis-quickstart-run-ssms.md)
 ### [Exécuter avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
 ### [Exécuter avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
@@ -177,7 +177,7 @@
 ## Suivre le blog
 ### [Blog de l’équipe SSIS](https://blogs.msdn.microsoft.com/ssis/)
 ## Obtenir de l’aide
-### [Forum SSIS sur MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Forum SSIS sur MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Balise SSIS sur Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Envoyer des commentaires
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
