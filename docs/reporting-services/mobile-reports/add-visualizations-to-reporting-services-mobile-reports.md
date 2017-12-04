@@ -121,7 +121,7 @@ Dans les graphiques de comparaison, vous pouvez choisir d’avoir les mêmes cou
 ## <a name="pie-and-funnel-charts"></a>Graphiques en secteurs et graphiques en entonnoir  
   
 Les graphiques en secteurs et les graphiques en entonnoir font partie des visualisations les plus simples. Vous pouvez structurer les données par lignes ou par colonnes. 
-* Les**graphiques en secteurs** dans les rapports mobiles  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]mobile reports can be pies, donuts, or donuts with a total dans les rapports mobiles the center. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
+* Les **graphiques en secteurs** dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] peuvent être des secteurs, des anneaux ou des anneaux avec un total au centre. Les graphiques en secteurs conviennent pour l’affichage de la taille relative de différentes parties d’un entier. Trop de secteurs rend la lecture difficile.
 * Les**graphiques en entonnoir** sont souvent utilisés pour afficher les étapes d’un processus, tel que les ventes.
 
 ![mobile-report-funnel-chart](../../reporting-services/mobile-reports/media/mobile-report-funnel-chart.png)

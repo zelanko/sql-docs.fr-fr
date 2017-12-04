@@ -1,7 +1,7 @@
 ---
 title: "Conditions requises pour l’utilisation des tables optimisées en mémoire | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,21 +17,23 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 88939992ca125a6db88d0e0f3cb3dab794916195
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41c5e5193a9ce056846f935e7663ef33fbb08337
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Conditions requises pour l'utilisation des tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Pour savoir comment utiliser la fonction OLTP en mémoire dans la base de données Azure, consultez [Prise en main de In-Memory (version préliminaire) dans la base de données SQL](http://azure.microsoft.com/documentation/articles/sql-database-in-memory/).  
   
- En plus des [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), voici les conditions d’utilisation de la fonction OLTP en mémoire :  
+ En plus des [configurations matérielle et logicielle exigées pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), les conditions d’utilisation de l’OLTP en mémoire sont les suivantes :  
   
--   SQL Server 2016 SP1 (ou version ultérieure), n’importe quelle édition. Pour SQL Server 2014 et SQL Server 2016 RTM (antérieure àSP1), vous avez besoin de l’édition Enterprise, Developer ou Evaluation.
-    - Remarque : L’OLTP en mémoire nécessite la version 64 bits de SQL Server.  
+-   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 (ou ultérieur), n’importe quelle édition. Pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM (antérieur à SP1), vous avez besoin de l’édition Enterprise, Developer ou Evaluation.
+    
+    > [!NOTE]
+    > L’OLTP en mémoire nécessite la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite une quantité de mémoire suffisante pour contenir les données des tables et des index optimisés en mémoire, ainsi qu’une quantité de mémoire supplémentaire pour gérer la charge de travail en ligne. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) .  
 
@@ -45,16 +47,21 @@ ms.lasthandoff: 11/17/2017
   
 -   OLTP en mémoire est installé dans le cadre des **Services Moteur de base de données**.  
   
-     Pour installer la création de rapports ([Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (pour gérer l’OLTP en mémoire via l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ), [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).   
+     Pour installer la génération de rapports ([Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (pour gérer l’OLTP en mémoire par le biais de l’Explorateur d’objets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]), [téléchargez SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).   
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Notes importantes lors de l'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>Notes importantes concernant l’utilisation de l’[!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   Depuis SQL Server 2016, il n’existe aucune limite de la taille des tables optimisées en mémoire, autre que la mémoire disponible. Dans SQL Server 2014, la taille totale en mémoire de toutes les tables durables dans une base de données ne devait pas dépasser 250 Go pour les bases de données SQL Server 2014. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
-    - Remarque : À compter de SQL Server 2016 SP1, les éditions Standard et Express prennent en charge l’OLTP en mémoire, mais elles imposent des quotas sur la quantité de mémoire que vous pouvez utiliser pour les tables optimisées en mémoire dans une base de données. Dans l’édition Standard, ce quota est de 32 Go par base de données ; dans l’édition Express, il est de 352 Mo par base de données. 
+-   À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], il n’existe aucune limite de la taille des tables à mémoire optimisée, autre que la mémoire disponible. 
+
+-   Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la taille totale en mémoire de toutes les tables durables dans une base de données ne doit pas dépasser 250 Go. Pour plus d’informations, consultez [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
+
+> [!NOTE]
+> À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les éditions Standard et Express prennent en charge l’OLTP en mémoire, mais elles imposent des quotas sur la quantité de mémoire que vous pouvez utiliser pour les tables à mémoire optimisée dans une base de données. Dans l’édition Standard, ce quota est de 32 Go par base de données ; dans l’édition Express, il est de 352 Mo par base de données. 
   
--   Si vous créez une ou plusieurs bases de données avec des tables optimisées en mémoire, vous devez activer l'initialisation instantanée de fichiers (accordez au compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le droit de l'utilisateur SE_MANAGE_VOLUME_NAME) pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Faute d'initialisation instantanée, les fichiers de stockage optimisés en mémoire (fichiers de données et delta) seront initialisés à la création, ce qui peut avoir un impact négatif sur les performances de votre charge de travail. Pour plus d'informations sur l'initialisation instantanée de fichiers, consultez [Initialisation des fichiers de base de données](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Pour plus d'informations sur la façon d'activer l'initialisation instantanée de fichiers, consultez [Comment et pourquoi activer l'initialisation instantanée de fichiers](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Si vous créez une ou plusieurs bases de données avec des tables à mémoire optimisée, vous devez activer l’initialisation instantanée de fichiers (IFI) en accordant au compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le droit d’utilisateur *SE_MANAGE_VOLUME_NAME*. Sans IFI, les fichiers de stockage à mémoire optimisée (fichiers de données et delta) sont initialisés à la création, ce qui peut avoir un impact négatif sur les performances de votre charge de travail. Pour plus d’informations sur IFI, consultez [Initialisation instantanée des fichiers de base de données](../../relational-databases/databases/database-instant-file-initialization.md).
   
 ## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
+ [Initialisation instantanée des fichiers de base de données](../../relational-databases/databases/database-instant-file-initialization.md)  
+ [Guide d’architecture de la mémoire](../../relational-databases/memory-management-architecture-guide.md)
   
