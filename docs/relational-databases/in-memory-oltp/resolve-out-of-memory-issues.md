@@ -1,7 +1,7 @@
 ---
 title: "Résoudre les problèmes de mémoire insuffisante | Microsoft Docs"
 ms.custom: 
-ms.date: 08/29/2016
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07e5aefc9b5dc699a956d06b0fc5c3dac53a7a4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 838f604df21a87912db8d48f815a73c6af27c8f2
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,10 @@ ms.lasthandoff: 11/17/2017
   
 |Rubrique|Vue d'ensemble|  
 |-----------|--------------|  
-|[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* » ».|  
-|[Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_recoverFromOOM)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
-|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* ». … » lorsque la mémoire disponible est suffisante pour l'opération.|  
+|[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* » ».|  
+|[Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](#bkmk_recoverFromOOM)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
+|[Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#bkmk_PageAllocFailure)|Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* ». … » lorsque la mémoire disponible est suffisante pour l'opération.|
+|[Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs)|Ce qu’il faut savoir avant d’utiliser l’OLTP en mémoire dans un environnement virtualisé.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
  Quand vous tentez de restaurer une base de données, il se peut que le message d’erreur suivant s’affiche : « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* » ». Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données.
@@ -50,11 +51,10 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
     Si la base de données est [liée à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), ce qui est recommandé, la mémoire disponible pour la restauration est régie par MAX_MEMORY_PERCENT. Si la valeur est trop faible, la restauration échouera. Cet extrait de code modifie la valeur de MAX_MEMORY_PERCENT pour le pool de ressources PoolHk à 70 % de la mémoire installée.  
   
     > [!IMPORTANT]  
-    >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
-    > Consultez la rubrique [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations.  
+    > Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
+    > Pour plus d’informations, consultez la rubrique [Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs).  
   
     ```tsql  
-  
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -74,19 +74,19 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
      Pour plus d’informations sur les valeurs maximales de MAX_MEMORY_PERCENT, consultez la section [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
   
 -   Augmentez **max server memory**.  
-    Pour plus d’informations sur la configuration de **max server memory** see the topic [Optimisation des performances du serveur à l’aide des options de configuration de la mémoire](http://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
+    Pour plus d’informations sur la configuration de **max server memory**, consultez la rubrique [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
 ##  <a name="bkmk_recoverFromOOM"></a> Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail  
  Évidemment, il est préférable de ne pas se trouver dans une situation d'insuffisance de mémoire. Une planification et une surveillance appropriées permettent souvent d'éviter ce type de problème. Néanmoins, même la meilleure des planifications ne suffit pas toujours pour anticiper ce qui va réellement se produire. Vous risquez donc d'être confronté à un problème d'insuffisance de mémoire à un moment ou un autre. Vous pouvez mettre fin à une situation d'insuffisance de mémoire en procédant aux deux étapes ci-dessous :  
   
-1.  [Ouvrir une connexion administrateur dédiée (DAC).](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_openDAC)  
+1.  [Ouvrir une connexion administrateur dédiée (DAC).](#bkmk_openDAC)  
   
-2.  [Prendre une mesure corrective](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_takeCorrectiveAction)  
+2.  [Prendre une mesure corrective](#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Ouvrir une connexion administrateur dédiée (DAC).  
- Microsoft SQL Server propose une connexion administrateur dédiée (DAC). Cette connexion DAC permet à un administrateur d'accéder à une instance active du moteur de base de données SQL Server afin de résoudre les problèmes sur le serveur, même si ce serveur ne répond pas aux autres connexions clientes. La connexion DAC est disponible via l'utilitaire `sqlcmd` et SQL Server Management Studio (SSMS).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une connexion administrateur dédiée. Cette connexion DAC permet à un administrateur d'accéder à une instance active du moteur de base de données SQL Server afin de résoudre les problèmes sur le serveur, même si ce serveur ne répond pas aux autres connexions clientes. La connexion administrateur dédiée est disponible via l'utilitaire `sqlcmd` et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Pour obtenir des conseils sur l'utilisation de `sqlcmd` et de DAC, consultez [Utilisation d'une connexion administrateur dédiée](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css). Pour obtenir des conseils sur l'utilisation de DAC via SSMS, consultez [Procédure : utiliser la connexion administrateur dédiée avec SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
+ Pour obtenir des conseils sur l’utilisation de DAC par le biais de SSMS ou de `sqlcmd`, consultez [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> Prendre une mesure corrective  
  Pour résoudre une situation d'insuffisance de mémoire, vous devez libérer de la mémoire existante en réduisant son utilisation ou mettre plus de mémoire à la disposition de vos tables en mémoire.  
@@ -94,14 +94,14 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
 #### <a name="free-up-existing-memory"></a>Libérer de la mémoire existante  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>Supprimer les lignes non essentielles des tables mémoire optimisées et patienter jusqu'au prochain garbage collection  
- Vous pouvez supprimer les lignes non essentielles d'une table mémoire optimisée. Le garbage collector remet à disposition la mémoire utilisée par ces lignes. . Le moteur de l'OLTP en mémoire collecte les lignes à nettoyer de façon agressive. Cependant, une transaction longue peut empêcher cette opération de garbage collection. Par exemple, si une transaction s'exécute pendant cinq minutes, les versions de ligne créées par des opérations de mise à jour ou de suppression alors que la transaction était active ne peuvent pas être récupérées par le garbage collector.  
+ Vous pouvez supprimer les lignes non essentielles d'une table mémoire optimisée. Le garbage collector remet à disposition la mémoire utilisée par ces lignes. Le moteur de l'OLTP en mémoire collecte les lignes à nettoyer de façon agressive. Cependant, une transaction longue peut empêcher cette opération de garbage collection. Par exemple, si une transaction s'exécute pendant cinq minutes, les versions de ligne créées par des opérations de mise à jour ou de suppression alors que la transaction était active ne peuvent pas être récupérées par le garbage collector.  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>Déplacer une ou plusieurs lignes dans une table sur disque  
  Les articles TechNet suivants donnent des conseils pour déplacer des lignes d'une table mémoire optimisée vers une table sur disque.  
   
--   [Partitionnement au niveau de l'application](http://technet.microsoft.com/library/dn296452\(v=sql.120\).aspx)  
+-   [Partitionnement au niveau de l'application](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
   
--   [Modèle d'application pour partitionner des tables mémoire optimisées](http://technet.microsoft.com/library/dn133171\(v=sql.120\).aspx)  
+-   [Modèle d'application pour partitionner des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
 #### <a name="increase-available-memory"></a>Augmenter la mémoire disponible  
   
@@ -115,10 +115,9 @@ Cet extrait de code modifie la valeur de MAX_MEMORY_PERCENT pour le pool de ress
   
 > [!IMPORTANT]  
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
-> Consultez la rubrique [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations.  
+> Pour plus d’informations, consultez la rubrique [Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs).  
   
 ```tsql  
-  
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  
   
@@ -128,11 +127,9 @@ WITH
      ( MAX_MEMORY_PERCENT = 70 )  
 GO  
   
--- reconfigure the Resource Governor  
---    RECONFIGURE enables resource governor  
+-- reconfigure the Resource Governor to enabled it
 ALTER RESOURCE GOVERNOR RECONFIGURE  
 GO  
-  
 ```  
   
  Pour plus d’informations sur les valeurs maximales de MAX_MEMORY_PERCENT, consultez la section [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
@@ -142,19 +139,34 @@ GO
   
 > [!IMPORTANT]  
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
-> Consultez la rubrique [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations.  
+> Pour plus d’informations, consultez la rubrique [Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs).  
   
 ##  <a name="bkmk_PageAllocFailure"></a> Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition  
- Si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>* » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>* ». Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkId=330673. dans le journal des erreurs lorsque la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
+ Si vous obtenez le message d’erreur `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'http://go.microsoft.com/fwlink/?LinkId=330673' for more information.` dans le journal des erreurs quand la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
   
  Pour corriger le problème, vous devez activer Resource Governor.  
   
- Consultez [Activer Resource Governor](http://technet.microsoft.com/library/bb895149.aspx) pour obtenir des informations sur les limites et les restrictions, ainsi que sur l’activation de Resource Governor à l’aide de l’Explorateur d’objets, sur les propriétés de Resource Governor et sur Transact-SQL.  
+ Consultez [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md) pour obtenir des informations sur les limites et les restrictions, ainsi que sur l’activation de Resource Governor à l’aide de l’Explorateur d’objets, sur les propriétés de Resource Governor et sur Transact-SQL.  
+ 
+## <a name="bkmk_VMs"></a>Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle
+La virtualisation de serveur vous permet de réduire les coûts d’exploitation et de capital informatique et d’optimiser l’efficacité informatique, grâce à des processus de configuration, de maintenance, de disponibilité, de sauvegarde et de récupération d’applications optimisés. Avec les progrès technologiques récents, les charges de travail de base de données complexes peuvent être consolidées plus aisément à l'aide de la virtualisation. Cette rubrique porte sur les bonnes pratiques relatives à l’utilisation d’OLTP en mémoire SQL Server dans un environnement virtualisé.
+
+### <a name="memory-pre-allocation"></a>Préallocation de mémoire
+Pour la mémoire dans un environnement virtualisé, de meilleures performances et une prise en charge améliorée sont essentielles. Vous devez pouvoir allouer rapidement de la mémoire aux machines virtuelles en fonction des exigences (charges de pointe et creuses) et garantir que la mémoire n'est pas gaspillée. La fonctionnalité de mémoire dynamique d’Hyper-V augmente l’agilité de l’allocation et de la gestion de la mémoire entre les machines virtuelles exécutées sur un hôte.
+
+Certaines bonnes pratiques pour virtualiser et gérer SQL Server ont besoin d’être modifiées lors de la virtualisation d’une base de données avec des tables mémoire optimisées. Sans les tables mémoire optimisées, les deux meilleures pratiques sont les suivantes :
+-  Si vous utilisez le paramètre min server memory, il vaut mieux allouer uniquement la quantité de mémoire nécessaire, afin qu’une mémoire suffisante reste disponible pour d’autres processus (évitant ainsi la pagination).
+-  Ne définissez pas la préallocation de mémoire sur une valeur trop élevée. Sinon, les autres processus ne disposeront pas de suffisamment de mémoire au moment où ils en ont besoin, ce qui peut entraîner une pagination de mémoire.
+
+Si vous suivez les pratiques ci-dessus lorsque votre base de données possède présente des tables à mémoire optimisée, vous voyez que la tentative de récupération et restauration d’une base de données peut entraîner le blocage de la base de données à l’état « Récupération en attente », même si vous avez suffisamment de mémoire disponible pour la récupérer. En effet, au démarrage, l’OLTP en mémoire met les données en mémoire plus rapidement que l’allocation de mémoire dynamique n’alloue la mémoire nécessaire à la base de données.
+
+### <a name="resolution"></a>Résolution
+Pour atténuer ce problème, préallouez suffisamment de mémoire à la base de données pour la récupération ou le redémarrage ; ne vous contentez pas d'une valeur minimale en comptant sur la mémoire dynamique pour fournir la mémoire supplémentaire lorsque cela est nécessaire.
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion de la mémoire pour l'OLTP en mémoire](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Analyse et dépannage de l’utilisation de mémoire](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
- [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Meilleures pratiques : utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
-  
+ [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Guide d’architecture de gestion de la mémoire](../../relational-databases/memory-management-architecture-guide.md)  
+ [server memory (options de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md) 
   
