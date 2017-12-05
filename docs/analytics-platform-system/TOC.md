@@ -1,5 +1,6 @@
 # Présentation de cette version
 ## [Nouveautés](whats-new-analytics-platform-system.md)
+## [nouvelles articles et articles mises à jour](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [Vue d’ensemble de Parallel Data Warehouse](parallel-data-warehouse-overview.md)

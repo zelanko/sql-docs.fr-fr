@@ -2,7 +2,7 @@
 
 # Vue d'ensemble
 ## [Nouveautés dans Reporting Services](what-s-new-in-sql-server-reporting-services-ssrs.md) 
-## [Articles nouveaux et récemment mis à jour](new-updated-reporting-services.md)
+## [nouvelles articles et articles mises à jour](new-updated-reporting-services.md)
 ## [Journal des modifications](change-log-sql-server-reporting-services.md)
 ## [Concepts de Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Fonctionnalités et tâches de Reporting Services](reporting-services-features-and-tasks-ssrs.md)   
@@ -90,7 +90,7 @@
 ### [Paramètres d'informations de périphérique HTML](html-device-information-settings.md)  
 ### [Paramètres d’informations de périphérique pour l’image](image-device-information-settings.md)  
 ### [Paramètres d'informations de périphérique pour le format de rendu MHTML](mhtml-device-information-settings.md)  
-### [Paramètres d'informations de périphérique PDF](pdf-device-information-settings.md)  
+### [PDF Device Information Settings](pdf-device-information-settings.md)  
 ### [Paramètres des informations de périphériques PPTX](pptx-device-information-settings.md)  
 ### [Paramètres des informations de périphériques XML](xml-device-information-settings.md)  
 ### [Paramètres des informations de périphériques Word](word-device-information-settings.md)  

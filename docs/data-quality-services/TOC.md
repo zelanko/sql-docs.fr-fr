@@ -1,5 +1,5 @@
 # [Vue d’ensemble](data-quality-services.md)  
-# [Articles nouveaux et récemment mis à jour](new-updated-data-quality-services.md)
+# [nouvelles articles et articles mises à jour](new-updated-data-quality-services.md)
 
 # Concept et fonctionnalités
 ## [Présentation de Data Quality Services](introduction-to-data-quality-services.md)  
