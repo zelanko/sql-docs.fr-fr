@@ -2,9 +2,12 @@
 title: "Notes de publication de SQL Server 2017 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/30/2017
-ms.prod: sql-server-2017
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,14 +16,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fe3554aa067ef7e7fd0c1ffa2e8ac3adc5aaaa07
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0cc5502883bd349f8a2586f901d5088c4edacf65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
-Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour des informations connexes, consultez :
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour des informations connexes, consultez :
 - [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notes de publication de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [Mises à jour cumulatives de SQL Server 2017](http://aka.ms/sql2017cu) pour plus d’informations sur la dernière version des mises à jour cumulatives
@@ -29,7 +32,7 @@ Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour 
 - [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Créer une machine virtuelle ](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Lancer une machine virtuelle avec SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
-## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - version en disponibilité générale (octobre 2017)
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - version de disponibilité générale (octobre 2017)
 ### <a name="database-engine"></a>Moteur de base de données
 
 - **Impact sur le problème et le client :** après la mise à niveau, le partage réseau FILESTREAM peut ne plus être disponible.
@@ -59,7 +62,7 @@ Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour 
 - **Solution de contournement :** supprimez les perspectives et redéployez.
 
 ### <a name="tools"></a>Outils
-- **Problème et impact sur le client :** l’exécution de *DReplay* échoue avec le message suivant : « Erreur DReplay. Une erreur inattendue s’est produite ».
+- **Impact sur le problème et le client :** l’exécution de *DReplay* échoue avec le message suivant : « Erreur DReplay. Une erreur inattendue s’est produite ».
 - **Solution de contournement :** aucune.
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)

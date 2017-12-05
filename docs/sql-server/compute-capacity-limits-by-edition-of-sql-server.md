@@ -1,10 +1,13 @@
 ---
-title: "Limites de capacité de calcul par édition de SQL Server | Microsoft Docs"
+title: "Limites de capacité de calcul des éditions SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,18 +21,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef30b71b10c44d8e09a543e75e7c19e5e85fec02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 02a5a436fdae6d9196359b36e72af3ffc11d2a87
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul par l'édition de SQL Server
-  Cette rubrique traite des limites de capacité de calcul des différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de la façon dont elles diffèrent dans les environnements physiques et virtualisés avec les processeurs hyperthreaded.  
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul des éditions SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cet article traite des limites de capacité de calcul des éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de la façon dont elles diffèrent dans les environnements physiques et virtualisés avec les processeurs hyperthreaded.  
   
  ![Mappages aux limites de capacité de calcul](../sql-server/media/compute-capacity-limits.gif "Mappages aux limites de capacité de calcul")  
   
- Le tableau suivant décrit les notations utilisées dans le schéma ci-dessus :  
+ Ce tableau décrit les notations dans le diagramme précédent :  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -42,62 +45,64 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 > Pour approfondir :  
 >   
-> - Un ordinateur virtuel est alloué à un ou plusieurs processeurs virtuels.  
-> - Un ou plusieurs processeurs virtuels sont alloués à un seul ordinateur virtuel.  
-> - Zéro ou un processeur virtuel est mappé à zéro ou un processeur logique. Lorsque le mappage d'un processeur virtuel à un processeur logique est : 
->     -   Un-à-zéro, il représente un processeur logique indépendant non utilisé par les systèmes d'exploitation invités.  
->     -   Un-à-plusieurs, il représente un overcommit.  
->     -   Zéro-à-plusieurs, il représente l'absence d'ordinateur virtuel sur le système hôte, de sorte qu'aucun processeur logique n'est utilisé par les VM.  
-> - Un socket est mappé à zéro ou plusieurs noyaux. Lorsque le socket de mappage de noyau est :  
->     -   Un-à-zéro, il représente un socket vide (aucun processeur installé).  
->     -   Un-à-un, il représente un processeur à un noyau installé dans le socket (très rare de nos jours).  
->     -   Un-à-plusieurs, il représente un processeur à plusieurs noyaux installé dans le socket (les valeurs courantes sont 2,4,8).  
-> - Un noyau est mappé à un ou deux processeurs logiques. Lorsque le mappage du noyau au processeur logique est :  
->     -   Un-à-un, l'hyperthreading est désactivé.  
->     -   Un-à-deux, l'hyperthreading est activé.  
+> - Une machine virtuelle compte un ou plusieurs processeurs virtuels.  
+> - Un ou plusieurs processeurs virtuels sont alloués à une seule machine virtuelle.  
+> - Zéro ou un processeur virtuel est mappé à zéro ou un processeur logique. Quand le mappage des processeurs virtuels à un processeur logique est : 
+>     -   Un à zéro, il représente un processeur logique indépendant non utilisé par les systèmes d’exploitation invités.  
+>     -   Un à plusieurs, il représente une survalidation (overcommit).  
+>     -   Zéro à plusieurs, il représente l’absence de machine virtuelle sur le système hôte. Donc, les machines virtuelles n’utilisent pas de processeurs logiques.  
+> - Un socket est mappé à zéro ou plusieurs cœurs. Quand le mappage de socket au cœur est :  
+>     -   Un à zéro, il représente un socket vide. Aucun processeur n’est installé.  
+>     -   Un à un, il représente un processeur monocœur installé dans le socket. Ce mappage est rare de nos jours.  
+>     -   Un à plusieurs, il représente un processeur multicœur installé dans le socket. Les valeurs sont habituellement 2, 4 et 8.  
+> - Un cœur est mappé à un ou deux processeurs logiques. Quand le mappage des cœurs à un processeur logique est :  
+>     -   Un à un, l’hyperthreading est désactivé.  
+>     -   Un à deux, l’hyperthreading est activé.  
   
- Les définitions suivantes s'appliquent aux termes utilisés dans cette rubrique :  
+ Les définitions suivantes s'appliquent aux termes utilisés dans cet article :  
   
--   Un thread ou un processeur logique est un moteur de calcul logique du point de vue de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], du système d'exploitation, d'une application ou du pilote.  
+-   Un thread ou un processeur logique est un moteur de calcul logique du point de vue de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], du système d'exploitation, d’une application ou d’un pilote.  
   
--   Un noyau est une unité de processeur, qui peut comprendre un ou plusieurs processeurs logiques.  
+-   Un cœur est une unité de processeur. Il peut être constitué d’un ou plusieurs processeurs logiques.  
   
--   Un processeur physique peut comprendre un ou plusieurs noyaux. Un processeur physique est identique à un package de processeurs ou à un socket.  
+-   Un processeur physique peut comprendre un ou plusieurs cœurs. Un processeur physique est identique à un package de processeurs ou à un socket.  
   
-Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si vous avez un ordinateur qui a deux processeurs quadruple cœur avec des threads activés et deux threads par noyau, vous avez 16 processeurs logiques : 2 processeurs X les 4 cœurs par processeur X 2 thread par cœur. Il faut noter que :  
+Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs cœurs et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 thread par cœur. À noter que :  
   
--   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un noyau hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même noyau avec l'hyperthreading désactivé.  
+-   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un cœur hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même cœur avec l'hyperthreading désactivé.  
   
--   Cependant, la capacité de calcul des 2 processeurs logiques dans le noyau hyperthreaded est supérieure à la capacité de calcul du même noyau avec l'hyperthreading désactivé.  
+-   La capacité de calcul des deux processeurs logiques dans le cœur avec l’hyperthreading activé est supérieure à la capacité de calcul du même cœur avec l’hyperthreading désactivé.  
   
 Chaque édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a deux limites de capacité de calcul :  
   
-- Un nombre maximal de sockets (identique au processeur physique ou au socket ou au package de processeurs).  
+- Un nombre maximal de sockets (ou processeurs physiques ou packages de processeurs)  
   
-- Un nombre maximum de noyaux comme indiqué par le système d'exploitation.  
+- Un nombre maximal de cœurs comme indiqué par le système d’exploitation  
   
-Ces limites s'appliquent à une seule instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Elles représentent la capacité maximale de calcul qu'une seule instance utilise. Elles ne limitent pas le serveur sur lequel l'instance peut être déployée. En fait, le déploiement de plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le même serveur physique est un moyen efficace d'utiliser la capacité de calcul d'un serveur physique avec plus de sockets et/ou de noyaux que les limites de capacité ci-dessous.  
+Ces limites s'appliquent à une seule instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Elles représentent la capacité maximale de calcul qu'une seule instance utilise. Elles ne restreignent pas le serveur sur lequel l’instance peut être déployée. En fait, le déploiement de plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur le même serveur physique est un moyen efficace d’utiliser la capacité de calcul d’un serveur physique avec plus de sockets et/ou de cœurs que les limites de capacité n’autorisent.  
   
 Le tableau suivant présente les limites de capacité de calcul pour une instance unique de chaque édition de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Édition|Capacité maximale de calcul utilisée par une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul utilisée par une instance unique (AS, RS)|  
+|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Capacité maximale de calcul pour une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul pour une instance unique (AS,RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
+|Édition Entreprise : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Standard|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 24 cœurs|  
 |Express|Limité à moins de 1 socket ou 4 cœurs|Limité à moins de 1 socket ou 4 cœurs|  
 
-\*Enterprise Edition avec serveur + licences d’accès client (CAL) (non disponibles pour les nouveaux contrats) limitées à un maximum de 20 cœurs par instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs.  
+\*Édition Entreprise avec licences d’accès client (CAL) + serveur limitées à 20 cœurs par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. (Cette licence n’est pas disponible pour les nouveaux contrats.) Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs.  
   
-Dans un environnement virtualisé, la limite de capacité de calcul est basée sur le nombre de processeurs logiques et non de noyaux, car l'architecture du processeur n'est pas visible aux applications invitées.  Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l'activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé mais seulement 16 processeurs logiques avec l'hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux ordinateurs virtuels sur le serveur avec la charge du calcul des ordinateurs virtuels, sur ce processeur logique mappé sur un thread d'exécution sur le processeur physique dans le serveur hôte.  
+Dans un environnement virtualisé, la limite de capacité de calcul est basée sur le nombre de processeurs logiques et non sur le nombre de cœurs. La raison est que l’architecture de processeurs n’est pas visible aux applications invitées. 
+
+Par exemple, un serveur avec quatre sockets comprenant des processeurs quadruple cœur et autorisant l’activation de deux hyperthreads par cœur, contient 32 processeurs logiques avec l'hyperthreading activé. Mais il contient seulement 16 processeurs logiques avec l’hyperthreading désactivé. Ces processeurs logiques peuvent être mappés aux machines virtuelles sur le serveur. La charge de calcul des machines virtuelles sur ce processeur logique est mappée à un thread d'exécution sur le processeur physique du serveur hôte.  
   
-Vous pouvez désactiver l'hyperthreading lorsque les performances par processeur virtuel sont importantes. Vous pouvez activer ou désactiver l'hyperthreading sur le processeur à l'aide d'un paramètre du BIOS pendant l'installation de celui-ci, mais il s'agit en général d'une opération couvrant l'étendue du serveur qui aura un impact sur toutes les charges de travail qui s'exécutent sur le serveur. On peut dans ce cas suggérer la séparation des charges de travail qui s'exécutent dans des environnements virtualisés de celles qui tirent parti de l'amélioration des performances grâce à l'hyperthreading dans un environnement de système d'exploitation physique.  
+Vous pouvez désactiver l’hyperthreading quand les performances de chaque processeur virtuel sont importantes. Vous pouvez activer ou désactiver l’hyperthreading à l’aide d’un paramètre BIOS du processeur au cours de la configuration du BIOS. Mais c’est généralement une opération limitée au serveur qui affecte toutes les charges de travail exécutées sur le serveur. Dans ce cas, la solution peut être de séparer les charges de travail qui s'exécutent dans des environnements virtualisés des charges de travail qui tirent parti de l'amélioration des performances grâce à l'hyperthreading dans un environnement de système d'exploitation physique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditions et composants de SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [Spécifications des capacités maximales pour SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [Installation de démarrage rapide de SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
+ [Spécifications de capacité maximale pour SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
+ [Démarrer rapidement l’installation de SQL Server 2016](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
 

@@ -14,11 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 347e737c378f79ec1bdd0de42d78c896c3c44f7a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32a2cc64cb54fda7244a07ad8aff8463899f0b3d
+ms.sourcegitcommit: 4286dddf27dcdf1c8ef3ef134474e72559c2f65c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/15/2017
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
@@ -76,11 +76,11 @@ Cette section montre comment déployer le package de solution sur votre batterie
 
 ## <a name="activate-feature"></a>Activer la fonctionnalité
 
-1. Dans votre site SharePoint, cliquez sur l’icône **engrenage** en haut à gauche et sélectionnez **Paramètres du site*.
+1. Dans votre site SharePoint, cliquez sur l’icône **engrenage** en haut à gauche et sélectionnez **Paramètres du site**.
 
     ![Paramètres du site à partir de l’icône d’engrenage.](media/sharepoint-site-settings.png)
 
-    Par défaut, les applications web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>* pour ouvrir la collection de sites racine.
+    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>* pour ouvrir la collection de sites racine.
 
 3. Dans **Administration de la collection de sites**, cliquez sur **Fonctionnalités de la collection de sites**.
 
@@ -116,11 +116,11 @@ Bien que l’Administration centrale de SharePoint permette de retirer une solut
 
 Le retrait de la solution ne supprime pas le composant WebPart Visionneuse de rapports de la liste des composants WebPart de votre site SharePoint. Pour supprimer le composant WebPart Visionneuse de rapports, effectuez les étapes suivantes.
 
-1. Dans votre site SharePoint, cliquez sur l’icône **engrenage** en haut à gauche et sélectionnez **Paramètres du site*.
+1. Dans votre site SharePoint, cliquez sur l’icône **engrenage** en haut à gauche et sélectionnez **Paramètres du site**.
 
     ![Paramètres du site à partir de l’icône d’engrenage.](media/sharepoint-site-settings.png)
 
-    Par défaut, les applications web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>* pour ouvrir la collection de sites racine.
+    Par défaut, les applications Web SharePoint sont accessibles via le port 80. Cela signifie que vous pouvez souvent accéder à un site SharePoint en entrant *http://<computer name>* pour ouvrir la collection de sites racine.
 
 2. Sous **Galeries du concepteur web**, sélectionnez **Composants WebPart**.
 

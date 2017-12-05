@@ -2,9 +2,12 @@
 title: "Accéder aux FileTables avec des API d’entrée-sortie de fichier | Microsoft Docs"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e9485840cba88623f686d33899475f0f572babe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
-  Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
   
 ##  <a name="accessing"></a> Commencer à utiliser les API d'E/S de fichier avec des FileTables  
  Les FileTables sont principalement utilisés via le système de fichiers Windows et les API d'E/S de fichier. Les FileTables prennent en charge l'accès non transactionnel via le vaste ensemble d'API d'E/S de fichier disponibles.  
