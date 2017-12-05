@@ -2,9 +2,12 @@
 title: "Créer un point de contrôle de l’utilitaire SQL Server (Utilitaire SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bbc03b0f57c516ab923bbc636df78e1e006b9797
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eaf3148fba4a949d937b725fe4f860f1bb228674
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
-  Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d’application de la couche Données est membre d’un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d’application de la couche Données est membre d’un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
   
  L'UCP recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
   

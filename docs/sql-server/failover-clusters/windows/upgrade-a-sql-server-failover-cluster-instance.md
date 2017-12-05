@@ -2,9 +2,12 @@
 title: "Mettre à niveau une instance de cluster de basculement SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: sql-server-2017
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7edcc0b0142562d998d3c7c1b2774b47716a4a06
-ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
+ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Mise à niveau d’une instance de cluster de basculement SQL Server
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge la mise à niveau d’un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vers un nouveau service pack ou une nouvelle mise à jour cumulative [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ou durant l’installation d’un nouveau Service Pack ou une nouvelle mise à jour cumulative Windows séparément sur tous les nœuds de cluster de basculement, avec des temps d’arrêt limités à un seul basculement manuel (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge la mise à niveau d’un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers une nouvelle version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vers un nouveau service pack ou une nouvelle mise à jour cumulative [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ou durant l’installation d’un nouveau Service Pack ou une nouvelle mise à jour cumulative Windows séparément sur tous les nœuds de cluster de basculement, avec des temps d’arrêt limités à un seul basculement manuel (ou deux basculements manuels en cas de restauration automatique vers l’instance principale d’origine).  
   
  La mise à niveau du système d’exploitation Windows d’un cluster de basculement n’est pas prise en charge par les systèmes d’exploitation antérieurs à [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Pour mettre à niveau un nœud de cluster s’exécutant sur [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] ou version supérieure, consultez [Exécuter une mise à jour ou mise à niveau propagée](#perform-a-rolling-upgrade-or-update).  
   

@@ -1,9 +1,13 @@
 ---
 title: "Notes de publication de SQL Server 2016 | Microsoft Docs"
 ms.date: 10/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 688c1607028a6792a128cef04128c494ade15d93
-ms.sourcegitcommit: 284a64817d5641b5245bc70ddebef2dc51d2e558
+ms.openlocfilehash: 216ae6b44bcfe3166a1b5eb0f989886cc18eaead
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
-  Cet article décrit des limitations et des problèmes des versions SQL Server 2016.    
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Cet article décrit les limitations et les problèmes des versions SQL Server 2016.    
     
  **Essayez-le :**    
    

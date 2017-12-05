@@ -2,9 +2,12 @@
 title: "Fonctionnalités de recherche en texte intégral dépréciées dans SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,21 +21,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2849b5a4570c4ce4c2633c13522c66d04b4c47fc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7492b1c26c21a2cbc831c2bed39be165310bf51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016
-  Cette rubrique décrit les fonctionnalités de la recherche en texte intégral qui sont dépréciées et toujours disponibles dans SQL Server. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version. N’utilisez pas de fonctions déconseillées dans les nouvelles applications.  
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Fonctionnalités de recherche en texte intégral dépréciées dans SQL Server 2016
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique décrit les fonctionnalités de la recherche en texte intégral qui sont dépréciées et toujours disponibles dans SQL Server. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version. N’utilisez pas de fonctionnalités dépréciées dans les nouvelles applications.  
   
 Surveillez l’utilisation des fonctionnalités dépréciées à l’aide du compteur de performance de l’objet **SQL Server:Deprecated Features** et des événements de suivi. Pour plus d’informations, consultez [Utilisation des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 ## <a name="features-no-longer-supported"></a>Fonctionnalités abandonnées  
 
   
-|Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
+|Fonctionnalité dépréciée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
 |Propriété FULLTEXTCATALOGPROPERTY : LogSize|Aucun.|FULLTEXTCATALOGPROPERTY**('LogSize')**|211|  
 |Propriété FULLTEXTSERVICEPROPERTY :<br /><br /> ConnectTimeout<br /><br /> DataTimeout|Aucun.|FULLTEXTSERVICEPROPERTY**('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY**('DataTimeout'**)|210<br /><br /> 209|  
