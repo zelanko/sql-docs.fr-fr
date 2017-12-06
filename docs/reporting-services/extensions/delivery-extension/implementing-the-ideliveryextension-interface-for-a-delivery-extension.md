@@ -2,9 +2,12 @@
 title: "Mise en œuvre de l’interface IDeliveryExtension pour une extension de remise | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 629a03eb85b28b2f22a5aba13ed2bd55a903da8b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 726b1cf1f56cf987cb91bde206b269392158d039
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>Implémentation de l'interface IDeliveryExtension pour une extension de remise
   Votre classe d'extension de remise sert à remettre des notifications de rapport aux utilisateurs selon le contenu des notifications. La classe d'extension de remise fournit également l'infrastructure pour valider des paramètres utilisateurs passés à l'extension de remise. De plus, votre classe d'extension de remise doit contenir des propriétés spécifiques que les clients peuvent utiliser pour obtenir des informations sur le nom de l'extension, les paramètres pris en charge par l'extension, et les formats de rendu disponibles pour l'extension de remise.  
@@ -42,7 +45,7 @@ L'interface IDeliveryExtension autorise la validation des données utilisateur e
  Pour un exemple d’implémentation de la classe **IDeliveryExtension**, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en œuvre d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Implémentation d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

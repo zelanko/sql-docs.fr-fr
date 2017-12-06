@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: af636e20cc2da22adf0607529f29959c1a005c9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1cfca2d37697e8c9942ac042857784e68dca7088
+ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des comptes de connexion. L'étendue d'un compte de connexion est l'intégralité du [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion. Les autorisations dont l’étendue englobe la totalité de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par exemple, l’autorisation **CREATE ENDPOINT** ) peuvent être accordées à un compte de connexion.  
   
-> **REMARQUE :** lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données à relation contenant-contenu pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]r et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données à relation contenant-contenu. Une base de données à relation contenant-contenu est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données à relation contenant-contenu à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **REMARQUE :** lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données à relation contenant-contenu pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données à relation contenant-contenu. Une base de données à relation contenant-contenu est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données à relation contenant-contenu à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Sécurité  
 

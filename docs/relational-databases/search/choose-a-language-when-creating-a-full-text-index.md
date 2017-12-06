@@ -2,7 +2,7 @@
 title: "Choisir une langue lors de la création d’un index de recherche en texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: dbe-search
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82edddf024831f41ce82ce8ec5d3f212513d89f7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
   Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier une langue au niveau de la colonne pour la colonne indexée. L’ [analyseur lexical et les générateurs de formes dérivées](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) de la langue spécifiée seront utilisés par les requêtes de texte intégral sur la colonne. Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral.  

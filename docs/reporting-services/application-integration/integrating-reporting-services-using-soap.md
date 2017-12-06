@@ -2,9 +2,12 @@
 title: "Intégration de Reporting Services à l’aide de SOAP | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 945209e19c1bb9744c8683c090a3f2a059339542
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7392b8fb16cebefc5af518d1ae3595d14729d99c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Intégration de Reporting Services à l'aide de SOAP
   L’API SOAP de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs points de terminaison de service web pour développer des solutions de création de rapports personnalisées. Les points de terminaison se répartissent actuellement dans deux catégories : la gestion et l'exécution. Les fonctionnalités de gestion sont exposées par le biais des points de terminaison <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> est utilisé pour gérer un serveur de rapports configuré en mode natif et le point de terminaison <xref:ReportService2006> est utilisé pour gérer un serveur de rapports configuré pour le mode intégré SharePoint. Le <xref:ReportService2010> fusionne les fonctionnalités de <xref:ReportService2005> et de <xref:ReportService2006> et peut gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Intégration de Reporting Services à des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [service Web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Service web Report Server](../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Génération d’applications à l’aide du service web et de .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

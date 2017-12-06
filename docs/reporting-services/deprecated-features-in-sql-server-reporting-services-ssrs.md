@@ -2,9 +2,12 @@
 title: "Fonctionnalités dépréciées de SQL Server Reporting Services dans SQL Server 2016 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,13 +24,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4bf0b79086482761cacb11d81b9432c52fc1f8f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 06eefb994cae0bb5a2bdbbba4a35b6e4495fa743
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Fonctionnalités dépréciées de SQL Server Reporting Services dans SQL Server 2016
+# <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2016"></a>Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)])
 

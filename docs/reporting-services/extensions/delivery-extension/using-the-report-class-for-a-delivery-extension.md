@@ -2,9 +2,12 @@
 title: Utilisation de la classe Rapport pour une extension de remise | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f74c4848721333e0cebb1d7292c28646b3f07fe7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bde275ac44b8eddaed227d02cbe807f175909c87
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>Utilisation de la classe Report pour une extension de remise
   La classe <xref:Microsoft.ReportingServices.Interfaces.Report> représente un rapport dans la base de données du serveur de rapports. Tout abonnement est associé à un rapport spécifique. Le rapport est contenu dans la notification. Votre extension de remise peut utiliser l'objet <xref:Microsoft.ReportingServices.Interfaces.Report> qui fait partie de la notification pour effectuer le rendu du rapport. L'objet <xref:Microsoft.ReportingServices.Interfaces.Report> contient également des propriétés spécifiques au rapport, telles que l'URL au rapport sur le serveur de rapports et le nom du rapport. Toutes ces propriétés peuvent être utilisées dans le cadre de votre fournisseur de remise.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/09/2017
  Pour un exemple d’utilisation de la classe <xref:Microsoft.ReportingServices.Interfaces.Report>, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en œuvre d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Implémentation d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Bibliothèque d’extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)   
  [Utilisation de la classe RenderedOutputFile pour une extension de remise](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
   
