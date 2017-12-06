@@ -2,9 +2,12 @@
 title: "Intégration de Reporting Services à l’aide de l’accès URL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: application-integration
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e0e4d5c1ade93a1b14f4a365e2af542570a201b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1706d9ad033ccb1517e73ebee6d13f0d749b9f9e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Intégration de Reporting Services à l'aide de l'accès URL
   Avec l'accès URL, vous accédez aux rapports via l'URL d'un serveur de rapports. Une demande d'URL vous permet d'accéder à un serveur de rapports spécifique ainsi qu'aux rapports, ressources et autres éléments inclus dans la base de données du serveur de rapports. Vous pouvez également personnaliser la consultation des rapports et la navigation pour vos utilisateurs. La chaîne de requête de l'URL contient des paramètres d'informations de périphérique, ainsi que des paramètres de rapport ciblés sur votre rapport et la sortie de rendu choisie. La façon dont le serveur de rapports gère les demandes d'URL dépend des paramètres, des préfixes de paramètres et du type d'élément auquel vous accédez via l'URL.  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4482935894f2aa785814c1af430065920afe25b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 59b8b667a9a895b9e95388ac781ec6bb46923920
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importer des documents JSON dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ Vous pouvez également utiliser OPENROWSET(BULK) comme indiqué ci-dessus pour l
         pages_i int, author nvarchar(100)) AS book
     ```
 
-Pour plus d’informations sur le Stockage de fichiers Azure, consultez [Stockage de fichiers](https://azure.microsoft.com/en-us/services/storage/files/).
+Pour plus d’informations sur le Stockage de fichiers Azure, consultez [Stockage de fichiers](https://azure.microsoft.com/services/storage/files/).
 
 ## <a name="import-json-documents-from-azure-blob-storage"></a>Importer des documents JSON à partir de Stockage Blob Azure
 
