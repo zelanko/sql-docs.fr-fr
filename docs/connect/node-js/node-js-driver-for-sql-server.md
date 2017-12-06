@@ -27,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote SQL Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Le module fastidieux est une implémentation javascript du protocole TDS, qui est pris en charge par tous les versions modernes de SQL Server. Le pilote est un projet open source sur Github.  
+Le module tedious est une implémentation javascript du protocole TDS, qui est pris en charge par tous les versions modernes de SQL Server. Le pilote est un projet open source sur Github.  
   
 Vous pouvez vous connecter à une base de données SQL à l’aide de Node.js sur Windows, Linux ou Mac.  
   
