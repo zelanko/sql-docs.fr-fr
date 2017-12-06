@@ -2,9 +2,12 @@
 title: "Enregistrer des Traces et des modèles de Trace | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-server-profiler
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 515c034ba96c93101ea8346dd0207e17143d2e80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 613946c9986edf5cbb2cb95f9e483bdb5bed50e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-traces-and-trace-templates"></a>Enregistrer des traces et de modèles de trace
-  Il est important de faire la distinction entre l'enregistrement de fichiers de trace et l'enregistrement de modèles de trace. L'enregistrement d'un fichier de trace suppose l'enregistrement des données d'événement capturées à un emplacement précis. L'enregistrement d'un modèle de trace suppose l'enregistrement de la définition de la trace, par exemple les colonnes de données, les classes d'événements ou les filtres spécifiés.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il est important de distinguer l’enregistrement de fichiers de trace à partir de l’enregistrement de modèles de trace. L'enregistrement d'un fichier de trace suppose l'enregistrement des données d'événement capturées à un emplacement précis. L'enregistrement d'un modèle de trace suppose l'enregistrement de la définition de la trace, par exemple les colonnes de données, les classes d'événements ou les filtres spécifiés.  
   
 ## <a name="saving-traces"></a>enregistrement des traces  
  Enregistrez les données d'événement capturées dans un fichier ou une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque vous devez analyser ou relire ultérieurement les données capturées. Un fichier de trace permet d'effectuer les opérations suivantes :  

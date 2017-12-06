@@ -3,8 +3,11 @@ title: XQuery et statique en tapant | Documents Microsoft
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 473b3e2fc020778b1d91f75935a46f50f0e886de
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2861a4b1460bebf51ea138678dd797e5f0048a41
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="xquery-and-static-typing"></a>XQuery et le typage statique
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un langage typé statiquement. Autrement dit, il génère des erreurs de type lors de la compilation des requêtes dès qu'une expression renvoie une valeur dotée d'un type ou d'une cardinalité qu'une fonction ou un opérateur spécifique n'accepte pas. De plus, la vérification des types statiques peut également déceler si une expression de chemin d'accès faisant référence à un document XML typé a été mal typée. Le compilateur XQuery commence par une phase de normalisation au cours de laquelle s'ajoutent les opérations implicites (atomisation, par exemple), puis effectue l'inférence de type statique et la vérification des types statiques.  
   

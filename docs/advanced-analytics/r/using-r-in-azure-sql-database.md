@@ -1,8 +1,8 @@
 ---
 title: "À l’aide de R dans la base de données SQL Azure | Documents Microsoft"
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,20 +13,20 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 4562dc3490f4790a31b4b32e06b9e5133a151c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef6573ca1d682ae4b4f4336ad6f809f1e094e9fc
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-r-in-azure-sql-database"></a>À l’aide de R dans la base de données SQL Azure
 
-En octobre 2017, l’équipe de développement SQL Server annoncé pour prendre en charge l’exécution de R code de bases de données à l’aide de procédures stockées, semblables à R Services dans SQL Server 2016.
+En octobre 2017, l’équipe de développement SQL Server annoncé pour prendre en charge l’exécution de R code de bases de données à l’aide de procédures stockées, semblables à R Services dans SQL Server 2016. Cette fonctionnalité est toujours en cours de développement.
+
+Pour maintenir à jour sur le calendrier de publication et les événements à venir, consultez le [de SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/) ou [blog Microsoft R Server](https://blogs.msdn.microsoft.com/rserver/).
 
 > [!IMPORTANT]
-> La version initiale qui a été annoncée a été conçue pour les tests et exploration uniquement. Actuellement, la fonctionnalité est **désactivé** dans la base de données SQL Azure pour prendre en charge le développement supplémentaire. 
-
-Pour maintenir à jour sur le public planification et des événements à venir, reportez-vous à la [de SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/) ou [blog Microsoft R Server](https://blogs.msdn.microsoft.com/rserver/).
+> La version initiale qui a été annoncée a été conçue pour les tests et exploration uniquement. Actuellement, la fonctionnalité est disponible dans la base de données SQL Azure dans des régions limitées uniquement, et les fonctionnalités sont limitées en comparaison avec les fonctionnalités prises en charge dans SQL Server 2016 ou 2017.
 
 **Ressources Azure**
 

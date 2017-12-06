@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
-ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
-ms.translationtype: HT
+ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 du serveur SQL sur Linux
 
@@ -55,7 +55,7 @@ Le tableau suivant répertorie l’historique de publication pour SQL Server 201
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [DISPONIBILITÉ GÉNÉRALE](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <a name="how-to-install-cumulative-updates"></a>Comment installer les mises à jour cumulatives
+## <a id="cuinstall"></a>Comment installer les mises à jour cumulatives
 
 Si vous avez configuré le référentiel de mise à jour Cumulative, vous obtenez la mise à jour cumulative la plus récente de packages SQL Server lorsque vous effectuez de nouvelles installations. Le référentiel de mise à jour Cumulative est la valeur par défaut pour tous les articles d’installation de package pour SQL Server sur Linux. Pour plus d’informations sur la configuration du référentiel, consultez [Source référentiels](sql-server-linux-setup.md#repositories).
 

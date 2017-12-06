@@ -1,10 +1,13 @@
 ---
-title: la fonction de local-name (XQuery) | Documents Microsoft
+title: local-name Function (XQuery) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: xquery
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -19,18 +22,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 52ae1021c17469e8fb5691fcf1da527cc348c950
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2412e0f5a350b2e8bb4fb507440bcbfba289e359
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="functions-on-nodes---local-name"></a>Functions on Nodes - local-name
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la partie locale du nom de *$arg* en tant que xs : String qui sera la chaîne de longueur nulle ou qui ont la forme lexicale de xs : NCName. Si l'argument n'est pas spécifié, la valeur par défaut est le nœud du contexte.  
+  Returns the local part of the name of *$arg* as an xs:string that will either be the zero-length string or will have the lexical form of an xs:NCName. If the argument is not provided, the default is the context node.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
 fn:local-name() as xs:string  
@@ -39,21 +42,21 @@ fn:local-name($arg as node()?) as xs:string
   
 ## <a name="arguments"></a>Arguments  
  *$arg*  
- Nom du nœud dont la partie local-name sera extraite.  
+ Node name whose local-name part will be retrieved.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarks  
   
--   Dans SQL Server, **fn :local-name()** sans argument peut uniquement être utilisé dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets (`[ ]`).  
+-   In SQL Server, **fn:local-name()** without an argument can only be used in the context of a context-dependent predicate. Specifically, it can only be used inside brackets (`[ ]`).  
   
--   Si l'argument est fourni et qu'il correspond à la séquence vide, la fonction retourne la chaîne de longueur zéro.  
+-   If the argument is supplied and is the empty sequence, the function returns the zero-length string.  
   
--   Si le nœud cible n'a pas de nom car il s'agit d'un nœud de document, de commentaire ou de texte, la fonction retourne la chaîne de longueur zéro.  
+-   If the target node has no name, because it is a document node, a comment, or a text node, the function returns the zero-length string.  
   
-## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
+## <a name="examples"></a>Examples  
+ This topic provides XQuery examples against XML instances that are stored in various **xml** type columns in the AdventureWorks database.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Extraction du nom local d'un nœud spécifique  
- La requête suivante est spécifiée sur une instance XML non typée. L'expression de requête, `local-name(/ROOT[1])`, extrait la partie locale du nom du nœud spécifié.  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Retrieve local name of a specific node  
+ The following query is specified against an untyped XML instance. The query expression, `local-name(/ROOT[1])`, retrieves the local name part of the specified node.  
   
 ```  
 declare @x xml  
@@ -62,7 +65,7 @@ SELECT @x.query('local-name(/ROOT[1])')
 -- result = ROOT  
 ```  
   
- La requête suivante est définie sur la colonne Instructions, une colonne xml typée, de la table ProductModel. L'expression `local-name(/AWMI:root[1]/AWMI:Location[1])` retourne le nom local, `Location`, du nœud spécifié.  
+ The following query is specified against the Instructions column, a typed xml column, of the ProductModel table. The expression, `local-name(/AWMI:root[1]/AWMI:Location[1])`, returns the local name, `Location`, of the specified node.  
   
 ```  
 SELECT Instructions.query('  
@@ -73,8 +76,8 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilisation de local-name sans argument dans un prédicat  
- La requête suivante porte sur la colonne Instructions, tapée **xml** colonne, de la table ProductModel. L'expression retourne tous les enfants de l'élément <`root`> dont la partie locale de QName est « Location ». Le **dépourvue** fonction n’est spécifiée dans le prédicat et il n’a aucun argument le nœud de contexte est utilisé par la fonction.  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Using local-name without argument in a predicate  
+ The following query is specified against the Instructions column, typed **xml** column, of the ProductModel table. The expression returns all the element children of the <`root`> element whose local name part of the QName is "Location". The **local-name()** function is specifed in the predicate and it has no arguments The context node is used by the function.  
   
 ```  
 SELECT Instructions.query('  
@@ -84,10 +87,10 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La requête retourne tous les enfants <`Location`> de l'élément <`root`>.  
+ The query returns all the <`Location`> element children of the <`root`> element.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctions sur les nœuds](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [Fonction namespace-uri &#40; XQuery &#41;](../xquery/functions-on-nodes-namespace-uri.md)  
+## <a name="see-also"></a>See Also  
+ [Functions on Nodes](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [namespace-uri Function &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

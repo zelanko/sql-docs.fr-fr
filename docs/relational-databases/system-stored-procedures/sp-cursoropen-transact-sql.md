@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec112810e691aceac5085f3ded941564331f74b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ouvre un curseur. sp_cursoropen définit l’instruction SQL associée du curseur et les options de curseur, puis remplit le curseur. sp_cursoropenis équivaut à la combinaison de la [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions DECLARE_CURSOR et OPEN. Cette procédure est appelée en spécifiant ID = 2 dans un paquet TDS (Tabular Data Stream).  
+  Ouvre un curseur. sp_cursoropen définit l’instruction SQL associée du curseur et les options de curseur, puis remplit le curseur. sp_cursoropen équivaut à la combinaison de la [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions DECLARE_CURSOR et OPEN. Cette procédure est appelée en spécifiant ID = 2 dans un paquet TDS (Tabular Data Stream).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 037f9e0da637b872298d3859499858620570bc41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6db9730d5e0905d464a57151365a9413f61a86eb
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-external-file-format-transact-sql"></a>CRÉER un FORMAT de fichier externe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -158,7 +158,7 @@ WITH (
 -   STRING_DELIMITER = '0x7E0x7E'--deux tildas (par exemple, ~ ~)
   
  Date_format = *datetime_format*  
- Spécifie un format personnalisé pour toutes les données de date et d’heure qui peuvent apparaître dans un fichier texte délimité. Si le fichier source utilise des formats de datefime par défaut, cette option n’est pas nécessaire. Un seul format de date/heure personnalisé est autorisé par fichier. Vous ne pouvez pas spécifier plusieurs formats de date/heure personnalisé par fichier. Toutefois, vous pouvez utiliser plusieurs formats de date/heure si chacun d’eux est le format par défaut pour son type de données respectifs dans la définition de table externe.
+ Spécifie un format personnalisé pour toutes les données de date et d’heure qui peuvent apparaître dans un fichier texte délimité. Si le fichier source utilise des formats de date/heure par défaut, cette option n’est pas nécessaire. Un seul format de date/heure personnalisé est autorisé par fichier. Vous ne pouvez pas spécifier plusieurs formats de date/heure personnalisé par fichier. Toutefois, vous pouvez utiliser plusieurs formats de date/heure si chacun d’eux est le format par défaut pour son type de données respectifs dans la définition de table externe.
  
  
 PolyBase utilise uniquement le format de date personnalisée pour l’importation des données. Il n’utilise pas le format personnalisé pour l’écriture de données dans un fichier externe.

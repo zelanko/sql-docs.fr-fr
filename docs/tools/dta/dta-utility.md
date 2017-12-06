@@ -2,9 +2,12 @@
 title: Utilitaire DTA | Documents Microsoft
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
-  L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **dta** utilitaire est la version de l’invite de commandes de l’Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
   
  À l'instar de l'Assistant Paramétrage du moteur de base de données, l'utilitaire **dta** analyse une charge de travail et recommande des PDS (Physical Design Structures) pour améliorer les performances du serveur pour cette charge de travail. La charge de travail peut être un cache du plan, un fichier de trace ou une table du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , ou un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les PDS incluent des index, des vues indexées et un partitionnement. Après l'analyse d'une charge de travail, l'utilitaire **dta** produit une recommandation pour la conception physique des bases de données et peut générer le script nécessaire pour la mise en œuvre de la recommandation. Des charges de travail peuvent être spécifiées à partir de l’invite de commandes avec l’argument **-if** ou **-it** . Vous pouvez aussi spécifier un fichier d’entrée XML à partir de l’invite de commandes avec l’argument **-ix** . Dans ce cas, la charge de travail est spécifiée dans le fichier d'entrée XML.  
   

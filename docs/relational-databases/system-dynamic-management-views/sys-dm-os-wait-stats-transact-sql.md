@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b171317170d9144edb71dfb29b36940ce6d7ee31
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,12 +282,12 @@ Cette commande remet tous les compteurs à 0.
 |FT_RESTART_CRAWL |Se produit lorsqu'une analyse de texte intégral doit redémarrer à partir du dernier point de référence connu et fiable pour une récupération faisant suite à une panne transitoire. Grâce à cette attente, les tâches travaillant actuellement sur ce remplissage peuvent se terminer ou quitter l'étape en cours.| 
 |FULLTEXT GATHERER |Se produit durant la synchronisation d'opérations de texte intégral.| 
 |GDMA_GET_RESOURCE_OWNER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GHOSTCLEANUPSYNCMGR |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GLOBAL_QUERY_CANCEL |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|GLOBAL_QUERY_CANCEL |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_QUERY_CLOSE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GLOBAL_QUERY_CONSUMER |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|GLOBAL_QUERY_PRODUCER |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|GLOBAL_QUERY_CONSUMER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|GLOBAL_QUERY_PRODUCER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_TRAN_CREATE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GUARDIAN |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
@@ -346,9 +346,9 @@ Cette commande remet tous les compteurs à 0.
 |HADR_TDS_LISTENER_SYNC |Le système AlwaysOn interne ou sur le cluster WSFC demande que les écouteurs sont démarrés ou arrêtés. Le traitement de cette demande est toujours asynchrone et il existe un mécanisme pour supprimer les demandes redondantes. Parfois, ce processus est interrompu en raison de modifications de la configuration. Toutes les attentes en rapport avec ce mécanisme de synchronisation des écouteurs font appel à ce type d'attente. Usage interne uniquement., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Utilisé à la fin d’une instruction toujours sur Transact-SQL qui nécessite le démarrage et/ou l’arrêt d’écouteur de groupe anavailability. Étant donné que l’opération de démarrage/arrêt est terminée de façon asynchrone, bloque le thread d’utilisateur à l’aide de ce type d’attente jusqu'à ce que la situation de l’écouteur est connue., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TIMER_TASK |En attente de l'obtention du verrou sur l'objet de tâche du minuteur ; également utilisé pour les attentes réelles entre l'exécution de travaux. Par exemple, pour une tâche qui s’exécute toutes les 10 secondes, après une exécution, les groupes de disponibilité AlwaysOn patientent environ 10 secondes de replanifier la tâche, et l’attente est incluse ici., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TRANSPORT_DBRLIST |En attente de l'accès à la liste des réplicas de bases de données de la couche de transport. Utilisé pour le verrouillage spinlock qui accorde l’accès à ce dernier., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TRANSPORT_FLOW_CONTROL |En attente lorsque le nombre de messages en attente sans accusé de réception Always On est sur le hors seuil de contrôle de flux. Il s’agit d’une base de réplica de disponibilité (et non sur une base de données à base de données)., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -471,9 +471,9 @@ Cette commande remet tous les compteurs à 0.
 |MD_AGENT_YIELD |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MD_LAZYCACHE_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MEMORY_ALLOCATION_EXT |Se produit lors de l’allocation de mémoire à partir du pool de mémoire interne SQL Server ou le système d’exploitation., <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|MEMORY_GRANT_UPDATE |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|MEMORY_GRANT_UPDATE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |METADATA_LAZYCACHE_RWLOCK |TBD <br /> **S’applique aux**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] uniquement. |  
-|MIGRATIONBUFFER |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|MIGRATIONBUFFER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MISCELLANEOUS |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |MISCELLANEOUS |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |MSQL_DQ |Se produit lorsqu'une tâche attend la fin d'une opération de requête distribuée. Permet de détecter d'éventuels interblocages d'application MARS (Multiple Active Result Set). L'attente se termine à la fin de l'appel de requête distribuée.| 
@@ -733,12 +733,12 @@ Cette commande remet tous les compteurs à 0.
 |PWAIT_MD_RELATION_CACHE |Se produit durant la synchronisation interne dans les métadonnées de table ou un index., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_MD_SERVER_CACHE |Se produit durant la synchronisation interne dans les métadonnées sur les serveurs liés., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_MD_UPGRADE_CONFIG |Se produit durant la synchronisation interne dans la mise à niveau des configurations à l’échelle du serveur., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|PWAIT_SBS_FILE_OPERATION |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|PWAIT_SBS_FILE_OPERATION |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -752,7 +752,7 @@ Cette commande remet tous les compteurs à 0.
 |QDS_DB_DISK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_DYN_VECTOR |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_EXCLUSIVE_ACCESS |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|QDS_HOST_INIT |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|QDS_HOST_INIT |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_LOADDB |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_QDS_CAPTURE_INIT |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -777,12 +777,12 @@ Cette commande remet tous les compteurs à 0.
 |QUERY_OPTIMIZER_PRINT_MUTEX |Se produit durant la synchronisation de la production de la sortie de diagnostics de l'optimiseur de requête. Ce type d’attente se produit uniquement si les paramètres de diagnostic ont été activés sous la direction du Support technique Microsoft.| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
-|RBIO_WAIT_VLF |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|RBIO_WAIT_VLF |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |RECOVER_CHANGEDB |Se produit durant la synchronisation de l'état de la base de données dans une base de données en mode secours semi-automatique.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_SYNC |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|REMOTE_BLOCK_IO |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|REMOTE_BLOCK_IO |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -812,12 +812,12 @@ Cette commande remet tous les compteurs à 0.
 |SATELLITE_CARGO |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SATELLITE_SERVICE_SETUP |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SATELLITE_TASK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|SBS_DISPATCH |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|SBS_RECEIVE_TRANSPORT |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|SBS_TRANSPORT |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|SBS_DISPATCH |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|SBS_RECEIVE_TRANSPORT |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|SBS_TRANSPORT |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SEC_DROP_TEMP_KEY |Se produit après l'échec d'une tentative de suppression d'une clé de sécurité temporaire avant une nouvelle tentative.| 
-|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_DBE_STATE_MUTEX |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_KEYRING_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -852,7 +852,7 @@ Cette commande remet tous les compteurs à 0.
 |SNI_HTTP_WAITFOR_0_DISCON |Se produit lors de l’arrêt de SQL Server, en attendant que les connexions HTTP en suspens.| 
 |SNI_LISTENER_ACCESS |Se produit pendant l'attente de mise à jour de la modification d'état des nœuds NUMA (Non-Uniform Memory Access). L'accès à la modification d'état est sérialisé.| 
 |SNI_TASK_COMPLETION |Se produit lorsqu'il y a une attente de fin de toutes les tâches pendant la modification d'état d'un nœud NUMA.| 
-|SNI_WRITE_ASYNC |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|SNI_WRITE_ASYNC |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SOAP_READ |Se produit durant l'attente de l'exécution d'une lecture sur le réseau HTTP.| 
 |SOAP_WRITE |Se produit durant l'attente de l'exécution d'une écriture sur le réseau HTTP.| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -903,7 +903,7 @@ Cette commande remet tous les compteurs à 0.
 |TDS_INIT |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TDS_PROXY_CONTAINER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TEMPOBJ |Se produit lorsque des suppressions d'objets temporaires sont synchronisées. Cette attente est rare ; elle survient uniquement si une tâche a demandé un accès exclusif pour les suppressions de tables temp.| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TERMINATE_LISTENER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |THREADPOOL |Se produit lorsqu'une tâche attend un thread de travail pour l'exécution. Ceci peut indiquer qu'un paramètre de thread de travail maximal est trop bas ou que les exécutions de traitement sont exceptionnellement longues, ce qui réduit le nombre de threads de travail disponibles pour répondre aux autres lots.| 
 |TIMEPRIV_TIMEPERIOD |Se produit durant la synchronisation interne du minuteur d'événements étendus.| 
@@ -933,13 +933,13 @@ Cette commande remet tous les compteurs à 0.
 |WAIT_FOR_RESULTS |Se produit durant l'attente du déclenchement d'une notification de requête.| 
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XLOGREAD_SIGNAL |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|WAIT_XLOGREAD_SIGNAL |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_CLOSE |Se produit pendant l’attente d’un point de contrôle., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_ENABLED |Se produit lorsque les points de contrôle est désactivé et en attente pour les points de contrôle doit être activé., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_STATE_LOCK |Se produit lors de la synchronisation de la vérification de l’état du point de contrôle., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **S’applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **S’applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_GUEST |Se produit lorsque l’allocateur de mémoire de base de données doit cesser de recevoir des notifications de mémoire insuffisante., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_HOST_WAIT |Se produit lorsque les attentes sont déclenchées par le moteur de base de données et implémentées par l’hôte., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -947,7 +947,7 @@ Cette commande remet tous les compteurs à 0.
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |Se produit lorsque le point de contrôle hors connexion est en attente pour les nouveaux enregistrements de journal à analyser., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_PROCEDURE_ENTRY |Se produit lorsqu’une procédure de suppression est en attente pour toutes les exécutions en cours de cette procédure pour terminer., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_RECOVERY |Se produit lors de la récupération de la base de données est en attente pour la récupération des objets optimisés en mémoire à la fin., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_TASK_SHUTDOWN |Se produit lors de l’attente d’un thread OLTP en mémoire terminer., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_TRAN_DEPENDENCY |Se produit lors de l’attente des dépendances de transaction., <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -996,10 +996,10 @@ Cette commande remet tous les compteurs à 0.
 |XE_TIMER_TASK_DONE |TBD| 
 |XIO_CREDENTIAL_MGR_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XIO_CREDENTIAL_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|XIO_EDS_MGR_RWLOCK |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|XIO_EDS_RWLOCK |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **S’applique aux**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à la version actuelle.| 
+|XIO_EDS_MGR_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_EDS_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XTP_HOST_DB_COLLECTION |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XTP_HOST_LOG_ACTIVITY |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

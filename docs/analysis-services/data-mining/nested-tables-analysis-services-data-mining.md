@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tables imbriquées (Analysis Services - Exploration de données)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
  Par exemple, si la table imbriquée contient les colonnes **Product**, **ProductQuantity**et **ProductPrice**, vous pouvez choisir **Product** comme clé de table imbriquée et ajouter **ProductQuantity** à la structure d’exploration de données pour une utilisation comme entrée.  
   
 ## <a name="filtering-nested-table-data"></a>Filtrage de données de table imbriquée  
- Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer des filtres sur les données utilisées pour effectuer l'apprentissage d'un modèle d'exploration de données ou le tester. Vous pouvez utiliser un filtre pour affecter la composition du modèle ou pour tester le modèle sur un sous-ensemble de cas. Des filtres peuvent également être appliqués aux tables imbriquées. Toutefois, la syntaxe pouvant être utilisée avec les tables imbriquées présente certaines limites.  
+ Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez créer des filtres sur les données utilisées pour effectuer l'apprentissage d'un modèle d'exploration de données ou le tester. Un filtre peut être utilisé pour affecter la composition du modèle, ou pour tester le modèle sur un sous-ensemble de cas. Des filtres peuvent également être appliqués aux tables imbriquées. Toutefois, la syntaxe pouvant être utilisée avec les tables imbriquées présente certaines limites.  
   
  Souvent, lorsque vous appliquez un filtre à une table imbriquée, vous testez l'existence ou la non-existence d'un attribut. Par exemple, vous pouvez appliquer un filtre qui restreint les cas utilisés dans le modèle à ceux ayant une valeur spécifiée dans la table imbriquée. Ou, vous pouvez restreindre les cas utilisés dans le modèle aux clients qui n'ont pas acheté un article particulier.  
   
