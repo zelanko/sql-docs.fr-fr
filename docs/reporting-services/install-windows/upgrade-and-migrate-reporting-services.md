@@ -2,9 +2,12 @@
 title: "Mettre à niveau et migrer Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: af94ddd1515281c0e6efefce3d3e6e329c8292c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13b4723a9d481f9372b73619ffd9900f278b1910
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Mettre à niveau et migrer Reporting Services
 
@@ -79,9 +82,9 @@ ms.lasthandoff: 11/09/2017
   
 -   Passez en revue la configuration requise afin de déterminer si votre matériel et vos logiciels peuvent prendre en charge [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   Utilisez l’outil d’analyse de configuration système (SCC, System Configuration Checker) pour analyser le serveur de rapports afin d’y déceler d’éventuels défauts pouvant empêcher la réussite de l’installation de SQL Server Reporting Services. Pour plus d'informations, consultez [Paramètres de l’outil d’analyse de configuration système](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
+-   Utilisez l’outil d’analyse de configuration système (SCC, System Configuration Checker) pour analyser le serveur de rapports afin d’y déceler d’éventuels défauts pouvant empêcher la réussite de l’installation de SQL Server Reporting Services. Pour plus d'informations, consultez [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).  
   
--   Prenez connaissance des bonnes pratiques recommandées et de l'aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+-   Prenez connaissance des meilleures pratiques recommandées et de l'aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 -   Sauvegardez votre clé symétrique. Pour plus d’informations, consultez [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   

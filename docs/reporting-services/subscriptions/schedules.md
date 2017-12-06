@@ -2,9 +2,12 @@
 title: Planifications | Microsoft Docs
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e23823f0e372964e6193a8c7a67a349fa170f514
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="schedules"></a>Planifications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des **planifications partagées** et des **planifications spécifiques aux rapports** pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.
@@ -61,7 +64,7 @@ ms.lasthandoff: 11/09/2017
  Pour plus d'informations sur la création et la gestion des planifications, consultez [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md).  
   
 > [!NOTE]  
->  Les opérations de planification ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
+>  Les opérations de planification ne sont pas disponibles dans toutes les édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454).  
   
 ##  <a name="bkmk_compare"></a> Comparaison entre les planifications partagées et les planifications spécifiques aux rapports  
  Les deux types de planification produisent le même résultat.  
@@ -120,7 +123,7 @@ ms.lasthandoff: 11/09/2017
   
      Avant que les événements ne soient traités, le processeur de planification et de livraison procède à une étape d'authentification pour vérifier que le propriétaire de l'abonnement est autorisé à consulter le rapport.  
   
- Reporting Services gère une file d'attente d'événements pour toutes les opérations planifiées. Il interroge régulièrement la file d'attente pour vérifier si elle contient de nouveaux événements. Par défaut, la file d'attente fait l'objet d'une analyse toutes les 10 secondes. Si vous souhaitez changer cette fréquence, modifiez les paramètres de configuration **PollingInterval**, **IsNotificationService**et **IsEventService** dans le fichier RSReportServer.config. Le mode SharePoint utilise également le fichier RSreporserver.config pour ces paramètres et les valeurs s'appliquent à toutes les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Fichier de configuration RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+ Reporting Services gère une file d'attente d'événements pour toutes les opérations planifiées. Il interroge régulièrement la file d'attente pour vérifier si elle contient de nouveaux événements. Par défaut, la file d'attente fait l'objet d'une analyse toutes les 10 secondes. Si vous souhaitez changer cette fréquence, modifiez les paramètres de configuration **PollingInterval**, **IsNotificationService**et **IsEventService** dans le fichier RSReportServer.config. Le mode SharePoint utilise également le fichier RSreporserver.config pour ces paramètres et les valeurs s'appliquent à toutes les applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
 ##  <a name="bkmk_serverdependencies"></a> Dépendances de serveur  
  Il est impératif que le service Report Server et l'Agent SQL Server s'exécutent pour que le processeur de planification et de livraison fonctionne. La fonctionnalité de traitement des planifications et des livraisons doit être activée par le biais de la propriété **ScheduleEventsAndReportDeliveryEnabled** de la facette **Configuration de la surface d’exposition pour Reporting Services** de la gestion basée sur une stratégie. Enfin, les opérations planifiées ne peuvent se déclencher que si l'Agent SQL Server et le service Report Server sont en cours d'exécution.  

@@ -2,9 +2,12 @@
 title: "Nouveau rôle d’utilisateur (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4a763b291ffa0edfd25007c4db74c02789215305
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 237b79ef21a6fe9f190054b9996d644e6f069ade
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="new-user-role-management-studio"></a>Nouveau rôle d'utilisateur (Management Studio)
   Utilisez cette page pour créer une définition de rôle au niveau élément. Une définition de rôle au niveau élément est une collection nommée de tâches qui énumère les tâches qu'un utilisateur peut effectuer sur des dossiers, des rapports, des modèles, des ressources et des sources de données partagées. Le rôle Visiteur prédéfini est un exemple de définition de rôle au niveau élément qui identifie les types d'actions dont un utilisateur final de rapports peut avoir besoin pour naviguer entre des dossiers et afficher des rapports.  

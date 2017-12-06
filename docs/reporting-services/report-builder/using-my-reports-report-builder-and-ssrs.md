@@ -2,9 +2,12 @@
 title: "Utilisation du dossier Mes rapports (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 3f8bf6c65bd022103f50704c35b2bae7556e247c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b80b260f392298dd02d37d411ae910d81b420715
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Utilisation du dossier Mes rapports (Générateur de rapports et SSRS)
   Sur un serveur de rapports configuré en mode natif, le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker vos rapports et dans lequel vous pouvez travailler sur les rapports dont vous êtes l'auteur. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Contrairement à ces autres dossiers, le dossier Mes rapports est un espace de travail géré par l'utilisateur. Vous pouvez ajouter ou supprimer des rapports et des dossiers, et enregistrer des rapports liés avec des paramètres personnalisés.  

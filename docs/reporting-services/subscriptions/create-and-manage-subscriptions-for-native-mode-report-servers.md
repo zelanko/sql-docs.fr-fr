@@ -2,9 +2,12 @@
 title: "Créer et gérer des abonnements pour les serveurs de rapports en mode natif | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e470d64c425f967b37a42eed2467b925f05ad0e4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  

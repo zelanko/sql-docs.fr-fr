@@ -2,9 +2,12 @@
 title: "Trier des données dans une région de données (Générateur de rapports et SSRS)| Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1bd8061755f4dbacdf16106ecca5e7a22b1101e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 78e3b4cc49c3df0b36d393c0c626b16fbfad9a0b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Trier des données dans une région de données (Générateur de rapports et SSRS)
   Pour changer l'ordre de tri des données dans une région de données à la première exécution d'un rapport, vous devez définir l'expression de tri sur le groupe ou la région de données. Par défaut, l'expression de tri d'un groupe a automatiquement la même valeur que l'expression de groupe.  

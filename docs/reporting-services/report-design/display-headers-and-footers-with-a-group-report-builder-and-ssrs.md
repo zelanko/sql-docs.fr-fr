@@ -2,9 +2,12 @@
 title: "Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5c1004a59c0cda51fb5cf9230b81a18945765005
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76748c3a02ca158e3519197b043ce8e4c978f915
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS)
   Vous pouvez mieux contrôler si une ligne statique, telle qu'un en-tête ou un pied de page de groupe, est rendue avec des lignes dynamiques qui sont associées à un groupe dans une région de données de tableau matriciel.  

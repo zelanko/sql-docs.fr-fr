@@ -2,9 +2,12 @@
 title: "Leçon 5 : mise en forme d’un rapport (Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,13 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a59d1082e60e358e1447838997192791950c41ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a83a6615e75b3051793318f71d8bb84c427b360e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Leçon 5 : mise en forme d’un rapport (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 Maintenant que vous avez ajouté une région de données et quelques champs au rapport Sales Orders, vous pouvez mettre en forme les champs de date et de valeurs monétaires, ainsi que les en-têtes de colonne.  
   
 ## <a name="bkmk_format_date"></a>Mise en forme de la date  

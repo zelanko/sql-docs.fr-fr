@@ -2,9 +2,12 @@
 title: Autorisation dans Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bd7ecdc8e792fe11810affa362ff681bfdf267f1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 95fb75408bccf629895af40d2b1aff2716c88d71
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisation dans Reporting Services
   L'autorisation est le processus permettant de déterminer si une identité peut se voir accorder le type d'accès demandé à une ressource donnée dans la base de données du serveur de rapports. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise une architecture d'autorisation basée sur les rôles qui permet à un utilisateur d'accéder à une ressource donnée en fonction de l'attribution de rôle de l'utilisateur pour l'application. Les extensions de sécurité pour [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiennent une implémentation d'un composant d'autorisation servant à accorder l'accès aux utilisateurs une fois ceux-ci authentifiés sur le serveur de rapports. L'autorisation est appelée lorsqu'un utilisateur tente d'effectuer une opération sur le système ou sur un élément du serveur de rapports par le biais de l'API SOAP et via l'accès URL. Cela est possible grâce à l’interface d’extension de sécurité **IAuthorizationExtension2**. Comme indiqué précédemment, toutes les extensions héritent d' **IExtension** , l'interface de base pour n'importe quelle extension que vous déployez. **IExtension** et **IAuthorizationExtension2** sont membres de l’espace de noms **Microsoft.ReportingServices.Interfaces**.  

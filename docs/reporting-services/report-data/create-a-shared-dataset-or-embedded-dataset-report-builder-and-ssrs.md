@@ -2,9 +2,12 @@
 title: "Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 77d880d77a10c5082f3818674876c5ac0336bcc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 93d56bb1558c298fbfa3eff5476f9549c8be37a7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS)
 Les jeux de données incorporés doivent être utilisés dans un seul rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Les jeux de données partagés d’un serveur de rapports peuvent être utilisés par plusieurs rapports, mobiles et paginés. Pour créer un jeu de données, vous devez disposer d’une source de données incorporée ou partagée.  

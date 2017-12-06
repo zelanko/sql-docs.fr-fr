@@ -2,9 +2,12 @@
 title: "Recherche de rapports et d’autres éléments (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 88576d1bab512cb0d8567ef95e6b7ef3a1db124a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 46825c7f0b93267a216444a91c5d7da0bef3879f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Recherche de rapports et d’autres éléments (Générateur de rapports et SSRS)
   Vous pouvez utiliser le Gestionnaire de rapports pour rechercher sur un serveur de rapports des éléments spécifiques en fonction de leur nom ou de leur description. Vous pouvez rechercher des rapports publiés, des modèles de rapports, des dossiers, des sources de données partagées et des ressources. Il est impossible de rechercher des planifications, des propriétaires, des attributions de rôles, des instantanés d'historique de rapport spécifiques ou des abonnements. La recherche est effectuée dans la base de données du serveur de rapports dans laquelle les éléments sont stockés.  

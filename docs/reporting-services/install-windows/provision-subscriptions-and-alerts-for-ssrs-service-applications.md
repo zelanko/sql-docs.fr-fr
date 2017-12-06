@@ -2,9 +2,12 @@
 title: Mettre en service les abonnements et les alertes pour les applications de service SSRS | Microsoft Docs
 ms.custom: 
 ms.date: 06/03/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a96245405f8f13de983215100cde3b189e2b0f17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f6a21d71f31380543a74db37bd70061a3fe848a0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Configurer les abonnements et les alertes pour les applications de service de SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les abonnements et les alertes de données nécessitent SQL Server Agent et peuvent exiger la configuration des autorisations de SQL Server Agent. Si des messages d'erreur apparaissent indiquant que SQL Server Agent est obligatoire et que vous avez vérifié le fonctionnement de SQL Server Agent, alors vous devez mettre à jour ou vérifier les autorisations. Cette rubrique traite de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et décrit trois méthodes pour mettre à jour les autorisations de SQL Server Agent avec les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les informations d'identification que vous utilisez pour les étapes de cette rubrique doivent disposer d'autorisations suffisantes pour accorder des autorisations EXECUTE au rôle RSExecRole pour les objets dans les bases de données de l'application de service, msdb et master.  

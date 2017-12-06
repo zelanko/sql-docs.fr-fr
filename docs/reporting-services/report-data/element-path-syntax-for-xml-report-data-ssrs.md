@@ -2,9 +2,12 @@
 title: "Syntaxe du chemin à l’élément pour des données de rapport XML (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 121f98cb4b10c480b2f6e215c9432361f963475c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 71d13409c7905b64f4b91b365b07f9b53b58264d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin de l’élément par défaut, laissez vide la requête du dataset ou le **ElementPath** XML du **Query** XML. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  

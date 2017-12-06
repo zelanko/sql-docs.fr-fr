@@ -2,9 +2,12 @@
 title: "Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 661d22ed1d594af2c282b61ec28eaaa37bd6821d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f73e01f06207255c7af761b46e48d0a35b1a8b40
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes (Générateur de rapports et SSRS)
   Sur les graphiques qui ne sont pas à base de formes dans un rapport paginé, [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] sélectionne une nouvelle couleur dans la palette en fonction de l’index de la série dans le graphique. Par exemple, la première série sur votre graphique sera associée à la première couleur dans la palette. Toutefois, ce comportement diffère pour les graphiques à base de formes. Sur les graphiques à base de formes, chaque couleur de la palette est associée à un point de données dans le dataset. Par exemple, le point de données 1 est associé à la première couleur de la palette, le point de données 2 est associé à la deuxième couleur et ainsi de suite.  

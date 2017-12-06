@@ -1,10 +1,13 @@
 ---
 title: "Intégration de Power BI Report Server (Gestionnaire de configuration) | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,17 +19,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6a99f3051cb4f4cae12c525204387906fbf3d8b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c8498460390ee46094741702190ec2d92909002a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration de Power BI Report Server (Gestionnaire de configuration)
+# <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
 
-La page **Intégration de Power BI** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sert à inscrire le serveur de rapports auprès du client géré Azure Active Directory (AD) souhaité pour permettre aux utilisateurs du serveur de rapports d’épingler les éléments de rapports pris en charge à des tableaux de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Pour obtenir la liste des éléments pris en charge que vous pouvez épingler, consultez [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
+La page  **Intégration de Power BI** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sert à inscrire le serveur de rapports auprès du client géré Azure Active Directory (AD) souhaité pour permettre aux utilisateurs du serveur de rapports d’épingler les éléments de rapports pris en charge à des tableaux de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Pour obtenir la liste des éléments pris en charge que vous pouvez épingler, consultez [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
 ##  <a name="bkmk_requirements"></a> Configuration requise pour l’intégration de Power BI
 

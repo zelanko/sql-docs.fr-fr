@@ -2,9 +2,12 @@
 title: "Références à la collection Fields d’un dataset (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d9c1c724e1b097e842975de2e8095a34fbbbb2d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a3e240e6e5a12fc38468d51af79aa43a19c7196f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Collections intégrées - Références à la collection Fields d’un dataset (Générateur de rapports)
   Chaque dataset d’un rapport contient une collection Fields. La collection Fields comprend l’ensemble de champs spécifiés par la requête de dataset, ainsi que tous les champs calculés supplémentaires que vous créez. Après avoir créé un dataset, la collection de champs apparaît dans le volet **Données du rapport** .  

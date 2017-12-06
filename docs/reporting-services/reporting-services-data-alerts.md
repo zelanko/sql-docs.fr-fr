@@ -2,9 +2,12 @@
 title: "Alertes de données Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 07/02/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f2be4b604e088329f719195976903f6dcb516246
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 981aa87df38c43e33fe573ea769cb686d3fbf59e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
 
@@ -33,7 +36,7 @@ Les alertes de données SQL Server Reporting Services sont une solution d’aler
 Les messages d'alerte de données sont envoyés par courrier électronique. Selon l'importance des informations, vous pouvez choisir la fréquence d'envoi des messages ou choisir de recevoir un message uniquement en cas de modification des résultats. Vous pouvez spécifier plusieurs destinataires de courrier électronique pour informer vos collègues et améliorer l'efficacité et la collaboration au sein de votre équipe.
 
 > [!NOTE]
-> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
 ##  <a name="AlertingWF"></a> Architecture des alertes de données et flux de travail
 
@@ -126,10 +129,10 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
  Comme le montre le schéma plus haut dans cette rubrique, les alertes de données utilisent des travaux de SQL Server Agent. Pour créer des travaux, SQL Server Agent doit s'exécuter. Il est possible que vous ayez configuré SQL Server Agent pour qu'il démarre automatiquement lors de l'installation d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Sinon, vous pouvez démarrer SQL Server Agent manuellement. Pour plus d’informations, consultez [Configurer l’Agent SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) et [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
- Vous pouvez utiliser la page **Configurer les abonnements et les alertes** dans l'Administration centrale de SharePoint pour déterminer si SQL Server Agent s'exécute, et pour créer et télécharger les scripts personnalisés [!INCLUDE[tsql](../includes/tsql-md.md)] que vous exécuterez ensuite pour accorder des autorisations à SQL Server Agent. Vous pouvez également générer les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] à l'aide de PowerShell. Pour plus d’informations, consultez [Provisionner les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+ Vous pouvez utiliser la page **Configurer les abonnements et les alertes** dans l'Administration centrale de SharePoint pour déterminer si SQL Server Agent s'exécute, et pour créer et télécharger les scripts personnalisés [!INCLUDE[tsql](../includes/tsql-md.md)] que vous exécuterez ensuite pour accorder des autorisations à SQL Server Agent. Vous pouvez également générer les scripts [!INCLUDE[tsql](../includes/tsql-md.md)] à l'aide de PowerShell. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="ConfigAlert"></a> Configurer des alertes de données  
- À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , les paramètres des fonctionnalités d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , y compris les données d'alerte, sont répartis entre le fichier de configuration du serveur de rapports (rsreportserver.config) et une base de données de configuration SharePoint lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Lorsque vous créez l'application de service en tant qu'étape en installant et en configurant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la base de données de configuration SharePoint est automatiquement créée. Pour plus d’informations, consultez [Fichier de configuration RsReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) et [Fichiers de configuration Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
+ À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , les paramètres des fonctionnalités d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , y compris les données d'alerte, sont répartis entre le fichier de configuration du serveur de rapports (rsreportserver.config) et une base de données de configuration SharePoint lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Lorsque vous créez l'application de service en tant qu'étape en installant et en configurant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la base de données de configuration SharePoint est automatiquement créée. Pour plus d’informations, consultez [Fichier de configuration RsReportserver.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md) et [Fichiers de configuration Reporting Services](../reporting-services/report-server/reporting-services-configuration-files.md).  
   
  Les paramètres des alertes de données d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluent les intervalles de nettoyage des données et des métadonnées d'alerte et le nombre de tentatives d'envoi des messages d'alerte de données par courrier électronique. Vous pouvez modifier le fichier de configuration et la base de données afin d'utiliser des valeurs différentes pour les paramètres d'alerte de données.  
   
@@ -294,7 +297,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
   
      Pour plus d’informations sur la gestion de toutes les alertes de données d’un site, consultez [Gestionnaire des alertes de données pour les administrateurs d’alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md) et [Gérer toutes les alertes de données sur un site SharePoint dans le Gestionnaire des alertes de données](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
--   Dans la section**Configurer les abonnements et les alertes** vous déterminez si Reporting Services peut utiliser SQL Server Agent pour les alertes de données et télécharger les scripts qui autorisent l'accès à SQL Server Agent. Pour plus d’informations, consultez [Provisionner les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
+-   Dans la section**Configurer les abonnements et les alertes** vous déterminez si Reporting Services peut utiliser SQL Server Agent pour les alertes de données et télécharger les scripts qui autorisent l'accès à SQL Server Agent. Pour plus d’informations, consultez [Configurer les abonnements et les alertes pour les applications de service de SSRS](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
 ##  <a name="Globalization"></a> Globalisation des alertes de données  
  Certain script tel que l'arabe et hébreu sont écrits de droite à gauche. Les alertes de données prennent en charge les scripts de droite à gauche ainsi que les scripts de gauche à droite. Les alertes de données détectent la culture et modifient en conséquence l'apparence et le comportement de l'interface utilisateur, ainsi que la disposition des messages d'alerte de données. La culture est dérivée du paramètre régional du système d'exploitation sur l'ordinateur de l'utilisateur. La culture est enregistrée chaque fois que vous mettez à jour puis resauvegardez la définition d'une alerte de données.  

@@ -2,9 +2,12 @@
 title: "Présentation des stratégies de sécurité | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f93b2af7e677bd82cc947b1db3e1f32066cdb9ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d24b824fcb87d7eca888f4dbc7c4c142e2c71de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="understanding-security-policies"></a>Présentation des stratégies de sécurité
   Tout code exécuté par un serveur de rapports doit faire partie d'une stratégie de sécurité d'accès du code spécifique. Ces stratégies de sécurité comprennent des groupes de codes qui mappent une preuve à un ensemble de jeux d'autorisations nommés. Souvent, les groupes de codes sont associés à un jeu d'autorisations nommé qui spécifie les autorisations pouvant être accordées au code dans ce groupe. Le runtime utilise la preuve fournie par un hôte approuvé ou par le chargeur pour déterminer les groupes de codes auxquels le code appartient et, par conséquent, les autorisations à accorder au code. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adhère à cette architecture de stratégie de sécurité telle qu’elle est définie par le Common Language Runtime (CLR) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Les sections suivantes décrivent les divers types de codes qui existent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ainsi que les règles de stratégie associées.  

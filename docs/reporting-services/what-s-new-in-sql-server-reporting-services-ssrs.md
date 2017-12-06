@@ -1,9 +1,13 @@
 ---
 title: "Nouveautés de SQL Server Reporting Services (SSRS) | Microsoft Docs"
 ms.date: 10/10/2017
-ms.prod: sql-server-2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -13,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 65eb6720677fbb4e6f95086aefc162dc23563206
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a409c0678ca17215932cffe378bdcebbb752897d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Nouveautés de SQL Server Reporting Services (SSRS)
 
@@ -27,7 +31,7 @@ Découvrez les nouveautés de SQL Server [!INCLUDE[ssRSnoversion](../includes/ss
 
   Pour plus d’informations sur les nouveautés concernant d’autres aspects de SQL Server, consultez [Nouveautés de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) ou [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
- **Télécharger** ![télécharger](../analysis-services/media/download.png "télécharger")
+ **Télécharger** ![download](../analysis-services/media/download.png "download")
 
 - Pour télécharger SQL Server 2017 Reporting Services, accédez au **[Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)**.
 
@@ -127,7 +131,7 @@ Pour plus d'informations, consultez :
 
 **Rapports paginés modernes :** concevez de magnifiques rapports paginés modernes avec les nouveaux styles modernes pour les graphiques, jauges, cartes et autres visualisations de données.
   
-**Graphiques de compartimentage et en rayons de soleil :** Améliorez vos rapports avec des graphiques de compartimentage ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") et en rayons de soleil ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") très utiles pour afficher des données hiérarchiques. Pour plus d’informations, consultez [Graphiques de compartimentage et en rayons de soleil dans Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Graphiques de compartimentage et en rayons de soleil :** Améliorez vos rapports avec des graphiques de compartimentage ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") et en rayons de soleil ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") très utiles pour afficher des données hiérarchiques. Pour plus d’informations, consultez [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Incorporation des rapports :** vous pouvez désormais incorporer des rapports mobiles et paginés dans d’autres pages web et des applications en utilisant un iframe avec les paramètres d’URL.  
 
@@ -188,7 +192,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Nouveautés d’Analysis Services](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Préversion technique des rapports Power Bi dans SSRS - Notes de publication](../reporting-services/reporting-services-release-notes.md)  
+[Technical Preview of Power BI reports in SSRS - Release notes (Version d’évaluation technique des rapports Power Bi dans SSRS - Notes de publication)](../reporting-services/reporting-services-release-notes.md)  
 [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)   
 [Compatibilité descendante](http://msdn.microsoft.com/en-us/675b0e0e-cfee-4790-9675-80fc3ea6d30f)   
 [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](http://msdn.microsoft.com/en-us/39f03d2d-6e48-4b34-a9d3-07f86313b937)   

@@ -2,9 +2,12 @@
 title: "Données des rapports (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d5cac8267c1a38401eee78758a6e34adcbdd06ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1581775de3bf36ecfd3153918ff4457b8d6dde7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-data-ssrs"></a>Données des rapports (SSRS)
   Les données de rapport peuvent provenir de plusieurs sources de données de votre organisation. Votre première étape lors de la conception d'un rapport consiste à créer des sources de données et des datasets qui représentent les données de rapport sous-jacentes. Chaque source de données inclut des informations de connexion de données. Chaque dataset inclut une commande de requête qui définit le jeu de champs à utiliser comme données d'une source de données. Pour visualiser des données de chaque dataset, ajoutez une région de données, telle qu'une table, une matrice, un graphique ou une carte. Lorsque le rapport est traité, les requêtes s'exécutent sur la source de données, et chaque région de données s'étend autant que nécessaire pour afficher les résultats de la requête pour le dataset.  

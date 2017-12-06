@@ -2,9 +2,12 @@
 title: "Fonctionnalités et tâches Reporting Services (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/18/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4761010af3005854c438f762d9c875ce56e3576f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e251399eff8391fccf029d37a11863c11850b94
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Fonctionnalités et tâches Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est organisé par les rapports et les fonctionnalités de rapport, les fonctionnalités du serveur de rapports, et les fonctionnalités de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

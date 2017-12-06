@@ -2,9 +2,12 @@
 title: "Création du proxy de service web | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b3f80f446e3d68059d2337d6fa64e9e99022e24f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0dd90d020f9f38de29acfdce5fc3cff5d52b7f7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-the-web-service-proxy"></a>Création du proxy de service Web
   Un client et un service Web peuvent communiquer à l'aide de messages SOAP qui encapsulent les paramètres d'entrée et de sortie au format XML. Une classe proxy mappe des paramètres aux éléments XML puis envoie les messages SOAP sur un réseau. De cette manière, la classe proxy vous évite de devoir communiquer avec le service Web au niveau SOAP et vous permet d'appeler des méthodes de service Web dans tout environnement de développement qui prend en charge les proxies de service Web et SOAP.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
   
      Après avoir ajouté la classe proxy comme un élément à votre projet, le fichier associé s'affiche dans l'Explorateur de solutions.  
   
-3.  Pour appeler le service par programmation, créez une instance de la classe proxy.  
+3.  Pour appeler le service par programme, créez une instance de la classe proxy.  
   
      L'exemple de code suivant affiche la syntaxe permettant de créer une instance de la classe proxy <xref:ReportService2010.ReportingService2010> dans un projet :  
   

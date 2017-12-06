@@ -2,9 +2,12 @@
 title: "Configurer et gérer des clés de chiffrement (Gestionnaire de configuration de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 798344004af25af275625a88f4569acca84c8eb6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b19b3aa513ed38faa40439b256c83607574aef89
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssrs-encryption-keys---manage-encryption-keys"></a>Clés de chiffrement SSRS - Gérer les clés de chiffrement
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des clés de chiffrement pour protéger les informations de connexion et d’identification stockées dans la base de données du serveur de rapports. Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le chiffrement est pris en charge par la combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. La clé symétrique est créée au cours de l'initialisation du serveur de rapports lorsque vous installez ou configurez le serveur de rapports. Elle est utilisée par le serveur de rapports pour chiffrer les données sensibles stockées sur le serveur de rapports. Les clés publiques et privées sont créées par le système d'exploitation et servent à protéger la clé symétrique. Une paire de clés privée et publique est créée pour chaque instance du serveur de rapports qui stocke des données sensibles dans une base de données de serveur de rapports.  

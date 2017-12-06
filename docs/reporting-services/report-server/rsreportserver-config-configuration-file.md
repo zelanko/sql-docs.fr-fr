@@ -2,9 +2,12 @@
 title: Fichier de configuration RSReportServer.config | Microsoft Docs
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
 Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  

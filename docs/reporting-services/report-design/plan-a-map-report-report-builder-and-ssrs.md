@@ -2,9 +2,12 @@
 title: "Planifier un rapport cartographique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 138021b238290bf881bd1bd6291c11db958f1653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b6581db08d67cef66d9ea4134493b3c83a4b0d80
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planifier un rapport cartographique (Générateur de rapports et SSRS)
 Un rapport efficace présente des informations provoquant des actions ou stimulant des idées. Pour présenter des données analytiques, telles que les totaux des ventes ou des statistiques démographiques sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Une carte peut contenir plusieurs couches, où chaque couche affiche des éléments cartographiques définis par un type spécifique de données spatiales : points qui représentent des emplacements, lignes qui représentent des itinéraires ou polygones qui représentent des zones. Vous pouvez associer vos données analytiques aux éléments cartographiques sur chaque couche.  

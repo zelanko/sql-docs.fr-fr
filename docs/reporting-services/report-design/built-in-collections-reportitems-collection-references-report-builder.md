@@ -2,9 +2,12 @@
 title: "Informations de référence sur la collection ReportItems (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f157edb8bb3e562dd89379eb74b8de2de0b06cfb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c89659ad5743675a4e8503c40367eea0eabacac1
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Collections intégrées - Informations de référence sur la collection ReportItems (Générateur de rapports)
   La collection intégrée **ReportItems** constitue l’ensemble des zones de texte des éléments de rapport, tels que les lignes d’une région de données ou les zones de texte de l’aire de conception du rapport. La collection **ReportItems** comprend les zones de texte situées dans l’étendue actuelle d’un en-tête de page, d’un pied de page ou du corps du rapport. Cette collection est déterminée au moment de l'exécution par le processeur de rapports et le convertisseur de rapports. L'étendue actuelle change à mesure que le processeur de rapports combine successivement les données du rapport et ses éléments de mise en page lorsque l'utilisateur visualise les pages du rapport. Vous pouvez utiliser la collection intégrée **ReportItems** pour produire des en-têtes de page de type dictionnaire, qui représentent le premier et le dernier éléments de chaque page.  

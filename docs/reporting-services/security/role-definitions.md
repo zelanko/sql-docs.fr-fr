@@ -2,9 +2,12 @@
 title: "Définitions de rôles | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 53968d85370c60720f4d6caf72054a869348b27d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d30bd923a2a88d4438c2700073cf8430966e0d2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions"></a>Définitions de rôles
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une *définition* de *rôle* est une collection nommée de tâches définissant les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  

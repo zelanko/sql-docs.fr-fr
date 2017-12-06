@@ -2,9 +2,12 @@
 title: Services web Report Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -25,13 +28,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 60934b6d62bfc741bb21cdf839198b0f6e1f688c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83ffccee4096ba5f0b662834b1316b0dab3ed158
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="report-server-web-service"></a>Service web Report Server
+# <a name="report-server-web-service"></a>service Web Report Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permet d’accéder à toutes les fonctionnalités du serveur de rapports par le biais du service web Report Server. Le service Web Report Server est un service Web XML avec une API SOAP. Il utilise SOAP sur HTTP et agit comme une interface de communication entre les programmes clients et le serveur de rapports. Le service Web fournit deux points de terminaison (un pour l'exécution des rapports et l'autre pour la gestion des rapports) avec des méthodes qui exposent les fonctionnalités du serveur de rapports et qui vous permettent de créer des outils personnalisés pour n'importe quelle partie du cycle de vie du rapport.  
   
  Trois méthodes principales s’offrent à vous pour développer des applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basées sur le service web. Vous pouvez :  

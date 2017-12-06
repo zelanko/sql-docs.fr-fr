@@ -2,9 +2,12 @@
 title: "Procédure : déboguer des assemblys personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-assemblies
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: c8024b1ccb7cddeced944bfd75cb586ea0d63718
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ba432ab8d54a465b34196f7bd16484c6e66d5ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Procédure : déboguer des assemblys personnalisés
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] propose différents outils de débogage qui peuvent vous aider à analyser le code de votre assembly personnalisé et à trouver les éventuelles erreurs qu’il contient. Vous devez choisir un outil en fonction de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

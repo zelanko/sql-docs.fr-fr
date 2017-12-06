@@ -1,9 +1,13 @@
 ---
 title: "Visionneuse HTML et barre d’outils Rapport | Microsoft Docs"
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2d42edc002d7dffe1747c0219e4da4dd48e9ba00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bbb4d1492bb3abf35d9e3bc3047b9f1d4f3fcfa5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML utilisée pour afficher des rapports sur demande lorsqu'ils sont demandés auprès du serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  

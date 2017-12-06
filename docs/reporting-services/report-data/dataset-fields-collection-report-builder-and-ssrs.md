@@ -2,9 +2,12 @@
 title: "Collection de champs de dataset (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  

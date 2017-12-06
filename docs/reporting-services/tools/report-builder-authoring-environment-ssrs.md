@@ -2,9 +2,12 @@
 title: "Environnement de création du Générateur de rapports (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5a5817be0d4f9645d52b27673ed31213bd258d37
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4265d5ba1e75e5436e84efd1ecff6a9af75053e4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Environnement de création du Générateur de rapports (SSRS)
   Le Générateur de rapports [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] est un environnement autonome dédié à la création de rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en dehors de Visual Studio. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le Centre de téléchargement Microsoft.  
@@ -32,7 +35,7 @@ ms.lasthandoff: 11/09/2017
   
 -   utiliser le ruban du Générateur de rapports pour ajouter rapidement des éléments à vos rapports, lancer la table, le graphique et les assistants Carte, ainsi que les données de rapport de format,  
   
--   ajouter des données des fournisseurs de données intégrés à l'aide de concepteurs de requêtes qui vous aident à spécifier les données à inclure dans votre rapport,  
+-   ajouter des données des fournisseurs de données intégrés à l'aide de les concepteurs de requêtes qui vous aident à spécifier les données à inclure dans votre rapport,  
   
 -   créer et utiliser les paramètres de rapport et d'autres fonctionnalités interactives permettant à vos lecteurs du rapport pour personnaliser les données et de modifier la présentation du rapport,  
   

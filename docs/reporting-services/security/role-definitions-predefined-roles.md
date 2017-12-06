@@ -2,9 +2,12 @@
 title: "Rôles prédéfinis | Microsoft Docs"
 ms.custom: 
 ms.date: 10/22/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 64192b6a5cb00633c1a9f89096b77c9b9d5539bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e424561065b7fa6889fd680335f56d1b7082ee60
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions---predefined-roles"></a>Définitions de rôles - Rôles prédéfinis
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec des rôles prédéfinis que vous pouvez utiliser pour accorder l'accès aux opérations du serveur de rapports. Chaque rôle prédéfini décrit une collection de tâches associées. Vous pouvez assigner des groupes et des comptes d'utilisateurs à des rôles prédéfinis pour fournir l'accès immédiat aux opérations du serveur de rapports.  
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Identifiez les utilisateurs et les groupes qui doivent accéder au serveur de rapports, et à quel niveau. Le rôle **Lecteur** ou le rôle **Générateur de rapports** doit être attribué à la plupart des utilisateurs. Le rôle **Serveur de publication** doit être attribué à un nombre restreint d'utilisateurs. Le rôle **Gestionnaire de contenu**ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
-3.  Lorsque vous êtes prêt à assigner des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le Gestionnaire de rapports. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+3.  Lorsque vous êtes prêt à assigner des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le Gestionnaire de rapports. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
 ##  <a name="bkmk_rolelist"></a> Définition de rôles prédéfinis  
  Les rôles prédéfinis sont définis par les tâches qu'ils prennent en charge. Vous pouvez modifier ces rôles ou les remplacer par des rôles personnalisés.  

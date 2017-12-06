@@ -2,9 +2,12 @@
 title: "Configurer la mémoire disponible pour les applications du serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4291b3defc7fede8059bfb70f66406c87e9f804f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f444ed7b1c875ed523a690d0a13629a1b190f381
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
   Bien que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puisse utiliser toute la mémoire disponible, vous pouvez substituer le comportement par défaut en configurant une limite supérieure pour la quantité totale des ressources de mémoire allouées aux applications serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez également définir des seuils qui obligent le serveur de rapports à modifier son mode de traitement des requêtes et leur classement par ordre de priorité, selon que la sollicitation de la mémoire est faible, moyenne ou élevée. Face à de faibles niveaux de sollicitation de la mémoire, le serveur de rapports répond en donnant une priorité légèrement supérieure au traitement de rapport interactif ou à la demande. Face à des niveaux élevés de sollicitation de la mémoire, le serveur de rapports utilise plusieurs techniques pour rester opérationnel en utilisant les ressources limitées dont il dispose.  

@@ -2,9 +2,12 @@
 title: "Transmission de paramètres d’informations de périphérique aux extensions de rendu | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6b6cc90094264f60def0532fa758e48cd55c1820
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af193124f65e1189d787cadb5d3deeab44d7def4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Transmission de paramètres d'informations de périphérique aux extensions de rendu
   Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les paramètres d'informations de périphérique sont utilisés pour passer les paramètres de rendu à l'extension de rendu définie. Les paramètres du service Web Report Server sont passés comme élément XML **DeviceInfo** , puis sont traités par le serveur de rapports. Des valeurs par défaut étant attribuées aux paramètres d'informations de périphérique, ces paramètres sont considérés comme des arguments facultatifs lors du processus de rendu. Toutefois, vous pouvez utiliser ces paramètres afin de personnaliser le rendu et remplacer les valeurs par défaut fournies par le serveur.  

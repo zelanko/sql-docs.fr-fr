@@ -2,9 +2,12 @@
 title: "Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: d2dc3f1680651e6bcd0f4e4b714f567d1347e0c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint)
   Pour publier des rapports et des éléments associés dans une bibliothèque SharePoint, vous pouvez soit publier le contenu à l’aide des outils de création de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tels que le Concepteur de rapports, soit télécharger le contenu à l’aide des actions de site SharePoint.  

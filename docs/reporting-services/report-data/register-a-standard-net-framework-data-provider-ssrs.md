@@ -2,9 +2,12 @@
 title: "Inscrire un fournisseur de données .NET Framework standard (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/18/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
   Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/09/2017
  L'appartenance d'URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour le fournisseur de données.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Vérification du déploiement et de l'inscription  
- Vous pouvez vérifier si le fournisseur de données a été correctement déployé vers le serveur de rapports en ouvrant le Gestionnaire de rapports et en vérifiant que le fournisseur de données est inclut dans la liste des sources de données disponibles. Pour plus d’informations sur le Gestionnaire de rapports et sources de données, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Vous pouvez vérifier si le fournisseur de données a été correctement déployé vers le serveur de rapports en ouvrant le Gestionnaire de rapports et en vérifiant que le fournisseur de données est inclut dans la liste des sources de données disponibles. Pour plus d’informations sur le Gestionnaire de rapports et les sources de données, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Inscription d'un fournisseur de données .NET Framework sur le client du Concepteur de rapports  
  Afin de créer des rapports qui utilisent ce fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour une source de données, vous devez installer l'assembly sur votre ordinateur client qui exécute le Concepteur de rapports. Vous devez modifier deux fichiers de configuration. Modifiez le fichier RSReportDesigner.config pour inscrire le fournisseur de données comme source de données et pour utiliser le concepteur de requêtes générique. Modifiez le fichier RSPreviewPolicy.config pour octroyer les autorisations de la sécurité d'accès du code pour l'assembly de fournisseur de données.  
@@ -207,7 +210,7 @@ ms.lasthandoff: 11/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implémentation d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implémentation d’une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Sécurité d'accès du code dans Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
   

@@ -2,9 +2,12 @@
 title: Configurer une authentification Windows sur le serveur de rapports | Microsoft Docs
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5fc00ad32e130ce1eb47dfde98791d8e4f65cd2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  

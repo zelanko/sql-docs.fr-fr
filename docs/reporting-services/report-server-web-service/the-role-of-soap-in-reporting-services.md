@@ -2,9 +2,12 @@
 title: "Rôle de SOAP dans Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 ms.workload: Inactive
-ms.openlocfilehash: ae2242cc79e7fb3d5719e374a45751d27d5c2b5c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af67f104153e9662ad9ea98aab6e9634070bc721
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Rôle de SOAP dans Reporting Services
   Le service Web Report Server utilise la messagerie SOAP (Simple Object Access Protocol) pour envoyer des commandes textuelles sur un réseau. Ces commandes prennent la forme de texte XML envoyé sur le Web à l'aide du protocole HTTP. En utilisant SOAP en tant que protocole de communication, le service Web Report Server permet aux applications et aux composants d'échanger des données avec le serveur de rapports à l'aide d'une infrastructure ouverte et largement reconnue. La norme SOAP est définie sur le site www.w3.org/TR/SOAP.  

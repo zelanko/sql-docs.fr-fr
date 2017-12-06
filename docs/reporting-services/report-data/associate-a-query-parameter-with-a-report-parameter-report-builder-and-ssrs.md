@@ -2,9 +2,12 @@
 title: "Associer un paramètre de requête à un paramètre de rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d682669b2bcf3eb7d9b54bea1f15f3549c274a50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 317024b71ca0eab89c4437f0d4707c103e330b56
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Associer un paramètre de requête à un paramètre de rapport (Générateur de rapports et SSRS)
   Lorsque vous définissez une requête de dataset qui contient une variable de requête, la commande de requête est analysée. Pour chaque variable de requête, un paramètre de dataset et un paramètre de rapport correspondants sont créés. Le paramètre de dataset, à son tour, pointe aussi sur le paramètre de rapport. Cela permet à un utilisateur d'entrer une valeur qui passe directement à la requête. Chaque fois que vous modifiez la commande de requête, le même processus a lieu.  

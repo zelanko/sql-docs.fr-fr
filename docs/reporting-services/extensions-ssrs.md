@@ -2,9 +2,12 @@
 title: Extensions (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9cd11331e81e9d2af7c235f02d8abdb22ae3c5c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90ac80211acb0f761963b1da4889d5319158375e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="extensions-ssrs"></a>Extensions (SSRS)
   Le serveur de rapports dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilise des extensions pour moduler les types d’entrées ou de sorties qu’il accepte pour l’authentification, le traitement des données, le rendu et la remise de rapports. Cela facilite l'utilisation de nouveau standards logiciels, tels qu'un nouveau schéma d'authentification ou un type de source de données personnalisé, par les installations de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] existantes. Le serveur de rapports prend en charge les extensions d'authentification personnalisées, les extensions pour le traitement des données, les extensions pour le traitement des rapports, les extensions de rendu et les extensions de remise. De plus, les extensions qui sont à la disposition des utilisateurs sont configurables dans le fichier de configuration RSReportServer.config. Par exemple, vous pouvez limiter les formats d'exportation que la visionneuse de rapport est autorisée à utiliser. Un serveur de rapports nécessite au moins une extension d'authentification, une extension pour le traitement des données et une extension de rendu. Les extensions de remise et de traitement des rapports sont facultatives, mais nécessaires si vous voulez prendre en charge la diffusion des rapports ou les contrôles personnalisés.  

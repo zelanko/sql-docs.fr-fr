@@ -2,9 +2,12 @@
 title: "Créer, supprimer ou modifier un dossier (Gestionnaire de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,13 +26,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ccd70a1bc31ab800142fa57aa0f21a469ed1cbfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8c1acb733ddce1bcbbfeab4117305e9738de607a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="create-delete-or-modify-a-folder-report-manager"></a>Créer, supprimer ou modifier un dossier (Gestionnaire de rapports)
+# <a name="create-delete-or-modify-a-folder-report-manager"></a>création, suppression ou modification d'un dossier (Gestionnaire de rapports)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
   
 ### <a name="to-create-a-folder"></a>Pour créer un dossier  
@@ -81,6 +84,6 @@ ms.lasthandoff: 11/09/2017
 ## <a name="see-also"></a>Voir aussi  
  [Page Nouveau dossier &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
  [Page Contenu &#40;Gestionnaire de rapports&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

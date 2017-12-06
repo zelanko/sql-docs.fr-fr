@@ -2,9 +2,12 @@
 title: "Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cd04a33dda250309bb7f4463bca2f91eb5bd6861
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 199653df3e60e7c13c8fe96b011903e2daf0cf19
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS)
   Pour donner un impact plus visuel à un graphique, envisagez d'utiliser un cadre de bordure autour de l'extérieur du graphique. Vous pouvez sélectionner un cadre de bordure à l'aide de la boîte de dialogue **Propriétés du graphique** ou du volet Propriétés. Les cadres de bordure de graphique ne peuvent être appliqués à aucune autre région de données.  

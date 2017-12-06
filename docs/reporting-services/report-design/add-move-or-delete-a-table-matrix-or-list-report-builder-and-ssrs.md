@@ -2,9 +2,12 @@
 title: "Ajouter, déplacer ou supprimer une table, une matrice ou une liste (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: eb1487fb02db3d644cccfd7b0e982ee3dcadb206
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 99726dcd58f88075a6f9ffabdb419b1c46e9aee5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Ajouter, déplacer ou supprimer une table, une matrice ou une liste (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données affiche les données d’un dataset de rapport. Les tables, matrices, listes, graphiques et jauges sont des régions de données. Pour imbriquer une région de données dans une autre, ajoutez une à une chaque région de données, puis faites glisser la région de données enfant dans la région de données parente.  
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/09/2017
   
 2.  Cliquez sur l'aire de conception, puis faites glisser la souris pour créer une zone de la taille voulue pour la région de données.  
   
-3.  Faites glisser un champ de dataset de rapport à partir du volet des données de rapport vers une cellule de la région de données. La région de données est maintenant liée à des données du dataset de rapport.  
+3.  Faites glisser un champ de dataset de rapport à partir du volet des données de rapportvers une cellule de la région de données. La région de données est maintenant liée à des données du dataset de rapport.  
   
 ## <a name="to-select-a-data-region"></a>Pour sélectionner une région de données  
   

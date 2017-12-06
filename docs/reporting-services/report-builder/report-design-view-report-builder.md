@@ -2,9 +2,12 @@
 title: "Mode Création de rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4a5dc89785c680636b7747d26cb2e6a493223c09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d98e581133e48ec19c9123973a39b6a9c0d3a0ac
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports est conçu pour vous aider à organiser facilement vos ressources de rapport et à générer rapidement les rapports paginés dont vous avez besoin. L’aire de conception se trouve au centre de la fenêtre, avec le ruban et les volets autour d’elle. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Cet article décrit les volets que vous utilisez pour ajouter, sélectionner et organiser vos ressources de rapport, ainsi que pour modifier les propriétés des éléments de rapport.  

@@ -2,9 +2,12 @@
 title: "Créer un historique de rapport (Reporting Services en mode intégré SharePoint) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b9f013e1fd6d614e9b4c8767c00feebea1da8ad8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e81318dc5b8c62796347b8412ccef4ecb3ee6d6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>Créer un historique de rapport (Reporting Services en mode intégré SharePoint)
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Chaque instantané est une copie du rapport tel qu'il existait lors de sa création. Il inclut la mise en page et les données en vigueur dans le rapport lors de la création de l'instantané. Les informations de rendu ne sont pas stockées avec l'instantané. Lorsque vous ouvrez un instantané dans l'historique de rapport, elle s'affiche au format HTML dans le composant WebPart Visionneuse de rapports. Une fois son rendu effectué, vous pouvez l'exporter vers d'autres formats d'application.  

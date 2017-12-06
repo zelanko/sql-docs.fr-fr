@@ -2,9 +2,12 @@
 title: Gestion des parties de rapports | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="managing-report-parts"></a>Gestion des parties de rapport
+# <a name="managing-report-parts"></a>Gestion de parties de rapport
   Les parties de rapports peuvent être réutilisées dans les rapports paginés par plusieurs utilisateurs et dans plusieurs rapports. Les utilisateurs peuvent rechercher des parties de rapports sur le serveur et les ajouter à un rapport.  Les utilisateurs peuvent également être informés des mises à jour apportées à la partie de rapport sur le serveur et republier de nouvelles versions d'une partie de rapport. Ces actions de création du rapport peuvent être affectées et contrôlées par les autorisations de sécurité de Reporting Services.  Cette rubrique passe en revue les propriétés et le comportement des parties de rapports une fois que celles-ci sont sur le serveur.  
   
 ## <a name="managing-report-parts"></a>Gestion de parties de rapport  

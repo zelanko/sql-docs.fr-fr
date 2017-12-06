@@ -2,9 +2,12 @@
 title: "Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: df4d201ba6de1ebda47f12e3c116ef4a7645a59b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 763199247d5c6b1c86f7e078c4687c78dfc12650
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées qui vous permettent d’accéder aux éléments de serveur de rapports à partir des sites et des bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
  Un administrateur de serveur ou un administrateur de la collection de sites peut définir des options qui déterminent si d'autres propriétaires de site peuvent définir des autorisations. Selon votre niveau d'autorisations, vous pourrez ou non créer ou personnaliser des niveaux d'autorisation ou des groupes SharePoint.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Utilisation des niveaux d'autorisation et des groupes SharePoint prédéfinis  
- Dans la documentation produit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] , il est recommandé de faire appel aux groupes standard SharePoint (qui comprennent *Nom de site* **Propriétaires**, *Nom de site* **Membres**, et *Nom de site* **Visiteurs**) et d’affecter les autorisations au niveau du site. La plupart des utilisateurs auxquels vous affectez des autorisations doivent appartenir aux groupes *Nom de site* **Visiteurs** ou *Nom de site* **Membres** . Les autorisations sur le site parent sont héritées sur l'ensemble de l'arborescence de site. Vous pouvez rompre l'héritage des autorisations pour des éléments spécifiques qui nécessitent des restrictions supplémentaires.  
+ Dans la documentation produit [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] , il est recommandé de faire appel aux groupes standard SharePoint (qui comprennent *Nom de site* **Propriétaires**, *Nom de site* **Membres**, et *Nom de site* **Visiteurs**) et d’affecter les autorisations au niveau du site. La plupart des utilisateurs auxquels vous affectez des autouisations doivent appartenir aux groupes *Nom de site* **Visiteurs** ou *Nom de site* **Membres** . Les autorisations sur le site parent sont héritées sur l'ensemble de l'arborescence de site. Vous pouvez rompre l'héritage des autorisations pour des éléments spécifiques qui nécessitent des restrictions supplémentaires.  
   
  Ces groupes SharePoint possèdent les niveaux d'autorisation prédéfinis suivants :  
   

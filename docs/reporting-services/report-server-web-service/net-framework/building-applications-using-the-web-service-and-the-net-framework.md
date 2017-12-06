@@ -2,9 +2,12 @@
 title: "Génération d’applications à l’aide du service web et du .NET Framework | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6ceb869a4839e89ea4c893a5dce966499d013466
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b45bd81569667c9de217935b8d212e270af28139
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Génération d'applications à l'aide du service Web et du .NET Framework
   Grâce au [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez utiliser des constructions de programmation familières, telles que des méthodes, des types primitifs et des types complexes définis par l’utilisateur pour utiliser des services web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contient une infrastructure et des outils qui vous permettent de créer des clients de service Web qui peuvent appeler des services Web conformes aux normes du World Wide Web Consortium (W3C).  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/09/2017
 |[Création du proxy du service web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|Décrit les façons d’ajouter une classe proxy à votre projet à l’aide du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
 |[Authentification du service web](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|Explique comment les appels vers le service Web Report Server sont authentifiés.|  
 |[Appel des méthodes du service web](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|Explique comment utiliser l’API SOAP pour appeler des méthodes de service web dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Définition de la propriété Url du service web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Explique comment diriger par programmation votre proxy de service web vers une nouvelle URL du serveur après avoir créé votre référence web.|  
+|[Définition de la propriété Url du service web](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Explique comment diriger par programme votre proxy de service Web vers une nouvelle URL du serveur après avoir créé votre référence Web.|  
 |[Approvisionnement des arguments des méthodes du service web](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Décrit comment appeler une méthode de service Web et fournir des arguments de méthode.|  
 |[Omission de valeurs pour les objets facultatifs du service web](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|Décrit comment omettre des valeurs pour des objets de service Web facultatifs.|  
 |[Utilisation des méthodes sécurisées du service web](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|Décrit le paramètre **SecureConnectionLevel** et la façon dont il affecte l’utilisation de l’API SOAP de Reporting Services.|  

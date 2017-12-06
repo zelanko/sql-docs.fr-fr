@@ -2,9 +2,12 @@
 title: "Déploiement d’une extension de remise | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cb51cec4e73cb0ea343f3289a5b0aee7c9e9f090
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b708125e0e6a15c22e7baee4ef4aba0f2c193624
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
   Les extensions de remise fournissent leurs informations de configuration sous la forme d'un fichier de configuration XML. Le fichier XML est conforme au schéma XML défini pour les extensions de remise. Les extensions de remise fournissent l'infrastructure nécessaire pour définir et modifier le fichier de configuration.  
@@ -98,7 +101,7 @@ ms.lasthandoff: 11/09/2017
  Vous pouvez vérifier que votre extension de remise a été correctement déployée sur le serveur de rapports en utilisant la méthode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> du service Web. Vous pouvez également ouvrir le portail web et vérifier que votre extension est effectivement répertoriée dans la liste des extensions de remise disponibles pour un abonnement. Pour plus d’informations sur le portail web et les abonnements, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en œuvre d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
+ [Implémentation d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   

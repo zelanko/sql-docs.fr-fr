@@ -2,9 +2,12 @@
 title: Outils de Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 5a676c4c1a27de60187426c0a3046e874f3c23b1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9cc8974ff85c595e97de7fc795a8a7908c983300
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement géré. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
 |----------|-----------------|-------------------|  
 |[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]|Avec [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)], vous pouvez créer des rapports mobiles qui ajustent dynamiquement le contenu en fonction de votre écran ou de la fenêtre de votre navigateur et s’adaptent à n’importe quelle taille d’écran.<br /><br /> Créez des rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles.<br /><br /> Pour plus d’informations, consultez [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).|Téléchargez l’ [Éditeur de rapports mobiles SQL Server](http://go.microsoft.com/fwlink/?LinkId=733527)|  
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Une exploration interactive des données et une expérience de présentation visuelle conçue pour vous permettre de créer et interagir avec les rapports basés sur des modèles tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Navigateur avec Silverlight.|  
-|Concepteur de rapports|Utilisez cet outil pour concevoir des rapports. Inclut les fonctionnalités suivantes :<br /><br /> Effectuez un déploiement vers un serveur de rapports en mode natif ou SharePoint.<br /><br /> Hébergé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Volet des données de rapport pour organiser les données utilisées dans votre rapport<br /><br /> Vues à onglets pour la conception et aperçu pour la création de rapports interactifs<br /><br /> Des concepteurs de requêtes pour spécifier les données à récupérer à partir de sources de données, et qui sont associés à la source de données dans [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)<br /><br /> Un éditeur d'expression avec IntelliSense pour générer les expressions de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] qui personnalisent le contenu et l'apparence d'un rapport<br /><br /> Prend en charge les éléments de rapport personnalisés et les concepteurs de requêtes personnalisés<br /><br /> <br /><br /> Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
+|Concepteur de rapports|Utilisez cet outil pour concevoir des rapports. Inclut les fonctionnalités suivantes :<br /><br /> Effectuez un déploiement vers un serveur de rapports en mode natif ou SharePoint.<br /><br /> Hébergé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Volet des données de rapport pour organiser les données utilisées dans votre rapport<br /><br /> Vues à onglets pour la conception et aperçu pour la création de rapports interactifs<br /><br /> Des concepteurs de requêtes pour spécifier les données à récupérer à partir de sources de données, et qui sont associés à la source de données dans [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)<br /><br /> Un éditeur d'expression avec Intellisense pour générer les expressions de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] qui personnalisent le contenu et l'apparence d'un rapport<br /><br /> Prend en charge les éléments de rapport personnalisés et les concepteurs de requêtes personnalisés<br /><br /> <br /><br /> Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Générateur de rapports|Utilisez cet outil pour concevoir des rapports. Inclut les fonctionnalités suivantes :<br /><br /> Effectuez un déploiement vers un serveur de rapports en mode natif ou SharePoint.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Environnement de création semblable à Office[!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]<br /><br /> Capacité à enregistrer des éléments de rapport en tant que parties de rapports<br /><br /> Un assistant pour la création de cartes<br /><br /> Agrégat d'agrégats<br /><br /> Prise en charge améliorée des expressions<br /><br /> Des concepteurs de requêtes pour spécifier quelles données extraire d'une sélection de types de sources de données intégrées<br /><br /> Pour plus d’informations, consultez [Générateur de rapports dans SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).|Téléchargez [la version autonome du Générateur de rapports](http://go.microsoft.com/fwlink/?LinkID=219138)<br /><br /> ou ouvrez le Gestionnaire de rapports/SharePoint|  
   
 ## <a name="tools-for-report-server-administration"></a>Outils pour l'administration de Report Server  

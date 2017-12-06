@@ -2,9 +2,12 @@
 title: "Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a0d28c5a5210eef5f2f6eea857f9361bbe434ad6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 361c21a666dfceb91604309c9fc5ded425b21a05
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
   Les paramètres en cascade permettent de gérer d'importantes quantités de données de rapport. Vous pouvez définir un ensemble de paramètres associés, de telle sorte que la liste des valeurs d'un paramètre dépende de la valeur choisie dans un autre paramètre. Par exemple, le premier paramètre est indépendant et peut présenter une liste de catégories de produits. Lorsque l'utilisateur sélectionne une catégorie, le deuxième paramètre dépend de la valeur du premier paramètre. Ses valeurs sont mises à jour avec une liste de sous-catégories au sein de la catégorie choisie. Lorsque l'utilisateur affiche le rapport, les valeurs des paramètres de catégorie et de sous-catégorie permettent de filtrer les données du rapport.  

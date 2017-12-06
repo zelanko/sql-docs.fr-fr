@@ -2,9 +2,12 @@
 title: "Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2ed84682cda474d2cba6e7f0854e8cc1cde8d827
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9c628663612344187a25757fd42a1aeb8bb86dde
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS)
   Vous pouvez rencontrer des problèmes quand vous ajoutez une carte ou une couche à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quand vous personnalisez une carte ou une couche existante de votre rapport, quand vous affichez l’aperçu d’une carte dans un rapport ou quand vous publiez un rapport contenant une carte. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.  

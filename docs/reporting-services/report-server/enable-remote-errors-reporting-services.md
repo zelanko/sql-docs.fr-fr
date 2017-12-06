@@ -2,9 +2,12 @@
 title: Activer les erreurs distantes (Reporting Services) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1d409aa01ca3d060068fa9045b0a1fafec8bf3fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: afdb8a3c8dbd683853f5cc7a129fa52009d13764
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
   Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété **EnableRemoteErrors** de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

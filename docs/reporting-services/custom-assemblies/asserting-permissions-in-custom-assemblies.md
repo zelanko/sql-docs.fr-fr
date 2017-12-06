@@ -2,9 +2,12 @@
 title: "Déclaration d’autorisations dans les assemblys personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-assemblies
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: dc3e6e84c3f0a70a3c794b5cfd803e228e5dcce0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 87bfd7706f968bb9340fd998ed98a6469fc16104
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Déclaration d'autorisations dans les assemblys personnalisés
   Par défaut, le code d’assembly personnalisé s’exécute avec le jeu d’autorisations limité **Execution**. Dans certaines situations, vous voudrez peut-être implémenter un assembly personnalisé qui effectue des appels sécurisés à des ressources protégées au sein de votre système de sécurité (comme un fichier ou le Registre). Pour ce faire, vous devez procéder comme suit :  

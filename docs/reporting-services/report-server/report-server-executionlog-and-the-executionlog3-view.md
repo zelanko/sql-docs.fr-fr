@@ -2,9 +2,12 @@
 title: "Journal d’exécution du serveur de rapports et vue ExecutionLog3 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ccd6c7081233b6d677ad366e7796a03b01d5e13e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8458127daae58d63376f80dc1b67302928f9f943
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  

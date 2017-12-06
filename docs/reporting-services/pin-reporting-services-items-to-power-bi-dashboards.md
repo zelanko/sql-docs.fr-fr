@@ -1,10 +1,13 @@
 ---
 title: "Épingler des éléments Reporting Services aux tableaux de bord Power BI | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/16/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 13af28f9c90f848c77a1709bbac115a0e70943b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Épingler des éléments Reporting Services aux tableaux de bord Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permet aux utilisateurs d’épingler des éléments de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à partir de la barre d’outils de la visionneuse de rapports à un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] en tant que nouvelle vignette.   Pour que vous puissiez épingler des éléments, il faut que votre administrateur intègre au préalable votre serveur de rapports à Azure Active Directory et [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -78,7 +81,7 @@ ms.lasthandoff: 11/09/2017
   
 4. Sélectionnez l’élément de rapport que vous voulez épingler à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Vous ne pouvez épingler qu’un seul élément à la fois.  La visionneuse de rapports présente un affichage ombré de votre rapport. Les éléments que vous pouvez épingler apparaissent en surbrillance, tandis que ceux que vous ne pouvez pas épingler, sont ombrés.  
   
-    **(1)** Sélectionnez le groupe qui contient le tableau de bord sur lequel vous souhaitez épingler l’élément, **(2)** sélectionnez le tableau de bord sur lequel vous souhaitez épingler l’élément et **(3)** sélectionnez la fréquence à laquelle vous voulez que la vignette soit mise à jour sur le tableau de bord.   ![remarque](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "e") L’actualisation est gérée par les abonnements [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et, une fois l’élément épinglé, vous pouvez modifier l’abonnement et configurer une autre planification de l’actualisation.  
+    **(1)** Sélectionnez le groupe qui contient le tableau de bord sur lequel vous souhaitez épingler l’élément, **(2)** sélectionnez le tableau de bord sur lequel vous souhaitez épingler l’élément et **(3)** sélectionnez la fréquence à laquelle vous voulez que la vignette soit mise à jour sur le tableau de bord.   ![remarque](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque") L’actualisation est gérée par les abonnements [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et, une fois l’élément épinglé, vous pouvez modifier l’abonnement et configurer une autre planification de l’actualisation.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   

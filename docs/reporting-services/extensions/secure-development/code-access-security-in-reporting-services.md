@@ -2,9 +2,12 @@
 title: "Sécurité d’accès du code dans Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: a815c0942c8d99d6747e0ffe9a83ea24551c6248
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 61c41adbb135d869af923efae932f6bed8a94935
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="code-access-security-in-reporting-services"></a>Sécurité d'accès du code dans Reporting Services
   La sécurité d'accès du code est axée sur les concepts principaux suivants : preuve, groupes de codes et jeux d'autorisations nommés. Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les composants du Gestionnaire de rapports, du Concepteur de rapports et de Report Server ont chacun un fichier de stratégie qui configure la sécurité d'accès du code pour les assemblys personnalisés, ainsi que pour les extensions de remise des données, de rendu et de sécurité. Les sections suivantes fournissent une vue d'ensemble de la sécurité d'accès du code. Pour obtenir des détails sur les rubriques traitées dans cette section, consultez les informations relatives au modèle de stratégie de sécurité dans la documentation du SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

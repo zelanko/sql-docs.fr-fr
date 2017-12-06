@@ -2,9 +2,12 @@
 title: "Utilisation des fichiers de stratégie de sécurité Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -25,11 +28,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e5be508787d44acd1c3356105cd3bd988b175a4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilisation des fichiers de stratégie de sécurité Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stocke les informations de stratégie de sécurité dans trois fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Ces fichiers de configuration peuvent contenir une combinaison de stratégies de sécurité à usage interne et définies par l'utilisateur pour les assemblys de code dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les trois fichiers de configuration correspondent à trois composants sécurisables dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] : le service Windows Report Server, l'application Web du Gestionnaire de rapports et la fenêtre d'aperçu du Concepteur de rapports.  

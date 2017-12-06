@@ -2,9 +2,12 @@
 title: "Cellules, lignes et colonnes d’une région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,13 +24,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: f7fad3b96a6cdcf508e9b485219f533e50e426cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 456f5fe95d2b5899360efaf0f2ab1d2ba492c228
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes d’une région de données de tableau matriciel (Générateur de rapports et SSRS)
+# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
   Pour contrôler la façon dont les lignes et les colonnes d’une région de données de tableau matriciel présentent les données dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , vous devez comprendre comment les lignes et les colonnes sont spécifiées pour les données de détail, les données de groupe, les étiquettes et les totaux. Dans la plupart des cas, vous pouvez utiliser les structures par défaut pour afficher vos données dans une table, une matrice ou une liste. Pour plus d’informations, consultez [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) ou [Listes](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Une région de données de tableau matriciel affiche des données de détail dans des lignes et des colonnes de détail et des données groupées dans des lignes et des colonnes de groupe. Quand vous ajoutez des groupes de lignes et de colonnes à une région de données de tableau matriciel, les lignes et les colonnes dans lesquelles les données doivent s’afficher sont ajoutées automatiquement. Vous pouvez ajouter et supprimer manuellement des lignes et des colonnes pour personnaliser une région de données de tableau matriciel et contrôler la manière dont vos données s'affichent dans le rapport.  

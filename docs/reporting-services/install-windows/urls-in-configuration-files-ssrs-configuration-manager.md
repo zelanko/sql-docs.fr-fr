@@ -2,9 +2,12 @@
 title: URL des fichiers de configuration (Gestionnaire de configuration de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 44500883ca00cffafd720c7e66fa59f1ddf9409a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae2ef2f43570c5ce200ca3ce6e8c5ddae3f8c95e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URL des fichiers de configuration (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les paramètres d’application dans un fichier RSReportServer.config. Ce fichier contient des paramètres de configuration pour les URL et pour les réservations d'URL. Ces paramètres de configuration ont des règles de modification et des objectifs très différents. Si vous êtes habitué à la modification de fichiers de configuration pour régler un déploiement, cette rubrique peut vous aider à comprendre comment chaque paramètre URL est utilisé.  

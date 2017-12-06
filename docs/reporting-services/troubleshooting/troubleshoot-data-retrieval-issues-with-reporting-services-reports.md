@@ -2,9 +2,12 @@
 title: "Résoudre les problèmes de récupération des données avec des rapports Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 02/27/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ae2ec9a548d851f8494d144401e043547d68e4b8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Dépanner des problèmes de récupération des données avec des rapports Reporting Services
 La première étape de traitement d'un rapport consiste à récupérer les données du rapport pour chaque dataset en exécutant la requête de dataset. Lorsque vous affichez l'aperçu d'un rapport localement, vos connexions à la source de données et vos informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur votre ordinateur. Lorsque vous exécutez un rapport sur le serveur de rapports, les connexions à la source de données et les informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur le serveur de rapports. Utilisez cette rubrique pour vous aider à résoudre des problèmes de récupération des données de rapport.   
@@ -63,7 +66,7 @@ Lorsque vous définissez une requête dans la boîte de dialogue Propriétés du
   
 Pour remplir la collection de champs de dataset, procédez comme suit :  
 * Assurez-vous que vous bénéficiez des autorisations nécessaires pour récupérer les informations des champs de la base de données. Pour certaines sources de données, vous disposez peut-être d'autorisations vous permettant d'accéder à la source de données, mais pas à la table ou à la colonne. Vous pouvez avoir l'autorisation d'accéder à une vue, mais vous n'êtes peut-être pas autorisé à exécuter les procédures stockées qui créent la vue. Pour valider votre accès à des tables ou à des colonnes spécifiques dans une base de données, vérifiez les résultats de votre requête dans une application séparée telle que SQL Server Management Studio, en tirant parti des mêmes autorisations que celles qui sont utilisées pour le rapport. Si vous ne pouvez pas voir les résultats désirés pour votre requête, faites appel à l'administrateur système pour modifier vos autorisations d'accès aux données.   
-* Exécutez la requête dans le volet de requêtes de la boîte de dialogue **Propriétés du dataset** . Pour en savoir plus, voir [Ajouter des données à un rapport (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
+* Exécutez la requête dans le volet de requêtes de la boîte de dialogue **Propriétés du dataset** . Pour en savoir plus, voir [Ajouter des données à un rapport (Générateur de rapports et SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Ajoutez des champs manuellement. Pour en savoir plus, [Procédure : ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## <a name="see-also"></a>Voir aussi  

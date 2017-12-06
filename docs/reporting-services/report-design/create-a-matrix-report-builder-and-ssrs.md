@@ -2,9 +2,12 @@
 title: "Créer une matrice (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 994d0d61ac4a591445285b4f967d5c3c74a820ad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0f28b38685f5ffd2ddd067a054e1f23ea6e4482
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Créer une matrice (Générateur de rapports et SSRS)
   Utilisez une matrice pour afficher des données groupées et des informations récapitulatives. Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Une matrice fournit des fonctionnalités similaires à celles des analyses croisées et des tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Vous pouvez mettre en forme les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez également inclure des bascules d'extraction qui permettent initialement de masquer les données de détail ; l'utilisateur peut ensuite cliquer sur ces bascules pour afficher plus ou moins de détails, en fonction de ses besoins.  

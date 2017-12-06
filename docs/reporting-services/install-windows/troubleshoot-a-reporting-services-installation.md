@@ -2,9 +2,12 @@
 title: "Dépanner une installation de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/29/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b0fdf77d99da7500d76cc6344e8f7465fc930a04
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a1e9828a77aac1449f7dbd273ec8deecddf4384a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
@@ -160,7 +163,7 @@ ms.lasthandoff: 11/09/2017
   
  **Solution de contournement :** configurez SharePoint, puis exécutez le programme d'installation de SQL Server.  
   
- **Plus d'informations :** En installant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une installation existante de SharePoint, le programme d'installation tente d'installer et de démarrer le service SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si SharePoint n'est pas configuré, le programme d'installation de service échoue, ce qui entraîne l'échec de l'installation.  
+ **Plus d'informations :** En installant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une installation existante de SharePoint, le programme d'installation tente d'installer et de démarrzer le service SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si SharePoint n'est pas configuré, le programme d'installation de service échoue, ce qui entraîne l'échec de l'installation.  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
@@ -257,7 +260,7 @@ ms.lasthandoff: 11/09/2017
 
  Si vous effectuez une mise à niveau de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]et que vous utilisez l’authentification NTLM avec un compte intégré pour le compte de service Report Server, une erreur 401- Non autorisé peut se produire lorsque vous accédez au serveur de rapports ou au portail web après la mise à niveau.  
   
- Cette erreur se produit à cause d'une modification dans la configuration par défaut de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] pour l'authentification Windows. Negotiate est configuré lorsque le compte de service Report Server est Service réseau ou Système local. NTLM est configuré lorsque le compte de service Report Server n'est pas l'un de ces comptes intégrés. Pour résoudre ce problème après la mise à niveau, vous pouvez modifier le fichier RSReportServer.config et attribuer à **AuthenticationType** la valeur **RSWindowsNTLM**. Pour plus d’informations, consultez [Configurer l’authentification Windows sur le serveur de rapports](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
+ Cette erreur se produit à cause d'une modification dans la configuration par défaut de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] pour l'authentification Windows. Negotiate est configuré lorsque le compte de service Report Server est Service réseau ou Système local. NTLM est configuré lorsque le compte de service Report Server n'est pas l'un de ces comptes intégrés. Pour résoudre ce problème après la mise à niveau, vous pouvez modifier le fichier RSReportServer.config et attribuer à **AuthenticationType** la valeur **RSWindowsNTLM**. Pour plus d’informations, consultez [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
 
 ### <a name="Uninstall32BitBreaks64Bit"></a> La désinstallation d’une instance 32 bits de SQL Server 2016 Reporting Services dans un déploiement côte à côte avec une instance 64 bits endommage l’instance 64 bits
 

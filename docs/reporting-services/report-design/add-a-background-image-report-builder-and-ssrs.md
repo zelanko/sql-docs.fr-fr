@@ -2,9 +2,12 @@
 title: "Ajouter une image d’arrière-plan (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 47029b9b4ed3508f9c937cac9c585e5c296e9ef4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8384182f7eb57df836a9530af6baf3f0b008154
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>Ajouter une image d'arrière-plan (Générateur de rapports et SSRS)
   Vous pouvez ajouter une image d'arrière-plan à un élément de rapport, par exemple un rectangle, une zone de texte, une liste, une matrice, un tableau et certaines parties d'un graphique, ou à une section de rapport, par exemple l'en-tête de page, le pied de page ou le corps du rapport. Vous pouvez définir une image d’arrière-plan pour tout élément sélectionné sur l’aire de conception du rapport qui affiche **BackgroundImage** dans le volet Propriétés. Comme les autres images, l'image d'arrière-plan peut être une URL vers une image sur le serveur de rapports, une image d'un champ de dataset ou une image incorporée dans la définition de rapport. Pour utiliser une image incorporée dans le rapport, vous devez d'abord ajouter l'image à la définition de rapport avant d'ajouter l'image à l'aire de conception.  

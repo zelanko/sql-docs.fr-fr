@@ -2,9 +2,12 @@
 title: "Méthodes des services web Report Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 89804c5a980a3fed4869dca8de1603d42e7b481a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3914f4faa9f2b58bfeb599b039be16a87a41a821
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-web-service-methods"></a>Méthodes des services Web Report Server
   Les services Web Report Server comportent plusieurs catégories de méthodes basées sur les fonctionnalités des composants. Ces méthodes sont fournies à l'aide de plusieurs points de terminaison de service Web (trois permettant de gérer les rapports, un autre de les exécuter), lesquels sont exposés comme membres des classes <xref:ReportService2010.ReportingService2010> et <xref:ReportExecution2005.ReportExecutionService>. Ces classes peuvent être générées à l’aide d’un outil de classe proxy tel que wsdl.exe. Ce dernier est d’ailleurs inclus dans le SDK du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Pour plus d’informations sur les services web Report Server et le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consultez [Génération d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  

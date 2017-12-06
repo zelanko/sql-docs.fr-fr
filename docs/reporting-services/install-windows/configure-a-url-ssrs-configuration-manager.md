@@ -2,9 +2,12 @@
 title: Configurer une URL (Gestionnaire de configuration de SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 1c356b28e675e824b1a6b6a4b434f27c4fe81de8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bfb7f618f6927c79392d13953dfd4daf5aa84290
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  

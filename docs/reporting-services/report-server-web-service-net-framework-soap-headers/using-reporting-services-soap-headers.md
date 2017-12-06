@@ -2,9 +2,12 @@
 title: "Utilisation des en-têtes SOAP Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service-net-framework-soap-headers
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 60f5539eeaf9a529082a2c8db13decaa33d33ee1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a3aca058733efe1a4d211065683082117cdc8c65
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-reporting-services-soap-headers"></a>Utilisation des en-têtes SOAP de Reporting Services
   La communication avec une méthode Web Service à l'aide de SOAP suit un format standard. Ce format est constitué en partie des données encodées dans un document XML. Le document XML consiste en un élément **Envelope** racine, composé lui-même d’un élément **Body** obligatoire et d’un élément **Header** facultatif. L’élément **Body** contient les données propres au message. L’élément **Header** facultatif peut contenir des informations supplémentaires qui ne sont pas directement liées au message. Chaque élément enfant de l’élément **Header** est appelé « en-tête SOAP ».  
@@ -45,7 +48,7 @@ ms.lasthandoff: 11/09/2017
 |[Définition de l'espace de noms des éléments pour la méthode GetProperties](../../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md)|Décrit comment extraire des propriétés selon le chemin d'accès ou l'ID d'un élément, en utilisant la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> et l'en-tête SOAP <xref:ReportService2010.ItemNamespaceHeader>.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications à l’aide du service web et du .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Création d’applications à l’aide du service web et du .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

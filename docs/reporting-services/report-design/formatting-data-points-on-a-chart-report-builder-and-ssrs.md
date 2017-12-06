@@ -2,9 +2,12 @@
 title: "Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: bf3c5c3a2a9603f996a2a66e51367b56669b12ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef5d6f5c0abbe09505de7608ec18d309a112d0c9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
 Dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un point de données est la plus petite entité individuelle sur un graphique. Sur les graphiques qui ne sont pas à base de formes, les points de données sont représentés selon le type de graphique. Par exemple, une série à base de lignes comprend un ou plusieurs points de données reliés. Sur les graphiques à base de formes, les points de données sont représentés par des coupes ou segments individuels qui s'ajoutent à l'ensemble du graphique. Par exemple, sur un graphique à secteurs, chaque secteur est un point de données. Pour plus d’informations, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  

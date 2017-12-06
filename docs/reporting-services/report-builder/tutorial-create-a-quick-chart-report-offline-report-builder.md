@@ -2,9 +2,12 @@
 title: "Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: df0786cc4863f40a881f7061267eaed8345aca1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7aeaa7ce698d5fd2b7f0d9823fb89a201bed96eb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
@@ -34,8 +37,8 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
   
  ![Générateur de rapports - Graphique à secteurs rapide](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Générateur de rapports - Graphique à secteurs rapide")  
   
-## <a name="prerequisites"></a>Prérequis  
- Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Installer le Générateur de rapports](../../reporting-services/install-windows/install-report-builder.md).  
+## <a name="prerequisites"></a>Conditions préalables  
+ Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
   

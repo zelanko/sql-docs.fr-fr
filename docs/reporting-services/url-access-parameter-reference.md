@@ -1,10 +1,13 @@
 ---
 title: "Référence de paramètre d’accès URL | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/09/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2924bd13417cbe3b9ce114516b998871abb0c89d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d'accès URL
   Vous pouvez utiliser les paramètres suivants dans une URL afin de configurer l’apparence de vos rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -231,7 +234,7 @@ ms.lasthandoff: 11/09/2017
   
      La valeur par défaut est **HTML5**. Pour plus d’informations, consultez [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
   
-     Pour obtenir une liste complète, consultez la section relative à l’extension **\<Render>** du fichier rsreportserver.config du serveur de rapports.  Pour plus d’informations sur l’emplacement du fichier, consultez [Fichier de configuration RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Pour obtenir une liste complète, consultez la section relative à l’extension **\<Render>** du fichier rsreportserver.config du serveur de rapports.  Pour plus d’informations sur l’emplacement du fichier, consultez [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Par exemple, pour obtenir directement une copie PDF d’un rapport à partir d’un serveur de rapports en mode **Native** :  
   

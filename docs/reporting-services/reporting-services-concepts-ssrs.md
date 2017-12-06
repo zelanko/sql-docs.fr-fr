@@ -2,9 +2,12 @@
 title: Concepts de Reporting Services (SSRS) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,16 +19,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 383b918c5559810d426ea4a26742a9f3df3c0caa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cd2500d7c1d3dff0ee0a3c41b40e6f35bb4060d5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  Mode natif [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]    
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Concepts du serveur de rapports  
  Un serveur de rapports est un ordinateur sur lequel une instance de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installée. Un serveur de rapports stocke en interne des éléments tels que des rapports paginés et mobiles, des éléments liés aux rapports et des ressources, des planifications et des abonnements. Un serveur de rapports peut être configuré en tant qu'unique serveur autonome ou comme batterie évolutive, ou il peut être intégré au serveur SharePoint. Vous interagissez avec des éléments de serveur de rapports par le service Web [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le fournisseur WMI, l'accès URL ou par programmation via des scripts. La façon dont vous interagissez avec un serveur de rapports dépend de la topologie de déploiement et de la configuration.  

@@ -1,10 +1,13 @@
 ---
 title: Installer le premier serveur de rapports en mode SharePoint | Microsoft Docs
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -12,11 +15,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 83a4392c267f4981ec79ff3b1b7d7febfeab9572
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f282b9aacc253620a2f90da67cd5738702acd0ee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Installer le premier serveur de rapports en mode SharePoint
 
@@ -31,7 +34,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Ajouter un serveur de rapports supplémentaire à une batterie &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
--   [Ajouter un serveur web frontal Reporting Services supplémentaire à une batterie](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
+-   [Ajouter un serveur Web frontal Reporting Services supplémentaire à une batterie](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
  Une installation sur un serveur unique est utile pour les scénarios de développement et de tests, mais n'est pas recommandée pour les environnements de production.  
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 11/09/2017
  Le diagramme suivant montre les composants qui font partie d’un déploiement de Reporting Services sur un serveur unique.  
  
  > [!NOTE]
- > Pour SharePoint 2016, Excel Services a été déplacé vers Office Online Server et ne peut pas être utilisé dans un déploiement de serveur unique. Office Online Server doit être déployé sur un autre serveur. Pour plus d’informations, consultez [Vue d’ensemble d’Office Online Server](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) et [Configurer les paramètres d’administration Excel Online](https://technet.microsoft.com/library/jj219698\(v=office.16\).aspx).
+ > Pour SharePoint 2016, Excel Services a été déplacé vers Office Online Server et ne peut pas être utilisé dans un déploiement de serveur unique. Office Online Server doit être déployé sur un autre serveur. Pour plus d’informations, consultez [Office Online Server overview](https://technet.microsoft.com/library/jj219437\(v=office.16\).aspx) (Vue d’ensemble d’Office Online Server) et [Configure Excel Online administrative settings](https://technet.microsoft.com/library/jj219698\(v=office.16\).aspx)(Configurer les paramètres d’administration Excel Online).
   
 |||  
 |-|-|  

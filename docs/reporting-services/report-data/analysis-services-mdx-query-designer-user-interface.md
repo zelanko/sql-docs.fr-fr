@@ -2,9 +2,12 @@
 title: "Interface utilisateur du Concepteur de requêtes MDX Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: aa4efde457b2769796523bd95ae4d11fe31c8029
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 71c6b76105da8947181ee87652646024b29bfbc5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes MDX Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des concepteurs de requêtes graphiques pour la création de requêtes MDX (Multidimensional Expression) et DMX (Data Mining Expression) pour une source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cette rubrique offre une description du Concepteur de requêtes MDX. Pour plus d’informations sur le Concepteur de requêtes DMX, consultez [Type de connexion Analysis Services pour DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).  
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
 |![Basculer vers l’affichage des requêtes DMX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Basculer vers l’affichage des requêtes DMX")|Bascule vers le type de commande MDX.|  
 |![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers la vue langage de requête DMX")|Bascule vers le type de commande DMX.|  
 |![Actualiser les données du résultat](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Actualiser les données du résultat")|Actualise les métadonnées à partir de la source de données.|  
-|![Ajouter un membre calculé](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
+|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Affiche la boîte de dialogue **Générateur de membres calculés** .|  
 |![Bouton bascule pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides")|Affiche ou masque les cellules vides dans le volet Données. (Cela revient à utiliser la clause NON EMPTY dans MDX.)|  
 |![Exécuter automatiquement la requête](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "Exécuter automatiquement la requête")|Exécute automatiquement la requête et affiche le résultat chaque fois qu'une modification est effectuée. Les résultats s'affichent dans le volet Données.|  
 |![Bouton Afficher les agrégations](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "Bouton Afficher les agrégations")|Affiche les agrégations dans le volet Données.|  
@@ -114,7 +117,7 @@ ms.lasthandoff: 11/09/2017
   
 -   **Modifier en tant que texte**  
   
--   **Ajouter un membre calculé** (![Ajouter un membre calculé](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Ajouter un membre calculé"))  
+-   **Ajouter un membre calculé** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Afficher les cellules vides** (![Bouton bascule pour afficher les cellules vides](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "Bouton bascule pour afficher les cellules vides"))  
   

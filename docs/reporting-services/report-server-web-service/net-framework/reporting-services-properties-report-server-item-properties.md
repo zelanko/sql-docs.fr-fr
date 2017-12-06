@@ -2,9 +2,12 @@
 title: "Propriétés d’élément du serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bf0ed39eff089b93dd67ea5c31e8274949efd9e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriétés de Reporting Services - Propriétés d’élément du serveur de rapports
   Les propriétés d'élément sont des propriétés spécifiques à des éléments dans la base de données du serveur de rapports, notamment des rapports, des rapports liés, des dossiers, des ressources, des modèles et des sources de données.  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/09/2017
 |**MimeType**|Type MIME d'une ressource dans la base de données du serveur de rapports.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Génération d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   
