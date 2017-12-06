@@ -2,9 +2,12 @@
 title: "Écrire des scripts pour les tâches d’administration et de déploiement | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 025eff8a2161a42935dbf4c94fb232bc48f3f99d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d56f2da5289d845e1f0d6f8736f48b3e92bbcc27
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Écrire des scripts pour les tâches d'administration et de déploiement
 
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Les scripts s’exécutent avec les informations d’identification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de l’utilisateur qui exécute le script, sauf si les informations d’identification sont définies explicitement.  
   
- Pour plus d’informations sur la mise en forme et l’exécution d’un fichier de script, consultez [Écrire des scripts avec l’utilitaire rs.exe et le service Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
+ Pour plus d’informations la mise en forme et l’exécution d’un fichier de script, consultez [Écrire des scripts avec l’utilitaire rs.exe et le service Web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
 ## <a name="using-scripts-to-set-server-properties"></a>Utilisation de scripts pour définir les propriétés du serveur  
  Vous pouvez écrire un script qui définit les propriétés système du serveur de rapports. Le script [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET suivant présente une méthode de définition des propriétés. Cet exemple désactive le contrôle RSClientPrint ActiveX, mais vous pouvez remplacer **EnableClientPrinting** et **False** par le nom et la valeur d'une propriété valide. Pour afficher la liste complète des propriétés de serveur, consultez [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  
@@ -135,7 +138,7 @@ End Sub
 [Installer le serveur de rapports Reporting Services en mode natif](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
 [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
 [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
-[Prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
+[Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
 [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,9 +2,12 @@
 title: "Domaines d’application des applications du serveur de rapports | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fa12c471b2074cc5aface50b6604f0ca1d14e954
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ce02d45295537bf9eef80816f7099a4697ddfd1c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domaines d'application des applications du serveur de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le serveur de rapports est implémenté comme un service unique qui contient le service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan. Chaque application s'exécute dans son propre domaine d'application au sein du processus unique du serveur de rapports. Pour la plupart, les domaines d'application sont créés, configurés et gérés de façon interne. Toutefois, il peut s'avérer utile de savoir comment les opérations de recyclage se produisent pour les domaines d'application du serveur de rapports, si vous cherchez à résoudre des problèmes de performances ou de mémoire, ou si vous dépannez des interruptions de service.  

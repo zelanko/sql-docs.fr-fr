@@ -2,9 +2,12 @@
 title: "Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server
 Utilisez cette rubrique pour résoudre les problèmes que vous rencontrez lors de la connexion à un serveur de rapports. En outre, elle fournit des informations sur les messages de type « Erreur inattendue ». Pour plus d’informations sur la configuration de la source de données et des informations de connexion au serveur de rapports, voir [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) et [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -102,7 +105,7 @@ Il existe deux solutions de contournement pour ce problème.
 1.  Dans une solution de contournement, vous pouvez désactiver temporairement le contrôle de compte d'utilisateur et utiliser l'Administration centrale de SharePoint pour accorder l'accès.  
 > [!IMPORTANT]  
 > Soyez vigilant si vous désactivez le contrôle de compte d'utilisateur pour contourner ce problème, et activez immédiatement le contrôle de compte d'utilisateur après avoir accordé l'accès à la base de données dans l'Administration centrale de SharePoint. Si vous ne souhaitez pas désactiver le contrôle de compte d'utilisateur, utilisez la deuxième solution de contournement fournie dans cette section. Pour plus d'informations sur l’utilisation du contrôle de compte d'utilisateur, consultez la documentation produit de Windows.  
-2. Dans l’autre solution de contournement, vous pouvez accorder manuellement l’accès à la base de données aux comptes de service Reporting Services. Pour accorder l’accès en ajoutant les comptes de service Reporting Services au groupe Windows et aux rôles de base de données appropriés, vous pouvez procéder comme suit. Cette procédure s’applique au compte de service Report Server dans SQL Server 2008 Reporting Services. Si vous exécutez SQL Server 2005 Reporting Services, effectuez la procédure pour le compte de service Windows du serveur de rapports et le compte de service web Report Server.   
+2. Dans l’autre solution de contournement, vous pouvez accorder manuellement l’accès à la base de données aux comptes de service Reporting Services. Pour accorder l’accès en ajoutant les comptes de service Reporting Services au groupe Windows et aux rôles de base de données appropriés, vous pouvez procéder comme suit. Cette procédure s’applique au compte de service du serveur de rapports dans SQL Server 2008 Reporting Services. Si vous exécutez SQL Server 2005 Reporting Services, effectuez la procédure pour le compte de service Windows du serveur de rapports et le compte de service web Report Server.   
   
 ### <a name="to-manually-grant-database-access"></a>Pour accorder manuellement l'accès à la base de données  
   
@@ -117,7 +120,7 @@ Il existe deux solutions de contournement pour ce problème.
 Lorsque vous créez les bases de données du serveur de rapports, **ReportServer** et **ReportServerTempDB**, sur un serveur SQL Server virtuel s’exécutant dans un cluster MSCS, il se peut que le nom distant au format `<domain>\<computer_name>$` ne soit pas inscrit dans SQL Server en tant que connexion. Si vous avez configuré le compte de service du serveur de rapports en tant que compte nécessitant ce nom distant pour les connexions, les utilisateurs ne peuvent pas se connecter aux répertoires /reports et /reportserver dans Reporting Services. Par exemple, le compte Windows intégré NetworkService requiert ce nom distant. Pour éviter ce problème, utilisez un compte de domaine explicite ou un compte de connexion SQL Server pour vous connecter aux bases de données du serveur de rapports.  
     
   ## <a name="see-also"></a>Voir aussi  
-[Prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+[Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Dépanner des problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  

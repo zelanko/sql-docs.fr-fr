@@ -2,9 +2,12 @@
 title: Personnaliser le composant WebPart Visionneuse de rapports | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 57d2bb85c011e8a70255b5dd07080a77da757286
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1b43b9caff7c01c9e95249a18a2fe5c13bdbf3b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personnaliser le composant WebPart Visionneuse de rapports
 
@@ -35,9 +38,9 @@ Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher 
   
 -   Modifiez l’aspect du composant WebPart en définissant des propriétés.  
   
--   Choisissez quelles fonctionnalités de création de rapport interactives sont disponibles sur la barre d'outils Rapports.  
+-   choisissez quelles fonctionnalités de création de rapport interactives sont disponibles sur la barre d'outils Rapports ;  
   
--   Spécifiez quelles zones d'affichage sont disponibles. Le composant WebPart Visionneuse de rapports compte une zone d’affichage de rapport, une zone de paramètres et une zone d’informations d’identification.  
+-   spécifiez quelles zones d'affichage sont disponibles ; Le composant WebPart Visionneuse de rapports compte une zone d’affichage de rapport, une zone de paramètres et une zone d’informations d’identification.  
   
  Vous ne pouvez pas étendre le composant WebPart Visionneuse de rapports pour prendre en charge d’autres types de fichiers et vous ne pouvez pas remplacer la barre d’outils Rapports par une barre d’outils personnalisée ou ajouter de nouvelles fonctionnalités à la barre d’outils existante. Si vous devez personnaliser les fonctionnalités standard, créez un composant WebPart personnalisé.  
 

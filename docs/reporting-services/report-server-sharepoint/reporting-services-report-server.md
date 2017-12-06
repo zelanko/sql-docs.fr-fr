@@ -2,9 +2,12 @@
 title: Serveur de rapports Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b71d0f313c853e53572fcee71c0b29cd4cb3ca47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e16bc12aa7361cd348caeb34fa73f974d4f74add
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
 
@@ -105,7 +108,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
   
 || Description|  
 |-|-----------------|  
-|**(1)**|Serveurs web ou serveurs web frontaux (WFE). Le complément Reporting Services doit être installé sur chaque serveur web à partir duquel vous souhaitez utiliser les fonctionnalités d’application web, comme l’affichage de rapports ou des pages de gestion Reporting Services pour effectuer des tâches telles que la gestion de sources de données ou des abonnements.|  
+|**(1)**|Serveurs Web ou serveurs Web frontaux (WFE). Le complément Reporting Services doit être installé sur chaque serveur web à partir duquel vous souhaitez utiliser les fonctionnalités d’application web, comme l’affichage de rapports ou des pages de gestion Reporting Services pour effectuer des tâches telles que la gestion de sources de données ou des abonnements.|  
 |**(2)**|Ce complément installe les points de terminaison URL et SOAP afin que les clients communiquent avec les serveurs d’applications, via le proxy du service Reporting Services.|  
 |**(3)**|Serveurs d’applications exécutant le service partagé Reporting Services. La montée en puissance du traitement des rapports est gérée dans le cadre de la batterie de serveurs SharePoint et par l’ajout du service Reporting Services à des serveurs d’applications supplémentaires.|  
 |**(4)**|Vous pouvez créer plusieurs applications de service Reporting Services, avec différentes configurations, notamment des autorisations, un e-mail, un proxy et des abonnements.|  

@@ -2,9 +2,12 @@
 title: "Région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 90f52e1c600c0f866eb6a2754c486d0c4e5af08a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Région de données de tableau matriciel (Générateur de rapports et SSRS)
   Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], une région de données de tableau matriciel est un élément de rapport à disposition généralisée qui affiche les données d’un rapport paginé dans des cellules organisées en lignes et colonnes. Les données du rapport peuvent être des données de détail récupérées à partir de la source de données ou des données de détail agrégées organisées en groupes de votre invention. Chaque cellule de tableau matriciel peut contenir un élément de rapport, par exemple une zone de texte ou une image, ou une autre région de données telle qu'une région de tableau matriciel, un graphique ou une jauge. Pour ajouter plusieurs éléments de rapport à une cellule, commencez par ajouter un rectangle pour servir de conteneur. Ajoutez ensuite les éléments de rapport au rectangle.  

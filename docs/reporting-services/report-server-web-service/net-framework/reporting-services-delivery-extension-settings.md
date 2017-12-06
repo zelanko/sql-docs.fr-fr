@@ -2,9 +2,12 @@
 title: "Paramètres des extensions de remise de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -29,33 +32,33 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 2f1e2c16fa9a9d72a2dd9743127348296cce3f9d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1487873422f2c5e0725583d952de3304d0056355
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Paramètres des extensions de remise de Reporting Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] propose une extension de remise par e-mail et une extension de remise par partage de fichiers. La remise par messagerie permet d'envoyer un rapport à des utilisateurs individuels ou à des groupes par le biais de la messagerie électronique. La remise par partage de fichiers permet d'envoyer automatiquement des rapports rendus à un partage de votre réseau. Vous pouvez utiliser l'une ou l'autre de ces extensions de remise avec des abonnements standard ou des abonnements piloté par les données. Vous devez transmettre les paramètres de remise qui sont spécifiques au type d'extension de remise chaque fois que vous appelez les méthodes <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> et <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Pour extraire par programmation la liste des paramètres de remise, utilisez la méthode <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] propose une extension de remise par e-mail et une extension de remise par partage de fichiers. La remise par messagerie permet d'envoyer un rapport à des utilisateurs individuels ou à des groupes par le biais de la messagerie électronique. La remise par partage de fichiers permet d'envoyer automatiquement des rapports rendus à un partage de votre réseau. Vous pouvez utiliser l'une ou l'autre de ces extensions de remise avec des abonnements standard ou des abonnements piloté par les données. Vous devez transmettre les paramètres de remise qui sont spécifiques au type d'extension de remise chaque fois que vous appelez les méthodes <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> et <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Pour extraire par programme la liste des paramètres de remise, utilisez la méthode <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
   
 > [!NOTE]  
 >  Les paramètres d'extension de remise respectent la casse.  
   
-## <a name="e-mail-delivery-settings"></a>Paramètres de remise par e-mail  
- Le tableau suivant répertorie les paramètres de remise par e-mail pour les abonnements qui utilisent l’e-mail du serveur de rapports.  
+## <a name="e-mail-delivery-settings"></a>Paramètres de remise par messagerie  
+ Le tableau suivant répertorie les paramètres de remise par messagerie pour les abonnements qui utilisent la messagerie électronique du serveur de rapports.  
   
 |Paramètre|Valeur|  
 |-------------|-----------|  
-|**TO**|Adresse e-mail qui s’affiche sur la ligne **À** de l’e-mail. Les adresses e-mail sont séparées par des points-virgules, s’il y en a plusieurs. Obligatoire.|  
-|**CC**|Adresse e-mail qui s’affiche sur la ligne **Cc** de l’e-mail. Les adresses e-mail sont séparées par des points-virgules, s’il y en a plusieurs. Ce paramètre est facultatif.|  
-|**BCC**|Adresse e-mail qui s’affiche sur la ligne **Cci** de l’e-mail. Les adresses e-mail sont séparées par des points-virgules, s’il y en a plusieurs. Ce paramètre est facultatif.|  
-|**ReplyTo**|Adresse e-mail qui s’affiche dans l’en-tête **Répondre à** de l’e-mail. Il doit s'agir d'une adresse e-mail unique. Ce paramètre est facultatif.|  
-|**IncludeReport**|Valeur indiquant si le rapport doit être inclus dans la remise par e-mail. La valeur **true** indique que le rapport est remis dans le corps de l’e-mail.|  
+|**TO**|Adresse e-mail qui s’affiche sur la ligne **À** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. Obligatoire.|  
+|**CC**|Adresse e-mail qui s’affiche sur la ligne **Cc** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. Ce paramètre est facultatif.|  
+|**BCC**|Adresse e-mail qui s’affiche sur la ligne **Cci** de l’e-mail. Les adresses de messagerie multiples sont séparées par des points-virgules. Ce paramètre est facultatif.|  
+|**ReplyTo**|Adresse e-mail qui s’affiche dans l’en-tête **Répondre à** de l’e-mail. Il doit s'agir d'une adresse de messagerie unique. Ce paramètre est facultatif.|  
+|**IncludeReport**|Valeur indiquant si le rapport doit être inclus dans la remise par messagerie. La valeur **true** indique que le rapport est remis dans le corps de l’e-mail.|  
 |**RenderFormat**|Nom de l'extension de rendu à utiliser pour générer le rapport rendu. Ce nom doit correspondre à l'une des extensions de rendu visibles installées sur le serveur de rapports. Cette valeur est obligatoire si le paramètre **IncludeReport** est défini sur **true**.|  
-|**Priorité**|Priorité avec laquelle l’e-mail est envoyé. Les valeurs valides sont **LOW**, **NORMAL** et **HIGH**. La valeur par défaut est **NORMAL**.|  
-|**Subject**|Texte figurant dans la ligne Objet de l’e-mail.|  
-|**Commentaire**|Texte inclus dans le corps de l’e-mail.|  
-|**IncludeLink**|Valeur qui indique si un lien vers le rapport doit être inclus dans le corps de l’e-mail.|  
+|**Priorité**|Priorité avec laquelle le message électronique est envoyé. Les valeurs valides sont **LOW**, **NORMAL** et **HIGH**. La valeur par défaut est **NORMAL**.|  
+|**Subject**|Texte figurant dans la ligne Objet du message électronique.|  
+|**Commentaire**|Texte inclus dans le corps du message électronique.|  
+|**IncludeLink**|Valeur qui indique si un lien vers le rapport doit être inclus dans le corps du message électronique.|  
   
 ## <a name="file-share-delivery-settings"></a>Paramètres de remise par partage de fichiers  
  Le tableau suivant répertorie les paramètres de remise par partage de fichiers pour les abonnements.  

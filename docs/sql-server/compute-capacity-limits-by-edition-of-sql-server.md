@@ -2,10 +2,10 @@
 title: "Limites de capacité de calcul des éditions SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 11/06/2017
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: ssdt
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 02a5a436fdae6d9196359b36e72af3ffc11d2a87
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Limites de capacité de calcul des éditions SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cet article traite des limites de capacité de calcul des éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et de la façon dont elles diffèrent dans les environnements physiques et virtualisés avec les processeurs hyperthreaded.  
@@ -46,16 +46,16 @@ ms.lasthandoff: 11/20/2017
 > Pour approfondir :  
 >   
 > - Une machine virtuelle compte un ou plusieurs processeurs virtuels.  
-> - Un ou plusieurs processeurs virtuels sont alloués à une seule machine virtuelle.  
+> - Un ou plusieurs processeurs virtuels sont alloués à un seul ordinateur virtuel.  
 > - Zéro ou un processeur virtuel est mappé à zéro ou un processeur logique. Quand le mappage des processeurs virtuels à un processeur logique est : 
 >     -   Un à zéro, il représente un processeur logique indépendant non utilisé par les systèmes d’exploitation invités.  
 >     -   Un à plusieurs, il représente une survalidation (overcommit).  
 >     -   Zéro à plusieurs, il représente l’absence de machine virtuelle sur le système hôte. Donc, les machines virtuelles n’utilisent pas de processeurs logiques.  
-> - Un socket est mappé à zéro ou plusieurs cœurs. Quand le mappage de socket au cœur est :  
+> - Un socket est mappé à zéro ou plusieurs noyaux. Quand le mappage de socket au cœur est :  
 >     -   Un à zéro, il représente un socket vide. Aucun processeur n’est installé.  
 >     -   Un à un, il représente un processeur monocœur installé dans le socket. Ce mappage est rare de nos jours.  
 >     -   Un à plusieurs, il représente un processeur multicœur installé dans le socket. Les valeurs sont habituellement 2, 4 et 8.  
-> - Un cœur est mappé à un ou deux processeurs logiques. Quand le mappage des cœurs à un processeur logique est :  
+> - Un noyau est mappé à un ou deux processeurs logiques. Quand le mappage des cœurs à un processeur logique est :  
 >     -   Un à un, l’hyperthreading est désactivé.  
 >     -   Un à deux, l’hyperthreading est activé.  
   
@@ -65,11 +65,11 @@ ms.lasthandoff: 11/20/2017
   
 -   Un cœur est une unité de processeur. Il peut être constitué d’un ou plusieurs processeurs logiques.  
   
--   Un processeur physique peut comprendre un ou plusieurs cœurs. Un processeur physique est identique à un package de processeurs ou à un socket.  
+-   Un processeur physique peut comprendre un ou plusieurs noyaux. Un processeur physique est identique à un package de processeurs ou à un socket.  
   
-Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs cœurs et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 thread par cœur. À noter que :  
+Les systèmes avec plusieurs processeurs physiques ou avec des processeurs physiques qui ont plusieurs noyaux et/ou des hyperthreads, permettent au système d'exploitation d'exécuter plusieurs tâches simultanément. Chaque thread d'exécution apparaît comme un processeur logique. Par exemple, si votre ordinateur a deux processeurs à quatre cœurs avec l’hyperthreading activé et deux threads par cœur, vous avez 16 processeurs logiques : 2 processeurs x 4 cœurs par processeur x 2 thread par cœur. À noter que :  
   
--   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un cœur hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même cœur avec l'hyperthreading désactivé.  
+-   La capacité de calcul d'un processeur logique à partir d'un thread unique d'un noyau hyperthreaded est inférieure à la capacité de calcul d'un processeur logique de ce même noyau avec l'hyperthreading désactivé.  
   
 -   La capacité de calcul des deux processeurs logiques dans le cœur avec l’hyperthreading activé est supérieure à la capacité de calcul du même cœur avec l’hyperthreading désactivé.  
   
@@ -85,7 +85,7 @@ Le tableau suivant présente les limites de capacité de calcul pour une instanc
   
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Capacité maximale de calcul pour une instance unique ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacité maximale de calcul pour une instance unique (AS,RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Édition Entreprise : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
+|Enterprise Edition : contrat de licence selon le nombre de cœurs\*|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Développeur|Maximum du système d'exploitation|Maximum du système d'exploitation|  
 |Standard|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 24 cœurs|  
 |Express|Limité à moins de 1 socket ou 4 cœurs|Limité à moins de 1 socket ou 4 cœurs|  

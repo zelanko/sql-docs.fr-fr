@@ -2,9 +2,12 @@
 title: "Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e8fce3d396a163c77b3b98bd7defd583f94d72b0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données)
   Dans un abonnement piloté par les données, les données d'abonnement dynamiques sont fournies par une requête ou une commande qui récupère les données à partir d'une source de données externe. Il est possible de récupérer les données d'abonnement à partir de n'importe quelle source de données gérée qui répond aux impératifs du traitement des abonnements pilotés par les données. La syntaxe de la requête ou de la commande doit être valide pour l'extension de traitement de données installée avec votre serveur de rapports.  
@@ -68,7 +71,7 @@ ms.lasthandoff: 11/09/2017
  Vous pouvez utiliser les données de la base de données d'abonnés pour personnaliser les options de remise de chaque destinataire. Le type d'extension de remise que vous utilisez détermine les options disponibles. Si vous utilisez l'extension de remise par messagerie électronique du serveur de rapports, la requête doit contenir une adresse de messagerie pour chaque abonné. Si vous utilisez une extension de remise par partage de fichiers, les données d'abonnés doivent inclure des valeurs pouvant être utilisées pour créer des fichiers de rapports spécifiques aux abonnés ou pour fournir une destination pour la remise. Pour plus d’informations, consultez [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Transmission de valeurs de paramètres de la base de données d'abonnés au rapport  
- Si vous créez un abonnement piloté par les données pour un rapport paramétrable, vous pouvez utiliser des valeurs de paramètres de variable pour personnaliser la production de chaque rapport. Par exemple, une base de données d'abonnés peut contenir des numéros d'identification d'employés, des dates d'embauche, des titres de fonction et des adresses de lieux de travail dont vous pouvez vous servir pour filtrer les données du rapport. Si le rapport accepte des paramètres basés sur ces données de colonnes, vous pouvez mapper le paramètre à la colonne appropriée.  
+ Si vous créez un abonnement piloté par les données pour un rapport paramétrable, vous pouvez utiliser des valeurs de paramètres de variable pour personnaliser la production de chaque rapport. Par exemple, une base de données d'abonnés peut contenir des numéros d'identification d'employés, des dates d'embauche, des postes et des adresses de lieux de travail dont vous pouvez vous servir pour filtrer les données du rapport. Si le rapport accepte des paramètres basés sur ces données de colonnes, vous pouvez mapper le paramètre à la colonne appropriée.  
   
  Lors du mappage de champs d'abonné à des paramètres de rapport, vérifiez que les types de données et les longueurs de colonnes sont compatibles. En cas de non-correspondance du type de données, une erreur se produit lors du traitement des abonnements. Pour en savoir plus sur l’utilisation des données dans un rapport paramétrable, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   

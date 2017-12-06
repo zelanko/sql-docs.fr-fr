@@ -1,10 +1,13 @@
 ---
 title: "Obtenir des données à partir de jeux de données partagés dans les rapports mobiles Reporting Services | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,13 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 770afc0e577f0283193f63ab8ac18fa02734fe8a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtenir des données à partir de jeux de données partagés dans les rapports mobiles Reporting Services
+# <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtenir des données à partir de datasets partagés dans l’Éditeur de rapports mobiles
 Outre le [chargement de données à partir de fichiers Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), l’Éditeur de rapports mobiles SQL Server peut également accéder à des données depuis pratiquement n’importe quelle source. L’accès aux données requiert une source de données partagée, configurée sur un portail web Reporting Services. En savoir plus sur la [création de sources de données partagées](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) et sur la [création de jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md).  
   
 Dès lors que vous avez configuré les sources de données partagées et les jeux de données partagés sur le serveur Reporting Services, vous pouvez les utiliser dans les rapports mobiles que vous créez dans [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].   

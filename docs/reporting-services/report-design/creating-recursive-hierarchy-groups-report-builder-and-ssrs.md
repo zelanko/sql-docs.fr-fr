@@ -2,9 +2,12 @@
 title: "Création de groupes de hiérarchies récursives (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 527d95adf61c1da4ebc7098a67c1f2e366bd39e5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3062eacef7de155c81bab789cc808cb3e1bffc5d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Création de groupes de hiérarchies récursives (Générateur de rapports et SSRS)
 Pour afficher des données récursives dans des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] où la relation entre le parent et l’enfant est représentée par des champs du dataset), définissez l’expression du groupe de régions de données en fonction du champ enfant et la propriété Parent en fonction du champ parent.  

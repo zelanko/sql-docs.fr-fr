@@ -2,9 +2,12 @@
 title: "Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/15/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez utiliser un Assistant dans [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] pour créer un graphique à barres dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Ensuite, vous ajouterez un filtre et améliorerez le graphique. 
@@ -53,7 +56,7 @@ Vous allez créer un dataset incorporé, choisir une source de données partagé
   
      La boîte de dialogue **Mise en route** s'affiche.  
   
-     ![Bien démarrer avec le Générateur de rapports](../reporting-services/media/rb-getstarted.png "Bien démarrer avec le Générateur de rapports")  
+     ![Générateur de rapports - Mise en route](../reporting-services/media/rb-getstarted.png "Générateur de rapports - Mise en route")  
   
      Si vous ne voyez pas la boîte de dialogue **Mise en route** , cliquez sur **Fichier** >**Nouveau**. La boîte de dialogue **Nouveau rapport ou dataset** contient une grande partie des contenus de la boîte de dialogue **Mise en route** . 
       

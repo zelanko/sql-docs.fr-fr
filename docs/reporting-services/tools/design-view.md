@@ -2,9 +2,12 @@
 title: Design, vue | Microsoft Docs
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 461e68458cc754355a172e607bfa638ae1eb2eb0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="design-view"></a>Vue Design
 Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , utilisez la vue Design pour disposer les éléments dans le rapport. Cette vue est parfois appelée aire de conception ou mode de conception.  
@@ -33,13 +36,13 @@ L'aire de conception se compose de trois sections :
 + l’en-tête de page,
 + le pied de page. 
 
-Utilisez la boîte à outils pour sélectionner les éléments à placer dans ces trois sections. Utilisez le volet des données de rapport pour consulter des images, paramètres, sources de données et dataset, y compris les requêtes de dataset et listes de champs. Après avoir ajouté des éléments de rapport à l’aire de conception, faites glisser des champs de dataset du volet **Données du rapport** vers des régions de données telles qu’une table, une matrice ou une liste. Chaque élément présent dans l'aire de conception du rapport contient des propriétés qui peuvent être gérées via une boîte de dialogue de propriétés ou le volet Propriétés.  
+Utilisez la boîte à outils pour sélectionner les éléments à placer dans ces trois sections. Utilisez le volet des données de rapportpour consulter des images, paramètres, sources de données et dataset, y compris les requêtes de dataset et listes de champs. Après avoir ajouté des éléments de rapport à l’aire de conception, faites glisser des champs de dataset du volet **Données du rapport** vers des régions de données telles qu’une table, une matrice ou une liste. Chaque élément présent dans l'aire de conception du rapport contient des propriétés qui peuvent être gérées via une boîte de dialogue de propriétés ou le volet Propriétés.  
   
 ## <a name="toolbox"></a>Boîte à outils  
  La Boîte à outils répertorie les régions de données et autres éléments de rapport disponibles pour votre rapport. Pour ajouter de éléments de rapport à partir de la Boîte à outils, double-cliquez sur l’élément qui vous intéresse ou faites-le glisser jusqu’à l’aire de conception. Vous pouvez ensuite modifier la forme et la taille en utilisant les handles d’objet.  
   
 ## <a name="report-data-pane"></a>Données du rapport, volet  
- Pour afficher le volet Données de rapport, dans le menu **Affichage** , cliquez sur **Données du rapport**. Utilisez ce volet pour définir des paramètres, des images, des sources de données et des datasets et pour référencer des champs intégrés tels que ReportName. Pour ajouter un nouvel élément, cliquez sur le menu **Nouveau** et sélectionnez un élément. Pour ajouter des champs calculés à un dataset existant, cliquez sur **Dataset**puis, dans la boîte de dialogue **Propriétés du dataset** , sélectionnez **Champs**. Sélectionnez un élément et cliquez sur **Modifier** pour ouvrir la boîte de dialogue **Propriétés** . Vous pouvez également cliquer avec le bouton droit sur les éléments du volet des données de rapport pour ajouter des éléments ou mettre à jour leurs propriétés.  
+ Pour afficher le volet Données de rapport, dans le menu **Affichage** , cliquez sur **Données du rapport**. Utilisez ce volet pour définir des paramètres, des images, des sources de données et des datasets et pour référencer des champs intégrés tels que ReportName. Pour ajouter un nouvel élément, cliquez sur le menu **Nouveau** et sélectionnez un élément. Pour ajouter des champs calculés à un dataset existant, cliquez sur **Dataset**puis, dans la boîte de dialogue **Propriétés du dataset** , sélectionnez **Champs**. Sélectionnez un élément et cliquez sur **Modifier** pour ouvrir la boîte de dialogue **Propriétés** . Vous pouvez également cliquer avec le bouton droit sur les éléments du volet des données de rapportpour ajouter des éléments ou mettre à jour leurs propriétés.  
   
  Pour ajouter des données et des images à un rapport, faites glisser les éléments depuis le volet des données de rapportvers les régions de données et les zones de texte de l'aire de conception.  
   

@@ -2,9 +2,12 @@
 title: "Résoudre les problèmes d’abonnements et de remise de Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9ebea5b20a98810b9a680f476bfa0bd94ffbf7e7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Résolution des problèmes d’abonnements et de remise de Reporting Services
   
@@ -48,7 +51,7 @@ Les journaux des exécutions sont des vues dans la base de données ReportServer
 
 ----------
 ## <a name="unable-to-send-reports-using-e-mail-with-windows-server-2003-and-pop3"></a>Impossible d'envoyer des rapports par courrier électronique avec Windows Server 2003 et POP3  
-Si vous exécutez une application de messagerie électronique avec le protocole POP3 (Post Office Protocol version 3) sur Microsoft Windows Server 2003, il est possible que vous ne puissiez pas envoyer de rapports en utilisant le serveur POP3 local. Si vous configurez le serveur de rapports pour envoyer des courriers électroniques en utilisant le serveur POP3 local, et que vous créez un abonnement qui envoie un rapport, vous risquez de recevoir le message d'erreur suivant :  
+Si vous exécutez une application de messagerie électronique avec le protocole POP3 (Post Office Protocol version 3) surMicrosoft Windows Server 2003, il est possible que vous ne puissiez pas envoyer de rapports en utilisant le serveur POP3 local. Si vous configurez le serveur de rapports pour envoyer des courriers électroniques en utilisant le serveur POP3 local, et que vous créez un abonnement qui envoie un rapport, vous risquez de recevoir le message d'erreur suivant :  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
 où \<error message> est remplacé par des informations complémentaires sur les messages d’erreur retournées par des objets de données de collaboration (CDO).  

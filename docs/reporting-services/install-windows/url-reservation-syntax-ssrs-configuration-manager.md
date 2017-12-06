@@ -2,9 +2,12 @@
 title: "Syntaxe de réservation d’URL (Gestionnaire de configuration de SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8118c7cf2050588a64a35b068903aa7ac3154c88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 88f5408801551be37142c616644a6cb114834cd4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntaxe de réservation d’URL (Gestionnaire de configuration de SSRS)
   Cette rubrique décrit les parties de la chaîne d'URL du service Web Report Server et du Gestionnaire de rapports. La chaîne d'URL stockée en interne possède une structure différente de celle d'une URL saisie dans la barre d'adresses d'une fenêtre de navigateur. La chaîne de réservation d'URL apparaît dans la fenêtre Résultats de l'outil de configuration de Reporting Services lorsque vous configurez une URL et dans le fichier RSReportServer.config. Il peut être utile de savoir comment la chaîne d'URL est définie si vous dépannez les problèmes de réservation d'URL ou interrogez HTTP.SYS pour afficher les réservations d'URL internes définies sur votre serveur.  

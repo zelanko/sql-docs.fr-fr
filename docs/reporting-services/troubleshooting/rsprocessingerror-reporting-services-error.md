@@ -2,9 +2,12 @@
 title: rsProcessingError - Erreur Reporting Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1ceb80c23e3c5e6d71d6857319da424a8815d504
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b53303b80144b02f6e64c6d3aaeac1856773da9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
@@ -115,7 +118,7 @@ ms.lasthandoff: 11/09/2017
   
  Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
   
--   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* '*\<nom_élément_rapport>*' n’est pas valide. L'étendue doit être active ou contenue au sein de l'étendue active.  
+-   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* '*\<nom_élément_rapport>*' n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
   
 -   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* '*\<nom_élément_rapport>*' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   

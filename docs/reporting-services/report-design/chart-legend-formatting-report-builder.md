@@ -2,9 +2,12 @@
 title: "Mise en forme de la légende sur un graphique (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -33,11 +36,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4bae3ff2a5111c020fdfaa20c3c3e4fc0d905558
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 878743f3b95871cab938fb85fb683c99bcfdf6f8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Légende de graphique - Mise en forme (Générateur de rapports)
   La légende du graphique contient des descriptions pour chaque catégorie d'un graphique. Une légende contient toujours un ou plusieurs éléments de légende. Chaque élément de légende consiste en une zone colorée qui représente les séries et une chaîne de texte qui décrit ces dernières, comme indiqué dans l'illustration ci-dessous.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 ## <a name="ordering-legend-items-in-the-legend"></a>Ordre des éléments de légende dans la légende  
  Les séries sont ordonnées dans la légende d'après l'ordre dans lequel le moteur de traitement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] les traite. Vous pouvez modifier cet ordre en modifiant l'ordre des champs dans la zone de dépôt des champs de données. Si vous utilisez un regroupement de séries, les données de série sont inconnues jusqu'au traitement. Vous ne disposez donc d'aucun moyen pour réordonner ces éléments. Les modifications peuvent être vues dans l'Aperçu. Pour plus d’informations sur le regroupement de séries, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
- Vous pouvez masquer l'affichage des séries dans la légende. Si vous utilisez un regroupement de séries, toutes les séries en rapport avec le champ de données seront masquées. Pour plus d’informations, consultez [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
+ Vous pouvez masquer l'affichage des séries dans la légende. Si vous utilisez un regroupement de séries, toutes les séries en rapport avec le champ de données seront masquées. Pour plus d’informations, consultez [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md).  
   
 ## <a name="changing-the-text-or-color-of-a-legend-item-in-the-legend"></a>Modification du texte ou de la couleur d'un élément de légende dans la légende  
  Lorsqu'un champ est placé dans la zone de dépôt du champ de données d'un graphique, un élément de légende contenant le nom de ce champ est automatiquement généré. Par défaut, le texte de chaque élément de légende est tiré du nom du champ de données. Chaque élément de légende est relié à une série individuelle sur le graphique, à l'exception des graphiques à base de formes, pour lesquels la légende est reliée à des points de données individuels et non à des séries individuelles. Lorsqu'un groupe de catégories est défini sur un graphique à base de formes, le texte de chaque élément de légende est tiré de la représentation de chaîne du groupe de catégories. Vous pouvez spécifier un texte d'étiquette personnalisé pour les graphiques à secteurs, en anneau ou en entonnoir afin d'afficher des informations autres que l'étiquette du groupe de catégories pour chaque point de données de la légende. Pour ce faire, sélectionnez la légende et spécifiez le texte de la légende dans la boîte de dialogue **Propriétés de la série** ou la propriété **LegendText** du volet Propriétés. Pour plus d’informations, consultez [Modifier le texte d’un élément de légende &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  

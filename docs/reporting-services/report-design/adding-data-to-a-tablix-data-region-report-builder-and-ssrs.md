@@ -2,9 +2,12 @@
 title: "Ajout de données à une région de données de tableau matriciel (Générateur de rapports et SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 13337dbbc9c1546c7e5443b8b2d2c9e02a7d66ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dc72748fdcb76e456c9c8155a5d91c83a1ad2483
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Ajout de données à une région de données de tableau matriciel (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , pour afficher les données d’un dataset de rapport dans une table ou une matrice, spécifiez dans chaque cellule de données le nom d’un champ de dataset à afficher. Vous pouvez afficher des données de détail ou des données groupées. Si vous ajoutez des groupes à une table ou à une matrice, les lignes et les colonnes des valeurs de groupe et les données de groupe sont automatiquement ajoutées. Vous pouvez ensuite ajouter des totaux et des sous-totaux pour vos données.  

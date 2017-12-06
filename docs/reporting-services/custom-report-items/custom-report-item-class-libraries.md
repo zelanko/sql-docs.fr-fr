@@ -2,9 +2,12 @@
 title: "Bibliothèques de classes d’éléments de rapport personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fbd23c312a441fe7df7b85033e95c96ff2d3a8a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 08b2b886a9bf76f6739a87bbdb270b8a4d0df50c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
   Les éléments de rapport personnalisés utilisent des classes de l’espace de noms **Microsoft.ReportDesigner**. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
  Cet attribut est utilisé afin d'identifier le type de l'élément de rapport personnalisé. Le nom doit correspondre à la valeur de l’attribut \<**Name**> de l’élément **ReportItem** figurant dans le fichier de configuration du Concepteur de rapports.  
   
-#### <a name="public-methods"></a>Méthodes publiques  
+#### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |||  
 |-|-|  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
  La classe **Adornment** est utilisée par le composant de conception de l’élément de rapport personnalisé pour définir des zones en dehors du rectangle principal de l’aire de conception. Ces zones permettent de gérer les événements de l'interface utilisateur, tels que les clics de souris et les opérations de glisser-déplacer.  
   
-#### <a name="public-methods"></a>Méthodes publiques  
+#### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |||  
 |-|-|  
@@ -101,7 +104,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="microsoftreportdesigneradornerservice"></a>Microsoft.ReportDesigner.AdornerService  
  Cette classe est utilisée pour fournir la collection de services d’affichage utilisée par l’élément de rapport personnalisé, et ce afin de prendre en charge les objets **Adornment** destinés à son composant de conception.  
   
-#### <a name="public-properties"></a>Propriétés publiques  
+#### <a name="public-properties"></a>Propri&#233;t&#233;s publiques  
   
 |||  
 |-|-|  
@@ -120,7 +123,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="microsoftreportdesignerexpressioneditor"></a>Microsoft.ReportDesigner.ExpressionEditor  
  Cette classe peut être utilisée à partir du contrôle DTC de l'élément de rapport personnalisé afin d'appeler l'Éditeur d'expressions.  
   
-#### <a name="public-methods"></a>Méthodes publiques  
+#### <a name="public-methods"></a>M&#233;thodes publiques  
   
 |||  
 |-|-|  

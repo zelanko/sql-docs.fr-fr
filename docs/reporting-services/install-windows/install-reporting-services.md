@@ -1,9 +1,13 @@
 ---
 title: "Installer SQL Server Reporting Services | Microsoft Docs"
 ms.date: 10/10/2017
-ms.prod: sql-server-2017
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
@@ -13,13 +17,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 2ab73e59ffc05a18f8a1a36ac66ba59ed726fdef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="install-sql-server-reporting-services"></a>Installer SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services"></a>Installation de SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)])
 
@@ -105,7 +109,7 @@ Les réservations d'URL se composent d'un préfixe, d'un nom d'hôte, d'un port 
 |Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat SSL (Secure Sockets Layer), le programme d’installation tente de créer des réservations d’URL qui utilisent le préfixe HTTPS.|
 |Nom d'hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `http://<computername>/reportserver`, `http://localhost/reportserver` ou`http://<IPAddress>/reportserver.`|
 |Port|Le port par défaut est 80. Si vous utilisez un port autre que le port 80, vous devez l’ajouter explicitement à l’URL lorsque vous ouvrez un portail web dans une fenêtre de navigateur.|
-|Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer pour le service web Report Server et au format Reports pour le portail web. Pour le service web Report Server, le répertoire virtuel par défaut est **reportserver**. Pour le portail web, le répertoire virtuel par défaut est **reports**.|
+|Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer pour le service web Report Server et au format Reports pour le portail web. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Pour le portail web, le répertoire virtuel par défaut est **reports**.|
 
 Voici un exemple de chaîne URL complète :
 
