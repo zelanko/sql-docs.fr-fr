@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7bdb349022f82d29045c7277185485b595675bc3
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
@@ -75,21 +75,36 @@ Les fonctionnalités suivantes ne sont pas disponibles dans cette version du pil
 
 ## <a name="character-set-support"></a>Prise en charge du jeu de caractères
 
-Le client de codage peut être une des opérations suivantes :
+Les données SQLCHAR dans un des jeux de caractères suivants sont prise en charge par le pilote :
+
   -  UTF-8
-  -  ISO-8859-1.
-  -  ISO-8859-2
+  -  CP437
+  -  CP850
+  -  CP874
+  -  CP932
+  -  CP936
+  -  CP949
+  -  CP950
+  -  CP1251
+  -  CP1253
+  -  CP1256
+  -  CP1257
+  -  CP1258
+  -  ISO-8859-1 / CP1252
+  -  ISO-8859-2 / CP1250
   -  ISO-8859-3
   -  ISO-8859-4
   -  ISO-8859-5
   -  ISO-8859-6
   -  ISO-8859-7
-  -  ISO-8859-8
-  -  ISO-8859-9
+  -  ISO-8859-8 / CP1255
+  -  ISO-8859-9 / CP1254
   -  ISO-8859-13.
   -  ISO-8859-15
-  
-Les données SQLCHAR doivent être un des jeux de caractères pris en charge. Les données SQLWCHAR doivent être au format UTF-16LE (Little Endian).  
+
+Lors de la connexion, le pilote détecte les paramètres régionaux actuels du processus, dans qu'il est chargé. S’il s’agit d’un des encodages pris en charge ci-dessus, le pilote utilise cet encodage pour les données SQLCHAR (caractère étroits) ; Sinon, la valeur par défaut UTF-8. Étant donné que tous les processus démarre dans les paramètres régionaux « C » par défaut (et par conséquent entraîner le pilote à la valeur par défaut au format UTF-8), si une application doit utiliser un des encodages ci-dessus, elle doit utiliser le **setlocale** afin de définir les paramètres régionaux de manière appropriée avant connexion ; en spécifiant les paramètres régionaux souhaités explicitement, ou utiliser une chaîne vide, par exemple `setlocale(LC_ALL, "")`, pour utiliser les paramètres régionaux de l’environnement.
+
+Les données SQLWCHAR doivent être au format UTF-16LE (Little Endian).
 
 Si SQLDescribeParameter ne spécifie pas de type SQL sur le serveur, le pilote utilise le type SQL spécifié dans le paramètre *ParameterType* de SQLBindParameter. Si un type SQL de caractère étroit, comme SQL_VARCHAR, est spécifié dans SQLBindParameter, le pilote convertit les données fournies à partir de la page de codes du client à la valeur par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] page de codes. (La valeur par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] est généralement : page de codes 1252.) Si la page de codes du client n’est pas pris en charge, elle est définie au format UTF-8. Dans ce cas, le pilote convertit ensuite les données UTF-8 à la page de codes par défaut. Toutefois, une perte de données est possible. Si la page de codes 1252 ne peut pas représenter un caractère, le pilote le convertit en point d’interrogation (« ? »). Pour éviter cette perte de données, spécifiez un type de caractère SQL Unicode, comme SQL_NVARCHAR, dans SQLBindParameter. Dans ce cas, le pilote convertit les données Unicode fournies dans l’encodage UTF-8 en UTF-16 sans perte de données.
 

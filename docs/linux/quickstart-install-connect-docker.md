@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Exécuter l’image de SQL Server 2017 conteneur avec Docker
 
@@ -35,31 +35,9 @@ Cette image se compose de SQL Server est en cours d’exécution sur Linux basé
 ## <a id="requirements"></a> Conditions préalables
 
 - Moteur de docker 1.8 + sur n’importe quel pris en charge la distribution de Linux ou Docker pour Mac et Windows. Pour plus d’informations, consultez [Docker d’installer](https://docs.docker.com/engine/installation/).
-- Minimum de 4 Go d’espace disque
-- Minimum de 4 Go de RAM
+- Minimum de 2 Go d’espace disque
+- Minimum de 2 Go de RAM
 - [Configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> La valeur par défaut sur Docker pour Mac et Docker pour Windows est de 2 Go pour la VM Moby, donc vous devez le modifier à 4 Go. Si vous exécutez sur Mac ou Windows, utilisez les procédures suivantes pour augmenter la mémoire.
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>Augmentez la mémoire de Docker à 4 Go (Mac)
-
-Les étapes suivantes augmentent la mémoire pour Docker pour Mac à 4 Go.
-
-1. Cliquez sur le logo de Docker sur la barre d’état supérieur.
-1. Sélectionnez **préférences**.
-1. Déplacer l’indicateur de mémoire à 4 Go ou plus.
-1. Cliquez sur le **redémarrer** bouton sur le bouton de l’écran.
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>Augmentez la mémoire de Docker à 4 Go (Windows)
-
-Les étapes suivantes augmentent la mémoire pour Docker pour Windows à 4 Go.
-
-1. Avec le bouton droit sur l’icône de Docker à partir de la barre des tâches.
-1. Cliquez sur **paramètres** sous ce menu.
-1. Cliquez sur le **avancé** onglet.
-1. Déplacer l’indicateur de mémoire à 4 Go ou plus.
-1. Cliquez sur le **appliquer** bouton.
 
 ## <a name="pull-and-run-the-container-image"></a>Extraire et exécuter l’image de conteneur
 

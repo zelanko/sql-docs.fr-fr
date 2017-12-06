@@ -1,6 +1,6 @@
 ---
-title: "Mise à jour - ADO pour la documentation de SQL Server | Documents Microsoft"
-description: "Extraits de l’affichage de contenu mis à jour pour la documentation récemment modifié, pour ActiveX Data Objects (ADO) pour Microsoft SQL Server."
+title: "Mise à jour - DMA des documents de SQL Server | Documents Microsoft"
+description: "Extraits de l’affichage de contenu mis à jour pour la documentation récemment modifié, pour les données Migration Assistant (DMA) pour Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -14,14 +14,14 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: ado-activex-data-objects
-ms.openlocfilehash: 9285c2f40b72151bddd5b5fefd2a2ec870b91ef4
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
 ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-activex-data-objects-ado-for-sql-server"></a>Nouveaux et mis à jour récemment : ActiveX Data Objects (ADO) pour SQL Server
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>Nouveaux et mis à jour récemment : Assistant de Migration de données (DMA) pour SQL Server
 
 
 
@@ -34,7 +34,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 - *Plage de dates de mises à jour :* &nbsp; **2017-09-28** &nbsp; - à - &nbsp; **2017-12-02**
-- *Zone de sujet :* &nbsp; **ActiveX Data Objects (ADO) pour SQL Server**.
+- *Zone de sujet :* &nbsp; **données Migration Assistant (DMA) pour SQL Server**.
 
 
 

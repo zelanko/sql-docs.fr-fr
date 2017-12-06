@@ -6,14 +6,16 @@ ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 0bc304b50930f8c8de5d244ea0b606add5f24d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Exécutez le 2017 du serveur SQL dans le cloud
 
@@ -25,7 +27,7 @@ Dans ce didacticiel de démarrage rapide, vous allez installer SQL Server 2017 s
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
-1.  Créer un AMI Linux au moins 3,25 Go de mémoire à partir du marketplace 
+1.  Créer un AMI Linux au moins 2 Go de mémoire à partir du marketplace 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -43,7 +45,7 @@ Dans ce didacticiel de démarrage rapide, vous allez installer SQL Server 2017 s
     
 ## <a name="digital-ocean"></a>Numérique océan
 1. Connexion à la [le panneau de configuration](https://cloud.digitalocean.com/login) et cliquez sur Créer un droplet
-1. Choisissez un droplet Ubuntu 16.04 avec au moins 3,25 Go de mémoire
+1. Choisissez un droplet Ubuntu 16.04 au moins 2 Go de mémoire
 1. Se connecter au droplet avec ssh
 1. Suivez les [démarrage rapide d’Ubuntu](quickstart-install-connect-ubuntu.md)
 1. Configurer des connexions à distance :
@@ -51,7 +53,7 @@ Dans ce didacticiel de démarrage rapide, vous allez installer SQL Server 2017 s
     * Ajouter une règle de trafic entrant pour autoriser le trafic sur le port sur lequel SQL Server écoute (port TCP par défaut 1433)
     
 ## <a name="google-cloud-platform"></a>Plateforme de Cloud de Google
-1.  Créer une image Linux avec au moins 3,25 Go de mémoire à partir du Lanceur de Cloud 
+1.  Créer une image Linux au moins 2 Go de mémoire à partir du Lanceur de Cloud 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

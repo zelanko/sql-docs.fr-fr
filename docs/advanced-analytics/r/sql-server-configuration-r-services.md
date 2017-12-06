@@ -2,7 +2,7 @@
 title: Configuration de SQL Server (R Services) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
 
@@ -70,7 +70,7 @@ Le système d’exploitation Windows utilise un fichier de pagination pour gére
 
 La rapidité du disque sur lequel est stocké le fichier d’échange peut aussi affecter les performances. En stockant le fichier d’échange sur un disque SSD ou en utilisant plusieurs fichiers d’échange sur plusieurs disques SSD, il est possible d’améliorer les performances.
 
-Pour plus d’informations sur le fichier d’échange de dimensionnement, consultez [comment déterminer la taille de fichier de page appropriée pour les versions 64 bits de Windows](https://support.microsoft.com/en-us/kb/2860880).
+Pour plus d’informations sur le fichier d’échange de dimensionnement, consultez [comment déterminer la taille de fichier de page appropriée pour les versions 64 bits de Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Optimisations au niveau instance ou base de données
 
@@ -167,7 +167,7 @@ Pour plus d’informations, y compris les exemples de code, consultez ce didacti
 
 **Autres ressources :**
 
-+ [Soft-NUMA dans SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA dans SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Comment mapper des nœuds soft-NUMA aux UC
 

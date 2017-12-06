@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurer une base de données SQL Server dans un conteneur Linux Docker
 
@@ -36,12 +36,9 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 ## <a name="prerequisites"></a>Conditions préalables
 
 * Moteur de docker 1.8 + sur n’importe quel pris en charge la distribution de Linux ou Docker pour Mac et Windows. Pour plus d’informations, consultez [Docker d’installer](https://docs.docker.com/engine/installation/).
-* Minimum de 4 Go d’espace disque
-* Minimum de 4 Go de RAM
+* Minimum de 2 Go d’espace disque
+* Minimum de 2 Go de RAM
 * [Configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> La valeur par défaut sur Docker pour Mac et Docker pour Windows est de 2 Go pour la VM Moby, donc vous devez le modifier à 4 Go. Si vous exécutez sur Mac ou Windows, augmentez vos paramètres de mémoire à l’aide de la [des instructions dans le démarrage rapide de Docker](quickstart-install-connect-docker.md).
 
 ## <a name="pull-and-run-the-container-image"></a>Extraire et exécuter l’image de conteneur
 
