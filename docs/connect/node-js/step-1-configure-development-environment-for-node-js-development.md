@@ -30,7 +30,7 @@ Notez que le pilote Node.js utilise le protocole TDS, qui est activé par défau
   
 ## <a name="windows"></a>Windows  
   
-1. **Installer exécutable du Gestionnaire de package et npm Node.js**  
+1. **Installer le runtime Node.js et le gestionnaire de paquets npm **  
 a. Accédez à [Node.js](https://nodejs.org/en/download/)  
 b. Cliquez sur le lien de msi du programme d’installation Windows approprié.   
 c. Une fois téléchargé, exécutez le fichier msi pour installer Node.js  
