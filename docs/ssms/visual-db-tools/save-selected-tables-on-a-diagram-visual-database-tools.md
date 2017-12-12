@@ -3,8 +3,11 @@ title: "Enregistrer des tables sélectionnées dans un schéma (Visual Database 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a6ac219c016292fc134aa1a1053812365d2f754d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 13e47d349680589c14f2804629c1417872f49265
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
-Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un schéma de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si vous ne souhaitez pas enregistrer toutes les changements que vous avez apportés à un schéma de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  
   
 ### <a name="to-save-selected-tables"></a>Pour enregistrer les tables sélectionnées  
   

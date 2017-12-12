@@ -3,8 +3,11 @@ title: Personnaliser des menus et des touches de raccourci | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34aac044681d6ba558799ed7bcbedbd2fde1411e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
-Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*<single letter>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*<single letter>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
   
 Les touches d’accès rapides pour les procédures stockées qui utilisent la touche Ctrl peuvent être créées dans la page **Clavier** de la boîte de dialogue **Outils**/**Options** .  
   

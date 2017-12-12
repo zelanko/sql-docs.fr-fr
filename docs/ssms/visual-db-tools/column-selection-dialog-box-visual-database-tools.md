@@ -3,8 +3,11 @@ title: "Sélectionner les colonnes, boîte de dialogue (Visual Database Tools) |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9dc761c177b2845c88a197034228eed073e811d6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f391acc3059f0e263977ea4a3f834a98ce5d962f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Boîte de dialogue Sélectionner les colonnes (Visual Database Tools)
-Vous permet de modifier la vue personnalisée des tables dans le schéma de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous permet de changer la vue personnalisée des tables dans le schéma de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  
   
 Cette boîte de dialogue apparaît quand vous cliquez avec le bouton droit sur une table, puis choisissez **Modifier la vue personnalisée** dans le menu contextuel.  
   

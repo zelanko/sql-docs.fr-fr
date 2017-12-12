@@ -3,8 +3,11 @@ title: "Arrêter une requête (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c7f4a6aa432fbe7461bf264f2da327c540358a09
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9cac60347b1de80202e6118f043f82e43525d4e7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="stop-a-query-visual-database-tools"></a>Arrêter une requête (Visual Database Tools)
-Si vous voyez qu'une requête dure trop longtemps ou ne donne pas les résultats que vous attendiez, vous pouvez l'arrêter même si elle n'est pas terminée.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si vous voyez qu’une requête dure trop longtemps ou ne donne pas les résultats que vous attendiez, vous pouvez l’arrêter même si elle n’est pas terminée.  
   
 ### <a name="to-stop-a-query"></a>Pour arrêter une requête  
   

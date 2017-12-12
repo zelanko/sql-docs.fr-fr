@@ -3,8 +3,11 @@ title: "Enregistrer (non autorisé), boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 324818ce1166c360715493f324a6fda7c70b45a4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d1224061affb1882d717f184f974a176d30a24a8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-not-permitted-dialog-box"></a>Enregistrer (non autorisé), boîte de dialogue
-La boîte de dialogue **Enregistrer** (non autorisé) vous prévient que l’enregistrement des modifications n’est pas autorisé car les modifications que vous avez apportées nécessitent la suppression et la recréation des tables répertoriées.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **Enregistrer** (non autorisé) vous prévient que l’enregistrement des changements n’est pas autorisé car les changements que vous avez apportés nécessitent la suppression et la recréation des tables répertoriées.  
   
 Les actions suivantes peuvent nécessiter la recréation d'une table :  
   

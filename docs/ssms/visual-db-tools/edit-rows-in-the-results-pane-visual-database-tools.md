@@ -3,8 +3,11 @@ title: "Modifier les lignes dans le volet Résultats (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ef7ec75a6546023d661b7ed448cdab9adf473b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5c6a8804827768aa0398d611636f69758099f3e6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifier les lignes dans le volet Résultats (Visual Database Tools)
-Dans la plupart des cas, vous pouvez modifier les données dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Pour plus d’informations sur la modification de données, consultez [Règles relatives à la mise à jour des résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) et [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans la plupart des cas, vous pouvez modifier les données dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Pour plus d’informations sur la modification de données, consultez [Règles relatives à la mise à jour des résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) et [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>Pour modifier des données dans le volet Résultats  
   

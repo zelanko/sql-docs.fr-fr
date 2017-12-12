@@ -3,8 +3,11 @@ title: "Créer manuellement des jointures réflexives (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 830f65d92ec3c8b96a57944b044f6ef61303e5b6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d1b1d10f031ba4f794e2590dee5561deb1570ed9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Créer manuellement des jointures réflexives (Visual Database Tools)
-Vous pouvez joindre une table à elle-même, même si elle ne possède pas de relation réflexive dans la base de données. Vous pouvez, par exemple, utiliser une jointure réflexive pour trouver des paires d'auteurs vivant dans la même ville.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez joindre une table à elle-même, même si elle ne possède pas de relation réflexive dans la base de données. Vous pouvez, par exemple, utiliser une jointure réflexive pour trouver des paires d'auteurs vivant dans la même ville.  
   
 À l'instar de toute autre jointure, une jointure réflexive nécessite au moins deux tables. En revanche, elle diffère des autres jointures par le fait que vous ajoutez une seconde instance de la même table plutôt qu'une autre table à la requête. Ainsi, vous pouvez comparer une colonne de la première instance de la table à la même colonne de la seconde, ce qui vous permet de comparer les valeurs d'une même colonne. Le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) assigne un alias à la seconde instance de la table.  
   

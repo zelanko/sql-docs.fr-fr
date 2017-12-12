@@ -3,8 +3,11 @@ title: "Boîte de dialogue Création de table (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 813c9846bd0662a454df2a197192da90dcc17ae4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Boîte de dialogue Création de table (Visual Database Tools)
-Permet de nommer une table créée dans laquelle vous copiez des lignes. Cette boîte de dialogue s'affiche lorsque vous modifiez le type d'une requête pour la transformer en une requête MAKE TABLE. Pour modifier le type d'une requête, dans le menu **Concepteur de requêtes** , pointez sur **Modifier le type**, puis cliquez sur **Créer une table**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permet de nommer une table créée dans laquelle vous copiez des lignes. Cette boîte de dialogue s'affiche lorsque vous modifiez le type d'une requête pour la transformer en une requête MAKE TABLE. Pour modifier le type d'une requête, dans le menu **Concepteur de requêtes** , pointez sur **Modifier le type**, puis cliquez sur **Créer une table**.  
   
 ## <a name="options"></a>Options  
 **Nom de la table**  

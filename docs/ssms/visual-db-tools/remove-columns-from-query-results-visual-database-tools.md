@@ -3,8 +3,11 @@ title: "Supprimer des colonnes des résultats d’une requête (Visual Database 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a70cc40a6645cb0341568fc7c2dec702323f3b8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ade4d54d4e9e1ea791a7f0330d6bb6da091b6c19
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Supprimer des colonnes des résultats d'une requête (Visual Database Tools)
-Si vous utilisez une colonne dans la requête Select mais que vous ne souhaitez pas l'afficher dans le jeu de résultats (autrement dit, si vous ne souhaitez pas que la colonne figure dans la liste de sélection de la requête), vous pouvez la supprimer du résultat. Une fois la colonne supprimée du résultat de la requête, vous pouvez continuer à l'utiliser dans des critères de recherche ou en tant que champ de tri.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si vous utilisez une colonne dans la requête Select mais que vous ne souhaitez pas l’afficher dans le jeu de résultats (autrement dit, si vous ne souhaitez pas que la colonne figure dans la liste de sélection de la requête), vous pouvez la supprimer du résultat. Une fois la colonne supprimée du résultat de la requête, vous pouvez continuer à l'utiliser dans des critères de recherche ou en tant que champ de tri.  
   
 > [!NOTE]  
 > Si vous souhaitez supprimer complètement une colonne de la requête, consultez [Supprimer des colonnes des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md).  
