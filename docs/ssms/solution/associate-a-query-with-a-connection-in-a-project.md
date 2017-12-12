@@ -3,8 +3,11 @@ title: "Associer une requête à une connexion dans un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bdda055c57486f6f20216b30a3c41e0a8c433e1f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 36217d01e2858e7193b1d7cbe72e734d6831281f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associer une requête à une connexion dans un projet
-Si une requête a été créée sans connexion ou si elle est déplacée d'un projet vers un autre, elle ne sera pas associée à une connexion dans le projet actif.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si une requête a été créée sans connexion ou si elle est déplacée d’un projet vers un autre, elle n’est pas associée à une connexion dans le projet actif.  
   
 ### <a name="to-associate-a-query-with-a-connection-in-a-project"></a>Pour associer une requête à une connexion dans un projet  
   

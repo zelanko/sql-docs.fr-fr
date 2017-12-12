@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Niveaux de compatibilité|Niveau de compatibilité 110 et 120 de la base de données|Projetez de mettre à niveau la base de données et l'application avant la prochaine version.|Niveau de compatibilité 110 de la base de données<br /><br /> Niveau de compatibilité 120 de la base de données||  
 |XML|Génération de schéma XDR en ligne|La directive XMLDATA de l'option FOR XML est déconseillée. Utilisez la génération XSD en mode RAW et AUTO. Il n'existe aucune solution de remplacement pour la directive XMLDATA en mode EXPLICIT.|XMLDATA|181|  
 |Sauvegarde et restauration|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE ou LOG TO TAPE|235|  
-|Sauvegarde et restauration|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Sauvegarde et restauration|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Sauvegarde et restauration|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Classements|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Aucun. Ces classements existent dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], mais ne sont pas visibles via fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Classements|Hindi<br /><br /> Macedonian|Ces classements existent dans [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] et versions ultérieures, mais ne sont pas visibles via fn_helpcollations. Utilisez à la place Macedonian_FYROM_90 et Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  

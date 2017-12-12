@@ -3,8 +3,11 @@ title: Autorisations et Visual Database Tools (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 232491b14f93a24416f1d5704b5d627ca6d1358b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ceb8a15b4f480c2f2a075928787d86803f567187
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Autorisations et Visual Database Tools (Visual Database Tools)
-Les autorisations, qui autorisent des utilisateurs à accéder à des objets de source de données, sont accordées dans la source de données, et non dans Visual Database Tools. Les autorisations d'accès octroyées sur les objets de source de données sont contrôlées par la stratégie de sécurité de votre installation. Si vous n'êtes pas autorisé à accéder à certains objets de base de données, contactez l'administrateur de votre base de données.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les autorisations, qui autorisent des utilisateurs à accéder à des objets de source de données, sont accordées dans la source de données, et non dans Visual Database Tools. Les autorisations d'accès octroyées sur les objets de source de données sont contrôlées par la stratégie de sécurité de votre installation. Si vous n'êtes pas autorisé à accéder à certains objets de base de données, contactez l'administrateur de votre base de données.  
   
 Si vos autorisations d'accès à la base de données vous permettent d'afficher, mais pas de modifier la structure de la base, vous pouvez utiliser des scripts pour concevoir vos modifications sans les transmettre à la base de données.  
   

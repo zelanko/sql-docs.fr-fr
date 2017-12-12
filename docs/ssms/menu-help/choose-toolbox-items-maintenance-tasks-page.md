@@ -3,8 +3,11 @@ title: "Choisir des éléments de boîte à outils (page Tâches de maintenance)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Choisir des éléments de boîte à outils (page Tâches de maintenance)
-Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affiche la liste de tous les composants des tâches de maintenance inscrits sur votre ordinateur et vous permet de modifier ceux qui sont affichés dans la boîte à outils. Vous pouvez ouvrir la boîte de dialogue **Personnaliser la boîte à outils** à partir du menu **Outils** . Pour trier la liste des composants, cliquez sur un en-tête de colonne.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affiche la liste de tous les composants des tâches de maintenance inscrits sur votre ordinateur et vous permet de changer ceux qui sont affichés dans la boîte à outils. Vous pouvez ouvrir la boîte de dialogue **Personnaliser la boîte à outils** à partir du menu **Outils** . Pour trier la liste des composants, cliquez sur un en-tête de colonne.  
   
 ## <a name="options"></a>Options  
 L’onglet **Tâches de maintenance** contient les colonnes d’informations suivantes :  

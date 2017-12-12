@@ -2,9 +2,12 @@
 title: "Déplacer un serveur inscrit ou un groupe de serveurs inscrits | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61e9c463554b142b052a5a7d1b40d6905d30c178
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Déplacer un serveur inscrit ou un groupe de serveurs inscrits
-  Cette rubrique explique comment organiser les serveurs dans des serveurs inscrits en déplaçant un serveur inscrit ou des groupes de serveurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les groupes de serveurs peuvent se composer de serveurs inscrits ou d'autres groupes de serveurs. Les serveurs comme les groupes de serveurs peuvent être déplacés d'un groupe de serveurs vers un autre.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment organiser les serveurs dans des serveurs inscrits en déplaçant un serveur inscrit ou des groupes de serveurs dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les groupes de serveurs peuvent se composer de serveurs inscrits ou d'autres groupes de serveurs. Les serveurs comme les groupes de serveurs peuvent être déplacés d'un groupe de serveurs vers un autre.  
   
 ##  <a name="SSMSProcedure"></a>  
   

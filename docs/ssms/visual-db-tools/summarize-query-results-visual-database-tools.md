@@ -3,8 +3,11 @@ title: "Résumé des résultats d’une requête (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5eebba84a544f1b8bf426337a7413e7f51131c5d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1e53feeedbed3359c525507de49e1e41caec621d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Résumé des résultats d'une requête (Visual Database Tools)
-Certains principes logiques s'appliquent à la création de requêtes d'agrégation. Par exemple, il est impossible d'afficher le contenu de lignes individuelles dans une requête de synthèse. Le Concepteur de requêtes et de vues vous aide à respecter ces principes dans le comportement du [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et du [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Certains principes logiques s’appliquent à la création de requêtes d’agrégation. Par exemple, il est impossible d'afficher le contenu de lignes individuelles dans une requête de synthèse. Le Concepteur de requêtes et de vues vous aide à respecter ces principes dans le comportement du [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et du [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) .  
   
 Une bonne compréhension des principes des requêtes d'agrégation et du comportement du Concepteur de requêtes et de vues permet de créer des requêtes correctes du point de vue logique. Le principe déterminant est que les requêtes d'agrégation ne peuvent donner que des informations de synthèse. C'est pourquoi la plupart des principes présentés plus loin décrivent les différentes méthodes permettant de référencer des colonnes de données individuelles dans une requête d'agrégation.  
   

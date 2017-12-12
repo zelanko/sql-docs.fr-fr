@@ -2,9 +2,12 @@
 title: "Définir les options de démarrage | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2591464744621eaf94e9367ab88152019aaf534c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11ad1af74c3db5dfcf05e37e0f6fef598435cfde
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>Leçon 1-7 - Définir les options de démarrage
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut être configuré de façon à ouvrir la zone de conception avec la configuration de votre choix au démarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Configurer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour qu'il s'ouvre avec votre configuration préférée peut vous faire gagner du temps.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut être configuré de façon à ouvrir la zone de conception avec la configuration de votre choix au démarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Configurer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour qu'il s'ouvre avec votre configuration préférée peut vous faire gagner du temps.  
   
 ## <a name="configuring-startup-options"></a>Configuration des options de démarrage  
   

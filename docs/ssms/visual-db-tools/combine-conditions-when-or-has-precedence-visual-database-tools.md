@@ -3,8 +3,11 @@ title: "Associer des conditions avec priorité à l’opérateur OR (Visual Data
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56714e86553346cc53125ad90d2140df502179e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5f8852df6a617323c69741eebd7c9c1475f4f054
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur OR (Visual Database Tools)
-Pour relier des conditions à l'aide de l'opérateur OR et leur accorder la priorité sur les conditions reliées à l'aide de l'opérateur AND, vous devez répéter la condition AND pour chaque condition OR.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour relier des conditions à l’aide de l’opérateur OR et leur accorder la priorité sur les conditions reliées à l’aide de l’opérateur AND, vous devez répéter la condition AND pour chaque condition OR.  
   
 Imaginez que vous souhaitez, par exemple, rechercher tous les employés travaillant dans la société depuis plus de cinq ans et occupant des postes de faible niveau ou étant à la retraite. Cette requête nécessite trois conditions, une condition reliée à deux autres conditions à l'aide de l'opérateur AND :  
   

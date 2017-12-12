@@ -3,8 +3,11 @@ title: "Règles pour l’entrée de valeurs de recherche (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bde4d45d9b161c54a03051a76bc867136ac34128
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec0d150e6ff4d9c6e70ea4045a5557702a7e72b9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Règles pour l'entrée de valeurs de recherche (Visual Database Tools)
-Cette rubrique décrit les conventions à utiliser lorsque vous entrez les types de valeurs littérales suivants pour une condition de recherche :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les conventions à utiliser quand vous entrez les types de valeurs littérales suivants pour une condition de recherche :  
   
 -   Valeurs texte  
   

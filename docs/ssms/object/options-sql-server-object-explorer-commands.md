@@ -3,8 +3,11 @@ title: "Options (Explorateur d’objets SQL Server - Commandes) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e32d7fe35d1a6322e902e07c866d952cdccb1411
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 69ada91ed2c98151d052a14604786ece9e27f059
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Options (Explorateur d’objets SQL Server - Commandes)
-Lorsque vous cliquez avec le bouton droit sur une table ou une vue dans l'Explorateur d'objets, les deux options suivantes relatives à l'affichage des lignes dans la table s'affichent :  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous cliquez avec le bouton droit sur une table ou une vue dans l’Explorateur d’objets, les deux options suivantes relatives à l’affichage des lignes dans la table s’affichent :  
   
 -   **Sélectionner les 1000 lignes du haut**  
   

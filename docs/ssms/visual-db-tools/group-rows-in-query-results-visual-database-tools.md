@@ -3,8 +3,11 @@ title: "Regrouper des lignes dans les résultats de requête (Visual Database To
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a879bdc95cda0812fcc7d3f43f4d7e99c183337f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Regrouper des lignes dans les résultats de requête (Visual Database Tools)
-Pour créer des sous-totaux ou afficher d'autres informations de synthèse pour les sous-ensembles d'une table, créez des groupes à l'aide d'une requête d'agrégation. Chaque groupe synthétise les données pour toutes les lignes de la table qui ont la même valeur.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour créer des sous-totaux ou afficher d’autres informations de synthèse pour les sous-ensembles d’une table, créez des groupes à l’aide d’une requête d’agrégation. Chaque groupe synthétise les données pour toutes les lignes de la table qui ont la même valeur.  
   
 Imaginons, par exemple, que vous souhaitiez voir le prix moyen d'un livre dans la table `titles` , en détaillant toutefois les résultats par éditeur. Pour ce faire, groupez la requête par éditeur (par exemple, `pub_id`). La requête donnera, par exemple, le résultat suivant :  
   

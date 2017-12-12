@@ -3,8 +3,11 @@ title: "Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 10/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,15 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0c9f20a8c5f251728ce8050e9c6fc2cab4b55a55
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 550f91939f2ab6b8e16455a6a5dea2a4ac519c5d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
-
-SSMS est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. SSMS fournit des outils pour configurer, surveiller et administrer les instances de SQL. Utilisez SSMS pour déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, mais aussi pour créer des requêtes et des scripts.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. SSMS fournit des outils pour configurer, surveiller et administrer les instances de SQL. Utilisez SSMS pour déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, mais aussi pour créer des requêtes et des scripts.
 
 Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer vos bases de données et entrepôts de données, où qu’ils se trouvent (sur votre ordinateur local ou dans le cloud).
 
@@ -130,10 +132,10 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 Cette version de SSMS peut être installée dans les langues suivantes :
 
 SQL Server Management Studio 17.3 :<br>
-[chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [français](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [allemand](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [italien](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [japonais](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [coréen](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [russe](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [espagnol](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
 Package de mise à niveau de SQL Server Management Studio 17.3 (mises à niveau 17.x à 17.3) :<br>
-[chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [français](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [allemand](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [italien](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [japonais](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [coréen](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [russe](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [espagnol](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
+[Chinois (République populaire de Chine)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [Chinois (Taïwan)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [Allemand | ](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407)[Italien](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>Notes de publication
 

@@ -3,8 +3,11 @@ title: Explorateur de solutions | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c561819367b6e61a1ccfc977a9533efdc95009e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="solution-explorer"></a>Explorateur de solutions
-Le volet Explorateur de solutions dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fournit des conteneurs appelés projets pour la gestion des éléments, tels que les scripts de base de données, les requêtes, les connexions de données et les fichiers. Un ou plusieurs projets qui sont liés entre eux peuvent être combinés dans un conteneur appelé solution.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le volet Explorateur de solutions dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fournit des conteneurs appelés projets pour la gestion des éléments, tels que les scripts de base de données, les requêtes, les connexions de données et les fichiers. Un ou plusieurs projets qui sont liés entre eux peuvent être combinés dans un conteneur appelé solution.  
   
 Une solution contient un ou plusieurs projets, qu'accompagnent les fichiers et les métadonnées qui permettent de définir la solution dans son entier. Un projet est un ensemble de fichiers, qu'accompagnent les métadonnées correspondantes telles que les informations de connexion. Les solutions et les projets contiennent des éléments qui représentent les scripts, les requêtes, les informations de connexion et les fichiers dont vous avez besoin pour créer votre solution de base de données.  
   

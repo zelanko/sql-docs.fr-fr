@@ -3,8 +3,11 @@ title: Supprimer une solution | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bc9d4185ffae8c2d11a12537f986e0da832ea2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 14bc137050d2a8510bab16d7b241f9363b7c06f2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-a-solution"></a>Supprimer une solution
-La suppression d'une solution entraîne la suppression définitive des fichiers du stockage physique ainsi que des éléments de fichiers dans la solution.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La suppression d’une solution entraîne la suppression définitive des fichiers du stockage physique ainsi que des éléments de fichiers dans la solution.  
   
 > [!NOTE]  
 > Contrairement aux projets et aux éléments, une solution ne peut faire l'objet que d'une suppression définitive et ne peut pas être supprimée temporairement.  

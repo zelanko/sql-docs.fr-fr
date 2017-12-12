@@ -3,8 +3,11 @@ title: "Propriétés de l’objet table (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9ee522227473617b98b60691599b42ec7f8d35c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriétés de l'objet table (Visual Database Tools)
-Ces propriétés figurent dans la fenêtre Propriétés lorsque vous sélectionnez un objet table dans le **Concepteur de requêtes et de vues**. L'objet table peut être une vue, un synonyme, une table dérivée ou une fonction table. Sauf indication contraire, ces propriétés sont en lecture seule dans la fenêtre **Propriétés** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ces propriétés figurent dans la fenêtre Propriétés quand vous sélectionnez un objet table dans le **Concepteur de requêtes et de vues**. L'objet table peut être une vue, un synonyme, une table dérivée ou une fonction table. Sauf indication contraire, ces propriétés sont en lecture seule dans la fenêtre **Propriétés** .  
   
 > [!NOTE]  
 > Les propriétés mentionnées dans cette rubrique sont classées par catégorie et non par ordre alphabétique.  

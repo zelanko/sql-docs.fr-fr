@@ -3,8 +3,11 @@ title: "Travaux faisant référence à une planification | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b8411f688963016cce117b7a30437fb4abbaa04f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3212c569168c7eb1ecba2ceb85e17899e3f300c6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Travaux faisant référence à une planification
-Cette boîte de dialogue vous permet d'afficher des informations sur les travaux faisant référence à une planification particulière.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette boîte de dialogue vous permet d’afficher des informations sur les travaux faisant référence à une planification particulière.  
   
 ## <a name="options"></a>Options  
 **Planifier**  
