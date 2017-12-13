@@ -2,12 +2,12 @@
 title: "Référence technique pour les Annotations BI CSDL | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Guide de référence technique pour les annotations BI du langage CSDL
-  Cette section répertorie les éléments, l'attribut et les propriétés dans le CSDL qui sont utilisés pour représenter les modèles tabulaires [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section répertorie les éléments, attributs et les propriétés de CSDL qui sont utilisées pour représenter [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] les modèles tabulaires. Certains éléments sont nouveaux ; d'autres ont été annotés ou étendus pour la prise en charge de la modélisation Business Intelligence.  
   
  Pour une vue d’ensemble des modèles tabulaires et comment les entités, les relations et les formules sont représentées dans CSDL, consultez [Annotations CSDL pour Business Intelligence &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

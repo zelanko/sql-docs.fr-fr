@@ -2,12 +2,12 @@
 title: Effacer les Caches Analysis Services | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 811735d222f76b910d75e87505f075c83bba902c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66d337637c1e8d1798172392f2821a4213497136
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="clear-the-analysis-services-caches"></a>Effacer les caches Analysis Services
-  Analysis Services met en cache des données pour optimiser les performances des requêtes. Cette rubrique fournit des recommandations pour l'utilisation de la commande XMLA ClearCache en vue d'effacer des caches qui ont été créés en réponse à une requête MDX. Les effets de l'exécution de la commande ClearCache varient selon que vous utilisez un modèle tabulaire ou multidimensionnel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Analysis Services met en cache les données pour optimiser les performances des requêtes. Cette rubrique fournit des recommandations pour l'utilisation de la commande XMLA ClearCache en vue d'effacer des caches qui ont été créés en réponse à une requête MDX. Les effets de l'exécution de la commande ClearCache varient selon que vous utilisez un modèle tabulaire ou multidimensionnel.  
   
  **À quel moment effacer le cache pour des modèles MDX**  
   

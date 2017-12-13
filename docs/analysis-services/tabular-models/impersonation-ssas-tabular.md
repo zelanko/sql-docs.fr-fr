@@ -2,12 +2,12 @@
 title: "L’emprunt d’identité dans les modèles tabulaires Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>Emprunt d'identité 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Cette rubrique fournit des créateurs de modèles tabulaires une présentation d’informations d’identification d’ouverture de session utilisation par Analysis Services lors de la connexion à une source de données pour importer et traiter (Actualiser) des données.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette rubrique fournit des créateurs de modèles tabulaires une présentation d’informations d’identification d’ouverture de session utilisation par Analysis Services lors de la connexion à une source de données pour importer et traiter (Actualiser) des données.  
 
 ##  <a name="bkmk_conf_imp_info"></a>Configuration de l’emprunt d’identité  
  Où et dans quel contexte existe un modèle détermine la façon dont les informations d’emprunt d’identité sont configurées. Lorsque vous créez un projet de modèle, l’emprunt d’identité est configuré dans SQL Server Data Tools (SSDT) lorsque vous vous connectez à une source de données pour importer des données. Une fois qu’un modèle est déployé, l’emprunt d’identité peut être configuré dans la propriété de chaîne de connexion de base de données de modèle à l’aide de SQL Server Management Studio (SSMS). Pour les modèles tabulaires dans Azure Analysis Services, vous pouvez utiliser SSMS ou **afficher sous la forme : Script** mode dans le concepteur basée sur navigateur pour modifier le fichier Model.bim dans JSON.

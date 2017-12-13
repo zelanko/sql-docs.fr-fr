@@ -2,12 +2,12 @@
 title: "Exécution de Transactions dans ADOMD.NET | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78445de3ed3b17805bc458ce6078e0d9587eed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: abe2e4bcc48a86e26e9a70e4f39e6bfbf7ba13ee
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connexions dans ADOMD.NET - exécution de Transactions
-  Dans ADOMD.NET, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> permet de gérer le contexte de transaction pour un objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> donné. Ces fonctionnalités vous permettent d'exécuter plusieurs commandes dans le même contexte. Chaque commande lit les mêmes données sans que les données lues ne soient modifiées entre chaque exécution de commande.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans ADOMD.NET, vous utilisez la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> objet pour gérer le contexte de transaction pour une donnée <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objet. Ces fonctionnalités vous permettent d'exécuter plusieurs commandes dans le même contexte. Chaque commande lit les mêmes données sans que les données lues ne soient modifiées entre chaque exécution de commande.  
   
 > [!NOTE]  
 >  Le <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> classe est l’implémentation de la **System.Data.IDbTransaction** interface, une partie de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] bibliothèque de classes .NET Framework et implémentée par tous les fournisseurs de données .NET Framework qui prennent en charge des transactions.  

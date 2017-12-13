@@ -2,12 +2,12 @@
 title: "Dans les modèles multidimensionnels, les vues de Source de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
-  Une vue de source de données (DSV) est une abstraction d'une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une vue de source de données (DSV) est une abstraction d’une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
   
  Vous pouvez créer plusieurs vues de sources de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur une ou plusieurs sources de données et construire chacune d’elles en fonction de la configuration requise pour une solution différente.  
   

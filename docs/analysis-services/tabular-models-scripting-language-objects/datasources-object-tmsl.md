@@ -2,12 +2,12 @@
 title: "Objet de sources de données (TMSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasources-object-tmsl"></a>Objet de sources de données (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Définit une connexion à une source de données utilisée par le modèle, soit pendant l’importation pour ajouter des données au modèle, ou dans les requêtes directes via le mode DirectQuery.  Modèles en mode DirectQuery peuvent posséder une seule **DataSource** objet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Définit une connexion à une source de données utilisée par le modèle, soit pendant l’importation pour ajouter des données au modèle, ou dans les requêtes directes via le mode DirectQuery.  Modèles en mode DirectQuery peuvent posséder une seule **DataSource** objet.  
   
  Sauf si vous créez, en remplaçant, ou la modification de l’objet de source de données lui-même, n’importe quelle source de données référencé dans votre script (comme dans le script de partition) doit être un existant **DataSource** objet dans votre modèle.  
   

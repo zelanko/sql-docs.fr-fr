@@ -2,12 +2,12 @@
 title: "Outils de requête d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3979e01644bbec77b71a93b7a20cfc9bc4276402
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tools"></a>Outils de requête d'exploration de données
-  Toutes les requêtes d’exploration de données utilisent le langage DMX (Data Mining Extensions). Vous pouvez utiliser DMX pour créer des modèles pour tous les types de tâches d’apprentissage automatique, notamment la classification, l’évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également écrire des requêtes DMX pour obtenir des informations sur les modèles et les statistiques générés quand vous avez traité le modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Toutes les requêtes d’exploration de données utilisent le langage d’Extensions DMX (Data Mining). Vous pouvez utiliser DMX pour créer des modèles pour tous les types de tâches d’apprentissage automatique, notamment la classification, l’évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également écrire des requêtes DMX pour obtenir des informations sur les modèles et les statistiques générés quand vous avez traité le modèle.  
   
  Vous pouvez écrire votre propre requête DMX, ou vous pouvez générer une requête DMX de base à l’aide d’un outil tel que le **Générateur de requêtes de prédiction** , puis la modifier. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent des outils qui vous permettent de générer des requêtes de prédiction DMX. Cette rubrique explique comment créer et exécuter des requêtes d’exploration de données à l’aide de ces outils.  
   

@@ -2,12 +2,12 @@
 title: "Spécification du contenu d’un axe de requête (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c58b048b5452719382c45c9c160293d5d7b6918f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9b7100066015b84fafb6ed11428b318ef79fc78d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-query-axis"></a>Requête MDX et les Axes de segment - spécifier le contenu d’un axe de requête
-  Les axes de requête spécifient les bords d'un jeu de cellules retourné par une instruction SELECT MDX (Multidimensional Expressions). La spécification des bords d'un jeu de cellules vous permet de restreindre les données retournées qui sont visibles par le client.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Axes de requête spécifient les bords d’un ensemble de cellules renvoyées par une instruction SELECT MDX (Multidimensional Expressions). La spécification des bords d'un jeu de cellules vous permet de restreindre les données retournées qui sont visibles par le client.  
   
  Pour spécifier des axes de requête, utilisez la clause `<SELECT query axis clause>` pour attribuer un jeu à un axe de requête particulier. Chaque valeur `<SELECT query axis clause>` définit un axe de requête. Le nombre d'axes du dataset est égal au nombre de valeurs `<SELECT query axis clause>` de l'instruction SELECT.  
   

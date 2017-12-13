@@ -2,12 +2,12 @@
 title: "Propriétés (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff1e43f8fd1242b8ac314b49268ec8c86e7cb907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10cd57d39845f67fe8e447a1c95a5e412709409d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-assl"></a>Propriétés (ASSL)
-  Cette section de référence contient des informations de syntaxe et d'utilisation pour chaque élément agissant en tant que propriété d'objet dans le schéma ASSL (Analysis Services Scripting Language).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui agit comme une propriété d’objet dans le schéma d’Analysis Services Scripting Language (ASSL).  
   
  Bien que le schéma ASSL renferme uniquement des éléments XML, les éléments décrits dans cette section correspondent, du point de vue du développeur, à des propriétés qui décrivent des objets.  
   

@@ -2,12 +2,12 @@
 title: "Codes des types utilisés dans les traces d’objets Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e6daef93ce07609173a3595adbb409c4b13607e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Codes des types d'objets Analysis Services utilisés dans les traces
-  Cette page répertorie le type d'objet (un numéro à six chiffres) de chaque objet d'un modèle de données Analysis Services. Ces codes apparaissent dans les journaux des traces et sont utilisés pour identifier le type d'objet associé à un verrou particulier. Par exemple, un dépassement du délai d'attente d'un verrou sur une base de données indique le type d'objet 100002, qui est le type d'objet Base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette page répertorie le type d’objet (un numéro à six chiffres) de chaque objet dans un modèle de données Analysis Services. Ces codes apparaissent dans les journaux des traces et sont utilisés pour identifier le type d'objet associé à un verrou particulier. Par exemple, un dépassement du délai d'attente d'un verrou sur une base de données indique le type d'objet 100002, qui est le type d'objet Base de données.  
   
 > [!NOTE]  
 >  Il y a davantage de codes répertoriés ci-dessous que ce qui apparaît réellement dans un journal des traces. La liste ci-dessous est une liste complète des codes de type pour chaque objet, mais seuls les objets susceptibles d'être verrouillés comportent un code de type d'objet dans un journal des traces.  

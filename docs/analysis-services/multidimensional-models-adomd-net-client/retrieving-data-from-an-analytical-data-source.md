@@ -2,12 +2,12 @@
 title: "La récupération des données à partir d’une Source de données analytiques | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2dbd10be43b0d0e64b4068e6f93c0bba2457d4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8d2c400fc82852333b64d9bd89b2e7c74190061
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>Récupération de données à partir d'une source de données analytiques
-  Dès lors que vous avez établi une connexion et que vous avez créé la requête, vous pouvez récupérer tout type de données. Dans ADOMD.NET, vous pouvez récupérer des données à l’aide de trois objets différents (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, et <xref:System.Xml.XmlReader>) en appelant une de le **Execute** méthodes de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> objet.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une fois qu’une connexion et la création de la requête, vous pouvez extraire des données. Dans ADOMD.NET, vous pouvez récupérer des données à l’aide de trois objets différents (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>, et <xref:System.Xml.XmlReader>) en appelant une de le **Execute** méthodes de la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> objet.  
   
  Chacun de ces trois objets établit un équilibre entre interactivité et charge :  
   

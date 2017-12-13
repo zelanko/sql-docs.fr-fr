@@ -2,12 +2,12 @@
 title: "Fonctionnalités et tâches Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Fonctionnalités et tâches Analysis Services
-  La documentation d’Analysis Services est structurée en fonction du type de modèle et du mode serveur afin que vous puissiez vous concentrer sur les outils, les tâches et les fonctionnalités disponibles pour le mode que vous avez installé. Des tâches d’administration communes à plusieurs modes se trouvent dans Gestion des instances.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Documentation fondamentale d’Analysis Services est organisée en mode de serveur et de type de modèle afin de pouvoir vous concentrer sur simplement les outils, les tâches et les fonctionnalités qui sont disponibles dans le mode que vous avez installé. Des tâches d’administration communes à plusieurs modes se trouvent dans Gestion des instances.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Comparaison des solutions tabulaires et multidimensionnelles (SSAS)](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  

@@ -2,12 +2,12 @@
 title: "Modifier les couleurs utilisées dans la visionneuse d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f2cbde3cff67fc89cdedd4dab37183389f5796d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Modifier les couleurs utilisées dans la visionneuse d'exploration de données
-  Vous pouvez modifier les couleurs utilisées dans les visionneuses d'explorations de données pour afficher des séries de données, des nœuds ou des clusters. Pour ce faire, définissez des options dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Après avoir modifié les paramètres, les sélections de couleur s'appliquent à tous les modèles que vous affichez à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; toutefois, vous devez fermer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et rouvrir le modèle dans la visionneuse pour voir les nouvelles couleurs.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez modifier les couleurs utilisées dans les visionneuses d’exploration de données pour afficher des séries de données, des nœuds ou des clusters. Pour ce faire, définissez des options dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Après avoir modifié les paramètres, les sélections de couleur s'appliquent à tous les modèles que vous affichez à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; toutefois, vous devez fermer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et rouvrir le modèle dans la visionneuse pour voir les nouvelles couleurs.  
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>Pour modifier les couleurs utilisées dans les visionneuses d'exploration de données  
   

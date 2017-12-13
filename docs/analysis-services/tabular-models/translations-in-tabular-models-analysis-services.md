@@ -2,12 +2,12 @@
 title: "Traductions dans les modèles tabulaires (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traductions dans les modèles tabulaires (Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Ajoute la prise en charge des chaînes de traduction pour les modèles tabulaires. Un objet unique dans le modèle peut avoir plusieurs traductions de nom ou de description, ce qui permet de prendre en charge des versions multilingues dans la définition du modèle.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajoute la prise en charge des chaînes de traduction pour les modèles tabulaires. Un objet unique dans le modèle peut avoir plusieurs traductions de nom ou de description, ce qui permet de prendre en charge des versions multilingues dans la définition du modèle.  
   
  Les chaînes traduites sont destinées aux métadonnées d’objet uniquement (noms et descriptions des tables et colonnes) qui s’affichent dans un outil client tel qu’une liste de tableau croisé dynamique Excel.  Pour utiliser des chaînes traduites, la connexion cliente spécifie la culture. Dans la fonctionnalité **Analyse dans Excel** , vous pouvez choisir la langue dans la liste déroulante. Pour d’autres outils, vous devrez peut-être spécifier la culture dans la chaîne de connexion.  
   

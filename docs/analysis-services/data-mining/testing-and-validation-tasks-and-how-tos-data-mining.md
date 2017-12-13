@@ -2,12 +2,12 @@
 title: "Test et des tâches de Validation et des procédures (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4dff2bccc2c56f35152c2959ee4b9699eaf9821b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c6b24aa2810e572df92ae8c0a1203761adf46003
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tâches de test et validation et procédures (exploration de données)
-  Vous pouvez utiliser l’onglet **Graphique d’analyse de précision de l’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour comparer la précision prédictive des modèles d’exploration de données dans la structure d’exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez utiliser la **graphique de précision d’exploration de données** onglet du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour comparer la précision prédictive des modèles d’exploration de données dans votre structure d’exploration de données.  
   
  Vous pouvez créer quatre types de graphiques :  
   

@@ -2,12 +2,12 @@
 title: "Architecture d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 637caf3c237da1bcd032ec81ddcd626e94b56dbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be637286bda9a3d2a6f39115357603bf03eec81c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
-  Cette section décrit l'architecture des solutions d'exploration de données qui sont hébergées dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette section décrit l’architecture des solutions d’exploration de données qui sont hébergés dans une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  
   
  En général, l'exploration de données SQL Server fonctionne en tant que service fourni dans le cadre d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exécutée en mode multidimensionnel ; par conséquent, nous vous recommandons de consulter également les sections de la documentation en ligne suivantes qui décrivent le fonctionnement, la maintenance et la configuration des solutions multidimensionnelles d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

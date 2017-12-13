@@ -2,12 +2,12 @@
 title: "Installer, de distribuer et de faire référence à l’objet de modèle tabulaire | Documents Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a2ba71ce1ac7dcc0787e84edba3ea436bd33e25f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60d264dccf042ec9447d92f17045f238597cd29e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>Installer, de distribuer et de faire référence à l’objet de modèle tabulaire
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Cet article explique comment télécharger, référencer et redistribuer Analysis Services tabulaire objet modèle (TOM), une bibliothèque c# pour créer et gérer les modèles tabulaires et les bases de données dans le code managé.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cet article explique comment télécharger, référencer et redistribuer Analysis Services tabulaire objet modèle (TOM), une bibliothèque c# pour créer et gérer les modèles tabulaires et les bases de données dans le code managé.  
   
 TOM est une extension de la bibliothèque client AMO (Microsoft.AnalysisServices.dll) qui est fourni avec SQL Server 2016. Il fonctionne avec les modèles tabulaires, ciblez le moteur de métadonnées tabulaire dans la version de SQL Server 2016. Pour utiliser TOM, le modèle et la base de données doivent être au niveau de compatibilité 1200 ou supérieur.  
 

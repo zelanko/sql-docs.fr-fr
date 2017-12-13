@@ -2,12 +2,12 @@
 title: "Créer des Tables, des Partitions et des colonnes dans un modèle tabulaire | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecf8c233177b283c5dc3a5601a267bdfa0c8a10f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 94bad422a63276ad130027ea77de4734571016a8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Créer des Tables, des Partitions et des colonnes dans un modèle tabulaire
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Dans un modèle tabulaire, une table se compose de lignes et de colonnes. Les lignes sont organisées en partitions pour prendre en charge l’actualisation des données incrémentielles. Une solution tabulaire peut prendre en charge plusieurs types de tables, en fonction de d'où proviennent les données :  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Dans un modèle tabulaire, une table se compose de lignes et de colonnes. Les lignes sont organisées en partitions pour prendre en charge l’actualisation des données incrémentielles. Une solution tabulaire peut prendre en charge plusieurs types de tables, en fonction de d'où proviennent les données :  
 
 * Tables normales, d'où proviennent les données à partir d’une source de données relationnelle, via le fournisseur de données. 
 

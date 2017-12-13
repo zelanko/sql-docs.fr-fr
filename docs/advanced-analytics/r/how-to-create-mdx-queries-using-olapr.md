@@ -17,24 +17,24 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4ee223a3c27ee35a823917f9d1aefcd8fb86e80e
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 235240ef5b49e0fb08ac86e215e98907dd42880a
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-mdx-queries-using-olapr"></a>Comment créer des requêtes MDX à l’aide d’olapR
 
-Le [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) package prend en charge les requêtes sur les modèles multidimensionnels hébergées dans SQL Server Analysis Services. Vous pouvez générer une requête sur un cube existant à l’aide de MDX, Explorer des dimensions et autres objets de cube et le coller dans des requêtes MDX existants pour récupérer des données.
+Le [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) package prend en charge les requêtes MDX sur des cubes hébergées dans SQL Server Analysis Services. Vous pouvez générer une requête sur un cube existant, Explorer des dimensions et autres objets de cube et le coller dans des requêtes MDX existants pour récupérer des données.
 
-Cet article décrit les deux utilisations principales du package olapR :
+Cet article décrit les deux utilisations principales de la **olapR** package :
 
-+ [Créer une requête à partir de R, à l’aide des constructeurs fournis dans le package olapR](#buildMDX)
++ [Créer une requête MDX à partir de R, à l’aide des constructeurs fournis dans le package olapR](#buildMDX)
 + [Exécutez une requête MDX existant à l’aide d’olapR et un fournisseur OLAP](#executeMDX)
 
 Les opérations suivantes ne sont pas prises en charge :
 
-+ Requêtes sur un modèle tabulaire
++ Requêtes DAX sur un modèle tabulaire
 + Création de nouveaux objets OLAP
 + Écriture différée pour les partitions, notamment les sommes ou les mesures
 
@@ -48,7 +48,7 @@ Les opérations suivantes ne sont pas prises en charge :
 
 4. Utilisez les fonctions d’assistance suivantes pour fournir plus de détails sur les dimensions et les mesures à inclure dans la requête MDX :
 
-     + `cube()` Spécifiez le nom de la base de données SSAS.
+     + `cube()` Spécifiez le nom de la base de données SSAS. Si vous vous connectez à une instance nommée, fournissez le nom de l’ordinateur et le nom de l’instance. 
      + `columns()`Fournir les noms des mesures à utiliser dans le **ON colonnes** argument.
      + `rows()`Fournir les noms des mesures à utiliser dans le **ON ROWS** argument.
      + `slicers()` Spécifiez un ou plusieurs membres à utiliser comme segment. Un segment est comme un filtre appliqué à toutes les données de requête MDX.
@@ -59,7 +59,7 @@ Les opérations suivantes ne sont pas prises en charge :
          
          Si votre requête est relativement simple, vous pouvez utiliser les fonctions `columns`, `rows`, et ainsi de suite pour créer votre requête. Toutefois, vous pouvez aussi utiliser la fonction `axis()` avec une valeur d’index non nulle pour créer une requête MDX avec de nombreux qualificateurs, ou pour ajouter des dimensions supplémentaires comme qualificateurs.
 
-5. Passez le handle et la requête MDX terminée dans les fonctions `executeMD` ou `execute2D`, selon la forme des résultats.
+5. Passez le handle et la requête MDX terminée, dans une des fonctions suivantes, selon la forme des résultats : 
 
   + `executeMD` Retourne un tableau multidimensionnel
   + `execute2D` Retourne une trame de données à deux dimensions (tabulaire)
@@ -81,7 +81,7 @@ Les opérations suivantes ne sont pas prises en charge :
 
 Les exemples suivants reposent sur le AdventureWorks données mart et cube le projet, car ce projet est largement disponible dans plusieurs versions, y compris les fichiers de sauvegarde peuvent facilement être restaurées dans Analysis Services. Si vous n’avez pas un cube existant, obtenir un exemple de cube à l’aide des options suivantes :
 
-+ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysinotes Services jusqu'à la leçon 4 : [création d’un cube OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu'à la leçon 4 : [création d’un cube OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Téléchargez un cube existant en tant que sauvegarde et restaurez-la à une instance d’Analysis Services. Par exemple, ce site propose un cube de traitement complet dans un format compressé : [SQL modèle multidimensionnel Adventure Works 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier et sa restauration sur votre instance SSAS. Pour plus d’informations, consultez [sauvegarde et restauration](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou [applet de commande Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 
@@ -98,7 +98,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + Sur les colonnes, vous pouvez spécifier plusieurs mesures comme éléments d’une chaîne séparés par des virgules.
 + L’axe des lignes utilise toutes les valeurs possibles (tous les MEMBRES) de la dimension « Product Line ». 
-+ Cette requête retourne une table avec trois colonnes, contenant un récapitulatif avec _regroupement_ des ventes sur Internet dans tous les pays.
++ Cette requête retourne une table avec trois colonnes, contenant un _cumul_ récapitulatif des ventes sur Internet à partir de tous les pays.
 + La clause WHERE spécifie les _axe de secteur_. Dans cet exemple, le segment utilise un membre de la **SalesTerritory** dimension pour filtrer la requête afin que seules les ventes à partir de l’Australie sont utilisées dans les calculs.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>Pour générer cette requête à l’aide des fonctions fournies dans olapR
@@ -115,6 +115,12 @@ slicers(qry) <- c("[Sales Territory].[Sales Territory Country].[Australia]")
 
 result1 <- executeMD(ocs, qry)
 
+```
+
+Pour une instance nommée, veillez à échapper des caractères qui pourraient être considérées comme des caractères de contrôle dans R.  Par exemple, la chaîne de connexion fait référence à une instance OLAP01, sur un serveur nommé ContosoHQ :
+
+```R
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>Pour exécuter cette requête comme chaîne MDX prédéfinie
@@ -156,7 +162,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| Résultats  |  
+| Résultats  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -174,7 +180,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| Résultats  |  
+| Résultats  |
 | ----|
 | _Customer_|
 |_Date_|
@@ -183,7 +189,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>Pour retourner tous les membres de la dimension et de la hiérarchie spécifiées
 
-Après avoir défini la source et créé le handle, spécifiez le cube, la dimension et la hiérarchie à retourner.
+Après avoir défini la source et créé le handle, spécifiez le cube, la dimension et la hiérarchie à retourner. Dans les résultats de retournés, les éléments qui portent le préfixe  **->**  représentent les enfants du membre précédent.
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
@@ -191,7 +197,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| Résultats  |  
+| Résultats  |
 | ----|
 | _Accessories_|
 |_Bikes_|
@@ -200,8 +206,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 |-> Assembly Components|
 
-
-Éléments dans les résultats qui sont précédés de  **->**  représentent les enfants du membre précédent.
 
 ## <a name="see-also"></a>Voir aussi
 

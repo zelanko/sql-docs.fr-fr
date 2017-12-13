@@ -2,12 +2,12 @@
 title: "Rechercher un nœud spécifique dans un réseau de dépendances | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b0dd066ca0c9e9e8189e7b211866f0971f3df92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f95a58a73030375534a202dd0c6a6d24a449e373
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Rechercher un nœud spécifique dans un réseau de dépendances
-  Un réseau de dépendances dans un modèle d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut contenir plusieurs nœuds, ce qui rend difficile la recherche des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un réseau de dépendances dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modèle d’exploration de données peut contenir plusieurs nœuds, ce qui complique la localisation des données vous intéressez. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Pour rechercher un nœud spécifique dans un réseau de dépendances  
   

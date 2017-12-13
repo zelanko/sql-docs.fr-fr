@@ -2,12 +2,12 @@
 title: "Définir des propriétés de hiérarchie de Cube | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dad968995a91d8a163a8ba067925e4dcb07848cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 858e5f95c4c382b46d85a9f0abcae728bae102c1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-cube-hierarchy-properties"></a>Définir les propriétés des hiérarchies de cube
-  Les propriétés des hiérarchies de cube vous permettent de spécifier des paramètres uniques pour les hiérarchies définies par l'utilisateur des dimensions de cube à partir de la même dimension de base de données. Le tableau suivant décrit les propriétés d'une hiérarchie de cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Propriétés de hiérarchie de cube vous permettent de vous permet de spécifier des paramètres uniques pour les hiérarchies définies par l’utilisateur dans les dimensions de cube basées sur la même dimension de base de données. Le tableau suivant décrit les propriétés d'une hiérarchie de cube.  
   
 |Propriété|Description|  
 |--------------|-----------------|  

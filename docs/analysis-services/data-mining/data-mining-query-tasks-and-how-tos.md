@@ -2,12 +2,12 @@
 title: "Tâches et procédures de requête d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ffbdae6e1ffbd491d1191df8543e8b3f831921d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2be13f6662ad2ed4d3cdae60eb1cc7ac458f62a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tâches de requête d'exploration de données et procédures
-  La capacité de créer des requêtes est essentielle si vous devez utiliser vos modèles d'exploration de données. Cette section fournit des liens vers des exemples de création de requêtes sur un modèle d’exploration de données à l’aide des outils fournis dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur ce qu’est une requête d’exploration de donnée, ou sur les différents types de requêtes que vous pouvez créer, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La possibilité de créer des requêtes est essentielle si vous devez faire utiliser de vos modèles d’exploration de données. Cette section fournit des liens vers des exemples de création de requêtes sur un modèle d’exploration de données à l’aide des outils fournis dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur ce qu’est une requête d’exploration de donnée, ou sur les différents types de requêtes que vous pouvez créer, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md).  
   
 ## <a name="creating-queries-with-prediction-query-builder"></a>Création de requêtes avec le Générateur de requêtes de prédiction  
  Le Générateur de requêtes de prédiction est fourni dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] comme un moyen de générer graphiquement des requêtes sur des modèles d’exploration de données. Les rubriques suivantes expliquent comment sélectionner un modèle, spécifier une source de données, personnaliser les prédictions et enregistrer la sortie.  

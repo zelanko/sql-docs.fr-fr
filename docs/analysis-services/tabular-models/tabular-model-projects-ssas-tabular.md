@@ -2,12 +2,12 @@
 title: "Projets de modèles tabulaires (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b71248949c16481dca0649fa86722477a46f231
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d6422eb1648f33f699525edbc944f3bc0b4c5519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Projets de modèles tabulaires (SSAS Tabulaire)
-  Pour créer un nouveau modèle tabulaire, vous devez d'abord créer un projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous installez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], trois nouveaux modèles de projet Business Intelligence sont fournis pour la création de projets de modèles tabulaires. Chaque modèle de projet fournit une infrastructure sur laquelle vous pouvez démarrer la création de votre modèle. Les rubriques de cette section décrivent comment créer un projet de modèle tabulaire à l'aide des modèles de projet.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pour créer un nouveau modèle tabulaire, vous devez d’abord créer un nouveau projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Lorsque vous installez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], trois nouveaux modèles de projet Business Intelligence sont fournis pour la création de projets de modèles tabulaires. Chaque modèle de projet fournit une infrastructure sur laquelle vous pouvez démarrer la création de votre modèle. Les rubriques de cette section décrivent comment créer un projet de modèle tabulaire à l'aide des modèles de projet.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

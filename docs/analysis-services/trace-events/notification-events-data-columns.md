@@ -2,12 +2,12 @@
 title: "Colonnes de données d’événements notification | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29b3b8561d260e17adb78bb944ee32a20b26406b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 39c93ff427048fe1893dd78f8fe35abc0b52885b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="notification-events-data-columns"></a>Colonnes de données d'événements de notification
-  Les événements de notification sont des événements qui ne sont pas directement générés par les utilisateurs de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, des notifications se déclenchent suite à la mise à jour par les utilisateurs des tables sous-jacentes pour la mise en cache proactive.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Événements de notification sont des événements qui ne sont pas directement générés par les utilisateurs de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, des notifications se déclenchent suite à la mise à jour par les utilisateurs des tables sous-jacentes pour la mise en cache proactive.  
   
  La catégorie d'événement Événements de notification a la classe d'événements suivante :  
   

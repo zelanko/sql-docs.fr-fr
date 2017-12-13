@@ -2,12 +2,12 @@
 title: "DAX dans les modèles tabulaires (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
 ms.date: 10/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e44414be7517bbecf0411753bdd55337cc9e0d39
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX dans les modèles tabulaires (SSAS tabulaire)
-  Les Expressions DAX (Data Analysis) est un langage de formule utilisé pour créer des calculs personnalisés dans Analysis Services, Power BI Desktop et Power Pivot dans Excel. Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Les Expressions DAX (Data Analysis) est un langage de formule utilisé pour créer des calculs personnalisés dans Analysis Services, Power BI Desktop et Power Pivot dans Excel. Les formules DAX comportent des fonctions, des opérateurs, et des valeurs pour effectuer des calculs avancés sur les données des tables et des colonnes.  
   
  Bien que DAX est utilisé dans Analysis Services, Power BI Desktop et Power Pivot dans Excel, cette rubrique s’applique plus aux projets de modèle tabulaire Analysis Services créés dans SQL Server Data Tools (SSDT).  
   

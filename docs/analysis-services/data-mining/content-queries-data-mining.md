@@ -2,12 +2,12 @@
 title: "Requêtes (exploration de données) de contenu | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45a912354d122eadb7008c2ff260366fa46770fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c32111e19274ecd744f968c7ce128a924487f22c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
-  Une requête de contenu est une façon d'extraire des informations sur les statistiques internes et la structure du modèle d'exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une requête de contenu est une façon d’extraire des informations sur les statistiques internes et de la structure du modèle d’exploration de données. Parfois, une requête de contenu peut fournir des détails qui ne sont pas aisément disponibles dans la visionneuse. Vous pouvez également utiliser les résultats d'une requête de contenu pour extraire des informations par programme pour d'autres utilisations.  
   
  Cette section fournit des informations générales sur les types d'informations que vous pouvez récupérer à l'aide d'une requête de contenu, ainsi que la syntaxe DMX générale pour les requêtes de contenu.  
   

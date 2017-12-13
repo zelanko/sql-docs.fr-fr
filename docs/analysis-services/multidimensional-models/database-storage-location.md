@@ -2,12 +2,12 @@
 title: "Emplacement de stockage de base de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6e5e0399f0025b434ff2a972b47ca3a7608fb1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 56b8fe6b370864f52e5f497b93bb3939fa1c6543
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-storage-location"></a>Emplacement de stockage de la base de données
-  Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite qu'une certaine base de données réside en dehors du dossier des données du serveur. Ces situations sont souvent générées par des exigences opérationnelles, telles que l'amélioration des performances ou le développement du stockage. Pour ces situations, la propriété de base de données **DbStorageLocation** permet au dba [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de spécifier l’emplacement de la base de données sur un disque local ou un périphérique réseau.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il existe souvent des situations lorsqu’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrateur de base de données (dba) souhaite une certaine base de données résident en dehors du dossier de données du serveur. Ces situations sont souvent générées par des exigences opérationnelles, telles que l'amélioration des performances ou le développement du stockage. Pour ces situations, la propriété de base de données **DbStorageLocation** permet au dba [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de spécifier l’emplacement de la base de données sur un disque local ou un périphérique réseau.  
   
 ## <a name="dbstoragelocation-database-property"></a>Propriété de base de données DbStorageLocation  
  La propriété de base de données **DbStorageLocation** spécifie le dossier où [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée et gère l’ensemble des fichiers de données et de métadonnées de la base de données. Tous les fichiers de métadonnées sont stockés dans le dossier **DbStorageLocation** , à l’exception du fichier de métadonnées de la base de données, qui est stocké dans le dossier de données du serveur. Deux considérations importantes doivent être prises en compte lors de la définition de la valeur de la propriété de base de données **DbStorageLocation** :  

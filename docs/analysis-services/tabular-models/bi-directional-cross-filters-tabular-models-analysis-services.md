@@ -2,12 +2,12 @@
 title: "-Modèles tabulaires - Analysis Services les filtres croisés bidirectionnels | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>-Modèles tabulaires - Analysis Services les filtres croisés bidirectionnels
-  L’une des nouveautés de SQL Server 2016 est son approche intégrée d’activation des *filtres croisés bidirectionnels* dans les modèles tabulaires. Grâce à elle, plus besoin de concevoir manuellement des solutions de contournement DAX pour propager un contexte de filtre dans les relations de table.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nouveau SQL Server 2016 est une approche intégrée pour l’activation de *des filtres croisés bidirectionnels* dans les modèles tabulaires, éliminant le besoin d’écrit à la main de solutions de contournement DAX pour propager un contexte de filtre sur les relations de table.  
   
  Décomposons les éléments constitutifs de ce concept : le *filtrage croisé* est la possibilité de définir un contexte de filtre sur une table en fonction des valeurs d’une table associée ; *bidirectionnel* renvoie au transfert d’un contexte de filtre vers une deuxième table associée située à l’autre extrémité d’une relation de table. Comme son nom l’indique, vous pouvez procéder à un découpage dans les deux directions de la relation et pas seulement dans un seul sens.  En interne, le filtrage bidirectionnel étend le contexte de filtre pour interroger un sur-ensemble de vos données.  
   

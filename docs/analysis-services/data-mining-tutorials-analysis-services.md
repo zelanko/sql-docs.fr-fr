@@ -2,12 +2,12 @@
 title: "Didacticiels d’exploration de données (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/06/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -19,14 +19,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 39db9f015ef3c52d5e967bdb6c45a47f8b7bd40f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7375fc22170ffa3f0f11455af619d62f42df50c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Didacticiels sur l'exploration de données (Analysis Services)
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilite la création de solutions d’exploration de données à l’aide des Assistants et des visualisations intégrées. En particulier si vous ne connaissez pas le Machine Learning, les outils de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] constituent un moyen facile de concevoir, former et explorer des modèles d’exploration de données. Les données de vos modèles peuvent être stockées dans un cube, une base de données relationnelle ou tout autre support source par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Après avoir créé un modèle, vous pouvez le mettre en production en accédant au modèle pour créer des prédictions à l’aide de plusieurs clients de prédiction, notamment [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ASP.NET.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , ce qui la rend facile de créer des solutions d’exploration de données à l’aide des Assistants et des visualisations intégrées. En particulier si vous ne connaissez pas le Machine Learning, les outils de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] constituent un moyen facile de concevoir, former et explorer des modèles d’exploration de données. Les données de vos modèles peuvent être stockées dans un cube, une base de données relationnelle ou tout autre support source par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Après avoir créé un modèle, vous pouvez le mettre en production en accédant au modèle pour créer des prédictions à l’aide de plusieurs clients de prédiction, notamment [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ASP.NET.  
   
 > [!NOTE]  
 >Les didacticiels décrits ici n’ont pas été mis à jour pour [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Vous pouvez utiliser les didacticiels créés pour SQL Server 2014. Les fonctionnalités d’exploration de données pour [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]n’ont pas du tout été modifiées d’un point de vue fonctionnel. Les étapes doivent être identiques.  

@@ -2,12 +2,12 @@
 title: Annulation de commandes (XMLA) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d86c304f8735cc8933fd9c466af4f58f4d980c74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5b6e43a5c79ccce179f960053ec7adde4e407509
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="canceling-commands-xmla"></a>Annulation de commandes (XMLA)
-  En fonction des autorisations d’administration de l’utilisateur qui émet la commande, le [Annuler](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) commande en XML pour Analysis (XMLA) peut annuler une commande sur une session, une session, une connexion, un processus serveur, ou une session associée ou.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]En fonction des autorisations d’administration de l’utilisateur qui émet la commande, le [Annuler](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) commande en XML pour Analysis (XMLA) peut annuler une commande sur une session, une session, une connexion, un processus de serveur ou une session associée ou connexion.  
   
 ## <a name="canceling-commands"></a>Annulation de commandes  
  Un utilisateur peut annuler la commande en cours d’exécution dans le contexte de la session explicite active en envoyant un **Annuler** avec aucune propriété spécifiée.  

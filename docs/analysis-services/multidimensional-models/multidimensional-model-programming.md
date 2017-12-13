@@ -2,12 +2,12 @@
 title: "Programmation de modèle multidimensionnel | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 25171096f715c5fc9aee4f9c4346a70508fa8f7d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-programming"></a>Programmation de modèle multidimensionnel
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs API que vous pouvez utiliser pour programmer sur une instance Analysis Services et met à disposition des bases de données multidimensionnelles. Cette section décrit les méthodes disponibles aux développeurs qui souhaitent créer des applications personnalisées à l'aide des solutions multidimensionnelles Analysis Services. Vous pouvez utiliser ces informations pour choisir l'interface de programmation qui répond le mieux aux besoins d'un projet spécifique. Les projets de développement Analysis Services peuvent être basés sur du code managé ou non managé qui s'exécute sur une plateforme Windows, ou d'autres plateformes qui prennent en charge l'accès HTTP.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs API que vous pouvez utiliser pour programmer par rapport à une instance Analysis Services et les bases de données multidimensionnelles, qu’il rend disponible. Cette section décrit les méthodes disponibles aux développeurs qui souhaitent créer des applications personnalisées à l'aide des solutions multidimensionnelles Analysis Services. Vous pouvez utiliser ces informations pour choisir l'interface de programmation qui répond le mieux aux besoins d'un projet spécifique. Les projets de développement Analysis Services peuvent être basés sur du code managé ou non managé qui s'exécute sur une plateforme Windows, ou d'autres plateformes qui prennent en charge l'accès HTTP.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Présentation de l’architecture Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
