@@ -2,12 +2,12 @@
 title: "Projets d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7ae03bc24451bb038581c53d5830c54a49f9c7d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
-  Un projet d'exploration de données fait partie d'une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un projet d’exploration de données fait partie d’un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  
   
  Cette rubrique fournit les informations de base nécessaires à la compréhension et à la création des projets d'exploration de données.  
   

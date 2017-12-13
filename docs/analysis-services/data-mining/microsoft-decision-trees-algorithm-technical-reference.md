@@ -2,12 +2,12 @@
 title: "Techniques de l’algorithme d’arbres de décision Microsoft | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
-  L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme MDT est un algorithme hybride qui incorpore des méthodes différentes pour la création d’une arborescence et prend en charge plusieurs tâches analytiques, y compris la régression, la classification et association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
   
  Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme pour différentes tâches et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles d'arbre de décision.  
   

@@ -2,12 +2,12 @@
 title: Calculs | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0771e03eaa12e37cce685309fa776fe7f7c31443
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 660c506193bfd554d8bbf5c1183bfea9384bbb4c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculations"></a>calculs
-  Un calcul est une expression de MDX (Multidimensional Expressions) ou un script qui est utilisé pour définir un membre calculé, d’un jeu nommé ou d’une attribution d’étendue dans un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'ajouter des objets définis non pas par les données du cube, mais par des expressions qui peuvent référencer d'autres parties du cube, d'autres cubes voire des informations à l'extérieur de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'étendre les capacités d'un cube, en renforçant la flexibilité et la puissance des applications de décisionnel. Pour plus d’informations sur les calculs de script, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et des requêtes MDX, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un calcul est une expression de MDX (Multidimensional Expressions) ou un script qui est utilisé pour définir un membre calculé, d’un jeu nommé ou d’une attribution d’étendue dans un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'ajouter des objets définis non pas par les données du cube, mais par des expressions qui peuvent référencer d'autres parties du cube, d'autres cubes voire des informations à l'extérieur de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'étendre les capacités d'un cube, en renforçant la flexibilité et la puissance des applications de décisionnel. Pour plus d’informations sur les calculs de script, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et des requêtes MDX, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Membres calculés  
  Un membre calculé est un membre dont la valeur est calculée au moment de l'exécution en utilisant une expression MDX (Multidimensional Expressions) que vous spécifiez lorsque vous définissez le membre calculé. Un membre calculé est disponible pour les applications de décisionnel comme n'importe quel autre membre. Les membres calculés n'augmentent pas la taille du cube, car seules les définitions sont stockées dans le cube ; les valeurs sont calculées dans la mémoire lorsqu'il faut répondre à une requête.  

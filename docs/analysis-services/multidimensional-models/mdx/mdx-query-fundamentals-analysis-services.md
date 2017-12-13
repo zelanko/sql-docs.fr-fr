@@ -2,12 +2,12 @@
 title: "Principes de base de requête MDX (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 280033210c597c611ce1af8ff98c4ea94e1852f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 601c9d365870528a8716091cfc3a1ba60bd2f920
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Principes de base des requêtes MDX (Analysis Services)
-  La syntaxe MDX (Multidimensional Expressions) permet de lancer des requêtes sur des objets multidimensionnels, tels que des cubes, et de retourner des jeux de cellules multidimensionnels contenant les données du cube. Cette rubrique et ses sous-rubriques donnent une vue d'ensemble des requêtes MDX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX (Multidimensional Expressions) vous permet d’interroger des objets multidimensionnels, tels que des cubes et retourner des ensembles de cellules multidimensionnels contenant les données du cube. Cette rubrique et ses sous-rubriques donnent une vue d'ensemble des requêtes MDX.  
   
  Les rubriques suivantes décrivent des requêtes MDX et les jeux de cellules qu'elles produisent, en fournissant des informations plus détaillées sur la syntaxe MDX de base.  
   

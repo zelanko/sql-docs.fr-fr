@@ -2,12 +2,12 @@
 title: "Une erreur s’est produite lors d’une tentative pour établir une connexion | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbc70ccf710772ba1b32abe5b65858d95ef2b38e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0f5cf8de15fdbb9eed6fae4cf4ccd17c3d99e56d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>Une erreur s’est produite lors d’une tentative pour établir une connexion
-  Cette erreur se produit si vous interrogez des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un serveur sur lequel [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n’est pas installé. Elle se produit également si le service SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) est arrêté, ou si vous essayez d’afficher des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une version antérieure.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette erreur se produit si vous interrogez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données sur un serveur qui n’a pas [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint est installé. Elle se produit également si le service SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) est arrêté, ou si vous essayez d’afficher des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d’une version antérieure.  
   
 ## <a name="details"></a>Détails  
   

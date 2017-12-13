@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  Nom de l'index. Les noms d'index doivent être uniques dans une table ou une vue, mais ne doivent pas être nécessairement uniques dans une base de données. Les noms d’index doivent respecter les règles de [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- *colonne*  
+ *column*  
  Colonnes sur lesquelles l'index est basé. Spécifiez deux ou plusieurs noms de colonnes pour créer un index composite sur les valeurs combinées des colonnes spécifiées. Répertoriez les colonnes à inclure dans l’index composite, dans l’ordre de priorité de tri, dans les parenthèses après *nom_table_ou_vue*.  
   
  Jusqu'à 32 colonnes peuvent être combinées en une clé d’index composite unique. Toutes les colonnes d'une clé d'index composite doivent se trouver dans la même table ou la même vue. La taille maximale autorisée des valeurs d’index combinées est de 900 octets pour un index cluster, ou 1 700 pour un index non cluster. Les limites sont 16 colonnes et 900 octets pour les versions antérieures [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Si les statistiques par partition ne sont pas prises en charge, l'option est ignorée et un avertissement est généré. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
 -   statistiques créées avec des index qui ne sont pas alignés sur les partitions avec la table de base ;  
-  
 -   statistiques créées sur les bases de données secondaires lisibles Always On ;  
-  
 -   statistiques créées sur les bases de données en lecture seule ;  
-  
 -   statistiques créées sur les index filtrés ;  
-  
 -   statistiques créées sur les vues ;  
-  
 -   statistiques créées sur les tables internes ;  
-  
 -   Statistiques créées avec les index spatiaux ou les index XML.  
   
  DROP_EXISTING = {ON | **OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Les index, y compris les index des tables temporaires globales, peuvent être créés en ligne, à l'exception des index suivants :  
   
 -   Index XML  
-  
 -   index de table temporaire locale ;  
-  
 -   index cluster unique initial sur une vue ;  
-  
 -   index cluster désactivés ;  
-  
 -   Index cluster si la table sous-jacente contient des types de données LOB : **image**, **ntext**, **texte**et les types de données spatiales.  
-  
 -   **varchar (max)** et **varbinary (max)** colonnes ne peut pas faire partie d’un index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], lorsqu’une table contient **varchar (max)** ou **varbinary (max)** colonnes, un index cluster contenant d’autres colonnes peuvent être créés ou reconstruit à l’aide de la **ONLINE** option. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]n’autorise pas la **ONLINE** option lorsque la table de base contient **varchar (max)** ou **varbinary (max)** colonnes.  
   
  Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Remplace le [configurer le degré maximal de parallélisme Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) option de configuration pour la durée de l’opération d’index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
+ Remplace le **degré maximal de parallélisme** option de configuration pour la durée de l’opération d’index. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
  *max_degree_of_parallelism* peut être :  
   

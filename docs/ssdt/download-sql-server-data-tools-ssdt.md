@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 46b86d31a7d5b03bf0c43f61c3c7c7fcf4c2a8ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 49651680f2b420da6fd3402b05f54524e346cd1e
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Télécharger SSDT (SQL Server Data Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** est un outil de développement moderne que vous pouvez télécharger gratuitement pour créer des bases de données relationnelles SQL Server, des bases de données SQL Azure, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services. Avec SSDT, vous pouvez concevoir et déployer tout type de contenu SQL Server avec la même facilité que lorsque vous développez une application dans Visual Studio. 
 
 SSDT pour Visual Studio 2017 (15.4.0 en préversion) est maintenant disponible. Cette version présente une expérience d’installation web autonome pour les projets de base de données SQL Server, Analysis Services, Reporting Services et Integration Services dans Visual Studio 2017 15.4 ou ultérieur.

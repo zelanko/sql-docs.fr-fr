@@ -2,12 +2,12 @@
 title: "Définir des relations logiques dans une vue de Source de données (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a255b5449ec7abc9ff8d78ce376a8f456053ceff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7ebf28e254d90e0d617c2b3319770e91c54e9a16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Définir des relations logiques dans une vue de source de données (Analysis Services)
-  L'Assistant Vue de source de données et le Concepteur de vue de source de données définissent automatiquement les relations entre les tables ajoutées à une vue de source de données (DSV), en fonction des relations de la base de données sous-jacente ou des critères de correspondance de noms que vous spécifiez.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’Assistant vue de Source de données et le Concepteur de vue de Source de données définissent automatiquement les relations entre les tables ajoutées à une vue de source de données (DSV) basée sur les relations de la base de données sous-jacente ou le nom correspondant aux critères que vous spécifiez.  
   
  Dans les cas où vous utilisez des données de plusieurs sources de données, vous devrez peut-être définir manuellement des relations logiques dans la vue DSV afin de compléter ces relations définies automatiquement. Des relations sont requises dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour identifier les tables de faits et de dimension, pour créer des requêtes pour la récupération de données et de métadonnées à partir de sources de données sous-jacentes, et pour tirer parti des fonctionnalités Business Intelligence avancées.  
   

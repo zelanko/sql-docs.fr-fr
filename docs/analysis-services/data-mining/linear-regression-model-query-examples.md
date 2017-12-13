@@ -2,12 +2,12 @@
 title: "Exemples de requêtes de modèle de régression linéaire | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25971b7df79dde58697e8c080b3c125bc6ba667e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b0f34af9c1c466f09040c7915f53b993cb04ac1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="linear-regression-model-query-examples"></a>Exemples de requête de modèle de régression linéaire
-  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur la formule de régression, tandis qu'une requête de prédiction peut vous indiquer si un nouveau point de données est adapté au modèle. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les séquences découvertes dans l’analyse, ou vous pouvez créer une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions pour les nouvelles données. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur la formule de régression, tandis qu'une requête de prédiction peut vous indiquer si un nouveau point de données est adapté au modèle. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Cette section explique comment créer ces requêtes pour les modèles basés sur l'algorithme MLR (Microsoft Linear Regression).  
   

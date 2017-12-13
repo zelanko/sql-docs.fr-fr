@@ -2,12 +2,12 @@
 title: "Indicateurs de Performance (KPI) dans les modèles multidimensionnels clés | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
-  Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'une activité économique.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans la terminologie d’entreprise, un indicateur de Performance clé (KPI) est une mesure quantifiable jaugeant.  
   
  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI est un ensemble de calculs associés à un groupe de mesures dans un cube qui servent à évaluer les performances de l’entreprise. Généralement, ces calculs sont une combinaison d'expressions MDX (Multidimensional Expressions) ou de membres calculés. Les indicateurs de performance clés contiennent également des métadonnées supplémentaires qui fournissent des informations sur la manière dont les applications clientes doivent afficher les résultats des calculs d'un indicateur de performance clé.  
   

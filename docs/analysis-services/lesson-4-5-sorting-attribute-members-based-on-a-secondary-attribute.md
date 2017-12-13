@@ -2,12 +2,12 @@
 title: "Le tri des membres d’attribut basé sur un attribut secondaire | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55680946738ce1317a0c71397d7a0fe90c959e01
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Leçon 4-5 - tri des membres d’attribut basés sur un attribut secondaire
-Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans la leçon 3, vous avez appris à trier les membres d’attribut en fonction de leur nom ou une valeur de clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  
   
 Les relations d'attributs définissent les relations ou les dépendances entre les attributs. Dans une dimension qui est basée sur une seule table relationnelle, tous les attributs sont généralement liés les uns aux autres via l'attribut clé. Cela est dû au fait que tous les attributs d'une dimension fournissent des informations sur les membres liés par l'attribut clé de la dimension aux faits de la table de faits pour chaque groupe de mesures associé. Dans une dimension basée sur plusieurs tables, les attributs sont généralement liés par une clé de jointure entre les tables. Si les données sous-jacentes le prennent en charge, les attributs associés peuvent être utilisés pour spécifier un ordre de tri. Par exemple, vous pouvez créer un nouvel attribut qui fournit la logique de tri pour un attribut associé.  
   

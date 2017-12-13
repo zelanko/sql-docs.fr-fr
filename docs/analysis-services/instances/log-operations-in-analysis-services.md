@@ -2,12 +2,12 @@
 title: "Enregistrer les opérations dans Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 546e28af279bd62018f54a7f1bff33c6e27b8883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
-  Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une instance Analysis Services enregistre les notifications du serveur, les erreurs et avertissements dans le fichier msmdsrv.log : une pour chaque instance que vous installez. Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
   
  En plus de la fonctionnalité de journalisation intégrée, de nombreux administrateurs et développeurs utilisent des outils fournis par la communauté Analysis Services pour recueillir des données sur les opérations du serveur, comme **ASTrace**. Pour obtenir des liens de téléchargement, consultez [Exemples de la communauté Microsoft SQL Server : Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) .  
   

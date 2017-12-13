@@ -2,12 +2,12 @@
 title: Utilisation des membres, Tuples et jeux (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 56f991716d78e8b4638ab57e7dc981c5942d81b0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 63b558fadebc2598da0969e13eac04d75aa4ef94
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Utilisation de membres, de tuples et de jeux (MDX)
-  MDX fournit de nombreuses fonctions chargées de retourner un ou plusieurs membres, tuples ou jeux ou conçues pour agir sur un membre, un tuple ou un jeu donné.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]MDX fournit de nombreuses fonctions qui retournent un ou plusieurs membres, tuples ou ensembles ; ou qui agissent sur un membre, tuple, ou définir.  
   
 ## <a name="member-functions"></a>Fonctions de membre  
  MDX intègre plusieurs fonctions à l'aide desquelles vous pouvez extraire des membres d'autres entités MDX, notamment des dimensions, des niveaux, des jeux ou des tuples. Par exemple, la fonction [FirstChild](../../../mdx/firstchild-mdx.md) est une fonction qui agit sur un membre et retourne un membre.  

@@ -2,12 +2,12 @@
 title: "Règles d’affectation de noms (Analysis Services) de l’objet | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8a1c08102482ecfd1282416fda65d930526b8de3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
-  Cette rubrique décrit les conventions d'affectation des noms d'objet et les mots et caractères réservés qui ne peuvent être utilisés dans aucun nom d'objet, dans le code ni dans le script, dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit les conventions d’affectation de noms d’objet, ainsi que les mots réservés et des caractères qui ne peut pas être utilisés dans un nom d’objet, dans le code ou de script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a>Conventions d’affectation de noms  
  Chaque objet possède une propriété **Name** et une propriété **ID** qui doivent être uniques dans l'étendue de la collection parente. Par exemple, deux dimensions peuvent porter le même nom dans la mesure où chacune réside dans une base de données différente.  

@@ -2,12 +2,12 @@
 title: "Configurer le stockage des chaînes pour les Partitions et Dimensions | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b16b14e2fb2fd703905245f9e779fd83b7f35cb4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b593a2de59682d400c72d5242b078b3b7f2fadb5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
-  Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
   
  Notez que vous pouvez augmenter le stockage des chaînes seulement sur les objets qui nécessitent une capacité supplémentaire. Dans la plupart des modèles multidimensionnels, des données de chaîne sont associées aux dimensions. Toutefois, les partitions qui contiennent des mesures de comptage distinctes sur les chaînes peuvent également bénéficier de ce paramètre. Le paramètre ne concernant que les chaînes, les données numériques ne sont pas affectées.  
   

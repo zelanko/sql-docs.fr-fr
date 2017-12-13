@@ -2,12 +2,12 @@
 title: "Contenu du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
-  Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après avoir conçu et traité un modèle d’exploration de données à l’aide des données à partir de la structure d’exploration de données sous-jacente, le modèle d’exploration de données est terminé et qu’il contient *contenu du modèle d’exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
   
  Le contenu du modèle d'exploration de données inclut des métadonnées relatives au modèle, des statistiques sur les données, et les modèles découverts par l'algorithme d'exploration. Selon l'algorithme utilisé, le contenu du modèle peut inclure des formules de régression, les définitions de règles et jeux d'éléments, ou des pondérations et d'autres statistiques.  
   

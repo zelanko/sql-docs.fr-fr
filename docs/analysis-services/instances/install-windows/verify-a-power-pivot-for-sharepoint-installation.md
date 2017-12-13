@@ -2,12 +2,12 @@
 title: "Vérifier une Power Pivot for SharePoint Installation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Vérifier une installation Power Pivot pour SharePoint
-  La gestion d’une instance de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint installée dans une batterie de serveurs SharePoint s’effectue via l’Administration centrale de SharePoint. Au minimum, vous pouvez vérifier des pages dans l’Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d’un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d’une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d’exemple contenant déjà des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et l’utiliser pour confirmer que l’intégration SharePoint est correctement configurée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint l’instance que vous installez dans une batterie de serveurs SharePoint est administrée via l’Administration centrale SharePoint. Au minimum, vous pouvez vérifier des pages dans l’Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d’un classeur [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d’une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d’exemple contenant déjà des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et l’utiliser pour confirmer que l’intégration SharePoint est correctement configurée.  
   
 ||  
 |-|  

@@ -2,12 +2,12 @@
 title: "Sauvegarde, restauration et synchronisation de bases de données (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d23fcaca8e9ad0d73d1e79566d2fa11348382a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sauvegarde, restauration et synchronisation de bases de données (XMLA)
-  XML for Analysis propose trois commandes qui permettent de sauvegarder, restaurer et synchroniser des bases de données :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis, il existe trois commandes de sauvegardent, restaurent et synchroniser les bases de données :  
   
 -   Le [sauvegarde](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) commande sauvegarde un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la base de données un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le fichier de sauvegarde (.abf), comme décrit dans la section, [sauvegarde des bases de données](#backing_up_databases).  
   

@@ -2,12 +2,12 @@
 title: "Exemples de requêtes modèle de Clustering de séquence | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
-  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les informations stockées dans le modèle, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions basées sur les nouvelles données que vous fournissez. Pour un modèle Sequence Clustering, les requêtes de contenu fournissent en général des détails supplémentaires à propos des clusters trouvés ou les transitions dans ces clusters. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer soit une requête de contenu, qui fournit des détails sur les informations stockées dans le modèle, ou vous pouvez créer une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions basées sur les nouvelles données que vous fournissez. Pour un modèle Sequence Clustering, les requêtes de contenu fournissent en général des détails supplémentaires à propos des clusters trouvés ou les transitions dans ces clusters. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Les requêtes de prédiction sur un modèle Sequence Clustering font en général des recommandations basées sur les séquences et transitions, sur les attributs non-séquence inclus dans le modèle ou sur une combinaison de séquence et attributs non-séquence.  
   

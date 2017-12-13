@@ -2,12 +2,12 @@
 title: "Partitions activées en écriture | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>Partitions - Partitions activées en écriture
-  Dans un cube, les données sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une partition. Les partitions activées en écriture permettent aux utilisateurs professionnels d'explorer différents scénarios en changeant les valeurs des cellules et en analysant les effets de ces modifications sur les données de cube. Si vous activez une partition en écriture, les applications clientes peuvent enregistrer les modifications des données de la partition. Ces modifications, qu'il est convenu d'appeler données d'écriture différée, sont stockées dans une table séparée et ne remplacent pas de données existantes d'un groupe de mesures. Toutefois, elles sont incorporées dans les résultats des requêtes comme si elles faisaient partie des données de cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les données dans un cube sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une partition. Les partitions activées en écriture permettent aux utilisateurs professionnels d'explorer différents scénarios en changeant les valeurs des cellules et en analysant les effets de ces modifications sur les données de cube. Si vous activez une partition en écriture, les applications clientes peuvent enregistrer les modifications des données de la partition. Ces modifications, qu'il est convenu d'appeler données d'écriture différée, sont stockées dans une table séparée et ne remplacent pas de données existantes d'un groupe de mesures. Toutefois, elles sont incorporées dans les résultats des requêtes comme si elles faisaient partie des données de cube.  
   
  Vous pouvez activer en écriture la totalité d'un cube ou uniquement certaines de ces partitions. Les dimensions activées en écriture sont différentes mais complémentaires. Une partition activée en écriture permet aux utilisateurs de mettre à jour les cellules de partition, tandis qu'une dimension activée en écriture leur permet de mettre à jour les membres de dimension. Vous pouvez également utiliser ces deux fonctionnalités conjointement. Par exemple, un cube activé en écriture ou une partition activée en écriture ne doit pas inclure les dimensions activées en écriture. **Rubrique connexe :**[Write Dimensions](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   

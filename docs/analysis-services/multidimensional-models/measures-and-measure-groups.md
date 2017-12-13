@@ -2,12 +2,12 @@
 title: Mesures et groupes de mesures | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
-  Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un cube inclut *mesures* dans *groupes de mesures*, logique métier, ainsi qu’une collection de dimensions qui donnent le contexte pour l’évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
   
  Cette rubrique décrit les [Measures](#bkmk_measure) et les [Measure Groups](#bkmk_mg). Elle contient également le tableau suivant, avec des liens vers des procédures de création et de configuration de mesures et de groupes de mesures.  
   

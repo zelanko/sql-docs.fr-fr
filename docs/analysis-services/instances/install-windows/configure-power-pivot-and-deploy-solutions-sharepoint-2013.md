@@ -2,12 +2,12 @@
 title: "Configurer PowerPivot et déployer des Solutions (SharePoint 2013) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: power-view
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: abdb6547c70842f0aa223aee2d35755a2a22e69b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
-  Cette rubrique décrit le déploiement et la configuration des améliorations intermédiaires apportées aux fonctionnalités [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , dont la Galerie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , l’actualisation des données de planification, le tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013** pour effectuer les opérations suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le déploiement et la configuration des améliorations de niveau intermédiaire pour le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des fonctionnalités dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] notamment [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] la galerie, l’actualisation des données du calendrier, tableau de bord de gestion et les fournisseurs de données. Exécutez l’outil **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013** pour effectuer les opérations suivantes :  
   
 -   Déployer les fichiers de solution SharePoint.  
   

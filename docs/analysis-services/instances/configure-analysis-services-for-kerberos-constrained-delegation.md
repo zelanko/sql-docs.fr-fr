@@ -2,12 +2,12 @@
 title: "Configurer Analysis Services pour la délégation contrainte Kerberos | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurer Analysis Services pour la délégation contrainte Kerberos
-  Quand vous configurez Analysis Services pour l'authentification Kerberos, vous cherchez probablement à obtenir l'un des deux résultats suivants : laisser le soin à Analysis Services d'emprunter l'identité d'un utilisateur durant l'interrogation de données, ou demander à Analysis Services de déléguer l'identité d'utilisateur à un service de bas niveau. Chaque scénario implique des spécifications de configuration légèrement différentes. De plus, dans les deux cas, une vérification doit avoir lieu pour s'assurer que la configuration a été effectuée correctement.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lors de la configuration d’Analysis Services pour l’authentification Kerberos, vous cherchez probablement pour parvenir à une ou les deux résultats suivants : avoir Analysis Services à emprunter l’identité d’une identité d’utilisateur lors de l’interrogation des données ; ou demander à Analysis Services délègue une identité d’utilisateur à un service de bas niveau. Chaque scénario implique des spécifications de configuration légèrement différentes. De plus, dans les deux cas, une vérification doit avoir lieu pour s'assurer que la configuration a été effectuée correctement.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** est un outil de diagnostic qui permet de dépanner les problèmes de connexion que rencontre Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Gestionnaire de configuration de Microsoft Kerberos pour SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  

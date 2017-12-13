@@ -2,12 +2,12 @@
 title: Modes de stockage et le traitement de partition | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 66d7906862ef10fe5e2f9aa93a143d0655c84971
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: eab4af44192304701687c7796448407eaacdaa96
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partitions - traitement et Modes de stockage de Partition
-  Le mode de stockage d'une partition affecte les performances de traitement et des requêtes, les besoins en espace de stockage, ainsi que les emplacements de stockage de la partition, de son cube et de son groupe de mesures parents. Le mode de stockage a également une incidence sur les options de traitement.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le mode de stockage d’une partition affecte la requête et les performances, les besoins de stockage et les emplacements de stockage de la partition et son groupe de mesures parent et le cube de traitement. Le mode de stockage a également une incidence sur les options de traitement.  
   
  Une partition peut utiliser l'un des trois modes de stockage de base :  
   

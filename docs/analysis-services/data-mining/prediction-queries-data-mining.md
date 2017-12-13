@@ -2,12 +2,12 @@
 title: "Requêtes de prédiction (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
-  Un projet d'exploration de données type a pour objectif d'utiliser le modèle d'exploration de données pour faire des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’objectif d’un projet d’exploration de données par défaut est d’utiliser le modèle d’exploration de données pour élaborer des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  
   
  Fonctionnellement, il existe différents types de requêtes de prédiction prises en charge dans SQL Server, selon le type d'entrée de la requête :  
   

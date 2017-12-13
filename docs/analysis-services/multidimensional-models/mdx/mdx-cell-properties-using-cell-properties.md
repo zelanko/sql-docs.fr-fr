@@ -2,12 +2,12 @@
 title: "À l’aide des propriétés de cellule (MDX) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52ef98613eceec0356317f1cd578ac63506d6815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81d09a847b9bb405cd028eaa8cd1b4cb9feac9a1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propriétés de la cellule MDX - à l’aide des propriétés de cellule
-  Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Propriétés de cellule dans MDX (Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules dans une source de données multidimensionnelles, par exemple un cube.  
   
  La syntaxe MDX prend en charge le mot clé CELL PROPERTIES dans une instruction MDX SELECT pour l'extraction des propriétés de cellule intrinsèques. Ces propriétés sont principalement utilisées pour définir l'affichage des données des cellules.  
   

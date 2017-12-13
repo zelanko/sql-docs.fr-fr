@@ -2,12 +2,12 @@
 title: Le Script MDX de base (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f5c97c821496ed4d81539c7b6f3659734f70ab21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6a045281cf1d089ce46909d29d22cdd107747035
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX de base (MDX)
-  Un script MDX (Multidimensional Expressions) définit le processus de calcul pour un cube dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Il existe deux types de scripts MDX :  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Un script MDX (Multidimensional Expressions) définit le processus de calcul d’un cube dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Il existe deux types de scripts MDX :  
   
  **Script MDX par défaut**  
  Au moment de la création d’un cube, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un script MDX par défaut pour celui-ci. Ce script définit un test de calcul pour l'intégralité du cube.  

@@ -2,12 +2,12 @@
 title: "Indicateurs de modélisation (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="modeling-flags-data-mining"></a>Indicateurs de modélisation (Exploration de données)
-  Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir à un algorithme d’exploration de données des informations supplémentaires portant sur les données définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez utiliser des indicateurs de modélisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour fournir des informations supplémentaires à un algorithme d’exploration de données sur les données qui sont définies dans une table de cas. Ces informations permettent à l'algorithme de construire un modèle d'exploration de données plus précis.  
   
  Certains indicateurs de modélisation sont définis au niveau de la structure d'exploration de données, tandis que d'autres sont définis au niveau de la colonne du modèle d'exploration de données. Par exemple, l’indicateur de modélisation **NOT NULL** est utilisé avec les colonnes de structure d’exploration de données. Vous pouvez définir des indicateurs de modélisation supplémentaires sur les colonnes du modèle d'exploration de données, en fonction de l'algorithme que vous utilisez pour créer le modèle.  
   

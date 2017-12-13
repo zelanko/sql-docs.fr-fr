@@ -2,12 +2,12 @@
 title: "Définir des formules de membre personnalisées | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82a27d94e0a964921bc54918e4d0e54a9eba35f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Propriétés d’attribut : permet de définir des formules de membre personnalisées
-  Vous pouvez définir une expression MDX (Multidimensional Expressions) appelée formule de membre personnalisée pour fournir les valeurs des membres d'un attribut spécifié. Une colonne d'une table issue d'une vue de source de données fournit, pour chaque membre d'un attribut, l'expression utilisée pour fournir la valeur de ce membre.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez définir une expression MDX (Multidimensional Expressions), appelée une formule de membre personnalisée pour fournir les valeurs pour les membres d’un attribut spécifié. Une colonne d'une table issue d'une vue de source de données fournit, pour chaque membre d'un attribut, l'expression utilisée pour fournir la valeur de ce membre.  
   
  Les formules de membre personnalisées déterminent les valeurs de cellule associées aux membres et ont priorité sur les fonctions d'agrégation des mesures. Les formules de membres personnalisées sont écrites dans MDX. Chaque formule de membre personnalisée s'applique à un seul membre. Les formules de membre personnalisées sont stockées dans la table de dimension ou dans une autre table qui entretient une relation de clé étrangère avec la table de dimension.  
   

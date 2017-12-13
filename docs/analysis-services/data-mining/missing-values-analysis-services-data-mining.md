@@ -2,12 +2,12 @@
 title: "Les valeurs manquantes (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valeurs manquantes (Analysis Services - Exploration de données)
-  Gérer les  *valeurs manquantes* correctement fait partie intégrante d’une modélisation efficace. Cette section explique ce que sont les valeurs manquantes et décrit les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer les valeurs manquantes lors de la génération de structures et de modèles d'exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La gestion des *les valeurs manquantes* correctement est une partie importante de la modélisation efficace. Cette section explique ce que sont les valeurs manquantes et décrit les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer les valeurs manquantes lors de la génération de structures et de modèles d'exploration de données.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Définition des valeurs manquantes dans l'exploration de données  
  Une valeur manquante peut avoir plusieurs significations. Entre autres possibilités, le champ n'était pas applicable, l'événement n'a pas eu lieu ou bien les données n'étaient pas disponibles. Il se peut que la personne qui a saisi les données ne connaissait pas la valeur exacte ou ne s'est pas inquiété de l'absence de remplissage d'un champ.  

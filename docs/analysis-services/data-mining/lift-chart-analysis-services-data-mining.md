@@ -2,12 +2,12 @@
 title: "Graphique de courbes d’élévation (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79178d1319e296d1dead562440d57c25d379dbd4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Graphique de courbes d'élévation (Analysis Services - Exploration de données)
-  Un *graphique de courbes d’élévation* représente graphiquement l’amélioration apportée par un modèle d’exploration de données par rapport à une estimation aléatoire, et mesure la modification en termes de score *d’élévation* . En comparant les scores de courbes d’élévation pour différents modèles, vous pouvez identifier le modèle le plus performant. Vous pouvez également déterminer le point auquel les prédictions du modèle deviennent moins utiles. Par exemple, en examinant le graphique de courbes d’élévation, vous pouvez réaliser qu’une campagne de promotion est susceptible d’être efficace auprès de seulement 30 % de vos clients et utiliser ce chiffre pour limiter l’étendue de la campagne.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *graphique de courbes d’élévation* graphiquement représente l’amélioration offrant un modèle d’exploration de données lors de la comparaison par rapport à une estimation aléatoire et mesure la modification en termes d’un *de courbes d’élévation* score. En comparant les scores de courbes d’élévation pour différents modèles, vous pouvez identifier le modèle le plus performant. Vous pouvez également déterminer le point auquel les prédictions du modèle deviennent moins utiles. Par exemple, en examinant le graphique de courbes d’élévation, vous pouvez réaliser qu’une campagne de promotion est susceptible d’être efficace auprès de seulement 30 % de vos clients et utiliser ce chiffre pour limiter l’étendue de la campagne.  
   
  Dans l’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le graphique de courbes d’élévation peut comparer la précision de plusieurs modèles qui ont le même attribut prédictible. Vous pouvez également évaluer la précision de la prédiction de résultats uniques (une seule valeur de l'attribut prédictible) ou de tous les résultats (toutes les valeurs de l'attribut spécifié).  
   

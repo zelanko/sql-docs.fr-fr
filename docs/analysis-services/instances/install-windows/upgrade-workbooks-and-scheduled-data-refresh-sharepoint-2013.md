@@ -2,12 +2,12 @@
 title: "Mettre à niveau les classeurs et l’actualisation planifiée des données (SharePoint 2013) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffec3fb3ec6abd9d6fd1779ae8e8f434894e68b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ecdb0be095931b952b3ef93ee566db40dfb5f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
-  Cette rubrique traite de l’utilisation des classeurs créés dans les environnements [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] précédents et comment mettre à niveau les classeurs [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] afin de pouvoir tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette rubrique explique l’utilisation des classeurs créés dans la précédente [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] environnements et la mise à niveau [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] classeurs afin que vous pouvez tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [Nouveautés de Power Pivot](http://go.microsoft.com/fwlink/?LinkID=203917).  
   
 > [!WARNING]  
 >  Vous ne pouvez pas restaurer la mise à niveau de classeurs qui sont mis à niveau automatiquement sur le serveur. Une fois qu'un classeur est mis à niveau, il le reste. Pour utiliser une version antérieure, vous pouvez republier le classeur précédent dans SharePoint, restaurer une version antérieure ou recycler le classeur. Pour plus d'informations sur la restauration ou le recyclage d'un document dans SharePoint, consultez [Planifier la protection du contenu à l’aide de corbeilles et du contrôle de version](http://go.microsoft.com/fwlink/?LinkId=238669).  

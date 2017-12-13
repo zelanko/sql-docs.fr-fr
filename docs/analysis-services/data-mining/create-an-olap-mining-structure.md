@@ -2,12 +2,12 @@
 title: "Créer une Structure d’exploration de données OLAP | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 011c1527e135a7326d54b0268d9e2fcb070fb6e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-olap-mining-structure"></a>Créer une structure d'exploration de données OLAP
-  Il existe de nombreux avantages à la création d'un modèle d'exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il existe de nombreux avantages à la création d’un modèle d’exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  
   
  Cette rubrique décrit comment créer une structure d'exploration de données OLAP, en fonction d'une dimension et de mesures associées dans une solution multidimensionnelle existante.  
   

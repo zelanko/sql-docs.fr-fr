@@ -2,12 +2,12 @@
 title: "SystemGetClusterCrossValidationResults (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a741805b22296232bffdc881ba4105243ea92506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 54b91c7abf3f9abe366d45d2579818aee1c121a5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Exploration de données)
-  Partitionne la structure d'exploration de données dans le nombre spécifié de sections croisées, effectue l'apprentissage d'un modèle pour chaque partition, puis retourne les mesures de précision de chaque partition.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Partitions de l’exploration de la structure dans le nombre spécifié de sections croisées, effectue l’apprentissage d’un modèle pour chaque partition, puis retourne les mesures de précision pour chaque partition.  
   
  **Remarque** : cette procédure stockée ne peut être utilisée qu’avec une structure d’exploration de données qui contient au moins un modèle de clustering. Pour la validation croisée des autres modèles, vous devez utiliser [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md).  
   

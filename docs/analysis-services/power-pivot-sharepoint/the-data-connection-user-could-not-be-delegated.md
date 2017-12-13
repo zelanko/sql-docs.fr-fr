@@ -2,12 +2,12 @@
 title: "L’utilisateur de connexion de données n’a pas pu être déléguée | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c302fa36eee6aba2364421182988f1d492a9f991
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fe36637d98e02507383ecb592e199176a5e300ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>L’utilisateur de connexion de données n’a pas pu être déléguée.
-  Pour les classeurs Excel contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services retourne cette erreur s’il ne peut pas se connecter à une instance de serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Pour les classeurs Excel qui contiennent des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données, Excel Services retourne cette erreur s’il ne peut pas se connecter à un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] instance de serveur dans SharePoint.  
   
 ## <a name="details"></a>Détails  
   

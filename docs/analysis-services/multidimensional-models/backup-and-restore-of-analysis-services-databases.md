@@ -2,12 +2,12 @@
 title: "Sauvegarde et restauration de bases de données Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6f5db5fe3911767be37930fb7d195efffb826042
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f750fc5c1c991b8cf4392d427855f583c478c028
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sauvegarde et restauration de bases de données Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et la restauration afin que vous puissiez récupérer une base de données et ses objets à partir d'une date et heure spécifiques. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut la sauvegarde et restauration afin que vous pouvez récupérer une base de données et ses objets à partir d’un point particulier dans le temps. La sauvegarde et la restauration peuvent également être utiles pour migrer des bases de données vers des serveurs mis à niveau, déplacer des bases de données entre des serveurs ou déployer une base de données sur un serveur de production. Pour la récupération des données, si vous ne possédez pas encore de plan de sauvegarde et si vos données ont de la valeur, vous devez concevoir et mettre en œuvre un plan au plus tôt.  
   
  Les commandes de restauration et sauvegarde sont effectuées sur une base de données Analysis Services déployée. Pour vos projets et solutions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous devez utiliser un contrôle de code source pour garantir la récupération des versions spécifiques de vos fichiers sources, puis créer un plan de récupération de données pour le référentiel du système de contrôle de code source que vous utilisez.  
   

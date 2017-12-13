@@ -2,12 +2,12 @@
 title: "Parcourir les données et métadonnées de Cube | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a4f1dcea3c74fdf61af401a854aba9c2166f5610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
-  Utilisez l'onglet **Navigateur** du Concepteur de cube pour parcourir les données du cube. Vous pouvez utiliser cette vue pour examiner la structure d'un cube et vérifier des données, le calcul, la mise en forme, ainsi que la sécurité des objets de base de données. Vous pouvez examiner rapidement un cube tel que les utilisateurs finaux le voient dans les outils de création de rapports ou d'autres applications clientes. Lorsque vous parcourez des données de cube, vous pouvez afficher différentes dimensions, explorer les membres et découper les dimensions.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilisez le **navigateur** onglet du Concepteur de Cube pour parcourir les données de cube. Vous pouvez utiliser cette vue pour examiner la structure d'un cube et vérifier des données, le calcul, la mise en forme, ainsi que la sécurité des objets de base de données. Vous pouvez examiner rapidement un cube tel que les utilisateurs finaux le voient dans les outils de création de rapports ou d'autres applications clientes. Lorsque vous parcourez des données de cube, vous pouvez afficher différentes dimensions, explorer les membres et découper les dimensions.  
   
  Avant de parcourir un cube, vous devez le traiter et vous y reconnecter. Une fois le traitement terminé, ouvrez l'onglet **Navigateur** du Concepteur de cube. Cliquez sur le bouton Reconnecter dans la barre d'outils pour actualiser la connexion.  
   

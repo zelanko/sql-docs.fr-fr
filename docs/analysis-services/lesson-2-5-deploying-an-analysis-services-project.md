@@ -2,12 +2,12 @@
 title: "Déploiement d’une analyse des Services de projet | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: de2922988f9a53f6ec4eae3d563d0e29ad565ac0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Leçon 2-5-déploiement d’un projet Analysis Services
-Pour afficher les données du cube et de dimension pour les objets du cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous devez déployer le projet sur une instance spécifiée d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis traiter le cube et ses dimensions. Le *déploiement* d'un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entraîne la création des objets définis dans une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le*traitement* des objets dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copie les données à partir des sources de données sous-jacentes dans les objets du cube. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) et [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Pour afficher les données de cube et de dimension pour les objets dans le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel dans le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet du didacticiel, vous devez déployer le projet à une instance spécifique de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puis traiter le cube et ses dimensions. Le *déploiement* d'un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entraîne la création des objets définis dans une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le*traitement* des objets dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copie les données à partir des sources de données sous-jacentes dans les objets du cube. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) et [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 À ce stade du processus de développement, vous déployez généralement le cube sur une instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sur un serveur de développement. À la fin du développement de votre projet Business Intelligence, vous utiliserez généralement l'Assistant Déploiement d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour le déployer à partir du serveur de développement sur un serveur de production. Pour plus d’informations, consultez [Déploiement d’une solution de modèle multidimensionnel](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) et [Déployer des solutions de modèles à l’aide de l’assistant Déploiement](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   

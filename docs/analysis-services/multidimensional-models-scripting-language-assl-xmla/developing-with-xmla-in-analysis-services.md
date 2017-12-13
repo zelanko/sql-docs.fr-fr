@@ -2,12 +2,12 @@
 title: "Développement avec XMLA dans Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71df2a16685019e6b1117dee995d5499711625eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 440464913f4dc6e38ca1da47dc4045f4249656f7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Développement avec XMLA dans Analysis Services
-  XMLA (XML for Analysis) est un protocole XML basé sur SOAP (Simple Object Access Protocol) conçu spécifiquement pour offrir un accès universel à n'importe quelle source de données multidimensionnelle standard accessible via une connexion HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise XMLA comme seul protocole pour communiquer avec les applications clientes. Fondamentalement, toutes les bibliothèques clientes prises en charge par Analysis Services formulent des demandes et des réponses XMLA.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]XML for Analysis (XMLA) est un protocole XML basé sur SOAP, spécifiquement conçu pour un accès universel à n’importe quelle source de données multidimensionnelle standard qui sont accessibles via une connexion HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise XMLA comme seul protocole pour communiquer avec les applications clientes. Fondamentalement, toutes les bibliothèques clientes prises en charge par Analysis Services formulent des demandes et des réponses XMLA.  
   
  En tant que développeur, vous pouvez utiliser XMLA pour intégrer une application cliente à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sans aucune dépendance du .NET Framework ou des interfaces COM. La configuration requise pour une application qui inclut l'hébergement sur un large éventail de plateformes peut être satisfaite à l'aide de XMLA et d'une connexion HTTP à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   

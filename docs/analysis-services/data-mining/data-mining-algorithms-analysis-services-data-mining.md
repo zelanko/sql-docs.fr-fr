@@ -2,12 +2,12 @@
 title: "Algorithmes d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ff1064666919897691a7dc407fe84da7d3a4cbfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 092ec27d421f91a1dc4484298139783df1695594
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algorithmes d'exploration de données (Analysis Services - Exploration de données)
-  Un *algorithme d’exploration de données* est un ensemble d’heuristiques et de calculs qui crée un modèle d’exploration de données à partir de données. Pour créer un modèle, l'algorithme analyse d'abord les données que vous fournissez, à la recherche de types spécifiques de modèles ou de tendances. L’algorithme utilise les résultats de cette analyse sur plusieurs itérations pour trouver les paramètres optimaux pour la création du modèle d’exploration de données. Ensuite, ces paramètres sont appliqués au jeu de données entier pour extraire des modèles utilisables et des statistiques détaillées.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un *algorithme* dans les données d’exploration de données (ou d’apprentissage) est un ensemble d’heuristiques et les calculs qui crée un modèle à partir des données. Pour créer un modèle, l'algorithme analyse d'abord les données que vous fournissez, à la recherche de types spécifiques de modèles ou de tendances. L’algorithme utilise les résultats de cette analyse sur plusieurs itérations pour trouver les paramètres optimaux pour la création du modèle d’exploration de données. Ensuite, ces paramètres sont appliqués au jeu de données entier pour extraire des modèles utilisables et des statistiques détaillées.  
   
  Le modèle d'exploration de données qu'un algorithme crée à partir de vos données peut prendre des formes variées, dont les suivantes :  
   

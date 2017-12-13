@@ -2,12 +2,12 @@
 title: "Les modèles d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modèles d'exploration de données (Analysis Services - Exploration de données)
-  Un *modèle d’exploration de données* est créé en appliquant un algorithme aux données, mais c’est plus qu’un algorithme ou qu’un conteneur de métadonnées : il s’agit d’un jeu de données, de statistiques et de modèles qui peuvent être appliqués à de nouvelles données pour générer des prédictions et pour effectuer des inférences sur les relations.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *modèle d’exploration de* est créé en appliquant un algorithme aux données, mais il est plus que d’un algorithme ou d’un conteneur de métadonnées : il s’agit d’un jeu de données, les statistiques et les modèles qui peuvent être appliqués aux nouvelles données pour générer des prédictions et faire des inférences sur les relations.  
   
  Cette section explique ce qu'est un modèle d'exploration de données et son utilisation : l'architecture de base des modèles et des structures, les propriétés des modèles d'exploration de données, ainsi que les méthodes pour créer et utiliser des modèles d'exploration de données.  
   

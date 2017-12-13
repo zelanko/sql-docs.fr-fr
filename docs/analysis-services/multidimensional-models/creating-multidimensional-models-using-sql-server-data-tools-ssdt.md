@@ -2,12 +2,12 @@
 title: "Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools (SSDT) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8069e4cb513ca83cd161564c6d9a0b2284890fdc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c79cf49be9eb64e21a6a19b6c8ac540d6c655d6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Création de modèles MDX à l'aide des Outils de données SQL Server (SSDT)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux environnements différents pour générer, déployer et gérer des solutions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ces deux environnements implémentent un système de projet. Pour plus d’informations sur les projets Visual Studio, consultez [Projets en tant que conteneurs](http://go.microsoft.com/fwlink/?LinkId=63960) dans MSDN Library.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux environnements différents pour générer, déployer et gérer les [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solutions : [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ces deux environnements implémentent un système de projet. Pour plus d’informations sur les projets Visual Studio, consultez [Projets en tant que conteneurs](http://go.microsoft.com/fwlink/?LinkId=63960) dans MSDN Library.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est un environnement de développement, basé sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2010, qui permet de créer et de modifier des solutions Business Intelligence. Avec [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous créez des projets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenant des définitions d’objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (cubes, dimensions, etc.), qui sont stockés dans des fichiers XML contenant des éléments ASSL ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language). Ces projets se trouvent dans des solutions qui peuvent aussi contenir des projets provenant d’autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , notamment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez développer des projets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans le cadre d’une solution qui n’est associée à aucune instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spécifique. Vous pouvez déployer les objets vers une instance d’un serveur de test afin de tester le projet au cours du développement, puis utiliser le même projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour déployer vos objets vers des instances d’un ou de plusieurs serveurs intermédiaires ou de production. Les projets et éléments appartenant à une solution qui inclut [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être intégrés avec un système de contrôle de code source, tel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual SourceSafe. Pour plus d’informations sur la création d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à l’aide de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Créer un projet Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet également de se connecter directement à une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer et modifier des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , sans utiliser un projet et sans stocker les définitions d'objets dans des fichiers XML. Pour plus d’informations, consultez [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)et [Connexion en mode en ligne à une base de données Analysis Services](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md).  
   

@@ -2,12 +2,12 @@
 title: "Octroyer un accès personnalisé à des données de cellule (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f199fb9b23b2837c4d886c2c5721c6cd762b7fad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0089b0257e4e3291375aee7baad1f304412f2a20
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Octroyer un accès personnalisé à des données de cellule (Analysis Services)
-  La sécurité de cellule permet d'accorder ou de refuser l'accès à des données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La sécurité de cellule est utilisée pour autoriser ou refuser l’accès aux données de mesure dans un cube. L'illustration ci-dessous montre une combinaison de mesures autorisées et refusées dans un tableau croisé dynamique, quand vous êtes connecté en tant qu'utilisateur dont le rôle autorise uniquement l'accès à certaines mesures. Dans cet exemple, **Reseller Sales Amount** et **Reseller Total Product Cost** sont les seules mesures accessibles avec ce rôle. L'accès à toutes les autres mesures est refusé de manière implicite (les étapes nécessaires pour obtenir ce résultat sont fournies plus bas dans la section suivante, intitulée Autoriser l'accès à des mesures spécifiques).  
   
  ![Tableau croisé dynamique montrant autorisé et refusé les cellules](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "tableau croisé dynamique montrant autorisé et refusé les cellules")  
   

@@ -2,12 +2,12 @@
 title: "Créer des membres calculés | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f91c068837043959e63e5e5f99d8ba719a51bb16
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-calculated-members"></a>Créer des membres calculés
-  Vous pouvez créer des mesures ou des membres de dimension personnalisés, nommés « membres calculés », en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez créer des mesures personnalisées ou des membres de dimension, appelés membres calculés, en combinant des données de cube, des opérateurs arithmétiques, des chiffres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  
   
  Les définitions du membre calculé sont stockées, mais leurs valeurs existent uniquement en mémoire. Dans l'exemple précédent, les valeurs en marks sont présentées aux utilisateurs finaux, mais elles ne sont pas stockées comme données du cube.  
   

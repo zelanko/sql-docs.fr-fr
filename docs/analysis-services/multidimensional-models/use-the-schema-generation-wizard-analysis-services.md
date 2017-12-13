@@ -2,12 +2,12 @@
 title: "Utilisez l’Assistant génération de schéma (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a52799da2610aa55a0e045b2192b46ffd5f85f15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utiliser l'Assistant Génération de schéma (Analysis Services)
-  L'Assistant Génération de schéma requiert un volume d'informations restreint durant la phase de génération. La plupart des informations dont l’Assistant Génération de schéma a besoin pour générer des schémas relationnels sont extraites depuis les cubes et dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez déjà créés dans le projet. En outre, vous pouvez personnaliser la façon dont le schéma de la base de données de zone de sujet est généré et comment les objets du schéma sont nommés.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’Assistant génération de schéma requiert une quantité limitée d’informations pendant la phase de génération. La plupart des informations dont l’Assistant Génération de schéma a besoin pour générer des schémas relationnels sont extraites depuis les cubes et dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez déjà créés dans le projet. En outre, vous pouvez personnaliser la façon dont le schéma de la base de données de zone de sujet est généré et comment les objets du schéma sont nommés.  
   
 ## <a name="start-the-wizard"></a>Démarrer l'Assistant  
  Vous pouvez ouvrir l'Assistant Génération de schéma à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] de plusieurs façons :  

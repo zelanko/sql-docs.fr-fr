@@ -2,12 +2,12 @@
 title: "La récupération des données à l’aide d’AdomdDataReader | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1e086fd6662a00e79b87a02fbaf3528b08895de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9c02bc400a7d1b3d9bec1a42f6ee43045616e3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>Récupération de données à l'aide d'AdomdDataReader
-  Lorsqu'il s'agit de récupérer des données analytiques, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> offre un bon compromis entre charge et interactivité. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> récupère un flux de données aplati, avant uniquement et en lecture seule auprès d'une source de données analytiques. Ce flux de données, qui n'est pas mis en mémoire tampon, permet à la logique procédurale de traiter de façon séquentielle et efficace les résultats d'une source de données analytiques. Le choix de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> s'avère judicieux lorsqu'il s'agit de récupérer de grandes quantités de données en vue de les afficher, car les données ne sont pas placées en mémoire cache.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lors de la récupération des données analytiques, les <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> objet fournit un bon équilibre entre la charge et interactivité. L'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> récupère un flux de données aplati, avant uniquement et en lecture seule auprès d'une source de données analytiques. Ce flux de données, qui n'est pas mis en mémoire tampon, permet à la logique procédurale de traiter de façon séquentielle et efficace les résultats d'une source de données analytiques. Le choix de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> s'avère judicieux lorsqu'il s'agit de récupérer de grandes quantités de données en vue de les afficher, car les données ne sont pas placées en mémoire cache.  
   
  L'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> peut également contribuer à améliorer les performances de l'application en récupérant les données dès qu'elles sont disponibles, au lieu d'attendre le retour des résultats complets de la requête. De plus, l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> diminue la charge système dans la mesure où, par défaut, ce lecteur ne stocke qu'une ligne à la fois en mémoire.  
   

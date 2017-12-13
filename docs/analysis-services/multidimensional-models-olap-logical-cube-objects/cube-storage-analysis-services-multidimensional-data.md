@@ -2,12 +2,12 @@
 title: "Stockage (Analysis Services - données multidimensionnelles) du cube | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Stockage de cube (Analysis Services - Données multidimensionnelles)
-  Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques pour minimiser l’espace nécessaire pour le stockage des données de cube et les agrégations :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Stockage peut inclure uniquement les métadonnées du cube, ou il peut inclure toutes les données source à partir de la table de faits, ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques pour minimiser l’espace nécessaire pour le stockage des données de cube et les agrégations :  
   
 -   Les options de stockage permettent de choisir les modes et emplacements de stockage qui conviennent le mieux aux données de cube.  
   

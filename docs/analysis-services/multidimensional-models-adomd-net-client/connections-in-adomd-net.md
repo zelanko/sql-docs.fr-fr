@@ -2,12 +2,12 @@
 title: "Établissement de connexions dans ADOMD.NET | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcda3b90d2157869be1c187e8c6d86449790f7b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet"></a>Connexions dans ADOMD.NET
-  Dans ADOMD.NET, vous utilisez la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objet pour ouvrir des connexions avec les sources de données analytiques, telles que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données. Lorsque vous n'avez plus besoin de la connexion, vous devez la fermer explicitement.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans ADOMD.NET, vous utilisez la <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> objet pour ouvrir des connexions avec les sources de données analytiques, telles que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données. Lorsque vous n'avez plus besoin de la connexion, vous devez la fermer explicitement.  
   
 ## <a name="opening-a-connection"></a>Ouverture d'une connexion  
  Pour ouvrir une connexion dans ADOMD.NET, vous devez d'abord spécifier une chaîne de connexion à une source de données analytiques et à une base de données valides. Vous devez ensuite ouvrir explicitement la connexion à cette source de données.  

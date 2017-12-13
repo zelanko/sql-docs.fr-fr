@@ -2,12 +2,12 @@
 title: "Définition des membres calculés | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Leçon 6-1-définir des membres calculés
-Les membres calculés sont les membres d'une dimension ou d'un groupe de mesures qui sont définis à l'aide d'une combinaison de données de cube, d'opérateurs arithmétiques, de nombres et de fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Les membres calculés sont membres d’une dimension ou un groupe de mesures qui sont définies selon une combinaison de données du cube, des opérateurs arithmétiques, des chiffres et des fonctions. Par exemple, vous pouvez créer un membre calculé qui additionne deux mesures physiques dans le cube. Les définitions de membre calculé sont stockées dans les cubes, mais leurs valeurs sont calculées lors du traitement des requêtes.  
   
 Pour créer un membre calculé, utilisez la commande **Nouveau membre calculé** , disponible sous l'onglet **Calculs** du Concepteur de cube. Vous pouvez créer un membre calculé au sein d'une dimension, y compris la dimension de mesures. Vous pouvez aussi placer un membre calculé dans un dossier d'affichage dans la boîte de dialogue **Propriétés de calcul** . Pour plus d’informations, consultez [Calculs](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Calculs dans les modèles multidimensionnels](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)et [Créer des membres calculés](../analysis-services/multidimensional-models/create-calculated-members.md).  
   

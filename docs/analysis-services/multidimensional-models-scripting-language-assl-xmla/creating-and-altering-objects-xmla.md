@@ -2,12 +2,12 @@
 title: "Création et modification d’objets (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: be8a71595f444b18c68324fcb18375665525ddd1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06d6b8e0460ffa303c6e365820c61f9d200dcc95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Création et modification d'objets (XMLA)
-  Les objets principaux peuvent être créés, modifiés et supprimés de manière indépendante. Les objets principaux se composent notamment des objets suivants :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les objets principaux peuvent être indépendamment créés, modifiés et supprimés. Les objets principaux se composent notamment des objets suivants :  
   
 -   Serveurs  
   

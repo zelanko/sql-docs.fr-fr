@@ -2,12 +2,12 @@
 title: "Afficher le schéma de Cube | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2489ce5465afcbbb42ffaa9403d75a7d42d68ca4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-the-cube-schema"></a>Afficher le schéma de cube
-  Le volet **Vue de source de données** de l'onglet **Structure de cube** du **Concepteur de cube** affiche le schéma de cube. Le schéma est l'ensemble de tables à partir desquelles les mesures et les dimensions d'un cube sont dérivées. Chaque schéma de cube se compose d'une ou plusieurs tables de faits et d'une ou plusieurs tables de dimension sur lesquelles les mesures et les dimensions du cube sont basées.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le **vue de Source de données** volet de la **Structure de Cube** onglet **le Concepteur de Cube** affiche le schéma du cube. Le schéma est l'ensemble de tables à partir desquelles les mesures et les dimensions d'un cube sont dérivées. Chaque schéma de cube se compose d'une ou plusieurs tables de faits et d'une ou plusieurs tables de dimension sur lesquelles les mesures et les dimensions du cube sont basées.  
   
  Le volet **Vue de source de données** de l'onglet **Structure de cube** affiche un diagramme de la vue de source de données sur laquelle le cube est basé. Ce diagramme est un sous-ensemble du diagramme principal de la vue de source de données. Vous pouvez masquer et afficher les tables dans le volet **Vue de source de données** et afficher tous les diagrammes existants. Toutefois, vous ne pouvez pas apporter des modifications (telles que l'ajout de nouvelles relations ou requêtes nommées) au schéma sous-jacent. Pour apporter des modifications au schéma, utilisez le concepteur de vue de source de données.  
   

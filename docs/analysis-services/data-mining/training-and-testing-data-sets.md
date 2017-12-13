@@ -2,12 +2,12 @@
 title: "Apprentissage et jeux de données de test | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18028674d3c6873734b9c7b67b4e03dde99ed2e3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
-  La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Séparation des données en jeux d’apprentissage et jeux de test est une partie importante de l’évaluation des modèles d’exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
   
  Après le traitement d'un modèle à l'aide du jeu d'apprentissage, vous testez le modèle en effectuant des prédictions sur le jeu de test. Comme les données dans le jeu de test contiennent déjà des valeurs connues pour l'attribut que vous souhaitez prédire, il est facile de déterminer si les prédictions du modèle sont correctes.  
   

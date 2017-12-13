@@ -2,12 +2,12 @@
 title: Modification de la Dimension Date | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ce770ce3ac600e086ea0b6d1ed03ed1b26b4ee3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9f593c830dbdffe9b09b6f5e44d0957a7bb1d4e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Leçon 3-4-modification de la Dimension Date
-Dans les tâches de cette rubrique, vous allez créer une hiérarchie définie par l'utilisateur et vous allez modifier les noms de membre affichés pour les attributs Date, Month, Calendar Quarter et Calendar Semester. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Dans les tâches de cette rubrique, vous créez une hiérarchie définie par l’utilisateur et modifiez les noms de membre affichés pour les attributs Date, mois, trimestre et semestre calendrier. Vous allez également définir des clés composites pour les attributs, contrôler l'ordre de tri des membres de dimension et définir les relations d'attributs.  
   
 ## <a name="adding-a-named-calculation"></a>Ajout d'un calcul nommé  
 Vous pouvez ajouter un calcul nommé, c'est-à-dire une expression SQL qui est représentée sous la forme d'une colonne calculée, dans la table d'une vue de source de données. L'expression apparaît et se comporte comme une colonne dans une table. Les calculs nommés permettent d'étendre le schéma relationnel des tables existantes dans une vue de source des données, sans avoir à modifier la table dans la source de données sous-jacente. Pour plus d’informations, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  

@@ -2,12 +2,12 @@
 title: "Référence technique de Microsoft Logistic Regression algorithme | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cfb1b20bed865c750ed5a29ff94fd4136830c18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)
-  L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) est une variante de l’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), où le paramètre *HIDDEN_NODE_RATIO* 0. Ce paramètre crée un modèle de réseau neuronal qui ne contient pas de couche masquée et qui, par conséquent, est équivalent à la régression logistique.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de régression logistique est une variante de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal, où le *HIDDEN_NODE_RATIO* paramètre est défini sur 0. Ce paramètre crée un modèle de réseau neuronal qui ne contient pas de couche masquée et qui, par conséquent, est équivalent à la régression logistique.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implémentation de l'algorithme MLR (Microsoft Logistic Regression)  
  Supposons que la colonne prédictible contient uniquement deux états, mais que vous souhaitez tout de même effectuer une analyse de régression, en associant les colonnes d'entrée à la probabilité que la colonne prédictible contiendra un état spécifique. Le diagramme suivant représente les résultats obtenus en attribuant les valeurs 1 et 0 aux états de la colonne prédictible, en calculant la probabilité que la colonne contiendra un état spécifique et en effectuant une régression linéaire par rapport à une variable d'entrée.  

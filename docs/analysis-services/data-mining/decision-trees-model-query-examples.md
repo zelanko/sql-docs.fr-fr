@@ -2,12 +2,12 @@
 title: "Exemples de requêtes de modèle des arbres de décision | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1b441eb4718e5f362fb1ef6f6a3a889cf5dc812
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f38e76e522a4b062e27379533c22b540311f4c34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="decision-trees-model-query-examples"></a>Exemples de requêtes de modèle d'arbre de décision
-  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, ou créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle d'arbre de décision peut fournir des statistiques sur le nombre de cas à chaque niveau de l'arbre, ou les règles qui font la différence entre des cas. En revanche, une requête de prédiction mappe le modèle à de nouvelles données pour générer des recommandations, des classifications, etc. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer une requête de contenu, qui fournit des détails sur les séquences découvertes dans l’analyse, ou vous pouvez créer une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle d'arbre de décision peut fournir des statistiques sur le nombre de cas à chaque niveau de l'arbre, ou les règles qui font la différence entre des cas. En revanche, une requête de prédiction mappe le modèle à de nouvelles données pour générer des recommandations, des classifications, etc. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees).  
   

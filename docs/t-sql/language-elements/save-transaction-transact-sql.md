@@ -31,11 +31,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6489bd5ca7b8b82b7211bc77414335e6e62bd7
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Arguments  
  *savepoint_name*  
- Nom affecté au point de sauvegarde. Les noms des points de sauvegarde doivent respecter les règles d'appellation des identificateurs, à la différence que leur nom est limité à 32 caractères. *argument* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
+ Nom affecté au point de sauvegarde. Les noms des points de sauvegarde doivent respecter les règles d'appellation des identificateurs, à la différence que leur nom est limité à 32 caractères. *savepoint_name* est toujours la casse, même lorsque l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne respecte pas la casse.  
   
  @*savepoint_variable*  
  Nom d'une variable définie par l'utilisateur et contenant un nom de point de sauvegarde valide. La variable doit être déclarée avec un **char**, **varchar**, **nchar**, ou **nvarchar** type de données. Plus de 32 caractères peuvent être passés à la variable, mais seuls les 32 premiers peuvent être utilisés.  

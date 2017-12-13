@@ -2,12 +2,12 @@
 title: "Groupe de membres d’attribut (discrétisation) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Propriétés - groupe attribut des membres d’attribut
-  Un groupe de membres est une collection de membres de dimension contigus générée par le système. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un groupe de membres est une collection de généré par le système de membres de dimension contigus. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les membres d’un attribut peuvent être regroupés en plusieurs groupes de membres via un processus nommé discrétisation. Un niveau dans une hiérarchie contient soit des groupes de membres, soit des membres, mais pas les deux. Lorsque les utilisateurs professionnels parcourent un niveau qui contient des groupes de membres, ils voient les noms et les valeurs de cellule de ces groupes. Les membres générés par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour prendre en charge les groupes de membres s'appellent membres de regroupement et se présentent comme des membres ordinaires.  
   
  La propriété **DiscretizationMethod** au niveau d’un attribut détermine la façon dont les membres sont regroupés.  
   

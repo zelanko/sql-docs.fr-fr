@@ -2,12 +2,12 @@
 title: "Projets connexes pour les Solutions d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da5beda0118e0eb281a84c9d0f675b94e3a9d067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d197240962d834b3da6c6e1dbdd1fb224a995192
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
-  Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le minimum requis pour une solution d’exploration de données est le projet d’exploration de données, qui définit les sources de données, vues de sources de données, les structures d’exploration de données et les modèles d’exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  
   
 -   Préparation et sélection des données et des variables. Inclut le nettoyage de données, la gestion et l'intégration des métadonnées de plusieurs sources de données, ainsi que la conversion, la fusion et le téléchargement de données dans un entrepôt de données.  
   

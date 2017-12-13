@@ -2,12 +2,12 @@
 title: Inscription SPN pour une instance Analysis Services | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53dd8aa711b2d9ba4a565f86ee66572e523fa78a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Inscription du nom SPN pour une instance Analysis Services
-  Un nom de principal du service (SPN) identifie de manière unique une instance de service dans un domaine Active Directory lorsque Kerberos est utilisé pour authentifier mutuellement les identités de service et de client. Un SPN est associé au compte d'ouverture de session sous lequel s'exécute l'instance du service.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Un nom de principal du Service (SPN) identifie de façon unique une instance de service dans un domaine Active Directory lorsque Kerberos est utilisé pour authentifier mutuellement les identités de service et client. Un SPN est associé au compte d'ouverture de session sous lequel s'exécute l'instance du service.  
   
  Pour les applications clientes qui se connectent à Analysis Services via l'authentification Kerberos, les bibliothèques clientes Analysis Services créent un nom SPN à l'aide du nom d'hôte de la chaîne de connexion et d'autres variables connues, telles que la classe de service, qui sont résolues dans n'importe quelle version donnée d'Analysis Services.  
   

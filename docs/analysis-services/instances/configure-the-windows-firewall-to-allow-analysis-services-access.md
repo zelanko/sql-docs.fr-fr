@@ -2,12 +2,12 @@
 title: "Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d1edb8853dcc8faa1ff632ea9379f937881c9886
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services
-  Une première étape essentielle pour mettre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] à disposition sur le réseau consiste à déterminer si vous devez débloquer des ports dans un pare-feu. La plupart des installations nécessitent la création d'au moins une règle de trafic entrant dans le pare-feu qui autorise les connexions à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une première étape essentielle dans la fabrication [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est disponible sur le réseau pour déterminer si vous devez débloquer des ports dans un pare-feu. La plupart des installations nécessitent la création d'au moins une règle de trafic entrant dans le pare-feu qui autorise les connexions à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Les conditions de configuration du pare-feu varient selon le mode d'installation de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   

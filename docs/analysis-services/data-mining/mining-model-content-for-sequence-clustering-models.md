@@ -2,12 +2,12 @@
 title: "Contenu du modèle pour les modèles Sequence Clustering d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8d0cc7b52ecffbc7a85be31047a8db97e7a1922b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 336dd3cc52fc72576c60c20c0e324f177b488837
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering
-  Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique décrit le contenu du modèle d’exploration de données qui est spécifique aux modèles qui utilisent l’algorithme Microsoft Sequence Clustering. Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Présentation de la structure d'un modèle Sequence Clustering  
  Un modèle Sequence Clustering comprend un nœud parent unique (NODE_TYPE = 1) qui représente le modèle et ses métadonnées. Le nœud parent, étiqueté **(Tout)**, a un nœud de séquence connexe (NODE_TYPE = 13) qui répertorie toutes les transitions détectées dans les données d’apprentissage.  

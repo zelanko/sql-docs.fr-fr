@@ -2,12 +2,12 @@
 title: "La Validation croisée (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 89484271e1424efafef7e5b1956c4d0ec4825efa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validation croisée (Analysis Services - Exploration de données)
-  La*validation croisée* est un outil d’analyse standard et une fonctionnalité importante quand il s’agit de développer et d’optimiser des modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*La validation croisée* est un outil standard dans analytique et est une fonctionnalité importante pour vous aider à développer et à affiner les modèles d’exploration de données. Vous recourez à la validation croisée après avoir créé une structure d'exploration de données et des modèles d'exploration de données connexes dans le but d'établir la validité du modèle.  Les applications de la validation croisée sont les suivantes :  
   
 -   Validation de la robustesse d'un modèle d'exploration de données particulier  
   

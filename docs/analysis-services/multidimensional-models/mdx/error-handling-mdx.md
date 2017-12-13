@@ -2,12 +2,12 @@
 title: (MDX) de la gestion des erreurs | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8679c6d912e6dab8fa89f4f67ddfa9070c04460f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1eb0133bb4f6e1d4b03e83f771c6170204eeb5b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-handling-mdx"></a>Gestion des erreurs (MDX)
-  Chaque cube peut contrôler le mode de gestion des erreurs contenues dans un script MDX (Multidimensional Expressions). La gestion des erreurs s’effectue par l’intermédiaire de l’énumérateur **ScriptErrorHandlingMode** . Les valeurs possibles pour cet énumérateur sont les suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Chaque cube peut contrôler la gestion des erreurs au sein d’un script MDX (Multidimensional Expressions). La gestion des erreurs s’effectue par l’intermédiaire de l’énumérateur **ScriptErrorHandlingMode** . Les valeurs possibles pour cet énumérateur sont les suivantes :  
   
  **IgnoreNone**  
  Entraîne la génération d’une erreur par le serveur si [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] détecte une erreur dans le script MDX.  

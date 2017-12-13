@@ -2,12 +2,12 @@
 title: "Créer une Source de données (SSAS multidimensionnel) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8fbcb252ca94f94eef82cbb2b19a3c15dcf7a38f
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
-  Dans un modèle multidimensionnel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objet de source de données représente une connexion à la source de données depuis laquelle vous traitez (ou importez) des données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modèle multidimensionnel, un objet de source de données représente une connexion à la source de données à partir de laquelle vous traitement (ou importez) de données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
   
  Cette rubrique comprend les sections suivantes :  
   

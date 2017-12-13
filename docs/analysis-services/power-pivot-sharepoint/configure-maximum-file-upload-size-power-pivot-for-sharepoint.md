@@ -2,12 +2,12 @@
 title: "Configurer la taille de téléchargement de fichier maximale (PowerPivot pour SharePoint) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c52d3ad3556021c7f4d37c08dc0456733457cb87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 68e7aa514a63f6bce6ddcff33c1b7a6a2616beed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurer la taille maximale de téléchargement de fichiers (PowerPivot pour SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Les classeurs contiennent souvent des quantités importantes de données qui se traduisent par des fichiers dépassant la taille de fichier maximale autorisée pour les chargements SharePoint. Lorsque vous essayez de télécharger un fichier qui dépasse la limite supérieure, l'erreur suivante s'affiche dans SharePoint :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs contiennent souvent de grandes quantités de données de résultat dans des fichiers qui dépassent la taille maximale autorisée pour les téléchargements SharePoint. Lorsque vous essayez de télécharger un fichier qui dépasse la limite supérieure, l'erreur suivante s'affiche dans SharePoint :  
   
 -   « La taille du fichier spécifié est supérieure à la taille maximale de fichier prise en charge. »  
   

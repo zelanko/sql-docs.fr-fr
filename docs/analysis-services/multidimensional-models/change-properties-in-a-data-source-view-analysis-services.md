@@ -2,12 +2,12 @@
 title: "Modifier les propriétés dans une vue de Source de données (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa1e0fa67c2a9dca58b4cfcff33407994810baa5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b8d8d731552fe099d161d6b87bca87ceecd709a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
-  Après avoir défini une vue de source de données à l'aide de l'Assistant Vue de source de données, puis ajouté des tables, des vues, des calculs nommés et des requêtes nommées à la vue de source de données, vous pouvez modifier les propriétés en rapport avec :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après la définition d’une vue de source de données à l’aide de l’Assistant vue de Source de données et l’ajout de tables, vues, de calculs nommés et afficher les requêtes nommées à la source de données, vous souhaiterez modifier les propriétés liées à :  
   
 -   les critères de correspondance de vues de source de données ;  
   

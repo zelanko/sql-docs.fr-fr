@@ -2,12 +2,12 @@
 title: "Créer et gérer une Partition locale (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2e5047564e2001f87691d622a736c9ad28b87c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cf08f0031c6e805b5677a0e551a20c941d0dce34
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Créer et gérer une partition locale (Analysis Services)
-  Vous pouvez créer des partitions supplémentaires pour un groupe de mesures afin d'améliorer les performances de traitement. Le fait de disposer de plusieurs partitions permet d'allouer des données de faits sur un nombre correspondant de fichiers de données physiques sur les serveurs locaux, ainsi que sur les serveurs distants. Dans Analysis Services, les partitions peuvent être traitées indépendamment et en parallèle, ce qui vous permet de contrôler davantage le traitement des charges de travail sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez créer des partitions supplémentaires pour un groupe de mesures améliorer les performances de traitement. Le fait de disposer de plusieurs partitions permet d'allouer des données de faits sur un nombre correspondant de fichiers de données physiques sur les serveurs locaux, ainsi que sur les serveurs distants. Dans Analysis Services, les partitions peuvent être traitées indépendamment et en parallèle, ce qui vous permet de contrôler davantage le traitement des charges de travail sur le serveur.  
   
  Les partitions peuvent être créées dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pendant la conception de modèle, ou une fois que la solution est déployée à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de XMLA. Nous vous recommandons de choisir une seule approche uniquement. Si vous passez d'un outil à un autre, vous allez peut-être constater que les modifications apportées à une base de données déployée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont remplacées lorsque vous redéployez ultérieurement la solution depuis [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   

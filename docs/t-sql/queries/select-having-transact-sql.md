@@ -1,7 +1,7 @@
 ---
 title: AYANT (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,16 +26,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f8ca5c21dfaf767009218b220d26520f178eb3a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf99ee7aece979c973d2d162062ac2bae7aac296
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="select---having-transact-sql"></a>SELECT - ayant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Indique un critère de recherche pour un groupe ou une fonction d'agrégation. HAVING ne peut être utilisé qu'avec l'instruction SELECT. HAVING est généralement utilisé dans une clause GROUP BY. Lorsque GROUP BY n'est pas utilisé, HAVING se comporte comme une clause WHERE.  
+  Indique un critère de recherche pour un groupe ou une fonction d'agrégation. HAVING ne peut être utilisé qu'avec l'instruction SELECT. HAVING est généralement utilisé avec une clause GROUP BY. Lorsque GROUP BY n’est pas utilisé, il existe un groupe unique et agrégé implicit.   
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Arguments  
-\<search_condition > Spécifie la condition de recherche pour le groupe ou l’agrégat répondre aux.  
+\<search_condition > Spécifie un ou plusieurs prédicats pour les groupes et/ou les agrégats à respecter. Pour plus d’informations sur les conditions de recherche et les prédicats, consultez [Condition de recherche &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
   
  Le **texte**, **image**, et **ntext** des types de données ne peut pas être utilisés dans une clause HAVING.  
   

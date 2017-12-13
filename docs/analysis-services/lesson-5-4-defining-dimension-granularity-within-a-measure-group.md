@@ -2,12 +2,12 @@
 title: "Définir la granularité des dimensions dans un groupe de mesures | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fbdacd6a82296b08d0f395502df71f0a9e65eb8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Leçon 5-4-définition granularité des dimensions dans un groupe de mesures
-Les utilisateurs peuvent souhaiter dimensionner des données de faits avec des granularités ou spécificités différentes pour diverses raisons. Prenons l'exemple d'un scénario dans lequel les données de ventes des revendeurs ou des ventes Internet sont enregistrées quotidiennement tandis que les données relatives aux quotas de ventes n'existent qu'au niveau du mois ou du trimestre. Dans un scénario de ce type, les utilisateurs souhaiteront que la dimension de temps ait une granularité ou un niveau de détail différent pour chaque table de faits. S'il est possible de définir une nouvelle dimension de base de données comme dimension de temps avec une granularité différente, la méthode qui fait appel à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]est plus simple.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Les utilisateurs souhaitent données de faits de dimension à des granularités ou à des fins différentes. Prenons l'exemple d'un scénario dans lequel les données de ventes des revendeurs ou des ventes Internet sont enregistrées quotidiennement tandis que les données relatives aux quotas de ventes n'existent qu'au niveau du mois ou du trimestre. Dans un scénario de ce type, les utilisateurs souhaiteront que la dimension de temps ait une granularité ou un niveau de détail différent pour chaque table de faits. S'il est possible de définir une nouvelle dimension de base de données comme dimension de temps avec une granularité différente, la méthode qui fait appel à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]est plus simple.  
   
 Par défaut, dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], lorsqu'une dimension est utilisée au sein d'un groupe de mesures, la granularité des données de cette dimension est fonction de son attribut de clé. Par exemple, lorsqu'une dimension de temps est incluse dans un groupe de mesures et que le niveau de granularité par défaut de la dimension de temps est le jour, le niveau de granularité par défaut de cette dimension dans le groupe de mesures est le jour. Ce niveau de granularité convient dans la plupart des cas, par exemple pour les groupes de mesures **Internet Sales** et **Reseller Sales** du présent didacticiel. Cependant, lorsqu'une dimension de ce type est incluse dans d'autres types de groupes de mesures, tels que les groupes de mesures des quotas de ventes ou du budget, une granularité de niveau mensuel ou trimestriel est généralement plus appropriée.  
   

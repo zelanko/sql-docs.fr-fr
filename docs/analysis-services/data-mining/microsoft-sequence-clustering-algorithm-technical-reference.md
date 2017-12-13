@@ -2,12 +2,12 @@
 title: Microsoft Sequence Clustering techniques algorithme | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,23 +25,23 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
-  L'algorithme MSC (Microsoft Sequence Clustering) est un algorithme hybride qui utilise l'analyse en chaîne de Markov pour identifier les séquences ordonnées et associe les résultats de cette analyse aux techniques de clustering pour générer des clusters basés sur les séquences et les autres attributs du modèle. Cette rubrique décrit l'implémentation de l'algorithme, la personnalisation de l'algorithme et les besoins spéciaux pour les modèles Sequence Clustering.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’algorithme Microsoft Sequence Clustering est un algorithme hybride qui utilise la chaîne de MARKOV pour identifier les séquences ordonnées et associe les résultats de cette analyse aux techniques de clustering pour générer des clusters basés sur les séquences et d’autres attributs dans le modèle. Cette rubrique décrit l'implémentation de l'algorithme, la personnalisation de l'algorithme et les besoins spéciaux pour les modèles Sequence Clustering.  
   
  Pour plus d'informations générales à propos de l'algorithme, y compris les procédures permettant de parcourir et d'interroger des modèles Sequence Clustering, consultez [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
 ## <a name="implementation-of-the-microsoft-sequence-clustering-algorithm"></a>Implémentation de l'algorithme Microsoft Sequence Clustering  
  Le modèle Microsoft Sequence Clustering utilise des modèles de Markov pour identifier des séquences et déterminer la probabilité des séquences. Un modèle de Markov est un graphique qui stocke les transitions entre des états différents. L'algorithme MSC (Microsoft Sequence Clustering) utilise des chaînes de Markov d'ordre n, pas un modèle de Markov masqué.  
   
- Le nombre d'ordres dans une chaîne de Markov vous indique le nombre d'états utilisés pour déterminer la probabilité des états actuels. Dans un modèle de Markov de premier ordre, la probabilité de l'état actuel dépend uniquement de l'état précédent. Dans une chaîne de Markov de deuxième-ordre, la probabilité d'un état dépend des deux états précédents, etc.. Pour chaque chaîne de Markov, une matrice de transition stocke les transitions de chaque combinaison d'états. À mesure que la longueur de la chaîne de Markov augmente, la taille de la matrice augmente également de façon exponentielle et la matrice devient extrêmement allouée. Le temps de traitement augmente aussi proportionnellement.  
+ Le nombre d'ordres dans une chaîne de Markov vous indique le nombre d'états utilisés pour déterminer la probabilité des états actuels. Dans un modèle de Markov de premier ordre, la probabilité de l'état actuel dépend uniquement de l'état précédent. Dans une chaîne de Markov de deuxième-ordre, la probabilité d'un état dépend des deux états précédents, etc. Pour chaque chaîne de Markov, une matrice de transition stocke les transitions de chaque combinaison d'états. À mesure que la longueur de la chaîne de Markov augmente, la taille de la matrice augmente également de façon exponentielle et la matrice devient extrêmement allouée. Le temps de traitement augmente aussi proportionnellement.  
   
- IL peut être utile de visualiser la chaîne en utilisant l'exemple d'analyse des parcours de visite, qui analyse les visites aux pages Web d'un site. Chaque utilisateur crée une longue séquence de clics pour chaque session. Lorsque vous créez un modèle pour analyser le comportement de l'utilisateur d'un site Web, le jeu de données utilisé pour l'apprentissage est une séquence d'URL, convertie en un graphique qui inclut le nombre de toutes les instances du même chemin d'accès de clic. Par exemple, le graphique contient la probabilité que l'utilisateur aille de la page 1 à la page 2 (10 %), la probabilité que l'utilisateur aille de la page 1 à la page 3 (20 %), etc.. Lorsque vous réunissez tous les chemins d'accès et les éléments des chemins d'accès possibles, vous obtenez un graphique qui peut être beaucoup plus long et plus complexe qu'un chemin d'accès unique observé.  
+ IL peut être utile de visualiser la chaîne en utilisant l'exemple d'analyse des parcours de visite, qui analyse les visites aux pages Web d'un site. Chaque utilisateur crée une longue séquence de clics pour chaque session. Lorsque vous créez un modèle pour analyser le comportement de l'utilisateur d'un site Web, le jeu de données utilisé pour l'apprentissage est une séquence d'URL, convertie en un graphique qui inclut le nombre de toutes les instances du même chemin d'accès de clic. Par exemple, le graphique contient la probabilité que l'utilisateur aille de la page 1 à la page 2 (10 %), la probabilité que l'utilisateur aille de la page 1 à la page 3 (20 %), etc. Lorsque vous réunissez tous les chemins d'accès et les éléments des chemins d'accès possibles, vous obtenez un graphique qui peut être beaucoup plus long et plus complexe qu'un chemin d'accès unique observé.  
   
  Par défaut, L'algorithme Microsoft Sequence Clustering utilise la méthode de clustering EM (Expectation Maximization). Pour plus d’informations, consultez [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md).  
   

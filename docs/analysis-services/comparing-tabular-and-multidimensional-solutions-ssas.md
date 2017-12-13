@@ -2,12 +2,12 @@
 title: Comparaison des Solutions multidimensionnelles et tabulaires (SSAS) | Documents Microsoft
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparaison des solutions multidimensionnelles et tabulaires
-  SQL Server Analysis Services offre plusieurs approches pour la création d’un modèle sémantique business intelligence : tabulaire, multidimensionnel et PowerPivot pour SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services offre plusieurs approches pour la création d’un modèle sémantique business intelligence : tabulaire, multidimensionnel et PowerPivot pour SharePoint.
   
  Le fait d’avoir plusieurs approches offre une expérience de modélisation adaptée aux différents besoins des entreprises et des utilisateurs. Le modèle multidimensionnel est une technologie rodée reposant sur des normes ouvertes, adoptée par de nombreux éditeurs de logiciels d’aide à la décision (Business Intelligence ou BI), mais il peut être difficile à maîtriser. Le modèle tabulaire propose une approche de modélisation relationnelle que de nombreux développeurs jugent plus intuitive. Le modèle PowerPivot est encore plus simple, car il offre une modélisation visuelle des données dans Excel, avec prise en charge des serveurs fournie via SharePoint.  
   

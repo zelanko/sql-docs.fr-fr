@@ -2,12 +2,12 @@
 title: "Créer une Dimension à l’aide d’une Table existante | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeabc8b64e3d5450373fb1235a78a27a8aff5a5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Créer une dimension à l'aide d'une table existante
-  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l'Assistant Dimension de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension à partir d'une table existante. Pour cela, sélectionnez l’option **Utiliser une table existante** de la page **Sélectionner la méthode de création** de l’Assistant. Si vous sélectionnez cette option, l'Assistant base la structure de la dimension sur les tables de dimension, leurs colonnes et toutes les relations entre ces colonnes d'une vue de source de données existante. L'Assistant échantillonne des données dans la table source et les tables associées. Il utilise ces données pour définir des colonnes d’attributs basées sur les colonnes dans les tables de dimension et pour définir des hiérarchies d’attributs (nommées hiérarchies *définies par l’utilisateur* ). Une fois que vous avez utilisé l'Assistant Dimension pour créer votre dimension, vous pouvez utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l’Assistant Dimension de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension à partir d’une table existante. Pour cela, sélectionnez l’option **Utiliser une table existante** de la page **Sélectionner la méthode de création** de l’Assistant. Si vous sélectionnez cette option, l'Assistant base la structure de la dimension sur les tables de dimension, leurs colonnes et toutes les relations entre ces colonnes d'une vue de source de données existante. L'Assistant échantillonne des données dans la table source et les tables associées. Il utilise ces données pour définir des colonnes d’attributs basées sur les colonnes dans les tables de dimension et pour définir des hiérarchies d’attributs (nommées hiérarchies *définies par l’utilisateur* ). Une fois que vous avez utilisé l'Assistant Dimension pour créer votre dimension, vous pouvez utiliser le Concepteur de dimensions pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
   
  Lorsque vous utilisez une table existante pour créer une dimension, l'Assistant Dimension vous guide à travers les étapes suivantes :  
   

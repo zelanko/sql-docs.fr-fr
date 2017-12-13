@@ -34,19 +34,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c97264457e575aa076e6b10f3454f0d8cf6e2d7
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crée, dans la base de données active, un schéma qui mappe les partitions d'une table ou d'un index partitionné avec des groupes de fichiers. Le nombre et le domaine des partitions d'une table ou d'un index partitionné sont définis dans une fonction de partition. Une fonction de partition doit d’abord être créée dans un [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) instruction avant de créer un schéma de partition.  
 
-[!NOTE]
-Uniquement les groupes de fichiers primaires sont pris en charge dans la base de données SQL Azure.  
+>[!NOTE]
+>Uniquement les groupes de fichiers primaires sont pris en charge dans la base de données SQL Azure.  
 
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

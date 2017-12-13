@@ -2,12 +2,12 @@
 title: "Propriétés de chaîne de connexion (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriétés des chaînes de connexion (Analysis Services)
-  Cette rubrique documente les propriétés de chaîne de connexion que vous pouvez définir dans le concepteur ou les outils d'administration, ou voir dans les chaînes de connexion générées par les applications clientes qui se connectent aux données Analysis Services et interrogent ces dernières. Par conséquent, elle couvre uniquement un sous-ensemble des propriétés disponibles. La liste complète inclut de nombreuses propriétés de serveur et de base de données, vous permettant de personnaliser une connexion à une application spécifique, indépendamment de la façon dont l'instance ou la base de données est configurée sur le serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique documente les propriétés de chaîne de connexion vous pourrez définir dans un des outils Concepteur ou d’administration, ou voir dans les chaînes de connexion générées par les applications clientes qui se connectent à et interrogent les données Analysis Services. Par conséquent, elle couvre uniquement un sous-ensemble des propriétés disponibles. La liste complète inclut de nombreuses propriétés de serveur et de base de données, vous permettant de personnaliser une connexion à une application spécifique, indépendamment de la façon dont l'instance ou la base de données est configurée sur le serveur.  
   
  Les développeurs qui créent des chaînes de connexion personnalisées dans un code d’application doivent consulter la documentation de l’API pour le client ADOMD.NET afin d’obtenir une liste plus détaillée : <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

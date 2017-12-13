@@ -2,12 +2,12 @@
 title: "Ajouter MSOLAP.5 en tant qu’un fournisseur de données approuvé dans Excel Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b3ea1f946e73a3f56cd70b5e88d9752d74a238
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 146b61a544dfc91585cde88bbdb54d2f43375b0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services
-  MSOLAP.5 fait référence au fournisseur OLE DB Analysis Services pour SQL Server 2012. Excel Services doit approuver ce fournisseur avant d’effectuer la demande de connexion qui se traduira par la disponibilité des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Msolap.5 fait référence au fournisseur OLE DB pour Analysis Services pour SQL Server 2012. Excel Services doit approuver ce fournisseur avant d’effectuer la demande de connexion qui se traduira par la disponibilité des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un serveur.  
   
  Si vous avez configuré [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint à l’aide de l’outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , MSOLAP.5 est peut-être déjà un fournisseur approuvé, car l’outil inclut une action qui répond à cette exigence. Toutefois, si vous utilisez PowerShell, l’administration centrale, ou si vous avez exclu l’action du fournisseur approuvé dans l’outil de configuration, le fournisseur peut être manquant, auquel cas vous devez l’ajouter maintenant, dans le cadre de la configuration de la batterie de serveurs pour l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

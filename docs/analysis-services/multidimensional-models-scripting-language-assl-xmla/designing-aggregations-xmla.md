@@ -2,12 +2,12 @@
 title: "Conception d’agrégations (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-xmla"></a>Conception d'agrégations (XMLA)
-  Les conceptions d'agrégation sont associées aux partitions d'un groupe de mesures particulier pour s'assurer que les partitions utilisent la même structure lors du stockage d'agrégations. À l’aide de la même structure de stockage pour les partitions permet de définir facilement des partitions qui peuvent être fusionnées ultérieurement à l’aide de la [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande. Pour plus d’informations sur les conceptions d’agrégation, consultez [agrégations et conceptions d’agrégation](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Conceptions d’agrégation sont associées aux partitions d’un groupe de mesures particulier pour vous assurer que les partitions utilisent la même structure lors du stockage des agrégations. À l’aide de la même structure de stockage pour les partitions permet de définir facilement des partitions qui peuvent être fusionnées ultérieurement à l’aide de la [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande. Pour plus d’informations sur les conceptions d’agrégation, consultez [agrégations et conceptions d’agrégation](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Pour définir des agrégations pour une conception d’agrégation, vous pouvez utiliser la [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) commande XML for Analysis (XMLA). Le **DesignAggregations** commande possède des propriétés qui identifient la conception d’agrégation à utiliser comme référence et la façon de contrôler le processus de conception basé sur cette référence. À l’aide de la **DesignAggregations** commande et ses propriétés, vous pouvez concevoir des agrégations itérative ou dans un lot et puis afficher les statistiques de conception obtenues pour évaluer le processus de conception.  
   

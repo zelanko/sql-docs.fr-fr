@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
+ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="create-external-table-transact-sql"></a>CRÉER une TABLE externe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -138,7 +138,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [nom_schéma]. | schema_name. ] *nom_table*  
  Un à trois - nom de partie de la table à créer. Pour une table externe, seules les métadonnées de la table sont stockée dans SQL, ainsi que des statistiques de base sur le fichier et ou le dossier référencé dans Hadoop ou Azure blob storage. Aucune donnée réelle est déplacée ou est stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition > [ ,... *n*  ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe de définition d’une colonne. Une exception à cela, vous ne pouvez pas utiliser la contrainte par défaut sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) et [créer la TABLE de base de données SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition > [,...  *n*  ] CREATE EXTERNAL TABLE autorise une ou plusieurs définitions de colonne. CREATE EXTERNAL TABLE et CREATE TABLE utilisent la même syntaxe de définition d’une colonne. Une exception à cela, vous ne pouvez pas utiliser la contrainte par défaut sur des tables externes. Pour plus d’informations sur les définitions de colonne et leurs types de données, consultez [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) et [créer la TABLE de base de données SQL Azure](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Les définitions de colonne, y compris les types de données et le nombre de colonnes doit correspondre les données dans les fichiers externes. S’il existe une incompatibilité, les lignes du fichier sont rejetées lors de l’interrogation des données réelles.  
   
@@ -295,6 +295,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE et DROP TABLE  
   
 -   CREATE STATISTICS et DROP STATISTICS  
+Remarque : Créer et supprimer des statistiques sur les tables externes ne sont pas pris en charge dans la base de données SQL Azure. 
   
 -   CREATE VIEW et DROP VIEW  
   

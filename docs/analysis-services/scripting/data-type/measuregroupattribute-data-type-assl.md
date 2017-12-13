@@ -2,12 +2,12 @@
 title: "Type de données MeasureGroupAttribute (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d274c0c10ba9ced0f38ff08f0d008ddc2eb53176
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0f9336aa58d5fc25c0f46356faf6afb55e46d5d3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>Type de données MeasureGroupAttribute (ASSL)
-  Définit un type de données primitif représentant la relation entre un attribut et un groupe de mesures.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif qui représente la relation entre un attribut et un groupe de mesures.  
   
 ## <a name="syntax"></a>Syntaxe  
   

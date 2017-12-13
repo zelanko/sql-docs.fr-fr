@@ -2,12 +2,12 @@
 title: "Exemples de requêtes de modèle de série chronologique | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd37cd530af23d04f98866eebcaaad824a66f150
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="time-series-model-query-examples"></a>Exemples de requêtes de modèle de série chronologique
-  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les modèles (ou séquences) découverts au cours de l'analyse, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez créer soit une requête de contenu, qui fournit des détails sur les modèles découverts dans l’analyse, ou vous pouvez créer une requête de prédiction, qui utilise les séquences dans le modèle pour élaborer des prédictions pour les nouvelles données. Par exemple, une requête de contenu pour un modèle de série chronologique peut fournir des détails supplémentaires sur les structures périodiques détectées, tandis qu'une requête de prédiction peut vous donner des prédictions pour les 5 à 10 tranches de temps suivantes. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
   
  Cette section explique comment créer les deux types de requêtes pour les modèles basés sur l'algorithme MTS (Microsoft Time Series).  
   

@@ -2,12 +2,12 @@
 title: "Ajouter l’Intelligence comptable à une Dimension | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Assistant BI - ajouter l’Intelligence comptable à une Dimension
-  Ajoutez l'intelligence comptable à un cube ou une dimension pour affecter des classes comptables standard, par exemple recettes et dépenses, aux membres d'un attribut de compte. Cette amélioration identifie également les types de comptes (tels que l'actif et le passif) et affecte l'agrégation appropriée à chaque type de compte. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut utiliser les classifications pour agréger les comptes sur une période.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Ajoutez l’intelligence comptable à un cube ou une dimension pour affecter des classifications de compte d’utilisateur standard, telles que les bénéfices et dépenses, aux membres d’un attribut de compte. Cette amélioration identifie également les types de comptes (tels que l'actif et le passif) et affecte l'agrégation appropriée à chaque type de compte. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut utiliser les classifications pour agréger les comptes sur une période.  
   
 > [!NOTE]  
 >  L'intelligence comptable n'est disponible que pour les dimensions qui sont basées sur des sources de données existantes. Pour les dimensions créées sans utiliser de source de données, vous devez exécuter l'Assistant Génération de schéma pour créer une vue de source de données avant d'ajouter l'intelligence comptable.  

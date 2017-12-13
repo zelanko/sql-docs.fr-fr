@@ -2,12 +2,12 @@
 title: "Grant autorisations Lire la définition des métadonnées d’objet (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ecfb3c65f3ab31caf318f6760c653db16ecb78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 02027bfdd00a6808ec3511d85fae0fd158fa70c8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Octroyer des autorisations Lire la définition sur des métadonnées d'objets (Analysis Services)
-  L'autorisation de lire une définition d'objets ou des métadonnées sur des objets sélectionnés permet à un administrateur d'accorder l'autorisation d'afficher des informations sur les objets sans accorder l'autoriser de modifier les définitions des objets, modifier la structure des objets ou afficher les données des objets. Vous pouvez accorder des autorisations**Lire la définition** au niveau de la base de données, d’une source de données, d’une dimension, d’une structure d’exploration de données et d’un modèle d’exploration de données. Si vous avez besoin d’autorisations **Lire la définition** pour un cube, vous devez activer **Lire la définition** pour la base de données. N’oubliez pas que les autorisations s’ajoutent les unes aux autres. Par exemple, imaginez qu'un rôle accorde l'autorisation de lire les métadonnées d'un cube tandis qu'un second rôle accorde au même utilisateur l'autorisation de lire les métadonnées d'une dimension. Les autorisations des deux rôles se combinent et permettent à l'utilisateur de lire les métadonnées du cube et celles de la dimension dans cette base de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Autorisation de lire une définition d’objet, ou métadonnées, sur les objets sélectionnés permet à un administrateur accorder l’autorisation d’afficher des informations sur l’objet, sans accorder d’autorisations pour modifier la définition de l’objet, modifiez la structure des objets ou afficher le texte réel données de l’objet. Vous pouvez accorder des autorisations**Lire la définition** au niveau de la base de données, d’une source de données, d’une dimension, d’une structure d’exploration de données et d’un modèle d’exploration de données. Si vous avez besoin d’autorisations **Lire la définition** pour un cube, vous devez activer **Lire la définition** pour la base de données. N’oubliez pas que les autorisations s’ajoutent les unes aux autres. Par exemple, imaginez qu'un rôle accorde l'autorisation de lire les métadonnées d'un cube tandis qu'un second rôle accorde au même utilisateur l'autorisation de lire les métadonnées d'une dimension. Les autorisations des deux rôles se combinent et permettent à l'utilisateur de lire les métadonnées du cube et celles de la dimension dans cette base de données.  
   
 > [!NOTE]  
 >  L'autorisation de lire les métadonnées d'une base de données est l'autorisation minimale nécessaire pour se connecter à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Un utilisateur autorisé à lire les métadonnées peut également utiliser l’ensemble de lignes de schéma DISCOVER_XML_METADATA pour exécuter une requête sur l’objet et afficher ses métadonnées. Pour plus d’informations, consultez [Ensemble de lignes DISCOVER_XML_METADATA](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md).  

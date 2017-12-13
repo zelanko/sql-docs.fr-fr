@@ -2,12 +2,12 @@
 title: "Exemples de requêtes modèle de clustering | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e60908ae9bba2e5f549b1f3fc57581553785938f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
-  Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez une requête sur un modèle d’exploration de données, vous pouvez récupérer les métadonnées relatives au modèle, ou créer une requête de contenu qui fournit des détails sur les modèles découverts dans l’analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
   
  Cette section explique comment créer des requêtes pour les modèles basés sur l'algorithme de clustering [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

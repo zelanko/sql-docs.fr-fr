@@ -2,12 +2,12 @@
 title: "4-6-spécification des relations d’attributs dans une hiérarchie définie par l’utilisateur | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>4-6-spécification des relations d’attributs dans une hiérarchie définie par l’utilisateur
-Comme vous l'avez déjà appris au cours de ce didacticiel, vous pouvez organiser les hiérarchies d'attributs en niveaux au sein des hiérarchies utilisateur pour mettre à disposition des utilisateurs d'un cube des chemins de navigation. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Comme vous avez déjà appris dans ce didacticiel, vous pouvez organiser les hiérarchies d’attributs en niveaux au sein des hiérarchies d’utilisateur à fournir des chemins de navigation pour les utilisateurs dans un cube. Une hiérarchie utilisateur peut représenter une hiérarchie naturelle, telle que ville, état et pays, ou simplement un chemin de navigation tel que nom d'employé, titre et nom de division. Du point de vue de l'utilisateur qui navigue au sein d'une hiérarchie, ces deux types de hiérarchies utilisateur sont identiques.  
   
 Avec une hiérarchie naturelle, si vous définissez des relations d'attributs entres les attributs qui composent les niveaux, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser l'agrégation d'un attribut pour obtenir les résultats à partir d'un attribut connexe. S'il n'existe aucune relation entre les attributs, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] agrège tous les attributs non clé à partir de l'attribut clé. Par conséquent, si les données sous-jacentes le prennent en charge, il est également conseillé de définir des relations d'attributs entre les attributs. La définition des relations d'attributs améliore les performances des dimensions, des partitions et du traitement des requêtes. Pour plus d’informations, consultez [Définir des relations d’attributs](../analysis-services/multidimensional-models/attribute-relationships-define.md) et [Relations d’attributs](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   

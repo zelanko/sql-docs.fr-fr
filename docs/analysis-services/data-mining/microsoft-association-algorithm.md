@@ -2,12 +2,12 @@
 title: Algorithme Microsoft Association | Documents Microsoft
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -39,14 +39,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b53b106e81fd161696d05d95d2669ca899a3034
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d68a5b94df379a3ab19d4df5d4621c986762473
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
-  L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme qui est souvent utilisé pour les moteurs de recommandation. Un moteur de recommandation recommande des éléments aux clients en se basant sur ceux qu’ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat.   
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’Association est un algorithme qui est souvent utilisé pour les moteurs de recommandation. Un moteur de recommandation recommande des éléments aux clients en se basant sur ceux qu’ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat.   
   
  Des modèles d'association sont générés sur les jeux de données qui contiennent des identificateurs pour les cas individuels et pour les éléments que les cas contiennent. Un groupe d’éléments dans un cas est appelé un *jeu d’éléments*. Un modèle d'association se compose d'une série de jeux d'éléments et de règles qui décrivent la manière dont ces éléments sont groupés au sein des cas. Les règles que l'algorithme identifie peuvent être utilisées pour prévoir les prochains achats d'un client, en fonction des éléments déjà présents dans le panier d'achat du client. Le diagramme ci-dessous montre une série de règles dans un jeu d'éléments.  
   

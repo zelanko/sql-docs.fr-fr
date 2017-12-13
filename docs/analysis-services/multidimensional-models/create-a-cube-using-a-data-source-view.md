@@ -2,12 +2,12 @@
 title: "Créer un Cube à l’aide d’une vue de Source de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
-  Utilisez cette méthode de génération d'un nouveau cube si vous envisagez d'utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilisez cette méthode de création d’un nouveau cube si vous envisagez d’utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  
   
  Pour créer un cube avec une source de données, dans l’Explorateur de solutions, cliquez avec le bouton droit sur **Cubes** et sélectionnez **Nouveau cube**. L'Assistant Cube s'ouvre.  
   

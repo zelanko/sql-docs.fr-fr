@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: df341bb5d66c8f88e5090e31014a5db5a1ff75c0
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: f339a83559e565d5046c721657becd6cf6a5940d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -39,8 +39,8 @@ ms.lasthandoff: 12/06/2017
 
   Ajoute un groupe de fichiers au schéma d'une partition ou modifie la désignation du groupe de fichiers NEXT USED pour le schéma de la partition. 
 
-[!NOTE]
-Uniquement les groupes de fichiers primaires sont pris en charge dans la base de données SQL Azure.  
+>[!NOTE]
+>Uniquement les groupes de fichiers primaires sont pris en charge dans la base de données SQL Azure.  
   
  ![Icône de lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "icône de lien de l’Article") [Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

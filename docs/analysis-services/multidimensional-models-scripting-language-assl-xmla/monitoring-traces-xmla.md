@@ -2,12 +2,12 @@
 title: Surveillance de Traces (XMLA) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
-  Vous pouvez utiliser la [s’abonner](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le **s’abonner** commande retourne les résultats d’une trace en tant qu’un ensemble de lignes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez utiliser la [s’abonner](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le **s’abonner** commande retourne les résultats d’une trace en tant qu’un ensemble de lignes.  
   
 ## <a name="specifying-a-trace"></a>Spécification d'une trace  
  Le [objet](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) propriété de la **s’abonner** commande doit contenir une référence d’objet à un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance ou une trace sur un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Si le **objet** propriété n’est pas spécifiée, ou un identificateur de trace n’est pas spécifié dans le **objet** propriété, le **s’abonner** commande surveille la trace de session par défaut pour la session explicite spécifiée dans l’en-tête SOAP pour la commande.  
