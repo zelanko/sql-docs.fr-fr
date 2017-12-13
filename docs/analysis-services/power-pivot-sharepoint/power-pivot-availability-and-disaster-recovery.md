@@ -2,12 +2,12 @@
 title: "Récupération d’urgence et disponibilité PowerPivot de l’alimentation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa0bd590b7eeea51fa12627488215067cb46ecf6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Récupération d’urgence et disponibilité PowerPivot
-  La disponibilité et les plans de récupération d'urgence pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dépendent principalement de la conception de votre batterie de serveurs SharePoint, de la durée de temps mort acceptable pour les différents composants, ainsi que des outils et des meilleures pratiques que vous implémentez pour la disponibilité SharePoint. Cette rubrique présente une synthèse des différentes technologies et inclut des exemples de schémas de topologie à prendre en compte lorsque vous planifiez la disponibilité et la récupération d'urgence pour un déploiement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Plans de récupération d’urgence et disponibilité pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dépend principalement de la conception de votre batterie de serveurs SharePoint, la quantité de temps mort acceptable pour les différents composants et les outils et les meilleures pratiques que vous implémentez pour la disponibilité SharePoint. Cette rubrique présente une synthèse des différentes technologies et inclut des exemples de schémas de topologie à prendre en compte lorsque vous planifiez la disponibilité et la récupération d'urgence pour un déploiement [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
 ||  
 |-|  

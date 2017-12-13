@@ -2,12 +2,12 @@
 title: Ensemble de lignes DISCOVER_CSDL_METADATA | Documents Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Ensemble de lignes DISCOVER_CSDL_METADATA
-  Retourne des informations sur un modèle de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (tabulaire ou multidimensionnel), qui fournit la définition du modèle au format CSDLBI (Conceptual Schema Definition avec annotations BI). CSDLBI repose sur CSDL, un schéma XML exploité par l'infrastructure Entity Data Framework utilisée pour la communication entre un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et le client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Les annotations Business Intelligence (BI) fournissent des métadonnées supplémentaires sur les modèles tabulaires et les objets qu'ils contiennent. Pour plus d’informations sur les modèles de données tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Retourne des informations sur une [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modèle de données (tabulaire ou multidimensionnel), qui fournit la définition du modèle au format CSDLBI (Conceptual Schema Definition Language avec annotations BI). CSDLBI repose sur CSDL, un schéma XML exploité par l'infrastructure Entity Data Framework utilisée pour la communication entre un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et le client [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Les annotations Business Intelligence (BI) fournissent des métadonnées supplémentaires sur les modèles tabulaires et les objets qu'ils contiennent. Pour plus d’informations sur les modèles de données tabulaires, consultez [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Le contexte de sécurité de la commande affecte l'ensemble de lignes retourné. Les autorisations de lecture sur l'instance Analysis Services sont requises pour obtenir la définition CSDL à partir du serveur.  
   

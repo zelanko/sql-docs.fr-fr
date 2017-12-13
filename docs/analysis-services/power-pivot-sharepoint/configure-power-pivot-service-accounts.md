@@ -2,12 +2,12 @@
 title: Configuration des comptes de Service Power Pivot | Documents Microsoft
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aae3f818de4936974dd53f14c2b3fdbbea0b369f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 016909afa00382f9b1a0905e95423eb82007b758
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configuration des comptes de service Power Pivot
-  Une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]inclut deux services qui prennent en charge des opérations serveur. Le service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** est un service Windows qui assure le traitement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et la prise en charge des requêtes sur un serveur d’applications. Le compte de connexion pour ce service est toujours spécifié pendant l'installation de SQL Server lorsque vous installez Analysis Services en mode intégré SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]installation inclut deux services qui prennent en charge les opérations du serveur. Le service **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** est un service Windows qui assure le traitement des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et la prise en charge des requêtes sur un serveur d’applications. Le compte de connexion pour ce service est toujours spécifié pendant l'installation de SQL Server lorsque vous installez Analysis Services en mode intégré SharePoint.  
   
  Un deuxième compte doit être spécifié pour l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un service web partagé qui s'exécute sous une identité du pool d'applications dans une batterie de serveurs SharePoint. Ce compte est spécifié quand vous configurez une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou de PowerShell.  
   

@@ -2,12 +2,12 @@
 title: "Objet de base de données (TMSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 239c6e21a7c0e05f52fa00c17d11c5ff81d8a216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c8506cdf1917fb803c701ca0acd9f1bf1f25b141
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-object-tmsl"></a>Objet de base de données (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Définit une base de données tabulaire au niveau de compatibilité 1200 ou supérieur, basé sur un modèle ayant le même niveau. Cette rubrique documente la définition d’objet de base de données, en fournissant la charge utile pour les demandes de créent, modifier, suppriment et effectuent les tâches de gestion de base de données.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Définit une base de données tabulaire au niveau de compatibilité 1200 ou supérieur, basé sur un modèle ayant le même niveau. Cette rubrique documente la définition d’objet de base de données, en fournissant la charge utile pour les demandes de créent, modifier, suppriment et effectuent les tâches de gestion de base de données.  
   
 > [!NOTE]  
 >  Dans n’importe quel script, qu’une seule base de données en temps peut être référencée. Pour les objets autres que de base de données elle-même, la propriété de base de données est facultative si vous spécifiez le modèle. Il existe un mappage entre un modèle et une base de données qui peut être utilisé pour déduire le nom de la base de données si elle n’est pas explicitement fourni.   

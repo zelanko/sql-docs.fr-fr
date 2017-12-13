@@ -2,12 +2,12 @@
 title: "Configurer les propriétés de déploiement (SSAS tabulaire) et de la modélisation des données par défaut | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 704a719e3f2d509b5a949f7e44dd86cdcea7b183
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f37da1066d505f36b6863dd65d401d689ccdedf5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Configurer les propriétés par défaut de modélisation des données et de déploiement (SSAS Tabulaire)
-  Cette rubrique explique comment configurer les paramètres de propriétés de niveau de compatibilité, de déploiement et de base de données d’espace de travail par défaut, qui peuvent être prédéfinis pour chaque nouveau projet de modèle tabulaire que vous créez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette rubrique décrit comment configurer le niveau de compatibilité par défaut, de déploiement et les paramètres de propriété espace de travail de base de données, qui peuvent être prédéfinis pour chaque nouveau modèle tabulaire de projet vous créent dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après qu'un projet a été créé, ces propriétés peuvent être encore être modifiées selon vos besoins.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Pour configurer le paramètre de propriété Niveau de compatibilité par défaut pour les nouveaux projets de modèle  
   

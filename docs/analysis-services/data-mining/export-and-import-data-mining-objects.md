@@ -2,12 +2,12 @@
 title: "Exporter et importer des objets d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 494f808919d4cc82ecdb91536e79b60976e74565
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exporter et importer des objets d'exploration de données
-  Outre les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour la sauvegarde, la restauration et la migration des solutions, l'exploration de données SQL Server permet de transférer rapidement des modèles et des structures d'exploration de données entre différents serveurs en utilisant des instructions DMX (Data Mining Extensions).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Outre les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour la sauvegarde, restauration et la migration de solutions, exploration de données SQL Server permet de transférer rapidement des modèles et des structures d’exploration de données entre différents serveurs à l’aide de l’exploration de données Extensions (DMX).  
   
  Si votre solution d’exploration de données utilise des données relationnelles au lieu d’une base de données multidimensionnelle, le transfert de modèles à l’aide des commandes **EXPORT** et **IMPORT** est beaucoup plus rapide et plus facile qu’en utilisant la restauration de base de données ou qu’en déployant une solution dans son intégralité.  
   

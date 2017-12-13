@@ -2,12 +2,12 @@
 title: "Créer et déployer une base de données vide (Analysis Services AMO-TOM) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fd42cdbd8eae5bada2c169a601c801a6e619afe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9581f7eb39fe0a6f8979ce09fde4233e800bef8d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>Créer et déployer une base de données vide (Analysis Services AMO-TOM)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-Un scénario courant de programmation pour AMO-TOM consiste à générer des bases de données et des modèles à la volée. Cet article vous guide tout au long des étapes de création d’une base de données. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Un scénario courant de programmation pour AMO-TOM consiste à générer des bases de données et des modèles à la volée. Cet article vous guide tout au long des étapes de création d’une base de données. 
 
 Pour les solutions tabulaires, il existe une correspondance univoque entre une base de données et un modèle, avec un modèle par base de données. Vous pouvez généralement spécifier un ou l’autre, et le moteur déduit l’objet manquant. 
 

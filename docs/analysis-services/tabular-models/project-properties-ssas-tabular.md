@@ -2,12 +2,12 @@
 title: "Propriétés (SSAS tabulaire) du projet | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66a5bfd14d877229f51a257c4775cf9873b854db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aeddf6f4c7739f86bf7d5c597684d084a7227848
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="project-properties-ssas-tabular"></a>Propriétés de projet (SSAS Tabulaire)
-  Cette rubrique décrit les propriétés de projet de modèle. Chaque projet de modèle tabulaire propose des propriétés de serveur de déploiement et d'options de déploiement qui spécifient comment le projet et le modèle sont déployés. Par exemple, le serveur sur lequel le modèle sera déployé et le nom de la base de données model déployée. Ces paramètres sont différents des propriétés du modèle, qui affectent la base de données model de l'espace de travail. Les propriétés du projet décrites ici se trouvent dans une boîte de dialogue de propriétés modale différente de la fenêtre de propriétés utilisée pour afficher les autres types de propriétés. Pour afficher les propriétés de projet modales, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette rubrique décrit les propriétés de projet de modèle. Chaque projet de modèle tabulaire propose des propriétés de serveur de déploiement et d'options de déploiement qui spécifient comment le projet et le modèle sont déployés. Par exemple, le serveur sur lequel le modèle sera déployé et le nom de la base de données model déployée. Ces paramètres sont différents des propriétés du modèle, qui affectent la base de données model de l'espace de travail. Les propriétés du projet décrites ici se trouvent dans une boîte de dialogue de propriétés modale différente de la fenêtre de propriétés utilisée pour afficher les autres types de propriétés. Pour afficher les propriétés de projet modales, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans **l’Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis cliquez sur **Propriétés**.  
   
  Sections de cette rubrique :  
   

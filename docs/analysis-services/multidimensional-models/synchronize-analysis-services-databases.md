@@ -2,12 +2,12 @@
 title: "Synchroniser les bases de données Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 53478ba4aace42f97beb00eb50d5f48fc7aecb6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8824ea31de1d2dc2774f57ac70af05a30f442408
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comprend une fonctionnalité de synchronisation de bases de données qui rend deux bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] équivalentes en copiant les données et les métadonnées depuis une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une fonctionnalité de synchronisation de base de données qui rend deux [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de données équivalentes en copiant les données et métadonnées d’une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  
   
 -   Déployer une base de données à partir d'un serveur de mise en lots vers un serveur de production.  
   

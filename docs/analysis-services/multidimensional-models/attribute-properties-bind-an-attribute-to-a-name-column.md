@@ -2,12 +2,12 @@
 title: "Lier un attribut à une colonne de nom | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2866844f0004bc37c7bead147a88dbf009199495
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 819c027aa1adfbfae7d6057e988b1d93327233f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriétés d’attribut : lier un attribut à une colonne de nom
-  Cette procédure décrit comment lier manuellement un attribut à une colonne de nom à l’aide du volet **Attributs** du Concepteur de dimensions et de la boîte de dialogue **Liaison d’objets** .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette procédure décrit comment lier un attribut manuellement à une colonne de nom d’à l’aide de la **attributs** volet dans le Concepteur de dimensions et à l’aide de la **liaison d’objets** boîte de dialogue.  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>Pour lier un attribut à une colonne de nom  
   

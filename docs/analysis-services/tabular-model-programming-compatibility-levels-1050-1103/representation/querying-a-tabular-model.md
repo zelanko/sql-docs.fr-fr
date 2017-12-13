@@ -2,12 +2,12 @@
 title: "Interrogation d’un modèle tabulaire | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querying-a-tabular-model"></a>Interrogation d'un modèle tabulaire
-  En tant que développeur, l'interrogation d'un modèle tabulaire revient à récupérer des données de la base de données tabulaire ; vous avez deux options pour atteindre cet objectif : utilisez des requêtes de table dans DAX ou utilisez MDX et récupérez les données comme si elles provenaient d'un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]En tant que développeur interrogation d’un modèle tabulaire signifie que récupérer des données à partir de la base de données tabulaire ; pour atteindre cet objectif, vous avez deux options : utilisez des requêtes de table dans DAX ou MDX et récupérez les données comme si elles provenaient d’un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Interrogation avec ADOMD.Net  
  L'utilisation d'ADOMD.Net pour interroger un modèle tabulaire est simple et flexible ; vous pouvez envoyer des instructions MDX ou des expressions de requêtes tabulaires depuis DAX vers le serveur pour obtenir les résultats.  

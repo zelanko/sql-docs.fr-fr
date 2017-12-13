@@ -2,12 +2,12 @@
 title: Utilisez la galerie PowerPivot | Documents Microsoft
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Utiliser la galerie PowerPivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint spéciale qui fournit des fonctions d’aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Est une bibliothèque de documents SharePoint spéciale qui fournit une gestion de documents et d’aperçus pour les classeurs Excel publiés et les rapports Reporting Services qui contiennent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données.  
   
 > [!NOTE]  
 >  En fonction de la configuration de votre serveur, vous pouvez voir des messages d'avertissement ou d'erreur dans la zone d'aperçu de documents spécifiques. Les messages peuvent apparaître lorsqu'un classeur Excel est configuré pour actualiser automatiquement ses données à chacune de ses ouvertures. Des messages d'avertissement de l'actualisation des données apparaîtront à la place d'une image d'aperçu si Excel Services est configuré pour afficher des messages d'erreur pour avertir de l'actualisation des données. Les administrateurs de la batterie de serveurs ou du service peuvent modifier les paramètres de configuration pour permettre l'affichage d'un aperçu de la feuille de travail réelle. Pour plus d’informations, voir [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

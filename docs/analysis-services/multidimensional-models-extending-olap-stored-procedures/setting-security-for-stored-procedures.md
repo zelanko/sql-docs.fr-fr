@@ -2,12 +2,12 @@
 title: "Définition de la sécurité pour les procédures stockées | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2865051f8689620a5a9df1b450ea74fb6eff8c7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8ae76fbe9c09366f0a9177de901e8c08ca5ffe15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="setting-security-for-stored-procedures"></a>Définition de la sécurité pour les procédures stockées
-  La sécurité des procédures stockées est définie avec la propriété **PermissionSet** sur une procédure stockée pour une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (niveau serveur), une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sécurité des procédures stockées est définie avec la **PermissionSet** propriété sur une procédure stockée pour une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (au niveau du serveur), un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données, ou un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des assemblys de modèle multidimensionnel](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   

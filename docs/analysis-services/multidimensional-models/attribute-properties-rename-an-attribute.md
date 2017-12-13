@@ -2,12 +2,12 @@
 title: Renommer un attribut | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6a77edcfe011502f3c863c873135f86163e9eb11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: da652fbd1c97f09e35c67fba4c7bec798f67a38f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---rename-an-attribute"></a>Propriétés d’attribut : renommer un attribut
-  Le nom d’un attribut dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est défini par sa propriété **Name** . Pour renommer un attribut, cliquez dessus avec le bouton droit dans le volet **Attributs** de l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis cliquez sur **Renommer**. Si le volet **Attributs** affiche la grille, vous pouvez cliquer sur le nom de l’attribut et le modifier directement dans la grille. Vous pouvez aussi sélectionner un attribut et définir sa propriété **Name** dans la fenêtre **Propriétés** .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le nom d’un attribut dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est défini par son **nom** propriété. Pour renommer un attribut, cliquez dessus avec le bouton droit dans le volet **Attributs** de l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis cliquez sur **Renommer**. Si le volet **Attributs** affiche la grille, vous pouvez cliquer sur le nom de l’attribut et le modifier directement dans la grille. Vous pouvez aussi sélectionner un attribut et définir sa propriété **Name** dans la fenêtre **Propriétés** .  
   
  Pour plus d’informations sur la façon de renommer un attribut, consultez [Lier un attribut à une colonne clé](../../analysis-services/multidimensional-models/attribute-properties-bind-an-attribute-to-a-key-column.md).  
   

@@ -2,12 +2,12 @@
 title: "Traitement d’un modèle multidimensionnel (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Traitement d’un modèle multidimensionnel (Analysis Services)
-  Le traitement est l'étape, ou la série d'étapes, dans lesquelles Analysis Services charge des données d'une source de données relationnelle dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Le traitement est l’étape ou une série d’étapes, dans lesquelles Analysis Services charge des données à partir d’une source de données relationnelles dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
   
  Par défaut, le traitement s'effectue lorsque vous déployez une solution sur le serveur. Vous pouvez également traiter une partie d'une solution, ad hoc ou à l'aide d'outils tels que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], ou selon une planification à l'aide de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et de SQL Server Agent. Lorsque vous apportez une modification structurelle au modèle, telle que la suppression d'une dimension ou la modification de son niveau de compatibilité, vous devez réeffectuer le traitement afin de synchroniser les aspects physiques et logiques du modèle.  
   

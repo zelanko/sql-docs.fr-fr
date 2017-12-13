@@ -2,12 +2,12 @@
 title: "Architecture physique (Analysis Services - Exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 772d9a4b58c199ce34a6b85b710519c344fd8deb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc6dcc6e4383e22a3b1695cc03cd40bd6acf8fb2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Architecture physique (Analysis Services - Exploration de données)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des composants serveur et des composants clients pour apporter des fonctionnalités d’exploration de données aux applications Business Intelligence :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les composants serveur et client pour fournir des fonctionnalités d’exploration de données pour les applications décisionnelles :  
   
 -   Le composant serveur est implémenté comme un service Microsoft Windows. Vous pouvez avoir plusieurs instances sur le même ordinateur, chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] étant implémentée comme une instance séparée du service Windows.  
   

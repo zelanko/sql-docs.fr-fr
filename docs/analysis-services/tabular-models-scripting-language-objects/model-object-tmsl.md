@@ -2,12 +2,12 @@
 title: "Objet de modèle (TMSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e2ba45e7f346fc597e579ce7dd7d7d0369fd94de
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="model-object-tmsl"></a>Objet de modèle (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Définit un modèle tabulaire. Il existe un modèle par base de données et qu’une seule base de données qui peut être spécifié dans n’importe quelle commande donnée. Un objet de base de données est l’objet parent.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Définit un modèle tabulaire. Il existe un modèle par base de données et qu’une seule base de données qui peut être spécifié dans n’importe quelle commande donnée. Un objet de base de données est l’objet parent.  
   
  Les définitions de modèle sont trop volumineuses pour reproduire la syntaxe ensemble dans une rubrique. Pour cette raison, une mise en évidence les principaux éléments de syntaxe partielle peut trouver ci-dessous, avec des liens vers les objets enfants.  
   

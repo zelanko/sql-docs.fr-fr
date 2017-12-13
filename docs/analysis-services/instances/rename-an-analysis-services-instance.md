@@ -2,12 +2,12 @@
 title: Renommer une Instance Analysis Services | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45ccdebbfaa2ca30bd6d5cd6c02bb7f869aa6496
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c08828062b6434b29e91c217af652f6445b75b19
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rename-an-analysis-services-instance"></a>Renommer une instance d'Analysis Services
-  Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de l’utilitaire **Modification du nom d’instance** , installé avec Management Studio (installation web).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez renommer une instance existante de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de la **renommer l’Instance** outil, installé à l’aide de Management Studio (installation Web).  
   
 > [!IMPORTANT]  
 >  Pendant que l’instance est renommée, l’utilitaire Modification du nom d’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécute avec des privilèges élevés et met à jour le nom de service Windows, les comptes de sécurité et les entrées de Registre associées à cette instance. Pour vous assurer que ces actions sont effectuées, veillez à exécuter cet outil en tant qu'administrateur système local.  

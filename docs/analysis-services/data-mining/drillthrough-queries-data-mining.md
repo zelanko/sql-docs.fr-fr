@@ -2,12 +2,12 @@
 title: "Les requêtes d’extraction (exploration de données) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41a3c89638b1fc9cc7e95fa13baeac93eb20c683
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d8a4cc823298eb1e1e36dce0141507dc4be05a1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
-  Une *requête d'extraction* vous permet de récupérer les détails des cas ou des données de structure sous-jacents, en envoyant une requête au modèle d'exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A *requête d’extraction* vous permet de récupérer les détails des cas de sous-jacente ou de la structure de données, en envoyant une requête au modèle d’exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit deux options différentes pour l'extraction :  
   

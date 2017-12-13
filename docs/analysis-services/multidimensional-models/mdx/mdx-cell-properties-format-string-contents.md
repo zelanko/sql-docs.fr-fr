@@ -2,12 +2,12 @@
 title: Contenu de FORMAT_STRING (MDX) | Documents Microsoft
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Propriétés de cellule MDX - contenu de FORMAT_STRING
-  La propriété de cellule **FORMAT_STRING** met en forme la propriété de cellule **VALUE** , en créant la valeur pour la propriété de cellule **FORMATTED_VALUE** . La propriété de cellule **FORMAT_STRING** traite les valeurs brutes de types chaîne et numérique en appliquant une expression de format à la valeur pour retourner une valeur mise en forme pour la propriété de cellule **FORMATTED_VALUE** . Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Le **FORMAT_STRING** formats de propriété de cellule la **valeur** propriété de cellule, la création de la valeur pour le **FORMATTED_VALUE** propriété de cellule. La propriété de cellule **FORMAT_STRING** traite les valeurs brutes de types chaîne et numérique en appliquant une expression de format à la valeur pour retourner une valeur mise en forme pour la propriété de cellule **FORMATTED_VALUE** . Les tableaux suivants détaillent la syntaxe et les caractères de mise en forme utilisés pour traiter les valeurs de type chaîne et numérique.  
   
 ## <a name="string-values"></a>Valeurs de type chaîne  
  Une expression de format pour une chaîne peut posséder une section, ou deux sections séparées par un point-virgule (;).  

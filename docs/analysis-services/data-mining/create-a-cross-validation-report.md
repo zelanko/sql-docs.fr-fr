@@ -2,12 +2,12 @@
 title: "Créer un rapport de Validation croisée | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47368a14a07f9ab0a42df11d29dbca6404b19463
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cross-validation-report"></a>Créer un rapport de validation croisée
-  Cette rubrique vous guide tout au long de la création d'un rapport de validation croisée à l'aide de l'onglet Graphique d'analyse de précision dans le Concepteur d'exploration de données. Pour obtenir des informations d’ordre général sur l’apparence du rapport de validation croisée et sur les mesures statistiques qu’il inclut, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique vous guide tout au long de la création d’un rapport de validation croisée à l’aide de l’onglet graphique de précision dans le Concepteur d’exploration de données. Pour obtenir des informations d’ordre général sur l’apparence du rapport de validation croisée et sur les mesures statistiques qu’il inclut, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Un rapport de validation croisée est fondamentalement différent d'un graphique d'analyse de précision, tel qu'un graphique de courbes d'élévation ou une matrice de classification.  
   

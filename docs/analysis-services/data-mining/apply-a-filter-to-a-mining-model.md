@@ -2,12 +2,12 @@
 title: "Appliquer un filtre à un modèle d’exploration de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/19/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3beab78045a254a30e398928cd262785703df4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85bbd59ae0e5de9dea2fb042fc0c67610864ec0f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
-  Si votre structure d'exploration de données contient une table imbriquée, vous pouvez appliquer un filtre à la table de cas, à la table imbriquée, ou aux deux.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Si votre structure d’exploration de données contient une table imbriquée, vous pouvez appliquer un filtre à la table de cas, la table imbriquée ou les deux.  
   
  La procédure suivante indique comment créer les deux types de filtres : filtres de cas et filtres sur les lignes de la table imbriquée.  
   

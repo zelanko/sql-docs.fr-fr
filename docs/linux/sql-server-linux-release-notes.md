@@ -4,7 +4,7 @@ description: "Cette rubrique contient les notes de publication et les fonctionna
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 du serveur SQL sur Linux
 
@@ -148,7 +148,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 
 ### <a name="known-issues"></a>Problèmes connus
 
-Les sections suivantes décrivent les problèmes connus avec la version de la disponibilité de genres (GA) de SQL Server 2017 sur Linux.
+Les sections suivantes décrivent les problèmes connus avec la version de la disponibilité générale de SQL Server 2017 sur Linux.
 
 #### <a name="general"></a>Général
 
@@ -178,7 +178,7 @@ Les sections suivantes décrivent les problèmes connus avec la version de la di
 
 - Lorsque vous restaurez une base de données a été sauvegardée sur SQL Server sur Windows, vous devez utiliser le **WITH MOVE** clause dans l’instruction Transact-SQL.
 
-- Nécessiter que le service Microsoft Distributed Transaction Coordinator les transactions distribuées ne sont pas pris en charge sur SQL Server est en cours d’exécution sur Linux. SQL Server vers SQL Server, les transactions distribuées sont prises en charge.
+- Nécessiter que le service Microsoft Distributed Transaction Coordinator les transactions distribuées ne sont pas pris en charge sur SQL Server est en cours d’exécution sur Linux. SQL Server vers SQL Server, les serveurs liés sont pris en charge, sauf si elles impliquent le DTC. Pour plus d’informations, consultez [nécessiter que le service Microsoft Distributed Transaction Coordinator les transactions distribuées ne sont pas pris en charge sur SQL Server est en cours d’exécution sur Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Certains algorithmes (suites de chiffrement) et de sécurité TLS (Transport Layer) ne fonctionnent pas correctement avec SQL Server sur Linux. Cela entraîne des échecs de connexion lorsque vous tentez de vous connecter à SQL Server, ainsi que des problèmes pour établir des connexions entre les réplicas des groupes de disponibilité de.
 

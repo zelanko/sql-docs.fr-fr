@@ -2,12 +2,12 @@
 title: "Élément EntityContainer (CSDLBI) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Élément EntityContainer (CSDLBI)
-  L'élément EntityContainer est un type complexe, basé sur le type CSDL, EntityContainer, qui définit une collection d'entités dans un modèle de données simple. Dans une application Business Intelligence, le modèle de données représenté par un EntityContainer peut contenir plusieurs tables avec une colonne liée par des relations, ainsi que des calculs, des mesures et des indicateurs de performance clés. Il est similaire sur le plan conceptuel à une base de données ou à une source de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]L’élément EntityContainer est un type complexe, selon le type CSDL, EntityContainer, qui définit une collection d’entités dans un modèle de données unique. Dans une application Business Intelligence, le modèle de données représenté par un EntityContainer peut contenir plusieurs tables avec une colonne liée par des relations, ainsi que des calculs, des mesures et des indicateurs de performance clés. Il est similaire sur le plan conceptuel à une base de données ou à une source de données.  
   
  L'EntityContainer doit spécifier chaque type d'entité inclus dans le modèle de données, notamment les tables et les relations. Des informations sur ces entités de modèle sont spécifiées en répertoriant les entités enfants du type, élément Entity. Pour plus d’informations, consultez [Élément EntityType &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   

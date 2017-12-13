@@ -2,12 +2,12 @@
 title: "Attributs CSDLBI pour la création de rapports | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cf0a6f94595778429b4ec850dac22757fc4a39e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 01c75144c964c80a224401cd7b5f81939f2714e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] création de requête.  
   
 ## <a name="model-attributes"></a>Attributs de modèle  
  Ces attributs sont définis sur un sous-élément d'un élément [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) CSDL.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 |**Alignement**|Enum|Valeur indiquant comment les valeurs de champ doivent être alignées dans une présentation tabulaire. Les valeurs possibles sont les suivantes : **Default**, **Center**, **Left**, **Right**. En cas d'omission, la valeur par défaut détermine l'alignement selon le type de données du champ.|  
 |**FormatString**|Texte|Chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> Champs - Datetime : date courte régionale ou « d »<br /><br /> -Fonction d’agrégation de champs à virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br /><br /> -Fonction d’agrégation des entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
 |**Unités**|Texte|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités. En cas d'omission, les unités sont inconnues.|  
-|**Largeur**|Entier|Largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. En ca d'omission, une largeur par défaut est basée sur le type de données du champ.|  
+|**Width**|Entier|Largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. En ca d'omission, une largeur par défaut est basée sur le type de données du champ.|  
 |**SortDirection**|Enum|Valeur indiquant comment les valeurs de champs sont généralement triées. Les valeurs possibles sont les suivantes : **Default**, **Ascending**, **Descending**. En cas d'omission, la valeur par défaut affecte un ordre de tri basé sur le type de données du champ.|  
 |**IsRightToLeft**|Booléen|Indique si le champ contient du texte qui doit être lu de droite à gauche. En cas d'omission, le paramètre de modèle est utilisé.|  
 |**OrderBy**|MemberRef|Référence à un autre champ du modèle qui définit l'ordre de tri pour les valeurs de ce champ. Les valeurs des deux champs doivent avoir un mappage 1:1 sinon, le comportement de tri n'est pas défini. En cas d'omission, le champ est trié selon sa propre valeur.|  

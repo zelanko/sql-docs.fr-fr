@@ -2,12 +2,12 @@
 title: "Automatiser les tâches d’administration Analysis Services avec SSIS | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43277dfa53b449da914ec32f35f1263f3082f9b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f9303a84fe9bd7b26434d869ec4c2d6216f0938f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatiser les tâches d'administration Analysis Services avec SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet d'automatiser l'exécution de scripts DDL, de tâches de traitement de cube et de modèle d'exploration de données, ainsi que de tâches de requête d'exploration de données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet d’automatiser l’exécution de scripts DDL, cube et de modèle d’exploration de données de traitement des tâches et les tâches de requête d’exploration de données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a été conçu pour effectuer des opérations de nettoyage de données au cours des tâches de traitement de données et pour rassembler des données de sources de données différentes. En cas d’utilisation de cubes et de modèles d’exploration de données, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut transformer des données non numériques en données numériques et peut garantir que les valeurs appartiennent aux intervalles prévus, créant ainsi des données propres qui permettront de remplir les tables de faits et les dimensions.  
   

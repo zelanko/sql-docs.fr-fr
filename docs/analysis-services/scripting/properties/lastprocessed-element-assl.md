@@ -2,12 +2,12 @@
 title: "Élément LastProcessed (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfb97c53960e13c6d1df6d9ca9769408cd8ead9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a1161545446b341ec5fe3763fc929167079e93d7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lastprocessed-element-assl"></a>Élément LastProcessed (ASSL)
-  Affiche l'horodateur en lecture seule qui indique à quel moment la base de données qui contient l'élément parent a été traitée pour la dernière fois.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient l’horodateur en lecture seule qui indique quand la base de données qui contient l’élément parent du dernier traitement.  
   
 ## <a name="syntax"></a>Syntaxe  
   

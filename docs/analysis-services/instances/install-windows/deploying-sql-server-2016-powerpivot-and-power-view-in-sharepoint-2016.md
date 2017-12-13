@@ -2,12 +2,12 @@
 title: "Déploiement de SQL Server 2016 PowerPivot et Power View dans SharePoint 2016 | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d688ba6f378ca6ce4cebab95ce67572b33f27068
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae98c7bb08848dd1d4b914ebfbaef71f40b22873
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016"></a>Déploiement de SQL Server 2016 PowerPivot et de Power View dans SharePoint 2016
-  **Résumé :** ce livre blanc fournit aux administrateurs et architectes SharePoint des instructions détaillées pour déployer et configurer un environnement de démonstration Microsoft BI selon les versions préliminaires de SharePoint Server 2016, Office Online Server et la pile SQL Server 2016 BI pour SharePoint 2016. Après une brève présentation des modifications architecturales importantes et des dépendances système correspondantes, il décrit la configuration et les logiciels requis, ainsi que le chemin de déploiement recommandé pour activer et vérifier les fonctionnalités BI en trois étapes. Ce livre blanc aborde également les problèmes connus affectant SharePoint Server 2016 Bêta 2, Office Online Server Preview et SQL Server 2016 CTP 3.1. Il suggère également des solutions de contournement appropriées. Ces solutions ne seront plus nécessaires dans les versions finales de ces produits. Consultez une version à jour de ce livre blanc lors du déploiement de versions RTM.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**Résumé :** ce livre blanc fournit SharePoint administrateurs et les architectes des instructions détaillées pour déployer et configurer un environnement de démonstration Microsoft BI selon les versions préliminaires de SharePoint Server 2016, office Online Server et SQL Server 2016 Business Intelligence de la pile pour SharePoint 2016. Après une brève présentation des modifications architecturales importantes et des dépendances système correspondantes, il décrit la configuration et les logiciels requis, ainsi que le chemin de déploiement recommandé pour activer et vérifier les fonctionnalités BI en trois étapes. Ce livre blanc aborde également les problèmes connus affectant SharePoint Server 2016 Bêta 2, Office Online Server Preview et SQL Server 2016 CTP 3.1. Il suggère également des solutions de contournement appropriées. Ces solutions ne seront plus nécessaires dans les versions finales de ces produits. Consultez une version à jour de ce livre blanc lors du déploiement de versions RTM.  
   
  **Auteur :** Kay Unkroth  
   

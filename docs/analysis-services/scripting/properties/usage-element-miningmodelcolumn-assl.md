@@ -2,12 +2,12 @@
 title: "Élément usage (MiningModelColumn) (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0e463c7b1c4410cdf134509d3afb2b3410f652db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81e11a97ca06b9d9e42639d826a92da79f0808ba
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Élément Usage (MiningModelColumn) (ASSL)
-  Décrit comment la colonne associée dans le parent [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) est utilisé.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit comment la colonne associée dans le parent [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) est utilisé.  
   
 ## <a name="syntax"></a>Syntaxe  
   

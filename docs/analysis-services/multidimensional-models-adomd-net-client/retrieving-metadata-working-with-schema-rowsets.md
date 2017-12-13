@@ -2,12 +2,12 @@
 title: "Utilisation des ensembles de lignes de schéma dans ADOMD.NET | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7086db056d4d5ac61349546b8748cdd19ee318c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4045c7b677129bcc7b72b8ed46fa84aed95e49f5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>La récupération des métadonnées - utilisation des ensembles de lignes de schéma
-  Lorsque vous avez besoin de plus de métadonnées que celles disponibles dans le modèle objet ADOMD.NET, ADOMD.NET offre la possibilité de récupérer la gamme complète d'ensembles de lignes de schéma XMLA (XML for Analysis), OLE DB, OLE DB pour OLAP et OLE DB pour l'exploration de données :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous avez besoin de davantage de métadonnées que celles disponibles dans le modèle objet ADOMD.NET, ADOMD.NET permet de récupérer la plage complète de XML pour Analysis (XMLA), OLE DB, OLE DB pour OLAP et OLE DB pour les ensembles de lignes de schéma d’exploration de données :  
   
  **Métadonnées XMLA**  
  Les ensembles de lignes de schéma XMLA offrent une méthode de récupération d'informations de bas niveau sur le serveur. Parmi les informations disponibles figurent entre autres les sources de données disponibles sur le serveur, les mots clés réservés par le fournisseur et les littéraux pris en charge par le fournisseur. Vous pouvez même utiliser un ensemble de lignes de schéma XMLA pour découvrir tous les ensembles de lignes de schéma pris en charge par le fournisseur.  

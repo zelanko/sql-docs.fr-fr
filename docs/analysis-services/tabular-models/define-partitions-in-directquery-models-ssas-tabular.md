@@ -2,12 +2,12 @@
 title: "Définir des partitions dans les modèles DirectQuery (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b680877b5ac907e143222b029d5d717145d3c2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2af8137f3063c4403c728e229c1836d5111bc927
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-partitions-in-directquery-models"></a>Définition de partitions dans les modèles DirectQuery
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Cette section explique comment sont utilisées les partitions dans les modèles DirectQuery. Pour obtenir des informations générales sur les partitions dans les modèles tabulaires, consultez [Partitions &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Cette section explique comment les partitions sont utilisées dans les modèles DirectQuery. Pour obtenir des informations générales sur les partitions dans les modèles tabulaires, consultez [Partitions &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md).  
   
 > [!NOTE]  
 >  Bien qu’une table puissent contenir plusieurs partitions, en mode DirectQuery, seul l’une d’entre elles peut être désignée pour être utilisée dans l’exécution des requêtes. La spécification de partition unique s’applique aux modèles DirectQuery à tous les niveaux de compatibilité.  

@@ -2,12 +2,12 @@
 title: "Les hiérarchies irrégulières | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Hiérarchies définies par l’utilisateur - hiérarchies irrégulières
-  Une hiérarchie déséquilibrée est une hiérarchie définie par l'utilisateur qui a un nombre de niveaux impair. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., la Cité du Vatican ou New Dehli.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Une hiérarchie déséquilibrée est une hiérarchie définie par l’utilisateur qui a un nombre impair de niveaux. Voici quelques exemples : un organigramme où un responsable hiérarchique a comme subordonnés directs des cadres du service et des non cadres, ou des hiérarchies avec des attributs Country-Region-City, où certaines villes n'ont pas d'état (State) ou de province (Province) parent, notamment Washington D.C., la Cité du Vatican ou New Dehli.  
   
  Pour la plupart des hiérarchies dans une dimension, chaque niveau a le même nombre de membres au-dessus de lui que tout autre membre au même niveau. Dans une hiérarchie déséquilibrée, en revanche, le membre parent logique d'au moins un membre ne figure pas dans le niveau immédiatement supérieur à ce membre. En pareil cas, la hiérarchie descend à des niveaux différents pour des chemins d'extraction différents. Dans une application cliente, cela peut rendre les chemins d'extraction inutilement compliqués.  
   

@@ -2,12 +2,12 @@
 title: "Définir les propriétés de Source de données (SSAS multidimensionnel) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 732cdd40d8601f00854ebd6a3ebc3694f733e187
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 654337a578f1852e2e2fcdb452d62bfbe46747f9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Définir les propriétés de la source de données (SSAS Multidimensionnel)
-  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objet de source de données représente une connexion à un entrepôt de données externe ou à une base de données relationnelle qui fournit des données à un modèle multidimensionnel. Les propriétés sur la source de données déterminent la chaîne de connexion, le délai d'attente, le nombre maximal de connexions et le niveau d'isolation de la transaction.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objet de source de données spécifie une connexion à un entrepôt de données externe ou d’une base de données relationnelle qui fournit des données à un modèle multidimensionnel. Les propriétés sur la source de données déterminent la chaîne de connexion, le délai d'attente, le nombre maximal de connexions et le niveau d'isolation de la transaction.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Définir les propriétés de la source de données dans les SQL Server Data Tools  
   

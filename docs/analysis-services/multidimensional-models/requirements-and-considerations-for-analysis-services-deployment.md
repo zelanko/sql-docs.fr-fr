@@ -2,12 +2,12 @@
 title: "Exigences et considérations pour Analysis Services de déploiement | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Configuration requise et considérations relatives au déploiement d'Analysis Services
-  Les performances et la disponibilité d'une solution dépendent de nombreux facteurs, notamment des capacités du matériel sous-jacent, de la topologie de votre déploiement de serveur, des caractéristiques de votre solution (présence, par exemple, de partitions distribuées sur plusieurs serveurs ou utilisation du stockage ROLAP qui requiert l'accès direct au moteur relationnel), des contrats de niveau de service et de la complexité de votre modèle de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les performances et la disponibilité d’une solution dépend de nombreux facteurs, notamment les fonctionnalités du matériel sous-jacent, la topologie de votre déploiement de serveur, les caractéristiques de votre solution (par exemple, avoir des partitions distribuées sur plusieurs serveurs ou à l’aide du stockage ROLAP qui requiert un accès direct au moteur relationnel), les contrats de niveau de service et la complexité de votre modèle de données.  
   
 ## <a name="memory-and-processor-requirements"></a>Besoins en mémoire et de traitement  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nécessite plus de ressources de mémoire et de traitement dans les cas suivants :  

@@ -2,12 +2,12 @@
 title: "Partitions dans les modèles multidimensionnels | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea486225e7ada9256aae3ad17732761388481835
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 986ade2663f23d0e987269a9474963d3f7137e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitions dans les modèles multidimensionnels
-  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], une *partition* permet le stockage physique des données de faits chargées dans un groupe de mesures. Une partition unique est créée automatiquement pour chaque groupe de mesures, mais il est courant de créer des partitions supplémentaires qui segmentent encore davantage les données, ce qui permet un traitement plus efficace et des performances de requête plus rapides.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un *partition* fournit le stockage physique des données de faits chargées dans un groupe de mesures. Une partition unique est créée automatiquement pour chaque groupe de mesures, mais il est courant de créer des partitions supplémentaires qui segmentent encore davantage les données, ce qui permet un traitement plus efficace et des performances de requête plus rapides.  
   
  Le traitement est plus efficace car les partitions peuvent être traitées indépendamment et en parallèle, sur un ou plusieurs serveurs. Les requêtes s'exécutent plus rapidement car chaque partition peut être configurée de manière à ce que les modes de stockage et les optimisations d'agrégation génèrent des temps de réponse plus courts. Par exemple, choisir le stockage MOLAP pour les partitions qui contiennent des données plus récentes s'avère généralement plus rapide que le stockage ROLAP. De même, si vous partitionnez par date, les partitions qui contiennent les données plus récentes peuvent bénéficier de davantage d'optimisations que les partitions qui contiennent des données plus anciennes auxquelles l'accès est moins fréquent. Notez que varier le stockage et la conception d'agrégation par partition aura un impact négatif sur les futures opérations de fusion. Veillez à déterminer si la fusion est un élément essentiel de votre stratégie de la gestion des partitions avant d'optimiser des partitions individuelles.  
   

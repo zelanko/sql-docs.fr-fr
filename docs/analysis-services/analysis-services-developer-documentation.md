@@ -2,12 +2,12 @@
 title: "Analysis Services Documentation pour développeurs | Documents Microsoft"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Documentation du développeur Analysis Services
-Dans Analysis Services, presque tous les objets et la charge de travail sont programmable, et il existe souvent plusieurs approche sélectionnables.  Options incluent l’écriture de code managé, un script ou à l’aide de normes ouvertes, comme XMLA et MSOLAP si les besoins de votre solution empêchent l’utilisation du .NET framework.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Dans Analysis Services, presque tous les objets et la charge de travail sont programmable, et il existe souvent plusieurs approche sélectionnables.  Options incluent l’écriture de code managé, un script ou à l’aide de normes ouvertes, comme XMLA et MSOLAP si les besoins de votre solution empêchent l’utilisation du .NET framework.
 
 ## <a name="what-you-can-accomplish-in-code"></a>Vous pouvez effectuer dans le code
 Scénarios de programmation classiques incluent le serveur et déploiement de la base de données, administration, modèle de création de la base de données et des accès aux données de vos applications personnalisées et les rapports qui utilisent des données Analysis Services. Commune à tous ces scénarios est une hiérarchie définition architecture et objet fixe, avec les opérations de bien comprendre qui s’étendent sur la définition de données, de traitement et de charges de travail de requête.

@@ -2,12 +2,12 @@
 title: "Créer, modifier ou supprimer une relation d’attribut | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1824a9c8c4632c0875890463b8f44ae2dec93308
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 641c28accfd11b5d973d49707afd7a02e3380a48
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Attribut de relations - créer, modifier ou supprimer la relation
-  Vous pouvez créer, modifier ou supprimer une relation d’attribut entre des attributs dans une dimension à l’aide de l’onglet **Relations d’attributs[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] du Concepteur de dimensions dans** .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez créer, modifier ou supprimer une relation d’attribut entre les attributs dans une dimension à l’aide de la **des relations d’attributs** onglet du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-an-attribute-relationship"></a>Pour créer une relation d'attribut  
   

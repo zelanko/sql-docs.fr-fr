@@ -2,12 +2,12 @@
 title: "Gestion des assemblys de modèle multidimensionnel | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Gestion des assemblys de modèles multidimensionnels
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et DMX (Data Mining Extensions). Ces fonctions sont conçues pour effectuer toutes les opérations possibles, des calculs statistiques standard au parcours des membres d’une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre de nombreuses fonctions intrinsèques à utiliser avec les langages MDX (Multidimensional Expressions) et les Extensions DMX (Data Mining), conçues pour effectuer des calculs statistiques standard pour tous les éléments parcours des membres dans une hiérarchie. Cependant, comme dans tout autre produit complexe et robuste, il est toujours nécessaire d'étendre la fonctionnalité de ce type d'outil.  
   
  Par conséquent, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'ajouter des assemblys à une base de données ou à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les assemblys vous permettent de créer des fonctions externes définies par l'utilisateur à l'aide de tout langage CLR (Common Language Runtime), tel que Microsoft Visual Basic .NET ou Microsoft Visual C#. Vous pouvez aussi utiliser des langages d'automatisation COM (Component Object Model) tels que Microsoft Visual Basic ou Microsoft Visual C++.  
   

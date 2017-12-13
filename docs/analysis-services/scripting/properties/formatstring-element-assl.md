@@ -2,12 +2,12 @@
 title: "Élément FormatString (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08619d72dfbcc41113ba62ff5901482771747da7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc412029636a31cba92eca785b6e13d232cf43bb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="formatstring-element-assl"></a>Élément FormatString (ASSL)
-  Décrit le format d’affichage pour un [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) élément ou un [mesure](../../../analysis-services/scripting/objects/measure-element-assl.md) élément.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Décrit le format d’affichage pour un [CalculationProperty](../../../analysis-services/scripting/objects/calculationproperty-element-assl.md) élément ou un [mesure](../../../analysis-services/scripting/objects/measure-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   

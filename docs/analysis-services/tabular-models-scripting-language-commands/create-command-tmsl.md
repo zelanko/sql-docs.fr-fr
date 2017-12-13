@@ -2,12 +2,12 @@
 title: "Créer une commande (TMSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae07d8b17fc659bb8a8bc2bef1cdcb6421606c29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dc53ca0e029bd4873ea5ff408ed30472640c9959
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-command-tmsl"></a>Créer une commande (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Crée l’objet spécifié et tous les objets descendants qui sont spécifiés. Si l’objet existe déjà, la commande génère une erreur.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Crée l’objet spécifié et tous les objets descendants qui sont spécifiés. Si l’objet existe déjà, la commande génère une erreur.  
   
 ## <a name="request"></a>Demande  
  La structure de la requête varie en fonction de l’objet. Un objet qui est le parent doit inclure tous ses enfants, même si les définitions d’objet complet des frères ou des parents ne sont pas requises.  

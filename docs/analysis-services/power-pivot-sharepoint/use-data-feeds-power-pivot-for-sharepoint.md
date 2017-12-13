@@ -2,12 +2,12 @@
 title: "Utiliser des flux de données (PowerPivot pour SharePoint) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78239c159da9213ca3cbc3e14ac5367e9846aa8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Utiliser des flux de données (Power Pivot pour SharePoint)
-  Les flux de données comportent un ou plusieurs flux de données générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Si vous utilisez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, les flux de données peuvent vous aider à obtenir des données d’entreprise ou des données métiers existantes à partir de sources de données arbitraires pour les afficher dans la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Flux de données sont un ou plusieurs flux de données qui sont générés à partir d’une source de données en ligne et transmis en continu à une application ou le document de destination. Si vous utilisez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, les flux de données peuvent vous aider à obtenir des données d’entreprise ou des données métiers existantes à partir de sources de données arbitraires pour les afficher dans la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  
   
  La façon dont vous utilisez un flux varie selon que vous utilisez les fonctionnalités d'exportation intégrées dans les applications qui prennent en charge les flux Atom ou que vous créez et utilisez des services de données personnalisés. Les applications capables de publier et de lire des données XML Atom fournissent un transfert de données transparent ; la mécanique des flux et services de données est invisible pour l'utilisateur. À ses yeux, un utilisateur ne fait que déplacer des données d'une application vers un autre.  
   

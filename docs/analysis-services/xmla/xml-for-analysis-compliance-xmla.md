@@ -2,12 +2,12 @@
 title: "Conformité XML for Analysis (XMLA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f86d674ec86788741e098d8cfe37462cdffaec6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9e4bab75508cf50144c7f200327e51d7e72cd756
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis-compliance-xmla"></a>Conformité XML for Analysis (XMLA)
-  La spécification XML for Analysis 1.1 décrit une norme ouverte qui prend en charge l'accès aux sources de données qui résident sur Internet. Cette rubrique détaille le niveau de compatibilité avec la spécification XML for Analysis 1.1 est pris en charge par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]La spécification XML for Analysis 1.1 décrit une norme ouverte qui prend en charge les accès aux sources de données qui résident sur le World Wide Web. Cette rubrique détaille le niveau de compatibilité avec la spécification XML for Analysis 1.1 est pris en charge par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="compliant-items"></a>Éléments conformes  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est conforme avec tous les éléments obligatoires répertoriés dans la spécification XML for Analysis 1.1. Qui plus est, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implémente l'élément facultatif suivant décrit dans la spécification XML for Analysis 1.1.  

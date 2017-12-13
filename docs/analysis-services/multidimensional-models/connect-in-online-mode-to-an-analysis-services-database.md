@@ -2,12 +2,12 @@
 title: "Se connecter en Mode en ligne une base de données Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 40d9f0516485989d7791046c197732bdab103a4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d27d9188f45f2ac2e2afe9be1b8f28b1ed6d62e6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Connexion en mode en ligne à une base de données Analysis Services
-  Vous pouvez vous connecter directement à une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et modifier directement les objets qu’elle contient. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez vous connecter directement à une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de base de données et de modifier directement les objets au sein de cette base de données. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>Pour se connecter directement à une base de données Analysis Services à l'aide des outils de données SQL Server  
   

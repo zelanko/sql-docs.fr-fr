@@ -2,12 +2,12 @@
 title: "Présentation de génération incrémentielle | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-incremental-generation"></a>Présentation de la génération incrémentielle
-  Après la génération de schéma initiale, vous pouvez modifier les définitions de cubes et de dimensions à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis exécuter à nouveau l'Assistant Génération de schéma. L'Assistant met à jour le schéma dans la base de données de la zone de sujet et dans la vue de source de données associée pour refléter les modifications, en conservant si possible les données qui existent actuellement dans les tables à régénérer. Si vous avez modifié les tables après la génération initiale, l'Assistant Génération de schéma préserve ces modifications si possible en appliquant les règles suivantes :  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Suite à la génération de schéma initial, vous pouvez modifier les définitions de cube et de dimension à l’aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis réexécutez l’Assistant génération de schéma. L'Assistant met à jour le schéma dans la base de données de la zone de sujet et dans la vue de source de données associée pour refléter les modifications, en conservant si possible les données qui existent actuellement dans les tables à régénérer. Si vous avez modifié les tables après la génération initiale, l'Assistant Génération de schéma préserve ces modifications si possible en appliquant les règles suivantes :  
   
 -   Si une table a été générée antérieurement par l'Assistant, elle est remplacée. Vous pouvez empêcher le remplacement d’une table générée par l’Assistant en affectant à la propriété **AllowChangesDuringGeneration** de cette table dans la vue de source de données la valeur **false**. Lorsque vous prenez le contrôle d'une table, celle-ci est traitée comme toutes les autres tables définies par l'utilisateur et n'est pas concernée par la régénération. Après avoir exclu une table de la génération, vous pouvez ultérieurement affecter à sa propriété **AllowChangesDuringGeneration** dans la vue de source de données la valeur **true** et rouvrir cette table pour des modifications par l’Assistant. Pour plus d’informations, consultez [Modifier les propriétés d’une vue de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   

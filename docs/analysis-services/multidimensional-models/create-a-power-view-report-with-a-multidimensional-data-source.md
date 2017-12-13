@@ -2,12 +2,12 @@
 title: "Créer un rapport Power View avec une Source de données multidimensionnelles | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffbac3cbba343bdaa966c6018cfa8add822e3869
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f216f4fc9938938fedc9a8b02b943784fd44535
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>Créer un rapport Power View avec une source de données multidimensionnelle
-  La création d’un rapport Power View basé sur un modèle multidimensionnel est identique à la création d’un rapport basé sur un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou sur un modèle tabulaire Analysis Services. Les rapports Power View sont créés à partir d'un fichier de connexion de source de données de rapport (.rsds) dans une bibliothèque SharePoint. Pour plus d’informations sur la création d’un fichier .rsds, consultez [Créer une source de données de rapport](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Création d’une vue de l’alimentation rapport basé sur un modèle multidimensionnel n’est pas différente de la création d’un rapport basé sur un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur ou un modèle tabulaire Analysis Services. Les rapports Power View sont créés à partir d'un fichier de connexion de source de données de rapport (.rsds) dans une bibliothèque SharePoint. Pour plus d’informations sur la création d’un fichier .rsds, consultez [Créer une source de données de rapport](../../analysis-services/multidimensional-models/create-a-report-data-source.md).  
   
  Avant de commencer, vous devez connaître les éléments suivants :  
   

@@ -2,12 +2,12 @@
 title: Surveiller une Instance Analysis Services | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analyser une instance Analysis Services
-  Surveillez les performances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou l’Analyseur de performances, une application parfois désignée sous l’appellation **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de créer et de gérer des traces, ainsi que d’analyser et relire les résultats de trace. L'Analyseur de performances rend compte de l'état du serveur, indexé en fonction de certains compteurs qui sont présentés dans la prochaine section.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez surveiller les performances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou l’Analyseur de performances, une application, parfois appelée **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de créer et de gérer des traces, ainsi que d’analyser et relire les résultats de trace. L'Analyseur de performances rend compte de l'état du serveur, indexé en fonction de certains compteurs qui sont présentés dans la prochaine section.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur la surveillance, consultez le [Guide des opérations SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  

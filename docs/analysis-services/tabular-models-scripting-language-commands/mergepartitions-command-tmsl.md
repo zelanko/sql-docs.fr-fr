@@ -2,12 +2,12 @@
 title: Commande de MergePartitions (TMSL) | Documents Microsoft
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d83ab2bae56fb7d38bf5c091ae57e6ddf592e3af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5e8ea1e0ea3614926c05c50374dd9b00a527cec0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mergepartitions-command-tmsl"></a>Commande de MergePartitions (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Fusionne les données d’une ou plusieurs partitions sources dans une partition cible et supprime la partition source. La requête SQL de la partition cible ne sera pas mis à jour dans le cadre de la fusion. Pour vous assurer que le traitement ultérieur de la partition récupère toutes les données, vous devez vérifier la requête de sorte qu’il sélectionne toutes les données dans la partition fusionnée.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Fusionne les données d’une ou plusieurs partitions sources dans une partition cible et supprime la partition source. La requête SQL de la partition cible ne sera pas mis à jour dans le cadre de la fusion. Pour vous assurer que le traitement ultérieur de la partition récupère toutes les données, vous devez vérifier la requête de sorte qu’il sélectionne toutes les données dans la partition fusionnée.  
   
 ## <a name="request"></a>Demande  
  Vous devez spécifier la base de données, de table et les partitions source et cible. Vous ne pouvez fusionner des partitions à partir de la même table.  

@@ -2,12 +2,12 @@
 title: Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 110863a69d45ece85023e5dd3bbd8a554631ed43
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0bd29ab1dcd96412710e9d79255119489253bde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT
-  Permet à l'application cliente de parcourir le contenu d'un modèle d'exploration de données. Les applications clientes peuvent utiliser les restrictions d'opérations d'arborescence spéciales décrites à la fin de cette rubrique pour accéder au contenu du modèle d'exploration de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Permet à l’application cliente de parcourir le contenu d’un modèle d’exploration de données. Les applications clientes peuvent utiliser les restrictions d'opérations d'arborescence spéciales décrites à la fin de cette rubrique pour accéder au contenu du modèle d'exploration de données.  
   
 ## <a name="rowset-columns"></a>Colonnes de l'ensemble de lignes  
  Le **DMSCHEMA_MINING_MODEL_CONTENT** ensemble de lignes contient les colonnes suivantes.  

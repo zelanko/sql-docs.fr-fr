@@ -2,12 +2,12 @@
 title: "Se connecter à Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 45b056f7b2d109396a114a7d8459bcc4db95c1ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 683474e873b45eca2fc39d0b8f254da06d205cf2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connect-to-analysis-services"></a>Se connecter à Analysis Services
-  Utilisez les informations de cette section pour en savoir plus sur les propriétés de chaîne de connexion, les bibliothèques clientes utilisées pour les connexions, les méthodes d'authentification prises en charge par Analysis Services et la procédure permettant de définir ou supprimer les connexions avant de déconnecter un serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Utilisez les informations de cette section pour en savoir plus sur les propriétés de chaîne de connexion, les bibliothèques clientes utilisées pour les connexions, les méthodes d’authentification sont pris en charge par Analysis Services et comment définir ou supprimer les connexions avant de déconnecter un serveur.  
   
 ## <a name="analysis-services-connections"></a>Connexions Analysis Services  
  Analysis Services utilise TCP comme protocole réseau et XML for Analysis (XMLA) comme protocole de communication. Au niveau le plus bas, toutes les bibliothèques clientes fournies avec Analysis Services implémentent XMLA sur TCP. Bien qu'il soit possible de créer des applications basées sur le format XMLA brut, la plupart des applications et des développeurs d'applications utilisent les bibliothèques clientes pour tirer parti des modèles objets et de l'efficacité de programmation qu'elles apportent. Pour les connexions du client à Analysis Services, vous pouvez vous servir d'IIS comme connexion intermédiaire si vous ne pouvez pas utiliser TCP dans la pile. Un des avantages de l'accès HTTP via IIS est la possibilité de se connecter à partir d'applications transmettant les informations d'identification dans la chaîne de connexion.  

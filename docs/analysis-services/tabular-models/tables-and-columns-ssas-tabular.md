@@ -2,12 +2,12 @@
 title: Tables et colonnes (SSAS tabulaire) | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tables et colonnes (SSAS Tabulaire)
-  Après avoir ajouté des tables et des données dans un modèle à l'aide de l'Assistant Importation de table, vous pouvez commencer à utiliser les tables en ajoutant de nouvelles colonnes de données, en créant des relations entre les tables, en définissant des calculs qui étendent les données, et en filtrant et en triant des données dans les tables pour un affichage plus aisé.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Une fois que vous avez ajouté des tables et des données dans un modèle à l’aide de l’Assistant Importation de Table, vous pouvez commencer à utiliser avec les tables en ajoutant de nouvelles colonnes de données, créer des relations entre les tables, la définition de calculs qui étendent les données, le filtrage et tri des données dans les tables pour faciliter l’affichage.  
   
  Sections de cette rubrique :  
   

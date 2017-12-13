@@ -2,12 +2,12 @@
 title: "Élément (ASSL) de traces | Documents Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afa73f44f7a72579a4c8476ff0053dce828435a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4973d40d24984772cabad04e9875bf2cc5a19694
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="traces-element-assl"></a>Élément Traces (ASSL)
-  Contient la collection d'éléments [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) associée à un élément [Server](../../../analysis-services/scripting/objects/server-element-assl.md) .  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [Trace](../../../analysis-services/scripting/objects/trace-element-assl.md) éléments associés à un [Server](../../../analysis-services/scripting/objects/server-element-assl.md) élément.  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -2,12 +2,12 @@
 title: "Élément annotations (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3c65e33b338ce9315fc0e7d76ab7e9381ded7337
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 56d48f46676f262002ecba58345359a5edd5289f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="annotations-element-assl"></a>Élément Annotations (ASSL)
-  Contient la collection de [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md) éléments associés à l’élément parent.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contient la collection de [Annotation](../../../analysis-services/scripting/objects/annotation-element-assl.md) éléments associés à l’élément parent.  
   
 ## <a name="syntax"></a>Syntaxe  
   

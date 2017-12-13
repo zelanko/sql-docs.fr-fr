@@ -2,12 +2,12 @@
 title: "Formules de Validation croisée | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e472f4f5a680bbcfd84cc260bd2d6acb35b70e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cross-validation-formulas"></a>Formules de validation croisée
-  Lorsque vous créez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, selon le type du modèle d'exploration de données (autrement dit, l'algorithme utilisé pour créer le modèle), le type de données de l'attribut prédictible et la valeur de l'attribut prédictible, le cas échéant.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous générez un rapport de validation croisée, il contient des mesures de précision pour chaque modèle, en fonction du type de modèle d’exploration de données (autrement dit, l’algorithme qui a été utilisé pour créer le modèle), le type de données de l’attribut prévisible et l’attribut prédictible valeur, le cas échéant.  
   
  Cette section répertorie les mesures utilisées dans le rapport de validation croisée et décrit la méthode de calcul.  
   

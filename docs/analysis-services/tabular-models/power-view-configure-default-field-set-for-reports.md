@@ -2,12 +2,12 @@
 title: "Configurer l’ensemble de champs par défaut pour les rapports Power View (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b357d75c87cc9a2a086382bbbf65079b31b59b52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View - configurer l’ensemble de champs par défaut pour les rapports
-  Un ensemble de champs par défaut est une liste prédéfinie de colonnes et de mesures qui sont automatiquement ajoutées à une zone de dessin de rapport [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] quand vous sélectionnez la table dans la liste des champs du rapport. Les auteurs de modèles tabulaires peuvent créer un ensemble de champs par défaut pour éliminer les étapes redondantes pour les auteurs de rapport qui utilisent le modèle pour leurs rapports. Par exemple, si vous savez que la plupart des auteurs de rapport qui utilisent des coordonnées de clients souhaitent toujours voir un nom de contact, un numéro de téléphone principal, une adresse de messagerie et un nom de société, vous pouvez présélectionner ces colonnes afin qu'elles soient toujours ajoutées à la zone de dessin du rapport lorsque l'auteur clique sur la table Customer Contact.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Un ensemble de champs par défaut est une liste prédéfinie de colonnes et les mesures qui sont automatiquement ajoutés à un [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] canevas de rapport lorsque la table est sélectionnée dans la liste de champs du rapport. Les auteurs de modèles tabulaires peuvent créer un ensemble de champs par défaut pour éliminer les étapes redondantes pour les auteurs de rapport qui utilisent le modèle pour leurs rapports. Par exemple, si vous savez que la plupart des auteurs de rapport qui utilisent des coordonnées de clients souhaitent toujours voir un nom de contact, un numéro de téléphone principal, une adresse de messagerie et un nom de société, vous pouvez présélectionner ces colonnes afin qu'elles soient toujours ajoutées à la zone de dessin du rapport lorsque l'auteur clique sur la table Customer Contact.  
   
 > [!NOTE]  
 >  Un ensemble de champs par défaut s'applique uniquement à un modèle tabulaire utilisé comme modèle de données dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Les ensembles de champs par défaut ne sont pas pris en charge dans les rapports de tableau croisé dynamique Excel.  

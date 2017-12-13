@@ -2,12 +2,12 @@
 title: "Type de données ProactiveCachingObjectNotificationBinding (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e26d57b3f223d75dc1bbde562ca8ca901eba9b5c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1f3c3f0288f64011ea7e68d986a4f1e5fb74db92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="proactivecachingobjectnotificationbinding-data-type-assl"></a>Type de données ProactiveCachingObjectNotificationBinding (ASSL)
-  Définit un type de données dérivé abstrait qui représente les informations de la [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur les modifications de source de données, soit dans les tables et vues spécifiées dans les tables et les vues identifiées par le biais des données existantes liaisons qui exigent une reconstruction du cache.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données dérivé abstrait qui représente les informations de la [ProactiveCaching](../../../analysis-services/scripting/objects/proactivecaching-element-assl.md) élément sur les modifications de source de données, dans les tables et vues spécifiées ou dans les tables et les vues identifiées par le biais des liaisons de données existantes qui exigent une reconstruction du cache.  
   
 ## <a name="syntax"></a>Syntaxe  
   

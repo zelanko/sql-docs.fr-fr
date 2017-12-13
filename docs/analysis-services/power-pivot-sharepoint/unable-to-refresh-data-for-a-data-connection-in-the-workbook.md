@@ -2,12 +2,12 @@
 title: "Impossible d’actualiser les données pour une connexion de données dans le classeur | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 67932080ad5ec8edc79232387a7b72df8627c076
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 35eeb61383298c6345147e3ea1db3f4f8c7e915b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur
-  Pour les classeurs Excel qui contiennent des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services retourne cette erreur en cas de demande de connexion à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui échoue.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Pour les classeurs Excel qui contiennent des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] données, Excel Services retourne cette erreur si elle soumet une demande de connexion à un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serveur et l’échec de la demande.  
   
 ## <a name="details"></a>Détails  
   

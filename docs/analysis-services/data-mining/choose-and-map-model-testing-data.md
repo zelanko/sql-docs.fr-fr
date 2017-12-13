@@ -2,12 +2,12 @@
 title: "Choisir et mapper le modèle de données de test | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>Choisir et mapper les données de test du modèle
-  Pour créer un graphique d’analyse de précision dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez choisir les données à utiliser pour tester le modèle et mapper les données au modèle.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Pour créer un graphique de précision dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez choisir les données qui seront utilisées pour tester le modèle et mappent les données au modèle.  
   
  Par défaut, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les données de test du modèle d’exploration de données, sous réserve que vous ayez créé un jeu de données d’exclusion au moment de la génération de la structure d’exploration de données. La création d'un jeu de test d'exclusion est la méthode la plus simple pour tester les modèles basés sur la même structure d'exploration de données, car les noms de colonnes et les types de données correspondront toujours au modèle, et vous pouvez être raisonnablement assuré que la distribution des données est similaire. En outre, le concepteur créera automatiquement les relations entre l'entrée et les colonnes du modèle.  
   

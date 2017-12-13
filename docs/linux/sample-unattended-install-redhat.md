@@ -2,8 +2,8 @@
 title: Installation sans assistance de SQL Server sur Red Hat Enterprise Linux | Documents Microsoft
 description: Exemple de Script SQL Server - installation sans assistance sur Red Hat Enterprise Linux
 author: edmacauley
-ms.author: edmacauley
-manager: jhubbard
+ms.author: edmaca
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8f352dcf0f646cd259a1163a5c752f233ed16393
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
+ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemple : Script d’installation sans assistance de SQL Server pour Red Hat Enterprise Linux
 
@@ -39,7 +39,7 @@ Cet exemple de script d’interpréteur de commandes installe SQL Server 2017 su
 Enregistrez l’exemple de script dans un fichier et pour le personnaliser, remplacer les valeurs des variables dans le script. Vous pouvez également définir des variables de scripts en tant que variables d’environnement, tant que vous les supprimez à partir du fichier de script.
 
 ```bash
-#!/bin/bash
+#!/bin/bash -eu
 
 # Use the following variables to control your install:
 

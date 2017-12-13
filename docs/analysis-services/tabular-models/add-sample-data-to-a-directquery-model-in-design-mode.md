@@ -2,12 +2,12 @@
 title: "Ajoutez des exemples de données à un modèle DirectQuery en Mode Création | Documents Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff618d97a65c7143dda513d38d66dd72d1459022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Ajouter des exemples de données à un modèle DirectQuery en mode Création
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- En mode DirectQuery, les partitions de table permettent de créer des exemples de sous-ensembles de données utilisés pendant la conception du modèle ou pour créer des solutions de remplacement d’une vue complète des données.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]En mode DirectQuery, les partitions de table sont utilisées pour créer des sous-ensembles de données échantillon utilisés lors de la conception de modèle, ou créer des solutions de remplacement d’une vue complète des données.
  
  Quand vous déployez un modèle tabulaire DirectQuery, une seule partition est autorisée par table, et cette partition doit obligatoirement contenir la vue complète des données. Toute partition supplémentaire contient soit un substitue de la vue complète des données, soit un exemple de données. Dans cette rubrique, nous allons décrire la création d’un exemple de partition, avec un sous-ensemble de données.
  

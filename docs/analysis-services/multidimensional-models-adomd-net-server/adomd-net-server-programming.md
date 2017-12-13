@@ -2,12 +2,12 @@
 title: Programmation du serveur ADOMD.NET | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fd825c22b7b6b4436d57c0baaeaf6abdb416cd91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec1460930df27e1111d17b6c5692f82186348153
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-server-programming"></a>Programmation du serveur ADOMD.NET
-  Les composants serveur d’ADOMD.NET résident dans le **Microsoft.AnalysisServices.AdomdServer** espace de noms (dans msmgdsrv.dll). Ces composants de serveur vous permet de créer des fonctions MDX (Multidimensional Expressions) personnalisées et des procédures stockées qui sont exécutées sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les objets serveur permettent d'interroger les cubes et les modèles d'exploration de données et d'évaluer des expressions dans un contexte donné. La création de fonctions personnalisées et de procédures stockées offrent les avantages d'une exécution rapide, d'un déploiement centralisé et d'une facilité de maintenance améliorée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les composants serveur d’ADOMD.NET résident dans le **Microsoft.AnalysisServices.AdomdServer** espace de noms (dans msmgdsrv.dll). Ces composants de serveur vous permet de créer des fonctions MDX (Multidimensional Expressions) personnalisées et des procédures stockées qui sont exécutées sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les objets serveur permettent d'interroger les cubes et les modèles d'exploration de données et d'évaluer des expressions dans un contexte donné. La création de fonctions personnalisées et de procédures stockées offrent les avantages d'une exécution rapide, d'un déploiement centralisé et d'une facilité de maintenance améliorée.  
   
  Les rubriques mentionnées dans le tableau suivant vous aideront à développer des applications serveur ADOMD.NET.  
   

@@ -2,12 +2,12 @@
 title: Programmation du Client ADOMD.NET | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad5dc8c4f260156ef8fec7d52197f2a9137894de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6ed705a9cd5f4084dcf6e09b619431479a23826
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="adomdnet-client-programming"></a>Programmation du client ADOMD.NET
-  Les composants clients ADOMD.NET résident dans le **Microsoft.AnalysisServices.AdomdClient** espace de noms (dans microsoft.analysisservices.adomdclient.dll). Ces composants clients offrent les fonctionnalités de client et les applications de couche intermédiaire pour interroger facilement les données et les métadonnées à partir d’une banque de données analytiques, telles que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Les composants clients ADOMD.NET résident dans le **Microsoft.AnalysisServices.AdomdClient** espace de noms (dans microsoft.analysisservices.adomdclient.dll). Ces composants clients offrent les fonctionnalités de client et les applications de couche intermédiaire pour interroger facilement les données et les métadonnées à partir d’une banque de données analytiques, telles que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="using-the-adomdnet-client-objects"></a>Utilisation des objets clients ADOMD.NET  
  Lorsqu'il s'agit d'interroger une source de données analytiques, il convient d'effectuer un ensemble de tâches courantes. Le tableau suivant présente les tâches courantes dans lesquelles les objets clients ADOMD.NET sont utilisés dans le cadre d'une requête de ce type.  

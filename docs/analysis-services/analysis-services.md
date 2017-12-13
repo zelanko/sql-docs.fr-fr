@@ -1,12 +1,12 @@
 ---
 title: Analysis Services | Documents Microsoft
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>Nouveautés d’Analysis Services ?
-  Analysis Services est un moteur de données analytiques utilisé de la prise de décision et analytique d’entreprise, en fournissant les données analytiques pour les rapports d’entreprise et les applications clientes, telles que Power BI, Excel, des rapports Reporting Services et d’autres outils de visualisation de données.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Analysis Services est un moteur de données analytiques utilisé de la prise de décision et analytique d’entreprise, en fournissant les données analytiques pour les rapports d’entreprise et les applications clientes, telles que Power BI, Excel, des rapports Reporting Services et d’autres outils de visualisation de données.  
   
  Un flux de travail typique comprend la création d’un modèle de données multidimensionnelle ou tabulaire, le déploiement du modèle en tant qu’une base de données à une instance de serveur local SQL Server Analysis Services ou Azure Analysis Services, configurer le traitement des données périodique et affectation d’autorisations d’accès aux données par les utilisateurs finaux. Lorsqu’il est prêt, votre modèle de données sémantique accessibles par toute application cliente prenant en charge d’Analysis Services comme source de données.  
  

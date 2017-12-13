@@ -2,12 +2,12 @@
 title: "Référence (PowerPivot pour SharePoint) des règles d’intégrité | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Référence de règles d'intégrité (Power Pivot pour SharePoint)
-  Cette rubrique de référence décrit les règles d'intégrité de SharePoint ajoutées par une installation de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint. Ces règles sont utilisées pour signaler des problèmes avec l'intégrité du serveur, la disponibilité, ou la configuration d'une application de service [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ou son instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] associée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique de référence décrit les règles de contrôle d’intégrité de SharePoint ajoutées par un [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour l’installation de SharePoint. Ces règles sont utilisées pour signaler des problèmes avec l'intégrité du serveur, la disponibilité, ou la configuration d'une application de service [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ou son instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] associée.  
   
  Le tableau suivant répertorie les règles dans l'ordre dans lequel elles apparaissent dans la page Définitions de règle de l'analyseur d'intégrité dans l'Administration centrale de SharePoint. Les règles configurables sont celles dont vous pouvez modifier les seuils qui la déclenchent. Pour plus d’informations, consultez [Configurer des règles d’intégrité PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md). La réparation automatique indique qu'il existe une solution intégrée sur laquelle vous pouvez cliquer dans la page Rapports de problème pour résoudre le problème.  
   

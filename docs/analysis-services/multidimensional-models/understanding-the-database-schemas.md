@@ -2,12 +2,12 @@
 title: "Comprendre les schémas de base de données | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
-  L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]L’Assistant génération de schéma génère un schéma relationnel dénormalisé pour la base de données de zone sujet basée sur les dimensions et les groupes de mesures dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
   
 ## <a name="validation"></a>Validation  
  Avant de commencer à générer le schéma relationnel sous-jacent, l'Assistant Génération de schéma valide les cubes et les dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si l'Assistant détecte des erreurs, il s'arrête et signale ces erreurs dans la fenêtre Liste des tâches de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Voici quelques exemples d'erreurs qui empêchent la génération :  

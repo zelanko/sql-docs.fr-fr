@@ -2,12 +2,12 @@
 title: "Configurer des règles d’intégrité PowerPivot | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Configurer des règles d’intégrité PowerPivot
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint inclut des règles d’intégrité SharePoint qui vous aident à analyser et à résoudre les problèmes de disponibilité et de configuration du serveur. Les règles d’intégrité qui s’appliquent à [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint apparaissent dans la page Vérifier les définitions de règles.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]pour SharePoint inclut des règles de contrôle d’intégrité SharePoint qui vous aident à surveiller et à résoudre les problèmes de disponibilité et de configuration du serveur. Les règles d’intégrité qui s’appliquent à [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint apparaissent dans la page Vérifier les définitions de règles.  
   
  Les règles d'intégrité permettent la détection anticipée des problèmes de serveur susceptibles de provoquer des interruptions de service. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint fournit plusieurs règles pour vous aider à identifier et résoudre les problèmes avant qu’ils ne touchent vos utilisateurs. Vous pouvez personnaliser beaucoup de ces règles pour les adapter aux besoins uniques de votre déploiement. Par exemple, si vous souhaitez disposer de plus de temps pour traiter les avertissements relatifs à l'espace disque, vous pouvez augmenter le pourcentage d'espace disque disponible de 5 % à 10 % afin de recevoir l'avertissement plus tôt.  
   

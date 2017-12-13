@@ -2,12 +2,12 @@
 title: "Restaurer à partir de PowerPivot | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88cd0379f0d23f819ab362a273c58bb40db81fa9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2cc8322e9a7208189ec7a8630e79a47baecaeb92
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="restore-from-power-pivot"></a>Restaurer à partir de PowerPivot
-  Utilisez la fonctionnalité Restaurer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SQL Server Management Studio pour créer une base de données model tabulaire sur une instance Analysis Services (exécutée en mode tabulaire) ou restaurer vers une base de données existante à partir d’un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (.xlsx).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Vous pouvez utiliser la restauration à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fonctionnalité dans SQL Server Management Studio pour créer une nouvelle base de données de modèle tabulaire sur une instance d’Analysis Services (exécutée en mode tabulaire), ou pour restaurer une base de données existante à partir d’un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur (.xlsx).  
   
 > [!NOTE]  
 >  Le modèle de projet Importer à partir de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SQL Server Data Tools fournit des fonctionnalités similaires. Pour plus d’informations, consultez [Importer à partir de Power Pivot &#40;SSAS Tabulaire&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md).  

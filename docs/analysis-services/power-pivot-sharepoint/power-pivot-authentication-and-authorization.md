@@ -2,12 +2,12 @@
 title: Power Pivot Authentication and Authorization | Documents Microsoft
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81357b2e0baec6545a6fec8aedf5d2c635d0c9da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
-  Un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint qui s’exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d’authentification et le modèle d’autorisation fournis par les serveurs SharePoint. L’infrastructure de sécurité SharePoint s’étend au contenu et aux opérations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , car l’ensemble du contenu relatif à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est stocké dans des bases de données de contenu SharePoint, et l’ensemble des opérations relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est effectué par des services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont authentifiés à l’aide d’une identité d’utilisateur SharePoint basée sur leur identité d’utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint déploiement qui s’exécute dans une batterie de serveurs SharePoint 2010 utilise le modèle d’autorisation et de sous-système d’authentification fourni par les serveurs SharePoint. L’infrastructure de sécurité SharePoint s’étend au contenu et aux opérations [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , car l’ensemble du contenu relatif à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est stocké dans des bases de données de contenu SharePoint, et l’ensemble des opérations relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]est effectué par des services partagés [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont authentifiés à l’aide d’une identité d’utilisateur SharePoint basée sur leur identité d’utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
   
  Étant donné que l’intégration à Excel Services est nécessaire pour les analyses de données libre-service, pour sécuriser un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vous devez également bien comprendre le fonctionnement de la sécurité dans Excel Services. Quand un utilisateur interroge un tableau croisé dynamique comportant une connexion de données à des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services transmet une demande de connexion de données à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie pour charger les données. Du fait de cette interaction entre les serveurs, il est indispensable que vous compreniez comment configurer des paramètres de sécurité pour les deux serveurs.  
   

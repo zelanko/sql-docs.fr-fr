@@ -2,12 +2,12 @@
 title: "Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Créer une requête de prédiction à l'aide du Générateur de requêtes de prédiction
-  Vous pouvez créer des requêtes de prédiction soit quand vous générez une solution d’exploration de données dans BI Development Studio, soit en cliquant avec le bouton droit sur un modèle d’exploration de données existant dans SQL Server Management Studio, puis en choisissant l’option **Générer une requête de prédiction**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Vous pouvez créer des requêtes de prédiction soit lorsque vous générez une solution d’exploration de données dans BI Development Studio, ou en double-cliquant sur un modèle d’exploration de données existant dans SQL Server Management Studio et puis en choisissant l’option **générer une requête de prédiction**.  
   
  Le **Générateur de requêtes de prédiction** dispose des trois modes de création suivants, que vous pouvez utiliser tour à tour en cliquant sur les icônes dans l’angle supérieur gauche.  
   

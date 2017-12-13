@@ -2,12 +2,12 @@
 title: "Choisir et mapper les données d’entrée pour une requête de prédiction | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e055a4ef5a23e08a7b8147cfd746c48b304aa3b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Choisir et mapper les données d'entrée pour une requête de prédiction
-  Lorsque vous créez des prédictions à partir d'un modèle d'exploration de données, vous le faites généralement en alimentant de nouvelles données dans le modèle. (Les modèles de série chronologique, qui peuvent faire des prédictions basées sur des données historiques uniquement, font exception.) Pour fournir de nouvelles données au modèle, vous devez vous assurer que les données sont disponibles dans une vue de source de données. Si vous connaissez à l'avance les données que vous allez utiliser pour la prédiction, vous pouvez les inclure dans la vue de source de données utilisée pour créer le modèle. Sinon, vous devrez peut-être créer une vue de source de données. Pour plus d’informations sur les vues de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous créez des prédictions à partir d’un modèle d’exploration de données, généralement cela en acheminant les nouvelles données dans le modèle. (Les modèles de série chronologique, qui peuvent faire des prédictions basées sur des données historiques uniquement, font exception.) Pour fournir de nouvelles données au modèle, vous devez vous assurer que les données sont disponibles dans une vue de source de données. Si vous connaissez à l'avance les données que vous allez utiliser pour la prédiction, vous pouvez les inclure dans la vue de source de données utilisée pour créer le modèle. Sinon, vous devrez peut-être créer une vue de source de données. Pour plus d’informations sur les vues de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Parfois les données dont vous avez besoin peuvent être contenues dans plusieurs tables d'une jointure un-à-plusieurs. Tel est le cas avec les données utilisées pour les modèles d'association ou les modèles Sequence Clustering, qui utilisent une table de cas liée à une table imbriquée qui contient les détails du produit ou de la transaction. Si votre modèle utilise une structure de table de cas imbriquée, les données que vous utilisez pour la prédiction doivent également avoir une structure de table de cas imbriquée.  
   

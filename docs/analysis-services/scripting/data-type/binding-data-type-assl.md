@@ -2,12 +2,12 @@
 title: "Liaison de Type de données (ASSL) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 64b5234cdeb661c3f25b0d6ed2e00db330ea0ca7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2045fbc3130319fe14b1ea2fcac25f27fb4004b5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="binding-data-type-assl"></a>Type de données Binding (ASSL)
-  Définit un type de données primitif abstrait qui représente une relation de dépendance entre deux objets dans laquelle les données ou les métadonnées d'un objet dépendent des données ou des métadonnées d'un objet lié.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Définit un type de données primitif abstrait qui représente une relation de dépendance entre deux objets dans laquelle les données ou les métadonnées d’un objet dépendent des données ou métadonnées d’un objet lié.  
   
 ## <a name="syntax"></a>Syntaxe  
   

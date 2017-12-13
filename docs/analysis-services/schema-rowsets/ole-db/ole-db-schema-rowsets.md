@@ -2,12 +2,12 @@
 title: "Ensembles de lignes de schéma OLE DB | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>Ensembles de lignes des schémas OLE DB
-  Les ensembles de lignes des schémas OLE DB suivants sont pris en charge par le fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Utilisez le **DISCOVER_ENUMERATORS** ensemble de lignes avec le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) méthode permettant de vérifier si un fournisseur de source de données particulière prend en charge un ensemble de lignes.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Les ensembles de lignes de schéma OLE DB suivants sont pris en charge par le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML pour le fournisseur Analysis (XMLA). Utilisez le **DISCOVER_ENUMERATORS** ensemble de lignes avec le [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) méthode permettant de vérifier si un fournisseur de source de données particulière prend en charge un ensemble de lignes.  
   
  Vous pouvez également obtenir des informations détaillées sur ces ensembles de lignes en recherchant la rubrique « Ensembles de lignes de schéma » dans la section Guide de référence du programmeur OLE DB de la Bibliothèque MSDN® sur le site Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   

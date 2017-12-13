@@ -2,12 +2,12 @@
 title: "Leçon 1 : Définition d’une vue de Source de données au sein d’une analyse Services projet | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a8a8a672919d2ee1fde9497dbdd9260362e3b537
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae0bf6f8f74711407a33f5b32929bfb62d75423c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Leçon 1 : Définition d'une vue de source de données dans un projet Analysis Services
-La conception d’une application Business Intelligence dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence par la création d’un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Dans ce projet, vous devez définir tous les éléments de votre solution, en commençant par une vue de source de données.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Conception d’une application décisionnelle dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence par la création d’un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Dans ce projet, vous devez définir tous les éléments de votre solution, en commençant par une vue de source de données.  
   
 Cette leçon contient les tâches suivantes :  
   

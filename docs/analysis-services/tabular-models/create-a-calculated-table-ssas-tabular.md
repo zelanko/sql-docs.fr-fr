@@ -2,12 +2,12 @@
 title: "Créer une Table calculée (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>Créer une table calculée (SSAS Tabulaire)
-  Un *table calculée* est un objet calculé basé sur une requête ou une expression DAX, dérivé de tout ou partie des autres tables dans le même modèle.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]A *table calculée* est un objet calculé basé sur une requête DAX ou une expression, dérivé à partir de tout ou partie des autres tables dans le même modèle.  
   
  Un problème de conception courant que les tables calculées peuvent résoudre est la présentation d’une dimension de rôle actif dans un contexte spécifique pour vous permettre de l'exposer comme une structure de requête dans les applications clientes.  Vous vous souvenez peut-être qu'une dimension de rôle actif est une simple table présentée dans plusieurs contextes : un exemple classique est la table Date, représentée par OrderDate, ShipDate ou DueDate, en fonction de la relation de clé étrangère. En créant explicitement une table calculée pour ShipDate, vous obtenez une table autonome et disponible pour les requêtes, et totalement opérationnelle comme toute autre table.  
   

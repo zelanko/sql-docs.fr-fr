@@ -2,12 +2,12 @@
 title: "Paramètre de référence (PowerPivot pour SharePoint) de configuration | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Référence de paramètre de configuration (Power Pivot pour SharePoint)
-  Cette rubrique fournit une documentation de référence pour les paramètres de configuration utilisés par les applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans une batterie de serveurs SharePoint. Si vous utilisez du script PowerShell pour configurer un serveur, ou si vous souhaitez rechercher des informations sur un paramètre spécifique, les informations de cette rubrique fournissent des descriptions détaillées.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Cette rubrique fournit la documentation de référence pour les paramètres de configuration utilisés par [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service d’applications dans une batterie de serveurs SharePoint. Si vous utilisez du script PowerShell pour configurer un serveur, ou si vous souhaitez rechercher des informations sur un paramètre spécifique, les informations de cette rubrique fournissent des descriptions détaillées.  
   
  Les paramètres de configuration sont définis pour chaque application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Dans une batterie de serveurs, vous pouvez créer plusieurs applications de service de façon à configurer des instances logiques indépendantes de la même instance de service physique. Les paramètres de configuration sont stockés dans la base de données d'application [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] créée pour chaque application de service que vous configurez.  
   

@@ -2,12 +2,12 @@
 title: "Vue d’ensemble de l’Architecture logique (Analysis Services - données multidimensionnelles) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
-  Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint, utilisé pour le chargement et l’interrogation d’Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des modèles de données à l’intérieur d’un classeur.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Analysis Services s’exécute dans un mode de déploiement de serveur qui détermine l’environnement d’architecture et de runtime mémoire utilisé par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint, utilisé pour le chargement et l’interrogation d’Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des modèles de données à l’intérieur d’un classeur.  
   
  Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [de modélisation tabulaire &#40; SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) et [comparaison des Solutions tabulaires et multidimensionnelles &#40; SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

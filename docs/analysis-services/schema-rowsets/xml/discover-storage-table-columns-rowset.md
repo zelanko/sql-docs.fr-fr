@@ -2,12 +2,12 @@
 title: Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMNS | Documents Microsoft
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 126a0f1c261cc13f5a3673a67c87d12aac5faece
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6ca81b54546e3ff69c42ea60484e462513443c5e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMNS
-  Fournit des informations au niveau de la colonne concernant les tables de stockage utilisées par une base de données Analysis Services exécutée en mode SharePoint ou tabulaire.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fournit des informations au niveau des colonnes des tables de stockage utilisé par une base de données Analysis Services en cours d’exécution en mode SharePoint ou tabulaire.  
   
  **S'applique à :** modèles tabulaires  
   

@@ -2,12 +2,12 @@
 title: "Types de données XML du scripts Language (ASSL) Analysis Services | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Types de données XML Analysis Services Scripting Language (ASSL)
-  Cette section de référence contient des informations de syntaxe et d'utilisation pour chaque élément agissant en tant que type dans le schéma ASSL (Analysis Services Scripting Language).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Cette section de référence contient des informations de syntaxe et d’utilisation pour chaque élément qui agit comme un type dans le schéma d’Analysis Services Scripting Language (ASSL).  
   
  Bien que le schéma ASSL renferme uniquement des éléments XML à partir du point de vue d’un développeur, les éléments décrits dans cette section correspondent aux types, tels que **liaison** et **autorisation**, qui sont utilisés pour définir les éléments enfants et les propriétés d’autres objets.  
   

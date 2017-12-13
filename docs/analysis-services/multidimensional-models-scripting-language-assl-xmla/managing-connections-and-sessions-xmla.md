@@ -2,12 +2,12 @@
 title: Gestion des connexions et Sessions (XMLA) | Documents Microsoft
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52392cf2a1af25e0f67634286e371fb2bef408f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Gestion des connexions et des sessions (XMLA)
-  *Conservation de l’état* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode se termine.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Que l'on appelle* est une condition pendant laquelle le serveur préserve l’identité et le contexte d’un client entre les appels de méthode. *Abandon de l’état* est une condition pendant laquelle le serveur ne retient pas l’identité et le contexte d’un client après un appel de méthode se termine.  
   
  Pour assurer la conservation de l’état, XML for Analysis (XMLA) prend en charge *sessions* qui autorisent une série d’instructions pour être exécutés simultanément. À titre d'exemple, une telle série d'instructions pourrait servir à créer le membre calculé à utiliser dans des requêtes ultérieures.  
   

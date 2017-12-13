@@ -2,12 +2,12 @@
 title: "Options et paramètres (Analysis Services) de traitement | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Options et paramètres de traitement (Analysis Services)
-  Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement afin de contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Lorsque vous traitez des objets dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement pour contrôler le type de traitement qui se produit pour chaque objet. Les types de traitement varient d'un objet à l'autre et en fonction des modification qui ont été apportées à l'objet depuis le dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l'objet le plus rapidement possible.  
   
  Les paramètres de traitement vous permettent de contrôler les objets traités et les méthodes utilisées pour traiter ces objets. Certains paramètres de traitement sont principalement utilisés pour des travaux de traitement par lots. Pour plus d’informations sur le traitement par lots, consultez [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   

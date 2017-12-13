@@ -2,12 +2,12 @@
 title: "Alimentation afficher les propriétés de création de rapports (SSAS tabulaire) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>Power View - propriétés du rapport (SSAS tabulaire)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permet la création intuitive de rapports ad hoc pour les utilisateurs professionnels comme les analystes de données, les décideurs d’entreprise et les travailleurs de l’information. Ils peuvent facilement créer des vues de données et interagir avec celles-ci à partir des modèles tabulaires basés sur des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publiés dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ou des modèles tabulaires créés à l’aide des [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , puis déployés sur des instances de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application de navigateur Silverlight lancée depuis SharePoint Server 2010 ou une version ultérieure.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] fournit intuitive rapports ad hoc pour les utilisateurs professionnels comme les analystes de données, les décideurs d’entreprise et les travailleurs. Ils peuvent facilement créer des vues de données et interagir avec celles-ci à partir des modèles tabulaires basés sur des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publiés dans une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , ou des modèles tabulaires créés à l’aide des [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , puis déployés sur des instances de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une application de navigateur Silverlight lancée depuis SharePoint Server 2010 ou une version ultérieure.  
   
  Quand vous créez des projets de modèle tabulaire dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], vous pouvez configurer certaines propriétés de création de rapports propres aux rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Les rubriques de cette section expliquent comment optimiser un modèle pour améliorer l'expérience de création de rapports dans [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

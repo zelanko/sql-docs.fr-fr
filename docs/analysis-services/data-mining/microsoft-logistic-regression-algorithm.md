@@ -2,12 +2,12 @@
 title: "L’algorithme Microsoft Logistic Regression | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0a62e3bad1e9bfcae6c929061000ebcc8d3b7af7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b267fa74daf5c8ea83501eb3daadd5b84dc9cb7f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
-  La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
   
  Il existe différentes implémentations de régression logistique dans la recherche de statistiques, qui utilisent différentes techniques d'apprentissage. L'algorithme de régression logistique de [!INCLUDE[msCoName](../../includes/msconame-md.md)] a été implémenté en utilisant une variante de l'algorithme MNN de réseau neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Cet algorithme partage un grand nombre des qualités des réseaux neuronaux, mais son apprentissage est plus aisé.  
   

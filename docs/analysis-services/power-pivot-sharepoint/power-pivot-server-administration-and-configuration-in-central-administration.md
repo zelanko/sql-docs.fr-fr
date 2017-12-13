@@ -2,12 +2,12 @@
 title: "Administration de serveur de tableau croisé dynamique et de Configuration dans l’Administration centrale de l’alimentation | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a414e1d07c7a8789ed0c91db91cc3af4009c417b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dff0e2f3dda0e4fc568f04787c4056ab27611a18
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d’un serveur Power Pivot dans l’Administration centrale
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] sont gérées par les administrateurs d’application de service SharePoint à l’aide de l’Administration centrale SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] d’administration de serveur et de configuration est effectuée par les administrateurs d’application de service SharePoint à l’aide de l’Administration centrale de SharePoint.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint doit être configuré avant de pouvoir être utilisé. Après avoir installé [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] pour SharePoint à l’aide du programme d’installation de SQL Server, vous pouvez le configurer selon l’une des approches suivantes :  
   

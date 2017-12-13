@@ -2,12 +2,12 @@
 title: "Spécifier la marque comme Table de dates | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1b8d4a4ab8b48b8d18a32023902b24132831b97c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9a37e946ba4a660b205b948a7f52d2dc84e6f39
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Spécifier la marque comme Table de dates à utiliser avec time intelligence
-  Pour pouvoir utiliser les fonctions time intelligence dans les formules DAX, vous devez spécifier une table de dates et une colonne d’identificateur unique (datetime) du type de données Date. Une fois qu'une colonne dans la table de dates est spécifiée comme identificateur unique, vous pouvez créer des relations entre les colonnes de cette table et de toutes les tables de faits.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Pour pouvoir utiliser les fonctions time intelligence dans les formules DAX, vous devez spécifier une table de dates et une colonne d’identificateur unique (datetime) du type de données Date. Une fois qu'une colonne dans la table de dates est spécifiée comme identificateur unique, vous pouvez créer des relations entre les colonnes de cette table et de toutes les tables de faits.  
   
  Lorsque vous utilisez les fonctions time intelligence, les règles suivantes s’appliquent :  
   

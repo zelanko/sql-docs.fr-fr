@@ -2,12 +2,12 @@
 title: "Octroyer un accès personnalisé à des données de dimension (Analysis Services) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6cf115e0e7c931dd4e0b173b937a476cd08635df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
-  Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Après avoir activé l’accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui explicitement autoriser ou refuser l’accès aux membres de dimension (y compris les mesures contenues dans la Dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
   
  ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "des tableaux croisés dynamiques avec et sans un membre de dimension")  
   
