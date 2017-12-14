@@ -1,5 +1,5 @@
 ---
-title: Destination ODBC | Documents Microsoft
+title: Destination ODBC | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0c3df5b8f8ef946021fcc72bb12cb164e99fdb5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-destination"></a>Destination ODBC
   La destination ODBC charge en masse les données dans les tables de base de données compatibles ODBC. La destination ODBC utilise un gestionnaire de connexions ODBC pour se connecter à la source de données.  
@@ -70,11 +68,11 @@ ms.lasthandoff: 08/17/2017
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de Destination ODBC &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
   
--   [Éditeur de Destination ODBC &#40; Page mappages &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Éditeur de destination ODBC &#40;page Mappages&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
   
--   [Éditeur de Destination ODBC &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Éditeur de destination ODBC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programmation.  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Charger des données à l’aide de la Destination ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
+-   [Charger des données à l’aide de la destination ODBC](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [Propriétés personnalisées des destinations ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
@@ -136,7 +134,7 @@ ms.lasthandoff: 08/17/2017
  Liste des colonnes de destination disponibles. Par glisser-déplacer, mappez une colonne de destination à une colonne d'entrée disponible.  
   
 #### <a name="input-column"></a>Colonne d'entrée  
- Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant **\<ignorer>** de manière à exclure des colonnes de la sortie.  
   
 #### <a name="destination-column"></a>Colonne de destination  
  Affiche toutes les colonnes de destination disponibles, mappées et non mappées.  
@@ -189,4 +187,3 @@ ms.lasthandoff: 08/17/2017
 #### <a name="redirect-flow"></a>Rediriger le flux  
  La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la destination ODBC. Pour plus d'informations, consultez Destination ODBC.  
   
-

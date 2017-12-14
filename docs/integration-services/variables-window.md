@@ -1,5 +1,5 @@
 ---
-title: "Fenêtre variables | Documents Microsoft"
+title: "Fenêtre Variables | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.variables.f1
 - sql13.dts.designer.variableoptionswindow.f1
-helpviewer_keywords:
-- Variables Window dialog box
+helpviewer_keywords: Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
  Si vous affectez une expression à une variable, un marqueur spécial sous la forme d'une icône s'affiche en regard de la variable. Ce marqueur d'icône spécial s'affiche également en regard des gestionnaires de connexions et des tâches contenant des expressions.  
 
-## <a name="variable-grid-options-dialog-box"></a>Boîte de dialogue Options de grille variable
+## <a name="variable-grid-options-dialog-box"></a>Options de grille variable, boîte de dialogue
  Utilisez la boîte de dialogue **Options de grille variables** pour sélectionner les colonnes qui s'affichent dans la fenêtre **Variables** et sélectionner les filtres à appliquer à la liste des variables. Pour plus d'informations sur les propriétés de variable correspondantes, consultez [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md).  
   
 ### <a name="options-for-filter"></a>Options pour le filtre  
@@ -120,8 +117,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40; SSIS &#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressions Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Générer de fichiers de vidage pour l’exécution des packages](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

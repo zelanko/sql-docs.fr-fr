@@ -1,5 +1,5 @@
 ---
-title: "Rôles d’utilisateur | Documents Microsoft"
+title: "Rôles d’utilisateur | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f01d18033764d683871cbc8d5883e25c78b7d958
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-roles"></a>Rôles d'utilisateur
   Cette section décrit les rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity. Les rôles décrits sont des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les rôles Windows ou des rôles de base de données Oracle.  
@@ -147,7 +145,7 @@ ms.lasthandoff: 08/03/2017
   
  La liste suivante décrit les privilèges requis pour l'utilisateur d'exploration de données de journaux :  
   
--   Sélectionnez sur \<any-captured-table >  
+-   SELECT sur \<tout_table_capturée>  
   
 -   SELECT ANY TRANSACTION  
   
@@ -181,4 +179,3 @@ ms.lasthandoff: 08/03/2017
  Les informations d'identification pour cet utilisateur ne sont jamais stockées. Elles sont requises par la console du concepteur CDC chaque fois qu'elles sont nécessaires et sont conservées pour les autres sessions d'interface utilisateur.  
   
   
-

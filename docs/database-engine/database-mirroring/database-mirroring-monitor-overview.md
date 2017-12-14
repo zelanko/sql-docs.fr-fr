@@ -2,9 +2,12 @@
 title: "Vue d’ensemble du moniteur de mise en miroir de bases de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbf4b3f8cec8528fc7a19acd683b5cc05ac98ba7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 34171578d9cf3b544106acdb7f017cb33fd3ccf9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
-  Si vous disposez des autorisations appropriées, vous pouvez utiliser le moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Si vous disposez des autorisations appropriées, vous pouvez utiliser le Moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  
   
  Vous pouvez inscrire vos bases de données mises en miroir pour une surveillance individuelle sur chaque partenaire de basculement. Lorsque vous inscrivez une base de données, le moniteur de mise en miroir de bases de données met en cache les informations suivantes relatives à la base de données :  
   

@@ -1,5 +1,5 @@
 ---
-title: "Persistance des objets personnalisés | Documents Microsoft"
+title: "Persistance des objets personnalisés | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom objects [Integration Services], persisting
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7b43f65b19f3dd4804ba1f7c18a81b640ed277d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 27b800182751ea40ad827c77ea71c6f2815eecc7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="persisting-custom-objects"></a>Persistance des objets personnalisés
-  Vous n’avez pas besoin d’implémenter une persistance personnalisée pour les objets personnalisés que vous créez tant que leurs propriétés utilisent uniquement des types de données simples tels que **entier** et **chaîne**. L'implémentation par défaut de la persistance enregistre les métadonnées de votre objet ainsi que les valeurs de toutes ses propriétés.  
+  Il n’est pas nécessaire d’implémenter une persistance personnalisée pour les objets personnalisés que vous créez à condition que leurs propriétés utilisent uniquement des types de données simples, comme **integer** et **string**. L'implémentation par défaut de la persistance enregistre les métadonnées de votre objet ainsi que les valeurs de toutes ses propriétés.  
   
  Toutefois, si votre objet comporte des propriétés qui utilisent des types de données complexes, ou si vous souhaitez effectuer un traitement personnalisé sur des valeurs de propriétés lors de leur chargement et de leur enregistrement, vous pouvez implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> et ses méthodes <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A>. Avec ces méthodes, vous effectuez un chargement depuis (ou un enregistrement vers) la définition XML du package, d'un fragment XML qui contient les propriétés de votre objet et leurs valeurs actuelles. Le format de ce fragment XML n'est pas défini ; il doit uniquement s'agir d'un format XML bien formé.  
   
@@ -38,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 >  Lorsque vous implémentez une persistance personnalisée, vous devez rendre persistantes toutes les propriétés de l'objet, y compris les propriétés héritées et les propriétés personnalisées que vous avez ajoutées.  
   
 ## <a name="example"></a>Exemple  
- Bien que l’exemple de gestionnaire de connexions personnalisé Sql Server ne nécessite pas de persistance personnalisée pour ses trois propriétés de type **chaîne**, le code suivant montre un exemple de code personnalisé requis pour rendre persistants le Gestionnaire de connexions et ses propriétés. La classe qui contient ce code doit implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
+ Bien que l’exemple de gestionnaire de connexions personnalisé SQL Server ne requière pas de persistance personnalisée pour ses trois propriétés de type **string**, le code suivant présente un exemple du code personnalisé qui serait requis pour rendre persistants le gestionnaire de connexions et ses propriétés. La classe qui contient ce code doit implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -167,4 +163,3 @@ public void SaveToXML(System.Xml.XmlDocument doc,
  [Génération, déploiement et débogage d’objets personnalisés](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   
   
-

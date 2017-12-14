@@ -2,9 +2,12 @@
 title: "Interrogation d’une table hiérarchique à l’aide de méthodes hiérarchiques | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c421750c7654ae0993fea523ebceaa2e2dd49ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7dd990ca2e614846596250e088683b723c736799
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-3---querying-a-hierarchical-table-using-hierarchy-methods"></a>Leçon 2-3 : Interrogation d’une table hiérarchique à l’aide de méthodes hiérarchiques
-Maintenant que la table HumanResources.EmployeeOrg est entièrement remplie, cette tâche vous indiquera comment interroger la hiérarchie à l'aide de certaines des méthodes hiérarchiques.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Maintenant que la table HumanResources.EmployeeOrg est entièrement remplie, cette tâche vous indique comment interroger la hiérarchie à l’aide de certaines des méthodes hiérarchiques.  
   
 ### <a name="to-find-subordinate-nodes"></a>Pour rechercher des nœuds subordonnés  
   

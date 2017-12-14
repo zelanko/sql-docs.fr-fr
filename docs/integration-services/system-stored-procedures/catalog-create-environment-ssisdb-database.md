@@ -1,5 +1,5 @@
 ---
-title: "Catalog.create_environment (base de données SSISDB) | Documents Microsoft"
+title: "catalog.create_environment (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: b3e0aab7ef3a4e9106781ec812177898a10e3a46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +37,16 @@ catalog.create_environment [@folder_name =] folder_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [@folder_name =] *nom_dossier*  
- Le nom du dossier pour contenir l’environnement. Le *nom_dossier* est **nvarchar (128)**.  
+ [@folder_name =] *folder_name*  
+ Nom du dossier destiné à contenir l’environnement. *folder_name* est de type **nvarchar(128)**.  
   
  [@environment_name =] *environment_name*  
- Nom de l'environnement. Le *environment_name* est **nvarchar (128)**.  
+ Nom de l'environnement. *environment_name* est de type **nvarchar(128)**.  
   
  [@environment_description=] *environment_description*  
- Description facultative de l'environnement. Le *environment_description* est **nvarchar (1024)**.  
+ Description facultative de l'environnement. *environment_description* est de type **nvarchar(1024)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -59,11 +57,11 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   Autorisations READ et MODIFY sur le dossier  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
 -   d'un rôle de base de données ;  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
@@ -76,4 +74,3 @@ catalog.create_environment [@folder_name =] folder_name
  Le nom de l'environnement doit être unique dans le dossier.  
   
   
-

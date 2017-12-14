@@ -1,5 +1,5 @@
 ---
-title: "Étape 1 : Copie de l’application de déploiement | Documents Microsoft"
+title: "Étape 1 : Copie du bundle de déploiement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af7cbc058ac548c4fb86d70518ca2366f6fffd57
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fd36b536be89f5a808aba7fdb6f6f423f0322599
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Leçon 3-1 : copie de l’application de déploiement
+# <a name="lesson-3-1---copying-the-deployment-bundle"></a>Leçon 3-1 : Copie du bundle de déploiement
 Au cours de cette tâche, vous allez copier l'application de déploiement sur l'ordinateur de destination.  
   
 La méthode la plus simple pour copier l'application de déploiement sur l'ordinateur de destination est de commencer par créer un partage public, mapper un lecteur sur le partage public, puis copier l'application de déploiement sur le partage. Si vous n'êtes pas certain de la procédure à suivre pour créer et configurer des dossiers publics ou mapper des lecteurs, consultez la documentation Windows.  
@@ -47,4 +44,3 @@ La méthode la plus simple pour copier l'application de déploiement sur l'ordin
   
   
   
-

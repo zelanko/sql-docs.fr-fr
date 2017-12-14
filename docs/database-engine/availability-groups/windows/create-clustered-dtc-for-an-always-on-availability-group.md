@@ -2,9 +2,12 @@
 title: "Créer un DTC en cluster pour un groupe de disponibilité Always On | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 77b06bff3d98e39104970adaaeadf9f8d342a357
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Créer un DTC en cluster pour un groupe de disponibilité Always On
-Cette rubrique vous présente la configuration complète d’une ressource de DTC en cluster pour un groupe de disponibilité Always On SQL Server. La configuration complète peut prendre une heure. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique vous présente la configuration complète d’une ressource de DTC en cluster pour un groupe de disponibilité Always On SQL Server. La configuration complète peut prendre une heure. 
 
 La procédure pas à pas crée une ressource DTC en cluster et les groupes de disponibilité SQL Server afin d’établir une conformité avec les exigences de la section [DTC en cluster pour les groupes de disponibilité SQL Server](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 

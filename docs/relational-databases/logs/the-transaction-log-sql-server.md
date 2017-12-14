@@ -2,9 +2,12 @@
 title: Journal des transactions (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 10/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5c2b3a5bd97800d958c04bbc11a509d0db15cdc3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4126d98d24184164618bad5601c3c6301ce77d2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
-  Chaque base de données SQL Server comprend un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chaque transaction.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Chaque base de données SQL Server comprend un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chaque transaction.
   
 Le journal des transactions est un composant essentiel de la base de données. En cas de défaillance du système, vous aurez besoin de ce journal pour rétablir votre base de données à un état cohérent. 
 

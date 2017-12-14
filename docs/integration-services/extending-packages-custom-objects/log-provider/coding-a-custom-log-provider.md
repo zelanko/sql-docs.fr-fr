@@ -1,5 +1,5 @@
 ---
-title: "Codage d’un fournisseur de journal personnalisé | Documents Microsoft"
+title: "Codage d’un module fournisseur d’informations personnalisé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,39 +8,35 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom log providers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4ae46112c19473b117a9a11eb83fc4510427365c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0fdab647193d9439ba9be97f89c503978254e0a5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-log-provider"></a>Codage d'un module fournisseur d'informations personnalisé
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
   
- Pour obtenir des exemples fonctionnels de modules personnalisés, consultez [développement d’une Interface utilisateur pour un fournisseur de journal personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
+ Pour obtenir des exemples fonctionnels de modules personnalisés, consultez [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md).  
   
-## <a name="configuring-the-log-provider"></a>Configuration du fournisseur de journaux  
+## <a name="configuring-the-log-provider"></a>Configuration du module fournisseur d’informations  
   
 ### <a name="initializing-the-log-provider"></a>Initialisation du module fournisseur d'informations  
  Vous remplacez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.InitializeLogProvider%2A> pour mettre en cache des références à la collection de connexions et à l'interface d'événements. Vous pouvez utiliser ces références mises en cache ultérieurement dans d'autres méthodes du module fournisseur d'informations.  
   
 ### <a name="using-the-configstring-property"></a>Utilisation de la propriété ConfigString  
- Au moment du design, un module fournisseur d’informations reçoit des informations de configuration à partir de la **Configuration** colonne. Ces informations de configuration correspondent à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> du module fournisseur d'informations. Par défaut, cette colonne contient une zone de texte à partir de laquelle vous pouvez extraire des informations de chaîne. La plupart des modules fournisseurs d'informations inclus dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilisent cette propriété pour stocker le nom du gestionnaire de connexions que le fournisseur utilise pour se connecter à une source de données externe. Si votre fournisseur de journaux utilise le <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> propriété, utilisez la <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> méthode pour valider cette propriété et de vous assurer que la propriété est définie correctement.  
+ Au moment de la conception, un module fournisseur d’informations reçoit des informations de configuration de la colonne **Configuration**. Ces informations de configuration correspondent à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> du module fournisseur d'informations. Par défaut, cette colonne contient une zone de texte à partir de laquelle vous pouvez extraire des informations de chaîne. La plupart des modules fournisseurs d'informations inclus dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilisent cette propriété pour stocker le nom du gestionnaire de connexions que le fournisseur utilise pour se connecter à une source de données externe. Si votre module fournisseur d’informations utilise la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A>, utilisez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> pour valider cette propriété et vous assurer que la propriété est correctement définie.  
   
 ### <a name="validating-the-log-provider"></a>Validation du module fournisseur d'informations  
  Vous remplacez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A> pour vous assurer que le fournisseur a été configuré correctement et qu'il est prêt pour l'exécution. En général, un niveau minimum de validation consiste à s'assurer que la propriété <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> est correctement définie. L'exécution ne peut pas continuer tant que le module fournisseur d'informations ne renvoie pas <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success> à partir de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Validate%2A>.  
@@ -87,7 +83,7 @@ End Function
 ```  
   
 ### <a name="persisting-the-log-provider"></a>Persistance du module fournisseur d'informations  
- D'ordinaire, vous n'avez pas à implémenter de persistance personnalisée pour un gestionnaire de connexions. Une persistance personnalisée est uniquement requise lorsque les propriétés d'un objet utilisent des types de données complexes. Pour plus d’informations, consultez [développement des objets personnalisés pour Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
+ D'ordinaire, vous n'avez pas à implémenter de persistance personnalisée pour un gestionnaire de connexions. Une persistance personnalisée est uniquement requise lorsque les propriétés d'un objet utilisent des types de données complexes. Pour plus d’informations, consultez [Développement d’objets personnalisés pour Integration Services](../../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md).  
   
 ## <a name="logging-with-the-log-provider"></a>Journalisation avec le module fournisseur d'informations  
  Il existe trois méthodes d'exécution qui doivent être remplacées par tous les modules fournisseurs d'informations : <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
@@ -142,7 +138,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Écriture des entrées du journal  
- Le <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> méthode est appelée chaque fois qu’un objet dans le package déclenche un événement en appelant un incendie\<événement > méthode sur une des interfaces d’événements. Chaque événement est déclenché avec des informations sur son contexte et habituellement un message explicatif. Toutefois, tous les appels de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> n'incluent pas d'informations sur chaque paramètre de méthode. Par exemple, certains événements standard dont les noms sont évidents ne fournissent pas MessageText, et DataCode et DataBytes sont prévus pour des informations supplémentaires facultatives.  
+ La méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> est appelée chaque fois qu’un objet compris dans le package déclenche un événement en appelant une méthode Fire\<événement> sur l’une des interfaces d’événements. Chaque événement est déclenché avec des informations sur son contexte et habituellement un message explicatif. Toutefois, tous les appels de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> n'incluent pas d'informations sur chaque paramètre de méthode. Par exemple, certains événements standard dont les noms sont évidents ne fournissent pas MessageText, et DataCode et DataBytes sont prévus pour des informations supplémentaires facultatives.  
   
  L'exemple de code suivant implémente la méthode <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> et écrit les événements dans le flux qui a été ouvert dans la section précédente.  
   
@@ -199,8 +195,7 @@ End Sub
 ```  
  
 ## <a name="see-also"></a>Voir aussi  
- [Création d’un fournisseur de journal personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
- [Développement d’une Interface utilisateur pour un fournisseur de journal personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
+ [Création d’un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)   
+ [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
   
   
-

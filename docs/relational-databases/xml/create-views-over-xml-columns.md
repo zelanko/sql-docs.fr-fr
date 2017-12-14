@@ -2,9 +2,12 @@
 title: "Créer des vues sur les colonnes XML | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00f455c27f3efdb2182e322112ce22f45abb4a51
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 854c8b4435a02f15f069dbdcfa666838708a95b8
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-views-over-xml-columns"></a>Créer des vues sur les colonnes XML
-  Vous pouvez utiliser une colonne de type **xml** pour créer des vues. L’exemple suivant crée une vue dans laquelle la valeur d’une colonne de type `xml` est extraite à l’aide de la méthode **value()** du type de données **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Vous pouvez utiliser une colonne de type **xml** pour créer des vues. L’exemple suivant crée une vue dans laquelle la valeur d’une colonne de type `xml` est extraite à l’aide de la méthode **value()** du type de données **xml** .  
   
 ```  
 -- Create the table.  

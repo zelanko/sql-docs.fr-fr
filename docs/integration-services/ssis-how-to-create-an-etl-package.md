@@ -1,5 +1,5 @@
 ---
-title: "SSIS comment créer un Package ETL | Documents Microsoft"
+title: "SSIS Guide pratique pour créer un package ETL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b14d05d686b26aaad7e6de24c9b445e0c4b1abf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="ssis-how-to-create-an-etl-package"></a>SSIS : comment créer un package ETL
+# <a name="ssis-how-to-create-an-etl-package"></a>SSIS : Guide pratique pour créer un package ETL
 
- > Pour obtenir un contenu pour les versions précédentes de SQL Server, consultez [didacticiel SSIS : création d’un Package ETL Simple](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Didacticiel SSIS : Création d’un package ETL simple](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) est une plateforme conçue pour créer des solutions d’intégration de données très performantes, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage des données. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; un service de gestion, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -52,7 +49,7 @@ Ce didacticiel s'adresse aux utilisateurs qui ont une connaissance des notions f
   
 Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]avec la **AdventureWorksDW2012** base de données. Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut. Pour télécharger la base de données **AdventureWorksDW2012** , accédez à [Adventure Works pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec la base de données **AdventureWorksDW2012** . Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut. Pour télécharger la base de données **AdventureWorksDW2012** , accédez à [Adventure Works pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
     > Quand vous attachez la base de données (fichier\*.mdf), [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] recherche par défaut un fichier .ldf. Vous devez supprimer manuellement le fichier .ldf avant de cliquer sur OK dans la boîte de dialogue **Attacher des bases de données** .  
@@ -88,4 +85,3 @@ Au cours de cette leçon, vous allez développer le package que vous avez créé
   
   
   
-

@@ -2,9 +2,12 @@
 title: "Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4e15a80fe4b1ad2ffbbb4155348fc71c5237336
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3137ff6c86a40986f8788c391fa45b213ee06bca
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms
-Certains types de stratégies de la Gestion basée sur des stratégies peuvent créer des déclencheurs afin d'appliquer la future conformité avec la stratégie. Dans cette leçon, vous allez créer une stratégie qui applique une norme d'affectation de noms pour des tables. Ensuite, vous allez tester la stratégie en essayant de créer une table qui enfreint la stratégie.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Certains types de stratégies de la Gestion basée sur des stratégies peuvent créer des déclencheurs afin d’appliquer la future conformité avec la stratégie. Dans cette leçon, vous allez créer une stratégie qui applique une norme d'affectation de noms pour des tables. Ensuite, vous allez tester la stratégie en essayant de créer une table qui enfreint la stratégie.  
   
 Cette leçon contient les rubriques suivantes :  
   

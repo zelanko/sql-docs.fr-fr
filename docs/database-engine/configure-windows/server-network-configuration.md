@@ -2,9 +2,12 @@
 title: "Configuration réseau du serveur | Microsoft Docs"
 ms.custom: 
 ms.date: 07/27/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c4ed91e4fd96fde43f87f25d351597b875df4550
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-network-configuration"></a>Configuration réseau du serveur
-  Les tâches de configuration réseau du serveur incluent l'activation de protocoles, la modification du port ou du canal utilisé par un protocole, la configuration du chiffrement, la configuration du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, l'exposition ou le masquage du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sur le réseau et l'inscription du nom principal du serveur. La plupart du temps, vous n'avez pas besoin de modifier la configuration réseau du serveur. Reconfigurez uniquement les protocoles réseau du serveur si des spécifications réseau spéciales l'imposent.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les tâches de configuration réseau du serveur incluent l’activation de protocoles, la modification du port ou du canal utilisé par un protocole, la configuration du chiffrement, la configuration du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, l’exposition ou le masquage du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] sur le réseau et l’inscription du nom du principal du serveur. La plupart du temps, vous n'avez pas besoin de modifier la configuration réseau du serveur. Reconfigurez uniquement les protocoles réseau du serveur si des spécifications réseau spéciales l'imposent.  
   
  La configuration réseau pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez l'utilitaire Réseau Serveur fourni avec ces produits.  
   

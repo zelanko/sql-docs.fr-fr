@@ -1,5 +1,5 @@
 ---
-title: "Définir les propriétés d’un composant de flux de données | Documents Microsoft"
+title: "Définir les propriétés d’un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Définir les propriétés d'un composant de flux de données
   Pour définir les propriétés de composants de flux de données, qui incluent des sources, des destinations et des transformations, utilisez l'une des fonctionnalités suivantes :  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 -   La boîte de dialogue **Éditeur avancé** permet d’accéder aux propriétés personnalisées pour chaque composant. La boîte de dialogue **Éditeur avancé** permet aussi d’accéder aux propriétés communes à l’ensemble des composants de flux de données, à savoir les propriétés des entrées, des sorties, des sorties d’erreurs, des colonnes et des colonnes externes.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Définir les propriétés d’un composant de flux de données avec un éditeur de composant  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Définir les propriétés d’un composant de flux de données à l’aide d’un éditeur de composant  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés**.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Définir les propriétés d’un composant de flux de données avec l’éditeur avancé  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Définir les propriétés d’un composant de flux de données à l’aide de l’Éditeur avancé  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -146,7 +143,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |ValidateExternalMetadata|Booléen|Indique si les métadonnées des colonnes externes sont validées. La valeur par défaut de cette propriété est **True**.|  
 |Version|Entier|Version d'un composant.|  
   
-###  <a name="inputs"></a>Propriétés d’entrée  
+###  <a name="inputs"></a> Propriétés des entrées  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les transformations et destinations ont des sorties. Une entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  Le tableau suivant décrit les propriétés des entrées de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -166,7 +163,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
   
  Les destinations et certaines transformations ne prennent pas en charge les sorties d’erreur, et les propriétés ErrorRowDisposition et TruncationRowDisposition de ces composants sont en lecture seule.  
   
-###  <a name="inputcolumns"></a>Propriétés de la colonne d’entrée  
+###  <a name="inputcolumns"></a> Propriétés des colonnes d’entrée  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une entrée contient une collection de colonnes d'entrée. Une colonne d'entrée d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes d'entrée de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -190,7 +187,7 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
   
  Les propriétés de type de données des colonnes d'entrée sont également décrites sous « Propriétés du type de données ».  
   
-###  <a name="outputs"></a>Propriétés de sortie  
+###  <a name="outputs"></a> Propriétés des sorties  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les sources et les transformations ont des sorties. Une sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  Le tableau suivant décrit les propriétés des sorties de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -206,12 +203,12 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |ID|Entier|Valeur qui identifie la sortie de façon unique.|  
 |IdentificationString|Chaîne|Chaîne qui identifie la sortie.|  
 |IsErrorOut|Booléen|Indique si la sortie est une sortie d'erreur.|  
-|IsSorted|Booléen|Indique si la sortie est triée. La valeur par défaut est **False**.<br /><br /> **\*\*Important \* \***  définissant la valeur de la **IsSorted** propriété **True** ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Booléen|Indique si la sortie est triée. La valeur par défaut est **False**.<br /><br /> **\*\* Important \*\*** L’affectation de la valeur **True** à la propriété **IsSorted** ne permet pas de trier les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Nom|Chaîne|Nom de la sortie.|  
 |SynchronousInputID|Entier|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont **Fail component**, **Ignore failure**et **Redirect row**.|  
   
-###  <a name="outputcolumns"></a>Propriétés de colonne de sortie  
+###  <a name="outputcolumns"></a> Propriétés des colonnes de sortie  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une sortie contient une collection de colonnes de sortie. Une colonne de sortie d'un composant dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  Le tableau suivant décrit les propriétés des colonnes de sortie de composants dans un flux de données. Certaines propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -261,8 +258,8 @@ Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../../i
 |Précision|Entier|Précision d'une colonne numérique.|  
 |Échelle|Entier|Échelle d'une colonne numérique.|  
 
-## <a name="custom-properties-of-data-flow-components"></a>Propriétés personnalisées de composants de flux de données
-Pour plus d’informations sur les propriétés personnalisées, consultez les rubriques suivantes  
+## <a name="custom-properties-of-data-flow-components"></a>Propriétés personnalisées des composants de flux de données
+Pour plus d’informations sur les propriétés personnalisées, consultez les rubriques suivantes :  
   
 -   [Propriétés personnalisées ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -378,7 +375,6 @@ Les valeurs de certaines propriétés d'objets de flux de données peuvent être
 |----------------------|--------------|  
 |Destination ADO NET|Propriété TableOrViewName<br /><br /> Propriété BatchSize<br /><br /> Propriété CommandTimeout|  
 |Destination de fichier plat|Propriété Header|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Destination compacte|Propriété TableName|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]destination|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
-
+|Destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact|Propriété TableName|  
+|Destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
 

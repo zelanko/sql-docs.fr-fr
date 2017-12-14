@@ -2,9 +2,12 @@
 title: "Fonctionnalités et tâches de l’utilitaire SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c099214c37d6f3a2d8f1198e6f172f1a11d1b64e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c7a221f337f54f625840fa724db01545a7af2c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont de plus en plus besoin de gérer leur environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans son ensemble, ce à quoi répond cette version via le concept d'application et de gestion multiserveur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont de plus en plus besoin de gérer leur environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans son ensemble, ce à quoi répond cette version via le concept d’application et de gestion multiserveur de l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Avantages de l'utilitaire SQL Server  
  L'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modélise les entités d'une organisation associées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans une vue unifiée. L'Explorateur d'utilitaire et les points de vue de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) fournissent aux administrateurs une vue holistique de l'intégrité des ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sert de point de contrôle de l'utilitaire (UCP). La combinaison du résumé et des données détaillées présentée dans l'UCP, à la fois pour les stratégies de sous-exploitation et de surexploitation et pour divers paramètres clés, permet d'identifier facilement les possibilités de consolidation de ressources et la surexploitation des ressources. Les stratégies de contrôle d'intégrité sont configurables et peuvent être ajustées pour modifier des seuils d'exploitation des ressources supérieurs ou inférieurs. Vous pouvez modifier des stratégies de surveillance globales ou configurer des stratégies de surveillance individuelles pour chaque entité gérée dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

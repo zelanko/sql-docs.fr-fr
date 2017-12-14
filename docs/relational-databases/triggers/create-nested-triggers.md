@@ -2,9 +2,12 @@
 title: "Créer des déclencheurs imbriqués | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e1320a9a1e3670c6d5cfc04d4b56f9d3ba51cc6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c00fc71fb0d0bd5dadd986b14d140e1293bcafba
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-nested-triggers"></a>Créer des déclencheurs imbriqués
-  Les déclencheurs DML et DDL sont imbriqués lorsqu'un déclencheur exécute une action qui lance un autre déclencheur. Ces actions peuvent lancer d'autres déclencheurs, et ainsi de suite. Les déclencheurs DML et DDL peuvent avoir jusqu'à 32 niveaux d'imbrication. Vous pouvez définir si les déclencheurs AFTER peuvent être imbriqués à l’aide de l’option de configuration serveur **nested triggers** . Les déclencheurs INSTEAD OF (seuls les déclencheurs DML peuvent être des déclencheurs INSTEAD OF) peuvent être imbriqués quelle que soit la valeur de ce paramètre.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Les déclencheurs DML et DDL sont imbriqués lorsqu’un déclencheur exécute une action qui lance un autre déclencheur. Ces actions peuvent lancer d'autres déclencheurs, et ainsi de suite. Les déclencheurs DML et DDL peuvent avoir jusqu'à 32 niveaux d'imbrication. Vous pouvez définir si les déclencheurs AFTER peuvent être imbriqués à l’aide de l’option de configuration serveur **nested triggers** . Les déclencheurs INSTEAD OF (seuls les déclencheurs DML peuvent être des déclencheurs INSTEAD OF) peuvent être imbriqués quelle que soit la valeur de ce paramètre.  
   
 > [!NOTE]  
 >  Une référence au code managé à partir d'un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)] compte pour un niveau quant à la limite d'imbrication de 32 niveaux. Les méthodes appelées à partir du code managé ne comptent pas par rapport à cette limite.  

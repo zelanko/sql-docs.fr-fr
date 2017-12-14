@@ -1,5 +1,5 @@
 ---
-title: "Catalog.stop_operation (base de données SSISDB) | Documents Microsoft"
+title: "catalog.stop_operation (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 76a41be8ac6066a4f163b5049a758302d43d5219
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bf33675e591fbb16417bc3b251a1a47693b59673
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +35,10 @@ catalog.stop_operation [ @operation_id = ] operation_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @operation_id =] *identifiant_opération*  
- Identificateur unique de la validation ou de l'instance d'exécution. Le *identifiant_opération* est **bigint**.  
+ [ @operation_id = ] *operation_id*  
+ Identificateur unique de la validation ou de l'instance d'exécution. *operation_id* est de type **bigint**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -51,14 +49,14 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   Autorisations READ et MODIFY sur la validation ou l'instance d'exécution  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
   
--   L’utilisateur ne dispose pas des autorisations appropriées  
+-   L’utilisateur n’a pas les autorisations appropriées  
   
 -   L'identificateur de l'opération n'est pas valide  
   
@@ -68,4 +66,3 @@ catalog.stop_operation [ @operation_id = ] operation_id
  Un seul utilisateur à la fois doit arrêter une opération dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si plusieurs utilisateurs essaient d'arrêter l'opération, la procédure stockée réussira (valeur `0`) à la première tentative, mais les tentatives suivantes généreront une erreur.  
   
   
-

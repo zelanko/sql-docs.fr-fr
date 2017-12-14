@@ -1,5 +1,5 @@
 ---
-title: Gestion des erreurs | Documents Microsoft
+title: Gestion des erreurs | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>Gestion des erreurs
   Une instance Oracle CDC exploite les modifications d'une base de données source Oracle (un cluster Oracle RAC est considéré comme une seule base de données) et écrit les modifications validées dans les tables de modifications dans une base de données CDC de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   La table MSXDBCDC.dbo.xdbcdc_trace, utilisée pour la journalisation et le suivi généraux par le processus principal du service de capture de données modifiées Oracle.  
   
--   Le \<base de données cdc >. cdc.xdbcdc_trace table, qui est utilisé pour la journalisation et le suivi généraux par les Instances Oracle CDC. Cela signifie que les erreurs liées à une instance Oracle CDC spécifique sont enregistrées dans la table de trace de cette instance.  
+-   La table \<cdc-database>.cdc.xdbcdc_trace, utilisée pour la journalisation et le suivi généraux par les instances Oracle CDC. Cela signifie que les erreurs liées à une instance Oracle CDC spécifique sont enregistrées dans la table de trace de cette instance.  
   
  Les informations sont enregistrées par le service de capture de données modifiées Oracle lorsque le service :  
   
@@ -120,8 +118,7 @@ ms.lasthandoff: 08/03/2017
  Le service de capture de données modifiées Oracle surveille ses sous-processus d'instance CDC. Lorsqu'un sous-processus d'instance de capture de données modifiées s'interrompt, le service de capture de données modifiées le désactive dans la table MSXDBCDC.dbo.xdbcdc_databases et met à jour l'état cdc.xdbcdc_state vers ABORTED. Dans ce cas, la boîte de dialogue Rapport d'erreurs Windows est utilisée pour signaler cette erreur en vue d'une analyse ultérieure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de Capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [L’Instance Oracle CDC](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
+ [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Instance CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

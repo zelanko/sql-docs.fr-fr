@@ -1,10 +1,13 @@
 ---
 title: "Leçon 5 : Sauvegarder une base de données à l’aide d’une sauvegarde d’instantanés de fichiers | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 910053b9953a1352c98b6b8f67dc844204933b2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Leçon 5 : Sauvegarder une base de données à l’aide d’une sauvegarde d’instantanés de fichiers
-Dans cette leçon, vous sauvegardez la base de données AdventureWorks2014 sur votre machine virtuelle Azure à l’aide de la sauvegarde d’instantanés de fichiers pour effectuer une sauvegarde quasi instantanée au moyen d’instantanés Azure. Pour plus d’informations sur les sauvegardes d’instantanés de fichiers, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous sauvegardez la base de données AdventureWorks2014 sur votre machine virtuelle Azure à l’aide de la sauvegarde d’instantanés de fichiers pour effectuer une sauvegarde quasi instantanée au moyen d’instantanés Azure. Pour plus d’informations sur les sauvegardes d’instantanés de fichiers, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
 Pour sauvegarder la base de données AdventureWorks2014 à l’aide de la sauvegarde d’instantanés de fichiers, procédez comme suit :  
   

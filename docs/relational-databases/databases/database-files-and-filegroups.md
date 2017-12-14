@@ -1,10 +1,13 @@
 ---
 title: "Groupes de fichiers et fichiers de base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 10/11/2016
-ms.prod: sql-server-2016
+ms.date: 11/16/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -36,14 +39,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 73fde10c6cf318e5cd5c7eaa52a55a36f4d82001
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4c18d191f0e97a2fbef5343d7b0fb7900bd2d80a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-files-and-filegroups"></a>Groupes de fichiers et fichiers de base de données
-  Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède au moins deux fichiers de système d'exploitation : un fichier de données et un fichier journal. Les fichiers de données contiennent des données et des objets tels que des tables, des index, des procédures stockées et des vues. Les fichiers journaux contiennent les informations nécessaires pour récupérer toutes les transactions de la base de données. Les fichiers de données peuvent être regroupés dans des groupes de fichiers à des fins d'allocation et d'administration.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a au moins deux fichiers de système d'exploitation : un fichier de données et un fichier journal. Les fichiers de données contiennent des données et des objets tels que des tables, des index, des procédures stockées et des vues. Les fichiers journaux contiennent les informations nécessaires pour récupérer toutes les transactions de la base de données. Les fichiers de données peuvent être regroupés dans des groupes de fichiers à des fins d'allocation et d'administration.  
   
 ## <a name="database-files"></a>Fichiers de base de données  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les bases de données possèdent trois types de fichiers, comme indiqué dans le tableau suivant.  
@@ -59,7 +62,6 @@ ms.lasthandoff: 11/09/2017
  Par défaut, les données et les journaux des transactions sont placés sur le même lecteur et leur chemin est identique, ceci afin de gérer les systèmes comportant un seul disque. Cependant, cette configuration n'est pas forcément optimale pour les environnements de production. Nous vous recommandons de placer les fichiers de données et les fichiers journaux sur des disques distincts.  
 
 ### <a name="logical-and-physical-file-names"></a>Noms de fichiers logiques et physiques
-
 Les fichiers SQL Server portent deux noms : 
 
 **logical_file_name**  : nom utilisé pour faire référence au fichier physique dans toutes les instructions Transact-SQL. Le nom de fichier logique doit respecter les règles régissant les identificateurs SQL Server et doit être unique parmi les noms de fichiers logiques de la base de données.
@@ -71,7 +73,6 @@ Les données et les fichiers journaux SQL Server peuvent être placés dans les 
 Lorsque plusieurs instances de SQL Server sont exécutées sur un ordinateur unique, chaque instance reçoit son propre répertoire par défaut pour contenir les fichiers des bases de données créées dans l’instance. Pour plus d’informations, consultez [Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
 ### <a name="data-file-pages"></a>Pages de fichiers de données
-
 Les pages d’un fichier de données SQL Server sont numérotées de manière séquentielle, zéro (0) correspondant à la première page. Chaque fichier d'une base de données possède un numéro d'identification de fichier unique. L'ID de fichier et le numéro de page sont nécessaires pour identifier de manière unique une page d'une base de données. L'exemple ci-dessous montre les numéros de page d'une base de données disposant d'un fichier de données primaire de 4 Mo et d'un fichier de données secondaire de 1 Mo.
 
 ![data_file_pages](../../relational-databases/databases/media/data-file-pages.gif)
@@ -79,20 +80,15 @@ Les pages d’un fichier de données SQL Server sont numérotées de manière s�
 La première page de chaque fichier est une page d'en-tête qui contient des informations sur les attributs du fichier. D'autres pages situées au début du fichier contiennent également des informations sur le système, comme les tables d'allocation. Une des pages système stockée à la fois dans le fichier de données primaire et dans le premier fichier journal est une page d'amorçage de base de données qui contient des informations sur les attributs de la base de données. Pour plus d’informations sur les pages et les types de pages, consultez « Fonctionnement des pages et étendues ».
 
 ### <a name="file-size"></a>Taille du fichier
-
 Les fichiers SQL Server peuvent augmenter automatiquement leur volume et dépasser leur taille d’origine. Lorsque vous définissez un fichier, vous pouvez spécifier un incrément de croissance précis. Chaque fois que le fichier est rempli, sa taille augmente en fonction de l'incrément de croissance. Si un groupe comporte plusieurs fichiers, ces derniers ne s'accroissent pas automatiquement jusqu'à ce que tous les fichiers soient remplis. La croissance se produit dans ce cas selon le principe de chacun son tour.
 
 Chaque fichier peut également avoir une taille maximale. En l'absence de spécification, le fichier continue à s'accroître jusqu'à ce que tout l'espace disque disponible soit utilisé. Cette fonctionnalité s’avère particulièrement utile lorsque SQL Server sert de base de données incorporée dans une application pour laquelle l’utilisateur n’a pas accès à un administrateur système. L'utilisateur peut laisser les fichiers s'accroître automatiquement autant que nécessaire pour réduire la charge administrative liée à la gestion de l'espace disponible dans la base de données et à l'affectation manuelle d'espace supplémentaire. 
 
-
 ## <a name="database-snapshot-files"></a>Fichiers d'instantanés de base de données
-
 Le format de fichier utilisé par un instantané de base de données pour stocker ses données de copie lors de l'écriture varie selon que l'instantané a été créé par un utilisateur ou utilisé en interne :
 
 * Un instantané de base de données créé par un utilisateur stocke ses données dans un ou plusieurs fichiers partiellement alloués. La technologie des fichiers partiellement alloués constitue une fonctionnalité du système de fichiers NTFS. Au départ, un fichier partiellement alloué ne contient pas de données utilisateur et aucun espace disque pour les données utilisateur ne lui a été alloué. Pour des informations générales sur l’utilisation des fichiers partiellement alloués dans un instantané de base de données et sur le schéma de croissance des instantanés de bases de données, consultez [Afficher la taille du fichier partiellement alloué d’un instantané de base de données (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md). 
 * Les instantanés de base de données sont utilisés en interne par certaines commandes DBCC. Citons notamment les commandes DBCC CHECKDB, DBCC CHECKTABLE, DBCC CHECKALLOC et DBCC CHECKFILEGROUP. Un instantané interne de base de données utilise les flux de données de remplacement éparses des fichiers de la base de données d'origine. Comme les fichiers partiellement alloués, les flux de données de remplacement sont une fonctionnalité du système de fichiers NTFS. L'utilisation de flux de données de remplacement éparses permet d'associer plusieurs affectations de données avec un seul fichier ou dossier sans influer sur les statistiques de taille de fichier ou de volume. 
-
-
   
 ## <a name="filegroups"></a>Groupes de fichiers  
  Chaque base de données possède un groupe de fichiers primaire. Celui-ci contient le fichier de données primaire et tous les fichiers secondaires qui n'ont pas été placés dans d'autres groupes de fichiers. Il est possible de créer des groupes de fichiers définis par l'utilisateur pour regrouper des fichiers de données à des fins d'administration, d'allocation des données et de placement.  
@@ -112,10 +108,9 @@ Le format de fichier utilisé par un instantané de base de données pour stocke
  Le groupe de fichiers PRIMARY est le groupe de fichiers par défaut sauf s'il est modifié par l'instruction ALTER DATABASE. Les objets et tables système restent affectés au groupe de fichiers PRIMARY, et non au nouveau groupe par défaut.  
 
 ### <a name="file-and-filegroup-example"></a>Exemple de fichier et de groupe de fichiers
+ L’exemple ci-dessous crée une base de données sur une instance de SQL Server. La base de données possède un fichier de données primaire, un groupe de fichiers défini par l'utilisateur et un fichier journal. Le fichier de données primaire fait partie du groupe de fichiers primaire et le groupe de fichiers défini par l'utilisateur possède deux fichiers de données secondaires. Une instruction ALTER DATABASE fait du groupe de fichiers défini par l'utilisateur le groupe par défaut. Une table est ensuite créée en spécifiant le groupe de fichiers défini par l'utilisateur. Cet exemple utilise le chemin générique `c:\Program Files\Microsoft SQL Server\MSSQL.1` pour éviter de spécifier une version de SQL Server.
 
-L’exemple ci-dessous crée une base de données sur une instance de SQL Server. La base de données possède un fichier de données primaire, un groupe de fichiers défini par l'utilisateur et un fichier journal. Le fichier de données primaire fait partie du groupe de fichiers primaire et le groupe de fichiers défini par l'utilisateur possède deux fichiers de données secondaires. Une instruction ALTER DATABASE fait du groupe de fichiers défini par l'utilisateur le groupe par défaut. Une table est ensuite créée en spécifiant le groupe de fichiers défini par l'utilisateur. Cet exemple utilise le chemin générique `c:\Program Files\Microsoft SQL Server\MSSQL.1` pour éviter de spécifier une version de SQL Server.
-
-```
+```t-sql
 USE master;
 GO
 -- Create the database with the default data
@@ -167,12 +162,33 @@ GO
 L'illustration ci-dessous récapitule les résultats de l'exemple précédent.
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
-  
-## <a name="related-content"></a>Contenu connexe  
+
+## <a name="file-and-filegroup-fill-strategy"></a>Stratégie de remplissage des fichiers et des groupes de fichiers
+Dans un groupe de fichiers, le remplissage des fichiers s'effectue selon un mode proportionnel. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] écrit les données en les répartissant entre les fichiers du groupe proportionnellement à l'espace disponible dans chaque fichier, au lieu de remplir un premier fichier. Il écrit ensuite dans le fichier suivant. Par exemple, si le fichier f1 a 100 Mo et le fichier f2 200 Mo d'espace libre, une extension est allouée à partir de f1, deux extensions à partir de f2, et ainsi de suite. De cette façon, les deux fichiers arrivent à peu près en même temps à saturation et le résultat est un entrelacement simple.
+
+Dès que tous les fichiers d'un groupe de fichiers sont remplis, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] accroît automatiquement la taille d'un fichier à la fois, selon le mécanisme de tourniquet (round robin), afin d'y insérer plus de données, à condition que la fonction de croissance automatique de la base de données soit activée. Par exemple, un groupe de fichiers contient trois fichiers définis en mode de croissance automatique. En cas de saturation de tous les fichiers du groupe de fichiers, seul le premier fichier sera étendu. Si le premier fichier est saturé, et qu'il n'est plus possible d'enregistrer des données dans le groupe de fichiers, le deuxième fichier est étendu. Si le deuxième fichier est plein et qu'il n'est plus possible d'enregistrer des données dans le groupe de fichiers, le troisième fichier sera étendu. Si le troisième fichier est plein et qu'il n'est plus possible d'enregistrer des données dans le groupe de fichiers, le premier fichier sera à nouveau étendu, et ainsi de suite.
+
+## <a name="rules-for-designing-files-and-filegroups"></a>Règles pour concevoir des fichiers et des groupes de fichiers
+Les règles suivantes s'appliquent aux fichiers et aux groupes de fichiers :
+- Un fichier ou un groupe de fichiers ne peut pas être utilisé par plusieurs bases de données. Par exemple, les fichiers sales.mdf et sales.ndf, qui contiennent des données et des objets de la base de données sales, ne peuvent pas être utilisés par une autre base de données.
+- Un fichier ne peut appartenir qu'à un seul groupe.
+- Les fichiers journaux des transactions ne peuvent jamais faire partie d'un groupe de fichiers.
+
+## <a name="recommendations"></a>Recommandations
+Voici une série de recommandations générales à suivre lors de l'utilisation de fichiers et de groupes de fichiers : 
+- La plupart des bases de données fonctionnent très bien avec un seul fichier de données et un seul fichier journal des transactions.
+- Si vous utilisez plusieurs fichiers, créez un second groupe de fichiers pour les fichiers supplémentaires et utilisez-le comme groupe de fichiers par défaut. Ainsi, le fichier primaire ne contiendra que les objets et les tables système.
+- Pour optimiser les performances, créez si possible les fichiers et les groupes de fichiers sur différents disques disponibles. Placez dans des groupes de fichiers différents les objets qui se disputent fortement l'espace disque.
+- Utilisez les groupes de fichiers pour permettre le placement des objets sur des disques physiques spécifiques.
+- Placez dans des groupes différents les tables qui sont utilisées dans les mêmes requêtes jointes. Vous améliorerez ainsi les performances, puisque les opérations d'entrée/sortie de recherche des données jointes se feront en parallèle.
+- Placez dans des groupes de fichiers différents les tables fréquemment consultées et les index non-cluster qui leur appartiennent. Vous améliorerez ainsi les performances, puisque les opérations d'entrée/sortie se feront en parallèle, les fichiers étant situés sur différents disques physiques.
+- Ne placez pas les fichiers journaux de transactions sur le même disque physique que les autres fichiers et groupes de fichiers.
+
+## <a name="related-content"></a>Contenu associé  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
  [Options de fichiers et de groupes de fichiers ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
-  
+ [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md) 

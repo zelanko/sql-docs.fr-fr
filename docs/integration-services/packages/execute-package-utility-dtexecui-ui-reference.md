@@ -1,5 +1,5 @@
 ---
-title: "Exécuter un utilitaire de Package (dtexecui) | Documents Microsoft"
+title: "Utilitaire d’exécution de package (dtexecui) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,22 +22,20 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="execute-package-utility-dtexecui"></a>Exécuter un utilitaire de Package (dtexecui)
+# <a name="execute-package-utility-dtexecui"></a>Utilitaire d’exécution de package (dtexecui)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant **dtexecui** à partir d’une invite de commandes, offre un autre moyen d’exécuter des packages à l’aide de l’outil d’invite de commandes **DTExec** .  
   
  Les packages sont exécutés dans le même processus que l’utilitaire **dtexecui.exe** . Cet utilitaire étant un outil 32 bits, les packages exécutés à l’aide de **dtexecui.exe** dans un environnement 64 bits s’exécutent dans Windows sur Win32 (WOW). Quand vous développez et testez des commandes à l’aide de l’utilitaire dtexecui.exe sur un ordinateur 64 bits, effectuez les tests en mode 64 bits en utilisant la version 64 bits de **dtexec.exe** avant de déployer ou de planifier les commandes sur un serveur de production.  
@@ -74,7 +71,7 @@ ms.lasthandoff: 08/03/2017
   
 |||  
 |-|-|  
-|Valeur|Description|  
+|Value|Description|  
 |**SQL Server**|Sélectionnez cette option lorsque le package se trouve dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Spécifiez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fournissez un nom d'utilisateur et un mot de passe pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque nom d’utilisateur et chaque mot de passe ajoutent les options **/USER** *nom_utilisateur* et **/PASSWORD** *mot_de_passe* options to the commet prompt.|  
 |**Système de fichiers**|Sélectionnez cette option lorsque le package se trouve dans le système de fichiers.|  
 |**Magasin de packages SSIS**|Sélectionnez cette option lorsque le package se trouve dans le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
@@ -99,7 +96,7 @@ ms.lasthandoff: 08/03/2017
  **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l’authentification Windows et connectez-vous à l’aide d’un compte d’utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Utiliser l'authentification SQL Server**  
+ **Authentification SQL Server**  
  Sélectionnez cette option pour utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalise l’authentification en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré précédemment. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas trouver le compte de connexion, l'authentification échoue et l'utilisateur reçoit un message d'erreur.  
   
 > [!IMPORTANT]  
@@ -122,7 +119,7 @@ ms.lasthandoff: 08/03/2017
  **Utiliser l'authentification Windows**  
  Sélectionnez cette option pour utiliser l'authentification Windows et connectez-vous à l'aide d'un compte d'utilisateur Microsoft Windows.  
   
- **Utiliser l'authentification SQL Server**  
+ **Authentification SQL Server**  
  Cette option est désactivée quand vous exécutez un package stocké dans le **Magasin de packages SSIS**.  
   
  **Package**  
@@ -378,7 +375,6 @@ ms.lasthandoff: 08/03/2017
  Ferme la boîte de dialogue **Utilitaire d’exécution de package** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilitaire DTExec](../../integration-services/packages/dtexec-utility.md)  
+ [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md)  
   
   
-

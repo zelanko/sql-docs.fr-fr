@@ -1,5 +1,5 @@
 ---
-title: "Leçon 3 : Installation des Packages SSIS | Documents Microsoft"
+title: "Leçon 3 : Installer des packages SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 986b8b46b7790b18442e17b6317f7816a0c7ec7c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b2e2f583b73ea67cdf3dcab23fe93ca00db8b949
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Leçon 3 : Installer des packages SSIS
 Dans la [Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), vous avez créé un utilitaire de déploiement et l’application de déploiement qui contient les éléments que vous devez installer comme packages sur un autre ordinateur. Vous avez vérifié également la liste de fichiers dans l'application de déploiement et examiné le contenu du fichier de manifeste créé lorsque vous avez créé l'utilitaire de déploiement.  
@@ -37,15 +34,14 @@ Dans cette leçon, vous allez copier l'application de déploiement dans l'ordina
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Copie de l’application de déploiement](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+-   [Étape 1 : Copie de l'application de déploiement](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [Étape 2 : Exécution de l’Assistant Installation de Package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [Étape 2 : Exécution de l'Assistant Installation de package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [Étape 3 : Test des Packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
 [Étape 1 : Copie de l'application de déploiement](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
   
   
-

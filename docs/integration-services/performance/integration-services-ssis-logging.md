@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) journalisation | Documents Microsoft
+title: "Journalisation d’Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 22c1126b8d5555dc743f7c8906230cf5dbcb08a8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 772217a434d69d8849fdaefd66108365c25e46e7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -141,7 +139,7 @@ ms.lasthandoff: 08/03/2017
 |**OnVariableValueChanged**|Écrit une entrée de journal lorsque la valeur d'une variable est modifiée.|  
 |**OnWarning**|Écrit une entrée de journal lorsqu'un avertissement survient.|  
 |**PipelineComponentTime**|Pour chaque composant de flux de données, écrit une entrée de journal pour chaque phase de validation et d'exécution. L'entrée de journal spécifie le temps de traitement de chaque phase.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Écrit une entrée de journal qui fournit des informations de diagnostic.<br /><br /> Par exemple, vous pouvez enregistrer un message avant et après chaque appel à un fournisseur de données externes. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Consignez l’événement **DiagnosticEx** lorsque vous souhaitez rechercher les noms des colonnes dans le flux de données qui contiennent des erreurs. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur. Pour plus d'informations, consultez [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> Remarque : si vous consignez l’événement **DiagnosticEx** avec le fournisseur de journaux SQL Server, la sortie risque d’être tronquée. Le champ **message** du module fournisseur d’informations SQL Server est de type nvarchar(2048). Pour prévenir le risque de troncation, utilisez un fournisseur de journaux différent lorsque vous consignez l’événement **DiagnosticEx** .|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Écrit une entrée de journal qui fournit des informations de diagnostic.<br /><br /> Par exemple, vous pouvez enregistrer un message avant et après chaque appel à un fournisseur de données externes. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Consignez l’événement **DiagnosticEx** lorsque vous souhaitez rechercher les noms des colonnes dans le flux de données qui contiennent des erreurs. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> Remarque : si vous consignez l’événement **DiagnosticEx** avec le fournisseur de journaux SQL Server, la sortie risque d’être tronquée. Le champ **message** du module fournisseur d’informations SQL Server est de type nvarchar(2048). Pour prévenir le risque de troncation, utilisez un fournisseur de journaux différent lorsque vous consignez l’événement **DiagnosticEx** .|  
   
  Le package ainsi que de nombreuses tâches contiennent des entrées du journal personnalisées qui peuvent être activées pour la journalisation. Par exemple, la tâche d’envoi de courrier fournit l’entrée de journal personnalisée **SendMailTaskBegin** , qui journalise les informations quand l’exécution de la tâche démarre, mais avant d’envoyer un message électronique. Pour plus d’informations, consultez [Custom Messages for Logging](#custom_messages).  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans SQL Server Data Tools](#ssdt).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](#saved_config).  
   
@@ -177,7 +175,7 @@ ms.lasthandoff: 08/03/2017
  La tâche de flux de données fournit un grand nombre d'entrées de journal personnalisées à l'aide desquelles vous pouvez analyser et améliorer les performances. Vous pouvez, par exemple, analyser les composants susceptibles de provoquer des fuites de mémoire ou contrôler le temps nécessaire à l'exécution d'une tâche en particulier. Pour obtenir une liste de ces entrées de journal personnalisées et un exemple de sortie de journalisation, consultez [Data Flow Task](../../integration-services/control-flow/data-flow-task.md).  
   
 #### <a name="capture-the-names-of-columns-in-which-errors-occur"></a>Capturez les noms des colonnes dans lesquelles des erreurs se produisent  
- Lorsque vous configurez une sortie d’erreur dans le flux de données, par défaut, la sortie d’erreur fournit uniquement l’identificateur numérique de la colonne dans laquelle l’erreur s’est produite. Pour plus d'informations, consultez [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).  
+ Lorsque vous configurez une sortie d’erreur dans le flux de données, par défaut, la sortie d’erreur fournit uniquement l’identificateur numérique de la colonne dans laquelle l’erreur s’est produite. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).  
   
  Vous pouvez rechercher des noms de colonne en activant la journalisation et en sélectionnant l’événement **DiagnosticEx** . Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez ensuite rechercher le nom de colonne à partir de son identificateur dans ce mappage de lignage. Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/03/2017
   
 3.  Sélectionnez un module fournisseur d'informations dans la liste **Type de fournisseur** , puis cliquez sur **Ajouter**.  
   
-4.  Dans le **Configuration** colonne, sélectionnez un gestionnaire de connexions ou cliquez sur  **\<nouvelle connexion >** pour créer une nouvelle connexion gestionnaire du type approprié pour le fournisseur de journaux. En fonction du module fournisseur sélectionné, utilisez l'un des gestionnaires de connexions suivants :  
+4.  Dans la colonne **Configuration**, sélectionnez un gestionnaire de connexions ou cliquez sur **\<Nouvelle connexion>** afin de créer un gestionnaire de connexions du type approprié pour le module fournisseur d’informations. En fonction du module fournisseur sélectionné, utilisez l'un des gestionnaires de connexions suivants :  
   
     -   Pour les fichiers texte, utilisez un gestionnaire de connexions de fichiers. Pour plus d'informations, consultez [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -242,7 +240,7 @@ ms.lasthandoff: 08/03/2017
   
     -   Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez un gestionnaire de connexions OLE DB. Pour plus d’informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-    -   Pour le journal des événements Windows, ne faites rien : [!INCLUDE[ssIS](../../includes/ssis-md.md)]crée automatiquement le journal.  
+    -   Pour le journal des événements Windows, ne faites rien : [!INCLUDE[ssIS](../../includes/ssis-md.md)] crée automatiquement le journal.  
   
     -   Pour les fichiers XML, utilisez un gestionnaire de connexions de fichiers.  
   
@@ -316,7 +314,7 @@ ms.lasthandoff: 08/03/2017
  Le champ de description est modifiable. Cliquez sur cette option, puis modifiez la description par défaut du journal.  
   
  **Configuration**  
- Sélectionnez un gestionnaire de connexions existant dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur \<**Nouvelle connexion**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
   
  Rubriques connexes : [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) , [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -420,7 +418,7 @@ ms.lasthandoff: 08/03/2017
 |Basic|Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Ceci est la valeur par défaut.|  
 |RuntimeLineage|Collecte les données nécessaires au suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage afin de mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations.|  
 |Performance|Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.<br /><br /> Le rapport **Performances de l'exécution** affiche le temps d'activité et le temps total écoulé des composants de flux de données du package. Ces informations sont disponibles si le niveau de journalisation de la dernière exécution du package a été défini sur **Performances** ou **Commentaires**. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> La vue [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) affiche les heures de début et de fin des composants de flux de données, pour chaque phase d’exécution. Cette vue affiche ces informations pour ces composants uniquement lorsque le niveau de journalisation de l'exécution du package est défini sur **Performances** ou **Commentaires**.|  
-|Commentaires|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> Les événements personnalisés sont notamment les événements consignés par les tâches [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les événements personnalisés, consultez [Custom Messages for Logging](#custom_messages).<br /><br /> L'événement **DiagnosticEx** est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, cet événement capture les valeurs de paramètres passées aux packages enfants.<br /><br /> L’événement **DiagnosticEx** vous permet également d’obtenir les noms des colonnes dans lesquelles des erreurs se produisent au niveau des lignes. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur.  Pour plus d’informations, consultez [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> La valeur de la colonne de message pour **DiagnosticEx** est du texte XML. Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> La vue [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
+|Commentaires|Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic.<br /><br /> Les événements personnalisés sont notamment les événements consignés par les tâches [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les événements personnalisés, consultez [Custom Messages for Logging](#custom_messages).<br /><br /> L'événement **DiagnosticEx** est un exemple d'événement de diagnostic. Chaque fois qu'une tâche d'exécution de package exécute un package enfant, cet événement capture les valeurs de paramètres passées aux packages enfants.<br /><br /> L’événement **DiagnosticEx** vous permet également d’obtenir les noms des colonnes dans lesquelles des erreurs se produisent au niveau des lignes. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur.  Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> La valeur de la colonne de message pour **DiagnosticEx** est du texte XML. Pour afficher le texte du message pour une exécution de package, interrogez la vue [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> La vue [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) affiche une ligne chaque fois qu’un composant de flux de données envoie des données à un composant en aval, pour une exécution de package. Le niveau de journalisation doit avoir la valeur **Commentaires** pour capturer ces informations dans la vue.|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>Créer et gérer des niveaux de journalisation personnalisés à l'aide de la boîte de dialogue de gestion des niveaux de journalisation personnalisés  
  Vous pouvez créer des niveaux de journalisation personnalisés qui collectent uniquement les statistiques et les événements que vous souhaitez. Vous pouvez également capturer le contexte des événements, notamment les valeurs de variables, les chaînes de connexion et les propriétés de composants. Lorsque vous exécutez un package, vous pouvez sélectionner un niveau de journalisation personnalisé partout où vous pouvez sélectionner un niveau de journalisation intégré.  
@@ -475,7 +473,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Tâche de transfert de bases de données](#TransferDatabase)  
   
- [Tâche de transfert de messages d'erreur](#TransferErrorMessages)  
+ [Tâche de transfert de messages d’erreur](#TransferErrorMessages)  
   
  [Tâche de transfert de travaux](#TransferJobs)  
   
@@ -489,7 +487,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
  [Tâche Lecteur de données WMI](#WMIDataReader)  
   
- [Tâche Observateur d'événement WMI](#WMIEventWatcher)  
+ [Tâche Observateur d’événement WMI](#WMIEventWatcher)  
   
  [Tâche XML](#XML)  
   
@@ -687,4 +685,3 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
   
 ## <a name="related-content"></a>Contenu connexe  
  [Outil DTLoggedExec pour un enregistrement complet et détaillé (projet CodePlex)](http://go.microsoft.com/fwlink/?LinkId=150579)  
-

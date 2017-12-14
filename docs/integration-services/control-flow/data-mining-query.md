@@ -1,5 +1,5 @@
 ---
-title: "Requête d’exploration de données | Documents Microsoft"
+title: "Requête d’exploration de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataminingquery.f1
+f1_keywords: sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8809f1e5f91ad5746b66d4640747b1ec0a923f0f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query"></a>Requête d'exploration de données
   Le volet de conception contient le Générateur de requêtes de prévisions d'exploration de données, qui peut servir à créer des requêtes de prévisions d'exploration de données. Vous pouvez concevoir des requêtes de prévisions basées sur des tables d'entrée ou des requêtes de prévisions singleton. Passez à la vue de résultat pour exécuter la requête et afficher les résultats. La vue de la requête affiche la requête DMX (Data Mining Extensions) créée par le Générateur de requêtes de prévisions d'exploration de données.  
@@ -34,9 +31,9 @@ ms.lasthandoff: 08/03/2017
  Bouton de basculement entre les vues  
  Cliquez sur une icône pour basculer entre le volet de conception et le volet de requête. Par défaut, le volet de conception est ouvert.  
   
- Pour basculer vers le volet de conception, cliquez sur le ![icône conception](../../integration-services/control-flow/media/ssis-designicon.gif "icône conception") icône.  
+ Pour basculer vers le volet de conception, cliquez sur l’icône ![Icône de conception](../../integration-services/control-flow/media/ssis-designicon.gif "Icône de conception").  
   
- Pour basculer vers le volet de requête, cliquez sur le ![icône SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "icône SQL") icône.  
+ Pour basculer vers le volet de requête, cliquez sur l’icône ![Icône SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "Icône SQL").  
   
  **Modèle d'exploration de données**  
  Choisissez le modèle d'exploration de données sur lequel vous souhaitez baser vos prévisions.  
@@ -72,7 +69,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de requête d'exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Les Extensions d’exploration de données &#40; DMX &#41; Référence des instructions](../../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "OLEDB Call, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0d6544c97f10b3132e69ffbfa89023e1e1bf12c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 52b44fe50eac1dfbab29aeeebe9cc5f82107bcd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call (classe d'événements)
-  La classe d’événements **OLEDB Call** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB pour les requêtes distribuées et les procédures stockées distantes.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **OLEDB Call** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB pour les requêtes distribuées et les procédures stockées distantes.  
   
  Incluez la classe d’événements **OLEDB Call** dans les traces pour surveiller uniquement les appels qui ne demandent pas de données ou les appels qui ne sont pas effectués pour la méthode **QueryInterface** . Quand la classe d’événements **OLEDB Call** est incluse dans une trace, la charge engagée dépend de la fréquence à laquelle les appels OLE DB se produisent sur la base de données pendant la trace. Si les appels se produisent fréquemment, la trace peut dégrader notablement les performances.  
   

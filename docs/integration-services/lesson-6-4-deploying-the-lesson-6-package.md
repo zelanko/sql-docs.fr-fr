@@ -1,5 +1,5 @@
 ---
-title: "Étape 4 : Déploiement de Package de la leçon 6 | Documents Microsoft"
+title: "Étape 4 : Déploiement du package de la Leçon 6 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d9be296088cf3f455f8790ff013ab0c1df14b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Leçon 6-4-déploiement de Package de la leçon 6
+# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Leçon 6-4 : Déploiement du package de la Leçon 6
 Pour déployer le package, vous devez l'ajouter au catalogue SSISDB dans Integration Services sur une instance de SQL Server. Dans cette leçon, vous allez ajouter le package de la leçon 6 au catalogue SSISDB, définir le paramètre, puis exécuter le package. Dans le cadre de cette leçon, vous utiliserez SQL Server Management Studio pour ajouter le package de la leçon 6 au catalogue SSISDB et déployer le package. Une fois le package déployé, vous modifierez le paramètre de façon à ce qu'il pointe vers un nouvel emplacement, puis vous exécuterez le package.  
   
 Dans cette leçon, vous allez :  
@@ -130,4 +127,3 @@ Le rapport Vue d'ensemble du package s'affiche avec le nom du package et une syn
   
   
   
-

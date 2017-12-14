@@ -1,5 +1,5 @@
 ---
-title: "Connexion SQL Server des autorisations requises pour le Concepteur de capture de données modifiées | Documents Microsoft"
+title: "Autorisations de connexion SQL Server requises pour CDC Designer | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80334de2-17c1-43c9-951e-21a9f864e9cb
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bdcee015ce6c936b3fc8b8653b21208bdee31074
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c93992095ccc5c388b240273008f07d2237e44c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>Autorisations de connexion SQL Server requises pour le concepteur CDC
   La console du concepteur CDC nécessite des informations de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer ses tâches. Cette rubrique décrit les informations qui peuvent être fournies dans la boîte de dialogue **Connexion à SQL Server** pour configurer la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,8 +41,7 @@ ms.lasthandoff: 08/03/2017
 |Modifier la configuration et ajouter/supprimer des instances de capture.|`db_datareader` et `db_datawriter` sur MSXDBCDC<br /><br /> `db_owner` sur la base de données CDC associée|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accéder à la Console du Concepteur de capture de données modifiées](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [Connexion SQL Server pour l’Instance de la création](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [Accéder à la console du concepteur CDC](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
+ [Connexion SQL Server pour la création d’une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   
-

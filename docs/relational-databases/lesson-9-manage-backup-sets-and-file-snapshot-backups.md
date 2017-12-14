@@ -1,10 +1,13 @@
 ---
 title: "Leçon 9 : Gérer des jeux de sauvegarde et des sauvegardes d’instantanés de fichiers | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc4ce7fe2c3648da7923dbb35fbfe252c971b006
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a2e16cd4312b50b700363be0dc85a67d2740a889
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>Leçon 9 : Gérer des jeux de sauvegarde et des sauvegardes de captures instantanées de fichiers
-Dans cette leçon, vous allez supprimer une sauvegarde à l’aide de la procédure stockée système [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) . Cette procédure stockée système supprime le fichier de sauvegarde et la capture instantanée de fichier sur chaque fichier de base de données associé à ce jeu de sauvegarde.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous allez supprimer une sauvegarde à l’aide de la procédure stockée système [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Cette procédure stockée système supprime le fichier de sauvegarde et la capture instantanée de fichier sur chaque fichier de base de données associé à ce jeu de sauvegarde.  
   
 > [!NOTE]  
 > Si vous essayez de supprimer un jeu de sauvegarde en supprimant simplement le fichier de sauvegarde du conteneur d’objets blob Azure, vous supprimerez uniquement le fichier de sauvegarde proprement dit : les captures instantanées de fichiers associées ne seront pas supprimées. Si vous vous trouvez dans ce scénario, utilisez la fonction système [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) pour identifier l’URL des captures instantanées de fichiers orphelines et utilisez la procédure stockée système [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) pour supprimer chaque capture instantanée de fichier orpheline. Pour plus d’informations, consultez  [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  

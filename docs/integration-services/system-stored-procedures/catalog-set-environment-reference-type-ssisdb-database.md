@@ -1,5 +1,5 @@
 ---
-title: "Catalog.set_environment_reference_type (base de données SSISDB) | Documents Microsoft"
+title: "catalog.set_environment_reference_type (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31a6d4310ad32f2517c8779172b0d539803e9f15
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +37,16 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @reference_id =] *reference_id*  
- Identificateur unique de la référence environnementale qui sera mise à jour. Le *reference_id* est **bigint**.  
+ [ @reference_id = ] *reference_id*  
+ Identificateur unique de la référence environnementale qui sera mise à jour. *reference_id* est de type **bigint**.  
   
- [ @reference_type =] *reference_type*  
- Indique si l'environnement peut se trouver dans le même dossier que le projet (référence relative) ou dans un dossier différent (référence absolue). Utilisez la valeur `R` pour indiquer une référence relative. Utilisez la valeur `A` pour indiquer une référence absolue. Le *reference_type* est **char (1)**.  
+ [ @reference_type = ] *reference_type*  
+ Indique si l'environnement peut se trouver dans le même dossier que le projet (référence relative) ou dans un dossier différent (référence absolue). Utilisez la valeur `R` pour indiquer une référence relative. Utilisez la valeur `A` pour indiquer une référence absolue. *reference_type* est de type **char(1)**.  
   
- [ @environment_folder_name =] *environment_folder_name*  
- Dossier dans lequel l'environnement se trouve. Cette valeur est obligatoire pour les références absolues. Le *environment_folder_name* est **nvarchar (128)**.  
+ [ @environment_folder_name = ] *environment_folder_name*  
+ Dossier dans lequel l'environnement se trouve. Cette valeur est obligatoire pour les références absolues. *environment_folder_name* est de type **nvarchar(128)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -59,9 +57,9 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Autorisations READ et MODIFY sur le projet, et autorisation READ sur l'environnement  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
@@ -70,13 +68,12 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   L'utilisateur n'a pas les autorisations appropriées  
   
--   Une référence absolue est spécifiée à l’aide de la `A` dans les *reference_location* paramètre, mais le nom du dossier n’a pas été spécifié avec la *environment_folder_name* paramètre.  
+-   Une référence absolue est spécifiée en utilisant le caractère `A` dans le paramètre *reference_location*, mais le nom du dossier n’a pas été spécifié avec le paramètre *environment_folder_name*.  
   
 ## <a name="remarks"></a>Notes  
  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent qu'il réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et par dossier et peuvent faire référence aux environnements qui résident dans un dossier différent que le projet. Un projet peut référencer plusieurs environnements.  
   
 > [!IMPORTANT]  
->  Si une référence relative est spécifiée, le *environment_folder_name* la valeur du paramètre n’est pas utilisée, et le nom de dossier d’environnement est automatiquement défini sur **NULL**. Si une référence absolue est spécifiée, le nom de dossier d’environnement doit être fourni dans le *environment_folder_name* paramètre.  
+>  Si une référence relative est spécifiée, la valeur de paramètre *environment_folder_name* n’est pas utilisée, et le nom du dossier d’environnement est défini automatiquement sur **NULL**. Si une référence absolue est spécifiée, le nom du dossier d’environnement doit être fourni dans le paramètre *environment_folder_name*.  
   
   
-

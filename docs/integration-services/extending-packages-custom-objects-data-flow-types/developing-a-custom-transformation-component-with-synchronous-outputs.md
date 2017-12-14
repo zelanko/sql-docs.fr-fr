@@ -1,5 +1,5 @@
 ---
-title: "Développement d’un composant de Transformation personnalisé à sorties synchrones | Documents Microsoft"
+title: "Développement d’un composant de transformation personnalisé avec des sorties synchrones | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,20 +24,19 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: d316a3921cd3b2d8b3e82a6ed5c5b629389614a7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5c6999fbcc1dccdf7a79802bdc9a2d49630f908e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Développement d'un composant de transformation personnalisé à sorties synchrones
-  Les composants de transformation à sorties synchrones reçoivent des lignes en provenance des composants en amont, puis lisent ou modifient les valeurs comprises dans les colonnes de ces lignes alors qu'ils transfèrent les lignes aux composants en aval. Ils peuvent également définir des colonnes de sortie supplémentaires dérivées des colonnes fournies par les composants en amont, mais ils n'ajoutent pas de lignes au flux de données. Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [fonctionnement synchrone et asynchrone des Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
+  Les composants de transformation à sorties synchrones reçoivent des lignes en provenance des composants en amont, puis lisent ou modifient les valeurs comprises dans les colonnes de ces lignes alors qu'ils transfèrent les lignes aux composants en aval. Ils peuvent également définir des colonnes de sortie supplémentaires dérivées des colonnes fournies par les composants en amont, mais ils n'ajoutent pas de lignes au flux de données. Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Ce type de composant convient aux tâches dans lesquelles les données sont modifiées en ligne à mesure qu'elles sont fournies au composant et dans lesquelles le composant n'a pas à consulter toutes les lignes avant de les traiter. Il s'agit du composant le plus facile à développer parce que les transformations à sorties synchrones ne se connectent pas en général à des sources de données externes, gèrent des colonnes de métadonnées externes ou ajoutent des lignes aux tampons de sortie.  
   
@@ -127,7 +124,7 @@ End Class
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|Supérieur à 0 et inférieur ou égale à 28 et inférieur à Précision.|Supérieur ou égal à 1 et inférieur ou égal à 38.|0|  
 |DT_BYTES|Supérieur à 0.|0|0|0|  
-|DT_STR|Supérieur à 0 et inférieur à 8 000.|0|0|Différent de 0 et une page de codes valide.|  
+|DT_STR|Supérieur à 0 et inférieur à 8 000.|0|0|Différent de 0 et une page de codes valide.|  
 |DT_WSTR|Supérieur à 0 et inférieur à 4000.|0|0|0|  
   
  Étant donné que les restrictions sur les propriétés de type de données sont basées sur le type de données de la colonne de sortie, vous devez choisir le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correct lorsque vous utilisez des types managés. La classe de base fournit trois méthodes d'assistance, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> qui aident les développeurs de composants managés à sélectionner un type de données [!INCLUDE[ssIS](../../includes/ssis-md.md)] en fonction d'un type managé. Ces méthodes convertissent des types de données managées en types de données [!INCLUDE[ssIS](../../includes/ssis-md.md)], et vice versa.  
@@ -194,7 +191,7 @@ End Sub
 ### <a name="processing-rows"></a>Traitement de lignes  
  Les composants reçoivent des objets <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> qui contiennent des lignes et des colonnes dans la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Pendant cette méthode, les lignes comprises dans le tampon sont parcourues, puis les colonnes identifiées pendant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> sont lues et modifiées. La méthode est appelée à plusieurs reprises par la tâche de flux de données jusqu'à ce qu'aucune ligne ne soit fournie à partir du composant en amont.  
   
- Une colonne individuelle dans la mémoire tampon est lu ou écrite à l’aide de la méthode d’accès tableau indexeur, ou en utilisant l’une de le **obtenir** ou **définir** méthodes. Le **obtenir** et **définir** méthodes sont plus efficaces et doit être utilisées lorsque le type de données de la colonne dans la mémoire tampon est connu.  
+ Une colonne individuelle du tampon est lue ou écrite en utilisant la méthode d’accès indexeur de tableau ou l’une des méthodes **Get** ou **Set**. Les méthodes **Get** et **Set** sont plus efficaces et doivent être utilisées lorsque le type de données de la colonne dans le tampon est connu.  
   
  L'exemple de code suivant présente une implémentation de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> qui traite des lignes entrantes.  
   
@@ -332,9 +329,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Développement d’un composant de Transformation personnalisé à sorties asynchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
- [Présentation des Transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
- [Création d’une Transformation synchrone avec le composant de Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Développement d’un composant de transformation personnalisé avec des sorties asynchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
+ [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
+ [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
   
   
-

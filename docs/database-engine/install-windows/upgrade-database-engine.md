@@ -2,11 +2,12 @@
 title: "Mettre à niveau le moteur de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 11bf3a52f7c528fca881c7dd3262c5a1ce09589e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49b515f9a46e0d6196762181f19500d2d06e4b33
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
-  Les rubriques de cette section vous aideront à mettre à niveau le moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les rubriques de cette section vous aideront à mettre à niveau le moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 1.  [Choisir une méthode de mise à niveau du moteur de base de données](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Avant de commencer une mise à niveau, vous devez comprendre les différentes méthodes de mise à niveau. Cette rubrique décrit les méthodes de mise à niveau ainsi que les étapes correspondantes.  
   

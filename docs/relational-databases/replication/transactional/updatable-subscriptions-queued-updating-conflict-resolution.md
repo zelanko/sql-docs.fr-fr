@@ -2,9 +2,12 @@
 title: "Détection et résolution des conflits de mise à jour en attente | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 30768bae36208218fc5529c64744abc7e1b12a44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b48c692d0f4992c46bcf27ffa80e2d1bf0740c39
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Abonnements pouvant être mis à jour - Résolution des conflits de mise à jour en attente
-  Étant donné que les abonnements mis à jour en attente permettent d'apporter des modifications aux mêmes données à différents emplacements, des conflits sont susceptibles de se produire lors de la synchronisation des données sur le serveur de publication. La réplication détecte les éventuels conflits lors de la synchronisation des modifications avec le serveur de publication et les résout à l'aide de la stratégie de résolution que vous avez sélectionnée lors de la création de la publication. Les conflits suivants peuvent se produire :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Étant donné que les abonnements mis à jour en attente permettent d’apporter des modifications aux mêmes données à différents emplacements, des conflits sont susceptibles de se produire lors de la synchronisation des données sur le serveur de publication. La réplication détecte les éventuels conflits lors de la synchronisation des modifications avec le serveur de publication et les résout à l'aide de la stratégie de résolution que vous avez sélectionnée lors de la création de la publication. Les conflits suivants peuvent se produire :  
   
 -   Conflits de mise à jour et d'insertion. Ce type de conflit survient lorsque les mêmes données sont modifiées dans deux endroits. L'un « gagne », l'autre « perd ».  
   

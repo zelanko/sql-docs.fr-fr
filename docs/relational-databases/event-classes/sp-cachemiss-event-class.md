@@ -2,9 +2,12 @@
 title: SP:CacheMiss Event Class | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfad681a8b7d8162aa37264ed60f02c243bcc686
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3ddae7e305520784888453ba4914f724140479cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss (classe d'événements)
-  La classe d'événements SP:CacheMiss indique que la procédure est introuvable dans le cache. Si la classe d'événements SP:CacheMiss apparaît fréquemment, cela peut indiquer qu'un supplément de mémoire doit être mis à la disposition de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], augmentant ainsi la taille du cache de procédure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements SP:CacheMiss indique que la procédure est introuvable dans le cache. Si la classe d'événements SP:CacheMiss apparaît fréquemment, cela peut indiquer qu'un supplément de mémoire doit être mis à la disposition de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], augmentant ainsi la taille du cache de procédure.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Colonnes de données de la classe d'événements SP:CacheMiss  
   

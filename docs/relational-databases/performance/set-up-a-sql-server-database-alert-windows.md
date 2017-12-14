@@ -2,9 +2,12 @@
 title: "Configurer une alerte de base de données SQL Server (Windows) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,38 +18,38 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29cc760d28e828b17cb6521c1fe2a6efc011ad24
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 459c324ac13d950f99643e839026d5090e99df78
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Configurer une alerte de base de données SQL Server (Windows)
-  À l'aide du Moniteur système, vous pouvez créer une alerte qui se déclenche quand le seuil d'un compteur du Moniteur système est franchi. En réponse à l'alerte, le Moniteur système peut lancer une application, telle qu'une application personnalisée écrite pour prendre en charge la condition d'alerte. Par exemple, vous pouvez créer une alerte déclenchée quand le nombre de blocages dépasse une valeur spécifique.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez utiliser le Moniteur système pour créer une alerte destinée à être déclenchée lorsque la valeur seuil est atteinte par le compteur du Moniteur système. En réponse à l'alerte, le Moniteur système peut lancer une application, telle qu'une application personnalisée écrite pour prendre en charge la condition d'alerte. Par exemple, vous pouvez créer une alerte déclenchée quand le nombre de blocages dépasse une valeur spécifique. 
   
- Vous pouvez également définir des alertes à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Alertes](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+ Vous pouvez également définir des alertes à l’aide de Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Alertes](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
   
-### <a name="to-set-up-a-sql-server-database-alert"></a>Pour installer une alerte de base de données SQL Server  
+## <a name="set-up-a-sql-server-database-alert"></a>Configurer une alerte de base de données SQL Server  
   
-1.  Dans l’arborescence de navigation de la fenêtre Performances, développez **Journaux et alertes de performance**.  
+1. Dans l’arborescence de navigation de la fenêtre **Performances**, développez **Journaux et alertes de performance**.  
   
-2.  Cliquez avec le bouton droit sur **Alertes**, puis cliquez sur **Nouveaux paramètres d’alerte**.  
+2. Cliquez avec le bouton droit sur **Alertes**, puis sélectionnez **Nouveaux paramètres d’alerte**.
   
-3.  Dans la boîte de dialogue **Nouveaux paramètres d’alerte** , entrez un nom pour la nouvelle alerte, puis cliquez sur **OK**.  
+3. Dans la boîte de dialogue **Nouveaux paramètres d’alerte**, tapez un nom pour la nouvelle alerte, puis sélectionnez **OK**.  
   
-4.  Sous l’onglet **Général** de la boîte de dialogue de la nouvelle alerte, ajoutez un **commentaire**, puis cliquez sur **Ajouter** pour ajouter un compteur à l’alerte.  
+4. Sous l’onglet **Général** de la boîte de dialogue de la nouvelle alerte, ajoutez un **commentaire**. Sélectionnez **Ajouter** pour ajouter un compteur à l’alerte.  
   
      Chaque alerte doit avoir au moins un compteur.  
   
-5.  Dans la boîte de dialogue Ajouter des compteurs, sélectionnez un objet SQL Server dans la liste **Objet de performance** , puis sélectionnez un compteur dans la zone **Sélectionner les compteurs dans la liste**.  
+5. Dans la boîte de dialogue **Ajouter des compteurs**, sélectionnez un objet SQL Server dans la liste **Objet de performance**. Sélectionnez un compteur dans la liste **Sélectionner des compteurs dans**.  
   
-6.  Pour ajouter le compteur à l’alerte, cliquez sur **Ajouter**. Vous pouvez continuer à ajouter des compteurs, ou bien cliquer sur **Fermer** pour revenir à la boîte de dialogue de la nouvelle alerte.  
+6. Pour ajouter le compteur à l’alerte, sélectionnez **Ajouter**. Vous pouvez continuer à ajouter des compteurs, ou bien sélectionnez **Fermer** pour revenir à la boîte de dialogue de la nouvelle alerte.  
   
-7.  Dans la boîte de dialogue de la nouvelle alerte, cliquez sur **Supérieur à** ou sur **Inférieur à**dans la liste **Avertir si la valeur est** , puis entrez une valeur de seuil dans la zone **Limite**.  
+7. Dans la boîte de dialogue de la nouvelle alerte, sélectionnez **Supérieur à** ou **Inférieur à** dans la liste **Avertir si la valeur est**. Entrez une valeur de seuil dans **Limite**.  
   
      L’alerte est générée lorsque la valeur du compteur est supérieure ou inférieure à la valeur du seuil (selon que vous avez sélectionné **Supérieur à** ou **Inférieur à**).  
   
-8.  Dans les zones **Période d’échantillonnage des données** , définissez la fréquence d’échantillonnage.  
+8. Dans les zones **Période d’échantillonnage des données** , définissez la fréquence d’échantillonnage.  
   
 9. Sous l’onglet **Action** , définissez les actions qui doivent se produire lorsque l’alerte est déclenchée.  
   

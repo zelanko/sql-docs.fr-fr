@@ -1,5 +1,5 @@
 ---
-title: "Étape 5 : Test de la leçon 4 du Package du didacticiel | Documents Microsoft"
+title: "Étape 5 : Test du package du didacticiel de la leçon 4 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 68e4545ee2eae96664007a8dc69c9953c0351107
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Leçon 4-5-test de la leçon 4 du Package du didacticiel
+# <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Leçon 4-5 : Test du package du didacticiel de la leçon 4
 Au moment de l'exécution, le fichier corrompu, Currency_BAD.txt, ne parvient pas à générer une correspondance avec la transformation de recherche Currency Key. Du fait que la sortie d'erreur de la transformation de recherche Currency Key a été configurée en vue de réacheminer les lignes qui ont échoué vers une nouvelle destination de lignes échouées, le composant n'échoue pas et le package s'exécute correctement. Toutes les lignes qui ont échoué sont enregistrées dans le fichier ErrorOutput.txt.  
   
 Au cours de cette tâche, vous allez tester la configuration de sortie d'erreur révisée en exécutant le package. Une fois le package exécuté, vous visualiserez le contenu du fichier ErrorOutput.txt.  
@@ -40,11 +37,11 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 **Flux de contrôle**  
   
-![Contrôler le flux de package](../integration-services/media/task4lesson2control.gif "contrôler le flux de package")  
+![Flux de contrôle dans le package](../integration-services/media/task4lesson2control.gif "Flux de contrôle dans le package")  
   
 **Flux de données**  
   
-![Flux de données dans le package](../integration-services/media/task5lesson5data.gif "dans le package de flux de données")  
+![Flux de données dans le package](../integration-services/media/task5lesson5data.gif "Flux de données dans le package")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Pour exécuter le package du didacticiel Lesson 4  
   
@@ -60,4 +57,3 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
   
   
-

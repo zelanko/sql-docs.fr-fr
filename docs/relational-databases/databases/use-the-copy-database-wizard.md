@@ -2,9 +2,12 @@
 title: "Utiliser l’Assistant Copie de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 07/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7e53c91fb8462fb26fd5a94e20c7a6ba7e2f54d0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
-L’Assistant Copie de base de données déplace ou copie des bases de données et certains objets serveur facilement à partir d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  vers une autre instance, sans temps d’arrêt du serveur. À l'aide de cet Assistant, vous pouvez effectuer les opérations suivantes : 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’Assistant Copie de base de données déplace ou copie des bases de données et certains objets serveur facilement à partir d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre instance, sans temps d’arrêt du serveur. À l'aide de cet Assistant, vous pouvez effectuer les opérations suivantes : 
   
 -   Choisir un serveur source et un serveur de destination.  
   

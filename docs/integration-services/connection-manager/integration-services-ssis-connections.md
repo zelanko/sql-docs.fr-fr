@@ -1,5 +1,5 @@
 ---
-title: Connexions Integration Services (SSIS) | Documents Microsoft
+title: Connexions Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
+caps.latest.revision: "92"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: 2f257448e90c82a2cd29e082fe6321401c889e37
-ms.contentlocale: fr-fr
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -74,7 +72,7 @@ ms.lasthandoff: 11/07/2017
   
 -   Vous pouvez créer votre propre gestionnaire de connexions personnalisé si les gestionnaires de connexions existants ne répondent pas à vos besoins.  
 
-### <a name="package-level-and-project-level-connection-managers"></a>Au niveau du package et les gestionnaires de connexions au niveau du projet
+### <a name="package-level-and-project-level-connection-managers"></a>Gestionnaires de connexions au niveau du package et au niveau du projet
 Un gestionnaire de connexions peut être créé au niveau du package ou au niveau du projet. Le gestionnaire de connexions créé au niveau du projet est disponible pour tous les packages du projet. Le gestionnaire de connexions créé au niveau du package n'est, quant à lui, disponible que pour ce seul package.  
   
  Pour partager des connexions aux sources, vous utilisez les gestionnaires de connexions créés au niveau du projet au lieu des sources de données. Pour ajouter un gestionnaire de connexions au niveau du projet, le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit utiliser le modèle de déploiement de projet. Quand un projet est configuré pour utiliser ce modèle, le dossier **Gestionnaires de connexions** apparaît dans **l’Explorateur de solutions**et le dossier **Sources de données** est supprimé de **l’Explorateur de solutions**.  
@@ -82,7 +80,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
 > [!NOTE]  
 >  Si vous souhaitez utiliser des sources de données dans votre package, vous devez convertir le projet en modèle de déploiement de package.  
 >   
->  Pour plus d’informations sur les deux modèles et sur la conversion d’un projet pour le modèle de déploiement de projet, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
+>  Pour plus d’informations sur les deux modèles et sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### <a name="built-in-connection-managers"></a>Gestionnaires de connexions intégrés  
  Le tableau suivant répertorie les types de gestionnaires de connexions fournis par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -117,9 +115,9 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
 |Type|Description|Rubrique|  
 |----------|-----------------|-----------|  
-|ORACLE|Se connecte à Oracle \<Infos de version\> server.|Le gestionnaire de connexions Oracle est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
+|ORACLE|Établit une connexion à un serveur Oracle \<informations de version\>.|Le gestionnaire de connexions Oracle est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
 |SAPBI|Établit une connexion à un système SAP NetWeaver BI version 7.|Le gestionnaire de connexions SAP BI est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Se connecte à un Teradata \<Infos de version\> server.|Le gestionnaire de connexions Teradata est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
+|TERADATA|Établit une connexion à un serveur Teradata \<informations de version\>.|Le gestionnaire de connexions Teradata est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Teradata par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
   
 ### <a name="custom-connection-managers"></a>Gestionnaires de connexions personnalisés  
  Vous pouvez également écrire des gestionnaires de connexions personnalisés. Pour plus d'informations, consultez [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -138,7 +136,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
  Le diagramme qui suit montre la zone **Gestionnaires de connexions** de l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- ![Capture d’écran du Concepteur de flux de contrôle avec le package](../../integration-services/connection-manager/media/samplecontrolflow.gif "capture d’écran du Concepteur de flux de contrôle avec le package")    
+ ![Capture d’écran du concepteur de flux de contrôle avec le package](../../integration-services/connection-manager/media/samplecontrolflow.gif "Capture d’écran du concepteur de flux de contrôle avec le package")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>Fournisseurs 32 bits et 64 bits pour gestionnaires de connexions  
  De nombreux fournisseurs utilisés par des gestionnaires de connexions sont disponibles en versions 32 bits et 64 bits. L'environnement de conception [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est un environnement 32 bits et vous ne pouvez voir que des fournisseurs 32 bits pendant la conception d'un package. Par conséquent, vous pouvez configurer un gestionnaire de connexions pour utiliser un fournisseur 64 bits spécifique uniquement si la version 32 bits du même fournisseur est également installée.  
@@ -148,13 +146,13 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   Les deux versions du fournisseur ont le même ID. Pour spécifier si l’exécution de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise une version 64 bits disponible du fournisseur, vous devez définir la propriété Run64BitRuntime du projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propriété Run64BitRuntime a la valeur **true**, l’exécution trouve le fournisseur 64 bits et l’utilise ; si Run64BitRuntime a la valeur **false**, l’exécution trouve et utilise le fournisseur 32 bits. Pour plus d’informations sur les propriétés que vous pouvez définir sur les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Integration Services (SSIS) et environnements de Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Ajouter un gestionnaire de connexions
-###  <a name="wizard"></a>Ajouter un gestionnaire de connexions lorsque vous créez un package  
+###  <a name="wizard"></a> Ajouter un gestionnaire de connexions lors de la création d’un package  
   
 -   Utiliser l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      En plus de créer et configurer un gestionnaire de connexions, cet Assistant vous aide également à créer et configurer les sources et destinations qui utilisent le gestionnaire de connexions. Pour plus d'informations, consultez [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a>Ajouter un gestionnaire de connexions à un package existant  
+###  <a name="package"></a> Ajouter un gestionnaire de connexions à un package existant  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -177,20 +175,20 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
     |[Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Configurer le gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Éditeur du Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|[Éditeur de gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Éditeur du gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de fichiers multiples](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Gestionnaire de connexions de fichiers plats](../../integration-services/connection-manager/flat-file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
     |[Gestionnaire de connexions de fichiers plats multiples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du Gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
+    |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Connexion&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Tout&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Éditeur du Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Éditeur du gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
      La zone **Gestionnaires de connexions** répertorie le gestionnaire de connexions ajouté.  
   
@@ -198,7 +196,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer l’élément sélectionné** dans le menu **Fichier** .  
   
-###  <a name="project"></a>Ajouter un gestionnaire de connexions au niveau du projet  
+###  <a name="project"></a> Ajouter un gestionnaire de connexions au niveau du projet  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -213,20 +211,20 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
     |[Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Configurer le gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Éditeur du Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|[Éditeur de gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Éditeur du gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de fichiers multiples](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Gestionnaire de connexions de fichiers plats](../../integration-services/connection-manager/flat-file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
     |[Gestionnaire de connexions de fichiers plats multiples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du Gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
+    |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Connexion&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Tout&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Éditeur du Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Éditeur du gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
      Le gestionnaire de connexions que vous avez ajouté apparaîtra sous le nœud **Gestionnaires de connexions** dans **l’Explorateur de solutions**. Il figurera aussi sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** pour tous les packages du projet. Le nom du gestionnaire de connexions de cet onglet aura un préfixe **(project)** afin de distinguer ce gestionnaire de connexions de niveau projet des gestionnaires de connexions de niveau package.  
   
@@ -235,26 +233,26 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
     > [!NOTE]  
     >  Sous l’onglet **Gestionnaires de connexions** de la fenêtre **Concepteur SSIS** , vous ne pouvez pas remplacer le préfixe **(project)** dans le nom du gestionnaire de connexions. C'est la procédure normale.  
 
-### <a name="add-ssis-connection-manager-dialog-box"></a>Ajouter la boîte de dialogue Gestionnaire de connexions SSIS
+### <a name="add-ssis-connection-manager-dialog-box"></a>Boîte de dialogue Ajout d’un gestionnaire de connexions SSIS
 La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet de sélectionner le type de connexion à ajouter à un package.  
   
  Pour en savoir plus sur les gestionnaires de connexions, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
 #### <a name="options"></a>Options  
- **Type de gestionnaire de connexion**  
+ **Type du gestionnaire de connexions**  
  Sélectionnez un type de connexion et cliquez sur **Ajouter**ou double-cliquez sur un type de connexion, pour spécifier les propriétés de connexion à l’aide de l’éditeur pour chaque type de connexion.  
   
  **Ajouter**  
  Spécifiez les propriétés de connexion à l'aide de l'éditeur pour chaque type de connexion.  
    
-##  <a name="parameter"></a>Créer un paramètre pour une propriété de gestionnaire de connexions  
+##  <a name="parameter"></a> Créer un paramètre pour une propriété du gestionnaire de connexions  
   
 1.  Dans la zone **Gestionnaires de connexions** , cliquez avec le bouton droit sur le gestionnaire de connexions pour lequel vous souhaitez créer un paramètre, puis cliquez sur **Paramétrer**.  
   
 2.  Configurez les paramètres dans la boîte de dialogue **Paramétrer** . Pour plus d’informations, consultez [Paramétrer (boîte de dialogue)](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Supprimer un gestionnaire de connexions 
-###  <a name="DeletePackageLevel"></a>Supprimer un gestionnaire de connexions d’un package  
+###  <a name="DeletePackageLevel"></a> Supprimer un gestionnaire de connexions d’un package  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -274,9 +272,9 @@ La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet
   
 5.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-###  <a name="DeleteProjectLevel"></a>Supprimer un gestionnaire de connexions partagé (Gestionnaire de connexions de niveau projet)  
+###  <a name="DeleteProjectLevel"></a> Supprimer un gestionnaire de connexions partagé (gestionnaire de connexions au niveau du projet)  
   
-1.  Pour supprimer un gestionnaire de connexions de niveau projet, cliquez avec le bouton droit sur le gestionnaire de connexions sous le nœud **Gestionnaires de connexions** dans la fenêtre **Explorateur de solutions** , puis cliquez **Supprimer**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]Affiche le message d’avertissement suivant :  
+1.  Pour supprimer un gestionnaire de connexions de niveau projet, cliquez avec le bouton droit sur le gestionnaire de connexions sous le nœud **Gestionnaires de connexions** dans la fenêtre **Explorateur de solutions** , puis cliquez **Supprimer**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] affiche le message d’avertissement suivant :  
   
     > [!WARNING]  
     >  Lorsque vous supprimez un gestionnaire de connexions au niveau projet, les packages qui utilisent le gestionnaire de connexions peuvent ne pas s'exécuter. Vous ne pouvez pas annuler cette action. Voulez -vous supprimer le gestionnaire de connexions ?  
@@ -289,7 +287,7 @@ La boîte de dialogue **Ajout d'un gestionnaire de connexions SSIS** vous permet
 ## <a name="set-the-properties-of-a-connection-manager"></a>Définir les propriétés d’un gestionnaire de connexions
 Tous les gestionnaires de connexions peuvent être configurés à l'aide de la fenêtre **Propriétés** .  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fournit également des boîtes de dialogue personnalisées pour modifier les différents types de gestionnaires de connexions dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La boîte de dialogue offre un ensemble d'options différent pour chaque type de gestionnaire de connexions.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit également des boîtes de dialogue personnalisées permettant de modifier les différents types de gestionnaires de connexions dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La boîte de dialogue offre un ensemble d'options différent pour chaque type de gestionnaire de connexions.  
   
 ### <a name="modify-a-connection-manager-using-the-properties-window"></a>Modifier un gestionnaire de connexions à l’aide de la fenêtre Propriétés  
   
@@ -322,20 +320,20 @@ Tous les gestionnaires de connexions peuvent être configurés à l'aide de la f
     |[Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[Configurer le gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Éditeur du Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|[Éditeur de gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Éditeur du gestionnaire de connexions Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de fichiers multiples](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Gestionnaire de connexions de fichiers plats](../../integration-services/connection-manager/flat-file-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Colonnes&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
     |[Gestionnaire de connexions de fichiers plats multiples](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du Gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
+    |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Connexion&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Éditeur du gestionnaire de connexions SQL Server Compact Edition &#40;page Tout&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Éditeur du Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[Gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager.md)|[Éditeur du gestionnaire de connexions WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
 5.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
@@ -352,4 +350,3 @@ Tous les gestionnaires de connexions peuvent être configurés à l'aide de la f
 -   Article technique, [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](http://go.microsoft.com/fwlink/?LinkId=233696)(Le message d’erreur « DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER’» s’affiche lors de l’utilisation du gestionnaire de connexions Oracle dans SSIS), sur le site support.microsoft.com.  
   
   
-

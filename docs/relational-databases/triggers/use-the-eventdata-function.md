@@ -2,9 +2,12 @@
 title: Utiliser la fonction EVENTDATA | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f657cb2a52bb4871baba4c2fa6c8b846590ab111
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d5b697208c433a7162a2753f0f28aecb2d7b10cc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
-  Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur **xml** . Le schéma XML inclut des informations sur les éléments suivants :  
+# <a name="use-the-eventdata-function"></a>UTiliser la fonction EVENTDATA
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Les informations sur un événement qui lance un déclencheur DDL sont capturées à l’aide de la fonction EVENTDATA. Cette fonction retourne une valeur **xml** . Le schéma XML inclut des informations sur les éléments suivants :  
   
 -   l'heure de l'événement ;  
   

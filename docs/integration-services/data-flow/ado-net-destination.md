@@ -1,5 +1,5 @@
 ---
-title: Destination ADO NET | Documents Microsoft
+title: Destination ADO NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: fr-fr
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-destination"></a>Destination ADO NET
   La destination ADO NET charge des données dans différentes bases de données compatibles [!INCLUDE[vstecado](../../includes/vstecado-md.md)]qui utilisent une table ou une vue de base de données. Vous pouvez charger ces données dans une table ou une vue existante ou créer une table et y charger les données.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/08/2017
  Une destination ADO NET inclut des mappages entre les colonnes d'entrée et les colonnes de la source de données de destination. Vous n'avez pas besoin de mapper les colonnes d'entrée à toutes les colonnes de destination. Toutefois, les propriétés de certaines colonnes de destination peuvent requérir le mappage de colonnes d'entrée. Sinon, des erreurs peuvent se produire. Par exemple, si une colonne de destination n'autorise pas les valeurs Null, vous devez mapper une colonne d'entrée à cette colonne. Par ailleurs, les types de données des colonnes mappées doivent être compatibles. Par exemple, vous ne pouvez pas mapper une colonne d’entrée avec un type de données chaîne à une colonne de destination avec un type de données numérique si le fournisseur [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ne prend pas en charge ce mappage.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ne gère pas l’insertion de texte dans des colonnes dont le type de données a la valeur de l’image. Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’insertion de texte dans des colonnes dont le type de données est défini sur image. Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
 > [!NOTE]  
 >  La destination ADO NET ne prend pas en charge le mappage d'une colonne d'entrée dont le type a la valeur DT_DBTIME avec une colonne de base de données dont le type a la valeur datetime. Pour plus d’informations sur les types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -104,12 +102,12 @@ ms.lasthandoff: 11/08/2017
  Si vous sélectionnez **Utiliser l’insertion en bloc le cas échéant**et affectez à l’option **Erreur** la valeur **Rediriger la ligne**, le lot de données que la destination redirige vers la sortie d’erreur peut inclure des lignes correctes. Pour plus d’informations sur la gestion des erreurs dans les opérations en bloc, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md). Pour plus d’informations sur l’option **Erreur** , consultez [Éditeur de destination ADO NET &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Si une table source SQL Server ou Sybase inclut une colonne d’identité, vous devez utiliser des tâches d’exécution SQL pour activer l’option IDENTITY_INSERT avant la destination ADO NET et de les désactiver à nouveau par la suite. (La propriété de colonne d’identité spécifie une valeur incrémentielle pour la colonne. L’instruction SET IDENTITY_INSERT permet de valeurs explicites de la table source être insérées dans la colonne d’identité dans la table de destination.)  
+>  Si une table source SQL Server ou Sybase inclut une colonne d’identité, vous devez utiliser les tâches d’exécution de requêtes SQL pour activer IDENTITY_INSERT avant la destination ADO NET et le désactiver après. (La propriété de la colonne d’identité spécifie une valeur incrémentielle pour la colonne. L’instruction SET IDENTITY_INSERT permet l’insertion de valeurs explicites de la table source dans la colonne d’identité de la table de destination.)  
 >   
->   Pour exécuter les instructions SET IDENTITY_INSERT et les chargement de données, vous devez effectuer les opérations suivantes. 
->       1. Utilisez le Gestionnaire de connexions ADO.NET même pour les tâches d’exécution SQL et pour la destination ADO.NET. 
->       2. Dans le Gestionnaire de connexions, définissez la **RetainSameConnection** propriété et la **MultipleActiveResultSets** True à la propriété. 
->       3. Sur la destination ADO.NET, définissez la **UseBulkInsertWhenPossible** propriété sur False. 
+>   Pour exécuter avec succès les instructions SET IDENTITY_INSERT et le chargement des données, vous devez effectuer les opérations suivantes. 
+>       1. Utilisez le même gestionnaire de connexions ADO.NET pour les tâches d’exécution de requêtes SQL et la destination ADO NET. 
+>       2. Dans le gestionnaire de connexions, définissez la propriété **RetainSameConnection** et la propriété **MultipleActiveResultSets** sur True. 
+>       3. Sur la destination ADO.NET, définissez la propriété **UseBulkInsertWhenPossible** sur False. 
 >
 >  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 11/08/2017
  Affichez la liste des colonnes de destination disponibles. Utilisez une opération de glisser-déplacer pour mapper les colonnes de destination disponibles dans la table aux colonnes d'entrée.  
   
  **Colonne d'entrée**  
- Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant  **\<ignorer >** pour exclure des colonnes de la sortie.  
+ Affichez les colonnes d’entrée que vous avez sélectionnées. Vous pouvez supprimer des mappages en sélectionnant **\<ignorer>** de manière à exclure des colonnes de la sortie.  
   
  **Colonne de destination**  
  Indique chaque colonne de destination disponible, qu'elle soit mappée ou non.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 11/08/2017
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
   
-

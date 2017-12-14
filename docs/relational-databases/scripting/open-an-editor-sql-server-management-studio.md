@@ -2,9 +2,12 @@
 title: "Ouvrir un éditeur (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 561ddee283355b308e58cd5e0aa5eb66c29b1c47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bd3905d6c9f0db1081b9d2cf96450a0405fb4da8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
-  Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment ouvrir l’Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)], ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] prend en charge quatre éditeurs : l’Éditeur de requête [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la modification de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , les éditeurs DMX et MDX pour la modification des scripts utilisant ces langages et l’éditeur XML/A pour la modification de scripts XML/A ou de fichiers XML. Tous ces éditeurs peuvent également être utilisés pour modifier des fichiers texte.  

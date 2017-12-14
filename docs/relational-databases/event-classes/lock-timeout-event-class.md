@@ -2,9 +2,12 @@
 title: "Lock:Timeout, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: db75a1766177f5aa96600249289f1eb97dd9c19c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2523de44f225c1429453362067c7a859e6a17b56
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-event-class"></a>Classe d'événements Lock:Timeout
-  La classe d'événements Lock:Timeout indique qu'une demande de verrou sur une ressource (par exemple une page) a dépassé le délai d'attente parce qu'une autre transaction retient un verrou bloquant sur la ressource requise. Le délai est déterminé par la fonction système @@LOCK_TIMEOUT et peut être défini à l’aide de l’instruction SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Lock:Timeout indique qu’une demande de verrou sur une ressource (par exemple une page) a dépassé le délai d’attente car une autre transaction retient un verrou bloquant sur la ressource requise. Le délai est déterminé par la fonction système @@LOCK_TIMEOUT et peut être défini à l’aide de l’instruction SET LOCK_TIMEOUT.  
   
  Utilisez la classe d'événements Lock:Timeout pour surveiller à quel moment des conditions d'expiration de délai se produisent. Ces informations sont utiles pour déterminer si les expirations des délais affectent de manière significative les performances de votre application et quels objets sont concernés. Vous pouvez examiner le code de l'application qui modifie ces objets pour déterminer si des modifications pouvant minimiser les délais d'expiration sont possibles.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Création d’une liste de la boucle ForEach avec la tâche de Script | Documents Microsoft"
+title: "Création d’une liste pour la boucle Foreach à l’aide de la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 526d0a36a1be48f9437e9a9d9ad2b341d4320bb6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
-  L'énumérateur Foreach à partir d'une variable énumère les éléments d'une liste qui lui est transmise via une variable et effectue les mêmes tâches sur chaque élément. Vous pouvez utiliser le code personnalisé dans une tâche de script pour remplir une liste à cet effet. Pour plus d’informations sur l’énumérateur, consultez [conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+  L'énumérateur Foreach à partir d'une variable énumère les éléments d'une liste qui lui est transmise via une variable et effectue les mêmes tâches sur chaque élément. Vous pouvez utiliser le code personnalisé dans une tâche de script pour remplir une liste à cet effet. Pour plus d’informations sur l’énumérateur, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a> Description  
- L’exemple suivant utilise des méthodes de la **System.IO** espace de noms pour dresser la liste des classeurs Excel sur l’ordinateur qui sont antérieurs à un nombre de jours spécifié par l’utilisateur dans une variable ou plus récents. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers éligibles à une **ArrayList** et enregistre le **ArrayList** à une variable pour une utilisation ultérieure dans un conteneur de boucle Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
+ L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet **ArrayList** et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
   
 > [!NOTE]  
->  La variable que vous utilisez avec l’énumérateur Foreach à partir Variable doit être de type **objet**. L’objet que vous placez dans la variable doit implémenter l’une des interfaces suivantes : **pas ' System.Collections.IEnumerable '**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource**, ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un **tableau** ou **ArrayList** est couramment utilisé. Le **ArrayList** requiert une référence et un **importations** instruction pour le **System.Collections** espace de noms.  
+>  La variable utilisée avec l’énumérateur Foreach From variable doit être de type **Object**. L’objet que vous placez dans la variable doit implémenter l’une des interfaces suivantes : **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un objet **Array** ou **ArrayList** est couramment utilisé. L’objet **ArrayList** nécessite une référence et une instruction **Imports** pour l’espace de noms **System.Collections**.  
   
  Vous pouvez apprendre à manipuler cette tâche en attribuant différentes valeurs, positives et négatives, à la variable de package `FileAge`. Par exemple, vous pouvez entrer 5 pour rechercher les fichiers créés au cours des cinq derniers jours ou entrer -3 pour rechercher les fichiers créés il y a plus de trois jours. Cette tâche peut prendre une minute ou deux sur un lecteur contenant de nombreux dossiers à rechercher.  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  Créez une variable de package nommée `FileAge` de type entier et entrez une valeur entière positive ou négative. Selon que la valeur est positive ou négative, le code recherche respectivement les fichiers postérieurs ou antérieurs à la date spécifiée (en nombre de jours).  
   
-2.  Créez une variable de package nommée `FileList` de type **objet** pour recevoir la liste de fichiers dressée par la tâche de Script pour une utilisation ultérieure par Foreach à partir de l’énumérateur de la Variable.  
+2.  Créez une variable de package nommée `FileList` de type **Object** pour recevoir la liste de fichiers établie par la tâche de script, qui sera utilisée ultérieurement par l’énumérateur Foreach From Variable.  
   
-3.  Ajouter le `FileAge` variable à la tâche de Script **ReadOnlyVariables** propriété et ajouter la `FileList` variable à la **ReadWriteVariables** propriété.  
+3.  Ajoutez la variable `FileAge` à la propriété **ReadOnlyVariables** de la tâche de script et ajoutez la variable `FileList` à la propriété **ReadWriteVariables**.  
   
-4.  Dans votre code, importez le **System.Collections** et **System.IO** espaces de noms.  
+4.  Dans votre code, importez les espaces de noms **System.Collections** et **System.IO**.  
   
 ### <a name="code"></a>Code  
   
@@ -183,7 +180,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    listForEnumerator = new ArrayList();  
+    ArrayList listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -256,8 +253,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conteneur de boucles foreach](../../integration-services/control-flow/foreach-loop-container.md)   
+ [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
  [Configurer un conteneur de boucles Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

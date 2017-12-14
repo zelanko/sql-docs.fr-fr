@@ -1,5 +1,5 @@
 ---
-title: "Erreurs et événements référence (Integration Services) | Documents Microsoft"
+title: "Guide de référence des erreurs et des événements (Integration Services) Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guide de référence des erreurs et des événements (Integration Services)
   Cette section de la documentation contient des informations sur plusieurs erreurs et événements liés à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les informations sur les causes et les solutions sont incluses pour les messages d'erreur.  
@@ -85,7 +83,6 @@ ms.lasthandoff: 08/03/2017
 |SQLISService_274|Indique que l'entrée de Registre qui contient l'emplacement du fichier de configuration n'existe pas ou est vide.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

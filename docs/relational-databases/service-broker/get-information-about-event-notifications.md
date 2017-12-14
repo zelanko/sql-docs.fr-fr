@@ -2,9 +2,12 @@
 title: "Obtenir des informations concernant les notifications d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5d71b5cb9f5e418607e56e69cac3df9ef15063ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e6b8528f6239db6e6de9352cada8a1b63fbf6590
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-information-about-event-notifications"></a>Obtenir des informations concernant les notifications d'événements
-  Les affichages catalogue suivants vous permettent d'interroger les métadonnées concernant les notifications d'événements.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les affichages catalogue suivants vous permettent d’interroger les métadonnées concernant les notifications d’événements.  
   
  **Pour obtenir des informations sur les notifications d'événements qui ne se produisent pas au niveau du serveur**  
   

@@ -2,9 +2,12 @@
 title: Utiliser un fichier de format pour ignorer une colonne de table (SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02dff7296690e0ecf3bfd76f9e7be1808885b2f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0603aa186c900e60cc17bc388d439738fd41a95a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Utiliser un fichier de format pour ignorer une colonne de table (SQL Server)
-  Cette rubrique décrit les fichiers de format. Vous pouvez utiliser un fichier de format pour ignorer l'importation d'une colonne de table lorsque le champ n'existe pas dans le fichier de données. Un fichier de données peut contenir moins de champs qu'il n'y a de colonnes dans la table uniquement si les colonnes ignorées peuvent être NULL et/ou avoir une valeur par défaut.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les fichiers de format. Vous pouvez utiliser un fichier de format pour ignorer l'importation d'une colonne de table lorsque le champ n'existe pas dans le fichier de données. Un fichier de données peut contenir moins de champs qu'il n'y a de colonnes dans la table uniquement si les colonnes ignorées peuvent être NULL et/ou avoir une valeur par défaut.  
   
 ## <a name="sample-table-and-data-file"></a>Exemples de table et de fichier de données  
  Les exemples suivants nécessitent une table nommée `myTestSkipCol` dans la base de données exemple [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sous le schéma **dbo** . Créez cette table comme suit :  

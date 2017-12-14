@@ -2,9 +2,12 @@
 title: "Data File Auto Grow, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2b2de5dae7a9c00ecc2e51b1c277da7f0181822
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4db8b0d9d12f763f78fb530d3bc914190cc907ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow (classe d'événements)
-  La classe d’événements **Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **Data File Auto Grow** indique que le fichier de données a crû automatiquement. Cet événement n'est pas déclenché si le fichier de données a été augmenté de manière explicite par le biais de l'instruction ALTER DATABASE.  
   
  Incluez la classe d’événements **Data File Auto Grow** dans les traces qui surveillent la croissance du fichier de données.  
   

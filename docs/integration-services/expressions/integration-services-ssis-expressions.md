@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) Expressions | Documents Microsoft
+title: Expressions Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressions Integration Services (SSIS)
   Une expression est une combinaison de symboles (identificateurs, littéraux, fonctions et opérateurs) qui génère une seule valeur de données. Les expressions simples peuvent être une constante unique, une variable ou une fonction. Généralement, les expressions sont complexes, car elles utilisent plusieurs opérateurs et fonctions, et référencent plusieurs colonnes et variables. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser des expressions pour définir des conditions dans les instructions CASE, créer et mettre à jour des valeurs dans des colonnes de données, mettre à jour ou remplir des propriétés au moment de l’exécution, définir des contraintes dans des contraintes de précédence et fournir les expressions utilisées par le conteneur de boucles For.  
@@ -51,9 +49,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Les variables utilisent une expression pour définir leur valeur. Par exemple, GETDATE() définit la valeur de la variable comme étant la date actuelle.  
   
--   Les contraintes de précédence peuvent utiliser des expressions pour spécifier les conditions déterminant si le conteneur ou le package contraint est exécuté. Les expressions utilisées dans une contrainte de priorité doivent retourner la valeur **true** ou **false**. Par exemple, l’expression @A > @B compare deux variables définies par l’utilisateur pour déterminer si la tâche contrainte s’exécute.  
+-   Les contraintes de précédence peuvent utiliser des expressions pour spécifier les conditions déterminant si le conteneur ou le package contraint est exécuté. Les expressions utilisées dans une contrainte de priorité doivent retourner la valeur **true** ou **false**. Par exemple, l’expression @A > @B compare deux variables définies par l’utilisateur pour déterminer si la tâche contrainte est exécutée.  
   
--   Le conteneur de boucles For peut utiliser des expressions pour créer les instructions d'initialisation, d'évaluation et d'incrémentation utilisées par la structure de bouclage. Par exemple, l’expression @Counter = 1 initialise le compteur de boucle.  
+-   Le conteneur de boucles For peut utiliser des expressions pour créer les instructions d'initialisation, d'évaluation et d'incrémentation utilisées par la structure de bouclage. Par exemple, l’expression @Counter = 1 initialise le compteur de boucles.  
   
  Les expressions peuvent également être utilisées pour mettre à jour les valeurs des propriétés des packages, les conteneurs tels que les conteneurs de boucles For et Foreach, les tâches, les gestionnaires de connexions aux niveaux des packages et du projet, les modules fournisseurs d'informations et les énumérateurs Foreach. Par exemple, en utilisant une expression de propriété, la chaîne « Localhost.AdventureWorks » peut être affectée à la propriété ConnectionName de la tâche Exécuter SQL. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -80,4 +78,3 @@ ms.lasthandoff: 08/03/2017
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

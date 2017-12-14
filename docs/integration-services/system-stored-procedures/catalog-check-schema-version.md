@@ -1,5 +1,5 @@
 ---
-title: Catalog.check_schema_version | Documents Microsoft
+title: catalog.check_schema_version | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 56eacb6ed209f34f65ae406fe4dd520284b79e5b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac266609952f0e2995dde7a8f7882bbeb50a822c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +39,8 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @use32bitruntime=] *use32bitruntime*  
- Lorsque le paramètre a la valeur **True**, la version 32 bits de dtexec est appelée. Le *use32bitruntime* est un **Bool**.  
+ [ @use32bitruntime= ] *use32bitruntime*  
+ Quand le paramètre est défini sur **True**, la version 32 bits de dtexec est appelée. *use32bitruntime* est de type **Bool**.  
   
 ## <a name="result-set"></a>Jeu de résultats  
  Aucune  
@@ -50,7 +48,6 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
 ## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'autorisation suivante :  
   
--   L’appartenance à la **ssis_admin** rôle de base de données.  
+-   Appartenance au rôle de base de données **ssis_admin**.  
   
   
-

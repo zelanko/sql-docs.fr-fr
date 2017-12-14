@@ -1,5 +1,5 @@
 ---
-title: Transformation de recherche de terme | Documents Microsoft
+title: Recherche de terme, transformation | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/19/2017
 |Termes de référence|Windows, Windows 7 Professionnel|  
 |Sortie|Windows|  
   
- La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivantes : %, @, &, $, #, \*, :,,., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, », et '.  
+ La transformation de recherche de terme peut mettre en correspondance des noms et des phrases nominales contenant des caractères spéciaux. Les données de la table de référence peuvent inclure ces caractères. Les caractères spéciaux sont les suivants :%, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, et ‘.  
   
 ## <a name="data-types"></a>Types de données  
  La transformation de recherche de terme ne peut utiliser qu'une colonne contenant le type de données DT_WSTR ou DT_NTEXT. Si une colonne contient du texte, mais pas l'un de ces types de données, la transformation de conversion de données peut ajouter une colonne avec le type de données DT_WSTR ou DT_NTEXT au flux de données, puis copier les valeurs de la colonne dans cette nouvelle colonne. La sortie de la transformation de conversion de données peut ensuite être utilisée comme entrée de la transformation de recherche de terme. Pour plus d’informations, voir [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/19/2017
   
 ### <a name="options"></a>Options  
  **Colonnes d'entrée disponibles**  
- À l'aide des cases à cocher, sélectionnez les colonnes d'entrées à transmettre telles quelles à la sortie. Faites glisser une colonne d'entrée vers la liste **Colonnes de référence disponibles** pour la mapper sur une colonne de recherche dans la table de référence. Les types de données prises en charge par les colonnes d'entrée et de recherche doivent correspondre et avoir pour valeur  DT_NTEXT ou DT_WSTR. Sélectionnez une ligne de mappage et cliquez avec le bouton droit de la souris pour modifier les mappages dans la boîte de dialogue [Créer des relations](../../../integration-services/data-flow/transformations/create-relationships.md) .  
+ À l'aide des cases à cocher, sélectionnez les colonnes d'entrées à transmettre telles quelles à la sortie. Faites glisser une colonne d'entrée vers la liste **Colonnes de référence disponibles** pour la mapper sur une colonne de recherche dans la table de référence. Les types de données prises en charge par les colonnes d'entrée et de recherche doivent correspondre et avoir pour valeur  DT_NTEXT ou DT_WSTR. Sélectionnez une ligne de mappage et cliquez avec le bouton droit pour modifier les mappages dans la boîte de dialogue [Créer des relations](../../../integration-services/data-flow/transformations/create-relationships.md) .  
   
  **Colonnes de référence disponibles**  
  Affiche les colonnes disponibles dans la table de référence. Choisissez la colonne qui contient la liste de termes correspondants.  
@@ -157,7 +155,6 @@ ms.lasthandoff: 08/19/2017
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Transformation d’Extraction de terme](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Transformation d'extraction de terme](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

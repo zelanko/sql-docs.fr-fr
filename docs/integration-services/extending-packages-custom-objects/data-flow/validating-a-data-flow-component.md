@@ -1,5 +1,5 @@
 ---
-title: "Validation d’un composant de flux de données | Documents Microsoft"
+title: "Validation d’un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>Validation d'un composant de flux de données
   La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> de la classe de base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> est fournie pour empêcher l'exécution d'un composant qui n'est pas configuré correctement. Cette méthode vous permet de vérifier qu'un composant dispose du nombre d'objets d'entrée et de sortie attendu, que les valeurs des propriétés personnalisées du composant sont acceptables et que toutes les connexions nécessaires sont spécifiées. Elle vous permet également de vérifier que les colonnes dans les collections d'entrée et de sortie contiennent des types de données corrects et que le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de chaque colonne est défini de manière appropriée pour le composant. L'implémentation de la classe de base contribue au processus de validation en contrôlant la collection de colonnes d'entrée du composant et en vérifiant que chaque colonne de la collection fait référence à une colonne dans le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> du composant en amont.  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  La valeur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> indique que le composant contient une erreur qui peut être corrigée en modifiant le composant dans le concepteur. L'erreur provient généralement d'une propriété personnalisée ou d'une connexion requise non spécifiée ou définie de manière incorrecte.  
   
- La valeur d'erreur finale est <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, ce qui indique que le composant a découvert des erreurs qui ne peuvent se produire que si la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> a été modifiée directement, en modifiant le package XML ou en utilisant le modèle objet. Par exemple, ce type d'erreur se produit lorsqu'un composant a ajouté une seule entrée, mais que la validation découvre que plusieurs entrées existent dans <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Retournent d’erreurs qui génèrent cette valeur peut uniquement être réparée en réinitialisant le composant à l’aide de la **réinitialiser** situé dans le **éditeur avancé** boîte de dialogue.  
+ La valeur d'erreur finale est <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>, ce qui indique que le composant a découvert des erreurs qui ne peuvent se produire que si la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> a été modifiée directement, en modifiant le package XML ou en utilisant le modèle objet. Par exemple, ce type d'erreur se produit lorsqu'un composant a ajouté une seule entrée, mais que la validation découvre que plusieurs entrées existent dans <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Les erreurs qui génèrent cette valeur de retour ne peuvent être réparées qu’en réinitialisant le composant à l’aide du bouton **Réinitialiser** de la boîte de dialogue **Éditeur avancé**.  
   
- En plus de retourner des valeurs d'erreur, les composants fournissent des informations en publiant des avertissements ou des erreurs lors de la validation. Les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> fournissent ce mécanisme. Lorsque ces méthodes sont appelées, ces événements sont publiés dans le **liste d’erreurs** fenêtre de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Les développeurs de composants peuvent ensuite fournir des commentaires directement aux utilisateurs sur les erreurs rencontrées et, le cas échéant, la manière de les corriger.  
+ En plus de retourner des valeurs d'erreur, les composants fournissent des informations en publiant des avertissements ou des erreurs lors de la validation. Les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> fournissent ce mécanisme. Lorsque ces méthodes sont appelées, ces événements sont publiés dans la fenêtre **Liste d’erreurs** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Les développeurs de composants peuvent ensuite fournir des commentaires directement aux utilisateurs sur les erreurs rencontrées et, le cas échéant, la manière de les corriger.  
   
  L'exemple de code suivant montre une implémentation substituée de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>.  
   
@@ -199,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

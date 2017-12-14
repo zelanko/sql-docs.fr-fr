@@ -2,9 +2,12 @@
 title: Parcourir les chemins PowerShell SQL Server | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2912bbd9a87e03d261f128ce64af60bcc0905f39
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4caf4b8db104a553904213319d58fb4ea558d40a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins PowerShell SQL Server
-  Le fournisseur PowerShell du [!INCLUDE[ssDE](../../includes/ssde-md.md)] expose le jeu d'objets dans une instance de SQL Server dans une structure similaire à un chemin d'accès de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
+# <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins d'accès PowerShell SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le fournisseur PowerShell du [!INCLUDE[ssDE](../../includes/ssde-md.md)] expose le jeu d’objets dans une instance de SQL Server dans une structure similaire à un chemin de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d'accès qui représentent la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif. Étant donné que les applets de commande sont fréquemment utilisées, elles ont des alias canoniques courts. Il existe également un ensemble d'alias qui mappent les applets de commande à des commandes semblables destinées à l'invite de commandes, et un autre ensemble pour les commandes de l'interpréteur de commandes UNIX.  

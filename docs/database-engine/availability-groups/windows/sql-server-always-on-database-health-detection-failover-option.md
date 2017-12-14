@@ -3,8 +3,11 @@ title: "Option de détection de l’intégrité des bases de données pour le ba
 ms.custom: 
 ms.date: 04/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JasonWHowell
 ms.author: jasonh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 722fec600bcb9b40564dff99c6036467c3856632
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Option de détection de l’intégrité au niveau base de données du groupe de disponibilité pour le basculement
-
-À compter de SQL Server 2016, l’option de détection de l’intégrité au niveau base de données (DB_FAILOVER) est disponible lors de la configuration d’un groupe de disponibilité Always On. La détection de l’état d’intégrité au niveau base de données indique quand une base de données n’est plus en ligne ou quand un problème se produit, puis déclenche le basculement automatique du groupe de disponibilité. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] À compter de SQL Server 2016, l’option de détection de l’intégrité au niveau base de données (DB_FAILOVER) est disponible lors de la configuration d’un groupe de disponibilité Always On. La détection de l’état d’intégrité au niveau base de données indique quand une base de données n’est plus en ligne ou quand un problème se produit, puis déclenche le basculement automatique du groupe de disponibilité. 
 
 La détection de l’intégrité au niveau base de données est activée pour le groupe de disponibilité dans son ensemble : par conséquent, la détection d’intégrité au niveau base de données surveille chaque base de données du groupe de disponibilité. Elle ne peut pas être activée sélectivement pour des bases de données spécifiques du groupe de disponibilité. 
 

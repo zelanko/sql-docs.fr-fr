@@ -2,9 +2,12 @@
 title: "Extraits de code Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d3c7b87cbf1ee3a61fa783a8f113b87fcb5d5cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
-  Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)]est un modèle contenant la structure de base d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)] est un modèle contenant la structure de base d’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d’un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  
   
 ## <a name="transact-sql-code-snippet-tasks"></a>Tâches relatives aux extraits de code Transact-SQL  
   

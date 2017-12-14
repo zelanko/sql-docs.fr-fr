@@ -1,5 +1,5 @@
 ---
-title: "Définir une Variable d’état | Documents Microsoft"
+title: "Définir une variable d’état | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ebec44b7492ead6e3417758ac653360f44d4df9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5266703e8a7644a36ebf7eeeaccde1456ce735e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d'état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
@@ -36,18 +34,18 @@ ms.lasthandoff: 08/03/2017
   
 |Composant| Description|  
 |---------------|-----------------|  
-|**\<nom de l’état >**|Il s'agit du nom de l'état de capture de données modifiées actuel.|  
+|**\<state-name>**|Il s'agit du nom de l'état de capture de données modifiées actuel.|  
 |**CS**|Cela marque le point de départ de la plage de traitement actuelle (début actuel).|  
-|**\<CS-lsn >**|Il s'agit du dernier numéro séquentiel dans le journal (NSE) traité dans l'exécution de capture de données modifiées précédente.|  
+|**\<CS-lsn>**|Il s'agit du dernier numéro séquentiel dans le journal (NSE) traité dans l'exécution de capture de données modifiées précédente.|  
 |**CE**|Cela marque le point d'arrivée de la plage de traitement actuelle (fin actuelle). La présence du composant CE dans l'état de capture de données modifiées indique qu'un package de capture de données modifiées est actuellement en cours de traitement ou qu'un package de capture de données modifiées a échoué avant la fin du traitement complet de sa plage de traitement de capture de données modifiées.|  
-|**\<Ce NSE >**|Il s'agit du dernier numéro séquentiel dans le journal à traiter dans l'exécution de capture de données modifiées actuelle. On part du principe que le dernier numéro de séquence à traiter correspond au maximum (0xFFF…).|  
+|**\<ce-lsn>**|Il s'agit du dernier numéro séquentiel dans le journal à traiter dans l'exécution de capture de données modifiées actuelle. On part du principe que le dernier numéro de séquence à traiter correspond au maximum (0xFFF…).|  
 |**IR**|Cela marque la plage de traitement initiale.|  
-|**\<début de la réponse aux incidents >**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
-|**\<fin de la réponse aux incidents >**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  
+|**\<ir-start>**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste avant le début de la charge initiale.|  
+|**\<ir-end>**|Il s'agit d'un numéro séquentiel dans le journal d'un changement juste après la fin de la charge initiale.|  
 |**TS**|Cela marque l'horodateur pour la dernière mise à jour de l'état de capture de données modifiées.|  
-|**\<horodatage >**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
+|**\<timestamp>**|Il s'agit d'une représentation décimale de la propriété de 64 bits, System.DateTime.UtcNow.|  
 |**ER**|Ce message apparaît lorsque la dernière opération a échoué et il inclut une brève description de la cause de l'erreur. Si ce composant est présent, il apparaît toujours en dernier.|  
-|**\<texte d’erreur courte >**|Il s'agit de la brève description de l'erreur.|  
+|**\<short-error-text>**|Il s'agit de la brève description de l'erreur.|  
   
  Les numéros séquentiels dans le journal et les numéros de séquence sont tous encodés sous forme de chaîne hexadécimale comportant jusqu'à 20 chiffres représentant la valeur du numéro séquentiel dans le journal de Binary(10).  
   
@@ -94,7 +92,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)   
- [Éditeur de tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [Éditeur de tâche de contrôle CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   
-

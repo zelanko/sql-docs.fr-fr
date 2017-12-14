@@ -2,9 +2,12 @@
 title: CompoundCurve | Microsoft Docs
 ms.custom: 
 ms.date: 06/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: spatial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00541c3148c16abb1db9af3f9fdb63bdaa317894
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b7c1727022b049923f06225c667b4a9d0438402
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-  Un **CompoundCurve** est une collection de zéro ou plusieurs instances continues **CircularString** ou **LineString** de type geometry ou geography.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un **CompoundCurve** est une collection de zéro ou plusieurs instances continues **CircularString** ou **LineString** de type geometry ou geography.  
   
 > [!IMPORTANT]  
 >  Pour obtenir une description détaillée et des exemples de nouvelles fonctionnalités spatiales dans cette version, y compris le sous-type **CompoundCurve** , téléchargez le livre blanc, [Nouvelles fonctionnalités spatiales dans SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=226407).  

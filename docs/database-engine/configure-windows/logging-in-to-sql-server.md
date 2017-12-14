@@ -2,9 +2,12 @@
 title: "Connexion à SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7d7c2aa416af62d1ffba8af688f2fbabf8a2aa3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
-  Vous pouvez vous connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de n’importe quel outil d’administration graphique ou d’une invite de commandes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez vous connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de n’importe quel outil d’administration graphique ou d’une invite de commandes.  
   
  Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’un outil d’administration graphique tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous êtes invité à fournir le nom du serveur, une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un mot de passe, si cela est nécessaire. Si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows, vous n'avez pas besoin de fournir de compte de connexion SQL Server chaque fois que vous accédez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise alors votre compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour vous connecter automatiquement. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution dans un mode d’authentification mixte ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows) et que vous choisissez de vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez spécifier une connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque c'est possible, utilisez l'authentification Windows.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Ajouter une SSIS avec montée en puissance travail avec montée en puissance parallèle Manager | Documents Microsoft"
+title: Ajouter un SSIS Scale Out Worker avec Scale Out Manager | Microsoft Docs
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,45 +8,42 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b769236330941a107865a0b133961bce5bf6b85b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ef11448d03bd188aaea425225312af9f681f530c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Ajouter une montée en charge travail avec montée en puissance parallèle Manager
+# <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Ajouter un Scale Out Worker avec Scale Out Manager
 
-Integration Services échelle Out Manager diminue considérablement la complexité pour ajouter la montée en puissance des processus de travail à votre environnement de monter en charge. 
+Integration Services Scale Out Manager simplifie considérablement l’ajout de Scale Out Worker à votre environnement Scale Out existant. 
 
-Les étapes ci-dessous permettent d’ajouter un montée en puissance des processus de travail à votre topologie de monter en charge :
+Les étapes ci-dessous indiquent comment ajouter un Scale Out Worker à votre topologie Scale Out :
 
-## <a name="1-install-scale-out-worker"></a>1. Installer la montée en charge de travail
-Dans l’Assistant installation de SQL Server, sélectionnez les Services d’intégration et de montée en puissance des processus de travail sur le **sélection des fonctionnalités** page. 
+## <a name="1-install-scale-out-worker"></a>1. Installer Scale Out Worker
+Dans l’Assistant Installation de SQL Server, sélectionnez Integration Services et Scale Out Worker dans la page **Sélection de fonctionnalités**. 
 ![Sélection de la fonctionnalité Worker](media/feature-select-worker.PNG)
 
-Sur le **Configuration Integration Services échelle Out - nœud de travail** page, vous pouvez simplement cliquer sur « Suivant » pour ignorer la configuration ici et utilisez **échelle Out Manager** pour effectuer la configuration après l’installation.
+Dans la page **Configuration d’Integration Services Scale Out - Nœud worker**, vous pouvez simplement cliquer sur « Suivant » pour ignorer la configuration à ce stade et utiliser **Scale Out Manager** pour effectuer la configuration après l’installation.
 
-Terminez l’Assistant installation.
+Terminez l’Assistant Installation.
 
-## <a name="2-open-firewall-on-scale-out-master-computer"></a>2. Ouvrez le pare-feu sur ordinateur échelle Out principal
-Ouvrir le port spécifié pendant l’installation de la mise à l’échelle des principale (8391, par défaut) et le port du serveur SQL Server (1433 par défaut), à l’aide de pare-feu Windows sur l’ordinateur de l’échelle des principales.
+## <a name="2-open-firewall-on-scale-out-master-computer"></a>2. Ouvrir le pare-feu sur l’ordinateur Scale Out Master
+Ouvrez le port spécifié pendant l’installation de Scale Out Master (8391, par défaut) et le port de SQL Server (1433, par défaut) à l’aide du Pare-feu Windows sur l’ordinateur Scale Out Master.
 
-## <a name="3-add-scale-out-worker-with-scale-out-manager"></a>3. Ajouter avec montée en charge le Gestionnaire de montée en charge de travail
-Exécutez SQL Server Management Studio en tant qu’administrateur et connectez-vous à l’instance de SQL Server de l’échelle des principales.
+## <a name="3-add-scale-out-worker-with-scale-out-manager"></a>3. Ajouter Scale Out Worker avec Scale Out Manager
+Exécutez SQL Server Management Studio en tant qu’administrateur et connectez-vous à l’instance SQL Server de Scale Out Master.
 
-Avec le bouton droit **SSISDB** dans l’Explorateur d’objets et sélectionnez **gérer les monter en charge...** . 
+Cliquez avec le bouton droit sur **SSISDB** dans l’Explorateur d’objets et sélectionnez **Gérer Scale Out**. 
 
-![Gérer la montée en puissance parallèle](media/manage-scale-out.PNG)
+![Gérer Scale Out](media/manage-scale-out.PNG)
 
-Dans la liste dépilé des **échelle Out Manager**, basculez vers **Gestionnaire de processus de travail**. Cliquez sur « + » bouton et suivez les instructions dans la boîte de dialogue se connecter le processus de travail. Pour plus d’informations, consultez [échelle Out Manager](integration-services-ssis-scale-out-manager.md).
-
+Dans la fenêtre **Scale Out Manager** qui apparaît, basculez vers **Gestionnaire de workers**. Cliquez sur le bouton « + » et suivez les instructions de la boîte de dialogue de connexion à Worker. Pour plus d’informations, consultez [Scale Out Manager](integration-services-ssis-scale-out-manager.md).

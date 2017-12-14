@@ -1,28 +1,30 @@
 ---
-title: "Types de données dans les Expressions Integration Services | Documents Microsoft"
+title: "Types de données Integration Services dans les expressions | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
   L'évaluateur d'expression utilise des types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Lorsque des données entrent dans un flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le moteur de flux de données convertit toutes les données de colonne vers un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les données de colonne utilisées par une expression ont déjà un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les expressions utilisées dans les transformations de fractionnement conditionnel et de colonne dérivée peuvent référencer des colonnes car elles font partie d'un flux de données qui comprend des données de colonne.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Examinez les expressions dans la capture d’écran suivante.  
   
- ![Chaîne des types de données dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "dans les expressions de SSIS, les types de données String")  
+ ![Types de données String dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Types de données String dans les expressions SSIS")  
   
 1.  La première s’exécute sans erreur, car la fonction NULL(DT_STR, ...) se trouve à la racine de l’expression.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  Les exemples suivants illustrent les impacts de la conversion.  
   
- ![Conversion de chaînes dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "conversion de chaînes dans les expressions SSIS")  
+ ![Conversion de données dans les expressions SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Conversion de données dans les expressions SSIS")  
   
 1.  Dans la première expression, la conversion n’est pas au niveau racine de l’expression. l’évaluateur d’expression gère cette conversion intelligemment et convertit le résultat en DT_WSTR (et non en DT_STR). L’expression renvoie DT_WSTR.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  Le diagramme suivant indique le type de résultat des conversions implicites des opérations BINARY. L'intersection d'une colonne et d'une ligne produit le même type de résultat d'une opération binaire avec des opérandes des types gauche (From) et droit (To).  
   
- ![Conversion entre types de données de type de données implicites](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "de types de données implicites entre types de données")  
+ ![Conversion de type de données implicite entre types de données](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversion de type de données implicite entre types de données")  
   
  L'intersection d'un entier signé et d'un entier non signé est un entier signé potentiellement plus grand que l'un ou l'autre des arguments.  
   

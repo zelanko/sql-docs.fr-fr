@@ -2,9 +2,12 @@
 title: Codes de retour OLE Automation et informations sur les erreurs| Microsoft Docs
 ms.custom: 
 ms.date: 07/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0db7fd283f74b6235cd771da246006dbba1cdb80
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6f51c1f609a1ab0556e3ba0494e23dc18cb4c9aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
-  Les procédures stockées du système OLE Automation retournent un code de retour de type **int** qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de 0 est un code d’erreur OLE de forme hexadécimale 0x800*nnnnn*qui est retourné comme une valeur **int** dans un code de retour de procédure stockée qui est de forme 214*nnnnnnn*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les procédures stockées du système OLE Automation retournent un code de retour de type **int** qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de 0 est un code d’erreur OLE de forme hexadécimale 0x800*nnnnn*qui est retourné comme une valeur **int** dans un code de retour de procédure stockée qui est de forme 214*nnnnnnn*.  
   
  Par exemple, le passage d’un nom d’objet non valide (comme SQLDMO.Xyzzy) dans la procédure stockée sp_OACreate provoque le retour d’un HRESULT **int** de 2147221005, ce qui correspond à 0x800401f3 en hexadécimal.  
   

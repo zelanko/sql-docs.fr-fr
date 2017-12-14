@@ -1,5 +1,5 @@
 ---
-title: Composant de script | Documents Microsoft
+title: Composant Script | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="script-component"></a>Composant Script
   Le composant Script héberge le script et permet à un package d'inclure du code de script personnalisé et de l'exécuter. Vous pouvez utiliser le composant Script dans des packages pour :  
@@ -119,7 +117,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="select-script-component-type"></a>Sélectionner le type de composant de script
   La boîte de dialogue **Sélectionner le type de composant de script** permet d'indiquer s'il est nécessaire de créer une transformation de script préconfigurée pour servir de source, de transformation ou de destination.  
   
- Pour en savoir plus sur le composant de Script, consultez [configuration du composant Script dans l’éditeur de composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Pour en savoir plus sur le composant Script, consultez [Configuration du composant Script dans l’éditeur de composant de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Options  
  Selon que vous choisissez **Source**, **Destination**ou **Transformation** , cela affecte la configuration de la transformation de script ainsi que les pages de l'Éditeur de transformation de script.  
@@ -127,7 +125,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="script-transformation-editor-connection-managers-page"></a>Éditeur de transformation de script (Page Gestionnaire de connexions)
   La page **Gestionnaire de connexions** de **l’Éditeur de transformation de script** permet de spécifier les connexions que doit utiliser le script.  
   
- Pour en savoir plus sur le composant de Script, consultez [configuration du composant Script dans l’éditeur de composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Pour en savoir plus sur le composant Script, consultez [Configuration du composant Script dans l’éditeur de composant de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Options  
  **Connection managers**  
@@ -137,7 +135,7 @@ ms.lasthandoff: 08/19/2017
  Tapez un nom unique descriptif pour la connexion.  
   
  **Gestionnaire de connexions**  
- Sélectionnez dans la liste des gestionnaires de connexions disponibles ou sélectionnez  **\<nouvelle connexion >** pour ouvrir le **ajouter un gestionnaire de connexions SSIS** boîte de dialogue.  
+ Effectuez une sélection dans la liste des gestionnaires de connexions disponibles ou sélectionnez **\<Nouvelle connexion>** pour ouvrir la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS**.  
   
  **Description**  
  Tapez une description pour la connexion.  
@@ -154,7 +152,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  La page **Colonnes d’entrée** ne s’affiche pas pour les composants source qui ont des sorties, mais pas d’entrées.  
   
- Pour en savoir plus sur le composant de Script, consultez [configuration du composant Script dans l’éditeur de composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Pour en savoir plus sur le composant Script, consultez [Configuration du composant Script dans l’éditeur de composant de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Options  
  **Nom de l'entrée**  
@@ -178,7 +176,7 @@ ms.lasthandoff: 08/19/2017
 > [!NOTE]  
 >  Les composants source disposent de sorties mais d'aucune entrée ; à l'inverse, les composants de destination possèdent des entrées mais aucune sortie. Les transformations, elles, ont les deux.  
   
- Pour en savoir plus sur le composant de Script, consultez [configuration du composant Script dans l’éditeur de composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Pour en savoir plus sur le composant Script, consultez [Configuration du composant Script dans l’éditeur de composant de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Options  
  **Inputs and outputs**  
@@ -203,7 +201,7 @@ ms.lasthandoff: 08/19/2017
 ## <a name="script-transformation-editor-script-page"></a>Éditeur de transformation de script (page Script)
   Utilisez l'onglet **Script** de la boîte de dialogue **Éditeur de transformation de script** pour définir un script et les propriétés associées.  
   
- Pour en savoir plus sur le composant de Script, consultez [configuration du composant Script dans l’éditeur de composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Pour en savoir plus sur le composant Script, consultez [Configuration du composant Script dans l’éditeur de composant de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Pour en savoir plus sur la programmation du composant de script, consultez [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ### <a name="options"></a>Options  
  **Propriétés**  
@@ -223,10 +221,9 @@ ms.lasthandoff: 08/19/2017
  **Modifier le script**  
  Utilisez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) pour créer ou modifier un script.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Extension du flux de données avec le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   
-

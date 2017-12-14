@@ -2,11 +2,12 @@
 title: Installer SQL Server PowerShell | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 0962e563c85f7707615486bbe87847a7988e6ed6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4f894fe680d3adb659eb05e2bef099a0992a5ad7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-powershell"></a>Installer SQL Server PowerShell
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation configure automatiquement les composants de PowerShell.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure automatiquement les composants de PowerShell.  
 
 Vous installez le logiciel qui fournit la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand vous sélectionnez des fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui nécessitent la prise en charge de PowerShell, le programme d’installation installe les composants PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   

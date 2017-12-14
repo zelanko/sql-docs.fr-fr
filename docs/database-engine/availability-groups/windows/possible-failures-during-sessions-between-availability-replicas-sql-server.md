@@ -2,9 +2,12 @@
 title: "Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3dea241da7685b1091704416c3a4a658198cfc4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fde99df0bca010b8920267b1b41de87fbe38e2bf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server)
-Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Des problèmes physiques, de système d’exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
   
 > [!IMPORTANT]  
 >  Les défaillances dans les bases de données autres que la base de données primaire ne sont pas détectables. En outre, il est peu vraisemblable qu'une défaillance du disque de données soit détectée, sauf si la base de données est redémarrée en raison de la défaillance d'un disque de données.  

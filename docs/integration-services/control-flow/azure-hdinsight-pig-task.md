@@ -1,5 +1,5 @@
 ---
-title: "Tâche Pig Azure HDInsight | Documents Microsoft"
+title: "Pig Azure HDInsight, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 02/28/2017
 ms.prod: sql-non-specified
@@ -8,48 +8,45 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9874b119b634966b146f8fa9d22c016bcd91617b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 967d28f701fc43b35824ea53f493fb9c3043bf45
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="azure-hdinsight-pig-task"></a>Tâche Pig Azure HDInsight
+# <a name="azure-hdinsight-pig-task"></a>Pig Azure HDInsight, tâche
 Utilisez la **tâche Pig Azure HDInsight** pour exécuter un script Pig sur un cluster Azure HDInsight.
      
 Pour ajouter une **tâche Pig Azure HDInsight**, faites-la glisser sur le concepteur SSIS, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue **Éditeur de tâches Pig Azure HDInsight** .  
   
-Le **tâche Pig Azure HDInsight** est un composant de la [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+La **tâche Pig Azure HDInsight** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
  La liste suivante décrit les champs de cette boîte de dialogue.  
   
-1.  Pour le **HDInsightConnection** champ, sélectionnez un gestionnaire de connexions Azure HDInsight existant ou créez-en un qui fait référence à un cluster Azure HDInsight utilisé pour exécuter le script.
+1.  Dans le champ **HDInsightConnection**, sélectionnez un gestionnaire de connexions Azure HDInsight existant ou créez-en un qui fait référence au cluster Azure HDInsight utilisé pour exécuter le script.
   
-2.  Pour le **AzureStorageConnection** champ, sélectionnez un gestionnaire de connexions de stockage Azure existant ou créez-en un qui fait référence au compte de stockage Azure associé au cluster. Cela est uniquement nécessaire si vous souhaitez télécharger les journaux de sortie et de l’exécution du script.
+2.  Dans le champ **AzureStorageConnection**, sélectionnez un gestionnaire de connexions Stockage Azure existant ou créez-en un qui fait référence au compte Stockage Azure associé au cluster. Celui-ci est nécessaire uniquement si vous souhaitez télécharger les journaux de sortie d’exécution de script et les journaux d’erreurs.
  
-3.  Pour le **BlobContainer** champ, spécifiez le nom de conteneur de stockage associé au cluster. Cela est uniquement nécessaire si vous souhaitez télécharger les journaux de sortie et de l’exécution du script.
+3.  Dans le champ **BlobContainer**, spécifiez le nom du conteneur de stockage associé au cluster. Celui-ci est nécessaire uniquement si vous souhaitez télécharger les journaux de sortie d’exécution de script et les journaux d’erreurs.
   
-4.  Pour le **LocalLogFolder** champ, spécifiez le dossier dans lequel les journaux de sortie et de l’exécution du script seront téléchargées sur. Cela est uniquement nécessaire si vous souhaitez télécharger les journaux de sortie et de l’exécution du script.   
+4.  Dans le champ **LocalLogFolder**, spécifiez le dossier dans lequel seront téléchargés les journaux de sortie d’exécution de script et les journaux d’erreurs. Celui-ci est nécessaire uniquement si vous souhaitez télécharger les journaux de sortie d’exécution de script et les journaux d’erreurs.   
   
-5.  Il existe deux façons de spécifier le script Pig à exécuter :
+5.  Deux méthodes permettent de spécifier le script Pig à exécuter :
   
-    1.  **Script en ligne**: spécifiez le **Script** champ en tapant en ligne le script à exécuter dans le **entrer le Script** boîte de dialogue.
+    1.  **Script en ligne** : renseignez le champ **Script** en tapant en ligne le script à exécuter dans la boîte de dialogue **Entrer le script**.
   
-    2.  **Fichier de script**: Téléchargez le fichier de script pour le stockage d’objets Blob Azure et spécifiez le **BlobName** champ. Si l’objet blob n’est pas dans le compte de stockage par défaut ou le conteneur associé au cluster HDInsight, le **ExternalStorageAccountName** et **ExternalBlobContainer** champs doivent être spécifiés. Pour un objet blob externe, assurez-vous qu’il est configuré comme accessibles au public.  
+    2.  **Fichier de script** : téléchargez le fichier de script dans Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
   
-     Si les deux sont spécifiées, le fichier de script sera utilisé et le script en ligne est ignoré.
-
+     Si les deux sont spécifiés, le fichier de script est utilisé et le script en ligne est ignoré.

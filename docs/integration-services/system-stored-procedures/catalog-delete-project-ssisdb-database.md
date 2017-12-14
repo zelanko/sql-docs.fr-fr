@@ -1,5 +1,5 @@
 ---
-title: "Catalog.delete_project (base de données SSISDB) | Documents Microsoft"
+title: "catalog.delete_project (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c09d08c3b115a3d5171d368aba7373240458cd48
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +35,13 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
- Nom du dossier qui contient le projet. *nom_dossier* est **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Le nom du projet qui doit être supprimé. *PROJECT_NAME* est **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nom du projet à supprimer. *project_name* est de type **nvarchar(128)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -54,21 +52,20 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   Autorisations READ et MODIFY sur le projet  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
- La liste suivante décrit quelques conditions qui peuvent provoquer la procédure delete_project stockées déclencher une erreur :  
+ La liste suivante décrit quelques conditions qui peuvent générer une erreur de procédure stockée delete_project :  
   
 -   Le projet n'existe pas  
   
 -   Le dossier n'existe pas  
   
--   L’utilisateur ne dispose pas des autorisations appropriées  
+-   L’utilisateur n’a pas les autorisations appropriées  
   
 ## <a name="remarks"></a>Notes  
  Tous les objets et les références environnementales du projet correspondant sont supprimés avec le projet. Toutefois, les versions du projet et les archives d'exploitation pertinentes sont conservées jusqu'à la prochaine exécution du travail de nettoyage de l'opération.  
   
   
-

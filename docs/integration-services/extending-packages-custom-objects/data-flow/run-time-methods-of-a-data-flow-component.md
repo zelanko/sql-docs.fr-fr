@@ -1,5 +1,5 @@
 ---
-title: "Composant de flux de méthodes d’exécution d’une donnée | Documents Microsoft"
+title: "Méthodes d’exécution d’un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Méthodes d'exécution d'un composant de flux de données
   Au moment de l'exécution, la tâche de flux de données examine la séquence de composants, prépare un plan d'exécution et gère un pool de threads de travail qui exécute le plan de travail. La tâche charge des lignes de données à partir des sources, les traite via des transformations, puis les enregistre dans des destinations.  
@@ -167,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- Pour plus d’informations sur le développement des composants qui ajoutent des lignes aux tampons de sortie, consultez [développement d’un composant de Source personnalisée](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) et [développement d’un composant de Transformation personnalisé à sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
+ Pour plus d’informations sur le développement de composants qui ajoutent des lignes aux mémoires tampons de sortie, consultez [Développement d’un composant source personnalisé](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) et [Développement d’un composant de transformation personnalisé à sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
 ### <a name="receiving-rows"></a>Réception de lignes  
- Les composants reçoivent des lignes provenant des composants en amont dans les objets <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. La tâche de flux de données fournit un objet <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> qui contient les lignes ajoutées au flux de données par les composants en amont en tant que paramètre de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Ce tampon d'entrée peut être utilisé pour examiner et modifier les lignes et colonnes dans le tampon, mais il ne permet pas d'ajouter ou de supprimer des lignes. La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> est appelée à plusieurs reprises jusqu'à ce qu'il n'y ait plus de tampon disponible. Lors du dernier appel, le <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> propriété **true**. Vous pouvez parcourir la collection de lignes dans le tampon en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, qui permet d'accéder à la ligne suivante du tampon. Cette méthode retourne **false** lorsque la mémoire tampon est sur la dernière ligne dans la collection. Vous n'avez pas à vérifier la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> sauf si vous devez effectuer une action supplémentaire une fois que les dernières lignes de données ont été traitées.  
+ Les composants reçoivent des lignes provenant des composants en amont dans les objets <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. La tâche de flux de données fournit un objet <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> qui contient les lignes ajoutées au flux de données par les composants en amont en tant que paramètre de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Ce tampon d'entrée peut être utilisé pour examiner et modifier les lignes et colonnes dans le tampon, mais il ne permet pas d'ajouter ou de supprimer des lignes. La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> est appelée à plusieurs reprises jusqu'à ce qu'il n'y ait plus de tampon disponible. Lors du dernier appel, la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> a la valeur **true**. Vous pouvez parcourir la collection de lignes dans le tampon en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, qui permet d'accéder à la ligne suivante du tampon. Cette méthode retourne **false** lorsque le tampon est sur la dernière ligne de la collection. Vous n'avez pas à vérifier la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> sauf si vous devez effectuer une action supplémentaire une fois que les dernières lignes de données ont été traitées.  
   
  Le texte suivant illustre le modèle correct pour l'utilisation de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> et de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> :  
   
@@ -216,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- Pour plus d’informations sur le développement des composants qui reçoivent des lignes dans les tampons d’entrée, consultez [développement d’un composant de Destination personnalisé](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) et [développement d’un composant de Transformation personnalisé à sorties synchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
+ Pour plus d’informations sur le développement de composants qui reçoivent des lignes dans les mémoires tampons d’entrée, consultez [Développement d’un composant de destination personnalisé](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) et [Développement d’un composant de transformation personnalisé à sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes de conception d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

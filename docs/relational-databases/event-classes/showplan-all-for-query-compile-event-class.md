@@ -2,9 +2,12 @@
 title: "Showplan All for Query Compile, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ae3b7c3f1711ff1987628ef7bf4f9f0a8513451
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c57d6ba87f0333b8436ad7135d1c789c460a65d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile, classe d'événements
-  La classe d'événements Showplan All for Query Compile se produit lorsque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compile une instruction SQL. Cette classe d’événements permet d’identifier les opérateurs Showplan. Les informations incluses constituent un sous-ensemble des informations de la classe d'événements Showplan XML For Query Compile.  
+# <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile (classe d'événements)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Showplan All for Query Compile se produit quand [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compile une instruction SQL. Cette classe d’événements permet d’identifier les opérateurs Showplan. Les informations incluses constituent un sous-ensemble des informations de la classe d'événements Showplan XML For Query Compile.  
   
  La classe d’événements Showplan All for Query Compile affiche des données de compilation complètes. Les performances des traces qui contiennent la classe d’événements Showplan All for Query Compile peuvent donc s’en trouver affectées. Pour minimiser cet effet, limitez l'utilisation de cette classe d'événements aux traces surveillant des problèmes particuliers durant de brèves périodes de temps.  
   

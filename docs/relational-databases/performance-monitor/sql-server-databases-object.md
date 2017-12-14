@@ -2,9 +2,12 @@
 title: "SQL Server, objet Databases | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a54b7a036e38d1a34649bf25f9e0b4cb670bf71d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 03d12d8216ce6b92251355c41b1f0bdc90303003
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objet Databases
-  L’objet **SQLServer:Databases** dans SQL Server fournit des compteurs pour analyser les opérations de copie en bloc, le débit des sauvegardes et des restaurations, ainsi que l’activité des journaux des transactions. Surveillez les transactions et le journal des transactions pour déterminer l'intensité de l'activité de l'utilisateur dans la base de données et le taux de remplissage du journal des transactions. Le volume d'activité de l'utilisateur peut déterminer les performances de la base de données et affecter la taille du journal, le verrouillage et la réplication. La surveillance de l'activité du journal de bas niveau afin de mesurer l'activité de l'utilisateur et l'exploitation des ressources peut permettre d'identifier les goulots d'étranglement des performances.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet **SQLServer:Databases** dans SQL Server fournit des compteurs pour analyser les opérations de copie en bloc, le débit des sauvegardes et des restaurations, ainsi que l’activité des journaux des transactions. Surveillez les transactions et le journal des transactions pour déterminer l'intensité de l'activité de l'utilisateur dans la base de données et le taux de remplissage du journal des transactions. Le volume d'activité de l'utilisateur peut déterminer les performances de la base de données et affecter la taille du journal, le verrouillage et la réplication. La surveillance de l'activité du journal de bas niveau afin de mesurer l'activité de l'utilisateur et l'exploitation des ressources peut permettre d'identifier les goulots d'étranglement des performances.  
   
  Plusieurs instances de l’objet **Databases** , chacune représentant une seule base de données, peuvent être analysées simultanément.  
   

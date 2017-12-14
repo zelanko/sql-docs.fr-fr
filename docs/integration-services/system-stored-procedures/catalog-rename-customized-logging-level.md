@@ -1,5 +1,5 @@
 ---
-title: Catalog.rename_customized_logging_level | Documents Microsoft
+title: catalog.rename_customized_logging_level | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00c2cd8fa5f8423a7791d663d02aecbf27b8ab41
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 345b424bd4404af4cc2f52aee4fc9ce174aee983
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>Catalog.rename_customized_logging_level
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Renomme un niveau de journalisation personnalisé existant. Pour plus d’informations sur les niveaux de journalisation personnalisés, consultez [Integration Services &#40; SSIS &#41; Journalisation](../../integration-services/performance/integration-services-ssis-logging.md).  
+  Renomme un niveau de journalisation personnalisée existant. Pour plus d’informations sur les niveaux de journalisation personnalisée, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,15 +36,15 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @old_name =] *ancien_nom*  
- Le nom existants personnalisés de niveau de journalisation à renommer.  
+ [ @old_name = ] *old_name*  
+ Nom du niveau de journalisation personnalisée existant à renommer.  
   
- Le *ancien_nom* est **nvarchar (128)**.  
+ *old_name* est de type **nvarchar(128)**.  
   
- [ @new_name =] *nouveau_nom*  
- Le nouveau nom de l’élément spécifié de niveau de journalisation personnalisé.  
+ [ @new_name = ] *new_name*  
+ Nouvelle nom du niveau de journalisation personnalisée spécifié.  
   
- Le *nouveau_nom* est **nvarchar (128)**.  
+ *new_name* est de type **nvarchar(128)**.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -68,7 +66,6 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit les conditions provoquant l'échec de la procédure stockée.  
   
--   L’utilisateur n’a pas les autorisations requises.  
+-   L’utilisateur ne dispose pas des autorisations requises.  
   
   
-

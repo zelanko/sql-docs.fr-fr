@@ -1,5 +1,5 @@
 ---
-title: "Étape 4 : Tester le Package leçon 5 du didacticiel | Documents Microsoft"
+title: "Étape 4 : Test du package du didacticiel de la leçon 5 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd1b78e3c7d1e3d9324987a292220adf03f1100b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f761097d3e2b7bac98c8617a723927d132c9f30b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Leçon 5-4 : tester le Package leçon 5 du didacticiel
+# <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Leçon 5-4 : Test du package du didacticiel de la leçon 5
 Au moment de l'exécution, votre package récupère la valeur de la propriété **Directory** à partir d'une variable mise à jour à l'exécution au lieu d'utiliser le nom du répertoire d'origine spécifié lors de la création du package. La valeur de cette variable est remplie par le fichier SSISTutorial.dtsConfig.  
   
 Pour vérifier si le package met à jour la propriété Directory avec la nouvelle valeur lors de l'exécution, exécutez tout simplement le package. Étant donné que seuls trois fichiers de données exemple ont été copiés dans le nouveau répertoire, le flux de données ne sera exécuté que trois fois au lieu de parcourir les 14 fichiers du dossier d'origine.  
@@ -37,11 +34,11 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 **Flux de contrôle**  
   
-![Contrôler le flux de package](../integration-services/media/task4lesson2control.gif "contrôler le flux de package")  
+![Flux de contrôle dans le package](../integration-services/media/task4lesson2control.gif "Flux de contrôle dans le package")  
   
 **Flux de données**  
   
-![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "dans le package de flux de données")  
+![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "Flux de données dans le package")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Pour tester le package du didacticiel Lesson 5  
   
@@ -54,4 +51,3 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
   
   
-

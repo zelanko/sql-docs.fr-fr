@@ -1,5 +1,5 @@
 ---
-title: "Tâche Envoyer un message | Documents Microsoft"
+title: "Envoyer un message, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: cf06b8fdc020b9c2012d5d710427b64043898e84
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a810d72817ebdf5a1078e95315adb755a2d42891
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="send-mail-task"></a>tache Envoyer un message
   La tâche Envoyer un message envoie un message électronique. La tâche Envoyer un message permet à un package d'envoyer des messages en cas de réussite ou d'échec des tâches du flux de travail du package, ou d'envoyer des messages en réponse à un événement déclenché par le package au moment de l'exécution. Par exemple, la tâche peut notifier à un administrateur de base de données la réussite ou l'échec de la tâche de sauvegarde de base de données.  
@@ -109,7 +107,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Options  
  **SMTPConnection**  
- Sélectionnez un gestionnaire de connexions SMTP dans la liste, ou cliquez sur  **\<nouvelle connexion... >** pour créer une nouvelle connexion gestionnaire.  
+ Sélectionnez un gestionnaire de connexions SMTP dans la liste ou cliquez sur **\<Nouvelle connexion...**> pour en créer un.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions SMTP prend en charge uniquement l'authentification anonyme et l'authentification Windows. Il ne prend pas en charge l'authentification de base.  
@@ -157,13 +155,13 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Connexion de fichiers  
  **MessageSource**  
- Sélectionnez un gestionnaire de connexions de fichier dans la liste ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+ Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur <\<**Nouvelle connexion...**> pour en créer un.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Sélectionnez une variable dans la liste ou cliquez sur \< **nouvelle variable...** > pour créer une nouvelle variable.  
+ Sélectionnez une variable dans la liste ou cliquez sur <\<**Nouvelle variable...**> pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -172,4 +170,3 @@ ms.lasthandoff: 08/11/2017
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   
   
-

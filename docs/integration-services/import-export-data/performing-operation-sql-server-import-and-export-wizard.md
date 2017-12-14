@@ -1,5 +1,5 @@
 ---
-title: "Opération (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+title: "Exécution de l’opération (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75dc26699071ee88bb0c05368b4bf36ba677c35b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Exécution de l'opération (Assistant Importation et Exportation SQL Server)
 Une fois que vous avez vérifié les choix que vous avez effectués dans l’Assistant et cliqué sur **Terminer** dans la page **Terminer l’Assistant** , l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Exécution de l’opération**. Cette page indique la progression et le résultat de l’opération que vous avez configurée dans les pages précédentes. Vous n’avez aucune action à effectuer dans cette page.
@@ -33,12 +30,12 @@ Une fois que vous avez vérifié les choix que vous avez effectués dans l’Ass
 ## <a name="screen-shot---operation-in-progress"></a>Capture d’écran : opération en cours 
  La capture d’écran suivante montre la page **Exécution de l’opération** de l’Assistant pendant que l’opération est en cours.  
   
- ![Page d’opération d’exécution de l’Assistant Importation et exportation](../../integration-services/import-export-data/media/performing-operation1.png "page opération d’exécution de l’Assistant Importation et exportation")  
+ ![Page Exécution de l’opération de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/performing-operation1.png "Page Exécution de l’opération de l’Assistant Importation et Exportation")  
 
 ## <a name="screen-shot---operation-completed"></a>Capture d’écran : opération terminée 
  La capture d’écran suivante montre la page **Exécution de l’opération** de l’Assistant une fois l’opération terminée. Cliquez sur un élément dans la colonne **Message** pour obtenir plus d’informations sur l’étape correspondante.  
   
- ![Page d’opération d’exécution de l’Assistant Importation et exportation](../../integration-services/import-export-data/media/performing-operation2.png "page opération d’exécution de l’Assistant Importation et exportation")  
+ ![Page Exécution de l’opération de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/performing-operation2.png "Page Exécution de l’opération de l’Assistant Importation et Exportation")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Suivre la progression de l’opération
  **Action**  
@@ -64,6 +61,5 @@ Une fois que vous avez vérifié les choix que vous avez effectués dans l’Ass
 
 ## <a name="see-also"></a>Voir aussi
 [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

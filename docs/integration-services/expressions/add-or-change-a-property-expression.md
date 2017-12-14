@@ -1,5 +1,5 @@
 ---
-title: "Ajouter ou modifier une Expression de propriété | Documents Microsoft"
+title: "Ajouter ou modifier une expression de propriété | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e9f115f318366e743e0a933239b55ccda16b5171
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d3be6cd239d59bbed67e335ddc7f828567535c2e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-change-a-property-expression"></a>Ajouter ou modifier une expression de propriété
   Vous pouvez créer des expressions de propriété pour les packages, les tâches, les conteneurs de boucles For ou Foreach, les conteneurs de séquences, les gestionnaires d'événements, les gestionnaires de connexions aux niveaux des packages et du projet, ainsi que les modules fournisseurs d'informations.  
@@ -73,14 +71,13 @@ ms.lasthandoff: 08/03/2017
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40; SSIS &#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Utiliser des Expressions de propriété dans des Packages](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services &#40; SSIS &#41; Packages](../../integration-services/integration-services-ssis-packages.md)   
+ [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md)   
+ [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Conteneurs Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Integration Services &#40; SSIS &#41; Gestionnaires d’événements](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Integration Services &#40; SSIS &#41; Connexions](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Integration Services &#40; SSIS &#41; Journalisation](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

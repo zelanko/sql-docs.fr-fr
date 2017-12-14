@@ -2,9 +2,12 @@
 title: "Prétraiter un schéma pour fusionner des schémas inclus | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08a839ccc5aae2426af36dc5bcef27e33406a343
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d74cb58d143170bcef3c0e976ef786d87e92d1f1
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Prétraiter un schéma pour fusionner des schémas inclus
-  L’élément W3C XSD **include** assure la prise en charge de la modularité des schémas, selon laquelle un schéma XML peut être partitionné en plusieurs fichiers physiques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] L’élément W3C XSD **include** assure la prise en charge de la modularité des schémas, selon laquelle un schéma XML peut être partitionné en plusieurs fichiers physiques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.  
   
  En guise de solution, les schémas XML comportant la directive \<xsd:include> peuvent être prétraités de façon à copier et à fusionner le contenu de tous les schémas inclus en un seul et unique schéma à télécharger vers le serveur. Vous pouvez utiliser le code C# suivant pour le prétraitement. Les commentaires dans la première partie du code fournissent des informations sur son utilisation.  
   

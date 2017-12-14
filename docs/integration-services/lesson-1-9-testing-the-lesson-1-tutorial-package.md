@@ -1,5 +1,5 @@
 ---
-title: "Étape 9 : Test de la leçon 1 du Package du didacticiel | Documents Microsoft"
+title: "Étape 9 : Test du package du didacticiel de la leçon 1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ca45e8e1ba02246eb5429bd7bfea125663f69f41
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c8cd5718bca93ff1384a2f2df15dac5c80627414
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Leçon 1-9 : test de la leçon 1 du Package du didacticiel
+# <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>Leçon 1-9 : Test du package du didacticiel de la leçon 1
 Au cours de cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
@@ -43,11 +40,11 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 **Flux de contrôle**  
   
-![Contrôler le flux de package](../integration-services/media/task9lesson1control.gif "contrôler le flux de package")  
+![Flux de contrôle dans le package](../integration-services/media/task9lesson1control.gif "Flux de contrôle dans le package")  
   
 **Flux de données**  
   
-![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "dans le package de flux de données")  
+![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "Flux de données dans le package")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Pour exécuter le package du didacticiel de la leçon 1  
   
@@ -65,4 +62,3 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
   
   
-

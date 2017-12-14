@@ -1,5 +1,5 @@
 ---
-title: "Envoi d’un Message électronique HTML avec la tâche de Script | Documents Microsoft"
+title: "Envoi d’un message électronique HTML à l’aide de la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,30 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Send Mail task [Integration Services]
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b5f50a79ca83243ea130c77a0d95ab402ba2d31a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 29b1dd04ab4be364b2569f783fe6c07f2929d925
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Envoi d'un message électronique HTML à l'aide de la tâche de script
   La tâche SendMail de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend uniquement en charge les messages électroniques au format texte brut. Toutefois, vous pouver envoyer facilement des messages électroniques HTML en utilisant la tâche de script et les fonctionnalités de messagerie du .NET Framework.  
@@ -40,7 +36,7 @@ ms.lasthandoff: 08/03/2017
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a> Description  
- L’exemple suivant utilise le **System.Net.Mail** espace de noms pour configurer et envoyer un message électronique HTML. Le script obtient To, à partir d’un objet et le corps du message électronique à partir de variables de package, les utilise pour créer un nouveau **MailMessag**e et définit son **IsBodyHtml** propriété **True**. Ensuite, il obtient le nom du serveur SMTP à partir d’une autre variable de package, initialise une instance de **System.Net.Mail.SmtpClient**et appelle son **envoyer** méthode pour envoyer le message au format HTML. L'exemple encapsule la fonctionnalité d'envoi du message dans une sous-routine susceptible d'être réutilisée dans d'autres scripts.  
+ L’exemple suivant utilise l’espace de noms **System.Net.Mail** pour configurer et envoyer un e-mail HTML. Le script obtient le destinataire, l’expéditeur, l’objet et le corps de l’e-mail à partir de variables du package, les utilise pour créer un nouvel objet **MailMessage** et définit sa propriété **IsBodyHtml** sur **True**. Il obtient ensuite le nom du serveur SMTP auprès d’une autre variable du package, initialise une instance de **System.Net.Mail.SmtpClient** et appelle sa méthode **Send** pour envoyer le message HTML. L'exemple encapsule la fonctionnalité d'envoi du message dans une sous-routine susceptible d'être réutilisée dans d'autres scripts.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Pour configurer cet exemple de tâche de script sans gestionnaire de connexions SMTP  
   
@@ -54,19 +50,19 @@ ms.lasthandoff: 08/03/2017
   
 3.  Créez une variable chaîne nommée `HtmlEmailServer` et attribuez le nom d'un serveur SMTP disponible qui accepte des messages sortants anonymes.  
   
-4.  Les cinq de ces variables pour affecter le **ReadOnlyVariables** propriété d’une nouvelle tâche de Script.  
+4.  Attribuez ces cinq variables à la propriété **ReadOnlyVariables** d’une nouvelle tâche de script.  
   
-5.  Importer le **System.Net** et **System.Net.Mail** espaces de noms dans votre code.  
+5.  Importez les espaces de noms **System.Net** et **System.Net.Mail** dans votre code.  
   
  L'exemple de code de cette rubrique obtient le nom du serveur SMTP auprès d'une variable du package. Toutefois, vous pourriez également exploiter un gestionnaire de connexions SMTP pour encapsuler les informations de connexion, puis extraire le nom du serveur du gestionnaire de connexions dans votre code. La méthode <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> du gestionnaire de connexions SMTP renvoie une chaîne au format suivant :  
   
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`  
   
- Vous pouvez utiliser la **String.Split** méthode pour séparer cette liste d’arguments dans un tableau de chaînes individuelles à chaque point-virgule ( ;) ou égale à signe (=), puis extraire le deuxième argument (indice 1) à partir du tableau en tant que le nom du serveur.  
+ Vous pouvez utiliser la méthode **String.Split** pour séparer cette liste d’arguments en un tableau de chaînes individuelles à chaque point-virgule (;) ou signe égal (=), puis extraire le deuxième argument (indice 1) du tableau en tant que nom du serveur.  
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>Pour configurer cet exemple de tâche de script avec un gestionnaire de connexions SMTP  
   
-1.  Modifier la tâche de Script configurée précédemment en supprimant le `HtmlEmailServer` variable dans la liste des **ReadOnlyVariables**.  
+1.  Modifiez la tâche de script configurée précédemment en supprimant la variable `HtmlEmailServer` de la liste de la propriété **ReadOnlyVariables**.  
   
 2.  Remplacez la ligne de code qui obtient le nom du serveur :  
   
@@ -89,10 +85,10 @@ ms.lasthandoff: 08/03/2017
 ```vb  
 Public Sub Main()  
   
-  Dim htmlMessageFrom As String = _  
-    Dts.Variables("HtmlEmailFrom").Value.ToString  
   Dim htmlMessageTo As String = _  
     Dts.Variables("HtmlEmailTo").Value.ToString  
+  Dim htmlMessageFrom As String = _  
+    Dts.Variables("HtmlEmailFrom").Value.ToString  
   Dim htmlMessageSubject As String = _  
     Dts.Variables("HtmlEmailSubject").Value.ToString  
   Dim htmlMessageBody As String = _  
@@ -101,7 +97,7 @@ Public Sub Main()
     Dts.Variables("HtmlEmailServer").Value.ToString  
   
   SendMailMessage( _  
-      htmlMessageFrom, htmlMessageTo, _  
+      htmlMessageTo, htmlMessageFrom, _  
       htmlMessageSubject, htmlMessageBody, _  
       True, smtpServer)  
   
@@ -110,7 +106,7 @@ Public Sub Main()
 End Sub  
   
 Private Sub SendMailMessage( _  
-    ByVal From As String, ByVal SendTo As String,  _  
+    ByVal SendTo As String, ByVal From As String, _  
     ByVal Subject As String, ByVal Body As String, _  
     ByVal IsBodyHtml As Boolean, ByVal Server As String)  
   
@@ -118,7 +114,7 @@ Private Sub SendMailMessage( _
   Dim mySmtpClient As SmtpClient  
   
   htmlMessage = New MailMessage( _  
-    From, SendTo, Subject, Body)  
+    SendTo, From, Subject, Body)  
   htmlMessage.IsBodyHtml = IsBodyHtml  
   
   mySmtpClient = New SmtpClient(Server)  
@@ -132,25 +128,25 @@ End Sub
 public void Main()  
         {  
   
-            string htmlMessageFrom = Dts.Variables["HtmlEmailFrom"].Value.ToString();  
             string htmlMessageTo = Dts.Variables["HtmlEmailTo"].Value.ToString();  
+            string htmlMessageFrom = Dts.Variables["HtmlEmailFrom"].Value.ToString();  
             string htmlMessageSubject = Dts.Variables["HtmlEmailSubject"].Value.ToString();  
             string htmlMessageBody = Dts.Variables["HtmlEmailBody"].Value.ToString();  
             string smtpServer = Dts.Variables["HtmlEmailServer"].Value.ToString();  
   
-            SendMailMessage(htmlMessageFrom, htmlMessageTo, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
+            SendMailMessage(htmlMessageTo, htmlMessageFrom, htmlMessageSubject, htmlMessageBody, true, smtpServer);  
   
             Dts.TaskResult = (int)ScriptResults.Success;  
   
         }  
   
-        private void SendMailMessage(string From, string SendTo, string Subject, string Body, bool IsBodyHtml, string Server)  
+        private void SendMailMessage(string SendTo, string From, string Subject, string Body, bool IsBodyHtml, string Server)  
         {  
   
             MailMessage htmlMessage;  
             SmtpClient mySmtpClient;  
   
-            htmlMessage = new MailMessage(From, SendTo, Subject, Body);  
+            htmlMessage = new MailMessage(SendTo, From, Subject, Body);  
             htmlMessage.IsBodyHtml = IsBodyHtml;  
   
             mySmtpClient = new SmtpClient(Server);  
@@ -161,7 +157,6 @@ public void Main()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâche Envoyer un message](../../integration-services/control-flow/send-mail-task.md)  
+ [Tache Envoyer un message](../../integration-services/control-flow/send-mail-task.md)  
   
   
-

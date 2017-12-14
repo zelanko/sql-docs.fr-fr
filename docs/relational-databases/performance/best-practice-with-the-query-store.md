@@ -1,10 +1,13 @@
 ---
 title: "Bonnes pratiques relatives au magasin de requêtes | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Cette rubrique décrit les bonnes pratiques concernant l’utilisation du magasin de requêtes avec votre charge de travail.  
   
-##  <a name="SSMS"></a> Utiliser la dernière version de SQL Server Management Studio  
+##  <a name="SSMS"></a>Utiliser la dernière version de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un ensemble d’interfaces utilisateur conçu pour configurer le magasin de requêtes et consommer les données collectées relatives à votre charge de travail.  
 Téléchargez la dernière version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [ici](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Accédez au sous-dossier Magasin de requêtes sous le nœud Bases de données de l’Explorateur d’objets de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour ouvrir les vues de résolution de problèmes de scénarios spécifiques.   
 Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fonctionnent avec l’ensemble de métriques d’exécution, chacune exprimée comme étant l’une des fonctions statistiques suivantes :  
   
-|Métrique d’exécution|Fonction statistique|  
-|----------------------|------------------------|  
-|Temps processeur, Durée, Nombre d’exécutions, Lectures logiques, Écritures logiques, Consommation de mémoire et Lectures physiques|Moyenne, Maximum, Minimum, Écart type, Total|  
+|Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Métrique d’exécution|Fonction statistique|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Temps processeur, Durée, Nombre d’exécutions, Lectures logiques, Écritures logiques, Consommation de mémoire, Lectures physiques, Durée du CLR, Degré de parallélisme et Nombre de lignes|Moyenne, Maximum, Minimum, Écart type, Total|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|Temps processeur, Durée, Nombre d’exécutions, Lectures logiques, Écritures logiques, Consommation de mémoire, Lectures physiques, Durée du CLR, Degré de parallélisme, Nombre de lignes, Mémoire utilisée par la journalisation, Délai d’attente|Moyenne, Maximum, Minimum, Écart type, Total|
   
  Le graphique suivant montre comment trouver les vues du magasin de requêtes :  
   
@@ -172,7 +176,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
   
 -   Réécrivez les requêtes problématiques, par exemple, pour profiter du paramétrage des requêtes ou pour implémenter une logique plus optimale.  
   
-##  <a name="Verify"></a> Vérifier que le magasin de requêtes collecte les données des requêtes en continu  
+##  <a name="Verify"></a> Vérifier que le magasin des requêtes collecte les données des requêtes en continu  
  Le magasin de requêtes peut modifier discrètement le mode d’opération. Vous avez donc tout intérêt à surveiller régulièrement l’état du magasin de requêtes pour vérifier qu’il fonctionne bien et prendre des mesures pour éviter des défaillances dont les causes étaient évitables. Exécutez la requête suivante pour déterminer le mode d’opération et afficher les paramètres les plus pertinents :  
   
 ```tsql
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Vous pouvez appliquer une ou deux de ces mesures en exécutant l’instruction suivante qui remet explicitement le mode d’opération en lecture-écriture :  
+Vous pouvez appliquer une ou deux de ces mesures en exécutant l’instruction suivante qui remet explicitement le mode d’opération en lecture-écriture :  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -230,11 +234,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- Si le problème persiste, cela signifie que les données du Magasin des requêtes sont altérées sur le disque.
+ Si le problème persiste, cela signifie que les données du magasin des requêtes sont endommagées sur le disque.
  
  Le Magasin des requêtes a pu être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée.
  
- Si cela n’a pas contribué à la résolution du problème, vous pouvez essayer d’effacer le Magasin des requêtes avant de demander le mode lecture/écriture.  
+ Si cela n’a pas résolu le problème, vous pouvez essayer d’effacer le magasin des requêtes avant de demander le mode lecture/écriture.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -261,7 +265,7 @@ FROM sys.database_query_store_options;
 |Auto|Concentrez-vous sur les requêtes pertinentes et exploitables, c’est-à-dire les requêtes qui s’exécutent régulièrement ou qui consomment beaucoup de ressources.|  
 |None|Vous avez déjà capturé le jeu de requêtes que vous vouliez surveiller dans le runtime et souhaitez éliminer les confusions que pourraient provoquer les autres requêtes.<br /><br /> L’option Aucun(e) est adaptée aux environnements de test et d’évaluation.<br /><br /> Elle est aussi appropriée pour les éditeurs de logiciels qui proposent le magasin de requêtes avec une configuration destinée à surveiller la charge de travail de leur application.<br /><br /> Cette option doit être utilisée avec précaution, car vous risquez de ne pas pouvoir suivre et optimiser les nouvelles requêtes importantes. Évitez d’utiliser l’option Aucun(e) sauf si l’un de vos scénarios l’exige.|  
   
-## <a name="keep-the-most-relevant-data-in-query-store"></a>Conserver les données les plus pertinentes dans le magasin de requêtes  
+## <a name="keep-the-most-relevant-data-in-query-store"></a>Conserver les données les plus pertinentes dans le magasin des requêtes  
  Configurez le magasin de requêtes de sorte qu’il ne contienne que les données pertinentes. Ainsi, il s’exécutera toujours en offrant une excellente expérience de résolution des problèmes tout en ayant un impact minime sur votre charge de travail normale.  
 Le tableau suivant décrit les bonnes pratiques :  
   

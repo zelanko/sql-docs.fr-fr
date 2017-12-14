@@ -1,5 +1,5 @@
 ---
-title: "Contrôle d’accès pour les données sensibles dans des Packages | Documents Microsoft"
+title: "Contrôle d’accès pour les données sensibles présentes dans les packages | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51150293cd37e0d9f641bd7ee2ee30f8cce8ed95
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: bd057df624f83e6a43bd7ed13d8f7c98e462c698
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Contrôle d'accès pour les données sensibles présentes dans les packages
   Pour protéger les données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez définir un niveau de protection qui permet de protéger uniquement les données sensibles ou toutes les données du package. En outre, vous pouvez chiffrer ces données avec un mot de passe ou une clé utilisateur ou vous fier à la base de données pour chiffrer les données. De plus, le niveau de protection que vous utilisez pour un package n'est pas nécessairement statique, mais change tout au long du cycle de vie du package. On définit souvent un niveau de protection pendant le développement et un autre dès le déploiement du package.  
@@ -118,7 +116,7 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Pour définir ou modifier le niveau de protection de package à l'invite de commandes  
   
-1.  Passez en revue les valeurs disponibles pour le **ProtectionLevel** propriété dans la section, [définissant le niveau de Protection de Packages](#set_protection)et déterminer la valeur appropriée pour votre package.  
+1.  Examinez les valeurs disponibles pour la propriété **ProtectionLevel** dans la section [Définition du niveau de protection des packages](#set_protection), puis déterminez la valeur appropriée pour votre package.  
   
 2.  Examinez les mappages pour l’option **Encrypt** dans la rubrique [Utilitaire dtutil](../../integration-services/dtutil-utility.md)et déterminez l’entier approprié à utiliser comme valeur de la propriété **ProtectionLevel** sélectionnée.  
   
@@ -140,10 +138,10 @@ ms.lasthandoff: 08/03/2017
   
          Si vous utilisez une commande semblable dans un fichier de commandes, entrez l'espace réservé de fichier, « % f », comme « %% f » dans le fichier de commandes.  
 
-## <a name="protection_dialog"></a>Boîte de dialogue niveau de Protection de projet package
+## <a name="protection_dialog"></a> Boîte de dialogue Niveau de protection du package
   Utilisez la boîte de dialogue **Niveau de protection du package** pour mettre à jour le niveau de protection d'un package. Le niveau de protection détermine la méthode de protection (par mot de passe ou par clé utilisateur) et l'étendue de la protection du package. La protection peut inclure toutes les données ou uniquement les données sensibles.  
   
- Pour comprendre les exigences et les options de sécurité de package, vous pouvez s’avérer utile de consulter [vue d’ensemble de la sécurité &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md).  
+ Pour comprendre les exigences et les options de la sécurité du package, il peut être utile de consulter [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md).  
   
 ### <a name="options"></a>Options  
  **Package protection level**  
@@ -155,7 +153,7 @@ ms.lasthandoff: 08/03/2017
  **Retapez le mot de passe**  
  Entrez à nouveau le mot de passe.  
 
-## <a name="password_dialog"></a>Boîte de dialogue de mot de passe de package
+## <a name="password_dialog"></a> Boîte de dialogue Mot de passe du package
   Utilisez la boîte de dialogue **Mot de passe du package** pour fournir le mot de passe d'un package qui est chiffré par un mot de passe. Vous devez fournir un mot de passe si le package utilise le niveau de protection **Chiffrer les données sensibles avec un mot de passe**ou **Chiffrer toutes les données avec un mot de passe** .  
   
 ### <a name="options"></a>Options  
@@ -164,7 +162,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Vue d’ensemble de la sécurité &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
  [Utilitaire dtutil](../../integration-services/dtutil-utility.md)  
   
-

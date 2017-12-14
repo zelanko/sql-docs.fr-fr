@@ -1,5 +1,5 @@
 ---
-title: "Tâche de Service Web | Documents Microsoft"
+title: "Service web, tâche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,20 +16,18 @@ f1_keywords:
 - sql13.dts.designer.webservicestask.general.f1
 - sql13.dts.designer.webservicestask.input.f1
 - sql13.dts.designer.webservicestask.output.f1
-helpviewer_keywords:
-- Web Service task [Integration Services]
+helpviewer_keywords: Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 9bdfbf05eafc612d7a6c5531e5c5c1b00fd576a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="web-service-task"></a>Tâche de service Web
   La tâche de service Web exécute une méthode de service Web. Vous pouvez utiliser la tâche de service Web pour :  
@@ -91,7 +88,7 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Options  
  **HTTPConnection**  
- Sélectionnez un gestionnaire de connexions dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+ Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
@@ -177,16 +174,15 @@ ms.lasthandoff: 08/11/2017
   
 #### <a name="outputtype--file-connection"></a>OutputType = Connexion de fichiers  
  **Fichier**  
- Sélectionnez un gestionnaire de connexions de fichier dans la liste ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+ Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
- Sélectionnez une variable dans la liste ou cliquez sur \< **nouvelle Variable...** > pour créer une nouvelle variable.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Vidéo, [Procédure : appeler un service Web à l’aide de la tâche Service Web (vidéo liée à SQL Server)](http://go.microsoft.com/fwlink/?LinkId=259642), sur technet.microsoft.com.  
-

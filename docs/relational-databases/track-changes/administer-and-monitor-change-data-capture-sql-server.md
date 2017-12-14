@@ -2,9 +2,12 @@
 title: "Administrer et surveiller la capture de données modifiées (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eeb22b42fa171fe644e6fa01e1be107bc1917afa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
-  Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
   
 ##  <a name="Capture"></a> Travail de capture  
  Le travail de capture est démarré par l’exécution de la procédure stockée sans paramètre **sp_MScdc_capture_job**. Cette procédure stockée commence par extraire les valeurs configurées pour *maxtrans*, *maxscans*, *continuous*, et *pollinginterval* pour le travail de capture de msdb.dbo.cdc_jobs. Ces valeurs configurées sont ensuite transférées comme paramètres à la procédure stockée **sp_cdc_scan**. Cela permet d’appeler **sp_replcmds** pour effectuer l’analyse du journal.  

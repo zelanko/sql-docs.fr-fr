@@ -2,9 +2,12 @@
 title: "Afficher les facettes, boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 73c832d6b4da2aa291e0919986b3521fabe7dfad
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3e73a3a40fa2ef43a04fafdecd6c4f7798a81ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-facets-dialog-box"></a>Boîte de dialogue Afficher les facettes
-  Utilisez cette boîte de dialogue pour consulter les propriétés d'une facette de la Gestion basée sur des stratégies. Les propriétés d'une facette sont définies lors de la création de la facette et ne peuvent pas être modifiées par le biais de cette boîte de dialogue.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour consulter les propriétés d’une facette de la Gestion basée sur des stratégies. Les propriétés d'une facette sont définies lors de la création de la facette et ne peuvent pas être modifiées par le biais de cette boîte de dialogue.  
   
 ## <a name="options"></a>Options  
  **Facette**  

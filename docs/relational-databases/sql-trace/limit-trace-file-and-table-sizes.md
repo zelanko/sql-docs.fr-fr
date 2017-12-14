@@ -2,9 +2,12 @@
 title: "Limiter les tailles de fichier et de table de trace | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: sql-trace
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9827287ecea08ca547c2b371c8e0696e37c7d02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cb3a4845d48fb24d5ca97823b2844e1c3ca369cf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limiter les tailles de fichier et de table de trace
-  Les résultats de Trace SQL ont des tailles variables selon les classes d’événements incluses dans la trace et leur mode d’utilisation par [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si vous tracez des classes d'événements qui se produisent fréquemment, vous pouvez minimiser la quantité de données collectées par la trace en définissant la taille de fichier maximale ou le nombre maximal de lignes. La spécification d'une taille de fichier maximale et/ou d'un nombre maximal de lignes empêche le fichier de trace ou la table de trace de croître au-delà de la limite spécifiée.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les résultats de Trace SQL ont des tailles variables selon les classes d’événements incluses dans la trace et leur mode d’utilisation par [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si vous tracez des classes d'événements qui se produisent fréquemment, vous pouvez minimiser la quantité de données collectées par la trace en définissant la taille de fichier maximale ou le nombre maximal de lignes. La spécification d'une taille de fichier maximale et/ou d'un nombre maximal de lignes empêche le fichier de trace ou la table de trace de croître au-delà de la limite spécifiée.  
   
 > [!NOTE]  
 >  Si vous enregistrez les données de trace dans un fichier existant, vous pouvez ajouter les données au fichier ou écraser le fichier. Si vous choisissez l'ajout au fichier et que la taille du fichier de trace est déjà supérieure ou égale à la taille de fichier maximale spécifiée, vous en êtes averti et pouvez alors augmenter la taille maximale du fichier ou indiquer un autre fichier. Il en est de même pour les tables de trace.  

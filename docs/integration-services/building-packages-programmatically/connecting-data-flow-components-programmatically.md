@@ -1,5 +1,5 @@
 ---
-title: "Connexion par programme des composants de flux de données | Documents Microsoft"
+title: "Connexion de composants de flux de données par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,28 +21,27 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 40869328965e049b5981e94655226bc0a78dc37f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c79cd2d2b540bab98b810ae07a1c66a3cff650c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Connexion de composants de flux de données par programme
   Après avoir ajouté des composants à la tâche de flux de données, vous devez les connecter pour créer une arborescence d'exécution qui représente le flux de données des sources vers des destinations en passant par des transformations. Ces objets <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> permettent de connecter les composants du flux de données.  
   
 ## <a name="creating-a-path"></a>Création d'un chemin d'accès  
- Appeler la nouvelle méthode de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> propriété de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> interface pour créer un nouveau chemin d’accès et l’ajouter à la collection de chemins d’accès dans la tâche de flux de données. Cette méthode retourne un nouvel objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> déconnecté, que vous utilisez alors pour connecter deux composants.  
+ Appelez la méthode New de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> pour créer un chemin et l’ajouter à la collection de chemins dans la tâche de flux de données. Cette méthode retourne un nouvel objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> déconnecté, que vous utilisez alors pour connecter deux composants.  
   
  Appelez la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> pour connecter le chemin d'accès et indiquer aux composants faisant partie du chemin d'accès qu'ils ont été connectés. Cette méthode accepte un <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> du composant en amont et un <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> du composant en aval en tant que paramètres. Par défaut, l'appel à la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> du composant crée une entrée unique pour les composants qui possèdent des entrées, et une sortie unique pour les composants qui possèdent des sorties. L'exemple suivant utilise cette sortie par défaut de la source et cette entrée par défaut de la destination.  
   
 ## <a name="next-step"></a>Étape suivante  
- Après avoir établi un chemin d’accès entre deux composants, l’étape suivante consiste à mapper les colonnes d’entrée dans le composant en aval, qui est décrite dans la rubrique suivante, [sélection d’entrée colonnes par programmation](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
+ Après avoir établi un chemin entre deux composants, l’étape suivante consiste à mapper les colonnes d’entrée dans le composant en aval, comme indiqué dans la nouvelle rubrique, [Sélection de colonnes d’entrée par programmation](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md).  
   
 ## <a name="sample"></a>Exemple  
  L'exemple de code suivant indique comment établir un chemin d'accès entre deux composants.  
@@ -131,7 +128,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sélectionner les colonnes d’entrée par programme](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Sélection de colonnes d’entrée par programmation](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
   
   
-

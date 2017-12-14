@@ -2,9 +2,12 @@
 title: "Suspendre et reprendre la mise en miroir de bases de données (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Suspendre et reprendre la mise en miroir de bases de données (SQL Server)
-  Le propriétaire de la base de données peut suspendre et reprendre ultérieurement une session de mise en miroir de bases de données à tout moment. La suspension conserve l'état de la session tout en suspendant la mise en miroir. En cas de goulots, la suspension peut permettre d'améliorer les performances sur le serveur principal.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le propriétaire de la base de données peut suspendre et reprendre ultérieurement une session de mise en miroir de bases de données à tout moment. La suspension conserve l'état de la session tout en suspendant la mise en miroir. En cas de goulots, la suspension peut permettre d'améliorer les performances sur le serveur principal.  
   
  Lorsqu'une session est suspendue, la base de données principale reste disponible. La suspension d'une session de mise en miroir fait passer son état à SUSPENDED, et la base de données miroir ne reflète plus la base de données principale, ce qui rend cette dernière vulnérable lors de son exécution.  
   

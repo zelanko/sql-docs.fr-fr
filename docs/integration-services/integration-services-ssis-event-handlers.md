@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) gestionnaires d’événements | Documents Microsoft"
+title: "Gestionnaires d’événements Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Gestionnaires d'événements Integration Services (SSIS)
   Lors de l'exécution, les exécutables (packages, conteneurs de boucles Foreach, conteneurs de boucles For, conteneurs de séquences et conteneurs d'hôtes de tâches) déclenchent des événements. Par exemple, un événement OnError se déclenche lorsqu'une erreur se produit. Vous pouvez créer des gestionnaires d'événements personnalisés pour ces événements afin d'étendre les fonctionnalités des packages et les rendre plus faciles à gérer au moment de l'exécution. Les gestionnaires d'événements peuvent réaliser des tâches comme les suivantes :  
@@ -55,7 +53,7 @@ ms.lasthandoff: 09/26/2017
   
  Seul le package possède un gestionnaire d’événements (pour son événement **OnError** ). Si une erreur se produit pendant l’exécution de la tâche d’exécution SQL, le gestionnaire d’événements **OnError** du package s’exécute. Le diagramme qui suit montre la séquence d’appels qui conduit à l’exécution du gestionnaire d’événements **OnError** du package.  
   
- ![Flux du Gestionnaire d’événements](../integration-services/media/mw-dts-eventhandlers.gif "flux du Gestionnaire d’événements")  
+ ![Flux de gestionnaire d’événements](../integration-services/media/mw-dts-eventhandlers.gif "Flux de gestionnaire d’événements")  
   
  Les gestionnaires d'événements sont membres d'une collection de gestionnaires d'événements. Tous les conteneurs incluent cette collection. Si vous créez le package à l’aide du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , vous pouvez afficher les membres des collections de gestionnaires d’événements dans les dossiers **Gestionnaires d’événements** de l’onglet **Explorateur de package** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -105,7 +103,7 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
   
  L’onglet **Gestionnaires d’événements** contient aussi une zone **Gestionnaires de connexions** dans laquelle vous pouvez créer et modifier les gestionnaires de connexions utilisés par les gestionnaires d’événements pour se connecter aux serveurs et aux sources de données. Pour plus d’informations, consultez [Créer des gestionnaires de connexions](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Ajouter un gestionnaire d’événements sur l’onglet gestionnaires d’événements  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>Ajouter un gestionnaire d’événements sous l’onglet Gestionnaires d’événements  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -113,7 +111,7 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
   
 3.  Cliquez sur l’onglet **Gestionnaires d’événements** .  
   
-     ![Capture d’écran de l’aire de conception avec le Gestionnaire d’événements](../integration-services/media/eventhandlers.gif "capture d’écran de l’aire de conception avec le Gestionnaire d’événements")  
+     ![Capture d’écran de l’aire de conception avec le gestionnaire d’événements](../integration-services/media/eventhandlers.gif "Capture d’écran de l’aire de conception avec le gestionnaire d’événements")  
   
      La création du flux de contrôle et des flux de données dans le gestionnaire d'événements est identique à la création du flux de contrôle et des flux de données dans un package. Pour plus d’informations, consultez [Flux de contrôle](../integration-services/control-flow/control-flow.md) et [Flux de données](../integration-services/data-flow/data-flow.md).  
   
@@ -140,4 +138,3 @@ Lors de l'exécution, les conteneurs et les tâches déclenchent des événement
  Pour plus d’informations sur l’ajout d’un gestionnaire d’événements à un package, consultez [Ajouter un gestionnaire d’événements à un package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   
-

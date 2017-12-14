@@ -2,9 +2,12 @@
 title: "Déployer une application de la couche Données | Microsoft Docs"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 21bcace1cd6c05ac3516095aff955e24ff016967
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d65afb41e160671afa9466f648a08e49937e3b6e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
-  Déployez une application de la couche Données (DAC) à partir d’un package DAC sur une instance existante du moteur de base de données ou de la base de données Azure SQL à l’aide d’un Assistant ou d’un script PowerShell. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Déployez une application de la couche Données (DAC) à partir d’un package DAC sur une instance existante du moteur de base de données ou de la base de données Azure SQL à l’aide d’un Assistant ou d’un script PowerShell. 
   
  Le processus de déploiement inscrit une instance DAC en stockant la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Il crée une base de données, puis remplit cette base de données avec tous les objets de base de données définis dans la DAC.  
  

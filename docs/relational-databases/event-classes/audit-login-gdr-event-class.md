@@ -2,9 +2,12 @@
 title: "Audit Login GDR, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddbf4afa06c6905780327a66510e035c12b66f8d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c552201bc9a0a73691ec9fca79c90f9f2a06857e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR (classe d'événements)
-  La classe d’événements **Audit Login GDR** survient dès qu’un droit de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est ajouté ou supprimé. Cette classe d’événements est destinée aux procédures stockées **sp_grantlogin**, **sp_revokelogin**et **sp_denylogin** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **Audit Login GDR** survient dès qu’un droit de connexion à [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est ajouté ou supprimé. Cette classe d’événements est destinée aux procédures stockées **sp_grantlogin**, **sp_revokelogin**et **sp_denylogin** .  
   
  Cette classe d'événements pourrait être supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons d’utiliser la classe d’événements **Audit Server Principal Management** à la place.  
   

@@ -2,9 +2,12 @@
 title: "Didacticiel : Administration de serveurs à l’aide de la gestion basée sur des stratégies | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58c12e4a33510f2fc9242f0d762dfb877b84750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4bda7d7ffbd562dc27acad4ee8eb5d427d3f542f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Didacticiel : Administration de serveurs à l’aide de la gestion basée sur des stratégies
-Bienvenue au didacticiel Administration de serveurs à l'aide de stratégies de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne connaissant pas la Gestion basée sur des stratégies.  
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Didacticiel : Administration de serveurs à l'aide de la Gestion basée sur des stratégies
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Bienvenue au didacticiel Administration de serveurs à l’aide de stratégies de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais ne connaissant pas la Gestion basée sur des stratégies.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 Ce didacticiel crée une stratégie permettant d'administrer votre serveur et une stratégie qui s'appliquent à une base de données unique. Une stratégie est exécutée sur demande pour tester la conformité. L'autre stratégie applique la conformité future.  

@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions du cache | Documents Microsoft
+title: Gestionnaire de connexions du cache | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords:
-- Cache connection manager
+f1_keywords: sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords: Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 481075f02dff2f4900eeca549835b990b50aee37
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-connection-manager"></a>Gestionnaire de connexions du cache
   Le gestionnaire de connexions du cache lit des données à partir de la transformation du cache ou d'un fichier cache (.caw) et peut enregistrer les données dans un fichier cache. Les données sont toujours stockées en mémoire que vous configuriez ou non le gestionnaire de connexions du cache pour utiliser un fichier cache.  
@@ -59,7 +55,7 @@ ms.lasthandoff: 08/09/2017
   
  Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou par programmation.  
   
- Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programme, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
+ Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programmation](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="cache-connection-manager-editor"></a>Éditeur du gestionnaire de connexions du cache
   Le gestionnaire de connexions du cache lit un dataset de référence à partir de la transformation de cache ou d'un fichier cache (.caw) et peut enregistrer les données dans un fichier cache. Les données sont toujours stockées en mémoire.  
@@ -135,7 +131,6 @@ ms.lasthandoff: 08/09/2017
  Spécifie la page de codes pour le type de colonne. Si le type de données le permet, vous pouvez mettre à jour **Page de codes**.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Implémenter une Transformation de recherche en Mode Cache complet à l’aide du Gestionnaire de connexions du Cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   
-

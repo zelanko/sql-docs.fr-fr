@@ -1,5 +1,5 @@
 ---
-title: "Étape 4 : Ajout de Configurations de Package | Documents Microsoft"
+title: "Étape 4 : Ajout de configurations au package | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>Leçon 1-4 - Ajout de Configurations de Package
+# <a name="lesson-1-4---adding-package-configurations"></a>Leçon 1-4 : Ajout de configurations au package
 Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un éventail de types de configuration. Vous pouvez stocker des configurations dans des variables d'environnement, des entrées de registre, des variables définies par l'utilisateur, des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et des fichiers XML. Pour une souplesse accrue, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge l'utilisation des configurations indirectes. Cela signifie que vous utilisez une variable d'environnement pour spécifier l'emplacement de la configuration qui de son côté spécifie les valeurs réelles. Les packages du projet Didacticiel de déploiement utilisent une combinaison des fichiers de configuration XML et des configurations indirectes. Un fichier de configuration XML peut inclure des configurations destinées à plusieurs propriétés et, le cas échéant, peut être référencé par plusieurs packages. Dans ce didacticiel, vous allez utiliser un fichier de configuration séparé pour chaque package.  
@@ -145,4 +142,3 @@ Vous allez créer deux fichiers de configuration, DataTransferConfig.dtsConfig e
 [Configurations du package](../integration-services/packages/package-configurations.md)  
 [Créer des configurations de package](../integration-services/packages/create-package-configurations.md)  
 [Accéder aux fichiers utilisés par des packages](../integration-services/security/security-overview-integration-services.md#files)  
-

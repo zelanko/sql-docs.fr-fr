@@ -1,10 +1,13 @@
 ---
 title: Configurer les comptes de service Windows et les autorisations | Microsoft Docs
 ms.custom: 
-ms.date: 08/24/2017
-ms.prod: sql-server-2016
+ms.date: 11/15/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -51,17 +54,17 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 caps.latest.revision: "207"
 author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+ms.author: BYHAM
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b93f57717cea30367f212020d73684a3fe55b796
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 665144f239aab08583a1444e48e851965262bf97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Configurer les comptes de service Windows et les autorisations](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx).
 
 
@@ -76,9 +79,7 @@ ms.lasthandoff: 11/09/2017
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
- 
- 
-  
+
 ##  <a name="Service_Details"></a> Services installés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En fonction des composants que vous décidez d'installer, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les services suivants :  
   
@@ -96,20 +97,24 @@ ms.lasthandoff: 11/09/2017
   
 -   **Recherche en texte intégral** : crée rapidement des index de recherche en texte intégral sur le contenu et des propriétés de données structurées et semi-structurées pour fournir un filtrage de document et l’analyse lexicale pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **SQL Writer** : permet aux applications de sauvegarde et restauration de fonctionner dans l’infrastructure du service de cliché instantané de volume (VSS).  
+-   **SQL Writer** : permet aux applications de sauvegarde et restauration de fonctionner dans l’infrastructure du service de cliché instantané de volume (VSS).
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** : fournit l’orchestration de relecture de trace pour plusieurs ordinateurs clients Distributed Replay.  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** : un ou plusieurs ordinateurs clients Distributed Replay qui opèrent avec un contrôleur Distributed Replay pour simuler des charges de travail simultanées sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : service approuvé hébergeant les exécutables externes fournis par Microsoft, tels que le composant d’exécution R installé avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Le processus Launchpad peut lancer des processus satellites dont les ressources seront régies par la configuration de l’instance. Le service Launchpad s’exécute sous son propre compte d’utilisateur, et chaque processus satellite d’une exécution déclarée hérite du compte d’utilisateur de Launchpad. Les processus satellites sont créés et détruits à la demande pendant l’exécution.  
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : service approuvé hébergeant les exécutables externes fournis par Microsoft, tels que le composant d’exécution R installé avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. Le processus Launchpad peut lancer des processus satellites dont les ressources seront régies par la configuration de l’instance. Le service Launchpad s’exécute sous son propre compte d’utilisateur, et chaque processus satellite d’une exécution déclarée hérite du compte d’utilisateur de Launchpad. Les processus satellites sont créés et détruits à la demande pendant l’exécution.
+
+    LaunchPad ne peut pas créer les comptes qu’elle utilise si vous installez SQL Server sur un ordinateur qui est également utilisé comme un contrôleur de domaine. Par conséquent, l’installation de R Services (en base de données) ou de Machine Learning Services (en base de données) échoue sur un contrôleur de domaine.
+
   
  - **Moteur SQL Server PolyBase** : fournit des fonctions de requête distribuée aux sources de données externes.
  
  - **Service de déplacement de données SQL Server PolyBase** : permet le déplacement de données entre SQL Server et les sources de données externes, ainsi qu’entre les nœuds SQL dans les groupes de scale-out PolyBase.
   
-##  <a name="Serv_Prop"></a> Propriétés et configuration des services  
- Les comptes de démarrage utilisés pour démarrer et exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être des [comptes d’utilisateur de domaine](#Domain_User), des [comptes d’utilisateur local](#Local_User), des [comptes de service administrés](#MSA), des [comptes virtuels](#VA_Desc)ou des [comptes système intégrés](#Local_Service). Pour démarrer et s'exécuter, chaque service dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit posséder un compte de démarrage configuré lors de l'installation.  
+##  <a name="Serv_Prop"></a> Propriétés et configuration des services
+
+Les comptes de démarrage utilisés pour démarrer et exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être des [comptes d’utilisateur de domaine](#Domain_User), des [comptes d’utilisateur local](#Local_User), des [comptes de service administrés](#MSA), des [comptes virtuels](#VA_Desc)ou des [comptes système intégrés](#Local_Service). Pour démarrer et s'exécuter, chaque service dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit posséder un compte de démarrage configuré lors de l'installation.
   
  Cette section décrit les comptes qui peuvent être configurés pour démarrer des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les valeurs par défaut utilisées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le concept de SID par service, les options de démarrage et la configuration du pare-feu.  
   
@@ -121,10 +126,11 @@ ms.lasthandoff: 11/09/2017
   
 -   [Port de pare-feu](#Firewall)  
   
-###  <a name="Default_Accts"></a> Comptes de service par défaut  
- Le tableau suivant répertorie les comptes de service par défaut utilisés par le programme d'installation lors de l'installation de tous les composants. Les comptes par défaut répertoriés sont les comptes recommandés, sauf indication contraire.  
+###  <a name="Default_Accts"></a> Comptes de service par défaut
+
+Le tableau suivant répertorie les comptes de service par défaut utilisés par le programme d'installation lors de l'installation de tous les composants. Les comptes par défaut répertoriés sont les comptes recommandés, sauf indication contraire.
   
- **Serveur autonome ou contrôleur de domaine**  
+ **Serveur autonome ou contrôleur de domaine**
   
 |Composant|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|Windows 7 et [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 et versions ultérieures|  
 |---------------|------------------------------------|----------------------------------------------------------------|  
@@ -144,7 +150,7 @@ ms.lasthandoff: 11/09/2017
   
  *Quand des ressources externes à l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont requises, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d’utiliser un compte de service administré (MSA), configuré avec le minimum de privilèges nécessaires.  
   
- **Instance de cluster de basculement SQL Server**  
+ **Instance de cluster de basculement SQL Server**
   
 |Composant|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]|[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2|  
 |---------------|------------------------------------|---------------------------------------|  
@@ -156,8 +162,8 @@ ms.lasthandoff: 11/09/2017
 |Lanceur FD (recherche en texte intégral)|[SERVICE LOCAL](#Local_Service)|[Compte virtuel](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[SERVICE LOCAL](#Local_Service)|[SERVICE LOCAL](#Local_Service)|  
 |Enregistreur VSS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |[SYSTÈME LOCAL](#Local_System)|[SYSTÈME LOCAL](#Local_System)|  
-  
-####  <a name="Changing_Accounts"></a> Modification des propriétés de compte  
+
+####  <a name="Changing_Accounts"></a> Modification des propriétés de compte
   
 > [!IMPORTANT]  
 >  -   Utilisez toujours des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tels que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pour modifier le compte utilisé par [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou les services Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour changer le mot de passe du compte. En plus de modifier le nom du compte, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue une configuration supplémentaire pour mettre à jour le magasin de sécurité local Windows qui protège la clé principale du service pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. D'autres outils tels que le Gestionnaire de contrôle de services Windows peuvent modifier le nom du compte mais pas tous les paramètres requis.  
@@ -206,8 +212,9 @@ Les comptes de service administrés, les comptes de service administrés de grou
   
  **Remarque relative à la sécurité :** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Utilisez un [MSA](#MSA) ou les services Agent [virtual account](#VA_Desc) quand cela est possible. Lorsque MSA et les comptes virtuels ne sont pas possibles, utilisez un compte d'utilisateur ou compte de domaine doté de privilèges minimaux au lieu d'un compte partagé pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez des comptes distincts pour différents services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . N'accordez aucune autorisation supplémentaire au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni aux groupes de services. Les autorisations seront accordées par le biais de l'appartenance aux groupes ou accordées directement à un SID de service, lorsqu'un SID de service est pris en charge.  
   
-###  <a name="Auto_Start"></a> Démarrage automatique  
- Outre le fait que les services doivent posséder des comptes d'utilisateurs, ils ont chacun trois états de démarrage possibles, que les utilisateurs peuvent contrôler :  
+###  <a name="Auto_Start"></a> Démarrage automatique
+
+Outre le fait que les services doivent posséder des comptes d'utilisateurs, ils ont chacun trois états de démarrage possibles, que les utilisateurs peuvent contrôler :
   
 -   **Désactivé** Le service est installé mais pas en cours d'exécution.  
   
@@ -217,8 +224,9 @@ Les comptes de service administrés, les comptes de service administrés de grou
   
  L'état de démarrage est sélectionné pendant l'installation. Lors de l'installation d'une instance nommée, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser doit être configuré pour démarrer automatiquement.  
   
-###  <a name="Configure_services"></a> Configuration des services pendant l’installation sans assistance  
- Le tableau suivant répertorie les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptibles d'être configurés durant l'installation. Pour les installations sans assistance, vous pouvez employer les commutateurs dans un fichier de configuration ou à l'invite de commandes.  
+###  <a name="Configure_services"></a> Configuration des services pendant l’installation sans assistance
+
+Le tableau suivant répertorie les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptibles d'être configurés durant l'installation. Pour les installations sans assistance, vous pouvez employer les commutateurs dans un fichier de configuration ou à l'invite de commandes.  
   
 |Nom du service SQL Server|Commutateurs pour des installations sans assistance*|  
 |-----------------------------|---------------------------------------------|  
@@ -229,18 +237,22 @@ Les comptes de service administrés, les comptes de service administrés de grou
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS|
+|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS***|
 |Moteur PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  *Pour obtenir plus d’informations et un exemple de syntaxe pour des installations sans assistance, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
- **Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est désactivé sur les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.  
+ **Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est désactivé sur les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services.
+
+ ***La définition du compte pour Launchpad au moyen des commutateurs seuls n’est pas prise en charge actuellement. Utilisez le Gestionnaire de configuration SQL Server pour modifier le compte et les autres paramètres de service.
+
+###  <a name="Firewall"></a> Port de pare-feu
+
+Dans la plupart des cas, lors de l'installation initiale, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être connecté par des outils tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installés sur le même ordinateur que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le programme d’installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’ouvre pas de ports dans le pare-feu Windows. Les connexions d'autres ordinateurs peuvent ne pas être possibles tant que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'est pas configuré pour écouter sur un port TCP, et tant que le port approprié n'est pas ouvert aux connexions dans le pare-feu Windows. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="Firewall"></a> Port de pare-feu  
- Dans la plupart des cas, lors de l'installation initiale, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être connecté par des outils tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installés sur le même ordinateur que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le programme d’installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’ouvre pas de ports dans le pare-feu Windows. Les connexions d'autres ordinateurs peuvent ne pas être possibles tant que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'est pas configuré pour écouter sur un port TCP, et tant que le port approprié n'est pas ouvert aux connexions dans le pare-feu Windows. Pour plus d’informations, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
-  
-##  <a name="Serv_Perm"></a> Autorisations de service  
- Cette section décrit les autorisations configurées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le SID par service des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+##  <a name="Serv_Perm"></a> Autorisations de service
+
+Cette section décrit les autorisations configurées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le SID par service des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   [Configuration du service et contrôle d’accès](#Serv_SID)  
   
@@ -260,27 +272,28 @@ Les comptes de service administrés, les comptes de service administrés de grou
   
 -   [Canaux nommés](#Pipes)  
   
-###  <a name="Serv_SID"></a> Configuration du service et contrôle d’accès  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] active un SID par service pour chacun de ses services pour fournir une isolation de service et une défense en profondeur. Le SID par service est dérivé du nom du service et est propre à ce service. Par exemple, un nom de SID pour le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être **NT Service\MSSQL$***\<NomInstance>*. L'isolation de service permet l'accès à des objets spécifiques sans devoir exécuter un compte à privilèges élevés ni affaiblir la protection de sécurité de l'objet. Un service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut limiter l'accès à ses ressources via une entrée de contrôle d'accès qui contient un SID de service.  
+###  <a name="Serv_SID"></a> Configuration du service et contrôle d’accès
+
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] active un SID par service pour chacun de ses services pour fournir une isolation de service et une défense en profondeur. Le SID par service est dérivé du nom du service et est propre à ce service. Par exemple, un nom de SID pour le service [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être **NT Service\MSSQL$***\<NomInstance>*. L'isolation de service permet l'accès à des objets spécifiques sans devoir exécuter un compte à privilèges élevés ni affaiblir la protection de sécurité de l'objet. Un service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut limiter l'accès à ses ressources via une entrée de contrôle d'accès qui contient un SID de service.
   
 > [!NOTE]  
->  Sur Windows 7 et [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (et versions ultérieures) le SID par service peut être le compte virtuel utilisé par le service.  
+>  Sur Windows 7 et [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (et versions ultérieures) le SID par service peut être le compte virtuel utilisé par le service.
   
- Pour la plupart des composants, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure directement l'ACL pour le compte par service, par conséquent, la modification du compte de service peut être effectuée sans devoir répéter le processus ACL de la ressource.  
+ Pour la plupart des composants, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure directement l'ACL pour le compte par service, par conséquent, la modification du compte de service peut être effectuée sans devoir répéter le processus ACL de la ressource.
   
- Lors de l'installation de [!INCLUDE[ssAS](../../includes/ssas-md.md)], un SID par service est créé pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un groupe Windows local est créé, nommé au format **SQLServerMSASUser$***nom_ordinateur***$***nom_instance*. Le SID par service **NT SERVICE\MSSQLServerOLAPService** peut appartenir au groupe Windows local et le groupe Windows local reçoit les autorisations appropriées dans l’ACL. Si le compte utilisé pour démarrer le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est modifié, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit modifier les autorisations Windows (telles que le droit d'ouvrir une session en tant que service), mais les autorisations affectées au groupe Windows local seront toujours disponibles sans besoin de mise à jour, parce que le SID par service n'a pas changé. Cette méthode permet de renommer le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pendant des mises à niveau.  
+ Lors de l'installation de [!INCLUDE[ssAS](../../includes/ssas-md.md)], un SID par service est créé pour le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un groupe Windows local est créé, nommé au format **SQLServerMSASUser$***nom_ordinateur***$***nom_instance*. Le SID par service **NT SERVICE\MSSQLServerOLAPService** peut appartenir au groupe Windows local et le groupe Windows local reçoit les autorisations appropriées dans l’ACL. Si le compte utilisé pour démarrer le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est modifié, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit modifier les autorisations Windows (telles que le droit d'ouvrir une session en tant que service), mais les autorisations affectées au groupe Windows local seront toujours disponibles sans besoin de mise à jour, parce que le SID par service n'a pas changé. Cette méthode permet de renommer le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pendant des mises à niveau.
   
  Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des groupes Windows locaux pour [!INCLUDE[ssAS](../../includes/ssas-md.md)] et le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser. Pour ces services, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configure l'ACL pour les groupes Windows locaux.  
   
- Selon la configuration du service, le compte de service pour un service ou un SID de service est ajouté en tant que membre du groupe de service lors de l'installation ou de la mise à niveau.  
+ Selon la configuration du service, le compte de service pour un service ou un SID de service est ajouté en tant que membre du groupe de service lors de l'installation ou de la mise à niveau.
   
 ###  <a name="Windows"></a> Privilèges et droits Windows  
- Le compte affecté pour démarrer un service a besoin d' **autorisations de démarrage, arrêt et pause** pour le service. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les affecte automatiquement.  En premier lieu, installez les Outils d'administration de serveur distant. Consultez la rubrique [Outils d'administration de serveur distant pour Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).  
+ Le compte affecté pour démarrer un service a besoin d' **autorisations de démarrage, arrêt et pause** pour le service. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les affecte automatiquement.  En premier lieu, installez les Outils d'administration de serveur distant. Consultez la rubrique [Outils d'administration de serveur distant pour Windows 7](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7d2f6ad7-656b-4313-a005-4e344e43997d).
   
- Le tableau suivant affiche les autorisations que le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande pour les SID par service ou les groupes Windows locaux utilisés par les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Le tableau suivant affiche les autorisations que le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande pour les SID par service ou les groupes Windows locaux utilisés par les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Autorisations accordées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|---------------------------------------|------------------------------------------------------------|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Autorisations accordées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|
+|---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Tous les droits sont accordés au SID par service. Instance par défaut : **NT SERVICE\MSSQLSERVER**. Instance nommée : **NT SERVICE\MSSQL$**NomInstance.)|**Ouvrir une session en tant que service** (SeServiceLogonRight)<br /><br /> **Remplacer un jeton de niveau processus** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorer la vérification transversale** (SeChangeNotifyPrivilege)<br /><br /> **Ajuster les quotas de mémoire pour un processus** (SeIncreaseQuotaPrivilege)<br /><br /> Autorisation de démarrer SQL Writer<br /><br /> Autorisation de lire le service Journal des événements<br /><br /> Autorisation de lire le service d'appel de procédure distante (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent :** \*<br /><br /> (Tous les droits sont accordés au SID par service. Instance par défaut : **NT Service\SQLSERVERAGENT**. Instance nommée : **NT Service\SQLAGENT$***NomInstance*.)|**Ouvrir une session en tant que service** (SeServiceLogonRight)<br /><br /> **Remplacer un jeton de niveau processus** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorer la vérification transversale** (SeChangeNotifyPrivilege)<br /><br /> **Ajuster les quotas de mémoire pour un processus** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Tous les droits sont accordés à un groupe Windows local. Instance par défaut : **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Instance nommée : **SQLServerMSASUser$***ComputerName***$***InstanceName*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$***NomOrdinateur***$***PowerPivot*.)|**Ouvrir une session en tant que service** (SeServiceLogonRight)<br /><br /> Tabulaire uniquement :<br /><br /> **Augmenter une plage de travail de processus** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajuster les quotas de mémoire pour un processus** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Verrouiller les pages en mémoire** (SeLockMemoryPrivilege) : nécessaire uniquement quand la pagination est totalement désactivée.<br /><br /> Installations de cluster de basculement uniquement :<br /><br /> **Augmenter la priorité de planification** (SeIncreaseBasePriorityPrivilege)|  
@@ -388,7 +401,8 @@ Les comptes de service administrés, les comptes de service administrés de grou
  Lorsque des fichiers de base de données sont stockés à un emplacement défini par l'utilisateur, vous devez octroyer l'accès SID par service à cet emplacement. Pour plus d’informations sur l’octroi d’autorisations de système de fichiers à un SID par service, consultez [Configurer les autorisations du système de fichiers pour l’accès au moteur de base de données](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md).  
   
 ###  <a name="File_System_Other"></a> Autorisations de système de fichiers accordées aux autres comptes d’utilisateur ou groupes Windows  
- Certaines autorisations de contrôle d'accès peuvent avoir été accordées à des comptes intégrés ou à d'autres comptes de services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau suivant répertorie les listes ACL supplémentaires définies par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+
+Certaines autorisations de contrôle d'accès peuvent avoir été accordées à des comptes intégrés ou à d'autres comptes de services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau suivant répertorie les listes ACL supplémentaires définies par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Composant demandeur|Compte|Ressource|Autorisations|  
 |--------------------------|-------------|--------------|-----------------|  
@@ -414,7 +428,8 @@ Les comptes de service administrés, les comptes de service administrés de grou
  *Ceci est l’espace de noms du fournisseur WMI.  
   
 ###  <a name="Unusual_Locations"></a> Autorisations de système de fichiers pour des emplacements de disque exceptionnels  
- Le lecteur par défaut pour les emplacements d’installation est **systemdrive**, normalement le lecteur C quand des bases de données tempdb ou utilisateur sont installées  
+
+L’emplacement d’installation par défaut est **systemdrive**, en général le lecteur C. Cette section donne des informations supplémentaires dans le cas où les bases de données tempdb ou utilisateur sont installées à des emplacements inhabituels.  
   
  **Lecteur non défini par défaut**  
   
@@ -428,7 +443,8 @@ Les comptes de service administrés, les comptes de service administrés de grou
 >  Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format *<nom_domaine>***\\***<nom_ordinateur>***$**.  
   
 ###  <a name="Review_additional_considerations"></a> Considérations supplémentaires  
- Le tableau suivant indique les autorisations nécessaires pour que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent des fonctionnalités supplémentaires.  
+
+Le tableau suivant indique les autorisations nécessaires pour que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent des fonctionnalités supplémentaires.  
   
 |Service/Application|Fonctionnalité|Autorisation requise|  
 |--------------------------|-------------------|-------------------------|  
@@ -458,7 +474,8 @@ Les comptes de service administrés, les comptes de service administrés de grou
 -   **[HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\Instance Names\RS] "InstanceName"="MSRSSQL13"**  
   
 ###  <a name="WMI"></a> WMI  
- Windows Management Instrumentation (WMI) doit être en mesure de se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour cette prise en charge, le SID par service du fournisseur WMI Windows (**NT SERVICE\winmgmt**) est configuré dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+
+Windows Management Instrumentation (WMI) doit être en mesure de se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour cette prise en charge, le SID par service du fournisseur WMI Windows (**NT SERVICE\winmgmt**) est configuré dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Le fournisseur WMI SQL requiert les autorisations suivantes :  
   
@@ -473,7 +490,8 @@ Les comptes de service administrés, les comptes de service administrés de grou
      Le programme d’installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un espace de noms WMI SQL et accorde l’autorisation de lecture au SID de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ###  <a name="Pipes"></a> Canaux nommés  
- Pendant toute l'installation, le programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'accès au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] via le protocole de mémoire partagée, qui est un canal nommé local.  
+
+Pendant toute l'installation, le programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit l'accès au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] via le protocole de mémoire partagée, qui est un canal nommé local.  
   
 ##  <a name="Provisioning"></a> Approvisionnement  
  Cette section décrit comment les comptes sont mis en service à l'intérieur des différents composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -2,9 +2,12 @@
 title: "Partitionnement au niveau de l’application | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0133e07a063589deeae9cf1d1cb9e05fe480437
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
-  Cette application traite les commandes. Il y a beaucoup de traitement sur les commandes récentes. Il n'y a beaucoup de traitement sur les commandes plus anciennes. Les commandes récentes sont dans une table mémoire optimisée. Les commandes plus anciennes sont dans une table sur disque. Toutes les commandes après le *hotDate* sont dans une table optimisée en mémoire. Toutes les commandes avant le *hotDate* sont dans une table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table optimisée en mémoire) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette application traite les commandes. Il y a beaucoup de traitement sur les commandes récentes. Il n'y a beaucoup de traitement sur les commandes plus anciennes. Les commandes récentes sont dans une table mémoire optimisée. Les commandes plus anciennes sont dans une table sur disque. Toutes les commandes après le *hotDate* sont dans une table optimisée en mémoire. Toutes les commandes avant le *hotDate* sont dans une table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table optimisée en mémoire) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
   
  Cet exemple n'utilise pas une table partitionnée pour la table sur disque, mais effectue le suivi d'un point de fractionnement explicite entre les deux tables, à l'aide d'une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  
   

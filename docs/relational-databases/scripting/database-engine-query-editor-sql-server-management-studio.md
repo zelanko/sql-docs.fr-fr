@@ -2,9 +2,12 @@
 title: "Éditeur de requête du moteur de base de données (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81d67f47cddfe48575758ec7ff3b5949a4c6f1f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
-  Utilisez l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
   
 ## <a name="transact-sql-f1-help"></a>Aide sur Transact-SQL via la touche F1  
  L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge votre liaison à la rubrique de référence pour une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique lorsque vous sélectionnez F1. Pour ce faire, mettez en surbrillance le nom d'une instruction Transact-SQL, puis sélectionnez F1. Le moteur de recherche d'aide recherchera alors une rubrique qui a un attribut d'aide F1 qui correspond à la chaîne que vous avez mise en surbrillance.  

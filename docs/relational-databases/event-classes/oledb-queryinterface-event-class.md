@@ -2,9 +2,12 @@
 title: "OLEDB QueryInterface, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a675719a1c034127bce3afc1bee730cc2221dd53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 54ea634acb632f76d6d74aa192fb89e4b3f8af94
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface (classe d'événements)
-  La classe d’événements **OLEDB QueryInterface** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] émet un appel vers **QueryInterface** du fournisseur OLE DB, provenant de requêtes distribuées et de procédures stockées distantes. Ajoutez cette classe d'événements dans les traces servant à effectuer un suivi des problèmes relatifs aux requêtes distribuées et aux procédures stockées distantes.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **OLEDB QueryInterface** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] émet un appel **QueryInterface** OLE DB pour des requêtes distribuées et des procédures stockées distantes. Ajoutez cette classe d'événements dans les traces servant à effectuer un suivi des problèmes relatifs aux requêtes distribuées et aux procédures stockées distantes.  
   
  Quand la classe **OLEDB QueryInterface** y est incluse, le total de l’espace réservé en est d’autant alourdi. Si de tels événements se produisent fréquemment, il est possible que la trace affecte de façon notable les performances. Pour minimiser l'effet d'une telle charge, limitez l'utilisation de cette classe d'événements aux traces destinées à effectuer le suivi de problèmes précis pour de brèves durées.  
   

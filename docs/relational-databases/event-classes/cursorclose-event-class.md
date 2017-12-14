@@ -2,9 +2,12 @@
 title: "Classe d’événements CursorClose | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fa3d628acdf6665c102b0315d1fc532e02fd6d3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 654126766b8ca24ecfed775253c616d7947bc619
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorclose-event-class"></a>CursorClose (classe d'événements)
-  Les événements de fermeture de curseur se produisent lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] se referme et libère un curseur. La classe d’événements **CursorClose** décrit les événements de fermeture de curseur qui se produisent dans les curseurs d’interface de programmation d’applications (API). Cette classe d'événements se produit lors de la fermeture d'une instruction de curseur [!INCLUDE[tsql](../../includes/tsql-md.md)] par ODBC, OLE DB ou DB-Library.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les événements de fermeture de curseur se produisent quand le [!INCLUDE[ssDE](../../includes/ssde-md.md)] se referme et libère un curseur. La classe d’événements **CursorClose** décrit les événements de fermeture de curseur qui se produisent dans les curseurs d’interface de programmation d’applications (API). Cette classe d'événements se produit lors de la fermeture d'une instruction de curseur [!INCLUDE[tsql](../../includes/tsql-md.md)] par ODBC, OLE DB ou DB-Library.  
   
  Incluez la classe d’événements **CursorClose** dans les traces qui enregistrent les performances des curseurs. La surcharge qui en découle dépend de la fréquence d'utilisation des curseurs sur la base de données pendant la trace. Si les curseurs sont largement utilisés, la trace peut altérer considérablement les performances.  
   

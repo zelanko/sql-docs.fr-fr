@@ -1,5 +1,5 @@
 ---
-title: Catalog.create_execution_dump | Documents Microsoft
+title: catalog.create_execution_dump | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Provoque la suspension d'un package en cours d'exécution et la création d'un fichier de vidage par ce dernier. Le fichier est stocké dans le  *\<lecteur >*: dossier \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Provoque la suspension d'un package en cours d'exécution et la création d'un fichier de vidage par ce dernier. Le fichier est stocké dans le dossier *\<lecteur>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,8 +36,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @execution_id =] *execution_id*  
- ID d'exécution du package en cours d'exécution. Le *execution_id* est **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ ID d'exécution du package en cours d'exécution. *execution_id* est de type **bigint**.  
   
 ## <a name="example"></a>Exemple  
  Dans l'exemple suivant, le package en cours d'exécution dont l'ID d'exécution est 88 est invité à créer un fichier de vidage.  
@@ -57,7 +55,7 @@ EXEC create_execution_dump @execution_id = 88
  Aucune  
   
 ## <a name="permissions"></a>Permissions  
- Cette procédure stockée requiert des utilisateurs qui seront membres de la **ssis_admin** rôle de base de données.  
+ Cette procédure stockée requiert que les utilisateurs soient membres du rôle de base de données **ssis_admin**.  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit les conditions provoquant l'échec de la procédure stockée.  
@@ -72,4 +70,3 @@ EXEC create_execution_dump @execution_id = 88
  [Générer de fichiers de vidage pour l’exécution des packages](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

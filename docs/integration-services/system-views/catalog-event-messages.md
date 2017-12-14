@@ -1,5 +1,5 @@
 ---
-title: Catalog.event_messages | Documents Microsoft
+title: catalog.event_messages | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0db5ace2a95bea93189cb48378b01a4ba599942
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,16 +31,16 @@ ms.lasthandoff: 09/26/2017
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|bigint|ID unique du message d'événement.|  
-|Operation_id|bigint|Le type d’opération.<br /><br /> Pour obtenir la liste des types d’opération, consultez [catalog.operations &#40; Base de données SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Operation_id|bigint|Type d’opération.<br /><br /> Pour obtenir la liste des types d’opération, consultez [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Heure à laquelle le message a été créé.|  
-|Message_type|smallint|Type de message affiché. Pour plus d’informations sur les types de messages, consultez [catalog.operation_messages &#40; Base de données SSISDB &#41; ](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_type|smallint|Type de message affiché. Pour plus d’informations sur les types de messages, consultez [catalog.operation_messages &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|smallint|Source du message.|  
 |message|nvarchar(max)|Texte du message.|  
-|Extended_info_id|bigint|L’ID des informations supplémentaires relatives au message d’opération, trouvé dans le [catalog.extended_operation_info &#40; Base de données SSISDB &#41; ](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) vue.|  
+|Extended_info_id|bigint|ID des informations supplémentaires relatives au message d’opération, trouvé dans la vue [catalog.extended_operation_info &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Nom du fichier de package.|  
-|Event_name|nvarchar (1024)|Événement d'exécution associé au message.|  
+|Event_name|nvarchar(1024)|Événement d'exécution associé au message.|  
 |Message_source_name|nvarchar(4000)|Composant de package qui est la source du message.|  
-|Message_source_id|Nvarchar(38)|ID unique de la source du message.|  
+|Message_source_id|nvarchar(38)|ID unique de la source du message.|  
 |Subcomponent_name|nvarchar(4000)|Composant de flux de données qui est la source du message.<br /><br /> Lorsque des messages sont retournés par le moteur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], SSIS.Pipeline s'affiche dans cette colonne.|  
 |Package_path|nvarchar(max)|Chemin d'accès unique du composant dans le package.|  
 |Execution_path|nvarchar(max)|Chemin d'accès complet du package parent jusqu'au point auquel le composant est exécuté.<br /><br /> Ce chemin d'accès capture également les itérations d'un composant.|  
@@ -66,12 +64,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Autorisation READ sur l'opération  
   
--   L’appartenance à la **ssis_admin** rôle de base de données.  
+-   Appartenance au rôle de base de données **ssis_admin**.  
   
--   L’appartenance à la **sysadmin** rôle de serveur.  
+-   Appartenance au rôle serveur **sysadmin**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   
-

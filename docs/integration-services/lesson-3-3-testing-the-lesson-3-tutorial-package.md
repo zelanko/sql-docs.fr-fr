@@ -1,5 +1,5 @@
 ---
-title: "Étape 3 : Test de la leçon 3 du Package du didacticiel | Documents Microsoft"
+title: "Étape 3 : Test du package du didacticiel de la leçon 3 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fa344530396b13defc44680a1232a3d6a1c39b42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Leçon 3-3-test de la leçon 3 du Package du didacticiel
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Leçon 3-3 : Test du package du didacticiel de la leçon 3
 Dans cette tâche, vous allez exécuter le package Lesson 3.dtsx. Lors de l'exécution du package, la fenêtre Journaux d'événements répertorie les entrées inscrites dans le fichier journal. Une fois l'exécution du package terminée, vous allez vérifier le contenu du fichier journal qui a été généré par le fournisseur d'informations.  
   
 ## <a name="checking-the-package-layout"></a>Vérification de la disposition du package  
@@ -35,11 +32,11 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
 **Flux de contrôle**  
   
-![Contrôler le flux de package](../integration-services/media/task4lesson2control.gif "contrôler le flux de package")  
+![Flux de contrôle dans le package](../integration-services/media/task4lesson2control.gif "Flux de contrôle dans le package")  
   
 **Flux de données**  
   
-![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "dans le package de flux de données")  
+![Flux de données dans le package](../integration-services/media/task9lesson1data.gif "Flux de données dans le package")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Pour exécuter le package du didacticiel Lesson 4  
   
@@ -60,4 +57,3 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
   
   
   
-

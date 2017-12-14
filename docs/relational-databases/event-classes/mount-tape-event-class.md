@@ -2,9 +2,12 @@
 title: "Mount Tape, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3d00f865e7beee1248ba43fd4008c1d32685e8b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5c8792a52d4db4e1ac53ca1218433939944f83be
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape (classe d'événements)
-  La classe d'événements Mount Tape intervient lors de la réception d'une demande de montage de bande. Cette classe d'événements permet de surveiller les demandes de montage de bande, tout comme leur succès ou leur échec.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Mount Tape intervient lors de la réception d’une demande de montage de bande. Cette classe d'événements permet de surveiller les demandes de montage de bande, tout comme leur succès ou leur échec.  
   
 ## <a name="mount-tape-event-class-data-columns"></a>Colonnes de données de la classe d'événements Mount Tape  
   

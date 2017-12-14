@@ -2,9 +2,12 @@
 title: "Délai d’attente d’entrée-sortie du système de stockage | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19115eaa47c43ab326067fd8610bf3589406a07b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b67442456ae1144c08d243799f3b47b40eabad2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="storage-system-input-output-time-out"></a>Délai d’attente d’entrée-sortie du système de stockage
-  Cette règle recherche l'ID d'événement 9 dans le journal des événements système. Ce message indique qu'un délai d'expiration d'E/S s'est produit dans le système de stockage.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette règle recherche l’ID d’événement 9 dans le journal des événements système. Ce message indique qu'un délai d'expiration d'E/S s'est produit dans le système de stockage.  
   
 ## <a name="best-practices-recommendations"></a>Meilleures pratiques recommandées  
  Pour plus d'informations sur la résolution de cette erreur, consultez les articles suivants de la Base de connaissances Microsoft :  

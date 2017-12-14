@@ -1,5 +1,5 @@
 ---
-title: "Générateur d’expressions | Documents Microsoft"
+title: "Générateur d’expressions | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords:
-- Expression Builder dialog box
+f1_keywords: sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords: Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-builder"></a>Générateur d'expressions
-  Utilisez la boîte de dialogue **Générateur d’expressions** pour créer et modifier l’expression d’une propriété ou écrire l’expression qui définit la valeur d’une variable à l’aide d’une interface graphique utilisateur qui affiche la liste des variables et fournit une référence intégrée aux fonctions, aux conversions de type et aux opérateurs que contient le langage d’expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Utilisez la boîte de dialogue **Générateur d’expressions** pour créer et modifier l’expression d’une propriété ou écrire l’expression qui définit la valeur d’une variable à l’aide d’une interface graphique utilisateur qui affiche la liste des variables et fournit une référence intégrée aux fonctions, aux conversions de type et aux opérateurs que contient le langage d’expression [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Une expression de propriété est une expression qui est affectée à une propriété. Lorsque l'expression est évaluée, la propriété est mise à jour de manière dynamique pour utiliser le résultat d'évaluation de l'expression. De la même manière, une expression utilisée dans une variable permet à la valeur de la variable d'être mise à jour avec le résultat de l'évaluation de l'expression.  
   
@@ -55,10 +51,9 @@ ms.lasthandoff: 08/03/2017
 |**Évaluer l'expression**|Cliquez sur **Évaluer l'expression** pour afficher le résultat de l'évaluation de l'expression|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page expressions](../../integration-services/expressions/expressions-page.md)   
- [Éditeur d’Expressions de propriété](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40; SSIS &#41; Variables](../../integration-services/integration-services-ssis-variables.md)   
+ [Page Expressions](../../integration-services/expressions/expressions-page.md)   
+ [Éditeur d’expressions de la propriété](../../integration-services/expressions/property-expressions-editor.md)   
+ [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variables système](../../integration-services/system-variables.md)  
   
   
-

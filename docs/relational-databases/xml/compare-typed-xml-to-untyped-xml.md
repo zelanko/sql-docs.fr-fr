@@ -2,9 +2,12 @@
 title: "Comparer du XML typé et du XML non typé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
-  Vous pouvez créer des variables, des paramètres et des colonnes du type **xml** . Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type **xml** . Dans ce cas, l'instance de type de données **xml** est dite *typée*. Dans le cas contraire, l'instance XML est dite *non typée*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Vous pouvez créer des variables, des paramètres et des colonnes du type **xml**. Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type **xml** . Dans ce cas, l'instance de type de données **xml** est dite *typée*. Dans le cas contraire, l'instance XML est dite *non typée*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Code XML bien formé et le type de données xml  
  Le type de données **xml** implémente le type de données **xml** de norme ISO. Par conséquent, il peut stocker des documents bien formés en conformité avec XML version 1.0, ainsi que des fragments de contenu XML avec des nœuds de texte et un nombre arbitraire d'éléments de premier niveau dans une colonne XML non typée. Le système vérifie que les données sont bien formées, n'exige pas l'association de schémas XML avec la colonne, puis rejette les données mal formées au sens large. Il peut aussi s'agir de variables et de paramètres XML non typés.  

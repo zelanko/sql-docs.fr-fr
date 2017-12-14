@@ -1,5 +1,5 @@
 ---
-title: Package de gestion (Service SSIS) | Documents Microsoft
+title: Gestion de packages (Service SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
-  Gestion des packages inclut la surveillance, la gestion, l’importation et exportation de packages.  
+  La gestion de packages inclut la surveillance, la gestion, l’importation et l’exportation de packages.  
  
  ## <a name="package-store"></a>Magasin de packages  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]fournit deux dossiers de niveau supérieur pour l’accès aux packages : 
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit deux dossiers de premier niveau pour l’accès aux packages : 
  - **Exécution des packages** 
  - **Packages stockés**
 
  Le dossier **Exécution des packages** répertorie les packages en cours d'exécution sur le serveur. Le dossier **Packages stockés** répertorie les packages enregistrés dans le magasin de packages. Ce sont les seuls packages gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le magasin de packages peut comprendre la base de données msdb et/ou les dossiers du système de fichiers répertoriés dans le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le fichier de configuration indique la base de données msdb et les dossiers du système de fichiers à gérer. Il est possible que vous disposiez également de packages stockés ailleurs dans le système de fichiers qui ne sont pas gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Vous enregistrez dans msdb de packages sont stockés dans une table nommée sysssispackages. Lorsque vous enregistrez des packages dans msdb, vous pouvez les regrouper dans des dossiers logiques. À l’aide des dossiers logiques peut vous aider à organiser les packages selon leur fonction, ou filtrer les packages dans la table sysssispackages. Créer des dossiers logiques dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Par défaut, tous les dossiers logiques que vous ajoutez à la base de données msdb sont inclus automatiquement dans le magasin de packages.  
+ Les packages que vous enregistrez dans msdb sont stockés dans une table nommée sysssispackages. Quand vous enregistrez des packages dans msdb, vous pouvez les regrouper dans des dossiers logiques. L’utilisation de dossiers logiques vous permet d’organiser les packages selon leur finalité ou bien de les filtrer dans la table sysssispackages. Créez des dossiers logiques dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Par défaut, tous les dossiers logiques que vous ajoutez à la base de données msdb sont inclus automatiquement dans le magasin de packages.  
   
- Les dossiers logiques que vous créez sont représentées sous forme de lignes dans la table sysssispackagefolders dans msdb. Les colonnes folderid et parentfolderid de sysssispackagefolders définissent l’arborescence des dossiers. Les dossiers logiques racine dans msdb sont les lignes de sysssispackagefolders avec des valeurs null dans la colonne parentfolderid. Pour plus d’informations, consultez [sysssispackages &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysssispackages-transact-sql.md) et [sysssispackagefolders (Transact-SQL &)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
+ Les dossiers logiques que vous créez sont représentés sous forme de lignes dans la table sysssispackagefolders de msdb. Les colonnes folderid et parentfolderid de sysssispackagefolders définissent l’arborescence des dossiers. Les dossiers logiques racines de msdb correspondent aux lignes de sysssispackagefolders ayant des valeurs Null dans la colonne parentfolderid. Pour plus d’informations, consultez [sysssispackages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysssispackages-transact-sql.md) et [sysssispackagefolders (Transact-SQL&)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
   
  Lorsque vous ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puis que vous vous connectez à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les dossiers msdb gérés par le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] apparaissent dans le dossier Packages stockés. Si le fichier de configuration spécifie des dossiers de système de fichiers racines, le dossier Packages stockés répertorie également les packages enregistrés dans le système de fichiers dans ces mêmes dossiers et dans tous les sous-dossiers.  
   
@@ -66,12 +64,12 @@ ms.lasthandoff: 08/03/2017
   
  Pour visualiser la liste des packages stockés dans le magasin de packages, vous devez ouvrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et vous connecter à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-## <a name="monitor-running-packages"></a>Analyse en cours d’exécution des packages  
- Le **en cours d’exécution de Packages** dossier répertorie les packages en cours d’exécution. Pour afficher des informations relatives aux packages en cours d'exécution sur la page **Résumé** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur le dossier **Exécution des packages** . Des informations telles que la durée d'exécution des packages en cours d'exécution figurent sur la page **Résumé** . Vous pouvez également actualiser l'affichage du dossier pour obtenir les informations les plus récentes.  
+## <a name="monitor-running-packages"></a>Surveiller les packages en cours d’exécution  
+ Le dossier **Exécution des packages** répertorie les packages en cours d’exécution. Pour afficher des informations relatives aux packages en cours d'exécution sur la page **Résumé** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cliquez sur le dossier **Exécution des packages** . Des informations telles que la durée d'exécution des packages en cours d'exécution figurent sur la page **Résumé** . Vous pouvez également actualiser l'affichage du dossier pour obtenir les informations les plus récentes.  
   
  Pour afficher des informations sur un seul package en cours d'exécution sur la page **Résumé** , cliquez sur le package. La page **Résumé** affiche des informations telles que la version et la description du package.  
   
-Arrêter l’exécution d’un package à partir de la **en cours d’exécution de Packages** dossier en double-cliquant sur le package, puis sur **arrêter**.  
+Pour arrêter un package en cours d’exécution dans le dossier **Exécution des packages**, cliquez avec le bouton droit sur le package, puis cliquez sur **Arrêter**.  
   
 ## <a name="view-packages-in-ssms"></a>Afficher les packages dans SSMS
     
@@ -86,7 +84,7 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
     > [!IMPORTANT]  
     >  Si vous ne pouvez pas vous connecter à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], il est probable que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne soit pas en cours d'exécution. Pour connaître l'état du service, cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur **Microsoft SQL Server**, sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**. Dans le volet gauche, cliquez sur **Services SQL Server**. Dans le volet droit, recherchez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Démarrez le service, il n'est pas déjà en cours d'exécution.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]s’ouvre. Par défaut, la fenêtre Explorateur d'objets est ouverte et positionnée dans l'angle inférieur gauche de SQL Server Management Studio. Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets** .  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] s'ouvre. Par défaut, la fenêtre Explorateur d'objets est ouverte et positionnée dans l'angle inférieur gauche de SQL Server Management Studio. Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets** .  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>Pour visualiser les packages gérés par le service Integration Services  
   
@@ -98,7 +96,7 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
  
  Les packages peuvent être enregistrés dans la table sysssispackages de la base de données msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans le système de fichiers.  
   
- Le magasin de packages, qui est le stockage logique que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contrôle et gère, peut inclure la base de données msdb et les dossiers du système de fichiers spécifiés dans le fichier de configuration pour le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Le magasin de packages, qui est le stockage logique que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contrôle et gère, peut inclure la base de données msdb et les dossiers du système de fichiers spécifiés dans le fichier de configuration pour le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Vous pouvez importer et exporter des packages entre les types de stockage suivants :  
   
@@ -106,9 +104,9 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
   
 -   Les dossiers dans le magasin de packages SSIS. Les deux dossiers par défaut sont appelés « Système de fichiers » et « MSDB ».  
   
--   La base de données msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   La base de données msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]vous donne la possibilité d’importer et exporter des packages, et ce faisant modifier le format de stockage et l’emplacement des packages. Les fonctionnalités d’importation et d’exportation vous permettent d’ajouter des packages au système de fichiers, au magasin de packages ou à la base de données msdb, et de copier des packages d’un format de stockage vers un autre. Par exemple, les packages enregistrés dans msdb peuvent être copiés dans le système de fichiers et vice versa.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous donne la possibilité d'importer et d'exporter des packages, et ce faisant, de modifier le format et l'emplacement de stockage des packages. Les fonctionnalités d’importation et d’exportation vous permettent d’ajouter des packages au système de fichiers, au magasin de packages ou à la base de données msdb, et de copier des packages d’un format de stockage vers un autre. Par exemple, les packages enregistrés dans msdb peuvent être copiés dans le système de fichiers et vice versa.  
   
  Vous pouvez aussi copier un package dans un format différent à l’aide de l’utilitaire d’invite de commandes **dtutil** (dtutil.exe). Pour plus d’informations, consultez [dtutil Utility](../../integration-services/dtutil-utility.md).  
   
@@ -134,7 +132,7 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans le **nom du serveur** zone, fournissez un nom de serveur ou cliquez sur  **\<Parcourir... >** et recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir**, puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -170,7 +168,7 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans le **nom du serveur** zone, fournissez un nom de serveur ou cliquez sur  **\<Parcourir... >** et recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir**, puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -197,7 +195,7 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
 8.  Cliquez sur **OK** pour terminer l'exportation.  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Importer un package
-  Utilisez la boîte de dialogue **Importer un package**, disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pour importer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et pour définir ou modifier son niveau de protection.  
+  Utilisez la boîte de dialogue **Importer un package** , disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pour importer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et pour définir ou modifier son niveau de protection.  
   
 ### <a name="options"></a>Options  
  **Emplacement du package**  
@@ -237,7 +235,7 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
  Cliquez sur le bouton Parcourir **(…)** et, dans la boîte de dialogue **Niveau de protection du package** , mettez à jour le niveau de protection. Pour plus d’informations, consultez [Boîte de dialogue Niveau de protection du package](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog).  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Exporter un package
-  Utilisez la boîte de dialogue **Exporter un package**, disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pour exporter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vers un autre emplacement et éventuellement modifier son niveau de protection.  
+  Utilisez la boîte de dialogue **Exporter un package** , disponible dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], pour exporter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vers un autre emplacement et éventuellement modifier son niveau de protection.  
   
 ### <a name="options"></a>Options  
  **Emplacement du package**  
@@ -295,4 +293,3 @@ Arrêter l’exécution d’un package à partir de la **en cours d’exécution
  [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

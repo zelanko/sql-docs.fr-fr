@@ -2,9 +2,12 @@
 title: "Classe d’événements Deprecation Final Support | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17095ce06acb9ed65e30c38bd71bb966fe6bc76d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cdf73d4ccb8d8ccfaa366f599368cce51fa310c8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support (classe d'événements)
-  La classe d’événements **Deprecation Final Support** a lieu quand vous utilisez une fonctionnalité qui sera supprimée dans la prochaine version majeure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une plus grande longévité de vos applications, n’utilisez pas les fonctions qui font intervenir la classe d’événements **Deprecation Final Support** ou **Deprecation Announcement** . Modifiez le plus tôt possible les applications qui utilisent actuellement les fonctions abandonnées.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **Deprecation Final Support** a lieu quand vous utilisez une fonctionnalité qui sera supprimée dans la prochaine version majeure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une plus grande longévité de vos applications, n’utilisez pas les fonctions qui font intervenir la classe d’événements **Deprecation Final Support** ou **Deprecation Announcement** . Modifiez le plus tôt possible les applications qui utilisent actuellement les fonctions abandonnées.  
   
 ## <a name="deprecation-final-support-event-class-data-columns"></a>Colonnes de la classe d'événements Deprecation Final Support  
   

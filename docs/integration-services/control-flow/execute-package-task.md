@@ -1,5 +1,5 @@
 ---
-title: "Exécuter la tâche de Package | Documents Microsoft"
+title: "Exécuter le package, tâche | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/11/2017
  La tâche d'exécution de package peut exécuter des packages enfants contenus dans le même projet qui contient le package parent. Vous sélectionnez un package enfant d'un projet en définissant la propriété **ReferenceType** sur **Project Reference**, puis en définissant la propriété **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Integration Services (SSIS) de déployer les projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  La tâche d’exécution de package peut exécuter des packages stockés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb et des packages stockés dans le système de fichiers. La tâche utilise un gestionnaire de connexions OLE DB pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un gestionnaire de connexions de fichiers pour accéder au système de fichiers. Pour plus d'informations, consultez [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) et [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
@@ -162,7 +160,7 @@ ms.lasthandoff: 08/11/2017
  Sélectionnez **Référence du projet** pour les packages enfants qui sont dans le projet. Sélectionnez **Référence externe** pour les packages enfants situés en dehors du package.  
   
 > [!NOTE]  
->  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Integration Services (SSIS) de déployer les projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+>  L’option **ReferenceType** est en lecture seule et est définie sur **Référence externe** si le projet qui contient le package n’a pas été converti en modèle de déploiement de projet. [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Mot de passe**  
  Si le package enfant s'avère protégé par un mot de passe, indiquez ce dernier ou cliquez sur le bouton représentant des points de suspension (…) afin de définir un nouveau mot de passe.  
@@ -195,7 +193,7 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--sql-server"></a>Emplacement = SQL Server  
  **Connexion**  
- Sélectionnez un gestionnaire de connexions OLE DB dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+ Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -204,7 +202,7 @@ ms.lasthandoff: 08/11/2017
   
 ##### <a name="location--file-system"></a>Emplacement = Système de fichiers  
  **Connexion**  
- Sélectionnez un gestionnaire de connexions de fichier dans la liste, ou cliquez sur \< **nouvelle connexion...** > pour en créer un nouveau.  
+ Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -214,7 +212,7 @@ ms.lasthandoff: 08/11/2017
 ###  <a name="parameter"></a> Définir les options sur la page Liaisons de paramètre  
  Vous pouvez passer des valeurs du package parent ou du projet au package enfant. Le projet doit utiliser le modèle de déploiement de projet et le package enfant doit être contenu dans le même projet qui contient le package parent.  
   
- Pour plus d’informations sur la conversion des projets dans le modèle de déploiement de projet, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Pour plus d’informations sur la conversion de projets en modèle de déploiement de projet, consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  **Paramètre de package enfant**  
  Entrez ou sélectionnez un nom pour le paramètre de package enfant.  
@@ -229,4 +227,3 @@ ms.lasthandoff: 08/11/2017
  Cliquez pour supprimer un mappage entre un paramètre ou une variable et un paramètre de package enfant.  
   
   
-

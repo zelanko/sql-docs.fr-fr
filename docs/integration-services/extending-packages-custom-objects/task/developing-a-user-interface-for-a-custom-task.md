@@ -1,5 +1,5 @@
 ---
-title: "Développement d’une Interface utilisateur pour une tâche personnalisée | Documents Microsoft"
+title: "Développement d’une interface utilisateur pour une tâche personnalisée | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1d13e82111d97d4d4a63615c91b3cbb48f68f708
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8707a24fda7d84ac260e33884d01279d8cbe5501
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Développement d'une interface utilisateur pour une tâche personnalisée
   Le modèle objet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit aux développeurs de tâches personnalisées la capacité de créer facilement une interface utilisateur personnalisée pour une tâche, qui peut ensuite être intégrée et affichée dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interface utilisateur fournit des informations utiles dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] et aide les utilisateurs à configurer correctement les propriétés et les paramètres de la tâche personnalisée.  
@@ -50,7 +47,7 @@ ms.lasthandoff: 08/03/2017
   
  Cette section décrit le rôle de l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> et de l'interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> lorsque vous développez une interface utilisateur pour une tâche personnalisée. Elle fournit également des informations sur la manière de créer, intégrer, déployer et déboguer la tâche dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
- Le [!INCLUDE[ssIS](../../../includes/ssis-md.md)] concepteur fournit plusieurs points d’entrée à l’interface utilisateur de la tâche : l’utilisateur peut sélectionner **modifier** dans le menu contextuel, double-cliquez sur la tâche, ou cliquez sur le **afficher l’éditeur** lien en bas de la feuille de propriétés. Lorsque l'utilisateur accède à l'un de ces points d'entrée, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] recherche et charge l'assembly qui contient l'interface utilisateur pour la tâche. L'interface utilisateur de la tâche est chargée de créer la boîte de dialogue des propriétés affichée pour l'utilisateur dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] fournit plusieurs points d’entrée dans l’interface utilisateur pour la tâche : l’utilisateur peut sélectionner **Modifier** dans le menu contextuel, double-cliquer sur la tâche ou cliquer sur le lien **Afficher l’éditeur** en bas de la feuille de propriétés. Lorsque l'utilisateur accède à l'un de ces points d'entrée, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] recherche et charge l'assembly qui contient l'interface utilisateur pour la tâche. L'interface utilisateur de la tâche est chargée de créer la boîte de dialogue des propriétés affichée pour l'utilisateur dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
  Une tâche et son interface utilisateur sont des entités distinctes. Elles doivent être implémentées dans des assemblys séparés pour réduire les tâches de localisation, de déploiement et de maintenance. La DLL n'a généralement pas connaissance de son interface utilisateur et ne charge ni n'appelle de données la concernant, à l'exception des informations contenues dans les valeurs d'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> codées dans la tâche. Il s'agit du seul lien qui unit une tâche et son interface utilisateur.  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 08/03/2017
   
  Le tableau suivant décrit les propriétés de l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
-|Propriété|Description|  
+|Propriété| Description|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Affiche le nom de la tâche dans la boîte à outils Flux de contrôle.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Description de la tâche (héritée de <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Cette propriété est affichée dans des info-bulles.|  
@@ -67,7 +64,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Si vous utilisez cette propriété, attribuez-lui l'une des valeurs de l'énumération <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Par exemple, `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contient des informations de contact au cas où la tâche nécessite un support technique.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Assigne un type à la tâche.|  
-|Attribute.TypeId|Dans le cadre d'une implémentation dans une classe dérivée, obtient un identificateur unique pour cet attribut. Pour plus d’informations, consultez **Attribute.TypeID** propriété dans la bibliothèque de classes .NET Framework.|  
+|Attribute.TypeId|Dans le cadre d'une implémentation dans une classe dérivée, obtient un identificateur unique pour cet attribut. Pour plus d’informations, consultez la propriété **Attribute.TypeID** dans la bibliothèque de classes .NET Framework.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.UITypeName%2A>|Nom de type de l'assembly utilisé par le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] pour charger l'assembly. Cette propriété permet de rechercher l'assembly de l'interface utilisateur pour la tâche.|  
   
  L'exemple de code suivant présente le <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>, au-dessus de la définition de classe.  
@@ -127,7 +124,7 @@ End Class 'MyTask
   
  Le concepteur appelle la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> pour demander la fenêtre affichée dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. La tâche crée une instance de la fenêtre qui contient l'interface utilisateur de la tâche et retourne l'interface utilisateur au concepteur afin qu'elle soit affichée. En général, les objets <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> et <xref:Microsoft.SqlServer.Dts.Runtime.Connections> sont fournis à la fenêtre par le biais d'un constructeur surchargé afin qu'ils puissent être utilisés pour configurer la tâche.  
   
- Pour afficher l'interface utilisateur de la tâche, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] appelle la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> associée. L'interface utilisateur de la tâche retourne le Windows Form de cette méthode et le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] affiche ce formulaire sous le forme d'une boîte de dialogue modale. Lorsque le formulaire est fermé, [!INCLUDE[ssIS](../../../includes/ssis-md.md)] concepteur examine la valeur de la **DialogResult** propriété du formulaire afin de déterminer si la tâche a été modifiée et si ces modifications doivent être enregistrées. Si la valeur de la **DialogResult** propriété **OK**, le [!INCLUDE[ssIS](../../../includes/ssis-md.md)] concepteur appelle les méthodes de persistance de la tâche pour enregistrer les modifications ; sinon, les modifications sont ignorées.  
+ Pour afficher l'interface utilisateur de la tâche, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] appelle la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> associée. L'interface utilisateur de la tâche retourne le Windows Form de cette méthode et le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] affiche ce formulaire sous le forme d'une boîte de dialogue modale. Lorsque le formulaire est fermé, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] examine la valeur de la propriété **DialogResult** du formulaire pour déterminer si la tâche a été modifiée et si ces modifications doivent être enregistrées. Si la propriété **DialogResult** a la valeur **OK**, le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] appelle les méthodes de persistance de la tâche pour enregistrer les modifications ; sinon, les modifications sont supprimées.  
   
  L'exemple de code suivant implémente l'interface <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> et suppose l'existence d'une classe Windows Form nommée SampleTaskForm.  
   
@@ -210,7 +207,6 @@ End Class
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)   
  [Codage d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
- [Développement d’une Interface utilisateur pour une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [Développement d’une interface utilisateur pour une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
   
   
-

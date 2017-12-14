@@ -1,10 +1,13 @@
 ---
 title: "Leçon 3 : Sauvegarder une base de données vers une URL | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f63e84d8c22b5c88214cc4d85a6bebf572c41430
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="lesson-3-database-backup-to-url"></a>Leçon 3 : Sauvegarder une base de données vers une URL
-Dans cette leçon, vous sauvegardez la base de données AdventureWorks2014 de votre instance SQL Server 2016 locale dans le conteneur Azure que vous avez créé à la [Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+# <a name="lesson-3-database-backup-to-url"></a>Leçon 3 : Sauvegarder une base de données dans une URL
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous sauvegardez la base de données AdventureWorks2014 de votre instance locale de SQL Server 2016 dans le conteneur Azure que vous avez créé à la [Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé sur un conteneur Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
 > Si vous souhaitez effectuer une sauvegarde d’une base de données SQL Server 2012 SP1 CU2 ou version ultérieure ou d’une base de données SQL Server 2014 dans ce conteneur Azure, vous pouvez utiliser la syntaxe déconseillée décrite [ici](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) pour sauvegarder dans une URL à l’aide de la syntaxe WITH CREDENTIALS.  

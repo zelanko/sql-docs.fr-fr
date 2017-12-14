@@ -1,5 +1,5 @@
 ---
-title: Destination du fichier HDFS | Documents Microsoft
+title: Destination du fichier HDFS | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hdfsfiledest.f1
+f1_keywords: sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02a2ecf62d91110bfd7e8a1429d5e1b835e4244e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d07d4efaa0b26a19f60ca27e465177d0ea7b797c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hdfs-file-destination"></a>HDFS File Destination
   Le composant HDFS File Destination permet à un package SSIS d’écrire des données dans un fichier HDFS. Les formats de fichier pris en charge sont les formats texte, Avro et ORC.  
   
  Pour configurer HDFS File Destination, opérez un glisser-déplacer de HDFS File Source vers le concepteur de flux de données, puis double-cliquez sur le composant pour ouvrir l’éditeur.  
   
- ![Éditeur de Destination du fichier HDFS](../../integration-services/data-flow/media/hdfs-file-dest.png "éditeur de Destination du fichier HDFS")  
+ ![Éditeur de la destination du fichier HDFS](../../integration-services/data-flow/media/hdfs-file-dest.png "Éditeur de la destination du fichier HDFS")  
   
 ## <a name="options"></a>Options  
  Configurez les options suivantes sur l’onglet **General (Général)** de la boîte de dialogue **Hadoop File Destination Editor (Éditeur de destination de fichiers Hadoop)** .  
@@ -49,7 +46,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Source du fichier HDFS](../../integration-services/data-flow/hdfs-file-source.md)  
+ [Source de fichier HDFS](../../integration-services/data-flow/hdfs-file-source.md)  
   
   
-

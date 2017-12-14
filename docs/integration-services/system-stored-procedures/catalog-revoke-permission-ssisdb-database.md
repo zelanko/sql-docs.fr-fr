@@ -1,5 +1,5 @@
 ---
-title: "Catalog.revoke_permission (base de données SSISDB) | Documents Microsoft"
+title: "catalog.revoke_permission (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - revoke_permission stored procedure [Integration Services]
 - catalog.revoke_permission stored procedure [Integration Services]
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f058368bdd39b31a569d8810cccfc4d03d9f875e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bc46123d3d395080f6bc5252bfccd63e597a3612
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +41,17 @@ catalog.revoke_permission [ @object_type = ] object_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @object_type =] *object_type*  
- Type d'objet sécurisable. Types d’objets sécurisables incluent le dossier (`1`), projet (`2`), environnement (`3`) et l’opération (`4`). Le *object_type* est **smallint***.*  
+ [ @object_type = ] *object_type*  
+ Type d'objet sécurisable. Les types d’objets sécurisables incluent le dossier (`1`), le projet (`2`), l’environnement (`3`) et l’opération (`4`). *object_type* est de type **smallint***.*  
   
- [ @object_id =] *object_id*  
- Identitifier unique (ID) de l’objet sécurisable. Le *object_id* est **bigint**.  
+ [ @object_id = ] *object_id*  
+ Identificateur unique (ID) de l’objet sécurisable. *object_id* est de type **bigint**.  
   
- [ @principal_id =] *principal_id*  
- ID du principal auquel révoquer l'autorisation. Le *principal_id* est **int**.  
+ [ @principal_id = ] *principal_id*  
+ ID du principal auquel révoquer l'autorisation. *principal_id* est de type **int**.  
   
- [ @permission_type =] *permission_type*  
- Type de l'autorisation. Le *permission_type* est **smallint**.  
+ [ @permission_type = ] *permission_type*  
+ Type de l'autorisation. *permission_type* est de type **smallint**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès)  
@@ -62,9 +60,9 @@ catalog.revoke_permission [ @object_type = ] object_type
   
  2 (object_id n’existe pas)  
   
- 3 (principal n’existe pas)  
+ 3 (le principal n’existe pas)  
   
- 4 (autorisation n’est pas valide)  
+ 4 (l’autorisation n’est pas valide)  
   
  5 (autre erreur)  
   
@@ -79,12 +77,12 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Autorisations ASSIGN_PERMISSIONS sur l'objet  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="remarks"></a>Notes  
- Si permission_type est spécifié, la procédure stockée supprime l’autorisation affectée explicitement au principal pour l’objet. Même s'il n'y a pas de telles instances, la procédure retourne une valeur de code de réussite (`0`). Si permission_type est omis, la procédure stockée supprime toutes les autorisations du principal pour l’objet.  
+ Si permission_type est spécifié, la procédure stockée supprime l’autorisation affectée explicitement au principal pour l’objet. Même s'il n'y a pas de telles instances, la procédure retourne une valeur de code de réussite (`0`). Si permission_type est omis, la procédure stockée supprime toutes les autorisations du principal à l’objet.  
   
 > [!NOTE]  
 >  Le principal peut encore avoir l'autorisation spécifiée sur l'objet s'il est membre d'un rôle qui a l'autorisation spécifiée.  
@@ -104,4 +102,3 @@ catalog.revoke_permission [ @object_type = ] object_type
 |`104`|MANAGE_OBJECT_PERMISSIONS|Permet au principal de gérer des autorisations sur tous les objets dans le dossier.|Dossier|  
   
   
-

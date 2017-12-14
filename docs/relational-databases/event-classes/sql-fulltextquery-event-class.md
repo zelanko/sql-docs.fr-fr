@@ -2,9 +2,12 @@
 title: "SQL:FullTextQuery, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 37a8e60840cd645e6d97229bdb426d0dc17c68a0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 67e62208027e8fe048e37a163bb84f2408e509f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery, classe d'événements
-  La classe d'événements SQL:FullTextQuery se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une requête de texte intégral. Incluez cette classe d'événements dans les traces qui surveillent les problèmes associés aux catalogues de texte intégral.  
+# <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery (classe d'événements)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements SQL:FullTextQuery se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une requête de texte intégral. Incluez cette classe d'événements dans les traces qui surveillent les problèmes associés aux catalogues de texte intégral.  
   
  Lorsque la classe d'événements SQL:FullTextQuery est incluse, la charge est élevée. Si de tels événements se produisent fréquemment, il est possible que la trace affecte de façon notable les performances. Pour réduire ce risque au minimum, limitez l'utilisation de cette classe d'événements aux traces qui surveillent des problèmes spécifiques pendant de brèves périodes de temps.  
   

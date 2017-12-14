@@ -2,9 +2,12 @@
 title: "Résumé : Gestion de données dans une table hiérarchique | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5c0f68a48e557da916d9d4de741ff44128fd6e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 994ef486992a0541323eed37a3e8054091969680
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>Leçon 2-5 : Résumé : Gestion de données dans une table hiérarchique
-Le type de données **hierarchyid** vous permet de créer facilement des tables qui reflètent des données hiérarchiques, puis de créer des index à profondeur prioritaire et à largeur prioritaire pour accéder de façon efficace à la table. Utilisez les méthodes hiérarchiques pour interroger et manipuler les données.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Le type de données **hierarchyid** vous permet de créer facilement des tables qui reflètent des données hiérarchiques, puis de créer des index à profondeur et à largeur prioritaires pour accéder de façon efficace à la table. Utilisez les méthodes hiérarchiques pour interroger et manipuler les données.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>Revenir au début du didacticiel  
 [Didacticiel : utilisation du type de données hierarchyid](../../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  

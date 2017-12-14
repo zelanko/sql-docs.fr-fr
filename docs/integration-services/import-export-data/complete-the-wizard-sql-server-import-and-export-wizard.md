@@ -1,5 +1,5 @@
 ---
-title: "Terminez l’Assistant (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+title: "Terminer l’Assistant (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,32 +8,29 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.completewizard.f1
+f1_keywords: sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c2592ac0539b2cd693e4aef48d7652c7970ec71c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b06adc095408d010acc2008352447a2ee48d8f67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Terminer l'Assistant (Assistant Importation et Exportation SQL Server)
-Une fois que vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement, et une fois que vous éventuellement enregistrez le package créé par l’Assistant, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] montre Assistant Importation et exportation **terminer l’Assistant**. Cette page vous permet de vérifier les choix effectués dans l’Assistant, puis de cliquer sur **Terminer** pour démarrer l’opération de copie.
+Une fois que vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement, et après l’enregistrement facultatif du package créé par l’Assistant, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Terminer l’Assistant**. Cette page vous permet de vérifier les choix effectués dans l’Assistant, puis de cliquer sur **Terminer** pour démarrer l’opération de copie.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Capture d’écran de la page Terminer l’Assistant 
- La capture d’écran suivante montre un exemple simple de la **terminer l’Assistant** page de l’Assistant.  
+ La capture d’écran suivante montre un exemple simple de la page **Terminer l’Assistant** de l’Assistant.  
   
- ![Page Fin de l’Assistant de l’Assistant Importation et exportation](../../integration-services/import-export-data/media/complete.png "page Fin de l’Assistant de l’Assistant Importation et exportation")  
+ ![Page Terminer l’Assistant de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/complete.png "Page Terminer l’Assistant de l’Assistant Importation et Exportation")  
   
 ## <a name="review-the-options-you-selected"></a>Vérifier les options sélectionnées  
  
@@ -48,5 +45,4 @@ Passez en revue le résumé et vérifiez les informations suivantes :
  
 ## <a name="see-also"></a>Voir aussi
 [Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 

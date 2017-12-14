@@ -1,36 +1,32 @@
 ---
 title: "Scénarios d’utilisation du Magasin des requêtes | Microsoft Docs"
 ms.custom: 
-ms.date: 04/12/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Query Store, usage scenarios
+helpviewer_keywords: Query Store, usage scenarios
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 231a1a6204c9010ec5c4895b7cb7506d3b4159ff
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Le magasin de requêtes peut être utilisé dans un vaste ensemble de scénarios quand il est essentiel de suivre et de garantir les performances de charges de travail prévisibles. Voici quelques exemples que vous pouvez examiner :  
+  Le magasin de requêtes peut être utilisé dans un vaste ensemble de scénarios quand il est essentiel de suivre et de garantir les performances de charges de travail prévisibles. Voici quelques exemples que vous pouvez examiner :  
   
 -   Repérer et résoudre des requêtes avec des régressions de choix de plan  
   
@@ -66,7 +62,7 @@ ms.lasthandoff: 09/27/2017
   
  Examinez le résumé du plan situé à droite pour analyser l’historique d’exécution et en savoir plus sur les différents plans et leurs statistiques d’exécution. Utilisez le volet inférieur pour examiner les différents plans ou les comparer visuellement, en les affichant côte à côte (à l’aide du bouton Comparer).  
   
- Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème :  
+ Quand vous identifiez une requête dont les performances ne sont pas optimales, votre action dépend de la nature du problème :  
   
 1.  Si la requête a été exécutée avec plusieurs plans et que le dernier est nettement plus mauvais que le précédent, vous pouvez utiliser le mécanisme de forçage d’application du plan pour garantir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisera le plan optimal pour les exécutions futures.  
   
@@ -79,7 +75,7 @@ ms.lasthandoff: 09/27/2017
 5.  Envisagez de récrire la requête coûteuse. Par exemple, profitez du paramétrage des requêtes et réduisez l’utilisation d’instructions SQL dynamiques. Implémentez une logique optimale lors de la lecture de données (appliquez le filtrage des données côté base de données, et non pas côté application).  
   
 ## <a name="ab-testing"></a>Test A/B  
- Utilisez le magasin de requêtes pour comparer les performances de la charge de travail avant et après la modification d’application que vous prévoyez d’introduire. La liste suivante contient plusieurs exemples où vous pouvez utiliser le magasin de requêtes pour évaluer l’impact de la modification de l’environnement ou de l’application sur les performances de la charge de travail :  
+ Utilisez le magasin de requêtes pour comparer les performances de la charge de travail avant et après la modification d’application que vous prévoyez d’introduire. La liste suivante contient plusieurs exemples où vous pouvez utiliser le magasin de requêtes pour évaluer l’impact de la modification de l’environnement ou de l’application sur les performances de la charge de travail :  
   
 -   Déploiement d’une nouvelle version de l’application.  
   
@@ -91,7 +87,7 @@ ms.lasthandoff: 09/27/2017
   
 -   L’ajout d’un contrôle de version du système temporel aux tables qui sont fréquemment modifiées par vos applications OLTP.  
   
- Dans chacun de ces scénarios, appliquez le flux de travail suivant :  
+ Dans chacun de ces scénarios, appliquez le flux de travail suivant :  
   
 1.  Exécutez votre charge de travail avec le magasin de requêtes avant la modification planifiée pour générer une ligne de base des performances.  
   
@@ -117,7 +113,7 @@ ms.lasthandoff: 09/27/2017
   
  Le plan avant la création d’index (plan_id = 1, au-dessus) a un indicateur d’index absents et vous pouvez vérifier que l’option Analyse d’index cluster était l’opérateur le plus coûteux dans la requête (rectangle rouge).  
   
- Le plan après la création d’index absents (plan_id = 15, en dessous) a maintenant une option Recherche d’index (non cluster) qui réduit le coût global de la requête et améliore ses performances (rectangle vert).  
+ Le plan après la création d’index absents (plan_id = 15, en dessous) a maintenant une option Recherche d’index (non cluster) qui réduit le coût global de la requête et améliore ses performances (rectangle vert).  
   
  En fonction de l’analyse, vous conservez généralement les index, car les performances de la requête ont été améliorées.  
   
@@ -136,7 +132,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  Passez au niveau de compatibilité de base de données le plus récent : exposez votre charge de travail aux derniers changements de l’optimiseur de requête et laissez-le éventuellement créer des plans.  
   
-5.  Utilisez le Magasin des requêtes pour l’analyse et la correction des régressions : dans l’ensemble, les changements de l’optimiseur de requête doivent produire de meilleurs plans. Toutefois, le Magasin des requêtes est un moyen facile d’identifier les régressions de choix de plan et de les corriger à l’aide du mécanisme de forçage d’application du plan.  
+5.  Utilisez le Magasin des requêtes pour l’analyse et la correction des régressions : dans l’ensemble, les changements de l’optimiseur de requête doivent produire de meilleurs plans. Toutefois, le Magasin des requêtes est un moyen facile d’identifier les régressions de choix de plan et de les corriger à l’aide du mécanisme de forçage d’application du plan. Avec [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], cette étape est désormais automatique grâce à la fonctionnalité [Correction du plan automatique](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction).  
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identifier et améliorer les charges de travail ad hoc  
  Certaines charges de travail n’ont pas de requêtes dominantes que vous pouvez paramétrer pour améliorer les performances globales de l’application. Ces charges de travail se caractérisent généralement par un nombre relativement important de requêtes différentes, chacune consommant une partie des ressources système. Chacune étant unique, ces requêtes sont exécutées très rarement (généralement une seule fois, d’où leur nom de « requêtes ad hoc »). Leur consommation d’exécution n’est donc pas critique. Par ailleurs, étant donné que l’application génère en permanence de nouvelles requêtes, une part importante des ressources système sont consacrées à la compilation des requêtes, ce qui n’est pas optimal. Cette situation n’est pas non plus idéale pour le magasin de requêtes car un grand nombre de requêtes et de plans inondent l’espace que vous avez réservé. De ce fait, il est probable que le magasin de requêtes se retrouvera très rapidement en mode lecture seule. Si vous avez activé **Stratégie de nettoyage basée sur la taille** ([fortement recommandé](best-practice-with-the-query-store.md) pour toujours maintenir le magasin de requêtes activé et en cours d’exécution), le processus en arrière-plan nettoie les structures du magasin de requêtes qui, la plupart du temps, utilisent également d’importantes ressources système.  
@@ -162,13 +158,13 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  ![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
- Le résultat des requêtes montre que, malgré le grand nombre de requêtes et de plans dans le Magasin des requêtes, leurs valeurs query_hash et plan_hash ne sont, en fait, pas différents. Un rapport entre les textes de requêtes uniques et les valeurs query_hash uniques nettement supérieur à 1 indique que la charge de travail est un candidat approprié pour le paramétrage, car la seule différence entre les requêtes est une constante littérale (paramètre) fournie en tant que partie du texte de la requête.  
+ Le résultat des requêtes montre que, malgré le grand nombre de requêtes et de plans dans le Magasin des requêtes, leurs valeurs query_hash et plan_hash ne sont, en fait, pas différents. Un rapport entre les textes de requêtes uniques et les valeurs query_hash uniques nettement supérieur à 1 indique que la charge de travail est un candidat approprié pour le paramétrage, car la seule différence entre les requêtes est une constante littérale (paramètre) fournie en tant que partie du texte de la requête.  
   
  En général, cette situation se produit si votre application génère des requêtes (au lieu d’appeler des procédures stockées ou des requêtes paramétrables), ou si elle s’appuie sur des infrastructures de mappage relationnel objet qui génèrent des requêtes par défaut.  
   
  Si vous contrôlez le code d’application, vous pouvez envisager de récrire la couche d’accès aux données pour utiliser des procédures stockées ou des requêtes paramétrables. Toutefois, il est possible d’améliorer considérablement cette situation sans apporter de modifications à l’application en forçant le paramétrage des requêtes pour l’ensemble de la base de données (toutes les requêtes) ou pour les modèles de requête individuels avec la même valeur query_hash.  
   
- L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
+ L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
   
 ```tsql  
 /*Apply plan guide for the selected query template*/  
@@ -229,4 +225,3 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   
-

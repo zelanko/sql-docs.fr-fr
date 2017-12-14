@@ -1,5 +1,5 @@
 ---
-title: Catalog.executable_statistics | Documents Microsoft
+title: catalog.executable_statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc671da319ee9e8ce71d98df001c3989d497a096
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: efd64e5612f10b3521849ff2da6103d2975f4830
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 |Nom de colonne|Type de données| Description|  
 |-----------------|---------------|-----------------|  
 |Statistics_id|bigint|ID unique des données.|  
-|Execution_id|bigint|ID unique de l'instance de l'exécution.<br /><br /> La vue catalog.executions fournit des informations supplémentaires sur les exécutions. Pour plus d’informations, consultez [catalog.executions &#40; Base de données SSISDB &#41; ](../../integration-services/system-views/catalog-executions-ssisdb-database.md).|  
+|Execution_id|bigint|ID unique de l'instance de l'exécution.<br /><br /> La vue catalog.executions fournit des informations supplémentaires sur les exécutions. Pour plus d’informations, consultez [catalog.executions &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).|  
 |Executable_id|bigint|ID unique du composant de package.<br /><br /> La vue catalog.executables fournit des informations supplémentaires sur les fichiers exécutables. Pour plus d’informations, consultez [catalog.executables](../../integration-services/system-views/catalog-executables.md).|  
 |Execution_path|nvarchar(max)|Chemin d'exécution complet du composant de package, y compris chaque itération du composant.|  
 |Start_time|datetimeoffset(7)|Heure à laquelle le fichier exécutable entre dans la phase de pré-exécution.|  
@@ -49,9 +47,8 @@ ms.lasthandoff: 09/26/2017
   
 -   Autorisation READ sur l'instance de l'exécution.  
   
--   L’appartenance à la **ssis_admin** rôle de base de données.  
+-   Appartenance au rôle de base de données **ssis_admin**.  
   
--   L’appartenance à la **sysadmin** rôle de serveur.  
+-   Appartenance au rôle serveur **sysadmin**.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Détection d’un fichier plat vide avec la tâche de Script | Documents Microsoft"
+title: "Détection d’un fichier plat vide à l’aide de la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - flat files
 - Script task [Integration Services], empty flat files
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40deae6a08a597114fbc721271a789895e1d8fa2
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0fe2ff93bb8852a4f7237ceae25a6af423e6dfd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Détection d'un fichier plat vide à l'aide de la tâche de script
   La source de fichier plat ne détermine pas si un fichier plat contient des lignes de données avant de tenter de les traiter. Vous pouvez améliorer l'efficacité d'un package, notamment d'un package qui parcourt de nombreux fichiers plats, en ignorant les fichiers qui ne contiennent aucune ligne de données. La tâche de script peut rechercher un fichier plat vide avant que le package ne commence à traiter le flux de données.  
@@ -39,21 +36,21 @@ ms.lasthandoff: 09/26/2017
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a> Description  
- L’exemple suivant utilise des méthodes de la **System.IO** espace de noms pour tester le fichier plat spécifié dans un gestionnaire de connexions de fichier plat pour déterminer si le fichier est vide, ou s’il contient uniquement attendu de lignes de données non-tels que les en-têtes de colonne ou une ligne vide. Le script vérifie d'abord la taille du fichier ; une taille de zéro octets indique que le fichier est vide. Si la taille du fichier est supérieure à zéro, le script lit les lignes du fichier jusqu'à la dernière, ou jusqu'à ce que le nombre de lignes dépasse le nombre attendu de lignes ne correspondant pas à des données. Si le nombre de lignes dans le fichier est inférieur ou égal au nombre attendu de lignes ne correspondant pas à des données, le fichier est considéré comme vide. Le résultat est retourné sous la forme d'une valeur booléenne dans une variable utilisateur, dont la valeur peut être utilisée pour le branchement du flux de contrôle du package. Le **FireInformation** méthode affiche également le résultat dans le **sortie** fenêtre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
+ L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour tester le fichier plat spécifié dans un gestionnaire de connexions de fichiers plats afin de déterminer si le fichier est vide ou s’il contient uniquement les lignes attendues ne correspondant pas à des données, telles que des en-têtes de colonnes ou des lignes vides. Le script vérifie d'abord la taille du fichier ; une taille de zéro octets indique que le fichier est vide. Si la taille du fichier est supérieure à zéro, le script lit les lignes du fichier jusqu'à la dernière, ou jusqu'à ce que le nombre de lignes dépasse le nombre attendu de lignes ne correspondant pas à des données. Si le nombre de lignes dans le fichier est inférieur ou égal au nombre attendu de lignes ne correspondant pas à des données, le fichier est considéré comme vide. Le résultat est retourné sous la forme d'une valeur booléenne dans une variable utilisateur, dont la valeur peut être utilisée pour le branchement du flux de contrôle du package. La méthode **FireInformation** affiche également le résultat dans la fenêtre **Output** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
-1.  Créer et configurer un gestionnaire de connexions de fichier plat nommé **EmptyFlatFileTest**.  
+1.  Créez et configurez un gestionnaire de connexions de fichiers plats nommé **EmptyFlatFileTest**.  
   
 2.  Créez une variable de type entier appelée `FFNonDataRows` et attribuez-lui une valeur égale au nombre attendu de lignes ne correspondant pas à des données dans le fichier plat.  
   
 3.  Créez une variable booléenne appelée `FFIsEmpty`.  
   
-4.  Ajouter le `FFNonDataRows` variable à la tâche de Script **ReadOnlyVariables** propriété.  
+4.  Ajoutez la variable `FFNonDataRows` à la propriété **ReadOnlyVariables** de la tâche de script.  
   
-5.  Ajouter le `FFIsEmpty` variable à la tâche de Script **ReadWriteVariables** propriété.  
+5.  Ajoutez la variable `FFIsEmpty` à la propriété **ReadWriteVariables** de la tâche de script.  
   
-6.  Dans votre code, importez le **System.IO** espace de noms.  
+6.  Dans votre code, importez l’espace de noms **System.IO**.  
   
  Si vous parcourez les fichiers avec un énumérateur Foreach File, au lieu d'utiliser un seul gestionnaire de connexions de fichiers plats, vous devez modifier l'exemple de code ci-dessous pour obtenir le nom et le chemin d'accès du fichier à partir de la variable dans laquelle la valeur énumérée est stockée et non à partir du gestionnaire de connexions.  
   
@@ -153,4 +150,3 @@ public void Main()
  [Exemples de tâche de script](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   
-

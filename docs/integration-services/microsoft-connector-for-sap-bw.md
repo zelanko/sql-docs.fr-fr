@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector pour SAP BW | Documents Microsoft
+title: Microsoft Connector for SAP BW | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d9edd63d224f5d4053133cba28ad31a8fba93522
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b313023e19949ab853b7b2c20578024e3350dbc5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector pour SAP BW
+# <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW comprend un jeu de trois composants qui vous permettent d’extraire ou de charger des données dans un système SAP Netweaver BW version 7.  
   
  Le logiciel [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW pour SQL Server 2016 est un composant de SQL Server 2016 Feature Pack. Pour installer le composant Connector pour SAP BW et sa documentation, téléchargez et exécutez le package du programme d’installation à la [page Web SQL Server 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=746297).  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/03/2017
  Décrit l’interface utilisateur de chaque composant de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
   
   
-

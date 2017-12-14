@@ -3,8 +3,11 @@ title: "Paramètres | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d4e6260a060152121b7b3ec0ef9ac14b2042c3a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 697268f348d50079d2d3f740ea56b9dd28944792
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="parameters"></a>Paramètres
-Les paramètres sont utilisés pour échanger des données entre d'une part une procédure stockée ou une fonction et d'autre part, l'application ou l'outil ayant appelé la procédure stockée ou la fonction : 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les paramètres sont utilisés pour échanger des données entre d’une part une procédure stockée ou une fonction et d’autre part, l’application ou l’outil ayant appelé la procédure stockée ou la fonction : 
 
 *  Les paramètres d'entrée permettent à l'appelant de faire passer une valeur de donnée à la procédure stockée ou à la fonction.
 *  Les paramètres de sortie permettent à la procédure stockée de faire passer en retour une valeur de donnée à l'appelant. Les fonctions définies par l'utilisateur ne peuvent pas définir de paramètres de sortie.

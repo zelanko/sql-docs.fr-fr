@@ -2,9 +2,12 @@
 title: "Utiliser l’Assistant Ajout d’un réplica Azure (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7aa33a5adbf14beb92175e030df68fad5227d09b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 72d2338ec7aa19a5557d82f3deba800709df4705
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utiliser l'Assistant Ajout d’un réplica Azure (SQL Server)
-  Utilisez l’Assistant Ajouter un réplica Microsoft Azure pour vous aider à créer une machine virtuelle Microsoft Azure dans un environnement informatique hybride et à le configurer comme réplica secondaire pour un groupe de disponibilité Always On nouveau ou existant.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez l’Assistant Ajouter un réplica Microsoft Azure pour vous aider à créer une machine virtuelle Microsoft Azure dans un environnement informatique hybride et à le configurer comme réplica secondaire pour un groupe de disponibilité Always On nouveau ou existant.  
   
 -   **Avant de commencer :**  
   

@@ -1,5 +1,5 @@
 ---
-title: "Codage d’un énumérateur Foreach personnalisé | Documents Microsoft"
+title: "Codage d’un énumérateur ForEach personnalisé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,33 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom foreach enumerators [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 74e6e838c3dcfb18e52a8fbf460a5b71ee25399a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a7b4e876198c38de3b6ead93e3b4c78a08615f6c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codage d'un énumérateur Foreach personnalisé
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
   
- Pour un exemple fonctionnel d’énumérateur personnalisé, consultez [développement d’une Interface utilisateur pour un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md).  
+ Pour obtenir un exemple fonctionnel d’un énumérateur personnalisé, consultez [Développement d’une interface utilisateur pour un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md).  
   
 ## <a name="initializing-the-enumerator"></a>Initialisation de l'énumérateur  
  Vous pouvez substituer la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.InitializeForEachEnumerator%2A> pour mettre en cache des références aux gestionnaires de connexions définis dans le package et des références à l'interface d'événements qui vous permet de déclencher des erreurs, des avertissements et des messages d'information.  
   
 ## <a name="validating-the-enumerator"></a>Validation de l'énumérateur  
- Substituez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> pour vérifier que l'énumérateur est correctement configuré. Si la méthode retourne **échec**, l’énumérateur et le package qui contient l’énumérateur ne seront pas exécutés. L'implémentation de cette méthode est propre à chaque énumérateur, mais si l'énumérateur utilise des objets <xref:Microsoft.SqlServer.Dts.Runtime.Variable> ou <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, vous devez ajouter du code pour vérifier que ces objets existent dans les collections fournies à la méthode.  
+ Substituez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> pour vérifier que l'énumérateur est correctement configuré. Si la méthode retourne **Failure**, l’énumérateur et le package dans lequel il est contenu ne seront pas exécutés. L'implémentation de cette méthode est propre à chaque énumérateur, mais si l'énumérateur utilise des objets <xref:Microsoft.SqlServer.Dts.Runtime.Variable> ou <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, vous devez ajouter du code pour vérifier que ces objets existent dans les collections fournies à la méthode.  
   
  L'exemple de code suivant montre une implémentation de <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.Validate%2A> qui recherche une variable spécifiée dans une propriété de l'énumérateur.  
   
@@ -84,7 +80,7 @@ End Function
 ```  
   
 ## <a name="returning-the-collection"></a>Retour de la collection  
- Pendant l’exécution, le <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> conteneur appelle le <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> méthode de l’énumérateur personnalisé. Dans cette méthode, l'énumérateur crée et remplit sa collection d'éléments, puis retourne la collection. Le conteneur <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> itère ensuite les éléments dans la collection et exécute son flux de contrôle pour chacun d'eux.  
+ Au moment de l’exécution, le conteneur <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> appelle la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> de l’énumérateur personnalisé. Dans cette méthode, l'énumérateur crée et remplit sa collection d'éléments, puis retourne la collection. Le conteneur <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> itère ensuite les éléments dans la collection et exécute son flux de contrôle pour chacun d'eux.  
   
  L'exemple suivant présente une implémentation de <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A> qui retourne un tableau d'entiers aléatoires.  
   
@@ -119,7 +115,6 @@ End Function
  
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un énumérateur Foreach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
- [Développement d’une Interface utilisateur pour un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Développement d’une interface utilisateur pour un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   
-

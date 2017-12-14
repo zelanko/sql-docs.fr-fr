@@ -2,9 +2,12 @@
 title: "Lock:Deadlock, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9ca6119d3c4972e4b9edb758c62891da536c24d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1236806dff15aefb7f1ce9b2388c2e63b8f81e08
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="lockdeadlock-event-class"></a>Lock:Deadlock, classe d’événements
-  La classe d'événements Lock:Deadlock intervient lorsqu'une tentative d'obtention d'un verrou est annulée, car cette tentative faisait partie d'un blocage et a été choisie comme victime.  
+# <a name="lockdeadlock-event-class"></a>Classe d'événements Lock:Deadlock
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Lock:Deadlock intervient quand une tentative d’obtention d’un verrou est annulée, car cette tentative faisait partie d’un blocage et a été choisie comme victime.  
   
  La classe d'événements Lock:Deadlock permet de surveiller à quel moment surviennent les blocages, ainsi que les objets concernés. Ces informations peuvent vous être utiles pour déterminer si les blocages affectent de façon significative les performances de votre application. Vous pouvez ensuite examiner le code de l'application pour déterminer si vous pouvez y apporter des modifications afin de réduire le nombre de blocages.  
   

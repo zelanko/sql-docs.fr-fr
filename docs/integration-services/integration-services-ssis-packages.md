@@ -1,5 +1,5 @@
 ---
-title: Packages Integration Services (SSIS) | Documents Microsoft
+title: Packages Integration Services (SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2a80b0c5d00cac3ca874bb61d1acf55311892dec
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
   Un package est une collection organisée de connexions, d'éléments de flux de contrôle, d'éléments de flux de données, de gestionnaires d'événements, de variables, de paramètres et de configurations que vous assemblez à l'aide des outils de conception graphiques de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou que vous créez via un programme.  Vous enregistrez le package terminé dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou le système de fichiers, ou vous pouvez déployer le projet ssISnoversion sur le serveur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Le package est l'unité de travail qui est extraite, exécutée et enregistrée.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 08/03/2017
   
  Le schéma suivant illustre un package simple contenant un flux de contrôle avec une tâche de flux de données, qui contient à son tour un flux de données.  
   
- ![Un package avec un flux de contrôle et un flux de données](../integration-services/media/ssis-package.gif "un package avec un flux de contrôle et un flux de données")  
+ ![Package avec un flux de contrôle et un flux de données](../integration-services/media/ssis-package.gif "Package avec un flux de contrôle et un flux de données")  
   
  Après avoir créé le package de base, vous pouvez l'enrichir en y ajoutant des fonctionnalités avancées telles que la journalisation et des variables. Pour plus d'informations, consultez la section relative aux objets qui étendent les fonctionnalités des packages.  
   
@@ -115,11 +113,10 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>Tâches associées  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , [!INCLUDE[ssIS](../includes/ssis-md.md)] met à votre disposition deux outils graphiques : le concepteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l'Assistant Importation et Exportation [!INCLUDE[ssIS](../includes/ssis-md.md)] . Consultez les rubriques suivantes pour plus de détails.  
   
--   [Importation et exportation de données avec SQL Server Assistant Importation et exportation](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
+-   [Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   
--   [Créer des Packages dans SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
+-   [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
--   Consultez [génération de Packages par programme](../integration-services/building-packages-programmatically/building-packages-programmatically.md) dans le Guide du développeur. 
+-   Voir [Génération de packages par programme](../integration-services/building-packages-programmatically/building-packages-programmatically.md) dans le Guide du développeur. 
   
   
-

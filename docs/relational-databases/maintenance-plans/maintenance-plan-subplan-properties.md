@@ -2,9 +2,12 @@
 title: "Plan de maintenance (Propriétés du sous-plan) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e97a88a9ab7a57a41c6a3b8ac2b6ae2c98736d04
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2951f131e6579ac0fb5f7ecc831114123c106dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de maintenance (Propriétés du sous-plan)
-  Utilisez la boîte de dialogue **Plan de maintenance (Propriétés du sous-plan)** pour spécifier un nom, une description et une planification de sous-plan de maintenance de plan. Cliquez sur **Propriétés du sous-plan** sous l’onglet **Conception** du plan de maintenance ou double-cliquez sur un sous-plan dans la grille du concepteur pour afficher cette boîte de dialogue.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez la boîte de dialogue **Plan de maintenance (Propriétés du sous-plan)** pour spécifier un nom, une description et une planification de sous-plan de maintenance de plan. Cliquez sur **Propriétés du sous-plan** sous l’onglet **Conception** du plan de maintenance ou double-cliquez sur un sous-plan dans la grille du concepteur pour afficher cette boîte de dialogue.  
   
 ## <a name="options"></a>Options  
  **Nom**  

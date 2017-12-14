@@ -1,5 +1,5 @@
 ---
-title: "Développement d’une tâche personnalisée | Documents Microsoft"
+title: "Développement d’une tâche personnalisée | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6f9c16453365ce5b7a278f352c8cec8d86c2780
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 265f05d748398eb4a219899681c0bf71eb481b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-task"></a>Développement d'une tâche personnalisée
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] utilise des tâches pour effectuer des unités de travail en soutien à l'extraction, la transformation et le chargement de données. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut une variété de tâches qui effectuent les actions les plus fréquemment utilisées, allant de l'exécution d'une instruction SQL au téléchargement d'un fichier à partir d'un site FTP. Si les tâches incluses et les actions prises en charge ne répondent pas complètement à vos besoins, vous pouvez créer une tâche personnalisée.  
@@ -54,16 +51,16 @@ ms.lasthandoff: 08/03/2017
  [Codage d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
  Décrit comment coder les méthodes principales d'une tâche personnalisée.  
   
- [Connexion aux Sources de données dans une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [Connexion à des sources de données dans une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
  Décrit comment connecter une tâche personnalisée à une source de données.  
   
  [Déclenchement et définition d’événements dans une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
  Décrit comment déclencher des événements et définir des événements personnalisés à partir de la tâche personnalisée.  
   
- [Ajout d’un Support pour le débogage dans une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
+ [Ajout de la prise en charge du débogage dans une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
  Décrit comment créer des cibles de points d'arrêt dans la tâche personnalisée.  
   
- [Développement d’une Interface utilisateur pour une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
+ [Développement d’une interface utilisateur pour une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
  Explique comment créer une interface utilisateur qui s'affiche dans le Concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] pour configurer des propriétés sur la tâche personnalisée.  
   
 ## <a name="related-sections"></a>Sections connexes  
@@ -86,18 +83,17 @@ ms.lasthandoff: 08/03/2017
  [Développement d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
  Explique comment programmer des gestionnaires de connexions personnalisés.  
   
- [Développement d’un fournisseur de journal personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
+ [Développement d’un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  Explique comment programmer des modules fournisseurs d'informations personnalisés.  
   
  [Développement d’un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Décrit comment programmer des énumérateurs personnalisés.  
   
- [Développement d’un composant de flux de données personnalisées](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
+ [Développement d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Explique comment programmer des sources, des transformations et des destinations de flux de données personnalisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extension du Package avec la tâche de Script](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
- [Comparaison des Solutions de script et des objets personnalisés](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
+ [Extension du package à l’aide de la tâche de script](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
+ [Comparaison des solutions de script et des objets personnalisés](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

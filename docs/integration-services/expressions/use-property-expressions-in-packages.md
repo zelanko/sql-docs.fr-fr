@@ -1,5 +1,5 @@
 ---
-title: "Utiliser des Expressions de propriété dans des Packages | Documents Microsoft"
+title: "Utiliser des expressions de propriété dans des packages | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1a931e20a1ab0bafae0e014b174cf718e9a69f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 87cdbcf3158e3bbcc76233ff48f0ec90d5372c64
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  Le schéma suivant montre les interfaces utilisateur que vous pouvez utiliser pour ajouter, modifier et supprimer des expressions de propriété.  
   
- ![L’interface utilisateur pour les expressions de propriété](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "l’interface utilisateur pour les expressions de propriété")  
+ ![Interface utilisateur pour les expressions de propriété](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Interface utilisateur pour les expressions de propriété")  
   
  Dans la fenêtre **Propriétés** et dans la page **Expressions** , cliquez sur le bouton de navigation **(…)** au niveau de la collection **Expressions** pour ouvrir la boîte de dialogue **Éditeur d’expressions de la propriété** . L'Éditeur d'expressions de la propriété permet de mapper une propriété à une expression et de taper une expression de propriété. Si vous souhaitez utiliser les outils d’expression graphique pour créer, puis valider l’expression, cliquez sur le bouton de navigation **(…)** au niveau de l’expression pour ouvrir la boîte de dialogue **Générateur d’expressions** , puis créez ou modifiez et éventuellement validez l’expression.  
   
@@ -183,4 +181,3 @@ ms.lasthandoff: 08/03/2017
  [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   
-

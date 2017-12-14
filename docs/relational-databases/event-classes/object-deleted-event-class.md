@@ -2,9 +2,12 @@
 title: "Object:Deleted, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c43e82f21e7b29d84ad7b758992b47e38af98ecf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c7b0dda763f7b24c8ad45b816b5d12ad50fddc4a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted (classe d'événements)
-  La classe d'événements Object:Deleted indique qu'un objet a été supprimé, par exemple avec les instructions DROP INDEX et DROP TABLE. Cette classe d'événements permet de déterminer si des objets sont supprimés, par exemple par des applications ODBC qui créent fréquemment des procédures stockées temporaires.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Object:Deleted indique qu’un objet a été supprimé, par exemple avec les instructions DROP INDEX et DROP TABLE. Cette classe d'événements permet de déterminer si des objets sont supprimés, par exemple par des applications ODBC qui créent fréquemment des procédures stockées temporaires.  
   
  En surveillant les colonnes de données par défaut LoginName et NTUserName en plus des classes d'événements Objects, vous pouvez déterminer le nom de l'utilisateur qui crée, supprime ou accède aux objets.  
   

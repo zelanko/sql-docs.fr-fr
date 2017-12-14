@@ -2,9 +2,12 @@
 title: "Identificateurs SQL Server dans PowerShell | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdc0185b9ac8564a47ca6e4e51b8fdb76e63a653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificateurs SQL Server dans PowerShell
-  Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell utilise les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les chemins Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les identificateurs peuvent contenir des caractères que Windows PowerShell ne prend pas en charge dans les chemins. Vous devez placer ces caractères dans une séquence d’échappement ou leur appliquer un codage spécial lors de l’utilisation des identificateurs dans les chemins Windows PowerShell.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell utilise les identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les chemins Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les identificateurs peuvent contenir des caractères que Windows PowerShell ne prend pas en charge dans les chemins. Vous devez placer ces caractères dans une séquence d’échappement ou leur appliquer un codage spécial lors de l’utilisation des identificateurs dans les chemins Windows PowerShell.  
   
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Identificateurs SQL Server dans les chemins d'accès Windows PowerShell  
  Les fournisseurs Windows PowerShell présentent les hiérarchies de données à l'aide d'une structure de chemin d'accès semblable à celle utilisée pour le système de fichiers Windows. Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente les chemins d'accès aux objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], le lecteur est défini sur SQLSERVER:, le premier dossier est défini sur \SQL et les objets de base de données sont référencés sous forme de conteneurs et d’éléments. Voici le chemin de la table Vendor dans le schéma Purchasing de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans une instance par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  

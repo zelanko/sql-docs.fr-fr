@@ -2,9 +2,12 @@
 title: "Administration (réplication) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47107da4379ff36923d9bf8987501203d3830175
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 86a4e432940b36b3ebb8a8dfec58d768b2a036fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administration-replication"></a>Administration (réplication)
-  Cette section contient des informations relatives à l'administration des topologies de réplication. Nous vous recommandons de commencer par lire la rubrique présentant les bonnes pratiques en matière de réplication avant de sélectionner les liens de la présente rubrique pour accéder à des informations plus complètes de cette section ou d'autres sections.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette section contient des informations relatives à l’administration des topologies de réplication. Nous vous recommandons de commencer par lire la rubrique présentant les meilleures pratiques en matière de réplication avant de sélectionner les liens de la présente rubrique pour accéder à des informations plus complètes de cette section ou d'autres sections.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Bonnes pratiques en matière d’administration de la réplication](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  

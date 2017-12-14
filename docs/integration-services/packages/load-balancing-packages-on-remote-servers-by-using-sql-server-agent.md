@@ -1,5 +1,5 @@
 ---
-title: "L’équilibrage de charge des Packages sur des serveurs distants à l’aide de l’Agent SQL Server | Documents Microsoft"
+title: "Équilibrage de charge de packages sur des serveurs distants à l’aide de SQL Server Agent | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Équilibrage de charge de packages sur des serveurs distants à l'aide de l'Agent SQL Server
   Lorsque plusieurs packages doivent être exécutés, il convient d'utiliser d'autres serveurs disponibles. Cette méthode qui consiste à utiliser d'autres serveurs pour exécuter des packages lorsque les packages sont tous sous le contrôle d'un package parent est qualifiée d'équilibrage de charge. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'équilibrage de charge est une procédure manuelle qui doit être mise en œuvre par les propriétaires des packages. L'équilibrage de charge n'est pas exécuté automatiquement par les serveurs. En outre, les packages qui sont exécutés sur des serveurs distants doivent être des packages complets, et non des tâches individuelles contenues dans d'autres packages.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>Illustration de l'équilibrage de charge  
  Le schéma ci-dessous représente un package parent sur un serveur. Le package parent contient plusieurs tâches Exécuter le travail de l'Agent SQL Server. Chaque tâche dans le package parent appelle un Agent SQL Server sur un serveur distant. Ces serveurs distants contiennent des travaux de l'Agent SQL Server qui incluent une étape appelant un package sur ce serveur.  
   
- ![Vue d’ensemble de l’architecture d’équilibrage de charge SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "architecture de l’équilibrage de charge de vue d’ensemble de SSIS")  
+ ![Aperçu de l’architecture de l’équilibrage de charge SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "Aperçu de l’architecture de l’équilibrage de charge SSIS")  
   
  Les étapes requises pour l'équilibrage de charge dans cette architecture ne sont pas de nouveaux concepts. L'équilibrage de charge est plutôt obtenu en utilisant autrement des concepts existants et des objets SSIS communs.  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>Liste des packages enfants  
  Si vous déployez votre projet qui contient un package parent et des packages enfants sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez afficher une liste des packages enfants qui sont exécutés par le package parent. Lorsque vous exécutez le package parent, un rapport **Vue d'ensemble** sur ce package est généré automatiquement dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce rapport répertorie les packages enfants qui ont été exécutés par la tâche Exécuter le package contenue dans le package parent, comme illustré par l'image ci-dessous.  
   
- ![Vue d’ensemble des rapports avec la liste des packages enfants](../../integration-services/packages/media/overviewreport-childpackagelisting.png "vue d’ensemble des rapports avec la liste des packages enfants")  
+ ![Rapport Vue d’ensemble avec liste des packages enfants](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Rapport Vue d’ensemble avec liste des packages enfants")  
   
  Pour plus d'informations sur l'accès au rapport **Vue d'ensemble** , consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -125,17 +123,16 @@ ms.lasthandoff: 08/03/2017
 >  Vous pouvez utiliser une tâche d’exécution SQL qui contient une instruction Transact-SQL **sp_start_job N'nom_package'**. Pour plus d’informations, consultez [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Environnement de débogage  
- Lors du test du package parent, utilisez l'environnement de débogage du concepteur en l'exécutant à l'aide des commandes Déboguer / Démarrer le débogage (F5). Vous pouvez également utiliser l'utilitaire d'invite de commandes, **dtexec**. Pour plus d'informations, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Lors du test du package parent, utilisez l'environnement de débogage du concepteur en l'exécutant à l'aide des commandes Déboguer / Démarrer le débogage (F5). Vous pouvez également utiliser l'utilitaire d'invite de commandes, **dtexec**. Pour plus d’informations, voir [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Journalisation des packages à charge équilibrée sur les serveurs distants
   Il est plus facile pour un administrateur de gérer les journaux de tous les packages enfants en cours d'exécution sur différents serveurs lorsque tous ces packages enfants utilisent le même module fournisseur d'informations et qu'ils écrivent tous dans la même destination. Une manière de créer un fichier journal commun pour tous les packages enfants est de configurer les packages enfants de telle sorte qu'ils inscrivent leurs événements dans un module fournisseur d'informations SQL Server. Vous pouvez configurer tous les packages pour qu'ils utilisent la même base de données, le même serveur et la même instance du serveur.  
   
  Pour afficher les fichiers journaux, l'administrateur n'a à se connecter qu'à un seul serveur pour afficher les fichiers journaux de tous les packages enfants.  
   
- Pour plus d’informations sur la façon d’activer la journalisation dans un package, consultez [journalisation d’Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Pour plus d’informations sur l’activation de la journalisation dans un package, consultez [Journalisation d’Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
 ## <a name="related-tasks"></a>Tâches associées  
  [Travaux de SQL Server Agent pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

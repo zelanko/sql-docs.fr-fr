@@ -2,9 +2,12 @@
 title: "Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c7aa66e648a90303f2096ef2d9e2fd0507320db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 64a09c6df54ee45ef008897b95f2943c788857a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes
-  Utilisez cette boîte de dialogue pour afficher la liste des stratégies qui font actuellement référence à cette facette de la Gestion basée sur des stratégies.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour afficher la liste des stratégies qui font actuellement référence à cette facette de la Gestion basée sur des stratégies.  
   
 ## <a name="options"></a>Options  
  **Nom**  

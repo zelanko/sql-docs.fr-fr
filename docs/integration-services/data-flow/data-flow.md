@@ -1,5 +1,5 @@
 ---
-title: "Flux de données | Documents Microsoft"
+title: "Flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow"></a>Flux de données
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  Le diagramme qui suit montre un flux de données composé d'une source, d'une transformation avec une entrée et une sortie et d'une destination. Ce diagramme indique les entrées, les sorties et les sorties d'erreurs, de même que les colonnes d'entrée, de sortie et externes.  
   
- ![Composants et de leurs entrées et sorties de flux de données](../../integration-services/data-flow/media/mw-dts-dataflow.gif "composants et de leurs entrées et sorties de flux de données")  
+ ![Composants de flux de données avec leurs entrées et sorties](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Composants de flux de données avec leurs entrées et sorties")  
   
 ## <a name="data-flow-implementation"></a>Implémentation des flux de données  
  L'ajout d'une tâche de flux de données au flux de contrôle d'un package constitue la première étape de l'implémentation d'un flux de données dans un package. Un package peut inclure plusieurs tâches de flux de données, chacune possédant son propre flux de données. Par exemple, si un package requiert que des flux de données soient exécutés dans un ordre spécifique ou que d'autres tâches soient exécutées entre les flux de données, vous devez utiliser une tâche de flux de données distincte pour chaque flux de données.  
@@ -224,4 +222,3 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>Contenu connexe  
  Vidéo, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Performances de Microsoft Connector pour Oracle par Attunity), sur le site web technet.microsoft.com.  
-

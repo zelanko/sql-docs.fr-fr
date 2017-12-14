@@ -1,5 +1,5 @@
 ---
-title: "Enregistrement et définition d’entrées de journal dans les données de composant de flux | Documents Microsoft"
+title: "Enregistrement et définition d’entrées de journal dans un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - logs [Integration Services], custom
 - custom log entries [Integration Services]
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a0cbdbb818c7299221172f5ceb9b4ee5c54bddcb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dbe113aad9e86802378eec1b24cc6539d758a5ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Enregistrement et définition d'entrées de journal dans un composant de flux de données
   Les composants de flux de données personnalisés peuvent publier des messages dans une entrée de journal existante à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Ils peuvent également présenter des informations à l'utilisateur en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A>, ou des méthodes semblables, de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Toutefois, cette procédure induit une surcharge causée par le déclenchement et la gestion d'événements supplémentaires et force l'utilisateur à passer en revue les messages d'information documentés pour rechercher ceux susceptibles de l'intéresser. Vous pouvez utiliser une entrée de journal personnalisée, tel que décrit ci-dessous, pour fournir aux utilisateurs de votre composant des informations de journal personnalisées étiquetées.  
@@ -77,7 +74,7 @@ End Sub
   
  L'exemple ci-dessus utilise <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT> car le composant s'attend à enregistrer une entrée une fois par exécution.  
   
- Après l’inscription de l’entrée de journal personnalisée et ajouter une instance de votre composant personnalisé à l’aire du concepteur flux données, le **journalisation** boîte de dialogue dans le concepteur affiche une nouvelle entrée de journal avec le nom « Mes personnalisé composant entrée de journal » dans la liste des entrées de journal disponibles.  
+ Après l’inscription de l’entrée de journal personnalisée et l’ajout d’une instance de votre composant personnalisé à l’aire du concepteur de flux de données, la boîte de dialogue **Enregistrement** dans le concepteur affiche une nouvelle entrée de journal appelée « Entrée de journal de mon composant personnalisé » dans la liste des entrées de journal disponibles.  
   
 ### <a name="logging-to-a-custom-log-entry"></a>Enregistrement dans une entrée de journal personnalisée  
  Après l'inscription de l'entrée de journal personnalisée, le composant peut désormais enregistrer des messages personnalisés. L'exemple suivant écrit une entrée de journal personnalisée pendant l'exécution de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> qui contient le texte d'une instruction SQL utilisée par le composant.  
@@ -105,10 +102,9 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- Lorsque l’utilisateur s’exécute maintenant le package, après avoir sélectionné le « mes personnalisé composant entrée de journal » dans le **journalisation** boîte de dialogue, le journal contient une entrée clairement étiquetée « Option personnalisée composant entrée de journal. » Cette nouvelle entrée de journal contient le texte de l'instruction SQL, l'horodateur et toutes les données supplémentaires enregistrées par le développeur.  
+ À présent, lorsque l’utilisateur exécute le package, après avoir sélectionné l’option « Entrée de journal de mon composant personnalisé » dans la boîte de dialogue **Enregistrement**, le journal contient une entrée clairement étiquetée « Utilisateur ::Entrée de journal de mon composant personnalisé ». Cette nouvelle entrée de journal contient le texte de l'instruction SQL, l'horodateur et toutes les données supplémentaires enregistrées par le développeur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40; SSIS &#41; Journalisation](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

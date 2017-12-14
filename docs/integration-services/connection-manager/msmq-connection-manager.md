@@ -1,5 +1,5 @@
 ---
-title: Gestionnaire de connexions MSMQ | Documents Microsoft
+title: Gestionnaire de connexions MSMQ | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="msmq-connection-manager"></a>Gestionnaire de connexions MSMQ
   Un gestionnaire de connexions MSMQ permet à un package de se connecter à une file d'attente de messages qui utilise Message Queuing (MSMQ). La tâche MSMQ incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions MSMQ.  
@@ -47,8 +44,8 @@ ms.lasthandoff: 08/09/2017
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom de l’ordinateur >\\< nom de la file d’attente\>|  
-|Privé|\<nom de l’ordinateur > \Private$\\< nom de la file d’attente\>|  
+|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
+|Privé|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
   
  Vous pouvez utiliser un point (.) pour représenter l'ordinateur local.  
   
@@ -79,8 +76,8 @@ ms.lasthandoff: 08/09/2017
   
 |Type de file d'attente|Exemple de chemin d'accès|  
 |----------------|-----------------|  
-|Public|\<nom de l’ordinateur >\\< nom de la file d’attente\>|  
-|Privé|\<nom de l’ordinateur > \Private$\\< nom de la file d’attente\>|  
+|Public|\<nom_ordinateur >\\<nom_file_attente\>|  
+|Privé|\<nom_ordinateur >\Private$\\<nom_file_attente\>|  
   
  Vous pouvez utiliser "." pour représenter l'ordinateur local.  
   
@@ -89,7 +86,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche MSMQ](../../integration-services/control-flow/message-queue-task.md)   
- [Integration Services &#40; SSIS &#41; Connexions](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   
-

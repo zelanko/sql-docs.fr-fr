@@ -1,5 +1,5 @@
 ---
-title: "Compatibilité descendante d’Integration Services | Documents Microsoft"
+title: "Compatibilité descendante d’Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 06/14/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9303874bc5b9fd769063e89caa982f211cca0c
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 07cf052ddd44b5c5bdfd7a4538dfb940a1866e21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilité descendante d'Integration Services
   Cette rubrique décrit les modifications entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Elle traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures. Elle décrit également les changements importants apportés au produit, connus pour empêcher le bon fonctionnement ou pour modifier le comportement d'une application personnalisée incluant la fonctionnalité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -58,4 +56,3 @@ Cette section décrit les changements essentiels apportés à [!INCLUDE[ssISnove
 Cette section décrit les changements de comportement dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les modifications de comportement affectent le mode de fonctionnement ou d’interaction des fonctionnalités dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Le comportement des fonctionnalités Integration Services dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]est inchangé.  
-

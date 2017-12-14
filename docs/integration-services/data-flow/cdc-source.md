@@ -1,5 +1,5 @@
 ---
-title: Source CDC | Documents Microsoft
+title: Source CDC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 1fa9085d2b60f5416fe11359f1c2965ac38f9ee7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cdc-source"></a>Source CDC
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/17/2017
   
 -   Le nom de la variable de package d'état de capture de données modifiées à partir de laquelle la plage de traitement de capture de données modifiées est déterminée. La source CDC ne modifie pas cette variable.  
   
- Les données retournées par la Source CDC sont le même que celui retourné par la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des fonctions de capture de données modifiées **cdc.fn_cdc_get_all_changes_\<capture-instance-name >** ou **cdc.fn_cdc_get_net_changes_\<capture-instance-name >** (le cas échéant). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md).  
+ Les données retournées par la source CDC sont les mêmes que celles retournées par les fonctions CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<nom-instance-capture>** ou **cdc.fn_cdc_get_net_changes_\<nom-instance-capture>** (si disponibles). Le seul ajout facultatif est la colonne **__$initial_processing** qui indique si la plage de traitement actuelle peut chevaucher une charge initiale de la table. Pour plus d’informations sur la traitement initial, consultez [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md).  
   
  La source CDC a une sortie normale et une sortie d'erreur.  
   
@@ -86,20 +84,20 @@ use <cdc-enabled-database-name>
   
  où :  
   
--   \<CDC-activé-base de données-name > est le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données contenant les tables de modifications.  
+-   \<cdc-enabled-database-name> est le nom de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant les tables de modifications.  
   
--   \<valeur-from-state-cs > est la valeur qui apparaît dans la variable d’état de capture de données modifiées sous la forme CS /\<, valeur-from-state-cs > / (CS signifie en cours-traitement--début de la plage).  
+-   \<value-from-state-cs> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CS/\<value-from-state-cs>/ (CS correspond à Current-processing-range-Start, début de la plage de traitement actuelle).  
   
--   \<valeur d’état de ce > est la valeur qui apparaît dans la variable d’état de capture de données modifiées sous la forme CE /\<, valeur-from-state-cs > / (CE signifie en cours-traitement--fin de la plage).  
+-   \<value-from-state-ce> est la valeur affichée dans la variable d’état de capture de données modifiées sous la forme CE/\<value-from-state-cs>/ (CE correspond à Current-processing-range-End, fin de la plage de traitement actuelle).  
   
--   \<mode > sont les modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
+-   \<mode> correspond aux modes de traitement de capture de données modifiées. Les modes de traitement ont l’une des valeurs suivantes : **Tout**, **Tout avec les anciennes valeurs**, **NET**, **Net avec masque de mise à jour**et **Net avec fusion**.  
   
  Ce script aide à isoler les problèmes en les reproduisant dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], où il est facile de reproduire et d'identifier des erreurs.  
   
 #### <a name="sql-server-error-message"></a>Message d'erreur SQL Server  
  Le message suivant peut être retourné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Un nombre insuffisant d’arguments fourni pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<... >.**  
+ **Nombre d’arguments fournis insuffisant pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<..>.**  
   
  Cette erreur n'indique pas qu'un argument est manquant. Elle signifie que les valeurs du NSE de début ou du NSE de fin dans la variable d'état de capture de données modifiées ne sont pas valides.  
   
@@ -110,7 +108,7 @@ use <cdc-enabled-database-name>
   
 -   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Éditeur de Source de capture de données modifiées &#40; Page colonnes &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
 -   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
@@ -155,7 +153,7 @@ use <cdc-enabled-database-name>
  **Instance de capture**  
  Sélectionnez ou tapez le nom de l'instance de capture CDC avec la table CDC à lire.  
   
- Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom d’instance par défaut capture pour une table [schema]. [table] est \<schéma > _\<table >, mais que les noms d’instance de capture en cours d’utilisation peuvent être différents. La table réelle qui est lu à partir d’est la table CDC **cdc.\< instance de capture > _CT**.  
+ Une table source capturée peut contenir une ou deux instances capturées pour gérer la transition transparente de la définition de table lors des modifications de schéma. Si plusieurs instances de capture sont définies pour la table source qui est capturée, sélectionnez l'instance de capture à utiliser ici. Le nom par défaut de l’instance de capture pour une table [schema].[table] est \<schéma>_\<table>, mais le nom réel utilisé pour cette instance de capture peut être différent. La table réelle dans laquelle les données sont lues est la table CDC **cdc .\<instance-capture>_CT**.  
   
  **Mode de traitement CDC**  
  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
@@ -166,9 +164,9 @@ use <cdc-enabled-database-name>
   
 -   **Net**: retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
--   **NET avec masque de mise à jour**: ce mode est semblable au mode Net standard, mais il ajoute également des colonnes booléennes avec le modèle de nom **__ $\<nom de colonne >\__Changed** indiquant les colonnes modifiées en cours de modification ligne.  
+-   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Modifié** qui indique les colonnes modifiées dans la ligne de modification active.  
   
--   **Net avec fusion** : ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
+-   **Net avec fusion**: ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
 > [!NOTE]  
 >  Pour toutes les options de modifications Net, la table source doit avoir une clé primaire ou un index unique. Pour les tables sans clé primaire ou sans index unique, vous devez utiliser l’option **Tout** .  
@@ -251,9 +249,8 @@ use <cdc-enabled-database-name>
  **Rediriger le flux**  
  La ligne de données qui présente l'erreur ou la troncation est dirigée vers la sortie d'erreur de la source CDC. Dans ce cas, la gestion des erreurs de la source CDC est utilisée. Pour plus d'informations, consultez [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   Entrée de blog, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)(Modes de traitement pour la source CDC), sur mattmasson.com.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Exécution des Packages et autres opérations de l’analyse | Documents Microsoft"
+title: "Surveiller les packages en cours d’exécution et autres opérations | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: performance
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a23adf907e01dd8c95c5c44a5a57db0aeb807625
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
   Vous pouvez surveiller les exécutions des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les validations de projet et d’autres opérations en utilisant un ou plusieurs des outils suivants. Certains outils tels que les drainages de données ne sont disponibles que pour les projets déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  Neuf types d'état différents sont utilisés pour indiquer l'état d'une opération. Pour obtenir une liste complète des types de statuts, consultez la vue [catalog.operations &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
 
-## <a name="active_ops"></a>Boîte de dialogue opérations actives
+## <a name="active_ops"></a> Boîte de dialogue Opérations actives
   Utilisez la boîte de dialogue **Opérations actives** pour afficher l'état des opérations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en cours d'exécution sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , par exemple les opérations de déploiement, de validation et d'exécution de package. Ces données sont stockées dans le catalogue SSISDB.  
   
  Pour plus d’informations sur les vues [!INCLUDE[tsql](../../includes/tsql-md.md)] associées, consultez [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md), [catalog.validations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-validations-ssisdb-database.md) et [catalog.executions &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)  
@@ -102,7 +100,7 @@ ms.lasthandoff: 09/27/2017
  Pour afficher la liste des packages qui s’exécutent sur le serveur, interrogez la vue, [catalog.executions &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md) pour les packages qui ont l’état 2.  
   
  Accès par programmation via l'API managé  
- Consultez le <xref:Microsoft.SqlServer.Management.IntegrationServices> espace de noms et de ses classes.  
+ Consultez l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> et ses classes.  
   
 ### <a name="stopping-a-running-package"></a>Arrêt d'un package en cours d'exécution  
  Vous pouvez demander l'arrêt d'un package en cours d’exécution dans la boîte de dialogue **Opérations actives** . Pour plus d'informations, consultez [Active Operations Dialog Box](#active_ops).  
@@ -113,7 +111,7 @@ ms.lasthandoff: 09/27/2017
  Pour arrêter un package en cours d’exécution sur le serveur, appelez la procédure stockée, [catalog.stop_operation &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md).  
   
  Accès par programmation via l'API managé  
- Consultez le <xref:Microsoft.SqlServer.Management.IntegrationServices> espace de noms et de ses classes.  
+ Consultez l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> et ses classes.  
   
 ### <a name="viewing-the-history-of-packages-that-have-run"></a>Affichage de l'historique des packages qui ont été exécutés  
  Pour afficher l’historique des packages exécutés dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez le rapport **Toutes les exécutions** . Pour plus d’informations sur le rapport **Toutes les exécutions** et d’autres rapports standard, consultez [Rapports du serveur Integration Services](#reports).  
@@ -124,14 +122,14 @@ ms.lasthandoff: 09/27/2017
  Pour afficher des informations relatives aux packages qui ont été exécutés, interrogez la vue, [catalog.executions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md).  
   
  Accès par programmation via l'API managé  
- Consultez le <xref:Microsoft.SqlServer.Management.IntegrationServices> espace de noms et de ses classes.  
+ Consultez l’espace de noms <xref:Microsoft.SqlServer.Management.IntegrationServices> et ses classes.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
   
  En haut de chaque page de rapport, l'icône de retour permet de revenir à la page précédente, l'icône de rafraîchissement actualise les informations affichées dans la page et l'icône d'impression vous permet d'imprimer la page en cours.  
   
- Pour plus d’informations sur la façon de déployer des packages vers le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, consultez [déployer Integration Services (SSIS) projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Pour plus d’informations sur le déploiement de packages sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### <a name="integration-services-dashboard"></a>Tableau de bord Integration Services  
  Le rapport **Tableau de bord Integration Services** fournit une vue d’ensemble de toutes les exécutions de package sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour chaque package qui s'est exécuté sur le serveur, le tableau de bord vous permet de « zoomer » pour rechercher des détails spécifiques sur les erreurs d'exécution du package qui se sont produites.  
@@ -178,7 +176,7 @@ ms.lasthandoff: 09/27/2017
  Le rapport **Toutes les validations** affiche un résumé de toutes les validations d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] effectuées sur le serveur. Le résumé affiche les informations relatives à chaque validation telles que l'état, l'heure de début et l'heure de fin. Chaque entrée du résumé inclut un lien vers les messages générés pendant la validation. Comme avec le Tableau de bord Integration Services, vous pouvez appliquer un filtre à la table afin de réduire les informations affichées.  
   
 ### <a name="custom-reports"></a>Rapports personnalisés  
- Vous pouvez ajouter un rapport personnalisé (fichier .rdl) au nœud de catalogue **SSISDB** sous le nœud **Catalogues Integration Services** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Avant d'ajouter le rapport, vérifiez que vous utilisez une convention d'affectation des noms en trois parties pour qualifier le projet référencé comme table source. Dans le cas contraire, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche une erreur. La convention d’affectation de noms est \<base de données >.\< propriétaire >. \<objet >. Par exemple, le nom « SSISDB.interne.exécutions ».  
+ Vous pouvez ajouter un rapport personnalisé (fichier .rdl) au nœud de catalogue **SSISDB** sous le nœud **Catalogues Integration Services** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Avant d'ajouter le rapport, vérifiez que vous utilisez une convention d'affectation des noms en trois parties pour qualifier le projet référencé comme table source. Dans le cas contraire, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche une erreur. La convention de nommage est \<base de données>.\<propriétaire>.\<objet>. Par exemple, le nom « SSISDB.interne.exécutions ».  
   
 > [!NOTE]  
 >  Quand vous ajoutez des rapports personnalisés au nœud **SSISDB** sous le nœud **Bases de données** , le préfixe SSISDB n’est pas nécessaire.  
@@ -207,6 +205,5 @@ ms.lasthandoff: 09/27/2017
     -   **Toutes les connexions**  
 
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de projets et Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Exécution de projets et de packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Rapports de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
-

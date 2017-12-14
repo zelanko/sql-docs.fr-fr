@@ -1,5 +1,5 @@
 ---
-title: "Étape 1 : Copie du Package de la leçon 3 | Documents Microsoft"
+title: "Étape 1 : Copie du package de la leçon 3 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c578fc6154a2a78e223bc1a920669228776e689
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 435147a234c6d6ddc6d1efc09e5b02de4e9e5e4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Leçon 4-1-copier le Package de la leçon 3
+# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Leçon 4-1 : Copie du package de la leçon 3
 Dans cette tâche, vous allez créer une copie du package Lesson 3.dtsx que vous avez créé à la leçon 3. Si vous n'avez pas terminé la leçon 3, vous pouvez également ajouter au projet le package final de la leçon 3 inclus avec le didacticiel, puis le copier pour l'utiliser. Vous allez utiliser cette nouvelle copie tout au long de la leçon 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>Pour créer le package de la leçon 4  
@@ -73,4 +70,3 @@ Dans cette tâche, vous allez créer une copie du package Lesson 3.dtsx que vous
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 2 : Création d'un fichier corrompu](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
-

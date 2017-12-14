@@ -2,9 +2,12 @@
 title: Ajouter ou modifier une jointure | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ef3cc313a76a26f075ab295a5559792dd872e32
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 09a75529623523ea12d51263ef6fede558840410
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
-  Les boîtes de dialogue **Ajouter une jointure** et **Modifier une jointure** permettent d'ajouter et de modifier des filtres de jointure pour les publications de fusion.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les boîtes de dialogue **Ajouter une jointure** et **Modifier une jointure** permettent d’ajouter et de modifier des filtres de jointure pour les publications de fusion.  
   
 > [!NOTE]  
 >  Pour pouvoir modifier un filtre dans une publication existante, vous devez procéder au préalable à un nouvel instantané de la publication. Si cette dernière dispose d'abonnements, ces abonnements doivent alors être réinitialisés. Pour plus d’informations sur les modifications de propriétés, consultez [Changer des propriétés de publication et d’article](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

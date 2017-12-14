@@ -1,5 +1,5 @@
 ---
-title: "Ajouter la référence de l’interface utilisateur de la boîte de dialogue Gestionnaire de connexions File | Documents Microsoft"
+title: "Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.fileconnection.f1
-helpviewer_keywords:
-- Add File Connection Manager
+f1_keywords: sql13.dts.designer.fileconnection.f1
+helpviewer_keywords: Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7c9a1599b5addd7011b07c8f36016573708fabc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
   Utilisez la boîte de dialogue **Ajouter un gestionnaire de connexions de fichiers** pour définir une connexion à un groupe de fichiers ou dossiers.  
@@ -64,7 +60,6 @@ ms.lasthandoff: 08/03/2017
  Sélectionnez un fichier ou dossier, puis utilisez les boutons de direction pour le déplacer vers le haut ou vers le bas afin de spécifier l'ordre d'accès.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../integration-services/integration-services-error-and-message-reference.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
-

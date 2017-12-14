@@ -1,11 +1,14 @@
 ---
 title: "Notes de publication de SQL Server 2008 R2 SP2 | Microsoft Docs"
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="sql-server-2008-r2-sp2-release-notes"></a>Notes de publication de SQL Server 2008 R2 SP2
-Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d'installer ou de dépanner Microsoft SQL Server 2008 R2 Service Pack 2. Le présent document Notes de publication s'applique à toutes les éditions de SQL Server 2008 R2 SP2 et est disponible en ligne uniquement. Il est mis à jour régulièrement.  
+# <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d’installer ou de dépanner Microsoft SQL Server 2008 R2 Service Pack 2. Le présent document Notes de publication s'applique à toutes les éditions de SQL Server 2008 R2 SP2 et est disponible en ligne uniquement. Il est mis à jour régulièrement.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Nouveautés du Service Pack 2  
 Ajout de la vue de gestion dynamique (DMV) **sys.dm_db_stats_properties**. Vous pouvez utiliser cette DMV pour retourner les propriétés de statistiques d'une table ou d'une vue indexée spécifique de la base de données active. Par exemple, cette DMV retourne le nombre de lignes échantillonnées et le nombre d'étapes dans l'histogramme.  

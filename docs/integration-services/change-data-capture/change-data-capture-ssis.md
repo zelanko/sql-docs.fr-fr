@@ -1,5 +1,5 @@
 ---
-title: "Capture de données modifiées (SSIS) | Documents Microsoft"
+title: "Capture de données modifiées (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 1f2d68bc745df5c06b623a74815efa937366e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-ssis"></a>Capture de données modifiées (SSIS)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la capture de données modifiées constitue une solution efficace au défi de l'optimisation des chargements incrémentiels de tables sources vers des mini-Data Warehouses et des entrepôts de données.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/26/2017
   
  Une fois qu'un administrateur a activé la capture de données modifiées sur la base de données, vous pouvez créer un package qui effectue un chargement incrémentiel des données modifiées. Le diagramme suivant montre les étapes à suivre pour créer un tel package qui effectue un chargement incrémentiel à partir d'une table individuelle :  
   
- ![Modifier les étapes de création de Package de Capture de données](../../integration-services/change-data-capture/media/cdc-package-creation.gif "modifier les étapes de création de Package de Capture de données")  
+ ![Étapes de création de package Change Data Capture](../../integration-services/change-data-capture/media/cdc-package-creation.gif "Étapes de création de package Change Data Capture")  
   
  Comme indiqué dans le diagramme précédent, la création d'un package qui effectue un chargement incrémentiel des données modifiées implique les étapes suivantes :  
   
@@ -121,7 +119,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [Traiter les insertions, les mises à jour et les suppressions](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
--   [Appliquer des modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+-   [Appliquer les modifications à la destination](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
 -   [Exécuter un chargement incrémentiel de plusieurs table](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
@@ -129,4 +127,3 @@ ms.lasthandoff: 09/26/2017
  Entrée de blog, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), sur sqlblog.com  
   
   
-

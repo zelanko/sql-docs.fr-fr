@@ -2,9 +2,12 @@
 title: "Abonnement, historique de synchronisation (abonnement de fusion, SQL Server 2000) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 67b546521c781f3ac5754b13c0dbe7d870461835
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 66c6a085eb2879d9ad9d7ee19036d64af553fea5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>Abonnement, Historique de synchronisation (Abonnement de fusion, SQL Server 2000)
-  L'onglet **Historique de synchronisation** affiche des informations détaillées sur l'Agent de fusion, notamment sur l'état, l'historique, les messages d'informations et n'importe quel message d'erreur.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’onglet **Historique de synchronisation** affiche des informations détaillées sur l’Agent de fusion, notamment sur l’état, l’historique, les messages d’informations et n’importe quel message d’erreur.  
   
 ## <a name="options"></a>Options  
  Sélectionnez les sessions de l’Agent de fusion à afficher dans le menu **Afficher** , puis sélectionnez une session dans la grille **Sessions de l’Agent de fusion**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  

@@ -2,9 +2,12 @@
 title: "Object:Created, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b16e94c7d025bceead676537fc54c4343403345
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 47d2d9db2ee856e62aa7e4ec3378d7cb00b34281
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectcreated-event-class"></a>Object:Created (classe d'événements)
-  La classe d'événements Object:Created indique qu'un objet a été créé, par exemple par l'instruction CREATE INDEX, CREATE TABLE ou CREATE DATABASE.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Object:Created indique qu’un objet a été créé, par exemple par l’instruction CREATE INDEX, CREATE TABLE ou CREATE DATABASE.  
   
  Cette classe d'événements peut être utilisée pour déterminer si les objets sont en cours de création (par exemple, par des applications ODBC qui créent souvent des procédures stockées temporaires). En surveillant les colonnes de données LoginName et NTUserName, vous pouvez déterminer le nom de l'utilisateur qui crée, supprime ou accède aux objets.  
   

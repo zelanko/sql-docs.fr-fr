@@ -2,9 +2,12 @@
 title: "Observations relatives à l’utilisation de serveurs de test | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31ae5e4f32eb2a6a2a5bd1e017b46937d70e8ef0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e8fddc2009fba8e86f0d9ebfdffcf476d90e747d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="considerations-for-using-test-servers"></a>Observations relatives à l'utilisation de serveurs de test
-  L’utilisation d’un serveur de test pour paramétrer une base de données sur un serveur de production constitue un avantage important de l’Assistant Paramétrage de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Avec cette fonctionnalité, vous pouvez transférer sur un serveur de test la charge de gestion du paramétrage sans copier les données réelles sur le serveur de test à partir du serveur de production.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’utilisation d’un serveur de test pour paramétrer une base de données sur un serveur de production constitue un avantage important de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Avec cette fonctionnalité, vous pouvez transférer sur un serveur de test la charge de gestion du paramétrage sans copier les données réelles sur le serveur de test à partir du serveur de production.  
   
 > [!NOTE]  
 >  La fonction de paramétrage du serveur de test n'est pas prise en charge par l'interface utilisateur graphique de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

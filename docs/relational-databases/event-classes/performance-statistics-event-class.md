@@ -2,9 +2,12 @@
 title: "Performance Statistics, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 952bad5b2f70ce0d1c22579ea50708cd48e6b9a0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
-  La classe d'événements Performance Statistics permet de surveiller les performances des requêtes, des procédures stockées et des déclencheurs en cours d'exécution. Chacune des six sous-classes d'événements indique un événement dans la durée de vie des requêtes, des procédures stockées et des déclencheurs au sein du système. En combinant ces sous-classes d'événements aux vues de gestion dynamique sys.dm_exec_query_stats, sys.dm_exec_procedure_statset sys.dm_exec_trigger_stats correspondantes, vous pouvez reconstituer l'historique des performances d'une requête, d'une procédure stockée ou d'un déclencheur donnés.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Performance Statistics permet de surveiller les performances des requêtes, des procédures stockées et des déclencheurs en cours d’exécution. Chacune des six sous-classes d'événements indique un événement dans la durée de vie des requêtes, des procédures stockées et des déclencheurs au sein du système. En combinant ces sous-classes d'événements aux vues de gestion dynamique sys.dm_exec_query_stats, sys.dm_exec_procedure_statset sys.dm_exec_trigger_stats correspondantes, vous pouvez reconstituer l'historique des performances d'une requête, d'une procédure stockée ou d'un déclencheur donnés.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonnes de données de la classe d'événements Performance Statistics  
  Les tableaux suivants décrivent les colonnes des données de la classe d’événements associées à chaque sous-classe des événements suivantes : EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4 et EventSubClass 5.  

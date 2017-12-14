@@ -1,5 +1,5 @@
 ---
-title: "Codage et débogage de la tâche de Script | Documents Microsoft"
+title: "Codage et débogage de la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -26,50 +23,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: "81"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codage et débogage de la tâche de script
-  Après avoir configuré le Script de tâches dans le **éditeur de tâche de Script**, vous écrivez votre code personnalisé dans l’environnement de développement de tâche de Script.  
+  Après avoir configuré la tâche de script dans l’**éditeur de tâche de script**, vous pouvez écrire votre code personnalisé dans l’environnement de développement de tâche de script.  
   
 ## <a name="script-task-development-environment"></a>Environnement de développement de tâche de script  
- La tâche de Script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement de développement du script proprement dit.  
+ La tâche de script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement de développement du script proprement dit.  
   
- Le code de script est écrit dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Vous spécifiez le langage de script en définissant le **ScriptLanguage** propriété dans le **éditeur de tâche de Script**. Si vous préférez utiliser un autre langage de programmation, vous pouvez développer un assembly personnalisé dans le langage de votre choix et appeler ses fonctionnalités à partir du code inclus dans la de script.  
+ Le code de script est écrit dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Vous pouvez spécifier le langage de script en définissant la propriété **ScriptLanguage** dans l’**éditeur de tâche de script**. Si vous préférez utiliser un autre langage de programmation, vous pouvez développer un assembly personnalisé dans le langage de votre choix et appeler ses fonctionnalités à partir du code inclus dans la de script.  
   
  Le script que vous créez dans la tâche de script est stocké dans la définition du package. Aucun fichier de script distinct n'est créé. Par conséquent, l'utilisation de la tâche de script n'affecte pas le déploiement de package.  
   
 > [!NOTE]  
 >  Lorsque vous concevez le package et déboguez le script, le code de script est écrit temporairement dans un fichier projet. Étant donné que le stockage d'informations sensibles dans un fichier représente un risque potentiel en termes de sécurité, nous vous recommandons de ne pas inclure d'informations sensibles, telles que des mots de passe, dans le code de script.  
   
- Par défaut, **Option Strict** est désactivé dans l’IDE.  
+ Par défaut, **Option Strict** est désactivé dans l’environnement de développement intégré.  
   
 ## <a name="script-task-project-structure"></a>Structure du projet de tâche de script  
  Lorsque vous créez ou modifiez le script contenu dans une tâche de script, VSTA ouvre un nouveau projet vide ou rouvre le projet existant. La création de ce projet VSTA n'affecte pas le déploiement du package étant donné que le projet est enregistré à l'intérieur du fichier de package ; la tâche de script ne crée pas de fichiers supplémentaires.  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Éléments et classes du projet de tâche de script  
- Par défaut, le projet de tâche de Script affiché dans la fenêtre Explorateur de projets VSTA contient un élément unique, **ScriptMain**. Le **ScriptMain** élément contient à son tour, une seule classe, également nommée **ScriptMain**. Les éléments de code inclus dans la classe varient selon le langage de programmation sélectionné pour la tâche de script :  
+ Par défaut, le projet de tâche de script affiché dans la fenêtre Explorateur de projets VSTA contient un seul élément, **ScriptMain**. L’élément **ScriptMain** contient à son tour une classe unique, également nommé **ScriptMain**. Les éléments de code inclus dans la classe varient selon le langage de programmation sélectionné pour la tâche de script :  
   
--   Lorsque la tâche de Script est configurée pour le [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] langage de programmation le **ScriptMain** classe possède une sous-routine publique, **principal**. Le **ScriptMain.Main** sous-routine est la méthode que le runtime appelle lorsque vous exécutez votre tâche de Script.  
+-   Lorsque la tâche de script est configurée pour le langage de programmation [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)], la classe **ScriptMain** possède une sous-routine publique, **Main**. La sous-routine **ScriptMain.Main** est la méthode appelée par le runtime lorsque vous exécutez votre tâche de script.  
   
-     Par défaut, le seul code dans le **principal** sous-routine d’un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. Le **Dts.TaskResult** propriété est décrite dans [retournant les résultats de la tâche de Script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Par défaut, le seul code figurant dans la sous-routine **Main** d’un nouveau script est la ligne `Dts.TaskResult = ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien. La propriété **Dts.TaskResult** est décrite dans [Retour de résultats de la tâche de script](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
--   Lorsque la tâche de Script est configurée pour la programmation Visual c# language, le **ScriptMain** classe possède une méthode publique, **principal**. La méthode est appelée lors de l'exécution de la tâche de script.  
+-   Lorsque la tâche de script est configurée pour le langage de programmation Visual C#, la classe **ScriptMain** possède une méthode publique, **Main**. La méthode est appelée lors de l'exécution de la tâche de script.  
   
-     Par défaut, le **principal** méthode inclut la ligne `Dts.TaskResult = (int)ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien.  
+     Par défaut, la méthode **Main** inclut la ligne `Dts.TaskResult = (int)ScriptResults.Success`. Cette ligne informe le runtime que la tâche a été menée à bien.  
   
- Le **ScriptMain** élément peut contenir des classes autres que la **ScriptMain** classe. La tâche de script ne peut accéder qu'aux classes qu'elle héberge.  
+ L’élément **ScriptMain** peut contenir d’autres classes que **ScriptMain**. La tâche de script ne peut accéder qu'aux classes qu'elle héberge.  
   
- Par défaut, le **ScriptMain** élément de projet contient le code généré automatiquement suivant. Le modèle de code fournit également une vue d'ensemble de la tâche de script, ainsi que des informations supplémentaires sur la récupération et la manipulation des objets SSIS, tels que les variables, les événements et les connexions.  
+ Par défaut, l’élément de projet **ScriptMain** contient le code généré automatiquement suivant. Le modèle de code fournit également une vue d'ensemble de la tâche de script, ainsi que des informations supplémentaires sur la récupération et la manipulation des objets SSIS, tels que les variables, les événements et les connexions.  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -207,28 +203,28 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>Autres éléments du projet de tâche de script  
- La tâche de script peut inclure des éléments autres que la valeur par défaut **ScriptMain** élément. Vous pouvez ajouter des classes, des modules et des fichiers de code au projet. Vous pouvez également utiliser des dossiers pour organiser des groupes d'éléments. Tous les éléments que vous ajoutez sont rendus persistants à l'intérieur du package.  
+ Le projet de tâche de script peut inclure d’autres éléments que l’élément **ScriptMain** par défaut. Vous pouvez ajouter des classes, des modules et des fichiers de code au projet. Vous pouvez également utiliser des dossiers pour organiser des groupes d'éléments. Tous les éléments que vous ajoutez sont rendus persistants à l'intérieur du package.  
   
 ### <a name="references-in-the-script-task-project"></a>Références dans le projet de tâche de script  
- Vous pouvez ajouter des références à des assemblys managés en cliquant sur le projet de tâche de Script dans **Explorateur de projets**, puis en cliquant sur **ajouter une référence**. Pour plus d’informations, consultez [faisant référence à d’autres assemblys dans les Solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ Vous pouvez ajouter des références aux assemblys managés en cliquant avec le bouton droit sur le projet de tâche de script dans l’**Explorateur de projets**, puis en cliquant sur **Ajouter une référence**. Pour plus d’informations, consultez [Référencement d’autres assemblys dans les solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
->  Vous pouvez afficher les références de projet dans l’IDE VSTA **affichage de classes** ou dans **Explorateur de projets**. Vous ouvrez un de ces fenêtres à partir de la **vue** menu. Vous pouvez ajouter une nouvelle référence à partir de la **projet** menu, à partir de **Explorateur de projets**, ou à partir de **affichage de classes**.  
+>  Vous pouvez consulter des références de projet dans l’environnement de développement intégré VSTA dans l’**Affichage de classes** ou l’**Explorateur de projets**. Vous ouvrez l’une ou l’autre de ces fenêtres à partir du menu **Affichage**. Vous pouvez ajouter une nouvelle référence à partir du menu **Projet**, de l’**Explorateur de projets** ou d’**Affichage de classes**.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Interaction avec le package dans la tâche de script  
- La tâche de Script utilise global **Dts** objet, qui est une instance de la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> classe et ses membres pour interagir avec le package qui le contient et le [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] runtime.  
+ La tâche de script utilise l’objet **Dts** global, qui est une instance de la classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, ainsi que ses membres, pour interagir avec le package qui la contient et avec le runtime [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
- Le tableau suivant répertorie les principaux membres publics de la <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> (classe), qui est exposé au code de tâche de Script via global **Dts** objet. Les rubriques de cette section examinent en détail l'utilisation de ces membres.  
+ Le tableau suivant répertorie les principaux membres publics de la classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, qui est exposée au code de la tâche de script par le biais de l’objet **Dts** global. Les rubriques de cette section examinent en détail l'utilisation de ces membres.  
   
 |Membre|Fonction|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Permet d'accéder aux gestionnaires de connexion définis dans le package.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Fournit une interface d'événements pour permettre à la tâche de script de déclencher des erreurs, des avertissements et des messages d'information.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Fournit un moyen simple de retourner un objet unique à l’exécution (en plus de la **TaskResult**) qui peut également être utilisé pour créer une branche de flux de travail.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Offre un moyen simple de retourner un objet unique au runtime (en plus de **TaskResult**) qui peut également être utilisé pour la création de branche de flux de travail.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|Enregistre des informations, telles que la progression et le résultat d'une tâche, à des modules fournisseurs d'informations activés.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|Signale le succès ou l'échec de la tâche.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|Fournit la transaction, le cas échéant, dans laquelle le conteneur de la tâche s'exécute.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Fournit l’accès aux variables répertoriées dans le **ReadOnlyVariables** et **ReadWriteVariables** propriétés pour une utilisation dans le script d’une tâche.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Permet d’accéder aux variables répertoriées dans les propriétés de tâche **ReadOnlyVariables** et **ReadWriteVariables** à utiliser dans le script.|  
   
  La classe <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> contient également quelques membres publics que vous n'utiliserez probablement pas.  
   
@@ -253,11 +249,10 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Entrée de blog, [VSTA le programme d’installation et problèmes de configuration pour les installations SSIS 2008 et R2](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
+-   Entrée de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), sur blogs.msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référencer d’autres assemblys dans les Solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [Configuration de la tâche de Script dans l’éditeur de tâche de Script.](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Référencement d’autres assemblys dans les solutions de script](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
+ [Configuration de la tâche de script dans l’éditeur de tâche de script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

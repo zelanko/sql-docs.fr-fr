@@ -1,10 +1,13 @@
 ---
 title: "Initialisation instantanée des fichiers de base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 08/15/2017
-ms.prod: sql-server-2016
+ms.date: 11/17/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,36 +22,36 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5d1ed7065cdbf710888c6b455fc1a059ecaebbfe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c1e3fb032916c235cff2dfaf9b0bf8a88d4dec82
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-instant-file-initialization"></a>Initialisation instantanée des fichiers de base de données
-  Les fichiers de données et les fichiers journaux sont initialisés pour remplacer toutes les données existantes laissées sur le disque par des fichiers précédemment supprimés. Les fichiers de données et les fichiers journaux sont d'abord initialisés en étant remplis avec des zéros quand vous effectuez l'une des opérations suivantes :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les fichiers de données et les fichiers journaux sont initialisés pour remplacer toutes les données existantes laissées sur le disque par des fichiers précédemment supprimés. Les fichiers de données et les fichiers journaux sont d'abord initialisés en étant remplis avec des zéros quand vous effectuez l'une des opérations suivantes :  
   
--   Créer une base de données.  
+- Créer une base de données.  
   
--   Ajouter des fichiers journaux ou de données à une base de données existante.  
+- Ajouter des fichiers journaux ou de données à une base de données existante.  
   
--   Augmenter la taille d'un fichier existant (opérations de croissance automatique incluses).  
+- Augmenter la taille d'un fichier existant (opérations de croissance automatique incluses).  
   
--   Restaurer une base de données ou un groupe de fichiers.  
+- Restaurer une base de données ou un groupe de fichiers.  
   
- L'initialisation des fichiers augmente le temps d'exécution de ces opérations. En revanche, quand les données sont écrites dans les fichiers pour la première fois, le système d'exploitation n'a pas besoin de remplir ces fichiers à l'aide de zéros.  
+L'initialisation des fichiers augmente le temps d'exécution de ces opérations. En revanche, quand les données sont écrites dans les fichiers pour la première fois, le système d'exploitation n'a pas besoin de remplir ces fichiers à l'aide de zéros.  
   
 ## <a name="instant-file-initialization"></a>Initialisation instantanée de fichiers  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fichiers de données peuvent être initialisés instantanément. L’initialisation instantanée des fichiers permet une exécution rapide des opérations mentionnées plus haut. L'initialisation instantanée des fichiers récupère l'espace disque utilisé sans le remplir avec des zéros. À la place, le contenu du disque est remplacé à mesure que de nouvelles données sont écrites dans les fichiers. Les fichiers journaux ne peuvent pas être initialisés instantanément.  
+Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fichiers de données peuvent être initialisés instantanément. L’initialisation instantanée des fichiers permet une exécution rapide des opérations mentionnées plus haut. L'initialisation instantanée des fichiers récupère l'espace disque utilisé sans le remplir avec des zéros. À la place, le contenu du disque est remplacé à mesure que de nouvelles données sont écrites dans les fichiers. Les fichiers journaux ne peuvent pas être initialisés instantanément.  
   
 > [!NOTE]  
 >  L’initialisation instantanée des fichiers n’est disponible que sur [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] ou [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] (ou versions ultérieures).  
   
- L'initialisation instantanée des fichiers n'est disponible que si l'autorisation SE_MANAGE_VOLUME_NAME a été octroyée au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER). Les membres du groupe Administrateurs Windows disposent de ce droit et peuvent l’attribuer aux autres utilisateurs en les ajoutant à la stratégie de sécurité **Effectuer les tâches de maintenance de volume** . Pour plus d'informations sur l'affectation de droits de l'utilisateur, consultez la documentation de Windows.  
+L'initialisation instantanée des fichiers n'est disponible que si l'autorisation SE_MANAGE_VOLUME_NAME a été octroyée au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER). Les membres du groupe Administrateurs Windows disposent de ce droit et peuvent l’attribuer aux autres utilisateurs en les ajoutant à la stratégie de sécurité **Effectuer les tâches de maintenance de volume** . Pour plus d'informations sur l'affectation de droits de l'utilisateur, consultez la documentation de Windows.  
   
-Certaines conditions, comme TDE, peuvent empêcher l’initialisation instantanée des fichiers.  
+Certaines utilisations de fonctionnalités, comme [TDE](../../relational-databases/security/encryption/transparent-data-encryption.md), peuvent empêcher l’initialisation instantanée des fichiers.  
   
- Pour accorder l'autorisation `Perform volume maintenance tasks` à un compte  
+Pour accorder l'autorisation `Perform volume maintenance tasks` à un compte  
   
 1.  Sur l’ordinateur où le fichier de sauvegarde doit être créé, ouvrez l’application **Stratégie de sécurité locale** (`secpol.msc`).  
   
@@ -65,9 +68,9 @@ Certaines conditions, comme TDE, peuvent empêcher l’initialisation instantan�
   
  Si le risque de divulgation du contenu supprimé constitue un problème, effectuez l’une et/ou l’autre des actions suivantes :  
   
--   Assurez-vous toujours que les fichiers de sauvegarde et les fichiers de données détachés possèdent des listes DACL restrictives.  
+- Assurez-vous toujours que les fichiers de sauvegarde et les fichiers de données détachés possèdent des listes DACL restrictives.  
   
--   Désactivez l'initialisation instantanée des fichiers pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en révoquant l'autorisation SE_MANAGE_VOLUME_NAME au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+- Désactivez l'initialisation instantanée des fichiers pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en révoquant l'autorisation SE_MANAGE_VOLUME_NAME au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  La désactivation de l'initialisation instantanée des fichiers n'affecte que les fichiers créés ou dont la taille a augmenté après la révocation du droit de l'utilisateur.  

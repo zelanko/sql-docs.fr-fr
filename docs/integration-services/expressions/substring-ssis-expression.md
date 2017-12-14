@@ -1,5 +1,5 @@
 ---
-title: SUBSTRING (Expression SSIS) | Documents Microsoft
+title: SUBSTRING (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8b829adf4536d23646eea1c4cfa1d9aa6d622e4b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (expression SSIS)
   Renvoie la partie d'une expression de caractères qui commence à la position spécifiée et qui a la longueur spécifiée. Les paramètres *position* et *length* doivent correspondre à des entiers.  
@@ -100,7 +98,6 @@ SUBSTRING ("Redmond",4,0)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

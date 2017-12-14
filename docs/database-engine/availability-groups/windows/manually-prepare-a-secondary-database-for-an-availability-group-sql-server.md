@@ -2,11 +2,12 @@
 title: "Préparer manuellement une base de données secondaire pour un groupe de disponibilité (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +24,14 @@ caps.latest.revision: "47"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 63ef60586a8fd776cc31a331c677760705974f21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b5a8152042d85f7e3025c0f1cdfc5acc534bfbad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>Préparer manuellement une base de données pour un groupe de disponibilité (SQL Server)
-Cette rubrique explique comment préparer une base de données pour un groupe de disponibilité Always On dans [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell. La préparation d’une base de données comporte deux étapes : 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment préparer une base de données pour un groupe de disponibilité Always On dans [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou de PowerShell. La préparation d’une base de données comporte deux étapes : 
 
 1. Restaurez une sauvegarde de base de données récente de la base de données principale ainsi que les sauvegardes de fichier journal ultérieures à l’aide de RESTORE WITH NORECOVERY sur chaque instance de serveur qui héberge le réplica secondaire
 2. Joignez la base de données restaurée au groupe de disponibilité.  

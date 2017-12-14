@@ -1,5 +1,5 @@
 ---
-title: "Comment créer et modifier un Service de capture de données modifiées | Documents Microsoft"
+title: "Guide pratique pour créer et modifier un service CDC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: daf64f88220832573485701883921ad575e789bc
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b2299c726ac0f34556b0b95126573d584193b93c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Procédure : créer et modifier un service de capture de données modifiées
   Ces procédures décrivent comment créer et modifier un service de capture de données modifiées Oracle dans la console de configuration du service de capture de données modifiées.  
@@ -69,8 +67,7 @@ ms.lasthandoff: 08/03/2017
 5.  Cliquez sur **OK** dans la boîte de dialogue Connexion à Oracle. Les deux boîtes de dialogue se ferment et le service est mis à jour et inscrit.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur de Capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Créer et modifier un Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Créer et modifier un service CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

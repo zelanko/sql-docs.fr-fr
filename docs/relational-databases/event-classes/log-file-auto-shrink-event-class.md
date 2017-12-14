@@ -2,9 +2,12 @@
 title: "Log File Auto Shrink, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32ea569906a61d179c4634f11dff301b5d2c0783
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ff072f287fd371fb0239c2adbe80c90965fee4e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, classe d’événements
-  La classe d’événements **Log File Auto Shrink** indique que le fichier journal s’est réduit automatiquement. Cet événement ne se déclenche pas si le fichier journal se réduit à la suite d'une instruction explicite ALTER DATABASE.  
+# <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink (classe d'événements)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **Log File Auto Shrink** indique que le fichier journal s’est réduit automatiquement. Cet événement ne se déclenche pas si le fichier journal se réduit à la suite d'une instruction explicite ALTER DATABASE.  
   
  Incluez la classe d’événements **Log File Auto Shrink** dans les traces chargées de surveiller la réduction du fichier journal. Quand cette classe d’événements est incluse dans une trace, la surcharge supportée est faible, sauf si le fichier rétrécit fréquemment.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Se connecter à la base de données de catalogue SSISDB sur Azure | Documents Microsoft"
+title: "Se connecter à la base de données de catalogues SSISDB sur Azure | Microsoft Docs"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,62 +8,59 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
-ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 10/13/2017
-
+ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Se connecter à la base de données de catalogue SSISDB sur Azure
+# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Se connecter à la base de données de catalogues SSISDB sur Azure
 
-Obtenir les informations de connexion que vous souhaitez vous connecter à la base de données de catalogue SSISDB hébergée sur un serveur de base de données SQL Azure. Vous avez besoin des éléments suivants pour vous connecter :
-- nom du serveur complet
+Obtenez les informations de connexion dont vous avez besoin pour vous connecter à la base de données de catalogues SSISDB hébergée sur un serveur Azure SQL Database. Vous avez besoin des éléments suivants pour vous connecter :
+- nom complet du serveur
 - nom de la base de données
 - informations de connexion 
 
-## <a name="prerequisites"></a>Conditions préalables
-Avant de commencer, assurez-vous que vous avez 17,2 ou version ultérieure de SQL Server Management Studio. Pour télécharger la dernière version de SSMS, consultez [télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+## <a name="prerequisites"></a>Prérequis
+Avant de commencer, vérifiez que vous avez la version 17.2 ou ultérieure de SQL Server Management Studio. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Obtenir les informations de connexion à partir du portail Azure
 1. Connectez-vous au [portail Azure](https://portal.azure.com/).
-2. Dans le portail Azure, sélectionnez **bases de données SQL** dans le menu de gauche, puis sélectionnez le `SSISDB` de la base de données sur le **bases de données SQL** page. 
-3. Sur le **vue d’ensemble** page pour le `SSISDB` de base de données, passez en revue le nom du serveur complet, comme illustré dans l’image suivante. Placez le curseur sur le nom du serveur pour afficher le **copie** option.
+2. Dans le portail Azure, sélectionnez **Bases de données SQL** dans le menu de gauche, puis sélectionnez la base de données `SSISDB` dans la page **Bases de données SQL**. 
+3. Dans la page **Vue d’ensemble** de la base de données `SSISDB`, vérifiez le nom complet du serveur comme indiqué dans l’image suivante. Pointez sur le nom du serveur pour afficher l’option **Cliquer pour copier**.
 
-    ![Informations de connexion de serveur](media/ssis-azure-connect-to-catalog-database/server-name.png) 
+    ![Informations de connexion au serveur](media/ssis-azure-connect-to-catalog-database/server-name.png) 
 
-4. Si vous avez oublié les informations de connexion pour le serveur de base de données SQL, accédez à la page serveur de base de données SQL. Vous pouvez y consulter l’administrateur du serveur nom et, si nécessaire, réinitialiser le mot de passe.
+4. Si vous avez oublié les informations de connexion du serveur SQL Database, accédez à la page du serveur SQL Database. Vous pourrez y trouver le nom de l’administrateur du serveur et, si nécessaire, réinitialiser le mot de passe.
 
-## <a name="connect-with-ssms"></a>Connectez-vous à SSMS
+## <a name="connect-with-ssms"></a>Se connecter à SSMS
 1. Ouvrez SQL Server Management Studio.
 
-2. **Connectez-vous au serveur**. Dans le **se connecter au serveur** boîte de dialogue, entrez les informations suivantes :
+2. **Connectez-vous au serveur**. Dans la boîte de dialogue **Se connecter au serveur**, entrez les informations suivantes :
 
-   | Paramètre       | Valeur suggérée |  Description | 
+   | Paramètre       | Valeur suggérée | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
-   | **Nom du serveur** | Le nom du serveur complet | Le nom doit être au format suivant : **mysqldbserver.database.windows.net**. |
-   | **Authentification** | Authentification SQL Server | Ce démarrage rapide utilise l’authentification SQL. |
-   | **Connexion** | Le compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié lorsque vous avez créé le serveur. |
-   | **Mot de passe** | Le mot de passe pour votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié lorsque vous avez créé le serveur. |
+   | **Nom du serveur** | Nom complet du serveur | Le nom doit être au format suivant : **mysqldbserver.database.windows.net**. |
+   | **Authentification** | Authentification SQL Server | Ce guide de démarrage rapide utilise l’authentification SQL. |
+   | **Connexion** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
+   | **Mot de passe** | Mot de passe du compte Administrateur de votre serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
 
-3. **Se connecter à la base de données SSISDB**. Sélectionnez **Options** pour développer le **se connecter au serveur** boîte de dialogue. Dans l’étendue **se connecter au serveur** boîte de dialogue, sélectionnez le **propriétés de connexion** onglet. Dans le **se connecter à la base de données** champ, sélectionnez ou entrez `SSISDB`.
+3. **Connectez-vous à la base de données SSISDB**. Sélectionnez **Options** pour développer la boîte de dialogue **Se connecter au serveur**. Dans la boîte de dialogue **Se connecter au serveur** développée, sélectionnez l’onglet **Propriétés de connexions**. Dans le champ **Se connecter à la base de données**, sélectionnez ou entrez `SSISDB`.
 
     > [!IMPORTANT]
-    > Si vous ne sélectionnez pas `SSISDB` lorsque vous vous connectez, vous ne pouvez pas voir le catalogue SSIS dans l’Explorateur d’objets.
+    > Si vous ne sélectionnez pas `SSISDB` quand vous vous connectez, le catalogue SSIS risque de ne pas s’afficher dans l’Explorateur d’objets.
 
-4. Puis sélectionnez **connexion**.
+4. Sélectionnez ensuite **Se connecter**.
 
-5. Dans l’Explorateur d’objets, développez **catalogues Integration Services** , puis **SSISDB** pour afficher les objets dans la base de données du catalogue SSIS.
+5. Dans l’Explorateur d’objets, développez **Catalogues Integration Services**, puis développez **SSISDB** pour afficher les objets de la base de données de catalogues SSIS.
 
 ## <a name="next-steps"></a>Étapes suivantes
-- Déployer un package. Pour plus d’informations, consultez [déployer un projet SSIS avec SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
-- Exécuter un package. Pour plus d’informations, consultez [exécuter un package SSIS avec SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Planifier un package. Pour plus d’informations, consultez [du package SSIS de la planification d’exécution sur Azure](ssis-azure-schedule-packages.md)
-
+- Déployez un package. Pour plus d’informations, consultez [Déployer un projet SSIS avec SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
+- Exécutez un package. Pour plus d’informations, consultez [Exécuter un package SSIS avec SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
+- Planifiez un package. Pour plus d’informations, consultez [Planifier l’exécution d’un package SSIS sur Azure](ssis-azure-schedule-packages.md)

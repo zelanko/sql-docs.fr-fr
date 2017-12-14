@@ -1,5 +1,5 @@
 ---
-title: Catalog.event_message_context | Documents Microsoft
+title: catalog.event_message_context | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b7aeb07c52f7ed00aa5a6a29cdd054258cb62d65
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/26/2017
 |Event_message_id|bigint|ID unique du message auquel le contexte est associé.|  
 |Context_depth|int|À mesure que la profondeur augmente, le contexte s'éloigne de l'erreur. Lorsqu'une erreur se produit, la profondeur du contexte commence à 1. La valeur 0 indique l'état du package avant le démarrage de l'exécution.|  
 |Package_path|Nvarchar(max)|Chemin d'accès au package de la source du contexte.|  
-|Context_type|smallint|Type de l'objet qui est la source du contexte. Consultez le **notes** section pour obtenir la liste des types de contexte.|  
+|Context_type|smallint|Type de l'objet qui est la source du contexte. Consultez la section **Remarques** pour obtenir la liste des types de contexte.|  
 |Context_source_name|Nvarchar(4000)|Nom de l'objet qui est la source du contexte.|  
 |Context_source_id|Nvarchar(38)|ID unique de l'objet qui est la source du contexte.|  
 |Property_name|Nvarchar(4000)|Nom de la propriété associée à la source du contexte.|  
@@ -62,9 +60,8 @@ ms.lasthandoff: 09/26/2017
   
 -   Autorisation READ sur l'opération  
   
--   L’appartenance à la **ssis_admin** rôle de base de données.  
+-   Appartenance au rôle de base de données **ssis_admin**.  
   
--   L’appartenance à la **sysadmin** rôle de serveur.  
+-   Appartenance au rôle serveur **sysadmin**.  
   
   
-

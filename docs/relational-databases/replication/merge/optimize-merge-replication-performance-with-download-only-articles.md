@@ -2,9 +2,12 @@
 title: "Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: feb4df0261b65ff9524979bfcf2897c20933cd31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9af82e7051c7dae3a16bd420dfe923d88a08cfac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul
-  La réplication de fusion propose deux types d'articles différents permettant de répondre aux différents besoins des applications. Les publications peuvent contenir un ou plusieurs de chacun de ces types d'articles en fonction de l'application :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication de fusion propose deux types d’articles différents permettant de répondre aux différents besoins des applications. Les publications peuvent contenir un ou plusieurs de chacun de ces types d'articles en fonction de l'application :  
   
 -   Articles standards  
   

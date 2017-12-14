@@ -2,9 +2,12 @@
 title: "Didacticiels sur la réplication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 84c864082da2c0a224b8ef42cea768c677534d23
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 501582405c40f5688514c9ce5fbcfe06ca2952c1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-tutorials"></a>Didacticiels sur la réplication
-La réplication inclut des didacticiels que vous pouvez utiliser pour apprendre à configurer et à exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La réplication inclut des didacticiels que vous pouvez utiliser pour apprendre à configurer et à exécuter les topologies de réplication à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Dans les didacticiels sur la réplication, « serveur de publication » fait référence au serveur qui contient les données source en cours de réplication et « Abonné » au serveur de destination. Le serveur de publication et l'Abonné peuvent partager la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais ce n'est pas une obligation. Pour plus d’informations, consultez [Présentation du modèle de publication de réplication](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
   

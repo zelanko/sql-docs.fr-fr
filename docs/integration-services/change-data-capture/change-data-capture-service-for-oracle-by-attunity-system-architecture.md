@@ -1,5 +1,5 @@
 ---
-title: "Capture de données modifiées Service pour Oracle par Attunity System Architecture | Documents Microsoft"
+title: "Architecture système de Change Data Capture Service pour Oracle d’Attunity | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9adf6ab7d2a249f089f418ed436506922057eab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Architecture système du service de capture de données modifiées pour Oracle par Attunity
   Le service de capture de données modifiées pour Oracle capture les modifications apportées aux tables sélectionnées dans une ou plusieurs bases de données Oracle sources dans les bases de données CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] situées sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le diagramme suivant montre les composants qui composent le service de capture de données modifiées pour Oracle.  
   
- ![Architecture de service](../../integration-services/change-data-capture/media/service-architecture.gif "Architecture de Service")  
+ ![Architecture du service](../../integration-services/change-data-capture/media/service-architecture.gif "Architecture du service")  
   
  Cette illustration montre quatre plateformes utilisées. Dans de nombreux cas, ces plateformes peuvent se chevaucher, mais ce schéma représente un cas de figure standard. Par exemple, il est logique que les bases de données Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutent chacune sur un ordinateur différent et ne soient pas partagées avec la plateforme de service de capture de données modifiées Oracle ou la plateforme à partir de laquelle le service de capture de données modifiées est conçu. Les plateformes illustrées sont les suivantes :  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/03/2017
  Le service de capture de données modifiées Oracle et ses instances Oracle CDC enfants ne peuvent communiquer qu'avec la ou les bases de données Oracle sources et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible comme clients. Ils n'écoutent pas activement le réseau et d'autres protocoles. Le service de capture de données modifiées Oracle surveille les modifications de configuration apportées aux bases de données CDC et met à jour son exécution selon la configuration mise à jour.  
   
   
-

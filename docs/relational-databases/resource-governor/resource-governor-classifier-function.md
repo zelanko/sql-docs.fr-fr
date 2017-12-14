@@ -2,9 +2,12 @@
 title: Fonction classifieur de Resource Governor | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a47914e36079c04040e1ccc23228278396154fbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur de Resource Governor
-  Le processus de classification de Resource Governor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le processus de classification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor affecte les sessions entrantes à un groupe de charge de travail en fonction des caractéristiques de la session. Vous pouvez adapter la logique de classification en entrant une fonction définie par l'utilisateur, appelée fonction classifieur.  
   
 ## <a name="classification"></a>classification.  
  Resource Governor prend en charge la classification des sessions entrantes. La classification est basée sur un jeu de critères écrits par l'utilisateur et contenus dans une fonction. Les résultats de la logique de la fonction permettent à Resource Governor de classer des sessions en groupes de charges de travail existants.  

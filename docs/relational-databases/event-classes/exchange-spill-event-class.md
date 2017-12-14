@@ -2,9 +2,12 @@
 title: "Exchange Spill, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bbbac6c6e2fd126ab40cddf9b21aa426b69d04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill (classe d'événements)
-  La classe d’événements **Exchange Spill** indique que les tampons d’un plan de requête parallèle ont été temporairement écrits dans la base de données **tempdb** . Cet événement intervient rarement, seulement lorsqu'un plan de requête inclut de multiples plages d'analyses.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements **Exchange Spill** indique que les mémoires tampons d’un plan de requête parallèle ont été temporairement écrites dans la base de données **tempdb**. Cet événement intervient rarement, seulement lorsqu'un plan de requête inclut de multiples plages d'analyses.  
   
  Normalement, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui génère de telles plages d'analyses comprend de nombreux opérateurs BETWEEN, chacun d'entre eux permettant de sélectionner une plage de lignes à partir d'une table ou d'un index. Vous pouvez également obtenir de multiples plages via des expressions telles que (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). De plus, les plans de requête imposent que ces plages soient analysées de façon ordonnée, dans la mesure ou une clause ORDER BY est spécifiée sur T.a, ou parce qu'un itérateur du plan demande que les lignes qu'il consomme soient triées.  
   

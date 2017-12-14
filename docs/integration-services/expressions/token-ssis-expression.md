@@ -1,5 +1,5 @@
 ---
-title: TOKEN (Expression SSIS) | Documents Microsoft
+title: TOKEN (expression SSIS) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff578d1f2ba584c64e471fa9514c6fa76e581d8e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 691d717b5cb5545a86fe9fbefffd0f545f77f934
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="token--ssis-expression"></a>TOKEN  (expression SSIS)
   Retourne un jeton (sous-chaîne) à partir d'une chaîne en fonction des délimiteurs spécifiés qui séparent les jetons de la chaîne et du numéro de jeton qui indique le jeton à retourner.  
@@ -48,13 +46,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction fractionne la chaîne < character_expression > dans un ensemble de jetons séparés par des délimiteurs spécifiés dans l’élément < delimiter_string > et renvoie le jeton n où N est le nombre d’occurrences du jeton spécifié par le \<occurrence > paramètre. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
+ Cette fonction fractionne la chaîne <character_expression> en un ensemble de jetons séparés par les délimiteurs spécifiés dans la chaîne <delimiter_string>, puis retourne le N-ième jeton, où N est le nombre d’occurrences du jeton spécifié par le paramètre \<occurrence>. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
   
  Les remarques suivantes s'appliquent à la fonction TOKEN :  
   
 -   La chaîne de délimitation peut contenir un ou plusieurs caractères de délimitation.  
   
--   Si la valeur de \<occurrence > le paramètre est supérieur au nombre total de jetons dans la chaîne, la fonction renvoie la valeur NULL.  
+-   Si la valeur du paramètre \<occurrence> est supérieure au nombre total de jetons présents dans la chaîne, la fonction retourne NULL.  
   
 -   Les délimiteurs de début sont ignorés.  
   
@@ -108,7 +106,6 @@ TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40; Expression SSIS &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+ [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   
-

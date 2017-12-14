@@ -2,9 +2,12 @@
 title: "Classe d’événements Progress Report: Online Index Operation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe46c6a2cf8a0ef4702c539a9384222bdfa55b26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3085eb5e62a1063f57370ff89145881ff7ae08a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Classe d'événements Progress Report: Online Index Operation
-  La classe d'événements Progress Report: Online Index Operation indique la progression d'une opération de construction d'index en ligne en cours.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Progress Report: Online Index Operation indique la progression d’une opération de construction d’index en ligne en cours.  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Colonnes de données de la classe d'événements Progress Report: Online Index Operation  
   

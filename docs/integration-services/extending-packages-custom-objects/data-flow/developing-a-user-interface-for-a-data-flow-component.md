@@ -1,5 +1,5 @@
 ---
-title: "Développement d’une Interface utilisateur pour un composant de flux de données | Documents Microsoft"
+title: "Développement d’une interface utilisateur pour un composant de flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,25 +25,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Développement d'une interface utilisateur pour un composant de flux de données
   Les développeurs de composants peuvent fournir une interface utilisateur personnalisée pour un composant. Cette interface s'affiche dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] lors de la modification du composant. Grâce à l'implémentation d'une interface utilisateur personnalisée, vous êtes averti lorsque le composant est ajouté ou supprimé d'une tâche de flux de données, et lorsque de l'aide est demandée pour le composant.  
   
- Si vous ne fournissez pas d'interface utilisateur personnalisée pour votre composant, les utilisateurs peuvent encore configurer le composant et ses propriétés personnalisées à l'aide de l'éditeur avancé. Vous pouvez vous assurer que l'éditeur avancé permet aux utilisateurs de modifier convenablement des valeurs de propriété personnalisées à l'aide des propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> le cas échéant. Pour plus d’informations, consultez « Création de propriétés personnalisées » dans [méthodes au moment du Design d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ Si vous ne fournissez pas d'interface utilisateur personnalisée pour votre composant, les utilisateurs peuvent encore configurer le composant et ses propriétés personnalisées à l'aide de l'éditeur avancé. Vous pouvez vous assurer que l'éditeur avancé permet aux utilisateurs de modifier convenablement des valeurs de propriété personnalisées à l'aide des propriétés <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> le cas échéant. Pour plus d’informations, consultez « Création de propriétés personnalisées » dans [Méthodes de conception d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Définition de la propriété UITypeName  
- Pour fournir une interface utilisateur personnalisée, le développeur doit attribuer à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> le nom d'une classe qui implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Lorsque cette propriété est définie par le composant, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] charge et appelle l’interface utilisateur personnalisée lorsque le composant est modifié dans [!INCLUDE[ssIS](../../../includes/ssis-md.md)] concepteur.  
+ Pour fournir une interface utilisateur personnalisée, le développeur doit attribuer à la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> le nom d'une classe qui implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Lorsque cette propriété est définie par le composant, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] charge et appelle l’interface utilisateur personnalisée lorsque le composant est modifié dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  La propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> est une chaîne délimitée par des virgules qui identifie le nom qualifié complet du type. La liste suivante affiche, dans l'ordre, les éléments qui identifient le type :  
   
@@ -94,10 +91,10 @@ End Class
   
  Bien que vous puissiez modifier le composant directement à partir de l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, il est préférable de créer une instance de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A>. Lorsque vous modifiez directement le composant à l'aide de l'interface, vous contournez les dispositifs de protection de la validation du composant. L'utilisation de l'instance du composant au moment de la conception par le biais de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> présente l'avantage de garantir que le composant peut contrôler les modifications qui lui sont appliquées.  
   
- La valeur de retour de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> détermine si les modifications apportées à un composant sont conservées ou supprimées. Lorsque cette méthode retourne **false**, toutes les modifications sont ignorées ; **true** les modifications dans le composant et marque le package comme devant être enregistré.  
+ La valeur de retour de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> détermine si les modifications apportées à un composant sont conservées ou supprimées. Lorsque cette méthode retourne **false**, toutes les modifications sont ignorées ; **true** conserve les modifications apportées au composant et marque le package comme devant être enregistré.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>Utilisation des services du concepteur SSIS  
- Le **IServiceProvider** paramètre de la <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> méthode permet d’accéder aux services suivants de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] concepteur :  
+ Le paramètre **IServiceProvider** de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fournit l’accès aux services suivants du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] :  
   
 |Service| Description|  
 |-------------|-----------------|  
@@ -295,4 +292,3 @@ End Namespace
  [Création d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

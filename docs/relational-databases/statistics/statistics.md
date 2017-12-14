@@ -1,10 +1,13 @@
 ---
 title: Statistiques | Microsoft Docs
 ms.custom: 
-ms.date: 10/11/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: statistics
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,21 +30,63 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 39ed8dd07bab5c83f60eaee420bb0e494f5dda85
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="statistics"></a>Statistiques
-  L'optimiseur de requête utilise des statistiques dans l'optique de créer des plans de requête qui améliorent les performances des requêtes. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires ou modifier la conception des requêtes pour obtenir des résultats optimaux. Cette rubrique traite des concepts de statistiques et fournit des instructions pour vous permettre d'utiliser efficacement les statistiques d'optimisation de requête.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’optimiseur de requête utilise des statistiques dans l’optique de créer des plans de requête qui améliorent les performances des requêtes. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires ou modifier la conception des requêtes pour obtenir des résultats optimaux. Cette rubrique traite des concepts de statistiques et fournit des instructions pour vous permettre d'utiliser efficacement les statistiques d'optimisation de requête.  
   
 ##  <a name="DefinitionQOStatistics"></a> Composants et concepts  
 ### <a name="statistics"></a>Statistiques  
  Les statistiques utilisées dans le cadre de l'optimisation de requête sont des objets qui contiennent des informations statistiques sur la distribution des valeurs dans une ou plusieurs colonnes d'une table ou d'une vue indexée. L'optimiseur de requête utilise ces statistiques pour estimer le nombre de lignes, également appelé *cardinalité*, dans le résultat de la requête. Ces *estimations de cardinalité* permettent à l’optimiseur de requête de créer un plan de requête de haute qualité. Par exemple, selon vos prédicats, l'optimiseur de requête peut utiliser des estimations de cardinalité pour choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index, plus vorace en ressources, contribuant ainsi à améliorer les performances des requêtes.  
   
- Chaque objet de statistiques est créé dans une liste constituée d'une ou de plusieurs colonnes de table et comprend un histogramme présentant la distribution des valeurs dans la première colonne. Les objets de statistiques sur plusieurs colonnes stockent également des informations statistiques sur la corrélation des valeurs entre les colonnes. Ces statistiques de corrélation, également appelées *densités*, sont dérivées du nombre de lignes distinctes de valeurs de colonne. Pour plus d’informations sur les objets de statistiques, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ Chaque objet de statistiques est créé dans une liste constituée d’une ou de plusieurs colonnes de table, et comprend un *histogramme* présentant la distribution des valeurs dans la première colonne. Les objets de statistiques sur plusieurs colonnes stockent également des informations statistiques sur la corrélation des valeurs entre les colonnes. Ces statistiques de corrélation, également appelées *densités*, sont dérivées du nombre de lignes distinctes de valeurs de colonne. 
+
+#### <a name="histogram"></a>Histogramme  
+Un **histogramme** mesure la fréquence des occurrences de chaque valeur distincte dans un jeu de données. L'optimiseur de requête calcule un histogramme sur les valeurs de colonnes de la première colonne clé de l'objet de statistiques, en sélectionnant les valeurs de colonnes au moyen d'un échantillonnage statistique des lignes ou d'une analyse complète de toutes les lignes dans la table ou la vue. Si l'histogramme est créé à partir d'un jeu de lignes échantillonnées, les totaux stockés pour le nombre de lignes et le nombre de valeurs distinctes sont des estimations et ne doivent pas nécessairement être des nombres entiers.
+
+> [!NOTE]
+> Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les histogrammes sont créés uniquement pour une seule colonne, en l’occurrence, la première colonne du jeu de colonnes clés de l’objet de statistiques.
   
+Pour créer l'histogramme, l'optimiseur de requête trie les valeurs de colonnes, calcule le nombre de valeurs qui correspondent à chaque valeur de colonne distincte, puis regroupe les valeurs de colonnes dans 200 étapes d'histogramme contiguës au maximum. Chaque étape de l’histogramme inclut une plage de valeurs de colonnes, suivie d’une valeur de colonne de limite supérieure. La plage comprend toutes les valeurs de colonnes possibles entre des valeurs limites, à l'exception des valeurs limites elles-mêmes. La plus basse des valeurs de colonnes triées est la valeur de limite supérieure pour la première étape d'histogramme.
+
+Plus précisément, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée **l’histogramme** à partir du jeu de valeurs de colonnes trié, en trois étapes :
+
+- **Initialisation de l’histogramme** : Dans la première étape, une suite de valeurs situées au début du jeu trié est traitée, et jusqu’à 200 valeurs de *range_high_key*, *equal_rows*, *range_rows* et *distinct_range_rows* sont collectées (*range_rows* et *distinct_range_rows* ont toujours une valeur nulle lors de cette étape). La première étape se termine lorsque toutes les entrées ont été traitées ou lorsque 200 valeurs ont été trouvées. Pour plus d’informations, reportez-vous à [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md). 
+- **Analyse avec fusion des compartiments** : chaque valeur supplémentaire, issue de la première colonne de la clé de statistiques, est traitée selon l’ordre de tri à la deuxième étape. Chaque valeur suivante est ajoutée à la dernière plage ou une nouvelle plage est créée à la fin (ceci est possible parce que les valeurs d’entrée sont triées). Si une nouvelle plage est créée, une paire de plages voisines existantes est réduite en une plage unique. Cette paire de plages est sélectionnée afin de minimiser la perte d’informations. Cette méthode utilise un algorithme de *différence maximale* pour réduire le nombre d’étapes dans l’histogramme, tout en augmentant la différence entre les valeurs limites. Le nombre d’étapes après réduction des plages reste à 200 pendant toute la durée de cette étape.
+- **Consolidation de l’histogramme** : Dans la troisième étape, d’autres plages peuvent être réduites, s’il n’y a pas eu de perte importante d’informations. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par conséquent, même si la colonne contient plus de 200 valeurs uniques, l’histogramme peut comporter moins de 200 étapes. Pour une colonne comprenant uniquement des valeurs uniques, l’histogramme consolidé comporte un minimum de trois étapes.
+
+> [!NOTE]
+> Si l’histogramme a été créé à l’aide de l’option SAMPLE plutôt qu’avec l’option FULLSCAN, les valeurs de *equal_rows*, *range_rows*, *distinct_range_rows* et  *average_range_rows* sont estimées, et n’ont donc pas besoin d’être des entiers.
+
+Le diagramme suivant illustre un histogramme avec six étapes : La zone située à gauche de la première valeur limite supérieure représente la première étape.
+  
+![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+  
+Pour chaque étape de l’histogramme ci-dessus :
+-   La ligne en gras représente la valeur limite supérieure (*range_high_key*) et le nombre d’occurrences (*equal_rows*) correspondant.  
+  
+-   La zone pleine située à gauche de *range_high_key* représente la plage de valeurs de colonnes et le nombre moyen d’occurrences de chacune des valeurs de colonnes (*average_range_rows*). Pour la première étape de l’histogramme, la valeur de *average_range_rows* est toujours égale à 0.  
+  
+-   Les lignes pointillées représentent les valeurs échantillonnées utilisées pour estimer le nombre total de valeurs distinctes dans la plage (*distinct_range_rows*) et le nombre total de valeurs dans la plage (*range_rows*). L’optimiseur de requête utilise *range_rows* et *distinct_range_rows* pour calculer *average_range_rows*, et ne stocke pas les valeurs échantillonnées.   
+  
+#### <a name="density-vector"></a>Vecteur de densité  
+La **densité** correspond aux informations sur le nombre de doublons d’une colonne donnée ou d’une combinaison de colonnes. Elle est calculée ainsi : 1/(nombre de valeurs distinctes). L'optimiseur de requête utilise des densités afin d'améliorer les estimations de cardinalité pour les requêtes qui retournent plusieurs colonnes à partir de la même table ou vue indexée. Le vecteur de densité contient une densité pour chaque préfixe des colonnes dans l'objet de statistiques. 
+
+> [!NOTE]
+> La fréquence correspond aux informations sur l’occurrence de chaque valeur distincte dans la première colonne de clé de l’objet de statistiques. Elle est calculée ainsi : nombre de lignes x densité. Les colonnes qui comportent des valeurs uniques ont une fréquence maximale de 1.
+
+Par exemple, si un objet de statistiques contient les colonnes clés `CustomerId`, `ItemId` et `Price`, la densité est calculée à partir des préfixes de colonnes suivants :
+  
+|Préfixe de colonne|Densité calculée sur|  
+|---|---|
+|(CustomerId)|Lignes avec des valeurs correspondantes pour CustomerID|  
+|(CustomerId, ItemId)|Lignes avec des valeurs correspondantes pour CustomerId et ItemId|  
+|(CustomerId, ItemId, Price)|Lignes avec des valeurs correspondantes pour CustomerId, ItemId et Price| 
+
 ### <a name="filtered-statistics"></a>Statistiques filtrées  
  Les statistiques filtrées peuvent améliorer les performances des requêtes qui effectuent des sélections dans des sous-ensembles bien définis de données. Les statistiques filtrées utilisent un prédicat de filtre pour sélectionner le sous-ensemble de données qui est inclus dans les statistiques. Les statistiques filtrées correctement conçues peuvent améliorer le plan d'exécution de requête par rapport aux statistiques de table complète. Pour plus d’informations sur le prédicat de filtre, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Pour plus d'informations sur l'opportunité de créer des statistiques filtrées, consultez la section [Quand créer des statistiques](#CreateStatistics) .  
   
@@ -53,7 +98,7 @@ ms.lasthandoff: 11/09/2017
   
  Lorsque l'optimiseur de requête crée des statistiques suite à l'utilisation de l'option AUTO_CREATE_STATISTICS, le nom des statistiques commence par `_WA`. Vous pouvez utiliser la requête suivante pour déterminer si l'optimiseur de requête a créé des statistiques pour une colonne de prédicat de requête.  
   
-```tsql  
+```t-sql  
 SELECT OBJECT_NAME(s.object_id) AS object_name,  
     COL_NAME(sc.object_id, sc.column_id) AS column_name,  
     s.name AS statistics_name  
@@ -147,7 +192,7 @@ Envisagez de créer des statistiques avec l'instruction CREATE STATISTICS dans l
   
  Pour créer des densités utiles aux estimations de cardinalité, les colonnes du prédicat de requête doivent correspondre à l'un des préfixes de colonnes contenus dans la définition de l'objet de statistiques. Par exemple, le code suivant crée un objet de statistiques multicolonnes sur les colonnes `LastName`, `MiddleName`et `FirstName`.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.stats  
@@ -174,7 +219,7 @@ GO
   
  L'optimiseur de requête peut utiliser les statistiques filtrées `BikeWeights` pour améliorer le plan de requête de la requête suivante qui sélectionne toutes les bicyclettes dont le poids est supérieur à `25`.  
   
-```tsql  
+```t-sql  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
 FROM Production.Product AS P  
     JOIN Production.ProductSubcategory AS S   
@@ -268,7 +313,7 @@ Pour améliorer les estimations de cardinalité pour les variables et les foncti
   
      Par exemple, la procédure stockée suivante `Sales.GetRecentSales` modifie la valeur du paramètre `@date` lorsque `@date` a la valeur NULL.  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -287,7 +332,7 @@ Pour améliorer les estimations de cardinalité pour les variables et les foncti
   
      Si le premier appel à la procédure stockée `Sales.GetRecentSales` transmet une valeur NULL pour le paramètre `@date` , l'optimiseur de requête compilera la procédure stockée avec l'estimation de cardinalité de `@date = NULL` même si le prédicat de requête n'est pas appelé avec `@date = NULL`. Il se peut que cette estimation de cardinalité soit sensiblement différente du nombre de lignes présenté dans le résultat réel de la requête. En conséquence, l'optimiseur de requête risque de choisir un plan de requête non optimisé. Pour éviter cela, vous pouvez réécrire la procédure stockée dans deux procédures comme dans l'exemple suivant :  
   
-    ```tsql  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     IF OBJECT_ID ( 'Sales.GetNullRecentSales', 'P') IS NOT NULL  
@@ -317,7 +362,7 @@ Pour améliorer les estimations de cardinalité pour les variables et les foncti
   
  Pour certaines applications, la recompilation de la requête à chacune de ses exécutions peu prendre trop de temps. L'indicateur de requête `OPTIMIZE FOR` peut s'avérer utile même si vous n'utilisez pas l'option `RECOMPILE`. Par exemple, vous pouvez ajouter une option `OPTIMIZE FOR` à la procédure stockée Sales.GetRecentSales pour spécifier une date précise. L'exemple suivant ajoute l'option `OPTIMIZE FOR` à la procédure Sales.GetRecentSales.  
   
-```tsql  
+```t-sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'Sales.GetRecentSales', 'P') IS NOT NULL  
@@ -349,6 +394,6 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md)   
- [Contrôle du comportement Autostat (AUTO_UPDATE_STATISTICS) dans SQL Server](http://support.microsoft.com/help/2754171)
-  
+ [Contrôle du comportement Autostat (AUTO_UPDATE_STATISTICS) dans SQL Server](http://support.microsoft.com/help/2754171) [STATS_DATE &#40;Transact-SQL&#41;](../../t-sql/functions/stats-date-transact-sql.md)   
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  

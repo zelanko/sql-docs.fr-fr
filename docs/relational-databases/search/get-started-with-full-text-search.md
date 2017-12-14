@@ -1,9 +1,13 @@
 ---
 title: "Bien démarrer avec la recherche en texte intégral | Microsoft Docs"
 ms.date: 08/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 01c9732a26e3e5e717de05a16e4c65b06c9cd358
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
-Par défaut, les bases de données SQL Server prennent en charge le texte intégral. Cependant, avant de pouvoir exécuter des requêtes de texte intégral, vous devez créer un catalogue en texte intégral, puis créer un index en texte intégral sur les tables ou les vues indexées dans lesquelles vous souhaitez effectuer votre recherche.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Par défaut, les bases de données SQL Server prennent en charge le texte intégral. Cependant, avant de pouvoir exécuter des requêtes de texte intégral, vous devez créer un catalogue en texte intégral, puis créer un index en texte intégral sur les tables ou les vues indexées dans lesquelles vous souhaitez effectuer votre recherche.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>Configurer la recherche en texte intégral en deux étapes
 La configuration de la recherche en texte intégral s’effectue en deux étapes :  

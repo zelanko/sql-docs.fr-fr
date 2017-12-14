@@ -1,5 +1,5 @@
 ---
-title: "Définir les propriétés de Package | Documents Microsoft"
+title: "Définir les propriétés d’un package | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 860438f65035233e198177697f24d2a2d820d75f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-package-properties"></a>Définir les propriétés d'un package
   Lorsque vous créez un package dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide de l'interface graphique fournie par [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous définissez les propriétés de l'objet de package dans la fenêtre Propriétés.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |**CreatorComputerName**|Nom de l'ordinateur sur lequel le package a été créé.|  
 |**CreatorName**|Nom de la personne qui a créé le package.|  
 |**Description**|Description des fonctionnalités du package.|  
-|**ID**|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour le **ID** propriété, sélectionnez  **\<générer un nouvel ID\>**  dans la liste déroulante.|  
+|**ID**|Identificateur global unique du package, affecté lors de la création du package. Cette propriété est en lecture seule. Pour générer une nouvelle valeur aléatoire pour la propriété **ID**, sélectionnez **\<Générer un nouvel ID\>** dans la liste déroulante.|  
 |**Nom**|Nom du package.|  
 |**PackageType**|Type de package. Les valeurs possibles sont **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**et **SQLReplication**. La valeur par défaut de cette propriété est **Default**. Pour plus d'informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/03/2017
 |**VersionMajor**|Dernière version majeure du package.|  
 |**VersionMinor**|Dernière version mineure du package.|  
 
-## <a name="set-package-properties-in-the-properties-window"></a>Définir les propriétés du package dans la fenêtre Propriétés 
+## <a name="set-package-properties-in-the-properties-window"></a>Définir les propriétés d’un package dans la fenêtre Propriétés 
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] contenant le package à configurer.  
   
 2.  Dans **l’Explorateur de solutions**, double-cliquez sur le package pour l’ouvrir dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou cliquez avec le bouton droit et sélectionnez **Concepteur de vues**.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 08/03/2017
   
 5.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés** .  
   
-

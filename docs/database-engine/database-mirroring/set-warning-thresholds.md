@@ -2,9 +2,12 @@
 title: "Définir des seuils d’avertissement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
-  Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d'avertissement pour la base de données sélectionnée dans l'arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d’avertissement pour la base de données sélectionnée dans l’arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données**.  
   
  La boîte de dialogue tente d'établir une connexion avec les deux instances de serveurs. Ces connexions sont établies de façon asynchrone. La boîte de dialogue affiche l'état de la connexion de chaque partenaire. Si le partenaire n'est pas connecté, vous pouvez cliquer sur **Se connecter**.  
   

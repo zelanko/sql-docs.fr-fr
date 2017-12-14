@@ -1,5 +1,5 @@
 ---
-title: "Étape 8 : Comment rendre le Package de la leçon 1 plus facile à comprendre | Documents Microsoft"
+title: "Étape 8 : Comment rendre le package de la leçon 1 plus facile à assimiler | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 55bd386054f3a7d066dc8c28c13e22ae82e9f0cb
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: ac8c3fa9e34de95c826c6c89a0356ac4797bd638
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Leçon 1-8 qui effectue le Package de la leçon 1 plus facile à comprendre
+# <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Leçon 1-8 : Comment rendre le package de la leçon 1 plus facile à assimiler
 Une fois la configuration du package de la leçon 1 terminée; il peut être judicieux de mettre un peu d'ordre dans la disposition du package. Si les formes dans la disposition des flux de contrôle et de données affichent des tailles aléatoires, ou si elles ne sont pas alignées ou groupées, la maîtrise des fonctionnalités du package peut s'avérer plus délicate.  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools fournit des outils qui facilitent et accélèrent le processus de mise en forme de la disposition des packages. Les fonctionnalités de mise en forme offrent notamment la possibilité d'attribuer la même taille aux formes, de les aligner et de manipuler l'espace horizontal et vertical entre elles.  
@@ -65,4 +62,3 @@ Au cours de cette tâche, vous allez exploiter les fonctionnalités de mise en f
   
   
   
-

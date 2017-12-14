@@ -1,5 +1,5 @@
 ---
-title: "Créer la fonction pour récupérer les données modifiées | Documents Microsoft"
+title: "Créer la fonction de récupération des données modifiées | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],creating function
+helpviewer_keywords: incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20f754d1559e170c4922969b11aa97052f576cc7
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3d7a5305d9b8c5c094f27b02bdcbd9c1c7bbb4a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
   Une fois que vous avez terminé le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la tâche suivante consiste à créer une fonction table qui récupère les données modifiées. Vous ne devez créer cette fonction qu'une seule fois avant le premier chargement incrémentiel.  
@@ -124,9 +121,9 @@ deallocate #hfunctions
   
  Pour simplifier l'interrogation de l'ensemble des lignes d'une table de modifications, les fonctions wrapper générées prennent également en charge les conventions suivantes :  
   
--   Si le @start_time paramètre est null, les fonctions wrapper utilisent la valeur LSN la plus basse dans l’instance de capture comme limite inférieure de la requête.  
+-   Si le paramètre @start_time est Null, les fonctions wrapper utilisent la valeur LSN la plus basse dans l’instance de capture comme limite inférieure de la requête.  
   
--   Si le @end_time paramètre est null, les fonctions wrapper utilisent la valeur LSN la plus élevée dans l’instance de capture comme limite supérieure de la requête.  
+-   Si le paramètre @end_time est Null, les fonctions wrapper utilisent la valeur LSN la plus élevée dans l’instance de capture comme limite supérieure de la requête.  
   
  La plupart des utilisateurs doivent être en mesure d'utiliser les fonctions wrapper que la procédure stockée système **sys.sp_cdc_generate_wrapper_function** crée sans modification. Toutefois, pour personnaliser les fonctions wrapper, vous devez personnaliser les scripts CREATE avant de les exécuter.  
   
@@ -220,7 +217,7 @@ go
 |**__$seqval**|**binary(10)**|Valeur de classement utilisée pour classer les modifications de ligne dans une transaction.|  
 |**__$operation**|**int**|Opération de langage de manipulation de données associée à la modification. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (valeurs avant l'opération de mise à jour)<br /><br /> 4 = mise à jour (valeurs après l'opération de mise à jour)|  
 |**__$update_mask**|**varbinary(128)**|Masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes modifiées. Vous pouvez examiner cette valeur pour déterminer les colonnes qui ont été modifiées.|  
-|**\<colonnes de table source capturées >**|variable|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée à l'origine dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
+|**\<<colonnes_de_table_source_capturées>**|variable|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée à l'origine dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   
  Pour plus d’informations, consultez [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
@@ -230,4 +227,3 @@ go
  **Rubriques suivante :** [Récupérer et comprendre les données modifiées](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   
-

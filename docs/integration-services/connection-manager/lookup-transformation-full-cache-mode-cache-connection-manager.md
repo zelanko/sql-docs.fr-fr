@@ -1,5 +1,5 @@
 ---
-title: Mode de Cache complet de Transformation de recherche - Gestionnaire de connexions du Cache | Documents Microsoft
+title: Transformation de recherche en mode Cache complet - Gestionnaire de connexions du cache | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 01d518ca176ab3de156ba303221777e9cbc65207
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Mode de Cache complet de Transformation de recherche - Gestionnaire de connexions du Cache
+# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions du cache
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions du cache. En mode Cache complet, le dataset de référence est chargé dans le cache avant l'exécution de la transformation de recherche.  
   
 > [!NOTE]  
@@ -65,7 +62,7 @@ ms.lasthandoff: 08/03/2017
   
 -   [Contraintes de précédence](../../integration-services/control-flow/precedence-constraints.md)  
   
--   [Exécuter la tâche du Package](../../integration-services/control-flow/execute-package-task.md)  
+-   [Tâche d’exécution de package](../../integration-services/control-flow/execute-package-task.md)  
   
 -   [Conteneur de séquences](../../integration-services/control-flow/sequence-container.md)  
   
@@ -288,9 +285,8 @@ ms.lasthandoff: 08/03/2017
 9. Exécutez le package.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Implémenter une Transformation de recherche en Mode Cache complet à l’aide du Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implémenter une recherche en Mode aucun Cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

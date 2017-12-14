@@ -2,9 +2,12 @@
 title: "Informations du débogueur Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
-  Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Chaque fois que le débogueur suspend l’exécution du code au niveau d’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l’état d’exécution actuel.  
   
 ## <a name="debugger-windows"></a>Fenêtres du débogueur  
  En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre principale de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Le débogueur affiche toutes ses informations dans ces deux fenêtres. Chaque fenêtre du débogueur contient des onglets que vous pouvez sélectionner pour contrôler le jeu d'informations à afficher dans la fenêtre. La fenêtre gauche du débogueur contient les onglets **Variables locales**, **Espion 1**, **Espion 2**, **Espion 3**et **Espion 4** . La fenêtre droite du débogueur contient les onglets **Pile des appels**, **Threads**, **Points d’arrêt**, **Fenêtre de commande**et **Sortie** .  

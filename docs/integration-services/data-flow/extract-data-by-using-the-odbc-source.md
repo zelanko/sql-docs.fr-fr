@@ -1,5 +1,5 @@
 ---
-title: "Extraire des données à l’aide de la Source ODBC | Documents Microsoft"
+title: "Extraire des données à l’aide de la source ODBC | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8f11c1c0304fe1ac2a6dcba55e409bde1319c706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>Extraire des données à l'aide de la source ODBC
   Cette procédure explique comment extraire des données à l'aide d'une source ODBC. Pour pouvoir ajouter et configurer une source ODBC, le package doit inclure au moins une tâche de flux de données.  
@@ -59,9 +57,8 @@ ms.lasthandoff: 08/03/2017
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source ODBC &#40; Page Gestionnaire de connexions &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [Éditeur de Source ODBC &#40; Page colonnes &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [Éditeur de Source ODBC &#40; Page sortie d’erreur &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+ [Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
+ [Éditeur de source ODBC &#40;page Colonnes&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [Éditeur de source ODBC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB | Documents Microsoft"
+title: "Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 252ca86357f628b5b859c248bf13b1fea5bfcf75
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 42e22e1fc4d46c96160b5c507e6e51f3d6f820f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Leçon 1-3 : ajout et configuration d’un gestionnaire de connexions OLE DB
+# <a name="lesson-1-3---adding-and-configuring-an-ole-db-connection-manager"></a>Leçon 1-3 : Ajout et configuration d’un gestionnaire de connexions OLE DB
 La tâche qui suit l'ajout du Gestionnaire de connexions de fichiers plats pour la connexion à la source de données, consiste à ajouter un Gestionnaire de connexions OLE DB pour la connexion à la destination. Un Gestionnaire de connexions OLE DB permet à un package d’extraire ou de charger des données dans une source de données compatible OLE DB. Au moyen du Gestionnaire de connexions OLE DB, vous pouvez spécifier le serveur, la méthode d'authentification et la base de données par défaut pour la connexion.  
   
 Au cours de cette leçon, vous allez créer un Gestionnaire de connexions OLE DB qui utilise l’authentification Windows pour la connexion à l’instance locale de **AdventureWorksDB2012**. Le Gestionnaire de connexions OLE DB que vous créez sera également référencé par d'autres composants que vous créerez ultérieurement au cours de ce didacticiel, tels que la transformation de recherche et la destination OLE DB.  
@@ -62,4 +59,3 @@ Au cours de cette leçon, vous allez créer un Gestionnaire de connexions OLE DB
 ## <a name="see-also"></a>Voir aussi  
 [Gestionnaire de connexions OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  
   
-

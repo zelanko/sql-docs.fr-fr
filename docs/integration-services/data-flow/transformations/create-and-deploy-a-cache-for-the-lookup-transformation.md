@@ -1,5 +1,5 @@
 ---
-title: "Créer et déployer un Cache pour la Transformation de recherche | Documents Microsoft"
+title: "Créer et déployer un cache pour la transformation de recherche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b859cc7f282c2e1ef5ed095ee8c7326cb7dcf382
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Créer et déployer un cache pour la transformation de recherche
   Vous pouvez créer et déployer un fichier cache (.caw) pour la transformation de recherche. Le dataset de référence est stocké dans le fichier cache.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 08/03/2017
   
 4.  Configurez le projet afin de créer un utilitaire de déploiement, puis créez le projet. Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Un fichier manifeste, \< *nom du projet*>. SSISDeploymentManifest.xml, est créé qui répertorie les divers fichiers dans le projet, les packages et les configurations du package.  
+     Un fichier manifeste, \<*nom_projet*>.SSISDeploymentManifest.xml, est créé et répertorie les différents fichiers du projet, les packages et les configurations des packages.  
   
 5.  Déployez le package dans le système de fichiers. Pour plus d’informations, consultez [Déployer des packages à l’aide de l’utilitaire de déploiement](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -102,4 +100,3 @@ ms.lasthandoff: 08/03/2017
  [Créer un utilitaire de déploiement](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

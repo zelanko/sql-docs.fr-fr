@@ -1,5 +1,5 @@
 ---
-title: "Connexion par programme des tâches | Documents Microsoft"
+title: "Connexion de tâches par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -22,19 +20,18 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 27be63f22fda13f0959f28c4ee36cc2b12c66058
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f76b250b29e0ab2fb5750941315d75ebed5b7272
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connecting-tasks-programmatically"></a>Connexion de tâches par programme
+# <a name="connecting-tasks-programmatically"></a>Connexion de tâches par programmation
   Une contrainte de précédence, représentée dans le modèle objet par la classe <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, établit l'ordre dans lequel les objets <xref:Microsoft.SqlServer.Dts.Runtime.Executable> s'exécutent dans un package. La contrainte de précédence permet de rendre l'exécution des conteneurs et des tâches d'un package dépendante du résultat de l'exécution d'une tâche ou d'un conteneur précédent. Les contraintes de précédence sont établies entre des paires d'objets <xref:Microsoft.SqlServer.Dts.Runtime.Executable> en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> de la collection <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> sur l'objet conteneur. Après avoir créé une contrainte entre deux objets exécutables, vous devez définir la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> pour établir les critères d'exécution du deuxième objet exécutable défini dans la contrainte.  
   
  Vous pouvez utiliser une contrainte ou une expression dans une seule contrainte de précédence, en fonction de la valeur spécifiée pour la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.EvalOp%2A>, tel que décrit dans le tableau suivant :  
@@ -43,8 +40,8 @@ ms.lasthandoff: 08/03/2017
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|Spécifie que le résultat de l'exécution détermine l'exécution de la tâche ou du conteneur contraint. Affectez la valeur souhaitée de l'énumération <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> de <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|Spécifie que la valeur d'une expression détermine l'exécution de la tâche ou du conteneur contraint. Définissez la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Spécifie que la contrainte doit produire un résultat et que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez à la fois le <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> propriétés de la <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>et définissez son <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> propriété **true**.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Spécifie que la contrainte doit produire un résultat ou que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez à la fois le <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> propriétés de la <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>et définissez son <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> propriété **false**.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|Spécifie que la contrainte doit produire un résultat et que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, et attribuez la valeur **true** à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|Spécifie que la contrainte doit produire un résultat ou que l'expression doit prendre une valeur, pour que la tâche ou le conteneur contraint s'exécute. Définissez les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> de <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>, et attribuez la valeur **false** à la propriété <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A>.|  
   
  L'exemple de code suivant illustre l'ajout de deux tâches à un package. Un <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> est créé entre elles pour empêcher l'exécution de la deuxième tâche tant que la première n'a pas fini de s'exécuter.  
   
@@ -108,7 +105,6 @@ End Module
 ```
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajout de la tâche de flux de données par programme](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
+ [Ajout de la tâche de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   
-

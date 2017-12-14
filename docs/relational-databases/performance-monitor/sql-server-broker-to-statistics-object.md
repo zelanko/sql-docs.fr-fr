@@ -2,9 +2,12 @@
 title: SQL Server, objet Broker TO Statistics | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00f291cbcd22622a010cde162cbcd27b866ae4d8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f4c11e2b2152ac2a60f157f9d0f813c191ae02c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, objet Broker TO Statistics
-  L’objet de performance SQL Server:Broker TO Statistics communique des informations sur le nombre de fois que des dialogues [!INCLUDE[ssSB](../../includes/sssb-md.md)] demandent des objets de transmission et sur la fréquence à laquelle des objets de transmission sont écrits dans **tempdb**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’objet de performance SQLServer:Broker TO Statistics communique des informations sur le nombre de fois que des boîtes de dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] demandent des objets de transmission, et sur la fréquence à laquelle des objets de transmission sont écrits dans **tempdb**.  
   
  Les objets de transmission enregistrent l'état de transmissions de message pour un dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Ils sont stockés en mémoire. Pour libérer de la mémoire, [!INCLUDE[ssSB](../../includes/sssb-md.md)] écrit périodiquement des lots d’objets de transmission inactifs dans des tables de travail **tempdb**.  
   

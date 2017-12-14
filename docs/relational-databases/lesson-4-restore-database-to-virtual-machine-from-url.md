@@ -1,10 +1,13 @@
 ---
 title: "Leçon 4 : Restaurer une base de données sur une machine virtuelle à partir d’une URL | Microsoft Docs"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f641f3df1010396d54a655beaaf982a7bff63972
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad780f4f49f99c0537e5ff560d1addab59627d9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Leçon 4 : Restaurer une base de données sur une machine virtuelle à partir d’une URL
-Dans cette leçon, vous restaurez la base de données AdventureWorks2014 sur votre instance de SQL Server 2016 sur votre machine virtuelle Azure.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans cette leçon, vous restaurez la base de données AdventureWorks2014 de votre instance de SQL Server 2016 sur votre machine virtuelle Azure.  
   
 > [!NOTE]  
 > Pour simplifier ce didacticiel, nous utilisons le même conteneur pour les fichiers journaux et les données que celui que nous avons utilisé pour la sauvegarde de base de données. Dans un environnement de production, vous utilisez probablement plusieurs conteneurs et souvent plusieurs fichiers de données. Avec SQL Server 2016, vous pouvez également envisager de répartir votre sauvegarde sur plusieurs objets blob pour augmenter les performances de sauvegarde quand vous sauvegardez une base de données volumineuse.  

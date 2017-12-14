@@ -1,5 +1,5 @@
 ---
-title: "Regrouper des valeurs dans un jeu de données à l’aide de la Transformation d’agrégation | Documents Microsoft"
+title: "Agréger les valeurs dans un dataset à l’aide de la transformation d’agrégation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b4e99dd830e0722fa5717f8749ef7f4dc152be0
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f07d092a7b0a583281070fb79063d1432ff81421
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation
   Pour pouvoir ajouter et configurer une transformation d'agrégation, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -77,10 +75,9 @@ ms.lasthandoff: 08/03/2017
 15. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation d’agrégation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
+ [Transformation d'agrégation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins d’accès d’Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
- [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
+ [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
+ [tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Flux de données dans les données | Documents Microsoft"
+title: "Données dans des flux de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 15689319652b1527bae7a7c27da9d89979c492d7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-in-data-flows"></a>Données dans des flux de données
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un ensemble de types de données qui sont utilisés dans les flux de données.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 08/03/2017
  Une fois que vous avez déployé un package sur le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez analyser le flux de données dans le package au moment de l’exécution pour vérifier les performances ou pour détecter d’autres problèmes. Des rapports standard sont disponibles et vous permettent de consulter l'état et l'historique du package. Vous pouvez interroger les vues de base de données qui fournissent des informations détaillées sur l'exécution du package. De plus, vous pouvez ajouter et supprimer dynamiquement des drainages de données au moment de l'exécution pour cibler des éléments spécifiques de votre package. Pour plus d’informations, consultez [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
   
-

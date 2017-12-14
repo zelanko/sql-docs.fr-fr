@@ -1,5 +1,5 @@
 ---
-title: "Enregistrement d’un Package par programme | Documents Microsoft"
+title: "Enregistrement d’un package par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,32 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically saving a package
 - saving a package programmatically
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: f6b99377f6eaf720b9511b560e5cf563ede2b869
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6a433d64b0c2b7694dfe1fc89db6dc6df9060b54
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="saving-a-package-programmatically"></a>Enregistrement d'un package par programme
   Après avoir généré un package par programme, ou modifié un package existant, vous souhaitez généralement enregistrer vos modifications.  
   
- Toutes les méthodes de cette rubrique qui permettent d'enregistrer des packages requièrent une référence à l'assembly **Microsoft.SqlServer.ManagedDTS** . Après avoir ajouté la référence d’un nouveau projet, importez le <xref:Microsoft.SqlServer.Dts.Runtime> espace de noms avec un **à l’aide de** ou **importations** instruction.  
+ Toutes les méthodes de cette rubrique qui permettent d'enregistrer des packages requièrent une référence à l'assembly **Microsoft.SqlServer.ManagedDTS** . Après avoir ajouté la référence dans un nouveau projet, importez l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> à l’aide d’une instruction **using** ou **Imports**.  
   
 ## <a name="saving-a-package-programmatically"></a>Enregistrement d'un package par programme  
- Pour enregistrer un package par programme, appelez l’une des méthodes suivantes de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> classe :  
+ Pour enregistrer un package par programmation, appelez l’une des méthodes suivantes de la classe [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> :  
   
 |Emplacement de stockage|Méthode à appeler|  
 |----------------------|--------------------|  
@@ -51,4 +48,3 @@ ms.lasthandoff: 08/03/2017
  [Enregistrer des packages](../../integration-services/save-packages.md)  
   
   
-

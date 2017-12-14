@@ -2,9 +2,12 @@
 title: Configurer un serveur de publication Oracle | Microsoft Docs
 ms.custom: 
 ms.date: 09/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66977f7eeb747d77d8f0db82b76b307e1aff2cca
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
-  Les publications provenant des serveurs de publication Oracle sont créées de la même façon que les publications d'instantané et les publications transactionnelles standard. Toutefois, pour créer une publication provenant d'un serveur de publication Oracle, vous devez préalablement effectuer les étapes ci-après (les étapes un, trois et quatre sont décrites en détail dans cette rubrique).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les publications provenant des serveurs de publication Oracle sont créées de la même façon que les publications d’instantané et les publications transactionnelles standard. Toutefois, pour créer une publication provenant d’un serveur de publication Oracle, vous devez préalablement effectuer les étapes ci-après (les étapes 1, 3 et 4 sont décrites en détail dans cette rubrique) :  
   
 1.  Créez un utilisateur de réplication administratif dans la base de données Oracle à l'aide du script fourni.  
   

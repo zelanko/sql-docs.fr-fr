@@ -1,5 +1,5 @@
 ---
-title: "Énumération des Packages disponibles par programme | Documents Microsoft"
+title: "Énumération des packages disponibles par programmation | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programmatically enumerate packages [SSIS]
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ebdf52b9ec71be3845d0fcdf3053b2168467389
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 84ab5ed55cd87c1dce61455a80b75990c423e792
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="enumerating-available-packages-programmatically"></a>Énumération des packages disponibles par programme
-  <a name="top"></a>Lorsque vous travaillez par programme avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, vous souhaiterez peut-être que pour déterminer si un package ou dossier spécifique existe, ou pour énumérer les packages enregistrés qui sont disponibles pour charger et exécuter. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
+# <a name="enumerating-available-packages-programmatically"></a>Énumération des packages disponibles par programmation
+  <a name="top"></a> Quand vous travaillez par programmation avec des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez avoir besoin de déterminer si un package ou un dossier individuel existe, ou d’énumérer les packages enregistrés qui peuvent être chargés et exécutés. La classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> de l'espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> fournit différentes méthodes pour répondre à ces impératifs.    
     
-##  <a name="exists"></a>Déterminer si un Package ou un dossier existe    
- Pour déterminer par programme si un package enregistré existe, appelez l'une des méthodes suivantes avant de tenter de le charger et l'exécuter :    
+##  <a name="exists"></a> Détermination de l’existence d’un package ou dossier    
+ Pour déterminer par programmation si un package enregistré existe, appelez l'une des méthodes suivantes avant de tenter de le charger et l'exécuter :    
     
 |Emplacement de stockage|Méthode à appeler|    
 |----------------------|--------------------|    
 |Magasin de packages SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnSqlServer%2A>|    
     
- Pour déterminer par programme si un dossier existe avant de tenter de répertorier les packages stockés qu'il contient, appelez l'une des méthodes suivantes :    
+ Pour déterminer par programmation si un dossier existe avant de tenter de répertorier les packages stockés qu'il contient, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
 |----------------------|--------------------|    
@@ -51,8 +48,8 @@ ms.lasthandoff: 09/26/2017
     
  [Retour au début](#top)    
     
-##  <a name="listing"></a>Énumération des Packages disponibles    
- Pour obtenir par programme une liste des packages enregistrés, appelez l'une des méthodes suivantes :    
+##  <a name="listing"></a> Énumération des packages disponibles    
+ Pour obtenir par programmation une liste des packages enregistrés, appelez l'une des méthodes suivantes :    
     
 |Emplacement de stockage|Méthode à appeler|    
 |----------------------|--------------------|    
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/26/2017
     
  Les exemples suivants sont des applications console qui illustrent l'utilisation de ces méthodes.    
     
-###  <a name="listing_store"></a>Exemple (magasin de packages SSIS)    
+###  <a name="listing_store"></a> Exemple (magasin de packages SSIS)    
  Utilisez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> pour répertorier les packages stockés dans le magasin de packages SSIS. File System et MSDB sont les emplacements de stockage par défaut gérés par le magasin de packages SSIS. Vous pouvez créer des dossiers logiques supplémentaires dans ces emplacements.    
     
 ```vb    
@@ -167,7 +164,7 @@ namespace EnumeratePackagesSSIS_CS
     
  [Retour au début](#top)    
     
-###  <a name="listing_sql"></a>Exemple (SQL Server)    
+###  <a name="listing_sql"></a> Exemple (SQL Server)    
  Utilisez la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> pour répertorier les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stockés dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
     
 ```vb    
@@ -252,4 +249,3 @@ namespace EnumeratePackagesSql_CS
  [Gestion de packages &#40;Service SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   
-

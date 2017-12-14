@@ -2,9 +2,12 @@
 title: "Mise en miroir de bases de données - Utiliser des certificats pour les connexions sortrantes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 442135ac804feff215bb3eab09bbf7ee3464af4e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b67769fce7a6516e3bd8d0a76eb70ef3d0365d4a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Mise en miroir de bases de données - Utiliser des certificats pour les connexions sortrantes
-  Cette rubrique explique comment configurer les instances de serveur de sorte qu'elles utilisent des certificats pour authentifier les connexions sortantes de la mise en miroir de bases de données. La configuration des connexions sortantes doit être effectuée avant celle des connexions entrantes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment configurer les instances de serveur de sorte qu’elles utilisent des certificats pour authentifier les connexions sortantes de la mise en miroir de bases de données. La configuration des connexions sortantes doit être effectuée avant celle des connexions entrantes.  
   
 > [!NOTE]  
 >  Toutes les connexions de mise en miroir situées sur une instance du serveur utilisent un point de terminaison de mise en miroir de bases de données unique, et vous devez spécifier la méthode d'authentification de l'instance du serveur au moment de la création de ce point de terminaison.  

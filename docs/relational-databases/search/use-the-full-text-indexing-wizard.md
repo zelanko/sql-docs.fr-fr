@@ -2,9 +2,12 @@
 title: "Utiliser l’Assistant Indexation de texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98fce836048a343f9eb87b2d987d13a294bce59f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4cfca84ed59bd6922a6667a0b214668836e421ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
-  L’Assistant Indexation de texte intégral de SSMS vous guide tout au long d’une série d’étapes destinées à vous aider à créer un index de texte intégral.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L’Assistant Indexation de texte intégral de SSMS vous guide tout au long d’une série d’étapes destinées à vous aider à créer un index de recherche en texte intégral.  
   
 ## <a name="create-a--full-text-index"></a>Créer un index de recherche en texte intégral 
 

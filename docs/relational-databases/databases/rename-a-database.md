@@ -1,10 +1,13 @@
 ---
 title: "Renommer une base de données | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 11/20/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e1fcae408b1c5617e39b835d82f7895635bd07ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5470b86096170410b88c6a8e8a596fe608d33cc7
+ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
-  Cette rubrique explique comment renommer une base de données définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le nom de la base de données peut contenir n'importe quel caractère conforme aux règles applicables aux identificateurs.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment renommer une base de données définie par l’utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le nom de la base de données peut contenir n'importe quel caractère conforme aux règles applicables aux identificateurs.  
   
  **Dans cette rubrique**  
   
@@ -41,6 +44,9 @@ ms.lasthandoff: 11/09/2017
      [Transact-SQL](#TsqlProcedure)  
   
 -   **Suivi :**  [Après avoir renommé une base de données](#FollowUp)  
+
+> [!NOTE]
+> Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Pour renommer une base de données dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql).
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -88,7 +94,7 @@ GO
  Après avoir renommé une base de données, sauvegardez la base de données **master** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Identificateur de la base de données](../../relational-databases/databases/database-identifiers.md)  
+ [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Identificateurs de base de données](../../relational-databases/databases/database-identifiers.md)  
   
   

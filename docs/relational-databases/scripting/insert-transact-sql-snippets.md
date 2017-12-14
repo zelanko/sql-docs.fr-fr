@@ -2,9 +2,12 @@
 title: "Insérer des extraits de code Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd2463b84505c7dbbd617e4a700725147e01c336
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8b37ab2c15e2d1770f2dd0f8c861fb8c2e0f3144
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="insert-transact-sql-snippets"></a>Insérer des extraits de code Transact-SQL
-  Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)] est un modèle que vous pouvez utiliser comme point de départ durant l’écriture de nouvelles instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)] est un modèle que vous pouvez utiliser comme point de départ durant l’écriture de nouvelles instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans l’Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="inserting-snippets"></a>Insertion d'extraits de code  
  Vous pouvez utiliser le menu **Insérer un extrait** pour ouvrir une liste par catégorie d’extraits de code et en choisir un.  

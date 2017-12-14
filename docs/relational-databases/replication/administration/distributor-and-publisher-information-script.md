@@ -2,9 +2,12 @@
 title: "Script d’information du serveur de distribution et du serveur de publication | Microsoft Docs"
 ms.custom: 
 ms.date: 03/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 247af1132f3b2df3a6b393967e1f9bef73df4705
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd2332c1e14a1c0987de06232837320a18cbe5dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script d'information du serveur de distribution et du serveur de publication
-  Le script utilise les tables système et les procédures stockées de réplication pour répondre aux questions les plus courantes sur les objets posées sur le serveur de distribution et sur le serveur de publication. Le script peut être utilisé « tel quel » et peut également servir de base pour des scripts personnalisés. Le script peut nécessiter deux modifications afin qu'il fonctionne dans votre environnement :  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le script utilise les tables système et les procédures stockées de réplication pour répondre aux questions les plus courantes sur les objets posées sur le serveur de distribution et sur le serveur de publication. Le script peut être utilisé « tel quel » et peut également servir de base pour des scripts personnalisés. Le script peut nécessiter deux modifications afin qu'il fonctionne dans votre environnement :  
   
 -   Modifiez la ligne `use AdventureWorks2012` afin d'utiliser le nom de votre base de données de publication.  
   

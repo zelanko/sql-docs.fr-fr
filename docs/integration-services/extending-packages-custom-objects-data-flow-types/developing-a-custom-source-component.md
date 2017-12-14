@@ -1,5 +1,5 @@
 ---
-title: "Développement d’un composant Source personnalisé | Documents Microsoft"
+title: "Développement d’un composant source personnalisé | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,30 +24,29 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 30e5320679193120148f714324da10d4d0c65506
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7ff2fd453c04886594f4d70e1115f00acac72edb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-source-component"></a>Développement d'un composant source personnalisé
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants source qui peuvent se connecter aux sources de données personnalisées et fournir des données à partir de ces sources à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet aux développeurs d’écrire des composants sources capables de se connecter à des sources de données personnalisées et de fournir des données, à partir de ces sources, à d’autres composants dans une tâche de flux de données. La possibilité de créer des sources personnalisées est particulièrement utile lorsque vous devez vous connecter à des sources de données qui ne sont pas accessibles à l'aide de l'une des sources [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existantes.  
   
  Les composants sources possèdent une ou plusieurs sorties et zéro entrée. Au moment de la conception, les composants sources permettent de créer et configurer des connexions, lire des métadonnées de colonne à partir de la source de données externe et configurer les colonnes de sortie de la source en fonction de la source de données externe. Pendant l'exécution, ils se connectent à la source de données externe et ajoutent des lignes à une mémoire tampon de sortie. La tâche de flux fournit ensuite cette mémoire tampon de lignes de données aux composants en aval.  
   
- Pour obtenir une vue d’ensemble du développement de composants de flux de données, consultez [développer un composant de flux de données personnalisé](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ Pour une vue d’ensemble du développement de composants de flux de données, consultez [Développement d’un composant de flux de données personnalisé](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Moment de la conception  
  Pour implémenter les fonctionnalités au moment de la conception d'un composant source, il est nécessaire de spécifier une connexion à une source de données externe, d'ajouter et configurer des colonnes de sortie qui reflètent la source de données et de confirmer que le composant est prêt à être exécuté. Par définition, un composant source possède zéro entrée et une ou plusieurs sorties asynchrones.  
   
 ### <a name="creating-the-component"></a>Création du composant  
- Les composants sources se connectent à des sources de données externes à l'aide d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> définis dans un package. Ils indiquent leur besoin d'un gestionnaire de connexions en ajoutant un élément à la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Cette collection remplit deux fonctions : conserver les références aux gestionnaires de connexions dans le package utilisé par le composant et publier la nécessité d'un gestionnaire de connexions sur le concepteur. Lorsqu’une <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a été ajouté à la collection, le **éditeur avancé** affiche le **propriétés de connexion** onglet, qui permet aux utilisateurs de sélectionner ou créer une connexion dans le package.  
+ Les composants sources se connectent à des sources de données externes à l'aide d'objets <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> définis dans un package. Ils indiquent leur besoin d'un gestionnaire de connexions en ajoutant un élément à la collection <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Cette collection remplit deux fonctions : conserver les références aux gestionnaires de connexions dans le package utilisé par le composant et publier la nécessité d'un gestionnaire de connexions sur le concepteur. Une fois que <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> a été ajouté à la collection, l’**Éditeur avancé** affiche l’onglet **Propriétés de connexion**, qui permet aux utilisateurs de sélectionner ou de créer une connexion dans le package.  
   
  L'exemple de code suivant présente une implémentation de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> qui ajoute une sortie, puis ajoute un objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> à <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -112,7 +109,7 @@ End Class
 ```  
   
 ### <a name="connecting-to-an-external-data-source"></a>Connexion à une source de données externe  
- Lorsqu'une connexion a été ajoutée à <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, vous pouvez substituer la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> pour établir une connexion à la source de données externe. Cette méthode est appelée au moment de la conception et de l'exécution. Le composant doit établir une connexion au Gestionnaire de connexions spécifié par la connexion de l’exécution et par la suite, à la source de données externe.  
+ Lorsqu'une connexion a été ajoutée à <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>, vous pouvez substituer la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A> pour établir une connexion à la source de données externe. Cette méthode est appelée au moment de la conception et de l'exécution. Le composant doit établir une connexion au gestionnaire de connexions spécifié par la connexion au moment de l’exécution, et par la suite, à la source de données externe.  
   
  Une fois la connexion établie, elle doit être mise en cache en interne par le composant et libérée lorsque la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> est appelée. La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReleaseConnections%2A> est appelée au moment de la conception et de l'exécution, comme la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>. Les développeurs substituent cette méthode et libèrent la connexion établie par le composant pendant l'exécution de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.AcquireConnections%2A>.  
   
@@ -185,10 +182,10 @@ End Sub
 |DT_CY|0|0|0|0|  
 |DT_NUMERIC|0|Supérieur à 0 et inférieur ou égale à 28 et inférieur à Précision.|Supérieur ou égal à 1 et inférieur ou égal à 38.|0|  
 |DT_BYTES|Supérieur à 0.|0|0|0|  
-|DT_STR|Supérieur à 0 et inférieur à 8 000.|0|0|Différent de 0 et une page de codes valide.|  
+|DT_STR|Supérieur à 0 et inférieur à 8 000.|0|0|Différent de 0 et une page de codes valide.|  
 |DT_WSTR|Supérieur à 0 et inférieur à 4000.|0|0|0|  
   
- Étant donné que les restrictions sur les propriétés de type de données sont basées sur le type de données de la colonne de sortie, vous devez choisir le type de données [!INCLUDE[ssIS](../../includes/ssis-md.md)] correct lorsque vous utilisez des types managés. La classe de base fournit trois méthodes d’assistance, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, et <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, pour aider les développeurs de composants managés de la sélection d’un [!INCLUDE[ssIS](../../includes/ssis-md.md)] type de données d’un type managé. Ces méthodes convertissent des types de données managées en types de données [!INCLUDE[ssIS](../../includes/ssis-md.md)], et vice versa.  
+ Étant donné que les restrictions sur les propriétés de type de données sont basées sur le type de données de la colonne de sortie, vous devez choisir le type de données [!INCLUDE[ssIS](../../includes/ssis-md.md)] correct lorsque vous utilisez des types managés. La classe de base fournit trois méthodes d’assistance, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> et <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>, qui aident les développeurs de composants managés à sélectionner un type de données [!INCLUDE[ssIS](../../includes/ssis-md.md)] en fonction d’un type managé. Ces méthodes convertissent des types de données managées en types de données [!INCLUDE[ssIS](../../includes/ssis-md.md)], et vice versa.  
   
  L'exemple de code suivant montre comment la collection de colonnes de sortie d'un composant est remplie selon le schéma d'une table. Les méthodes d'assistance de la classe de base permettent de définir le type de données de la colonne, qui lui-même définit les propriétés dépendantes.  
   
@@ -369,9 +366,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Validation du composant  
- Vous devez valider un composant source et vérifier que les colonnes définies dans ses collections de colonnes de sortie correspondent aux colonnes au niveau de la source de données externe. Il est parfois impossible de vérifier les colonnes de sortie par rapport à la source de données externe, notamment lorsque le composant est déconnecté ou lorsqu'il est préférable d'éviter de longs allers-retours au serveur. Dans ce cas, il est toujours possible de valider les colonnes dans la sortie à l'aide de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> de l'objet de sortie. Pour plus d’informations, consultez [validation d’un composant de flux de données](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
+ Vous devez valider un composant source et vérifier que les colonnes définies dans ses collections de colonnes de sortie correspondent aux colonnes au niveau de la source de données externe. Il est parfois impossible de vérifier les colonnes de sortie par rapport à la source de données externe, notamment lorsque le composant est déconnecté ou lorsqu'il est préférable d'éviter de longs allers-retours au serveur. Dans ce cas, il est toujours possible de valider les colonnes dans la sortie à l'aide de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A> de l'objet de sortie. Pour plus d’informations, consultez [Validation d’un composant de flux de données](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md).  
   
- Cette collection existe sur les objets d'entrée et de sortie et vous pouvez la remplir avec les colonnes de la source de données externe. Vous pouvez utiliser cette collection pour valider les colonnes de sortie lorsque [!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur est en mode hors connexion, lorsque le composant est déconnecté ou lorsque le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> propriété **false**. La collection doit d'abord être remplie à mesure que les colonnes de sortie sont créées. Étant donné que la colonne de métadonnées externe doit correspondre initialement à la colonne de sortie, il est relativement facile de l'ajouter à la collection. Les propriétés de type de données de la colonne, qui doivent déjà être définies correctement, peuvent être copiées directement dans l'objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
+ Cette collection existe sur les objets d'entrée et de sortie et vous pouvez la remplir avec les colonnes de la source de données externe. Cette collection permet de valider les colonnes de sortie lorsque le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] est hors connexion, lorsque le composant est déconnecté ou lorsque la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> a la valeur **false**. La collection doit d'abord être remplie à mesure que les colonnes de sortie sont créées. Étant donné que la colonne de métadonnées externe doit correspondre initialement à la colonne de sortie, il est relativement facile de l'ajouter à la collection. Les propriétés de type de données de la colonne, qui doivent déjà être définies correctement, peuvent être copiées directement dans l'objet <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>.  
   
  L'exemple de code suivant ajoute une colonne de métadonnées externe basée sur une colonne de sortie créée récemment. Il suppose que la colonne de sortie a déjà été créée.  
   
@@ -416,7 +413,7 @@ Private Sub CreateExternalMetaDataColumn(ByVal output As IDTSOutput100, ByVal ou
 ### <a name="locating-columns-in-the-buffer"></a>Localisation des colonnes dans le tampon  
  La mémoire tampon de sortie d'un composant contient les colonnes définies par le composant et toutes les colonnes ajoutées à la sortie d'un composant en aval. Par exemple, si un composant source fournit trois colonnes dans sa sortie et que le composant suivant ajoute une quatrième colonne de sortie, la mémoire tampon de sortie destinée au composant source contient ces quatre colonnes.  
   
- L'ordre des colonnes dans une ligne de mémoire tampon n'est pas défini par l'index de la colonne de sortie dans la collection de colonnes de sortie. Seule la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> permet de placer correctement une colonne de sortie dans une ligne de mémoire tampon. Cette méthode localise la colonne avec l’ID de lignage spécifié dans la mémoire tampon spécifiée et retourne son emplacement dans la ligne. Les index des colonnes de sortie se trouvent généralement dans la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> et sont stockés pour être utilisés lors de l'exécution de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>.  
+ L'ordre des colonnes dans une ligne de mémoire tampon n'est pas défini par l'index de la colonne de sortie dans la collection de colonnes de sortie. Seule la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSBufferManagerClass.FindColumnByLineageID%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> permet de placer correctement une colonne de sortie dans une ligne de mémoire tampon. Cette méthode recherche la colonne avec l’ID de lignage spécifié dans la mémoire tampon spécifiée et retourne son emplacement dans la ligne. Les index des colonnes de sortie se trouvent généralement dans la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> et sont stockés pour être utilisés lors de l'exécution de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>.  
   
  L'exemple de code suivant recherche l'emplacement des colonnes de sortie dans la mémoire tampon de sortie pendant un appel à <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> et stocke l'information dans une structure interne. Le nom de la colonne, également stocké dans la structure, est utilisé dans l'exemple de code de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> présenté dans la section suivante de cette rubrique.  
   
@@ -677,8 +674,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Développement d’un composant de Destination personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
- [Création d’une Source avec le composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [Développement d’un composant de destination personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
+ [Création d’une source à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   
-

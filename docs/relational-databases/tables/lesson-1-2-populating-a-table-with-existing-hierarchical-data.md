@@ -2,9 +2,12 @@
 title: "Remplissage d’une table avec des données hiérarchiques existantes | Microsoft Docs"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 49f9580f99974d4453a7633c6640f8b5ca418e35
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 25feafb61615372739cc6997666cee5841424bb9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>Leçon 1-2 : remplissage d’une table avec des données hiérarchiques existantes
-Cette tâche crée une table et la remplit avec les données de la table **EmployeeDemo** . Les étapes de cette tâche sont les suivantes :  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Cette tâche crée une table et la remplit avec les données de la table **EmployeeDemo**. Les étapes de cette tâche sont les suivantes :  
   
 -   Créez une table qui contient une colonne **hierarchyid** . Cette colonne pourrait remplacer les colonnes **EmployeeID** et **ManagerID** existantes. Toutefois, vous conserverez ces colonnes. Cela s'explique par le fait que les applications existantes peuvent faire référence à ces colonnes. De même, cela peut vous aider à comprendre les données après le transfert. La définition de table spécifie que **OrgNode** est la clé primaire, ce qui exige que la colonne contienne des valeurs uniques. L’index cluster sur la colonne **OrgNode** stockera la date dans la séquence **OrgNode** .  
   

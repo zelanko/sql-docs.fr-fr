@@ -2,11 +2,12 @@
 title: "Installer SQL Server à partir de l’invite de commandes | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: server-general
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -89,14 +90,14 @@ caps.latest.revision: "255"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 0015d57b64757afb886fb6ded1d5803d93ed13e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf7f4a160fe33cad667f1b469ee6178835d0c384
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
-  Avant d’exécuter le programme d’installation de SQL Server, consultez [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Avant d’exécuter le programme d’installation de SQL Server, consultez [Planification d’une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
  L’installation d’une nouvelle instance de SQL Server à partir de l’invite de commandes vous permet de spécifier les composants à installer et la façon dont ils doivent être configurés. Vous pouvez également spécifier une interaction en mode silencieux, de base ou complète avec l'interface utilisateur du programme d'installation.  
   

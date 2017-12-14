@@ -1,5 +1,5 @@
 ---
-title: "Se connecter à une Source de données SQL Server (SQL Server Assistant Importation et exportation) | Documents Microsoft"
+title: "Se connecter à une source de données SQL Server (Assistant Importation et Exportation SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,129 +8,126 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 17910c8e30dee98f39e977896fb67774b54a798d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 79a1f98f64096d11faf25a75e681518546bbd21e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une Source de données SQL Server (SQL Server Assistant Importation et exportation)
-Cette rubrique vous montre comment se connecter à un **Microsoft SQL Server** de source de données à partir de la **choisir une Source de données** ou **choisir une Destination** page de l’importation de SQL Server et l’Assistant Exportation. Il existe plusieurs fournisseurs de données que vous pouvez utiliser pour se connecter à SQL Server.
+# <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données SQL Server (Assistant Importation et Exportation SQL Server)
+Cette rubrique vous montre comment se connecter à une source de données **Microsoft SQL Server** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Vous pouvez utiliser plusieurs fournisseurs de données pour vous connecter à SQL Server.
 
 > [!TIP]
-> Si vous êtes sur un réseau avec plusieurs serveurs, il peut être plus facile à entrer le nom du serveur au lieu de développer la liste déroulante des serveurs. Si vous cliquez sur la liste déroulante, il peut prendre beaucoup de temps pour interroger le réseau pour tous les serveurs disponibles, et les résultats ne peuvent pas inclure même le serveur souhaité.
+> Si vous êtes sur un réseau doté de nombreux serveurs, il peut être plus facile d’entrer le nom du serveur plutôt que de développer la liste déroulante des serveurs. Si vous cliquez sur la liste déroulante, l’interrogation du réseau pour connaître tous les serveurs disponibles peut prendre beaucoup de temps, et les résultats peuvent même ne pas contenir le serveur que vous souhaitez.
 
 ## <a name="connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server"></a>Se connecter à SQL Server avec le fournisseur de données .NET Framework pour SQL Server 
-Après avoir sélectionné **fournisseur de données .NET Framework pour SQL Server** sur la **choisir une Source de données** ou **choisir une Destination** page de l’Assistant, la page affiche une liste groupée des options pour le fournisseur. Bon nombre d'entre elles sont des noms hostiles et les paramètres inhabituels. Heureusement, pour vous connecter à une base de données d’entreprise, vous devez généralement fournir uniquement quelques informations. Vous pouvez ignorer les valeurs par défaut pour les autres paramètres.
+Après avoir sélectionné le **Fournisseur de données .NET Framework pour SQL Server** dans la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant, la page affiche une liste groupée d’options pour le fournisseur. Bon nombre d’entre elles comportent des noms inconnus et des paramètres inhabituels. Heureusement, pour vous connecter à une base de données d’entreprise, vous ne devez généralement fournir que quelques éléments d’information. Vous pouvez ignorer les valeurs par défaut des autres paramètres.
 
 > [!NOTE]
-> Les options de connexion pour ce fournisseur de données sont les mêmes si SQL Server est la source ou la destination. Autrement dit, les options sont les mêmes sur les deux le **choisir une Source de données** et **choisir une Destination** pages de l’Assistant.
+> Les options de connexion de ce fournisseur de données sont les mêmes, que SQL Server soit la source ou la destination. Autrement dit, les options que vous affichez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
-|Informations nécessaires|.NET framework Data Provider pour la propriété de SQL Server|
+|Informations nécessaires|Propriété du fournisseur de données .NET Framework pour SQL Server|
 |---|---|
 |Nom du serveur|**Source de données**|
-|Informations d’authentification (connexion)|**La sécurité intégrée de**; ou, **ID utilisateur** et **mot de passe**<br/>Si vous souhaitez afficher la liste déroulante des bases de données sur le serveur, vous devez d’abord fournir les informations de connexion valide.|
+|Informations d’authentification (connexion)|**Sécurité intégrée** ; ou **ID d’utilisateur** et **Mot de passe**<br/>Si vous voulez afficher la liste déroulante des bases de données sur le serveur, vous devez d’abord fournir des informations de connexion valides.|
 |Nom de la base de données|**Catalogue initial**|
 
-![Se connecter à SQL avec le fournisseur .NET](../../integration-services/import-export-data/media/connect-to-sql-with-net-provider.jpg)
+![Connexion à SQL avec le fournisseur .NET](../../integration-services/import-export-data/media/connect-to-sql-with-net-provider.jpg)
 
-### <a name="options-to-specify-net-framework-data-provider-for-sql-server"></a>Options pour spécifier (fournisseur de données .NET Framework pour SQL Server)
+### <a name="options-to-specify-net-framework-data-provider-for-sql-server"></a>Options à spécifier (Fournisseur de données .NET Framework pour SQL Server)
 
 > [!NOTE]
-> Les options de connexion pour ce fournisseur de données sont les mêmes si SQL Server est la source ou la destination. Autrement dit, les options sont les mêmes sur les deux le **choisir une Source de données** et **choisir une Destination** pages de l’Assistant.
+> Les options de connexion de ce fournisseur de données sont les mêmes, que SQL Server soit la source ou la destination. Autrement dit, les options que vous affichez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
 **Source de données**  
  Entrez le nom ou l’adresse IP du serveur source ou de destination, ou sélectionnez un serveur dans la liste déroulante.  
  
- Pour spécifier un port TCP non standard, entrez une virgule après le nom du serveur ou l’adresse IP, puis entrez le numéro de port.
+ Pour indiquer un port TCP non standard, entrez une virgule après l’adresse IP ou le nom du serveur, puis entrez le numéro de port.
  
  **Catalogue initial**  
- Entrez le nom de la base de données source ou de destination, ou sélectionnez une base de données à partir de la liste déroulante.  
+ Entrez le nom de la base de données source ou de destination, ou sélectionnez une base de données dans la liste déroulante.  
   
  **Sécurité intégrée**  
- Spécifiez **True** pour se connecter avec l’authentification intégrée de Windows (recommandée), ou **False** pour se connecter avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. Si vous spécifiez **False**, vous devez entrer un ID d'utilisateur et un mot de passe. La valeur par défaut est **False**.  
+ Spécifiez **True** pour établir la connexion par le biais de l’authentification intégrée de Windows (recommandé), ou **False** pour établir la connexion à l’aide de l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez **False**, vous devez entrer un ID d'utilisateur et un mot de passe. La valeur par défaut est **False**.  
   
  **ID d'utilisateur**  
- Entrez un nom d’utilisateur si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+ Entrez un nom d’utilisateur si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Mot de passe**  
- Entrez le mot de passe si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.  
+ Entrez le mot de passe si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="connect-to-sql-server-with-the-odbc-driver-for-sql-server"></a>Se connecter à SQL Server avec le pilote ODBC pour SQL Server 
-Pilotes ODBC ne sont pas répertoriées dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **fournisseur de données .NET Framework pour ODBC** comme source de données. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
+Les pilotes ODBC ne sont pas répertoriés dans la liste déroulante des sources de données. Pour vous connecter avec un pilote ODBC, commencez par sélectionner le **Fournisseur de données .NET Framework pour ODBC** comme source de données. Ce fournisseur agit comme un wrapper autour du pilote ODBC.
 
 > [!TIP]
-> **Obtenir le dernier pilote**. Téléchargez le [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
+> **Récupérer le pilote le plus récent**. Téléchargez [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
 
-Voici l’écran générique que vous voyez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
+Voici l’écran générique que vous affichez immédiatement après avoir sélectionné le fournisseur de données .NET Framework pour ODBC.
 
-![Se connecter à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
+![Connexion à SQL avec ODBC avant](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-before.jpg)
 
-### <a name="options-to-specify-odbc-driver-for-sql-server"></a>Options pour spécifier (le pilote ODBC pour SQL Server)
+### <a name="options-to-specify-odbc-driver-for-sql-server"></a>Options à spécifier (pilote ODBC pour SQL Server)
 
 > [!NOTE]
-> Les options de connexion pour le pilote ODBC sont les mêmes si SQL Server est la source ou la destination. Autrement dit, les options sont les mêmes sur les deux le **choisir une Source de données** et **choisir une Destination** pages de l’Assistant.
+> Les options de connexion de ce pilote ODBC sont les mêmes, que SQL Server soit la source ou la destination. Autrement dit, les options que vous affichez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
-Pour vous connecter à SQL Server avec le dernier pilote ODBC, assembler une chaîne de connexion qui inclut les paramètres suivants et leurs valeurs. Le format de chaîne de connexion complète immédiatement après la liste des paramètres.
+Pour vous connecter à SQL Server au moyen du pilote ODBC le plus récent, assemblez une chaîne de connexion qui inclut les paramètres suivants accompagnés de leur valeur. Le format d’une chaîne de connexion complète est donné immédiatement après la liste des paramètres.
 
 > [!TIP]
-> Obtenir de l’aide d’assembler une chaîne de connexion est bonne. Ou, au lieu de fournir une chaîne de connexion, fournir une source de données existante (nom de source de données) ou créez-en un. Pour plus d’informations sur ces options, consultez [se connecter à une Source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
+> Obtenez de l’aide pour l’assemblage d’une chaîne de connexion correcte. Au lieu de produire une chaîne de connexion, vous pouvez fournir un DSN (nom de source de données) existant ou en créer un. Pour obtenir plus d’informations sur ces options, consultez [Se connecter à une source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
-**Pilote**  
-Le nom du pilote ODBC. Le nom est différent pour les différentes versions du pilote.
+**Driver**  
+Nom du pilote ODBC. Le nom diffère selon les versions du pilote.
 
 **Server**  
-Le nom du serveur SQL.
+Nom du serveur SQL Server.
 
 **Base de données**  
 Nom de la base de données.  
 
-**Trusted_Connection**; ou, **Uid** et **Pwd**  
-Spécifiez **Trusted_Connection = Yes** pour se connecter avec l’authentification intégrée Windows ; ou, spécifier **Uid** (id utilisateur) et **Pwd** (mot de passe) pour se connecter avec l’authentification SQL Server.
+**Trusted_Connection** ; ou **Uid** et **Pwd**  
+Spécifiez **Trusted_Connection=Yes** pour vous connecter avec l’authentification intégrée de Windows, sinon spécifiez **Uid** (id d’utilisateur) et **Pwd** (mot de passe) pour vous connecter avec l’authentification SQL Server.
 
 ### <a name="connection-string-format"></a>Format de chaîne de connexion
-Voici le format de chaîne de connexion qui utilise l’authentification intégrée de Windows.
+Voici le format d’une chaîne de connexion qui utilise l’authentification intégrée de Windows.
 
     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
-Voici le format de chaîne de connexion qui utilise l’authentification SQL Server au lieu de l’authentification intégrée Windows.
+Voici le format d’une chaîne de connexion qui utilise l’authentification SQL Server au lieu de l’authentification intégrée de Windows.
 
      `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
-### <a name="enter-the-connection-string"></a>Entrez la chaîne de connexion
-Entrez la chaîne de connexion dans le **ConnectionString** champ, ou entrez le nom de source de données dans le **Dsn** champ sur la **choisir une Source de données** ou **choisir une Destination** page. Après avoir entré la chaîne de connexion, l’Assistant analyse la chaîne et affiche les propriétés et leurs valeurs dans la liste.
+### <a name="enter-the-connection-string"></a>Entrer la chaîne de connexion
+Indiquez la chaîne de connexion dans le champ **ConnectionString** ou entrez le nom DSN dans le champ **Dsn** de la page **Choisir une source de données** ou **Choisir une Destination**. Une fois que vous avez entré la chaîne de connexion, l’Assistant analyse cette chaîne et affiche les propriétés individuelles avec leur valeur dans la liste.
 
 L’exemple suivant utilise cette chaîne de connexion.
 
     `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
-Voici l’écran que vous voyez après avoir entré la chaîne de connexion.
+Voici l’écran que vous affichez après avoir entré la chaîne de connexion.
 
-![Se connecter à SQL avec ODBC après](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
+![Connexion à SQL avec ODBC après](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
-## <a name="connect-to-sql-server-with-the-microsoft-ole-db-provider-for-sql-server-or-sql-server-native-client"></a>Se connecter à SQL Server avec le fournisseur Microsoft OLE DB pour SQL Server ou SQL Server Native Client
+## <a name="connect-to-sql-server-with-the-microsoft-ole-db-provider-for-sql-server-or-sql-server-native-client"></a>Se connecter à SQL Server au moyen du fournisseur Microsoft OLE DB pour SQL Server ou de SQL Server Native Client
 
 > [!IMPORTANT]
-> Le fournisseur Microsoft OLE DB pour SQL Server et SQL Server Native Client ne sont pas pris en charge dans les versions de SQL Server après SQL Server 2012. Utilisez le pilote ODBC à la place. Pour plus d’informations sur la transition vers le pilote ODBC, consultez les billets de blog suivants.
->   -   [Microsoft s’aligne sur ODBC pour l’accès aux données relationnel natif](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
->   -   [Présentation les nouveaux pilotes ODBC de Microsoft SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
+> Le fournisseur Microsoft OLE DB pour SQL Server et SQL Server Native Client ne sont pas pris en charge dans les versions de SQL Server postérieures à SQL Server 2012. Utilisez le pilote ODBC à la place. Pour plus d’informations sur la transition vers le pilote ODBC, consultez les billets de blog suivants.
+>   -   [Microsoft s’aligne sur ODBC pour l’accès aux données relationnelles natives](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)
+>   -   [Présentation des nouveaux pilotes Microsoft ODBC pour SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/)
 
-## <a name="other-data-providers-and-more-info"></a>Plus d’informations et les autres fournisseurs de données
-Pour plus d’informations sur la façon de se connecter à SQL Server avec un fournisseur de données qui n’est pas répertorié ici, consultez [les chaînes de connexion SQL Server](https://www.connectionstrings.com/sql-server/). Ce site tiers contient également plus d’informations sur les fournisseurs de données et les paramètres de connexion décrites dans cette page.
+## <a name="other-data-providers-and-more-info"></a>Autres fournisseurs de données et renseignements complémentaires
+Pour plus d’informations sur la façon de se connecter à SQL Server au moyen d’un fournisseur de données qui n’est pas répertorié ici, consultez [Chaînes de connexion SQL Server](https://www.connectionstrings.com/sql-server/). Ce site tiers contient également des informations complémentaires sur les fournisseurs de données et les paramètres de connexion décrits dans cette page.
 
 ## <a name="see-also"></a>Voir aussi
-[Choisissez une Source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
-[Choisir une Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-
+[Choisir une source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
+[Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

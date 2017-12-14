@@ -2,11 +2,12 @@
 title: "Mettre à niveau Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +26,14 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-analysis-services"></a>Mettre à niveau Analysis Services
-  Les instances d’Analysis Services peuvent être mises à niveau vers une version SQL Server du même mode serveur pour tirer parti des fonctionnalités introduites dans la version actuelle, comme cela est décrit dans [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les instances d’Analysis Services peuvent être mises à niveau vers une version SQL Server du même mode serveur pour tirer parti des fonctionnalités introduites dans la version actuelle, comme cela est décrit dans [Nouveautés d’Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Vous pouvez mettre à niveau chaque instance sur place, indépendamment des autres instances exécutées sur le même matériel. Toutefois, la plupart des administrateurs choisissent d’installer une nouvelle instance de la nouvelle version pour pouvoir tester l’application avant de transférer les charges de travail de production vers le nouveau serveur. Une mise à niveau sur place peut cependant être plus adaptée pour les serveurs de développement ou de test.  
   

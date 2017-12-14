@@ -1,5 +1,5 @@
 ---
-title: "Contraintes de précédence | Documents Microsoft"
+title: "Contraintes de précédence | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.precedenceconstraint.f1
+f1_keywords: sql13.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -22,30 +20,29 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 380c7e4c06b4baec2efcbad54000a009a93b93e1
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 411d89b90a77bf704dd876b5d6ce0dc5a36233a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
   Les contraintes de précédence lient les exécutables, les conteneurs et les tâches des packages dans un flux de contrôle et spécifient les conditions qui déterminent si les exécutables s'exécutent. Un exécutable peut être une boucle For, une boucle Foreach, un conteneur de séquence, une tâche ou un gestionnaire d'événement. Les gestionnaires d'événements utilisent également les contraintes de précédence pour lier leurs exécutables dans un flux de contrôle.  
   
  Une contrainte de précédence lie deux exécutables : l'exécutable de précédence et l'exécutable contraint. L'exécutable de précédence s'exécute avant l'exécutable contraint et le résultat de l'exécution de l'exécutable de précédence peut déterminer si l'exécutable contraint s'exécute. Le schéma suivant illustre deux exécutables liés par une contrainte de précédence.  
   
- ![Exécutables connectés par une contrainte de précédence](../../integration-services/control-flow/media/ssis-pcsimple.gif "exécutables connectés par une contrainte de précédence")  
+ ![Exécutables connectés par le biais d’une contrainte de précédence](../../integration-services/control-flow/media/ssis-pcsimple.gif "Exécutables connectés par le biais d’une contrainte de précédence")  
   
  Dans un flux de contrôle linéaire, c'est-à-dire sans branchement, les contraintes de précédence déterminent à elles seules la séquence d'exécution des tâches. Dans un flux de contrôle avec branchements, le moteur d'exécution [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] détermine l'ordre d'exécution des tâches et des conteneurs qui suivent immédiatement le branchement. Le moteur d'exécution détermine également l'ordre d'exécution des flux de travail non connectés dans un flux de contrôle.  
   
  L'architecture à conteneurs imbriqués d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permet à tous les conteneurs (à l'exception du conteneur d'hôte de tâche qui encapsule une seule tâche) d'inclure d'autres conteneurs, chacun avec son propre flux de contrôle. Les conteneurs de boucles For, de boucles Foreach et de séquence peuvent inclure plusieurs tâches et d'autres conteneurs, qui à leur tour peuvent inclure plusieurs tâches et conteneurs. Par exemple, un package avec une tâche de script et un conteneur de séquence possède une contrainte de précédence qui lie la tâche de script et le conteneur de séquence. Le conteneur de séquence contient trois tâches de script et ses contraintes de précédence lient les trois tâches de script dans un flux de contrôle. Le schéma suivant illustre les contraintes de précédence dans un package avec deux niveaux d'imbrication.  
   
- ![Contraintes de précédence dans un package](../../integration-services/control-flow/media/mw-dts-12.gif "contraintes de précédence dans un package")  
+ ![Contraintes de précédence dans un package](../../integration-services/control-flow/media/mw-dts-12.gif "Contraintes de précédence dans un package")  
   
  Le package étant situé au sommet de la hiérarchie de conteneurs [!INCLUDE[ssIS](../../includes/ssis-md.md)] , plusieurs packages ne peuvent pas être liés par des contraintes de précédence ; toutefois, vous pouvez ajouter une tâche d’exécution de package à un package et lier indirectement un autre package au flux de contrôle.  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
 > [!NOTE]  
 >  Seules les contraintes de précédence membres de la même collection **Contrainte de précédence** peuvent être groupées dans une condition AND logique. Par exemple, vous ne pouvez pas combiner des contraintes de précédence à partir de deux conteneurs de boucles Foreach.  
   
-## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Définir les propriétés d’une contrainte de précédence à l’éditeur de contrainte de précédence.  
+## <a name="set-the-properties-of-a-precedence-constraint-with-the-precedence-constraint-editor"></a>Définir les propriétés d’une contrainte de précédence à l’aide de l’Éditeur de contrainte de précédence  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -144,7 +141,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
 > [!NOTE]  
 >  Ce type de contrainte de précédence s'affiche sous forme de ligne pointillée verte, mise en surbrillance ou bleue.  
   
-## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>Définir les propriétés d’une contrainte de précédence dans la fenêtre Propriétés  
+## <a name="set-the-properties-of-a-precedence-constraint-in-properties-window"></a>Définir les propriétés d’une contrainte de précédence à l’aide de la fenêtre Propriétés  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package à modifier.  
   
@@ -168,7 +165,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Définir la valeur d’une contrainte de précédence avec le menu contextuel  
+## <a name="set-the-value-of-a-precedence-constraint-with-the-shortcut-menu"></a>Définir la valeur d’une contrainte de précédence à l’aide du menu contextuel  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
   
@@ -187,11 +184,11 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
  Dans l'illustration qui suit, la tâche A et la tâche B sont liées par une contrainte de précédence qui utilise un résultat d'exécution et une expression. La valeur de la contrainte est définie sur **Succès** et l’expression est  `@X >== @Z`. La tâche B, la tâche contrainte, s’exécute uniquement si la tâche A se termine avec succès et si la valeur de la variable **X** est supérieure ou égale à la valeur de la variable **Z**.  
   
- ![Contrainte de précédence entre deux tâches](../../integration-services/control-flow/media/mw-dts-03.gif "contrainte de précédence entre deux tâches")  
+ ![Contrainte de précédence entre deux tâches](../../integration-services/control-flow/media/mw-dts-03.gif "Contrainte de précédence entre deux tâches")  
   
  Les exécutables peuvent également être liés par plusieurs contraintes de précédence contenant des expressions différentes. Par exemple, dans l'illustration qui suit, les tâches B et C sont liées à la tâche A par des contraintes de précédence qui utilisent des résultats d'exécution et des expressions. Les deux valeurs de contrainte sont définies sur **Succès**. Une contrainte de précédence inclut l’expression `@X >== @Z`, tandis que l’autre inclut l’expression `@X < @Z`. En fonction des valeurs de la variable **X** et de la variable **Z**, la tâche C ou la tâche B s’exécute.  
   
- ![Expressions de contraintes de précédence](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions sur les contraintes de précédence")  
+ ![Expressions sur les contraintes de précédence](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions sur les contraintes de précédence")  
   
  Vous pouvez ajouter ou modifier une expression à l’aide de **l’Éditeur de contrainte de précédence** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] et la fenêtre Propriétés fournie par [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cependant, la fenêtre Propriétés ne propose aucune vérification de la syntaxe de l'expression.  
   
@@ -215,7 +212,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
 8.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
  
-### <a name="combine-execution-values-and-expressions"></a>Combiner des expressions et des valeurs d’exécution.  
+### <a name="combine-execution-values-and-expressions"></a>Combinaison de valeurs d’exécution et d’expressions  
  Le tableau qui suit décrit les effets de la combinaison d'une contrainte de valeur d'exécution et d'une expression dans une contrainte de précédence.  
   
 |Opération d'évaluation|Résultat d'évaluation de la contrainte|Résultat d'évaluation de l'expression|L'exécutable contraint s'exécute|  
@@ -239,7 +236,7 @@ Une contrainte de précédence connecte deux exécutables : deux tâches, deux c
   
  Assembler des scénarios de contraintes complexes par regroupement de contraintes permet d'implémenter un flux de contrôle complexe dans les packages. Par exemple, dans l’illustration qui suit, la tâche D est liée à la tâche A par une contrainte **Success** , la tâche D est liée à la tâche B par une contrainte **Failure** , et la tâche D est liée à la tâche C par une contrainte **Success** . Les contraintes de précédence entre la tâche D et la tâche A, entre la tâche D et la tâche B, et entre la tâche D et la tâche C participent à une relation *et* logique. Par conséquent, pour que la tâche D s'exécute, la tâche A doit s'exécuter avec succès, la tâche B doit échouer et la tâche C doit s'exécuter avec succès.  
   
- ![Tâches liées par des contraintes de précédence](../../integration-services/control-flow/media/precedenceconstraints.gif "tâches liées par des contraintes de précédence")  
+ ![Tâches liées par des contraintes de précédence](../../integration-services/control-flow/media/precedenceconstraints.gif "Tâches liées par des contraintes de précédence")  
   
 ### <a name="logicaland-property"></a>Propriété LogicalAnd  
  Si une tâche ou un conteneur comporte plusieurs contraintes, la propriété **LogicalAnd** indique si une contrainte de précédence est évaluée seule ou de concert avec les autres contraintes.  
@@ -272,4 +269,3 @@ Pendant la première utilisation du concepteur [!INCLUDE[ssIS](../../includes/ss
 4.  Sur la surface de dessin de l’onglet **Flux de contrôle** , cliquez sur la tâche ou le conteneur et faites glisser son connecteur vers l’exécutable auquel vous voulez que la contrainte de précédence s’applique.  
   
 5.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
-

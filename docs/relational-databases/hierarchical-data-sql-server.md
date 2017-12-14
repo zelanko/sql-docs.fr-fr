@@ -2,9 +2,12 @@
 title: "Données hiérarchiques (SQL Server) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a353346cd6cf9abe094f839b1396bdadac93c7e7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2127532c0e60feba9cff8f2f986260ac8179e6d3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
-  Le type de données **hierarchyid** intégré simplifie le stockage et l’interrogation de données hiérarchiques. **hierarchyid** est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Le type de données **hierarchyid** intégré simplifie le stockage et l’interrogation de données hiérarchiques. **hierarchyid** est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
   
  Les données hiérarchiques sont définies comme un jeu d'éléments de données liés entre eux par des relations hiérarchiques. Des relations hiérarchiques existent dans lesquelles un élément de données est le parent d'un autre élément. Voici quelques exemples de données hiérarchiques communément stockées dans les bases de données :  
   

@@ -2,9 +2,12 @@
 title: "Groupes d’événements DDL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccea01b74a215c298ad5411c7da862f2f7f62a15
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec4272b36c365f38793bcf8ccd5692e5933e3164
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-event-groups"></a>groupes d'événements DDL
-  Les tableaux suivants répertorient les groupes d'événements DDL qui peuvent être utilisés pour exécuter un déclencheur DDL ou une notification d'événement ainsi que les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'ils couvrent. Notez la nature inclusive des groupes d'événements. Par exemple, un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_EVENTS (10018) couvre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE et DROP TABLE. Un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_VIEW_EVENTS (10017) couvre toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sous les types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS et DDL_STATISTICS_EVENTS.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Les tableaux suivants répertorient les groupes d’événements DDL qui peuvent être utilisés pour exécuter un déclencheur DDL ou une notification d’événement, ainsi que les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu’ils couvrent. Notez la nature inclusive des groupes d'événements. Par exemple, un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_EVENTS (10018) couvre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE et DROP TABLE. Un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_VIEW_EVENTS (10017) couvre toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sous les types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS et DDL_STATISTICS_EVENTS.  
   
 > [!NOTE]  
 >  Certaines procédures stockées système qui exécutent des opérations de type DDL peuvent également exécuter des déclencheurs DDL ou déclencher des notifications d'événements. Testez vos déclencheurs et notifications d'événements DDL afin de déterminer leur réponse aux procédures stockées système qui sont exécutées. Par exemple, l’instruction CREATE TYPE et la procédure stockée **sp_addtype** activent toutes les deux un déclencheur ou une notification d’événements DDL créés sur un événement CREATE_TYPE.  

@@ -1,5 +1,5 @@
 ---
-title: "Surveillance des compteurs de performances avec la tâche de Script | Documents Microsoft"
+title: "Surveillance des compteurs de performances à l’aide de la tâche de script | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - performance counters [Integration Services]
 - SSIS Script task, performance counters
@@ -24,37 +21,36 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: fd733f7d2fdf9c5d1181df6e7856d729e9a58026
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 134c0f6317fbea5ca23c0fe727cd505c133ae10d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Surveillance des compteurs de performances à l'aide de la tâche de script
-  Les administrateurs peuvent avoir besoin de surveiller les performances des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectuent des transformations complexes sur de grandes quantités de données. Le **System.Diagnostics** espace de noms de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit des classes pour l’utilisation de compteurs de performances existants et pour créer vos propres compteurs de performances.  
+  Les administrateurs peuvent avoir besoin de surveiller les performances des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectuent des transformations complexes sur de grandes quantités de données. L’espace de noms **System.Diagnostics** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit des classes permettant d’utiliser des compteurs de performances existants et de créer vos propres compteurs de performances.  
   
- Les compteurs de performances stockent des informations sur les performances des applications que vous pouvez utiliser pour analyser les performances des logiciels dans le temps. Compteurs de performances peuvent être surveillés localement ou à distance à l’aide de la **l’Analyseur de performances** outil. Vous pouvez stocker les valeurs des compteurs de performances dans des variables à des fins de branchement ultérieur du flux de contrôle dans le package.  
+ Les compteurs de performances stockent des informations sur les performances des applications que vous pouvez utiliser pour analyser les performances des logiciels dans le temps. Les compteurs de performances peuvent être surveillés localement ou à distance en utilisant l’outil **Analyseur de performances**. Vous pouvez stocker les valeurs des compteurs de performances dans des variables à des fins de branchement ultérieur du flux de contrôle dans le package.  
   
- Comme alternative à l’utilisation de compteurs de performances, vous pouvez augmenter la <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> événement via le <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> propriété de la **Dts** objet. L'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> indique à la fois les stades intermédiaires de l'avancement et le pourcentage d'avancement à l'exécution [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Comme alternative à l’utilisation des compteurs de performances, vous pouvez déclencher l’événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> via la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> de l’objet **Dts**. L'événement <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> indique à la fois les stades intermédiaires de l'avancement et le pourcentage d'avancement à l'exécution [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a> Description  
- L'exemple suivant crée un compteur de performance personnalisé et incrémente le compteur. Tout d'abord, l'exemple détermine si le compteur de performance existe déjà. Si le compteur de performance n'a pas été créé, le script appelle le **créer** méthode de la **PerformanceCounterCategory** objet à créer. Après avoir créé le compteur de performance, le script incrémente le compteur. Enfin, l’exemple suit la meilleure pratique de l’appel de la **fermer** méthode sur le compteur de performances lorsqu’il n’est plus nécessaire.  
+ L'exemple suivant crée un compteur de performance personnalisé et incrémente le compteur. Tout d'abord, l'exemple détermine si le compteur de performance existe déjà. Si le compteur de performances n’a pas été créé, le script appelle la méthode **Create** de l’objet **PerformanceCounterCategory** pour le créer. Après avoir créé le compteur de performance, le script incrémente le compteur. Enfin, l’exemple suit la méthode conseillée qui consiste à appeler la méthode **Close** sur le compteur de performances lorsqu’il n’est plus nécessaire.  
   
 > [!NOTE]  
 >  La création d'une nouvelle catégorie de compteur de performance et d'un compteur de performance requiert des droits d'administration. En outre, la nouvelle catégorie et le compteur subsistent sur l'ordinateur après leur création.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
   
--   Utilisez un **importations** instruction dans votre code pour importer le **System.Diagnostics** espace de noms.  
+-   Utilisez une instruction **Imports** dans votre code pour importer l’espace de noms **System.Diagnostics**.  
   
 ### <a name="example-code"></a>Exemple de code  
   
@@ -129,4 +125,3 @@ public void Main()
         }  
   
 ```  
-

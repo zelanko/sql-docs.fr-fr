@@ -1,5 +1,5 @@
 ---
-title: "Plan d’exécution et Allocation de mémoire tampon | Documents Microsoft"
+title: "Plan d’exécution et allocation de mémoire tampon | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,27 +23,26 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0beb223eec74e28e70614f324203a0d2d47637e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan d'exécution et allocation de mémoire tampon
   Avant l'exécution, la tâche de flux de données examine ses composants et génère un plan d'exécution pour chaque séquence de composants. Cette section fournit des détails sur le plan d'exécution et son mode d'affichage, ainsi que sur l'allocation de mémoires tampons d'entrée et de sortie en fonction du plan d'exécution.  
   
 ## <a name="understanding-the-execution-plan"></a>Fonctionnement du plan d'exécution  
- Un plan d'exécution contient des threads sources et des threads de travail. Chaque thread contient des listes de travaux qui spécifient des listes de travaux de sortie pour les threads sources ou des listes de travaux d'entrée et de sortie pour les threads de travail. Les threads sources dans un plan d’exécution représentent les composants sources dans le flux de données et sont identifiées dans le plan d’exécution par *SourceThread**n*, où  *n*  est le numéro de base zéro du thread source.  
+ Un plan d'exécution contient des threads sources et des threads de travail. Chaque thread contient des listes de travaux qui spécifient des listes de travaux de sortie pour les threads sources ou des listes de travaux d'entrée et de sortie pour les threads de travail. Les threads sources d’un plan d’exécution, qui représentent les composants sources du flux de données, sont identifiés dans le plan d’exécution par *SourceThread**n*, où *n* correspond au numéro de base zéro du thread source.  
   
  Chaque thread source crée une mémoire tampon, définit un écouteur et appelle la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> sur le composant source. C'est de cet emplacement que démarre l'exécution et que proviennent les données, pendant que le composant source commence à ajouter des lignes aux mémoires tampons de sortie que lui fournit la tâche de flux de données. Une fois que les threads sources sont exécutés, la charge de travail est répartie entre les threads de travail.  
   
- Un thread de travail peut contenir les deux listes d’entrée et de sortie de travail et est identifié dans le plan d’exécution en tant que *WorkThread**n*, où  *n*  est le numéro de base zéro du thread de travail. Ces threads contiennent des listes de travaux de sortie lorsque le graphique contient un composant à sorties asynchrones.  
+ Un thread de travail, qui peut contenir des listes de travaux d’entrée et de sortie, est identifié dans le plan d’exécution par *WorkThread**n*, où *n* correspond au numéro de base zéro du thread de travail. Ces threads contiennent des listes de travaux de sortie lorsque le graphique contient un composant à sorties asynchrones.  
   
  L'exemple de plan d'exécution suivant représente un flux de données qui contient un composant source connecté à une transformation à sortie asynchrone connectée à un composant de destination. Dans cet exemple, WorkThread0 contient une liste des travaux de sortie car le composant de transformation possède une sortie asynchrone.  
   
@@ -83,7 +80,7 @@ End WorkThread1
 ```  
   
 > [!NOTE]  
->  Le plan d’exécution est généré chaque fois qu’un package est exécuté et peut être capturé par l’ajout d’un fournisseur de journal au package, l’activation de la journalisation et en sélectionnant le **PipelineExecutionPlan** événement.  
+>  Le plan d’exécution est généré chaque fois qu’un package est exécuté. Il peut être capturé en ajoutant un module fournisseur d’informations au package, en activant la journalisation et en sélectionnant l’événement **PipelineExecutionPlan**.  
   
 ## <a name="understanding-buffer-allocation"></a>Fonctionnement de l'allocation de mémoire tampon  
  En fonction du plan d'exécution, la tâche de flux de données crée des mémoires tampons qui contiennent les colonnes définies dans les sorties des composants de flux de données. La mémoire tampon est réutilisée tandis que les données transitent par la séquence de composants, jusqu'à ce qu'un composant à sorties asynchrones soit trouvé. Puis, une nouvelle mémoire tampon est créée, qui contient les colonnes de sortie de la sortie asynchrone et les colonnes de sortie des composants en aval.  
@@ -92,6 +89,5 @@ End WorkThread1
   
  Les composants de transformation à sorties asynchrones reçoivent la mémoire tampon d'entrée existante via la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> et la nouvelle mémoire tampon de sortie via la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Les composants de transformation à sorties asynchrones sont les seuls types de composants de flux de données qui reçoivent à la fois une mémoire tampon d'entrée et de sortie.  
   
- Parce que la mémoire tampon fournie à un composant est susceptible de contenir plus de colonnes que le composant a dans ses collections de colonnes d’entrée ou de sortie, les développeurs de composants peuvent appeler le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> méthode de localisation d’une colonne dans la mémoire tampon en spécifiant son **LineageID**.  
+ Comme la mémoire tampon fournie à un composant est susceptible de contenir un nombre de colonnes supérieur à celui que possède le composant dans ses collections de colonnes d’entrée et de sortie, les développeurs de composants peuvent appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> pour rechercher une colonne dans la mémoire tampon en spécifiant son **LineageID**.  
   
-

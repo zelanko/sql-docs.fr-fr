@@ -1,5 +1,5 @@
 ---
-title: Feature Pack Azure pour Integration Services (SSIS) | Documents Microsoft
+title: Feature Pack SQL Server Integration Services (SSIS) pour Azure | Microsoft Docs
 ms.custom: 
 ms.date: 08/22/2017
 ms.prod: sql-non-specified
@@ -8,37 +8,35 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: d4204ba56e515025bed3ae3bf8e7a77d6da471be
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/30/2017
-
+ms.openlocfilehash: 7f0a4bcdaa5a79332e41199ef4407d6136b38bb9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
-SQL Server Integration Services (SSIS) Feature Pack pour Azure est une extension qui fournit les composants répertoriés dans cette page pour SSIS pour se connecter aux services Azure, le transfert de données entre Azure et les sources de données sur site et traiter les données stockées dans Azure.
+# <a name="azure-feature-pack-for-integration-services-ssis"></a>Feature Pack SQL Server Integration Services (SSIS) pour Azure
+Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extension qui fournit les composants répertoriés dans cette page afin de permettre à SSIS de se connecter aux services Azure, de transférer des données entre des sources de données Azure et locales, et de traiter des données stockées dans Azure.
 
-[![Télécharger le Feature Pack SSIS pour Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **télécharger**
+[![Télécharger le Feature Pack SSIS pour Azure](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **Télécharger**
 
-- Pour SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=54798)
-- Pour SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=49492)
-- Pour SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack pour Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
-- Pour SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack pour Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
+- Pour SQL Server 2017 : [Feature Pack Microsoft SQL Server 2017 Integration Services pour Azure](https://www.microsoft.com/download/details.aspx?id=54798)
+- Pour SQL Server 2016 : [Feature Pack Microsoft SQL Server 2016 Integration Services pour Azure](https://www.microsoft.com/download/details.aspx?id=49492)
+- Pour SQL Server 2014 : [Feature Pack Microsoft SQL Server 2014 Integration Services pour Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
+- Pour SQL Server 2012 : [Feature Pack Microsoft SQL Server 2012 Integration Services pour Azure](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
 
-## <a name="components-in-the-feature-pack"></a>Composants dans le Feature Pack
+## <a name="components-in-the-feature-pack"></a>Composants du Feature Pack
 -   Gestionnaires de connexions
 
     -   [Gestionnaire de connexions de stockage Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
@@ -67,7 +65,7 @@ SQL Server Integration Services (SSIS) Feature Pack pour Azure est une extension
     
     -   [Tâche de chargement Azure SQL Data Warehouse](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
-    -   [Tâche de système de fichiers Azure Data Lake Store](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Tâche du système de fichiers Azure Data Lake Store](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
 -   Composants de flux de données
 
@@ -79,15 +77,15 @@ SQL Server Integration Services (SSIS) Feature Pack pour Azure est une extension
     
     -   [Destination Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Objets Blob Azure & énumérateur de fichier ADLS. Consultez [conteneur de boucles Foreach](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Énumérateur de fichiers ADLS et objets blob Azure. Voir [Conteneur de boucles Foreach](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
 
 ## <a name="download-the-feature-pack"></a>Télécharger le Feature Pack
- Télécharger SQL Server Integration Services (SSIS) Feature Pack pour Azure.
+ Téléchargez le Feature Pack SQL Server Integration Services (SSIS) pour Azure.
  
-- [SSIS Feature Pack pour Azure](http://go.microsoft.com/fwlink/?LinkID=626967) pour SQL Server 2016
-- [SSIS Feature Pack pour Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) pour[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+- [Feature Pack SSIS pour Azure](http://go.microsoft.com/fwlink/?LinkID=626967) pour SQL Server 2016
+- [Feature Pack SSIS pour Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables
  Avant d’installer le Feature Pack, vous devez vérifier que les conditions préalables suivantes sont remplies.
 
 -   SQL Server Integration Services
@@ -119,4 +117,3 @@ SQL Server Integration Services (SSIS) Feature Pack pour Azure est une extension
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
-

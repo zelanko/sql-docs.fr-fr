@@ -1,5 +1,5 @@
 ---
-title: "Catalog.rename_environment (base de données SSISDB) | Documents Microsoft"
+title: "catalog.rename_environment (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fab134694401fa13f2798fcd5a5ef0787dc14f52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +37,16 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name =] *nom_dossier*  
- Nom du dossier qui contient l'environnement. Le *nom_dossier* est **nvarchar (128)**.  
+ [ @folder_name = ] *folder_name*  
+ Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Nom d'origine de l'environnement. Le *environment_name* est **nvarchar (128)**.  
+ [ @environment_name = ] *environment_name*  
+ Nom d'origine de l'environnement. *environment_name* est de type **nvarchar(128)**.  
   
- [ @new_environment_name =] *new_environment_name*  
- Nouveau nom de l'environnement. Le *new_environment_name* est **nvarchar (128)**.  
+ [ @new_environment_name = ] *new_environment_name*  
+ Nouveau nom de l'environnement. *new_environment_name* est de type **nvarchar(128)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -59,9 +57,9 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Autorisations MODIFY sur l'environnement  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur ou un avertissement :  
@@ -77,4 +75,3 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  Lorsqu'une référence environnementale n'est pas valide, la validation et l'exécution des packages correspondants qui utilisent ces références échoueront.  
   
   
-

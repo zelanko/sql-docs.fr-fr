@@ -1,5 +1,5 @@
 ---
-title: "Chemins d’accès d’Integration Services | Documents Microsoft"
+title: Chemins Integration Services | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,24 +22,23 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541c8faa4c878922411680646f3fa7a557eefe0f
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-paths"></a>Chemins d'accès d'Integration Services
   Un chemin d'accès connecte deux composants d'un flux de données en reliant la sortie d'un composant à l'entrée d'un autre composant. Un chemin d'accès comporte une source et une destination. Par exemple, si un chemin d'accès connecte une source OLE DB et une transformation de tri, la source OLE DB est la source du chemin d'accès, tandis que la transformation de tri est la destination du chemin d'accès. La source est le composant où débute le chemin d'accès et la destination, le composant où il se termine.  
   
  Si vous exécutez un package dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous pouvez afficher les données d'un flux de données en attachant des visionneuses de données à un chemin d'accès. Une visionneuse de données peut être configurée pour afficher des données dans une grille. Une visionneuse de données est un outil de débogage très utile. Pour plus d’informations, consultez [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  
   
-## <a name="configure-the-path"></a>Configurer le chemin d’accès  
+## <a name="configure-the-path"></a>Configurer le chemin  
  Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] contient la boîte de dialogue **Éditeur du chemin d’accès au flux de données** qui permet de définir les propriétés du chemin d’accès, d’afficher les métadonnées des colonnes de données qui empruntent le chemin d’accès et de configurer les visionneuses de données.  
   
  Le nom, la description et l'annotation du chemin d'accès sont des propriétés que vous pouvez configurer. Vous pouvez également configurer les chemins d'accès par programme. Pour plus d’informations, consultez [Connexion de composants de flux de données par programme](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -49,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
  Les métadonnées indiquent le nom, le type de données, la précision, l'échelle, la longueur, la page de codes et le composant source de chaque colonne dans la sortie du composant précédent. Le composant source est le composant du flux de données ayant créé la colonne. Il peut ou non s'agir du premier composant du flux de données. Par exemple, les transformations d'union totale et de tri créent leurs propres colonnes et sont les sources de leurs colonnes de sortie. À l'inverse, une transformation de copie de colonne peut transmettre des colonnes sans les modifier ou créer des colonnes en copiant les colonnes d'entrée. La transformation de copie de colonne est le composant source des nouvelles colonnes uniquement.  
 
-## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Définir les propriétés d’un chemin d’accès avec l’éditeur de chemin d’accès de données de flux
+## <a name="set-the-properties-of-a-path-with-the-data-flow-path-editor"></a>Définir les propriétés d’un chemin à l’aide de l’Éditeur du chemin d’accès au flux de données
 Les chemins d'accès connectent deux composants de flux de données. Pour pouvoir définir les propriétés des chemins d'accès, le flux de données doit contenir au moins deux composants de flux de données connectés.
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package souhaité.  
@@ -64,7 +62,7 @@ Les chemins d'accès connectent deux composants de flux de données. Pour pouvoi
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
 
-## <a name="general-page---data-flow-path-editor"></a>Page Général - éditeur de chemin d’accès de flux de données
+## <a name="general-page---data-flow-path-editor"></a>Page Général - Éditeur du chemin d’accès au flux de données
 Utilisez la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour définir les propriétés du chemin d'accès, afficher les métadonnées de la colonne et gérer les visionneuses de données liées à ce chemin d'accès.  
   
  Utilisez le nœud **Général** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour nommer et décrire le chemin d'accès et pour spécifier ses options d'annotation.  
@@ -91,11 +89,11 @@ Utilisez la boîte de dialogue **Éditeur du chemin d'accès au flux de données
  **SourceName**  
  Affiche la sortie qui représente le début du chemin d'accès.  
  
-## <a name="metadata-page---data-flow-path-editor"></a>Page métadonnées - éditeur de chemin d’accès de flux de données
+## <a name="metadata-page---data-flow-path-editor"></a>Page Métadonnées - Éditeur du chemin d’accès au flux de données
 Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour afficher les métadonnées des colonnes du chemin d'accès.  
   
 ### <a name="options"></a>Options  
- **Métadonnées de chemin d’accès**  
+ **Path metadata**  
  Affiche la liste des métadonnées des colonnes. Cliquez sur les en-têtes de colonne pour trier les données des colonnes.  
   
  **Nom**  
@@ -116,7 +114,7 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
  **Page de codes**  
  Affiche la page de codes de la colonne. La valeur **0** indique que la colonne d'utilise pas de page de codes. Cette situation se produit lorsque les données sont au format Unicode ou de type numérique, date ou heure.  
   
- **Position de clé de tri**  
+ **Position de la clé de tri**  
  Affiche la position de la clé de tri de la colonne. La valeur **0** indique que la colonne n'est pas triée.  
   
 > [!NOTE]  
@@ -131,14 +129,14 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
  **Copier dans le Presse-papiers**  
  Copie les données de la colonne dans le Presse-papiers. Par défaut, toutes les lignes de métadonnées sont copiées dans l'ordre de tri actuellement affiché.  
  
-## <a name="data-viewers-page---data-flow-path-editor"></a>Page visionneuses de données - éditeur de chemin d’accès de flux de données
+## <a name="data-viewers-page---data-flow-path-editor"></a>Page Visionneuses de données - Éditeur du chemin d’accès au flux de données
 Utilisez la page **Visionneuses de données** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour gérer les visionneuses de données liées au chemin d'accès.  
   
 ### <a name="options"></a>Options  
  **Nom**  
  Affiche la liste des visionneuses de données.  
   
- **Type de visionneuse de données**  
+ **Type de Visionneuse de données**  
  Affiche le type de la visionneuse de données.  
   
  **Ajouter**  
@@ -155,7 +153,7 @@ Les objets de flux de données dans le modèle d’objet [!INCLUDE[msCoName](../
   
  Cette rubrique répertorie et décrit les propriétés personnalisées des chemins d'accès qui connectent des objets de flux de données.  
   
-### <a name="custom-properties-of-a-path"></a>Propriétés personnalisées d’un chemin d’accès  
+### <a name="custom-properties-of-a-path"></a>Propriétés personnalisées d’un chemin  
  Dans le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un chemin d'accès qui connecte des composants dans le flux de données implémente l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>.  
   
  Le tableau suivant décrit les propriétés configurables des chemins d'accès dans un flux de données. Le moteur de flux de données assigne également des valeurs à d'autres propriétés en lecture seule qui ne sont pas répertoriées ici.  
@@ -165,4 +163,3 @@ Les objets de flux de données dans le modèle d’objet [!INCLUDE[msCoName](../
 |PathAnnotation|Integer (énumération)|Valeur qui indique si une annotation doit être affichée avec le chemin d'accès sur l'aire du concepteur. Les valeurs possibles sont **AsNeeded**, **SourceName**, **PathName**et **Never**. La valeur par défaut est **AsNeeded**.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Entrée associée au chemin d'accès.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|Sortie associée au chemin d'accès.|  
-

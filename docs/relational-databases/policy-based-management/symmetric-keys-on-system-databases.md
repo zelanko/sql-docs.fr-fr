@@ -2,9 +2,12 @@
 title: "Clés symétriques sur les bases de données système | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab1e853380ad3ec9cee539e664ac15e90ef4b494
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ff1c3870a2e10fcc7bca42aca4cf6a3c59b1239a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="symmetric-keys-on-system-databases"></a>Clés symétriques sur les bases de données système
-  Cette règle recherche des clés symétriques créées par l'utilisateur dans les bases de données master, msdb, model et tempdb.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette règle recherche des clés symétriques créées par l’utilisateur dans les bases de données master, msdb, model et tempdb.  
   
 ## <a name="best-practices-recommendations"></a>Meilleures pratiques recommandées  
  Ne créez pas de clés symétriques dans les bases de données système.  

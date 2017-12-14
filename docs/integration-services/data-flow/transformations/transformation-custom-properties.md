@@ -1,12 +1,14 @@
 ---
-title: "Propriétés personnalisées de transformation | Documents Microsoft"
+title: "Propriétés personnalisées des transformations | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -41,16 +43,16 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 62ff6e04e7f26e6ca1af9760ebb17c5f41d37f0d
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 964997cb8223139d44c696a80b4c659769f717a9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données possèdent des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -264,7 +266,7 @@ ms.lasthandoff: 08/03/2017
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|Séparateurs|Chaîne|Séparateurs de jetons utilisés par la transformation. Les séparateurs par défaut incluent les caractères suivants : espace (), virgule (,), point (.), point-virgule ( ;), deux-points ( :), trait d’union (-), double guillemet droit («), guillemet droit unique ('), marque une esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation ( !), point d’interrogation ( ?), ouvrir des parenthèses ((), la parenthèse fermante ()), inférieur à (\<), supérieur à (>), crochet gauche ([]), crochet (]), l’accolade ouvrante ({}), fermeture accolade (}), canal (&#124;) fermant signe dièse (#), astérisque (*), signe insertion (^) et le pourcentage (%).|  
+|Séparateurs|Chaîne|Séparateurs de jetons utilisés par la transformation. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;), signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
 |Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur **True** sert principalement à des fins de débogage. La valeur par défaut de cette propriété est **False**.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de regroupement probable**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |MaxMemoryUsage|Entier|Quantité de mémoire maximale que peut utiliser la transformation. La valeur par défaut de cette propriété est **0**, permettant ainsi l'utilisation dynamique de la mémoire.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de regroupement probable**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise pour identifier des doublons.  La valeur par défaut de cette propriété est de 0,8.|  
@@ -298,7 +300,7 @@ ms.lasthandoff: 08/03/2017
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Booléen|Spécifie si une copie de la table de référence doit être réalisée pour la construction de l'index de recherche floue et les recherches suivantes. La valeur par défaut de cette propriété est **True**.|  
-|Séparateurs|Chaîne|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les séparateurs par défaut incluent les caractères suivants : espace (), virgule (,), point (.) point-virgule ( ;), trait d’union (deux-points) (-), le double guillemet droit («), guillemet droit unique ('), marque une esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation ( !), point d’interrogation ( ?), parenthèse ouvrante ((), la parenthèse fermante ()), inférieur à (\<), supérieur à (>), crochet gauche ([]), crochet (]), l’accolade ouvrante ({}), fermeture accolade (}), le canal (&#124;) fermant. signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
+|Séparateurs|Chaîne|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (\\), barre oblique inverse (\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;). signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
 |DropExistingMatchIndex|Booléen|Valeur spécifiant si l’index de correspondance spécifié dans MatchIndexName est supprimé quand MatchIndexOptions n’est pas défini sur ReuseExistingIndex. La valeur par défaut de cette propriété est **True**.|  
 |Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur **True** sert principalement à des fins de débogage. La valeur par défaut de cette propriété est **False**.<br /><br /> Remarque : cette propriété n’est pas disponible dans l’ **Éditeur de transformation de recherche floue**, mais peut être définie à l’aide de l’ **éditeur avancé**.|  
 |MatchIndexName|Chaîne|Nom de l'index de correspondance. L'index de correspondance désigne la table dans laquelle la transformation crée et enregistre l'index qu'elle utilise. En cas de réutilisation de l’index de correspondance, MatchIndexName spécifie l’index à réutiliser. MatchIndexName doit être un nom d’identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
@@ -410,7 +412,7 @@ ms.lasthandoff: 08/03/2017
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie de la transformation de commande OLE DB ne disposent pas de propriétés personnalisées.  
   
- Pour plus d’informations, consultez [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
+ Pour plus d’informations, voir [OLE DB Command Transformation](../../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
 ##  <a name="percent"></a> Transformation d'échantillonnage par pourcentage, propriétés personnalisées  
  La transformation d'échantillonnage par pourcentage dispose à la fois de propriétés personnalisées et de propriétés communes à l'ensemble des composants de flux de données.  
@@ -491,7 +493,7 @@ ms.lasthandoff: 08/03/2017
   
  L'entrée et les colonnes d'entrée de la transformation d'échantillonnage de lignes ne sont pas dotées de propriétés personnalisées.  
   
- Pour plus d’informations, consultez [Transformation d’échantillonnage de lignes](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
+ Pour plus d’informations, voir [Row Sampling Transformation](../../../integration-services/data-flow/transformations/row-sampling-transformation.md).  
   
 ##  <a name="script"></a> Composant Script, propriétés personnalisées  
  Le composant Script dispose à la fois de propriétés personnalisées et de propriétés communes à l'ensemble des composants de flux de données. Les mêmes propriétés personnalisées sont disponibles si le composant Script opère en qualité de source, de transformation ou de destination.  
@@ -633,7 +635,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
- [Propriétés du chemin d’accès](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
- [Propriétés de flux de données qui peuvent être définies à l’aide d’Expressions](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
+ [Propriétés du chemin](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   
+ [Propriétés du flux de données pouvant être définies à l’aide d’expressions](http://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8)  
   
   

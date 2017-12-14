@@ -1,11 +1,14 @@
 ---
 title: "Notes de publication de SQL Server 2012 | Microsoft Docs"
-ms.prod: sql-server-2012
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Release Notes, SQL Server
@@ -15,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a84e08ccbb7806dafe0549b5825192dfd6e33565
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
-Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d'installer ou de dépanner Microsoft SQL Server 2012 ([cliquez ici pour le télécharger](http://go.microsoft.com/fwlink/?LinkId=238647)). Ce document Notes de publication, uniquement disponible en ligne (absent du support d'installation), est régulièrement mis à jour.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Ce document Notes de publication décrit les problèmes connus que vous devez examiner avant d’installer ou de dépanner Microsoft SQL Server 2012 ([cliquez ici pour le télécharger](http://go.microsoft.com/fwlink/?LinkId=238647)). Ce document Notes de publication, uniquement disponible en ligne (absent du support d'installation), est régulièrement mis à jour.  
   
 Pour plus d'informations sur le démarrage et l'installation de SQL Server 2012, consultez le fichier Lisez-moi de SQL Server 2012. Le document Lisez-moi est disponible sur le support d'installation et sur la page de téléchargement du fichier [Lisez-moi](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Vous pouvez également trouver des informations supplémentaires dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?LinkId=190948) et sur les [forums SQL Server](http://go.microsoft.com/fwlink/?LinkId=213599).  
   

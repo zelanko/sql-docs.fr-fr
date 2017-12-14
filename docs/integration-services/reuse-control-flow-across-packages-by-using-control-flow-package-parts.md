@@ -1,5 +1,5 @@
 ---
-title: "Réutiliser un flux de contrôle sur les Packages à l’aide de composants de Package de flux de contrôle | Documents Microsoft"
+title: "Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3dfe873284d448a53d4c094b622a5411261039e3
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 25de11d7825c2e52b8247d44ee790d21c0457468
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle
   Enregistrez une tâche ou un conteneur de flux de contrôle couramment utilisés dans un fichier de pièce (fichier « .dtsxp ») autonome, et réutilisez celui-ci plusieurs fois dans un ou plusieurs packages à l’aide de composants de package de flux de contrôle. Cette réutilisation facilite la conception et la gestion des packages SSIS.  
@@ -36,18 +34,18 @@ ms.lasthandoff: 08/03/2017
 ## <a name="create-a-new-control-flow-package-part"></a>Créer un composant de package de flux de contrôle  
  Pour créer un composant de package de flux contrôle, dans l’Explorateur de solutions, développez le dossier **Package Parts** (Composants de package). Cliquez avec le bouton droit sur **Control Flow** (Flux de contrôle), puis sélectionnez **New Control Flow Package Part**(Nouveau composant de package de flux de contrôle).  
   
- ![Créer un nouveau modèle de flux de contrôle](../integration-services/media/control-flow-templates-create-new.png "créer un nouveau modèle de flux de contrôle")  
+ ![Créer un modèle de flux de contrôle](../integration-services/media/control-flow-templates-create-new.png "Créer un modèle de flux de contrôle")  
   
  Un nouveau fichier de composant portant l’extension « .dtsxp » est créé dans le dossier **Package Parts | Control Flow** (Composants de Package | Flux de contrôle). En même temps, un nouvel élément du même nom est ajouté à la boîte à outils SSIS. (L’élément de boîte à outils est visible uniquement pendant que vous avez un projet contenant le composants ouvert dans Visual Studio.)  
   
- ![Dans la boîte à outils, les modèles de flux de contrôle](../integration-services/media/control-flow-templates-in-toolbox.png "dans la boîte à outils, les modèles de flux de contrôle")  
+ ![Modèles de flux de contrôle dans la boîte à outils](../integration-services/media/control-flow-templates-in-toolbox.png "Modèles de flux de contrôle dans la boîte à outils")  
   
 ## <a name="design-a-control-flow-package-part"></a>Concevoir un composant de package de flux de contrôle  
  Pour ouvrir l’éditeur de composant de package, double-cliquez sur le fichier du composant dans l’Explorateur de solutions. Vous pouvez concevoir le composant de la même manière qu’un package.  
   
- ![Étape 1 de la conception de modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-1.png "étape 1 de la conception de modèle de flux de contrôle")  
+ ![Étape 1 de la conception de modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-1.png "Étape 1 de la conception de modèle de flux de contrôle")  
   
- ![Étape 2 de la conception de modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-2.png "étape 2 de la conception de modèle de flux de contrôle")  
+ ![Étape 2 de la conception de modèle de flux de contrôle](../integration-services/media/control-flow-template-design-step-2.png "Étape 2 de la conception de modèle de flux de contrôle")  
   
  Vérifiez que les composants du flux de contrôle présentent les limitations suivantes.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="drag-and-drop-a-control-flow-package-part"></a>Glisser-déplacer un composant de package de flux de contrôle  
  Pour réutiliser un composant dans un projet, glissez-déplacez simplement l’élément composant comme tout autre conteneur ou tâche à partir de la boîte à outils. Vous pouvez glisser-déplacer le composant vers un package plusieurs fois afin de réutiliser la logique en plusieurs emplacements du package. Recourez à cette méthode pour réutiliser un composant faisant partie du projet actuel.  
   
- ![Ajouter un modèle de flux de contrôle à un package](../integration-services/media/control-flow-templates-add-to-package.png "ajouter un modèle de flux de contrôle à un package")  
+ ![Ajouter un modèle de flux de contrôle à un package](../integration-services/media/control-flow-templates-add-to-package.png "Ajouter un modèle de flux de contrôle à un package")  
   
  ![Package avec plusieurs modèles de flux de contrôle](../integration-services/media/control-flow-templates-in-package.png "Package avec plusieurs modèles de flux de contrôle")  
   
@@ -75,14 +73,14 @@ ms.lasthandoff: 08/03/2017
   
 -   Si le package n’utilise pas de composant, le concepteur supprime tout fichier .dtsx.designer créé précédemment pour le package (autrement dit, tout fichier .dtsx.designer portant le même nom que le package).  
   
- ![Explorateur de solutions avec des modèles de flux de contrôle](../integration-services/media/control-flow-templates-in-solution-explorer.png "l’Explorateur de solutions avec des modèles de flux de contrôle")  
+ ![Explorateur de solutions avec des modèles de flux de contrôle](../integration-services/media/control-flow-templates-in-solution-explorer.png "Explorateur de solutions avec des modèles de flux de contrôle")  
   
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>Ajouter une copie d’un composant de package de flux contrôle existant ou une référence à un composant existant  
  Pour ajouter à un package une copie d’un composant existant dans le système de fichiers, dans l’Explorateur de solutions, développez le dossier **Package Parts** (Composants de package). Cliquez avec le bouton droit sur **Control Flow** (Flux de contrôle), puis sélectionnez **Add Existing Control Flow Package Part**(Ajouter un composant de package de flux de contrôle existant).  
   
- ![Ajouter un nouveau modèle de flux de contrôle dans le menu](../integration-services/media/control-flow-templates-add-from-menu.png "ajouter un nouveau modèle de flux de contrôle à partir du menu")  
+ ![Ajouter un nouveau modèle de flux de contrôle à partir du menu](../integration-services/media/control-flow-templates-add-from-menu.png "Ajouter un nouveau modèle de flux de contrôle à partir du menu")  
   
- ![Boîte de dialogue Ajouter copie des modèles existants](../integration-services/media/control-flow-templates-add-copy-dialog.png "boîte de dialogue Ajouter la copie des modèles existants")  
+ ![Boîte de dialogue Ajouter une copie de modèles existants](../integration-services/media/control-flow-templates-add-copy-dialog.png "Boîte de dialogue Ajouter une copie de modèles existants")  
   
  **Options**  
   
@@ -95,18 +93,18 @@ ms.lasthandoff: 08/03/2017
 -   Si cette option est désactivée, une copie du fichier du composant est ajoutée au projet.  
   
 ## <a name="configure-a-control-flow-package-part"></a>Configurer un composant de package de flux de contrôle  
- Pour configurer des composants de package de flux de contrôle après les avoir ajoutés au flux de contrôle d’un package, utilisez la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package).  
+ Pour configurer des composants de package de flux de contrôle après les avoir ajoutés au flux de contrôle d’un package, utilisez la boîte de dialogue **Configuration de composants de package**.  
   
-#### <a name="to-open-the-package-part-configuration-dialog-box"></a>Pour ouvrir la boîte de dialogue Package Part Configuration (Configuration de composant de package)  
+#### <a name="to-open-the-package-part-configuration-dialog-box"></a>Pour ouvrir la boîte de dialogue de configuration de composants de package  
   
-1.  Pour configurer une instance de composant, double-cliquez dessus dans le flux de contrôle. Vous pouvez également cliquer avec le bouton droit sur l’instance de composant, puis sélectionner **Modifier**. La boîte de dialogue **Package Part Configuration** (Configuration de composant de package).  
+1.  Pour configurer une instance de composant, double-cliquez dessus dans le flux de contrôle. Vous pouvez également cliquer avec le bouton droit sur l’instance de composant, puis sélectionner **Modifier**. La boîte de dialogue **Configuration de composants de package**.  
   
 2.  Configurez les propriétés et les gestionnaires de connexion pour l’instance de composant.  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
- Utilisez l’onglet **Properties** (Propriétés) de la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package).  
+ Utilisez l’onglet **Propriétés** de la boîte de dialogue **Configuration de composants de package**.  
   
- ![Onglet Propriétés de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-properties-tab.png "onglet Propriétés de la boîte de dialogue Configuration du modèle")  
+ ![Onglet Propriétés de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-properties-tab.png "Onglet Propriétés de la boîte de dialogue Configuration du modèle")  
   
  La hiérarchie d’arborescence dans le volet gauche répertorie toutes les propriétés configurables de l’instance de composant.  
   
@@ -116,34 +114,34 @@ ms.lasthandoff: 08/03/2017
   
  La table dans le volet droit répertorie les propriétés à configurer.  
   
--   **Property Path**(Chemin d’accès à la propriété). Chemin d’accès à la propriété.  
+-   **Chemin de la propriété**. Chemin d’accès à la propriété.  
   
--   **Property Type**(Type de propriété). Type de données de la propriété.  
+-   **Type de propriété**. Type de données de la propriété.  
   
 -   **Valeur**. Valeur configurée. Cette valeur remplace la valeur par défaut.  
   
-### <a name="connection-managers-tab"></a>Onglet Connection Managers (Gestionnaires de connexions)  
- L’onglet **Connection Managers** (Gestionnaires de connexions) dans la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package) permet de spécifier les propriétés des gestionnaires de connexions pour l’instance de composant.  
+### <a name="connection-managers-tab"></a>Onglet Gestionnaires de connexions  
+ L’onglet **Gestionnaires de connexion** dans la boîte de dialogue **Configuration de composants de package** permet de spécifier les propriétés des gestionnaires de connexions pour l’instance de composant.  
   
- ![Onglet gestionnaires de connexions de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-connection-managers-tab.png "onglet gestionnaires de connexions de la boîte de dialogue Configuration du modèle")  
+ ![Onglet Gestionnaires de connexions de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-connection-managers-tab.png "Onglet Gestionnaires de connexions de la boîte de dialogue Configuration du modèle")  
   
  Le tableau dans le volet gauche répertorie tous les gestionnaires de connexions définis dans le composant de flux de contrôle. Choisissez le gestionnaire de connexions à configurer.  
   
  La liste dans le volet droit répertorie les propriétés du gestionnaire de connexions sélectionné.  
   
--   **Set**(Définie). Option activée si la propriété est configurée pour l’instance de composant.  
+-   **Définie**. Option activée si la propriété est configurée pour l’instance de composant.  
   
--   **Property Name**(Nom de la propriété). Nom de la propriété.  
+-   **Nom de la propriété**. Nom de la propriété.  
   
 -   **Valeur**. Valeur configurée. Cette valeur remplace la valeur par défaut.  
   
 ## <a name="delete-a-control-flow-part"></a>Supprimer un composant de flux de contrôle  
- Pour supprimer un composant, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le composant, puis sélectionnez **Delete**(Supprimer). Sélectionnez **OK** pour confirmer la suppression, ou sélectionnez **Cancel** (Annuler) pour conserver le composant.  
+ Pour supprimer un composant, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le composant, puis sélectionnez **Supprimer**. Sélectionnez **OK** pour confirmer la suppression, ou sélectionnez **Annuler** pour conserver le composant.  
   
  Si vous supprimez un composant d’un projet, il est supprimé définitivement du système de fichiers et ne peut pas être restauré.  
   
 > [!NOTE]  
->  Si vous voulez supprimer un composant d’un projet Integration Services, mais continuer à l’utiliser dans d’autres projets, utilisez l’option **Exclude from Project**  (Exclure du projet ) au lieu de l’option **Delete** (Supprimer).  
+>  Si vous voulez supprimer un composant d’un projet Integration Services, mais continuer à l’utiliser dans d’autres projets, utilisez l’option **Exclure du projet** au lieu de l’option **Supprimer**.  
   
 ## <a name="package-parts-are-a-design-time-feature-only"></a>Les composants de package sont des fonctionnalités disponibles uniquement au moment de la conception.  
  Les composants de package sont des fonctionnalités disponibles au moment du design caractéristiques. Le concepteur SSIS crée, ouvre, enregistre et met à jour des composants, et ajoute, configure ou supprime des instances de composant dans un package. En revanche, le runtime SSIS n’est pas informé de la présence de composants. Voici comment le concepteur accomplit cette séparation.  
@@ -156,7 +154,6 @@ ms.lasthandoff: 08/03/2017
   
  Le diagramme ci-dessous illustre la relation entre les composants (fichiers « .dtsxp »), le concepteur SSIS et le runtime SSIS.  
   
- ![Fichiers de modèles de flux et le flux de contrôle](../integration-services/media/control-flow-templates-intro.png "les fichiers de modèles de flux et le flux de contrôle")  
+ ![Fichiers de modèles de flux de contrôle et flux](../integration-services/media/control-flow-templates-intro.png "Fichiers de modèles de flux de contrôle et flux")  
   
   
-

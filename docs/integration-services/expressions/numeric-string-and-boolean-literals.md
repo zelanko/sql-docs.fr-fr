@@ -1,5 +1,5 @@
 ---
-title: "Littéraux (SSIS) | Documents Microsoft"
+title: "Littéraux (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 149e9cb31f5e7cecfba9d0c221c1cbddb2b76cfa
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 428bdd08e35be0ebc2a3c069396f67118144b07f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="numeric-string-and-boolean-literals"></a>Numériques, chaînes et littéraux booléens
+# <a name="numeric-string-and-boolean-literals"></a>Littéraux numériques, booléens et de chaîne
  Les expressions peuvent contenir des littéraux numériques, booléens et de chaîne. L'évaluateur d'expression prend en charge divers littéraux numériques tels que les entiers, les décimaux et les constantes en virgule flottante. L'évaluateur d'expression prend également en charge les suffixes longs et flottants, qui spécifient comment il doit gérer les valeurs, ainsi que la notation scientifique dans les littéraux numériques.  
   
 ## <a name="numeric-literals"></a>Littéraux numériques  
@@ -123,4 +121,3 @@ ms.lasthandoff: 09/26/2017
 > **REMARQUE :** Dans une expression, un littéral booléen doit être délimité par des espaces.  
   
   
-

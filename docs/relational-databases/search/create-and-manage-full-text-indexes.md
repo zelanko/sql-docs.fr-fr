@@ -2,9 +2,12 @@
 title: "Créer et gérer des index de recherche en texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 468a8c1d4b2b528b612684a93d571fca374db6cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
-Cette rubrique décrit comment créer, remplir et gérer des index de recherche en texte intégral dans SQL Server.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique décrit comment créer, remplir et gérer des index de recherche en texte intégral dans SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Prérequis - Créer un catalogue de texte intégral
 Avant de pouvoir créer un index de recherche en texte intégral, vous devez disposer d’un catalogue de texte intégral. Le catalogue est un conteneur virtuel pour un ou plusieurs index de recherche en texte intégral. Pour plus d’informations, consultez [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md).

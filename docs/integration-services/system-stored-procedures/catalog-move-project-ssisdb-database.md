@@ -1,5 +1,5 @@
 ---
-title: "Catalog.move_project (base de données SSISDB) | Documents Microsoft"
+title: "catalog.move_project (base de données SSISDB) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5b091ccea1f733ebbf6e52308d17c7bdb7449cbe
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogmoveproject---ssisdb-database"></a>Catalog.move_project - base de données SSISDB
+# <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - base de données SSISDB
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Déplace un projet d'un dossier vers un autre dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -39,16 +37,16 @@ catalog.move_project [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @source_folder =] *source_folder*  
- Nom du dossier source, où le projet réside avant le déplacement. Le *source_folder* est **nvarchar (128)**.  
+ [ @source_folder = ] *source_folder*  
+ Nom du dossier source, où le projet réside avant le déplacement. *source_folder* est de type **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Nom du projet qui sera supprimé. Le *project_name* est **nvarchar (128)**.  
+ [ @project_name = ] *project_name*  
+ Nom du projet qui sera supprimé. *project_name* est de type **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- Nom du dossier de destination, où le projet réside après le déplacement. Le *destination_folder* est **nvarchar (128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ Nom du dossier de destination, où le projet réside après le déplacement. *destination_folder* est de type **nvarchar(128)**.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -59,9 +57,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Autorisations READ et MODIFY sur le projet que vous souhaitez déplacer et autorisation CREATE_OBJECTS sur le dossier de destination  
   
--   L’appartenance à la **ssis_admin** rôle de base de données  
+-   Appartenance au rôle de base de données **ssis_admin**  
   
--   L’appartenance à la **sysadmin** rôle de serveur  
+-   Appartenance au rôle serveur **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Erreurs et avertissements  
  La liste suivante décrit quelques conditions qui peuvent générer une erreur de cette procédure stockée :  
@@ -72,7 +70,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Le dossier de destination n'existe pas ou le dossier de destination contient déjà un projet avec le même nom  
   
--   L’utilisateur ne dispose pas des autorisations appropriées  
+-   L’utilisateur n’a pas les autorisations appropriées  
   
 ## <a name="remarks"></a>Notes  
  Lorsqu'un projet est déplacé d'un dossier source vers un dossier de destination, le projet dans le dossier source et les références environnementales correspondantes sont supprimés. Dans le dossier de destination, un projet et des références environnementales identiques sont créés. Les références environnementales relatives seront résolues dans un dossier différent après le déplacement. Les références absolues seront résolues dans le même dossier après le déplacement.  
@@ -81,4 +79,3 @@ catalog.move_project [ @source_folder = ] source_folder
 >  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent que l'environnement réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et dossier, et aux environnements qui résident dans un dossier différent de celui du projet.  
   
   
-

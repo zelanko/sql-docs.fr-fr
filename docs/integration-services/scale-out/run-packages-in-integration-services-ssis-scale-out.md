@@ -1,5 +1,5 @@
 ---
-title: "Exécuter des Packages dans SQL Server Integration Services (SSIS) montée en puissance parallèle | Documents Microsoft"
+title: "Exécuter des packages dans SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
-f1_keywords:
-- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 88537ff52ada042d642b8915342e374ecca3246e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Exécuter des packages dans Integration Services (SSIS) monter en charge
+# <a name="run-packages-in-integration-services-ssis-scale-out"></a>Exécuter des packages dans Integration Services (SSIS) Scale Out
 Une fois les packages déployés sur le serveur Integration Services, vous pouvez les exécuter dans Scale Out.
 
-## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Exécuter des packages avec la boîte de dialogue Exécuter un Package de monter en charge 
+## <a name="run-packages-with-execute-package-in-scale-out-dialog"></a>Exécuter des packages avec la boîte de dialogue Exécuter un package dans Scale Out 
 
 1. Ouvrir la boîte de dialogue Exécuter un package dans Scale Out
 
@@ -43,7 +39,7 @@ Une fois les packages déployés sur le serveur Integration Services, vous pouve
     Sous l’onglet **Avancé** , vous définissez une option Scale Out appelée **Nombre de nouvelles tentatives**. Elle définit le nombre de nouvelles tentatives d’exécution du package en cas d’échec.
 
     > [!Note]
-    > Le **vider en cas d’erreurs** option s’applique uniquement lorsque le compte exécutant le service de mise à l’échelle des processus de travail est un administrateur de l’ordinateur local.
+    > L’option **Vider en cas d’erreurs** ne prend effet que si le compte exécutant le service Scale Out Worker est administrateur de l’ordinateur local.
 
 3. Sélectionner les ordinateurs
 
@@ -53,7 +49,7 @@ Une fois les packages déployés sur le serveur Integration Services, vous pouve
    > Les packages sont exécutés avec les informations d’identification des comptes d’utilisateur des services Scale Out Worker, qui sont affichées dans la page **Sélection des ordinateurs** . Par défaut, le compte est NT Service\SSISScaleOutWorker140. Vous souhaiterez peut-être les remplacer par vos propres comptes de laboratoire.
 
    >[!WARNING]
-   >Exécutions de package déclenchées par différents utilisateurs sur le même processus de travail sont exécutées avec le même compte. Il n’existe aucune limite de sécurité entre eux. 
+   >Les exécutions de package déclenchées par différents utilisateurs sur le même Worker sont effectuées avec le même compte. Il n’existe aucune frontière de sécurité entre elles. 
 
 4. Exécuter les packages et afficher des rapports 
 
@@ -110,15 +106,14 @@ L’exécution de packages dans Scale Out nécessite les autorisations suivantes
 -   L’appartenance au rôle serveur **sysadmin**  
 
 ## <a name="set-default-execution-mode"></a>Définir le mode d’exécution par défaut
-Pour définir le mode d’exécution par défaut pour « Monter en charge », cliquez sur le **SSISDB** nœud dans l’Explorateur d’objets de SSMS et sélectionnez **propriétés**.
-Dans le **propriétés de catalogue** boîte de dialogue, définissez **mode d’exécution par défaut des serveurs** à **monter en charge**.
+Pour définir le mode d’exécution par défaut sur « Scale Out », cliquez avec le bouton droit sur le nœud **SSISDB** dans l’Explorateur d’objets de SSMS et sélectionnez **Propriétés**.
+Dans la boîte de dialogue **Propriétés du catalogue**, définissez **Mode d’exécution par défaut à l’échelle du serveur** sur **Scale Out**.
 
-Une fois ce paramètre, il est inutile de spécifier le  **@runinscaleout**  paramètre [catalogue]. [ create_execution]. Exécutions sont exécutées automatiquement dans monter en charge. 
+Une fois ce paramètre défini, vous n’avez pas besoin de spécifier le paramètre **@runinscaleout** pour [catalog].[create_execution]. Les exécutions sont effectuées automatiquement dans Scale Out. 
 
-![Mode exe](media\exe-mode.PNG)
+![Mode d’exécution](media\exe-mode.PNG)
 
-Pour basculer le mode d’exécution par défaut en mode non - monter en charge, définissez simplement **mode d’exécution par défaut des serveurs** à **Server**.
+Pour basculer le mode d’exécution par défaut sur un mode non-Scale Out, définissez simplement **Mode d’exécution par défaut à l’échelle du serveur** sur **Serveur**.
 
-## <a name="run-package-in-sql-agent-job"></a>Exécutez le package dans le travail de l’agent SQL
-Dans le travail de l’agent Sql, vous pouvez choisir exécuter un package SSIS en tant qu’une étape du travail. Pour exécuter le package de monter en charge, vous pouvez tirer parti du mode d’exécution par défaut ci-dessus. Après la définition du mode d’exécution par défaut pour « Monter en charge », les packages dans les travaux de l’agent Sql seront exécutés dans monter en charge.
-
+## <a name="run-package-in-sql-agent-job"></a>Exécuter le package dans le travail de l’Agent SQL
+Dans le travail de l’Agent SQL, vous pouvez choisir d’exécuter un package SSIS en tant qu’étape du travail. Pour exécuter le package dans Scale Out, vous pouvez tirer parti du mode d’exécution par défaut ci-dessus. Une fois le mode d’exécution par défaut défini sur « Scale Out », les packages dans les travaux de l’agent SQL sont exécutés dans Scale Out.

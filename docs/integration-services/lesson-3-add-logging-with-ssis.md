@@ -1,5 +1,5 @@
 ---
-title: "Leçon 3 : Ajouter la journalisation avec SSIS | Documents Microsoft"
+title: "Leçon 3 : Ajouter la journalisation avec SSIS | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0bfc02e0c5930fca3dec339274167cbad5716461
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0a24728e5d9806e1a4aa257155299e18668c88b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Leçon 3 : Ajouter la journalisation avec SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut des fonctions d'écriture dans un journal pour dépanner et contrôler l'exécution du package, lesquelles fournissent une trace des tâches et des événements de conteneur. Les fonctions d'écriture dans un journal sont d'une utilisation souple et peuvent être activées au niveau du package ou de tâches et de conteneurs spécifiques au sein du package. Vous pouvez sélectionner les événements à enregistrer et créer plusieurs journaux pour un seul package.  
   
-La fonction d'écriture dans un journal est fournie par un module fournisseur d'informations. Chaque module fournisseur d'informations peut écrire les informations de journalisation dans différents formats et types de destination. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit les modules fournisseurs d'informations suivants :  
+La fonction d'écriture dans un journal est fournie par un module fournisseur d'informations. Chaque module fournisseur d'informations peut écrire les informations de journalisation dans différents formats et types de destination. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit les modules fournisseurs d'informations suivants :  
   
 -   Fichier texte  
   
@@ -50,15 +47,14 @@ Au cours de cette leçon, vous allez créer une copie du package que vous avez c
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Copie du Package de la leçon 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [Étape 1 : Copie du package de la leçon 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Étape 2 : Ajout et configuration de la journalisation](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
+-   [Étape 2 : Ajout et configuration de la journalisation](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Étape 3 : Test de la leçon 3 du Package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Étape 3 : Test de la leçon 3 du package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
-[Étape 1 : Copie du Package de la leçon 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+[Étape 1 : Copie du package de la leçon 2](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: Source OData | Documents Microsoft
+title: Source OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>Source OData
 Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol). Le composant prend en charge les protocoles OData v3 et v4.  
@@ -38,18 +36,18 @@ Utilisez le composant source OData dans un package SSIS pour consommer les donn�
 -   Pour le protocole OData V4, le composant prend en charge le format de données JSON.  
 
 La source OData prend en charge les sources de données suivantes :
--   Microsoft Dynamics AX en ligne et Microsoft Dynamics CRM Online
--   Les listes SharePoint. Pour afficher toutes les listes sur un serveur SharePoint, utilisez l’URL suivante : http://\<serveur > / _vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+-   Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online,
+-   Listes SharePoint. Pour visualiser toutes les listes d’un serveur SharePoint, utilisez l’URL suivante : http://\<serveur>/_vti_bin/ListData.svc. Pour plus d'informations sur les conventions d'URL SharePoint, consultez [Interface REST de SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
   
-## <a name="odata-format-and-performance"></a>Format OData et les performances
- La plupart des services OData peut retourner des résultats dans plusieurs formats. Vous pouvez spécifier le format de jeu de résultats en utilisant la `$format` option de requête. Les formats comme JSON et JSON Light sont plus efficaces qu’ATOM ou XML, et peuvent offrir un gain de performances en cas de transfert d’un grand volume de données. Le tableau suivant fournit les résultats des tests. Comme vous pouvez le voir, le passage d’ATOM à JSON s’est traduit par un gain de performances de 30 à 53 %, et le passage d’ATOM au nouveau format JSON Light (disponible dans WCF Data Services 5.1) a entraîné un gain de performances de 67 %.  
+## <a name="odata-format-and-performance"></a>Format OData et performances
+ La plupart des services OData retournent les résultats dans plusieurs formats. Vous pouvez spécifier le format du jeu de résultats à l’aide de l’option de requête `$format`. Les formats comme JSON et JSON Light sont plus efficaces qu’ATOM ou XML, et peuvent offrir un gain de performances en cas de transfert d’un grand volume de données. Le tableau suivant fournit les résultats des tests. Comme vous pouvez le voir, le passage d’ATOM à JSON s’est traduit par un gain de performances de 30 à 53 %, et le passage d’ATOM au nouveau format JSON Light (disponible dans WCF Data Services 5.1) a entraîné un gain de performances de 67 %.  
   
 |Lignes|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
 |10000|113 secondes|74 secondes|68 secondes|  
 |1000000|1110 secondes|853 secondes|665 secondes|  
   
-## <a name="related-topics-in-this-section"></a>Rubriques connexes dans cette Section  
+## <a name="related-topics-in-this-section"></a>Rubriques connexes de cette section  
   
 -   [Didacticiel : Utiliser la source OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
@@ -81,7 +79,7 @@ La source OData prend en charge les sources de données suivantes :
  Permet d'indiquer les options de la requête. Par exemple : `$top=5` 
   
  **URL du flux**  
- Affiche en lecture seule en fonction des options sélectionnées dans cette boîte de dialogue des URL de flux.  
+ Affiche l’URL du flux en lecture seule en fonction des options sélectionnées dans la boîte de dialogue.  
   
  **Aperçu**  
  Affichez un aperçu des résultats à l’aide de la boîte de dialogue **Aperçu** . L’**Aperçu** peut afficher jusqu’à 20 lignes.  
@@ -140,4 +138,3 @@ La source OData prend en charge les sources de données suivantes :
  [Gestionnaire de connexions OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

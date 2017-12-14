@@ -1,5 +1,5 @@
 ---
-title: "Identifier la Source de Packages avec des Signatures numériques | Documents Microsoft"
+title: "Identifier la source de packages à l’aide de signatures numériques | Microsoft Docs"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.digitalsigning.f1
+f1_keywords: sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
   Il est possible de signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec un certificat numérique pour identifier sa source. Après avoir signé un package avec un certificat numérique, vous pouvez utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package. Pour vérifier la signature à l’aide d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez définir une option dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans l’utilitaire **dtexec** (dtexec.exe), ou définir une valeur de Registre facultative.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
      Bien que le package ait été signé, vous devez maintenant configurer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package.  
 
-## <a name="signing_dialog"></a>Référence de l’interface utilisateur de la boîte de dialogue signature numérique
+## <a name="signing_dialog"></a> Référence de l’IU de la boîte de dialogue Signature numérique
   Utilisez la boîte de dialogue **Signature numérique** pour signer un package par une signature numérique ou pour la supprimer. La boîte de dialogue **Signature numérique** est disponible via l'option **Signature numérique** dans le menu **SSIS** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Pour plus d’informations, voir [Signer un package à l’aide d’un certificat numérique](#cert).  
@@ -155,7 +152,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>Voir aussi  
  [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
- [Vue d’ensemble de la sécurité &#40; Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

@@ -18,6 +18,7 @@
 ### [Ajouter le composant WebPart de la Visionneuse de rapports à une page Web](add-report-viewer-web-part-to-page.md)
 ### [Connecter un composant WebPart de filtres ou de documents](connect-filter-or-documents-web-part-sharepoint-integrated-mode.md)  
 ### [Personnaliser le composant WebPart de la Visionneuse de rapports](customize-the-report-viewer-web-part.md)  
+### [Paramètres de site SharePoint pour le composant WebPart Visionneuse de rapports](report-viewer-web-part-sharepoint-site-settings.md)
 # [Haute disponibilité](high-availability-reporting-services.md)  
 # [Activer et désactiver RDL Sandboxing](enable-and-disable-rdl-sandboxing.md)  
 # [Configurer Reporting Services pour utiliser un autre nom d’objet](configure-reporting-services-to-use-a-subject-alternative-name.md)  

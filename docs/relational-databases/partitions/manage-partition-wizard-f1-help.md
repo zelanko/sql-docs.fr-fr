@@ -2,9 +2,12 @@
 title: "Aide sur l’Assistant Gestion de partition via la touche F1 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89d561c68a324e4760c8b093ba641dc7ea3453e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Aide sur l'Assistant Gestion de partition via la touche F1
-  Utilisez l’ **Assistant Gestion de partition** pour gérer et modifier des tables partitionnées existantes via le basculement de partition ou l’implémentation d’un scénario de fenêtre glissante. Cet Assistant peut faciliter la gestion de vos partitions et simplifier la migration régulière de données vers et à partir de vos tables.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez **l’Assistant Gestion de partition** pour gérer et modifier des tables partitionnées existantes via le basculement de partition, ou l’implémentation d’un scénario de fenêtre glissante. Cet Assistant peut faciliter la gestion de vos partitions et simplifier la migration régulière de données vers et à partir de vos tables.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Pour démarrer l'Assistant Gestion de partition  
   

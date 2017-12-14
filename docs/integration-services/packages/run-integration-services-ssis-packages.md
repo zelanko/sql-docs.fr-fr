@@ -1,12 +1,14 @@
 ---
-title: "Packages exécution Integration Services (SSIS) | Documents Microsoft"
+title: "Exécuter des packages Integration Services (SSIS) | Microsoft Docs"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,21 +23,21 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-integration-services-ssis-packages"></a>Exécuter des packages Integration Services (SSIS)
   Pour exécuter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser un outil parmi plusieurs, en fonction de l’endroit où ces packages sont stockés. Ces outils sont répertoriées dans le tableau ci-dessous.  
   
- Pour stocker un package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous utilisez le modèle de déploiement de projet pour déployer le projet sur le serveur. Pour plus d’informations, consultez [Integration Services (SSIS) déployer des projets et Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Pour stocker un package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous utilisez le modèle de déploiement de projet pour déployer le projet sur le serveur. Pour plus d’informations, consultez [Déployer des projets et des packages Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Pour stocker un package dans le magasin de packages SSIS, la base de données msdb ou dans le système de fichiers, vous utilisez le modèle de déploiement de package. Pour plus d’informations, consultez [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
@@ -49,8 +51,8 @@ ms.lasthandoff: 08/03/2017
 |**dtexecui**<br /><br /> Pour plus d’informations, consultez [Référence de l’interface utilisateur de l’utilitaire d’exécution de package &#40;DtExecUI&#41;](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|Non|Oui|Oui|  
 |**SQL Server Agent**<br /><br /> Vous pouvez utiliser un travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour planifier un package.<br /><br /> Pour plus d’informations, consultez [Travaux de l’Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Oui|Oui|Oui|  
 |**Procédure stockée intégrée**<br /><br /> Pour plus d’informations, consultez [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Oui|Non|Non|  
-|**API managée à l’aide de types et membres dans le** <xref:Microsoft.SqlServer.Management.IntegrationServices> espace de noms|Oui|Non|Non|  
-|**API managée à l’aide de types et membres dans le** <xref:Microsoft.SqlServer.Dts.Runtime> espace de noms|Actuellement impossible|Oui|Oui|  
+|**API managée à l’aide des types et membres dans l’espace de noms** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Oui|Non|Non|  
+|**API managée à l’aide des types et membres dans l’espace de noms** <xref:Microsoft.SqlServer.Dts.Runtime>|Actuellement impossible|Oui|Oui|  
 
 ## <a name="execution-and-logging"></a>Exécution et journalisation  
  Les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent être activés pour la journalisation et vous pouvez capturer des informations sur l'exécution dans des fichiers journaux. Pour plus d’informations, consultez [Journalisation d’Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -80,13 +82,13 @@ ms.lasthandoff: 08/03/2017
   
 1.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le dossier de projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contenant le package à exécuter, puis cliquez sur **Propriétés**.  
   
-2.  Dans le  **\<nom du projet > Pages de propriétés** boîte de dialogue, cliquez sur **Build**.  
+2.  Dans la boîte de dialogue **\<Pages de propriétés de <nom_projet**, cliquez sur **Générer**.  
   
 3.  Mettez à jour la valeur de la propriété OutputPath pour indiquer le dossier que vous souhaitez utiliser pour le déploiement au moment du design, puis cliquez sur **OK**.  
 
 
-## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Exécuter un package sur le serveur SSIS à l'aide de SQL Server Management Studio
-  Après avoir déployé votre projet sur le serveur[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez exécuter le package sur le serveur.  
+## <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Exécuter un package sur le serveur SSIS à l’aide de SQL Server Management Studio
+  Après avoir déployé votre projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez exécuter le package sur le serveur.  
   
  Vous pouvez utiliser des rapports d'opérations pour afficher des informations sur les packages qui ont été exécutés, ou qui sont actuellement exécutés, sur le serveur. Pour plus d'informations, consultez [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -171,4 +173,3 @@ ms.lasthandoff: 08/03/2017
 [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
-

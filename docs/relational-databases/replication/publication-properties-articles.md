@@ -2,9 +2,12 @@
 title: "Propriétés de la publication, Articles | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c0f2c87e7f36b1c1952b9126f43a0be8d04ea4d7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8d3b75391bacc62e7d1b38743f8ab83db78d1e5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-articles"></a>Propriétés de la publication, Articles
-  La page **Articles** de la boîte de dialogue **Propriétés de la publication** reprend les informations sur les articles contenus dans une publication, vous permet d'ajouter ou de supprimer des articles de publications existantes, ainsi que de modifier les propriétés des articles et le filtrage s'appuyant sur des colonnes.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La page **Articles** de la boîte de dialogue **Propriétés de la publication** reprend les informations sur les articles contenus dans une publication, vous permet d’ajouter ou de supprimer des articles de publications existantes, ainsi que de modifier les propriétés des articles et le filtrage des colonnes.  
   
 > [!NOTE]  
 >  Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Changer les propriétés de publication et d’article](../../relational-databases/replication/publish/change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  

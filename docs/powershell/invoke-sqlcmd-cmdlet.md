@@ -2,9 +2,12 @@
 title: Invoke-Sqlcmd (applet de commande) | Microsoft Docs
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
   **Invoke-Sqlcmd** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui exécute des scripts contenant des instructions des langages ([!INCLUDE[tsql](../includes/tsql-md.md)] et XQuery) ainsi que les commandes prises en charge par l’utilitaire **sqlcmd** .  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
 |Définition de variable.|-v|-Variable|  
-|Intervalle de délai de requête.|-t|-QueryTimeout|  
+|Intervalle de délai de requête (secondes).|-t|-QueryTimeout|  
 |Arrêter l'exécution en cas d'erreur|-b|-AbortOnError|  
 |Connexion administrateur dédiée.|-A|-DedicatedAdministratorConnection|  
 |Désactiver les commandes interactives, le script de démarrage et les variables d'environnement.|-X|-DisableCommands|  
 |Désactiver la substitution de variable.|-X|-DisableVariables|  
 |Niveau de gravité minimal pour le rapport.|-v|-SeverityLevel|  
 |Niveau d'erreur minimal pour le rapport.|-m|-ErrorLevel|  
-|Intervalle de délai de connexion.|-l|-ConnectionTimeout|  
+|Intervalle de délai de connexion (secondes).|-l|-ConnectionTimeout|  
 |Nom d'hôte.|-H|-HostName|  
 |Modifier le mot de passe et quitter.|-Z|-NewPassword|  
 |Fichier d'entrée contenant une requête|-i|-InputFile|  

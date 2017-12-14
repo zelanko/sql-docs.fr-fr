@@ -2,9 +2,12 @@
 title: "Choisir un programme de résolution | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cba1ee9c5659d84f4fbe5a1c6ac5957794df0a88
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02e8f1043c8b3337953dd300c67ad0d94343eb88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflit de réplication de fusion avancée - Choisir un programme de résolution
-  Lors du choix d'un résolveur, considérez l'importance de la résolution des conflits dans votre application et si vous pouvez utiliser l'outil de résolution des conflits par défaut basé sur les priorités ou si vous devez utiliser un résolveur d'articles.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Lors du choix d’un programme de résolution, considérez l’importance de la résolution des conflits dans votre application, et si vous pouvez utiliser l’outil de résolution des conflits par défaut basé sur les priorités ou utiliser un programme de résolution d’articles.  
   
  Si vos données sont partitionnées sans que plusieurs utilisateurs écrivent dans les mêmes partitions, et que votre topologie de réplication est relativement simple (un éditeur et quelques abonnés), les conflits seront rares ou inexistants. Dans ce type d'environnement, vous n'avez probablement pas besoin d'une stratégie complexe de résolution des conflits. Une stratégie utilisant les paramètres par défaut de résolution de conflits, des abonnements clients et une règle du type « la première modification l'emporte », est recommandée. Si la topologie est plus complexe (utilisant par exemple des Abonnés de réédition), des abonnements serveur avec des priorités spécifiques peuvent être plus appropriés.  
   

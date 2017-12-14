@@ -1,0 +1,28 @@
+# [SQL Operations Studio (préversion)](what-is.md)
+# [Installer](download.md)
+# Démarrages rapides
+## [Connexion & interrogation de SQL Server](quickstart-sql-server.md)
+## [Connexion & interrogation d’Azure SQL Database](quickstart-sql-database.md)
+## [Connexion & interrogation d’Azure SQL Warehouse](quickstart-sql-dw.md)
+# Didacticiels
+## [Éditeur T-SQL](tutorial-sql-editor.md) 
+## [Exemple d’analyse : requêtes lentes](tutorial-qds-sql-server.md)
+## [Exemple d’analyse : utilisation de l’espace de table](tutorial-table-space-sql-server.md)
+## [Créer une analyse personnalisée](tutorial-build-custom-insight-sql-server.md) 
+## [Sauvegarde et restauration](tutorial-backup-restore-sql-server.md)
+# Guides pratiques
+## [Tableaux de bord et widgets d’analyse](insight-widgets.md)
+## [Extraits de code](code-snippets.md)
+## [Terminal intégré (PowerShell, Bash)](integrated-terminal.md)
+## [Raccourcis clavier](keyboard-shortcuts.md)
+## [Groupes de serveurs](server-groups.md)
+## [Contrôle de code source](source-control.md)
+## [Espace de travail & paramètres utilisateur](settings.md)
+## [Authentification Windows (Kerberos)](enable-kerberos.md)
+## [Collecte des données d’utilisation](usage-data-collection.md)
+# Ressources
+## [Référence Transact-SQL](../t-sql/language-reference.md)
+## [SQL Operations Studio (préversion) - Référentiel GitHub](https://www.github.com/Microsoft/SqlOpsStudio)
+## [Blog SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+# [Questions fréquentes (FAQ)](faq.md)
+# [Signaler les problèmes & faire des suggestions](https://github.com/microsoft/sqlopsstudio/issues)

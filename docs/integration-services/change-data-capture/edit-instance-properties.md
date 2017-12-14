@@ -1,5 +1,5 @@
 ---
-title: "Modifier les propriétés de l’Instance | Documents Microsoft"
+title: "Modifier les propriétés d’instance | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,33 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
-ms.contentlocale: fr-fr
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1ddaa0513e6b095ec5dcbb5b9b52358bbedface8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="edit-instance-properties"></a>Modifier les propriétés d'instance
   Utilisez l'éditeur de propriétés pour apporter des modifications à l'instance CDC après avoir créé les configurations initiales. Vous pouvez effectuer les opérations suivantes dans l'éditeur de propriétés.  
   
--   [Modifier les propriétés de la base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
+-   [Modifier les propriétés d'une base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
   
--   [Modifier des Tables](../../integration-services/change-data-capture/edit-tables.md)  
+-   [Modifier des tables](../../integration-services/change-data-capture/edit-tables.md)  
   
--   [Ajouter des Tables à une Instance de capture de données modifiées](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
+-   [Ajouter des tables à une instance CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
--   [Modifier les propriétés de Table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
+-   [Modifier les propriétés d’une table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
--   [Examiner et générer des Scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+-   [Examiner et générer des scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
 -   [Modifier les propriétés avancées](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/03/2017
      Vous pouvez également cliquer avec le bouton droit sur le service dans la liste au centre de la console du concepteur CDC et sélectionner **Propriétés**.  
   
   
-

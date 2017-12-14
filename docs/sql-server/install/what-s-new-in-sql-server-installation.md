@@ -2,9 +2,12 @@
 title: "Nouveautés dans l’installation de SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 08/23/2017
-ms.prod: sql-non-specified
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d41437182f423016da8e25c71bd493c5f1816f95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8754cccdcecd0c9ce12e2416e62234f0857aa8c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Nouveautés dans l’installation de SQL Server
-
- L’installation est prise en charge uniquement sur les processeurs x64. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’installation est prise en charge uniquement sur les processeurs x64. Pour plus d’informations, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  L'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] vous invite à spécifier le répertoire dans lequel enregistrer le package extrait. Si aucun emplacement n’est indiqué, le serveur utilise par défaut le lecteur système de l’ordinateur. Les fichiers extraits sont conservés une fois que l'installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est terminée.  
   

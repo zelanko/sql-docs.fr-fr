@@ -2,9 +2,12 @@
 title: "Execution Warnings, classe d’événements | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="execution-warnings-event-class"></a>Execution Warnings, classe d’événements
-  La classe d'événements Execution Warnings indique que des avertissements d'allocation de mémoire se sont produits lors de l'exécution d'une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'une procédure stockée. Il est possible de surveiller cette classe d'événements pour déterminer si des requêtes ont dû attendre une seconde ou plus que de la mémoire se libère avant de continuer, ou si la précédente tentative d'obtention de mémoire a échoué. Les informations sur la durée d'attente des requêtes peuvent faciliter la découverte de problèmes de contention dans le système qui peuvent nuire aux performances.  
+# <a name="execution-warnings-event-class"></a>Execution Warnings (classe d'événements)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La classe d’événements Execution Warnings indique que des avertissements d’allocation de mémoire se sont produits lors de l’exécution d’une instruction ou d’une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est possible de surveiller cette classe d'événements pour déterminer si des requêtes ont dû attendre une seconde ou plus que de la mémoire se libère avant de continuer, ou si la précédente tentative d'obtention de mémoire a échoué. Les informations sur la durée d'attente des requêtes peuvent faciliter la découverte de problèmes de contention dans le système qui peuvent nuire aux performances.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Colonnes de la classe d'événements Execution Warnings  
   
