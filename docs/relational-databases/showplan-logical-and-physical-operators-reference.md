@@ -2,9 +2,12 @@
 title: "Guide de référence des opérateurs Showplan logiques et physiques"
 ms.custom: 
 ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -139,14 +142,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guide de référence des opérateurs Showplan logiques et physiques
-  Les opérateurs décrivent comment [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute une requête ou une instruction DML (Data Manipulation Language). L'optimiseur de requête utilise des opérateurs pour construire un plan de requête qui crée le résultat spécifié dans la requête ou pour exécuter l'opération spécifiée dans l'instruction DML. Le plan de requête est une arborescence composée d'opérateurs physiques. Vous pouvez afficher le plan de requête à l'aide des instructions SET SHOWPLAN, des options plan d'exécution graphique dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou des classes d'événements Showplan de SQL Server Profiler.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les opérateurs décrivent comment [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute une requête ou une instruction DML (Data Manipulation Language). L'optimiseur de requête utilise des opérateurs pour construire un plan de requête qui crée le résultat spécifié dans la requête ou pour exécuter l'opération spécifiée dans l'instruction DML. Le plan de requête est une arborescence composée d'opérateurs physiques. Vous pouvez afficher le plan de requête à l'aide des instructions SET SHOWPLAN, des options plan d'exécution graphique dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou des classes d'événements Showplan de SQL Server Profiler.  
   
  Les opérateurs sont classés en opérateurs logiques et physiques.  
   
@@ -224,7 +227,7 @@ ms.lasthandoff: 11/09/2017
 |![Icône d’opérateur Filter (moteur de base de données)](../relational-databases/media/filter-32x.gif "Icône d’opérateur Filter (moteur de base de données)")|**Filter**|L’opérateur **Filter** analyse l’entrée en ne retournant que les lignes répondant à l’expression du filtre (prédicat) qui apparaît dans la colonne **Argument** .|  
 |Aucune|**Flow Distinct**|L'opérateur logique **Flow Distinct** analyse les entrées en éliminant les doublons. Alors que l’opérateur **Distinct** mobilise l’intégralité des entrées avant de produire une sortie, l’opérateur **FlowDistinct** retourne chaque ligne à mesure qu’il l’obtient de l’entrée (sauf si la ligne est un doublon, auquel cas elle est supprimée).|  
 |Aucune|**Full Outer Join**|L’opérateur logique **Full Outer Join** retourne chaque ligne répondant au prédicat de jointure de la première entrée (du haut) joint à chaque ligne de la seconde entrée (du bas). Il renvoie également les lignes de :<br /><br /> -la première entrée qui ne possède pas de correspondance dans la seconde entrée ;<br /><br /> -la seconde entrée sans correspondance dans la première entrée.<br /><br /> L'entrée qui ne contient pas les valeurs correspondantes est retournée sous forme de valeur NULL. **Full Outer Join** est un opérateur logique.|  
-|![Icône d’opérateur de parallélisme Gather Streams](../relational-databases/media/parallelism-32x.gif "Icône d’opérateur de parallélisme Gather Streams")|**Gather Streams**|L'opérateur **Gather Streams** n'est utilisé que dans les plans de requête parallèle. **** Cet opérateur mobilise plusieurs flux d'entrée et ne produit qu'un flux de sortie d'enregistrements en associant les flux d'entrée. Le contenu et le format des enregistrements ne sont pas modifiés. Si l'opérateur conserve l'ordre, tous les flux d'entrée doivent alors être classés. Si la sortie est triée, la colonne **Argument** contient un prédicat ORDER BY:() et les noms des colonnes classées. **Gather Streams** est un opérateur logique.|  
+|![Icône d’opérateur de parallélisme Gather Streams](../relational-databases/media/parallelism-32x.gif "Icône d’opérateur de parallélisme Gather Streams")|**Gather Streams**|L'opérateur **Gather Streams** n'est utilisé que dans les plans de requête parallèle. **Cet opérateur** mobilise plusieurs flux d'entrée et ne produit qu'un flux de sortie d'enregistrements en associant les flux d'entrée. Le contenu et le format des enregistrements ne sont pas modifiés. Si l'opérateur conserve l'ordre, tous les flux d'entrée doivent alors être classés. Si la sortie est triée, la colonne **Argument** contient un prédicat ORDER BY:() et les noms des colonnes classées. **Gather Streams** est un opérateur logique.|  
 |![Icône d’opérateur Hash Match](../relational-databases/media/hash-match-32x.gif "Icône d’opérateur Hash Match")|**Hash Match**|L'opérateur **Hash Match** crée une table de hachage en calculant une valeur de hachage pour chaque ligne à partir de son entrée de génération. Un prédicat HASH:() accompagné d’une liste de colonnes utilisées pour créer une valeur de hachage apparaît dans la colonne **Argument** . Ensuite, il calcule, pour chaque ligne de sondage (le cas échéant), une valeur de hachage en utilisant la même fonction de hachage, et consulte la table de hachage pour trouver les correspondances. Si un prédicat résiduel (identifié par RESIDUAL:() dans la colonne **Argument** ) y figure, il doit également trouver les lignes qui doivent lui correspondre. Son comportement dépend de l'opération logique exécutée :<br /><br /> -Pour toutes les jointures, utilisez la première entrée (du haut) pour créer la table de hachage, et la seconde entrée (du bas) pour tester cette table. Les correspondances (ou non correspondances) de sortie sont dictées par le type de jointure. Si plusieurs jointures utilisent la même colonne de jointure, ces opérations sont regroupées dans une équipe de hachage.<br /><br /> -Pour les opérateurs distincts ou d’agrégation, utilisez l’entrée pour créer la table de hachage (en supprimant les doublons et en calculant les expressions d’agrégation). Une fois la table de hachage construite, parcourez-la et sortez toutes les entrées.<br /><br /> -Pour l’opérateur UNION, utilisez la première entrée pour créer la table de hachage (en supprimant les doublons). Utilisez la deuxième entrée (qui ne doit pas comporter de doublons) pour analyser la table de hachage, retourner toutes les lignes sans correspondance, puis analyser la table de hachage et retourner toutes les entrées.<br /><br /> **Hash Match** est un opérateur physique.|  
 |![Icône de l’élément de langage If](../relational-databases/media/if-32x.gif "Icône de l’élément de langage If")|**If**|L'opérateur **If** effectue un traitement conditionnel basé sur une expression. **If** est un élément de langage.|  
 |Aucune|**Inner Join**|L’opérateur logique **Inner Join** retourne chaque ligne répondant à la jointure de la première entrée (du haut) et de la seconde entrée (du bas).|  

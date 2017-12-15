@@ -2,9 +2,12 @@
 title: "Améliorer les performances des index de recherche en texte intégral | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b90d942aa6c056a6a656b1bc2c835e51f468f676
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
-Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
   
 ##  <a name="causes"></a> Causes courantes des problèmes de performances
 ### <a name="hardware-resource-issues"></a>Problèmes liés aux ressources matérielles
@@ -148,7 +151,7 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
   
  `F = 8*10*8=640`  
   
- Le calcul suivant obtient la valeur optimale de **mémoire maximum du serveur**—*M*. **La mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
+ Le calcul suivant obtient la valeur optimale de **mémoire maximum du serveur**—*M*. *L*a mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
   
  `M = 8192-640-500=7052`  
   

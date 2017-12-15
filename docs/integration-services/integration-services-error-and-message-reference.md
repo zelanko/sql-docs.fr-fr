@@ -1,5 +1,5 @@
 ---
-title: Integration Services Error and Message Reference | Documents Microsoft
+title: "Guide de référence des erreurs et des messages propres à Integration Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
-ms.contentlocale: fr-fr
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1202,7 +1200,7 @@ ms.lasthandoff: 09/26/2017
 |0xC0049054|-1073442732|DTS_E_EXPREVALSTATIC_INPUTCOLUMNNAMENOTFOUND|La colonne d'entrée spécifiée est introuvable dans la collection de colonnes d'entrée.|  
 |0xC0049055|-1073442731|DTS_E_EXPREVALSTATIC_INPUTCOLUMNIDNOTFOUND|Échec de la recherche d'une colonne d'entrée par ID de lignage. La colonne d'entrée est introuvable dans la collection de colonnes d'entrée.|  
 |0xC0049056|-1073442730|DTS_E_EXPREVALSTATIC_NOINPUTCOLUMNCOLLECTION|L'expression contient un jeton non reconnu qui est une référence à une colonne d'entrée, mais la collection de colonnes d'entrée n'est pas disponible pour traiter les colonnes d'entrée. La collection de colonnes d'entrée n'a pas été spécifiée pour l'évaluateur d'expression, mais une colonne d'entrée est incluse dans l'expression.|  
-|0xC0049057|-1073442729|DTS_E_EXPREVALSTATIC_VARIABLENOTFOUND|Une variable spécifiée est introuvable dans la collection. Elle n'existe peut-être pas dans l'étendue correcte.. Vérifiez que la variable existe et que l'étendue est correcte.|  
+|0xC0049057|-1073442729|DTS_E_EXPREVALSTATIC_VARIABLENOTFOUND|Une variable spécifiée est introuvable dans la collection. Elle n'existe peut-être pas dans l'étendue correcte. Vérifiez que la variable existe et que l'étendue est correcte.|  
 |0xC0049058|-1073442728|DTS_E_EXPREVALSTATIC_INVALIDTOKENSTATE|Échec de l'analyse de l'expression. L'expression contient un jeton non valide ou incomplet. Elle contient peut-être des éléments non valides, un élément obligatoire manque (notamment des parenthèses fermantes), ou elle n'est peut-être pas correctement formée.|  
 |0xC0049059|-1073442727|DTS_E_EXPREVALSTATIC_INVALIDCASTCODEPAGE|La valeur spécifiée pour le paramètre de page de codes de la conversion en type de données DT_STR ou DT_TEXT n'est pas valide. La page de codes spécifiée n'est pas installée sur l'ordinateur.|  
 |0xC004905A|-1073442726|DTS_E_EXPREVALSTATIC_INVALIDCASTPRECISION|La valeur spécifiée pour le paramètre de précision d'une opération de conversion est hors limites pour la conversion du type.|  
@@ -1354,7 +1352,7 @@ ms.lasthandoff: 09/26/2017
 |0xC0202090|-1071636336|DTS_E_TXPIVOTBADPIVOTKEYVALUE|La valeur de clé de tableau croisé dynamique « %1 » n'est pas valide.|  
 |0xC0202091|-1071636335|DTS_E_ERRORWHILESKIPPINGDATAROWS|Une erreur s'est produite lorsque les lignes de données ont été ignorées.|  
 |0xC0202092|-1071636334|DTS_E_ERRORWHILEREADINGDATAROWS|Une erreur s'est produite lors du traitement du fichier « %1 » sur la ligne de données %2!I64d!.|  
-|0xC0202093|-1071636333|DTS_E_FAILEDTOINITIALIZEFLATFILEPARSER|Une erreur s'est produite lors de l'initialisation de l'analyseur de fichier plat..|  
+|0xC0202093|-1071636333|DTS_E_FAILEDTOINITIALIZEFLATFILEPARSER|Une erreur s'est produite lors de l'initialisation de l'analyseur de fichier plat.|  
 |0xC0202094|-1071636332|DTS_E_UNABLETORETRIEVECOLUMNINFOFROMFLATFILECONNECTIONMANAGER|Impossible d'extraire les informations de colonne à partir du gestionnaire de connexions de fichier plat.|  
 |0xC0202095|-1071636331|DTS_E_FAILEDTOWRITEOUTCOLUMNNAME|Échec de l'écriture du nom de colonne pour la colonne « %1 ».|  
 |0xC0202096|-1071636330|DTS_E_INVALIDFLATFILECOLUMNTYPE|Le type de colonne de la colonne « %1 » est incorrect. Il s'agit du type « %2 ». Seuls les types « %3 » ou « %4 » sont autorisés.|  
@@ -2345,4 +2343,3 @@ ms.lasthandoff: 09/26/2017
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 ne permet pas d'insérer des colonnes de métadonnées externes.|  
   
   
-
