@@ -7,11 +7,11 @@ author: barbkess
 ms.author: barbkess
 ms.topic: article
 ms.technology: database-engine
-ms.openlocfilehash: 4c6368e61f5160f1dff12710a2d152a76a184ca7
-ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.openlocfilehash: f9a888d52c31ca2c5133b70a00e8d25f6e04c29e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 11/29/2017
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/16/2017
                                                 <h3 class="bgdAccent1" style="padding:20px;">Développer</h3>
                                                 <h4>Conception</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/sql-connection-libraries">Connecter avec des applications clientes</a></li>
+                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Connecter avec des applications clientes</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/database-features">Concepts des bases de données relationnelles</a></li>
                                                 </ul>
                                                 <h4>Outils</h4>

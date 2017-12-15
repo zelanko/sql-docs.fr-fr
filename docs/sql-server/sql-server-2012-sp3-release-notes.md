@@ -1,9 +1,9 @@
 ---
 title: "Notes de publication de SQL Server 2012 SP3 | Microsoft Docs"
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 05/17/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5fd9e8545be6cfeacc22e5b465f8bef01e82a746
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 960803406d9dcf81e49b08ecf23c21fdb6e76645
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>Notes de publication de SQL Server 2012 SP3
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Ces notes de publication décrivent des problèmes dont vous devez avoir connaissance avant d’installer ou de dépanner SQL Server 2012 Service Pack 3. Les notes de publication sont disponibles uniquement en ligne, et non sur un support d’installation. Elles sont mises à jour régulièrement à mesure que des problèmes sont identifiés. Pour obtenir la liste des améliorations et des correctifs, consultez [Informations sur SQL Server 2012 Service Pack 3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information).  

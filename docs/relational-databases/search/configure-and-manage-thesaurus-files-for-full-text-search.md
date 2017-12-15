@@ -1,7 +1,7 @@
 ---
 title: "Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -21,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072df52e6a96bae1393f212a3160f549ed2880e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aada9589beecbd40470ff590a8f67cfd069c49f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les requêtes de recherche en texte intégral 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les requêtes de recherche en texte intégral 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent rechercher des synonymes des termes spécifiés par l’utilisateur grâce à un *dictionnaire des synonymes* pour la recherche en texte intégral. Chaque dictionnaire des synonymes définit un jeu de synonymes pour une langue spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données.
 
 La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) et [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) et pour toutes les requêtes [CONTAINS](../../t-sql/queries/contains-transact-sql.md) et [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) qui spécifient la clause `FORMSOF THESAURUS`.

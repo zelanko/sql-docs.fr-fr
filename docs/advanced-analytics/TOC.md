@@ -3,7 +3,7 @@
 # Vue d'ensemble
 ## [Présentation de Microsoft Machine Learning Services](r/r-services.md)
 ## [Nouveautés de Machine Learning](what-s-new-in-sql-server-machine-learning-services.md)
-## [Articles nouveaux et récemment mis à jour](new-updated-advanced-analytics.md)
+## [nouvelles articles et articles mises à jour](new-updated-advanced-analytics.md)
 ## [Architecture et vue d’ensemble](architecture-overview-machine-learning.md)
 ## [Différences dans les fonctionnalités de Machine Learning entre les éditions de SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 

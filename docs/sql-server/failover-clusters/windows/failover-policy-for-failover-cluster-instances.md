@@ -2,10 +2,10 @@
 title: "Stratégie de basculement pour les instances de cluster de basculement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 70117aaa0f1e936fff8c8d78f82636d4e77c460b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dans une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un seul nœud peut posséder le groupe de ressources de cluster de basculement Windows Server (WSFC) à un moment donné. Les demandes des clients sont servies par ce nœud dans la FCI. En cas d'échec et d'un redémarrage infructueux, la propriété du groupe est déplacée vers un autre nœud WSFC dans la FCI. Ce processus s'appelle le basculement. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] augmente la fiabilité de la détection de pannes et fournit une stratégie de basculement flexible.  
