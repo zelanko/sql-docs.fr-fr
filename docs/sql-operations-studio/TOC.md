@@ -1,5 +1,6 @@
 # [SQL Operations Studio (préversion)](what-is.md)
 # [Installer](download.md)
+# [Notes de publication](release-notes.md)
 # Démarrages rapides
 ## [Connexion & interrogation de SQL Server](quickstart-sql-server.md)
 ## [Connexion & interrogation d’Azure SQL Database](quickstart-sql-database.md)
