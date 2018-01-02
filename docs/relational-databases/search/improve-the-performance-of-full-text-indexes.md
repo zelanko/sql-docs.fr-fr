@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Cette rubrique décrit certaines causes courantes à l’origine de performances médiocres des requêtes et des index de recherche en texte intégral. Elle fournit également quelques suggestions pour éviter ces problèmes et améliorer les performances.
@@ -151,7 +151,7 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
   
  `F = 8*10*8=640`  
   
- Le calcul suivant obtient la valeur optimale de **mémoire maximum du serveur**—*M*. *L*a mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
+ Le calcul suivant obtient la valeur optimale de **mémoire maximum du serveur**—*M*. La mémoire physique totale disponible sur ce système en Mo—*T*—est `8192`.  
   
  `M = 8192-640-500=7052`  
   

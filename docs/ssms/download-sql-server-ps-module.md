@@ -3,8 +3,11 @@ title: "Télécharger le module PowerShell SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
-ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.openlocfilehash: 83b535f97682334f6a83f3eb58e2f673c2040b4c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Télécharger le module PowerShell SQL Server
-Le module PowerShell SQL Server fait partie de la version 17.0 de SQL Server Management Studio et il est désormais fourni via PowerShell Gallery.  Le module n’est plus inclus dans le package d’installation de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez en plus installer le module SQL Server sur l’ordinateur.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le module PowerShell SQL Server fait partie de la version 17.0 de SQL Server Management Studio et est désormais fourni via PowerShell Gallery.  Le module n’est plus inclus dans le package d’installation de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez en plus installer le module SQL Server sur l’ordinateur.
 
 Vous pouvez trouver une documentation complète sur l’installation de la dernière version de Windows Management Framework et sur l’installation en général des modules PowerShell sur le site [PowerShell Gallery](https://www.powershellgallery.com/).
 

@@ -13,15 +13,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Planifier l’exécution d’un package SSIS sur Azure
 Vous pouvez planifier l’exécution de packages stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database en choisissant l’une des options de planification suivantes :
--   [SQL Server Agent](#agent)
+-   [Agent SQL Server](#agent)
 -   [Travaux élastiques SQL Database](#elastic)
 -   [Activité de procédure stockée SQL Server Azure Data Factory](#sproc)
 
@@ -62,13 +62,13 @@ Pour planifier un package avec SQL Server Agent localement, créez un travail av
 
 ## <a name="elastic"></a> Planifier un package avec des travaux élastiques SQL Database
 
-Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Conditions préalables
 
 Pour pouvoir utiliser des travaux élastiques afin de planifier des packages SSIS stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database, vous devez effectuer les actions suivantes :
 
-1.  Installez et configurez les tâches de base de données élastique. Pour plus d’informations, consultez [Vue d’ensemble de l’installation des tâches de base de données élastique](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installez et configurez les tâches de base de données élastique. Pour plus d’informations, consultez [Vue d’ensemble de l’installation des tâches de base de données élastique](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Créez des informations d’identification au niveau de la base de données pour permettre aux travaux d’envoyer des commandes à la base de données de catalogues SSIS. Pour plus d’informations, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -121,7 +121,9 @@ Pour planifier un package avec l’activité de procédure stockée SQL Server A
 
 4.  Créez un pipeline Data Factory qui utilise l’activité de procédure stockée SQL Server pour exécuter le package SSIS.
 
-Cette section fournit une vue d’ensemble de ces étapes. La description complète du didacticiel Data Factory dépasse le cadre de cet article. Pour plus d’informations, consultez [Activité de procédure stockée SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+Cette section fournit une vue d’ensemble de ces étapes. La description complète du didacticiel Data Factory dépasse le cadre de cet article. Pour plus d’informations, consultez [Activité de procédure stockée SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity).
+
+Si une exécution planifiée échoue et que l’activité de la procédure stockée ADF fournit un ID d’exécution pour l’exécution qui a échoué, vérifiez le rapport d’exécution pour cet ID dans SSMS, dans le catalogue SSIS.
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Créer un service lié pour l’instance SQL Database qui héberge SSISDB
 Le service lié permet à Data Factory de se connecter à SSISDB.
@@ -225,9 +227,45 @@ END
 GO
 ```
 
+Pour fournir le script SQL montré ci-dessus comme valeur du paramètre `stmt`, vous devez en général inclure la totalité du script sur une seule ligne, comme illustré dans l’exemple suivant. (Le [standard JSON](https://json.org/) ne prend pas en charge les caractères de contrôle, notamment le caractère de contrôle de nouvelle ligne `\n` utilisé dans d’autres langages pour séparer les lignes dans une chaîne multiligne.)
+
+```json
+{
+    "name": "SprocActivitySamplePipeline",
+    "properties": {
+        "activities": [
+            {
+                "type": "SqlServerStoredProcedure",
+                "typeProperties": {
+                    "storedProcedureName": "sp_executesql",
+                    "storedProcedureParameters": {
+                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
+                    }
+                },
+                "outputs": [
+                    {
+                        "name": "sprocsampleout"
+                    }
+                ],
+                "scheduler": {
+                    "frequency": "Minute",
+                    "interval": 15
+                },
+                "name": "SprocActivitySample"
+            }
+        ],
+        "start": "2017-12-06T12:00:00Z",
+        "end": "2017-12-06T12:30:00Z",
+        "isPaused": false,
+        "hubName": "test_hub",
+        "pipelineMode": "Scheduled"
+    }
+}
+```
+
 Pour plus d’informations sur le code de ce script, consultez [Déployer et exécuter des packages SSIS à l’aide de procédures stockées](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur SQL Server Agent, consultez [Travaux de SQL Server Agent pour les packages](../packages/sql-server-agent-jobs-for-packages.md).
 
-Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).

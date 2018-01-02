@@ -19,11 +19,11 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.  
@@ -115,7 +115,7 @@ Ces étapes doivent être effectuées sur un PC exécutant l’édition cliente 
   
 7. Sélectionnez l'onglet **Haute disponibilité AlwaysOn** .  
   
-8. Vérifiez que champ Nom du cluster de basculement Windows contient le nom du nœud de cluster de basculement local. Si ce champ est vide, cette instance de serveur ne prend pas actuellement en charge les groupes de disponibilité AlwaysOn. L'ordinateur local n'est pas un nœud de cluster, le cluster WSFC a été arrêté, ou cette édition de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ne prend pas en charge les groupes de disponibilité AlwaysOn.  
+8. Vérifiez que champ Nom du cluster de basculement Windows contient le nom du nœud de cluster de basculement local. Si ce champ est vide, cette instance de serveur ne prend pas actuellement en charge les groupes de disponibilité AlwaysOn. L’ordinateur local n’est pas un nœud de cluster, le cluster WSFC a été arrêté ou bien cette édition de [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] ne prend pas en charge les groupes de disponibilité AlwaysOn.  
   
 9. Activez la case à cocher Activer les groupes de disponibilité AlwaysOn, puis cliquez sur OK.  
   

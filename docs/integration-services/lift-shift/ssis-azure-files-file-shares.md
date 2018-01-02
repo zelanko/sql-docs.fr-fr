@@ -1,19 +1,19 @@
 ---
 title: "Stocker et récupérer des fichiers sur des partages de fichiers locaux et dans Azure | Microsoft Docs"
 description: "Cet article explique comment utiliser le système de fichiers et les partages de fichiers, aussi bien localement que dans Azure, avec SSIS"
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Stocker et récupérer des fichiers sur des partages de fichiers locaux et dans Azure avec SSIS
 Cet article explique comment mettre à jour vos packages SSIS (SQL Server Integration Services) quand vous effectuez un « lift-and-shift » des packages qui utilisent des systèmes de fichiers locaux dans SSIS au sein d’Azure.
@@ -22,7 +22,7 @@ Cet article explique comment mettre à jour vos packages SSIS (SQL Server Integr
 > Pour le moment, la base de données de catalogues SSIS (SSISDB) prend en charge uniquement un seul ensemble d’informations d’identification d’accès. Le runtime d’intégration Azure SSIS ne peut donc pas utiliser d’informations d’identification distinctes pour se connecter à plusieurs partages de fichiers locaux et partages Azure Files.
 
 ## <a name="store-temporary-files"></a>Stocker les fichiers temporaires
-Si vous devez stocker et traiter des fichiers temporaires au cours d’une seule exécution de package, les packages peuvent utiliser le dossier temporaire `(.)/temp` ou `%TEMP%` de vos nœuds de runtime d’intégration Azure SSIS.
+Si vous devez stocker et traiter des fichiers temporaires au cours d’une même exécution d’un package, les packages peuvent utiliser le répertoire de travail actuel (`.`) ou le répertoire temporaire (`%TEMP%`) de vos nœuds Azure SSIS Integration Runtime.
 
 ## <a name="store-files-across-multiple-package-executions"></a>Stocker des fichiers au cours de plusieurs exécutions de packages
 Si vous devez stocker et traiter des fichiers permanents, et les conserver au cours de plusieurs exécutions de packages, vous pouvez utiliser des partages de fichiers locaux ou Azure Files

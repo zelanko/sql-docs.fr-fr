@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 6860fb131bb645ca918f7095481776884c0f4f6f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d'index en ligne
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,11 +103,11 @@ Quand vous effectuez une regénération d’index en ligne pouvant être reprise
 - Récupération après des échecs de regénération d’index (par exemple les basculements de bases de données ou le manque d’espace disque).
 - Quand une opération d’index est en pause, l’index d’origine et celui qui vient d’être créé nécessitent de l’espace disque et doivent être mis à jour durant les opérations DML.
 
-- Active les journaux de troncation durant une opération de regénération d’index (cette opération ne peut pas être effectuée pour une opération d’index en ligne classique).
+- Active la troncation des journaux des transactions durant une opération de régénération d’index (cette opération ne peut pas être effectuée pour une opération d’index en ligne classique).
 - L’option SORT_IN_TEMPDB=ON n’est pas prise en charge
 
 > [!IMPORTANT]
-> Avec la regénération pouvant être reprise, vous n’êtes pas obligé de maintenir une troncation de longue durée ouverte, ce qui permet la troncation des journaux au cours de cette opération et une meilleure gestion de l’espace des journaux. Avec la nouvelle conception, nous avons réussi à conserver les données nécessaires dans une base de données, ainsi que toutes les références indispensables au redémarrage de l’opération pouvant être reprise.
+> Dans la mesure où la régénération peut être reprise, il n’est pas nécessaire de maintenir ouverte une transaction de longue durée, ce qui permet la troncation des journaux au cours de cette opération et une meilleure gestion de l’espace des journaux. Avec la nouvelle conception, nous avons réussi à conserver les données nécessaires dans une base de données, ainsi que toutes les références indispensables au redémarrage de l’opération pouvant être reprise.
 >
 
 En règle générale, il n’existe aucune différence de performances entre la regénération d’index en ligne avec reprise et sans reprise. Quand vous mettez à jour un index pouvant être repris alors qu’une opération de regénération d’index est en pause :

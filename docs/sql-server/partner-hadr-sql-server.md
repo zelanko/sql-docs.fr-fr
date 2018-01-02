@@ -7,8 +7,8 @@ author: MikeRayMSFT
 manager: jhubbard
 editor: 
 ms.assetid: 
-ms.service: database-engine
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -16,28 +16,27 @@ ms.tgt_pltfrm: NA
 ms.workload: sql-server
 ms.custom: 
 ms.date: 09/17/2017
-ms.prod: sql-server
-ms.prod_service: sql-non-specified
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 0234e7966cc326edf2ce5a85ce03f8e38143f5b5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a37ba047d17dda983d3fbed247df38ebb3a1aaf8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Partenaires pour la haute disponibilité et la récupération d’urgence de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour fournir la haute disponibilité et la récupération d’urgence pour vos services SQL Server, vous pouvez choisir parmi un large éventail d’outils de pointe.  Cet article présente les sociétés partenaires de Microsoft offrant des solutions de haute disponibilité et de récupération d’urgence qui prennent en charge Microsoft SQL Server.
 
 ## <a name="our-high-availability-and-disaster-recovery-partners"></a>Nos partenaires pour la haute disponibilité et la récupération d’urgence
-<!--
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
+<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 | Partenaire |  Description | Liens | 
 | --- | --- | --- |
 |![azure][5] |**Azure Site Recovery**<br>Site Recovery réplique les charges de travail en cours d’exécution sur des machines virtuelles ou des serveurs physiques afin de les garder à disposition dans un emplacement secondaire si le site principal n’est pas disponible. Vous pouvez répliquer et basculer des machines virtuelles SQL Server à partir du centre de données local vers Azure ou vers un autre centre de données local, ou d’un centre de données Azure vers un autre centre de données Azure.<br><br> Éditions Standard et Enterprise de SQL Server 2008 R2 - SQL Server 2016|[Site web][azure_website]<br>[Place de marché][azure_marketplace]<br>[Feuille de données][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Vidéo][azure_youtube]|
 |![dh2i][2] |**DH2i**<br>DxEnterprise est un logiciel de disponibilité intelligente pour Windows, Linux et Docker, qui vous permet d’obtenir des temps d’indisponibilité planifiés ou non les plus proches possibles de zéro, de faire des économies importantes, de bénéficier d’une gestion grandement simplifiée, et d’une consolidation à la fois physique et logique.<br><br>SQL Server 2005+, Windows Server 2008 R2+, Ubuntu 16+, RHEL 7+, CentOS 7+|[Site web][dh2i_website]<br>[Feuille de données][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Vidéo][dh2i_youtube]|
-|![hpe][4] |**HPE Serviceguard**<br>Protégez vos charges de travail SQL Server 2017 critiques sur Linux® contre les temps d’indisponibilité planifiés ou non, dus à une multitude de défaillances des infrastructures et des applications dans des environnements physiques et virtuels à n’importe quelle distance, avec HPE Serviceguard pour Linux (SGLX). Dans le cadre du programme bêta, HPE SGL X offre des options de surveillance et de récupération contextuelles pour l’instance du cluster de basculement et les charges de travail SQL Server des groupes de disponibilité Always On. Optimisez la disponibilité avec HPE SGLX sans compromettre l’intégrité des données et les performances.<br><br>SQL Server 2017 sur Linux - RedHat 7.3, 7.4, SuSE 12 SP2, SP3|[Site web][hpe_website]<br>[Feuille de données][hpe]<br>[Télécharger][hpe_download]<br>[Twitter][hpe_twitter]
+|![hpe][4] |**HPE Serviceguard**<br>Protégez vos charges de travail SQL Server 2017 critiques sur Linux® contre les temps d’indisponibilité planifiés ou non, dus à une multitude de défaillances des infrastructures et des applications dans des environnements physiques et virtuels à n’importe quelle distance, avec HPE Serviceguard pour Linux (SGLX). Dans le cadre du programme bêta, HPE SGLX offre des options de surveillance et de récupération contextuelles pour l’instance du cluster de basculement et les charges de travail SQL Server des groupes de disponibilité Always On. Optimisez la disponibilité avec HPE SGLX sans compromettre l’intégrité des données et les performances.<br><br>SQL Server 2017 sur Linux - RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Site web][hpe_website]<br>[Feuille de données][hpe]<br>[Télécharger la version bêta][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![idera][3]|**IDERA**<br>SQL Safe Backup est une solution de sauvegarde et de récupération à hautes performances pour SQL Server, qui permet des économies en réduisant le temps de sauvegarde des bases de données et la taille des fichiers de sauvegarde, et en fournissant un accès instantané en lecture et en écriture aux bases de données dans les fichiers de sauvegarde.<br><br>Microsoft SQL Server : 2005 SP1 ou ultérieur, 2008, 2008 R2, 2012, 2014, 2016 ; toutes les éditions |[Site web][idera_website]|
 |![portworx][6] |**Portworx**<br>Portworx est la solution pour les conteneurs avec état s’exécutant en production. Avec Portworx, les utilisateurs peuvent gérer toutes les bases de données ou services avec état sur n’importe quelle infrastructure utilisant n’importe quel planificateur de conteneur, notamment Kubernetes, Mesosphere DC/OS et Docker Swarm. Portworx résout les cinq problèmes les plus courants rencontrés par les équipes DevOps lors de l’exécution de bases de données en conteneur et d’autres services avec état en production : persistance, haute disponibilité, automatisation des données, prise en charge de plusieurs magasins de données et infrastructures, et sécurité.<br><br>SQL Server 2017 sur Docker |[Site web][portworx_website]<br>[Documentation][portworx_docs]<br>[Vidéo][portworx_youtube]|
 |![veeam][1] |**Veeam**<br>Veeam Backup & Replication est une solution de sauvegarde et de disponibilité puissante, facile à utiliser et abordable. Elle permet la récupération rapide, flexible et fiable des applications virtualisées et des données, en rassemblant la sauvegarde et la réplication des machines virtuelles dans une même solution logicielle. Veeam Backup & Replication a reçu plusieurs récompenses pour sa prise en charge des environnements virtuels VMware vSphere et Microsoft Hyper-V.<br><br>SQL Server 2005 SP4 - SQL Server 2016 sur Windows |[Site web][veeam_website]<br>[Feuille de données][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[Vidéo][veeam_youtube]|
@@ -99,3 +98,6 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [su
 
 <!--Download links-->
 [hpe_download]: http://downloads.linux.hpe.com/SDR/project/sglx/sglx-beta/
+
+<!--Blog links-->
+[hpe_blog]: https://community.hpe.com/t5/Servers-The-Right-Compute/SQL-Server-for-Linux-Is-Here-and-A-New-Chapter-for-Mission/ba-p/6977571#.WiHWW0xFwUE
