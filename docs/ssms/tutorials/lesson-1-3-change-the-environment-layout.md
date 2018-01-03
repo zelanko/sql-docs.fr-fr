@@ -3,7 +3,7 @@ title: "Changer la disposition d’environnement | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Leçon 1-3 - Changer la disposition d’environnement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les composants de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] occupent de l’espace à l’écran. Pour disposer de davantage d'espace, vous pouvez fermer, masquer ou déplacer des composants de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Les exercices pratiques proposés ici apprennent à déplacer les composants vers différents endroits.  
@@ -57,7 +57,7 @@ Vous pouvez personnaliser la présentation des composants de [!INCLUDE[ssManStud
   
 1.  Cliquez avec le bouton droit dans la barre de titre de l'Explorateur d'objets et notez la présence des options de menu suivantes :  
   
-    -   Float  
+    -   float  
   
     -   Ancrer  
   

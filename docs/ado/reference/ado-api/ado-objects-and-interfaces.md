@@ -3,7 +3,7 @@ title: Les Interfaces et les objets ADO | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71a89ccaf6d6c8ce7022d2441814b2a6284d1993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad14c7327d3dc7186ff86c3ca0ba84d206143973
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-objects-and-interfaces"></a>Objets et interfaces ADO
 Les relations entre ces objets sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -37,7 +37,7 @@ Les relations entre ces objets sont représentées dans le [modèle objet ADO](.
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Construit un ADO **enregistrement** objet OLE DB **ligne** objet dans une application C/C++.|  
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Construit un ADO **Recordset** objet OLE DB **ensemble de lignes** objet dans une application C/C++.|  
 |[ADOStreamConstruction, interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Construit un ADO **flux** objet OLE DB **IStream** objet dans une application C/C++.|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.<br /><br /> Le **commande** l’objet n’est pas sécurisé pour le script.|  
+|[Commandee](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.<br /><br /> Le **commande** l’objet n’est pas sécurisé pour le script.|  
 |[Connexion](../../../ado/reference/ado-api/connection-object-ado.md)|Représente une connexion ouverte à une source de données.<br /><br /> Le **connexion** objet est sécurisé pour le script.|  
 |[IDSOShapeExtensions, interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet sous-jacent de la Source de données OLE DB pour le fournisseur SHAPE.|  
 |[Erreur](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> Le **erreur** objet n’est pas sécurisé pour le script.|  

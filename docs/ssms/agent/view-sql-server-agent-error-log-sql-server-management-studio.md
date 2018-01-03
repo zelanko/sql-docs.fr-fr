@@ -3,7 +3,7 @@ title: "Afficher le journal des erreurs de SQL Server Agent (SQL Server Managem
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076b87df4f1bde154da48ba960d2919f1c149672
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7f3587e7262a4df9d4ce45a89cd925ff74eafb44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment afficher le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -47,7 +47,7 @@ La visionneuse du fichier journal affiche les informations de journalisation de 
 ## <a name="BeforeYouBegin"></a>Avant de commencer  
   
 ### <a name="Restrictions"></a>Limitations et restrictions  
-Cependant, l'Explorateur d'objets affiche le nœud de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] uniquement si vous avez l'autorisation de l'utiliser.  
+Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 ### <a name="Security"></a>Sécurité  
   

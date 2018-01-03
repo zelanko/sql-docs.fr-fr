@@ -3,7 +3,7 @@ title: "Boîte de dialogue Index - Clés (Visual Database Tools) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a246ec54d0b0cd439bbdbd8f81acb6ad3be7d9c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fa2fa79f818c344f9228dffe500fbe96236954b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Boîte de dialogue Index - Clés (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez cette boîte de dialogue pour créer ou modifier des index, des clés primaires et des clés uniques. Pour y accéder, ouvrez la définition de table pour la table possédant l’index ou la clé, cliquez avec le bouton droit sur la grille de définition de table et cliquez sur **Index/Clés**.  
@@ -39,7 +39,7 @@ Répertorie les clés primaires ou uniques et les index existants. Sélectionnez
 **Ajouter**  
 Crée une nouvelle clé primaire ou unique ou un nouvel index.  
   
-**Delete**  
+**Supprimer**  
 Supprime la clé ou l’index sélectionné dans la liste **Clé ou index Primary/Unique sélectionné** .  
   
 **Catégorie Général**  
@@ -119,7 +119,7 @@ Spécifie si le [!INCLUDE[ssDE](../../includes/ssde_md.md)] sous-jacent calcule 
 **Verrouillage de ligne autorisé**  
 Spécifier si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données. Il est recommandé de choisir le paramètre **Oui**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utilisation des contraintes (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
 [Utilisation des clés (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

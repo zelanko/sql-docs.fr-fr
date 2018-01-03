@@ -3,7 +3,7 @@ title: ParameterDirectionEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df9cadb2a5ccf23602df0b9cae6d67c881f647ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51083883a293bb44c76cadf3971e920e8c3ed05c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Spécifie si le [paramètre](../../../ado/reference/ado-api/parameter-object.md) représente un paramètre d’entrée, un paramètre de sortie, à la fois une entrée et un paramètre de sortie, ou la valeur de retour d’une procédure stockée.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|Valeur par défaut. Indique que le paramètre représente un paramètre d’entrée.|  
+|**adParamInput**| 1|Valeur par défaut. Indique que le paramètre représente un paramètre d’entrée.|  
 |**adParamInputOutput**|3|Indique que le paramètre représente un paramètre d’entrée et de sortie.|  
 |**adParamOutput**|2|Indique que le paramètre représente un paramètre de sortie.|  
 |**adParamReturnValue**|4|Indique que le paramètre représente une valeur de retour.|  

@@ -3,7 +3,7 @@ title: "Propriétés de la colonne (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 647187fc56293cf1d30b2daa4150f1ad05503338
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ef372c7a1716fe9e928b3567c52c654268f7a3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  
@@ -50,14 +50,14 @@ Peut être développée pour afficher les propriétés **Nom** et **Base de donn
 **Nom**  
 Indique le nom de la colonne.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
 Affiche le nom de la source de données pour la colonne sélectionnée. (S'applique uniquement à OLE DB.)  
   
 **Catégorie Divers**  
 S'étend pour afficher les propriétés restantes.  
   
 **Type de données**  
-Indique le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://msdn.microsoft.com/en-us/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incrément d'identité**  
 Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
@@ -95,7 +95,7 @@ Affiche le nom de la colonne. Pour modifier le nom, tapez-le dans la zone de tex
 > [!CAUTION]  
 > S'il existe des requêtes, des vues, des fonctions définies par l'utilisateur, des procédures stockées ou des programmes qui font référence à la colonne, la modification du nom rend ces objets non valides.  
   
-**Autoriser les valeurs NULL**  
+**Null autorisé**  
 Précise si le type de données de la colonne autorise les valeurs NULL.  
   
 **Type de données**  

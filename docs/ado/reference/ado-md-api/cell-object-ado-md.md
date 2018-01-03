@@ -3,7 +3,7 @@ title: Cell, objet (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e35b30a2474f43ee1d46e23ae4a4323cca47f16b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f48b3cf06a7c11e29e87e462b037053906ff10d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cell-object-ado-md"></a>Objet de cellule (ADO MD)
 Représente les données à l’intersection des coordonnées des axes d’un ensemble de cellules.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **cellule** est retourné par la [élément](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriété d’un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet.  
   
  Les collections et les propriétés d’un **cellule** de l’objet, vous pouvez procédez comme suit :  
@@ -46,7 +46,7 @@ Représente les données à l’intersection des coordonnées des axes d’un en
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |CouleurFond|Couleur d’arrière-plan utilisée pour afficher la cellule.|  
 |FontFlags|Masque de bits détaillant les effets de la police.|  

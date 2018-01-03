@@ -3,7 +3,7 @@ title: ConnectPromptEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbb4f3f854f319d31f91f8e7f0d8a15cf4263495
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 89c339b294a3afc968a6a9f5307d3a06995a7454
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Spécifie si une boîte de dialogue doit être affichée pour demander les paramètres manquants lors de l’ouverture d’une connexion à une source de données.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|Toujours demander.|  
+|**adPromptAlways**| 1|Toujours demander.|  
 |**adPromptComplete**|2|Vous demande si plus d’informations est nécessaire.|  
 |**adPromptCompleteRequired**|3|Vous demande si plus d’informations est requis mais les paramètres optionnels ne sont pas autorisés.|  
 |**adPromptNever**|4|Ne jamais demander.|  

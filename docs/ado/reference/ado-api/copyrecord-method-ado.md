@@ -3,7 +3,7 @@ title: "CopyRecord, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9459d144016deaaec593a8edd92bf5b518a8962b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50749d088c57754ef9b667b114da8fb4f475ad19
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord, méthode (ADO)
 Copie une entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) vers un autre emplacement.  
@@ -40,27 +40,27 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient une URL spécifiant l’entité à copier (par exemple, un fichier ou répertoire). Si *Source* est omis ou spécifie une chaîne vide, le fichier ou le répertoire représenté par les [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) seront copiés.  
+ Facultatif. A **chaîne** valeur qui contient une URL spécifiant l’entité à copier (par exemple, un fichier ou répertoire). Si *Source* est omis ou spécifie une chaîne vide, le fichier ou le répertoire représenté par les [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) seront copiés.  
   
  *Destination*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient une URL spécifiant l’emplacement où *Source* seront copiés.  
+ Facultatif. A **chaîne** valeur qui contient une URL spécifiant l’emplacement où *Source* seront copiés.  
   
  *UserName*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Destination*.  
+ Facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Destination*.  
   
  *Mot de passe*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
+ Facultatif. A **chaîne** valeur qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
   
  *Options*  
- Ce paramètre est facultatif. A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valeur qui a la valeur par défaut **adCopyUnspecified**. Spécifie le comportement de cette méthode.  
+ Facultatif. A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) valeur qui a la valeur par défaut **adCopyUnspecified**. Spécifie le comportement de cette méthode.  
   
  *Async*  
- Ce paramètre est facultatif. A **booléenne** valeur lorsque **True**, indique que cette opération doit être asynchrone.  
+ Facultatif. A **booléenne** valeur lorsque **True**, indique que cette opération doit être asynchrone.  
   
 ## <a name="return-value"></a>Valeur retournée  
  A **chaîne** valeur qui retourne généralement la valeur de *Destination*. Toutefois, la valeur exacte retournée dépend du fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les valeurs de *Source* et *Destination* ne doit pas être identiques ; sinon, une erreur d’exécution se produit. Au moins un des noms de serveur, chemin d’accès ou ressource doit être différent.  
   
  Tous les enfants (par exemple, les sous-répertoires) de *Source* sont copiés de manière récursive, à moins que **valeur adCopyNonRecursive** est spécifié. Dans une opération récursive, *Destination* ne doit pas être un sous-répertoire de *Source*; sinon, l’opération ne sera pas terminée.  

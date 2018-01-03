@@ -3,7 +3,7 @@ title: "Définir un alias SQL Server pour le service SQL Server Agent | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78edcd258efdc5649819c9966ec662fa7abd34fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edfacdbd7bcf47191cc3093b620f1c530355b36a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Définir un alias SQL Server pour le service SQL Server Agent (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique indique comment définir un alias [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se sert pour se connecter au [!INCLUDE[ssDE](../../includes/ssde_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Par défaut, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent se connecte à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] par l'intermédiaire de canaux de communication nommés qui utilisent des noms de serveur dynamiques ne nécessitant aucune configuration supplémentaire du client. Vous devez configurer un alias de connexion serveur uniquement si vous n'utilisez pas le transport réseau par défaut ou si vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] via un autre canal nommé.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ne fonctionnera correctement que si vous sélectionnez un alias qui se réfère à l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
--   Cependant, l'Explorateur d'objets affiche le nœud de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] uniquement si vous avez l'autorisation de l'utiliser.  
+-   Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 ### <a name="Security"></a>Sécurité  
   

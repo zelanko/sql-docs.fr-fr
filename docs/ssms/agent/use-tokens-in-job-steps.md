@@ -3,7 +3,7 @@ title: "Utiliser des jetons dans les étapes d’un travail | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent vous permet d’utiliser des jetons dans des scripts d’étape de travail [!INCLUDE[tsql](../../includes/tsql_md.md)]. Ces jetons avec lesquels vous rédigez des étapes de travail vous offrent la même flexibilité que les variables lors de l'écriture de programmes logiciels. Après que vous avez inséré un jeton dans un script d'étape de travail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent le remplace au moment de l'exécution avant que le sous-système [!INCLUDE[tsql](../../includes/tsql_md.md)] n'exécute l'étape de travail.  
   
 > [!IMPORTANT]  
-> Depuis le Service Pack 1 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] , la syntaxe des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent a changé. Une macro d'échappement doit désormais accompagner tous les jetons employés dans les étapes de travail, sans quoi ces dernières échoueront. L'emploi de macros d'échappement et la mise à jour des étapes de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent utilisant des jetons sont abordés dans les sections « Utilisation de jetons », « Jetons et macros[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent » et « Mise à jour des étapes de travail pour l'utilisation de macros » ci-après. De plus, la syntaxe [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] qui faisait usage de crochets pour identifier des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent (par exemple, «`[DATE]`») a également changé. Vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Par exemple :  
+> Depuis le Service Pack 1 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] , la syntaxe des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent a changé. Une macro d'échappement doit désormais accompagner tous les jetons employés dans les étapes de travail, sans quoi ces dernières échoueront. L'emploi de macros d'échappement et la mise à jour des étapes de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent utilisant des jetons sont abordés dans les sections « Utilisation de jetons », « Jetons et macros[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent » et « Mise à jour des étapes de travail pour l'utilisation de macros » ci-après. De plus, la syntaxe [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] qui faisait usage de crochets pour identifier des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent (par exemple, «`[DATE]`») a également changé. Vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
 >   
 > `$(ESCAPE_`*macro name*`(DATE))`  
   
@@ -145,7 +145,7 @@ L'exemple suivant s'inscrit dans un script chargé d'extraire le `job_id` dans l
 <pre>SELECT * FROM msdb.dbo.sysjobs  
 WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
 [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)  
   

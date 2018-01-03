@@ -3,7 +3,7 @@ title: "Ouvrir le Concepteur de schémas de base de données (Visual Database To
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5303f21c4cb7b5e95d8c23b75f7b606eaf299175
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 546a7179bb17b96d96e9e71613db868fa8aa9092
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Ouvrir le Concepteur de schémas de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’outil visuel Concepteur de schémas de base de données permet de concevoir et de visualiser une base de données à laquelle vous êtes connecté. Lors du design d'une base de données, le Concepteur de bases de données permet de créer, de modifier ou de supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes. Pour visualiser une base de données, vous pouvez créer un ou plusieurs schémas illustrant toutes les tables, colonnes, clés et relations, ou quelques-unes d'entre elles.  
@@ -54,6 +54,6 @@ Vous pouvez ouvrir le Concepteur de schémas de base de données en ouvrant un n
   
 3.  Le menu **Schéma de base de données** est ajouté au menu principal et le schéma s’ouvre dans le volet de concepteur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

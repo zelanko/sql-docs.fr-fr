@@ -3,7 +3,7 @@ title: "Choisir la table cible pour Insert Results, boîte de dialogue (Visual D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ab56a5548e59cac0f7f2d6f84d35453942ce1f6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8acff0ca01947c905615542de85bd2da9b0c5be6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Boîte de dialogue Choisir la table cible pour Insert Results (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permet de spécifier la table à laquelle les lignes de données seront ajoutées suite à l’exécution d’une requête INSERT RESULTS. Cette boîte de dialogue s'affiche lorsque vous démarrez une requête INSERT RESULTS.  
@@ -36,6 +36,6 @@ Sélectionnez dans la liste le nom de la table dans laquelle des lignes doivent 
 > [!NOTE]  
 > Vous pouvez modifier la table dans laquelle vous souhaitez insérer des lignes dans la fenêtre **Propriétés** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes Insert Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-insert-results-queries-visual-database-tools.md)  
   

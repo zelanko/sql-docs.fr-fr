@@ -3,7 +3,7 @@ title: "Index de texte intégral, boîte de dialogue (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 612d6cb328d1c93ed3f215c34ea243e1c6ff5a45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1c81ecbf34a24d718f891987e396a2a4e7beabfa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue permet de créer un index de texte intégral si vous souhaitez effectuer des recherches en texte intégral sur les colonnes de type texte de vos tables de base de données. Un index de texte intégral se base sur un index normal ; vous devez donc d'abord le créer. L'index normal doit être créé sur une colonne unique, non null ; il est conseillé de choisir une colonne contenant des petites valeurs plutôt que des grandes.  
@@ -97,7 +97,7 @@ Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incr
 **Nom d'index unique**  
 Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser l'Assistant Indexation de texte intégral](http://msdn.microsoft.com/en-us/3e9d9605-6525-4781-9168-fdaa06db3459)  
 [CREATE FULLTEXT INDEX (Transact-SQL)](http://msdn.microsoft.com/en-us/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
   

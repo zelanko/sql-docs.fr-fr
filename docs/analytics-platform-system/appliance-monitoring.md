@@ -3,10 +3,10 @@ title: "Dispositif de surveillance (système de plateforme Analytique)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 253864fb-9178-41d2-a0ae-5dd9fd0a4fda
 caps.latest.revision: "25"
-ms.openlocfilehash: dbbae960d5e4d88b6cb725c9e22fc36a428b9264
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d85f311df05a0aa43e074226d639493e1513153
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-monitoring"></a>Surveillance de l’appliance
 Ce Guide de surveillance de matériel décrit les outils et les tâches de surveillance de l’appliance SQL Server PDW.  
@@ -69,7 +69,7 @@ Si votre solution d’analyse ne prend pas en charge directe Transact\-requêtes
    
 ## <a name="Tasks"></a>Liées de tâches de surveillance  
   
-|Tâche d’analyse| Description|  
+|Tâche d’analyse|Description|  
 |-------------------|---------------|  
 |Contrôler le matériel à l’aide de la Console d’administration.|[Contrôler le matériel à l’aide de la Console d’administration &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Contrôler le matériel à l’aide de vues système.|[Contrôler le matériel à l’aide de vues système &#40; Système de plateforme Analytique &#41;](monitor-the-appliance-by-using-system-views.md)|  

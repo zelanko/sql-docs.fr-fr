@@ -3,7 +3,7 @@ title: "LineSeparator, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6eefc91488558d00a58b8d5f1ff5127ec30a5a23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 183f0847a6a70ff5191b7fb0755c928448ffa3ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator, propriété (ADO)
 Indique le caractère binaire à utiliser comme séparateur de ligne dans le texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
@@ -32,7 +32,7 @@ Indique le caractère binaire à utiliser comme séparateur de ligne dans le tex
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) valeur qui indique le caractère de séparation de ligne utilisé dans le **flux**. La valeur par défaut est **adCRLF**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **LineSeparator** est utilisé pour interpréter les lignes lors de la lecture du contenu d’un texte **flux**. Lignes peuvent être ignorées en cliquant sur le [SkipLine](../../../ado/reference/ado-api/skipline-method.md) (méthode).  
   
  **LineSeparator** est utilisé qu’avec du texte **flux** objets ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeText**). Cette propriété est ignorée si **Type** est **adTypeBinary**.  

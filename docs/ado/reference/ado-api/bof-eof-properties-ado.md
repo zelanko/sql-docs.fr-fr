@@ -3,7 +3,7 @@ title: "Début de fichier EOF, propriétés (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e97052bce1e27e7730ffa73d04a8ba95f8af233c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c2b827856eac7ec2eed9ca4f3580b2a12418933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bof-eof-properties-ado"></a>Début de fichier EOF, propriétés (ADO)
 -   **BOF** indique que la position actuelle se trouve avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Valeur retournée  
  Le **BOF** et **EOF** propriétés retour **booléenne** valeurs.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **BOF** et **EOF** propriétés afin de déterminer si un **Recordset** objet contient des enregistrements ou si vous avez dépassé les limites d’un **Recordset**  lorsque vous déplacez d’un enregistrement à l’objet.  
   
  Le **BOF** propriété renvoie **True** (-1) si la position actuelle est avant le premier enregistrement et **False** (0) si la position actuelle est l’ou après le premier enregistrement.  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/17/2017
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Déplacer < 0|Déplacer 0|MoveNext,<br /><br /> Déplacer > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Autorisé|Erreur|Erreur|Autorisé|  
-|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Erreur|Erreur|  
-|Les deux **True**|Erreur|Erreur|Erreur|Erreur|  
+|**BOF**=**True**, **EOF**=**False**|Autorisé|Error|Error|Autorisé|  
+|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Error|Error|  
+|Les deux **True**|Error|Error|Error|Error|  
 |Les deux **False**|Autorisé|Autorisé|Autorisé|Autorisé|  
   
  Ce qui permet une **déplacer** méthode ne garantit pas que la méthode parviendra à localiser un enregistrement ; cela signifie uniquement que l’appel spécifié **déplacer** méthode ne génère pas d’une erreur.  

@@ -3,7 +3,7 @@ title: "L’objet Recordset (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 02d767f733ed8cb3767d49cf092ff67d1e37ef54
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dec2c20c2450f4db1d0671f365714647c47c7db6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-object-ado"></a>Objet Recordset (ADO)
 Représente l’ensemble d’enregistrements à partir d’une table de base ou les résultats d’une commande exécutée. À tout moment, le **Recordset** objet fait référence à un seul enregistrement dans le jeu en tant que l’enregistrement actif.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous utilisez **Recordset** objets pour manipuler des données à partir d’un fournisseur. Lorsque vous utilisez ADO, vous manipulez les données à l’aide de presque entièrement **Recordset** objets. Tous les **Recordset** objets sont constitués d’enregistrements (lignes) et des champs (colonnes). Selon les fonctionnalités prises en charge par le fournisseur, certaines **Recordset** méthodes ou propriétés ne peuvent pas être disponibles.  
   
  ADODB. Jeu d’enregistrements est le ProgID qui doit être utilisé pour créer un **Recordset** objet. Applications existantes qui font référence à l’objet ADOR obsolète. Le ProgID Recordset continueront à fonctionner sans avoir à recompiler, mais tout nouveau développement doit faire référence à ADODB. Jeu d’enregistrements.  

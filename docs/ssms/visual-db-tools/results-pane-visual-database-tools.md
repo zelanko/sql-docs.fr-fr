@@ -3,7 +3,7 @@ title: "Volet Résultats (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72c6d376b55df42961420aacb9d768324196c21f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e2b2fc492396c2831f4a007ef0f3b491a22671ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="results-pane-visual-database-tools"></a>Volet Résultats (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le volet Résultats montre les résultats de la dernière requête SELECT exécutée. (Les résultats des autres types de requêtes sont affichés dans des boîtes de messages.) Pour ouvrir le volet Résultats, ouvrez ou créez une requête ou encore une vue, ou retournez les données d'une table. Si le volet Résultats ne s'affiche pas par défaut, dans le menu **Concepteur de requêtes** , pointez sur **Volet**, puis cliquez sur **Résultats**.  
@@ -68,7 +68,7 @@ Lorsque vous travaillez sur les résultats d'une requête ou d'une vue, il est p
   
 Si une requête est modifiée, une icône d'alerte avec le texte « Requête modifiée » apparaît dans le coin inférieur droit du volet Résultats. L'icône apparaît également dans le coin supérieur gauche du volet.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Exécuter des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

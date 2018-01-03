@@ -3,7 +3,7 @@ title: "Créer des scripts au moyen de modèles | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e042e4083d3e62543cee463e2d8456f162b945aa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41b8e42e5af6b1fbdd5a094ba4df63938e2dea21
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>Leçon 3-1 - Créer des scripts au moyen de modèles
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un grand nombre de modèles de scripts contenant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour la plupart des tâches courantes. Ces modèles contiennent des paramètres pour les valeurs fournies par les utilisateurs, telles que les noms des tables. À l'aide de ces paramètres, vous pouvez taper un nom une fois puis le copier automatiquement partout où cela est nécessaire dans le script. Vous pouvez écrire vos propres modèles personnalisés pour prendre en compte les scripts que vous écrivez souvent. Vous pouvez également réorganiser l'arborescence des modèles, déplacer des modèles ou créer de nouveaux dossiers pour y stocker des modèles. Au cours de cet exercice, vous allez utiliser un modèle pour créer une base de données en spécifiant un modèle de classement.  

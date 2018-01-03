@@ -3,7 +3,7 @@ title: "Autres méthodes d’affichage de la fenêtre de code | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dae743368f92cb4b274629ac66e727b07639d38b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 027435e6ffe5fed7d62aac3b7a583872ca9f8fe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-5---other-ways-of-viewing-the-code-window"></a>Leçon 2-5 - Autres méthodes d’affichage de la fenêtre de code
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La fenêtre de code peut être configurée pour afficher plusieurs fenêtres de code de différentes façons.  

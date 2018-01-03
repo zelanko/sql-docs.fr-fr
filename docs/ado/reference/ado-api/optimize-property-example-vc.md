@@ -3,7 +3,7 @@ title: "Optimiser l’exemple de propriété (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07c69f576fcd1c85bd293c01c7b7995f7b7e1e9f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b7ef91419c5891d4f49aacfb0c50712609aeec8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize-property-example-vc"></a>Optimiser l’exemple de propriété (VC ++)
 Cet exemple illustre la [champ](../../../ado/reference/ado-api/field-object.md) objet dynamique **optimiser** propriété. Le **zip** champ le **auteurs** de table dans le **Pubs** base de données n’est pas indexée. Définissant le [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété **True** sur la **zip** champ autorise ADO pour créer un index qui améliore les performances de la [trouver](../../../ado/reference/ado-api/find-method-ado.md)(méthode).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 // Optimize_Property_Sample.cpp  

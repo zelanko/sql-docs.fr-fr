@@ -3,7 +3,7 @@ title: Index de la syntaxe ADO | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7adcbadefe3af5939679b6e6ce8bfe44667f95be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e185dbb815485553a133898a5802ecf5f9d5521c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-syntax-indexes"></a>Index de la syntaxe ADO
 La syntaxe d’appel des méthodes et propriétés ADO diffère selon votre environnement de développement. Le reste de la référence du langage ADO utilise le langage de programmation Microsoft Visual Basic pour illustrer la syntaxe de méthode et la propriété ADO. Toutefois, reportez-vous aux sections suivantes pour les exemples de syntaxe plus spécifiques en fonction de votre langage de programmation et la méthodologie :  

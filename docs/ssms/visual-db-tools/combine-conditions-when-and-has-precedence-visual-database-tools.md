@@ -3,7 +3,7 @@ title: "Associer des conditions avec priorité à l’opérateur AND (Visual Dat
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 375048e54f6cf1b95650a4f21deac8137ece5242
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 33d6a936357454191378295a2387b30b5884df38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur AND (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour associer des conditions avec AND, vous ajoutez deux fois la colonne à la requête, une fois pour chaque condition. Pour associer des conditions à l’aide de l’opérateur OR, vous indiquez la première condition dans la colonne Filtre et les autres conditions dans une colonne **Ou...** .  
@@ -63,9 +63,9 @@ Imaginez que vous souhaitiez, par exemple, rechercher des employés travaillant 
       (job_lvl = 200)  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Associer des conditions avec priorité à l'opérateur OR (Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[Règles pour l'entrée de valeurs de recherche (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Règles pour l’entrée de valeurs de recherche (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [Spécifier des critères de recherche (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "Afficher les propriétés d’un schéma (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c0a4d49bd6608ca7a1f375945e6267f935e73885
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27700f030ab97818cfcbdb6b5389417f37118c9b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Afficher les propriétés d'un schéma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez afficher les propriétés d’un schéma de base de données dans la fenêtre Propriétés.  
@@ -39,6 +39,6 @@ ms.lasthandoff: 12/05/2017
   
 Les propriétés du schéma s’affichent à présent dans la fenêtre **Propriétés** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "Créer une alerte utilisant un numéro d’erreur | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c3313c7af9cc115e69ba2d81e3f9436ae57e9f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2d3bf4ca04661851126927360cef3c9c3326f408
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Créer une alerte avec un numéro d’erreur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer une alerte [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent survenant dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] qui sera déclenchée quand une erreur avec un numéro spécifique se produira à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -85,7 +85,7 @@ Par défaut, seuls les membres du rôle serveur fixe **sysadmin** peuvent exécu
   
 #### <a name="to-create-an-alert-using-an-error-number"></a>Pour créer une alerte avec un numéro d'erreur  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

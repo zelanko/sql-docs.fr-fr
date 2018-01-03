@@ -3,7 +3,7 @@ title: "Joindre, boîte de dialogue (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d463f00d5c86368858f18d2dfc3d72f989de88e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f5cb437552b01e7bd7027dc8285f2939198a5037
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Boîte de dialogue Joindre (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez cette boîte de dialogue afin de spécifier des options de jointure de tables. Pour accéder à cette boîte de dialogue, sélectionnez une ligne de jointure dans le volet **Design** . Ensuite, dans la fenêtre **Propriétés** , cliquez sur **Condition et type de jointure**, puis sur le bouton de sélection **(…)** qui s’affiche à droite de la propriété.  
@@ -50,7 +50,7 @@ Lorsque vous sélectionnez une option pour créer une jointure externe, le losan
 > [!NOTE]  
 > Les mots « gauche » et « droite » ne correspondent pas forcément à la position des tables dans le volet Schéma. « Gauche » désigne la table dont le nom apparaît à gauche du mot clé JOIN dans l'instruction SQL et « droite » la table dont le nom apparaît à droite du mot clé JOIN. Si vous déplacez les tables dans le volet **Schéma** , vous ne changez en rien cette désignation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

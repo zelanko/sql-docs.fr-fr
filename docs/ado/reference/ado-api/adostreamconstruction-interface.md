@@ -3,7 +3,7 @@ title: Interface de ADOStreamConstruction | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e22c76c1e484e544e53d9ee313e6e303b7f0b8f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 58d8769837d186f3e9bc1decc9559cf39cb22ec8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adostreamconstruction-interface"></a>Interface de ADOStreamConstruction
 Le **ADOStreamConstruction** interface est utilisée pour construire un ADO **flux** objet OLE DB **IStream** objet dans une application C/C++.  
@@ -41,7 +41,7 @@ Le **ADOStreamConstruction** interface est utilisée pour construire un ADO **fl
 ## <a name="events"></a>Événements  
  Aucun.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Étant donné un OLE DB **IStream** objet (`pStream`), la construction de ADO **flux** objet (`adoStr`) s’élève à trois opérations ci-après :  
   
 1.  Créer un ADO **flux** objet :  

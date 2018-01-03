@@ -3,7 +3,7 @@ title: "Exécuter des requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2cf3c97dc3e53472fe22cefd22ee8ba0e68ca13
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fe328cd267fd93be9bf6745b28de1ef710d31d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-queries-visual-database-tools"></a>Exécuter des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous avez terminé de concevoir votre requête, vous pouvez l’exécuter.  
@@ -45,7 +45,7 @@ Le Concepteur de requêtes et de vues retourne les résultats à votre ordinateu
   
 En cas de création d'une requête Update, Insert From, Insert Into, Delete ou Make Table, le Concepteur de requêtes et de vues affiche un message indiquant le nombre de lignes concernées par la requête.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

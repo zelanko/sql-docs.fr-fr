@@ -3,7 +3,7 @@ title: "Propriétés de la requête (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7b8519c310eff1942280345c77c630aeea23e56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0140ad78a13b1dda752ee0c3f303094578c4f158
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriétés de la requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ces propriétés apparaissent dans la fenêtre Propriétés quand vous avez une requête ouverte dans le Concepteur de requêtes et de vues. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés.  
@@ -39,7 +39,7 @@ Se développe pour afficher la propriété **Nom** .
 **Nom**  
 Affiche le nom de la requête en cours. Ne peut pas être modifié dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
-**Nom de la base de données**  
+**Database Name**  
 Indique le nom de la source de données pour la table sélectionnée.  
   
 **Nom de serveur**  
@@ -82,13 +82,13 @@ Utilisez cette zone pour modifier le nombre de lignes à retourner ou pour spéc
 **Expression**  
 Spécifie le nombre ou le pourcentage de lignes que la requête doit retourner. Si vous affectez à **Pour cent** la valeur Oui, le nombre indique le pourcentage de lignes que la requête doit retourner ; si vous affectez à **Pour cent** la valeur Non, le nombre représente le nombre de lignes à retourner. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
   
-**Pour cent**  
+**Pourcentage**  
 Spécifie que la requête doit retourner uniquement les *n* premiers pour cent de lignes dans le jeu de résultats. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
   
 **Avec liens**  
 Spécifie que la vue inclura une clause WITH TIES. WITH TIES est utile si une vue inclut une clause ORDER BY et une clause TOP basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause ORDER BY, la vue est agrandie de façon à inclure ces lignes. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Requête avec des paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "Renommer un journal d’erreurs de l’Agent SQL Server (SQL Server Ma
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e02a0e69df8e230d2255c8abc0f7c064999a477
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 83b8bbd9c08ac115c093a0c06b5dc2df6cd5bb57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rename-a-sql-server-agent-error-log-sql-server-management-studio"></a>Rename a SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment renommer le fichier où sont consignées les erreurs de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="Restrictions"></a>Limitations et restrictions  
   
--   Cependant, l'Explorateur d'objets affiche le nœud de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] uniquement si vous avez l'autorisation de l'utiliser.  
+-   Cependant, l'Explorateur d'objets affiche le nœud de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent uniquement si vous avez l'autorisation de l'utiliser.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent n'écrira pas dans le nouveau fichier journal tant que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent n'est pas redémarré.  
   

@@ -3,7 +3,7 @@ title: "DeleteRecord, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66d13bc4449bad73b1ab09869a764e6bff533442
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eedc8d14c94ec89554651cdfce03af0eb63315cf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord, méthode (ADO)
 Supprime une entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -40,12 +40,12 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient une URL qui identifie l’entité (par exemple, le fichier ou le répertoire) à supprimer. Si *Source* est omis ou spécifie une chaîne vide, l’entité représentée par le [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) est supprimé. Si l’enregistrement est une collection ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, par exemple un répertoire) tous les enfants (par exemple, les sous-répertoires) seront également supprimés.  
+ Facultatif. A **chaîne** valeur qui contient une URL qui identifie l’entité (par exemple, le fichier ou le répertoire) à supprimer. Si *Source* est omis ou spécifie une chaîne vide, l’entité représentée par le [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) est supprimé. Si l’enregistrement est une collection ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, par exemple un répertoire) tous les enfants (par exemple, les sous-répertoires) seront également supprimés.  
   
  *Async*  
- Ce paramètre est facultatif. A **booléenne** valeur lorsque **True**, spécifie que l’opération de suppression est asynchrone.  
+ Facultatif. A **booléenne** valeur lorsque **True**, spécifie que l’opération de suppression est asynchrone.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Opérations sur l’objet représenté par ce **enregistrement** peuvent échouer après l’exécution de cette méthode. Après avoir appelé **DeleteRecord**, le **enregistrement** doit être fermé, car le comportement de la **enregistrement** peut devenir imprévisible selon lorsque le fournisseur met à jour le **Enregistrement** avec la source de données.  
   
  Si cette **enregistrement** a été obtenu à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), puis les résultats de cette opération seront répercutées immédiatement dans le **Recordset**. Actualiser le **Recordset** en fermant et en rouvrant ou en exécutant la **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) (méthode), la [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode), ou [Resync](../../../ado/reference/ado-api/resync-method.md) (méthode).  

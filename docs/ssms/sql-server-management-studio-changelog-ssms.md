@@ -3,7 +3,7 @@ title: SQL Server Management Studio - Journal des modifications (SSMS) | Microso
 ms.custom: 
 ms.date: 12/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: f6a8a753f3bb272ebd1a98429a5f224dce717f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cet article fournit des détails sur les mises à jour, les améliorations et les correctifs de bogues des versions actuelles et précédentes de SSMS. Téléchargez les [versions précédentes de SSMS ci-dessous](#previous-ssms-releases).
@@ -418,7 +418,7 @@ Disponibilité générale | Numéro de build : 14.0.17099.0
 - Correctifs de la personnalisation dans les écrans de démarrage pour SSMS et le profileur
 - Suppression dans SSMS de l’interface utilisateur du point de contrôle de l’utilitaire
 - SSMS peut maintenant créer des bases de données SQL Azure dans l’édition « PremiumRS »
-- Groupes de disponibilité AlwaysOn
+- Groupes de disponibilité Always On
   - Ajout de la prise en charge pour de nouveaux types de cluster : EXTERNAL et NONE
     - Ajout de la prise en charge de SQL Server sur Linux
     - Ajout de l’amorçage automatique comme option pour la synchronisation initiale des données
@@ -665,7 +665,7 @@ Généralement disponible | Numéro de version : 13.0.15700.28
 
 * [Nouvelle option d’authentification **« Authentification universelle Active Directory »**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Il s’agit d’un système d’authentification par jeton piloté par Azure Active Directory, qui prend en charge des mécanismes d’authentification multifacteur, par mot de passe et intégrée.
 
-* Nouveaux modèles d’événements étendus correspondant à la fonctionnalité des modèles SQL Server Profiler [(article Microsoft Connect n°2543925).](../tools/sql-server-profiler/sql-server-profiler-templates.md).
+* Nouveaux modèles d’événements étendus correspondant à la fonctionnalité des modèles SQL Server Profiler [(article Microsoft Connect n°2543925)](../tools/sql-server-profiler/sql-server-profiler-templates.md).
 
 * Nouvelles boîtes de dialogue Créer une base de données et Propriétés de la base de données pour les bases de données SQL Azure.
 

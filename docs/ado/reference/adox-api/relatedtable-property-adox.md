@@ -3,7 +3,7 @@ title: "RelatedTable, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89fe6b4cc220ef3ac524dd6069066ce75be22544
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4ef62d978a455b652dc283fe1ae3060f2504cf9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable, propriété (ADOX)
 Indique le nom de la table associée.  
@@ -37,7 +37,7 @@ Indique le nom de la table associée.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **chaîne** valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur par défaut est une chaîne vide ("").  
   
  Si la clé est une clé étrangère, puis **RelatedTable** est le nom de la table qui contient la clé.  

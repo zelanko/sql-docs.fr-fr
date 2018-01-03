@@ -3,7 +3,7 @@ title: "Item, propriété (ensemble de cellules ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b0d4a5f2104d625091a0b39f1b009b933bedbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36b85e56dbe958739b55f9446c368d01d8b436f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-ado-md-cellset"></a>Propriété de l’élément (ensemble de cellules ADO MD)
 Récupère une cellule d’un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) à l’aide de ses coordonnées.  
@@ -49,7 +49,7 @@ Cell = Cellset.Item ( Positions)
   
 -   La position ordinale  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **élément** propriété à retourner un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) de l’objet dans un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet. Si le **élément** propriété ne peut pas trouver la cellule correspondant à la *Positions* argument, une erreur se produit.  
   
  Le **élément** propriété est la propriété par défaut pour le **ensemble de cellules** objet. Les formes de syntaxe suivantes sont interchangeables :  
@@ -59,7 +59,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le *Positions* argument spécifie la cellule à retourner. Vous pouvez spécifier la cellule par position ordinale ou par la position le long de chaque axe. Lorsque vous spécifiez la cellule par position le long de chaque axe, vous pouvez spécifier la valeur numérique de la position ou les noms des membres pour chaque position.  
   
  La position ordinale est un nombre qui identifie de façon unique une cellule dans le **ensemble de cellules**. Point de vue conceptuel, les cellules sont numérotées dans un **ensemble de cellules** comme si le **ensemble de cellules** ont été un *p*-tableau unidimensionnel, où *p* est le nombre d’axes. Les cellules sont traitées dans l'ordre ligne-champ. Voici la formule pour calculer le nombre ordinal d’une cellule :  

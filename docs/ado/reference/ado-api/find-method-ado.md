@@ -3,7 +3,7 @@ title: "Find (méthode) (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3f2a2af33a7355084f85e80fda3ff92e5415adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-method-ado"></a>Find (méthode) (ADO)
 Recherche un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour la ligne qui répond aux critères spécifiés. Si vous le souhaitez, la direction de recherche, de la ligne de début et du décalage à partir de la ligne de début peut être spécifiée. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement trouvé. dans le cas contraire, la position est définie à la fin (ou démarrer) de la **Recordset**.  
@@ -49,9 +49,9 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Facultatif*.* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valeur qui spécifie si la recherche doit commencer sur la ligne actuelle ou de la ligne suivante dans la direction de la recherche. Une recherche s’arrête à la fin de la **Recordset** si la valeur est **adSearchForward**. Une recherche s’arrête au début de la **Recordset** si la valeur est **adSearchBackward**.  
   
  *Démarrer*  
- Ce paramètre est facultatif. A **Variant** signet qui indique la position de départ pour la recherche.  
+ Facultatif. A **Variant** signet qui indique la position de départ pour la recherche.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Seul un nom de colonne unique peut être spécifié dans *critères*. Cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  
   
  L’opérateur de comparaison dans *critères* peut être «**>**« (supérieur à), »**\<**» (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), « <> » (différent de) ou « like » (correspondance).  

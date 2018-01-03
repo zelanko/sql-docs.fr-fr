@@ -3,7 +3,7 @@ title: "Imprimer les résultats d’une requête (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f3633d69465df3d595d9145dfada1f80bf14d04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Imprimer les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour imprimer les résultats de votre requête, vous pouvez copier le contenu du [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) dans un autre programme Windows, un traitement de texte par exemple, puis le mettre en forme et l’imprimer.  
@@ -45,6 +45,6 @@ Le Concepteur de requêtes et de vues met les résultats de la requête dans le 
   
 5.  Mettez en forme les résultats, puis imprimez-les.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

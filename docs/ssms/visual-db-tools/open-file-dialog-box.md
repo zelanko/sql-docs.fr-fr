@@ -3,7 +3,7 @@ title: "Boîte de dialogue Ouvrir un fichier | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 894dcee809aac7b3d32b30f1ee5fdc988eb8b009
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **Ouvrir un fichier** permet d’ouvrir un fichier existant à partir du disque. Vous pouvez également utiliser cette boîte de dialogue pour ouvrir un fichier déjà ouvert en utilisant des options d'encodage linguistique différentes.  
@@ -35,7 +35,7 @@ Pour accéder à cette boîte de dialogue, sélectionnez **Ouvrir** dans le menu
 > Avant d'ouvrir un projet ou un composant dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], déterminez la fiabilité de son code. Le fait d'ouvrir le projet ou le composant dans un [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] peut entraîner l'exécution de son code dans un processus approuvé sur votre ordinateur local.  
   
 ## <a name="option"></a>Option  
-**Regarder dans**  
+**Look in**  
 Recherchez le dossier de projet existant dans ce menu déroulant. Si vous sélectionnez un dossier dans cette liste, son contenu s'affiche dans le volet principal.  
   
 ## <a name="my-places-bar"></a>Barre Mon environnement  
@@ -68,7 +68,7 @@ Atteint le niveau suivant supérieur de l'arborescence.
 **Rechercher sur le Web**  
 Ce bouton n'est pas disponible.  
   
-**Delete**  
+**Supprimer**  
 Supprime les fichiers ou dossiers sélectionnés du support de stockage.  
   
 **Nouveau dossier**  
@@ -98,7 +98,7 @@ Cette commande n'est pas disponible.
 ## <a name="tools"></a>Outils  
 Sélectionnez un outil à appliquer à l'élément sélectionné dans le volet du sommaire.  
   
-**Delete**  
+**Supprimer**  
 Supprime le fichier ou dossier sélectionné du support de stockage.  
   
 **Mapper un lecteur réseau**  

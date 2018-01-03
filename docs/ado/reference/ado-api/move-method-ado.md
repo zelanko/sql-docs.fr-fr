@@ -3,7 +3,7 @@ title: "Move, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d1db74ef70a98467e320dc09ff4e19c5935ac04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47239335259fc7bee4d01ef01741e4148f1a3ea0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-method-ado"></a>Move, méthode (ADO)
 Déplace la position de l’enregistrement actif dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -43,9 +43,9 @@ recordset.Move NumRecords, Start
  Connecté **Long** expression qui spécifie le nombre d’enregistrements qui se déplace de la position actuelle.  
   
  *Démarrer*  
- Ce paramètre est facultatif. A **chaîne** valeur ou **Variant** qui correspond à un signet. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
+ Facultatif. A **chaîne** valeur ou **Variant** qui correspond à un signet. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **déplacer** méthode est prise en charge sur tous les **Recordset** objets.  
   
  Si le *NbEnregistrements* argument est supérieure à zéro, la position actuelle se déplace vers l’avant (vers la fin de la **Recordset**). Si *NbEnregistrements* est inférieur à zéro, la position actuelle se déplace vers l’arrière (vers le début de la **Recordset**).  

@@ -3,7 +3,7 @@ title: "ConnectionString, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString, propriété (ADO)
 Indique les informations utilisées pour établir une connexion à une source de données.  
@@ -32,12 +32,12 @@ Indique les informations utilisées pour établir une connexion à une source de
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **ConnectionString** propriété pour spécifier une source de données en passant une chaîne de connexion détaillée contenant une série de *argument* *= valeur* instructions séparées par points-virgules.  
   
  ADO prend en charge cinq arguments pour la **ConnectionString** propriété ; toutes les autres passe arguments directement au fournisseur sans aucun traitement par ADO. Le prend en charge de ADO arguments est les suivantes.  
   
-|Argument| Description|  
+|Argument|Description|  
 |--------------|-----------------|  
 |*Fournisseur =*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
 |*Nom du fichier =*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  

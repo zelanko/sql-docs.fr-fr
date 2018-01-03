@@ -3,7 +3,7 @@ title: "Propriétés de l’étape du travail - Nouvelle étape du travail (page
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fb87fbdb20c9872d502543f125911eb638cfc8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13f3553e80052f9264f70d0018d8d1157aaacb14
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriétés de l’étape du travail - Nouvelle étape du travail (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher et changer les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou pour définir une nouvelle étape de travail.  
@@ -39,7 +39,7 @@ Définissez le sous-système utilisé par l'étape du travail. En fonction du so
 **Exécuter en tant que**  
 Définissez le compte proxy pour l'étape du travail. Les membres du rôle serveur fixe sysadmin peuvent également spécifier le **Compte de service SQL Server Agent**.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
 Définissez la base de données où est exécutée l'étape du travail. Cette option est disponible pour tous les types d'étapes de travail.  
   
 **Command**  
@@ -137,7 +137,7 @@ Copie le texte sélectionné.
 Colle le contenu du Presse-papiers.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Options des étapes de travail de l'Agent de lecture de file d'attente de la réplication  
-**Base de données**  
+**Sauvegarde de la base de données**  
 Base de données à utiliser pour l'étape du travail.  
   
 **Tout sélectionner**  
@@ -371,7 +371,7 @@ Spécifiez les options dans la fenêtre de ligne de commande.
 **Ligne de commande**  
 Tapez les options de ligne de commande à utiliser pour ce package.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)  
 [Travaux de SQL Server Agent pour les packages](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
 [Administration des agents de réplication](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  

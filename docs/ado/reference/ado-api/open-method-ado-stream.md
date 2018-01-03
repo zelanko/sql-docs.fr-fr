@@ -3,7 +3,7 @@ title: "Open (méthode) (flux ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e93255bf18f91377f8d62400a236208507cb8c8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-stream"></a>Open (méthode) (flux ADO)
 Ouvre un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet à manipuler des flux de données binaire ou texte.  
@@ -40,21 +40,21 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Ce paramètre est facultatif. A **Variant** valeur qui spécifie la source de données pour le **flux**. *Source* peut contenir une chaîne d’URL absolue qui pointe vers un nœud existant dans une arborescence connue, par exemple un système de fichiers ou de messagerie. Une URL doit être spécifiée à l’aide du mot clé URL (« URL =*schéma*://*server*/*dossier*»). Vous pouvez également *Source* peut contenir une référence à un déjà ouvert [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, qui ouvre le flux par défaut associé à la **enregistrement**. Si *Source* n’est pas spécifié, un **flux** est instancié et ouvert, associé à aucune source sous-jacente par défaut. Pour plus d’informations sur les schémas d’URL et de leurs fournisseurs associés, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Facultatif. A **Variant** valeur qui spécifie la source de données pour le **flux**. *Source* peut contenir une chaîne d’URL absolue qui pointe vers un nœud existant dans une arborescence connue, par exemple un système de fichiers ou de messagerie. Une URL doit être spécifiée à l’aide du mot clé URL (« URL =*schéma*://*server*/*dossier*»). Vous pouvez également *Source* peut contenir une référence à un déjà ouvert [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, qui ouvre le flux par défaut associé à la **enregistrement**. Si *Source* n’est pas spécifié, un **flux** est instancié et ouvert, associé à aucune source sous-jacente par défaut. Pour plus d’informations sur les schémas d’URL et de leurs fournisseurs associés, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
- Ce paramètre est facultatif. A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **flux** (par exemple, en lecture/écriture ou en lecture seule). Valeur par défaut est **adModeUnknown**. Consultez le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour plus d’informations sur les modes d’accès. Si *Mode* n’est pas spécifié, il est hérité par l’objet source. Par exemple, si la source de **enregistrement** est ouvert en mode lecture seule, le **flux** sera également ouvert en mode lecture seule par défaut.  
+ Facultatif. A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **flux** (par exemple, en lecture/écriture ou en lecture seule). Valeur par défaut est **adModeUnknown**. Consultez le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour plus d’informations sur les modes d’accès. Si *Mode* n’est pas spécifié, il est hérité par l’objet source. Par exemple, si la source de **enregistrement** est ouvert en mode lecture seule, le **flux** sera également ouvert en mode lecture seule par défaut.  
   
  *OpenOptions*  
- Ce paramètre est facultatif. A [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valeur. Valeur par défaut est **adOpenStreamUnspecified**.  
+ Facultatif. A [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valeur. Valeur par défaut est **adOpenStreamUnspecified**.  
   
  *UserName*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient l’ID d’utilisateur qui, s’il est nécessaire, accède à la **flux** objet.  
+ Facultatif. A **chaîne** valeur qui contient l’ID d’utilisateur qui, s’il est nécessaire, accède à la **flux** objet.  
   
  *Mot de passe*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient le mot de passe, s’il est nécessaire, accède à la **flux** objet.  
+ Facultatif. A **chaîne** valeur qui contient le mot de passe, s’il est nécessaire, accède à la **flux** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsqu’un **enregistrement** objet est passé comme paramètre source, le *UserID* et *mot de passe* paramètres ne sont pas utilisés, car l’accès à la **enregistrement** objet est déjà disponible. De même, la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) de la **enregistrement** objet est transféré vers le **flux** objet. Lorsque *Source* n’est pas spécifié, le **flux** ouvert ne contient aucune donnée et a un [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de zéro (0). Pour éviter de perdre des données qui sont écrit à ce **flux** lors de la **flux** est fermée, enregistrer le **flux** avec la [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) ou [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) méthodes, ou l’enregistrer dans un autre emplacement de mémoire.  
   
  Un *si OptionsOuverture a* valeur **adOpenStreamFromRecord** identifie le contenu de la *Source* le paramètre doit être déjà ouvert **enregistrement**objet. Le comportement par défaut consiste à traiter *Source* comme une URL qui pointe directement vers un nœud dans une arborescence, telle qu’un fichier. Le flux par défaut associé à ce nœud est ouvert.  

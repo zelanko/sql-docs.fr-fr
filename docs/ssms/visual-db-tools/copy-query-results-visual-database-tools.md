@@ -3,7 +3,7 @@ title: "Copier les résultats d’une requête (Visual Database Tools) | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5bab1e49dc6e83401fec2ac6f0210f27801a7387
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 913fb6061bed6eaa47eff5f92d5d1c3064b1731f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copier les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des tabulations à partir du volet **Résultats**. Vous pouvez copier le jeu de résultats complet ou plusieurs lignes ou cellules contiguës ou non contiguës.  
@@ -55,6 +55,6 @@ ms.lasthandoff: 12/05/2017
   
 5.  Cliquez avec le bouton droit, puis cliquez sur **Copier**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

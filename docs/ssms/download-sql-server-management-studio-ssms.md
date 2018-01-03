@@ -1,9 +1,9 @@
 ---
 title: "Télécharger SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -30,14 +30,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 90ffdbc2b636c360fd145c83847704f9860d6c37
-ms.sourcegitcommit: f376e735c7315d6bdedb16244ad5f5f6428631d9
+ms.openlocfilehash: efd1e5f85968f90af166a14eb58526b66f20cf3a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SSMS est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. SSMS fournit des outils pour configurer, surveiller et administrer les instances de SQL. Utilisez SSMS pour déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, mais aussi pour créer des requêtes et des scripts.
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] SSMS est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. SSMS fournit des outils pour configurer, surveiller et administrer les instances de SQL. Utilisez SSMS pour déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, mais aussi pour créer des requêtes et des scripts.
 
 Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer vos bases de données et entrepôts de données, où qu’ils se trouvent (sur votre ordinateur local ou dans le cloud).
 
@@ -179,7 +179,7 @@ Il n’existe aucun problème connu.
 
 
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 - [Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Documentation de SQL Server Management Studio](sql-server-management-studio-ssms.md)

@@ -3,7 +3,7 @@ title: Command, objet (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2f4aab59ac3a5296d4dcd75927b632f7a6915d46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cc65eed5ff64351932689c2f54d7fab44f7e0915
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-object-ado"></a>Objet de commande (ADO)
 Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez un **commande** objet pour interroger une base de données et de renvoyer des enregistrements dans une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, pour exécuter une opération en bloc ou pour manipuler la structure d’une base de données. Selon les fonctionnalités du fournisseur, certaines **commande** collections, méthodes ou propriétés peuvent générer une erreur lorsqu’elles sont référencées.  
   
  Avec les collections, les méthodes et les propriétés d’un **commande** de l’objet, vous pouvez procédez comme suit :  

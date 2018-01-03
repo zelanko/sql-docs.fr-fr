@@ -3,7 +3,7 @@ title: "Ouvrir des requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2efbc1e30f7cd67529e0df143e4ac47c5ada294
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 32d326f9f2c07413405ce32c0c90de9d567a3bcc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-queries-visual-database-tools"></a>Ouvrir des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ouvrir une requête existante dans le Concepteur de requêtes et de vues en utilisant la commande **Ouvrir**.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Par défaut, le Concepteur de requêtes et de vues ouvre tous ses volets (SQL, Critères, Schéma et Résultats), mais cette valeur par défaut peut être modifiée dans la boîte de dialogue **Options** . Pour ouvrir ces volets s’ils sont fermés, dans le menu **Concepteur de requêtes** , pointez sur **Volet**, puis cliquez sur le volet que vous souhaitez ouvrir.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Enregistrer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

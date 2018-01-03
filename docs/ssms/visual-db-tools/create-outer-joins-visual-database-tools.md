@@ -3,7 +3,7 @@ title: "Créer des jointures externes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccbda35c56aaa7aeb221ff3f0c7527b0389eebe8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5847977926b80ef1cf98172b7b59c3e8a0a1c02
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Créer des jointures externes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Par défaut, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) crée une jointure interne entre des tables. Les jointures internes éliminent les lignes qui ne correspondent pas à une ligne de l'autre table. Quant aux jointures externes, elles retournent toutes les lignes d'au moins une des tables ou vues mentionnées dans la clause FROM, pour autant que ces lignes répondent à une des conditions de recherche WHERE ou HAVING. Pour inclure, dans l'ensemble de résultats, des lignes de données qui n'ont pas de correspondances dans la table jointe, vous pouvez créer une jointure externe.  
@@ -63,7 +63,7 @@ FROM employee LEFT OUTER JOIN jobs
 WHERE (jobs.job_id IS NULL)  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Boîte de dialogue Joindre &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   

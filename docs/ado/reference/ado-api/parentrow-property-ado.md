@@ -3,7 +3,7 @@ title: "ParentRow, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8869e091c0f48981d60893ed0d3f698aeee0c8b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d7aa68b89272bd9a6c39f7ae770898e169a90d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentrow-property-ado"></a>ParentRow, propriété (ADO)
 Définit le conteneur d’OLE DB **ligne** de l’objet sur un **ADORecordConstruction** de l’objet, afin que le parent de la ligne est activé dans ADO **enregistrement** objet.  

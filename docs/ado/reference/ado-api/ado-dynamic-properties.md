@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55158776c72f16a8988edb0e8a552f64672935e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98b2e7a1c4cbd7063379249b9d7fb0ac3264a56f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-dynamic-properties"></a>Propriétés dynamiques ADO
 Les propriétés dynamiques peuvent être ajoutées à la [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collections de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [commande](../../../ado/reference/ado-api/command-object-ado.md), ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets. La source de ces propriétés est un fournisseur de données, telles que la [fournisseur OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), ou un fournisseur de services, tels que les [le Service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Consultez le fournisseur de données approprié ou la documentation pour plus d’informations sur une propriété dynamique spécifique du fournisseur de service.  

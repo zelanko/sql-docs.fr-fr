@@ -3,7 +3,7 @@ title: "Supprimer des requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 168fe3c2e6e9de016b99a318165457bab8ba83c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d7382118fab66c765107b16d5e48221548211514
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-queries-visual-database-tools"></a>Supprimer des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez supprimer une requête en l’éliminant du projet et en la supprimant définitivement du système de fichiers. Les requêtes supprimées à l'aide de la procédure suivante ne sont pas envoyées à la Corbeille et ne peuvent pas être récupérées.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Si vous souhaitez éliminer la requête du projet sans la supprimer, cliquez sur **Enlever**. Ensuite, vous pouvez cliquer avec le bouton droit sur le dossier de requête et choisir **Ajouter un élément** pour rechercher et rajouter la requête ultérieurement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Effacer les résultats d’une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
 [Abandonner les modifications apportées aux requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

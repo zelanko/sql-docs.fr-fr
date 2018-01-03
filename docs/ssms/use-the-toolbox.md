@@ -3,7 +3,7 @@ title: "Utiliser la boîte à outils | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f8899fed233516fce93277a48f2ceb652212ff8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a33bf533868113e2fda6b550a36ac9e9969a96b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-toolbox"></a>Utiliser la boîte à outils
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez sélectionner et faire glisser des éléments, du texte et des contrôles à partir de la boîte à outils vers des formulaires, des pages et des générateurs, puis faire glisser ces éléments à partir de ces sources de nouveau vers la boîte à outils pour une utilisation ultérieure. Par exemple, dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , vous pouvez faire glisser une tâche vers un plan de maintenance.  
@@ -48,6 +48,6 @@ Les éléments de la boîte à outils sont regroupés dans des sections appelés
 |Déplacer un élément sous un onglet développé de la boîte à outils|Faites glisser l'élément vers son nouvel emplacement, puis relâchez le bouton de la souris.|  
 |Renommer un élément de la boîte à outils|Cliquez avec le bouton droit sur l’élément de la boîte à outils, puis cliquez sur **Renommer un élément** dans le menu contextuel.|  
   
-## <a name="see-also"></a>Voir aussi  
-[Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
+## <a name="see-also"></a> Voir aussi  
+[Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

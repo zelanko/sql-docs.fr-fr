@@ -3,7 +3,7 @@ title: "Constantes énumérées ADOX | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ec43e5030e6bb335e7089af38be9ba6b5effb55
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d531e41fdba4e012ed1d33dcf3efa180065e7697
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-enumerated-constants"></a>Constantes énumérées ADOX
 Pour faciliter le débogage, les constantes énumérées ADOX répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version d’ADOX à l’autre. Votre code doit uniquement dépendre du nom, pas la valeur réelle, de constantes énumérées.  
   
  Les constantes énumérées suivantes sont définies.  
   
-|Énumération| Description|  
+|Énumération|Description|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Spécifie le type d’action à effectuer lorsque **SetPermissions** est appelée.|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Spécifie si les enregistrements avec des valeurs null sont indexés.|  

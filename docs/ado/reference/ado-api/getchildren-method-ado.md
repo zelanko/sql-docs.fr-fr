@@ -3,7 +3,7 @@ title: "GetChildren, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46f9af9b4cb1b4648acc75389f7d75cccdc46b96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fff51cb110366031907d8aeaa272f72eb7dc0fd2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getchildren-method-ado"></a>GetChildren, méthode (ADO)
 Retourne un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dont les lignes représentent les enfants d’une collection [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -41,7 +41,7 @@ Set recordset = record.GetChildren
 ## <a name="return-value"></a>Valeur retournée  
  A **Recordset** objet pour lequel chaque ligne représente un enfant d’actuel **enregistrement** objet. Par exemple, les enfants d’un **enregistrement** que représente un répertoire, sont les fichiers et sous-répertoires contenus dans le répertoire parent.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le fournisseur détermine les colonnes qui figureront dans retourné **Recordset**. Par exemple, un fournisseur de source de document retourne toujours une ressource **Recordset**.  
   
 ## <a name="applies-to"></a>S'applique à  

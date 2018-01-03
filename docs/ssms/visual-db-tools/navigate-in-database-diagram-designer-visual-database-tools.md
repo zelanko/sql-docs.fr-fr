@@ -3,7 +3,7 @@ title: "Naviguer dans le Concepteur de schémas de base de données (Visual Data
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2745dbdedeac792e45e9d7c9cc59fb95f7bca7b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bd6aa99f77bd9a2a43e9c910007466beba9bc9f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de schémas de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez travailler dans le Concepteur de schémas de base de données à l’aide du clavier ou de la souris. Pour connaître les méthodes spécifiques utilisées dans le Concepteur de schémas de base de données, consultez les tableaux suivants.  
@@ -43,6 +43,6 @@ ms.lasthandoff: 12/05/2017
 |Modifier la quantité d'informations affichées dans une table|Ctrl+T|  
 |Zoom|Ctrl+Touche Plus ou Moins|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

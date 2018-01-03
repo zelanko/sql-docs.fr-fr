@@ -3,7 +3,7 @@ title: "Collection d’erreurs (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b3fffa48412387178006c66a97a0cbd6a9f3a93a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66afd514c40c646fad62d5fc0302bc486af7e653
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-collection-ado"></a>Collection d’erreurs (ADO)
 Contient tous les [erreur](../../../ado/reference/ado-api/error-object.md) objets créés en réponse à une erreur liée au fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Toute opération impliquant des objets ADO peut générer une ou plusieurs erreurs de fournisseur. Lorsqu’une erreur survient, un ou plusieurs **erreur** objets peuvent être placés dans le **erreurs** collection de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Lorsqu’une autre opération ADO génère une erreur, le **erreurs** collection est désactivée et le nouvel ensemble de **erreur** objets peuvent être placés dans le **erreurs** collection.  
   
  Chaque **erreur** objet représente une erreur de fournisseur spécifique, pas une erreur ADO. Les erreurs ADO sont exposées au mécanisme de gestion des exceptions runtime. Par exemple, dans Microsoft Visual Basic, l’occurrence d’une erreur ADO spécifique déclenchera un [onError](../../../ado/reference/rds-api/onerror-event-rds.md) événement et s’affichent dans le **Err** objet.  

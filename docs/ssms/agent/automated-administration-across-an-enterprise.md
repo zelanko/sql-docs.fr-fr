@@ -3,7 +3,7 @@ title: "Administration automatisée à l’échelle d’une entreprise | Microso
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77867115cb6d169bf7a3c84c8737d54f9657651f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 915518355263cb9977313abf5d2063556dccdd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le fait d’automatiser l’administration sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est appelé *administration multiserveur*. Utilisez l'administration multiserveur dans les cas suivants :  
@@ -84,7 +84,7 @@ Contient des informations concernant le transfert d'événements des serveurs ci
 [Paramétrer l'administration automatisée dans une entreprise](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Contient des informations décrivant la façon dont l'administration automatisée au sein d'un environnement multiserveur exploite les fonctionnalités d'autoconfiguration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques relatives à la compatibilité descendante pour l’installation du moteur de base de données SQL Server](http://msdn.microsoft.com/en-us/10de5ec6-d3cf-42ef-aa62-1bdf3fbde841)  
 [Inscription des serveurs](http://msdn.microsoft.com/en-us/c2a2513e-fa09-419c-99e7-a12d57c5a0db)  
 [sp_add_targetservergroup](http://msdn.microsoft.com/en-us/acb69343-d766-46ff-b771-0c7655c5231a)  

@@ -3,7 +3,7 @@ title: "Supprimer des colonnes des requêtes (Visual Database Toolss) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fdffb968590c41dd6a0158c5777dad3c38483411
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb5152ae022bd736492f01d2a370443cc42850b5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>Supprimer des colonnes des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si vous ne souhaitez plus utiliser une colonne figurant dans une requête, vous pouvez la supprimer. Dans ce cas, le Concepteur de requêtes et de vues supprime toutes les références à cette colonne dans la liste de sélection, les spécifications de tri, les critères de recherche, le **volet SQL**et toute autre spécification de regroupement.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Supprimez toutes les références à la colonne dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Ajouter des colonnes à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md)  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  

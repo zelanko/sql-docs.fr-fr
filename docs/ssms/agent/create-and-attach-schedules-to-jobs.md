@@ -3,7 +3,7 @@ title: "Créer des planifications et les attacher à des travaux | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc61a3323ae24d1c571b743fa4d0d2bed3278585
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1f516bb0add6bd1f415260f061b1de77bf2b22a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Créer des planifications et les attacher à des travaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La planification des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent consiste à définir la ou les conditions qui déclenchent leur exécution sans intervention de l’utilisateur. Vous pouvez planifier l'exécution automatique d'un travail en lui créant une planification ou en lui attachant une planification existante.  
@@ -50,7 +50,7 @@ Une planification peut être définie par rapport à une heure ou un événement
   
 -   ponctuellement, à une date et une heure spécifiques ;  
   
--   selon une planification périodique.  
+-   Selon une planification récurrente.  
   
 Vous pouvez remplacer vos planifications du travail par des alertes qui répondent à un événement par l'exécution d'un travail.  
   
@@ -87,7 +87,7 @@ Avant de définir des travaux à exécuter pendant l'inactivité de l'UC, déter
   
 Définissez l'inactivité de l'UC comme un pourcentage en dessous duquel l'utilisation de l'UC doit se maintenir pendant une période donnée. Définissez ensuite la durée. Lorsque le taux d'utilisation de l'UC reste inférieur au pourcentage spécifié pendant un certain temps (défini par l'utilisateur), l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] démarre tous les travaux dont l'exécution est planifiée aux moments d'inactivité de l'UC. Pour plus d’informations sur l’utilisation de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] ou de l’Analyseur de performances visant à surveiller le taux d’utilisation de l’UC, consultez [Surveillance de l’utilisation du processeur](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -96,7 +96,7 @@ Définissez l'inactivité de l'UC comme un pourcentage en dessous duquel l'utili
 |Décrit la méthode à suivre pour planifier un travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Planifier un travail](../../ssms/agent/schedule-a-job.md)|  
 |Indique comment définir la condition d'inactivité de l'UC pour votre serveur.|[Définir le seuil et la durée d’inactivité de l’UC &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
 [sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

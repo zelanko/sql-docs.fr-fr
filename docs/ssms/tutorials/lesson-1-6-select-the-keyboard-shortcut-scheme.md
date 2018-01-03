@@ -3,7 +3,7 @@ title: "Sélectionner le schéma de raccourcis clavier | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f2ec0b8dd3142775006740726340df64994be660
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 914f73712e5a8f3120017cf414d968dd323bb98b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>Leçon 1-6 - Sélectionner le schéma de raccourcis clavier
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Au lieu du schéma de clavier [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] standard, vous pouvez configurer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser un schéma de clavier compatible avec [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Définir les options de démarrage](../../tools/sql-server-management-studio/lesson-1-7-set-the-startup-options.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
 [Personnaliser des menus et des touches de raccourci](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
   

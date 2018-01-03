@@ -3,7 +3,7 @@ title: "Utiliser des rapports personnalisés avec les propriétés des nœuds de
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez exécuter des rapports personnalisés dans le contexte d’un nœud de l’Explorateur d’objets si les rapports personnalisés font référence aux paramètres de rapport de ce nœud. Un rapport peut ainsi exploiter le contexte actuel (par exemple, la base de données actuelle ou un objet de serveur ou de base de données).  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |Nom du paramètre|Type de données|  
 |------------------|-------------|  
 |**ObjectName**|**Chaîne**|  
-|**ObjectTypeName**|**Chaîne**|  
+|**ObjectTypeName**|**String**|  
 |**Filtré**|**Booléen**|  
-|**ServerName**|**Chaîne**|  
-|**FontName**|**Chaîne**|  
-|**DatabaseName**|**Chaîne**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>Exemple de paramètre de rapport des nœuds de l'Explorateur d'objets  
 Pour exécuter l'exemple, utilisez la procédure suivante.  
@@ -533,8 +533,8 @@ Le rapport créé au moyen du code ci-dessous utilise les paramètres associés 
 </Report></pre>  
 ```
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Ajouter un rapport personnalisé à Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Annuler la suppression des avertissements d’exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
   

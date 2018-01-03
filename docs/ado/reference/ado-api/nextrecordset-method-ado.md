@@ -3,7 +3,7 @@ title: "NextRecordset, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 569303b6598f0d6b580f20049a02f7e9a5e90621
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset, méthode (ADO)
 Efface l’actuel [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet et renvoie la prochaine **Recordset** en exécutant une série de commandes.  
@@ -44,12 +44,12 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Paramètres  
  *RecordsAffected*  
- Ce paramètre est facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération en cours.  
+ Facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération en cours.  
   
 > [!NOTE]
 >  Ce paramètre retourne uniquement le nombre d’enregistrements affectés par une opération ; Il ne retourne pas le nombre d’enregistrements à partir d’une instruction select utilisée pour générer le **Recordset**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **NextRecordset** méthode pour retourner les résultats de la commande suivante dans une instruction composée de commande ou d’une procédure stockée qui retourne plusieurs résultats. Si vous ouvrez un **Recordset** objet basé sur une instruction composée de commande (par exemple, « sélectionnez \* à partir de table1 ; Sélectionnez \* de table2 ») à l’aide de la [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) méthode sur un [commande](../../../ado/reference/ado-api/command-object-ado.md) ou [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode sur un **Recordset**, ADO exécute uniquement la première commande et retourne les résultats à *recordset*. Pour accéder aux résultats des commandes suivantes dans l’instruction, appelez le **NextRecordset** (méthode).  
   
  Tant que des résultats supplémentaires et la **Recordset** contenant les instructions composées n’est pas déconnecté ni marshalé à travers les limites de processus, le **NextRecordset** méthode continue de retourner **Recordset** objets. Si une commande retourne des lignes s’exécute correctement mais ne renvoie aucun enregistrement, retourné **Recordset** objet sera ouvert mais vide. Test pour ce cas en vérifiant que le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriétés sont toutes deux **True**. Si vous utilisez une non ??? renvoi de ligne commande s’exécute correctement, retourné **Recordset** objet sera fermé, vous pouvez vérifier en testant la [état](../../../ado/reference/ado-api/state-property-ado.md) propriété sur le **Recordset**. Lorsqu’il n’y a plus aucun résultat, *recordset* a la valeur *rien*.  

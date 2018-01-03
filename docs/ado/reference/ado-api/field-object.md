@@ -3,7 +3,7 @@ title: Field, objet | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f0838ea34dbc5117c5c52ed7848e60b9bcf9ef6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 638ba9740e02ef403256b76a8fd800993b237fb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-object"></a>Objet Field
 Représente une colonne de données avec un type de données commun.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Chaque **champ** objet correspond à une colonne dans la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Vous utilisez la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété du **champ** objets pour définir ou retourner les données de l’enregistrement actif. Selon les fonctionnalités le fournisseur expose des regroupements, des méthodes ou propriétés d’un **champ** objet n’est peut-être pas disponible.  
   
  Avec les collections, les méthodes et les propriétés d’un **champ** de l’objet, vous pouvez procédez comme suit :  

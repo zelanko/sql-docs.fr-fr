@@ -3,7 +3,7 @@ title: "Ouvrir des schémas de base de données (Visual Database Tools) | Micros
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c56181f69c637a1368d25e633cbd2e847f89beac
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ace503d33170b10379ccbdab94b9860e2689946
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Ouvrir des schémas de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ouvrir des schémas de base de données en vue d’afficher ou de modifier la structure du schéma.  
@@ -45,7 +45,7 @@ Le schéma de base de données s'ouvre dans le Concepteur de schémas de base de
 > [!NOTE]  
 > Seul le propriétaire du schéma ou un membre du rôle db_owner de la base de données peut ouvrir le schéma.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

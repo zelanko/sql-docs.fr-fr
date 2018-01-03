@@ -3,7 +3,7 @@ title: "Supprimer un schéma de base de données (Visual Database Tools) | Micro
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f981c4d7ab720d0ab789efa97cac773449eda843
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c6f1b17fdb1d50e86578b55250a5b15b4d8d054b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Supprimer un schéma de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous n’avez plus besoin d’un schéma de base de données, vous pouvez le supprimer.  
@@ -43,6 +43,6 @@ ms.lasthandoff: 12/05/2017
   
 Le schéma de base de données est supprimé de la base de données. Lorsque vous supprimez un schéma de base de données, ses tables sont préservées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

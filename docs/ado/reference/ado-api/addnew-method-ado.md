@@ -3,7 +3,7 @@ title: "AddNew (méthode) (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1db70bfb438d7954a5874c80631c9a72c83e7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51978e39a34b02238d4c0b1658620c9ba8d538a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addnew-method-ado"></a>AddNew (méthode) (ADO)
 Crée un nouvel enregistrement pour être une mise à jour [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -43,12 +43,12 @@ recordset.AddNew FieldList, Values
  A **Recordset** objet.  
   
  *FieldList*  
- Ce paramètre est facultatif. Un nom unique ou un tableau de noms ou de positions ordinales des champs dans le nouvel enregistrement.  
+ Facultatif. Un nom unique ou un tableau de noms ou de positions ordinales des champs dans le nouvel enregistrement.  
   
  *Valeurs*  
- Ce paramètre est facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *liste de champs* est un tableau, *valeurs* doit également être un tableau avec le même nombre de membres ; sinon, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champs dans chaque tableau.  
+ Facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *liste de champs* est un tableau, *valeurs* doit également être un tableau avec le même nombre de membres ; sinon, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champs dans chaque tableau.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **AddNew** méthode pour créer et initialiser un nouvel enregistrement. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode avec **adAddNew** (un [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valeur) pour vérifier si vous pouvez ajouter des enregistrements à actuel **Recordset**objet.  
   
  Après avoir appelé la **AddNew** (méthode), le nouvel enregistrement devient l’enregistrement actif et reste actif après avoir appelé la [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode). Étant donné que le nouvel enregistrement est ajouté à la **Recordset**, un appel à **MoveNext** après la mise à jour ne dépassera la fin de la **Recordset**, rendant **EOF**  True. Si le **Recordset** objet ne prend pas en charge les signets, vous n’êtes peut-être pas en mesure d’accéder au nouvel enregistrement une fois que vous déplacez vers un autre enregistrement. Selon le type de curseur, vous devez appeler la [Requery](../../../ado/reference/ado-api/requery-method.md) méthode pour rendre le nouvel enregistrement accessible.  
@@ -61,7 +61,7 @@ recordset.AddNew FieldList, Values
   
  Dans *mode de mise à jour par lot* (dans lequel le fournisseur met en cache plusieurs modifications et les écrit dans la source de données sous-jacente uniquement lorsque vous appelez le [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) méthode), l’appel du **AddNew** méthode sans arguments affecte le **EditMode** propriété **adEditAdd**. Le fournisseur met en cache localement les modifications des valeurs de champ. Appel de la **mise à jour** méthode ajoute le nouvel enregistrement actuel **Recordset**, mais le fournisseur ne pas valider les modifications apportées à la base de données sous-jacente, ou redéfinissez le **EditMode** pour **adEditNone**, jusqu'à ce que vous appeliez la **UpdateBatch** (méthode). Si vous passez le *liste de champs* et *valeurs* arguments, ADO envoie le nouvel enregistrement dans le fournisseur de stockage dans un cache et définit les **EditMode** à **adEditAdd** ; vous devez appeler la **UpdateBatch** méthode pour valider le nouvel enregistrement dans la base de données sous-jacente.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant montre comment utiliser la méthode AddNew avec la liste de champs et de la liste de valeurs inclus, pour voir comment inclure la liste de champs et une liste de valeurs sous forme de tableaux.  
   
 ```  

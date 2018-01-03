@@ -3,7 +3,7 @@ title: "Créer une étape de travail Analysis Services | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bb5beada6cc4b32350f06a3746817417c0e2e7b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fa8f1d368670b93bdff70585c1650710442f8d8c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-an-analysis-services-job-step"></a>Créer une étape de travail Analysis Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer et définir les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] qui exécutent les commandes et les requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou SQL Server Management Objects.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Autorisations  
+#### <a name="Permissions"></a>Permissions  
   
 -   Pour exécuter une étape de travail qui utilise le sous-système Analysis Services, un utilisateur doit être membre du rôle serveur fixe **sysadmin** ou avoir accès à un compte proxy valide, défini pour utiliser ce sous-système. De plus, le compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou du proxy doit correspondre à un compte administrateur Analysis Services et à un compte de domaine Windows valide.  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Pour créer une étape de travail de commande Analysis Services  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
@@ -148,7 +148,7 @@ Pour plus d’informations, consultez [sp_add_jobstep (Transact-SQL)](http://msd
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Pour créer une étape de travail de requête Analysis Services  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

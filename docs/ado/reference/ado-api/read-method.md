@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 740be677f54f8d4b5d30902a792b58d4681df888
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad739a0d3aded4b0bf0458803d9fcdba5b388272
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="read-method"></a>Read, méthode
 Lit un nombre spécifié d’octets à partir d’un fichier binaire [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -40,12 +40,12 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Paramètres  
  *NbOctets*  
- Ce paramètre est facultatif. A **Long** valeur qui spécifie le nombre d’octets à lire à partir du fichier ou le [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur **adReadAll**, qui est la valeur par défaut.  
+ Facultatif. A **Long** valeur qui spécifie le nombre d’octets à lire à partir du fichier ou le [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur **adReadAll**, qui est la valeur par défaut.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Le **en lecture** méthode lit un nombre spécifié d’octets ou l’intégralité du flux à partir d’un **flux** de l’objet et retourne les données résultantes comme un **Variant**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si *NumBytes* reste supérieur au nombre d’octets dans le **flux**, seuls les octets restants sont retournés. La lecture des données ne sont pas remplies pour correspondre à la longueur spécifiée par *NumBytes*. S’il n’y a aucun octet pour lire, une valeur variant avec une valeur null est retourné. **Lecture** ne peut pas être utilisé pour lire vers l’arrière.  
   
 > [!NOTE]

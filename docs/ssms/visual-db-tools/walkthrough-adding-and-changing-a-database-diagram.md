@@ -3,7 +3,7 @@ title: "Procédure pas à pas : ajouter et modifier un schéma de base de donn�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d202d485b27b19a0d7b3461e0f427d996567b4f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7835747f81513f26fb7e69a357094cdc1d8dcfe0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un schéma de base de données
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un schéma de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette procédure pas à pas montre comment créer et modifier un schéma de base de données et apporter des changements à la base de données par l’intermédiaire du composant des schémas de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments suivants :  
   
 -   Accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avec l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
@@ -82,9 +82,9 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 3.  Ajoutez les informations suivantes à la **Table1**:  
   
-    |**Nom de la colonne**|**Type de données**|**Autoriser les valeurs NULL**|  
+    |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|checked|  
+    |**T1col1**|**Int**|checked|  
     |**T1col2**|**varchar(50)**|checked|  
     |**T1col3**|**float**|checked|  
   
@@ -125,9 +125,9 @@ Vous pouvez ajouter des contraintes de validation et établir des relations entr
   
 1.  Créez une nouvelle table dans le Concepteur de schémas nommée `Table2` et contenant les colonnes suivantes :  
   
-    |**Nom de la colonne**|**Type de données**|**Autoriser les valeurs NULL**|  
+    |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |-------------------|-----------------|-------------------|  
-    |**T2col1**|**int**|non validé|  
+    |**T2col1**|**Int**|non validé|  
     |**T2col2**|**varchar(50)**|checked|  
     |**T2col3**|**xml**|checked|  
   
@@ -201,7 +201,7 @@ Toutes les modifications apportées au schéma ne sont publiées dans la base de
   
 3.  En cas d’erreurs, la boîte de dialogue **Notifications post-enregistrement** affiche les erreurs et leurs origines. Corrigez les erreurs et réenregistrez le schéma.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Il s'agit d'un schéma de base contenant deux nouvelles tables et deux tables existantes, mais il illustre la possibilité de créer un schéma d'une base de données existante ou de créer un nouveau schéma visuel. Suggestions pour des recherches approfondies :  
   
 -   Créer des nouveaux schémas contenant des groupes de tables associées  
@@ -212,7 +212,7 @@ Il s'agit d'un schéma de base contenant deux nouvelles tables et deux tables ex
   
 -   Copier le schéma dans un bitmap  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
 [Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Ajouter des tables à des schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  

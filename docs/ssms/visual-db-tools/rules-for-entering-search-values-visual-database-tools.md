@@ -3,7 +3,7 @@ title: "Règles pour l’entrée de valeurs de recherche (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec0d150e6ff4d9c6e70ea4045a5557702a7e72b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4ac4ebc852260c2f682b06f9fec24a56820e4410
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Règles pour l'entrée de valeurs de recherche (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les conventions à utiliser quand vous entrez les types de valeurs littérales suivants pour une condition de recherche :  
@@ -122,7 +122,7 @@ Le tableau suivant récapitule les formats de date que vous pouvez utiliser dans
   
 |**Volet**|**Format de date**|  
 |------------|-------------------|  
-|Critère|Données locales spécifiques, spécifiques à la base de données, ANSI standard<br /><br />Les dates entrées dans le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) sont converties dans un format compatible avec la base de données à l’intérieur du volet SQL.|  
+|Critères|Données locales spécifiques, spécifiques à la base de données, ANSI standard<br /><br />Les dates entrées dans le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) sont converties dans un format compatible avec la base de données à l’intérieur du volet SQL.|  
 |SQL|Données spécifique à la base de données, ANSI standard|  
 |Résultats|Données locales spécifiques|  
   
@@ -150,6 +150,6 @@ Le format des données logiques varie d'une base de données à l'autre. Très s
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "ConnectionTimeout, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 17572bfd4ef1de5fa20246f88c8a0187409bbfd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 603158672b81380976224b2d9ff708a27c879ff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout, propriété (ADO)
 Indique le délai d’attente lors de l’établissement d’une connexion avant d’abandonner la tentative et de générer une erreur.  
@@ -32,7 +32,7 @@ Indique le délai d’attente lors de l’établissement d’une connexion avant
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Long** valeur qui indique, en secondes, la durée d’attente pour la connexion à ouvrir. Valeur par défaut est 15.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **ConnectionTimeout** propriété sur un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) si retards dus au réseau du trafic ou serveur une utilisation intensive rendent nécessaire d’abandonner une tentative de connexion de l’objet. Si l’heure à partir de la **ConnectionTimeout** paramètre de la propriété s’écoule avant l’ouverture de la connexion, une erreur se produit et ADO annule la tentative. Si vous définissez la propriété sur zéro, ADO attend indéfiniment que la connexion est ouverte. Assurez-vous que le fournisseur auquel vous écrivez du code prend en charge la **ConnectionTimeout** fonctionnalité.  
   
  Le **ConnectionTimeout** propriété est en lecture/écriture lorsque la connexion est fermée et en lecture seule lorsqu’il est ouvert.  

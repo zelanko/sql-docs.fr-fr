@@ -3,7 +3,7 @@ title: "AbsolutePage, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e75be5da366dbda463a05c920192626446c17238
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 332064ee95d1d5b868d0aa7accad02b4966b4a7d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage, propriété (ADO)
 Indique la page sur laquelle réside l’enregistrement actif.  
@@ -34,7 +34,7 @@ Indique la page sur laquelle réside l’enregistrement actif.
   
  Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser soit **Long** ou une autre valeur peut être de longueur de 64 bits comme DBORDINAL. N’utilisez pas **PositionEnum** valeurs, car ils sont limités à la longueur de 32 bits.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété peut être utilisée pour identifier le numéro de page sur laquelle se trouve l’enregistrement actif. Elle utilise le [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriété pour séparer logiquement le nombre total de lignes de la **Recordset** objet en une série de pages, chacun d'entre eux ayant le nombre d’enregistrements égales à **PageSize** (à l’exception de la dernière page, qui peut comporter moins d’enregistrements). Le fournisseur doit prendre en charge les fonctionnalités requises pour cette propriété doit être disponible.  
   
 -   Lors de l’obtention ou la définition de la **AbsolutePage** propriété, ADO utilise le [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriété et la [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propriété ensemble comme suit :  

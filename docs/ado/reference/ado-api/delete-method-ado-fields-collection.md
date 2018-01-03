@@ -3,7 +3,7 @@ title: "DELETE, méthode (Collection de champs ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2f26c6370aa87be18a1c0a2e80cffa637fcab70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cc110ab21ddd81b45b361e5cd38e9d90970a173
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-method-ado-fields-collection"></a>DELETE, méthode (Collection de champs ADO)
 Supprime un objet à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  
@@ -42,7 +42,7 @@ Fields.Delete Field
  *Field*  
  A **Variant** qui désigne le [champ](../../../ado/reference/ado-api/field-object.md) objet à supprimer. Ce paramètre peut être le nom de la **champ** objet ou la position ordinale de la **champ** objet lui-même.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Appel de la **Fields.Delete** méthode sur open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) provoque une erreur d’exécution.  
   
 ## <a name="applies-to"></a>S'applique à  

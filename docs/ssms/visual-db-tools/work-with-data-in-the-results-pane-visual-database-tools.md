@@ -3,7 +3,7 @@ title: "Utiliser des données du volet de résultats (Visual Database Tools) | M
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7493784bc506c454ab0c230d549d0accae58c7c4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ac0861f7c9d1a5f30efbfeb7466ed320f346191
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Après avoir exécuté une requête ou une vue, les résultats sont affichés dans le volet Résultats. Vous pouvez ensuite travailler avec ces résultats. Par exemple, vous pouvez ajouter ou supprimer des lignes, entrer ou modifier des données, et naviguer facilement parmi les vastes ensembles de résultats.  
@@ -125,7 +125,7 @@ Ce qui est retourné au volet Résultats par la base de données est étroitemen
   
 -   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d'un type de données de précision supérieure, elles peuvent être tronquées ou représentées par *<Unable to read data>*.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

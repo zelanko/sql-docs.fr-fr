@@ -3,7 +3,7 @@ title: "Créer un travail | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b6260fe8358eb135667c16560d7fba1e9935fe51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 04fb45c80033381fdd8ab4e824bc1f93df23bfa7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-job"></a>Créer un travail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer un travail de SQL Server Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] ou SQL Server Management Objects (SMO).  
@@ -69,7 +69,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
   
-#### <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
+#### <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
 1.  Dans l' **Explorateur d'objets**, cliquez sur le signe plus (+) pour développer le serveur sur lequel vous souhaitez créer un travail de SQL Server Agent.  
   
@@ -93,9 +93,9 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 ## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
   
-#### <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
+#### <a name="to-create-a-sql-server-agent-job"></a>Pour créer un travail de l'Agent SQL Server  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

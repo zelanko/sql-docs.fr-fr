@@ -3,7 +3,7 @@ title: "Item, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -51,11 +51,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bec4236ff89d27a4db3e4606ea95401e75ba2590
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-ado"></a>Élément propriété (ADO)
 Indique un membre spécifique d’une collection, par nom ou un nombre ordinal.  
@@ -73,7 +73,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant** expression qui correspond au nom ou au nombre ordinal d’un objet dans une collection.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **élément** propriété pour retourner un objet spécifique dans une collection. Si **élément** Impossible de trouver un objet dans la collection correspondant à la *Index* argument, une erreur se produit. En outre, certaines collections ne prennent en charge les objets nommés ; pour ces collections, vous devez utiliser des références d’un nombre ordinal.  
   
  Le **élément** propriété est la propriété par défaut pour toutes les collections ; par conséquent, les formes de syntaxe suivantes sont interchangeables :  

@@ -3,7 +3,7 @@ title: "Close (méthode) (ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 187d525cf0795457c87c540d68b62c03661e56b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 73cfa5ac30f9b7ac4e5e7d616b5e4f9eba4a2bef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="close-method-ado-md"></a>Close (méthode) (ADO MD)
 Ferme un ensemble de cellules ouvert.  
@@ -38,7 +38,7 @@ Ferme un ensemble de cellules ouvert.
 Cellset.Close  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  À l’aide de la **fermer** méthode pour fermer une [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet libère les données associées, y compris les données dans aucun liées [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md), ou [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets. Fermeture d’un **ensemble de cellules** ne le supprime pas de la mémoire ; vous pouvez modifier ses paramètres de propriété et ouvrez à nouveau ultérieurement. Pour éliminer définitivement un objet de la mémoire, affectez la variable objet **rien**.  
   
  Vous pouvez ensuite appeler la [ouvrir](../../../ado/reference/ado-md-api/open-method-ado-md.md) méthode pour rouvrir le **ensemble de cellules** à l’aide de la même ou à une autre chaîne source. Alors que le **ensemble de cellules** objet est fermé, la récupération de toutes les propriétés ou appeler une méthode qui font référence aux données sous-jacentes ou métadonnées génère une erreur.  

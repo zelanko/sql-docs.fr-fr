@@ -3,7 +3,7 @@ title: "Personnaliser la quantité d’informations affichées dans les schémas
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b4e05f53f40655a5bf269db9022abd9e6e40eb09
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b3b6f3ae70e0917303cf0dab79c0bd296ba9043
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personnaliser la quantité d'informations affichées dans les schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous ajoutez une table à un schéma de base de données, elle apparaît avec un nombre déterminé de propriétés affichées. Vous pouvez choisir dans un menu de variations la quantité d'informations qui s'affichent ou créer un jeu de propriétés personnalisé.  
@@ -37,7 +37,7 @@ Les choix sont les suivants :
   
 -   Noms des colonnes  
   
--   Clés  
+-   Keys  
   
 -   Nom uniquement  
   
@@ -59,6 +59,6 @@ Les choix sont les suivants :
   
 3.  Dans la boîte de dialogue **Sélectionner les colonnes** , choisissez les propriétés que vous souhaitez afficher quand **Custom** est sélectionné dans le menu **Vue Table** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

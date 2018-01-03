@@ -3,7 +3,7 @@ title: Joindre manuellement des tables (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f9fe3b4dd3fc65924ef308ca5ce817c9a008fc1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1223e0a42ed48773f2294a5ae58444e52fae2843
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Joindre manuellement des tables (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous ajoutez plusieurs tables à une requête, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) tente de les joindre en fonction de données communes ou d’informations enregistrées dans la base de données sur d’éventuelles liaisons entre les tables. Pour plus d’informations, consultez [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md). Néanmoins, si le Concepteur de requêtes et de vues n'a pas joint automatiquement les tables ou si vous voulez créer d'autres conditions de jointure entre les tables, vous pouvez joindre les tables manuellement.  
@@ -48,6 +48,6 @@ Vous pouvez créer des jointures basées sur des comparaisons entre deux colonne
   
 Le Concepteur de requêtes et de vues ajoute une clause INNER JOIN à l’instruction SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md). Vous pouvez changer ce type de jointure en jointure externe. Pour plus d’informations, consultez [Créer des jointures externes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

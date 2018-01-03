@@ -3,7 +3,7 @@ title: Assistance utilisateur de SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6a3108ec508a859dd6b097425f27475a85c026f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une assistance utilisateur est disponible dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] par le biais du menu ? (Aide) et la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Le menu ? (Aide) de [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] offre des accès différents aux informations concernant [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Il permet également d'avoir accès à la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] et aux ressources de MSDN en ligne qui n'étaient pas auparavant disponibles à partir de l'environnement d'aide. En outre, l'environnement d'aide est à présent configurable. Il peut être lancé dans l'environnement [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ou dans une fenêtre externe associée.  

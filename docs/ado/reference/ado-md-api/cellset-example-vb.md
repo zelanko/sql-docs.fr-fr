@@ -3,7 +3,7 @@ title: "Exemple d’ensemble de cellules (VB) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35bcc8eb6068c1e0579d3245e5acc85601ebec49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb72abdd44deeabda8a9513744ba7d962fa7bffc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cellset-example-vb"></a>Exemple d’ensemble de cellules (VB)
 Ce projet Visual Basic illustre les principes fondamentaux de l’utilisation d’ADO MD pour accéder aux données de cube. Il affiche les légendes de membre pour les en-têtes de ligne et de colonne, puis affiche mises en forme des valeurs de cellules spécifiques au sein de l’ensemble de cellules.  

@@ -3,7 +3,7 @@ title: CompareEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9377c58ed99ff5cc69f8938a614bebdcd0bdfe89
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee22fbb105dc9f01444540dbdc46130d8a626bd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compareenum"></a>CompareEnum
 Spécifie la position relative de deux enregistrements représentée par leur signet.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1|Indique que les signets sont égaux.|  
+|**adCompareEqual**| 1|Indique que les signets sont égaux.|  
 |**adCompareGreaterThan**|2|Indique que le premier signet est après la deuxième.|  
 |**adCompareLessThan**|0|Indique que le premier signet est que la seconde.|  
 |**adCompareNotComparable**|4|Indique que les signets ne peuvent pas être comparées.|  

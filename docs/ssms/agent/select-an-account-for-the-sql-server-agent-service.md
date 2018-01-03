@@ -3,7 +3,7 @@ title: "Sélectionner un compte pour le service SQL Server Agent | Microsoft Doc
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1bb0705f19d85e827f622e4da8783324574f303
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows dans le contexte duquel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent s’exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Pour sélectionner un compte pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pour choisir l'une des options suivantes :  
@@ -123,7 +123,7 @@ Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssN
 > [!NOTE]  
 > Utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pour spécifier que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] doit démarrer lorsque le système d'exploitation démarre.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Configuration des comptes de service Windows](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
 [Gestion des services à l’aide de SQL Computer Manager](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  

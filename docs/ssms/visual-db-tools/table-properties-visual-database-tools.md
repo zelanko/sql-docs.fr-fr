@@ -3,7 +3,7 @@ title: "Propriétés de la table (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7dc7692744a8f1b194e10591106d43d0f8aa938d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe0a195866ec219190d9c2c2ae5a21c8ebc7b194
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Ces propriétés apparaissent dans la fenêtre Propriétés quand vous cliquez avec le bouton droit dans le Concepteur de tables puis sélectionnez Propriétés. Sauf indication contraire, vous pouvez modifier ces propriétés dans la fenêtre Propriétés lorsque la table est sélectionnée.  
@@ -88,6 +88,6 @@ Affiche la colonne utilisée par Microsoft SQL Server comme colonne ROWGUID de l
 **Groupe de fichiers Text/Image**  
 Fournit une liste déroulante dans laquelle vous pouvez choisir le groupe de fichiers des colonnes possédant des types de données texte ou image. Si la table est stockée à l'aide d'un schéma de partition, laissez ce champ vierge.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Concevoir des tables (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

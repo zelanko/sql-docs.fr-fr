@@ -3,7 +3,7 @@ title: Alertes | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bcf6d6ecebacd8ea3f3b2a18d5ffe89cb5d2b6ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a8210d7acf8121f616f89f3f87b0cb2d2ba34b36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alerts"></a>Alertes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Les événements sont générés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et entrés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent lit le journal des applications et compare les événements qui y sont écrits aux alertes que vous avez définies. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent trouve une correspondance, il déclenche une alerte, qui est une réponse automatisée à un événement. Outre l'analyse des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent peut aussi analyser les conditions de performance, ainsi que les événements WMI (Windows Management Instrumentation).  
@@ -71,7 +71,7 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à un ou plusieu
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent déclenche une alerte quand se produit une erreur du niveau de gravité indiqué. Ainsi, vous pouvez spécifier un niveau de gravité de 15 pour répondre aux erreurs de syntaxe dans les instructions Transact-SQL.  
   
--   **Base de données**  
+-   **Sauvegarde de la base de données**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ne déclenche une alerte que si l’événement se produit dans une base de données déterminée. Cette option s'applique en plus du numéro d'erreur ou du niveau de gravité. Par exemple, si une instance contient une base de données utilisée pour la production et une autre servant à la génération de rapports, vous pouvez définir une alerte répondant aux erreurs de syntaxe rencontrées uniquement dans la base de données de production.  
   
@@ -158,6 +158,6 @@ Vous trouverez ci-dessous des liens traitant des tâches courantes :
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   

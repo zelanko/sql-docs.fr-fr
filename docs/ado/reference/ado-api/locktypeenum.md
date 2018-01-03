@@ -3,7 +3,7 @@ title: LockTypeEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,21 +20,21 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 528d26feb0037a3717ff7b1a9b05606e3ecf37c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 48c9909bf228a6bad0ad7e6d44415a1499fd5ea5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Spécifie le type de verrou placé sur les enregistrements pendant la modification.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Indique les mises à jour par lot optimiste. Requis pour le mode de mise à jour par lots.|  
 |**adLockOptimistic**|3|Indique un verrouillage optimiste, enregistrement par enregistrement. Le fournisseur utilise le verrouillage optimiste, verrouiller des enregistrements uniquement quand vous appelez le [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode).|  
 |**adLockPessimistic**|2|Indique un verrouillage pessimiste, enregistrement par enregistrement. Le fournisseur effectue ce qui est nécessaire pour garantir la réussite l’édition des enregistrements, généralement par un verrouillage des enregistrements de la source de données immédiatement après la modification.|  
-|**adLockReadOnly**|1|Indique les enregistrements en lecture seule. Vous ne pouvez pas modifier les données.|  
+|**adLockReadOnly**| 1|Indique les enregistrements en lecture seule. Vous ne pouvez pas modifier les données.|  
 |**adLockUnspecified**|-1|Ne spécifie pas un type de verrou. Pour les clones, le clone est créé avec le même type de verrou que l’original.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  

@@ -3,7 +3,7 @@ title: "Choisir des dossiers de recherche, boîte de dialogue (Visual Studio) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bdc3ea0d960d2bb2e4abbe2f16ec2ff2a3db62b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 974a77627d00103a5ac4f89ab9773dfcea0a0ef6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Boîte de dialogue Choisir des dossiers de recherche (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue vous permet d’assembler, d’enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l’ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  

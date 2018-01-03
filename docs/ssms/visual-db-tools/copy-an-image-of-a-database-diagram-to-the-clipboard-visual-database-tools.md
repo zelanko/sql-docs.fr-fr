@@ -3,7 +3,7 @@ title: "Copier une image d’un schéma de base de données dans le Presse-papie
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ba6900ccb07dbe01b675444b05faf5cb53fc93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d6c5d281a318eaf1214442a690b0811abde694e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copier une image d'un schéma de base de données dans le Presse-papiers (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer une image d’un schéma de base de données et la copier dans une autre application.  
@@ -40,6 +40,6 @@ ms.lasthandoff: 12/05/2017
   
     L'image de l'intégralité du schéma de la base de données est désormais dans le Presse-papiers système.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "Créer des requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44d4501f760e397a9ce6339a9f898f30cbc181fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c000e41faca9bcc3442cd67695f13d9a33e7366f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Créer des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les requêtes vous permettent de récupérer des données des tables et vues contenues dans votre base de données. Vous pouvez créer et utiliser des requêtes dans le **Concepteur de requêtes et de vues**, qui se compose de quatre volets : le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)et le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
 Pour affiner davantage votre requête, vous pouvez modifier le code SQL dans le **Volet SQL** ou choisir des options telles que l’ordre de tri et les alias de colonne dans le **Volet Critères**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Enregistrer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

@@ -3,7 +3,7 @@ title: "Options (Environnement - Page Général) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4220e4844dc45a33b0a2bc163d2e77a3fe65db3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85771a5858a9be2e8e9cb79830cd0eff8a945b38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---general-page"></a>Options (Environnement - Page Général)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Options** pour configurer les actions de démarrage [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], les options de gestion des fenêtres générales ainsi que d’autres paramètres généraux. Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , puis cliquez sur **Général**.  
@@ -61,7 +61,7 @@ Spécifie que ce bouton ne ferme que la fenêtre Outils qui est active et non le
 **Le bouton Masquer automatiquement affecte uniquement l'onglet actif**  
 Spécifie que ce bouton ne masque automatiquement que la fenêtre Outils qui est active et non les autres fenêtres Outils de l'ensemble ancré. Par défaut, cette case est décochée.  
   
-## <a name="display"></a>Affichage  
+## <a name="display"></a>Afficher  
 **Affiche n fichiers dans la liste des derniers fichiers utilisés**  
 Personnalise le nombre de projets et de fichiers récents qui apparaissent dans le menu **Fichier** . Entrez un nombre compris entre 1 et 24. La valeur par défaut est 4. Vous pouvez ainsi facilement récupérer les projets de script et les fichiers récemment utilisés.  
   

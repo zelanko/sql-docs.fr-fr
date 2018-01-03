@@ -3,7 +3,7 @@ title: "Open (méthode) (connexion ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9133d8e959d1831fc1ff64ed1d8ecace96c3f882
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41850de804523a50dbf0d489e678b93c9f29b6ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-method-ado-connection"></a>Open (méthode) (connexion ADO)
 Ouvre une connexion à une source de données.  
@@ -41,18 +41,18 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Paramètres  
  *ConnectionString*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient des informations de connexion. Consultez le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) pour plus d’informations sur les paramètres corrects.  
+ Facultatif. A **chaîne** valeur qui contient des informations de connexion. Consultez le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) pour plus d’informations sur les paramètres corrects.  
   
  *ID d’utilisateur*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient un nom d’utilisateur à utiliser pour établir la connexion.  
+ Facultatif. A **chaîne** valeur qui contient un nom d’utilisateur à utiliser pour établir la connexion.  
   
  *Mot de passe*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient un mot de passe à utiliser pour établir la connexion.  
+ Facultatif. A **chaîne** valeur qui contient un mot de passe à utiliser pour établir la connexion.  
   
  *Options*  
- Ce paramètre est facultatif. A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valeur qui détermine si cette méthode doit retourner après (synchrone) ou avant (de façon asynchrone) la connexion est établie.  
+ Facultatif. A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) valeur qui détermine si cette méthode doit retourner après (synchrone) ou avant (de façon asynchrone) la connexion est établie.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  À l’aide de la **ouvrir** méthode sur un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet établit la connexion physique à une source de données. Une fois que cette méthode se termine correctement, la connexion est établie et vous pouvez émettre des commandes sur elle et traiter les résultats.  
   
  Utilisez le paramètre facultatif *ConnectionString* argument afin de spécifier une chaîne de connexion contenant une série de *argument* *= valeur* instructions séparées par des points-virgules, ou un fichier ou répertoire ressource identifiée par une URL. Le **ConnectionString** propriété hérite automatiquement de la valeur utilisée pour le *ConnectionString* argument. Par conséquent, vous pouvez soit définir la **ConnectionString** propriété de la **connexion** de l’objet avant de l’ouvrir, ou utilisez le *ConnectionString* argument pour définir ou substituer les paramètres de connexion en cours pendant le **ouvrir** appel de méthode.  

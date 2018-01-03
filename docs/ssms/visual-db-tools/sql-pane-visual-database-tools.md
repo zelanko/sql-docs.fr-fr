@@ -3,7 +3,7 @@ title: Volet SQL (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5ec778110af1238b0bb703b5ff91c2086097cbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a44627a7853237edd1bfebb3cb576f495535c6d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-pane-visual-database-tools"></a>Volet SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez utiliser le volet SQL pour créer votre propre instruction SQL, ou utiliser le volet Critères et le volet Schéma pour créer l’instruction, auquel cas les instructions SQL sont créées dans le volet SQL. Pendant la génération de la requête, le volet SQL se met automatiquement à jour et se reformate pour une lecture plus aisée.  
@@ -59,7 +59,7 @@ Vous pouvez continuer à modifier l'instruction et à l'exécuter, comme vous le
 > [!NOTE]  
 > Si vous entrez une instruction SQL, puis apportez d'autres modifications à la requête dans les volets Schéma et Critères, le Concepteur de requêtes et de vues régénère et réaffiche l'instruction SQL. Dans certains cas, l'instruction SQL obtenue a une construction différente de celle que vous aviez entrée à l'origine (mais elle donne toujours les mêmes résultats). Vous constaterez très vraisemblablement cette différence si vous utilisez des conditions de recherche impliquant plusieurs clauses liées par AND et OR.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Exécuter des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

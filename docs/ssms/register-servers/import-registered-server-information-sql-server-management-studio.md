@@ -3,7 +3,7 @@ title: Importer des informations de serveur inscrit (SQL Server Management Studi
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 587534b225f8b789a4a3b395b2af1bd0795b9653
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d75220973fbab5056572a899be93f24dde9f82d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importer des informations de serveur inscrit (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment importer les informations du serveur inscrit enregistrées dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. L'exportation puis l'importation de fichiers de serveurs inscrits vous permet de configurer aisément plusieurs ordinateurs avec les mêmes serveurs dans Serveurs inscrits. Cela est utile lors de la gestion d'un grand nombre de serveurs à partir d'ordinateurs situés à des emplacements différents ou lorsque vous voulez configurer des paramètres de connexion de base pour un utilisateur peu expérimenté.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/05/2017
   
  Les inscriptions de serveurs qui utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent les mots de passe par utilisateur. Après l'importation des inscriptions de serveurs, les utilisateurs doivent entrer le mot de passe pour chaque serveur la première fois qu'ils se connectent et stocker les mots de passe dans leurs listes de serveurs inscrits. Cela n'est pas nécessaire pour les serveurs inscrits via l'authentification Windows.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Modifier l’inscription d’un serveur &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/change-a-server-s-registration-sql-server-management-studio.md)   
  [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Créer un nouveau serveur inscrit &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  

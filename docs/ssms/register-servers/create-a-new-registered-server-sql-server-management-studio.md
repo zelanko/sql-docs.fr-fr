@@ -3,7 +3,7 @@ title: "Créer un serveur inscrit (SQL Server Management Studio) | Microsoft Doc
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1802866292b1a8529e7ac2a415e6c2f64f5cc505
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eafb023f631824a41ba4e86ebb51f1ca392e6f45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un nouveau serveur inscrit (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment en inscrivant ceux-ci dans le composant Serveurs inscrits de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Un serveur peut être inscrit avant la connexion ou lors de la connexion depuis l'Explorateur d'objets. Il existe une option de menu qui permet d'inscrire les instances de serveur sur l'ordinateur local.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Pour plus d’informations, consultez [Choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **Nom d'utilisateur**  
+     **User name**  
      Spécifie le nom d'utilisateur actuel avec lequel vous vous connectez. Cette option en lecture seule est disponible uniquement si vous avez choisi de vous connecter via l'authentification Windows. Pour modifier les **Noms d'utilisateurs**, ouvrez une session sur l'ordinateur en tant qu'utilisateur différent.  
   
      **Connexion**  
@@ -105,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
  Pour exécuter des requêtes sur tous les serveurs inscrits auprès d’un serveur de gestion centralisée, développez le serveur de gestion centralisée, cliquez avec le bouton droit sur le groupe de serveurs, pointez sur **Se connecter**, puis cliquez sur **Nouvelle requête**. Lorsque les requêtes sont exécutées dans la nouvelle fenêtre Éditeur de requête, elles s'exécutent contre tous les serveurs du groupe de serveurs, à l'aide des informations de connexion stockées et du contexte d'authentification Windows de l'utilisateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Masquer les objets système dans l'Explorateur d'objets](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
  [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  

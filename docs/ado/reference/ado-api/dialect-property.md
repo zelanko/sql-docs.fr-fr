@@ -3,7 +3,7 @@ title: "Propriété Dialect | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a57fa4b9acd97cd2bfe96545680e3bd8ffc6f35b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c6159cb20de931a30a668b49a638c5e31f1642e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialect-property"></a>Propriété Dialect
 Indique le dialecte de la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) ou [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propriétés. Le dialecte définit la syntaxe et les règles générales que le fournisseur utilise pour analyser la chaîne ou le flux.  
@@ -32,7 +32,7 @@ Indique le dialecte de la [CommandText](../../../ado/reference/ado-api/commandte
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Le **dialecte** propriété contient un GUID valide qui représente le dialecte du texte de commande ou du flux. La valeur par défaut de cette propriété est {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, ce qui signifie que le fournisseur doit choisir comment interpréter le texte de commande ou le flux.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  ADO n’interroge pas le fournisseur lorsque l’utilisateur lit la valeur de cette propriété ; Il retourne une représentation sous forme de chaîne de la valeur actuellement stockée dans le [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
   
  Lorsque l’utilisateur définit les **dialecte** valide le GUID de propriété, ADO et génère une erreur si la valeur fournie n’est pas un GUID valide. Consultez la documentation de votre fournisseur déterminer les valeurs GUID pris en charge par le **dialecte** propriété.  

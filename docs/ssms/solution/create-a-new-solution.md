@@ -3,7 +3,7 @@ title: "Créer une solution | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8e0e4034f71fa1a6a6c4a9fbad967fd0bc419af9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2039725f0db2279c6385a64c68ed661366b4a80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-solution"></a>Créer une solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous créez un projet, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crée une solution qui le contient. Vous ne pouvez ouvrir qu'une seule solution à la fois. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ne vous autorise pas à créer des dossiers dans les projets. Pour organiser votre travail, créez plusieurs projets.  
@@ -43,7 +43,7 @@ Pour accéder à l’Explorateur de solutions, cliquez sur **Explorateur de solu
   
 6.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ouvrir des solutions à partir du contrôle de code source](https://msdn.microsoft.com/en-us/library/ms174216.aspx)  
   

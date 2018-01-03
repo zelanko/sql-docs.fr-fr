@@ -3,7 +3,7 @@ title: "Mode, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71b8bbcaa20e10791f8e3d684655b47e3dd1441a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21a3257ff92cd73d10f0685a7727d98417a917ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mode-property-ado"></a>Mode, propriété (ADO)
 Indique les autorisations disponibles pour la modification des données dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -35,7 +35,7 @@ Indique les autorisations disponibles pour la modification des données dans un 
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur. La valeur par défaut pour un **connexion** est **adModeUnknown**. La valeur par défaut pour un **enregistrement** objet est **adModeRead**. La valeur par défaut pour un **flux** associé à une source sous-jacente (ouverte avec une URL comme source, ou en tant que la valeur par défaut **flux** d’un **enregistrement**) est  **adModeRead**. La valeur par défaut pour un **flux** non associé à un sous-jacent source (instanciée en mémoire) est **adModeUnknown**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **Mode** propriété pour définir ou retourner les autorisations d’accès en cours d’utilisation par le fournisseur sur la connexion actuelle. Vous pouvez définir le **Mode** propriété uniquement lorsque la **connexion** objet est fermé.  
   
  Pour un **flux** de l’objet, si le mode d’accès n’est pas spécifié, il est hérité de la source utilisée pour ouvrir le **flux** objet. Par exemple, si un **flux** est ouvert à partir d’un **enregistrement** objet, par défaut, il est ouvert dans le même mode que le **enregistrement**.  

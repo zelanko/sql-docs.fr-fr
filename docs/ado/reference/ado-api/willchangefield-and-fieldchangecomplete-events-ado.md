@@ -3,7 +3,7 @@ title: "WillChangeField et FieldChangeComplete, événements (ADO) | Documents M
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d532aa3857e2a61bb5ec23fa9258f6d7aa1186f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c30a41b18016515f97ba044eb0d36724a59a351
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField et FieldChangeComplete, événements (ADO)
 Le **WillChangeField** événement est appelé avant qu’une opération en attente modifie la valeur d’un ou plusieurs [champ](../../../ado/reference/ado-api/field-object.md) des objets dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Le **FieldChangeComplete** événement est appelé après la valeur d’un ou plusieurs **champ** objets a changé.  
@@ -47,7 +47,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  A **Long** qui indique le nombre de **champ** objets *champs*.  
   
- *Champs*  
+ *Fields*  
  Pour **WillChangeField**, le *champs* paramètre est un tableau de **variantes** contenant **champ** objets avec les valeurs d’origine. Pour **FieldChangeComplete**, le *champs* paramètre est un tableau de **variantes** contenant **champ** objets avec les valeurs modifiées .  
   
  *pError*  
@@ -67,7 +67,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *Connection*  
  A **Recordset** objet. Le **Recordset** pour laquelle cet événement s’est produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **WillChangeField** ou **FieldChangeComplete** événement peut se produire lors de la définition du [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété et en appelant le [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode) avec les paramètres de tableau de champ et de valeur.  
   
 ## <a name="see-also"></a>Voir aussi  

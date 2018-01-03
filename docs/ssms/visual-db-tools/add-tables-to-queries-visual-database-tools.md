@@ -3,7 +3,7 @@ title: "Ajouter des tables à des requêtes (Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e6ccda0e06a9b7a0644985e06912c07ac7376fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92cadb859c17ffc53bb0aaa59063d1939e1f1049
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Ajouter des tables à des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous créez une requête, vous récupérez des données d’une table ou d’autres objets structurés comme des tables (vues et certaines fonctions définies par l’utilisateur). Pour utiliser l'un de ces objets dans votre requête, vous pouvez les ajouter au **volet Schéma**.  
@@ -62,7 +62,7 @@ Le Concepteur de requêtes et de vues n'affiche pas les colonnes de données d'u
   
 7.  Toujours dans le **volet SQL**, ajoutez un alias à la suite de la parenthèse fermante.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des alias de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
 [Supprimer des tables des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

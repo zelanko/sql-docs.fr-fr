@@ -3,7 +3,7 @@ title: "Ouvrir et fermer les méthodes-exemple (VBScript) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ef738d914bf98d0faa5e9633cb39a2f6ef0408b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d0af74b3ce760e82e6cf452839343acff8ee2b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Les méthodes Open et Close-exemple (VBScript)
 Cet exemple utilise le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthodes sur les deux [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [connexion](../../../ado/reference/ado-api/connection-object-ado.md) les objets qui ont été ouverts.  

@@ -3,7 +3,7 @@ title: "Créer des projets de base de données à l’aide de SQL Server Manage
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 00e88a87885a2c7d1e6aec7f82525b8cf540cc50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e503d3f0effc561a8ed715ac9ff3bfb0277e2ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="build-database-projects-by-using-sql-server-management-studio"></a>Créer des projets de base de données à l'aide de SQL Server Management Studio
+# <a name="build-database-projects-by-using-sql-server-management-studio"></a>Créer des projets de base de données à l'aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un projet de script de base de données est un ensemble organisé de scripts, d’informations de connexion et de modèles qui sont tous associés à une base de données ou une partie d’une base de données. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] fournit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] pour l’administration et la conception de bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] dans le contexte d’un projet de script. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] inclut des concepteurs, des éditeurs, des guides et des assistants pour aider les utilisateurs lors du développement, du déploiement et de la gestion de bases de données.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
@@ -69,7 +69,7 @@ L'Explorateur de solutions est un outil destiné aux développeurs qui créent e
   
 Une solution est constituée d'un ou plusieurs projets de script. Un projet est constitué d'un ou plusieurs scripts ou connexions. Un projet peut également comprendre des fichiers qui ne sont pas des scripts.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Écriture, analyse et modification de requêtes à l’aide de SQL Server Management Studio](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  

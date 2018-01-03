@@ -3,7 +3,7 @@ title: "Boîte de dialogue Tables et colonnes (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eead403ffc94b04113d0b4415b7002eaed25a02
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b828265e9f8e85e240420acd795ed9ab0494e4b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Boîte de dialogue Tables et colonnes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez cette boîte de dialogue pour mapper une clé primaire dans une table à une clé étrangère dans une autre. Pour accéder à cette boîte de dialogue, dans le menu **Concepteur de tables** , cliquez sur **Relations**. Dans la boîte de dialogue **Relations de clé étrangère** , cliquez sur le champ **Spécification de tables et colonnes** , puis cliquez sur le bouton de sélection **(…)** situé à droite de la propriété.  
@@ -49,6 +49,6 @@ Répertorie les colonnes de la table sélectionnées dans la liste **Table de cl
 > [!NOTE]  
 > Les colonnes que vous choisissez pour la clé étrangère doivent posséder le même type de données que les colonnes primaires auxquelles elles correspondent. Il doit exister un nombre égal de colonnes dans chacune des clés. Par exemple, si la clé primaire de la table située du côté clé primaire de la relation est composée de deux colonnes, vous devez faire correspondre chacune de ces colonnes à une colonne de la table située du côté clé étrangère de la relation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Procédure : créer des relations entre tables (Visual Database Tools)](http://msdn.microsoft.com/en-us/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

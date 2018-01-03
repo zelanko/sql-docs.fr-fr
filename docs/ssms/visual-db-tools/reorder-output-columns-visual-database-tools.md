@@ -3,7 +3,7 @@ title: "Réorganiser les colonnes de sortie (Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 770e918f8f61679a69dd474975672652124fd2d3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f81fae76f155da544467c39fea1a85419f6ba89a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Réorganiser les colonnes de sortie (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’ordre dans lequel vous ajoutez des colonnes de données à une requête Select détermine l’ordre d’affichage de ces colonnes dans les résultats. La première colonne que vous ajoutez à la requête s'affiche à l'extrême gauche des résultats, la deuxième colonne à côté et ainsi de suite.  
@@ -46,7 +46,7 @@ Pour maîtriser l'affichage d'une colonne de données dans le jeu de résultats 
 > [!TIP]  
 > Vous pouvez ajouter une ligne de données à un emplacement spécifique du volet Critères, en insérant une ligne vierge dans ce volet Critères, puis en spécifiant la colonne de données à ajouter. Pour plus d’informations, consultez [Ajouter des colonnes à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
 [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

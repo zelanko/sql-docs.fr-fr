@@ -3,7 +3,7 @@ title: Supprimer un proxy de SQL Server Agent | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d33a588c8f3ad55f1167c324fba3347163c13b5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f7f96d540096c91b449d313fda3bc9686477a63d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment supprimer un compte proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou de [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Lorsque vous supprimez un compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , vérifiez que le proxy ne fait pas référence à des étapes de travail actives. Pour vérifier si des étapes de travail font référence au proxy, cliquez avec le bouton droit sur le proxy, sélectionnez **Propriétés**, puis dans la boîte de dialogue *Propriétés du compte proxy***nom_proxy** , sélectionnez la page **Références** . Si vous supprimez un proxy, il vous est proposé de réaffecter toutes les étapes de travail qui utilisent ce proxy dans la boîte de dialogue **Supprimer un objet** .  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilisent les informations d'identification pour stocker les informations relatives aux comptes d'utilisateur Windows. L'utilisateur spécifié dans l'information d'identification doit être habilité à ouvrir une session en tant que programme de traitement par lots sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est en cours d'exécution.  
+-   Les proxys de l'Agent[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilisent les informations d'identification pour stocker les informations relatives aux comptes d'utilisateur Windows. L'utilisateur spécifié dans l'information d'identification doit être habilité à ouvrir une session en tant que programme de traitement par lots sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est en cours d'exécution.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] vérifie l'accès au sous-système pour un proxy et donne accès au proxy à chaque exécution de l'étape de travail. Si le proxy n'a plus accès au sous-système, l'étape de travail échoue. Sinon, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] emprunte l'identité de l'utilisateur spécifié dans le proxy et exécute l'étape de travail.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 ### <a name="Security"></a>Sécurité  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Autorisations  
 Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer, modifier ou supprimer des comptes proxy.  
   
 ## <a name="SSMSProcedure"></a>Utilisation de SQL Server Management Studio  
@@ -83,7 +83,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent créer, modifier ou
   
 #### <a name="to-delete-a-sql-server-agent-proxy-account"></a>Pour supprimer un compte proxy de SQL Server Agent  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

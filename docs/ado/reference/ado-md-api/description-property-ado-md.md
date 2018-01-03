@@ -3,7 +3,7 @@ title: "Description, propriété (ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8acff61da1e6a8a6f73f9f10eb8941c109f75d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 173b5c3ac03ad7a472fa3e0f82617da20f281d73
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-property-ado-md"></a>Description, propriété (ADO MD)
 Retourne une description de texte de l’objet actuel.  
@@ -38,7 +38,7 @@ Retourne une description de texte de l’objet actuel.
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **chaîne** et est en lecture seule.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets, **Description** s’applique uniquement aux membres de formule et de mesure. **Description** retourne une chaîne vide (« ») pour tous les autres types de membres. Pour plus d’informations sur les différents types de membres, consultez la [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriété.  
   
  Cette propriété est uniquement prise en charge sur **membre** les objets qui appartiennent à un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet. Une erreur se produit lorsque cette propriété est référencée à partir de **membre** objets appartenant à un [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objet.  

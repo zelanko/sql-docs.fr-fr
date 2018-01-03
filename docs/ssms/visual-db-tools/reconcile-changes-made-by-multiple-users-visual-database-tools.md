@@ -3,7 +3,7 @@ title: "Rapprocher les modifications effectuées par plusieurs utilisateurs (Vis
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00eeab1dbe74e77189136b200b4f1ddfe50e218b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b8113bac98412aedfbb5d9e9bd8781893d033c5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans un environnement multi-utilisateur, des changements peuvent être apportés à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l'objet dans le Concepteur de tables ou dans le Concepteur de schémas de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  
@@ -64,6 +64,6 @@ Par exemple, supposons qu'une collègue et vous-même exécutiez chacun une requ
   
     Dans ce cas, vous ne pouvez pas valider vos modifications apportées à la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Boîte de dialogue Modifications détectées dans la base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   

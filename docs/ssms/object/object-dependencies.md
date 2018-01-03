@@ -3,7 +3,7 @@ title: "Dépendances d’objet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1d1605a4f702061dc9dcd5be2ee5c673866bed6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52c30e921f61ec720dffc2fddd4ecf7ae17a91de
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Certains objets de base de données possèdent des dépendances sur d’autres objets de base de données. Par exemple, les vues et les procédures stockées dépendent de l'existence de tables qui contiennent les données retournées par la vue ou la procédure. Les **Dépendances d'objets (page Général)** de l'objet actuel répertorient à la fois les objets de base de données indispensables au bon fonctionnement de l'objet et les objets qui dépendent de l'objet sélectionné. Un objet qui référence un autre objet dans sa définition et dont la définition est stockée dans le catalogue système est appelé une *entité de référence*. Un objet référencé par un autre objet est appelé *entité référencée*.  
@@ -39,7 +39,7 @@ Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances so
 Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
 **Dépendances**  
-Cliquez sur **Objets dépendant de** *<selected object>* pour afficher une vue hiérarchique des objets qui dépendent de l'objet sélectionné. Cliquez sur **Objets dont** *<selected object>* **dépend** is clicked, this displays an hierarchical view of objects on which the selected object dépend.  
+Cliquez sur **Objets dépendant de** *<selected object>* pour afficher une vue hiérarchique des objets qui dépendent de l'objet sélectionné. Cliquez sur **Objets dont** *<selected object>* **dépend** pour afficher une vue hiérarchique des objets dont dépend l'objet sélectionné.  
   
 **Nom**  
 Affiche le nom de l'objet sélectionné dans l'arborescence **Dépendances** affichée plus haut.  

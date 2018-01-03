@@ -3,7 +3,7 @@ title: "Source, propriété (jeu d’enregistrements ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36180bafb53d72985c2dc671d80147c8ffaa8588
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f472e37945d56a3c981bacb6a6251350460ecc4f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-property-ado-recordset"></a>Source, propriété (jeu d’enregistrements ADO)
 Indique la source de données pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -39,7 +39,7 @@ Indique la source de données pour un [Recordset](../../../ado/reference/ado-api
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit un **chaîne** valeur ou [commande](../../../ado/reference/ado-api/command-object-ado.md) objet référence ; retourne uniquement un **chaîne** valeur qui indique la source de la **Recordset**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **Source** propriété pour spécifier une source de données pour un **Recordset** en utilisant l’une des opérations suivantes : une **commande** de l’objet variable, une instruction SQL, une procédure stockée, ou un nom de table.  
   
  Si vous définissez la **Source** propriété un **commande** objet, le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété de la **Recordset** objet hérite les valeur de la **ActiveConnection** propriété spécifié **commande** objet. Toutefois, lors de la lecture le **Source** propriété ne retourne pas une **commande** de l’objet ; au lieu de cela, elle retourne le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété de la **commande** de l’objet à laquelle vous avez défini le **Source** propriété.  

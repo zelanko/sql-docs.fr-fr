@@ -3,7 +3,7 @@ title: "Demander propriété dynamique (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 820e3aae44e3a1fcd8ebabaee21d5bdac651cab2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c9ca7365c2f9f97bc4219715bcbb8d1e25ea5f79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompt-property-dynamic-ado"></a>Demander propriété dynamique (ADO)
 Spécifie si le fournisseur OLE DB doit inviter l’utilisateur pour les informations d’initialisation.  
@@ -31,7 +31,7 @@ Spécifie si le fournisseur OLE DB doit inviter l’utilisateur pour les informa
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **Invite de commandes** est une propriété dynamique, ce qui peut être ajoutée à la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) l’objet [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection par le fournisseur OLE DB. Pour demander les informations d’initialisation, les fournisseurs OLE DB affiche généralement une boîte de dialogue à l’utilisateur.  
   
  Propriétés dynamiques d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet sont perdues lorsque le **connexion** est fermé. Le **invite** propriété doit être réinitialisée avant de rouvrir le **connexion** pour utiliser une valeur autre que la valeur par défaut.  

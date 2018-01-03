@@ -3,7 +3,7 @@ title: "Inscrire un serveur connecté (SQL Server Management Studio) | Microsoft
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Inscrire un serveur connecté (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment inscrire un serveur connecté dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Lors de l'inscription du serveur, vous pouvez enregistrer les informations de connexion relatives aux serveurs auxquels vous accédez fréquemment. Un serveur peut être inscrit avant la connexion ou au moment de la connexion depuis l'Explorateur d'objets.  Vous pouvez afficher les serveurs inscrits dans SSMS en accédant à **Afficher**\\**Serveurs inscrits** à partir du menu.
@@ -57,7 +57,7 @@ Quand un utilisateur se connecte avec un nom de connexion et un mot de passe sp�
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Pour plus d’informations, consultez [Choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-     -    **Nom d'utilisateur**  
+     -    **User name**  
 Spécifie le nom d'utilisateur actuel avec lequel vous vous connectez. Cette option en lecture seule est disponible uniquement si vous avez choisi de vous connecter via l'authentification Windows. Pour modifier les **Noms d'utilisateurs**, ouvrez une session sur l'ordinateur en tant qu'utilisateur différent. 
 
      -    **Connexion**  
@@ -84,7 +84,7 @@ Cliquez sur cette option pour tester la connexion au serveur sélectionné dans 
 **Enregistrer**  
 Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits. 
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer un nouveau serveur inscrit (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
   
   

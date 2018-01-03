@@ -3,7 +3,7 @@ title: "Se connecter au serveur (Moteur de base de données) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-f1
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6c964843ed176e0a175606ef92c8146d20a37b47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70f7d86d487cc947940edf5daf89c54d9186df6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez cette boîte de dialogue pour afficher ou spécifier des options de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. Dans la plupart des cas, vous pouvez vous connecter en entrant le nom d’ordinateur du serveur de base de données dans la zone **Nom du serveur** et en cliquant sur **Se connecter**. Si vous vous connectez à une instance nommée, utilisez le nom d’ordinateur suivi d’une barre oblique inverse, puis du nom de l’instance. Par exemple, `mycomputer\myinstance`. Si vous vous connectez à [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], utilisez le nom d’ordinateur suivi de **\sqlexpress**.  
@@ -67,7 +67,7 @@ L’authentification Azure Active Directory est un mécanisme de connexion à [!
   > **Active Directory - Authentification intégrée**  
 L’authentification Azure Active Directory est un mécanisme de connexion à [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)] à l’aide d’identités dans Azure Active Directory (Azure AD). Utilisez cette méthode pour vous connecter à [!INCLUDE[ssSDS](../../includes/sssds_md.md)] si vous êtes connecté à Windows avec vos informations d’identification Azure Active Directory à partir d’un domaine fédéré. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
-**Nom d'utilisateur**  
+**User name**  
 Nom d’utilisateur Windows avec lequel vous connecter. Cette option est disponible uniquement si vous avez choisi la connexion avec **l’Authentification par mot de passe Active Directory**. Il est en lecture seule lorsque vous sélectionnez l’authentification **Authentification Windows** ou **Active Directory - Authentification intégrée**.  
   
 **Connexion**  

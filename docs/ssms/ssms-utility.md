@@ -3,7 +3,7 @@ title: Utilitaire Ssms | Microsoft Docs
 ms.custom: 
 ms.date: 12/08/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: a69ee6a0f66529c6cfb08216643d9c2a6c2a1482
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssms-utility"></a>Utilitaire Ssms
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’utilitaire **Ssms** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si cela est spécifié, **Ssms** établit également une connexion à un serveur et ouvre des requêtes, des scripts, des fichiers, des projets et des solutions.  
@@ -88,7 +88,7 @@ Ssms
 [**-?**]  
  Affiche l'aide de la ligne de commande.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Tous les commutateurs sont facultatifs et séparés par un espace à l'exception des fichiers qui sont séparés par des virgules. Si vous ne spécifiez pas de commutateur, **Ssms** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] tel que spécifié dans les paramètres **Options** du menu **Outils** . Par exemple, si l’option **Au démarrage** de la page **Environnement/Général** spécifie **Ouvrir la fenêtre de nouvelle requête**, **Ssms** s’ouvre avec un éditeur de requête vide.  
   
  Le commutateur **-log** doit apparaître à la fin de la ligne de commande, après tous les autres commutateurs. L'argument de nom de fichier (filename) est facultatif. Si un nom de fichier est spécifié et que le fichier n'existe pas, il est créé. Si le fichier ne peut pas être créé (par exemple, en raison d'un accès en écriture insuffisant), le journal est écrit à la place à l'emplacement APPDATA non localisé (voir ci-dessous). Si l'argument du nom de fichier (filename) n'est pas spécifié, deux fichiers sont écrits dans le dossier des données d'application non localisé de l'utilisateur actuel. Le dossier de données d'application non localisé de SQL Server peut se trouver dans la variable d'environnement APPDATA. Par exemple, pour SQL Server 2012, le dossier est le suivant : \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\\. Les deux fichiers sont nommés, par défaut, ActivityLog.xml et ActivityLog.xsl. Le premier contient les données du journal des activités et le deuxième est une feuille de style XML qui offre un moyen plus pratique d'afficher le fichier XML. Utilisez les étapes suivantes pour afficher le fichier journal dans votre visionneuse XML par défaut, comme Internet Explorer : cliquez sur Démarrer, sur Exécuter…, tapez « \<lecteur système>:\Users\\<nom utilisateur\>\AppData\Roaming\Microsoft\AppEnv\10.0\ActivityLog.xml » dans le champ fourni, puis appuyez sur Entrée.  
@@ -149,7 +149,7 @@ Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 
 
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   
   

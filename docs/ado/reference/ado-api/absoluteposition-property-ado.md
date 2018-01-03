@@ -3,7 +3,7 @@ title: "AbsolutePosition, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 491ed39340dd066955db2fd73ed986614744cff4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17fe4e32b8a54d51ac3009e06e74e77e74321171
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition, propriété (ADO)
 Indique la position ordinale d’une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) enregistrement en cours de l’objet.  
@@ -34,7 +34,7 @@ Indique la position ordinale d’une [Recordset](../../../ado/reference/ado-api/
   
  Pour le code 64 bits, utilisez un type de données qui fournit le stockage d’une valeur 64 bits. Par exemple, vous pouvez utiliser soit Long, soit une autre valeur longueur 64 bits comme DBORDINAL. N’utilisez pas **PositionEnum** valeurs, car ils sont limités à la longueur de 32 bits.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour définir le **AbsolutePosition** propriété, ADO nécessite que le fournisseur OLE DB que vous utilisez implémenter le [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) interface.  
   
  L’accès à la **AbsolutePosition** propriété d’un **Recordset** qui a été ouvert avec l’avant uniquement ou curseur dynamique génère l’erreur **adErrFeatureNotAvailable**. Avec d’autres types de curseur, la position correcte sera retournée tant que le fournisseur OLE DB prend en charge la **IRowsetScroll:IRowsetLocate** interface. Si le fournisseur ne prend pas en charge la **IRowsetScroll** interface, la propriété est définie **adPosUnknown**. Consultez la documentation de votre fournisseur pour déterminer si elle prend en charge **IRowsetScroll**.  

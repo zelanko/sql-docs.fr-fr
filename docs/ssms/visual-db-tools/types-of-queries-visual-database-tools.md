@@ -3,7 +3,7 @@ title: "Types de requêtes (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5172dd65f727d4829dd92b1aa5f54ce0f8bea89
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ea5c9451b1db6e369525edd93a9d735f6538263e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Types de requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le Concepteur de requêtes et de vues propose des fonctionnalités intégrées pour certains types de requêtes (Select, Insert Results, Insert Values, Update, Delete et Make Table) et prend également en charge les requêtes d’expression UNION, de recherche en texte intégral et CASE.  

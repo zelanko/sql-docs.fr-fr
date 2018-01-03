@@ -3,7 +3,7 @@ title: "Exemple de méthode GetRows (JScript) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a81c58c0a9f131993b5b41c130ddd599d42c0d91
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f017bbeb1d3812e6f984c77acaba09477819591
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getrows-method-example-jscript"></a>Exemple de méthode GetRows (JScript)
 Cet exemple utilise le [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) pour récupérer toutes les lignes de la *Customers* à partir de la table un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et remplir un tableau avec les données résultantes. Le **GetRows** méthode retournera moins le nombre de lignes souhaité dans deux cas : soit if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a été atteinte, ou si **GetRows** tenté de récupérer un enregistrement qui a été supprimé par un autre utilisateur. La fonction retourne **False** uniquement dans le second cas. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **GetRowsJS.asp**.  

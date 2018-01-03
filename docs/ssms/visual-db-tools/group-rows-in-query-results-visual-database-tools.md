@@ -3,7 +3,7 @@ title: "Regrouper des lignes dans les résultats de requête (Visual Database To
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bff62f024fd85b326213197f7f79ea43ed0a0f37
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad7ba5f8a5f4f155ee5bce77551dfab3ec7fc85e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Regrouper des lignes dans les résultats de requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour créer des sous-totaux ou afficher d’autres informations de synthèse pour les sous-ensembles d’une table, créez des groupes à l’aide d’une requête d’agrégation. Chaque groupe synthétise les données pour toutes les lignes de la table qui ont la même valeur.  
@@ -88,6 +88,6 @@ Le résultat obtenu peut se présenter comme suit :
     GROUP BY pub_id  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Trier et regrouper des résultats de requête (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

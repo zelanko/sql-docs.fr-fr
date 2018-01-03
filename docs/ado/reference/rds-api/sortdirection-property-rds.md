@@ -1,11 +1,13 @@
 ---
 title: "SortDirection, propriété (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d1b07bebfd6b047e13c394a070757b26bd0c354
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4e2bc3372e360debd15fa33b6badd4bd6bdc61fa
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection, propriété (RDS)
 Indique si un ordre de tri est croissant ou décroissant.  
@@ -39,10 +41,10 @@ DataControl.SortDirection = value
  *DataControl*  
  Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
- *Valeur*  
+ *Value*  
  A **booléenne** valeur qui, lorsque la valeur **True**, indique le sens de tri est croissant. **False** indique l’ordre décroissant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), **SortDirection**, [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des propriétés de tri et de filtrage des fonctionnalités sur le cache côté client. La fonctionnalité de tri classe les enregistrements à l’aide de valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble des enregistrements selon des critères de recherche, lors de la version complète [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est conservé dans le cache. Le [réinitialiser](../../../ado/reference/rds-api/reset-method-rds.md) méthode exécute les critères et remplace l’actuel **Recordset** avec un texte modifiable **Recordset**.  
   
 ## <a name="applies-to"></a>S'applique à  

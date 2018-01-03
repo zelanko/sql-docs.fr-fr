@@ -3,7 +3,7 @@ title: "Créer des requêtes Insert Results (Visual Database Tools) | Microsoft 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddef4fd36ca72c473b480c31e7cd46c7e710d295
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2bc5a6ba90fb46d4d5329a3d8c8a16d7f9fe8d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Créer des requêtes Insert Results (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez copier des lignes d’une table à une autre ou au sein d’une même table à l’aide d’une requête Insert Results. Dans une table `titles` par exemple, vous pouvez utiliser une requête Insert Results pour copier des informations sur les titres publiés par un éditeur dans une seconde table que vous pouvez mettre à la disposition de cet éditeur. Une requête Insert Results ressemble à une requête Make Table, à la seule différence qu'elle copie des lignes dans une table existante.  
@@ -101,7 +101,7 @@ Lorsque vous créez une requête Insert Results, le volet Critères change afin 
   
 Quand vous exécutez une requête Insert Results, aucun résultat n’apparaît dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

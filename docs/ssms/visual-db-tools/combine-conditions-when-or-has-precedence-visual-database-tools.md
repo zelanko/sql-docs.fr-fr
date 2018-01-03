@@ -3,7 +3,7 @@ title: "Associer des conditions avec priorité à l’opérateur OR (Visual Data
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5f8852df6a617323c69741eebd7c9c1475f4f054
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5efcb2680c0b0b33f87b1e23254070786458530d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur OR (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour relier des conditions à l’aide de l’opérateur OR et leur accorder la priorité sur les conditions reliées à l’aide de l’opérateur AND, vous devez répéter la condition AND pour chaque condition OR.  
@@ -76,7 +76,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 > [!NOTE]  
 > Quand vous entrez des conditions de requête au format indiqué immédiatement au-dessus du [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), mais que vous apportez par la suite des modifications à la requête figurant dans le volet Schéma ou dans le volet Critères, le Concepteur de requêtes recrée l'instruction SQL pour qu'elle corresponde à ce format, avec la condition AND répartie de manière explicite vers les deux conditions OR.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Conventions pour la combinaison de conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

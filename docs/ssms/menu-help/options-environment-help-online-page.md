@@ -3,7 +3,7 @@ title: Options (Environnement - Aide - Page En ligne) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---online-page"></a>Options (Environnement - Aide - Page En ligne)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **Options** vous permet de spécifier les sources d’aide à utiliser pour les recherches, notamment pour l’aide F1, dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , sélectionnez **Aide**, puis cliquez sur **En ligne**. Si la page **En ligne** n'apparaît pas dans la liste, activez la case à cocher **Afficher tous les paramètres** dans la boîte de dialogue **Options** .  

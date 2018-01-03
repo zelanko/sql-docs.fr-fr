@@ -3,7 +3,7 @@ title: "DateCreated, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a9da873196a37a77cb998897522af22059683ccf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e56ae8c4ec6a57f7fc50ca5d00f21bc77ce7d3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datecreated-property-adox"></a>DateCreated, propriété (ADOX)
 Indique la date de que création de l’objet.  
@@ -35,7 +35,7 @@ Indique la date de que création de l’objet.
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **Variant** valeur qui spécifie la date de création. La valeur est null si **DateCreated** n’est pas pris en charge par le fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **DateCreated** propriété est null pour les objets récemment ajoutés. Après avoir ajouté un nouvel [vue](../../../ado/reference/adox-api/view-object-adox.md) ou [procédure](../../../ado/reference/adox-api/procedure-object-adox.md), vous devez appeler la [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode de la [vues](../../../ado/reference/adox-api/views-collection-adox.md) ou [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection pour obtenir les valeurs de la **DateCreated** propriété.  
   
 ## <a name="applies-to"></a>S'applique à  

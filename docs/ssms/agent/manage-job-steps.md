@@ -3,7 +3,7 @@ title: "Gérer les étapes de travail | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 74a603626ff9e2c076abb09eb27ac2416a525b01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6db3f3c828aa0841372bdc8bc8d493235d0bccb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
@@ -200,7 +200,7 @@ Notez que si vous avez déployé le package dans le catalogue SSIS et que vous s
   
 Pour plus d’informations sur la création d’étapes de travail qui exécutent des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , consultez [Travaux de SQL Server Agent pour les packages](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -215,7 +215,7 @@ Pour plus d’informations sur la création d’étapes de travail qui exécuten
 |Décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail.|[Afficher des informations sur une étape de travail](../../ssms/agent/view-job-step-information.md)|  
 |Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Supprimer un journal d'étapes de travail](../../ssms/agent/delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/en-us/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Créer des travaux](../../ssms/agent/create-jobs.md)  
 [sp_add_job (Transact-SQL)](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  

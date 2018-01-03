@@ -3,7 +3,7 @@ title: Options (Environnement - Page Polices et couleurs) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae02d8e4c6639555fe79ceca82ca46361648ddee
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b25286172071a980e96ead35ffef81a6b5cf19d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La boîte de dialogue **Options** vous permet de définir un modèle personnalisé de polices et de couleurs pour différents éléments de l’interface utilisateur dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Dans le menu **Outils** , cliquez sur **Options** , développez le dossier **Environnement** et sélectionnez **Polices et couleurs**.  
@@ -89,7 +89,7 @@ Cochez cette case pour afficher le texte des éléments affichés sélectionnés
 **Exemple**  
 Affiche un aperçu du modèle de style, de taille et de couleur des polices correspondant aux valeurs sélectionnées dans **Afficher les paramètres de** et **Éléments affichés**. Vous pouvez utiliser cette zone pour afficher un aperçu des résultats obtenus lorsque vous essayez différentes options de mise en forme.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Codage en couleurs dans les éditeurs de code](http://msdn.microsoft.com/en-us/802882dc-c997-4e3f-8a01-994bb43169ae)  
 [Options (Éditeur de texte/onglet Éditeur et page Barre d'état)](http://msdn.microsoft.com/en-us/e4815678-7885-4631-878f-c6a2b857ee05)  
   

@@ -3,7 +3,7 @@ title: "Supprimer des lignes dans le volet de résultats (Visual Database Tools)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3084fd3358aa359ddd16a20c344078a5933dabd3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b63dddd7dc856409e81a0b5ff62998a3eb91fd1b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Supprimer des lignes dans le volet Résultats (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des enregistrements dans la base de données. Pour supprimer l'ensemble des lignes, vous pouvez utiliser une requête Delete. Pour plus d’informations, consultez [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). Si vous souhaitez uniquement supprimer des lignes du volet Résultats, modifiez les critères de la requête. Pour plus d’informations, consultez [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Si certaines des lignes sélectionnées ne peuvent pas être supprimées de la base de données, aucune d'elles n'est supprimée et un message s'affiche pour vous indiquer les lignes qui ne peuvent pas être supprimées.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -3,7 +3,7 @@ title: "Append et CreateParameter, méthodes-exemple (VC ++) | Documents Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b1ec823387e26a900ecfaaff620f11f3a3caf1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce057ae922844437e94e4854b14a48ffcd126747
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append et CreateParameter, méthodes-exemple (VC ++)
 Cet exemple utilise le [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthodes pour exécuter une procédure stockée avec un paramètre d’entrée.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 // BeginAppendCpp.cpp  

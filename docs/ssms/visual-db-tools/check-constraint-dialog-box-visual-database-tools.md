@@ -3,7 +3,7 @@ title: "Contraintes de validation, boîte de dialogue (Visual Database Tools) | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18d082efc3361d4ddc71983aedcb897c9cb5c2d8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b74db72d1d5993a0f6932701a307f5eba9431934
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Boîte de dialogue Contraintes de validation (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue apparaît quand vous cliquez avec le bouton droit sur une grille de définition de table dans le Concepteur de tables puis cliquez sur **Vérifier les contraintes**. Elle contient un jeu de propriétés pour les contraintes non uniques jointes aux tables de votre base de données. Les propriétés qui s’appliquent aux contraintes uniques apparaissent dans la boîte de dialogue **Index/Clés** .  
@@ -37,7 +37,7 @@ Répertorie les contraintes de validation disponibles. Pour afficher les propri�
 **Ajouter**  
 Crée une nouvelle contrainte pour la table de base de données sélectionnée et fournit un nom par défaut ainsi que d'autres valeurs pour la contrainte. La contrainte ne devient valide que lorsqu'une expression est entrée pour celle-ci.  
   
-**Delete**  
+**Supprimer**  
 Supprime la contrainte sélectionnée de la table. Pour annuler l'ajout d'une contrainte de validation, supprimez la contrainte à l'aide de ce bouton.  
   
 **Catégorie Général**  
@@ -67,7 +67,7 @@ Spécifie si la contrainte est appliquée lors de l'insertion ou de la mise à j
 **Appliquer la réplication**  
 Indique si la contrainte doit être appliquée lorsqu'un Agent de réplication effectue une requête Insert ou Update sur cette table.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utilisation des contraintes (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
 [Boîte de dialogue Index - Clés &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

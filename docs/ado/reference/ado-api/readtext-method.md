@@ -3,7 +3,7 @@ title: "Méthode ReadText | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readtext-method"></a>ReadText, méthode
 Lit un nombre spécifié de caractères à partir d’un fichier texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -40,12 +40,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Paramètres  
  *NumChars*  
- Ce paramètre est facultatif. A **Long** valeur qui spécifie le nombre de caractères à lire à partir du fichier, ou un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur. La valeur par défaut est **adReadAll**.  
+ Facultatif. A **Long** valeur qui spécifie le nombre de caractères à lire à partir du fichier, ou un [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur. La valeur par défaut est **adReadAll**.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Le **ReadText** méthode lit un nombre spécifié de caractères, une ligne entière ou l’intégralité du flux d’un **flux** de l’objet et retourne la chaîne résultante.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si *NUMCHARS* est supérieur au nombre de caractères présents dans le flux, seuls les caractères restants sont retournés. La chaîne de lecture n’est pas remplie pour correspondre à la longueur spécifiée par *NUMCHARS*. S’il n’y a pas de caractères pour lire, une valeur de type variant null est retournée. **ReadText** ne peut pas être utilisé pour lire vers l’arrière.  
   
 > [!NOTE]

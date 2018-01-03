@@ -3,7 +3,7 @@ title: "Volet Détails de l’Explorateur d’objets | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523ea1b976fc5769cd400e9bbe32f380956421df
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Détails de l’Explorateur d’objets, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fournit une vue tabulaire de tous les objets se trouvant dans le serveur ainsi qu’une interface utilisateur pour les gérer. Les fonctionnalités de l’Explorateur d’objets varient légèrement en fonction du type de serveur. Il contient toutefois des fonctionnalités de développement pour les bases de données et des fonctionnalités de gestion pour tous les types de serveurs.  
@@ -50,7 +50,7 @@ Détails de l'Explorateur d'objets comprend une barre d'outils contenant les ic�
 |**Suivant**|Passe à l’écran suivant après une opération **Précédent** .|  
 |**Monter**|Passe à l'objet ou au dossier parent.|  
 |**Synchroniser**|Définit l'objet sélectionné dans Détails de l'Explorateur d'objets comme focus de l'Explorateur d'objets.|  
-|**Filtre**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
+|**Filter**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
 |**Actualiser**|Actualise l'affichage dans Détails de l'Explorateur d'objets.|  
 |**Recherche**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
   
@@ -103,6 +103,6 @@ Jeux volumineux
   
 -   Les recherches portant sur des jeux d'objets volumineux peut prendre du temps et nuire aux performances du serveur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur d'objets](../../ssms/object/object-explorer.md)  
   
