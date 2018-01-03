@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6434b5e98944ee48b51d3d1c06db0ba94fbda0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a84f5bfb08b3824f908b7b38a1da0dddcd8a71c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu’un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -71,10 +71,10 @@ ms.lasthandoff: 11/17/2017
   
      ( *nombre_de_pages* * 8192)  
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Le script suivant indique la taille du disque en kilooctets, pour chaque fichier partiellement alloué.  Le script affiche également la taille maximale en mégaoctets que peut atteindre un fichier partiellement alloué.  Exécutez le script Transact-SQL en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```tsql
+```sql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
         sd.name AS [Snapshot],
         mf.name AS [Filename], 
@@ -92,7 +92,7 @@ AND mf2.is_sparse = 0
 ORDER BY 1;
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

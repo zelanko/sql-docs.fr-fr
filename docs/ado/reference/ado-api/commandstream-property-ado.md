@@ -3,7 +3,7 @@ title: "CommandStream, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dacfa25b7ab9967f8c28e38c0df121063b583319
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d1c75a7db62475c8f717e36a93b9bf554c6248d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandstream-property-ado"></a>CommandStream, propriété (ADO)
 Indique le flux utilisé comme entrée pour un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
@@ -32,7 +32,7 @@ Indique le flux utilisé comme entrée pour un [commande](../../../ado/reference
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne le flux de données utilisé comme entrée pour un **commande** objet. Le format de ce flux de données est spécifique au fournisseur ; consultez la documentation de votre fournisseur pour plus d’informations. Cette propriété est similaire à la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété, ce qui permet de spécifier une chaîne pour l’entrée d’un **commande**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **CommandStream** et **CommandText** s’excluent mutuellement. Lorsque l’utilisateur définit les **CommandStream** propriété, le **CommandText** propriété la valeur la chaîne vide (« »). Si l’utilisateur définit les **CommandText** propriété, le **CommandStream** propriété sera définie **rien**.  
   
  Les comportements de la **Command.Parameters.Refresh** et **Command.Prepare** méthodes sont définies par le fournisseur. Les valeurs des paramètres dans un flux de données ne peuvent pas être actualisés.  

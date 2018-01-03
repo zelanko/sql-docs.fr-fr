@@ -3,7 +3,7 @@ title: "Conventions pour la combinaison de conditions de recherche dans le volet
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7b0d8e0ec4d73c564b9cd9db14fac961c310f48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 611da9e69e29621c057fe93734e66d0a64168744
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Conventions pour la combinaison de conditions de recherche dans le volet Critères (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer des requêtes qui incluent un nombre quelconque de conditions de recherche, reliées par un nombre quelconque d’opérateurs AND et OR. Une requête avec une combinaison de clauses AND et OR peut devenir complexe ; il est donc utile de comprendre comment une telle requête est interprétée quand vous l’exécutez et comment elle est représentée dans les volets [Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) et [SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
@@ -171,6 +171,6 @@ Le Concepteur de requêtes et de vues représente cette clause WHERE dans le vol
   
 Si vous apportez des modifications à la requête (en modifiant, par exemple, une valeur dans le volet Critères), le Concepteur de requêtes et de vues recrée l'instruction SQL dans le volet SQL. L'instruction SQL recréée ressemblera à celle qui est affichée dans le volet Critères, et non à votre instruction d'origine. Par exemple, si le volet Critères contient des clauses AND distribuées, l'instruction obtenue dans le volet SQL contiendra des clauses AND distribuées de façon explicite. Pour plus d'informations, consultez « Utilisation de AND avec plusieurs clauses OR », plus haut dans cette rubrique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

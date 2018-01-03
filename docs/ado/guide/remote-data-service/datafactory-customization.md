@@ -3,7 +3,7 @@ title: Personnalisation de DataFactory | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53054c25f273acc4e5c91e8641dfe50d94b5d115
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 11a52b760227f8dad9400c24fe6118703aea3f5f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datafactory-customization"></a>DataFactory, personnalisation
 Service de données à distance (RDS) permet de facilement accéder aux données dans un système à trois niveaux client/serveur. Un contrôle des données client spécifie des paramètres de chaîne de connexion et de commande pour effectuer une requête sur une source de données distante ou une chaîne de connexion et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) paramètres nécessaires pour effectuer une mise à jour de l’objet.  

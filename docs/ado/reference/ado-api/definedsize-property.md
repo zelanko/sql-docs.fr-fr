@@ -3,7 +3,7 @@ title: "Propriété DefinedSize | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6aed254022d8203487899e2b4b72d6cbe2275eeb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a730e33ba9d3ce73a1178ee38ef1b9a5e58b5965
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property"></a>Propriété DefinedSize
 Indique la capacité de données d’une [champ](../../../ado/reference/ado-api/field-object.md) objet.  
@@ -40,7 +40,7 @@ Indique la capacité de données d’une [champ](../../../ado/reference/ado-api/
   
 4.  Pour les types de données qui n’ont pas une longueur, il est défini sur ~ 0 (au niveau du bit, la valeur n’est pas 0 ; tous les bits sont définis sur 1).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **DefinedSize** propriété pour déterminer la capacité de données d’une **champ** objet.  
   
  Le **DefinedSize** et [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) propriétés sont différentes. Par exemple, considérez un **champ** objet avec un type déclaré de **adVarChar** et un **DefinedSize** valeur de la propriété de 50, contenant un seul caractère. Le **ActualSize** valeur de propriété retournée est la longueur en octets du caractère unique.  

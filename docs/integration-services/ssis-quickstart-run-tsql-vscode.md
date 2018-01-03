@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: deb2b7ee8d96fe02383647345aad7bcf4562ad6f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c962285d10ca05434deafc9cf1d071a09f8cca65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Exécuter un package SSIS à partir de Visual Studio Code avec Transact-SQL
 Ce guide de démarrage rapide montre comment utiliser Visual Studio Code pour se connecter à la base de données du catalogue SSIS, puis utiliser des instructions Transact-SQL pour exécuter un package SSIS stocké dans le catalogue SSIS.
 
 Visual Studio Code est un éditeur de code pour Windows, Mac OS et Linux qui prend en charge les extensions, notamment l’extension `mssql` pour la connexion à Microsoft SQL Server, Azure SQL Database ou Azure SQL Data Warehouse. Pour plus d’informations sur VS Code, consultez [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 
 Avant de commencer, vérifiez que vous avez installé la dernière version de Visual Studio Code et chargé l’extension `mssql`. Pour télécharger ces outils, consultez les pages suivantes :
 -   [Télécharger Visual Studio Code](https://code.visualstudio.com/Download)
@@ -36,7 +36,7 @@ Pour activer les commandes `mssql` et T-SQL IntelliSense, définissez **SQL** co
 
 1. Ouvrez Visual Studio Code, puis ouvrez une nouvelle fenêtre. 
 
-2. Cliquez sur **Texte brut** dans le coin inférieur droit de la barre d’état.
+2. Cliquez sur **Texte brut** en bas à droite de la barre d’état.
 
 3. Dans le menu déroulant **Sélectionner le mode de langage** qui s’affiche, sélectionnez ou entrez **SQL**, puis appuyez sur **Entrée** pour définir SQL comme mode de langage. 
 
@@ -60,7 +60,7 @@ Utilisez Visual Studio Code pour établir une connexion au catalogue SSIS.
    | **Nom du serveur** | Nom complet du serveur | Si vous vous connectez à un serveur Azure SQL Database, le nom est au format suivant : `<server_name>.database.windows.net`. |
    | **Nom de la base de données** | **SSISDB** | Nom de la base de données avec laquelle établir une connexion. |
    | **Authentification** | Connexion SQL| Ce guide de démarrage rapide utilise l’authentification SQL. |
-   | **Nom d'utilisateur** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
+   | **User name** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
    | **Mot de passe (connexion SQL)** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
    | **Enregistrer le mot de passe** | Oui ou Non | Si vous ne souhaitez pas entrer le mot de passe à chaque fois, sélectionnez Oui. |
    | **Entrez un nom pour ce profil** | Nom d’un profil, tel que **mySSISServer** | L’enregistrement du nom de profil permet d’accélérer les connexions suivantes. | 

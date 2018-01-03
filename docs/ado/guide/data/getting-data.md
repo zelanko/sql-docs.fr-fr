@@ -3,7 +3,7 @@ title: "Obtention de données | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4336c13df5d04f356c83141c5a98653da516a6a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63e18be6bdc2505f939d6d6f7dca4a79bfc96ee2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-data"></a>Obtention de données
 [Notions de base ADO](../../../ado/guide/data/ado-fundamentals.md)et le [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) exemple introduites en particulier, les quatre opérations primaires impliquées dans la création d’une application ADO : obtention de données, examinez les données, modifier des données et mise à jour des données. Cette section traite de l’obtention de données plus en détail.  

@@ -3,7 +3,7 @@ title: "ActiveConnection, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0e3fe0c51bb9e21cdb4cf3ef27fee3785b871c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6edb5e36a0b8da56dd1761b188427b403ad5b153
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection, propriété (ADOX)
 Indique l’ADO [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet auquel le [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) appartient.  
@@ -39,7 +39,7 @@ Indique l’ADO [connexion](../../../ado/reference/ado-api/connection-object-ado
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit un **connexion** objet ou un **chaîne** contenant la définition d’une connexion. Retourne l’actif **connexion** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur par défaut est une référence d’objet null.  
   
 ## <a name="applies-to"></a>S'applique à  

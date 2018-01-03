@@ -3,7 +3,7 @@ title: Enregistrer sous | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f86afead1c6eca201a6669e8f64e89425f0cb1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8957cd743dd7f358d7f451f5d6e0879d040974d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-as"></a>Enregistrer sous
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permet d’enregistrer une instance de l’élément actif à l’emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **Enregistrer** *<file>* **sous** dans le menu **Fichier** (où *<file>* est le nom de l’élément actif), ou appuyez sur Alt+F, A dans l’éditeur de code.  
@@ -54,7 +54,7 @@ Affiche les fichiers et les dossiers contenus dans **Mes Projets** ou à l’emp
 **Poste de travail**  
 Affiche l’emplacement **Poste de travail** sur votre ordinateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Options d'enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
 [Gérer des fichiers avec encodage](../../ssms/solution/manage-files-with-encoding.md)  
   

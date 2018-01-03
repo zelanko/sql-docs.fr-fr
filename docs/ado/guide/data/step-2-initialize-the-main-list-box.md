@@ -3,7 +3,7 @@ title: "Étape 2 : Initialiser la zone de liste principale | Documents Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e84bc73bd63d90b43b4192208690fe3bca272de6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41fc40fd9154e8539ca0eeab541b2479d7c31144
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Étape 2 : Initialiser la zone de liste principale
 Pour déclarer les objets Record et Recordset globaux, insérez le code suivant dans (général) (déclarations) pour Form1 :  

@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>Destination ADO NET
   La destination ADO NET charge des données dans différentes bases de données compatibles [!INCLUDE[vstecado](../../includes/vstecado-md.md)]qui utilisent une table ou une vue de base de données. Vous pouvez charger ces données dans une table ou une vue existante ou créer une table et y charger les données.  
@@ -52,9 +52,9 @@ ms.lasthandoff: 11/20/2017
   
  La destination ADO NET comporte une entrée standard et une sortie d'erreur.  
   
- Vous pouvez définir des propriétés au moyen du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programme, cliquez sur l'une des rubriques suivantes :  
+ La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
 -   [Propriétés communes](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
@@ -75,10 +75,10 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="static-options"></a>Options statiques  
  **Connection manager**  
- Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une connexion en cliquant sur **Nouveau**.  
+ Sélectionnez un gestionnaire de connexions existant dans la liste ou créez une nouvelle connexion en cliquant sur **Nouveau**.  
   
  **Nouveau**  
- Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .  
+ Créez un gestionnaire de connexions à partir de la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** .  
   
  **Utiliser une table ou une vue**  
  Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouvelle**.  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si une table source SQL Server ou Sybase inclut une colonne d’identité, vous devez utiliser les tâches d’exécution de requêtes SQL pour activer IDENTITY_INSERT avant la destination ADO NET et le désactiver après. (La propriété de la colonne d’identité spécifie une valeur incrémentielle pour la colonne. L’instruction SET IDENTITY_INSERT permet l’insertion de valeurs explicites de la table source dans la colonne d’identité de la table de destination.)  
 >   
->   Pour exécuter avec succès les instructions SET IDENTITY_INSERT et le chargement des données, vous devez effectuer les opérations suivantes. 
->       1. Utilisez le même gestionnaire de connexions ADO.NET pour les tâches d’exécution de requêtes SQL et la destination ADO NET. 
->       2. Dans le gestionnaire de connexions, définissez la propriété **RetainSameConnection** et la propriété **MultipleActiveResultSets** sur True. 
->       3. Sur la destination ADO.NET, définissez la propriété **UseBulkInsertWhenPossible** sur False. 
+>   Pour exécuter avec succès les instructions SET IDENTITY_INSERT et le chargement des données, vous devez effectuer les opérations suivantes.  
+>       1. Utilisez le même gestionnaire de connexions ADO.NET pour les tâches d’exécution de requêtes SQL et la destination ADO NET.  
+>       2. Dans le gestionnaire de connexions, définissez la propriété **RetainSameConnection** et la propriété **MultipleActiveResultSets** sur True.  
+>       3. Sur la destination ADO.NET, définissez la propriété **UseBulkInsertWhenPossible** sur False.   
 >
 >  Pour plus d’informations, consultez [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) et [IDENTITY &#40;Propriété&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   

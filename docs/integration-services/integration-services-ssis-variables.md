@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/20/2017
   
  **Expressions de contrainte de précédence** : elles fournissent les valeurs à utiliser dans des contraintes de précédence pour déterminer si un exécutable contraint s’exécute. Les expressions peuvent être utilisées avec un résultat d'exécution (succès, échec, achèvement de l'opération) ou à la place d'un résultat d'exécution. Par exemple, si l’expression `@varMax > @varMin`est évalué à **true**, l’exécutable s’exécute. Pour plus d’informations, consultez [Ajouter des expressions aux contraintes de précédence](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Paramètres et codes de retour** : ils fournissent des valeurs aux paramètres d’entrée ou stockent les valeurs des paramètres de sortie et des codes de retour. Cette opération s'effectue en mappant les variables aux paramètres et aux valeurs de retour. Par exemple, si vous affectez à la variable `varProductId` la valeur 23 et que vous exécutez l’instruction SQL `SELECT * from Production.Product WHERE ProductID = ?`, la requête récupère le produit associé à la valeur `ProductID` 23. Pour plus d’informations, consultez [Tâche d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Paramètres et codes de retour** : ils fournissent des valeurs aux paramètres d’entrée ou stockent les valeurs des paramètres de sortie et des codes de retour. Cette opération s'effectue en mappant les variables aux paramètres et aux valeurs de retour. Par exemple, si vous affectez à la variable `varProductId` la valeur 23 et que vous exécutez l’instruction SQL `SELECT * from Production.Product WHERE ProductID = ?`, la requête récupère le produit associé à la valeur `ProductID` 23. Pour plus d’informations, consultez [Tache d’exécution de requêtes SQL](../integration-services/control-flow/execute-sql-task.md) et [Paramètres et codes de retour dans la tâche d’exécution SQL](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
  **Expressions de boucle For** : elles fournissent les valeurs à utiliser dans les expressions d’initialisation, d’évaluation et d’assignation de la boucle For. Par exemple, si la variable `varCount` a la valeur 2 et la variable `varMaxCount` la valeur 10 et que l’expression d’initialisation est `@varCount`, l’expression d’évaluation  `@varCount < @varMaxCount`et l’expression d’assignation `@varCount =@varCount +1`, la boucle se répète 8 fois. Pour plus d’informations, consultez [Conteneur de boucles For](../integration-services/control-flow/for-loop-container.md).  
   
@@ -200,7 +200,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
  **Type de valeur**  
  Sélectionnez un type de données.  
   
- **Valeur**  
+ **Value**  
  Tapez une valeur. La valeur doit être compatible avec le type de données spécifié dans l'option **Type de valeur** .  
   
  **Lecture seule**  
@@ -313,7 +313,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Mettre à jour une variable de manière dynamique avec des configurations  
  Pour mettre à jour dynamiquement des variables, vous pouvez créer des configurations pour les variables, déployer les configurations dans le package, puis mettre à jour les valeurs de variable dans un fichier de configuration lorsque vous déployez les packages. À l'exécution, le package utilise les valeurs de variable mises à jour. Pour plus d’informations, consultez [Créer des configurations de package](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Utiliser les valeurs des variables et des paramètres dans un package enfant](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Mapper des paramètres de requête à des variables dans un composant de flux de données](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

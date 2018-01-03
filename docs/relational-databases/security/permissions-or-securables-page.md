@@ -3,7 +3,7 @@ title: "Autorisations ou Éléments sécurisables, page | Microsoft Docs"
 ms.custom: 
 ms.date: 01/07/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
 ms.component: security
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bcdb1f8d446c5cadf94718f2ae7f59c9c0624caf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6dc65e94e95e978d47e9cb454337a52d0a6cc622
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="permissions-or-securables-page"></a>Page Autorisations ou Éléments sécurisables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la page **Autorisations** ou **Éléments sécurisables** pour afficher ou définir les autorisations pour les éléments sécurisables. Cette page peut être ouverte à partir de plusieurs emplacements. Le contenu de la page peut varier légèrement, selon la façon dont la page est ouverte et ce qu'elle contient. La grille supérieure de la page peut être remplie lorsque la page s'ouvre, ou elle peut être vide. Pour ajouter des éléments à la grille supérieure, cliquez sur **Rechercher**. Dans la grille supérieure, sélectionnez un élément, puis définissez les autorisations appropriées sous l'onglet **Autorisations explicites** . Pour afficher les autorisations agrégées, utilisez l'onglet **Autorisations effectives** .  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
  Sélectionnez cette option pour refuser cette autorisation à la connexion. Désactivez-la pour révoquer cette autorisation.  
   
  **Autorisations au niveau des colonnes**  
- Pour les objets qui contiennent des colonnes (tels que les tables, les vues ou les fonctions table), le bouton **Autorisations au niveau des colonnes** ouvre la boîte de dialogue du **même nom**. Dans cette boîte de dialogue, vous pouvez définir les autorisations **Octroyer**, **Autoriser**ou **Refuser** sur des colonnes individuelles d'une table ou d'une vue. Cette option n'est pas disponible pour tous les types d'objets ou autorisations.  
+ Pour les objets qui contiennent des colonnes (tels que les tables, les vues ou les fonctions table), le bouton **Autorisations au niveau des colonnes** ouvre la boîte de dialogue du **même nom** . Dans cette boîte de dialogue, vous pouvez définir les autorisations **Octroyer**, **Autoriser**ou **Refuser** sur des colonnes individuelles d'une table ou d'une vue. Cette option n'est pas disponible pour tous les types d'objets ou autorisations.  
   
 ## <a name="effective-tab"></a>Onglet Autorisations effectives  
  Les autorisations qu'un principal a mises en rapport avec un élément sécurisable peuvent provenir des autorisations définies pour plusieurs principaux différents. Par exemple, une connexion peut recevoir des autorisations individuellement, et également comme membre d'un groupe. L'onglet **Autorisations effectives** affiche le résultat de la combinaison d'autorisations explicites et des autorisations provenant d'appartenances de groupe ou de rôle. Les autorisations Octroyer sont agrégées. Une autorisation Refuser remplace toutes les autorisations Octroyer.  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
  **Colonne**  
  Noms des colonnes affectées par l'autorisation.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

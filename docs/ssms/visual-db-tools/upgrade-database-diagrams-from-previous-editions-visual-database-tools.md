@@ -3,7 +3,7 @@ title: "Mettre à niveau des schémas de base de données d’éditions antérie
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3f225eafb6cd6b1a4518a8e98f6b657bdc385cb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e4651d6e75744ce33f7e8eb1062de0f2b8daf396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des schémas de base de données d'éditions antérieures (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sont automatiquement mis à niveau lors de l’installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Pour obtenir plus d’instructions sur la configuration des schémas, consultez [Configurer le Concepteur de schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
     Cela permet de mettre à niveau les schémas stockés dans la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Comprendre la propriété du schéma de base de données (Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
 [Configurer le Concepteur de schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

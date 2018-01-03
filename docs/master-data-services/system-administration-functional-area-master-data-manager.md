@@ -5,7 +5,7 @@ ms.date: 04/01/2016
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e88ddee14ae9f46b79ca771a8879c0ac2c43d5df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a926b66adc2649f05aaab5f452b07faad3c4b062
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Zone fonctionnelle Administration de système (Master Data Manager)
   Dans la zone fonctionnelle Administration de système, les administrateurs peuvent créer un modèle et tous ses objets. Ils peuvent également créer des règles d'entreprise et créer et déployer des packages de modèles. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -49,14 +49,14 @@ ms.lasthandoff: 11/20/2017
   
  [Déploiement de modèles &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
- [Déployer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+ [Déployer un package de déploiement de modèle à l’aide de l’Assistant](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
  [Créer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)  
   
  [Résolution des problèmes de déploiement de modèle de (Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-model-deployment-master-data-services.aspx)  
   
 ## <a name="business-rules"></a>Règles d'entreprise  
- [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/20/2017
   
  [Actions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,23 +13,23 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7891a781a5874653eb7d4864529630d4d2a03442
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e01ed21accad152b2ef32d012f3194458ab0440
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Déployer un projet SSIS avec du code C# dans une application .NET
 Ce didacticiel de démarrage rapide montre comment écrire du code C# pour se connecter à un serveur de base de données et déployer un projet SSIS.
 
 Pour créer une application C#, vous pouvez utiliser Visual Studio, Visual Studio Code ou un autre outil de votre choix.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Avant de commencer, vérifiez que Visual Studio ou Visual Studio Code est installé sur votre ordinateur. Téléchargez l’édition Community gratuite de Visual Studio, ou le logiciel Visual Studio Code gratuit, à partir de la page de [Téléchargements Visual Studio](https://www.visualstudio.com/downloads/).
 
 > [!NOTE]
-> Un serveur Azure SQL Database est à l’écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
+> Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
 
 ## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Obtenir les informations de connexion en cas de déploiement sur SQL Database 
 

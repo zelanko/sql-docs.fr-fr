@@ -3,7 +3,7 @@ title: "Accès à un enregistrement | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8612ee07c90c315bf5cc1eceb621082ced03d5a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3178020e032f7ed86d48445fdf3bdc460c522b87
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jumping-to-a-record"></a>Accès à un enregistrement
 Le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode vous permet de faire avancer ou reculer dans le **Recordset** un nombre spécifié d’enregistrements à l’aide de la syntaxe suivante :  
@@ -33,7 +33,7 @@ Le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode vous 
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **déplacer** méthode est prise en charge sur tous les **Recordset** objets.  
   
  Si le *NbEnregistrements* argument est supérieure à zéro, la position actuelle se déplace vers l’avant (vers la fin de la **Recordset**). Si *NbEnregistrements* est inférieur à zéro, la position actuelle se déplace vers l’arrière (vers le début de la **Recordset**).  

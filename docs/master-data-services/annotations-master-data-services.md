@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 12f29a56698ebd784bc6a5d8c2f07e385a782f72
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3d19bf9b5719b4252efe3a83a2cf486ad6ce296f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="annotations-master-data-services"></a>Annotations (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les annotations sont des commentaires que vous entrez pour fournir des informations sur des transactions.  
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/20/2017
   
 -   [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]MDS.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Ajouter une annotation à une transaction|[Annoter une transaction &#40;Master Data Services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   

@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5909e7d45ba7c90f82a57266994108892201c632
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 3f8256186a41f596d981d03fcbc8aa247e1794a3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Utilisez la procédure suivante pour estimer la quantité d'espace nécessaire au stockage d'un index non cluster :  
   
 1.  Calculez les variables à utiliser dans les étapes 2 et 3.  
@@ -258,7 +263,7 @@ ms.lasthandoff: 12/01/2017
   
      Pour plus d'informations sur l'espace nécessaire pour les colonnes éparses, consultez [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

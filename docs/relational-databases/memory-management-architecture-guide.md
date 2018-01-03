@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire est
 |Type d’allocation de mémoire| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Allocation de page unique|Oui|Oui, regroupées dans des allocations de pages de « toute taille »|
-|Allocation de plusieurs pages|Non|Oui, regroupées dans des allocations de pages de « toute taille »|
-|Allocation du CLR|Non|Oui|
-|Mémoire de piles de threads|Non|Non|
-|Allocations directes de Windows|Non|Non|
+|Allocation de plusieurs pages|non|Oui, regroupées dans des allocations de pages de « toute taille »|
+|Allocation du CLR|non|Oui|
+|Mémoire de piles de threads|non|non|
+|Allocations directes de Windows|non|non|
 
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de ***Mémoire totale du serveur (Ko)*** a déjà atteint le paramètre ***Mémoire du serveur cible (Ko)*** (comme spécifié par max server memory). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 
 
@@ -120,7 +120,7 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire app
 
 |Type d’allocation de mémoire| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Allocation de page unique|Non|Non, regroupées dans des allocations de pages de « toute taille »|
+|Allocation de page unique|non|Non, regroupées dans des allocations de pages de « toute taille »|
 |Allocation de plusieurs pages|Oui|Non, regroupées dans des allocations de pages de « toute taille »|
 |Allocation du CLR|Oui|Oui|
 |Mémoire de piles de threads|Oui|Oui|
@@ -138,7 +138,7 @@ Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise dynamique
 
 La requête suivante retourne des informations sur la mémoire allouée actuellement :  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
@@ -281,7 +281,7 @@ La protection de la somme de contrôle, introduite dans [!INCLUDE[ssVersion2005]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est compatible avec la technologie NUMA (Non-Uniform Memory Access) et fonctionne correctement avec l'accès NUMA matériel sans configuration particulière. À mesure que la vitesse et le nombre de processeurs augmentent, il devient de plus en plus difficile de réduire le temps de réponse de la mémoire requis pour exploiter cette puissance de traitement supplémentaire. Pour contourner ce problème, les fournisseurs de matériel proposent des caches L3 de grande capacité, mais cette solution présente des limites. L’architecture NUMA fournit une solution évolutive à ce problème. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été conçu pour tirer parti des ordinateurs reposant sur la technologie NUMA sans qu’il soit nécessaire d’apporter des modifications aux applications. Pour en savoir plus, référez-vous à [Procédure : configurer SQL Server pour utiliser soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 [Mémoire du serveur (option de configuration de serveur)](../database-engine/configure-windows/server-memory-server-configuration-options.md)   
 [Lecture de pages](../relational-databases/reading-pages.md)   
 [Écriture de pages](../relational-databases/writing-pages.md)   

@@ -3,7 +3,7 @@ title: "Objet de liaison de données de carnet d’adresses | Documents Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 20adad3287a409a0d9dc05ea58397da32226f00b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22552b3b4f9574f04b5fec8a382ee792b1267ebf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-book-data-binding-object"></a>Objet de liaison de données du carnet d’adresses
 L’application de carnet d’adresses utilise le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet pour lier des données à partir de la base de données SQL Server à un objet visuel (dans ce cas, un tableau DHTML) dans la page de l’application client HTML. La logique de programmation pilotée par événements VBScript utilise le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à :  
@@ -56,7 +56,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>Paramètres de la balise objet générique  
  Le tableau suivant décrit les paramètres associés à la balise d’objet.  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |***ID DE CLASSE***|Un nombre unique de 128 bits qui identifie le type d’objet incorporé dans le système. Cet identificateur est conservé dans le Registre système de l’ordinateur local. (Pour les ID de classe de la **RDS. DataControl** d’objets, consultez [RDS. Objet DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Définit un identificateur de document à l’échelle pour l’objet incorporé est utilisé pour l’identifier dans le code.|  
@@ -64,7 +64,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. Paramètres de la balise de DataControl  
  Le tableau suivant décrit les paramètres spécifiques à la **RDS. DataControl** objet. (Pour une liste complète de la **RDS. DataControl** de l’objet et savoir quand les implémenter, consultez [RDS. Objet DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md).)  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |[SERVEUR](../../../ado/reference/rds-api/server-property-rds.md)|Si vous utilisez HTTP, la valeur est le nom de l’ordinateur serveur précédé par `http://`.|  
 |[SE CONNECTER](../../../ado/reference/rds-api/connect-property-rds.md)|Fournit les informations de connexion nécessaires pour la **RDS. DataControl** pour se connecter à SQL Server.|  

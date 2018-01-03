@@ -3,7 +3,7 @@ title: "Fournisseurs requis pour la mise en forme des données | Documents Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 123bcb546cabae6895dac5fbf9edd06b97e9400b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 87c86790165d7f428ec3a5d5328fd36cd8165acf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-providers-for-data-shaping"></a>Fournisseurs requis pour la mise en forme des données
 Mise en forme des données requiert généralement deux fournisseurs. Le fournisseur de services, [le Service de mise en forme des données pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fournit les données de mise en forme des fonctionnalités et un fournisseur de données, telles que le fournisseur OLE DB pour SQL Server, fournit les lignes de données pour remplir la forme [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +35,7 @@ Mise en forme des données requiert généralement deux fournisseurs. Le fournis
   
  Aucun fournisseur de données n’est requise si le **Recordset** n’est pas remplie (par exemple, comme dans un fabriqués **Recordset** contenant des colonnes créées avec le mot clé NEW). Dans ce cas, spécifiez «**fournisseur de données =**none ; ».  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 Dim cnn As New ADODB.Connection  

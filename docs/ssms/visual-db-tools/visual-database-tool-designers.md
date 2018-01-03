@@ -3,7 +3,7 @@ title: Concepteurs Visual Database Tools | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 206d464ab885728f270c81d9bb527b9c5f2a98ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69528faf39230c9c268457896e6c692a6fc93305
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tool-designers"></a>Concepteurs Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools est une combinaison d’outils de conception que vous pouvez utiliser pour traiter une source de données. Vous pouvez les utiliser pour créer des requêtes, concevoir ou modifier une structure de base de données ou mettre à jour des données. Les outils disponibles sont le Concepteur de schémas de base de données, le Concepteur de tables et le Concepteur de requêtes et de vues.  
@@ -92,7 +92,7 @@ Une fois le concepteur ouvert, le menu **Concepteur de requêtes** apparaît dan
 >   
 > Cette version de Visual Database Tools ne prend pas en charge Microsoft SQL Server versions 7 et antérieures.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
 [Concevoir des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

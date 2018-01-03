@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 15fe0cb4d21bc72fa8eb351829914bdd6958a89c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8270991f406e6845cdbe4d19fd8bc58e57eb4b35
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Les index XML sélectifs sont un autre type d’index XML disponible, en plus des index XML ordinaires. Les objectifs de la fonctionnalité d'index XML sélectif sont les suivants :  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  Si vous devez uniquement interroger ces données sur le chemin d'accès `/book/title` et le chemin d'accès `/book/subjects` , créez l'index XML sélectif suivant :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   

@@ -5,7 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,11 +24,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3046646a61d7b9e85812808493a748f50a7ea416
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d6696b83e60538b0b18c2de37ffcd943a1a54f3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-master-data-services"></a>Membres (services de données de référence)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les membres sont les données de référence physiques. Par exemple, un membre peut être un vélo Road-150 spécifique dans une entité Product ou un client spécifique dans une entité Customer.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Table de l’entité Bike Product](../master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l’entité Bike Product")  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 |Mettez à jour les valeurs d'attribut d'un membre.|[Modifier le type d’attribut &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   

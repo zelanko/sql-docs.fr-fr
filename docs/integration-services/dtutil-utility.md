@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 318e2d1481f9398780dafe56b3db3f24545242a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dtutil-utility"></a>dtutil (utilitaire)
   L’utilitaire d’invite de commandes **dtutil** sert à gérer les packages [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cet utilitaire peut copier, déplacer ou supprimer un package, ou en vérifier l'existence. Ces actions peuvent être effectuées sur n'importe quel package [!INCLUDE[ssIS](../includes/ssis-md.md)] stocké à l'un des trois emplacements suivants : une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] et le système de fichiers. Si l'utilitaire accède à un package stocké dans **msdb**, il peut être nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il est nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si le nom d'utilisateur est manquant, **dtutil** essaie de se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant l'authentification Windows. Le type de stockage du package est identifié par les options **/SQL**, **/FILE**et **/DTS** .  
@@ -122,15 +122,15 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Codes de sortie dtutil  
  L'utilitaire**dtutil** définit un code de sortie qui vous alerte lorsque des erreurs de syntaxe sont détectées, des arguments incorrects sont employés ou des combinaisons non valides d'options sont spécifiées. Dans le cas contraire, l'utilitaire signale « L'opération s'est terminée avec succès ». Le tableau ci-dessous répertorie les valeurs que l'utilitaire **dtutil** peut définir lors de sa fermeture.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0|L'utilitaire s'est exécuté avec succès.|  
-|1|L'utilitaire a échoué.|  
+| 1|L'utilitaire a échoué.|  
 |4|L'utilitaire ne peut pas localiser le package demandé.|  
 |5|L'utilitaire ne peut pas charger le package demandé.|  
 |6|L'utilitaire ne peut pas résoudre la ligne de commande car elle comporte des erreurs syntaxiques ou sémantiques.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous ne pouvez pas utiliser de fichiers de commandes ou une redirection avec **dtutil**.  
   
  L'ordre des options dans la ligne de commande n'est pas significatif.  
@@ -278,7 +278,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Exécuter des packages Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   

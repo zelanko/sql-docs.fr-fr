@@ -3,7 +3,7 @@ title: Supprimer un groupe de serveurs (SQL Server Management Studio) | Microsof
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0ff2470ac6875c75c5a4882855536b4d0cf2d55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Supprimer un groupe de serveurs (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment supprimer un groupe de serveurs dans les serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez supprimer un groupe de serveurs à tout moment. Si le groupe de serveurs n'est pas vide, tous les serveurs ou les groupes de serveurs contenus dans le groupe de serveurs supprimé sont également supprimés. Avant de supprimer un groupe de serveurs, déplacez les serveurs ou les groupes de serveurs que vous voulez conserver dans un nouveau groupe de serveurs.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Dans la boîte de dialogue **Demande de confirmation de suppression** , cliquez sur **Oui**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Déplacer un serveur inscrit ou un groupe de serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/move-a-registered-server-or-registered-server-group.md)  
   
   

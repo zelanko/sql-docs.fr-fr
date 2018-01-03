@@ -3,7 +3,7 @@ title: "La méthode de recherche | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2e6e7d303e8cf1bad6edc21b22832ab76df5244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d94cf588916667e2cf82992b6a3ac6b601e8f84
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seek-method"></a>La méthode de recherche
 Recherche l’index d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour localiser rapidement la ligne qui correspond aux valeurs spécifiées et la position de ligne en cours à cette ligne.  
@@ -45,7 +45,7 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valeur qui spécifie le type de comparaison à effectuer entre les colonnes de l’index et correspondants *KeyValues*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **recherche** méthode conjointement avec le [Index](../../../ado/reference/ado-api/index-property.md) propriété si le fournisseur sous-jacent prend en charge les index sur la **Recordset** objet. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** méthode pour déterminer si le fournisseur sous-jacent prend en charge **recherche**et le **supports (adIndex)** méthode pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge **recherche** et **Index**.)  
   
  Si **recherche** n’a pas trouvé la ligne requise, aucune erreur ne se produit et la ligne est placé à la fin de la **Recordset**. Définir le **Index** index à la propriété souhaitée avant l’exécution de cette méthode.  

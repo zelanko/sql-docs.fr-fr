@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a293cb894ac3a0c4eac086a8740d16c98c955e83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 41bac509d07c7aaeea93ab34ee19aecf653fa2e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Activer et désactiver le suivi des modifications (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="enable-change-tracking-for-a-database"></a>Activer le suivi des modifications pour une base de données  
  Avant de pouvoir utiliser le suivi des modifications, vous devez l'activer au niveau de la base de données. L’exemple suivant indique comment activer le suivi des modifications en utilisant [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -63,7 +63,7 @@ SET CHANGE_TRACKING = ON
   
  L’exemple suivant indique comment activer le suivi des modifications pour une table en utilisant [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -78,19 +78,19 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  Quand aucune table n'effectue un suivi des modifications dans une base de données, vous pouvez désactiver le suivi des modifications pour cette base de données. L’exemple suivant indique comment désactiver le suivi des modifications pour une base de données en utilisant [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  L’exemple suivant indique comment désactiver le suivi des modifications pour une table en utilisant [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Propriétés de la base de données &#40;page Suivi des modifications&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
  [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   

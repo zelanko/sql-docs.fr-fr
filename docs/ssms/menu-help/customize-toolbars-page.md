@@ -3,7 +3,7 @@ title: "Personnaliser (page Barres d’outils) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1be117c2fafffd2272f5af08c987c61e5d64b8e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a0fb95a5c9589b46e2f144362d7b667411965545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-toolbars-page"></a>Personnaliser (page Barres d'outils)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’onglet **Barres d’outils** vous permet de créer, de renommer, de supprimer et de réinitialiser des barres d’outils. Vous pouvez accéder à cet onglet en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Barres d'outils**.  
@@ -42,7 +42,7 @@ Affiche la boîte de dialogue **Nouvelle barre d'outils** , dans laquelle vous p
 **Rename**  
 Affiche la boîte de dialogue **Renommer la barre d'outils** , dans laquelle vous pouvez uniquement modifier le nom d'une barre d'outils personnalisée.  
   
-**Delete**  
+**Supprimer**  
 Supprime la barre d'outils personnalisée sélectionnée dans la liste **Barres d'outils** .  
   
 **Réinitialiser**  

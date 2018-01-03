@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d2f173b7e4c88182846f2613e24933ae4a470edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 60eeccf774507cd6f4a949b7f0b5baf07b0bd960
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il existe trois manières d’effectuer cette opération : via l’option **WITH RECOMPILE** dans la définition de la procédure ou lorsque la procédure est appelée, via l’indicateur de requête **RECOMPILE** sur des instructions ou en utilisant la procédure stockée système **sp_recompile** . Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  **WITH RECOMPILE**   
  Si cette option est utilisée lorsque la définition de la procédure est créée, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
@@ -107,11 +107,11 @@ AS
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur titre et le nom de leur service à partir d'une vue.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue.  
   
      Puis, copiez et collez le second exemple de code dans la fenêtre de requête et cliquez sur **Exécuter**. Cela exécute la procédure et recompile son plan de requête.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -125,11 +125,11 @@ GO
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur titre et le nom de leur service à partir d'une vue.  
+3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée une procédure simple qui retourne tous les employés (prénom et nom), leur poste et le nom de leur service à partir d'une vue.  
   
      Ensuite, copiez et collez l'exemple suivant dans la fenêtre de requête et cliquez sur **Exécuter**. Cela n'exécute pas la procédure mais la marque pour la recompilation de sorte que son plan de requête sera mis à jour à la prochaine exécution.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
@@ -137,7 +137,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer une procédure stockée](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modifier une procédure stockée](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Renommer une procédure stockée](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

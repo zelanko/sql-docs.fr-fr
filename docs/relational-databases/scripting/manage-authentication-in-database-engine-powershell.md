@@ -3,9 +3,9 @@ title: "Gérer l’authentification dans le moteur de base de données PowerShel
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f25118386ef075d6e6b769def7b06c6908a9e4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835a888a5ae50e38a26c0a299564b6bd57a0365c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Gérer l'authentification dans le moteur de base de données PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Par défaut, les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell utilisent l’authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous pouvez utiliser l’authentification SQL Server en définissant un lecteur virtuel PowerShell ou en spécifiant les paramètres **–Username** et **–Password** pour **Invoke-Sqlcmd**.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  **Pour définir l’authentification en utilisant :**  [Un lecteur virtuel](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Toutes les actions que vous pouvez effectuer dans une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont contrôlées par les autorisations accordées aux informations d'identification utilisées pour la connexion à l'instance. Par défaut, le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent le compte Windows sous lequel ils s'exécutent pour établir une connexion via l'authentification Windows au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  Pour établir une connexion via l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez fournir un ID de connexion et un mot de passe d'authentification SQL Server. Quand vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez associer les informations d’identification de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un lecteur virtuel, puis exécuter la commande de changement de répertoire (**cd**) pour passer à ce lecteur. Dans Windows PowerShell, les informations d'identification de sécurité peuvent être associées uniquement à des lecteurs virtuels.  
@@ -88,9 +88,9 @@ $pwd = read-host -AsSecureString -Prompt "Password"
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" –Username “MyLogin” –Password $pwd  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd (applet de commande)](../../powershell/invoke-sqlcmd-cmdlet.md)  
+ [Invoke-Sqlcmd, applet de commande](../../powershell/invoke-sqlcmd-cmdlet.md)  
   
   

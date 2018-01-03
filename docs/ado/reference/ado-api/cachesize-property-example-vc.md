@@ -3,7 +3,7 @@ title: "Exemple de propriété CacheSize (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bc9aa494fed72b37d1147d2ee82d1308cb95c50
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32f03e7066be91416c37dc6b286089283355fef8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesize-property-example-vc"></a>Exemple de propriété CacheSize (VC ++)
 Cet exemple utilise le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété pour afficher la différence de performances pour une opération effectuée avec et sans cache de 30 enregistrements.  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69c55653dd8044bc2236025457fa3b5ae180cbed
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Leçon 1-4 : Ajout de configurations au package
 Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  
@@ -138,7 +138,7 @@ Vous allez créer deux fichiers de configuration, DataTransferConfig.dtsConfig e
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Configurations du package](../integration-services/packages/package-configurations.md)  
 [Créer des configurations de package](../integration-services/packages/create-package-configurations.md)  
 [Accéder aux fichiers utilisés par des packages](../integration-services/security/security-overview-integration-services.md#files)  

@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: docset-sql-devref
@@ -19,13 +19,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c61113cc241b20a30ac31ac6e89d82251c0dd69
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ccd75faa1209ea71944b1807f697b19691e04974
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="working-with-connection-managers-programmatically"></a>Utilisation de gestionnaires de connexions par programmation
+# <a name="working-with-connection-managers-programmatically"></a>Utilisation de gestionnaires de connexions par programme
   Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la méthode AcquireConnection de la classe de gestionnaire de connexions associée est celle que vous appelez le plus souvent quand vous utilisez des gestionnaires de connexions dans le code managé. Quand vous écrivez du code managé, vous devez appeler la méthode AcquireConnection pour utiliser les fonctionnalités d’un gestionnaire de connexions. Vous devez appeler cette méthode que vous écriviez du code managé dans une tâche de script, un composant Script, un objet personnalisé ou une application personnalisée.  
   
  Pour appeler correctement la méthode AcquireConnection, vous devez pouvoir répondre aux questions suivantes :  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
 |WMI|Gestionnaire de connexions WMI|**System.Management.ManagementScope**||  
 |SQLMOBILE|Gestionnaire de connexions SQL Server Compact|**System.Data.SqlServerCe.SqlCeConnection**||  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexion à des sources de données dans la tâche de script](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Connexion aux sources de données dans le composant Script](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Connexion à des sources de données dans une tâche personnalisée](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

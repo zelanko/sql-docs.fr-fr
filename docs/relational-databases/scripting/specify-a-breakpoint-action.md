@@ -3,9 +3,9 @@ title: "Spécifier une action de point d’arrêt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4f2df0116147c4c4093762e91274d01dfe1610c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e45e8d2e4514d5ba254a375441d78f05d4cb8c9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’action de point d’arrêt **Lorsqu’il est atteint** spécifie une tâche personnalisée que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] effectue pour un point d’arrêt. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Lorsqu’il est atteint** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre des **points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Lorsqu’il est atteint** dans le menu contextuel.  
   
@@ -71,8 +71,8 @@ ms.lasthandoff: 11/17/2017
   
 3.  Cliquez sur **OK** pour implémenter les modifications ou sur **Annuler** pour fermer sans appliquer les modifications.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)  
+ [Spécifier un nombre d’accès](../../relational-databases/scripting/specify-a-hit-count.md)  
   
   

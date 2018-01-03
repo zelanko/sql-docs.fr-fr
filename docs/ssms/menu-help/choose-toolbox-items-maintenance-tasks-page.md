@@ -3,7 +3,7 @@ title: "Choisir des éléments de boîte à outils (page Tâches de maintenance)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ead6bf455f4fd80da564f55a5a6dd183a773116
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Choisir des éléments de boîte à outils (page Tâches de maintenance)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affiche la liste de tous les composants des tâches de maintenance inscrits sur votre ordinateur et vous permet de changer ceux qui sont affichés dans la boîte à outils. Vous pouvez ouvrir la boîte de dialogue **Personnaliser la boîte à outils** à partir du menu **Outils** . Pour trier la liste des composants, cliquez sur un en-tête de colonne.  

@@ -5,7 +5,7 @@ ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 76cced5552daf87bffa6ac234f54c3ee780349a9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e7b7e796c6badea38ea4423561d26e7f53eb95d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Nouveautés d’Integration Services dans SQL Server 2017
 Cette rubrique décrit les fonctionnalités qui ont été ajoutées ou mises à jour dans [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
@@ -43,7 +43,7 @@ Voici les nouvelles fonctionnalités les plus importantes d’Integration Servic
 
 Avec la préversion publique d’Azure Data Factory version 2 en septembre 2017, vous pouvez désormais effectuer les opérations suivantes :
 -   Déployer des packages dans la base de données du catalogue SSIS (SSISDB) sur Azure SQL Database.
--   Exécuter des packages déployés sur Azure sur le runtime d’intégration Azure-SSIS, un composant d’Azure Data Factory version 2.
+-   Exécuter des packages déployés sur Azure sur le runtime d’intégration Azure-SSIS, composant d’Azure Data Factory version 2.
 
 Pour plus d’informations, consultez [Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d3bbb70503d86358362e78809f9f51408309b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Leçon 1-7 : Ajout et configuration de la destination OLE DB
 Votre package peut maintenant extraire des données à partir de la source de fichier plat pour les transformer dans un format compatible avec la destination. La tâche suivante consiste à charger les données transformées dans la destination. Pour charger les données, vous devez ajouter une destination OLE DB au flux de données. La destination OLE DB peut utiliser une table de base de données, un affichage ou une commande SQL pour charger les données dans plusieurs bases de données compatibles OLE DB.  
@@ -62,7 +62,7 @@ Au cours de cette procédure, vous allez ajouter et configurer une destination O
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 8 : comment rendre le package de la leçon 1 plus facile à assimiler](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Destination OLE DB](../integration-services/data-flow/ole-db-destination.md)  
   
   

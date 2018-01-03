@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,16 +20,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d9632d2512c3ff44bea76e47bf7825f6dcc1400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff377b1dcb3e79b94f25a04e2deb01c340cc5758
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
   Créez une vue d’abonnement pour exporter les données Master Data Services vers des systèmes d’abonnement. Vous créez une vue de vos données dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Composants requis  
+## <a name="prerequisites"></a>Prerequisites  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** . Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -68,10 +68,10 @@ ms.lasthandoff: 11/20/2017
 ## <a name="view-information"></a>Visualiser les informations  
  Pour chaque vue créée, une ligne comportant dix colonnes est ajoutée à la grille. Le tableau ci-après décrit ces colonnes.  
   
-|Colonne|Description|  
+|colonne|Description|  
 |------------|-----------------|  
 |État|État de la vue.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la vue est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’une vue, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Nom|Nom de la vue d’abonnement.|  
+|Nom   |Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Options de version|Nom de la version.|  
 |Version|Nom de l’indicateur de version.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Le**: date et heure de la dernière mise à jour de la vue.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  

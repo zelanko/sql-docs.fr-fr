@@ -3,7 +3,7 @@ title: "Options (Explorateur d’objets SQL Server - Commandes) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 69ada91ed2c98151d052a14604786ece9e27f059
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 74210d90aa66f6bc770e6c9cb56a2e0fa38fff64
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Options (Explorateur d’objets SQL Server - Commandes)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Quand vous cliquez avec le bouton droit sur une table ou une vue dans l’Explorateur d’objets, les deux options suivantes relatives à l’affichage des lignes dans la table s’affichent :  
@@ -47,6 +47,6 @@ Spécifie le nombre de lignes à retourner lorsque vous modifiez des lignes dans
 **Valeur de la commande Sélectionner les <n> premières lignes**  
 Spécifie le nombre de lignes à retourner qui est spécifié dans le script de l'éditeur de requête créé. La valeur par défaut est 1000 lignes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [SQL Server Audit (moteur de base de données)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

@@ -3,7 +3,7 @@ title: "Exemple de propriété Count (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09a9152a29e096dc97fed3ee3b9ff2aeef9ae45b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d43c688e57637cf4ade6bc0237e86ffbe33da9f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="count-property-example-vc"></a>Exemple de propriété Count (VC ++)
 Cet exemple illustre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets de chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections.  

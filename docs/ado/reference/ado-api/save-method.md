@@ -3,7 +3,7 @@ title: "Save (méthode) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bd594fb077c3a8b6eca9e3496c857dbbc0249c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb9651c4bf6de24fd3cdf7c7d42e6c0c24365fda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-method"></a>Save (méthode)
 Enregistre le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier ou [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -40,12 +40,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Paramètres  
  *Destination*  
- Ce paramètre est facultatif. A **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **flux** objet.  
+ Facultatif. A **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **flux** objet.  
   
  *PersistFormat*  
- Ce paramètre est facultatif. A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
+ Facultatif. A [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [méthode Save](../../../ado/reference/ado-api/save-method.md) méthode peut uniquement être appelée sur open **Recordset**. Utilisez le [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode à la restauration ultérieure le **Recordset** de *Destination*.  
   
  Si le [propriété Filter](../../../ado/reference/ado-api/filter-property.md) propriété n’est en vigueur pour le **Recordset**, seules les lignes accessibles sous le filtre sont enregistrées. Si le **Recordset** est hiérarchique, puis l’enfant **Recordset** et ses enfants sont enregistrés, y compris le parent **Recordset**. Si la méthode Save d’un enfant **Recordset** est appelée, l’enfant et tous ses enfants sont enregistrés, mais le parent n’est pas.  
@@ -71,7 +71,7 @@ recordset.Save Destination, PersistFormat
   
  Filtre uniquement sous la forme de chaînes de critères (par exemple OrderDate > ' 12/31/1999 ') affectent le contenu d’un rendu persistant **Recordset**. Les filtres créés avec un tableau de **signets** ou à l’aide d’une valeur à partir de la [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) n’affectera pas le contenu du rendu persistant **Recordset**. Ces règles s’appliquent aux **Recordset**s créés avec des curseurs côté client ou côté serveur.  
   
- Étant donné que la *Destination* paramètre accepte tout objet qui prend en charge l’interface OLE DB IStream, vous pouvez enregistrer un **Recordset** directement à l’objet Response ASP.. Pour plus d’informations, consultez la **scénario de persistance des objets Recordset XML**.  
+ Étant donné que la *Destination* paramètre accepte tout objet qui prend en charge l’interface OLE DB IStream, vous pouvez enregistrer un **Recordset** directement à l’objet Response ASP. Pour plus d’informations, consultez la **scénario de persistance des objets Recordset XML**.  
   
  Vous pouvez également enregistrer une **Recordset** au format XML à une instance d’un objet DOM MSXML, comme est indiqué dans le code Visual Basic suivant :  
   

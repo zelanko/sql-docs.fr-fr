@@ -3,7 +3,7 @@ title: Notions de base ADO | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9eb2a8ddce4813a0738fc73dd4f54d6b015d30c9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6b693060ad00f8b18268c503a7d0a96f3e5e62a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-fundamentals"></a>Notions de base ADO
 ADO offre aux développeurs un modèle objet puissant, logique pour accéder par programmation aux, la modification et la mise à jour des données à partir d’un large éventail de sources de données via les interfaces système OLE DB. L’utilisation la plus courante de l’objet ADO consiste à interroger une table ou des tables dans une base de données relationnelle, récupérer et afficher les résultats dans une application et permettre aux utilisateurs de peut-être apporter et enregistrer les modifications dans les données. Autres tâches sont les suivantes :  

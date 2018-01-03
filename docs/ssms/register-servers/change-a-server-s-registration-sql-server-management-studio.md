@@ -3,7 +3,7 @@ title: "Changer l’inscription d’un serveur (SQL Server Management Studio) | 
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a933562956daaaa2113f86c94f664ba859279587
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d99c47617fb43ccfe9e788af1d5c5204463ffb8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Changer l’inscription d’un serveur (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment changer l’inscription d’un serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les informations de connexion d'un serveur inscrit peuvent être modifiées à tout moment.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Dans la boîte de dialogue **Modifier les propriétés d'inscription du serveur** , modifiez le serveur, les informations de connexion ou les propriétés de connexion et cliquez ensuite sur **Enregistrer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Inscrire des serveurs](../../tools/sql-server-management-studio/register-servers.md)  
   
   

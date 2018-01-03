@@ -20,13 +20,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b8881f34970d44bdf99a9e3e547eeefb8c21d2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e65cb03e1efa9b1c83f9cacad4bd8edba231484e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="polygon"></a>Polygone
+# <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un **polygone** est une surface à deux dimensions stockée en tant que séquence de points définissant un anneau englobant extérieur, et zéro ou plusieurs anneaux intérieurs.  
   
 ## <a name="polygon-instances"></a>Instances Polygon  
@@ -142,7 +142,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  Voici un autre exemple de conversion d'une instance non valide en instance geometry valide. Dans l'exemple suivant, l'instance `Polygon` a été créée à l'aide de trois points qui sont exactement les mêmes :  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  
@@ -151,7 +151,7 @@ SELECT @g.ToString()
   
  L'instance geometry retourné ci-dessus est un `Point(1 3)`.  Si le `Polygon` donné est `POLYGON((1 3, 1 5, 1 3, 1 3))` , alors `MakeValid()` retourne `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [STArea &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

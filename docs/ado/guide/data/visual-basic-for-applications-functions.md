@@ -3,7 +3,7 @@ title: Visual Basic pour Applications functions | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fee0368395faf95ce941dbf4e5352dbca549a64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835dfeb15a84529baf553ce1daa171d02e8faca7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic pour Applications functions
 Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les expressions de calcul de la mise en forme des données :  
@@ -37,17 +37,17 @@ Visual Basic suivant pour les fonctions d’Applications peuvent servir dans les
 |Chr$|CEnt|CLong|Cos|CSmpl|CChaîne|  
 |CVar|CVDate|CVErr|Date|Date$|AjDate|  
 |DiffDate|PartDate|SérieDate|ValDate|Jour|DDB|  
-|Erreur|Error$|Exp|Fix|Format|Format$|  
+|Error|Error$|Exp|Fix|Format|Format$|  
 |VC|Hex|Hex$|Heure|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|Minuscule|Minuscule$|Gauche|  
 |LeftB|Gauche$|LeftB$|NbCar|Journal|SupprGauche|  
-|SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Mois|  
+|SupprGauche$|ExtracChaîne|ExtracChaîne$|Minute|MIRR|Month|  
 |maintenant|NPer|NPV|Oct|Oct$|Vpm|  
 |PPmt|PV|RVBC|Taux|RGB|Droit|  
 |RightB|Droite$|RightB$|Aléat|SupprDroite|RTrim$|  
 |Seconde|Sgn|Sin|AmorLin|Espace|Espace$|  
-|Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|Chaîne|  
+|Racine|NumChaîne|Str$|CompChaîne|ConvChaîne|String|  
 |Chaîne$|SYD|Tan|Time|Temps$|Minuterie|  
 |SérieHeure|VHeure|SupprEspace|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|JourSem|Année||  

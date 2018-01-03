@@ -3,7 +3,7 @@ title: FilterGroupEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 080b0149fcfe0df39e1efbe44a87fe6243424468
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d3b80757a0836fd11757c9e80c2b1650b0cb983f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Spécifie le groupe d’enregistrements à filtrer à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|Filtres pour afficher uniquement les enregistrements concernés par la dernière [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) appeler.|  
 |**adFilterConflictingRecords**|5|Filtres pour visualiser les enregistrements qui ont échoué la dernière mise à jour par lots.|  
 |**adFilterFetchedRecords**|3|Filtres pour visualiser les enregistrements dans le cache actuel, autrement dit, les résultats de la dernière pour extraire des enregistrements à partir de la base de données.|  
 |**adFilterNone**|0|Supprime le filtre en cours et restaure tous les enregistrements pour l’affichage.|  
-|**adFilterPendingRecords**|1|Filtres pour afficher uniquement les enregistrements qui ont été modifiés, mais n’ont pas encore été envoyées au serveur. Applicable uniquement pour le mode de mise à jour par lot.|  
+|**adFilterPendingRecords**| 1|Filtres pour afficher uniquement les enregistrements qui ont été modifiés, mais n’ont pas encore été envoyées au serveur. Applicable uniquement pour le mode de mise à jour par lot.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
  Package : **com.ms.wfc.data**  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 81dd719383f3a05356d15677ce61bad5e8962807
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86ca875378afdd32cf509767eb3c02dc3ff0154d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-queries"></a>Requêtes Integration Services (SSIS)
   La tâche Exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche peuvent utiliser des requêtes SQL. Dans la tâche d'exécution SQL, les instructions SQL peuvent créer, mettre à jour et supprimer des données et des objets de base de données, exécuter des procédures stockées et des instructions SELECT. Dans la source OLE DB et la transformation de recherche, les instructions SQL sont généralement des instructions SELECT ou EXEC. Cette dernière exécute le plus souvent des procédures stockées qui retournent des jeux de résultats.  
@@ -95,7 +95,7 @@ Utilisez la boîte de dialogue **Générateur de requêtes** pour créer une req
  **Barre d'outils**  
  Utilisez la barre d'outils pour gérer les datasets, sélectionner les volets à afficher et contrôler les fonctions de requête.  
   
-|Value| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Afficher/Masquer le volet Diagramme**|Affiche ou masque le volet **Diagramme** .|  
 |**Afficher/Masquer le volet Grille**|Affiche ou masque le volet **Grille** .|  

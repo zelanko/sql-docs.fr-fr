@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59c25f34bb01f4d3767f01d5912322e3c33f9ba9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5fa5d7f7f52d2c96cbef25d2bbce33168a77b5e1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Mode de détermination des autorisations (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la méthode la plus simple pour configurer la sécurité est d'affecter des autorisations d'objet de modèle à un groupe dont l'utilisateur est membre.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
  Dans ce cas, le chevauchement des autorisations de l'utilisateur et du groupe doit être résolu avant que les autorisations de l'objet de modèle et des membres de la hiérarchie puissent être comparées. Pour plus d’informations, consultez [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Chevauchement des autorisations d’accès &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

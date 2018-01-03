@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 08908c187ec2e548b4379aae11517f1ad50626fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
@@ -92,13 +92,13 @@ ms.lasthandoff: 11/17/2017
  `SELECT * from sys.dm_cdc_log_scan_sessions where empty_scan_count <> 0`  
   
 ### <a name="determine-latency"></a>Déterminer la latence  
- La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
+ La vue de gestion sys.dm_cdc_log_scan_sessions inclut une colonne qui enregistre la latence pour chaque session de capture. La latence correspond au temps écoulé entre la validation d'une transaction sur une table source et la dernière transaction capturée en cours de validation sur la table de modifications. La colonne de latence est remplie uniquement pour les sessions actives. Pour les sessions ayant une valeur supérieure à 0 dans la colonne empty_scan_count, la colonne de latence a la valeur 0. La requête suivante retourne la latence moyenne pour les sessions les plus récentes :  
   
  `SELECT latency FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
   
  Vous pouvez utiliser des données de latence pour déterminer si le processus de capture traite les transactions rapidement ou lentement. Ces données sont très utiles lorsque le processus de capture s'exécute continuellement. Si le processus de capture s'exécute selon une planification, la latence peut être élevée à cause du décalage entre les transactions qui sont validées sur la table source et le processus de capture qui s'exécute à l'heure planifiée.  
   
- Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
+ Une autre mesure importante du rendement du processus de la capture est le débit. Il s'agit du nombre moyen de commandes par seconde qui sont traitées pendant chaque session. Pour déterminer le débit d'une session, divisez la valeur dans la colonne command_count par la valeur dans la colonne de durée. La requête suivante retourne le débit moyen pour les sessions les plus récentes :  
   
  `SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions WHERE session_id = 0`  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Exécutez le code suivant pour créer un collecteur personnalisé destiné à la capture de données modifiées.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  
@@ -159,7 +159,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

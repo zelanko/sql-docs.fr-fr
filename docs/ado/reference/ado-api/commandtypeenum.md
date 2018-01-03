@@ -3,7 +3,7 @@ title: CommandTypeEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,21 +20,21 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4a2e9e05e48913e2aecc3ef5a6f0651cd36e2d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fb7c01971633727f1e7e5769060b256eab13914b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Spécifie comment un argument de commande doit être interprété.  
   
  Il est important de valider fourni par l’utilisateur *CommandString* valeurs pour éviter de révéler les utilisateurs de l’application la possibilité d’injecter des commandes potentiellement dangereuses pour ADO exécuter.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Ne spécifiez pas l’argument de type de commande.|  
-|**adCmdText**|1|Prend la valeur [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) une définition textuelle d’une commande ou une procédure stockée à appeler.|  
+|**adCmdText**| 1|Prend la valeur [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) une définition textuelle d’une commande ou une procédure stockée à appeler.|  
 |**adCmdTable**|2|Prend la valeur **CommandText** comme nom de table dont les colonnes sont renvoyées par une requête SQL générée en interne.|  
 |**valeur adCmdStoredProc**|4|Prend la valeur **CommandText** comme nom de procédure stockée.|  
 |**adCmdUnknown**|8|Valeur par défaut. Indique que le type de commande dans le **CommandText** propriété n’est pas connue.<br /><br /> Lorsque le type de commande n’est pas connu, ADO effectuera plusieurs tentatives d’interpréter le **CommandText**.<br /><br /> -   **CommandText** est interprété comme une définition textuelle d’un appel de procédure stockée ou de commande. Il s’agit du même comportement que **adCmdText**.<br />-   **CommandText** est le nom d’une procédure stockée. Il s’agit du même comportement que **valeur adCmdStoredProc**.<br />-   **CommandText** est interprété comme le nom d’une table. Toutes les colonnes sont retournées par une requête SQL générée en interne. Il s’agit du même comportement que **adCmdTable**.|  

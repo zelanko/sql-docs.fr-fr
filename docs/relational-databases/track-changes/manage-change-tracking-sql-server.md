@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f06b2599172d8cbdaee05a4c42d852a37290dadb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gérer le suivi des modifications (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,12 +104,12 @@ ms.lasthandoff: 11/17/2017
   
  Comme avec d’autres tables internes, vous pouvez déterminer l’espace utilisé pour les tables de suivi des modifications en utilisant la procédure stockée [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Vous pouvez obtenir les noms des tables internes en utilisant l’affichage catalogue [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , comme l’illustre l’exemple suivant.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Propriétés de la base de données &#40;page Suivi des modifications&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   

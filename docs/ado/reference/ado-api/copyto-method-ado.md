@@ -3,7 +3,7 @@ title: "CopyTo (méthode) (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c59a27806939557b170ae8fc7d3f842afd21f83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyto-method-ado"></a>CopyTo (méthode) (ADO)
 Copie le nombre spécifié de caractères ou d’octets (en fonction de [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) dans le [flux](../../../ado/reference/ado-api/stream-object-ado.md) vers un autre **flux** objet.  
@@ -46,9 +46,9 @@ Stream.CopyTo DestStream, NumChars
 >  Le *DestStream* paramètre ne peut pas être un proxy de **flux** , car cela nécessite un accès à une interface privée sur l’objet le **flux** objet ne peut pas être exécutée à distance sur le client.  
   
  *NumChars*  
- Ce paramètre est facultatif. Un **entier** valeur qui spécifie le nombre d’octets ou de caractères à copier à partir de la position actuelle dans la source de **flux** vers la destination **flux**. La valeur par défaut est – 1, qui spécifie que tous les caractères ou octets sont copiés à partir de la position actuelle pour [fin du support](../../../ado/reference/ado-api/eos-property.md).  
+ Facultatif. Un **entier** valeur qui spécifie le nombre d’octets ou de caractères à copier à partir de la position actuelle dans la source de **flux** vers la destination **flux**. La valeur par défaut est – 1, qui spécifie que tous les caractères ou octets sont copiés à partir de la position actuelle pour [fin du support](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode copie le nombre spécifié de caractères ou d’octets à partir de la position actuelle spécifiée par le [Position](../../../ado/reference/ado-api/position-property-ado.md) propriété. Si le nombre spécifié est supérieur au nombre d’octets jusqu'à disponible **fin du support**, alors que des caractères ou octets à partir de la position actuelle pour **fin du support** sont copiés. Si la valeur de *NumChars* est – 1, ou est omis, tous les caractères ou octets à partir de la position actuelle sont copiés.  
   
  Qu’en présence de caractères ou octets dans le flux de destination, tout le contenu au-delà du point où se termine la copie reste et n’est pas tronqué. **Position** devient l’octet suivant immédiatement le dernier octet copié. Si vous voulez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

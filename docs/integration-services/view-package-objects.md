@@ -5,7 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -26,11 +26,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 88c6bc973c6039b81d8af48a9dd7d76304946add
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 48327b0b2b0b964366369699b1800f08375125c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-package-objects"></a>Afficher des objets de packages
   Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'onglet **Explorateur de package** fournit un aperçu du package. Cet affichage reflète la hiérarchie de conteneur de l'architecture [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Le conteneur de packages est situé en haut de la hiérarchie et vous pouvez développer le package pour afficher les connexions, les exécutables, les gestionnaires d'événements, les fournisseurs d'informations, les contraintes de précédence et les variables du package.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Cliquez avec le bouton droit sur un objet, puis cliquez sur **Supprimer**. 
  
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../integration-services/control-flow/integration-services-tasks.md)   
  [Conteneurs Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Contraintes de précédence](../integration-services/control-flow/precedence-constraints.md)   

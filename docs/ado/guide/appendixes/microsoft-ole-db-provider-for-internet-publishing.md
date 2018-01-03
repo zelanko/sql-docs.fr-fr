@@ -3,7 +3,7 @@ title: Fournisseur Microsoft OLE DB pour la publication Internet | Documents Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bac02557dcc9cf816edfcad5b6cc5d927e42f21a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 81b34a20948dc53bb16bdd2c9442895af711adb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Fournisseur Microsoft OLE DB pour Internet présentation de la publication
 Le fournisseur Microsoft OLE DB pour la publication Internet permet à ADO d’accéder aux ressources pris en charge par Microsoft FrontPage ou Microsoft Internet Information Server. Les ressources incluent des fichiers de source de web tels que des fichiers HTML ou des dossiers web de Windows 2000.
@@ -54,7 +54,7 @@ MSDAIPP.DSO
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour la publication Internet.|
 |**Source de données** - ou - **URL**|Spécifie l’URL d’un fichier ou un répertoire publié dans un dossier Web.|

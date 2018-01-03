@@ -3,9 +3,9 @@ title: "Espion, fenêtre | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ce89bd43189b4d873fd6a827b7fc9bd28726349
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d07939bd14884e347601f890bec0676b36321d3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Débogueur Transact-SQL - Fenêtre Espion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La fenêtre **Espion** affiche des informations sur les expressions que vous avez sélectionnées. Les fenêtres Espion peuvent être au nombre de quatre, au maximum : **Espion 1**, **Espion 2, Espion 3**et **Espion 4**. Les expressions sont évaluées dans l’étendue du frame de pile des appels actuellement sélectionné dans la fenêtre **Pile des appels** . Vous devez être en mode débogage pour surveiller les variables et les expressions.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Cliquez avec le bouton droit sur l’expression, puis sélectionnez **Modifier la valeur**.  
   
-## <a name="columns"></a>Columns  
+## <a name="columns"></a>Colonnes  
  **Nom**  
  Expressions répertoriées par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les expressions suivantes sont prises en charge :  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Instructions Transact-SQL qui retournent une seule valeur, par exemple : SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
- **Valeur**  
+ **Value**  
  Affiche la valeur retournée après que le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] a évalué l’expression spécifiée dans **Nom**.  
   
  Si la longueur d'une expression dépasse la largeur de la colonne **Valeur** , une info-bulle affiche la valeur complète lorsque vous placez le pointeur sur la cellule **Valeur** de cette expression.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
  **Type**  
  Affiche le type de données de l'expression.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Variables locales (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   

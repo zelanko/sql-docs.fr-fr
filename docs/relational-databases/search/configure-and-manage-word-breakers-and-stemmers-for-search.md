@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Les analyseurs lexicaux et les générateurs de formes dérivées effectuent une analyse linguistique de l’ensemble des données indexées en texte intégral. L’analyse linguistique effectue les deux opérations suivantes :
@@ -53,7 +53,7 @@ Pour utiliser les analyseurs lexicaux et générateurs de formes dérivées four
 
 Pour afficher la liste des langues prises en charge par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante. La présence d’une langue dans cette liste signifie que des analyseurs lexicaux sont inscrits pour cette langue. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ Pour que la recherche en texte intégral utilise les analyseurs lexicaux pour un
 
 Pour afficher la liste des composants d’analyseurs lexicaux inscrits, utilisez l’instruction suivante.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ Si vous ajoutez, supprimez ou modifiez un analyseur lexical, vous devez actualis
   
 Pour afficher la langue d’analyseur lexical de colonnes spécifiques, exécutez l’instruction suivante.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
@@ -140,7 +140,7 @@ Pour plus d’informations et pour obtenir des options supplémentaires, consult
 Cela est significatif si un catalogue de texte intégral a été importé lorsqu'une base de données a été mise à niveau vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une ou plusieurs langues utilisées par les index de recherche en texte intégral dans le catalogue de texte intégral peuvent maintenant être associées aux nouveaux analyseurs lexicaux. Pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
   
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

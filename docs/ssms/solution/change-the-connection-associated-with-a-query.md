@@ -3,7 +3,7 @@ title: "Changer la connexion associée à une requête | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32e6d29195ec503dc549ffc15da7aaca3a28ec2b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4d37fca8b0d45be5f9090958e2bc1b2a7729d65d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Modifier la connexion associée à une requête
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une requête peut être exécutée sur plusieurs serveurs différents ou bases de données en changeant la connexion utilisée par la requête.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Dans la boîte de dialogue **Se connecter au moteur de base de données** , fournissez les nouvelles informations de connexion, puis cliquez sur **Se connecter**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Associer une requête à une connexion dans un projet](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [Afficher ou modifier les propriétés d'une connexion dans un projet](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  

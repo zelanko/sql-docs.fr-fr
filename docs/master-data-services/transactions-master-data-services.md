@@ -5,7 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae6560cbdb884fa8009ab33c248f1de426c9c89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30c30eac6d8651886a37f9895c39ab9cfc782903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-master-data-services"></a>Transactions (Master Data Services)
 
@@ -89,7 +89,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Plusieurs utilisateurs peuvent mettre à jour les mêmes valeurs d'entité sans erreur malgré les transactions activées. En général, la dernière modification de la valeur dans un même intervalle de temps prévaut. Les conflits de modifications en double peuvent être observés dans l'historique des transactions et peuvent être corrigés manuellement par l'administrateur. L'historique des transactions affiche les transactions individuelles pour **Valeur précédente** et **Nouvelle valeur** pour l'attribut en question dans chaque session, mais ne corrige pas automatiquement le conflit lorsque plusieurs **Nouvelles valeurs** existent pour la même valeur de départ.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -98,7 +98,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog [Nettoyage des journaux des transactions, de l’historique des problèmes de validation et des tables de mise en lots](http://go.microsoft.com/fwlink/p/?LinkId=615374)(en anglais) sur msdn.com.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   

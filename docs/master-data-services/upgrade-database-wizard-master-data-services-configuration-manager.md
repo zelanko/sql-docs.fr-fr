@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f37057354b9b4565b4c455f14b46abb846c23a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 939ba7535afa7c877a151e348d8d0903e1572f25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Assistant Mise à niveau de base de données (Gestionnaire de configuration Master Data Services)
   Utilisez **l’Assistant mise à niveau de base de données** pour mettre à niveau une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="progress-and-finish"></a>État d'avancement et fin  
  Affiche l'état d'avancement du processus de mise à niveau. Une fois la base de données mise à niveau, cliquez sur le lien vers le fichier journal pour afficher des informations détaillées sur la mise à niveau ou cliquez sur **Terminer** pour fermer l’Assistant Base de données et revenir à la page **Bases de données** . La base de données mise à niveau est sélectionnée et vous pouvez afficher et modifier ses paramètres système.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Installation et configuration de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Mettre à niveau Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

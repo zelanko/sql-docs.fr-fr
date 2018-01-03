@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d796fb91c46e2620a80d2bedb481156657aeb539
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 07ace3fa24747619e8dbe64cbeb461175220a755
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-configuration"></a>Configuration de PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Exécutez sp_configure « connexion à hadoop » et définissez une valeur appropriée.  Pour trouver la valeur, consultez [Configuration de la connectivité PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (Configuration de la connectivité PolyBase).  
   
-    ```tsql  
+    ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -208,7 +208,7 @@ Notez que lorsque PolyBase s’authentifie auprès d’un cluster sécurisé Ker
   
     |**#**|**Fichier de configuration**|**Clé de configuration**|**Action**|  
     |------------|----------------|---------------------|----------|   
-    |1|core-site.xml|polybase.kerberos.kdchost|Spécifiez le nom d’hôte KDC. Par exemple : kerberos.votre-domaine.com.|  
+    | 1|core-site.xml|polybase.kerberos.kdchost|Spécifiez le nom d’hôte KDC. Par exemple : kerberos.votre-domaine.com.|  
     |2|core-site.xml|polybase.kerberos.realm|Spécifiez le domaine Kerberos. Par exemple : VOTRE-DOMAINE.COM|  
     |3|core-site.xml|hadoop.security.authentication|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : KERBEROS<br></br>**Note de sécurité :** KERBEROS doit être écrit en majuscules. Dans le cas contraire, il pourrait ne pas être activé.|   
     |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Recherchez la configuration côté Hadoop et copiez-la sur l’ordinateur SQL Server. Par exemple : hdfs/_HOST@YOUR-REALM.COM|  
@@ -223,7 +223,7 @@ Notez que lorsque PolyBase s’authentifie auprès d’un cluster sécurisé Ker
   
  [Bien démarrer avec PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration de la connectivité PolyBase &#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)   
  [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   

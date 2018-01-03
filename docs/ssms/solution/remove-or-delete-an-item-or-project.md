@@ -3,7 +3,7 @@ title: "Enlever ou supprimer un élément ou un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10a079026d7c31d627154279daa627acd05670f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fa1c0e7218476480f99cbb2bc5a8d310f9efeb65
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Enlever ou supprimer un élément ou un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les éléments de projet des projets [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sont les requêtes, les connexions et les fichiers divers. Vous pouvez enlever des requêtes et des fichiers divers de projet d'une solution sans effacer du support de stockage les fichiers. Supprimez un projet ou un élément lorsqu'il n'est plus utile dans la solution en cours mais que vous souhaitez l'insérer dans une autre solution.  
@@ -58,7 +58,7 @@ Vous pouvez supprimer de façon permanente un projet, mais vous devez d'abord en
   
 3.  Dans le menu **Fichier** , cliquez sur **Supprimer**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)  
 [Ajouter des éléments existants à un projet](../../ssms/solution/add-existing-items-to-a-project.md)  

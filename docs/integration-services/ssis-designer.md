@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c154bf25df98ca502925b5514e5d0da583ce2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] est un outil graphique permettant de créer et de gérer des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , en tant que projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -157,7 +157,7 @@ Utilisez l'onglet **Flux de données** du concepteur [!INCLUDE[ssIS](../includes
  **Gestionnaire d’événements**  
  Sélectionnez un type de gestionnaire d'événements. Créez le gestionnaire d’événements en faisant glisser les éléments à partir de la **Boîte à outils**.  
   
- **Delete**  
+ **Supprimer**  
  Sélectionnez un gestionnaire d’événements et supprimez-le du package en cliquant sur **Supprimer**.  
   
  **Cliquez ici pour créer un \<nom de gestionnaire d’événements\> pour le fichier exécutable \<nom du fichier exécutable\>**  
@@ -186,11 +186,11 @@ Les packages utilisent des gestionnaires de connexion pour se connecter aux sour
   
  Cliquez avec le bouton droit dans cette zone puis, dans le menu qui s'affiche, cliquez sur l'option de la tâche à exécuter.
  
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Interface utilisateur d’Integration Services](../integration-services/integration-services-user-interface.md)  
   
   

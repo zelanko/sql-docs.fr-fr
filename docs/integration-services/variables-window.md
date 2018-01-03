@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>Fenêtre Variables
   La fenêtre **Variables** permet de créer et de modifier les variables définies par l’utilisateur et d’afficher les variables système.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Si vous affectez une expression à la variable, vous ne pouvez pas modifier le type de données.  
   
- **Valeur**  
+ **Value**  
  Affichez la valeur de la variable. Vous pouvez mettre à jour la valeur des variables définies par l'utilisateur. Cette valeur peut être un littéral ou une expression. En outre, la valeur peut être une chaîne multiligne. Pour affecter une expression à la variable, cliquez sur le bouton d'ellipse qui est en regard de la colonne **Expression** dans la fenêtre **Variables** .  
   
  **Espace de noms**  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Data type**  
   
--   **Valeur**  
+-   **Value**  
   
 -   **Espace de noms**  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Expression**  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expressions Integration Services &#40;SSIS&#41;](../integration-services/expressions/integration-services-ssis-expressions.md)   

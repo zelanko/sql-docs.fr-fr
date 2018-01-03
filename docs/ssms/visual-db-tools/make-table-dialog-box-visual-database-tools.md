@@ -3,7 +3,7 @@ title: "Boîte de dialogue Création de table (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fba467f32b32d76ceed49a4dbb26c0e61878f953
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Boîte de dialogue Création de table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Permet de nommer une table créée dans laquelle vous copiez des lignes. Cette boîte de dialogue s'affiche lorsque vous modifiez le type d'une requête pour la transformer en une requête MAKE TABLE. Pour modifier le type d'une requête, dans le menu **Concepteur de requêtes** , pointez sur **Modifier le type**, puis cliquez sur **Créer une table**.  
@@ -38,7 +38,7 @@ Pour créer une table de destination dans une autre base de données, spécifiez
 > [!NOTE]  
 > Avant d'exécuter la requête, vous pouvez modifier les propriétés de la table à créer dans la fenêtre **Propriétés** . Pour plus d’informations, consultez [Propriétés de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes Make Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

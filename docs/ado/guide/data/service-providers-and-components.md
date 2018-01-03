@@ -3,7 +3,7 @@ title: Fournisseurs et les composants de service | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61232bd2d028c9beb1b5471bb6db0b1c28b7b7e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d44d3ce48da69c734b381058637b15b7afd0736c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="service-providers-and-components"></a>Fournisseurs de services et de composants
 Fournisseurs de services sont des composants qui étendent les fonctionnalités des fournisseurs de données en implémentant les interfaces étendues qui ne sont pas prise en charge par le magasin de données.  

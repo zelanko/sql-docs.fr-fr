@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Détermination des autorisations effectives du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Cette rubrique explique comment déterminer les détenteurs d’autorisations su
 Il est impossible de modifier les rôles serveur et base de données fixes qui disposent d’autorisations pré-configurées. Pour déterminer qui est membre d’un rôle serveur fixe, exécutez la requête suivante.    
 >  [!NOTE] 
 >  Ne s’applique pas à la base de données SQL ni à SQL Data Warehouse, où les autorisations de niveau serveur ne sont pas disponibles. La colonne `is_fixed_role` de `sys.server_principals` a été ajoutée dans SQL Server 2012. Elle n’est pas nécessaire pour les versions antérieures de SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Cette requête vérifie les tables dans la base de données master, mais elle peut être exécutée dans n’importe quelle base de données du produit local. 
 
 Pour déterminer qui est membre d’un rôle base de données fixe, exécutez la requête suivante dans chaque base de données.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ N’oubliez pas qu’un utilisateur Windows peut être membre de plusieurs group
 La requête suivante retourne la liste des autorisations qui ont été accordées ou refusées au niveau serveur. Vous devez exécuter cette requête dans la base de données master.   
 >  [!NOTE] 
 >  Les autorisations de niveau serveur ne peuvent pas être accordées ou faire l’objet d’une requête sur la base de données SQL ou SQL Data Warehouse.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Autorisations de base de données
 
 La requête suivante retourne la liste des autorisations qui ont été accordées ou refusées au niveau base de données. Vous devez exécuter cette requête dans chaque base de données.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Chaque classe d’autorisations de la table d’autorisations peut être jointe à d’autres vues système qui fournissent des informations relatives à cette classe d’éléments sécurisables. Par exemple, la requête suivante fournit le nom de l’objet de base de données qui est concerné par l’autorisation.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -151,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Utilisez la fonction `HAS_PERMS_BY_NAME` pour déterminer si un utilisateur particulier (dans ce cas `TestUser`) dispose d’une autorisation. Exemple :   
-```tsql
+Utilisez la fonction `HAS_PERMS_BY_NAME` pour déterminer si un utilisateur particulier (dans ce cas `TestUser`) dispose d’une autorisation. Exemple :   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

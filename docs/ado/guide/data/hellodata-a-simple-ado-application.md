@@ -3,7 +3,7 @@ title: "HelloData : Une Application ADO Simple | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 339f65cf1d4715d66e6c96316b04b072873d015d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1c2733381221139373764577df07afa22e40e49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : Une Application ADO Simple
 Cette application simple passe en revue chacune des quatre principales opérations ADO : mise en route, d’examiner, de modification et de mise à jour des données. Ces opérations sont effectuées sur la base de données Northwind fournie avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base de l’objet ADO et éviter l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
@@ -50,17 +50,17 @@ Cette application simple passe en revue chacune des quatre principales opératio
   
 |Type de contrôle|Propriété|Valeur|  
 |------------------|--------------|-----------|  
-|Formulaire|Nom|Form1|  
+|Formulaire|Nom   |Form1|  
 ||Hauteur|6500|  
 ||Largeur|6500|  
-|MS DataGrid|Nom|grdDisplay1|  
-|TextBox|Nom|txtDisplay1|  
+|MS DataGrid|Nom   |grdDisplay1|  
+|TextBox|Nom   |txtDisplay1|  
 ||Propriété MultiLine|true|  
-|Bouton de commande|Nom|cmdGetData|  
+|Bouton de commande|Nom   |cmdGetData|  
 ||Légende|Get Data|  
-|Bouton de commande|Nom|cmdExamineData|  
+|Bouton de commande|Nom   |cmdExamineData|  
 ||Légende|Examiner les données|  
-|Bouton de commande|Nom|cmdEditData|  
+|Bouton de commande|Nom   |cmdEditData|  
 ||Légende|Modifier des données|  
-|Bouton de commande|Nom|cmdUpdateData|  
+|Bouton de commande|Nom   |cmdUpdateData|  
 ||Légende|Données mises à jour|

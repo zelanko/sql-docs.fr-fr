@@ -3,7 +3,7 @@ title: "Méthode OpenSchema | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b79dcd972c3b14a27cae47cc08893f2266dfd6b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openschema-method"></a>OpenSchema, méthode
 Obtient les informations de schéma de base de données à partir du fournisseur.  
@@ -46,12 +46,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  N’importe quel [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valeur qui représente le type de requête de schéma à exécuter.  
   
  *Critères*  
- Ce paramètre est facultatif. Un tableau de contraintes de requête pour chaque *QueryType* option, comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Facultatif. Un tableau de contraintes de requête pour chaque *QueryType* option, comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *Si IDSchéma*  
  Le GUID pour une requête de schéma de fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *QueryType* a la valeur **adSchemaProviderSpecific**; sinon, il n’est pas utilisé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **OpenSchema** méthode renvoie des informations autodescriptives sur la source de données, telles que les tables figurant dans la source de données, les colonnes dans les tables, et les types de données pris en charge.  
   
  Le *QueryType* argument est un GUID qui indique les colonnes (schémas) retournés. La spécification OLE DB comporte une liste complète des schémas.  

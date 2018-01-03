@@ -3,7 +3,7 @@ title: SchemaEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 78baaa8f9665bc54efdc0b93464013f3fea71a77
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e8380ba12f6390f8db4661fc570b40f18e7c49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère de la méthode.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO permettre être trouvé dans les rubriques de [Appendix B: Schema Rowsets](http://msdn.microsoft.com/en-us/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de référence du programmeur OLE DB. Le nom de chaque rubrique figure entre parenthèses dans la section Description du tableau suivant.  
   
  Plus d’informations sur la fonction et les colonnes retournées pour chaque constante ADO MD sont accessibles dans les rubriques de [OLE DB pour les objets OLAP et d’ensembles de lignes de schéma](http://msdn.microsoft.com/en-us/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans OLE DB pour la documentation de traitement analytique en ligne (OLAP). Le nom de chaque rubrique figure entre parenthèses dans la colonne Description du tableau suivant.  
@@ -38,10 +38,10 @@ Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/refe
   
  ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **Recordset**, puis remplit chaque ligne avec les valeurs retournées respectivement par le **IDBInfo::GetKeywords** et **IDBInfo::GetLiteralInfo** méthodes. Vous trouverez plus d’informations sur ces méthodes dans les [IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section de référence du programmeur OLE DB.  
   
-|Constante|Valeur| Description|Colonnes de contrainte|  
+|Constante|Valeur|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes ASSERTIONS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
+|**adSchemaCatalogs**| 1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|Retourne les jeux de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes CHARACTER_SETS)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|Retourne les contraintes check définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (CHECK_CONSTRAINTS) Ensemble de lignes)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|Retourne les classements de caractères définis dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes de classements)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  

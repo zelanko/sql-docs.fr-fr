@@ -3,7 +3,7 @@ title: "IsolationLevel et Mode, propriétés-exemple (VC ++) | Documents Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 86c0c5ac8c417a68ecde02805a7c724166c2e8a6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8dc518af8f16854f4c069d14ce0e234265325c62
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel et Mode, propriétés-exemple (VC ++)
 Cet exemple utilise le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour ouvrir une connexion exclusive et le [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriété pour ouvrir une transaction effectuée indépendamment des autres transactions.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 // BeginIsolationLevelCpp.cpp  

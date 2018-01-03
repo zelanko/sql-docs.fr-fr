@@ -3,9 +3,9 @@ title: "Gérer les signets | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d4dc1a1474d70e686fb08e6c6df79c40cb9d3488
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-bookmarks"></a>Gérer les signets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Lorsque vous travaillez dans un éditeur de code, la fenêtre **Signets** vous permet de créer des liens vers des lignes de code spécifiques au sein de votre document. Vous pouvez afficher cette fenêtre à partir du menu **Affichage** .  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
  **Désactiver/Activer tous les signets**  
  Coche ou décoche les cases de tous les signets dans la fenêtre **Signets** . Ne supprime pas les signets et ne modifie pas les lignes de code qu'ils marquent.  
   
- **Delete**  
+ **Supprimer**  
  Supprime le signet actuellement sélectionné de la fenêtre **Signets** et du document où le signet est apparu. Ne supprime pas la ligne de code qui contenait le signet.  
   
  Cases à cocher des signets  
@@ -84,10 +84,10 @@ ms.lasthandoff: 11/17/2017
 ## <a name="bookmarks-window-shortcut-menu"></a>Menu contextuel de la fenêtre Signets  
  Lorsque vous cliquez avec le bouton droit sur une entrée dans la fenêtre **Signets** , les commandes ci-dessous sont disponibles dans le menu contextuel.  
   
- **Delete**  
+ **Supprimer**  
  Supprime le signet actuellement sélectionné de la fenêtre **Signets** et du document où le signet est apparu. Ne supprime pas la ligne de code qui contenait le signet.  
   
- **Rename**  
+ **Renommer**  
  Vous permet d'affecter un nouveau nom complet à un signet ou un dossier.  
   
  **Désactiver/Activer le signet**  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
  **Désactiver/Activer tous les signets**  
  Coche ou décoche les cases de tous les signets dans la fenêtre **Signets** . Ne supprime pas les signets et ne modifie pas les lignes de code qu'ils marquent.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

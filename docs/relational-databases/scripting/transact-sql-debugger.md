@@ -3,9 +3,9 @@ title: "Débogueur Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed70a11de7d159fb2e26f43b7456954fc41db9f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bb725e9794a5c2fe582e49d77e02b7246cabd4e8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger"></a>Débogueur Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] vous permet de détecter les erreurs dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] en étudiant le comportement du code au moment de l’exécution. Après avoir défini la fenêtre de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode débogage, vous pouvez suspendre l'exécution du code au niveau de lignes spécifiques et inspecter les informations et les données qui sont utilisées ou retournées par ces instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code.|[Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Décrit comment utiliser le débogueur pour afficher des données [!INCLUDE[tsql](../../includes/tsql-md.md)] (telles que des paramètres et des variables) et des informations système.|[Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

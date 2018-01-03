@@ -3,9 +3,9 @@ title: "Rechercher du texte avec des expressions régulières | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d9837053135c6c0783d69d9544c84efd35cc5efe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4522ce26253a547b7cf55202f99a4e391f8fdaf3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |Saut de ligne|\n|Représente un saut de ligne indépendant de la plateforme. Dans une expression Remplacer, insère un saut de ligne.|  
 |Tout caractère de l'ensemble|[]|Représente tout caractère figurant entre les crochets []. Pour spécifier une plage de caractères, répertoriez les caractères de début et de fin, en les séparant par un tiret (-) ; par exemple [a-z].|  
 |Tout caractère hors de l'ensemble|[^...]|Représente tout caractère ne figurant pas dans le jeu de caractères qui suit le signe ^.|  
-|Ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
+|ou|&#124;|Représente l’expression placée avant ou après le symbole OU (&#124;). Critère surtout utilisé à l'intérieur d'un groupe. Par exemple, compte (courant&#124;rendu) retourne « compte courant » et « compte rendu ».|  
 |Caractère d'échappement|\|Représente le caractère qui suit la barre oblique inverse (\\) comme littéral. Cette syntaxe vous permet de rechercher les caractères utilisés dans les expressions régulières, tels { et ^. Par exemple, \\^ recherche le caractère ^.|  
 |Expression avec balises|{}|Représente le texte avec les balises de l'expression.|  
 |Identificateur C/C++|:i|Représente l'expression ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
 |Katakana|:Ka|Représente les caractères Katakana.|  
 |Idéographique/Han/Kanji|:Id|Représente des caractères idéographiques tels Han et Kanji.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

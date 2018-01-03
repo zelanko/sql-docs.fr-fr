@@ -3,7 +3,7 @@ title: "Utilisation des jeux d’enregistrements | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-recordsets"></a>Utilisation des jeux d’enregistrements
 Le **Recordset** objet possède des fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser les opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas, telle que celle de la [Index](../../../ado/reference/ado-api/index-property.md) propriété — la structure de la source de données.  
@@ -116,7 +116,7 @@ Le **Recordset** objet possède des fonctionnalités intégrées qui permettent 
 ### <a name="filtering-with-a-constant"></a>Filtrage avec une constante  
  Les constantes suivantes sont disponibles pour le filtrage **jeux d’enregistrements**.  
   
-|Constante| Description|  
+|Constante|Description|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|Filtres pour afficher uniquement les enregistrements concernés par la dernière **supprimer**, **Resync**, **UpdateBatch**, ou **CancelBatch** appeler.|  
 |**adFilterConflictingRecords**|Filtres pour visualiser les enregistrements qui ont échoué la dernière mise à jour par lots.|  

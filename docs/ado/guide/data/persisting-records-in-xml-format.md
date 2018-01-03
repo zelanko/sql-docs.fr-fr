@@ -3,7 +3,7 @@ title: "Maintien d’enregistrements au Format XML | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 719d6d0575f90f3460de6e8b1285b6a59cf7f791
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4f3259a78bba2451609c728372d9583eb259cbda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="persisting-records-in-xml-format"></a>Maintien d’enregistrements au Format XML
 Comme le format ADTG, **Recordset** persistance au format XML est implémenté avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement en lecture seule à partir d’un fichier XML ou un flux qui contient les informations de schéma générées par ADO enregistré. De même, elle peut prendre un ADO **Recordset**, générer un fichier XML et enregistrez-le dans un fichier ou tout objet qui implémente le modèle COM **IStream** interface. (En fait, un fichier est juste un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2.5 et ultérieures, ADO repose sur l’analyseur Microsoft XML (MSXML) pour charger le code XML dans le **Recordset**; par conséquent msxml.dll est obligatoire.  

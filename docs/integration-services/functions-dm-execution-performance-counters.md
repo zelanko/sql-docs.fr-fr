@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ece7ad69dc6ed7421b3e2793330e9ecb995575fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Fonctions - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Si un ID d'exécution n'est pas spécifié, les statistiques de performance de plusieurs exécutions sont retournées. Si vous êtes membre du rôle de base de données **ssis_admin** , les statistiques de performances de toutes les exécutions en cours sont retournées.  Si vous n’êtes pas membre du rôle de base de données **ssis_admin** , les statistiques de performances des exécutions en cours pour lesquelles vous disposez d’autorisations de lecture sont retournées. *execution_id* est un **BigInt**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le tableau suivant répertorie les valeurs de nom de compteur retournées par la fonction dm_execution_performance_counter.  
   
-|Nom du compteur| Description|  
+|Nom du compteur|Description|  
 |------------------|-----------------|  
 |Octets BLOB lus|Nombre d'octets des données d'objet BLOB (Binary Large Object) que le moteur de flux de données lit à partir de toutes les sources.|  
 |Octets BLOB écrits|Nombre d'octets des données BLOB que le moteur de flux de données écrit sur toutes les destinations.|  
@@ -62,20 +62,20 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Return  
  La fonction dm_execution_performance_counters retourne une table comportant les colonnes suivantes, pour une exécution en cours. Les informations retournées concernent tous les packages contenus dans l'exécution. Si aucune exécution n'est en cours, une table vide est retournée.  
   
-|Nom de la colonne|Type de colonne| Description|Notes|  
+|Nom de la colonne|Type de colonne|Description|Notes |  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** n’est pas une valeur valide.|Identificateur unique de l'exécution qui contient le package.||  
 |counter_name|**nvarchar(128)**|Nom du compteur.|Consultez la section **Notes** des valeurs.|  
 |counter_value|**BigInt**|Valeur retournée par le compteur.||  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans l'exemple suivant, la fonction retourne des statistiques pour une exécution en cours ayant l'ID 34.  
   
 ```sql
 select * from [catalog].[dm_execution_performance_counters] (34)  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans l'exemple suivant, la fonction retourne des statistiques pour toutes les exécutions en cours sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], selon les autorisations dont vous disposez.  
   
 ```sql
@@ -83,7 +83,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette fonction requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'instance d'exécution  

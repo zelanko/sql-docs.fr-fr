@@ -3,7 +3,7 @@ title: "Propriétés du travail - Nouveau travail (page Étapes) | Microsoft Doc
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abca15659be8754bd84032a8871508cda216739c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7db6510c6ced00b0062267db4f73418de144d30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propriétés du travail - Nouveau travail (page Étapes)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour consulter et organiser les étapes d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
@@ -49,6 +49,6 @@ Modifie l'étape de travail sélectionnée.
 **Supprimer**  
 Supprime l'étape de travail sélectionnée. Lorsque des étapes de travail sont supprimées, leur journal de sortie est automatiquement supprimé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
   

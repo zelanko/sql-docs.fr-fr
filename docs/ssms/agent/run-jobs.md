@@ -3,7 +3,7 @@ title: "Exécuter des travaux | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 703027a77c621f28a561082fa0d5f897220cc2b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 16154d6cc014c4d6d494b8889598bb33bba1e548
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-jobs"></a>Exécuter des travaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour gérer des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], des procédures stockées [!INCLUDE[tsql](../../includes/tsql_md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Management Objects.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
@@ -40,6 +40,6 @@ ms.lasthandoff: 12/05/2017
 |Explique comment arrêter un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Stop a Job](../../ssms/agent/stop-a-job.md)|  
 |Explique comment désactiver ou activer un travail [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Activer ou désactiver un travail](../../ssms/agent/disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sysdownloadlist](http://msdn.microsoft.com/en-us/71087a4c-e829-488e-aa7d-a9476e2b4779)  
   

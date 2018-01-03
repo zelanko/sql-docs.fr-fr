@@ -3,7 +3,7 @@ title: "Types d’événements | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f33ed98f367560da7f4b60d5a754d99937319358
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7880a6a3d2499735ad31b92d3c67cdfcafd8325d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-events"></a>Types d’événements
 Il existe deux types d’événements. « Événements will », appelés avant le début d’une opération, comportent généralement « Est » dans leur nom, par exemple, **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelées après un événement a été effectué généralement incluent « Complète » dans leur nom, par exemple, **RecordChangeComplete** ou **ConnectComplete**. Existe des exceptions, telles que **InfoMessage** , mais ces modifications se produisent après l’opération associée est terminée.  

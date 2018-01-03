@@ -3,9 +3,9 @@ title: Rechercher et remplacer | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et éventuellement le remplacer. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="find-what"></a>Rechercher  
  Ces contrôles vous permettent de spécifier la chaîne de caractères ou l'expression à rechercher.  
   
- **Find what**  
+ **Rechercher**  
  Tapez le texte à rechercher. La boîte de dialogue tente de fournir le texte recherché, à l'aide du texte sélectionné avec le curseur avant l'ouverture de la boîte de dialogue, d'un texte proche ou d'un texte qui a fait l'objet d'une recherche antérieure. Vous pouvez réutiliser une des 20 dernières chaînes de recherche en la sélectionnant dans cette liste déroulante.  
   
  **[chaînes contenant des caractères génériques]**  
@@ -129,7 +129,7 @@ ms.lasthandoff: 11/17/2017
  **Remplacer dans les fichiers**  
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Remplacer dans les fichiers** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

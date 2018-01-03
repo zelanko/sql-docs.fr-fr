@@ -3,7 +3,7 @@ title: "Autres méthodes de déplacement d’un objet Recordset | Documents Micr
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e44da06a716171f48620c54557d08810fab49ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Autres méthodes de déplacement dans un jeu d’enregistrements
 Les quatre méthodes suivantes servent à déplacer, ou faites défiler, dans le **Recordset**: [MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Certaines de ces méthodes ne sont pas disponibles sur les curseurs avant uniquement.)  

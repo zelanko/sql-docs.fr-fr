@@ -3,7 +3,7 @@ title: "Définir la connexion SQL Server pour le service SQL Server Agent | Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5caa2ebe88fd2de52a239693e5a5b517f2e8ae46
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a70b599aa521e50959e460ef604ca754655caff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit la configuration de la connexion entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent et le [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] au moyen de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] peut se connecter à une instance locale de SQL Server en utilisant l'authentification Windows.  

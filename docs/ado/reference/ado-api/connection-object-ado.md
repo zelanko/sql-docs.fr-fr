@@ -3,7 +3,7 @@ title: Objet de connexion (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9911597512c0172931b940fe463fab90391c2d7f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 68a54c70eb48a65e5bce6349adf99040945211d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-object-ado"></a>Objet de connexion (ADO)
 Représente une connexion ouverte à une source de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **connexion** objet représente une session unique avec une source de données. Dans un système de base de données client/serveur, il peut être équivalente à une connexion réseau réelle au serveur. Selon les fonctionnalités prises en charge par le fournisseur, certaines collections, des méthodes ou propriétés d’un **connexion** objet n’est peut-être pas disponible.  
   
  Avec les collections, les méthodes et les propriétés d’un **connexion** de l’objet, vous pouvez procédez comme suit :  
@@ -67,7 +67,7 @@ Représente une connexion ouverte à une source de données.
 >  N’utilisez pas cette fonctionnalité (appelant une procédure stockée ou une commande nommée comme s’il s’agissait d’une méthode native sur le **connexion** objet) dans une application Microsoft® .NET Framework, car l’implémentation sous-jacente de conflits de fonctionnalité avec la façon dont le .NET Framework interagit avec COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Exécuter une commande comme une méthode native d’un objet de connexion  
- Pour exécuter une commande, donnez-lui un nom à l’aide de la **commande** objet [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété. Définir le **ActiveConnection** propriété de la **commande** objet à la connexion. Ensuite vous émettez une instruction où le nom de commande est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres et un **Recordset** de l’objet si toutes les lignes sont retournées. Définir le **Recordset** propriétés pour personnaliser résultant **Recordset**. Exemple :  
+ Pour exécuter une commande, donnez-lui un nom à l’aide de la **commande** objet [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété. Définir le **ActiveConnection** propriété de la **commande** objet à la connexion. Ensuite vous émettez une instruction où le nom de commande est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres et un **Recordset** de l’objet si toutes les lignes sont retournées. Définir le **Recordset** propriétés pour personnaliser résultant **Recordset**. Exemple :  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -83,7 +83,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Exécuter une procédure stockée comme une méthode native d’un objet de connexion  
- Pour exécuter une procédure stockée, émettez une instruction où le nom de la procédure stockée est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres. ADO effectuera une « estimation » des types de paramètres. Exemple :  
+ Pour exécuter une procédure stockée, émettez une instruction où le nom de la procédure stockée est utilisé comme s’il s’agissait d’une méthode sur le **connexion** objet, suivie de tous les paramètres. ADO effectuera une « estimation » des types de paramètres. Exemple :  
   
 ```  
 Dim cnn As New ADODB.Connection  

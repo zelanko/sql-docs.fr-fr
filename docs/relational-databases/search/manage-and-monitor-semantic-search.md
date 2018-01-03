@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b01af634ed2681c49bdb444cd4a468b45be3ab03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Gérer et surveiller la recherche sémantique
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Décrit le processus d’indexation sémantique et les tâches associées à la gestion et au contrôle des index.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  La première phase de l'indexation inclut l'alimentation de l'index de mots clés de recherche en texte intégral et de l'index d'expressions clés sémantiques, ainsi que l'extraction de données de ressemblance de document.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -62,7 +62,7 @@ GO
   
  La taille logique est affichée en nombre de pages d'index.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -73,7 +73,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Quelle est la taille totale des index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
  Interrogez la propriété **IndexSize** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -81,7 +81,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Combien d'éléments sont indexés dans les index sémantiques et de recherche en texte intégral pour un catalogue de texte intégral ?  
  Interrogez la propriété **ItemCount** de la fonction de métadonnées [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
   
  Lorsque l'indexation sémantique est désactivée et suspendue, les requêtes sur les données sémantiques continuent de s'exécuter avec succès et retournent des données indexées précédemment. Ce comportement n'est pas cohérent avec le comportement de la recherche en texte intégral.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

@@ -3,7 +3,7 @@ title: "Abandonner les modifications apportées aux requêtes (Visual Database T
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 507ef93ff1bae87aea60ef746d2e9c578f6b63e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8b1e89b785a2f490d15594f7ecc786b40b6c9dec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Abandonner les modifications apportées aux requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez abandonner les changements apportés à une définition de requête avant de les enregistrer. Une fois enregistrées, leur état antérieur ne peut pas être rétabli.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
     La définition de requête retrouve l'état qui était le sien lors du dernier enregistrement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Enregistrer des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

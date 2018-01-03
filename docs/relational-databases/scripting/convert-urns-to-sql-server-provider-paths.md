@@ -3,9 +3,9 @@ title: "Convertir des URN en chemins de fournisseur SQL Server | Microsoft Doc
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d74b81da835b5ce9791123be2ada5d9316ae23e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc1a1168400eb47d8d9a655486506c87ec939e86
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="convert-urns-to-sql-server-provider-paths"></a>Convertir des URN en chemins d'accès de fournisseur SQL Server
+# <a name="convert-urns-to-sql-server-provider-paths"></a>Convertir des URN en chemins de fournisseur SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le modèle objet SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) génère des URN (Uniform Resource Names) pour ses objets. Chaque URN identifie de façon unique un objet SMO et peut être converti en chemin de fournisseur PowerShell SQL Server à l’aide de l’applet de commande **Convert-UrnToPath** .  
   
 ## <a name="converting-urns-to-paths"></a>Conversion d'URN en chemins d'accès  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 Get-Help Convert-UrnToPath -Examples  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions de requête et noms URN](../../powershell/query-expressions-and-uniform-resource-names.md)   
  [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

@@ -3,7 +3,7 @@ title: "Index spatiaux, boîte de dialogue (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: efb3e7457ce2406fa52801221b4c9a9d937fc7dd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7a3a67a16ceef1e85a988b762d7f0cecb4e452d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Index spatiaux** pour créer des index pour les colonnes du type de données **géométrie** ou **géographie** (*colonnes spatiales*), qui ne peuvent pas être indexées à l’aide de la boîte de dialogue **Index/Clés**. Chaque colonne spatiale peut avoir plusieurs index spatiaux, mais ils doivent être créés un par un.  
@@ -36,7 +36,7 @@ Répertorie les index spatiaux existants. Sélectionnez un index pour afficher s
 **Ajouter**  
 Crée un index spatial.  
   
-**Delete**  
+**Supprimer**  
 Supprime l'index spatial sélectionné dans la liste **Index spatial sélectionné** .  
   
 **Cellules par objet**  
@@ -44,7 +44,7 @@ Indique le nombre de cellules par objet de pavage qui peuvent être utilisées p
   
 Si un objet couvre plus de cellules que le nombre spécifié par *n*, l'indexation utilise autant de cellules que nécessaire pour fournir un pavage de niveau supérieur complet. Dans de tels cas, un objet peut recevoir plus de cellules que le nombre spécifié. Dans ce cas, le nombre maximal est le nombre de cellules générées par la grille de niveau supérieur, qui dépend de la densité du **Niveau 1** .  
   
-**Columns**  
+**Colonnes**  
 Indique le nom de colonne et l'ordre de tri.  
   
 **IsSpatialIndex**  
@@ -120,6 +120,6 @@ Spécifie si de nouvelles statistiques sont calculées une fois l'index créé. 
 **Verrouillage de ligne autorisé**  
 Spécifie si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Vue d'ensemble des index spatiaux](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)  
   

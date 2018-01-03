@@ -3,7 +3,7 @@ title: "Bookmark, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1b1446203cf866562026219059f7520042b3b25b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 498f1db6216d949663dba9bd22e8066534241605
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bookmark-property-ado"></a>Bookmark, propriété (ADO)
 Indique un signet qui identifie de façon unique l’enregistrement actif dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet ou définit l’enregistrement actif un **Recordset** objet l’enregistrement identifié par un signet valid.  
@@ -32,7 +32,7 @@ Indique un signet qui identifie de façon unique l’enregistrement actif dans u
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Variant** expression qui correspond à un signet valide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **signet** à enregistrer la position de l’enregistrement actif et revenir à cet enregistrement à tout moment. Les signets sont uniquement disponibles dans **Recordset** les objets qui prennent en charge la fonctionnalité de signet.  
   
  Lorsque vous ouvrez un **Recordset** de l’objet, chacun de ses enregistrements possède un signet unique. Pour enregistrer le signet de l’enregistrement actif, affectez la valeur de la **signet** propriété à une variable. Pour revenir rapidement à cet enregistrement à tout moment après avoir déplacé vers un autre enregistrement, affectez le **Recordset** l’objet **signet** propriété à la valeur de cette variable.  

@@ -3,7 +3,7 @@ title: Il ne | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,21 +20,21 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de4655072b5ce25b3fb35dbb8bc73b6334a9f6c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82518cbfd6572f03cbe0b742b52bb5e4acd3d8e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventstatusenum"></a>Il n'
 Spécifie l’état actuel de l’exécution d’un événement.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Demande l’annulation de l’opération qui a provoqué l’événement se produit.|  
 |**adStatusCantDeny**|3|Indique que l’opération ne peut pas demander l’annulation de l’opération en attente.|  
 |**Contraire**|2|Indique que l’opération qui a provoqué l’événement a échoué en raison d’une erreur ou des erreurs.|  
-|**adStatusOK**|1|Indique que l’opération qui a provoqué l’événement a réussi.|  
+|**adStatusOK**| 1|Indique que l’opération qui a provoqué l’événement a réussi.|  
 |**adStatusUnwantedEvent**|5|Empêche toute notification avant que la méthode d’événement ait terminé l’exécution.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  

@@ -3,7 +3,7 @@ title: "À l’aide de CacheSize | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72ef02bfcf8e5392d23cd90f0ad0d49fe4d87122
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f22491ec3d32fc9819bdeaa993af0700c4f49260
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cachesize"></a>Utilisation de CacheSize
 Utilisez le **CacheSize** propriété pour contrôler le nombre d’enregistrements à récupérer simultanément dans la mémoire locale à partir du fournisseur. Par exemple, si le **CacheSize** est 10, après la première ouverture du **Recordset** de l’objet, le fournisseur extrait les 10 premiers enregistrements dans la mémoire locale. À mesure que vous parcourez les **Recordset** de l’objet, le fournisseur retourne les données de la mémoire tampon locale. Dès que vous déplacez au-delà du dernier enregistrement dans le cache, le fournisseur extrait les 10 enregistrements suivants à partir de la source de données dans le cache.  

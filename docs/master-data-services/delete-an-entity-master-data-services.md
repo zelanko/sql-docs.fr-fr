@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 396560b3b763ddcde593b040a353b751d290e33d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9b246a4f959707c53868d26f625e1456dc62df03
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-an-entity-master-data-services"></a>Supprimer une entité (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une entité afin de supprimer tous les membres et attributs de l'entité.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Les membres de l'entité de toutes les versions seront supprimés définitivement.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

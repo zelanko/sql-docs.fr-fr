@@ -7,23 +7,27 @@ documentationcenter:
 author: becczhang
 manager: jhubbard
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: quick start create, mvc
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: portal
+ms.tgt_pltfrm: 
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Effectuer une rotation du protecteur TDE (Transparent Data Encryption) à l’aide de PowerShell 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Ce guide pratique explique comment effectuer une rotation des clés pour un serveur Azure SQL Server qui utilise un protecteur TDE fourni par Azure Key Vault. La rotation du protecteur TDE d’un serveur Azure SQL Server permet de changer la clé asymétrique utilisée pour protéger les bases de données sur le serveur. La rotation des clés est une opération en ligne qui s’effectue normalement en quelques secondes, car elle déchiffre et rechiffre uniquement la clé de chiffrement des données de la base de données, pas la base de données entière.
 
@@ -37,11 +41,11 @@ Ce guide expose les deux options possibles pour effectuer la rotation du protect
 > Après une substitution de clé, **ne supprimez pas** les versions précédentes de la clé.  Quand des clés sont substituées, certaines données peuvent rester chiffrées avec les clés précédentes, par exemple, d’anciennes sauvegardes de la base de données. 
 >
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 - Ce guide pratique suppose que vous utilisez déjà une clé Azure Key Vault comme protecteur TDE pour une base de données ou un entrepôt de données Azure SQL. Consultez [Transparent Data Encryption avec prise en charge de BYOK](transparent-data-encryption-byok-azure-sql.md).
 - Azure PowerShell version 3.7.0 ou ultérieure doit être installé et exécuté. 
-- [Recommandé mais facultatif] Créez d’abord les éléments de clé du protecteur TDE dans un module de sécurité matériel (HSM) ou un magasin de clés local, puis importez ces éléments dans Azure Key Vault. Pour en savoir plus, consultez [Instructions pour utiliser un module de sécurité matériel (HSM) et Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started).
+- [Recommandé mais facultatif] Créez d’abord les éléments de clé du protecteur TDE dans un module de sécurité matériel (HSM) ou un magasin de clés local, puis importez ces éléments dans Azure Key Vault. Pour en savoir plus, consultez [Instructions pour utiliser un module de sécurité matériel (HSM) et Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started).
 
 ## <a name="option-1-auto-rotation"></a>Option 1 : Rotation automatique
 

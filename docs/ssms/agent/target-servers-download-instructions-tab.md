@@ -3,7 +3,7 @@ title: "Serveurs cibles (onglet Instructions de téléchargement) | Microsoft Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17c67093de57f58f810315050a8b48009e306f7b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 271e01a59fa533df607d26dfc87bdcd3f587b4c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-servers-download-instructions-tab"></a>Serveurs cibles (onglet Instructions de téléchargement)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Utilisez cette page pour afficher et mettre à jour les instructions de téléchargement pour un ou plusieurs serveurs cibles.  
@@ -52,12 +52,12 @@ Affiche la date et l'heure locales auxquelles le serveur cible a téléchargé l
 **État du téléchargement des instructions**  
 Affiche le dernier état de l'instruction de téléchargement sélectionnée.  
   
-**Delete**  
+**Supprimer**  
 Supprime l'instruction de téléchargement sélectionnée.  
   
 **Désactiver**  
 Désactive l'état de l'instruction de téléchargement sélectionnée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

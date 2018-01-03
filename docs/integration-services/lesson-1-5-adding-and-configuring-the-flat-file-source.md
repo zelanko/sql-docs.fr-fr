@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0afc0fff3b28eea9d510b81f2ec3a6224d493db5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5e4d78be29d3fd124b1a85c12c4a8ec58d3c5dcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Leçon 1-5 : Ajout et configuration de la source de fichier plat
 Au cours de cette tâche, vous allez ajouter et configurer une source de fichier plat à votre package. Une source de fichier plat est un composant de flux de données qui utilise des métadonnées définies par un Gestionnaire de connexions de fichiers plats pour spécifier le format et la structure des données à extraire à partir du fichier plat par un processus de transformation. La source de fichier plat peut être configurée pour extraire les données à partir d'un seul fichier plat en utilisant la définition de format de fichier fournie par le Gestionnaire de connexions de fichiers plats.  
@@ -52,7 +52,7 @@ Au cours de ce didacticiel, vous allez configurer la source de fichier plat pour
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 6 : Ajout et configuration des transformations de recherche](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [source de fichier plat](../integration-services/data-flow/flat-file-source.md)  
 [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)  
   

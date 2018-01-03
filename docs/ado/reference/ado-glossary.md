@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.  
@@ -190,7 +190,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  ISAPI (Internet Server Application programmation Interface)  
  Un ensemble de fonctions pour les serveurs Internet, tel qu’un serveur de 2000 Windows NT® / Windows Server exécutant Microsoft® Internet Information Services (IIS).  
   
- Clé  
+ Key  
  Une ou plusieurs colonnes dans une table qui identifient de manière unique une ligne ; souvent utilisé pour une table d’index.  
   
 ## <a name="m"></a>M  
@@ -292,7 +292,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  Une opération démarrée par du code qui se termine avant que l’opération suivante puisse démarrer. Voir aussi une opération asynchrone.  
   
 ## <a name="t-z"></a>T-Z  
- Arborescence  
+ trEE  
  Structure représentant une relation hiérarchique entre des éléments (nœuds). Il existe un nœud au niveau supérieur d’une arborescence (racine). Sous la racine, il peut y avoir plusieurs enfants. Chaque enfant peut être à son tour le parent d’autres enfants, donc créer une branche comme un arbre. Un dossier contenant des documents et autres dossiers est un exemple classique d’une structure arborescente. Voir aussi hiérarchie, nœud, racine, enfant, parent.  
   
  Serveur Web  

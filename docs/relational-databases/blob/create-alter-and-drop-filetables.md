@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3834e2948ea4e43bc5e44a4aed9f1560b2864b64
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4e9c1bcfec7bd2d009af31b69317f9fd23b68843
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Décrit la procédure de création d’un nouveau FileTable, ou de modification ou de suppression d’un FileTable existant.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  L’exemple suivant crée un FileTable et spécifie les valeurs définies par l’utilisateur pour **FILETABLE_DIRECTORY** et **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -84,7 +84,7 @@ GO
   
  L'exemple suivant crée également un nouveau FileTable. Étant donné que les valeurs définies par l’utilisateur ne sont pas spécifiées, la valeur de **FILETABLE_DIRECTORY** devient le nom du FileTable, la valeur de **FILETABLE_COLLATE_FILENAME** devient database_default et les contraintes uniques et de clé primaire reçoivent des noms générés par le système.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -119,7 +119,7 @@ GO
   
  **Exemple**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -150,7 +150,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> D'autres objets de base de données sont créés lorsque vous créez un FileTable  
  Lorsque vous créez un nouveau FileTable, quelques contraintes et index définis par le système sont également créés. Vous ne pouvez pas modifier ou supprimer ces objets ; ils disparaissent uniquement lorsque le FileTable lui-même est supprimé. Pour consulter la liste de ces objets, interrogez l’affichage catalogue [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -187,7 +187,7 @@ GO
   
 -   *\<générateur_de_nom_unique>* est une chaîne générée par le système pour rendre le nom unique. Cette chaîne peut contenir le nom du FileTable et un identificateur unique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Gérer des FileTables](../../relational-databases/blob/manage-filetables.md)  
   
   

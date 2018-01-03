@@ -3,9 +3,9 @@ title: "Scripts du moteur de base de données | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d97fa3f4c13ad328cbcb2302ae6ab2a7b922707e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52a85f7ed9f26b1414f918f50509999394a66399
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-engine-scripting"></a>Scripts du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] prend en charge l’environnement de script [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell pour gérer les instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et leurs objets. Vous pouvez également générer et exécuter des requêtes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui contiennent des éléments [!INCLUDE[tsql](../../includes/tsql-md.md)] et XQuery dans des environnements très similaires aux environnements de script.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
 |Explique comment intégrer les composants SQL Server dans un environnement Windows PowerShell et générer des scripts PowerShell pour gérer des instances et des objets SQL Server.|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
 |Explique comment utiliser l’Assistant **Générer et publier des scripts** pour créer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui recréent un ou plusieurs objets d’une base de données.|[Générer des scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Didacticiel : écriture d'instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

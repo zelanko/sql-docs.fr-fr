@@ -5,7 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ddaf96b05f2d1b6fc9857faf6309c5bfdd4d449c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
 Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extension qui fournit les composants répertoriés dans cette page afin de permettre à SSIS de se connecter aux services Azure, de transférer des données entre des sources de données Azure et locales, et de traiter des données stockées dans Azure.
@@ -85,14 +85,14 @@ Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extens
 - [Feature Pack SSIS pour Azure](http://go.microsoft.com/fwlink/?LinkID=626967) pour SQL Server 2016
 - [Feature Pack SSIS pour Azure](https://www.microsoft.com/download/details.aspx?id=54798) pour [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
  Avant d’installer le Feature Pack, vous devez vérifier que les conditions préalables suivantes sont remplies.
 
 -   SQL Server Integration Services
 -   .Net Framework 4.5
 
 ## <a name="scenario-processing-big-data"></a>Scénario : traitement du Big Data
- Utilisez le connecteur Azure pour accomplir le travail suivant de traitement de données volumineuses :
+ Utilisez le connecteur Azure pour accomplir le travail suivant de traitement de données volumineuses :
 
 1.  Utilisez la tâche de téléchargement d'objet blob Azure pour charger des données d'entrée dans le stockage d'objets blob Azure.
 

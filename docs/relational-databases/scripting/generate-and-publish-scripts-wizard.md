@@ -3,9 +3,9 @@ title: "Assistant Générer et publier des scripts | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -49,11 +49,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 69d2561990609eb94620ab8a3f7abd9c31dbb316
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 801dba9b807d9928f7d7dcb1db83274ca11ee778
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez utiliser **l’Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] vers une autre instance. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  Pour publier une base de données sur un service d'hébergement Web, sélectionnez l'option **Publier sur le service Web** dans la page de **Définir les options de script** de l'Assistant.  
   
-###  <a name="Permissions"></a> Autorisations  
+###  <a name="Permissions"></a> Permissions  
  L'autorisation minimale pour publier une base de données est l'appartenance au rôle de base de données fixe db_ddladmin sur la base de données d'origine. L'autorisation minimale pour publier un script de base de données sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au fournisseur d'hébergement est l'appartenance au rôle de base de données fixe db_ddladmin sur la base de données cible.  
   
  L'utilisateur doit fournir également un nom d'utilisateur et un mot de passe pour accéder à son compte de fournisseur d'hébergement pour publier avec l'Assistant. La base de données cible doit être créée au fournisseur d'hébergement avant de publier la base de données source. La publication remplace les objets dans cette base de données existante.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Pointez sur **Tâches**, puis cliquez sur **Générer des scripts**.  
   
-3.  Renseignez les boîtes de dialogue de l'Assistant :  
+3.  Renseignez les boîtes de dialogue de l'Assistant :  
   
     -   [Page Introduction](#Introduction)  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Liaisons de scripts** - Génère un script pour lier les objets de règle et les objets par défaut. La valeur par défaut est **False**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) et [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
--   **Classement de script** - Inclut des informations de classement dans le script. La valeur par défaut est **False**. Pour plus d’informations, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   **Classement de script** - Inclut des informations de classement dans le script. La valeur par défaut est **False**. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   **Valeurs de script par défaut** - Inclut les objets par défaut utilisés pour définir les valeurs par défaut dans les colonnes de table. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Générer un script pour les contraintes de validation** – Ajoute des contraintes **CHECK** au script. La valeur par défaut est **True**. Les contraintes**CHECK** exigent que les données entrées dans une table satisfassent à certaines conditions spécifiées. Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
--   **Générer un script des options de compression de données** - Génère un script des options de compression de données si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. Pour plus d’informations, consultez [Data Compression](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est **False**.  
+-   **Générer un script des options de compression de données** - Génère un script des options de compression de données si elles sont configurées sur la base de données d’origine ou sur des tables dans la base de données d’origine. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). La valeur par défaut est **False**.  
   
 -   **Générer un script pour les clés étrangères** - Ajoute des clés étrangères au script. La valeur par défaut est **True**. Les clés étrangères indiquent et garantissent les relations entre les tables.  
   
@@ -369,8 +369,8 @@ Si vous définissez [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] en tant qu�
 
 Les options définies à l’étape 4 ne seront pas mémorisées. Si vous préférez qu’elles le soient, suivez les instructions données dans **Comment définir les options de script par défaut sur SQL Data Warehouse**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Installation de SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
- [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+ [Copier des bases de données sur d’autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   
   

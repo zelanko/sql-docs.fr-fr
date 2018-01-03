@@ -3,7 +3,7 @@ title: "À l’aide d’un objet de connexion | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38454d8edc91715f5a3e3d5ee55f045d0e55e581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6053e0134a3b9ae866f88aa4ee0742d311c2821
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-connection-object"></a>À l’aide d’un objet de connexion
-Avant d’ouvrir un **connexion** de l’objet, vous devez définir certaines informations sur la source de données et le type de connexion. La plupart de ces informations est détenue par le *ConnectionString* paramètre de la [Open (méthode)](../../../ado/reference/ado-api/open-method-ado-connection.md) sur la **connexion** objet, ou par le [ConnectionString propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur la **connexion** objet. Une chaîne de connexion se compose d’une liste de paires de valeur d’argument séparés par des points-virgules, avec les valeurs encadrées par des guillemets simples. Exemple :  
+Avant d’ouvrir un **connexion** de l’objet, vous devez définir certaines informations sur la source de données et le type de connexion. La plupart de ces informations est détenue par le *ConnectionString* paramètre de la [Open (méthode)](../../../ado/reference/ado-api/open-method-ado-connection.md) sur la **connexion** objet, ou par le [ConnectionString propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur la **connexion** objet. Une chaîne de connexion se compose d’une liste de paires de valeur d’argument séparés par des points-virgules, avec les valeurs encadrées par des guillemets simples. Exemple :  
   
 ```  
 Dim sConn As String  

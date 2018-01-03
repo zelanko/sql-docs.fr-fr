@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de12dd7f28eb427429ecc0260ce37707ff0cec99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcc6d1391487c1e56851f485abd709d29634adc6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Cet article explique quand et comment utiliser les cibles package0 cible pour le
 La [section ring_buffer section](#h2_target_ring_buffer) inclut un exemple d’utilisation de [XQuery dans Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) pour copier une chaîne XML dans un ensemble de lignes relationnel.
 
 
-### <a name="prerequisites"></a>Conditions préalables
+### <a name="prerequisites"></a>Prerequisites
 
 
 - Familiarisez-vous avec les concepts de base des événements étendus, comme décrit dans [Démarrage rapide : événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
@@ -122,7 +122,7 @@ sqlserver      checkpoint_begin   4
 Ensuite, vient l’instruction CREATE EVENT SESSION qui a conduit aux résultats précédents. Pour ce test, sur la clause EVENT...WHERE, le champ **package0.counter** a été utilisé pour faire cesser le décompte une fois que le nombre a atteint 4.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -160,7 +160,7 @@ La cible **event_file** écrit la sortie de session d’événements à partir d
 Ensuite, vient l’instruction CREATE EVENT SESSION utilisée pour le test. L’une des clauses ADD TARGET spécifie une cible event_file.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -292,7 +292,7 @@ Dans l’exemple présent, l’offre de la clause EVENT...ACTION se produit pour
 - Pour effectuer le suivi de plusieurs actions de la source, vous pouvez ajouter une deuxième cible d’histogramme à l’instruction CREATE EVENT SESSION.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -358,7 +358,7 @@ L’exemple suivant définit **source_type=0**. La valeur attribuée à **source
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -451,7 +451,7 @@ L’instruction CREATE EVENT SESSION suivante spécifie deux événements et deu
 Pour affiner les résultats, nous avons tout d’abord utilisé l’instruction SELECT de sys.objects pour rechercher l’élément object_id de la table test. Nous avons ajouté un filtre pour cet ID à la clause EVENT...WHERE.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -555,7 +555,7 @@ Dans cette section ring_buffer nous montrons également comment vous pouvez util
 Aucune information particulière n’est à mentionner au sujet de cette instruction CREATE EVENT SESSION, qui utilise la cible ring_buffer.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -668,7 +668,7 @@ Le contenu extrait par une instruction SELECT est au format d’une chaîne XML.
 Pour afficher le code XML précédent, vous pouvez émettre l’instruction SELECT suivante lorsque la session d’événements est active. Les données XML actives sont récupérées à partir de la vue système **sys.dm_xe_session_targets**.
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -700,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 Pour afficher le code XML précédent sous forme d’un ensemble de lignes relationnel, continuez à partir de l’instruction SELECT précédente en émettant l’instruction T-SQL suivante. Les lignes commentées expliquent chaque utilisation de XQuery.
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',

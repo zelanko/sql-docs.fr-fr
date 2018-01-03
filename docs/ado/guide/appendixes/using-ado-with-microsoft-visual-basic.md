@@ -3,7 +3,7 @@ title: "À l’aide d’ADO avec Microsoft Visual Basic | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef8260be592439a3130afe9af830b8159290f2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>À l’aide d’ADO avec Microsoft Visual Basic et Visual Basic pour Applications
 Configuration d’un projet ADO et l’écriture de code ADO sont semblable si vous utilisez Visual Basic ou Visual Basic pour Applications. Cette rubrique aborde l’utilisation d’ADO avec Visual Basic et Visual Basic pour Applications et indique les différences.
@@ -103,7 +103,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Les objets instanciés avec **CreateObject** sont à liaison tardive, ce qui signifie qu’ils ne sont pas fortement typées et de fin de ligne de commande est désactivée. Toutefois, il vous autorise à ne pas référencer la bibliothèque ADO à partir de votre projet et vous permet d’instancier des versions spécifiques d’objets. Exemple :
+ Les objets instanciés avec **CreateObject** sont à liaison tardive, ce qui signifie qu’ils ne sont pas fortement typées et de fin de ligne de commande est désactivée. Toutefois, il vous autorise à ne pas référencer la bibliothèque ADO à partir de votre projet et vous permet d’instancier des versions spécifiques d’objets. Exemple :
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

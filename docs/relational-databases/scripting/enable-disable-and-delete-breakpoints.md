@@ -3,9 +3,9 @@ title: "Activer, désactiver et supprimer des points d’arrêt | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38a596f36d68cc6efd8b21450aaddf5f0a293ab0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2a3bd394023591be8821d1df4488945c835b253
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Activer, désactiver et supprimer des points d'arrêt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour afficher et gérer tous les points d’arrêt ouverts, vous pouvez utiliser la fenêtre **Points d’arrêt**. Utilisez la fenêtre pour afficher les informations sur les points d'arrêt et entreprendre des actions, telles que la suppression, la désactivation ou l'activation des points d'arrêt.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Dans la barre d'outils de la fenêtre **Points d'arrêt** , cliquez sur le bouton **Supprimer tous les points d'arrêt** .  
   
-## <a name="see-also"></a>Voir aussi  
- [Basculer un point d'arrêt](../../relational-databases/scripting/toggle-a-breakpoint.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Basculer un point d’arrêt](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   

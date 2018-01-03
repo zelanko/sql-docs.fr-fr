@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a993272297b82d35cd77412d3f58c709483efaba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fb33b9b5409ecdaddd2885b279831a35fefb0af5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Créer un attribut de date (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez créer un attribut date lorsque vous souhaitez que les utilisateurs entrent une date comme valeur d'attribut.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  L'attribut est appelée DateTime, mais les valeurs d'heure ne sont pas prises en charge.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -85,14 +85,14 @@ ms.lasthandoff: 11/20/2017
 |Seq|19|  
 |Option de liste|jj/MM/aaaa hh:mm:ss tt|  
 |ID d'option|19|  
-|EstVisible|1|  
+|EstVisible| 1|  
 |Group_ID|3|  
   
  Une fois que vous avez entré une ligne comportant les valeurs ci-dessus dans la table mdm.tblList, le masque « jj/MMM/aaaa hh:mm:ss tt » devient disponible dans la zone de liste de masque de saisie. Vous pouvez alors sélectionner ce masque afin d'afficher la date et l'heure dans la colonne d'attribut datetime d'une entité dans l'Explorateur MDS.  
   
  Le masque de saisie est une chaîne au format DateTime .NET personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Changer le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

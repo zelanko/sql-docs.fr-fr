@@ -3,7 +3,7 @@ title: "Utiliser le Concepteur de requêtes et de vues avec des données interna
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b88c7cbc8f2976c79017ebca218eb79cbfcc588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 562e347f9f51230c41358545e93cc970743a3f74
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utiliser le Concepteur de requêtes et de vues avec des données internationales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez utiliser le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) quelle que soit la langue utilisée dans les données et le système d’exploitation Windows. Vous trouverez ci-dessous les quelques différences que vous pourrez rencontrer ainsi que des informations sur la gestion des données dans des applications internationales.  
@@ -62,6 +62,6 @@ L'ordre de tri des données d'une requête est déterminé par la base de donné
 ## <a name="using-double-byte-characters"></a>Utilisation de caractères codés sur deux octets  
 Les caractères codés sur deux octets, ou caractères DBCS (Double Byte Character Set), peuvent être utilisés pour des noms d'objets de bases de données tels que des noms de tables et de vues ou d'alias. Vous pouvez également les utiliser pour des noms de paramètres et des marqueurs de paramètres. Cependant, vous ne pouvez pas les utiliser dans des éléments du langage SQL tels que des noms de fonctions ou des mots clés SQL.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

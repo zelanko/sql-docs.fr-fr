@@ -2,32 +2,34 @@
 title: "PowerShell : Activer TDE à l’aide de votre propre clé Azure Key Vault | Microsoft Docs"
 description: "Découvrez comment configurer Azure SQL Database et Data Warehouse pour commencer à utiliser Transparent Data Encryption (TDE) pour le chiffrement au repos à l’aide de PowerShell."
 keywords: 
-services: sql-database
 documentationcenter: 
 author: aliceku
 manager: craigg
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: security
-ms.workload: Inactive
+ms.component: security
+ms.workload: On Demand
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: aliceku
-ms.openlocfilehash: f8de7e653a925e04dbcab9efbd5b5c8e5354b611
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0acfd9faa668d1e86cb82496bdd97dc6a0ec2bc8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="powershell-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell : Activer Transparent Data Encryption à l’aide de votre propre clé Azure Key Vault
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fonctionnalité Transparent Data Encryption (TDE) pour SQL Database ou Data Warehouse. Pour en savoir plus sur TDE avec prise en charge de Bring Your Own Key (BYOK), consultez [Transparent Data Encryption (TDE) avec prise en charge de Bring Your Own Key pour Azure SQL](transparent-data-encryption-byok-azure-sql.md). 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 - Vous devez avoir un abonnement Azure et être administrateur de cet abonnement.
 - [Recommandé mais facultatif] Vous devez avoir un module de sécurité matériel (HSM) ou un magasin de clés local à utiliser pour la création d’une copie locale des éléments de clé du protecteur TDE.

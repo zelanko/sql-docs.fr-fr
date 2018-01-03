@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d4181262d713918c834d7dc971444118f11fe623
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7a6e6764d71d632cb4f232eecd34e16f38bede57
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ Le paramétrage d’Always Encrypted est une fonctionnalité de SQL Server Manag
   
 Sans le paramétrage, le fournisseur de données .NET Framework transmet chaque instruction créée dans l’éditeur de requête en tant que requête non paramétrée. Si la requête contient des littéraux ou des variables Transact-SQL qui ciblent des colonnes chiffrées, le fournisseur de données .NET Framework pour SQL Server ne peut pas les détecter et les chiffrer avant d’envoyer la requête à la base de données. Par conséquent, la requête échoue en raison d’une incompatibilité de type (entre la variable littérale en texte brut Transact-SQL et la colonne chiffrée). Par exemple, sans paramétrage, la requête suivante échoue, supposant que la colonne `SSN` est chiffrée.   
 
-```tsql
+```sql
 DECLARE @SSN NCHAR(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN
@@ -148,7 +148,7 @@ Si le paramétrage d’Always Encrypted et le comportement Always Encrypted dans
 - Variables initialisées avec un littéral unique. Les variables initialisées avec des expressions contenant des opérateurs ou fonctions ne seront pas paramétrées.      
 
 Vous trouverez ci-après des exemples de variables paramétrées par SQL Server Management Studio.   
-```tsql
+```sql
 DECLARE @SSN char(11) = '795-73-9838';
    
 DECLARE @BirthDate date = '19990104';
@@ -156,7 +156,7 @@ DECLARE @Salary money = $30000;
 ```
 
 Et voici quelques exemples de variables que SQL Server Management Studio ne tentera pas de paramétrer :   
-```tsql
+```sql
 DECLARE @Name nvarchar(50); --Initialization seperate from declaration
 SET @Name = 'Abel';
    
@@ -170,7 +170,7 @@ Pour qu’une tentative de paramétrage aboutisse :
 - Si le type déclaré de la variable est un type de date ou d’heure, la variable doit être initialisée à l’aide d’une chaîne à l’aide d’un des formats suivants conformes à la norme ISO 8601.   
 
 Voici des exemples de déclarations de variables Transact-SQL générant des erreurs de paramétrage :   
-```tsql
+```sql
 DECLARE @BirthDate date = '01/04/1999' -- unsupported date format   
    
 DECLARE @Number int = 1.1 -- the type of the literal does not match the type of the variable   
@@ -192,7 +192,7 @@ Un autre exemple ci-dessous montre deux variables qui répondent aux conditions 
 >   [!NOTE]
 >   Étant donné que Always Encrypted prend en charge un sous-ensemble limité de conversions de type, dans de nombreux cas, il est nécessaire que le type de données d’une variable Transact-SQL soit identique au type de colonne de base de données ciblée. Par exemple, en supposant que le type de la colonne `SSN` dans la `Patients` table est `char(11)`, la requête ci-après échoue, dans la mesure où le type de la variable `@SSN` ( `nchar(11)`), ne correspond pas au type de la colonne.   
 
-```tsql
+```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
 SELECT * FROM [dbo].[Patients]
 WHERE [SSN] = @SSN;
@@ -209,7 +209,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   Sans paramétrage, la requête entière, y compris les conversions de type, est traitée à l’intérieur de SQL Server/Azure SQL Database. Avec un paramétrage activé, certaines conversions de type sont effectuées par .NET Framework au sein de SQL Server Management Studio. En raison des différences entre le système .NET Framework et le système SQL Server (par exemple, précision différente de certains types, comme float), une requête exécutée avec paramétrage activé peut produire des résultats différents de ceux d’une requête exécutée sans paramétrage activé. 
 
-#### <a name="permissions"></a>Permissions      
+#### <a name="permissions"></a>Autorisations      
 
 Pour exécuter des requêtes sur des colonnes chiffrées, y compris des requêtes qui extraient des données en texte chiffré, vous avez besoin des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` dans la base de données.   
 Outre les autorisations ci-dessus, pour déchiffrer des résultats de requête ou pour chiffrer les paramètres de requête (générés par le paramétrage de variables Transact-SQL), vous devez également accéder à la clé principale de colonne protégeant les colonnes cibles :   
@@ -261,7 +261,7 @@ La boîte de dialogue **Nouvelle clé de chiffrement de colonne** vous permet de
 
 SQL Server Management Studio génère une clé de chiffrement de colonne, puis récupère les métadonnées pour la clé principale de colonne sélectionnée à partir de la base de données. SQL Server Management Studio utilise ensuite les métadonnées de clé principale de colonne pour contacter le magasin de clés qui contient votre clé principale de colonne et chiffrer la clé de chiffrement de colonne. Enfin, les métadonnées de la nouvelle clé de chiffrement de colonne sont créées dans la base de données. La boîte de dialogue effectue cette opération en générant et en émettant une instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Vous avez besoin des autorisations relatives à la base de données *ALTER ANY ENCRYPTION MASTER KEY* et *VIEW ANY COLUMN MASTER KEY DEFINITION* dans la base de données pour que la boîte de dialogue crée les métadonnées de clé de chiffrement de colonne et accède aux métadonnées de clé principale de colonne.
 Pour accéder à un magasin de clés et utiliser la clé principale de colonne, vous pouvez avoir besoin d’autorisations sur le magasin de clés et/ou la clé :
@@ -299,7 +299,7 @@ SQL Server Management Studio obtient les métadonnées des clés de chiffrement 
 
 **Étape 3: Configurer vos applications avec la nouvelle clé principale de colonne**
 
-Dans cette étape, vous devez vérifier que toutes vos applications clientes qui interrogent des colonnes de base de données protégées par la clé principale de colonne en permutation (c’est-à-dire les colonnes de base de données chiffrées avec une clé de chiffrement de colonne elle-même chiffrée avec la clé principale de colonne en permutation) peuvent accéder à la nouvelle clé principale de colonne. Cette étape dépend du type de magasin de clés dans lequel est stockée votre nouvelle clé principale de colonne. Par exemple :
+Dans cette étape, vous devez vérifier que toutes vos applications clientes qui interrogent des colonnes de base de données protégées par la clé principale de colonne en permutation (c’est-à-dire les colonnes de base de données chiffrées avec une clé de chiffrement de colonne elle-même chiffrée avec la clé principale de colonne en permutation) peuvent accéder à la nouvelle clé principale de colonne. Cette étape dépend du type de magasin de clés dans lequel est stockée votre nouvelle clé principale de colonne. Exemple :
 - Si la nouvelle clé principale de colonne est un certificat stocké dans le magasin de certificats Windows, vous devez déployer le certificat au même emplacement de magasin de certificats (*Utilisateur actuel* ou *Ordinateur local*) en tant qu’emplacement spécifié dans le chemin d’accès à la clé de votre clé principale de colonne dans la base de données. L’application doit être en mesure d’accéder au certificat :
     - Si le certificat est stocké à l’emplacement du magasin de certificats *Utilisateur actuel* , il doit être importé dans le magasin de l’utilisateur actuel de l’identité Windows de l’application (utilisateur).
     - Si le certificat est stocké à l’emplacement du magasin de certificats *Ordinateur local* , l’identité Windows de l’application doit disposer d’une autorisation d’accès au certificat.
@@ -336,7 +336,7 @@ Si vous choisissez de supprimer la définition de l’ancienne clé principale d
 > [!NOTE]
 > Nous vous recommandons vivement de ne pas supprimer définitivement l’ancienne clé principale de colonne après la permutation. Au lieu de cela, laissez l’ancienne clé principale de colonne dans son magasin de clés actuel ou archivez-la dans un autre emplacement sécurisé. Si vous restaurez votre base de données à partir d’un fichier de sauvegarde à un point dans le temps avant la configuration de la nouvelle clé principale de colonne, vous aurez besoin de l’ancienne clé pour accéder aux données.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 La permutation d’une clé principale de colonne nécessite les autorisations relatives à la base de données suivantes :
 
@@ -371,7 +371,7 @@ Pour permuter une clé de chiffrement de colonne, utilisez l’Assistant Always 
 7.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer** et fermez l’Assistant à la fin.
 8.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted/Clés de chiffrement de colonne** , puis recherchez l’ancienne clé de chiffrement de colonne à supprimer de la base de données. Cliquez avec le bouton droit sur la clé et sélectionnez **Supprimer**.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 La permutation d’une clé de chiffrement de colonne nécessite les autorisations relatives à la base de données suivantes : **ALTER ANY COLUMN MASTER KEY** : obligatoire si vous utilisez une nouvelle clé de chiffrement de colonne générée automatiquement (une clé principale de colonne et ses métadonnées sont également générées).
 **ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour ajouter des métadonnées pour la nouvelle clé de chiffrement de colonne.
@@ -404,7 +404,7 @@ Quand vous mettez à niveau une base de données à l’aide d’un fichier DACP
 > [!NOTE]
 > Si la clé principale de colonne configurée pour la colonne dans la base de données ou le fichier DACPAC est stockée dans Azure Key Vault, vous êtes invité à vous connecter à Azure (si ce n’est pas déjà fait).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Pour effectuer une opération de mise à niveau de la DAC si Always Encrypted est configuré dans le fichier DACPAC ou dans la base de données cible, vous pouvez avoir besoin de certaines ou de l’ensemble des autorisations ci-dessous, en fonction des différences entre le schéma dans le fichier DACPAC et le schéma de la base de données cible.
 
@@ -427,7 +427,7 @@ Quand vous importez le fichier BACPAC dans une base de données, les données ch
 Si vous avez une application qui est configurée pour modifier ou récupérer les données chiffrées stockées dans la base de données source (la base de données exportée), vous n’avez rien à faire de spécial pour que l’application puisse interroger les données chiffrées dans la base de données cible, comme les clés dans les deux bases de données sont identiques.
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Vous avez besoin des autorisations *ALTER ANY COLUMN MASTER KEY* et *ALTER ANY COLUMN ENCRYPTION KEY* sur la base de données source. Vous avez besoin des autorisations *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*et *VIEW ANY COLUMN ENCRYPTION* sur la base de données cible.
 
@@ -450,7 +450,7 @@ Le tableau ci-dessous répertorie les scénarios de migration possibles et comme
 |Déplacer les données chiffrées sans les déchiffrer.<br><br>**Remarque :** Les tables cibles avec les colonnes chiffrées doivent exister avant la migration.| Fournisseur de données/pilote : *tout*<br>Paramètre de chiffrement de colonne = Désactivé<br><br>(si le fournisseur de données .NET Framework pour SQL Server et .NET Framework 4.6 ou version ultérieure sont utilisés.)| Fournisseur de données/pilote : *tout*<br>Paramètre de chiffrement de colonne = Désactivé<br><br>(si le fournisseur de données .NET Framework pour SQL Server et .NET Framework 4.6 ou version ultérieure sont utilisés.)<br><br>L’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS doit être activée pour l’utilisateur.<br><br>Pour plus d’informations, consultez [Migrer des données sensibles protégées par Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Pour **chiffrer** ou **déchiffrer** des données stockées dans la source de données, vous avez besoin des autorisations *VIEW ANY COLUMN MASTER KEY DEFINITION* et *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* dans la base de données source.
 
@@ -461,7 +461,7 @@ Vous devez également pouvoir accéder aux clés principales de colonne, configu
 - **Fournisseur de services de chiffrement (CAPI)** : vous pouvez être invité à fournir les informations d’identification et autorisations nécessaires quand vous utilisez un magasin de clés ou une clé, selon le magasin et la configuration du fournisseur CSP.
 Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 - [Always Encrypted (moteur de base de données)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Assistant Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)
 - [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)

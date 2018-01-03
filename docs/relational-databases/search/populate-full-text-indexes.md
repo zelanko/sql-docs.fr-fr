@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
@@ -58,7 +58,7 @@ Pour créer un index de recherche en texte intégral sans le remplir immédiatem
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Exemple - Créer un index de recherche en texte intégral sans exécuter une alimentation complète  
  L'exemple ci-après crée un index de recherche en texte intégral sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` . Cet exemple utilise `WITH CHANGE_TRACKING OFF, NO POPULATION` pour différer l’alimentation complète initiale.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Exemple - Exécuter une alimentation complète sur une table  
  L'exemple ci-après exécute une alimentation complète sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ Il existe deux types de suivi des modifications :
     **Exemple - Modifier un index de recherche en texte intégral pour qu’il utilise le suivi des modifications automatique**  
     L'exemple ci-après modifie l'index de recherche en texte intégral de la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` pour qu'il utilise le suivi des modifications avec alimentation automatique.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ Il existe deux types de suivi des modifications :
     **Exemple - Créer un index de recherche en texte intégral avec le suivi des modifications manuel**  
     L'exemple ci-après crée un index de recherche en texte intégral qui utilisera le suivi des modifications avec alimentation manuelle sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ Il existe deux types de suivi des modifications :
     **Exemple - Exécuter une alimentation manuelle**  
     L'exemple ci-après exécute une alimentation manuelle sur l'index de recherche en texte intégral faisant l'objet d'un suivi des modifications, sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  
@@ -227,7 +227,7 @@ Les parties variables du nom de fichier du journal d’analyse sont les suivante
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Créer et gérer des index de recherche en texte intégral](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

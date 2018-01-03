@@ -3,7 +3,7 @@ title: "Suppression d’enregistrements à l’aide de la méthode Delete | Docu
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d0a12e1d6d7e94d2f4feb69f51bb43b1e0edbb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f681e4453751deb6c191ee5f4baa42b77471b34b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Suppression d’enregistrements à l’aide de la méthode de suppression
 À l’aide de la **supprimer** méthode marque l’enregistrement actif ou un groupe d’enregistrements dans une **Recordset** objet pour la suppression. Si le **Recordset** objet n’autorise pas de suppression de l’enregistrement, une erreur se produit. Si vous êtes en mode de mise à jour immédiate, suppressions se produisent immédiatement dans la base de données. Si un enregistrement ne peut pas être supprimé avec succès (en raison de violations d’intégrité de base de données, par exemple), l’enregistrement reste en mode édition après l’appel à **mise à jour.** Cela signifie que vous devez annuler la mise à jour à l’aide de [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) avant de quitter l’enregistrement actif (par exemple, à l’aide de [fermer](../../../ado/reference/ado-api/close-method-ado.md), [déplacer](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

@@ -3,7 +3,7 @@ title: "Boîte de dialogue Mise en page | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e52e80a2de50c69ecc6349a3666e9da5a71f742
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d415cfe737b8b559873b581e094b408495eb386
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="page-setup-dialog-box"></a>Boîte de dialogue Mise en page
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez personnaliser votre conception de page à l’aide des options de la boîte de dialogue **Mise en page**. La disponibilité de certaines options dépend des langues qui sont installées et activées pour la modification.  
@@ -48,7 +48,7 @@ Définit la distance entre le bord gauche de la page et le bord gauche des ligne
 Droit  
 Définit la distance entre le bord droit de la page et le bord droit des lignes sans retrait alignées à droite.  
   
-Haut  
+TOP  
 Définit la distance entre le haut de la page et le haut de la première ligne de la page.  
   
 Bas  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec18dcf8fd78dbee82bf74adcf4e492dca604049
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d5c10d9e0e34352db32481270343f948277149d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
   Les hiérarchies dérivées affichent des relations un à plusieurs et peuvent désormais également afficher des relations plusieurs à plusieurs.  
@@ -94,7 +94,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Sécurité des membres  
- Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Par exemple :  
+ Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Exemple :  
   
 -   Une hiérarchie dérivée qui n’ancre pas les récursions Null (chaque membre au niveau récursif apparaît sous la racine et sous son parent récursif).  
   
@@ -105,7 +105,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
 ## <a name="collections"></a>Collections  
  Les Hiérarchies explicites et collections sont déconseillées. La procédure stockée de conversion (udpConvertCollectionAndConsolidatedMembersToLeaf) convertit des membres de la collection en membres feuille, et crée des hiérarchies dérivées plusieurs à plusieurs pour capturer les informations d’appartenance.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

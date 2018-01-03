@@ -3,7 +3,7 @@ title: Personnaliser (page Commandes) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9d748b147c19031f5f304f0233c772dbd91798b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-commands-page"></a>Personnaliser (page Commandes)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue vous permet d’ajouter des commandes à des barres d’outils et à des menus et d’en supprimer, ainsi que de changer les images utilisées pour représenter les boutons des barres d’outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  
@@ -45,6 +45,6 @@ Affiche la boîte de dialogue **Réorganiser les commandes** qui vous permet de 
 **Clavier**  
 Affiche la page **Clavier** de la boîte de dialogue **Options** pour vous permettre de spécifier des combinaisons de touches de raccourci pour les commandes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Personnaliser des menus et des touches de raccourci](../../ssms/customize-menus-and-shortcut-keys.md)  
   

@@ -3,7 +3,7 @@ title: "Accès aux lignes d’un objet Recordset hiérarchique | Documents Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 351650e6445c0d8f85751349d243bc8870fd8c2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a25fbf3437b05497093ec9a8b83c69342faba077
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>L’accès aux lignes dans un jeu d’enregistrements hiérarchique (par exemple)
 L’exemple suivant montre les étapes nécessaires pour accéder aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -39,7 +39,7 @@ L’exemple suivant montre les étapes nécessaires pour accéder aux lignes dan
 
  Le [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) est définie sur **false** à des fins d’illustration, afin que vous puissiez voir le chapitre changer de manière explicite dans chaque itération de la boucle externe. Pour rendre l’exemple de code plus efficace, vous pouvez déplacer l’affectation à l’étape 3 avant la première ligne à l’étape 2, afin que l’affectation est exécutée une seule fois. Puis définissez la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété **true**, de sorte que *affectation* implicitement et automatiquement modifiera le chapitre correspondant à chaque fois que *rst* se déplace vers une nouvelle ligne.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```
 Sub datashape()

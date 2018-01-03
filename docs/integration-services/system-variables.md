@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 32f85c2442c459932edba13d88f83879280b13fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ba8e16a181534aa8881197fd178ebf39661f4d24
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-variables"></a>Variables système
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
@@ -42,23 +42,23 @@ ms.lasthandoff: 11/20/2017
 |**CancelEvent**|Int32|Gestionnaire d'un objet d'événement Windows que la tâche peut signaler pour indiquer que la tâche doit interrompre son exécution.|  
 |**ContainerStartTime**|DateTime|Heure de démarrage du conteneur.|  
 |**CreationDate**|DateTime|Date de création du package.|  
-|**CreatorComputerName**|Chaîne|Ordinateur sur lequel le package a été créé.|  
-|**CreatorName**|Chaîne|Nom de la personne qui a créé le package.|  
-|**ExecutionInstanceGUID**|Chaîne|Identificateur unique de l'instance exécutée d'un package.|  
-|**FailedConfigurations**|Chaîne|Noms des configurations de package ayant échoué.|  
+|**CreatorComputerName**|String|Ordinateur sur lequel le package a été créé.|  
+|**CreatorName**|String|Nom de la personne qui a créé le package.|  
+|**ExecutionInstanceGUID**|String|Identificateur unique de l'instance exécutée d'un package.|  
+|**FailedConfigurations**|String|Noms des configurations de package ayant échoué.|  
 |**IgnoreConfigurationsOnLoad**|Booléen|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
 |**InteractiveMode**|Booléen|Indique si le package est exécuté en mode interactif. Si un package s’exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cette propriété a la valeur **True**. Si un package s’exécute par le biais de l’utilitaire de ligne de commande **DTExec** , la propriété a la valeur **False**.|  
 |**LocaleId**|Int32|Paramètre régional utilisé par le package.|  
-|**MachineName**|Chaîne|Nom de l'ordinateur sur lequel s'exécute le package.|  
+|**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
 |**OfflineMode**|Booléen|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
-|**PackageID**|Chaîne|Identificateur unique du package.|  
-|**PackageName**|Chaîne|Nom du package.|  
+|**PackageID**|String|Identificateur unique du package.|  
+|**PackageName**|String|Nom du package.|  
 |**StartTime**|DateTime|Heure de début d'exécution du package.|  
 |**ServerExecutionID**|Int64|ID d'exécution du package exécuté sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> La valeur par défaut est zéro. La valeur est modifiée uniquement si le package est exécuté par ISServerExec sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Lorsqu'il existe un package enfant, la valeur est passée du package parent au package enfant.|  
-|**UserName**|Chaîne|Compte de l'utilisateur qui a démarré le package. Le nom d'utilisateur est qualifié par le nom de domaine.|  
+|**UserName**|String|Compte de l'utilisateur qui a démarré le package. Le nom d'utilisateur est qualifié par le nom de domaine.|  
 |**VersionBuild**|Int32|Version du package.|  
-|**VersionComment**|Chaîne|Commentaires sur la version du package.|  
-|**VersionGUID**|Chaîne|Identificateur unique de la version.|  
+|**VersionComment**|String|Commentaires sur la version du package.|  
+|**VersionGUID**|String|Identificateur unique de la version.|  
 |**VersionMajor**|Int32|Version principale du package.|  
 |**VersionMinor**|Int32|Version secondaire du package.|  
   
@@ -74,10 +74,10 @@ ms.lasthandoff: 11/20/2017
   
 |Variable système|Type de données|Description|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|Chaîne|Nom de la tâche.|  
+|**CreationName**|String|Nom de la tâche.|  
 |**LocaleId**|Int32|Paramètre régional utilisé par la tâche.|  
-|**TaskID**|Chaîne|Identificateur unique d'une instance de tâche.|  
-|**TaskName**|Chaîne|Nom de l'instance de tâche.|  
+|**TaskID**|String|Identificateur unique d'une instance de tâche.|  
+|**TaskName**|String|Nom de l'instance de tâche.|  
 |**TaskTransactionOption**|Int32|Option de transaction utilisée par la tâche.|  
   
 ## <a name="system-variables-for-event-handlers"></a>Variables système pour les gestionnaires d'événements  
@@ -87,20 +87,20 @@ ms.lasthandoff: 11/20/2017
 |---------------------|---------------|-----------------|-------------------|  
 |**Annuler**|Booléen|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
 |**ErrorCode**|Int32|Identificateur de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
-|**ErrorDescription**|Chaîne|Description de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
+|**ErrorDescription**|String|Description de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
 |**ExecutionStatus**|Booléen|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
 |**ExecutionValue**|DBNull|Valeur de l'exécution.|Gestionnaire d'événements OnTaskFailed|  
 |**LocaleId**|Int32|Paramètre régional utilisé par le gestionnaire d'événements.|Tous les gestionnaires d'événements|  
 |**PercentComplete**|Int32|Pourcentage de travail terminé.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountLow**|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
-|**ProgressDescription**|Chaîne|Description de la progression.|Gestionnaire d'événements OnProgress|  
+|**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
 |**Propagate**|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : la valeur de la variable **Propagate** est ignorée lors de la validation du package. Si vous affectez la valeur **Propagate** à **False** dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
-|**SourceDescription**|Chaîne|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
-|**SourceID**|Chaîne|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
-|**SourceName**|Chaîne|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
-|**VariableDescription**|Chaîne|Description de la variable.|Gestionnaire d'événements OnVariableValueChanged|  
-|**VariableID**|Chaîne|Identificateur unique de la variable.|Gestionnaire d'événements OnVariableValueChanged|  
+|**SourceDescription**|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
+|**SourceID**|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
+|**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
+|**VariableDescription**|String|Description de la variable.|Gestionnaire d'événements OnVariableValueChanged|  
+|**VariableID**|String|Identificateur unique de la variable.|Gestionnaire d'événements OnVariableValueChanged|  
   
 ## <a name="system-variables-in-parameter-bindings"></a>Variables système dans des liaisons de paramètres  
  Il est souvent pratique d'enregistrer les valeurs de variables système dans des tables lors de l'exécution du package. Par exemple, un package qui crée dynamiquement une table et écrit le GUID de l'instance d'exécution du package qui a créé la table dans une colonne de table.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 11/20/2017
   
  Cette règle s'applique également aux variables définies par l'utilisateur. Cependant, lorsque les types de données de variables système ne peuvent pas être modifiés et si vous devez personnaliser l'utilisation de ces variables en fonction des types de données, les variables définies par l'utilisateur offrent plus de souplesse. Les variables définies par l'utilisateur qui sont utilisées dans des liaisons de paramètres sont généralement définies avec des types de données compatibles avec les types de données des paramètres auxquels elles sont mappées.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

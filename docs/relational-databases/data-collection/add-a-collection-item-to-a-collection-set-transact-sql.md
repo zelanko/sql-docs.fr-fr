@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 66c9edcd76803ea957821a893a3b35f4ccb8d032
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f80eaf65f30f50ea4963da7a37662551be837de1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Ajouter un élément de collecte à un jeu d'éléments de collecte (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez ajouter un élément de collecte à un jeu d’éléments de collecte existant à l’aide des procédures stockées fournies avec le collecteur de données.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Arrêtez le jeu d’éléments de collecte auquel vous souhaitez ajouter l’élément en exécutant la procédure stockée **sp_syscollector_stop_collection_set** . Par exemple, pour arrêter un jeu d'éléments de collecte nommé « Test Collection Set », exécutez les instructions suivantes :  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Déclarez le jeu d'éléments de collecte auquel vous souhaitez ajouter l'élément de collecte. Le code suivant fournit un exemple de la façon dont déclarer l'ID du jeu d'éléments de collecte.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Déclarez le type de collecteur. Le code suivant fournit un exemple de la façon dont déclarer le type de collecteur Requête T-SQL générique.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
      Vous pouvez exécuter le code suivant pour obtenir la liste des types de collecteurs installés :  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Exécutez la procédure stockée **sp_syscollector_create_collection_item** pour créer l’élément de collecte. Vous devez déclarer le schéma de l'élément de collecte de manière à ce qu'il soit mappé au schéma requis pour le type de collecteur voulu. L'exemple suivant utilise le schéma d'entrée Requête T-SQL générique.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/17/2017
   
      Les jeux d’éléments de collecte et leurs éléments de collecte figurent sous l’onglet **Résultats** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

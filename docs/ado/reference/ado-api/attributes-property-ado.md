@@ -3,7 +3,7 @@ title: "Attributs, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a245de28b8224a9265544d2850f6fdb12dbb1c2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d62e02663cb14c83ec69c467a0fe5e02b04cfa8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-property-ado"></a>Attributs, propriété (ADO)
 Indique une ou plusieurs caractéristiques d’un objet.  
@@ -43,7 +43,7 @@ Indique une ou plusieurs caractéristiques d’un objet.
   
  Pour un [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet, le **attributs** propriété est en lecture seule et sa valeur peut être la somme d’une ou plusieurs [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) valeurs.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **attributs** propriété pour définir ou retourner les caractéristiques de **connexion** objets, **paramètre** objets, **champ** objets, ou **Propriété** objets.  
   
  Lorsque vous définissez plusieurs attributs, vous pouvez additionner les constantes appropriées. Si vous définissez la valeur de propriété à une somme, y compris les constantes incompatibles, une erreur se produit.  

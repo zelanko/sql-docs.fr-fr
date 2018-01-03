@@ -3,7 +3,7 @@ title: Fournisseur Microsoft OLE DB pour ODBC | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f3131bff34d35b334495c7c718eb513f5d88bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez les interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette manière. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui accessibles via ODBC.
@@ -55,7 +55,7 @@ MSDASQL
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour ODBC.|
 |**SOURCE DE DONNÉES**|Spécifie le nom de source de données.|
@@ -86,7 +86,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
  Si vous utilisez un **DSN** ou **FileDSN**, il doit être défini via l’administrateur de Source de données ODBC dans le panneau de configuration Windows. Dans Microsoft Windows 2000, l’administrateur ODBC se trouve sous Outils d’administration. Dans les versions antérieures de Windows, l’icône de l’administrateur ODBC est appelée **ODBC 32 bits** ou simplement **ODBC**.
 
  Comme alternative au paramètre un **DSN**, vous pouvez spécifier le pilote ODBC (**pilote =**), tels que « SQL Server » ; le nom du serveur (**SERVER =**) ; et le nom de la base de données (**Base de données =**).
@@ -98,7 +98,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propriétés de connexion spécifique au fournisseur
  Le fournisseur OLE DB pour ODBC ajoute plusieurs propriétés pour le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la **connexion** objet. Le tableau suivant répertorie ces propriétés avec le nom de propriété OLE DB correspondant entre parenthèses.
 
-|Nom de la propriété| Description|
+|Nom de la propriété|Description|
 |-------------------|-----------------|
 |Procédures accessibles (KAGPROP_ACCESSIBLEPROCEDURES)|Indique si l’utilisateur a accès à des procédures stockées.|
 |Table accessible (KAGPROP_ACCESSIBLETABLES)|Indique si l’utilisateur a l’autorisation d’exécuter des instructions SELECT sur les tables de base de données.|
@@ -125,7 +125,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Jeu d’enregistrements spécifiques au fournisseur et les propriétés de commande
  Le fournisseur OLE DB pour ODBC ajoute plusieurs propriétés pour le **propriétés** collection de la **Recordset** et **commande** objets. Le tableau suivant répertorie ces propriétés avec le nom de propriété OLE DB correspondant entre parenthèses.
 
-|Nom de la propriété| Description|
+|Nom de la propriété|Description|
 |-------------------|-----------------|
 |Requête en fonction des mises à jour/supprime/insertions (KAGPROP_QUERYBASEDUPDATES)|Indique si les insertions, suppressions et mises à jour peuvent être effectuées à l’aide de requêtes SQL.|
 |Type de concurrence ODBC (KAGPROP_CONCURRENCY)|Indique la méthode utilisée pour réduire les problèmes éventuels engendrés par deux utilisateurs qui tentent d’accéder simultanément aux mêmes données à partir de la source de données.|
@@ -189,7 +189,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Lecture seule|Lecture seule|Lecture seule|Lecture seule|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
+|[Filtre](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
@@ -210,19 +210,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|Oui|Oui|Oui|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Oui|Oui|Oui|Oui|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Non|Non|Oui|Oui|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|non|non|Oui|Oui|
 |[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|Oui|Oui|Oui|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
+|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|Oui|Oui|Oui|
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|Oui|Oui|Oui|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Oui|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Non|Oui|Oui|Oui|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|non|Oui|Oui|Oui|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|Oui|Oui|Oui|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Non|Oui|Oui|Oui|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|non|Oui|Oui|Oui|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Oui|Oui|Oui|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[Requery)](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Oui|
-|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
+|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|non|non|Oui|Oui|
 |[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|

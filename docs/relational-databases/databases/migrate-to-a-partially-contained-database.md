@@ -18,13 +18,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fee80391d7ac1ce5b509ba91eaf54b385b623a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ce086529c97471ed6b2e80e5487aadab70be2c9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Migrer vers une base de données partiellement à relation contenant-contenu
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment se préparer à passer au modèle de base de données partiellement à relation contenant-contenu, puis indique la procédure de migration.  
   
  **Dans cette rubrique :**  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Vous devez comprendre le modèle de base de données partiellement à relation contenant-contenu. Pour plus d’informations, consultez [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
--   Vous devez connaître les risques qui sont propres aux bases de données partiellement à relation contenant-contenu. Pour plus d'informations, consultez [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+-   Vous devez connaître les risques qui sont propres aux bases de données partiellement à relation contenant-contenu. Pour plus d'informations, consultez [Bonnes pratiques de sécurité avec les bases de données à relation contenant-contenu](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 -   Les bases de données à relation contenant-contenu ne prennent pas en charge la réplication, la capture de données modifiées ou le suivi des modifications. Vérifiez que la base de données n'utilise pas ces fonctionnalités.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Activation de bases de données à relation contenant-contenu à l'aide de Transact-SQL  
  L'exemple suivant active des bases de données à relation contenant-contenu sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -80,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Conversion d'une base de données au modèle partiellement à relation contenant-contenu à l'aide de Transact-SQL  
  L'exemple suivant convertit une base de données nommée `Accounting` en base de données partiellement à relation contenant-contenu.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -99,7 +99,7 @@ GO
 ##  <a name="users"></a> Migration des utilisateurs vers des utilisateurs de base de données à relation contenant-contenu  
  L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données à relation contenant-contenu avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données à relation contenant-contenu.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   
@@ -122,7 +122,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  

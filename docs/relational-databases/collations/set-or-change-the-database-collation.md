@@ -20,13 +20,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7c787c1399715b4e0a3bff74a4f4e8f6c802816c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba331718701b81ec3fcf5f3de239d5e9ce49556f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="set-or-change-the-database-collation"></a>Définir ou modifier le classement de la base de données
+# <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
   
  **Dans cette rubrique**  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  CREATE DATABASE  
  Nécessite l’autorisation CREATE DATABASE sur la base de données **master** , ou l’autorisation ALTER ANY DATABASE ou VIEW ANY DEFINITION.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser la clause [COLLATE](~/t-sql/statements/collations.md) pour spécifier un nom de classement. L'exemple crée la base de données `MyOptionsTest` qui utilise le classement `Latin1_General_100_CS_AS_SC` . Après avoir créé la base de données, exécutez l'instruction `SELECT` pour vérifier le paramètre.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -124,7 +124,7 @@ GO
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser la clause [COLLATE](~/t-sql/statements/collations.md) dans une instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) pour modifier le nom du classement. Exécutez l'instruction `SELECT` pour vérifier la modification.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  
@@ -139,7 +139,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

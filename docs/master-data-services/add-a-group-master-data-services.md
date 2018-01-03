@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,16 +20,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a7e0d8aab20d5d92bbc9b74c84d8159bcb560d3d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 282a0c3e16d9254797beeed57f69b26985bb707d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-a-group-master-data-services"></a>Ajouter un groupe (Master Data Services)
   Ajoutez un groupe à la liste **Groupes** dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour commencer la procédure d’affectation d’une autorisation d’accès à l’application web. Pour qu’un utilisateur du groupe puisse accéder à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez accorder au groupe une autorisation d’accès à un ou plusieurs objets de modèle et zones fonctionnelles.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Autorisations d'accès** .  
@@ -51,11 +51,11 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Quand l’utilisateur accède pour la première fois à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], son nom est ajouté à la liste des utilisateurs de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Affecter des autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécurité &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

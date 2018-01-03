@@ -3,7 +3,7 @@ title: "Enregistrements et champs spécifiques au fournisseur | Documents Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16596d3ffa943f382e6c3a9ec2aa9c2e2e14432f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69cb7375808e3c11dd8d92bab48a3588693e30e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs spécifiques au fournisseur
 Lorsqu’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en conjonction avec open [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
@@ -61,7 +61,7 @@ Lorsqu’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md
 ## <a name="resource-recordset-columns"></a>Colonnes de jeu d’enregistrements de ressources  
  A *jeu d’enregistrements de ressource* se compose des colonnes suivantes.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|En lecture seule. Indique l’URL de la ressource.|  
 |RESOURCE_PARENTNAME|AdVarWChar|En lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
@@ -78,7 +78,7 @@ Lorsqu’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md
 |RESOURCE_ISCOLLECTION|adBoolean|En lecture seule. True si la ressource est une collection, comme un répertoire. False si la ressource est un fichier simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut être une collection ou un fichier simple.|  
 |DEFAULT_DOCUMENT|AdVarWChar|En lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou un document structuré. Utilisé lorsque le flux de valeur par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
-|CHAPTERED_CHILDREN|AdChapter|En lecture seule. Ce paramètre est facultatif. Indique le chapitre relatif à l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur OLE DB pour Internet Publishing* n’utilise pas cette colonne.)|  
+|CHAPTERED_CHILDREN|AdChapter|En lecture seule. Facultatif. Indique le chapitre relatif à l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur OLE DB pour Internet Publishing* n’utilise pas cette colonne.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|En lecture seule. Indique le nom complet de la ressource.|  
 |RESOURCE_ISROOT|adBoolean|En lecture seule. True si la ressource est la racine d’une collection ou un document structuré.|  
   

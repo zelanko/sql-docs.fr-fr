@@ -3,9 +3,9 @@ title: "Fenêtres Résultats de la recherche | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca6d03068225909a645b05059a3da15893604821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ce32d0a7ee6acdaf2a605392e8b9ee5ceee3d94e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-results-windows"></a>Fenêtres Résultats de la recherche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les deux fenêtres Résultats de la recherche affichent les correspondances trouvées par une recherche effectuée à l’aide des onglets **Rechercher dans les fichiers** ou **Remplacer dans les fichiers** de la boîte de dialogue **Rechercher et remplacer**. La commande **Options de résultat** pour **Rechercher dans les fichiers** et **Remplacer dans les fichiers** vous permet de choisir la fenêtre Résultats de la recherche dans laquelle seront répertoriées, le cas échéant, les occurrences trouvées.  

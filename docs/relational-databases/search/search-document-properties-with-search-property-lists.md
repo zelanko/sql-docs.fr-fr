@@ -25,13 +25,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l'aide des listes de propriétés de recherche
+# <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Auparavant, les propriétés de document était indiscernables du contenu du corps du document. Cela limitait les requêtes de texte intégral aux recherches génériques sur les documents entiers. Maintenant, vous pouvez configurer un index de recherche en texte intégral pour prendre en charge la recherche portant sur des propriétés, telles que les propriétés Auteur et Titre, pour les types de documents pris en charge dans une colonne de données binaires **varbinary**, **varbinary(max)** (incluant **FILESTREAM**) ou **image** . Cette forme de recherche s'appelle *recherche de propriétés*.  
   
  Le [filtre](../../relational-databases/search/configure-and-manage-filters-for-search.md) associé (IFilter) détermine si la recherche de propriétés est possible sur un type spécifique de document. Pour certains types de document, l'IFilter associé extrait tout ou partie des propriétés définies pour ce le type de document, ainsi que le contenu du corps du document. Vous pouvez configurer un index de recherche en texte intégral de façon à prendre en charge la recherche de propriétés portant uniquement sur les propriétés extraites par un IFilter lors de l'indexation de texte intégral. Parmi les IFilters qui extraient plusieurs propriétés de document, il existe des IFilters pour les types de fichier document Microsoft Office (tels que .docx, .xlsx et .pptx). En revanche, XML IFilter n'émet pas des propriétés.  
@@ -52,11 +52,11 @@ ms.lasthandoff: 11/17/2017
 ### <a name="indexing-of-registered-properties"></a>Indexation de propriétés inscrites  
  Une fois qu'un index de recherche en texte intégral est associé à une liste de propriétés de recherche, l'index doit être rempli à nouveau pour indexer les termes de recherche spécifiques à la propriété. Lors de l'indexation de texte intégral, le contenu de toutes les propriétés est stocké dans l'index de recherche en texte intégral avec les autres contenus. Toutefois, lors de l'indexation d'un terme de recherche présent dans une propriété enregistrée, l'indexeur de texte intégral stocke également l'ID de propriété interne correspondant au terme. En revanche, si une propriété n'est pas enregistrée, elle est stockée dans l'index de recherche en texte intégral comme si elle faisait partie du corps du document, et a la valeur zéro comme ID de propriété interne.  
   
- L'illustration suivante montre une vue logique de la façon dont les termes de recherche apparaissent dans un index de recherche en texte intégral associé à la liste de propriétés de recherche figurant dans l'illustration précédente. L'exemple de document Document 1 contient trois propriétés : Title, Author et Keywords, ainsi que le corps du document. Pour les propriétés Title et Keywords, spécifiées dans la liste de propriétés de recherche, des termes de recherche sont associés à leurs ID de propriété internes correspondants dans l'index de recherche en texte intégral. En revanche, le contenu de la propriété Author est indexé comme s'il faisait partie du corps du document. Cela signifie que l'inscription d'une propriété augmente un peu la taille de l'index de recherche en texte intégral, en fonction du volume du contenu stocké dans la propriété.  
+ L'illustration suivante montre une vue logique de la façon dont les termes de recherche apparaissent dans un index de recherche en texte intégral associé à la liste de propriétés de recherche figurant dans l'illustration précédente. L'exemple de document Document 1 contient trois propriétés : Title, Author et Keywords, ainsi que le corps du document. Pour les propriétés Title et Keywords, spécifiées dans la liste de propriétés de recherche, des termes de recherche sont associés à leurs ID de propriété internes correspondants dans l'index de recherche en texte intégral. En revanche, le contenu de la propriété Author est indexé comme s'il faisait partie du corps du document. Cela signifie que l'inscription d'une propriété augmente un peu la taille de l'index de recherche en texte intégral, en fonction du volume du contenu stocké dans la propriété.  
   
  ![Index de recherche en texte intégral qui utilise une liste de propriétés de recherche](../../relational-databases/search/media/ifts-spl-and-fti.gif "Index de recherche en texte intégral qui utilise une liste de propriétés de recherche")  
   
- Les termes de recherche de la propriété Title (« Favorite », « Biking », et « Trails ») sont associés à l'ID de propriété interne 1, affecté à Title pour cet index. Les termes de recherche de la propriété Keywords (« biking » et « mountain ») sont associés à l'ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes de recherche de la propriété Author (« Jane » et « Doe ») et les termes de recherche dans le corps du document, l'ID de propriété interne est 0. Notez que le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l'index n'avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
+ Les termes de recherche de la propriété Title (« Favorite », « Biking », et « Trails ») sont associés à l'ID de propriété interne 1, affecté à Title pour cet index. Les termes de recherche de la propriété Keywords (« biking » et « mountain ») sont associés à l'ID de propriété interne 2, affecté à Tags pour cet index. Pour les termes de recherche de la propriété Author (« Jane » et « Doe ») et les termes de recherche dans le corps du document, l'ID de propriété interne est 0. Notez que le terme « biking » est présent dans la propriété Title, dans la propriété Keywords (Tags) et dans le corps du document. Une recherche de propriété sur « biking » dans la propriété Title ou Keywords (Tags) retournerait ce document dans les résultats. Une requête de texte intégral générique sur « biking » retournerait également ce document, comme si l'index n'avait pas été configuré pour la recherche de propriétés. Une recherche de propriété sur « biking » dans la propriété Author ne retournerait pas ce document.  
   
  Une requête de texte intégral de portée propriété utilise les ID de propriété internes enregistrés pour la liste de propriétés de recherche actuelle de l'index de recherche en texte intégral.  
   
@@ -163,7 +163,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Interrogation des propriétés de recherche avec CONTAINS  
  La syntaxe [CONTAINS](../../t-sql/queries/contains-transact-sql.md) de base pour une requête de texte intégral avec étendue aux propriétés se présente comme suit :  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
@@ -228,7 +228,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

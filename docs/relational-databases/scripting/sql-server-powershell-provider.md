@@ -3,9 +3,9 @@ title: "Fournisseur PowerShell SQL Server | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,13 +24,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4aa7050589878d109ef826bad2c9385abc00b5f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f87f36a963adb92f660d292560e06128bfeac237
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sql-server-powershell-provider"></a>fournisseur PowerShell SQL Server
+# <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell présente la hiérarchie des objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des chemins semblables aux chemins de système de fichiers. Vous pouvez utiliser les chemins pour localiser un objet, puis utiliser des méthodes des modèles SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour effectuer des actions sur les objets.  
   
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Avantages du fournisseur PowerShell SQL Server  
@@ -69,7 +69,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
-## <a name="sql-server-provider-tasks"></a>Tâches de fournisseur SQL Server  
+## <a name="sql-server-provider-tasks"></a>Tâches de fournisseur SQL Server  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
@@ -78,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Explique comment convertir une valeur URN (Uniform Resource Name) SMO en chemin d'accès de fournisseur SQL Server.|[Convertir des URN en chemins d'accès de fournisseur SQL Server](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)|  
 |Explique comment ouvrir des connexions d'authentification SQL Server à l'aide du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le fournisseur utilise des connexions via l'authentification Windows établies à l'aide des informations d'identification du compte Windows qui exécute la session Windows PowerShell.|[Gérer l'authentification dans le moteur de base de données PowerShell](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

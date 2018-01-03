@@ -3,7 +3,7 @@ title: Forme la Clause COMPUTE | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c894903c58613309ea0688a2d468e8f09b29097
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0c20aec7585c33a7165fac4e93b446e4ce3aaf4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de forme
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constitués d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation de l’enfant **Recordset** ou un préalablement mis en forme **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans le paramètre facultatif par clause.  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a> Description  
+## <a name="description"></a>Description  
  Les parties de cette clause sont les suivantes :  
   
  *commande-enfant*  
@@ -67,7 +67,7 @@ SHAPE child-command [AS] child-alias
   
  Si la clause BY est omise, l’intégralité de l’enfant **Recordset** est traité comme un seul groupe et le parent **Recordset** contient exactement une ligne. Cette ligne référence tout l’enfant **Recordset**. L’omission de la clause BY vous permet de calculer des agrégats de « total général » sur l’intégralité de l’enfant **Recordset**.  
   
- Exemple :  
+ Exemple :  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -85,12 +85,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |État|Ville|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|ou|Medford|200,000|  
-|ou|Portland|400,000|  
+|- ou -|Medford|200,000|  
+|- ou -|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|ou|Corvallis|300,000|  
+|- ou -|Corvallis|300,000|  
   
  Maintenant, exécutez cette commande de la forme :  
   
@@ -114,7 +114,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Référence à enfant 1|CA|  
 |1,200,000|Référence à enfant 2|WA|  
-|1,100,000|Référence à enfant 3|ou|  
+|1,100,000|Référence à enfant 3|- ou -|  
   
 ## <a name="child1"></a>Child1  
   
@@ -134,9 +134,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |État|Ville|Remplissage|  
 |-----------|----------|----------------|  
-|ou|Medford|200,000|  
-|ou|Portland|400,000|  
-|ou|Corvallis|300,000|  
+|- ou -|Medford|200,000|  
+|- ou -|Portland|400,000|  
+|- ou -|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Voir aussi  
  [L’accès aux lignes dans un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

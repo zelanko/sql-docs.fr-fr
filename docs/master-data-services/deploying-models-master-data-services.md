@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f7e37a81441292f84089faa027d008071de0936
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 734efcf822d2e270f8a2ae14e62ef787010acdc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploying-models-master-data-services"></a>Déploiement de modèles (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un package est un fichier XML qui contient une structure de modèle déployable et, éventuellement, les données du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d'un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement MDS existant.  
@@ -70,17 +70,17 @@ ms.lasthandoff: 11/20/2017
 ## <a name="sample-packages"></a>Exemples de packages  
  Des fichiers d'exemple de package sont inclus lorsque vous installez [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Ils se trouvent dans le répertoire Master Data Services\Samples\Packages où vous avez installé [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Lorsque vous déployez ces exemples de packages à l'aide de l'outil MDSModelDeploy, les exemples de modèles sont créés et remplis avec les données.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Créez un nouveau package de déploiement d'objets de modèle et/ou de données à l'aide de l'outil MDSModelDeploy.|[Créer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|Créez un nouveau package de déploiement d'objets de modèle uniquement à l'aide de l'Assistant.|[Créer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|Déployez un package d'objets de modèle et des données à l'aide de l'outil MDSModelDeploy.|[Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|Créez un nouveau package de déploiement d'objets de modèle uniquement à l'aide de l'Assistant.|[Créer un package de déploiement de modèle à l’aide de l’Assistant](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|Déployez un package d'objets de modèle et des données à l'aide de l'outil MDSModelDeploy.|[Déployer un package de déploiement de modèle à l’aide de MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
 |Déployez un package d'objets de modèle uniquement à l'aide de l'Assistant.|[Déployer un package de déploiement de modèle à l'aide de l'Assistant](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |Modifiez un package de déploiement de modèle pour déployer les parties sélectionnées d'un modèle, plutôt que le modèle entier.|[Modifier un package de déploiement de modèle](../master-data-services/edit-a-model-deployment-package.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
 -   [Options de déploiement de modèle &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   

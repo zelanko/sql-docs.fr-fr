@@ -3,7 +3,7 @@ title: "Rapports personnalisés dans Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
+# <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], un grand nombre de nœuds de l’Explorateur d’objets proposent un ensemble de rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame_md.md)]. Ces rapports fournissent généralement les informations serveur demandées. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2, les administrateurs peuvent exécuter des rapports personnalisés qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 ## <a name="implementation"></a>Implémentation  
@@ -64,7 +64,7 @@ Lorsque vous travaillez avec des rapports personnalisés, tenez compte des contr
 ## <a name="managing-custom-reports"></a>Gestion des rapports personnalisés  
 Nous recommandons aux utilisateurs qui possèdent un grand nombre de rapports personnalisés de les organiser à l'aide de dossiers de système de fichiers dotés des autorisations du système de fichiers NTFS appropriées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Les rapports personnalisés sont exécutés avec les autorisations de l'utilisateur actuel. Pour empêcher tout utilisateur malveillant de modifier les requêtes exécutées par le rapport, les autorisations définies dans le dossier de système de fichiers contenant les fichiers de rapports doivent l'être avec un accès restreint.  
   
 L'utilisateur tout comme le compte utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] doivent bénéficier d'un accès en lecture au dossier de système de fichiers contenant les fichiers de rapports.  
@@ -76,8 +76,8 @@ Toutes les commandes [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] v
   
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Ajouter un rapport personnalisé à Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Utiliser des rapports personnalisés avec les propriétés de nœud de l’Explorateur d’objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

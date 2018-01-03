@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5470b86096170410b88c6a8e8a596fe608d33cc7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 8bc8f0154f8da5ecbbfc5d45e1ab1ee7ff974c69
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment renommer une base de données définie par l’utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le nom de la base de données peut contenir n'importe quel caractère conforme aux règles applicables aux identificateurs.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir renommé une base de données](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
 > Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Pour renommer une base de données dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql).
@@ -56,14 +56,14 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite l'autorisation ALTER sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
 #### <a name="to-rename-a-database"></a>Pour renommer une base de données  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
+1.  Dans **l’Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], puis développez-la.  
   
 2.  Vérifiez que personne n’utilise la base de données, puis [configurez la base de données en mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md).  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple modifie le nom de la base de données `AdventureWorks2012` en `Northwind`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -93,7 +93,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir renommé une base de données  
  Après avoir renommé une base de données, sauvegardez la base de données **master** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Identificateurs de base de données](../../relational-databases/databases/database-identifiers.md)  
   

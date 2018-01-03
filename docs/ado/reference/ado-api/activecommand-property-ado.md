@@ -3,7 +3,7 @@ title: "ActiveCommand, propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c65e508d22fc6b144a0a4cb130b700d91e224cc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8e5384aff9ee8646493d26272cdeaae33ab49157
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand, propriété (ADO)
 Indique le [commande](../../../ado/reference/ado-api/command-object-ado.md) objet créé associé [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -32,7 +32,7 @@ Indique le [commande](../../../ado/reference/ado-api/command-object-ado.md) obje
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un **Variant** qui contient un **commande** objet. Valeur par défaut est une référence d’objet null.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **ActiveCommand** propriété est en lecture seule.  
   
  Si un **commande** objet n’a pas été utilisé pour créer l’actuel **Recordset**, un **Null** référence d’objet est retourné.  

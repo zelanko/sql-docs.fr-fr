@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 842e5bd0bcae76eaffa174c0fdacaf420ae88c5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
 
@@ -63,10 +63,10 @@ La destination finale des données sources est la table de faits **FactCurrency*
   
 |Nom de la colonne|Type de données|Table de recherche|Colonne de recherche|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|Aucun|Aucun|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|Aucun|Aucun|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mappage des données sources pour la compatibilité avec la destination  
 L'analyse du format des données sources et de destination indique que des recherches seront nécessaires pour les valeurs **CurrencyKey** et **DateKey** . Les transformations qui effectueront ces recherches obtiendront les valeurs **CurrencyKey** et **DateKey** en utilisant les autres clés des tables de dimension **DimCurrency** et **DimDate** .  
@@ -74,9 +74,9 @@ L'analyse du format des données sources et de destination indique que des reche
 |Colonne de fichier plat|Nom de la table|Nom de la colonne|Type de données|  
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrency|AverageRate|float|  
-|1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|float|  
+| 1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
+|2|DimDate|FullDateAlternateKey|Date|  
+|3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  

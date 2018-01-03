@@ -3,7 +3,7 @@ title: "Boîte de dialogue Commentaire SQL (Visual Database Tools) | Microsoft D
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 039f84ddff175ae8e2830b7e38ee4fc28b54a307
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 395fb96d7c98556d62c17858c549287aa7af3d66
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Boîte de dialogue Commentaire SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette boîte de dialogue contient une zone modifiable qui permet d’ajouter une description détaillée de la requête. Pour accéder à cette boîte de dialogue, ouvrez la requête ou affichez-la dans le Concepteur de requêtes et de vues, puis sélectionnez **Commentaire SQL** dans la fenêtre **Propriétés**et cliquez sur le bouton de sélection (**…**), à droite du champ de propriété.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Afficher les propriétés d’une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  
   

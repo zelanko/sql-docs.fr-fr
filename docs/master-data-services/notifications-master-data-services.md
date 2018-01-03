@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -22,11 +22,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1dad77d3c02be12e437bd016a256bb31cad830f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0056a26ead4148ad0c163000611791e799d91df5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="notifications-master-data-services"></a>Notifications (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] peut être configuré pour envoyer une notification par courrier électronique lors d’un échec de validation de règle d’entreprise, d’une modification de l’état d’une version de modèle ou d’une modification de l’état d’un ensemble de modifications.  
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/20/2017
   
 |Instance|Description|  
 |--------------|-----------------|  
-|Les données ne remplissent pas les conditions de validation des règles d'entreprise.|Les règles d'entreprise doivent être configurées individuellement pour envoyer des messages électroniques lorsqu'une valeur d'attribut fait échouer la validation de la règle d'entreprise. La notification contient les informations ci-après.<br /><br /> Modèle<br /><br /> Version<br /><br /> Entité<br /><br /> Code de membre<br /><br /> Règle d’entreprise ayant échoué<br /><br /> Lien vers le membre dont la valeur d’attribut fait échouer la règle d’entreprise<br /><br /> Heure d’émission de la notification<br /><br /> Pour plus d’informations, consultez [Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
-|L'état d'une version de modèle change|Chaque fois que l'état d'une version de modèle change, les utilisateurs qui sont des administrateurs de modèle reçoivent automatiquement des notifications. La notification contient les informations ci-après.<br /><br /> Modèle<br /><br /> Version<br /><br /> État précédent et nouvel état de la version<br /><br /> Heure d’émission de la notification<br /><br /> Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
-|Modifications d’état de l’ensemble de modifications|Chaque fois que l’état d’un ensemble de modifications change pour une entité qui nécessite une approbation, les administrateurs d’entité et/ou les propriétaires d’ensemble de modifications reçoivent automatiquement des notifications. La notification contient les informations ci-après.<br /><br /> Modèle<br /><br /> Version<br /><br /> Nom de l’ensemble de modifications<br /><br /> État précédent<br /><br /> Nouvel état<br /><br /> Lien pour appliquer l’ensemble de modifications afin d’afficher et de modifier les modifications en attente.<br /><br /> Pour plus d’informations, consultez [Ensembles de modifications &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
+|Les données ne remplissent pas les conditions de validation des règles d'entreprise.|Les règles d'entreprise doivent être configurées individuellement pour envoyer des messages électroniques lorsqu'une valeur d'attribut fait échouer la validation de la règle d'entreprise. La notification contient les informations ci-après.<br /><br /> Modèle<br /><br /> Options de version<br /><br /> Entité<br /><br /> Code de membre<br /><br /> Règle d’entreprise ayant échoué<br /><br /> Lien vers le membre dont la valeur d’attribut fait échouer la règle d’entreprise<br /><br /> Heure d’émission de la notification<br /><br /> Pour plus d’informations, consultez [Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
+|L'état d'une version de modèle change|Chaque fois que l'état d'une version de modèle change, les utilisateurs qui sont des administrateurs de modèle reçoivent automatiquement des notifications. La notification contient les informations ci-après.<br /><br /> Modèle<br /><br /> Options de version<br /><br /> État précédent et nouvel état de la version<br /><br /> Heure d’émission de la notification<br /><br /> Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
+|Modifications d’état de l’ensemble de modifications|Chaque fois que l’état d’un ensemble de modifications change pour une entité qui nécessite une approbation, les administrateurs d’entité et/ou les propriétaires d’ensemble de modifications reçoivent automatiquement des notifications. La notification contient les informations ci-après.<br /><br /> Modèle<br /><br /> Options de version<br /><br /> Nom de l’ensemble de modifications<br /><br /> État précédent<br /><br /> Nouvel état<br /><br /> Lien pour appliquer l’ensemble de modifications afin d’afficher et de modifier les modifications en attente.<br /><br /> Pour plus d’informations, consultez [Ensembles de modifications &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   
 ## <a name="system-settings"></a>Paramètres système  
- Il existe des paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les notifications. Vous pouvez ajuster ces paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
+ Il existe des paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les notifications. Vous pouvez ajuster ces paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Configurer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour envoyer des notifications par courrier électronique.|[Configurer des notifications par courrier électronique &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)|  
 |Configurer [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour envoyer des notifications lorsque les valeurs d'attribut changent.|[Configurer des règles d’entreprise pour envoyer des notifications &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
   
--   [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Business Rules &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
 -   [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

@@ -3,7 +3,7 @@ title: "À l’aide de signets | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a1cfde267a31b3e11f1c869ac96b652b9db5af16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cbabea62b99f36adb2adf9f12e52d80644f33ea
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-bookmarks"></a>À l’aide de signets
 Il est souvent utile de pouvoir revenir directement à un enregistrement spécifique après avoir déplacé dans le **Recordset** sans avoir à parcourir tous les enregistrements et comparer des valeurs. Par exemple, si vous essayez de rechercher un enregistrement à l’aide de la **trouver** méthode, mais la recherche ne retourne aucun enregistrement, vous accédez automatiquement à chaque extrémité de la **Recordset**. Si votre fournisseur prend en charge les, les signets peuvent être utilisés pour marquer votre position avant d’utiliser le **trouver** méthode afin de pouvoir revenir à votre emplacement. Un signet est un **Variant** type valeur qui identifie de façon unique un enregistrement dans un **Recordset** objet.  

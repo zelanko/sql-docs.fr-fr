@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 38a85c28afb7a93c15b031799b47b07f592350c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9060efc7289f0bf8fd17ad52cd97f45abefc4bfc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : réplicas secondaires accessibles en lecture (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Dans une base de données secondaire comportant des tables optimisées en mémoire, bien que les versions de ligne soient toujours générées pour les tables optimisées en mémoire, les requêtes sont bloquées jusqu’à la fin de toutes les transactions actives qui existaient dans le réplica principal au moment où le réplica secondaire a été activé pour un accès en lecture. Cela garantit que les tables sur disque et optimisées en mémoire sont disponibles en même temps pour la charge de travail de création de rapports et les requêtes en lecture seule.  
   
--   Le suivi des modifications et la capture de données modifiées ne sont pas pris en charge sur les bases de données secondaires qui appartiennent à un réplica secondaire accessible en lecture :  
+-   Le suivi des modifications et la capture de données modifiées ne sont pas pris en charge sur les bases de données secondaires qui appartiennent à un réplica secondaire accessible en lecture :  
   
     -   Le suivi des modifications est explicitement désactivé sur les bases de données secondaires.  
   
@@ -208,9 +208,9 @@ ms.lasthandoff: 11/20/2017
 -   Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser ce suffixe lorsque vous créez des statistiques sur une base de données primaire. Pour plus d'informations, consultez [Statistics](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Accès aux tables optimisées en mémoire sur un réplica secondaire  
- Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Par exemple :  
+ Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Exemple :  
   
-```tsql  
+```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
 GO  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
@@ -237,9 +237,9 @@ GO
   
     |Accès en lecture au réplica secondaire ?|Isolation d'instantané ou isolation d'instantané Read Committed ?|Base de données primaire|Base de données secondaire|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |Non|Non|Aucune version de ligne ni surcharge de 14 octets|Aucune version de ligne ni surcharge de 14 octets|  
-    |Non|Oui|Versions de ligne et surcharge de 14 octets|Aucune version de ligne, mais surcharge de 14 octets|  
-    |Oui|Non|Aucune version de ligne, mais surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
+    |non|non|Aucune version de ligne ni surcharge de 14 octets|Aucune version de ligne ni surcharge de 14 octets|  
+    |non|Oui|Versions de ligne et surcharge de 14 octets|Aucune version de ligne, mais surcharge de 14 octets|  
+    |Oui|non|Aucune version de ligne, mais surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
     |Oui|Oui|Versions de ligne et surcharge de 14 octets|Versions de ligne et surcharge de 14 octets|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Tâches associées  
@@ -256,11 +256,11 @@ GO
   
 -   [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenu connexe  
+##  <a name="RelatedContent"></a> Contenu associé  
   
 -   [Blog de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

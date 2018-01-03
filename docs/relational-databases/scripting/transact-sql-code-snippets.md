@@ -3,9 +3,9 @@ title: "Extraits de code Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 03d2fac305ec83d34d6f070aac71620f8b5cc055
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70b893aabd8a6c602b55365e4658f8f02cc4fc30
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un extrait de code [!INCLUDE[tsql](../../includes/tsql-md.md)] est un modèle contenant la structure de base d’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d’un bloc. Vous pouvez utiliser les extraits de code comme point de départ lors de l'ajout d'instructions dans l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Vous pouvez insérer les extraits de code prédéfinis fournis avec SQL Server ou créer vos propres extraits de code.  
@@ -31,11 +31,11 @@ ms.lasthandoff: 11/17/2017
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Explique comment insérer un extrait de code existant, tel qu'un extrait de code CREATE TABLE ou SELECT.|[Insérer des extraits de code Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)|  
-|Explique comment insérer un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.|[Insérer des extraits de code d'entourage (surround-with) Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
+|Explique comment insérer un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.|[Insérer des extraits de code d’entourage (surround-with) Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)|  
 |Explique comment terminer la génération d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] complète ou d'un bloc après avoir inséré un extrait de code.|[Compléter des extraits de code Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |Explique comment générer vos propres extraits de code personnalisés et les ajouter à l'ensemble d'extraits de code SQL Server.|[Ajouter des extraits de code Transact-SQL](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

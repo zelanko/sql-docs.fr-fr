@@ -3,7 +3,7 @@ title: Mode de traitement par lots | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f763d43aed3312a87fb4c4a16b3ad28b77f0efaf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9070a483570ec496740b16a20f080514b9d23f75
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="batch-mode"></a>Mode Lot
 Mode de traitement par lots est activé lorsque la **LockType** est définie sur **adLockBatchOptimistic** et mise à jour par lot est pris en charge par le fournisseur. Certains paramètres de verrouillage ne sont pas disponibles en fonction de l’emplacement du curseur. Par exemple, un type de verrouillage pessimiste n’est pas disponible lorsque le **CursorLocation** a la valeur **adUseClient**. À l’inverse, un fournisseur ne prendre en charge un verrouillage optimiste du traitement par lots lorsque l’emplacement du curseur se trouve sur le serveur. Vous devez utiliser les commandes de mise à jour avec un jeu de clés ou un curseur statique uniquement.  
   
  Le **UpdateBatch** méthode est utilisée pour envoyer **Recordset** modifications contenues dans le tampon de copie au serveur pour mettre à jour la source de données. Dans la section suivante, nous allons ouvrir un **Recordset** en mode batch, apporter des modifications à la mémoire tampon de copie, puis l’envoi des modifications à la source de données à l’aide d’un appel à **UpdateBatch**.  
   
- Cette section contient les rubriques suivantes :  
+ Cette section contient les rubriques suivantes :  
   
 -   [Envoi des mises à jour : méthode UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   

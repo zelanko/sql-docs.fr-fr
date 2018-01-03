@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f8e55988e5e55671b5ff97b80916e3c368d51dd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Leçon 1-2 : Ajout et configuration d’un gestionnaire de connexions de fichiers plats
 Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -92,10 +92,10 @@ Le gestionnaire de connexions de fichiers plats fournit des informations de para
   
     |Colonne de fichier plat|Type suggéré|Colonne de destination|Type de destination|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|float|  
+    |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency.CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
+    |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
     Le type de données suggéré pour la colonne **CurrencyID** n’est pas compatible avec le type de données du champ de la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est nchar (3), le type de la colonne **CurrencyID** , chaîne [DT_STR], doit être changé en chaîne [DT_WSTR]. De plus, le champ `DimDate.FullDateAlternateKey` est défini avec le type de données date ; par conséquent, **CurrencyDate** doit être changé de [DT_Date] en date de base de données [DT_DBDATE].  
   
@@ -108,7 +108,7 @@ Le gestionnaire de connexions de fichiers plats fournit des informations de para
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 3 : ajout et configuration d'un gestionnaire de connexions OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Gestionnaire de connexions de fichiers plats](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Types de données d'Integration Services](../integration-services/data-flow/integration-services-data-types.md)  
   

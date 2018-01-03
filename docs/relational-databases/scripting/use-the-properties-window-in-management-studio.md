@@ -3,9 +3,9 @@ title: "Utiliser la fenêtre Propriétés dans Management Studio | Microsoft Doc
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b99df9358de8b26efb064587af391ff901418c24
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: adef30d9bc7488bc56c3d118962028b4b005c2fa
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utiliser la fenêtre Propriétés dans Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La fenêtre Propriétés décrit l’état d’un élément dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tel qu’une connexion ou un opérateur Showplan, et fournit des informations sur les objets de base de données, tels que les tables, les vues et les concepteurs.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Sous l'onglet **Plan d'exécution** de l'Éditeur de requête SQL, cliquez sur les icônes des opérateurs pour afficher des informations sur ces derniers dans la fenêtre Propriétés.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fenêtre Propriétés &#40;Management Studio&#41;](http://msdn.microsoft.com/library/6a9a1389-df8d-4cfc-928b-eccbf884a22d)  
   
   

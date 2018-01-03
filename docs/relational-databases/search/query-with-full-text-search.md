@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c4d90a0e4498ecdb28727eeca14c2f6bbe147e6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Écrivez des requêtes de texte intégral en utilisant les prédicats de texte intégral **CONTAINS** et **FREETEXT**, ainsi que les fonctions d’ensemble de lignes **CONTAINSTABLE** et **FREETEXTTABLE** avec l’instruction **SELECT**. Cette rubrique fournit des exemples de chaque prédicat et de chaque fonction et vous aide à choisir le meilleur à utiliser.
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---contains"></a>Exemple – CONTAINS  
  L'exemple ci-dessous recherche tous les produits qui contiennent le mot `$80.99` et qui coûtent `"Mountain"`.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -55,7 +55,7 @@ GO
 ### <a name="example---freetext"></a>Exemple – FREETEXT 
  L’exemple suivant recherche tous les documents qui contiennent des mots liés à « vital », « safety » et « components ».  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -68,7 +68,7 @@ GO
 ### <a name="example---containstable"></a>Exemple – CONTAINSTABLE  
  L'exemple suivant retourne l'ID de description et la description de tous les produits dont la colonne **Description** contient le mot « aluminum » à proximité du mot « light » ou du mot « lightweight ». Seules les lignes dont la valeur de classement est supérieure ou égale à 2 sont renvoyées.  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -90,7 +90,7 @@ GO
 ### <a name="example--freetexttable"></a>Exemple – FREETEXTTABLE  
  L'exemple ci-après étend une requête FREETEXTTABLE afin de retourner en premier les lignes dont le niveau de classement est le plus élevé et d'ajouter le classement de chaque ligne à la liste de sélection. Pour spécifier la requête, il faut savoir que **ProductDescriptionID** est la colonne clé unique de la table **ProductDescription** .  
   
-```tsql 
+```sql 
 USE AdventureWorks2012  
 GO  
   
@@ -106,7 +106,7 @@ GO
   
 Voici l'extension de la même requête qui renvoie uniquement les lignes avec une valeur de rang égale ou supérieure à 10 :  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -164,7 +164,7 @@ Le tableau ci-dessous décrit les types de mots et d’expressions que vous pouv
 ###  <a name="Simple_Term"></a> Recherche d’un mot ou d’une expression spécifique (terme simple)  
  Vous pouvez utiliser [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) pour rechercher une expression spécifique dans une table. Par exemple, si vous souhaitez effectuer une recherche dans la table **ProductReview** de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] afin de trouver tous les commentaires de produits contenant l’expression « learning curve », vous pouvez utiliser le prédicat CONTAINS en procédant comme suit :  
   
-```tsql
+```sql
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ GO
 ###  <a name="Prefix_Term"></a> Recherche d’un mot avec un préfixe (terme de préfixe)  
  Vous pouvez utiliser [CONTAINS](../../t-sql/queries/contains-transact-sql.md) ou [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) pour rechercher des mots ou des expressions ayant un préfixe que vous spécifiez. Toutes les entrées de la colonne qui contiennent le texte commençant par le préfixe spécifié sont retournées. Par exemple, rechercher toutes les lignes qui contiennent le préfixe `top`-, comme dans `top``ple`, `top``ping`et `top`. La requête est la suivante :  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -198,7 +198,7 @@ Vous pouvez utiliser [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [
   
 L'exemple suivant recherche toutes les formes de « foot » (« foot », « feet », etc.) dans la colonne `Comments` de la table `ProductReview` dans la base de données `AdventureWorks` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -215,7 +215,7 @@ Vous pouvez utiliser [CONTAINSTABLE](../../relational-databases/system-functions
   
 L'exemple suivant affiche une requête qui recherche toutes les adresses de client à l'aide de pondérations, où tout texte qui commence par la chaîne « Bay » comporte soit « Street » soit « View ». Les résultats accordent un rang plus élevé aux lignes qui contiennent le plus de mots, parmi ceux spécifiés.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -240,10 +240,10 @@ En revanche, FREETEXT et FREETEXTTABLE traitent les termes booléens comme des m
   
  Pour plus d’informations sur la façon de combiner CONTAINS avec d’autres prédicats qui utilisent les opérateurs logiques AND, OR et NOT, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L’exemple suivant utilise le prédicat CONTAINS pour rechercher les descriptions dont l’ID de description n’est pas égal à 5 et la description contient les mots « Aluminum » et « spindle ». La condition de recherche utilise l'opérateur booléen AND. Cet exemple utilise la table ProductDescription de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -262,7 +262,7 @@ GO
 
 -   **Respect de la casse**. Les requêtes de recherche en texte intégral ne respectent pas la casse. Néanmoins, en ce qui concerne le Japonais, il existe plusieurs orthographes phonétiques pour lesquelles le concept de normalisation orthographique est apparenté au respect de la casse (par exemple kana = non respect). Ce genre de normalisation orthographique n'est pas pris en charge.  
 
--   **Mots vides**. Lorsqu'une requête de texte intégral est définie, le Moteur d'indexation et de recherche en texte intégral supprime les mots vides (également appelés mots parasites) des critères de recherche. Les mots vides sont des mots tels que « un », « et », « est » ou « le » dont les occurrences sont fréquentes mais qui ne sont pas utiles pour une recherche de texte spécifique. Les mots vides sont répertoriés dans une liste de mots vides. Chaque index de recherche en texte intégral est associé à une liste de mots vides spécifique, qui détermine les mots vides à omettre de la requête ou de l'index au moment de l'indexation. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+-   **Mots vides**. Lorsqu'une requête de texte intégral est définie, le Moteur d'indexation et de recherche en texte intégral supprime les mots vides (également appelés mots parasites) des critères de recherche. Les mots vides sont des mots tels que « un », « et », « est » ou « le » dont les occurrences sont fréquentes mais qui ne sont pas utiles pour une recherche de texte spécifique. Les mots vides sont répertoriés dans une liste de mots vides. Chaque index de recherche en texte intégral est associé à une liste de mots vides spécifique, qui détermine les mots vides à omettre de la requête ou de l'index au moment de l'indexation. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 -   **Dictionnaire des synonymes**. Les requêtes FREETEXT et FREETEXTTABLE utilisent le dictionnaire des synonymes par défaut. CONTAINS et CONTAINSTABLE prennent en charge un argument THESAURUS facultatif. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
@@ -270,7 +270,7 @@ GO
 
 Après avoir appliqué une combinaison d’analyseur lexical, de dictionnaire des synonymes et de liste de mots vides dans une requête, vous pouvez afficher les résultats de la création de jetons à l’aide de la vue de gestion dynamique **sys.dm_fts_parser**. Pour plus d’informations, consultez [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

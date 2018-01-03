@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59869c0fdcb73fc30ee9bc763e8665f05f71df90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
   Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau des packages créés par des versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers le format de package utilisé par la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
  **Source du package**  
  Sélectionnez l'emplacement de stockage qui contient les packages à mettre à niveau. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**File System**|Indique que les packages à mettre à niveau se trouvent dans un dossier sur l'ordinateur local.<br /><br /> Pour que l'Assistant sauvegarde les packages d'origine avant de les mettre à niveau, les packages d'origine doivent être stockés dans le système de fichiers. Pour plus d'informations, consultez la rubrique de procédure.|  
 |**Magasin de packages SSIS**|Indique que les packages à mettre à niveau se trouvent dans le magasin de packages. Le magasin de packages se compose de l’ensemble des dossiers du système de fichiers gérés par le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/20/2017
  **Dossier**  
  Tapez le nom d’un dossier qui contient les packages à mettre à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
- **Parcourir**  
+ **...**  
  Recherchez le dossier qui contient les packages à mettre à niveau.  
   
 ### <a name="package-source-dynamic-options"></a>Options dynamiques de la source du package  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Tapez le nom d’utilisateur que l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisera pour se connecter au serveur.  
   
  **Mot de passe**  
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
  **Source du package**  
  Spécifiez l'emplacement où les packages de mise à niveau doivent être stockés. Cette option a les valeurs répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**File System**|Indique que les packages mis à niveau doivent être enregistrés dans un dossier sur l'ordinateur local.|  
 |**Magasin de packages SSIS**|Indique que les packages mis à niveau doivent être enregistrés dans le magasin de packages Integration Services. Le magasin de packages se compose de l'ensemble des dossiers du système de fichiers gérés par Integration Services. Pour plus d’informations, consultez [Gestion de packages &#40;Service SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> La sélection de cette valeur affiche les options dynamiques **Source du package** correspondantes.|  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/20/2017
  **Dossier**  
  Tapez le nom d’un dossier dans lequel enregistrer les packages mis à niveau, ou cliquez sur **Parcourir** et recherchez le dossier.  
   
- **Parcourir**  
+ **...**  
  Recherchez le dossier dans lequel les packages mis à niveau seront enregistrés.  
   
 ### <a name="package-source-dynamic-options"></a>Options dynamiques de la source du package  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **Utiliser l'authentification SQL Server**  
  Permet d’utiliser l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur. Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un nom d’utilisateur et un mot de passe.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Tapez le nom d’utilisateur à utiliser pendant l’utilisation de l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour se connecter au serveur.  
   
  **Mot de passe**  
@@ -258,7 +258,7 @@ Dans l'Explorateur d'objets de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md
   
 Dans l'Explorateur de solutions de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puis développez le nœud **Packages SSIS** pour voir les packages mis à niveau.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Mettre à niveau des packages Integration Services](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   

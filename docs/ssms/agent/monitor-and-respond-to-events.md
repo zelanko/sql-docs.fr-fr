@@ -3,7 +3,7 @@ title: "Surveiller et répondre aux événements | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58759019e5a76db186d3d038d3c7c024f8efe933
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0736a72ceeb4cd5ab8350bff74baff6cbb4d8c7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitor-and-respond-to-events"></a>Surveiller et répondre aux événements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +74,6 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] journalise un 
   
 Quelle que soit la source de l'événement, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent répond à l'événement en exécutant les tâches spécifiées dans l'alerte de cet événement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
   

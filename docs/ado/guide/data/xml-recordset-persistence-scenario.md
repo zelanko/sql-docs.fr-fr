@@ -3,7 +3,7 @@ title: "Scénario de persistance des objets Recordset XML | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bfbc480a7b13a7008d2cc7679a5033e2f3270797
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9a809d6e2e50ee20747466ab4b2895a5aedf721
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Scénario de persistance des objets Recordset XML
-Dans ce scénario, vous allez créer une application Active Server Pages (ASP) qui enregistre le contenu d’un objet Recordset directement dans l’objet Response ASP..  
+Dans ce scénario, vous allez créer une application Active Server Pages (ASP) qui enregistre le contenu d’un objet Recordset directement dans l’objet Response ASP.  
   
 > [!NOTE]
 >  Ce scénario nécessite que votre serveur Internet Information Server 5.0 (IIS) ou ultérieur est installé.  

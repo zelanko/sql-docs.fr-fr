@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] L’OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.
@@ -37,9 +37,9 @@ L'OLTP en mémoire compile les tables optimisées en mémoire quand elles sont c
 
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>Maintenance des DLL de l'OLTP en mémoire
 
-La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :
+La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -63,7 +63,7 @@ La création d’une table optimisée en mémoire à l’aide de l’instruction
 
 Consultez l'exemple de script suivant, qui crée une base de données et une table optimisée en mémoire :
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -156,7 +156,7 @@ Pour plus d'informations sur les procédures stockées compilées en mode natif,
 
 Prenons l'exemple de procédure stockée suivant, qui insère des lignes dans la table t1 de l'exemple précédent :
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,
@@ -213,7 +213,7 @@ Les fichiers créés lorsqu'une table ou une procédure stockée est compilée s
 
 Aucune intervention de l'utilisateur n'est nécessaire pour gérer ces fichiers. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée et supprime les fichiers, le cas échéant.
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

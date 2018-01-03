@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,16 +18,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06a7e065187ca920497d411172a67eb8362ba857
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erreurs du processus de site (Master Data Services)
   Lorsque le processus de mise en lots est terminé, tous les enregistrements traités dans les tables intermédiaires ont une valeur dans la colonne ErrorCode. Ces valeurs sont répertoriées dans le tableau suivant.  
   
-|Code|Erreur|Se produit lorsque/détails|S'applique à la table|  
+|Code|Error|Se produit lorsque/détails|S'applique à la table|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Le même code de membre existe plusieurs fois dans la table de mise en lots.|Votre lot intermédiaire comporte plusieurs occurrences du même code de membre. Aucun membre n'est créé ou mis à jour.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210003|La valeur d'attribut fait référence à un membre qui n'existe pas ou qui est inactif.|Lorsque vous mettez en lots des attributs basés sur un domaine, vous devez utiliser le code, au lieu du nom. S’applique à **ImportType0**, **1**et **2**.|Feuille<br /><br /> Consolidé|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 |210047|Le membre ne peut pas être un frère d'Inutilisé.|Ceci se produit lorsque **RelationshipType** = **2** (frère) et que **ParentCode** ou **ChildCode** a la valeur **Inutilisé**. Les membres peuvent uniquement être des enfants du nœud Inutilisé.|Relation|  
 |210048|**ParentCode** et **ChildCode** ne peuvent pas être identiques.|La valeur **ParentCode** est identique à la valeur **ChildCode** . Ces valeurs doivent être différentes.|Relation|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Afficher les erreurs rencontrées lors de la mise en lots &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

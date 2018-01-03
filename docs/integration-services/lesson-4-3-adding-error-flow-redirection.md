@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1538ad973644dfa38fbed083327528a1973bcc4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb3ec5c108f74e6ae0b53f6bd27a4cad70e7313
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Leçon 4-3 : Ajout de redirection de flux d’erreurs
 Comme nous l'avons démontré au cours de la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu'elle tente de traiter le fichier plat exemple endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
@@ -76,7 +76,7 @@ Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composa
   
     La sous-routine terminée doit se présenter comme le code ci-dessous.  
   
-    [Visual Basic]  
+    [Visual Basic]  
   
     ```vb
     Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
@@ -102,7 +102,7 @@ Pour améliorer l'utilité de la sortie d'erreur, vous allez utiliser un composa
   
 13. Cliquez sur **OK** pour fermer la boîte de dialogue **Éditeur de transformation de script** .  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 [Étape 4 : Ajout d'une destination de fichier plat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   

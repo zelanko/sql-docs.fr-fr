@@ -3,7 +3,7 @@ title: Service de curseur Microsoft pour OLE DB (composant du Service ADO) | Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Service de curseur Microsoft pour une vue d’ensemble de la base de données OLE
 Le Service de curseur Microsoft pour OLE DB complète les fonctions de prise en charge de curseur des fournisseurs de données. Par conséquent, l’utilisateur perçoit relativement uniforme des fonctionnalités à partir de tous les fournisseurs de données.
@@ -62,7 +62,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  La propriété dynamique DBPROP_SERVERDATAONINSERT n’est pas prise en charge par le service de curseur, même si elle est prise en charge par le fournisseur de données sous-jacent.
 
-|Nom de la propriété| Description|
+|Nom de la propriété|Description|
 |-------------------|-----------------|
 |Recalcul automatique (DBPROP_ADC_AUTORECALC)|Pour les jeux d’enregistrements créés avec le Service de mise en forme des données, cette valeur indique la fréquence à laquelle les colonnes calculées et agrégées sont calculées. La valeur par défaut (valeur = 1) consiste à recalculer chaque fois que le Service de mise en forme de données détermine que les valeurs ont changé. Si la valeur est 0, les colonnes calculées ou d’agrégats sont calculées uniquement lorsque la hiérarchie est initialement créée.|
 |Taille de lot (DBPROP_ADC_BATCHSIZE)|Indique le nombre d’instructions de mise à jour qui peuvent être regroupées avant d’être envoyées au magasin de données. Davantage d’instructions dans un lot, les moins d’allers-retours vers les données de magasin.|
@@ -88,7 +88,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportement de la propriété intégrée
  Le Service de curseur pour OLE DB affecte également le comportement de certaines propriétés intégrées.
 
-|Nom de la propriété| Description|
+|Nom de la propriété|Description|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complète les types de curseurs disponibles pour un **Recordset**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complète les types de verrous disponibles pour un **Recordset**. Active les mises à jour du lot.|

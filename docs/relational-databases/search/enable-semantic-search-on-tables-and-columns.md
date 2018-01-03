@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Décrit la procédure d’activation ou de désactivation de l’indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  L’exemple suivant crée un catalogue de texte intégral par défaut, **ft**. L’exemple crée ensuite un index unique sur la colonne **JobCandidateID** de la table **HumanResources.JobCandidate** de l’exemple de base de données AdventureWorks2012. Cet index unique est requis en tant que colonne clé pour un index de recherche en texte intégral. L’exemple crée ensuite un index de recherche en texte intégral et un index sémantique sur la colonne **Resume** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -90,7 +90,7 @@ GO
   
  Cet exemple spécifie également que le suivi des modifications est désactivé et sans remplissage. Plus tard, durant les heures creuses, cet exemple utilise une instruction **ALTER FULLTEXT INDEX** pour démarrer un remplissage complet sur le nouvel index et activer le suivi automatique des modifications.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -113,7 +113,7 @@ GO
   
  Plus tard, pendant une heure creuse, l'index est rempli :  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -139,7 +139,7 @@ GO
   
  L’exemple suivant modifie un index de recherche en texte intégral existant sur la table **Production.Document** de l’exemple de base de données AdventureWorks2012. Il ajoute un index sémantique sur la colonne **Document** de la table **Production.Document** , qui comporte déjà un index de recherche en texte intégral. L'exemple spécifie que l'index ne sera pas rempli à nouveau automatiquement.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -164,7 +164,7 @@ Vous pouvez supprimer l’indexation sémantique lorsque vous modifiez un index 
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Supprimer un index sémantique à l'aide de Transact-SQL  
 Pour supprimer l’indexation sémantique d’une ou de plusieurs colonnes, appelez l’instruction **ALTER FULLTEXT INDEX** avec l’option **ALTER COLUMN***nom_colonne***DROP STATISTICAL_SEMANTICS** . Vous pouvez supprimer l'indexation de plusieurs colonnes dans une instruction **ALTER** unique.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -176,7 +176,7 @@ GO
   
 Pour supprimer l’indexation de texte intégral et sémantique d’une colonne, appelez l’instruction **ALTER FULLTEXT INDEX** avec l’option **ALTER COLUMN***nom_colonne***DROP** .  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -202,7 +202,7 @@ GO
   
  Une valeur de retour de 1 indique que la recherche en texte intégral et la recherche sémantique sont activées pour la base de données ; une valeur de retour de 0 indique qu'elles ne le sont pas.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -226,7 +226,7 @@ GO
   
      Une valeur de retour de 1 indique que la recherche sémantique est activée pour la colonne ; une valeur de retour de 0 indique qu'elle n'est pas activée.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -235,7 +235,7 @@ GO
   
      Une valeur 1 dans la colonne **statistical_semantics** indique que la colonne spécifiée est activée pour l’indexation sémantique en plus de l’indexation de texte intégral.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -253,16 +253,16 @@ GO
   
  Interrogez l’affichage catalogue [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
   
  Les langues suivantes sont prises en charge pour l'indexation sémantique. Cette liste représente la sortie de l’affichage catalogue [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), classée par LCID.  
   
-|Langage|LCID|  
+|Langue|LCID|  
 |--------------|----------|  
-|Allemand|1031|  
+|German|1031|  
 |Anglais (États-Unis)|1033|  
 |Français|1036|  
 |Italien|1040|  

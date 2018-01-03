@@ -3,7 +3,7 @@ title: "Plus en détail la persistance des objets Recordset | Documents Microsof
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 03208e45eb04540befeae3e8e86ec0100e1f9831
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45c072e5a21e04488a45bb8dc978a663f734ac08
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="more-about-recordset-persistence"></a>En savoir plus sur la persistance des objets Recordset
 Prend en charge de l’objet ADO Recordset stocker le contenu d’un **Recordset** dans un fichier à l’aide de son [enregistrer](../../../ado/reference/ado-api/save-method.md) (méthode). Le fichier stocké de façon permanente se trouve sur un ordinateur local lecteur, serveur, ou en tant qu’URL sur un serveur Web de site. Une version ultérieure, le fichier peut être restauré avec l’option le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode de la **Recordset** objet ou le [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) méthode de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
@@ -41,7 +41,7 @@ Prend en charge de l’objet ADO Recordset stocker le contenu d’un **Recordset
   
  Pour obtenir un exemple de **Recordset** persistance, voir le scénario de persistance XML Recordset.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ### <a name="save-a-recordset"></a>Enregistrer un jeu d’enregistrements :  
   

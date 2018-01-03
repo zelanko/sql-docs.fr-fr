@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Ajouter une copie des packages existants
   Utilisez la boîte de dialogue **Ajouter une copie des packages existants** pour ajouter à un projet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]une copie d'un package stocké dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le système de fichiers ou le magasin de packages SSIS.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Type d'authentification**  
  En cas de copie à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez un type d'authentification.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , entrez un nom d’utilisateur.  
   
  **Mot de passe**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **Chemin d'accès au package**  
  Tapez le chemin du package ou cliquez sur le bouton Parcourir **(…)** pour rechercher le package à copier.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Enregistrer une copie du package](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Enregistrer des packages](../integration-services/save-packages.md)   
  [Service Integration Services &#40;Service SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)

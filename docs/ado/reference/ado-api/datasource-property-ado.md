@@ -3,7 +3,7 @@ title: "Propriété de source de données (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1c5ce0f95b5d6d874c2ba396a2ec4453184566aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 901dc09e94acfbd6299cfcb72586e80edc687360
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datasource-property-ado"></a>Propriété de source de données (ADO)
 Indique un objet qui contient des données pour être représentée comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentées comme un **Recordset** objet*.*  
   
  Le [DataMember](../../../ado/reference/ado-api/datamember-property.md) et **DataSource** propriétés doivent être utilisées conjointement.  

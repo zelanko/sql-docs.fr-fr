@@ -3,7 +3,7 @@ title: "Didacticiel : SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -28,13 +28,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8ae304d08d1f747a656266f159e0833a2028c46e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Didacticiel : SQL Server Management Studio
+# <a name="tutorial-sql-server-management-studio"></a>Didacticiel : SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Le didacticiel SQL Server Management Studio (SSMS) vous présente l’environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
@@ -65,7 +65,7 @@ Pour ce didacticiel, les éléments suivants doivent être installés :
 -   SQL Server 2016 ou ultérieur, avec l’exemple de base de données AdventureWorks. Pour installer l’exemple de base de données AdventureWorks, consultez [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014) et installez la base de données AdventureWorks2014 (OLTP).  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Didacticiels sur le moteur de base de données](../../relational-databases/database-engine-tutorials.md)  
   
   

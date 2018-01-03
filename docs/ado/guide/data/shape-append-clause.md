@@ -3,7 +3,7 @@ title: Clause APPEND de forme | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab01c719611309117308c818930b1553741495e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a6f5a67559ea2137110dc72d77a56bacc8da39a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de forme
 La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un enfant **Recordset**.  
@@ -36,7 +36,7 @@ La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Reco
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a> Description  
+## <a name="description"></a>Description  
  Les parties de cette clause sont les suivantes :  
   
  *commande parent*  
@@ -70,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  *jeu d’enregistrements enfants*  
  -   Une commande fournisseur entourée accolades (« {} ») qui retourne un **Recordset** objet. La commande est envoyée au fournisseur de données sous-jacent et sa syntaxe dépend des exigences de ce fournisseur. Ce sera généralement le langage SQL, même si ADO ne requiert pas de langage de requête particulier.  
   
@@ -101,7 +101,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  La clause après le mot-clé APPEND est en fait une liste, où chaque clause est séparée par une virgule et définit une autre colonne à ajouter au parent.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque vous construisez des commandes de fournisseur à partir de l’entrée d’utilisateur dans le cadre d’une commande SHAPE, SHAPE traite fournie par l’utilisateur une commande fournisseur comme une chaîne opaque et passe fidèlement au fournisseur. Par exemple, dans la commande SHAPE suivante,  
   
 ```  

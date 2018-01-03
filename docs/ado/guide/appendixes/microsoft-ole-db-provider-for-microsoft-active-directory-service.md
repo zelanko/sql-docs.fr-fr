@@ -3,7 +3,7 @@ title: Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory
 Le fournisseur Active Directory Service Interfaces ADSI () permet à ADO pour se connecter à des services d’annuaire hétérogènes via ADSI. Ainsi, les applications ADO accès en lecture seule pour les services d’annuaire Microsoft Windows NT 4.0 et Microsoft Windows 2000, en plus de n’importe quel service d’annuaire compatible LDAP et les Services d’annuaire Novell. ADSI est basé sur un modèle de fournisseur, afin que s’il existe un nouveau fournisseur donnant accès à un autre annuaire, l’application ADO puisse y accéder en toute transparence. Le fournisseur ADSI est libre de threads et Unicode.  
@@ -49,7 +49,7 @@ ADSDSOObject
   
  La chaîne se compose des mots clés suivants.  
   
-|Mot clé| Description|  
+|Mot clé|Description|  
 |-------------|-----------------|  
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour le Service Active Directory.|  
 |**ID d'utilisateur**|Spécifie le nom d’utilisateur. Si ce mot clé est omis, l’ouverture de session est utilisé.|  
@@ -65,27 +65,27 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*Root*|Indique le **ADsPath** objet à partir duquel commencer la recherche (autrement dit, la racine de la recherche).|  
-|*Filter*|Indique le filtre de recherche au format RFC 1960.|  
+|*Filtre*|Indique le filtre de recherche au format RFC 1960.|  
 |*Attributs*|Indique une liste délimitée par des virgules d’attributs à retourner.|  
-|*Étendue*|Ce paramètre est facultatif. A **chaîne** qui spécifie la portée de la recherche. Les valeurs possibles sont les suivantes :<br /><br /> -Base : Recherche uniquement l’objet de base (racine de la recherche).<br />-Un niveau : Rechercher un seul niveau.<br />-Sous-arborescence, Rechercher l’intégralité du sous-arbre.|  
+|*Étendue*|Facultatif. A **chaîne** qui spécifie la portée de la recherche. Les valeurs possibles sont les suivantes :<br /><br /> -Base : Recherche uniquement l’objet de base (racine de la recherche).<br />-Un niveau : Rechercher un seul niveau.<br />-Sous-arborescence, Rechercher l’intégralité du sous-arbre.|  
   
- Exemple :  
+ Exemple :  
   
 ```  
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- Le fournisseur prend également en charge SQL SELECT pour le texte de commande. Exemple :  
+ Le fournisseur prend également en charge SQL SELECT pour le texte de commande. Exemple :  
   
 ```  
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le fournisseur n’accepte pas les appels de procédures stockées ou des noms de table simples (par exemple, le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sera toujours **adCmdText**). Consultez la documentation d’Active Directory Service Interfaces pour obtenir une description plus détaillée des éléments de texte de commande.  
   
 ## <a name="recordset-behavior"></a>Comportement du jeu d’enregistrements  
@@ -107,7 +107,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|toujours **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|toujours **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Lecture seule|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|  
+|[Filtre](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lecture/écriture|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponible|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lecture/écriture|  
@@ -122,13 +122,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |Méthode|Disponible ?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Non|  
-|[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Non|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Non|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Non|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|non|  
+|[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|non|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|non|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|non|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|  
 |[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Non|  
+|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|non|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|  
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|  
@@ -140,8 +140,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery)](../../../ado/reference/ado-api/requery-method.md)|Oui|  
 |[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Oui|  
 |[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|Non|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|non|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|non|  
   
  Pour plus d’informations sur ADSI et sur les spécificités du fournisseur, reportez-vous à la documentation d’Active Directory Service Interfaces ou visitez la page Web ADSI.  
   

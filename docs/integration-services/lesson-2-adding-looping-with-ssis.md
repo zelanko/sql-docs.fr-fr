@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 46add077a9b90353ba41f18fe5c4dd15082e7c0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Leçon 2 : Ajout d’un bouclage avec SSIS
 Au cours de la [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), vous avez créé un package qui a extrait des données d’une source de fichier plat unique, transformé les données au moyen de la fonction de transformation des recherches, puis chargé les données dans la table de faits **FactCurrency** de l’exemple de base de données **AdventureWorksDW2012** .  
@@ -70,7 +70,7 @@ Cette leçon contient les tâches suivantes :
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
 [Étape 1 : Copie du package de la leçon 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Conteneur de boucles For](../integration-services/control-flow/for-loop-container.md)  
   
   

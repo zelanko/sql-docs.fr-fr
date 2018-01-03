@@ -3,9 +3,9 @@ title: "Informations du débogueur Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a029341c3f01b4831856a3e3fdd704620fa0d93e
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Chaque fois que le débogueur suspend l’exécution du code au niveau d’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l’état d’exécution actuel.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/17/2017
   
  En mode débogage, lorsque vous déplacez le pointeur de la souris sur un identificateur, une fenêtre contextuelle **Info express** affiche le nom de l’expression et sa valeur actuelle. Pour plus d’informations, consultez [Info express &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
   
-## <a name="breakpoints"></a>Points d'arrêt  
+## <a name="breakpoints"></a>Points d’arrêt  
  Vous pouvez utiliser la fenêtre **Points d’arrêt** pour afficher et gérer les points d’arrêt actuellement définis. Pour plus d’informations, consultez [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Pile des appels  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
   
  En mode débogage, les onglets **Résultats** et **Messages** sont toujours actifs dans l’éditeur de requête. L’onglet **Résultats** continue à afficher les jeux de résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées au cours d’une session de débogage. L’onglet **Messages** continue à afficher des messages système, tels que *xx* lignes affectées et la sortie des instructions PRINT et RAISERROR.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Variables locales (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Espion (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Boîte de dialogue Espion express](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

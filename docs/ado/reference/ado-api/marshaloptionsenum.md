@@ -3,7 +3,7 @@ title: MarshalOptions | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7afe4eeecbbfdb759d8772a4bbbb1fcc562c3966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8f54d75168f07056ca1edb8aa74d78ae289f4fde
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptions
 Spécifie les enregistrements qui doivent être renvoyées au serveur.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|Valeur par défaut. Retourne toutes les lignes sur le serveur.|  
-|**adMarshalModifiedOnly**|1|Retourne uniquement les lignes modifiées au serveur.|  
+|**adMarshalModifiedOnly**| 1|Retourne uniquement les lignes modifiées au serveur.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
  Package : **com.ms.wfc.data**  

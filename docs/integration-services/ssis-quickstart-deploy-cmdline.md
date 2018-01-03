@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3e7f7e3fa870c7aa5b30a5a4a324f0cef7f6ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a753aa1418e935604148d0d42afa22716dec1b17
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 Ce didacticiel de démarrage rapide montre comment déployer un projet SSIS à partir de l’invite de commandes en exécutant l’Assistant Déploiement d’Integration Services, `ISDeploymentWizard.exe`.
@@ -34,7 +34,7 @@ Pour plus d’informations sur l’Assistant Déploiement d’Integration Servic
 ## <a name="deploy-a-project-with-the-wizard"></a>Déployer un projet avec l’Assistant
 1. Dans la page **Introduction** de l’Assistant, examinez l’introduction. Cliquez sur **Suivant** pour ouvrir la page **Sélectionner la source**.
 
-2. Dans la page **Sélectionner la Source**, sélectionnez le projet SSIS existant à déployer.
+2. Dans la page **Sélectionner la source**, sélectionnez le projet SSIS existant à déployer.
     -   Pour déployer un fichier de déploiement de projet que vous avez créé, sélectionnez **Fichier de déploiement de projet** , puis entrez le chemin d’accès du fichier .ispac.
     -   Pour déployer un projet qui réside dans un catalogue SSIS, sélectionnez **Catalogue Integration Services**, puis entrez le nom du serveur et le chemin du projet au sein du catalogue.
     Cliquez sur **Suivant** pour afficher la page **Sélectionner la destination** .
@@ -48,7 +48,7 @@ Pour plus d’informations sur l’Assistant Déploiement d’Integration Servic
     -   Vous pouvez modifier vos sélections en cliquant sur **Précédent**ou en cliquant sur l'une des étapes dans le volet gauche.
     -   Cliquez sur **Déployer** pour démarrer le processus de déploiement.
   
-5.  Une fois le processus de déploiement terminé, la page **Résultats** s’ouvre. Cette page indique la réussite ou l’échec de chaque action.
+5.  Une fois le processus de déploiement effectué, la page **Résultats** s’affiche. Cette page indique la réussite ou l’échec de chaque action.
     -   Si l’action a échoué, cliquez sur **Échec** dans la colonne **Résultat** pour afficher une explication de l’erreur.
     -   Si vous le souhaitez, cliquez sur **Enregistrer le rapport** pour enregistrer les résultats dans un fichier XML.
     -   Cliquez sur **Fermer** pour quitter l’Assistant.

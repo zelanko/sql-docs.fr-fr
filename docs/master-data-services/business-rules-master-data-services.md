@@ -5,7 +5,7 @@ ms.date: 03/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d1cf7f3dd89fa9629881fcee9b133fac70ca409
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8bd22c0084e7077169254b773431183b89885fcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une règle d'entreprise est une règle qui vous permet de vérifier la qualité et l'exactitude de vos données de référence. Vous pouvez utiliser une règle d'entreprise pour mettre à jour automatiquement vos données, envoyer un message électronique ou démarrer un processus ou un flux de travail d'entreprise.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-settings"></a>Paramètres système  
  Il existe deux paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les règles d'entreprise. Vous pouvez ajuster ces paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

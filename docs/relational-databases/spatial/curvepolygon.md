@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c87bfe2f5342cc9edceb6a472cba8579c09c220
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4688012500c7160b87c38470a482d46d50dfe996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un **CurvePolygon** est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
@@ -132,7 +132,7 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Instanciation d'une instance geometry avec un CurvePolygon Vide  
  Cet exemple indique comment créer une instance **CurvePolygon** vide :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -140,21 +140,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
  Cet extrait de code indique comment déclarer et initialiser une instance geometry avec un **CurvePolygon** dans la même instruction :  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanciation d'une instance geography avec un CurvePolygon  
  Cet extrait de code indique comment déclarer et initialiser une instance **geography** avec un **CurvePolygon**:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Stockage d'un CurvePolygon uniquement avec un anneau englobant extérieur  
  Cet exemple indique comment stocker un cercle simple dans une instance **CurvePolygon** (seul un anneau englobant extérieur est utilisé pour définir le cercle) :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -163,7 +163,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Stockage d'un CurvePolygon contenant des anneaux intérieurs  
  Cet exemple crée une bouée dans une instance **CurvePolygon** (à la fois un anneau englobant extérieur et un anneau intérieur sont utilisés pour définir la bouée) :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -171,7 +171,7 @@ SELECT @g.STArea() AS Area;
   
  Cet exemple montre à la fois une instance **CurvePolygon** valide et une instance non valide lors de l'utilisation d'anneaux intérieurs :  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  
@@ -188,7 +188,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1 et @g2 utilisent tous les deux le même anneau englobant extérieur (un cercle avec un rayon de 5) et un carré comme anneau intérieur.  Toutefois, l’instance @g1 est valide, mais l’instance @g2 n’est pas valide.  La raison pour laquelle @g2 n’est pas valide est que l’anneau intérieur fractionne l’espace intérieur englobé par l’anneau extérieur en quatre régions distinctes.  Le dessin suivant montre ce qui s'est produit :  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

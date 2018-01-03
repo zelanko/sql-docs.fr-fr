@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ca1b0eb6ba963192597a4ebc471c09024eef3042
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Leçon 3-3 : Test des packages déployés
 Dans cette tâche, vous allez tester les packages que vous avez déployés vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -110,7 +110,7 @@ Les dossiers de niveau supérieur dans le dossier Packages stockés représenten
   
     La requête retourne 21 lignes de données. Le résultat retourné comprend les lignes provenant du fichier de données XML, orders.xml. Chaque ligne est une synthèse par pays/région ; la ligne répertorie le nom d'un pays/d'une région, le nombre de commandes par pays/région, ainsi que les dates des commandes les plus récentes et les plus anciennes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utilitaire dtexec](../integration-services/packages/dtexec-utility.md)  
   
   

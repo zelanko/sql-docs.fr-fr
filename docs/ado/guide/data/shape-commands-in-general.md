@@ -3,7 +3,7 @@ title: "En général les commandes Shape | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,20 +20,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-commands-in-general"></a>En général, les commandes de forme
 Mise en forme des données définit les colonnes d’une forme **Recordset**, les relations entre les entités représentées par les colonnes et la façon dont le **Recordset** remplie avec des données.  
   
  Une forme **Recordset** peut se composer des types de colonnes suivants.  
   
-|Type de colonne| Description|  
+|Type de colonne|Description|  
 |-----------------|-----------------|  
-|data|Des champs une **Recordset** retournées par une commande de requête à un fournisseur de données, de table ou précédemment mise en forme **Recordset**.|  
+|données|Des champs une **Recordset** retournées par une commande de requête à un fournisseur de données, de table ou précédemment mise en forme **Recordset**.|  
 |chapitre|Une référence à un autre **Recordset**, appelé un *chapitre*. Les colonnes de chapitres permettent de définir un *parent-enfant* relation où la *parent* est la **Recordset** qui contient la colonne de chapitre et le *enfant* est la **Recordset** représenté par le chapitre.|  
 |agrégat|La valeur de la colonne est obtenue par l’exécution une *fonction d’agrégation* sur toutes les lignes ou une colonne de toutes les lignes d’un enfant **Recordset**. (Voir les fonctions d’agrégation dans la rubrique suivante, [les fonctions d’agrégation, la fonction de calcul et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |Expression calculée|La valeur de la colonne est dérivée en calculant une expression Visual Basic pour Applications sur les colonnes de la même ligne de la **Recordset**. L’expression est l’argument de la fonction de calcul. (Consultez Expression calculée dans la rubrique suivante, [les fonctions d’agrégation, la fonction de calcul et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) et dans [Visual Basic pour Applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

@@ -24,13 +24,13 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bad7cdb475aa1b9416e7a0463485293e0035de8d
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 0d02b151b9197d2e6cb3f6a58161e84256a9073e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="polybase-queries"></a>PolyBase Queries
+# <a name="polybase-queries"></a>Requêtes PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cet article donne des exemples de requêtes qui utilisent la fonctionnalité [Guide PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server 2016. Avant d’utiliser ces exemples, vous devez également comprendre les instructions T-SQL nécessaires pour installer PolyBase (voir [Objets T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/12/2017
 ## <a name="select-from-external-table"></a>Requête SELECT sur une table externe  
  Requête simple qui retourne des données à partir d’une table externe définie.  
   
-```tsql  
+```sql  
 SELECT TOP 10 * FROM [dbo].[SensorData];   
 ```
   
@@ -152,7 +152,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ## <a name="export-data"></a>Exporter des données
 
-Exportez des données de SQL Server vers Hadoop ou Azure Storage. 
+Exportez des données de SQL Server vers Hadoop ou le Stockage Azure. 
 
 Tout d’abord, activez la fonctionnalité d’exportation en définissant la valeur `sp_configure` de l’option « autoriser l’exportation polybase » sur 1. Créez ensuite une table externe pointant vers le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. 
 

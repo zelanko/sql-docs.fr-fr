@@ -3,9 +3,9 @@ title: "Éditeur de requête du moteur de base de données (SQL Server Manageme
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6093f85a7efb9b10b03d24d5cb2e2efccb3e73f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Éditeur de requête du moteur de base de données (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour créer et exécuter des scripts contenant des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’éditeur prend également en charge l’exécution de scripts qui contiennent des commandes **sqlcmd** .  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sql-editor-toolbar"></a>Barre d'outils Éditeur SQL  
  Quand vous ouvrez l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , la barre d’outils Éditeur SQL s’affiche avec les boutons suivants.  
   
- **Connecter**  
+ **Se connecter**  
  Ouvre la boîte de dialogue **Se connecter au serveur** . Utilisez cette boîte de dialogue pour établir une connexion à un serveur.  
   
  **Déconnecter**  
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
  **Windows**  
  Ouvre la fenêtre **Point d’arrêt** ou la fenêtre **Immédiat** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

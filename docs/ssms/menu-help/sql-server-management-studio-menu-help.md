@@ -3,7 +3,7 @@ title: Aide de SQL Server Management Studio | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fdde0922c1f1180f845e0304a50d6fb0f0f74e04
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e33aad28b6adf835f9ab809d8d15ec0844b9648f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages accessibles à partir de la barre de menus dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 [À propos de SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   
-[Options d'enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
+[Options d’enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
   
 [Boîte de dialogue Choisir des dossiers de recherche &#40;Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   

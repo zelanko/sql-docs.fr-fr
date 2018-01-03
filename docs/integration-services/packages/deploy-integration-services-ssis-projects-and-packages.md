@@ -25,13 +25,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
-# <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages SSIS (Integration Services)
+# <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge deux modèles de déploiement : le modèle de déploiement de projet et le modèle de déploiement de package hérité. Le modèle de déploiement de projet vous permet de déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 Pour plus d’informations sur le modèle de déploiement de package hérité, consultez [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
@@ -47,14 +47,14 @@ Pour plus d’informations sur le modèle de déploiement de package hérité, c
 |Un projet est l'unité de déploiement.|Un package est l'unité de déploiement.|  
 |Des paramètres sont utilisés pour affecter des valeurs aux propriétés du package.|Des configurations sont utilisées pour affecter des valeurs aux propriétés du package.|  
 |Un projet, contenant des packages et des paramètres, est généré dans un fichier de déploiement de projet (extension .ispac).|Les packages (extension .dtsx) et les configurations (extension .dtsConfig) sont enregistrés individuellement dans le système de fichiers.|  
-|Un projet, contenant des packages et des paramètres, est déployé dans le catalogue SSISDB sur une instance de SQL Server.|Les packages et les configurations sont copiés dans le système de fichiers sur un autre ordinateur. Les packages peuvent également être enregistrés dans la base de données MSDB sur une instance de SQL Server.|  
+|Un projet, contenant des packages et des paramètres, est déployé dans le catalogue SSISDB sur une instance de SQL Server.|Les packages et les configurations sont copiés dans le système de fichiers sur un autre ordinateur. Les packages peuvent également être enregistrés dans la base de données MSDB sur une instance de SQL Server.|  
 |L'intégration du CLR est requise sur le moteur de base de données.|L'intégration du CLR n'est pas requise sur le moteur de base de données.|  
 |Les valeurs des paramètres spécifiques à l'environnement sont stockées dans des variables d'environnement.|Les valeurs de la configuration spécifique à l'environnement sont stockées dans des fichiers de configuration.|  
 |Les projets et les packages contenus dans le catalogue peuvent être validés sur le serveur avant l'exécution. Vous pouvez effectuer la validation à l'aide de SQL Server Management Studio, de procédures stockées ou de code managé.|Les packages sont validés juste avant l'exécution. Vous pouvez également valider un package avec dtExec ou du code managé.|  
 |Les packages sont exécutés en démarrant une exécution sur le moteur de base de données. Un identificateur de projet, des valeurs de paramètre explicites (facultatif) et des références environnementales (facultatif) sont affectés à une exécution avant son démarrage.<br /><br /> Vous pouvez également exécuter des packages à l'aide de **dtExec**.|Les packages sont exécutés à l'aide des utilitaires d'exécution **dtExec** et **DTExecUI** . Les configurations applicables sont identifiées par des arguments d'invite de commandes (facultatif).|  
 |Pendant l'exécution, les événements qui sont produits par le package sont automatiquement capturés et sont enregistrés dans le catalogue. Vous pouvez interroger ces événements avec des vues Transact-SQL.|Pendant l'exécution, les événements qui sont produits par un package ne sont pas automatiquement capturés. Un module fournisseur d'informations doit être ajouté au package pour capture les événements.|  
 |Les packages sont exécutés dans un processus Windows distinct.|Les packages sont exécutés dans un processus Windows distinct.|  
-|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|  
+|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|L'Agent SQL Server est utilisé pour planifier l'exécution du package.|  
   
  Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Si vous utilisez ce modèle, vous ne pouvez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. La fonctionnalité de déploiement incrémentiel de packages présentée pour la première fois dans [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.   
   
@@ -100,7 +100,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
  Pour déployer un projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], effectuez les tâches suivantes :  
   
-1.  Créez un catalogue SSISDB, si vous ne l'avez pas encore fait. Pour plus d’informations, consultez [Catalogue SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Créez un catalogue SSISDB, si vous ne l'avez pas encore fait. Pour plus d’informations, consultez [Catalogue SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  Convertissez le projet en modèle de déploiement de projet en exécutant **l’Assistant Conversion de projet Integration Services** . Pour plus d’informations, consultez les instructions ci-dessous : [Pour convertir un projet en modèle de déploiement de projet](#convert).  
   
@@ -291,7 +291,7 @@ Lancer l’Assistant en :
 
  - En tapant **« Assistant déploiement SQL Server »** dans Windows Search 
 
-**- ou -**
+**OR**
 
  - En recherchant le fichier exécutable **ISDeploymentWizard.exe** sous le dossier d’installation de SQL Server, par exemple : « C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn». 
  
@@ -341,7 +341,7 @@ Lancer l’Assistant en :
 > [!IMPORTANT]  
 >  Pour une exécution données, un package peut s'exécuter uniquement avec les valeurs contenues dans un seul environnement.  
   
- Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Pour créer et utiliser un environnement serveur  
   
@@ -361,13 +361,13 @@ Lancer l’Assistant en :
   
     3.  Entrez la **Valeur** de la variable d'environnement.  
   
-         Pour plus d'informations sur les règles énoncées pour les noms de variable d'environnement, consultez la section **Variable d'environnement** dans [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Pour plus d'informations sur les règles énoncées pour les noms de variable d'environnement, consultez la section **Variable d'environnement** dans [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Indiquez si la variable contient une valeur sensible, en activant ou désactivant la case à cocher **Sensible** .  
   
          Si vous sélectionnez **Sensible**, la valeur de la variable ne s'affiche pas dans le champ **Valeur** .  
   
-         Les valeurs sensibles sont chiffrées dans le catalogue SSISDB. Pour plus d'informations sur le chiffrement, consultez [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Les valeurs sensibles sont chiffrées dans le catalogue SSISDB. Pour plus d'informations sur le chiffrement, consultez [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  Dans la page **Autorisations** , accordez ou refusez des autorisations pour les rôles et les utilisateurs sélectionnés en procédant comme suit.  
   
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Utiliser l'authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifie la connexion en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
   
- **Nom d'utilisateur**  
+ **User name**  
  Spécifiez un nom d'utilisateur lorsque vous utilisez l'authentification SQL Server.  
   
  **Mot de passe**  
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **État**  
  Indique si un package est prêt à être converti en modèle de déploiement de projet.  
   
- **Boîte de**  
+ **Message**  
  Affiche un message associé au package.  
   
  **Mot de passe**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Portée**  
  Indique l'étendue du paramètre.  
   
- **Valeur**  
+ **Value**  
  Indique la valeur du paramètre.  
   
  Cliquez sur le bouton de sélection en regard du champ de valeur pour configurer les propriétés du paramètre.  

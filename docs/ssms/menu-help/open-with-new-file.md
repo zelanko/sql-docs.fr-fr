@@ -3,7 +3,7 @@ title: Ouvrir avec (Nouveau fichier) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ouvrir un document dans un ou plusieurs éditeurs en cliquant sur **Ouvrir** dans le menu **Fichier**, puis en cliquant sur **Fichier**. Dans la boîte de dialogue **Ouvrir un fichier** , sélectionnez le fichier, cliquez sur la flèche **Ouvrir** , puis cliquez sur **Ouvrir avec**. Dans la boîte de dialogue **Ouvrir avec** , dans la liste **Sélectionnez le programme à ouvrir** , cliquez sur le programme de votre choix, puis cliquez sur **Ouvrir**.  
@@ -47,6 +47,6 @@ Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’e
 > [!NOTE]  
 > Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Association d’extensions de fichier à un éditeur de code](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   

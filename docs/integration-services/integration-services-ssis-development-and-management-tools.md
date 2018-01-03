@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 07f4bba6b5a5312d62898f26b1ed6965f72cbec2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b78023eab9f0a737276e02c76a0ef27ce16c3002
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Outils de gestion et de développement Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut deux studios pour travailler avec des packages :  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour la gestion de packages dans un environnement de production.  
   
-## <a name="sql-server-data-tools"></a>Outils de données SQL Server  
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Vous pouvez réaliser les tâches suivantes dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
   
 -   exécuter l'Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour créer des packages de base qui copient des données entre une source et une destination ;  

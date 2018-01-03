@@ -3,7 +3,7 @@ title: "Fenêtre de sortie SSMS | Microsoft Docs"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,18 +21,18 @@ author: shueybubbles
 ms.author: davidshi
 manager: kenvh
 ms.workload: Inactive
-ms.openlocfilehash: 68fedd92d79f508e0b85f369019a886356ed8475
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 915b63d0913131bf817c06d7980c35c5904daf30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Fenêtre de sortie dans SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ouvrir la fenêtre de sortie à partir du menu Affichage ou avec la combinaison de touches Ctrl+Alt+O. Il existe plusieurs canaux de sortie disponibles.
 
 Le tableau suivant donne une vue d’ensemble des types de messages associés à chaque canal de sortie.
 
-|Channel| Description|
+|Channel|Description|
 |-----------|---------------|  
 |**Télémétrie**|La télémétrie est le flux des [données d’utilisation des fonctionnalités anonymes](sql-server-management-studio-ssms.md) collectées par Microsoft. Ces événements peuvent être utiles pour votre archivage des données d’utilisation de SSMS. Elle peut vous permettre d’identifier les nœuds de l’Explorateur d’objets que vous avez développés et les commandes que vous avez exécutées pendant votre session SSMS avec la fenêtre de sortie ouverte.|
 |**l’Explorateur d’objets**|Ce canal renvoie le texte de la requête et le temps écoulé des requêtes SQL nécessaires pour développer les nœuds dans l’Explorateur d’objets. Chaque requête journalise une requête Begin et un événement End Query. Chaque événement a un horodatage et l’URN associé à l’entité faisant l’objet d’une requête. L’[URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) fait référence à l’objet SQL Management Object sous-jacent et se compose d’une hiérarchie de style XPath. Par exemple, l’URN d’une table nommée « Table1 » dans la base de données « Db » sur le serveur « MyServer » est "Server [@Name= 'MyServer']/Database[@Name='Db']/Table[/@Name='Table1']". Le développement d’un nœud dans l’Explorateur d’objets peut effectuer plusieurs requêtes de ce type avec des paramètres différents. L’événement End Query contient le temps écoulé de la requête, ainsi que le texte TSQL. Vous trouverez ces données de requête utiles pour l’analyse des performances de serveur quand l’Explorateur d’objets semble anormalement lent pour développer un nœud spécifique. **Remarque** : Les nœuds de l’Explorateur d’objets ne fournissent pas tous ce niveau de détail de requête lors du développement.|

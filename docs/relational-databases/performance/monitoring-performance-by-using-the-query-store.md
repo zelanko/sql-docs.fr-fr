@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="use-transact-sql-statements"></a>Utilisation d’instructions Transact-SQL  
   
-1.  Utilisez l’instruction **ALTER DATABASE** pour activer le magasin de requêtes. Par exemple :  
+1.  Utilisez l’instruction **ALTER DATABASE** pour activer le magasin de requêtes. Exemple :  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -90,7 +90,7 @@ Le Magasin des requêtes contient trois magasins :
   
  La requête suivante retourne des informations sur les requêtes et plans du magasin de requêtes.  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -200,7 +200,7 @@ Les options suivantes sont disponibles pour configurer les paramètres du magasi
   
  Interrogez [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) pour déterminer si le magasin de requêtes est actif et s’il collecte des statistiques d’exécution.  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +213,7 @@ Lorsque la taille du magasin de requête dépasse le quota, la fonctionnalité p
   
  Pour trouver des informations détaillées sur l'état du magasin de requêtes, exécutez ce qui suit dans une base de données utilisateur.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +221,7 @@ SELECT * FROM sys.database_query_store_options;
   
  Vous pouvez remplacer l'intervalle d'agrégation des statistiques d'exécution de requête (la valeur par défaut est 60 minutes).  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +235,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  Pour vérifier la taille et la limite actuelles du magasin de requête, exécutez l’instruction suivante dans la base de données utilisateur.  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  Si le stockage du magasin de requêtes est saturé, utilisez l'instruction suivante pour l’étendre.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +251,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  Vous pouvez définir simultanément plusieurs options de magasin de requêtes avec l'instruction ALTER DATABASE.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +270,7 @@ SET QUERY_STORE (
   
  Les tables internes du magasin de requêtes sont créées dans le groupe de fichiers PRIMARY lors de la création de la base de données. Cette configuration ne peut pas être modifiée ultérieurement. Si vous manquez d'espace, vous pouvez effacer les anciennes données du magasin de requêtes à l'aide de l'instruction suivante.  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +278,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **Supprimer des requêtes ad-hoc** Cette opération supprime les requêtes qui ont été exécutées une seule fois et qui datent de plus de 24 heures.  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -321,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  ***n* dernières requêtes exécutées sur la base de données ?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +336,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **Nombre d’exécutions de chaque requête ?**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +352,7 @@ ORDER BY total_execution_count DESC;
   
  **Nombre de requêtes avec la durée moyenne d’exécution la plus longue au cours de la dernière heure ?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +369,7 @@ ORDER BY rs.avg_duration DESC;
   
  **Nombre de requêtes ayant la plus grande moyenne de lectures d’E/S physiques au cours des dernières 24 heures, avec le nombre moyen de lignes et d’exécutions correspondant ?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +388,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **Requêtes avec plusieurs plans ?** Ces requêtes sont particulièrement intéressantes, car elles sont adaptées aux régressions dues à un changement de plan. La requête suivante identifie ces requêtes, ainsi que tous les plans :  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +417,7 @@ ORDER BY query_id, plan_id;
   
  **Requêtes ayant récemment régressé en termes de performances (en comparant avec d’autres points dans le temps) ?** L'exemple de requête suivant retourne toutes les requêtes dont le temps d'exécution a doublé au cours des dernières 48 heures suite à un changement de plan. La requête compare tous les intervalles de statistiques d'exécution côte à côte.  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +457,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **Quelles sont les requêtes qui attendent le plus ?**
 Cette requête retourne les 10 premières requêtes qui attendent le plus. 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +473,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **Requêtes ayant récemment régressé en termes de performances (en comparant les exécutions récentes à l’historique) ?** La requête suivante compare l'exécution des requête en fonction des périodes d'exécution. Dans cet exemple spécifique, la requête compare l’exécution pendant une période récente (1 heure) et l’exécution pendant une période historique (la veille), puis identifie celle qui a introduit `additional_duration_workload`. Cette mesure est calculée comme suit : différence entre la moyenne des exécutions récentes et la moyenne des exécutions historiques, multipliée par le nombre d'exécutions récentes. Elle représente en fait la durée supplémentaire introduite dans les exécutions récentes en comparaison avec les exécutions historiques :  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -562,7 +562,7 @@ OPTION (MERGE JOIN);
   
  **Forcer un plan pour une requête (appliquer une stratégie de forçage).** Lorsqu'un plan est forcé pour une requête donnée, chaque fois qu'une requête est exécutée, elle l'est avec le plan forcé.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,18 +570,18 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **Supprimer l’application forcée du plan pour une requête.** Pour vous appuyer à nouveau sur l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer le plan de requête optimal, utilisez **sp_query_store_unforce_plan** pour annuler l’application forcée du plan qui était sélectionné pour la requête.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Utilisation du Magasin des requêtes avec l’OLTP en mémoire](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md)   
  [Comment le Magasin des requêtes collecte les données](../../relational-databases/performance/how-query-store-collects-data.md)   
  [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [Affichages catalogue du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [Ouvrir le Moniteur d’activité &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   
  [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)   

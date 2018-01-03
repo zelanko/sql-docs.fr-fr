@@ -3,7 +3,7 @@ title: Interface ADORecordConstruction | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 02a70364256177b3df405bac1601128d6df83594
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cedc7639b0b5c1559fe137be96c822287a3ff82
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adorecordconstruction-interface"></a>Interface ADORecordConstruction
 Le **ADORecordConstruction**interface est utilisée pour construire un ADO **enregistrement** objet OLE DB **ligne** objet dans une application C/C++.  
@@ -44,7 +44,7 @@ Le **ADORecordConstruction**interface est utilisée pour construire un ADO **enr
 ## <a name="events"></a>Événements  
  Aucun.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Étant donné un OLE DB **ligne** objet (`pRow`), la construction de ADO **enregistrement** objet (`adoR`), s’élève à trois opérations ci-après :  
   
 1.  Créer un ADO **enregistrement** objet :  

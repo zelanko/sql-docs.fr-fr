@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b63ac7f650bdc3e333bb50a19021a48c65dee1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0146839adf62839b6f319df6407a4afad8e1f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Créer un jeu d’éléments de collecte - Type de collecteur Requête T-SQL générique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez créer un jeu d’éléments de collecte personnalisé avec des éléments de collecte qui utilisent le type de collecteur Requête T-SQL générique à l’aide des procédures stockées fournies avec le collecteur de données. Accomplir cette tâche implique l'utilisation de l'éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour effectuer les procédures suivantes :  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Le nouvel élément de collecte étant basé sur un type de collecteur générique déjà installé, vous pouvez exécuter le code suivant pour définir le GUID de sorte qu'il corresponde au type de collecteur Requête T-SQL générique.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Utilisez la procédure stockée sp_syscollector_create_collection_item pour créer l'élément de collecte. Déclarez le schéma de l'élément de collecte de manière à ce qu'il soit mappé au schéma requis pour le type de collecteur Requête T-SQL générique.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Avant de démarrer le nouveau jeu d'éléments de collecte, exécutez la requête suivante pour vérifier que le nouveau jeu d'éléments de collecte et son élément de collecte ont été créés.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -123,10 +123,10 @@ ms.lasthandoff: 11/17/2017
   
      Vous pouvez également procéder à un contrôle visuel dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans l’Explorateur d’objets, développez le nœud **Gestion** , puis développez **Collecte de données**. Le nouveau jeu d'éléments de collecte s'affiche. Le cercle rouge sur l'icône du jeu d'éléments de collecte indique que ce dernier est arrêté.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant combine les exemples documentés dans les étapes précédentes. Notez que la fréquence de collecte définie pour l'élément de collecte (5 secondes) est ignorée, car le mode de collecte du jeu d'éléments de collecte est défini sur 0, ce qui correspond au mode avec mise en cache. Pour plus d'informations, consultez [Data Collection](../../relational-databases/data-collection/data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  
@@ -166,9 +166,9 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Gérer les planifications](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
- [Démarrer ou arrêter un jeu d'éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
+ [Démarrer ou arrêter un jeu d’éléments de collecte](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

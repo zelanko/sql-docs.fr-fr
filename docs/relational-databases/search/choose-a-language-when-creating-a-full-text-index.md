@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Choisir une langue lors de la création d'un index de recherche en texte intégral
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Lorsque vous créez un index de recherche en texte intégral, vous devez spécifier une langue au niveau de la colonne pour la colonne indexée. L’ [analyseur lexical et les générateurs de formes dérivées](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) de la langue spécifiée seront utilisés par les requêtes de texte intégral sur la colonne. Plusieurs aspects doivent être pris en considération pour le choix de la langue d'une colonne lors de la création d'un index de texte intégral. Ces aspects sont liés à la façon dont les unités lexicales de votre texte sont créées et à la façon dont ce texte est ensuite indexé par le Moteur d'indexation et de recherche en texte intégral.  
   
 > [!NOTE]  
@@ -44,7 +49,7 @@ ms.lasthandoff: 12/01/2017
 > [!NOTE]  
 >  Le Microsoft Natural Language Group (MS NLG) a implémenté et prend en charge ces nouveaux composants linguistiques.  
   
- Les avantages de ces nouveaux analyseurs lexicaux sont les suivants :  
+ Les avantages de ces nouveaux analyseurs lexicaux sont les suivants :  
   
 -   Robustesse  
   
@@ -116,7 +121,7 @@ ms.lasthandoff: 12/01/2017
  Par défaut, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la recherche en texte intégral analyse les termes de la requête en utilisant la langue spécifiée pour chaque colonne incluse dans la clause de texte intégral. Pour remplacer ce comportement, spécifiez une langue autre que par défaut au moment de la requête. Pour les langues prises en charge dont les ressources sont installées, la clause LANGUAGE *language_term* d’une requête [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)ou [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) est utilisée pour spécifier la langue utilisée pour l’analyse lexicale, la recherche de radical, le dictionnaire des synonymes et le traitement des mots vides des termes de la requête.  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

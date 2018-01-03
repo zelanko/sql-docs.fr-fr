@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, prerequisites
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8449ce51322ebc605bbfb8a5406e92489334dda
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc9be5bd8809f274d1f895952f2fd201a01a25a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Configuration requise pour l’utilisation de la Documentation ADO
 Pour utiliser cette documentation, vous devez, au minimum, de l’expérience dans le développement d’applications avec Microsoft Visual Basic, car la plupart des exemples dans le guide sont écrits dans cette langue. Il existe également quelques exemples écrits en Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) et Microsoft JScript.  

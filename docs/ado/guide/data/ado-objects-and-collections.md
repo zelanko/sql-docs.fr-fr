@@ -3,7 +3,7 @@ title: Collections et les objets ADO | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a6796b6511c81dc2a4f9100f656478bef3711b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b2bd4d1caf6ad0f2b180804407aede35155208e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-objects-and-collections"></a>Collections et les objets ADO
 ADO comprend les objets suivants de neuf et quatre regroupements.  
   
-|Objet ou la Collection| Description|  
+|Objet ou la Collection|Description|  
 |--------------------------|-----------------|  
 |**Connexion** objet|Représente une session unique avec une source de données. Dans le cas d’un système de base de données client/serveur, il peut être équivalente à une connexion réseau réelle au serveur. Selon les fonctionnalités prises en charge par le fournisseur, certaines collections, des méthodes ou propriétés d’un **connexion** objet n’est peut-être pas disponible.|  
 |Objet**Command** |Permet de définir une commande spécifique, comme une requête SQL, destinée à s’exécuter sur une source de données.|  

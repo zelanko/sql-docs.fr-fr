@@ -3,7 +3,7 @@ title: "Déterminer le Mode Édition | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3ffee8b910c5e13754c461671a00380d348f3f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2d11cdcaf0c7f56fcce7420b530b8b179f36f514
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-edit-mode"></a>Déterminer le Mode d’édition
 ADO gère un tampon d’édition associé à l’enregistrement actif. Le **EditMode** propriété indique si les modifications ont été apportées à cette mémoire tampon ou si un enregistrement a été créé. Utilisez **EditMode** pour déterminer l’état de modification de l’enregistrement actif. Vous pouvez tester les modifications en attente si un processus de modification a été interrompu et déterminer si vous devez utiliser le **mise à jour** ou **CancelUpdate** (méthode).  
   
  **EditMode** renvoie un de le **EditModeEnum** constantes, qui sont répertoriées dans le tableau suivant.  
   
-|Constante| Description|  
+|Constante|Description|  
 |--------------|-----------------|  
 |**adEditNone**|Indique qu’aucune opération de modification n’est en cours.|  
 |**adEditInProgress**|Indique que les données dans l’enregistrement actif ont été modifiées mais ne pas enregistrées.|  

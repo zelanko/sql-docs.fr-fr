@@ -3,7 +3,7 @@ title: "Options d’enregistrement avancées | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c75d958c7cca998117b03821857157cf2eb9355
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="advanced-save-options"></a>Options d'enregistrement avancées
+# <a name="advanced-save-options"></a>Options d’enregistrement avancées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez cette boîte de dialogue pour sélectionner un schéma d’encodage linguistique et spécifier les caractères à insérer à la fin de chaque ligne. Pour accéder à la boîte de dialogue **Options d’enregistrement avancées** , dans le menu **Fichier** , cliquez sur **Enregistrer** <query name>**.sql sous** pour ouvrir la boîte de dialogue **Enregistrer Fichier As** , cliquez sur la flèche vers le bas sur le bouton **Enregistrer** , puis cliquez sur **Enregistrer with Encoding**.  
   
 ## <a name="options"></a>Options  

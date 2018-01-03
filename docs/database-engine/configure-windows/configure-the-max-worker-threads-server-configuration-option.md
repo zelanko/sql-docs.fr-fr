@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e800424a84c6d1a992bcdfeae5104e885872f37
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: c21bd96e0d30b3656a80f0d2f240ebdbc37692ff
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/28/2017
   
  L'option de configuration du serveur **max worker threads** (nombre maximal de threads de travail) ne prend pas en compte les threads requis pour toutes les tâches système, telles que les groupes de disponibilité, Service Broker, le gestionnaire de verrous et autres. Si le nombre de threads configurés est dépassé, la requête suivante fournit des informations sur les tâches système qui ont engendré les threads supplémentaires.  
   
- ```t-sql  
+ ```sql  
  SELECT  s.session_id, r.command, r.status,  
     r.wait_type, r.scheduler_id, w.worker_address,  
     w.is_preemptive, w.state, t.task_state,  
@@ -107,14 +107,14 @@ ms.lasthandoff: 11/28/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Pour configurer l'option max worker threads  
   
-1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis sélectionnez **Propriétés**.  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur et sélectionnez **Propriétés**.  
   
 2.  Cliquez sur le nœud **Processeurs** .  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) pour attribuer à l’option `max worker threads` la valeur `900`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -150,9 +150,9 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option max worker threads  
  Le changement prend effet immédiatement après l’exécution de [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), sans nécessiter le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
- [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+## <a name="see-also"></a> Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   

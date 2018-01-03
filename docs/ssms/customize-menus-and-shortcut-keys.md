@@ -3,7 +3,7 @@ title: Personnaliser des menus et des touches de raccourci | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 04f57c9717643065fa50f1364586b9b886c92c4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790f0a159366986a193bbfd4509f92d65ec5492
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*<single letter>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
@@ -166,6 +166,6 @@ Les touches d’accès rapides pour les procédures stockées qui utilisent la t
 > [!NOTE]  
 > Certaines commandes sont disponibles uniquement lorsque [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] affiche le contenu pertinent. Si aucune commande du menu n'est disponible, l'élément de menu ne le sera pas non plus.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Fonctionnalités de SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
   

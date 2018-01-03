@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Leçon 5-2 : Activation et configuration des configurations de package
 Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété **Directory** du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  
@@ -66,7 +66,7 @@ Au cours de cette tâche, vous allez convertir le projet en modèle de déploiem
   
 2.  Cliquez sur **OK** dans la boîte de dialogue d’avertissement et, une fois la conversion terminée, cliquez sur **OK** dans la boîte de dialogue **Convertir en modèle de déploiement de package** .  
   
-3.  Cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+3.  Cliquez sur l’arrière-plan de l’onglet **Flux de contrôle** dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 4.  Dans le menu **SSIS** , cliquez sur **Configurations du package**.  
   

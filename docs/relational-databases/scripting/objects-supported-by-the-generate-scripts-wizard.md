@@ -3,9 +3,9 @@ title: "Objets pris en charge par l’Assistant Génération de scripts | Micros
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87fde29aab8338f096d2132b13011e44fcf96014
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b775783cf11a74bbf5ddfd2641f8dc6b483a6ff
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Objets pris en charge par l'Assistant Génération de scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L’Assistant Générer et publier des scripts prend en charge un sous-ensemble des objets pris en charge par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -31,10 +31,10 @@ ms.lasthandoff: 11/17/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Rôle d'application|Rôle de base de données|Schéma|Agrégat défini par l'utilisateur|Affichage*|  
+|Rôle d'application|Rôle de base de données|schéma|Agrégat défini par l'utilisateur|Affichage*|  
 |Assembly|Contrainte DEFAULT|Procédure stockée*|Type de données défini par l'utilisateur|Collection de schémas XML|  
 |Contrainte CHECK|Catalogue de texte intégral|Synonyme|Fonction définie par l'utilisateur||  
-|Procédure stockée CLR (Common Language Runtime)|Index|Table|Table définie par l'utilisateur||  
+|Procédure stockée CLR (Common Language Runtime)|Index|Table de charge de travail|Table définie par l'utilisateur||  
 |Fonction CLR définie par l'utilisateur|Règle|Utilisateur**|Type défini par l'utilisateur||  
   
  *Publié sans chiffrement.  

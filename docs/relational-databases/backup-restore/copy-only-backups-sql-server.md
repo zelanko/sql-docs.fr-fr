@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a9709fa0261784ecb39fa74a90a139a3ecbdd82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b95da2182f5ec836dab827dd959ba3d6607a249e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="copy-only-backups-sql-server"></a>Sauvegardes de type copie seule (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Une *sauvegarde de copie uniquement* est une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indépendante du mécanisme des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conventionnelles. Normalement, une sauvegarde modifie la base de données et affecte la restauration des sauvegardes ultérieures. Parfois, cependant, il est utile d'effectuer une sauvegarde à une fin précise sans affecter les procédures globales de sauvegarde et de restauration de la base de données. Pour cela, on peut recourir à une sauvegarde de copie uniquement.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
  Vous pouvez créer une sauvegarde de copie uniquement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  
 
 ### <a name="examples"></a>Exemples  
-###  <a name="SSMSProcedure"></a> A.  Utilisation de SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> A.  Utilisation de SQL Server Management Studio  
 Dans cet exemple, une sauvegarde de copie seule de la base de données `Sales` sauvegardée sur le disque à l’emplacement de sauvegarde par défaut.
 
 1.  Dans l’ **Explorateur d’objets**, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.
@@ -65,7 +65,7 @@ Dans cet exemple, une sauvegarde de copie seule de la base de données `Sales` s
 ###  <a name="TsqlProcedure"></a>B.  Utilisation de Transact-SQL  
 Cet exemple crée une sauvegarde de copie seule pour la base de données `Sales` utilisant le paramètre COPY_ONLY.  Une sauvegarde de copie seule du journal des transactions est également prise.
 
-```tsql
+```sql
 BACKUP DATABASE Sales
 TO DISK = 'E:\BAK\Sales_Copy.bak'
 WITH COPY_ONLY;
@@ -98,10 +98,10 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

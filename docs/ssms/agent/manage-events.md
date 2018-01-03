@@ -3,7 +3,7 @@ title: "Gérer les événements | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 816b06ef6e3e55147f3e9681fdc50065124461f7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5532a94ac54eaad01c046e8249e2541f1784c395
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-events"></a>Gérer les événements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tous les messages d’événements qui correspondent à un niveau de gravité d’erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
@@ -93,6 +93,6 @@ Vous pouvez définir un travail à exécuter en réponse à une alerte. Par exem
 > [!NOTE]  
 > Un travail pouvant déclencher un événement, veillez à ne pas créer de boucle récursive de travail d'alerte.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

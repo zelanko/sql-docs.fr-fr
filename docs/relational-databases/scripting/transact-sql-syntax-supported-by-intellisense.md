@@ -3,9 +3,9 @@ title: Syntaxe Transact-SQL prise en charge par IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bec5a6542bc3095df0414c77af09acbb2ec05020
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6316251928dd147230e0849f0468a3848ef7d779
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Syntaxe Transact-SQL prise en charge par IntelliSense
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique décrit les instructions et les éléments syntaxiques [!INCLUDE[tsql](../../includes/tsql-md.md)] pris en charge par IntelliSense dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -52,17 +52,17 @@ ms.lasthandoff: 11/17/2017
   
 |Instruction Transact-SQL|Syntaxe prise en charge|Exceptions|  
 |-----------------------------|----------------------|----------------|  
-|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toute la syntaxe, sauf la clause *execute_statement* .|Aucune|  
-|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toute la syntaxe.|Aucune|  
-|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toute la syntaxe.|Aucune|  
-|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toute la syntaxe.|Aucune|  
-|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Toute la syntaxe.|Aucune|  
-|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Exécution des procédures stockées définies par l'utilisateur, des procédures stockées système, des fonctions définies par l'utilisateur et des fonctions système.|Aucune|  
-|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Toute la syntaxe.|Aucune|  
-|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Toute la syntaxe.|Aucune|  
+|[INSERT](../../t-sql/statements/insert-transact-sql.md)|Toute la syntaxe, sauf la clause *execute_statement* .|None|  
+|[UPDATE](../../t-sql/queries/update-transact-sql.md)|Toute la syntaxe.|None|  
+|[DELETE](../../t-sql/statements/delete-transact-sql.md)|Toute la syntaxe.|None|  
+|[DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)|Toute la syntaxe.|None|  
+|[SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)|Toute la syntaxe.|None|  
+|[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)|Exécution des procédures stockées définies par l'utilisateur, des procédures stockées système, des fonctions définies par l'utilisateur et des fonctions système.|None|  
+|[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)|Toute la syntaxe.|None|  
+|[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)|Toute la syntaxe.|None|  
 |[CREATE PROCEDURE](../../t-sql/statements/create-procedure-transact-sql.md)|Toute la syntaxe.|Il n'existe aucune prise en charge IntelliSense pour la clause EXTERNAL NAME.<br /><br /> Dans la clause AS, IntelliSense prend uniquement en charge les instructions et la syntaxe répertoriées dans cette rubrique.|  
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|Toute la syntaxe.|Il n'existe aucune prise en charge IntelliSense pour la clause EXTERNAL NAME.<br /><br /> Dans la clause AS, IntelliSense prend uniquement en charge les instructions et la syntaxe répertoriées dans cette rubrique.|  
-|[USE](../../t-sql/language-elements/use-transact-sql.md)|Toute la syntaxe.|Aucune|  
+|[USE](../../t-sql/language-elements/use-transact-sql.md)|Toute la syntaxe.|None|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense dans les instructions prises en charge  
  IntelliSense dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les éléments syntaxiques suivants quand ils sont utilisés dans l’une des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] prises en charge :  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Tables, vues, fonctions table et expressions de table  
   
-    -   Columns  
+    -   Colonnes  
   
     -   Procédures et paramètres de procédure  
   

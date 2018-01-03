@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 417d9cea0efa946e5180776f629f221a8bb1b545
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Leçon 6-4 : Déploiement du package de la Leçon 6
 Pour déployer le package, vous devez l'ajouter au catalogue SSISDB dans Integration Services sur une instance de SQL Server. Dans cette leçon, vous allez ajouter le package de la leçon 6 au catalogue SSISDB, définir le paramètre, puis exécuter le package. Dans le cadre de cette leçon, vous utiliserez SQL Server Management Studio pour ajouter le package de la leçon 6 au catalogue SSISDB et déployer le package. Une fois le package déployé, vous modifierez le paramètre de façon à ce qu'il pointe vers un nouvel emplacement, puis vous exécuterez le package.  

@@ -3,7 +3,7 @@ title: "La récupération des jeux de résultats en flux | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7bca240a384ef3e8a3e6bbd2a59731cc8861136d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>La récupération des jeux de résultats dans le flux de données
 Au lieu de recevoir les résultats dans traditionnel **Recordset** objet ADO peut récupérer à la place les résultats de la requête dans un flux de données. ADO **flux** objet (ou d’autres objets qui prennent en charge le modèle COM **IStream** interface, telles que ASP **demande** et **réponse** objets ) peut être utilisé pour contenir ces résultats. Une utilisation de cette fonctionnalité consiste à récupérer les résultats au format XML. Avec SQL Server, par exemple, les résultats XML peuvent être retournés de plusieurs façons, par exemple à l’aide de la clause FOR XML avec une requête SQL SELECT ou une requête XPath.  
@@ -184,5 +184,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Notes   
  À ce stade, XML a été transmis au navigateur client et il est prêt à être affiché. Cela permet à l’aide de code VBScript côté client pour lier le document XML à une instance de DOM et exécuter une boucle dans chaque nœud enfant pour générer une liste de produits au format HTML.

@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 175d7015137566ae5d9ecf2de97698395679eca2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 404829831ddf4958c19fa89eae9eb8c8fbd7077f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Sauvegarder un journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment sauvegarder un journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de PowerShell.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 -   Par défaut, chaque opération de sauvegarde réussie ajoute une entrée au journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et au journal des événements système. Si vous sauvegardez fréquemment le journal, ces messages de réussite peuvent rapidement s’accumuler, créer des journaux d’erreurs très volumineux et compliquer la recherche d’autres messages. Dans de tels cas, vous pouvez supprimer ces entrées de journal en utilisant l’indicateur de trace 3226 si aucun de vos scripts ne dépend de ces entrées. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
 **Vérifiez que vous disposez des autorisations appropriées avant de commencer !** 
 
 Les autorisations BACKUP DATABASE et BACKUP LOG requises sont octroyées par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
@@ -116,7 +116,7 @@ Les autorisations BACKUP DATABASE et BACKUP LOG requises sont octroyées par dé
   
          Une sauvegarde de la fin du journal est effectuée après une défaillance pour éviter de perdre des données. Sauvegardez le journal actif (sauvegarde de la fin du journal) après une défaillance, avant de commencer la restauration de la base de données ou en cas de basculement sur une base de données secondaire. Sélectionner cette option équivaut à spécifier l'option NORECOVERY dans l'instruction BACKUP LOG de Transact-SQL. Pour plus d’informations sur les sauvegardes de la fin du journal, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
-16. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général**), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
+16. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général** ), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
   
 17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] et versions ultérieures prennent en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Par défaut, la compression d’une sauvegarde dépend de la valeur de l’option de configuration de serveur **Compression par défaut des sauvegardes** . Toutefois, quelle que soit la valeur par défaut actuelle au niveau du serveur, vous pouvez compresser une sauvegarde en activant **Compresser la sauvegarde**, et vous pouvez empêcher la compression en activant **Ne pas compresser la sauvegarde**.  
   
@@ -151,7 +151,7 @@ Les autorisations BACKUP DATABASE et BACKUP LOG requises sont octroyées par dé
   
  L'exemple suivant crée une sauvegarde du journal des transactions pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur l'unité de sauvegarde nommée qui a été précédemment créée, `MyAdvWorks_FullRM_log1`.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  
@@ -182,7 +182,7 @@ GO
   
 ## <a name="more-information"></a>Informations complémentaires 
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
   

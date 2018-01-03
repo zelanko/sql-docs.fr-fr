@@ -3,9 +3,9 @@ title: "Éditeur XML (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c7f2e3e338e1d8d2bc7df6cc8fb344213e05ed4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ff569edefb2e65e5586ff645584afe755dd4df9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Fournit un ensemble d’outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Cliquez sur l'icône moins (-) de l'élément le plus bas que vous souhaitez afficher dans le concepteur.  
   
-## <a name="data-view"></a>Mode Données  
+## <a name="data-view"></a>Vue de données  
  Le mode Données affiche une grille de données dont vous pouvez vous servir pour modifier les fichiers .xml. Seul le contenu d'un fichier XML (pas les balises ni la structure) peut être modifié en mode Données.  
   
  Il y a deux zones séparées en mode Données : **Tables de données** et **Données**. La zone **Tables de données** est une liste des relations définies à l’intérieur du fichier XML, dans l’ordre de leur imbrication (en allant de l’extérieur vers l’intérieur). La zone **Données** est une grille de données qui affiche les données en fonction de la sélection effectuée dans la zone Tables de données.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="showplan-view"></a>Mode SHOWPLAN  
  Les plans de requête peuvent être enregistrés au format XML lorsqu'ils sont créés à l'aide de l'option SET SHOWPLAN_XML ON. Double-cliquez sur un fichier se terminant par l'extension .showplan pour ouvrir le plan de requête.  
   
-## <a name="see-also"></a>Voir aussi  
- [Enregistrer un plan d'exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Enregistrer un plan d’exécution au format XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

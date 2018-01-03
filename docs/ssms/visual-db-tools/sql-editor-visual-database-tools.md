@@ -3,7 +3,7 @@ title: "Éditeur SQL (Visual Database Tools) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4abc54346419e0ba6281e71d583cf0a4e571caf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>Éditeur SQL (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez l’Éditeur SQL pour modifier des procédures stockées, fonctions, déclencheurs et scripts SQL existants. Cette fenêtre s'affiche lorsque vous ouvrez l'un de ces objets. Si vous souhaitez créer une instruction SQL à exécuter sur votre source de données, utilisez le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) du Concepteur de requêtes.  
@@ -54,6 +54,6 @@ L'Éditeur SQL fournit de nombreuses fonctionnalités pratiques de modification 
   
 Lorsque vous modifiez des instructions SQL, certaines instructions Transact-SQL apparaissent dans une zone entourée d'un trait fin. Cela vous aide à mieux appréhender les sections de commandes du code SQL et à identifier les blocs d'instructions SQL qui peuvent être conçus de manière graphique à l'aide du Concepteur de requêtes. Pour plus d’informations sur l’utilisation du Concepteur de requêtes, consultez [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

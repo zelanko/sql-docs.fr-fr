@@ -3,9 +3,9 @@ title: "Configurer des règles de pare-feu avant d’exécuter le débogueur TSQ
 ms.custom: 
 ms.date: 10/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c2f422427764fce597607afdd9a259b11544a1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous devez configurer des règles de Pare-feu Windows pour permettre le débogage [!INCLUDE[tsql](../../includes/tsql-md.md)] en cas de connexion à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui s’exécute sur un autre ordinateur que l’Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/17/2017
 
 * Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service SQL Server est exécuté doit avoir des autorisations d’authentification pour le client  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter le débogueur Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   

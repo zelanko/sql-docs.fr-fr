@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ac9a4b15d48f9c5f9ac9a25a932d9acec798e31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dd4c11bc8b7fcaad34aa085e3406f31529793954
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changesets-master-data-services"></a>Ensembles de modifications (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] prend désormais en charge la possibilité d’enregistrer les modifications en attente dans une entité comme ensembles de modifications. Cette fonctionnalité peut être utilisée dans deux scénarios.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/20/2017
   
     1.  Vous créez un ensemble de modifications. L’ensemble de modifications est dans l’état Ouvert. Consultez [Créer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  Vous appliquez l’ensemble de modifications et ajoutez des modifications à l’ensemble de modifications. Consultez [Appliquer et mettre à jour un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  Vous appliquez l’ensemble de modifications et ajoutez des modifications à l’ensemble de modifications. Consultez [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  Vous soumettez l’ensemble de modifications à l’administrateur d’entité pour approbation. L’ensemble de modifications est dans l’état En attente. Consultez [Valider ou envoyer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
     3.  Lorsque vous êtes prêt, vous validez l’ensemble de modifications. Consultez [Valider ou envoyer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Créer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Appliquer et mettre à jour un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [Valider ou envoyer un ensemble de modifications &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   

@@ -5,7 +5,7 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: quick-start
 ms.suite: sql
 ms.custom: 
 ms.technology: integration-services
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 068f54a757e16c7b44760cbb69dee4a4d5cb70ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fa245a3411b175e1bf9b8f95d473d2980eb0f47c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Déployer un projet SSIS à partir de SSMS avec Transact-SQL
 
@@ -28,7 +28,7 @@ Ce guide de démarrage rapide montre comment utiliser SQL Server Management Stud
 
 SQL Server Management Studio est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. Pour plus d’informations sur SSMS, consultez [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Prerequisites
 
 Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio. Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -41,15 +41,15 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
 
 1. Ouvrez SQL Server Management Studio.
 
-2. Dans la boîte de dialogue **Se connecter au serveur**, entrez les informations suivantes :
+2. Dans la boîte de dialogue **Se connecter au serveur**, entrez les informations suivantes :
 
    | Paramètre       | Valeur suggérée | En savoir plus | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Type de serveur** | Moteur de base de données | Cette valeur est requise. |
    | **Nom du serveur** | Nom complet du serveur |  |
    | **Authentification** | Authentification SQL Server | Ce guide de démarrage rapide utilise l’authentification SQL. |
-   | **Connexion** | Compte d’administrateur de serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
-   | **Mot de passe** | Mot de passe de votre compte d’administrateur de serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
+   | **Connexion** | Compte Administrateur du serveur | Il s’agit du compte que vous avez spécifié quand vous avez créé le serveur. |
+   | **Mot de passe** | Mot de passe du compte Administrateur de votre serveur | Il s’agit du mot de passe que vous avez spécifié quand vous avez créé le serveur. |
 
 3. Cliquez sur **Se connecter**. La fenêtre Explorateur d’objets s’ouvre dans SSMS. 
 

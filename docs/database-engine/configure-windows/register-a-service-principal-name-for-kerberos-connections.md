@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour utiliser l’authentification Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les deux conditions suivantes doivent être remplies :  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 Vous pouvez vérifier qu'une connexion utilise Kerberos en interrogeant la vue de gestion dynamique sys.dm_exec_connections. Exécutez la requête suivante et vérifiez la valeur de la colonne auth_scheme, qui sera « KERBEROS » si Kerberos est activé.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -62,7 +62,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  L'Authentification Windows est la méthode recommandée pour authentifier les utilisateurs sur SQL Server. Les clients qui utilisent l'Authentification Windows sont authentifiés à l'aide de NTLM ou Kerberos. Dans un environnement Active Directory, l'authentification Kerberos est toujours tentée en premier. L'authentification Kerberos n'est pas disponible pour les clients [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] utilisant des canaux nommés.  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Lorsque le service du [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il tente d'enregistrer le nom de principal du service (SPN). Si le compte qui démarre SQL Server n'a pas l'autorisation d'enregistrer un SPN dans les services de domaine Active Directory, cet appel échouera et un message d'avertissement sera consigné dans le journal des événements de l'application, ainsi que dans le journal des erreurs SQL Server. Pour inscrire le SPN, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit s'exécuter sous un compte intégré, tel que Système local (non recommandé) ou SERVICE RÉSEAU, ou sous un compte qui a l'autorisation d'inscrire un SPN, tel qu'un compte d'administrateur de domaine. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le système d'exploitation  [!INCLUDE[win7](../../includes/win7-md.md)] ou  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , vous pouvez exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un compte virtuel ou d'un compte de service administré (MSA). Les comptes virtuels t de service administré peuvent inscrire un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas sous l’un de ces comptes, le SPN n’est pas inscrit lors du démarrage et l’administrateur de domaine doit l’inscrire manuellement.  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ Les comptes de service peuvent être utilisés comme SPN. Ils sont spécifiés p
   
 Pour déterminer la méthode d'authentification d'une connexion, exécutez la requête suivante.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -181,7 +181,7 @@ WHERE session_id = @@SPID;
   
  Si l'annulation de l'inscription du SPN échoue pendant l'arrêt, cet échec est consigné dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'arrêt se poursuit.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Prise en charge des noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

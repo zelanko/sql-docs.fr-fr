@@ -3,7 +3,7 @@ title: Fournisseur Microsoft OLE DB pour Oracle | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5dc6f23b468637ee9de35644493f668341ad0e39
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb8cf771b758dc81bb80e38bc709c611d8125921
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Fournisseur Microsoft OLE DB pour Oracle présentation
 > [!IMPORTANT]
@@ -53,7 +53,7 @@ MSDAORA
 
  La chaîne se compose des mots clés suivants :
 
-|Mot clé| Description|
+|Mot clé|Description|
 |-------------|-----------------|
 |**Fournisseur**|Spécifie le fournisseur OLE DB pour Oracle.|
 |**Source de données**|Spécifie le nom d’un serveur.|
@@ -68,7 +68,7 @@ MSDAORA
 
  Ces paramètres sont entièrement décrits dans le [de référence du programmeur OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). Le [Index des propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fournit une référence croisée entre ces noms de paramètres et les propriétés OLE DB correspondantes.
 
-|Paramètre| Description|
+|Paramètre|Description|
 |---------------|-----------------|
 |**Handle de fenêtre**|Indique le handle de fenêtre à utiliser pour demander des informations supplémentaires.|
 |**Identificateur de paramètres régionaux**|Indique un nombre 32 bits unique (par exemple, 1033) qui spécifie les préférences liées à la langue de l’utilisateur. Ces préférences indiquent la façon dont les dates et heures sont formatées, les éléments sont triés par ordre alphabétique, les chaînes sont comparées et ainsi de suite.|

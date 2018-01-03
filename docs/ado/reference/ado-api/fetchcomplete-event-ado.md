@@ -3,7 +3,7 @@ title: "FetchComplete, événement (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1754cb26eb381e056ba818958593cda40722c7c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c8575cd7423217702a0e2b98580e8ed2e7a45ac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete, événement (ADO)
 Le **FetchComplete** événement est appelé une fois que tous les enregistrements dans une opération asynchrone de longue durée ont été récupérés dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -50,7 +50,7 @@ FetchComplete pError, adStatus, pRecordset
  *Connection*  
  A **Recordset** objet. L’objet pour lequel les enregistrements ont été récupérés.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour utiliser **FetchComplete** avec Microsoft Visual Basic, Visual Basic 6.0 ou version ultérieure est requis.  
   
 ## <a name="see-also"></a>Voir aussi  

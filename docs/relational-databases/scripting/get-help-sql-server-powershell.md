@@ -3,9 +3,9 @@ title: "Obtenir de l’aide sur SQL Server PowerShell | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 815fab8fa577dad6ee4ef34388c65a1ed3c4b63d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22c902b09c96bd67fc64e6dc2c7ee33ba7558b17
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="get-help-sql-server-powershell"></a>Obtenir de l'aide sur SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Il existe plusieurs sources d’informations sur l’utilisation du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour Windows PowerShell et des applets de commande. Cela inclut l'aide qui est disponible dans l'environnement Windows PowerShell.  
@@ -98,7 +98,7 @@ Get-Help -Category provider
   
 1.  Exécuter Get-Help en spécifiant le nom SQLServer  
   
-### <a name="example-get-sql-server-provider-help"></a>Exemple : obtenir de l'aide sur le fournisseur SQL Server  
+### <a name="example-get-sql-server-provider-help"></a>Exemple : obtenir de l'aide sur le fournisseur SQL Server  
  Cet exemple retourne des informations de base sur le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 ```  
@@ -127,8 +127,8 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [Utiliser les applets de commande du Moteur de base de données](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [Utiliser les applets de commande du moteur de base de données](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
   
   

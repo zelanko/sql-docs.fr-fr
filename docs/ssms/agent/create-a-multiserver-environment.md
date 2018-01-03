@@ -3,7 +3,7 @@ title: "Créer un environnement multiserveur | Microsoft Docs"
 ms.custom: 
 ms.date: 01/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 364a16b8cc7f25fba918fc51c06652781ba7c17e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 65663572c887bc63d0178c8e48cb24beacfec86a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-multiserver-environment"></a>Créer un environnement multiserveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L’administration multiserveur nécessite que vous configuriez un serveur maître (MSX) et au moins un serveur cible (TSX). Les travaux qui seront traités sur l'ensemble des serveurs cibles sont d'abord définis sur le serveur maître, puis téléchargés sur les serveurs cibles.  
@@ -52,7 +52,7 @@ Tenez compte des éléments ci-dessous avant de créer un environnement multiser
   
 -   SQL Server Integration Services ne prend en charge que les serveurs cibles qui présentent la même version ou une version ultérieure à la version du serveur maître.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
 Les rubriques suivantes décrivent les tâches généralement impliquées dans la création d'un environnement multiserveur.  
   
 |Description|Rubrique|  
@@ -64,6 +64,6 @@ Les rubriques suivantes décrivent les tâches généralement impliquées dans l
 |Décrit comment annuler l'inscription de plusieurs serveurs cibles d'un serveur maître.|[Annuler l’inscription de plusieurs serveurs cibles dans un serveur maître](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |Décrit comment vérifier l'état d'un serveur cible.|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8afb388611f0da3c0596fe4a0665f785dde876e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c700c1b81d1e990f2ab0744faed1db98a34200d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="model-object-permissions-master-data-services"></a>Autorisations d'objet de modèle (Master Data Services)
   Les autorisations d'objet modèle sont obligatoires. Elles déterminent les attributs auxquels un utilisateur peut accéder dans la zone fonctionnelle **Explorateur** de l'interface utilisateur.  
@@ -39,13 +39,13 @@ ms.lasthandoff: 11/20/2017
   
  Vous pouvez attribuer une combinaison d’autorisations Read, Create, Update et Delete ou Deny aux objets de modèle. Si vous n'affectez aucune autorisation sous l'onglet **Modèles** , l'utilisateur ne peut pas afficher les modèles ou données dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="best-practice"></a>Meilleure pratique  
+## <a name="best-practice"></a>Bonne pratique  
  En général vous devez attribuer l’autorisation **ALL** à l’objet de modèle, puis attribuer explicitement l’autorisation aux objets en dessous.  
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog, [Améliorations de sécurité](http://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Autorisations de modèle &#40;Master Data Services&#41;](../master-data-services/model-permissions-master-data-services.md)   
  [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   

@@ -3,7 +3,7 @@ title: "Créer un schéma de base de données (Visual Database Tools) | Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ba635346ceebfd444f15aaae189cf6a31ff19d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Créer un schéma de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez utiliser l’Explorateur d’objets pour créer de nouveaux schémas de base de données. Les schémas de base de données représentent, de manière graphique, la structure de la base de données. Grâce aux schémas de base de données, vous pouvez créer et modifier des tables, des colonnes, des relations et des clés. En outre, vous pouvez modifier des index et des contraintes.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Vous pouvez continuer à ajouter ou supprimer des tables, modifier des tables existantes et les relations entre elles jusqu'à ce que le nouveau schéma de base de données soit terminé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   

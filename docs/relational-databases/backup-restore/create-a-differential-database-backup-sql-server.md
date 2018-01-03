@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4d34c96c7a70464aeb072bd80dc6cddafd2cdc34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f2276cce5bd041722169bf4825bd13483bad9789
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Créer une sauvegarde différentielle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Créez une sauvegarde différentielle de base de données dans[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **Effectuer une somme de contrôle avant d'écrire sur le support**et éventuellement **Continuer lors d'erreurs de somme de contrôle**. Pour plus d’informations sur les sommes de contrôle, consultez [Erreurs de support possibles pendant les opérations de sauvegarde et de restauration &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-14. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général**), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
+14. Si vous effectuez la sauvegarde sur un lecteur de bande (spécifié dans la section **Destination** de la page **Général** ), l’option **Décharger la bande après la sauvegarde** est active. Vous pouvez cliquer sur cette option pour activer l'option **Rembobiner la bande avant de décharger** .  
   
     > [!NOTE]  
     >  Les options de la section **Journal des transactions** sont inactives, à moins que vous ne sauvegardiez un journal des transactions (comme spécifié dans la section **Type de sauvegarde** de la page **Général** ).  
@@ -136,7 +136,7 @@ ms.lasthandoff: 11/17/2017
   
      **Pour consulter la valeur par défaut de compression de la sauvegarde actuelle**  
   
-    -   [Afficher ou configurer l'option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [Afficher ou configurer la compression par défaut des sauvegardes (option de configuration de serveur)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
     > [!NOTE]  
     >  Vous pouvez également utiliser l'Assistant Plan de maintenance pour créer des sauvegardes différentielles de base de données.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Exécutez l'instruction BACKUP DATABASE pour créer une sauvegarde différentielle de base de données, en spécifiant les éléments suivants :  
   
-    -   le nom de la base de données à sauvegarder ;  
+    -   le nom de la base de données à sauvegarder ;  
   
     -   l'unité de sauvegarde où est écrite la sauvegarde complète de la base de données.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple crée une sauvegarde complète et différentielle de la base de données `MyAdvWorks` .  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   
@@ -175,7 +175,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegardes différentielles &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

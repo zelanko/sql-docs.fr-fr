@@ -3,7 +3,7 @@ title: Champs de la Collection (ADO) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 433ce545129e4a0a6ac88238ba3181fade2186bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32b9f8cff20d7b2e82479985af4219439c8b2233
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fields-collection-ado"></a>Collection de champs (ADO)
 Contient tous les [champ](../../../ado/reference/ado-api/field-object.md) les objets d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **Recordset** objet a un **champs** collection composée de **champ** objets. Chaque **champ** objet correspond à une colonne dans la **Recordset**. Vous pouvez remplir le **champs** collection avant d’ouvrir le **Recordset** en appelant le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur la collection.  
   
 > [!NOTE]

@@ -3,7 +3,7 @@ title: Arguments pour outils externes | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c09b8aa81f0846305b0bd1f33a89a269af64b45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07a73ebeb158d520db011f979bfd2e21c543c22f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="arguments-for-external-tools"></a>Arguments des outils externes
+# <a name="arguments-for-external-tools"></a>Arguments pour outils externes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les arguments sont des variables pour lesquelles l’environnement Studio fournit des valeurs quand vous lancez un outil externe à partir du menu **Outils**. Des outils externes, tels que le Bloc-notes, peuvent être ajoutés au menu **Outils** via la boîte de dialogue **Outils externes** .  
   
 Le tableau ci-dessous répertorie les arguments pour les outils externes.  
   
-|Nom|Argument|Description|  
+|Nom   |Argument|Description|  
 |--------|------------|---------------|  
 |**Chemin d'accès de l'élément**|$(ItemPath)|Nom complet du fichier source en cours (sous la forme lecteur + chemin d'accès + nom du fichier) ; vide si la fenêtre active n'est pas une fenêtre source.|  
 |**Répertoire de l'élément**|$(ItemDir)|Répertoire de la source en cours (sous la forme lecteur + chemin d'accès) ; vide si la fenêtre active n'est pas une fenêtre source.|  
@@ -51,7 +51,7 @@ Le tableau ci-dessous répertorie les arguments pour les outils externes.
   
 *La ligne active, la colonne active ou le texte actif est basé sur la position du curseur dans l’éditeur de texte, comme indiqué dans la barre d’état.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Boîte de dialogue Outils externes](../ssms/external-tools-dialog-box.md)  
 [Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
   

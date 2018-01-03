@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa52c7a05fc0db049af7ce01f29ef0fd0801bdba
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 39d791db9743307cdcc7ebdb0ac0ee38641b09ed
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Créer, modifier ou supprimer des index XML secondaires sélectifs
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Décrit la procédure de création d’un index XML secondaire sélectif, ou de modification ou de suppression d’un index XML secondaire sélectif existant.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  L'exemple suivant crée un index XML secondaire sélectif sur le chemin d'accès `'pathabc'`. Le chemin d'accès à l'index est identifié par le nom qui lui a été donné lors de sa création à l'aide de l'instruction CREATE SELECTIVE XML INDEX. Pour plus d’informations, consultez [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  
@@ -52,7 +52,7 @@ FOR
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Procédure : modifier un index XML secondaire sélectif  
  **Modifier un index XML secondaire sélectif à l'aide de Transact-SQL**  
- 1.  Supprimez l'index XML secondaire sélectif existant en appelant l'instruction DROP INDEX. Pour plus d’informations, consultez [DROP INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
+ 1.  Supprimez l'index XML secondaire sélectif existant en appelant l'instruction DROP INDEX. Pour plus d’informations, consultez [DROP INDEX &#40;index XML sélectifs&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
   
 2.  Recréez l'index avec les options de votre choix en appelant l'instruction CREATE XML INDEX. Pour plus d’informations, consultez [CREATE XML INDEX &#40;Selective XML Indexes&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
@@ -60,7 +60,7 @@ FOR
   
  L'exemple suivant modifie un index XML secondaire sélectif en le supprimant et en le recréant.  
   
-```tsql  
+```sql  
 DROP INDEX filt_sxi_index_c  
   
 CREATE XML INDEX filt_sxi_index_c  
@@ -83,13 +83,13 @@ FOR
   
  L'exemple suivant illustre une instruction DROP INDEX.  
   
-```tsql  
+```sql  
 DROP INDEX ssxi_index  
 ON tbl  
 ```  
   
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

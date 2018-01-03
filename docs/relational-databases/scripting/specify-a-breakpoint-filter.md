@@ -3,9 +3,9 @@ title: "Spécifier un filtre de point d’arrêt | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce81877a15ce4f0f827df05f93e33a0a3e9afaa0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a2f90363fad028ecb098ed98c5832832c9e0b245
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-a-breakpoint-filter"></a>Spécifier un filtre de point d'arrêt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Un filtre de point d’arrêt limite l’action du point d’arrêt uniquement aux ordinateurs, aux processus du système d’exploitation et aux threads spécifiés. Les filtres de point d'arrêt sont utilisés en général lors du débogage d'applications parallèles.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Dans la fenêtre de l’éditeur, cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Filtre** dans le menu contextuel.  
   
-     - ou -  
+     -ou-  
   
      Dans la fenêtre **Points d’arrêt** , cliquez avec le bouton droit sur le glyphe du point d’arrêt, puis cliquez sur **Filtre** dans le menu contextuel.  
   
@@ -49,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 3.  Cliquez sur **OK** pour implémenter les modifications ou sur **Annuler** pour fermer sans appliquer les modifications.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)   
- [Spécifier une action de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Spécifier une action de point d’arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
   
   

@@ -3,7 +3,7 @@ title: "Associer une requête à une connexion dans un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 36217d01e2858e7193b1d7cbe72e734d6831281f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c790e099f0fc9558b452879866c8dbbaa25d7f2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associer une requête à une connexion dans un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Si une requête a été créée sans connexion ou si elle est déplacée d’un projet vers un autre, elle n’est pas associée à une connexion dans le projet actif.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Dans la boîte de dialogue **Se connecter au moteur de base de données** , fournissez les informations de connexion. Si les informations de connexion correspondent à une connexion existante, la requête est associée alors à cette connexion.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Modifier la connexion associée à une requête](../../ssms/solution/change-the-connection-associated-with-a-query.md)  
 [Afficher ou modifier les propriétés d'une connexion dans un projet](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)  

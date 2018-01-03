@@ -3,7 +3,7 @@ title: "Gérer des fichiers avec encodage | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12f1c224e5a2d31d406e9d4190d287aaa45bf31c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb72b7335688bc088db221e2a263521b04c6c0bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-files-with-encoding"></a>Gérer des fichiers avec encodage
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour faciliter l’affichage de votre code dans un langage particulier ou sur une plateforme spécifique, vous pouvez associer un encodage de caractères déterminé à un fichier.  
@@ -67,7 +67,7 @@ Si vous utilisez Visual SourceSafe pour stocker des fichiers ANSI, UTF-8 ou Unic
   
 -   Les fichiers UTF8 ne fonctionnent pas de façon fiable avec Visual SourceSafe, car les modifications doivent être apportées pendant l'archivage, l'extraction, le contrôle des différences et la fusion, ce qui provoque des problèmes pour les éditeurs de fichier UTF8.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Fichiers gérant les solutions et les projets](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
 [Association d’extensions de fichier à un éditeur de code](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
   

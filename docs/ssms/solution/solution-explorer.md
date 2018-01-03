@@ -3,7 +3,7 @@ title: Explorateur de solutions | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3652c94ce57fa5200e846c922f4d6a245478965c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solution-explorer"></a>Explorateur de solutions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le volet Explorateur de solutions dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] fournit des conteneurs appelés projets pour la gestion des éléments, tels que les scripts de base de données, les requêtes, les connexions de données et les fichiers. Un ou plusieurs projets qui sont liés entre eux peuvent être combinés dans un conteneur appelé solution.  
@@ -53,7 +53,7 @@ Utilisez ces conteneurs pour effectuer les tâches suivantes :
   
 Les éléments contenus dans les projets dépendent du type de projet et de l'utilisation ou non de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
 Utilisez les rubriques ci-dessous pour commencer à utiliser les solutions SQL Server :  
   
 |||  

@@ -3,7 +3,7 @@ title: Solutions (SQL Server Management Studio) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 506e7aec9c3c6c89d057d75f4b8b92947cc0cd50
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54000cd193dc9634f9dcfae9bd702fadcd77b7e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solutions-sql-server-management-studio"></a>Solutions (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] est une collection d’un ou plusieurs projets connexes. Les projets sont des conteneurs que les développeurs utilisent pour organiser des fichiers associés, tels que des ensembles de scripts d'administration couramment utilisés.  
@@ -53,12 +53,12 @@ Les solutions et projets peuvent être intégrés dans une base de données [!IN
 |Décrit comment ouvrir une solution existante dans l'Explorateur de solutions.|[Ouvrir une solution existante](../../ssms/solution/open-an-existing-solution.md)|  
 |Décrit comment fermer une solution.|[Fermer une solution](../../ssms/solution/close-a-solution.md)|  
 |Décrit comment supprimer une solution.|[Supprimer une solution](../../ssms/solution/delete-a-solution.md)|  
-|Décrit comment copier des éléments entre des projets.|[Copier des éléments d'une solution](../../ssms/solution/copy-items-in-a-solution.md)|  
+|Décrit comment copier des éléments entre des projets.|[Copier des éléments d’une solution](../../ssms/solution/copy-items-in-a-solution.md)|  
 |Décrit comment supprimer des éléments dans un projet ou un projet complet.|[Enlever ou supprimer un élément ou un projet](../../ssms/solution/remove-or-delete-an-item-or-project.md)|  
 |Décrit comment déplacer des éléments entre des projets dans une solution.|[Déplacer des éléments dans une solution](../../ssms/solution/move-items-in-a-solution.md)|  
 |Décrit comment renommer une solution ou les éléments de la solution.|[Renommer des solutions et des éléments de projet](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  

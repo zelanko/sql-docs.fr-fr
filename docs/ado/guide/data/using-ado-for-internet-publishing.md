@@ -3,7 +3,7 @@ title: "À l’aide d’ADO pour la publication Internet | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b1cf73843e742254e9fcbc71299fa1494a669164
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 97b94feddfa95a954294ba27a66dd02632c9a24a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-for-internet-publishing"></a>À l’aide d’ADO pour la publication Internet
 [Le fournisseur OLE DB pour Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) montre un exemple spécifique d’accès aux données hétérogènes avec ADO. Même si les exemples de cette section sont spécifiques à l’aide du fournisseur de publication Internet, les principes illustrés doivent être similaires lors de l’utilisation d’ADO avec d’autres fournisseurs de données hétérogènes, tel qu’un fournisseur à un magasin de courrier électronique.  

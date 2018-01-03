@@ -3,7 +3,7 @@ title: "Annexe a : fournisseurs | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc27499ecc4b67a95067002be0d8d3a5c86c76da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Annexe a : données et fournisseurs de services
 Cette section traite des trois types de fournisseurs : les fournisseurs de données, les fournisseurs de services et les composants de service. Fournisseurs sont divisés en deux catégories : ceux qui fournissent des données et ceux qui fournissent des services. A *fournisseur de données* possède ses propres données et les expose sous forme de tableau à votre application. A *fournisseur de services* encapsule un service en production et la consommation des données, étendant les fonctionnalités de vos applications ADO. Un fournisseur de services peut être également défini comme un *composant de service*, qui doivent travailler conjointement avec d’autres composants ou fournisseurs de service.
@@ -51,7 +51,7 @@ Cette section traite des trois types de fournisseurs : les fournisseurs de donn
 |Service d’indexation Microsoft|[Fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Service Active Directory|[Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Bases de données Microsoft Jet|[Fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Microsoft SQL Server|[Fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
+|Microsoft SQL Server|[Fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Bases de données Oracle|[Fournisseur Microsoft OLE DB pour Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Publication sur Internet|[Fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |Sources de données simple|[Fournisseur Simple Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|

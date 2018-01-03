@@ -3,7 +3,7 @@ title: Inclure ou exclure des lignes (Visual Database Tools) | Microsoft Docs
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fe150d5eb288d26fec9f75028b2066896c82bd31
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8bf614a4620340212028e004aa73c1b8c7819379
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Inclure ou exclure des lignes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Pour limiter le nombre de lignes qu’une requête SELECT doit renvoyer, créez des conditions de recherche ou des critères de filtre. Dans SQL, les conditions de recherche apparaissent dans la clause WHERE de l'instruction ou, si vous créez une requête d'agrégation, dans la clause HAVING.  
@@ -64,7 +64,7 @@ Vous pouvez même combiner plusieurs conditions de recherche dans une seule et m
 region = 'UK' OR region = 'US'  
 ```  
   
-Pour plus de détails sur la combinaison de conditions de recherche, consultez les rubriques suivantes :  
+Pour plus de détails sur la combinaison de conditions de recherche, consultez les rubriques suivantes :  
   
 -   [Conventions pour la combinaison de conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
   
@@ -109,7 +109,7 @@ Voici quelques exemples des requêtes utilisant plusieurs opérateurs et critèr
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Requête avec des paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

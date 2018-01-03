@@ -3,7 +3,7 @@ title: "Afficher les volets du Concepteur de requêtes et de vues (Visual Databa
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14268591a142263a159d879ea821a8a395d33c1f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Le Concepteur de requêtes et de vues est composé de quatre volets distincts : le volet Schéma, le volet Critères, le volet SQL et le volet Résultats. En général, lorsque vous ouvrez une vue ou créez une nouvelle requête, les quatre fenêtres s'ouvrent, mais si vous devez ouvrir l'une d'elles, vous pouvez le faire aussi longtemps que le Concepteur de requêtes et de vues est ouvert.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Dans le menu **Concepteur de requêtes** , pointez sur **Volet** et cliquez sur le nom du volet à ouvrir.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ouvrir le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -23,11 +23,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18a5a0b1d3309d58cda54387fe228010ca11d831
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 630e5a4d312855581c6a2d8b29028d415068a396
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
   Les autorisations de feuille s'appliquent aux valeurs d'attribut pour tous les membres feuille d'une entité.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/20/2017
 |**Lecture**|L’utilisateur peut lire les membres feuille et les attributs.|  
 |**Créer**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
 |**Update**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
-|**Delete**|L’utilisateur peut supprimer des membres feuille.|  
+|**Supprimer**|L’utilisateur peut supprimer des membres feuille.|  
 |**Refuser**|Refusez tout accès aux membres feuille.|  
   
  Vous pouvez aussi combiner les autorisations Read, Create, Update et Delete. Lorsque les autorisations Create, Update et Delete sont attribuées, l’autorisation Read est attribuée automatiquement.  
@@ -58,13 +58,13 @@ ms.lasthandoff: 11/20/2017
 |**Lecture**|L’utilisateur peut lire des attributs.|  
 |**Créer**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
 |**Update**|L’utilisateur peut mettre à jour des attributs.|  
-|**Delete**|Aucun effet.|  
+|**Supprimer**|Aucun effet.|  
 |**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
-|Nom|Code|Subcategory (Mise à jour)|  
+|Nom   |Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|\{5\} Mountain Bikes|  
 |Mountain-100|BK-M201|\{5\} Mountain Bikes|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Dans cet exemple, Subcategory est un attribut basé sur un domaine, basé sur l'entité SubcategoryList. Vous pouvez sélectionner une sous-catégorie différente pour Mountain-100, mais vous ne pouvez pas ajouter ni supprimer des membres dans l'entité SubcategoryList.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

@@ -3,9 +3,9 @@ title: "Se connecter au moteur de base de données avec sqlcmd | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 13baaff3d96cb1d62e6f0566fadc10717898fdcd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 38a76ed3e2b27ad2eb5bdd1f6e90500c4241760f
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd : se connecter au moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la communication cliente par le biais du protocole réseau TCP/IP (protocole par défaut) et du protocole des canaux nommés. Le protocole de mémoire partagée est également disponible si le client se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur le même ordinateur. Il existe trois méthodes courantes de sélection du protocole. Le protocole utilisé par l’utilitaire **sqlcmd** est déterminé dans l’ordre suivant :  
@@ -80,7 +80,7 @@ sqlcmd -S 127.0.0.1,1691
     sqlcmd -S tcp:127.0.0.1,1433  
     ```  
   
--   Connectez-vous à une instance nommée :  
+-   Connectez-vous à une instance nommée :  
   
     ```  
     sqlcmd -S tcp:ComputerA,1691  
@@ -89,7 +89,7 @@ sqlcmd -S 127.0.0.1,1691
   
 ### <a name="to-connect-using-named-pipes"></a>Pour établir la connexion à l'aide de canaux nommés  
   
--   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
+-   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
   
     ```  
     sqlcmd -S np:\\<computer name>\<pipe name>  

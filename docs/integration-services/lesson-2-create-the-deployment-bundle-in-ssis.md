@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,13 +18,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cafc9a6455ccc1534a91284e3e443714c48b3ab
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 60ff7d6e351b823d482f7fbf037d251a90756d2a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Leçon 2 : Créer le bundle  de déploiement dans SSIS
+# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Leçon 2 : Créer l’application de déploiement dans SSIS
 Dans la [Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), vous avez créé le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] intitulé Didacticiel de déploiement, ajouté les packages et les fichiers de prise en charge au projet, et implémenté les configurations dans les packages.  
   
 Au cours de cette leçon, vous allez créer l'application de déploiement, celle-ci correspond à un dossier contenant les éléments nécessaires pour installer des packages sur un autre ordinateur. Cette application inclut un manifeste de déploiement, des copies des packages et des copies des fichiers de prise en charge issus du projet de de didacticiel de déploiement. Le manifeste de déploiement répertorie les packages, les fichiers divers et les configurations dans l'application de déploiement.  

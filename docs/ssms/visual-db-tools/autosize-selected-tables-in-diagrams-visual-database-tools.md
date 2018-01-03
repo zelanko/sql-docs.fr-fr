@@ -3,7 +3,7 @@ title: "Redimensionner automatiquement des tables sélectionnées dans des sché
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7b582991cdff6de92b8babe372c0c7bde37c8b0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a13c67f63570b4bd132490ac87841b429650960a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Redimensionner automatiquement des tables sélectionnées dans des schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez insérer rapidement des tables dans votre schéma en appliquant la plus petite taille qui permet d’afficher tous les champs.  
@@ -37,6 +37,6 @@ ms.lasthandoff: 12/05/2017
   
 2.  Cliquez avec le bouton droit sur une table sélectionnée et choisissez **Redimensionner automatiquement les tables sélectionnées**dans le menu contextuel.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

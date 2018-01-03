@@ -21,16 +21,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea89e4192c833ce569c336f5f2eb5f7382c136ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 2f69e34f9d4fbbe6514cc2350ca2b14c2685ce8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-troubleshooting"></a>Résolution des problèmes de Polybase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Pour résoudre les problèmes de PolyBase, utilisez les techniques indiquées dans cette rubrique.  
   
-## <a name="catalog-views"></a>vues de catalogue ;  
+## <a name="catalog-views"></a>Affichages catalogue  
  Utilisez les affichages catalogue répertoriés ici pour gérer les opérations de PolyBase.  
   
 |||  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/18/2017
   
      Enregistrez l’ID d’exécution de la requête la plus longue.  
   
-    ```tsql  
+    ```sql  
      -- Find the longest running query  
     SELECT execution_id, st.text, dr.total_elapsed_time  
     FROM sys.dm_exec_distributed_requests  dr  
@@ -83,11 +83,11 @@ ms.lasthandoff: 11/18/2017
   
      Vérifiez l’élément location_type de l’étape d’exécution la plus longue :  
   
-    -   Head ou Compute : implique une opération SQL. Passez à l’étape 3a.  
+    -   Head ou Compute : implique une opération SQL. Passez à l’étape 3a.  
   
     -   DMS : implique une opération de Service de déplacement de données PolyBase. Passez à l’étape 3b.  
   
-    ```tsql  
+    ```sql  
     -- Find the longest running step of the distributed query plan  
     SELECT execution_id, step_index, operation_type, distribution_type,   
     location_type, status, total_elapsed_time, command   
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/18/2017
   
          Utilisez l’ID d’exécution et l’index d’étape enregistrés dans les étapes précédentes. Utilisez l’ID d’exécution et l’index d’étape enregistrés dans les étapes précédentes.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of SQL step    
         SELECT execution_id, step_index, distribution_id, status,   
         total_elapsed_time, row_count, command   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/18/2017
   
          Utilisez l’ID d’exécution et l’index d’étape enregistrés dans les étapes précédentes.  
   
-        ```tsql  
+        ```sql  
         -- Find the execution progress of DMS step    
         SELECT execution_id, step_index, dms_step_index, status,   
         type, bytes_processed, total_elapsed_time  
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/18/2017
   
      Utilisez l’ID d’exécution et l’index d’étape enregistrés dans les étapes précédentes.  
   
-    ```tsql  
+    ```sql  
     SELECT execution_id, step_index, dms_step_index, compute_node_id,   
     type, input_name, length, total_elapsed_time, status   
     FROM sys.dm_exec_external_work   

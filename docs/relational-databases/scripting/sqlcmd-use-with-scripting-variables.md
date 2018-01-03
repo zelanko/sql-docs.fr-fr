@@ -3,9 +3,9 @@ title: Utiliser sqlcmd avec des variables de script | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eba9a6581d4f93c1eb84e14b3172f1f6cefb312f
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd : utiliser avec des variables de script
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
@@ -113,7 +113,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
  Les variables définies par **sqlcmd** sont reconnues comme des variables de script. Le tableau suivant répertorie les variables de script **sqlcmd** .  
   
-|        Variable         | Option connexe | R/W (Lecture/écriture) |         Par défaut         |
+|        Variable         | Option connexe | R/W (Lecture/écriture) |         Valeur par défaut         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
@@ -334,7 +334,7 @@ C:\> sqlcmd
 >2 GO
 ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

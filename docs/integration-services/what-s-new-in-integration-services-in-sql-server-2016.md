@@ -3,8 +3,11 @@ title: "Nouveauté d’Integration Services dans SQL Server 2016 | Microsoft Doc
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -157,16 +160,16 @@ Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version
   
 -   Vous avez restauré la base de données à partir d’une ancienne version de SQL Server.  
   
--   Vous n’avez pas supprimé la base de données d’un groupe de disponibilité Always On avant la mise à niveau de l’instance SQL Server. Cela empêche la mise à niveau automatique de la base de données. Pour plus d’informations, consultez [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   Vous n’avez pas supprimé la base de données d’un groupe de disponibilité Always On avant la mise à niveau de l’instance SQL Server. Cela empêche la mise à niveau automatique de la base de données. Pour plus d’informations, consultez [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- Pour plus d’informations, consultez [Catalogue SSIS &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md). 
+ Pour plus d’informations, consultez [Catalogue SSIS &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Prise en charge de la fonctionnalité AlwaysOn dans le catalogue SSIS  
  La fonctionnalité des groupes de disponibilité AlwaysOn est une solution de haute disponibilité et de récupération d’urgence qui offre une alternative au niveau de l’entreprise à la mise en miroir de bases de données. Un groupe de disponibilité prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées bases de données de disponibilité, qui basculent ensemble. Pour plus d’informations, consultez [Groupes de disponibilité AlwaysOn](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  Dans SQL Server 2016, SSIS introduit de nouvelles fonctionnalités qui vous permettent d’effectuer facilement un déploiement sur un catalogue SSIS centralisé (par exemple, une base de données utilisateur SSISDB). Pour fournir une haute disponibilité à la base de données SSISDB et son contenu (projets, packages, journaux d’exécution, etc.), vous pouvez ajouter la base de données SSISDB à un groupe de disponibilité AlwaysOn, comme n’importe quelle autre base de données utilisateur. Quand un basculement se produit, le nœud secondaire devient automatiquement le nouveau nœud primaire.  
   
- Pour obtenir une présentation détaillée et des instructions pas à pas concernant l’activation d’AlwaysOn pour SSISDB, consultez [Catalogue SSIS](../integration-services/service/ssis-catalog.md).  
+ Pour obtenir une présentation détaillée et des instructions pas à pas concernant l’activation d’AlwaysOn pour SSISDB, consultez [Catalogue SSIS](../integration-services/catalog/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Déploiement incrémentiel de packages  
 La fonctionnalité de déploiement incrémentiel de packages vous permet de déployer un ou plusieurs packages dans un projet existant ou nouveau sans déployer la totalité du projet. Vous pouvez déployer des packages de façon incrémentielle à l’aide des outils suivants.  
@@ -230,7 +233,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
 >  (Dans RC0, cette méthode a été déplacée dans la nouvelle interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Pour plus d’informations, consultez [Nouvelle interface IDTSComponentMetaData130 dans l’API](#CMD130).)  
 
 ####  <a name="ServerLogLevel"></a> Prise en charge du niveau de journalisation par défaut au niveau du serveur  
- Dans **Propriétés du serveur**de SQL Server, sous la propriété **Niveau de journalisation du serveur** , vous pouvez désormais sélectionner un niveau de journalisation par défaut au niveau du serveur. Vous pouvez choisir l’un des niveaux de journalisation intégrés (Basic, None, Verbose, Performance ou RuntimeLineage), ou choisir un niveau de journalisation personnalisé existant. Le niveau de journalisation sélectionné s’applique à tous les packages déployés dans le catalogue SSIS. Il s’applique également par défaut à une étape de travail de l’Agent SQL qui exécute un package SSIS.  
+ Dans **Propriétés du serveur**de SQL Server, sous la propriété **Niveau de journalisation du serveur** , vous pouvez désormais sélectionner un niveau de journalisation par défaut au niveau du serveur. Vous pouvez choisir l’un des niveaux de journalisation intégrés (Basic, None, Verbose, Performance ou RuntimeLineage), ou choisir un niveau de journalisation personnalisé existant. Le niveau de journalisation sélectionné s’applique à tous les packages déployés dans le catalogue SSIS. Il s'applique également par défaut à une étape de travail de l'Agent SQL qui exécute un package SSIS.  
 
 ####  <a name="CMD130"></a> Nouvelle interface IDTSComponentMetaData130 dans l’API  
  Le nouveau niveau de journalisation <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> ajoute de nouvelles fonctionnalités à l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> existante dans SQL Server 2016, en particulier la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (La méthode **GetIdentificationStringByID** est déplacée de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> dans la nouvelle interface.) Il y a également deux nouvelles interfaces, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , qui fournissent la propriété **LineageIdentificationString** . Pour plus d’informations, consultez [Noms de colonnes pour les erreurs contenues dans le flux de données](#ErrorColumn).  
@@ -288,8 +291,8 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
 ####  <a name="SAPBW"></a> Publication du connecteur pour SAP BW pour SQL Server 2016  
  Microsoft® Connector pour SAP BW pour Microsoft SQL Server® 2016 a été publié avec SQL Server 2016 Feature Pack. Pour télécharger les composants du Feature Pack, consultez [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).
  
-#### <a name="oracleteradata"></a> Publication de la version 4.0 des connecteurs pour Oracle et Teradata
-La version 4.0 de Microsoft Connectors pour Oracle et Teradata a été publiée. Pour télécharger les connecteurs, consultez [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+#### <a name="oracleteradata"></a> Publication de la version&4;.0 des connecteurs pour Oracle et Teradata
+La version&4;.0 de Microsoft Connectors pour Oracle et Teradata a été publiée. Pour télécharger les connecteurs, consultez [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Publication des connecteurs pour Analytics Platform System (PDW) Appliance Update 5
 Les adaptateurs de destination pour le chargement des données dans PDW avec AU5 ont été publiés. Pour télécharger les adaptateurs, consultez [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610).
@@ -316,7 +319,7 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
 ### <a name="better-install-experience"></a>Amélioration de l’expérience d’installation
 
 ####  <a name="Upgrade"></a> Blocage de la mise à niveau quand SSISDB appartient à un groupe de disponibilité  
- Si la base de données du catalogue SSIS (SSISDB) appartient à un groupe de disponibilité AlwaysOn, vous devez supprimer SSISDB du groupe de disponibilité, mettre à niveau SQL Server, puis rajouter SSISDB au groupe de disponibilité. Pour plus d’informations, consultez [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ Si la base de données du catalogue SSIS (SSISDB) appartient à un groupe de disponibilité AlwaysOn, vous devez supprimer SSISDB du groupe de disponibilité, mettre à niveau SQL Server, puis rajouter SSISDB au groupe de disponibilité. Pour plus d’informations, consultez [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Amélioration de l’expérience de conception
 
@@ -368,7 +371,7 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] a introduit la propriété **ValidationDetails** dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. Cette nouvelle propriété n’a pas été annoncée ou documentée à ce moment-là. La propriété **ValidationDetails** est également disponible dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
   

@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
  À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les options **PASSWORD** et **MEDIAPASSWORD** sont suspendues pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit pouvoir lire et écrire sur l’unité. Le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute **doit** avoir des autorisations d’écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/05/2017
   
      Pour plus d’informations sur les paramètres de compression de sauvegarde, consultez [Afficher ou configurer l’option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).  
   
-22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **ertificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
+22. Dans la section **Chiffrement** , sélectionnez la case à cocher **Chiffrer la sauvegarde** si vous souhaitez utiliser un chiffrement pour la sauvegarde. Utilisez la liste déroulante **Algorithme** pour sélectionner un algorithme de chiffrement.  Utilisez la liste déroulante **ertificat ou clé asymétrique** pour sélectionner un certificat ou une clé asymétrique existants. Le chiffrement est pris en charge dans SQL Server 2014 ou les versions ultérieures. Pour plus d’informations sur les options de chiffrement, consultez [Sauvegarder la base de données &#40;page Options de sauvegarde&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
 Vous pouvez utiliser l’ [Assistant Plan de maintenance](../maintenance-plans/use-the-maintenance-plan-wizard.md) pour créer des sauvegardes de bases de données. 
@@ -304,7 +304,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
 #### <a name="a-back-up-to-a-disk-device"></a>**A. Sauvegarder sur une unité de disque**  
  L'exemple suivant sauvegarde entièrement la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur disque, à l'aide de `FORMAT` , pour créer une nouveau jeu de supports.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**B. Sauvegarder sur un périphérique à bandes**  
  L’exemple suivant sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] complète sur bande, en ajoutant la sauvegarde aux sauvegardes précédentes.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**C. Sauvegarder sur un périphérique à bandes logique**  
  L'exemple suivant crée une unité de sauvegarde logique pour un périphérique à bandes. Il sauvegarde ensuite la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] complète sur ce périphérique.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -372,7 +372,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

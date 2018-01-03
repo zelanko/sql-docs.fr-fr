@@ -3,9 +3,9 @@ title: Importer le module SQLPS | Microsoft Docs
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5fb5957e23a6ad4488a33587d227219855d6b8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-sqlps-module"></a>Importer le module SQLPS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La méthode recommandée pour gérer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de PowerShell consiste à importer le module **sqlps** dans un environnement Windows PowerShell. Le module charge et inscrit les assemblys de facilité de gestion et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  À partir de Windows PowerShell 3.0, les modules sont importés automatiquement lorsqu’une applet de commande ou une fonction dans le module est utilisée dans une commande. Cette fonctionnalité fonctionne sur n’importe quel module d’un répertoire inclus dans la valeur de la variable d’environnement PSModulePath.  Pour plus d’informations, consultez [Importation d’un module PowerShell](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Utilisez l’applet de commande **Import-Module** pour importer le module sqlps. Spécifiez le paramètre **DisableNameChecking** si vous souhaitez supprimer l’avertissement sur **Encode-Sqlname** et **Decode-Sqlname**.  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  Cet exemple charge le module **sqlps** avec la fonction de vérification des noms désactivée.  
   
 ```powershell 
@@ -72,10 +72,10 @@ Get-Module -ListAvailable -Name Sqlps;
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [&#91;Début&#93;]()  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [fournisseur PowerShell SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [Utiliser les applets de commande du Moteur de base de données](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
+ [Utiliser les applets de commande du moteur de base de données](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)  
  [Installation d’un module PowerShell](https://msdn.microsoft.com/library/dd878350(v=vs.85).aspx)  
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   

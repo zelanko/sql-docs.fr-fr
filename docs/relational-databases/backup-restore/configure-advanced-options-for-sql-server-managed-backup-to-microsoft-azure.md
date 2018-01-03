@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurer les options avancées pour la sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ce didacticiel explique comment définir les options avancées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ces procédures sont nécessaires uniquement si vous avez besoin des fonctionnalités qu’elles proposent. Sinon, vous pouvez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] et utiliser le comportement par défaut.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **Créer un certificat de sauvegarde ou une clé asymétrique :** vous pouvez utiliser un certificat ou une clé asymétrique pour le chiffrement. L'exemple suivant crée un certificat de sauvegarde à utiliser pour le chiffrement.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -115,10 +115,10 @@ ms.lasthandoff: 11/17/2017
   
     ```  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  Après avoir configuré les options avancées et les planifications personnalisées, vous devez activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données cible ou l’instance SQL Server. Pour plus d'informations, consultez [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

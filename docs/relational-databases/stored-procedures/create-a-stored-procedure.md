@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>Créer une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Pour créer une procédure, utilisez :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
 ##  <a name="Procedures"></a> Comment créer une procédure stockée  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
   
     |Paramètre|Valeur|  
     |---------------|-----------|  
-    |Auteur|*Votre nom*|  
+    |Author|*Votre nom*|  
     |Date de création|*Date du jour*|  
     |Description|Retourne des données sur les employés.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  Dans l' **Éditeur de requête**, remplacez l'instruction SELECT par l'instruction suivante :  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour créer une procédure dans l'Éditeur de requête**  
   
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans le menu **Fichier** , cliquez sur **Nouvelle requête**.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/17/2017
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   

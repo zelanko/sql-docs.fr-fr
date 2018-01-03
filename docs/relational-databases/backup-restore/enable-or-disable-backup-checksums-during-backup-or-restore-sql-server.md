@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c363b96889bdf48710e4da2b930047d27ed3c26e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6285718d684b1468bce5eefc4ab5e43c0310c80
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Activer ou désactiver des sommes de contrôle de sauvegarde au cours d'opérations de sauvegarde ou de restauration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Pour activer les sommes de contrôle de sauvegarde dans une instruction [BACKUP](../../t-sql/statements/backup-transact-sql.md) , spécifiez l'option WITH CHECKSUM. Pour désactiver les sommes de contrôle de sauvegarde, spécifiez l'option WITH NO_CHECKSUM. Ceci est le comportement par défaut, sauf pour une sauvegarde compressée. L'exemple suivant spécifie que les sommes de contrôle doivent être effectuées.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -92,7 +92,7 @@ GO
   
 3.  Pour activer les sommes de contrôle de sauvegarde dans une instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , spécifiez l'option WITH CHECKSUM. Ceci est le comportement par défaut pour une sauvegarde compressée. Pour désactiver les sommes de contrôle de sauvegarde, spécifiez l'option WITH NO_CHECKSUM. Ceci est le comportement par défaut, sauf pour une sauvegarde compressée. L'exemple suivant spécifie que les sommes de contrôle de sauvegarde doivent être effectuées.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -102,7 +102,7 @@ GO
 > [!WARNING]  
 >  Si vous spécifiez explicitement CHECKSUM pour une opération de restauration et que la sauvegarde contient des sommes de contrôle de sauvegarde, ces sommes de contrôle de sauvegarde ainsi que les sommes de contrôle de page sont vérifiées, comme dans le cas par défaut. Toutefois, si le jeu de sauvegarde manque de sommes de contrôle de sauvegarde, l'opération de restauration se solde par un échec et l'affichage d'un message indiquant l'absence des sommes de contrôle.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   

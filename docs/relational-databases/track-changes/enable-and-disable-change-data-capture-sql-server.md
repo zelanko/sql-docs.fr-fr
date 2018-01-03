@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 204b18d54a65c8fdf3cbc86d04e7daf1850fe84f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86c13345caa59dfb4ef9dad6f9c9cdb0ea324472
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Cette rubrique décrit l’activation et la désactivation de la capture de données modifiées pour une base de données et une table.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!IMPORTANT]  
 >  Pour repérer les modèles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], allez dans **Afficher**, cliquez sur **Explorateur de modèles**, puis sélectionnez **Modèles SQL Server**. **Capture de données modifiées** est un sous-dossier. Sous ce dossier, vous trouverez tous les modèles auxquels il est fait référence dans cette rubrique. On trouve également une icône **Explorateur de modèles** dans la barre d'outils [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Pour repérer les modèles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], allez dans **Afficher**, cliquez sur **Explorateur de modèles**, puis sur **Modèles SQL Server**. **Capture de données modifiées** est un sous-dossier où vous trouverez tous les modèles qui sont référencés dans cette rubrique. On trouve également une icône **Explorateur de modèles** dans la barre d'outils [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -86,7 +86,7 @@ GO
   
  Par défaut, la table de modifications se situe dans le groupe de fichiers par défaut de la base de données. Les propriétaires de base de données qui souhaitent contrôler le placement des tables de modifications individuelles peuvent utiliser le paramètre *@filegroup_name* pour spécifier un groupe de fichiers particulier pour la table de modifications associée à l’instance de capture. Le groupe de fichiers nommé doit déjà exister. En règle générale, il est recommandé de placer des tables de modifications dans un groupe de fichiers séparé des tables sources. Consultez le modèle **Activer une table en spécifiant l’option Filegroup** pour un exemple montrant l’utilisation du paramètre *@filegroup_name* .  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -108,7 +108,7 @@ GO
   
  Si vous ne souhaitez pas utiliser de rôle de régulation, affectez explicitement la valeur NULL au paramètre *@role_name* . Consultez le modèle **Activer une table sans utiliser un rôle de régulation** pour obtenir un exemple d’activation d’une table sans un rôle de régulation.  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -133,7 +133,7 @@ GO
   
  Consultez le modèle **Activer une table pour tous et pour les requêtes de modifications nettes** pour un exemple montrant la création d’une instance de capture avec les deux fonctions de requête.  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -157,7 +157,7 @@ GO
   
  Pour un exemple de désactivation de table, consultez le modèle Désactiver une instance de capture pour une table.  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  
@@ -170,7 +170,7 @@ EXEC sys.sp_cdc_disable_table
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Utiliser les données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

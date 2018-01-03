@@ -3,7 +3,7 @@ title: "Ajouter un rapport personnalisé à Management Studio | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99bdd9671b2cea32f88b3904b3d67f698c50d085
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf041215c96e0acc59fd4d773562867dcc20313f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Ajouter un rapport personnalisé à Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment créer un simple rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] enregistré comme fichier .rdl, puis ajouter ce fichier à [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] en tant que rapport personnalisé. [!INCLUDE[ssRS](../../includes/ssrs_md.md)] permet de créer un large choix de rapports élaborés. Pour que vous puissiez créer un rapport en suivant cette rubrique, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] doit être installé sur votre ordinateur. Vous n'avez pas besoin d'installer [!INCLUDE[ssRS](../../includes/ssrs_md.md)] sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pour exécuter un rapport personnalisé à l'aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     2.  Ajustez le nombre de fichiers dans la **liste des derniers fichiers utilisés**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Annuler la suppression des avertissements d'exécution de rapports personnalisés](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

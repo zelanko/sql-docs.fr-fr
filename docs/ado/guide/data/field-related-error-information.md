@@ -3,7 +3,7 @@ title: "Informations sur l’erreur champ | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d37d91f2b35cf211044f2ac1f2bf8705bbc1ef16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67404e4d66983c3cf64bd44a2d80c77c4eb99790
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-related-error-information"></a>Informations sur l’erreur de champ
 Si une erreur est directement liée à un champ, par exemple, si les données sont manquantes ou si elle est de type incorrect pour le champ, vous pouvez récupérer plus d’informations sur la cause du problème en examinant la **champ** l’objet **état**  propriété. Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminée en examinant le **état** propriété de la **champs** dans chacun du concernés enregistrements. La propriété contient une des valeurs dans le **FieldStatusEnum** constante. Le tableau suivant contient les valeurs qui présentent un intérêt particulier lorsqu’une erreur se produit.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indique que le champ ne peut pas être extraites ou stocké sans perte de données.|  
 |**adFieldDataOverflow**|6|Indique que les données renvoyées par le fournisseur a dépassé le type de données du champ.|  

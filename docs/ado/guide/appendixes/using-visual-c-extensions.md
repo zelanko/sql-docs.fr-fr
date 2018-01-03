@@ -3,7 +3,7 @@ title: Utilisation des Extensions Visual C++ | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da6cd44f389b059a897ec464e1848cd9660b6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7722a67ea07a6a5e0b033d8b0131c494e5e6bd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-extensions"></a>Extensions Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L’Interface IADORecordBinding
@@ -115,7 +115,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Fin d’entrées de liaison
  **END_ADO_BINDING**()
 
-|Paramètre| Description|
+|Paramètre|Description|
 |---------------|-----------------|
 |*Classe*|Classe dans laquelle les entrées de liaison et les variables C/C++ sont définis.|
 |*Ordinal*|Nombre ordinal, à partir d’un, de la **Recordset** champ correspondant à la variable C/C++.|
@@ -133,10 +133,10 @@ Update(CADORecordBinding *binding)
 
  Lors de la définition de données, *état* peut être définie sur **adFldNull** pour indiquer le **Recordset** champ doit être défini avec la valeur null.
 
-|Constante|Valeur| Description|
+|Constante|Valeur|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Une valeur de champ non null a été retournée.|
-|**adFldBadAccessor**|1|Liaison n’était pas valide.|
+|**adFldBadAccessor**| 1|Liaison n’était pas valide.|
 |**adFldCantConvertValue**|2|Valeur n’a pas pu être convertie pour des raisons d’autre que la non-correspondance des signes ou données débordement.|
 |**adFldNull**|3|Lors de l’obtention d’un champ, indique une valeur null a été retournée.<br /><br /> Lorsque vous définissez un champ, indique le champ doit être défini sur **NULL** lorsque le champ ne peut pas encoder **NULL** elle-même (par exemple, un tableau de caractères ou un nombre entier).|
 |**adFldTruncated**|4|Chiffres ou des données de longueur variable ont été tronquées.|

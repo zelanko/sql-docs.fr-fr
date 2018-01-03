@@ -3,7 +3,7 @@ title: "BeginTrans, CommitTrans et RollbackTrans, méthodes-exemple (VC ++) | Do
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 807aaf72d48c7eec13a3dff96281206206f2d295
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 93205d3fa02f120c855be0056a8a8859134ce669
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans et RollbackTrans, méthodes-exemple (VC ++)
 Cet exemple modifie le type de tous les livres de psychologie dans le ***titres*** table de la base de données. Après le [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) méthode démarre une transaction qui isole toutes les modifications apportées à la ***titres*** table, le [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) méthode enregistre les modifications. Vous pouvez utiliser la [restauration](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) méthode pour annuler les modifications que vous avez enregistré à l’aide de la [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 // BeginBeginTransCpp.cpp  

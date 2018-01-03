@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b7281ad56ebbf4b63d03866888a91ccfc111985
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfde48c7c81bfc23bd01d771363d9c4e9f7443f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Créer un type de données d'alias défini par l'utilisateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Cette rubrique explique comment créer un nouvel alias de type de données défini par l’utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Autorisations  
+####  <a name="Permissions"></a> Permissions  
  Nécessite l’autorisation CREATE TYPE dans la base de données actuelle et l’autorisation ALTER sur *schema_name*. Si *schema_name* n’est pas spécifié, les règles de résolution de noms par défaut pour la détermination du schéma de l’utilisateur actuel s’appliquent.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
      **Autoriser les valeurs NULL**  
      Spécifiez si le type de données défini par l'utilisateur accepte les valeurs NULL. L'acceptation de valeurs Null par un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
-     **Type de données**  
+     **Data type**  
      Sélectionnez le type de données de base dans la zone de liste. La zone de liste affiche tous les types de données à l’exception des types de données **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** et **xml** . Le type de données d'un type de données défini par l'utilisateur existant n'est pas modifiable.  
   
      **Default**  
@@ -123,12 +123,12 @@ ms.lasthandoff: 11/17/2017
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée un alias de type de données basé sur le type de données `varchar` fourni par le système. L'alias de type de données `ssn` est utilisé pour les colonnes comportant des numéros de sécurité sociale à 11 chiffres (999-99-9999). Cette colonne ne peut pas avoir la valeur NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Identificateur de la base de données](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   

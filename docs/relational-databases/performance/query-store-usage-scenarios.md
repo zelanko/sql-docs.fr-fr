@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941481fb17d33c18e648e4afe511e868e59fc0a1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  Vous pouvez également exécuter un script [!INCLUDE[tsql](../../includes/tsql-md.md)] pour obtenir le nombre total de textes de requêtes, de requêtes et de plans dans le système, et déterminer dans quelle mesure elles sont différentes en comparant leurs valeurs query_hash et plan_hash :  
   
-```tsql  
+```sql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -164,9 +164,9 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  Si vous contrôlez le code d’application, vous pouvez envisager de récrire la couche d’accès aux données pour utiliser des procédures stockées ou des requêtes paramétrables. Toutefois, il est possible d’améliorer considérablement cette situation sans apporter de modifications à l’application en forçant le paramétrage des requêtes pour l’ensemble de la base de données (toutes les requêtes) ou pour les modèles de requête individuels avec la même valeur query_hash.  
   
- L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
+ L’approche avec des modèles de requête individuels requiert la création d’un repère de plan :  
   
-```tsql  
+```sql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
   
  Si toutes vos requêtes (ou la majorité d’entre elles) sont idéales pour un autoparamétrage, il peut être préférable d’opter pour la modification de `FORCED PARAMETERIZATION` pour l’ensemble de la base de données :  
   
-```tsql  
+```sql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
@@ -204,7 +204,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;
   
  Dans ce cas, vous pouvez activer l’option de serveur [**Optimiser pour les charges de travail ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) afin d’éviter de gaspiller la mémoire cache sur des requêtes qui ne seront probablement pas réexécutées. Pour empêcher la capture de ces requêtes dans le magasin de requêtes, définissez `QUERY_CAPTURE_MODE` sur `AUTO`.  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -220,8 +220,8 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   
   

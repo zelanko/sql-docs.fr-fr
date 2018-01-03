@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e432e01995835f870b40ff1a0e5df07c06ef56a6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
 Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
@@ -72,14 +72,14 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
 16. Dans la liste **Fichier de configuration** , cliquez sur **datatransferconfig.dtsconfig**, développez Property dans la colonne **Path** de la zone **Configurations** , et mettez à jour la colonne **Value** avec les valeurs suivantes :  
   
-    |Propriété|Value|Valeur mise à jour|  
+    |Propriété|Valeur|Valeur mise à jour|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. Dans la liste **Fichier de configuration** , cliquez sur loadxmldataconfig.dtsconfig, développez Property dans la colonne **Path** de la zone **Configurations** et mettez à jour la colonne **Value** avec les valeurs suivantes :  
   
-    |Propriété|Value|Valeur mise à jour|  
+    |Propriété|Valeur|Valeur mise à jour|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -108,5 +108,5 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Service Integration Services &#40;Service SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

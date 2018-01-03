@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,14 +22,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 25de11d7825c2e52b8247d44ee790d21c0457468
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 212e1c2913cc8720d2a5ca92916cec187e357c2e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle
-  Enregistrez une tâche ou un conteneur de flux de contrôle couramment utilisés dans un fichier de pièce (fichier « .dtsxp ») autonome, et réutilisez celui-ci plusieurs fois dans un ou plusieurs packages à l’aide de composants de package de flux de contrôle. Cette réutilisation facilite la conception et la gestion des packages SSIS.  
+  Enregistrez une tâche ou un conteneur de flux de contrôle couramment utilisés dans un fichier de pièce (fichier « .dtsxp ») autonome, et réutilisez celui-ci plusieurs fois dans un ou plusieurs packages à l’aide de composants de package de flux de contrôle. Cette réutilisation facilite la conception et la gestion des packages SSIS.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>Créer un composant de package de flux de contrôle  
  Pour créer un composant de package de flux contrôle, dans l’Explorateur de solutions, développez le dossier **Package Parts** (Composants de package). Cliquez avec le bouton droit sur **Control Flow** (Flux de contrôle), puis sélectionnez **New Control Flow Package Part**(Nouveau composant de package de flux de contrôle).  
@@ -93,16 +93,16 @@ ms.lasthandoff: 11/20/2017
 -   Si cette option est désactivée, une copie du fichier du composant est ajoutée au projet.  
   
 ## <a name="configure-a-control-flow-package-part"></a>Configurer un composant de package de flux de contrôle  
- Pour configurer des composants de package de flux de contrôle après les avoir ajoutés au flux de contrôle d’un package, utilisez la boîte de dialogue **Configuration de composants de package**.  
+ Pour configurer des composants de package de flux de contrôle après les avoir ajoutés au flux de contrôle d’un package, utilisez la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package).  
   
-#### <a name="to-open-the-package-part-configuration-dialog-box"></a>Pour ouvrir la boîte de dialogue de configuration de composants de package  
+#### <a name="to-open-the-package-part-configuration-dialog-box"></a>Pour ouvrir la boîte de dialogue Package Part Configuration (Configuration de composant de package)  
   
-1.  Pour configurer une instance de composant, double-cliquez dessus dans le flux de contrôle. Vous pouvez également cliquer avec le bouton droit sur l’instance de composant, puis sélectionner **Modifier**. La boîte de dialogue **Configuration de composants de package**.  
+1.  Pour configurer une instance de composant, double-cliquez dessus dans le flux de contrôle. Vous pouvez également cliquer avec le bouton droit sur l’instance de composant, puis sélectionner **Modifier**. La boîte de dialogue **Package Part Configuration** (Configuration de composant de package).  
   
 2.  Configurez les propriétés et les gestionnaires de connexion pour l’instance de composant.  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
- Utilisez l’onglet **Propriétés** de la boîte de dialogue **Configuration de composants de package**.  
+ Utilisez l’onglet **Properties** (Propriétés) de la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package).  
   
  ![Onglet Propriétés de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-properties-tab.png "Onglet Propriétés de la boîte de dialogue Configuration du modèle")  
   
@@ -114,14 +114,14 @@ ms.lasthandoff: 11/20/2017
   
  La table dans le volet droit répertorie les propriétés à configurer.  
   
--   **Chemin de la propriété**. Chemin d’accès à la propriété.  
+-   **Property Path**(Chemin d’accès à la propriété). Chemin d’accès à la propriété.  
   
--   **Type de propriété**. Type de données de la propriété.  
+-   **Property Type**(Type de propriété). Type de données de la propriété.  
   
 -   **Valeur**. Valeur configurée. Cette valeur remplace la valeur par défaut.  
   
-### <a name="connection-managers-tab"></a>Onglet Gestionnaires de connexions  
- L’onglet **Gestionnaires de connexion** dans la boîte de dialogue **Configuration de composants de package** permet de spécifier les propriétés des gestionnaires de connexions pour l’instance de composant.  
+### <a name="connection-managers-tab"></a>Onglet Connection Managers (Gestionnaires de connexions)  
+ L’onglet **Connection Managers** (Gestionnaires de connexions) dans la boîte de dialogue **Package Part Configuration**  (Configuration de composant de package) permet de spécifier les propriétés des gestionnaires de connexions pour l’instance de composant.  
   
  ![Onglet Gestionnaires de connexions de la boîte de dialogue Configuration du modèle](../integration-services/media/template-configuration-connection-managers-tab.png "Onglet Gestionnaires de connexions de la boîte de dialogue Configuration du modèle")  
   
@@ -129,19 +129,19 @@ ms.lasthandoff: 11/20/2017
   
  La liste dans le volet droit répertorie les propriétés du gestionnaire de connexions sélectionné.  
   
--   **Définie**. Option activée si la propriété est configurée pour l’instance de composant.  
+-   **Set**(Définie). Option activée si la propriété est configurée pour l’instance de composant.  
   
--   **Nom de la propriété**. Nom de la propriété.  
+-   **Property Name**(Nom de la propriété). Nom de la propriété.  
   
 -   **Valeur**. Valeur configurée. Cette valeur remplace la valeur par défaut.  
   
 ## <a name="delete-a-control-flow-part"></a>Supprimer un composant de flux de contrôle  
- Pour supprimer un composant, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le composant, puis sélectionnez **Supprimer**. Sélectionnez **OK** pour confirmer la suppression, ou sélectionnez **Annuler** pour conserver le composant.  
+ Pour supprimer un composant, dans l’Explorateur de solutions, cliquez avec le bouton droit sur le composant, puis sélectionnez **Delete**(Supprimer). Sélectionnez **OK** pour confirmer la suppression, ou sélectionnez **Cancel** (Annuler) pour conserver le composant.  
   
  Si vous supprimez un composant d’un projet, il est supprimé définitivement du système de fichiers et ne peut pas être restauré.  
   
 > [!NOTE]  
->  Si vous voulez supprimer un composant d’un projet Integration Services, mais continuer à l’utiliser dans d’autres projets, utilisez l’option **Exclure du projet** au lieu de l’option **Supprimer**.  
+>  Si vous voulez supprimer un composant d’un projet Integration Services, mais continuer à l’utiliser dans d’autres projets, utilisez l’option **Exclude from Project**  (Exclure du projet ) au lieu de l’option **Delete** (Supprimer).  
   
 ## <a name="package-parts-are-a-design-time-feature-only"></a>Les composants de package sont des fonctionnalités disponibles uniquement au moment de la conception.  
  Les composants de package sont des fonctionnalités disponibles au moment du design caractéristiques. Le concepteur SSIS crée, ouvre, enregistre et met à jour des composants, et ajoute, configure ou supprime des instances de composant dans un package. En revanche, le runtime SSIS n’est pas informé de la présence de composants. Voici comment le concepteur accomplit cette séparation.  

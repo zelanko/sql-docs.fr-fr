@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d31004490ec90b92f0ab1cf16c0dc3e56e234d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad12cc0dbc2cd30552981b6947fd25ece3369c2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-the-ado-libraries"></a>Référencer les bibliothèques ADO
 La dernière version de l’objet ADO est empaquetée en tant que *msado15.dll*. Les dernières versions de ADO MD et ADOX sont empaquetées en tant que *msadom.dll* et *msadox.dll*, respectivement. Ces bibliothèques sont installés par défaut dans *$installDir*, où *$installDir* représente le chemin d’accès du répertoire dans lequel la bibliothèque ADO a été installée sur votre ordinateur. Pour utiliser les bibliothèques ADO dans votre application, vous devez les référencer explicitement dans le projet d’application.  

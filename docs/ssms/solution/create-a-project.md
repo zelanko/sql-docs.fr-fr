@@ -3,7 +3,7 @@ title: "Créer un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a95d8c7ecf359e6fc10939759d05d816d91efc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-project"></a>Créer un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez créer un ou plusieurs projets à l’intérieur d’une solution existante.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/05/2017
     **Emplacement**  
     Entrez l'emplacement dans lequel vous voulez créer votre projet ou choisissez-en un dans la liste.  
   
-    **Parcourir**  
+    **...**  
     Affiche la boîte de dialogue **Emplacement du projet** , afin que vous puissiez naviguer jusqu’au répertoire dans lequel le projet doit être enregistré.  
   
     **Solution**  
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/05/2017
   
 Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut pour les dossiers de projets de scripts est : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [l’Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ajouter un projet existant à une solution](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
 [Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)  

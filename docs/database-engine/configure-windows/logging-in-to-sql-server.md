@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01cb38024cef71a6a19c9b79ca036270dc46a6ab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Vous pouvez vous connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de n’importe quel outil d’administration graphique ou d’une invite de commandes.  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="verifying-your-connection-protocol"></a>Vérification du protocole de connexion  
  En cas de connexion au [!INCLUDE[ssDE](../../includes/ssde-md.md)], la requête suivante renvoie le protocole utilisé pour la connexion actuelle, ainsi que la méthode d'authentification (NTLM ou Kerberos), et indique si la connexion est chiffrée.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
  [Se connecter à une instance de SQL Server &#40;invite de commandes&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Les ressources suivantes peuvent vous aider à résoudre un problème de connexion.  
@@ -92,8 +92,8 @@ WHERE session_id = @@SPID;
   
 -   [Procédure de résolution des problèmes de connectivité SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
-## <a name="related-content"></a>Contenu connexe  
- [Choisir un mode d'authentification](../../relational-databases/security/choose-an-authentication-mode.md)  
+## <a name="related-content"></a>Contenu associé  
+ [Choisir un mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md)  
   
  [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   

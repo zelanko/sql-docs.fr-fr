@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Un catalogue de texte intégral est un conteneur logique pour un groupe d’index de recherche en texte intégral. Vous devez créer un catalogue de texte intégral avant de pouvoir créer un index de recherche en texte intégral.
@@ -34,9 +34,9 @@ Un catalogue de texte intégral est un objet virtuel qui n’appartient à aucun
 ##  <a name="creating"></a> Créer un catalogue de texte intégral  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Créer un catalogue de texte intégral avec Transact-SQL
-Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Par exemple :
+Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Exemple :
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

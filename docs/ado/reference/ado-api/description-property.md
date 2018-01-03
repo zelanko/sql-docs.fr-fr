@@ -3,7 +3,7 @@ title: "Propriété Description | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc23f481c709c0901eb6a2020b51629a16f659eb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 91f323c2baaf411a6186eff5c1df725fb8a06687
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="description-property"></a>Description (propriété)
 Décrit un [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
@@ -35,7 +35,7 @@ Décrit un [erreur](../../../ado/reference/ado-api/error-object.md) objet.
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un **chaîne** valeur qui contient une description de l’erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **Description** propriété pour obtenir une brève description de l’erreur. Afficher cette propriété pour avertir l’utilisateur d’une erreur que vous ne pouvez pas ou ne souhaitez pas gérer. La chaîne proviennent d’ADO ou d’un fournisseur.  
   
  Les fournisseurs sont chargés de transmettre le texte d’erreur spécifique à ADO. ADO ajoute un [erreur](../../../ado/reference/ado-api/error-object.md) de l’objet à la **erreurs** collection pour chaque fournisseur d’erreur ou avertissement reçoit. Énumérer les **erreurs** collection pour les erreurs transmises par le fournisseur de trace.  

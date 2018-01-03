@@ -3,7 +3,7 @@ title: "Ajouter des éléments existants à un projet | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56f873817e5ed00c4ea07a3b9ac3dc44e40882f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: baa79600bb9e617b5275c623e610688209d90c56
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-existing-items-to-a-project"></a>Ajouter des éléments existants à un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité de l’application. Un élément existant peut être une requête ou un fichier divers. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] comporte deux types de projets : les projets de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et les projets de script Analysis Services. Les fichiers de requête que vous pouvez ajouter au projet sont déterminés par le type du projet. Par exemple, vous pouvez ajouter une requête [!INCLUDE[tsql](../../includes/tsql_md.md)] (fichier doté de l'extension .sql) à un projet de script [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , mais vous ne pouvez pas l'ajouter à un projet de script de services d'analyse. Pour associer d’autres extensions de fichier à un type de projet, consultez [Procédure : associer des extensions de fichier à un éditeur de code](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925).  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Dans le menu **Projet** , cliquez sur **Ajouter un élément existant**.  
   
-    **Regarder dans**  
+    **Look in**  
     Recherche les fichiers ou dossiers à ajouter au projet dans cette liste. Pour les services Web XML et les applications Web ASP.NET, les fichiers se trouvent sur un serveur Web.  
   
     **Bureau**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Le fichier est ajouté au dossier **Requêtes** ou **Fichiers divers** du projet.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)  
 [Enlever ou supprimer un élément ou un projet](../../ssms/solution/remove-or-delete-an-item-or-project.md)  

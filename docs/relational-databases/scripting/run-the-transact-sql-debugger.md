@@ -3,9 +3,9 @@ title: "Exécuter le débogueur Transact-SQL | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e081ce40af97789870b1ed63ff705db8113fb809
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 016079a4e88a669a8ea4be31652095cfc81b0184
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] après avoir ouvert une fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous pouvez ensuite exécuter votre code [!INCLUDE[tsql](../../includes/tsql-md.md)] en mode débogage jusqu'à ce que vous arrêtiez le débogueur. Vous pouvez définir des options permettant de personnaliser la façon dont le débogueur s'exécute.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
  La fenêtre de l'éditeur de requête reste en mode débogage jusqu'à la fin de la dernière instruction dans la fenêtre de l'éditeur de requête ou jusqu'à l'arrêt du mode débogage. Vous pouvez arrêter le mode débogage et l'exécution d'instructions en utilisant l'une des méthodes suivantes :  
   
--   Dans le menu **Débogage** , cliquez sur **Arrêter le débogage**.  
+-   Dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 -   Dans la barre d'outils **Déboguer** , cliquez sur le bouton **Arrêter le débogage** .  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
 |**Désactiver tous les points d'arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
 |Non disponible|**Ajouter un espion**|Non disponible|Non disponible|Ajoute l'expression sélectionnée à la fenêtre **Espion** .|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

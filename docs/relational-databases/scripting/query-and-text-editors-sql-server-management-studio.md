@@ -3,9 +3,9 @@ title: "Éditeurs de texte et de requête (SQL Server Management Studio) | Micro
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -33,11 +33,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b54b922643b184ccc19a3cdead0cec7d06503fea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b278c4027a3293ec7845be3d9b344451d6a2f457
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez utiliser l’un des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour modifier et tester de manière interactive un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX ou XML/A, ou pour modifier un fichier texte brut ou XML. Chaque éditeur est pris en charge par un service propre à un langage qui met en couleurs les mots clés et qui vérifie la syntaxe et les erreurs d'utilisation. L'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprend un débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez utiliser pour résoudre les problèmes présents dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -135,7 +135,7 @@ ms.lasthandoff: 11/17/2017
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code et afficher les informations de débogage telles que les valeurs des variables et des paramètres.|[Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’état &#40;éditeur de requête du moteur de base de données&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

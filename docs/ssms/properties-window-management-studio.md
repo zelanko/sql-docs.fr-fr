@@ -3,7 +3,7 @@ title: "Fenêtre Propriétés (Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e1bd4e6f6201bc9a64e68a7b05722b281abbb0e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-management-studio"></a>Fenêtre Propriétés (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette fenêtre vous permet d’afficher les propriétés des éléments sélectionnés. Vous pouvez également utiliser la fenêtre Propriétés pour afficher les propriétés d'un fichier, d'un projet et d'une solution. Pour accéder à cette fenêtre, cliquez dans le menu **Affichage** sur **Fenêtre Propriétés** .  
@@ -43,6 +43,6 @@ La fenêtre Propriétés affiche différents types de champs d'édition, en fonc
 |**Propriétés**|Affiche les propriétés d'un objet.|  
 |**Volet Description**|Le volet Description apparaît dans la partie inférieure de la fenêtre Propriétés et affiche le type de la propriété ainsi qu'une description succincte de celle-ci. Vous pouvez activer et désactiver la description de la propriété via la commande **Description** située dans le menu contextuel.|  
   
-## <a name="see-also"></a>Voir aussi  
-[Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
+## <a name="see-also"></a> Voir aussi  
+[Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

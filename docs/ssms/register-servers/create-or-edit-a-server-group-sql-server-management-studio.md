@@ -3,7 +3,7 @@ title: "Créer ou modifier un groupe de serveurs (SQL Server Management Studio) 
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e91da011789c674e8169a3ef3eb68630ac2b111
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2bb7c1950d3a8dd84b6c5445bc48bf1ab104887
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Créer ou modifier un groupe de serveurs (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Cette rubrique explique comment organiser les serveurs dans des serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en créant des groupes de serveurs et en plaçant les serveurs dans les groupes. Vous pouvez créer des groupes de serveurs dans Serveurs inscrits à tout moment ou lors de l'inscription des serveurs.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Vous pouvez également créer un nouveau groupe de serveurs pendant l’inscription d’un serveur, en cliquant sur **Nouveau groupe**, puis en renseignant la boîte de dialogue **Nouveau groupe** .  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Inscrire des serveurs](../../tools/sql-server-management-studio/register-servers.md)  
   
   

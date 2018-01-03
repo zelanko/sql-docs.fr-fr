@@ -3,9 +3,9 @@ title: "Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête | M
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 44b90c0b7ce2e12e973e6145551bbb3af4c16e3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e63038dab16cd65b74a8b5eb393e3ec6d101e248
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Grâce à l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez écrire et modifier des requêtes en tant que scripts SQLCMD. Vous utilisez des scripts SQLCMD lorsque vous devez traiter des commandes Windows System et des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le même script.  
@@ -152,7 +152,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="color-coding-in-sqlcmd-scripts"></a>Codage en couleurs dans les scripts SQLCMD  
  Lorsque les scripts SQLCMD sont activés, les scripts sont codés en couleurs. Le codage en couleurs des mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] reste inchangé. Les commandes SQLCMD sont présentées avec un arrière-plan ombré.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple ci-après utilise une instruction **sqlcmd** pour créer un fichier de sortie nommé testoutput.txt et exécute deux instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi qu’une commande du système d’exploitation (pour imprimer le répertoire actuel). Le fichier résultant contient la sortie du message provenant de l'instruction `DIR` , suivie des résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
@@ -164,7 +164,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

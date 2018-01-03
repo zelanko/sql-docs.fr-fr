@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> Créer la base de données  
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée la base de données IMOLTP_DB destinée à contenir une ou plusieurs tables optimisées en mémoire. Le chemin \<lecteur_et_chemin> doit exister avant d’exécuter cette commande.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -96,7 +96,7 @@ Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les t
   
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée un pool de ressources nommé Pool_IMOLTP avec la moitié de la mémoire disponible.  Une fois le pool créé, Resource Governor est reconfiguré afin d'inclure Pool_IMOLTP.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -113,7 +113,7 @@ GO
   
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant définit une liaison de la base de données IMOLTP_DB au pool de ressources Pool_IMOLTP. La liaison ne devient effective que lorsque vous mettez la base de données en ligne.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Confirmer la liaison  
  Confirmez la liaison, en prenant soin de noter l'ID du pool de ressources pour IMOLTP_DB. Cette valeur ne doit pas être NULL.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -132,7 +132,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Rendre la liaison effective  
  Vous devez mettre la base de données hors ligne, puis en ligne, après sa liaison au pool de ressources afin que la liaison prenne effet. Si votre base de données était déjà liée à un autre pool de ressources, cela supprime la mémoire allouée du pool précédent afin que les allocations de mémoire pour vos index et votre table mémoire optimisée émanent désormais du nouveau pool de ressources lié à la base de données.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -156,7 +156,7 @@ GO
   
  **Exemple de code**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -185,7 +185,7 @@ GO
   
  Une fois qu'une base de données a été liée à un pool de ressources nommé, utilisez la requête suivante pour afficher les allocations de mémoire sur les différents pools de ressources.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -213,7 +213,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Si vous ne liez pas votre base de données à un pool de ressources, elle est liée au pool « par défaut ». Étant donné que le pool de ressources par défaut est utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la plupart des autres allocations, vous ne pourrez pas surveiller la mémoire consommée par les tables mémoire optimisées à l'aide de la DMV sys.dm_resource_governor_resource_pools précisément pour la base de données.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   

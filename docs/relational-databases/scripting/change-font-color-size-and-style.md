@@ -3,9 +3,9 @@ title: Modifier la couleur, la taille et le style de la police | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0b27197892a40573ba8a164c54392f90158c218c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0afebea7644b83dea20918ca55c7601395c1df97
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="change-font-color-size-and-style"></a>Modifier la couleur, la taille et le style de la police
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Vous pouvez personnaliser l’apparence du texte dans l’Éditeur et dans d’autres emplacements dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
  Les paramètres de la couleur du texte et du type de police sont globaux pour tous les types d'éléments de texte, notamment les commentaires, les chaînes, etc.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Imprimer le code et les résultats](../../relational-databases/scripting/print-code-and-results.md)   
  [Codage en couleurs dans les éditeurs de requête](../../relational-databases/scripting/color-coding-in-query-editors.md)  
   

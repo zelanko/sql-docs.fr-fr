@@ -3,9 +3,9 @@ title: "Espion express, boîte de dialogue | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 29db30b65a2ec487cfd56a849b82f645e5bb9e4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4831c5a62987109aba02f29f540fdff908cee5b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Débogueur Transact-SQL - Boîte de dialogue Espion express
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Utilisez la boîte de dialogue **Espion express** pour consulter rapidement le type de données et la valeur d’une expression [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, une variable ou un paramètre) pendant que vous déboguez du code [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour surveiller plusieurs expressions, vous pouvez également ajouter l’expression à une fenêtre **Espion** .  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  **Nom**  
  Expression [!INCLUDE[tsql](../../includes/tsql-md.md)] actuellement surveillée.  
   
- **Valeur**  
+ **Value**  
  Affiche la valeur actuellement assignée à l'expression. Si l'expression n'a pas de valeur, un espace est affiché.  
   
  Si la longueur d'une expression dépasse la largeur de la colonne **Valeur** , une info-bulle affiche la valeur complète lorsque vous placez le pointeur sur la cellule **Valeur** de cette expression.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
  **Type**  
  Affiche le type de données de l'expression.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Espion (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   

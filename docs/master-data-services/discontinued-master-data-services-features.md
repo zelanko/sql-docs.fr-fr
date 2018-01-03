@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cad58416d1177a421c710f00979a9153cb393cdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9516ec50e770291f8ad575b3d93fb7cd411d3fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discontinued-master-data-services-features"></a>Fonctionnalités Master Data Services éliminées
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  Le modèle de métadonnées n’est plus disponible. Par ailleurs, vous ne pouvez plus afficher les métadonnées dans la zone fonctionnelle Explorateur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités Master Data Services déconseillées](../master-data-services/deprecated-master-data-services-features.md)  
   
   
