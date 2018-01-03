@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 029ba3a0508e3198b3b81e94a508783308a4257d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_colonne*  
+ *column_name*  
  Est le nom de colonne d’un **varbinary (max)** colonne FILESTREAM. *column_name* doit être un nom de colonne. Il ne peut s'agir d'une expression ou du résultat d'une instruction CAST ou CONVERT.  
   
  Demande de PathName pour une colonne de tout autre type de données ou pour un **varbinary (max)** columnthat n’a pas de provoquer une erreur de compilation de requête de la volonté d’attribut de stockage FILESTREAM.  
@@ -54,7 +54,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Retourne le nom de serveur converti au format BIOS, par exemple : `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|Retourne le nom de serveur non converti, par exemple : `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+| 1|Retourne le nom de serveur non converti, par exemple : `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|Retourne le chemin d'accès complet du serveur, par exemple : `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
@@ -64,11 +64,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Lorsque la base de données appartient à un groupe de disponibilité Always On de groupe, puis la valeur de *use_replica_computer_name* a les effets suivants sur la sortie de la **chemin d’accès** fonction :  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Non spécifié.|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
 |0|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
-|1|La fonction retourne le nom d'ordinateur dans le chemin d'accès.|  
+| 1|La fonction retourne le nom d'ordinateur dans le chemin d'accès.|  
   
 ## <a name="return-type"></a>Type de retour  
  **nvarchar(max)**  
@@ -76,7 +76,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Valeur retournée  
  La valeur retournée est le chemin d'accès logique complet ou NETBIOS de l'objet blob. PathName ne retourne pas d'adresse IP. Une valeur NULL est retournée lorsque l'objet blob FILESTREAM n'a pas été créé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La colonne ROWGUID doit être visible dans toute requête qui appelle PathName.  
   
  Un objet blob FILESTREAM peut être créé uniquement à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -86,7 +86,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lecture du chemin d'accès d'un objet BLOB FILESTREAM  
  L'exemple suivant attribue `PathName` à une variable `nvarchar(max)`.  
   
-```tsql  
+```sql  
 DECLARE @PathName nvarchar(max);  
 SET @PathName = (  
     SELECT TOP 1 photo.PathName()  
@@ -98,7 +98,7 @@ SET @PathName = (
 ### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Affichage des chemins d'accès des BLOB FILESTREAM dans une table  
  L'exemple suivant crée et affiche les chemins d'accès pour trois objets blob FILESTREAM.  
   
-```tsql  
+```sql  
 -- Create a FILESTREAM-enabled database.  
 -- The c:\data directory must exist.  
 CREATE DATABASE PathNameDB  

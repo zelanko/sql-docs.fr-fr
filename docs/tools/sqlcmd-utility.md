@@ -3,7 +3,7 @@ title: Utilitaire SQLCMD | Documents Microsoft
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlcmd
 ms.reviewer: 
@@ -33,11 +33,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbf609bb0bfba5f49a38e942deb566377b066864
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 711ac727b68dbd6ee3c1697e7933ead413919a29
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -226,7 +226,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 > [!NOTE]  
 >  La variable d'environnement OSQLSERVER a été conservée pour assurer une compatibilité descendante. La variable d’environnement SQLCMDSERVER est prioritaire par rapport à la variable d’environnement OSQLSERVER ; **sqlcmd** et **osql** peuvent donc être utilisés l’un à côté de l’autre sans interférence et les anciens scripts continuent à fonctionner.  
   
- **-U** *login_id*  
+ **-U** *ID_connexion*  
  Est le nom de connexion ou le nom d’utilisateur contenu dans la base de données. Pour les utilisateurs contenus dans la base de données, vous devez fournir l’option de nom de base de données (-d).  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 > [!IMPORTANT]  
 >  N'utilisez pas le terminateur GO dans la requête.  
   
- Si l’option **-b** est spécifiée avec cette option, **sqlcmd** se termine avec une erreur. L’option**-b** est traitée ultérieurement dans cette rubrique.  
+ Si l’option **-b** est spécifiée avec cette option, **sqlcmd** se termine avec une erreur. L’option **-b** est traitée ultérieurement dans cette rubrique.  
   
  **-Q"** *requête cmdline* **"**  
  Exécute une requête quand **sqlcmd** démarre, puis quitte immédiatement **sqlcmd**. Il est possible d'exécuter des requêtes séparées par plusieurs points-virgules.  
@@ -476,7 +476,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  **-?**  
  Affiche la version de **sqlcmd** et un résumé de la syntaxe des options de **sqlcmd** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les options ne doivent pas nécessairement être utilisées dans l'ordre indiqué dans la section de la syntaxe.  
   
  Lorsque plusieurs résultats sont retournés, **sqlcmd** imprime une ligne vide entre chaque ensemble de résultats dans un traitement. En outre, le message `<x> rows affected` ne s’affiche pas lorsqu’il ne concerne pas l’instruction exécutée.  
@@ -505,7 +505,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
   
-|Variable|Commutateur associé|R/W (Lecture/écriture)|Par défaut|  
+|Variable|Commutateur associé|R/W (Lecture/écriture)|Valeur par défaut|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -581,7 +581,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Les noms de variable ne respectent pas la casse.  
   
- Les variables de script peuvent être définies comme suit :  
+ Les variables de script peuvent être définies comme suit :  
   
 -   Implicitement à l'aide d'une option de ligne de commande. Par exemple, l’option **-l** définit la variable **sqlcmd** SQLCMDLOGINTIMEOUT.  
   
@@ -638,11 +638,11 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Entraîne la fermeture de **sqlcmd** .  
   
  [**:**] **EXIT**[ **(***instruction***)** ]  
- Vous permet d’utiliser le résultat d’une instruction SELECT comme valeur de retour de **sqlcmd**. S'il est numérique, la première colonne de la dernière ligne de résultats est convertie en un entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows 200x transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
+ Vous permet d’utiliser le résultat d’une instruction SELECT comme valeur de retour de **sqlcmd**. S'il est numérique, la première colonne de la dernière ligne de résultats est convertie en un entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows 200x transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
   
  `:EXIT(query)`  
   
- Par exemple :  
+ Exemple :  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -668,7 +668,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Exécute le traitement qui inclut la requête, puis se termine après avoir retourné les résultats de la requête.  
   
- Si RAISERROR est utilisé dans un script **sqlcmd** et qu’une erreur de gravité 127 se produit, l’exécution de **sqlcmd** se termine et l’ID du message est retourné au client. Par exemple :  
+ Si RAISERROR est utilisé dans un script **sqlcmd** et qu’une erreur de gravité 127 se produit, l’exécution de **sqlcmd** se termine et l’ID du message est retourné au client. Exemple :  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -729,7 +729,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  `:connect $(myservername) $(myusername)`  
   
  [**:**] **!!**< *commande*>  
- Exécute des commandes du système d'exploitation. Pour exécuter une commande du système d’exploitation, commencez une ligne par deux points d’exclamation (**!!**) suivis de la commande du système d’exploitation. Par exemple :  
+ Exécute des commandes du système d'exploitation. Pour exécuter une commande du système d’exploitation, commencez une ligne par deux points d’exclamation (**!!**) suivis de la commande du système d’exploitation. Exemple :  
   
  `:!! Dir`  
   

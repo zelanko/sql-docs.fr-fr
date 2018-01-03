@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fed0fc07f27a3069ba56309b1da7f18197bd987f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 Type de retour est varie selon le premier argument (expression). Si un argument d’entrée est de type chaîne (`NVARCHAR`, `VARCHAR`), le type de résultat sera identique au type d’entrée. Le tableau suivant répertorie les conversions automatiques :  
 
-|Type de l’expression d’entrée |Résultat | 
+|Type de l’expression d’entrée |Résultats | 
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
@@ -75,7 +75,7 @@ Type de retour est varie selon le premier argument (expression). Si un argument 
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR (4000) |
 
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  
 `STRING_AGG`agrégat accepte toutes les expressions à partir des lignes et les concatène en une seule chaîne. Valeurs d’expression sont implicitement convertis en types chaîne et ensuite concaténés. La conversion implicite en chaînes respecte les règles existantes de conversion de type de données. Pour plus d’informations sur les conversions de type de données, consultez [CAST et CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -90,7 +90,7 @@ Les valeurs NULL sont ignorées et le séparateur correspondant n’est pas ajou
 
 ### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. Générer la liste de noms séparés dans les nouvelles lignes 
 L’exemple suivant génère une liste de noms dans une cellule de résultat unique, séparées par des retours chariot.
-```tsql
+```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
 FROM Person.Person; 
 ```
@@ -107,7 +107,7 @@ FROM Person.Person;
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. Générer la liste de noms séparés par des virgules sans les valeurs NULL   
 L’exemple suivant remplace les valeurs null avec le « N/a » et retourne les noms séparés par des virgules dans une cellule de résultat unique.  
-```tsql
+```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
 FROM Person.Person; 
 ```
@@ -122,7 +122,7 @@ FROM Person.Person;
 
 ### <a name="c-generate-comma-separated-values"></a>C. Générer des valeurs séparées par des virgules 
 
-```tsql   
+```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -141,7 +141,7 @@ FROM Person.Person;
 ### <a name="d-return-news-articles-with-related-tags"></a>D. Retourner des articles d’actualité avec les balises associées 
 
 L’article et leurs balises sont séparés dans différentes tables. Développeur souhaite retourner une ligne par chaque article avec toutes les balises associées. Utilisation de la requête suivante : 
-```tsql
+```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
 LEFT JOIN dbo.ArticleTag AS t 
@@ -160,7 +160,7 @@ GROUP BY a.articleId, title;
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Générer la liste des messages électroniques par villes
 
 La requête suivante recherche les adresses de messagerie d’employés et les regroupe par villes : 
-```tsql
+```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
 GROUP BY town; 
@@ -178,7 +178,7 @@ Des messages électroniques retourné dans les colonne peut être utilisée dire
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. Générer une liste triée de messages électroniques par villes   
    
 Similaire à l’exemple précédent, la requête suivante recherche les adresses de messagerie d’employés, les regroupe par ville puis trie les e-mails par ordre alphabétique :   
-```tsql
+```sql
 SELECT town, 
     STRING_AGG (email, ';') WITHIN GROUP (ORDER BY email ASC) AS emails 
 FROM dbo.Employee 

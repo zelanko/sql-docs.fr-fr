@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: da5449283269e7ff018e7a4b394eb4c26b69e590
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: 5900878e440a0ae821655adea764eaebad8fddf2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Une source de données externe nommé pointe vers l’emplacement de stockage d�
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)]recommande de spécifier un nom de classement pour chaque colonne dans un [fichier de format](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
-|Valeur CODEPAGE| Description|  
+|Valeur CODEPAGE|Description|  
 |--------------------|-----------------|  
 |ACP|Colonnes de **char**, **varchar**, ou **texte** type de données sont converties à partir de la [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] / [!INCLUDE[msCoName](../../includes/msconame-md.md)] page de codes Windows (ISO 1252) à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page de codes.|  
 |OEM (valeur par défaut)|Colonnes de **char**, **varchar**, ou **texte** type de données sont converties à partir de la page de codes OEM du système pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page de codes.|  
@@ -334,7 +334,7 @@ Avant de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fic
   
  Pour plus d’informations sur cette modification et autres considérations relatives à l’aide de BULK INSERT, consultez [importer en bloc des données par l’utilisation de BULK INSERT ou OPENROWSET &#40; BULK... &#41; &#40; SQL Server &#41; ](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert les autorisations INSERT et ADMINISTER BULK OPERATIONS. De plus, l'autorisation ALTER TABLE est nécessaire si une ou plusieurs des conditions suivantes sont réunies :  
   
 -   Des contraintes existent et l'option CHECK_CONSTRAINTS n'est pas spécifiée.  
@@ -415,7 +415,7 @@ WITH (FORMAT = 'CSV');
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. L’importation de données à partir d’un fichier dans le stockage blob Azure   
 L’exemple suivant montre comment charger des données à partir d’un fichier csv dans un emplacement de stockage d’objets blob Azure, qui a été configuré en tant que source de données externe. Cela nécessite des informations d’identification d’une étendue de la base de données à l’aide d’une signature d’accès partagé.    
 
-```tsql
+```sql
 BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -447,11 +447,11 @@ Pour terminer `BULK INSERT` des exemples, y compris la configuration de source d
   
 -   [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
--   [Utiliser un fichier de format pour mapper les colonnes d’une table aux champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Fichiers de format pour l’importation ou l’exportation de données &#40; SQL Server &#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

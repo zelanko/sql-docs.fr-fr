@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 47d4b177e93d028ccf0afffec6a9480928e11cb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 65a39571e4cd02b9bbb20d42463301d38d0f8836
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR au niveau du bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ expression | expression
 ## <a name="result-types"></a>Types des résultats  
  Retourne un **int** si les valeurs d’entrée sont **int**, un **smallint** si les valeurs d’entrée sont **smallint**, ou un **tinyint** si les valeurs d’entrée sont **tinyint**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'opérateur | au niveau du bit exécute un OR logique au niveau du bit entre les deux expressions, évaluant chaque bit se correspondant dans les deux expressions. Dans le résultat, les bits prennent la valeur 1 si l'un des bits ou les deux (pour la position en cours d'évaluation) des expressions d'entrées ont la valeur 1 ; si aucun des deux bits des deux expressions d'entrée ne vaut 1, le bit du résultat est mis à 0.  
   
  Si les expressions de gauche et droite ont des types de données entiers différents (par exemple, sur la gauche *expression* est **smallint** et du droit *expression* est **int**), l’argument du type de données plus petit est converti au type de données plus volumineux. Dans cet exemple, le **smallint***expression* est converti en un **int**.  
@@ -65,7 +65,7 @@ expression | expression
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une table avec **int** types pour afficher les valeurs d’origine et place la table dans une ligne.  
   
-```tsql  
+```sql  
 CREATE TABLE bitwise  
 (   
  a_int_value int NOT NULL,  

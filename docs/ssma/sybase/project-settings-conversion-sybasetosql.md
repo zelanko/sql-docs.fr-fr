@@ -3,7 +3,7 @@ title: "Paramètres (Conversion) (SybaseToSQL) du projet | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 860a6758367999edcd264dab12229d4f23bbf7ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Paramètres du projet (Conversion) (SybaseToSQL)
 La page de Conversion de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit la syntaxe de Sybase Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou une syntaxe de SQL Azure.  
@@ -275,7 +275,7 @@ Messages de l’utilisateur ASE sont stockées dans chaque base de données. [!I
   
 Ce paramètre spécifie le nombre à ajouter au numéro de message de l’utilisateur ASE à convertir en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] message de l’utilisateur. Si votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a des messages de l’utilisateur dans le **sys.messages** vue de catalogue, vous devrez peut-être modifier ce nombre à une valeur plus élevée. Il s’agit donc les numéros de message converti ne portent pas de numéros de message existant.  
   
-Notez les points suivants :  
+Notez les points suivants :  
   
 -   Les messages dans la plage-19999 17000 ASE proviennent de la table système sysmessages et ne sont pas convertis.  
   

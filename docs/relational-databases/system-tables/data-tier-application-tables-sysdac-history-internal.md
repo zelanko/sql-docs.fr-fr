@@ -22,21 +22,21 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tables d’Application de couche données - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations sur les actions entreprises pour gérer les applications de la couche Données (DAC). Cette table est stockée dans le **dbo** schéma de la **msdb** base de données.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**int**|Identificateur de l'action.|  
-|**sequence_id**|**int**|Identifie une étape dans une action.|  
+|**action_id**|**Int**|Identificateur de l'action.|  
+|**sequence_id**|**Int**|Identifie une étape dans une action.|  
 |**instance_id**|**uniqueidentifier**|Identificateur de l'instance DAC. Cette colonne peut être jointe sur la **instance_id** colonne [dbo.sysdac_instances &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = déployer<br /><br /> **1** = créer<br /><br /> **2** = renommer<br /><br /> **3** = détachement<br /><br /> **4** = suppression|  
 |**action_type_name**|**varchar (19)**|Nom du type d'action :<br /><br /> **déployer**<br /><br /> **créer**<br /><br /> **changement de nom**<br /><br /> **détacher**<br /><br /> **supprimer**|  
@@ -55,20 +55,20 @@ ms.lasthandoff: 11/17/2017
 |**date_de_création**|**datetime**|Date et heure de création de cette entrée.|  
 |**date_de_modification**|**datetime**|Date et heure de la dernière modification apportée à l'entrée.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les actions de gestion de la DAC, telles que le déploiement ou la suppression d'une DAC, génèrent plusieurs étapes. Un identificateur d'action est attribué à chaque action. Chaque étape est affectée à un numéro de séquence et une ligne dans **sysdac_history_internal**, où l’état de l’étape est enregistré. Chaque ligne est créée lors du démarrage de l'étape de l'action et est mise à jour autant que nécessaire pour refléter l'état de l'opération. Par exemple, une action DAC de déploiement peut être attribuée **action_id** 12 et quatre lignes dans **sysdac_history_internal**:  
   
 |||||  
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|create|dacpac|  
-|12|1|create|login|  
-|12|2|create|database|  
-|12|3|renommer|database|  
+|12| 1|create|login|  
+|12|2|create|base de données|  
+|12|3|renommer|base de données|  
   
  Les opérations DAC, telles que supprimer, ne supprimez pas les lignes à partir de **sysdac_history_internal**. Vous pouvez utiliser la requête suivante pour supprimer manuellement les lignes pour les DAC ne sont plus déployées sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -80,7 +80,7 @@ WHERE instance_id NOT IN
 > [!NOTE]  
 >  Actuellement, il n’existe aucun mécanisme pour supprimer **sysdac_history_internal** sur les lignes [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin. Accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données master.  
   
 ## <a name="see-also"></a>Voir aussi  

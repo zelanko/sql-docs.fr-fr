@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 897eb5ff888873c7e9befcdb850b13dd2dd9be03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e7376d3b6fa4bebac0e0b176bd4144d6bec54b0c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>Sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -73,21 +73,21 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|LINK_STATE accompagnées|int|Une des valeurs suivantes, qui correspondent aux valeurs de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|LINK_STATE accompagnées|INT|Une des valeurs suivantes, qui correspondent aux valeurs de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar(32)|Une des valeurs suivantes, qui correspondent à l’exemple précédent valeurs pour **LINK_STATE accompagnées**.<br /><br /> -SAIN<br />     Le serveur entre SQL Server et Azure à distance n'est sain.<br />-ERROR_AZURE_FIREWALL<br />     Le pare-feu Azure empêche le lien entre SQL Server et le serveur Azure distant.<br />-ERROR_NO_CONNECTION<br />     SQL Server ne peut pas établir une connexion au serveur Azure distant.<br />-ERROR_AUTH_FAILURE<br />     Échec de l’authentification empêche le lien entre SQL Server et le serveur Azure distant.<br />-ERREUR<br />     Une erreur qui n’est pas un problème d’authentification, un problème de connectivité ou d’un problème de pare-feu empêche le lien entre SQL Server et le serveur Azure distant.|  
-|error_number|int|Le numéro de l’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
-|error_message|nvarchar (1024)|Message d’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
+|error_number|INT|Le numéro de l’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
+|error_message|nvarchar(1024)|Message d’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations db_owner.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>Vérifiez la connexion à partir de SQL Server pour le serveur Azure distant  
   
-```tsql  
+```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
 ### <a name="check-the-azure-firewall"></a>Vérifiez le pare-feu Azure  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -113,11 +113,11 @@ GO
   
 |LINK_STATE accompagnées|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<numéro d’erreur liés au pare-feu >*|*\<message d’erreur liés au pare-feu >*|  
+| 1|ERROR_AZURE_FIREWALL|*\<numéro d’erreur liés au pare-feu >*|*\<message d’erreur liés au pare-feu >*|  
   
 ### <a name="check-authentication-credentials"></a>Vérifiez les informations d’identification d’authentification  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database>  
 GO  
 EXECUTE sys.sp_rda_test_connection  
@@ -133,7 +133,7 @@ GO
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Vérifier l’état du serveur Azure distant  
   
-```tsql  
+```sql  
 USE <SQL Server database>  
 GO  
 EXECUTE sys.sp_rda_test_connection   

@@ -3,7 +3,7 @@ title: "Se connecter à Sybase (SybaseToSQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4f565c0acba658142e0542ce2a1806d0216f4f8b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Se connecter à Sybase (SybaseToSQL)
 Utilisez le **se connecter à Sybase** boîte de dialogue se connecter à l’instance de Sybase Adaptive Server Enterprise (ASE) que vous souhaitez migrer.  
@@ -44,7 +44,7 @@ Entrez ou sélectionnez le nom ou l’adresse IP du serveur adaptative. Le nom d
 **Port du serveur**  
 Si vous utilisez un port non défini par défaut pour les connexions à ASE, entrez le numéro de port. Le numéro de port par défaut est 5000. Il s’agit d’une option de mode standard.  
   
-**Nom d'utilisateur**  
+**User name**  
 Entrez le nom d’utilisateur qui est utilisé pour se connecter à ASE. Il s’agit d’une option de mode standard.  
   
 **Mot de passe**  
@@ -61,9 +61,9 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
   
     |Paramètre|Paramètre de Sybase 12,5|Paramètre de Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nom du serveur|Nom de serveur|Server|  
-    |Port|Adresse de Port du serveur|Port|  
-    |Nom d'utilisateur|ID d'utilisateur|ID d'utilisateur|  
+    |Nom du serveur|Nom du serveur|Serveur|  
+    |d’|Adresse de Port du serveur|d’|  
+    |Nom d’utilisateur|ID d'utilisateur|ID d'utilisateur|  
     |Mot de passe|Mot de passe|Mot de passe|  
     |Fournisseur|Fournisseur|Fournisseur|  
   
@@ -80,10 +80,10 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
     |Paramètre|Paramètre de Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nom du pilote|Pilote|  
-    |Nom de serveur|Server|  
+    |Nom du serveur|Serveur|  
     |Nom d'utilisateur|UID|  
     |Mot de passe|Mot de passe|  
-    |Numéro de port|Port|  
+    |Numéro de port|d’|  
   
     Pour Sybase ASE 12,5 ou 15, un exemple de chaîne de connexion est la suivante :  
   
@@ -93,10 +93,10 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
   
     |Paramètre|Paramètre de Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nom de serveur|Server|  
+    |Nom du serveur|Serveur|  
     |Nom d'utilisateur|UID|  
     |Mot de passe|Mot de passe|  
-    |Numéro de port|Port|  
+    |Numéro de port|d’|  
   
     Un exemple de chaîne de connexion pour le fournisseur ADO.NET est comme suit :  
   

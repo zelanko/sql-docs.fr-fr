@@ -3,7 +3,7 @@ title: "Onlineindexoperation, élément (DTA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0f1b623107b78bcf9edd3ff101f2faf7831ff3fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dd8acd696b9aa2ddfe200adba618d848657df5f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie si l’index, vues indexées ou partitions recommandées par l’Assistant Paramétrage du moteur de base de données peuvent être créées en ligne.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 |**Type de données et longueur**|**string**, aucune longueur maximale.|  
 |**Valeurs autorisées**|**OFF**<br /> Aucune PDS ne peut être créée en ligne.<br /><br /> **ON**<br /> Toutes les PDS recommandées peuvent être créées en ligne.<br /><br /> **MIXED**<br /> L'Assistant Paramétrage du moteur de base de données tente de recommander des PDS pouvant être créées en ligne lorsque cela est possible.<br /><br /> Utilisez une de ces valeurs avec cet élément. Si les index sont créés en ligne, le mot clé **ONLINE = ON** est ajouté à sa définition d’objet.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Ce paramètre est facultatif. Ne peut être utilisé qu’une seule fois pour l’élément **TuningOptions** .|  
+|**Occurrence**|Facultatif. Ne peut être utilisé qu’une seule fois pour l’élément **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/05/2017
 |**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Exemple de fichier d’entrée XML simple &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -3,7 +3,7 @@ title: SQL Server Migration Assistant | Documents Microsoft
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bde2050f1151c19eeeecde37752c4fd52624017f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant de migration SQL Server
 Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de la base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
@@ -47,10 +47,10 @@ Pour des sources prises en charge, passez en revue les informations sur le centr
 SSMA prennent en charge les versions suivantes de la cible.
 
 - SQL Server 2008
-- SQL Server 2008 R2
+- SQL Server 2008 R2
 - SQL Server 2012
-- SQL Server 2014
-- SQL Server 2016
+- SQL Server 2014
+- SQL Server 2016
 - Azure SQL Database
 - SQL Server 2017 sur Windows et Linux (version préliminaire)
 - ** Azure SQL Data Warehouse

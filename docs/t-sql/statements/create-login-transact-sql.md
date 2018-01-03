@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -109,22 +109,22 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
  Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins 8 caractères, et ne peuvent pas dépasser 128 caractères.  Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peut pas contenir de guillemets simples, ou le *login_name*.  
   
  Mot de passe  **=**  *hashed_password*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  S'applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.  
   
  HASHED  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie que le mot de passe entré après l'argument PASSWORD est déjà haché. Si cette option n'est pas sélectionnée, la chaîne de caractères entrée comme mot de passe est hachée avant d'être stockée dans la base de données. Cette option doit être utilisée uniquement pour effectuer une migration de bases de données d'un serveur vers un autre. N'utilisez pas l'option HASHED pour créer des connexions. L'option HASHED ne peut pas être utilisée avec des hachages créés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7 ou antérieur,  
   
  MUST_CHANGE  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Si vous incluez cette option, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande à l'utilisateur un nouveau mot de passe lors de la première utilisation de la nouvelle connexion.  
   
  Informations d’identification  **=**  *credential_name*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Nom des informations d'identification à associer à la nouvelle connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Informations d’identification ne peut pas être mappée à la connexion de l’administrateur système (sa).  
   
@@ -136,22 +136,22 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SID de connexion : structure SID valide pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il s’agit en général un 32 octets (**binary(32)**) littéral composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.  
   
 DEFAULT_DATABASE  **=**  *base de données*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la base de données par défaut à affecter à la connexion. Si cette option est omise, la base de données par défaut est master.  
   
 DEFAULT_LANGUAGE  **=**  *language*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie la langue par défaut à affecter à la connexion. Si cette option est omise, la langue par défaut est la langue par défaut actuellement définie pour le serveur. Si la langue par défaut du serveur est changée par la suite, la langue par défaut de la connexion reste la même.  
   
 CHECK_EXPIRATION  **=**  {ON | **OFF** }  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie si les règles d'expiration des mots de passe doivent être imposées sur cette connexion. La valeur par défaut est OFF.  
   
 CHECK_POLICY  **=**  { **ON** | {OFF}  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  S’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion uniquement. Spécifie que les stratégies de mot de passe Windows de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doivent être imposées sur cette connexion. La valeur par défaut est ON.  
   
@@ -163,21 +163,21 @@ CHECK_POLICY  **=**  { **ON** | {OFF}
 -   Un des caractères non alphanumériques, tels qu'un espace, _, @, *, ^, % ! , $, # ou &.  
   
 WINDOWS  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie que la connexion doit être mappée sur une connexion Windows.  
   
 CERTIFICAT *certname*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie le nom d'un certificat à associer à cette connexion. Ce certificat doit déjà se trouver dans la base de données master.  
   
 CLÉ asymétrique *asym_key_name*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie le nom d'une clé asymétrique à associer à cette connexion. Cette clé doit déjà se trouver dans la base de données master.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les mots de passe respectent la casse.  
   
  Le hachage préalable des mots de passe est pris en charge uniquement lorsque vous créez des connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -212,14 +212,14 @@ CLÉ asymétrique *asym_key_name*
   
  Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] connexions, consultez [gérer les bases de données et des connexions dans base de données SQL Windows Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nécessite **ALTER ANY LOGIN** autorisation sur le serveur ou l’appartenance dans le **securityadmin** rôle serveur fixe.  
   
  Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer de nouvelles connexions.  
   
  Si l'option **CREDENTIAL** est utilisée, l'autorisation **ALTER ANY CREDENTIAL** est également exigée sur le serveur.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
  Après avoir créé un compte de connexion, celle-ci peut se connecter à la [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mais dispose uniquement des autorisations accordées à la **public** rôle. Envisagez d'effectuer certaines des activités suivantes.  
   
 -   Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
@@ -243,7 +243,7 @@ GO
 ### <a name="b-creating-a-login-with-a-password"></a>B. Création d'une connexion avec un mot de passe  
  L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe. L'option `MUST_CHANGE` exige que les utilisateurs modifient ce mot de passe la première fois qu'ils se connectent au serveur.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>' MUST_CHANGE;  
@@ -253,7 +253,7 @@ GO
 ### <a name="c-creating-a-login-mapped-to-a-credential"></a>C. Création d'une connexion mappée sur une information d'identification  
  L'exemple suivant crée la connexion pour un utilisateur particulier, à l'aide de l'utilisateur. Cette connexion est mappée à l'information d'identification.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',   
@@ -264,7 +264,7 @@ GO
 ### <a name="d-creating-a-login-from-a-certificate"></a>D. Création d'une connexion à partir d'un certificat  
  L’exemple suivant crée une connexion pour un utilisateur particulier à partir d’un certificat dans master.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE MASTER;  
@@ -279,7 +279,7 @@ GO
 ### <a name="e-creating-a-login-from-a-windows-domain-account"></a>E. Création d'une connexion à partir d'un compte de domaine Windows  
  L'exemple suivant crée une connexion à partir d'un compte de domaine Windows.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;  
@@ -314,7 +314,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>G. Création d’une connexion d’authentification SQL Server avec un mot de passe  
  L’exemple suivant crée la connexion `Mary7` avec mot de passe `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   

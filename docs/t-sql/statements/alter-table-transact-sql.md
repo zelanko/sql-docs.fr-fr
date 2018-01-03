@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -334,7 +334,7 @@ Certaines modifications de type de données peuvent entraîner une modification 
   
  Si la colonne en cours de modification est chiffrée à l’aide de chiffré avec, vous pouvez modifier le type de données à un type de données compatible (tel que INT en BIGINT), mais vous ne pouvez pas modifier les paramètres de chiffrement.  
   
- *nom_colonne*  
+ *column_name*  
  Nom de la colonne à ajouter, modifier ou supprimer. *column_name* peut comporter un maximum de 128 caractères. Pour les nouvelles colonnes, *column_name* peut être omis pour les colonnes créées avec une **timestamp** type de données. Le nom **timestamp** est utilisé si aucun *column_name* est spécifié pour un **timestamp** colonne de type de données.  
   
  [ *type_schema_name***.** ] *type_name*  
@@ -543,7 +543,7 @@ WITH CHECK | WITH NOCHECK
   
  *max_degree_of_parallelism* peut prendre l’une des valeurs suivantes :  
   
- 1  
+  1  
  Supprime la création de plans parallèles.  
   
  \>1  
@@ -742,12 +742,12 @@ TABLE
  Représente le nom du jeu de colonnes. Un jeu de colonnes est une représentation XML non typée qui combine toutes les colonnes éparses d'une table dans une sortie structurée. Un jeu de colonnes ne peut pas être ajouté à une table qui contient des colonnes éparses. Pour plus d’informations sur les jeux de colonnes, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).  
   
  { ENABLE | DISABLE } FILETABLE_NAMESPACE  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Active ou désactive les contraintes définies par le système sur un FileTable. Peut être utilisé uniquement avec un FileTable.  
   
  DÉFINIR (FILETABLE_DIRECTORY = *directory_name* )  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie le nom de répertoire FileTable compatible Windows. Ce nom doit être unique parmi tous les noms de répertoire FileTable de la base de données. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement SQL. Peut être utilisé uniquement avec un FileTable.  
 ```    
@@ -777,7 +777,7 @@ TABLE
   
 -   Pour désactiver Stretch pour une table et copier les données distantes pour la table d'Azure vers SQL Server, exécutez la commande suivante. Cette commande ne peut pas être annulée.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   Pour désactiver Stretch pour une table et abandonner les données distantes, exécutez la commande suivante.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -849,7 +849,7 @@ S’IL EXISTE
   
  Conditionnellement supprime la colonne ou la contrainte uniquement s’il existe déjà.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour ajouter de nouvelles lignes de données, utilisez [insérer](../../t-sql/statements/insert-transact-sql.md). Pour supprimer les lignes de données, utilisez [supprimer](../../t-sql/statements/delete-transact-sql.md) ou [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). Pour modifier les valeurs des lignes existantes, utilisez [mise à jour](../../t-sql/queries/update-transact-sql.md).  
   
  Si le cache de procédures contient des plans d'exécution qui référencent la table, ALTER TABLE les marque de façon à les recompiler lors de leur prochaine exécution.  
@@ -943,7 +943,7 @@ Dans les versions antérieures, la spécification du format server.database.sche
   
  Pour résoudre le problème, supprimez l'utilisation d'un préfixe en quatre parties.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
  Les autorisations ALTER TABLE s'appliquent aux tables mises en œuvre dans une instruction ALTER TABLE SWITCH. Toute donnée basculée hérite de la sécurité de la table cible.  
@@ -1411,7 +1411,7 @@ ENABLE CHANGE_TRACKING;
   
 L'exemple ci-dessous active le suivi des modifications ainsi que le suivi des colonnes qui sont mises à jour lors d'une modification.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -1764,7 +1764,7 @@ WITH
   
 |Partition|Contient des données ?|Plage de limite|  
 |---------------|---------------|--------------------|  
-|1|Oui|OrderDate < ' 2004-01-01 »|  
+| 1|Oui|OrderDate < ' 2004-01-01 »|  
 |2|Oui|« 2004-01-01' < = OrderDate < ' 01 / 01/2005 »|  
 |3|Oui|« 2005-01-01' < = OrderDate < ' 2006-01-01 »|  
 |4|Oui|« 2006-01-01'< = OrderDate < ' 2007-01-01 »|  

@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ed224c77a502f81da57b232a68fddc0d4157338
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 147ac7627ba30a8a249e00cbf03e37887368de09
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>Sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -56,18 +56,18 @@ Request_id de [sys.dm_exec_requests](../../relational-databases/system-dynamic-m
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar (256)**|Le type d’événement dans le tampon d’entrée pour le spid donné.|  
 |**paramètres**|**smallint**|Tous les paramètres fournis pour l’instruction.|  
 |**event_info**|**nvarchar(max)**|Le texte de l’instruction dans le tampon d’entrée pour le spid donné.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l’utilisateur a l’autorisation VIEW SERVER STATE, l’utilisateur voit les sessions de tout en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur voit uniquement la session active.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur s’affiche en cours d’exécution toutes les sessions sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sinon, l’utilisateur voit uniquement la session active.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette fonction de gestion dynamique peut être utilisée conjointement avec sys.dm_exec_sessions ou sys.dm_exec_requests faisant **CROSS APPLY**.  
   
 ## <a name="examples"></a>Exemples  
@@ -75,7 +75,7 @@ Request_id de [sys.dm_exec_requests](../../relational-databases/system-dynamic-m
 ### <a name="a-simple-example"></a>A. Exemple simple  
  L’exemple suivant illustre le passage d’un id de session (SPID) et un id de demande à la fonction.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-using-cross-apply-to-additional-information"></a>B. À l’aide de s’appliquent à des informations supplémentaires  
  L’exemple suivant répertorie le tampon d’entrée pour les sessions avec l’id de session supérieur à 50.  
   
-```tsql  
+```sql  
 SELECT es.session_id, ib.event_info   
 FROM sys.dm_exec_sessions AS es  
 CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  

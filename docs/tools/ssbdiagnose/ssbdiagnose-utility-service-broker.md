@@ -3,7 +3,7 @@ title: Utilitaire ssbdiagnose (Service Broker) | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 601de096e50a39b13113ff09e86965187701b327
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **ssbdiagnose** utilitaire signale des problèmes dans [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations ou la configuration de [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
@@ -139,7 +139,7 @@ ssbdiagnose
   
  *nom_service*: spécifie le nom du service cible.  
   
- *ID_broker*: spécifie l’ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui identifie la base de données cible. *ID_broker* est un GUID. Vous pouvez exécuter la requête suivante dans la base de données cible pour le rechercher :  
+ *ID_broker*: spécifie l’ID [!INCLUDE[ssSB](../../includes/sssb-md.md)] qui identifie la base de données cible. *ID_broker* est un GUID. Vous pouvez exécuter la requête suivante dans la base de données cible pour le rechercher :  
   
 ```  
 SELECT service_broker_guid  
@@ -260,7 +260,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Affiche l'aide de la ligne de commande.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez **ssbdiagnose** pour effectuer les opérations suivantes :  
   
 -   Confirmer qu'une application [!INCLUDE[ssSB](../../includes/sssb-md.md)] récemment configurée ne contient pas d'erreurs de configuration.  

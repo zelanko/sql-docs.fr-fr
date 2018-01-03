@@ -43,11 +43,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 671eb95a5c1772ec790886d923112d491bbd2a35
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a739b230d39726367d54a64e7b2327f6a80f9ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -158,7 +158,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET  
  Spécifie la liste des noms des colonnes ou des variables à mettre à jour.  
   
- *nom_colonne*  
+ *column_name*  
  Colonne qui contient les données à modifier. *column_name* doit exister dans *table_or view_name*. Il est impossible de mettre à jour les colonnes d'identité.  
   
  *expression*  
@@ -466,7 +466,7 @@ ID     Value
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Les autorisations UPDATE sont obligatoires sur la table cible. Les autorisations SELECT sont également requises pour la table de mise à jour si l’instruction UPDATE contient une clause WHERE ou si *expression* dans le jeu de clause utilise une colonne de la table.  
   
  Mettre à jour les autorisations par défaut aux membres de la **sysadmin** rôle serveur fixe le **db_owner** et **db_datawriter** les rôles de base de données et le propriétaire de la table. Membres de la **sysadmin**, **db_owner**, et **db_securityadmin** rôles et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  

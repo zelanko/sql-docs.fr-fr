@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque, le système est en *implicite* le mode de transaction. Cela signifie que si @@TRANCOUNT = 0, les instructions Transact-SQL suivantes commence une nouvelle transaction. Elle est équivalente à une invisibles BEGIN TRANSACTION en cours d’exécution tout d’abord :  
   
 ||||  
@@ -56,7 +56,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (Voir l'exception ci-dessous.)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
+|Suppression|OPEN|UPDATE|  
 |DROP|.|.|  
   
  Lorsque chacune des instructions T-SQL précédentes est OFF, délimité par une instruction BEGIN TRANSACTION invisible et une instruction COMMIT TRANSACTION invisible. Si elle est désactivée, on dit que le mode de transaction est *autocommit*. Si votre code T-SQL émet visiblement un BEGIN TRANSACTION, nous dire le mode de transaction est *explicite*.  
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>Exemples  
  Le script Transact-SQL suivant exécute quelques différents cas de test. La sortie de texte est également fournie, qui montre le comportement détaillé et les résultats de chaque cas de test.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +169,7 @@ go
   
  L’élément suivant est la sortie de texte du script Transact-SQL précédente.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

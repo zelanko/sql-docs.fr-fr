@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 75af14c94dd17ae6caead3f6b5dee9e0bf0b257e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f09bc032ffe4de52fcb7d9f46e4fbdd4450c8c14
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID de la base de données.|  
 |**FileId**|**smallint**|ID de fichier.|  
@@ -70,10 +70,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|Valeur du handle de fichier.|  
 |**BytesOnDisk**|**bigint**|Taille physique du fichier sur le disque (en octets).<br /><br /> Pour les fichiers de base de données, il est la même valeur que **taille** dans **sys.database_files**, mais est exprimée en octets plutôt que des pages.<br /><br /> Dans le cas des fichiers partiellement alloués d'instantané de base de données, il s'agit de l'espace qu'utilise le système d'exploitation pour ceux-ci.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **fn_virtualfilestats** est un système de fonction table qui fournit des informations statistiques, telles que le nombre total d’e/s effectuée dans un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -81,7 +81,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### <a name="a-displaying-statistical-information-for-a-database"></a>A. Affichage des informations statistiques d'une base de données  
  L'exemple suivant affiche les informations statistiques de l'ID de fichier 1 de la base de données dont l'ID est `1`.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
@@ -90,7 +90,7 @@ GO
 ### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Affichage des informations statistiques d'une base de données et d'un fichier nommés  
  L'exemple suivant affiche les informations statistiques du fichier journal de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La fonction système `DB_ID` est utilisé pour spécifier le *database_id* paramètre.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -99,7 +99,7 @@ GO
 ### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>C. Affichage des informations statistiques de la totalité des bases de données et des fichiers  
  L'exemple suivant affiche les informations statistiques de tous les fichiers de toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

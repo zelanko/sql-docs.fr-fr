@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f4589c45311ad9c1479f97ceb82b38f3e13393e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,13 +48,13 @@ THROW [ { error_number | @local_variable },
  *error_number*  
  Constante ou variable qui représente l'exception. *error_number* est **int** et doit être supérieure ou égale à 50 000 et inférieur ou égal à 2147483647.  
   
- *Message*  
+ *message*  
  Chaîne ou variable qui décrit l'exception. *message* est **nvarchar (2048)**.  
   
- *état*  
+ *state*  
  Constante ou variable comprise entre 0 et 255 qui indique l'état à associer au message. *état* est **tinyint**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instruction qui précède l'instruction THROW doit être suivie du terminateur d'instruction, le point-virgule (;).  
   
  Si une construction TRY…CATCH n'est pas disponible, la session prend fin. Le numéro de ligne et la procédure où l'exception est levée sont définis. La gravité est définie sur 16.  
@@ -77,7 +77,7 @@ THROW [ { error_number | @local_variable },
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. Utilisation de THROW pour lever une exception  
  L’exemple suivant montre comment utiliser la `THROW` instruction pour lever une exception.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -92,7 +92,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>B. Utilisation de THROW pour lever à nouveau une exception  
  L'exemple suivant montre comment utiliser l'instruction `THROW` pour lever une nouvelle fois la dernière exception levée.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -123,7 +123,7 @@ END CATCH;
 ### <a name="c-using-formatmessage-with-throw"></a>C. Utilisation de FORMATMESSAGE avec THROW  
  L'exemple suivant indique comment utiliser la fonction `FORMATMESSAGE` avec `THROW` pour générer un message d'erreur personnalisé. L'exemple commence par créer un message d'erreur défini par l'utilisateur à l'aide de `sp_addmessage`. Étant donné que l’instruction THROW n’autorise pas les paramètres de substitution dans le *message* paramètre dans la même manière que RAISERROR, la fonction FORMATMESSAGE est utilisé pour passer les trois valeurs de paramètre attendus par le message d’erreur 60000.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

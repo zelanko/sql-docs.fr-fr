@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94ef4e523b213f3b959546964227325b350f23b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b2ecaff48f54ce76fe0d193eda5406df1bc574e7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,10 +62,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  File d’attente *nom_file_attente*  
  Indique l’étendue de la notification d’événement s’applique à la file d’attente spécifié par *nom_file_attente*. L'argument QUEUE doit être spécifié s'il a été indiqué lors de la création de la notification d'événement. *nom_file_attente* est le nom de la file d’attente et doit également être spécifié.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si une notification d'événement se déclenche dans une transaction et est supprimée dans la même transaction, l'instance de notification d'événement est envoyée, puis la notification d'événement est supprimée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour supprimer une notification d'événement qui s'étend au niveau de la base de données, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER ANY DATABASE EVENT NOTIFICATION sur la base de données active.  
   
  Pour supprimer une notification d'événement étendue au niveau du serveur, un utilisateur doit, au minimum, être propriétaire de la notification d'événement ou posséder une autorisation ALTER ANY EVENT NOTIFICATION sur le serveur.  
@@ -75,7 +75,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une notification d'événement étendue au niveau de la base de données, puis la supprime :  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE EVENT NOTIFICATION NotifyALTER_T1  

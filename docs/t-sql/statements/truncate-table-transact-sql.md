@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5523e2797d3f0a69e39f0fb3cdbd70a6f389eed2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 71f05b47a4a070e5d797a6f9ff6b5f4d88e585c5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```  
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -59,7 +59,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```tsql  
+```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
@@ -93,7 +93,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
   
  Pour tronquer une table partitionnée, la table et index doivent être alignées (partitionnée sur la même fonction de partition).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Comparée à l'instruction DELETE, l'instruction TRUNCATE TABLE offre les avantages suivants :  
   
 -   Moindre espace du journal des transactions utilisé.  
@@ -134,7 +134,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>Troncation de grandes tables  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la possibilité de supprimer ou tronquer des tables qui ont plus de 128 étendues sans maintenir de verrous simultanés sur toutes les extensions requises pour la suppression.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation minimale requise est ALTER sur *table_name*. Les autorisations TRUNCATE TABLE sont octroyées par défaut au propriétaire de la table, aux membres du rôle serveur fixe sysadmin et des rôles de base de données fixes db_owner et db_ddladmin. Elles ne sont pas transférables. Toutefois, vous pouvez incorporer l’instruction TRUNCATE TABLE dans un module, par exemple une procédure stockée et accorder des autorisations appropriées pour le module à l’aide de la clause EXECUTE AS clause.  
   
 ## <a name="examples"></a>Exemples  
@@ -142,7 +142,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ### <a name="a-truncate-a-table"></a>A. Tronquer une table  
  L'exemple suivant supprime toutes les données de la table `JobCandidate`. Des instructions `SELECT` sont incluses avant et après l'instruction `TRUNCATE TABLE` pour comparer les résultats.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT COUNT(*) AS BeforeTruncateCount   
@@ -161,7 +161,7 @@ GO
   
  L'exemple suivant tronque les partitions spécifiées d'une table partitionnée. La syntaxe `WITH (PARTITIONS (2, 4, 6 TO 8))` provoque la troncation des numéros de partitions 2, 4, 6, 7 et 8.  
   
-```  
+```sql  
 TRUNCATE TABLE PartitionTable1   
 WITH (PARTITIONS (2, 4, 6 TO 8));  
 GO  

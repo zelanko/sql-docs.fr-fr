@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4d5241ddc65de92d7588e4c8d1ddb7c2e6b08528
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 283484ce00b3f0c19dea00b47826926a2b86df43
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,14 +115,14 @@ END
   
 -   Si aucun *Boolean_expression* a la valeur TRUE, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne le *else_result_expression* si une clause ELSE est spécifiée, ou une valeur NULL si aucune clause ELSE n’est spécifiée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise uniquement 10 niveaux d'imbrication dans les expressions CASE.  
   
  L'expression CASE ne peut pas être utilisée pour contrôler le flux d'exécution d'instructions, de blocs d'instructions, de fonctions définies par l'utilisateur et de procédures stockées Transact-SQL. Pour obtenir la liste des méthodes de contrôle de flux, consultez [langage de contrôle de flux &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
   
  L'instruction CASE évalue les conditions de manière séquentielle et s'arrête à la première condition remplie. Dans certains cas, une expression est évaluée avant qu'une instruction CASE ne reçoive les résultats de l'expression en entrée. Des erreurs sont possibles lors de l'évaluation de ces expressions. Les expressions d'agrégation qui apparaissent dans les arguments WHEN d'une instruction CASE sont évaluées en premier, puis fournies à l'instruction CASE. Par exemple, la requête suivante génère une erreur de division par zéro lors de la production de la valeur de l'agrégat MAX. Cela se produit avant l'évaluation de l'expression CASE.  
   
-```tsql  
+```sql  
 WITH Data (value) AS   
 (   
 SELECT 0   

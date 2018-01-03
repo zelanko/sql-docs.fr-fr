@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4e5b69caf7cde64cae7454c7132e1ee739898fff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8c83285118f584351172a3722427697479bb1bb7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
@@ -54,7 +54,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Si une base de données est supprimée, puis recréée, les jeux de sauvegarde de toutes les bases de données sont retournés. La sortie est classée par database_guid, qui identifie de façon unique chaque base de données.   
 S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une rupture dans la séquence de journaux de transactions consécutifs, la table contiendra une ligne spéciale pour chaque segment LSN manquant.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL du fichier de sauvegarde.|  
 |backup_type|NVARCHAR(6)|« DB » pour la sauvegarde de base de données « LOG » pour la sauvegarde de journal|  
@@ -70,12 +70,12 @@ S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une r
 |fork_point_lsn|NUMERIC(25, 0)|Si first_recovery_fork_id n'équivaut pas à last_recovery_fork_id, il s'agit du numéro séquentiel dans le journal du point du branchement. Dans les autres cas, cette valeur est NULL.|  
 |availability_group_guid|UNIQUEIDENTIFIER|Si une base de données est une base de données Always On, c’est le GUID du groupe de disponibilité. Sinon, cette valeur est NULL.|  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès) ou 1 (échec).  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **sélectionnez** autorisations sur cette fonction.  
   
 ## <a name="examples"></a>Exemples  

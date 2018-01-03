@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 507d136d24a9c9b7b68435a46952b79aecb1f688
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 55cafd4b779faf5cd3a77b24800682ec3b6c5bb5
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemple : Script d’installation sans assistance de SQL Server pour Ubuntu
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 Cet exemple de script d’interpréteur de commandes installe SQL Server 2017 sur Ubuntu 16.04 sans entrée interactive. Il fournit des exemples d’installation du moteur de base de données, les outils de ligne de commande de SQL Server, l’Agent SQL Server et effectue les étapes de post-installation. Vous pouvez éventuellement installer la recherche en texte intégral et créer un utilisateur administratif.
 
 > [!TIP]
-> Si vous n’avez pas besoin d’un script d’installation sans assistance, le moyen le plus rapide pour installer SQL Server consiste à suivre le [didacticiel de démarrage rapide pour Ubuntu](quickstart-install-connect-ubuntu.md). Pour plus d’informations d’installation, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
+> Si vous n’avez pas besoin d’un script d’installation sans assistance, le moyen le plus rapide pour installer SQL Server consiste à suivre le [démarrage rapide pour Ubuntu](quickstart-install-connect-ubuntu.md). Pour plus d’informations d’installation, consultez [aide à l’Installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 - Vous devez au moins 2 Go de mémoire pour exécuter SQL Server sur Linux.
 - Le système de fichiers doit être **XFS** ou **EXT4**. Autres systèmes de fichiers, tel que **BTRFS**, non pris en charge.
@@ -38,7 +38,7 @@ Cet exemple de script d’interpréteur de commandes installe SQL Server 2017 su
 ## <a name="sample-script"></a>Exemple de script
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

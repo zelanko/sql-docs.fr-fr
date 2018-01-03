@@ -1,7 +1,7 @@
 ---
 title: "Test migration des objets de base de données (OracleToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4b5f343234e77639e0b10eb07bce8281da9010f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b20c1f5d47388a92e92402faa9017dc6b042a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Test migration des objets de base de données (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Assistant de migration pour Oracle Tester (testeur SSMA) teste automatiquement la conversion des objets de base de données et la migration des données effectuées par SSMA. Une fois que toutes les étapes de migration de SSMA sont terminées, utilisez SSMA testeur pour vérifier que les objets convertis fonctionnent de manière identique et que toutes les données a été transféré correctement.  
@@ -51,7 +51,7 @@ SSMA testeur exécute les objets sélectionnés pour le test sur Oracle et leurs
 > [!NOTE]  
 > Attention ! N’utilisez jamais de SSMA testeur sur les systèmes de production. Lors de l’exécution de Tester le schéma source et les données sont modifiées. Pendant ce temps, la restauration complète de l’état d’origine peut être impossible pour certains types de code testé.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Si vous souhaitez utiliser le testeur de SSMA, installer SSMA Oracle Extension avec le **installer la base de données testeur** activée.  
   
 Pour permettre la comparaison des données de la table résultante, définissez la **colonne ROWID de générer** option **Oui** avant le démarrage de la conversion de schéma. SSMA ajoutera une colonne ROWID à toutes les tables lors de l’exécution de la **convertir le schéma** commande.  

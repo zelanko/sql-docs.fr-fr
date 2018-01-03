@@ -3,7 +3,7 @@ title: Utilitaire osql | Documents Microsoft
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: osql
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8e8f3045d6af2264007d7b0ec5fac9f4e464a5f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a41dd247105dcce2580027c014aa266df5ed9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="osql-utility"></a>Utilitaire osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Le **osql** utilitaire vous permet d’entrer [!INCLUDE[tsql](../includes/tsql-md.md)] instructions, des procédures système et des fichiers de script. Pour communiquer avec le serveur, cet utilitaire fait appel à ODBC.  
@@ -142,7 +142,7 @@ C:\>osql
  Spécifie l'indicateur de fin de commande. Par défaut, il faut entrer la commande GO sur une ligne isolée pour terminer une commande et la soumettre à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si vous changez d'indicateur de fin de commande, n'utilisez ni les mots réservés [!INCLUDE[tsql](../includes/tsql-md.md)] ni les caractères ayant une signification particulière pour le système d'exploitation, qu'ils soient ou non précédés d'une barre oblique inverse  
   
  **-q "** *query* **"**  
- Exécute une requête au démarrage d’ **osql** , mais ne quitte pas **osql** à l’issue de la requête. (Notez que la requête ne doit pas comporter d'instruction GO). Si vous exécutez une requête à partir d'un fichier de commandes, vous pouvez utiliser %variable ou %variable d'environnement%. Exemple :  
+ Exécute une requête au démarrage d’ **osql** , mais ne quitte pas **osql** à l’issue de la requête. (Notez que la requête ne doit pas comporter d'instruction GO). Si vous exécutez une requête à partir d'un fichier de commandes, vous pouvez utiliser %variable ou %variable d'environnement%. Exemple :  
   
 ```  
 SET table=sys.objects  
@@ -197,7 +197,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  L'utilitaire **-n**, **-O** et **-D** ne sont plus prises en charge par **osql**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’utilitaire **osql** doit être exécuté directement à partir du système d’exploitation à l’aide des options respectant la casse énumérées ici. Une fois **osql**démarré, il accepte les instructions SQL et les envoie de manière interactive à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les résultats sont mis en forme et affichés à l’écran (**stdout**). Pour quitter **osql**, utilisez QUIT ou EXIT.  
   
  Si vous ne spécifiez pas de nom d’utilisateur quand vous démarrez **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vérifie les variables d’environnement et les utilise, par exemple, **osqluser=(***user***)** ou **osqlserver=(***server***)**. Si aucune variable d'environnement n'est définie, le nom d'utilisateur du poste de travail est utilisé. Si vous n'indiquez pas de serveur, le nom du poste de travail est utilisé.  
@@ -274,13 +274,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Exemple :  
+ Exemple :  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- Vous pouvez également inclure le paramètre EXIT dans un fichier de commandes. Exemple :  
+ Vous pouvez également inclure le paramètre EXIT dans un fichier de commandes. Exemple :  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -308,7 +308,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR avec une gravité de 127  
   
 > [!NOTE]  
->  Si RAISERROR est utilisé dans un script **osql** et qu'une erreur de gravité 127 se produit, l'exécution d’ **osql** se termine et l'ID du message est retourné au client. Exemple :  
+>  Si RAISERROR est utilisé dans un script **osql** et qu'une erreur de gravité 127 se produit, l'exécution d’ **osql** se termine et l'ID du message est retourné au client. Exemple :  
   
 ```  
 RAISERROR(50001, 10, 127)  

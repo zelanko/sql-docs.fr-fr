@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba2e281c7f5593425bd67b817e02d81ee29a4742
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa52f107c3ba3c7332ea207ad0f3fc07e0dd03b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>Sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_rda_reconcile_batch @objname = '@objname'
  @objname = '*@objname*'  
  Le nom de la table SQL Server compatible Stretch.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations db_owner.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si vous souhaitez supprimer des données qui a déjà été migrées vers Azure, procédez comme suit.  
   
 1.  Suspendre la migration des données. Pour plus d’informations, consultez [suspendre et reprendre la migration des données &#40; Stretch Database &#41; ](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
@@ -67,10 +67,10 @@ sp_rda_reconcile_batch @objname = '@objname'
   
 5.  Reprendre la migration des données. Pour plus d’informations, consultez [suspendre et reprendre la migration des données &#40; Stretch Database &#41; ](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour rapprocher l’ID de lot, exécutez l’instruction suivante.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  
 ```  
   

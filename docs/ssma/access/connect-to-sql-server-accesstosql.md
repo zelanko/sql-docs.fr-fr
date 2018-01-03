@@ -1,7 +1,7 @@
 ---
 title: "Se connecter à SQL Server (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a8645c13d8a50c451f36b29f88fb286bc165587a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2ab855134819878fe47110c8d78a330beaaf0a9a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>Se connecter à SQL Server (AccessToSQL)
 Utilisez le **se connecter à SQL Server** boîte de dialogue se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous souhaitez migrer vers. Pour accéder à la **se connecter à SQL Server** boîte de dialogue le **fichier** menu, cliquez sur **se connecter à SQL Server**.  
@@ -42,13 +42,13 @@ Entrez ou sélectionnez l’instance de SQL Server pour se connecter à. Par dé
 **Port du serveur**  
 Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] n’est pas configuré pour accepter les connexions sur la valeur par défaut du port (1433), entrez le numéro de port. Sinon, laissez cette valeur vide.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
 Spécifiez la base de données pour migrer des objets et des données. Cette option n’est pas disponible lors de la reconnexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 **Authentification**  
 Sélectionnez la méthode d’authentification qui est utilisée pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Pour utiliser votre compte Windows actuel, sélectionnez l’authentification Windows. Pour spécifier un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connexion et le mot de passe, sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] l’authentification.  
   
-**Nom d'utilisateur**  
+**User name**  
 Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] l’authentification, entrez le nom de connexion pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Si vous utilisez l’authentification Windows, cette option n’est pas disponible.  
   
 **Mot de passe**  

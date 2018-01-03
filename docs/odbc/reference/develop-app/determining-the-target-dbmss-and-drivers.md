@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 515b89b4b99d73584cf1f88783296e49f6ab298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Détermination de la cible SGBD et les pilotes
 La question suivante à prendre en compte est, quelles sont la SGBD cible pour l’application et les pilotes sont disponibles qui prennent en charge ces SGBD ? Étant donné que les applications génériques ont tendance à être hautement interopérable, la question de cible de SGBD est plus applicable à des applications personnalisées et verticales. Toutefois, la question de pilotes cibles s’applique à toutes les applications, car les pilotes peuvent varier dans la vitesse, la qualité, la prise en charge de la fonctionnalité et disponibilité. Également, si les pilotes doivent être redistribué par l’application, le coût et la disponibilité des régimes de licences en doivent être pris en compte.  

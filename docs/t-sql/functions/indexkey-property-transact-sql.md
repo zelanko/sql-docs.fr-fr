@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7680fdcc7f3d59295f6dd4dd9e08501d56d54d4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39223c0b83e3c79bede3e25ed6f5f8e70f34750b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +63,13 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *propriété*  
  Nom de la propriété pour laquelle des informations sont retournées. *propriété* est une chaîne de caractères et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**ColumnId**|ID de colonne à la *key_ID* position de l’index.|  
 |**Décroissant**|Ordre de stockage de la colonne d'index<br /><br /> 1 = décroissant 0 = croissant|  
   
 ## <a name="return-types"></a>Types de retour  
- **int**  
+ **Int**  
   
 ## <a name="exceptions"></a>Exceptions  
  Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
@@ -79,7 +79,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, les deux propriétés sont retournées pour l'ID index `1`, la colonne clé `1` dans la table `Production.Location`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT   

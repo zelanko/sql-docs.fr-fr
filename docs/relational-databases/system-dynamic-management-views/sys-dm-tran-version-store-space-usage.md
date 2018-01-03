@@ -24,11 +24,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 8488ee0a8bb823438071cb912bd56c08af640b42
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,19 +39,19 @@ Chaque enregistrement avec contrôle de version est stocké sous forme de donné
   
 Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys.dm_tran_version_store_space_usage** à surveiller et planifier la taille de tempdb basée sur l’utilisation de l’espace de magasin de version des bases de données dans une instance de SQL Server.
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID de base de données de la base de données.|  
+|**database_id**|**Int**|ID de base de données de la base de données.|  
 |**reserved_page_count**|**bigint**|Nombre total des pages réservées dans tempdb pour la version de stockage des enregistrements de la base de données.|  
 |**reserved_space_kb**|**bigint**|Espace total utilisé en kilo-octets dans tempdb pour la version de stockage des enregistrements de la base de données.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 
 ## <a name="examples"></a>Exemples  
  La requête suivante peut être utilisée pour déterminer l’espace utilisé dans tempdb par la banque des versions de chaque base de données dans une instance de SQL Server. 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,

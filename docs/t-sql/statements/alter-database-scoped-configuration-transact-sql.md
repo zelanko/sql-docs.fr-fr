@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f003a852db7b1773e2c82b6ade3a951da673dbe0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2867f3aff5b8d6d7256d2a9a4ecbe7dcfdccb88c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>MODIFIER la CONFIGURATION inclus dans l’étendue de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ Active ou désactive le cache d’identité au niveau de la base de données. La
 > [!NOTE] 
 > Cette option peut uniquement être définie pour le serveur principal. Pour plus d’informations, consultez [les colonnes d’identité](create-table-transact-sql-identity-property.md).  
 
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Requiert ALTER toute CONFIGURATION de l’étendue de base de données   
 sur la base de données. Cette autorisation peut être accordée par un utilisateur avec l’autorisation CONTROL sur une base de données.  
   
@@ -194,7 +194,7 @@ Ces exemples illustrent l’utilisation de ALTER DATABASE SCOPED CONFIGURATION
 Cet exemple montre comment accorder l’autorisation nécessaire à l’exécution de ALTER DATABASE SCOPED CONFIGURATION     
 à l’utilisateur [Joe].  
   
-```tsql  
+```sql  
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;  
 ```  
   
@@ -202,14 +202,14 @@ GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 
 Cet exemple définit MAXDOP = 1 pour une base de données primaire et le MAXDOP = 4 pour la base de données secondaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 1 ;  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=4 ;  
 ```  
   
 Cet exemple définit MAXDOP pour une base de données secondaire pour être la même qu’il est défini pour sa base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 ```  
   
@@ -217,13 +217,13 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY ;
 
 Cet exemple affecte LEGACY_CARDINALITY_ESTIMATION à une base de données secondaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=ON ;  
 ```  
   
 Cet exemple définit LEGACY_CARDINALITY_ESTIMATION pour une base de données secondaire, car il s’agit de sa base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION=PRIMARY ;  
 ```  
   
@@ -231,20 +231,20 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 
 Cet exemple définit PARAMETER_SNIFFING Off pour une base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING =OFF ;  
 ```  
   
 Cet exemple définit PARAMETER_SNIFFING Off pour une base de données primaire dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;  
 ```  
   
 Cet exemple définit PARAMETER_SNIFFING pour la base de données secondaire, car il est sur la base de données primaire   
 dans un scénario de géo-réplication.  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
@@ -253,7 +253,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY
 La valeur QUERY_OPTIMIZER_HOTFIXES ON pour la base de données primaire   
 dans un scénario de géo-réplication.  
 
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;  
 ```  
   
@@ -261,7 +261,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES=ON ;
 
 Cet exemple efface le cache de procédure (possible uniquement pour une base de données primaire).  
   
-```tsql  
+```sql  
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;  
 ```  
 
@@ -271,7 +271,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 Cet exemple désactive le cache d’identité.
 
-```tsql 
+```sql 
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 

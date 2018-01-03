@@ -3,7 +3,7 @@ title: "Mettre en corrélation une Trace avec les données de journal de perform
 ms.custom: 
 ms.date: 07/12/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ef4781a05da3e06bc1d098dacce544dd599d647b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fe3b9fbc7a0b1b7eed6b478fff11ef4abb2cde83
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Corréler une trace avec les données du journal de performances Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]À l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous pouvez ouvrir un journal de performances de Microsoft Windows, choisir les compteurs que vous voulez mettre en corrélation avec une trace et afficher les compteurs de performances sélectionnés en même temps que la trace dans le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] interface utilisateur graphique. Lorsque vous sélectionnez un événement dans la fenêtre de trace, une barre verticale rouge dans le volet Moniteur système du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] indique les données du journal de performances en corrélation avec l'événement de trace sélectionné.  

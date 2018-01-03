@@ -4,7 +4,7 @@ description: "Cette rubrique contient les notes de publication et les fonctionna
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 du serveur SQL sur Linux
 
@@ -35,7 +35,7 @@ Les notes suivantes s’appliquent à SQL Server 2017 est en cours d’exécutio
 | Moteur docker 1.8 + sur Windows, Mac ou Linux | Néant | [Guide d’installation](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Examinez le [requise](sql-server-linux-setup.md#system) pour SQL Server sur Linux.
+> Pour plus d’informations, consultez la [requise](sql-server-linux-setup.md#system) pour SQL Server sur Linux. Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez le [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="supported-client-tools"></a>Outils clients pris en charge
 
@@ -49,7 +49,7 @@ Les notes suivantes s’appliquent à SQL Server 2017 est en cours d’exécutio
 
 Le tableau suivant répertorie l’historique de publication pour SQL Server 2017.
 
-| Version | Version | Date de publication |
+| Version | Options de version | Date de publication |
 |-----|-----|-----|
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -127,8 +127,8 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Procédures système stockées étendues (XP_CMDSHELL, etc.). |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Définir des assemblys CLR avec l’autorisation EXTERNAL_ACCESS ou UNSAFE |
-| &nbsp; | Extension du pool de mémoires tampons |
-| **Agent SQL Server** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
+| &nbsp; | Buffer Pool Extension |
+| **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | l'Agent de lecture du journal ; |
 | &nbsp; | Capture de données modifiées |
@@ -289,7 +289,7 @@ Les limitations suivantes s’appliquent à SSMS sur Windows connectés à SQL S
 
 ### <a name="next-steps"></a>Étapes suivantes
 
-Pour commencer, consultez les didacticiels de démarrage rapide suivants :
+Pour commencer, consultez les Démarrages rapides suivants :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

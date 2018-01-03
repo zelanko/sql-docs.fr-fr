@@ -1,7 +1,7 @@
 ---
 title: "Mappage des bases de données MySQL pour les schémas SQL Server (MySQLToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77a150ac9568f614869b3e6f168c96eb47d2e764
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4dd351ebbb052515d953f02ae74282dd1e1d62f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mappage des bases de données MySQL pour les schémas SQL Server (MySQLToSQL)
 Par défaut, SSMA pour MySQL migre tous les objets dans un schéma MySQL à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou nommée pour le schéma de la base de données SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre les schémas de MySQL et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou bases de données SQL Azure.  
@@ -75,7 +75,7 @@ Si vous personnalisez le mappage entre un schéma de MySQL et un schéma de SQL 
   
 1.  Sous l’onglet mappage de schéma, sélectionnez n’importe quelle ligne, puis cliquez sur **rétablir par défaut** pour rétablir la base de données par défaut et le schéma.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 Si vous souhaitez analyser la conversion d’objets de MySQL dans des objets SQL Server ou SQL Azure, vous pouvez [créer un rapport de conversion](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) dans le cas contraire, vous pouvez [convertir les définitions d’objets de base de données MySQL](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) en schémas SQL Server ou SQL Azure  
   
 ## <a name="see-also"></a>Voir aussi  

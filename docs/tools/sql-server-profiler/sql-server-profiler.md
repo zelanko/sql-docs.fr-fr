@@ -3,7 +3,7 @@ title: "Le Générateur de profils SQL Server | Documents Microsoft"
 ms.custom: 
 ms.date: 10/24/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -32,11 +32,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8194b34b1e07abaedabe5c4ee685f645470fce70
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1fc967826c92981266156cf9a3655ff0a80478af
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface pour créer et gérer des traces et analyser et relire les résultats de trace. Les événements sont enregistrés dans un fichier de trace, qui peut être analysé ou utilisé ultérieurement pour relire une série d’étapes spécifique lors de la tentative de diagnostic d’un problème.  
@@ -80,7 +80,7 @@ Le tableau suivant indique les fonctionnalités que nous vous conseillons d’ut
 ## <a name="sql-server-profiler-concepts"></a>Concepts de SQL Server Profiler  
  Pour utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous devez comprendre les termes qui décrivent le fonctionnement de l'outil.  
   
->**REMARQUE** Pour utiliser SQL Server Profiler, il est préférable de bien comprendre Trace SQL. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
+>**REMARQUE !** Pour utiliser SQL Server Profiler, il est préférable de bien comprendre Trace SQL. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
  **Événement**  
  Un événement est une action générée dans une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En voici quelques exemples :  
@@ -91,7 +91,7 @@ Le tableau suivant indique les fonctionnalités que nous vous conseillons d’ut
   
 -   état du traitement d'appel de procédure distante (RPC) ;  
   
--   le lancement ou la fin d'une procédure stockée ;  
+-   le lancement ou la fin d'une procédure stockée ;  
   
 -   le lancement ou la fin d'instructions à l'intérieur de procédures stockées ;  
   

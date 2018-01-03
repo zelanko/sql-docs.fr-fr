@@ -3,7 +3,7 @@ title: "Propriétés de Analysis Server (onglet Avancé) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1aef76c86f7f90cd5b3a4cbd7ed47b1d99aa7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 75abb271d1017eb5204bedddce07946c1c69412e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Propriétés de Analysis Server (onglet Avancé)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ce service est Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si des propriétés personnalisées sont définies, elles apparaissent dans cet onglet, avec les valeurs correspondantes.  

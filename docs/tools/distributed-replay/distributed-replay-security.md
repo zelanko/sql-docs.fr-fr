@@ -3,7 +3,7 @@ title: Distributed Replay Security | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e3f2b9639e7643ffefac8e67ac08c7443bb0463
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Avant d’installer et utiliser le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalité Distributed Replay, vous devez passer en revue les informations de sécurité importantes dans cette rubrique. Cette rubrique décrit les étapes de configuration de la sécurité consécutives à l'installation requises pour pouvoir utiliser Distributed Replay. Elle inclut également des considérations importantes en ce qui concerne la protection des données et les étapes de suppression importantes.  
@@ -114,12 +114,12 @@ ms.lasthandoff: 12/05/2017
   
 -   Membres du groupe Administrateurs local sur le contrôleur.  
   
--   Membres du groupe Administrateurs local sur les clients.  
+-   Membres du groupe Administrateurs local sur les clients.  
   
     > [!IMPORTANT]  
     >  Ces comptes ont entièrement accès à toutes les informations d'identification personnelle (PII) ou informations sensibles contenues dans la trace, l'intermédiaire, la distribution ou les fichiers de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés par Distributed Replay.  
   
- Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
+ Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
   
 -   Stockez les données de la trace d'entrée, les résultats de la trace de sortie et les fichiers de base de données dans un emplacement qui utilise le système de fichiers NTFS et appliquez les listes de contrôle d'accès (ACL) appropriées. Si nécessaire, chiffrez les données stockées sur l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sachez que les listes de contrôle d'accès (ACL) ne sont pas appliquées aux fichiers de trace, et qu'il n'y a pas de masque de données ni de codage. Vous devez supprimer ces fichiers rapidement après utilisation.  
   

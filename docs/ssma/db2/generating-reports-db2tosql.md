@@ -1,7 +1,7 @@
 ---
 title: "Génération de rapports (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1cd4e49126faf6816575c21f1b87c312c6d7a48
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77bca9dfb3bb5ff1f2d12fc112ae39a4dda4ed15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generating-reports-db2tosql"></a>Génération de rapports (DB2ToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -38,7 +38,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande**|**Titre de rapport**|  
-    |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
+    | 1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convertir le schéma|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
     |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;. XML|  
@@ -55,7 +55,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
+    | 1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
     |2|verbose = « true »|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
   
     > [!NOTE]  
@@ -66,7 +66,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    | 1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
     |2|signaler les erreurs = « true »|Erreur détaillée / avertissement / messages d’informations.|  
   
     > [!NOTE]  

@@ -1,7 +1,7 @@
 ---
 title: "MODIFIER le niveau de compatibilité de base de données (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 12/07/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c5e55a85b2ff67327198ff3fa54654b904429ed8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>MODIFIER le niveau de compatibilité de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 
  Exécutez la requête suivante pour déterminer la version de le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous êtes connecté.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
@@ -88,12 +88,13 @@ SELECT SERVERPROPERTY('ProductVersion');
 
  Pour déterminer le niveau de compatibilité actuel, interrogez la **compatibility_level** colonne [sys.databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level FROM sys.databases;  
 ```  
   
-## <a name="remarks"></a>Notes  
- Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est défini à la version de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Bases de données sont définies à ce niveau, sauf si le **modèle** base de données a un niveau de compatibilité inférieur. Lorsqu’une base de données est mise à niveau depuis une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données conserve son niveau de compatibilité existant s’il est au moins minimale autorisée pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La mise à niveau une base de données avec un niveau de compatibilité inférieur au niveau autorisé, définit la base de données de compatibilité le plus bas niveau autorisé. Cela s'applique aussi bien aux bases de données système qu'aux bases de données utilisateur. Utilisez **ALTER DATABASE** pour modifier le niveau de compatibilité de la base de données. Pour afficher le niveau de compatibilité actuel d’une base de données, interrogez la **compatibility_level** colonne dans la **sys.databases** vue de catalogue.  
+## <a name="remarks"></a>Notes   
+
+Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est défini à la version de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Bases de données sont définies à ce niveau, sauf si le **modèle** base de données a un niveau de compatibilité inférieur. Lorsqu’une base de données est mise à niveau depuis une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données conserve son niveau de compatibilité existant s’il est au moins minimale autorisée pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La mise à niveau une base de données avec un niveau de compatibilité inférieur au niveau autorisé, définit la base de données de compatibilité le plus bas niveau autorisé. Cela s'applique aussi bien aux bases de données système qu'aux bases de données utilisateur. Utilisez **ALTER DATABASE** pour modifier le niveau de compatibilité de la base de données. Pour afficher le niveau de compatibilité actuel d’une base de données, interrogez la **compatibility_level** colonne dans la **sys.databases** vue de catalogue.  
 
   
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>Utilisation du niveau de compatibilité pour la compatibilité descendante  
@@ -136,7 +137,8 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 | Trace 2371 est désactivé par défaut dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | [Trace 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) est activé par défaut dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Indicateur de trace 2371 indique à la mise à jour des statistiques automatiques à échantillonner un sous-ensemble plus petit encore plus sage de lignes, dans une table qui comporte un grand nombre de lignes. <br/> <br/> Une amélioration consiste à inclure, dans l’exemple, plusieurs lignes qui ont été insérées récemment. <br/> <br/> Une autre amélioration consiste à laisser les requêtes à exécuter pendant le processus de mise à jour des statistiques est en cours d’exécution, plutôt que la requête de blocage. |  
 | Pour le niveau 120, les statistiques sont échantillonnées par un *unique*-thread de processus. | Pour le niveau 130, les statistiques sont échantillonnées par un *multi*-thread de processus. |  
 | les clés étrangères entrantes 253 est la limite. | Une table donnée peut être référencée par des clés étrangères entrantes jusqu'à 10 000 ou références similaire. Pour connaître les restrictions associées, consultez [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md). |  
-|Les algorithmes de hachage MD2, MD4, MD5, SHA et SHA1 déconseillées sont autorisés.|Les algorithmes de hachage SHA2_256 et SHA2_512 uniquement sont autorisés.|  
+|Les algorithmes de hachage MD2, MD4, MD5, SHA et SHA1 déconseillées sont autorisés.|Les algorithmes de hachage SHA2_256 et SHA2_512 uniquement sont autorisés.|
+||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]inclut des améliorations dans certaines conversions de types de données et certaines opérations (principalement rares). Pour plus d’informations, consultez [améliorations de SQL Server 2016 de gestion de certains types de données et les opérations peu courantes](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon).|
   
   
 Indicateur de correctifs qui étaient inclus dans la trace 4199 dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] sont maintenant activés par défaut. Avec le mode de compatibilité 130. Indicateur de trace 4199 sera applicable pour les nouveaux correctifs d’optimiseur de requête sont libérés après [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Pour utiliser l’optimiseur de requête plus ancienne dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] vous devez sélectionner le niveau de compatibilité 110. Pour plus d’informations sur l’indicateur de Trace 4199, consultez [indicateur de Trace 4199](https://support.microsoft.com/en-us/kb/974006).  
@@ -146,7 +148,7 @@ Indicateur de correctifs qui étaient inclus dans la trace 4199 dans les version
   
 |Paramètre de niveau de compatibilité inférieur ou égal à 110|Paramètre de niveau de compatibilité égal à 120|  
 |--------------------------------------------------|-----------------------------------------|  
-|L'ancien optimiseur de requête est utilisé.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des améliorations appréciables dans le composant qui crée et optimise les plans de requête. Cette nouvelle fonctionnalité de l'optimiseur de requête dépend de l'utilisation du niveau de compatibilité 120 de la base de données. Pour bénéficier de ces améliorations, vous devez développer des applications de base de données à l'aide d'un niveau de compatibilité de base de données 120. Les applications qui sont migrées des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être soigneusement testées pour vérifier que de bonnes performances sont conservées ou améliorées. Si les performances se dégradent, définissez le niveau de compatibilité 110 ou inférieur de base de données pour utiliser la méthodologie de l'ancien optimiseur de requête.<br /><br /> Le niveau de compatibilité 120 de la base de données utilise un nouvel estimateur de cardinalité qui est réglé pour le stockage des données et les charges de travail OLTP modernes. Avant de définir le niveau de compatibilité de base de données à 110 en raison de problèmes de performances, consultez les recommandations contenues dans la section Plans de requête de la [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Nouveautés du moteur de base de données](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) rubrique.|  
+|L'ancien optimiseur de requête est utilisé.|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]inclut des améliorations importantes pour le composant qui crée et optimise les plans de requête. Cette nouvelle fonctionnalité de l'optimiseur de requête dépend de l'utilisation du niveau de compatibilité 120 de la base de données. Pour bénéficier de ces améliorations, vous devez développer des applications de base de données à l'aide d'un niveau de compatibilité de base de données 120. Les applications qui sont migrées des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être soigneusement testées pour vérifier que de bonnes performances sont conservées ou améliorées. Si les performances se dégradent, définissez le niveau de compatibilité 110 ou inférieur de base de données pour utiliser la méthodologie de l'ancien optimiseur de requête.<br /><br /> Le niveau de compatibilité 120 de la base de données utilise un nouvel estimateur de cardinalité qui est réglé pour le stockage des données et les charges de travail OLTP modernes. Avant de définir le niveau de compatibilité de base de données à 110 en raison de problèmes de performances, consultez les recommandations contenues dans la section Plans de requête de la [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [Nouveautés du moteur de base de données](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md) rubrique.|  
 |Dans les niveaux de compatibilité inférieurs à 120, le paramètre de langue est ignoré lorsque vous convertissez un **date** à une valeur de chaîne. Notez que ce comportement est spécifique à la **date** type. Consultez l’exemple B dans la section exemples ci-dessous.|Le paramètre de langue n’est pas ignoré lors de la conversion un **date** à une valeur de chaîne.|  
 |Les références récursives dans la partie droite d'une clause EXCEPT créent une boucle infinie. Exemple C dans la section exemples ci-dessous illustre ce comportement.|Les références récursives dans une clause EXCEPT génèrent une erreur conformément à la norme SQL ANSI.|  
 |Une expression CTE récursive autorise les noms de colonnes en double.|Les expressions CTE récursives n'autorisent pas les noms de colonnes en double.|  
@@ -214,7 +216,7 @@ Indicateur de correctifs qui étaient inclus dans la trace 4199 dans les version
   
  Pour plus d’informations, consultez [Mots clés réservés &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -222,7 +224,7 @@ Indicateur de correctifs qui étaient inclus dans la trace 4199 dans les version
 ### <a name="a-changing-the-compatibility-level"></a>A. Modification du niveau de compatibilité  
  L’exemple suivant modifie le niveau de compatibilité de la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] à la base de données `110,` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 110;  
 GO  
@@ -230,7 +232,7 @@ GO
   
  L’exemple suivant retourne le niveau de compatibilité de la base de données actuelle.  
   
-```tsql  
+```sql  
 SELECT name, compatibility_level   
 FROM sys.databases   
 WHERE name = db_name();  
@@ -239,7 +241,7 @@ WHERE name = db_name();
 ### <a name="b-ignoring--the-set-language-statement-except-under-compatibility-level-120"></a>B. En ignorant l’instruction SET LANGUAGE sauf sous le niveau de compatibilité 120  
  La requête suivante ignore l’instruction SET LANGUAGE sauf sous le niveau de compatibilité 120.  
   
-```tsql  
+```sql  
 SET DATEFORMAT dmy;   
 DECLARE @t2 date = '12/5/2011' ;  
 SET LANGUAGE dutch;   
@@ -255,7 +257,7 @@ SELECT CONVERT(varchar(11), @t2, 106);
 ### <a name="c"></a>C.  
  Pour le paramètre de niveau de compatibilité inférieur ou égal à 110, les références récursives dans la partie droite d’une clause EXCEPT créent une boucle infinie.  
   
-```tsql  
+```sql  
 WITH   
 cte AS (SELECT * FROM (VALUES (1),(2),(3)) v (a)),  
 r   
@@ -270,7 +272,7 @@ FROM r;
 ### <a name="d"></a>D.  
  Cet exemple montre la différence entre les styles 0 et 121. Pour plus d’informations sur les styles de date et d’heure, consultez [CAST et CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE TABLE t1 (c1 time(7), c2 datetime2);   
   
 INSERT t1 (c1,c2) VALUES (GETDATE(), GETDATE());  
@@ -293,7 +295,7 @@ Jun  7 2011  3:15PM  2011-06-07 15:15:35.8130000
 ### <a name="e"></a>E.  
  L'attribution de variable est autorisée dans une instruction contenant un opérateur UNION de niveau supérieur, celle-ci produit néanmoins des résultats inattendus. Par exemple, dans les instructions suivantes, la variable locale `@v` reçoit la valeur de la colonne `BusinessEntityID` issue de l'union de deux tables. Par définition, lorsque l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable. Dans ce cas, la dernière valeur est attribuée correctement à la variable, toutefois, le jeu de résultats de l'instruction SELECT UNION est également retourné.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET compatibility_level = 90;  
 GO  
@@ -309,7 +311,7 @@ SELECT @v;
 ### <a name="f"></a>F.  
  L'attribution de variable n'est pas autorisée dans une instruction contenant un opérateur UNION de niveau supérieur. L'erreur 10734 est retournée. Pour résoudre l'erreur, réécrivez la requête, comme dans l'exemple suivant.  
   
-```tsql  
+```sql  
 DECLARE @v int;  
 SELECT @v = BusinessEntityID FROM   
     (SELECT BusinessEntityID FROM HumanResources.Employee  
@@ -325,5 +327,5 @@ SELECT @v;
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
- [Afficher ou modifier le niveau de compatibilité d'une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 
+ [Afficher ou modifier le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 
   

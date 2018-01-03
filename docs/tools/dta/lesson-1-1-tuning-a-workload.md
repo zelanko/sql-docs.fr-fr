@@ -3,7 +3,7 @@ title: "Paramétrer une charge de travail | Documents Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 56041b15a6fa78bc88d62c409f0df958d0dd862a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 534f4ab58ee49d3bfce6899bf3858404fb7b3fd0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Leçon 1-1-paramétrer une charge de travail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]L’Assistant Paramétrage du moteur de base de données peut être utilisé pour trouver la meilleure conception physique de la base de données de performances des requêtes sur les bases de données et les tables que vous sélectionnez pour le paramétrage.  

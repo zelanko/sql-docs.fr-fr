@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>Fonctions numériques
 Le tableau suivant décrit les fonctions numériques qui sont incluses dans l’ensemble de la fonction scalaire ODBC. En appelant **SQLGetInfo** avec un *type d’information* de SQL_NUMERIC_FUNCTIONS, une application peut déterminer les fonctions numériques sont pris en charge par un pilote.  
@@ -39,7 +39,7 @@ Le tableau suivant décrit les fonctions numériques qui sont incluses dans l’
   
  Les fonctions scalaires CURRENT_TIMESTAMP, CURRENT_TIME et CURRENT_DATE ont été ajoutées dans ODBC 3.0 pour les aligner avec SQL-92.  
   
-|Fonction| Description|  
+|Fonction|Description|  
 |--------------|-----------------|  
 |**ABS (** *positions numeric_exp* **)** (ODBC version 1.0)|Retourne la valeur absolue de *positions numeric_exp*.|  
 |**ACOS (** *exp_float* **)** (ODBC version 1.0)|Retourne l’arc cosinus de *exp_float* à un angle, exprimé en radians.|  

@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 23952b00480291dc5e73b1e729af36ebb2912747
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 992919d80e0f82393af0a6aa4c2c5564d3ec6189
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*entier*  
  Spécifie le nombre maximal de fichiers d'audit qui peuvent être créés. Ne sont pas reportées sur le premier fichier lorsque la limite est atteinte. Lorsque la limite MAX_FILES est atteinte, toute action qui entraîne la génération d’événements d’audit supplémentaires échoue avec une erreur.  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  RESERVE_DISK_SPACE  **=**  {ON | {OFF}  
  Cette option pré-alloue la valeur MAXSIZE au fichier sur le disque. S'applique uniquement si MAXSIZE n'est pas égal à UNLIMITED. La valeur par défaut est OFF.  
@@ -112,7 +112,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
  FAIL_OPERATION  
  Les actions de base de données échouent si elles entraînent des événements audités. Les actions qui n’entraînent pas les événements audités peuvent continuer, mais aucun événement audité ne peut se produire. L’audit continue de se connecter les événements et reprend si le problème est résolu. Utilisez cette option lorsqu'il est plus important de conserver un audit complet que de disposer d'un accès complet au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
   
  ÉTAT  **=**  {ON | {OFF}  
  Active ou désactive la collecte d'enregistrements d'audit. La modification de l'état d'un audit en cours d'exécution (de ON à OFF) crée une entrée d'audit signalant que l'audit a été arrêté et indiquant le principal qui a arrêté l'audit et l'heure d'arrêt de l'audit.  
@@ -122,21 +122,21 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
  predicate_expression  
  Spécifie l'expression de prédicat utilisée pour déterminer si un événement doit ou non être traité. Les expressions de prédicat sont limitées à 3 000 caractères, ce qui limite les arguments de chaîne.  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  event_field_name  
  Nom du champ d'événement qui identifie la source de prédicat. Les champs d’audit sont décrits dans [sys.fn_get_audit_file &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Tous les champs peuvent être audités sauf `file_name` et `audit_file_offset`.  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  nombre  
  Est de n’importe quel type numérique, y compris **décimal**. Le manque de mémoire physique ou un nombre trop grand pour être représenté sous forme d'entier 64 bits sont les seules limitations.  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ' string '  
  Chaîne ANSI ou Unicode, comme requis par la comparaison de prédicat. Aucune conversion implicite de type chaîne n'est effectuée pour les fonctions de comparaison de prédicat. La transmission d'un type incorrect provoque une erreur.  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous devez spécifier au moins l'une des clauses TO, WITH ou MODIFY NAME lorsque vous appelez ALTER AUDIT.  
   
  Vous devez définir l'état d'un audit sur l'option OFF pour apporter des modifications à un audit. Si ALTER AUDIT est exécuté lorsqu’un audit est activé avec des options autres que STATE = OFF, vous recevez un message d’erreur MSG_NEED_AUDIT_DISABLED.  
@@ -145,7 +145,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
  Vous ne pouvez pas modifier le GUID d'un audit après sa création.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer, modifier ou supprimer un principal de l'audit du serveur, vous devez posséder l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -191,7 +191,7 @@ GO
 ### <a name="c-changing-a-server-audit-where-clause"></a>C. Modification d'une clause WHERE d'audit du serveur  
  L’exemple suivant modifie le where clause créée dans l’exemple C de [CREATE SERVER AUDIT &#40; Transact-SQL &#41; ](../../t-sql/statements/create-server-audit-transact-sql.md). La nouvelle clause WHERE filtre pour l’événement défini par l’utilisateur 27.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -204,7 +204,7 @@ GO
 ### <a name="d-removing-a-where-clause"></a>D. Suppression d'une clause WHERE  
  L'exemple suivant supprime une expression de prédicat de clause WHERE.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  
@@ -217,7 +217,7 @@ GO
 ### <a name="e-renaming-a-server-audit"></a>E. Modification du nom d’un audit du serveur  
  L'exemple suivant renomme l'audit de serveur `FilterForSensitiveData` en `AuditDataAccess`.  
   
-```tsql  
+```sql  
 ALTER SERVER AUDIT [FilterForSensitiveData] WITH (STATE = OFF)  
 GO  
 ALTER SERVER AUDIT [FilterForSensitiveData]  

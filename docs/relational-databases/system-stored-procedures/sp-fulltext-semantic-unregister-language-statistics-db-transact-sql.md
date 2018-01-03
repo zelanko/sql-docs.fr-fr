@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8798d626a64a56d1dd57222abea1458347b01f5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2778e08e3af0682d3fcc099cacb498fb3e267524
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -47,7 +47,7 @@ GO
 ##  <a name="Arguments"></a> Arguments  
  Cette procédure ne requiert pas d'arguments. Étant donné qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne dispose que d'une base de données de statistiques linguistiques de sémantique, il n'est pas nécessaire d'identifier la base de données.  
   
-## <a name="return-code-value"></a>Valeur de Code de retour  
+## <a name="return-code-value"></a>Valeur du code de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
@@ -69,13 +69,13 @@ GO
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant montre comment annuler l’inscription de la base de données de statistiques linguistiques de sémantique en appelant **sp_fulltext_semantic_unregister_language_statistics_db**.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  

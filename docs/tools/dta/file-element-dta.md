@@ -3,7 +3,7 @@ title: "Fichier de l’élément (DTA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b0c8ddde264d603c1141eb3abd381589490fea3c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18132a9eaf3be086e2508c7508a4823e290b65db
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-element-dta"></a>File, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie le fichier de charge de travail. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. Les fichiers de charge de travail peuvent être des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] (.sql) ou des fichiers de trace (.trc). Pour plus d’informations, consultez[Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
-|**Type de données et longueur**|Utilisez le type de données **string** pour spécifier le chemin du répertoire de votre fichier de charge de travail. Par exemple :<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Notez que la limite de longueur est appliquée par le serveur.|  
+|**Type de données et longueur**|Utilisez le type de données **string** pour spécifier le chemin du répertoire de votre fichier de charge de travail. Exemple :<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Notez que la limite de longueur est appliquée par le serveur.|  
 |**Valeur par défaut**|Aucun.|  
 |**Occurrence**|Obligatoire une fois si aucun autre type de charge de travail n'est spécifié. Vous devez spécifier un élément enfant **EventString**, **File**ou **Database** pour le parent **Workload** , mais un seul type peut être utilisé. Par exemple, si vous spécifiez une charge de travail avec l’élément **File** , vous ne pouvez pas spécifier une charge de travail avec l’élément **Database** dans le même fichier d’entrée XML.|  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/05/2017
 |**Élément parent**|[Workload, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/workload-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Exemple de fichier d’entrée XML simple &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  

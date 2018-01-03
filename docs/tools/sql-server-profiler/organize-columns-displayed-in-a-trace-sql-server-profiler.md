@@ -3,7 +3,7 @@ title: "Organiser les colonnes affichées dans une Trace (SQL Server Profiler) |
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7a21efcc0d50f58497cc169610c77cd9fb0d00e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organiser les colonnes affichées dans une trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vous pouvez grouper les colonnes de données dans une trace en sélectionnant **organiser les colonnes** dans la table de trace ou **propriétés du fichier de Trace** boîte de dialogue, ou lorsque vous définissez une trace. Le regroupement des colonnes de données vous permet de mieux analyser la sortie de trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Pour plus d’informations, consultez [Afficher et analyser des traces avec SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+| 1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   Choisissez une seule colonne de regroupement pour grouper et agréger les événements de trace. Lorsque vous ne choisissez qu'une colonne de données pour le regroupement, la fenêtre de trace affiche les événements en les groupant en fonction des valeurs de cette colonne de données et réduit tous les événements sous celle-ci. Un signe positif (**+**) apparaît à gauche de l’événement dans la colonne de données choisie pour le regroupement, tandis que le nombre d’événements réduits sous celle-ci apparaît entre parenthèses à droite de l’événement. L’exemple suivant indique comment la grille de la fenêtre de trace apparaît si vous choisissez uniquement la colonne de données **EventClass** pour le regroupement. Notez que tous les événements sont organisés sous la colonne de données **EventClass** . Pour afficher tous les événements, cliquez sur le signe plus pour développer et afficher toutes les classes d'événements correspondantes.  

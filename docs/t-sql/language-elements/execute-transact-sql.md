@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c8099f3a7e05a2cce9acc6186c4311ab0f3fc061
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ Execute a character string
   
 ```  
   
-```tsql  
+```sql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 -- Execute a stored procedure  
@@ -329,7 +329,7 @@ Execute a character string
   
  Le jeu de résultats réel qui est retourné pendant l'exécution peut différer du résultat défini à l'aide de la clause WITH RESULT SETS de l'une des manières suivantes : nombre de jeux de résultats, nombre de colonnes, nom de colonne, possibilité de valeur NULL et type de données. Si le nombre de jeu de résultats diffère, une erreur se produit et le lot est abandonné.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Paramètres peuvent être fournis à l’aide *valeur* ou à l’aide de*nom_paramètre*=*valeur.* Un paramètre ne fait pas partie d’une transaction. Ainsi, si vous modifiez l’un d’eux dans une transaction et que vous restaurez cette dernière par la suite, le paramètre ne reprend pas sa valeur initiale. La valeur renvoyée à l'appelant est toujours la valeur au moment du renvoie du module.  
   
  L'imbrication a lieu lorsqu'un module en appelle un autre ou exécute du code managé en faisant référence à un module CLR (Common Language Runtime), un type défini par l'utilisateur ou un agrégat. Le niveau d'imbrication augmente au début de l'exécution du module appelé ou de la référence au code managé ; il diminue à la fin de l'exécution du module appelé ou de la référence au code managé. Au-delà de 32 niveaux d'imbrication, l'ensemble de la chaîne d'appel échoue. Le niveau d’imbrication actuel est stocké dans le @@NESTLEVEL fonction système.  
@@ -356,7 +356,7 @@ Execute a character string
   
  Les modifications du contexte de la base de données ne durent que jusqu'à la fin de l'instruction EXECUTE. Dans le code exemple qui suit, après l'exécution de l'instruction `EXEC`, le contexte de la base de données est master.  
   
-```tsql  
+```sql  
 USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FROM HumanResources.Employee;');  
 ```  
   
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>Bonnes pratiques  
  Spécifiez une connexion ou un utilisateur qui possède les privilèges minimum requis pour effectuer les opérations définies dans l'instruction ou le module. Par exemple, ne spécifiez pas un nom de connexion qui a des autorisations au niveau serveur, si seules des autorisations au niveau base de données sont requises. Ne spécifiez pas non plus le compte d'un propriétaire de base de données, excepté si ces autorisations sont exigées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Aucune autorisation n'est requise pour exécuter l'instruction EXECUTE. Cependant, des autorisations sont requises sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction INSERT, l'appelant de l'instruction EXECUTE doit posséder l'autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module.  
   
  Les autorisations EXECUTE pour un module sont accordées par défaut au propriétaire du module, qui peut les transmettre à d'autres utilisateurs. Lorsqu'un module qui exécute une chaîne est lancé, les autorisations sont vérifiées dans le contexte non pas de l'utilisateur qui a créé le module, mais de celui qui exécute le module. Cependant, si le même utilisateur est propriétaire du module appelant et du module appelé, la vérification de l'autorisation EXECUTE n'a pas lieu pour le second module.  
@@ -467,7 +467,7 @@ EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @Bus
 ### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. Utilisation de l'instruction EXECUTE avec une variable de procédure stockée  
  Le code exemple suivant crée une variable qui représente le nom d'une procédure stockée.  
   
-```tsql  
+```sql  
 DECLARE @proc_name varchar(30);  
 SET @proc_name = 'sys.sp_who';  
 EXEC @proc_name;  

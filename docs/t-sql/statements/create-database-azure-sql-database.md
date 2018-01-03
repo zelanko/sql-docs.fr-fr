@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64686457f1f5f4057635eb4a4c9a0f3d4030d8fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c2a8612af978c6cd32056ff192e0eae8909b50cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ Spécifie le classement par défaut pour le catalogue de métadonnées. *DATABAS
   
  Pour plus d’informations sur les arguments et la `CREATE DATABASE` instruction, consultez [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les bases de données dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ont plusieurs paramètres par défaut définis lors de la création de la base de données. Pour plus d’informations sur ces paramètres par défaut, consultez la liste de valeurs dans [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
  MAXSIZE permet de limiter la taille de la base de données. Si la taille de la base de données atteint sa valeur MAXSIZE, vous recevez le code d’erreur 40544. Lorsque cela se produit, vous ne pouvez pas insérer ou mettre à jour des données, ni créer des objets (tels que des tables, des procédures stockées, des vues et des fonctions). Toutefois, vous pouvez encore lire et supprimer des données, tronquer des tables, supprimer des tables et des index et reconstruire des index. Vous pouvez ensuite mettre à jour MAXSIZE avec une valeur supérieure à votre taille de base de données actuelle ou supprimer certaines données afin de libérer de l'espace de stockage. Vous devrez peut-être patienter jusqu'à quinze minutes avant de pouvoir insérer de nouvelles données.  
@@ -206,7 +206,7 @@ L’argument CATALOG_COLLATION est uniquement disponible lors de la création de
   
  Pour plus d’informations, consultez [créer une copie d’une base de données SQL Azure à l’aide de Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer une base de données à un compte de connexion doit être une des opérations suivantes :  
   
 -   La connexion du principal au niveau du serveur  
@@ -223,14 +223,14 @@ Pour obtenir un didacticiel de démarrage rapide vous montrant comment se connec
 ### <a name="simple-example"></a>Exemple simple  
  Un exemple simple pour la création d’une base de données.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB1;  
 ```  
   
 ### <a name="simple-example-with-edition"></a>Exemple simple avec l’édition  
  Un exemple simple pour la création d’une base de données standard.  
   
-```tsql  
+```sql  
 CREATE DATABASE TestDB2  
 ( EDITION = 'standard' );  
 ```  
@@ -238,7 +238,7 @@ CREATE DATABASE TestDB2
 ### <a name="example-with-additional-options"></a>Exemple avec des Options supplémentaires  
  Un exemple d’utilisation de plusieurs options.  
   
-```tsql  
+```sql  
 CREATE DATABASE hito   
 COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS   
 ( MAXSIZE = 500 MB, EDITION = 'standard', SERVICE_OBJECTIVE = 'S1' ) ;  
@@ -247,7 +247,7 @@ COLLATE Japanese_Bushu_Kakusu_100_CS_AS_KS_WS
 ### <a name="creating-a-copy"></a>Création d’une copie  
  Un exemple de création d’une copie d’une base de données.  
   
-```tsql  
+```sql  
 CREATE DATABASE escuela   
 AS COPY OF school;  
 ```  
@@ -255,21 +255,21 @@ AS COPY OF school;
 ### <a name="creating-a-database-in-an-elastic-pool"></a>Création d’une base de données dans un Pool élastique  
  Crée la base de données dans le pool nommé S3M100 :  
   
-```tsql  
+```sql  
 CREATE DATABASE db1 ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = S3M100 ) ) ;  
 ```  
   
 ### <a name="creating-a-copy-of-a-database-on-another-server"></a>Création d’une copie d’une base de données sur un autre serveur  
  L’exemple suivant crée une copie de la base de données db_original, nommé db_copy dans le niveau de performance P2 pour une base de données.  Cela est vrai que db_original soit dans un pool élastique ou d’un niveau de performance pour une base de données.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original ( SERVICE_OBJECTIVE = 'P2' )  ;  
 ```  
   
  L’exemple suivant crée une copie de la base de données db_original, nommé db_copy dans un pool élastique nommé ep1.  Cela est vrai que db_original soit dans un pool élastique ou d’un niveau de performance pour une base de données.  Si db_original se trouve dans un pool élastique avec un nom différent, puis db_copy est toujours créé dans ep1.  
   
-```tsql  
+```sql  
 CREATE DATABASE db_copy   
     AS COPY OF ozabzw7545.db_original   
     (SERVICE_OBJECTIVE = ELASTIC_POOL( name = ep1 ) ) ;  
@@ -279,7 +279,7 @@ CREATE DATABASE db_copy
 
 L’exemple suivant définit le classement de catalogue pour DATABASE_DEFAULT lors de la création de base de données, qui définit le classement de catalogue pour être le même que le classement de base de données.
 
-```tsql
+```sql
 CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = ‘basic’)  
       WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```

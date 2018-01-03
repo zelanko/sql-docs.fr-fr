@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: df016654700bd36ebb553e7b3cd66f50d35eadc1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>-Clause SELECT INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribu
 ## <a name="logging-behavior"></a>Comportement de journalisation  
  L'importance de la journalisation pour SELECT INTO dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, à l’aide de l’instruction SELECT... DANS l’instruction peut être plus efficace que la création d’une table puis en remplissant la table avec une instruction INSERT. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE TABLE dans la base de données de destination.  
   
 ## <a name="examples"></a>Exemples  
@@ -109,7 +109,7 @@ Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribu
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. Création d'une table en spécifiant des colonnes provenant de plusieurs sources  
  L'exemple suivant crée la table `dbo.EmployeeAddresses` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en sélectionnant sept colonnes de diverses tables liées aux salariés et aux adresses.  
   
-```tsql  
+```sql  
 SELECT c.FirstName, c.LastName, e.JobTitle, a.AddressLine1, a.City,   
     sp.Name AS [State/Province], a.PostalCode  
 INTO dbo.EmployeeAddresses  
@@ -128,7 +128,7 @@ GO
 ### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertion de lignes en utilisant une journalisation minimale  
  L'exemple suivant crée la table `dbo.NewProducts` et insère des lignes provenant de la table `Production.Product`. L'exemple suppose que le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur FULL. Pour garantir une journalisation minimale, le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur BULK_LOGGED avant l'insertion des lignes ; il reprend ensuite la valeur FULL après l'utilisation de l'instruction SELECT...INTO. Ce processus permet de garantir que l'instruction SELECT...INTO utilise un espace minimal dans le journal des transactions et qu'elle s'exécute de manière efficace.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY BULK_LOGGED;  
 GO  
   
@@ -144,7 +144,7 @@ GO
 ### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. Création d'une colonne d'identité à l'aide de la fonction IDENTITY  
  L'exemple suivant utilise la fonction IDENTITY pour créer une colonne d'identité dans la nouvelle table `Person.USAddress` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Cela est nécessaire, car l'instruction SELECT qui définit la table contient une jointure qui empêche le transfert de la propriété IDENTITY vers la nouvelle table. Notez que la valeur initiale et la valeur d'incrément spécifiées dans la fonction IDENTITY sont différentes de celles de la colonne `AddressID` dans la table source `Person.Address`.  
   
-```tsql  
+```sql  
 -- Determine the IDENTITY status of the source column AddressID.  
 SELECT OBJECT_NAME(object_id) AS TableName, name AS column_name, 
   is_identity, seed_value, increment_value  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
   
  **S’applique à :** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -216,7 +216,7 @@ GO
   
  **S’applique à :** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql
+```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  
 SELECT DISTINCT   
         Insured_Customers.FirstName, Insured_Customers.LastName,   
@@ -234,7 +234,7 @@ L’exemple suivant demostrates création d’une table en tant que copie d’un
 
  **S’applique à :**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
-```tsql
+```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
 ALTER DATABASE [AdventureWorksDW2016]
 ADD FILE

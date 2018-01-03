@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25675b2dc83e5251b381bf95af353deb647d563a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Syntaxe  
   
-```tsql  
+```sql  
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
@@ -57,22 +57,22 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
-|number_of_sql_errors|int|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
-|number_of_invalid_credential_errors|int|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
-|number_of_other_errors|int|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
-|number_of_corrupted_or_deleted_backups|int|Nombre de fichiers de sauvegarde supprimés ou endommagés.|  
-|number_of_backup_loops|int|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
+|number_of_storage_connectivity_errors|INT|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
+|number_of_sql_errors|INT|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
+|number_of_invalid_credential_errors|INT|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
+|number_of_other_errors|INT|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
+|number_of_corrupted_or_deleted_backups|INT|Nombre de fichiers de sauvegarde supprimés ou endommagés.|  
+|number_of_backup_loops|INT|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|INT|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes contenant des erreurs peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiées pour en savoir plus les problèmes. Vous pouvez également utiliser la procédure stockée **managed_backup.sp_get_backup_diagnostics** pour obtenir la liste des événements étendus et rechercher les détails de l’erreur.  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **sélectionnez** autorisations sur la fonction.  
   
 ## <a name="examples"></a>Exemples  

@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>Sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +51,15 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>Table retournée
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID de la session. N'accepte pas la valeur NULL.|
-|request_id|**int**|ID de la demande. N'accepte pas la valeur NULL.|
+|request_id|**Int**|ID de la demande. N'accepte pas la valeur NULL.|
 |sql_handle|**varbinary(64)**|Table de hachage du texte SQL de la requête. Autorise la valeur Null.|
 |plan_handle|**varbinary(64)**|Table de hachage du plan de requête. Autorise la valeur Null.|
 |query_plan|**xml**|Showplan XML avec des statistiques partielles. Autorise la valeur Null.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage les statistiques d’exécution de requête.  
@@ -80,7 +80,7 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
 > [!IMPORTANT]
 > Dans TPC-C comme tests de charge de travail, l’activation de l’infrastructure de profilage de statistiques léger ajoute une surcharge de 1,5 à 2 pour cent. En revanche, l’infrastructure de profilage de statistiques standard pouvez ajouter jusqu'à 90 % de temps pour le même scénario de charge de travail.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
 
 ## <a name="examples"></a>Exemples  
@@ -88,14 +88,14 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Examinez les statistiques de plan et de l’exécution de requêtes actives pour un lot en cours d’exécution  
  L’exemple suivant interroge **sys.dm_exec_requests** pour rechercher la requête vous intéresse et copier son `session_id` à partir de la sortie.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  Ensuite, pour obtenir les statistiques de plan et de l’exécution de requêtes actives, utilisez copié `session_id` avec la fonction système **sys.dm_exec_query_statistics_xml**.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +103,7 @@ GO
 
  Ou combiné pour toutes les demandes en cours d’exécution.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

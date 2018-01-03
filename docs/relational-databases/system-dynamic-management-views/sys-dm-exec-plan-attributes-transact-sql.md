@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |attribut|**varchar (128)**|Nom de l'attribut associé à ce plan. Le tableau situé immédiatement sous celle-ci répertorie les attributs possibles, leurs types de données et leurs descriptions.|  
 |valeur|**sql_variant**|Valeur de l'attribut associé à ce plan.|  
@@ -57,38 +57,38 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
 
-|Attribut|Type de données| Description|  
+|Attribute|Type de données|Description|  
 |---------------|---------------|-----------------|  
-|set_options|**int**|Indique les valeurs d'option ayant servi à compiler le plan.|  
-|objectid|**int**|Une des clés principales servant à rechercher un objet dans le cache. Il s’agit d’ID d’objet stocké dans [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) pour les objets de base de données (procédures, vues, déclencheurs, etc.). Pour des plans de type « Adhoc » ou « Prepared », il s'agit d'un hachage interne du texte du lot.|  
-|dbid|**int**|ID de la base de données contenant l'entité à laquelle le plan fait référence.<br /><br /> Pour des plans ad hoc ou préparés, il s'agit de l'ID de la base de données à partir duquel est exécuté le lot.|  
-|dbid_execute|**int**|Pour les objets système stockés dans le **ressources** de base de données, l’ID de base de données à partir de laquelle le plan mis en cache est exécuté. Dans tous les autres cas, il est égal à 0.|  
-|user_id|**int**|Une valeur de -2 indique que le lot soumis ne dépend pas de la résolution implicite des noms et peut être partagé entre différents utilisateurs. Cette méthode est recommandée. Toute autre valeur représente l'ID de l'utilisateur soumettant la requête dans la base de données.| 
+|set_options|**Int**|Indique les valeurs d'option ayant servi à compiler le plan.|  
+|objectid|**Int**|Une des clés principales servant à rechercher un objet dans le cache. Il s’agit d’ID d’objet stocké dans [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) pour les objets de base de données (procédures, vues, déclencheurs, etc.). Pour des plans de type « Adhoc » ou « Prepared », il s'agit d'un hachage interne du texte du lot.|  
+|dbid|**Int**|ID de la base de données contenant l'entité à laquelle le plan fait référence.<br /><br /> Pour des plans ad hoc ou préparés, il s'agit de l'ID de la base de données à partir duquel est exécuté le lot.|  
+|dbid_execute|**Int**|Pour les objets système stockés dans le **ressources** de base de données, l’ID de base de données à partir de laquelle le plan mis en cache est exécuté. Dans tous les autres cas, il est égal à 0.|  
+|user_id|**Int**|Une valeur de -2 indique que le lot soumis ne dépend pas de la résolution implicite des noms et peut être partagé entre différents utilisateurs. Cette méthode est recommandée. Toute autre valeur représente l'ID de l'utilisateur soumettant la requête dans la base de données.| 
 |language_id|**smallint**|ID de la langue de la connexion qui a créé l'objet dans le cache. Pour plus d’informations, consultez [sys.syslanguages &#40; Transact-SQL &#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Format de date de la connexion qui a créé l'objet dans le cache Pour plus d’informations, consultez [SET DATEFORMAT &#40; Transact-SQL &#41; ](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Valeur date first. Pour plus d’informations, consultez [SET DATEFIRST &#40; Transact-SQL &#41; ](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|status|**int**|Bits d'état interne qui font partie de la clé de recherche en cache.|  
-|required_cursor_options|**int**|Options de curseur spécifiées par l'utilisateur (type de curseur par exemple).|  
-|acceptable_cursor_options|**int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction. Par exemple, l'utilisateur peut spécifier un curseur dynamique, mais l'optimiseur de requête peut convertir ce type de curseur en curseur statique.|  
-|inuse_exec_context|**int**|Nombre de lots en cours d'exécution qui font appel au plan de requête.|  
-|free_exec_context|**int**|Nombre de contextes d'exécution en cache pour le plan de requête qui ne sont pas actuellement utilisés.|  
-|hits_exec_context|**int**|Nombre d'obtention et de réutilisation du contexte d'exécution à partir du cache du plan évitant ainsi de recompiler l'instruction SQL. La valeur est une agrégation de toutes les exécutions de lot jusqu'à présent.|  
-|misses_exec_context|**int**|Nombre de fois un contexte d'exécution était introuvable dans le cache de plan entraînant la création d'un nouveau contexte d'exécution pour l'exécution du lot.|  
-|removed_exec_context|**int**|Nombre de contextes d'exécution ayant été supprimés en raison d'une mémoire insuffisante dans le plan en cache.|  
-|inuse_cursors|**int**|Nombre de lots en cours d'exécution contenant un ou plusieurs curseurs qui font appel au plan en cache.|  
-|free_cursors|**int**|Nombre de curseurs libres ou inactifs du plan en cache.|  
-|hits_cursors|**int**|Nombre d'obtention et de réutilisation d'un curseur inactif à partir du plan en cache. La valeur est une agrégation de toutes les exécutions de lot jusqu'à présent.|  
-|misses_cursors|**int**|Nombre de fois où un curseur inactif était introuvable dans le cache.|  
-|removed_cursors|**int**|Nombre de curseurs ayant été supprimés en raison d'une mémoire insuffisante dans le plan en cache.|  
+|status|**Int**|Bits d'état interne qui font partie de la clé de recherche en cache.|  
+|required_cursor_options|**Int**|Options de curseur spécifiées par l'utilisateur (type de curseur par exemple).|  
+|acceptable_cursor_options|**Int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction. Par exemple, l'utilisateur peut spécifier un curseur dynamique, mais l'optimiseur de requête peut convertir ce type de curseur en curseur statique.|  
+|inuse_exec_context|**Int**|Nombre de lots en cours d'exécution qui font appel au plan de requête.|  
+|free_exec_context|**Int**|Nombre de contextes d'exécution en cache pour le plan de requête qui ne sont pas actuellement utilisés.|  
+|hits_exec_context|**Int**|Nombre d'obtention et de réutilisation du contexte d'exécution à partir du cache du plan évitant ainsi de recompiler l'instruction SQL. La valeur est une agrégation de toutes les exécutions de lot jusqu'à présent.|  
+|misses_exec_context|**Int**|Nombre de fois un contexte d'exécution était introuvable dans le cache de plan entraînant la création d'un nouveau contexte d'exécution pour l'exécution du lot.|  
+|removed_exec_context|**Int**|Nombre de contextes d'exécution ayant été supprimés en raison d'une mémoire insuffisante dans le plan en cache.|  
+|inuse_cursors|**Int**|Nombre de lots en cours d'exécution contenant un ou plusieurs curseurs qui font appel au plan en cache.|  
+|free_cursors|**Int**|Nombre de curseurs libres ou inactifs du plan en cache.|  
+|hits_cursors|**Int**|Nombre d'obtention et de réutilisation d'un curseur inactif à partir du plan en cache. La valeur est une agrégation de toutes les exécutions de lot jusqu'à présent.|  
+|misses_cursors|**Int**|Nombre de fois où un curseur inactif était introuvable dans le cache.|  
+|removed_cursors|**Int**|Nombre de curseurs ayant été supprimés en raison d'une mémoire insuffisante dans le plan en cache.|  
 |sql_handle|**varbinary**(64)|Handle SQL du lot.|  
 |merge_action_type|**smallint**|Type du plan d'exécution du déclencheur utilisé à la suite d'une instruction MERGE.<br /><br /> 0 indique un plan de non-déclencheur, un plan de déclencheur qui ne s'exécute pas à la suite d'une instruction MERGE ou un plan de déclencheur qui s'exécute à la suite d'une instruction MERGE qui spécifie uniquement une action DELETE.<br /><br /> 1 indique un plan de déclencheur INSERT qui s'exécute à la suite d'une instruction MERGE.<br /><br /> 2 indique un plan de déclencheur UPDATE qui s'exécute à la suite d'une instruction MERGE.<br /><br /> 3 indique un plan de déclencheur DELETE qui s'exécute à la suite d'une instruction MERGE contenant une action INSERT ou UPDATE correspondante.<br /><br /> Pour les déclencheurs imbriqués exécutés par des actions en cascade, cette valeur correspond à l'action de l'instruction MERGE qui a provoqué la cascade.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert l’autorisation VIEW SERVER STATE sur le serveur.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] niveaux Premium requiert l’autorisation VIEW DATABASE STATE dans la base de données. Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard et les niveaux de base nécessite le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] compte d’administrateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="set-options"></a>Définir les options  
  Les copies du même plan compilé peuvent différer uniquement par la valeur dans la **set_options** colonne. Cela signifie que des connexions différentes font appel à différents jeux d'options SET pour la même requête. L'utilisation de différents jeux d'option n'est pas souhaitable généralement car elle est source de complications supplémentaires, d'une réutilisation insuffisante du plan et d'une augmentation du cache du plan en raison de la présence de plusieurs copies dans le cache.  
@@ -98,7 +98,7 @@ Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
   
 |Option|Valeur|  
 |------------|-----------|  
-|ANSI_PADDING|1|  
+|ANSI_PADDING| 1|  
 |Plan en parallèle|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
@@ -126,8 +126,8 @@ Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
   
 |Option|Valeur|  
 |------------|-----------|  
-|Aucune|0|  
-|INSENSITIVE|1|  
+|None|0|  
+|INSENSITIVE| 1|  
 |SCROLL|2|  
 |READ ONLY|4|  
 |FOR UPDATE|8|  
@@ -148,7 +148,7 @@ Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Retour des attributs pour un plan spécifique  
  L'exemple suivant retourne tous les attributs de plan pour un plan spécifié. Dans la première requête, la vue de gestion dynamique `sys.dm_exec_cached_plans` est interrogée pour obtenir le descripteur de plan du plan spécifié. Dans la deuxième requête, remplacez `<plan_handle>` par une valeur de descripteur de plan issue de la première requête.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>B. Retour des options SET pour les plans compilés et du handle SQL pour les plans en cache  
  L'exemple suivant retourne une valeur représentant les options ayant servi à compiler chaque plan. Il retourne également le handle SQL de tous les plans mis en cache.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

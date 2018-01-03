@@ -1,7 +1,7 @@
 ---
 title: "L’exécution de la Console SSMA (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d749a876fb128f55e653eca6fe8dda613a09dfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>L’exécution de la Console SSMA (AccessToSQL)
 Microsoft vous fournit un ensemble robuste de commandes de script de fichier et les options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -167,7 +167,7 @@ charge--base de données access : utilisé pour charger des fichiers de base de
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <load-access-database>  
@@ -201,7 +201,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <force-load>  
@@ -314,7 +314,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -386,7 +386,7 @@ convertir le schéma
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -446,7 +446,7 @@ migrer des données
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -476,7 +476,7 @@ tables de lien : cette commande lie la table source (Access) à la table cible.
   
 </link-tables>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <link-tables>  
@@ -502,7 +502,7 @@ tables dissocier : cette commande supprime la table source (Access) à partir d
   
 </unlink-tables>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <unlink-tables>  
@@ -581,7 +581,7 @@ synchroniser la cible
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -590,7 +590,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -646,7 +646,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -655,7 +655,7 @@ ou
   
   object-type="category"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -705,7 +705,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  

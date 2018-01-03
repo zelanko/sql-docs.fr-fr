@@ -3,7 +3,7 @@ title: "L’exécution de la Console SSMA (SybaseToSQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 09/27/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 072b8f49052e664861c67097d2eed9d1cffca05f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a76b457d7178483d18a5a7a26d176d7e606b6fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>L’exécution de la Console SSMA (SybaseToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même.  
@@ -240,7 +240,7 @@ Impossible de se connecter au serveur de base de données source lors de l’ex�
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -305,7 +305,7 @@ Si la connexion de base de données source ou cible n’est pas effectuée avant
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -361,7 +361,7 @@ Cette commande migre les données source à la cible.
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -440,7 +440,7 @@ fail-script>" (optional)
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -449,7 +449,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -501,7 +501,7 @@ Cette commande nécessite un ou plusieurs nœuds de la métabase en tant que par
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -510,7 +510,7 @@ ou
   
   object-type="<object-category>" />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -555,7 +555,7 @@ Cette commande nécessite un ou plusieurs nœuds de la métabase en tant que par
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  
@@ -629,7 +629,7 @@ Cette commande nécessite un ou plusieurs nœuds de la métabase en tant que par
   
 </convert-sql-statement>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  
@@ -654,7 +654,7 @@ ou
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  

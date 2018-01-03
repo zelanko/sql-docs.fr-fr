@@ -2,9 +2,11 @@
 title: "À l’aide de R dans la base de données SQL Azure | Documents Microsoft"
 ms.custom: 
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +15,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: cb43b2c1edb6ce03acd2e3e64eb077ca96c62304
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 8960f8a8c5dadaa0c53cd4fcb1ab786ce6e720a7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="using-r-in-azure-sql-database"></a>À l’aide de R dans la base de données SQL Azure
 
@@ -58,7 +60,7 @@ Les tâches suivantes ne sont pas pris en charge dans la version préliminaire d
 + Vues de gestion dynamique pour l’analyse du processeur et utilisation de la mémoire de scripts R ne sont pas disponibles.
 + Aucun des packages tiers ne peuvent être installés. L’instruction de créer une bibliothèque externe n’est pas pris en charge.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Dans la base de données SQL Azure, toutes les commandes de R sont exécutées à partir de T-SQL, à l’aide de la procédure stockée [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). 
 
@@ -104,19 +106,23 @@ GO
 La procédure stockée suivante effectue le travail de création et de formation du modèle, ce qui peut être enregistré dans un des deux formats binaires réellement.
 
 ```sql
-CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
+CREATE PROCEDURE generate_iris_model
+    @trained_model VARBINARY(MAX) OUTPUT, 
+    @native_trained_model VARBINARY(MAX) OUTPUT
 AS
 BEGIN
   EXEC sp_execute_external_script @language = N'R'
-    , @script = N'
+  , @script = N'
     iris_model <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris_rx_data);
     trained_model <- as.raw(serialize(iris_model, connection=NULL));
     native_trained_model <- rxSerializeModel(iris_model, realtimeScoringOnly = TRUE)
     '
   , @input_data_1 = N'SELECT "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species" FROM iris_data'
   , @input_data_1_name = N'iris_rx_data'
-  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT'
+  , @params = N'@trained_model VARBINARY(MAX) OUTPUT, @native_trained_model VARBINARY(MAX) OUTPUT
     , @trained_model = @trained_model OUTPUT
+    , @native_trained_model = @native_trained_model OUTPUT;
+End
 ```
 
 + Le **sortie** mot clé dans les paramètres d’entrée indique que les valeurs doivent être transmises et utilisés pour la sortie, ainsi.

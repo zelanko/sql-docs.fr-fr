@@ -3,7 +3,7 @@ title: Utilitaire sqlmaint | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sqlmaint
 ms.reviewer: 
@@ -25,13 +25,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6ef2ee4a1e84f18cc79b337e6358155f88fde826
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5eb402990dd9859a957c64d8d6bf47f7d2b3213
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="sqlmaint-utility"></a>Utilitaire sqlmaint
+# <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le**sqlmaint** utilitaire exécute un ensemble spécifique d’opérations de maintenance sur une ou plusieurs bases de données. Utilisez **sqlmaint** pour exécuter des vérifications DBCC, sauvegarder une base de données et son journal des transactions, mettre à jour des statistiques et reconstruire des index. Toutes les activités de maintenance de base de données produisent un rapport qui peut être envoyé vers un fichier texte, un fichier HTML ou un compte de messagerie déterminé. **sqlmaint** exécute les plans de maintenance de base de données créés avec des versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour exécuter des plans de maintenance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir de l’invite de commandes, utilisez [l’utilitaire dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -94,7 +94,7 @@ number[minutes | hours | days | weeks | months]
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows.  
   
- **-P** *password*  
+ **-P** *mot de passe*  
  Spécifie le mot de passe de l’ID de connexion. Uniquement valide si le paramètre **-U** est également fourni. Si le *password* contient des caractères spéciaux, il doit être encadré par des guillemets doubles ; ceux-ci sont facultatifs dans tous les autres cas.  
   
 > [!IMPORTANT]  
@@ -135,7 +135,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Le nom de fichier complet UNC est requis pour *html_file* lorsque **sqlmaint** accède à un serveur distant.  
   
  **-DelHtmlRpt** \<*time_period*>  
- Spécifie que tous les rapports HTML dans le répertoire de rapports supprimés si l’intervalle de temps après la création du fichier du rapport dépasse \< *time_period*>. **-DelHtmlRpt** recherche les fichiers dont les noms correspondent au modèle créé à partir du paramètre *html_file* . Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, puis **- DelHtmlRpt** entraîne **sqlmaint** tous les fichiers dont les noms correspondent au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont plus anciens que la valeur spécifiée \< *time_period*>.  
+ Spécifie que tous les rapports HTML dans le répertoire de rapports supprimés si l’intervalle de temps après la création du fichier du rapport dépasse \< *time_period*>. **-DelHtmlRpt** recherche les fichiers dont les noms correspondent au modèle créé à partir du paramètre *html_file*. Si *html_file* est c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, puis **- DelHtmlRpt** entraîne **sqlmaint** tous les fichiers dont les noms correspondent au modèle C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm et qui sont plus anciens que la valeur spécifiée \< *time_period*>.  
   
  **-RmUnusedSpace** *threshold_percent free_percent*  
  Spécifie que l’espace inutilisé est retiré de la base de données spécifiée dans **-D**. Cette option est uniquement utile pour les bases de données dont la configuration prévoit une croissance automatique. *Threshold_percent* indique, en Mo, la taille qu’une base de données doit atteindre pour que **sqlmaint** tente d’en supprimer l’espace de données inutilisé. Si la base de données est plus petite que *threshold_percent*, aucune action n’est exécutée. *Free_percent* spécifie l’espace qui doit rester libre dans la base de données, exprimé sous la forme d’un pourcentage de la taille finale de celle-ci. Prenons l’exemple d’une base de données de 200 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données a pour taille finale 110 Mo. La base de données n’est pas étendue si elle est inférieure à la valeur de *free_percent* augmentée de la quantité de données contenue dans la base de données. Prenons l’exemple d’une base de données de 108 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données ne passera pas à 110 Mo, mais conserve sa taille de 108 Mo.  
@@ -233,7 +233,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Si seul le paramètre *number* est spécifié, la partie de la date sélectionnée par défaut est **semaines**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’utilitaire **sqlmaint** effectue des opérations de maintenance sur une ou plusieurs bases de données. Si **-D** est spécifié, les opérations spécifiées par ailleurs portent uniquement sur la base de données indiquée. Si **-PlanName** ou **-PlanID** est spécifié, la seule information récupérée du plan de maintenance indiqué par **sqlmaint** est la liste des bases de données contenues dans le plan. Toutes les opérations spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à chaque base de données figurant sur la liste extraite du plan, l’utilitaire **sqlmaint** n’effectuant aucune opération de maintenance définie dans le plan lui-même.  
   
  L’utilitaire **sqlmaint** retourne 0 en cas de réussite et 1 en cas d’échec. L'échec de l'exécution est signalé :  

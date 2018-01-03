@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2b58f344839a0f8e74fa46c5e788b7835d3eadc2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7eb679c8d7182dd0edd3a96caafa824a8722962
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trace-dll"></a>DLL de traçage
 La DLL qui effectue le suivi est un des composants ODBC. La trace de la DLL est actuellement fournie en tant qu’exemple DLL dans le composant ODBC du SDK Windows et a été précédemment inclus le Kit de développement logiciel Microsoft Data Access composants (MDAC). Par conséquent, l’entrée de Registre, une interface et un exemple de code pour la DLL de trace sont disponibles. Cette DLL peut être remplacée par une trace de la DLL produite par un utilisateur ODBC ou un fournisseur tiers. Une DLL de trace personnalisée convient à un nom différent de la DLL de trace exemple d’origine. DLL de trace doivent être installés dans le répertoire système, ou ils ne seront pas chargé. Les chaînes de connexion ne seront pas passées à la DLL de la trace par le Gestionnaire de pilotes.  

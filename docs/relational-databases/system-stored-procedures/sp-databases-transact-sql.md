@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6133cef4500d7066f38a51f5a5f124d1e879e01
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 444dc643385d2bf26cbc95984473f0b68519c92a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +43,28 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucune  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**NOM_BASE_DE_DONNÉES**|**sysname**|Nom de la base de données. Dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], cette colonne représente le nom de la base de données stockées dans le **sys.databases** vue de catalogue.|  
-|**DATABASE_SIZE**|**int**|Taille de la base de données, exprimée en kilo-octets.|  
+|**DATABASE_SIZE**|**Int**|Taille de la base de données, exprimée en kilo-octets.|  
 |**SECTION NOTES**|**varchar(254)**|Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)], ce champ retourne toujours NULL.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les noms de bases de données qui sont renvoyés peuvent être utilisés comme paramètres dans l'instruction USE pour changer de contexte de base de données active.  
   
  **sp_databases** n’a aucun équivalent dans ODBC Open Database Connectivity ().  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE DATABASE, ALTER ANY DATABASE ou VIEW ANY DEFINITION et doit être autorisée à accéder à la base de données. L'autorisation VIEW ANY DEFINITION ne peut pas lui être refusée.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre l'exécution de `sp_databases`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 EXEC sp_databases;  

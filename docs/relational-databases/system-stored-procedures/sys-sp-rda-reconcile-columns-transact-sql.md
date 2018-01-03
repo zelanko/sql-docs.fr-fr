@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce87847a891e04548a3da30c2f07238d27e7aa24
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6bae454caa630025bb4470dc69da7fa4a97f6307
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>Sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +55,16 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou >0 (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations db_owner.  
    
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si des colonnes comprises dans la table Azure distante n’existent plus dans la table SQL Server compatible Stretch, ces colonnes supplémentaires n’empêchent pas Stretch Database de fonctionner normalement. Vous pouvez éventuellement supprimer manuellement les colonnes supplémentaires.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour rapprocher les colonnes dans la table Azure distante, exécutez l’instruction suivante.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  
 ```  
   

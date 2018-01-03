@@ -1,11 +1,11 @@
 ---
 title: "Prise en main d’apprentissage dans SQL Server | Documents Microsoft"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Prise en main d’apprentissage dans SQL Server
 
@@ -39,7 +39,7 @@ Cet article fournit des liens vers des ressources pour chaque produit dans la pl
     + [Présentation de l’architecture pour Python dans SQL Server](/python/architecture-overview-sql-server-python.md)
     + [Configurer SQL Server R Services ou des Services de Machine Learning](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
-+ SQL Server 2016
++ SQL Server 2016
 
   SQL Server 2016 prend en charge l’exécution du code R dans SQL Server à l’aide de procédures stockées. Cela facilite l’automatisation des tâches d’apprentissage automatique à l’aide des outils SQL. Ou bien, vous pouvez exécuter le code R à partir d’un ordinateur portable à distance ou d’un environnement de développement R, lors de l’utilisation de l’ordinateur SQL Server en tant que le _contexte de calcul_.
 
@@ -83,7 +83,7 @@ Vous pouvez également installer [!INCLUDE[rsql-platform-md](../includes/rsql-pl
 
 + [Didacticiels d’apprentissage machine](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Démarrez ici pour rechercher une liste de toutes les ressources pour en savoir plus sur les solutions d’apprentissage machine à l’aide de [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] ou [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Démarrez ici pour rechercher une liste de toutes les ressources pour en savoir plus sur les solutions d’apprentissage machine à l’aide de SQL Server 2016 et SQL Server 2017.
 
 ### <a name="r-tutorials"></a>Didacticiels de R
 
@@ -95,7 +95,7 @@ Vous pouvez également installer [!INCLUDE[rsql-platform-md](../includes/rsql-pl
 
 + [Explorer R et ScaleR 25 fonctions courtes](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   Vous débutez avec R ? Vous vous demandez la manière dont Microsoft R (ou RevoScaleR) compare à R standard ? Pour R Server, consultez ces rapide-démarre.
+   Vous débutez avec R ? Vous vous demandez la manière dont Microsoft R (ou RevoScaleR) compare à R standard ? Pour R Server et serveur de Machine Learning, consultez ces rapide-démarre.
 
 ### <a name="python-tutorials"></a>Didacticiels de Python
 

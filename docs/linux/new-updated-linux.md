@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 4adfcb675e52b5b73bd4dcc4867bf79350a26d52
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Nouveau et récemment mis à jour : SQL Server sur Linux docs
 
@@ -33,7 +33,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 
 
 
-- *Plage de dates de mises à jour :* &nbsp; **2017-09-28** &nbsp; - à - &nbsp; **2017-12-02**
+- *Période des mises à jour :* &nbsp; **28-09-2017** &nbsp; au &nbsp; **02-12-2017**
 - *Zone de sujet :* &nbsp; **Microsoft SQL Server sur Linux**.
 
 
@@ -102,7 +102,7 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 ### <a name="1-nbsp-run-the-sql-server-2017-container-image-with-dockerquickstart-install-connect-dockermd"></a>1. &nbsp;[Exécuter l’image de SQL Server 2017 conteneur avec Docker](quickstart-install-connect-docker.md)
 
-*Mise à jour : 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([suivant](#TitleNum_2))
+*Mise à jour : 30/11/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Suivant](#TitleNum_2))
 
 <!-- Source markdown line 261.  ms.author= jroth.  -->
 
@@ -210,7 +210,7 @@ La valeur par défaut `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le ta
 
 | |Haute disponibilité & </br> protection de données | Protection des données
 |:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>| 1
 |Indisponibilité du réplica principal | Basculement automatique. Nouveau réplica principal est R / w. | Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur.
 |Panne du réplica secondaire | Primaire est en lecture/écriture, exécution exposée à des pertes de données (si principal échoue et ne peut pas être récupérée). Aucun basculement automatique si principal n’échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica de basculer vers si principal n’échoue également.
 |Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si principal n’échoue également. | Principal est R / w. Aucun basculement automatique si principal n’échoue également.
@@ -256,7 +256,7 @@ Cette rubrique de configuration fournit des scénarios d’utilisation suppléme
 **<a id="production"></a>Exécuter des images de conteneur de production**
 
 
-Le didacticiel de démarrage rapide dans la section précédente s’exécute à l’édition développeur gratuite de SQL Server à partir du Hub d’ancrage. La plupart des informations s’applique toujours si vous souhaitez exécuter des images de conteneur, tels que les éditions Enterprise, Standard ou Web de production. Toutefois, il existe des quelques différences sont décrites ici.
+Démarrage rapide dans la section précédente s’exécute à l’édition développeur gratuite de SQL Server à partir du Hub d’ancrage. La plupart des informations s’applique toujours si vous souhaitez exécuter des images de conteneur, tels que les éditions Enterprise, Standard ou Web de production. Toutefois, il existe des quelques différences sont décrites ici.
 
 - Vous pouvez uniquement utiliser SQL Server dans un environnement de production, si vous avez une licence valide. Vous pouvez obtenir une licence de production de SQL Server Express gratuite [ici](https://go.microsoft.com/fwlink/?linkid=857693). Les licences de SQL Server Standard et Enterprise Edition sont disponibles via [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
 
@@ -272,7 +272,7 @@ Le didacticiel de démarrage rapide dans la section précédente s’exécute à
 
    1. Ensuite, vous devez obtenir le développeur libre image de conteneur sur Docker magasin. Accédez à [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), cliquez sur **passer à l’extraction**, suivez les instructions.
 
-   1. Passez en revue la configuration requise et exécuter des procédures dans la [didacticiel de démarrage rapide : démarrage rapide-install-se connecter-docker.md). Il existe deux différences. Vous devez extraire l’image **magasin/microsoft/mssql-server-linux :\<-nom de la balise\>**  à partir du magasin de Docker. Et vous devez spécifier votre édition de production avec le **MSSQL_PID** variable d’environnement. L’exemple suivant montre comment exécuter la dernière image de conteneur de SQL Server 2017 pour l’édition Enterprise :
+   1. Passez en revue la configuration requise et exécuter des procédures dans [démarrage rapide : démarrage rapide-install-se connecter-docker.md). Il existe deux différences. Vous devez extraire l’image **magasin/microsoft/mssql-server-linux :\<-nom de la balise\>**  à partir du magasin de Docker. Et vous devez spécifier votre édition de production avec le **MSSQL_PID** variable d’environnement. L’exemple suivant montre comment exécuter la dernière image de conteneur de SQL Server 2017 pour l’édition Enterprise :
 
 
 
@@ -506,7 +506,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
 
 ### <a name="9-nbsp-troubleshoot-sql-server-on-linuxsql-server-linux-troubleshooting-guidemd"></a>9. &nbsp;[Résoudre les problèmes de SQL Server sur Linux](sql-server-linux-troubleshooting-guide.md)
 
-*Mise à jour : 2017-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([précédente](#TitleNum_8))
+*Mise à jour : 30/11/2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Précédent](#TitleNum_8))
 
 <!-- Source markdown line 125.  ms.author= anshrest.  -->
 
@@ -569,26 +569,26 @@ Cette section liste les articles très similaires récemment mis à jour dans d�
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Zones de sujet avec des articles nouveaux ou mis à jour récemment
 
-- [Nouveau + mis à jour (3 + 14) : **avancées d’Analytique pour SQL** documents](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nouveaux + Mis à jour (3 + 14) : **Analytique avancée pour SQL** (documentation)](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Nouveaux + Mis à jour (1 + 0) : **Analysis Services pour SQL** (documentation)](../analysis-services/new-updated-analysis-services.md)
-- [Nouveau + mis à jour (87 + 0) : **système de plateforme d’Analytique pour SQL** documents](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nouveau + mis à jour (5 + 4) : **se connecter à SQL** documents](../connect/new-updated-connect.md)
-- [Nouveau + mis à jour (0 + 1) : **moteur de base de données pour SQL** documents](../database-engine/new-updated-database-engine.md)
-- [Nouveau + mis à jour (2 + 2) : **Integration Services pour SQL** documents](../integration-services/new-updated-integration-services.md)
-- [Nouveau + mis à jour (10 + 9) : **Linux pour SQL** documents](../linux/new-updated-linux.md)
-- [Nouveau + mis à jour (2 + 4) : **des bases de données relationnelles pour SQL** documents](../relational-databases/new-updated-relational-databases.md)
-- [Nouveau + mis à jour (4 + 2) : **Reporting Services pour SQL** documents](../reporting-services/new-updated-reporting-services.md)
-- [Nouveau + mis à jour (0 + 1) : **exemples pour SQL** documents](../sample/new-updated-sample.md)
-- [Nouveau + mis à jour (0 + 21) : **SQL opérations Studio** documents](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nouveau + mis à jour (5 + 1) : **Microsoft SQL Server** documents](../sql-server/new-updated-sql-server.md)
+- [Nouveaux + Mis à jour (87 + 0) : **Système de la plateforme d’analyse pour SQL** (documentation)](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nouveaux + Mis à jour (5 + 4) : **Connexion à SQL** (documentation)](../connect/new-updated-connect.md)
+- [Nouveaux + Mis à jour (0 + 1) : **Moteur de base de données pour SQL** (documentation)](../database-engine/new-updated-database-engine.md)
+- [Nouveaux + Mis à jour (2 + 2) : **Integration Services pour SQL** (documentation)](../integration-services/new-updated-integration-services.md)
+- [Nouveaux + Mis à jour (10 + 9) : **Linux pour SQL** (documentation)](../linux/new-updated-linux.md)
+- [Nouveaux + Mis à jour (2 + 4) : **Bases de données relationnelles pour SQL** (documentation)](../relational-databases/new-updated-relational-databases.md)
+- [Nouveaux + Mis à jour (4 + 2) : **Reporting Services pour SQL** (documentation)](../reporting-services/new-updated-reporting-services.md)
+- [Nouveaux + Mis à jour (0 + 1) : **Exemples pour SQL** (documentation)](../sample/new-updated-sample.md)
+- [Nouveaux + Mis à jour (21 + 0) : **SQL Operations Studio** (documentation)](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nouveaux + Mis à jour (5 + 1) : **Microsoft SQL Server** (documentation)](../sql-server/new-updated-sql-server.md)
 - [Nouveaux + Mis à jour (0 + 1) : **SQL Server Data Tools (SSDT)** (documentation)](../ssdt/new-updated-ssdt.md)
-- [Nouveau + mis à jour (1 + 0) : **SQL Server Migration Assistant (SSMA)** documents](../ssma/new-updated-ssma.md)
+- [Nouveaux + Mis à jour (1 + 0) : **Assistant Migration SQL Server (SSMA)** (documentation)](../ssma/new-updated-ssma.md)
 - [Nouveaux + Mis à jour (0 + 1) : **SQL Server Management Studio (SSMS)** (documentation)](../ssms/new-updated-ssms.md)
-- [Nouveau + mis à jour (0 + 2) : **Transact-SQL** documents](../t-sql/new-updated-t-sql.md)
+- [Nouveaux + Mis à jour (0 + 2) : **Transact-SQL** (documentation)](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Zones de sujet sans article nouveau ou mis à jour récemment
 
-- [Nouveau + mis à jour (0 0 +) : **données Migration Assistant (DMA) pour SQL** documents](../dma/new-updated-dma.md)
+- [Nouveaux + Mis à jour (0 + 0) : **Data Migration Assistant (DMA) pour SQL** (documentation)](../dma/new-updated-dma.md)
 - [Nouveaux + Mis à jour (0 + 0) : **ActiveX Data Objects (ADO) pour SQL** (documentation)](../ado/new-updated-ado.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Data Quality Services pour SQL** (documentation)](../data-quality-services/new-updated-data-quality-services.md)
 - [Nouveaux + Mis à jour (0 + 0) : **Extensions DMX (Data Mining Extensions) pour SQL** (documentation)](../dmx/new-updated-dmx.md)

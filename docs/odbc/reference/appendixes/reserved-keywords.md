@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb3cd6b0bcb1d159e3c32a672b8b9f1038057b51
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54df53e2ff5f095a0404719d6e1219013d90d47f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
 Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire minimale SQL ; Toutefois, pour garantir la compatibilité avec les pilotes qui prennent en charge la grammaire SQL de base, les applications Évitez d’utiliser un de ces mots clés. Le #**définir** valeur SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
@@ -66,7 +66,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|ou|  
+|COLLATION|- ou -|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
@@ -84,7 +84,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -94,7 +94,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Suppression|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  

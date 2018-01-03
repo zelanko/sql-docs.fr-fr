@@ -24,40 +24,40 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a23388dd2333694f779b9f78de81dd9659916b49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 Retourne une ligne pour chaque segment de colonne dans un index columnstore. Il existe un segment de colonne par colonne par rowgroup. Par exemple, une table avec 10 groupes de lignes et 34 colonnes retourne 340 lignes. 
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indique l'ID de partition. Unique dans une base de données.|  
 |**hobt_id**|**bigint**|ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore.|  
-|**column_id**|**int**|ID de la colonne columnstore.|  
-|**segment_id**|**int**|ID du rowgroup. Pour la compatibilité descendante, le nom de colonne continue à être appelée segment_id même si cela est l’ID de groupe de lignes. Vous pouvez identifier un segment à l’aide de \<hobt_id, partition_id, column_id >, < segment_id >.|  
-|**version**|**int**|Version du format de segment de colonne.|  
-|**encoding_type**|**int**|Type de codage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED - non chaîne/binaire avec aucun dictionnaire (très semblable à 4 avec des variantes internes)<br /><br /> 2 = VALUE_HASH_BASED - colonne de type chaîne ou binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED - colonne de type chaîne ou binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED - non chaîne/binaire avec aucun dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - type chaîne ou binaire avec aucun dictionnaire<br /><br /> Tous les encodages de tirer parti de codage de bit-compression et la longueur de l’exécution lorsque cela est possible.|  
-|**row_count**|**int**|Nombre de lignes dans le groupe de lignes.|  
-|**has_nulls**|**int**|1 si le segment de colonne a des valeurs NULL.|  
+|**column_id**|**Int**|ID de la colonne columnstore.|  
+|**segment_id**|**Int**|ID du rowgroup. Pour la compatibilité descendante, le nom de colonne continue à être appelée segment_id même si cela est l’ID de groupe de lignes. Vous pouvez identifier un segment à l’aide de \<hobt_id, partition_id, column_id >, < segment_id >.|  
+|**version**|**Int**|Version du format de segment de colonne.|  
+|**encoding_type**|**Int**|Type de codage utilisé pour ce segment :<br /><br /> 1 = VALUE_BASED - non chaîne/binaire avec aucun dictionnaire (très semblable à 4 avec des variantes internes)<br /><br /> 2 = VALUE_HASH_BASED - colonne de type chaîne ou binaire avec des valeurs communes dans le dictionnaire<br /><br /> 3 = STRING_HASH_BASED - colonne de type chaîne ou binaire avec des valeurs communes dans le dictionnaire<br /><br /> 4 = STORE_BY_VALUE_BASED - non chaîne/binaire avec aucun dictionnaire<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - type chaîne ou binaire avec aucun dictionnaire<br /><br /> Tous les encodages de tirer parti de codage de bit-compression et la longueur de l’exécution lorsque cela est possible.|  
+|**row_count**|**Int**|Nombre de lignes dans le groupe de lignes.|  
+|**has_nulls**|**Int**|1 si le segment de colonne a des valeurs NULL.|  
 |**base_id**|**bigint**|Id de la valeur de base si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, ID a la valeur 1.|  
 |**ordre de grandeur**|**float**|Grandeur si le type d’encodage 1 est utilisé.  Si le type d’encodage 1 n'est pas utilisé, ordre de grandeur a la valeur 1.|  
-|**primary_dictionary_id**|**int**|La valeur 0 représente le dictionnaire global. La valeur -1 indique qu’il n’existe aucun dictionnaire global créé pour cette colonne.|  
-|**secondary_dictionary_id**|**int**|Une valeur non nulle pointe vers le dictionnaire local pour cette colonne dans le segment actuel (par exemple, le groupe de lignes). La valeur -1 indique qu’il n’existe aucun dictionnaire local pour ce segment.|  
+|**primary_dictionary_id**|**Int**|La valeur 0 représente le dictionnaire global. La valeur -1 indique qu’il n’existe aucun dictionnaire global créé pour cette colonne.|  
+|**secondary_dictionary_id**|**Int**|Une valeur non nulle pointe vers le dictionnaire local pour cette colonne dans le segment actuel (par exemple, le groupe de lignes). La valeur -1 indique qu’il n’existe aucun dictionnaire local pour ce segment.|  
 |**min_data_id**|**bigint**|ID de données minimum dans le segment de colonne.|  
 |**max_data_id**|**bigint**|ID de données maximum dans le segment de colonne.|  
 |**null_value**|**bigint**|Valeur utilisée pour représenter les valeurs NULL.|  
 |**on_disk_size**|**bigint**|Taille de segment en octets.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La requête suivante retourne des informations sur les segments d'un index columnstore.  
   
-```tsql  
+```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   
     COUNT(*) AS number_of_segments  
 FROM sys.column_store_segments AS s   
@@ -70,7 +70,7 @@ GROUP BY i.name, p.object_id, p.index_id, i.type_desc ;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Toutes les colonnes requièrent au moins **VIEW DEFINITION** autorisation sur la table. Les colonnes suivantes retournent null à moins que l’utilisateur ait également **sélectionnez** autorisation : has_nulls, base_id, magnitude, min_data_id, max_data_id et null_value.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

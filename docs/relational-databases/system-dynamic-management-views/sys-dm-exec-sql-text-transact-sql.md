@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,18 +69,18 @@ Identifie de façon univoque un plan de requête pour un traitement en cache ou 
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID de base de données.<br /><br /> Pour les instructions SQL ad hoc et préparées, l'ID de la base de données où les instructions ont été compilées.|  
-|**ObjectID**|**int**|ID d’objet.<br /><br /> Est NULL pour les instructions SQL ad hoc et préparées.|  
+|**ObjectID**|**Int**|ID d’objet.<br /><br /> Est NULL pour les instructions SQL ad hoc et préparées.|  
 |**nombre**|**smallint**|Pour une procédure stockée numérotée, cette colonne retourne le numéro de la procédure stockée. Pour plus d’informations, consultez [fonctionnalité sys.numbered_procedures &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md).<br /><br /> Est NULL pour les instructions SQL ad hoc et préparées.|  
 |**chiffré**|**bit**|1 = le texte SQL est chiffré.<br /><br /> 0 = le texte SQL n'est pas chiffré.|  
-|**text**|**nvarchar (max** **)**|Texte de la requête SQL.<br /><br /> NULL pour les objets chiffrés.|  
+|**texte**|**nvarchar (max** **)**|Texte de la requête SQL.<br /><br /> NULL pour les objets chiffrés.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Pour les requêtes ad hoc, les handles SQL sont des valeurs de hachage en fonction du texte SQL qui est envoyé au serveur et peuvent provenir d’une base de données. 
 
 Pour des objets de base de données tels que des procédures stockées, des déclencheurs ou des fonctions, les handles SQL sont dérivés de l'ID de la base de données, de l'ID de l'objet et du numéro de l'objet. 
@@ -96,7 +96,7 @@ Descripteur de plan est une valeur de hachage dérivée du plan compilé du lot 
 Voici un exemple pour illustrer le passage de base un **sql_handle** soit directement, soit via **CROSS APPLY**.
   1.  Créer l’activité.  
 Exécutez le code T-SQL suivant dans une nouvelle fenêtre de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ Exécutez le code T-SQL suivant dans une nouvelle fenêtre de requête dans [!IN
     2.  À l’aide de **CROSS APPLY**.  
     La colonne sql_handle de **sys.dm_exec_requests** seront passés à **sys.dm_exec_sql_text** à l’aide de **CROSS APPLY**. Ouvrez une nouvelle fenêtre de requête et passer le spid identifié à l’étape 1. Dans cet exemple, le spid se trouve être `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ Exécutez le code T-SQL suivant dans une nouvelle fenêtre de requête dans [!IN
     2.  Passage **sql_handle** directement.  
 Acquérir le **sql_handle** de **sys.dm_exec_requests**. Ensuite, passez le **sql_handle** directement à **sys.dm_exec_sql_text**. Ouvrez une nouvelle fenêtre de requête et de passer le spid identifié à l’étape 1 pour **sys.dm_exec_requests**. Dans cet exemple, le spid se trouve être `59`. Passez ensuite retourné **sql_handle** en tant qu’argument à **sys.dm_exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ Acquérir le **sql_handle** de **sys.dm_exec_requests**. Ensuite, passez le **sq
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Obtenir des informations sur les cinq premières requêtes par temps processeur moyen  
  L'exemple suivant retourne le texte de l'instruction SQL et le temps processeur moyen pour les cinq premières requêtes.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>C. Fournir des statistiques d’exécution du lot  
  L'exemple suivant retourne le texte des requêtes SQL qui sont exécutées par traitements et fournit des informations statistiques à leur sujet.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   

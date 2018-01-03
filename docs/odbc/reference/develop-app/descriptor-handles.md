@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44f8593c55579c40854190c8710fdfde0b753d0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be9387fd0b34123e1a0b903795b1bf1e2106d725
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptor-handles"></a>Handles de descripteur
 A *descripteur* est une collection de métadonnées qui décrivent les paramètres d’une instruction SQL ou les colonnes d’un jeu de résultats, comme indiqué par l’application ou le pilote (également connu sous le *implémentation*). Par conséquent, un descripteur peut remplir un des quatre rôles :  

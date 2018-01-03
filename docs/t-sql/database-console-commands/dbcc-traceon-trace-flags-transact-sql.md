@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de trace (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0315da3d42331296f78cf977c7fd36cdff32853
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 05d205ca74a1da06e0783a69102b332603ec75a0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - les indicateurs de Trace (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 > Il est possible que le comportement des indicateurs de trace ne soit pas pris en charge dans les prochaines versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
   
-|Indicateur de trace| Description|  
+|Indicateur de trace|Description|  
 |---|---|
 |**139**| Force correct de la sémantique de conversion dans la portée de DBCC vérifier commandes telles que [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) et [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md), lors de l’analyse de la logique de précision et de conversion améliorée introduite avec le niveau de compatibilité 130 pour les types de données spécifiques, sur une base de données qui a un niveau de compatibilité inférieur. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/help/4010261).<br /><br />**Remarque :** cet indicateur de trace s’applique aux [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] CU3 RTM, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et aux builds plus élevées.<br /><br />**Avertissement :** Trace indicateur 139 n’est pas destinée à être activée en permanence dans un environnement de production et doit être utilisé dans le seul but d’effectuer la validation de base de données vérifie décrites dans cette [article du Support Microsoft](http://support.microsoft.com/help/4010261). Il doit être désactivé immédiatement après que les contrôles de validation sont effectués.<br /><br />**Étendue**: globale uniquement|
 |**174**|Augmente la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] planifier le nombre de compartiments de cache à partir de 40,009 à 160,001 sur les systèmes 64 bits. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/3026083).<br /><br />**Remarque :** Veuillez vous assurer que vous testez cette option, avant de le déployer dans un environnement de production.<br /><br />**Étendue**: globale uniquement|
@@ -82,6 +82,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 |**2371**|Modifie le seuil de statistiques de mise à jour automatique fixe au seuil de statistiques de mise à jour automatique dynamique. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/2754171).<br /><br />**Remarque :** compter [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et, sous la [le niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, ce comportement est contrôlé par le moteur et l’indicateur de trace 2371 n’a aucun effet.<br /><br />**Étendue**: globale uniquement|
 |**2389**|Activer généré automatiquement des statistiques rapides pour l’ordre croissant des clés (modification de l’histogramme). Si l’indicateur de trace 2389 est définie, et une première colonne de statistiques est marquée comme croissant, l’histogramme utilisée pour estimer la cardinalité sera ajustée à la compilation de requête. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/2801413).<br /><br />**Remarque :** Veuillez vous assurer que vous testez cette option, avant de le déployer dans un environnement de production.<br /><br />**Remarque :** cet indicateur de trace ne s’applique pas à CE la version 120 ou version ultérieure. Utilisez l’indicateur de trace 4139 à la place.<br /><br />**Étendue**: global ou session ou une requête|
 |**2390**|Activer les statistiques de rapides générés automatiquement pour les clés croissantes ou inconnus (modification de l’histogramme). Si l’indicateur de trace 2390 est définie, et une première colonne de statistiques est marquée comme étant l’ordre croissant ou inconnu, l’histogramme utilisée pour estimer la cardinalité sera ajustée à la compilation de requête. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/2801413).<br /><br />**Remarque :** Veuillez vous assurer que vous testez cette option, avant de le déployer dans un environnement de production.<br /><br />**Remarque :** cet indicateur de trace ne s’applique pas à CE la version 120 ou version ultérieure. Utilisez l’indicateur de trace 4139 à la place.<br /><br />**Étendue**: global ou session ou une requête|
+|**2430**|Active un autre nettoyage de classe de verrou. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/2754301).<br /><br />**Étendue**: globale uniquement| 
 |**2453**|Permet à une variable de table déclencher recompile lorsque suffisamment nombre de lignes est modifiée. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/2952444).<br /><br />**Remarque :** Veuillez vous assurer que vous testez cette option, avant de le déployer dans un environnement de production.<br /><br />**Étendue**: global ou session ou une requête|
 |**2528**|Désactive la vérification parallèle des objets par DBCC CHECKDB, DBCC CHECKFILEGROUP et DBCC CHECKTABLE. Par défaut, le degré de parallélisme est déterminé automatiquement par le processeur de requête. Le degré maximum de parallélisme est configuré de la même manière que celui des requêtes parallèles. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).<br /><br />**Remarque :** DBCC parallèle vérifie en principe doit être activée (valeur par défaut). Le processeur de requêtes réévalue et ajuste automatiquement le parallélisme pour chaque table ou d’un lot de tables vérifiées par DBCC CHECKDB.<br /><br />Le scénario d’utilisation classique est lorsqu’un administrateur système sait qu’une charge serveur augmente avant que DBCC CHECKDB se termine et souhaite réduire ou désactiver le parallélisme, afin d’augmenter la concurrence avec d’autres charges de travail utilisateur manuellement. Toutefois, la désactivation des vérifications parallèles de DBCC CHECKDB peut provoquer qu’il prenne plus de temps.<br /><br />**Remarque :** si DBCC CHECKDB est exécutée à l’aide de l’option TABLOCK et parallélisme est désactivé, les tables peuvent être verrouillées pendant de longues périodes.<br /><br />**Remarque :** compter [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, une option MAXDOP est disponible pour remplacer l’option max degree of parallelism configuration de sp_configure pour l’instruction.<br /><br />**Étendue**: global ou session|
 |**2549**|Exécute la commande DBCC CHECKDB en supposant que de chaque fichier de base de données se trouve sur un lecteur de disque unique. Commande DBCC CHECKDB génère une liste de pages à lire par le lecteur de disque unique parmi tous les fichiers de base de données interne. Cette logique détermine les lecteurs de disque uniques en fonction de la lettre de lecteur du nom de fichier physique de chaque fichier.<br /><br />**Remarque :** n’utilisez pas cet indicateur de trace, sauf si vous savez que chaque fichier est basé sur un disque physique unique.<br /><br />**Remarque :** bien que cet indicateur de trace améliore les performances d’utilisation de l’option PHYSICAL_ONLY cible des commandes DBCC CHECKDB, certains utilisateurs ne peuvent pas voir toute amélioration des performances. Lorsque cet indicateur de trace améliore l’utilisation des ressources d’e/s disque, les performances sous-jacente des ressources de disque peuvent limiter les performances globales de la commande DBCC CHECKDB. Pour plus d’informations, consultez [article du Support Microsoft](http://support.microsoft.com/kb/2634571).<br /><br />**Étendue**: globale uniquement| 
@@ -146,7 +147,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 |**10316**|Permet de créer des index supplémentaires sur [interne optimisée en mémoire temporal table intermédiaire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), à côté de celui par défaut. Si vous avez le modèle de requête spécifique qui inclut des colonnes qui ne sont pas couvertes par l’index de la valeur par défaut vous pouvez envisager d’ajouter de nouvelles.<br /><br />**Remarque :** système tables temporelles à des Tables optimisées en mémoire sont conçus pour fournir un débit transactionnel élevé. Sachez que la création d’index supplémentaires peut introduire surcharge pour les opérations DML mettre à jour ou supprimer des lignes dans la table actuelle. Trouver le juste équilibre entre les performances des requêtes temporelles et une surcharge supplémentaire DML doit viser avec les index supplémentaires.<br /><br />**Étendue**: global ou session|
 |**11023**|Désactive l’utilisation de la dernière taux d’échantillonnage persistante, pour toutes les mises à jour de statistiques suivantes où un taux d’échantillonnage n’est pas spécifié explicitement dans le cadre de la [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instruction. Pour plus d’informations, consultez ce [article du Support Microsoft](http://support.microsoft.com/kb/4039284).<br /><br />**Étendue**: global| 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe trois types d’indicateurs de trace : requête, de session et global. Les indicateurs de trace de requêtes sont actives pour le contexte d’une requête spécifique. Les indicateurs de trace de session sont actifs pour une connexion et sont visibles uniquement à cette connexion. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Certains indicateurs ne peuvent être activés qu'en tant qu'indicateurs globaux, tandis que d'autres peuvent être activés avec une étendue globale ou de session.  
   
  Les règles suivantes s'appliquent :  
@@ -165,13 +166,13 @@ Utilisez la `DBCC TRACESTATUS` commande afin de déterminer quels indicateurs de
 ## <a name="examples"></a>Exemples  
  L’exemple suivant définit l’indicateur de trace 3205 sur pour toutes les sessions au niveau du serveur à l’aide de DBCC TRACEON.  
   
-```t-sql  
+```sql  
 DBCC TRACEON (3205,-1);  
 ```
 
 Vous pouvez activer tous les correctifs affectant le plan contrôlés par les indicateurs de trace 4199 et 4137 pour une requête particulière.
   
-```t-sql
+```sql
 SELECT x FROM correlated WHERE f1 = 0 AND f2 = 1 OPTION (QUERYTRACEON 4199, QUERYTRACEON 4137)
 ``` 
  

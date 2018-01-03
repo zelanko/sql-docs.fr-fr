@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a75d56944852d39d083bd1a8c075c3efb6aaa723
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ca1e489937aba92270fe73978f017c35b4fca99
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingiscolumninmask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,18 +57,18 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valeurs de retour  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK retourne les valeurs suivantes.  
   
-|Valeur retournée| Description|  
+|Valeur retournée|Description|  
 |------------------|-----------------|  
 |0|La colonne spécifiée n’est pas dans le *change_columns* liste.|  
-|1|La colonne spécifiée est dans le *change_columns* liste.|  
+| 1|La colonne spécifiée est dans le *change_columns* liste.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  CHANGE_TRACKING_IS_COLUMN_IN_MASK n’effectue pas de contrôle pour valider la *column_id* valeur ou qui le *change_columns* paramètre a été obtenu à partir de la table à partir de laquelle le *column_id* a été obtenu.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant détermine si la colonne `Salary` de la table `Employees` a été mise à jour. Le `COLUMNPROPERTY` fonction retourne l’ID de colonne de la `Salary` colonne. La variable locale `@change_columns` doit être définie en fonction des résultats d'une requête en utilisant CHANGETABLE comme source de données.  
   
-```tsql  
+```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
     (COLUMNPROPERTY(OBJECT_ID('Employees'), 'Salary', 'ColumnId')  
     ,@change_columns);  

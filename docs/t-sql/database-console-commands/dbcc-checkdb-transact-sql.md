@@ -1,7 +1,7 @@
 ---
 title: DBCC CHECKDB (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  Pour réparer les erreurs, nous vous recommandons d'effectuer une restauration à partir d'une sauvegarde. Les opérations de réparation ne prennent en compte aucune des contraintes qui peuvent exister sur les tables ou entre tables. Si la table spécifiée est impliquée dans une ou plusieurs contraintes, nous vous recommandons d'exécuter DBCC CHECKCONSTRAINTS après une réparation. Si vous devez utiliser REPAIR, exécutez la commande DBCC CHECKDB sans option de réparation afin de déterminer le niveau de réparation à utiliser. Si vous utilisez le niveau REPAIR_ALLOW_DATA_LOSS, nous vous recommandons de sauvegarder la base de données avant d'exécuter la commande DBCC CHECKDB avec cette option.    
     
  ALL_ERRORMSGS  
- Affiche toutes les erreurs signalées par objet. Tous les messages d'erreur sont affichés par défaut. La spécification ou non de cette option n'a aucun effet. Messages d’erreur sont triés par ID d’objet, à l’exception des messages générés à partir de [base de données tempdb](../../relational-databases/databases/tempdb-database.md).  
-    
-> [!NOTE] 
-> Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le nombre maximal de messages d'erreur retournés est de 1 000. Lorsque vous spécifiez ALL_ERRORMSGS, nous vous recommandons d’exécuter la commande DBCC à l’aide de la [utilitaire sqlcmd](../../tools/sqlcmd-utility.md) ou en planifiant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent pour exécuter la commande et diriger la sortie vers un fichier. En utilisant l'une ou l'autre de ces méthodes, il vous suffit d'exécuter la commande une seule fois pour obtenir tous les messages d'erreur.    
+ Affiche toutes les erreurs signalées par objet. Tous les messages d'erreur sont affichés par défaut. La spécification ou non de cette option n'a aucun effet. Messages d’erreur sont triés par ID d’objet, à l’exception des messages générés à partir de [base de données tempdb](../../relational-databases/databases/tempdb-database.md).     
 
  EXTENDED_LOGICAL_CHECKS  
  Si le niveau de compatibilité est égal à 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou supérieur, effectue des vérifications de cohérence logique sur une vue indexée, des index XML et des index spatiaux, là où il est présent.  
@@ -182,7 +179,7 @@ Cette argment toujours implique NO_INFOMSGS et n’est pas autorisée avec l’u
 > [!WARNING] 
 > Si MAXDOP est défini sur zéro puis SQL Server choisit le degré maximal de parallélisme à utiliser.    
 
-## <a name="remarks"></a>Notes    
+## <a name="remarks"></a>Notes     
 DBCC CHECKDB n'examine pas les index désactivés. Pour plus d’informations sur les index désactivés, consultez [désactiver des index et contraintes](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 Si un type défini par l'utilisateur est marqué comme étant ordonné par octet, il ne doit y avoir qu'une seule sérialisation du type défini par l'utilisateur. En l'absence de sérialisation cohérente de type défini par l'utilisateur ordonné par octet, l'erreur 2537 est générée à l'exécution de DBCC CHECKDB. Pour plus d’informations, consultez [les exigences de Type défini par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).
 Étant donné que la [base de données Resource](../../relational-databases/databases/resource-database.md) est modifiable uniquement en mode mono-utilisateur, DBCC CHECKDB commande ne peut pas être exécuté directement sur ce dernier. Toutefois, lorsque DBCC CHECKDB est exécutée sur le [base de données master](../../relational-databases/databases/master-database.md), une deuxième commande CHECKDB est également exécutée en interne sur la base de données de la ressource. Cela signifie que DBCC CHECKDB peut retourner des résultats supplémentaires. La commande retourne des jeux de résultats supplémentaires lorsqu'aucune option n'est définie ou lorsque l'option PHYSICAL_ONLY ou ESTIMATEONLY est définie.
@@ -200,7 +197,7 @@ Ces vérifications de cohérence logique effectuent une vérification croisée d
 - À compter de SQL Server 2016, des vérifications supplémentaires sur les colonnes calculées persistantes, les colonnes UDT et les index filtrés ne fonctionnera pas par défaut afin d’éviter l’évaluation d’une expression coûteuse. Cette modification réduit considérablement la durée de CHECKDB sur les bases de données contenant ces objets. Cependant, les vérifications de cohérence physique de ces objets est toujours exécuté. Uniquement lorsque l’option de EXTENDED_LOGICAL_CHECKS est spécifiée l’évaluation d’une expression ne se fera en plus des vérifications logiques déjà présentes (vue indexée, les index XML et les index spatiaux) dans le cadre de l’option EXTENDED_LOGICAL_CHECKS.   
     
 **Pour connaître le niveau de compatibilité de base de données**
--   [Afficher ou modifier le niveau de compatibilité d'une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
+-   [Afficher ou modifier le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Instantané de base de données interne    
 DBCC CHECKDB utilise un instantané de base de données interne pour la cohérence transactionnelle nécessaire à la réalisation de ces vérifications. Ceci évite les problèmes de blocage et d'accès simultané lors de l'exécution de ces commandes. Pour plus d’informations, consultez [afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) et la section Utilisation de capture instantanée de base de données interne DBCC [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md). Si vous ne pouvez créer aucun instantané ou si TABLOCK est spécifié, la commande DBCC CHECKDB acquiert des verrous pour obtenir la cohérence requise. Dans ce cas, un verrou de base de données exclusif est requis pour effectuer les vérifications d'allocation, tandis que des verrous de table partagés sont nécessaires pour effectuer les vérifications de table.
@@ -224,10 +221,10 @@ DBCC CHECKDB effectue par défaut une vérification parallèle des objets. Le de
 ## <a name="understanding-dbcc-error-messages"></a>Présentation des messages d'erreur de DBCC    
 Une fois la commande DBCC CHECKDB exécutée, un message est consigné dans le journal d'erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la commande DBCC est correctement exécutée, le message indique que l'exécution a réussi, ainsi que la durée d'exécution de la commande. Si la commande DBCC est interrompue avant la fin de la vérification en raison d'une erreur, le message indique que la commande n'a pas abouti, précise une valeur d'état ainsi que la durée d'exécution de la commande. Le tableau suivant répertorie et décrit les valeurs d'état pouvant être incluses dans le message.
     
-|État| Description|    
+|État|Description|    
 |-----------|-----------------|    
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a arrêté la commande DBCC.|    
-|1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|    
+| 1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|    
 |2|Une erreur s'est produite lors de la réparation de la base de données en mode urgence.|    
 |3|Ceci indique une corruption des métadonnées qui a arrêté la commande DBCC.|    
 |4|Une assertion ou une violation d'accès a été détectée.|    
@@ -373,7 +370,7 @@ DBCC CHECKDB retourne le jeu de résultats suivant si ESTIMATEONLY est spécifi�
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorisations    
 L’appartenance au rôle de serveur fixé sysadmin ou du rôle de base de données fixé db_owner.
     
 ## <a name="examples"></a>Exemples    

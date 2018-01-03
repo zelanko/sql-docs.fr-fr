@@ -3,7 +3,7 @@ title: "Analyser des blocages avec le Générateur de profils SQL Server | Docum
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7c0de1737702872b1d692a5489afbd4c64eba499
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c2940a94d2893fb58886506fa5db07402b86280d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analyser des blocages à l'aide de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour identifier la cause d’un blocage. Un interblocage se produit quand il y a une dépendance cyclique entre au moins deux threads ou processus pour un jeu de ressources dans SQL Server. Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet de créer une trace qui enregistre, relit et affiche les événements de blocage dans le cadre d'une analyse.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/05/2017
 |ID de propriétaire|ID de transaction des processus qui utilisent des transactions et qui attendent un verrou.|  
 |Descripteur de transaction|Pointeur vers le descripteur de transaction qui décrit l'état de la transaction.|  
 |Mémoire tampon d'entrée|Mémoire tampon d'entrée du processus actuel, qui définit le type d'événement et l'instruction en cours d'exécution. Les valeurs possibles sont :<br /><br /> **Langage**<br /><br /> **RPC**<br /><br /> **Aucune**|  
-|Instruction|Type d'instruction. Les valeurs possibles sont :<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|.|Type d'instruction. Les valeurs possibles sont :<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>Nœud de ressource de blocage  
  Dans un blocage, chacun des deux processus attend une ressource détenue par l'autre processus. Dans un graphique de blocage, les ressources apparaissent sous la forme de nœuds de ressources.  

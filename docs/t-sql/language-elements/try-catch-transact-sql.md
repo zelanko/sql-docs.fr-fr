@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6bf90e58d4956877786dd0d247653e8a99480c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d344044a5ce4a0cd995cc1695b69ac9312d4db74
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ END CATCH
  *statement_block*  
  Tout groupe d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un lot ou contenues dans un bloc BEGIN…END.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La construction TRY…CATCH intercepte toutes les erreurs d'exécution dont la gravité est supérieure à 10 et qui ne ferment pas la connexion de la base de données.  
   
  Un bloc TRY doit être suivi immédiatement d'un bloc CATCH associé. L'inclusion d'une autre instruction entre les instructions END TRY et BEGIN CATCH génère une erreur de syntaxe.  
@@ -108,7 +108,7 @@ END CATCH
   
  Ces fonctions renvoient la valeur NULL si elles sont appelées en dehors de l'étendue du bloc CATCH. Les informations sur les erreurs peuvent être récupérées à l'aide de ces fonctions à partir de n'importe quel emplacement dans l'étendue du bloc CATCH. Par exemple, le script suivant montre une procédure stockée contenant des fonctions de gestion des erreurs : dans le bloc `CATCH` d'une construction `TRY…CATCH`, la procédure stockée est appelée et les informations sur l'erreur sont retournées.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +161,7 @@ END CATCH;
   
  L'exemple suivant montre comment une erreur de résolution de noms d'objets générée par une instruction `SELECT` n'est pas interceptée par la construction `TRY…CATCH`, mais par le bloc `CATCH` lorsque la même instruction `SELECT` est exécutée au sein d'une procédure stockée.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +178,7 @@ END CATCH
   
  L'exécution de l'instruction `SELECT` au sein d'une procédure stockée entraîne l'occurrence de l'erreur à un niveau inférieur à celui du bloc `TRY`. L'erreur sera gérée par la construction `TRY…CATCH`.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +211,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Utilisation de TRY…CATCH  
  L'exemple suivant illustre une instruction `SELECT` qui génère une erreur de division par zéro. L'erreur entraîne le saut de l'exécution vers le bloc `CATCH` associé.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +231,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>B. Utilisation de TRY…CATCH dans une transaction  
  L'exemple suivant montre comment un bloc `TRY…CATCH` fonctionne dans une transaction. L'instruction dans le bloc `TRY` génère une erreur de violation de contrainte.  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +260,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>C. Utilisation de TRY…CATCH avec XACT_STATE  
  L'exemple suivant montre comment utiliser la construction `TRY…CATCH` pour gérer les erreurs qui surviennent dans une transaction. La fonction `XACT_STATE` détermine si la transaction doit être validée ou annulée. Dans cet exemple, `SET XACT_ABORT` est `ON`. Cela rend la transaction non validable lorsque l'erreur de violation de contrainte se produit.  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +329,7 @@ GO
 ### <a name="d-using-trycatch"></a>D. Utilisation de TRY…CATCH  
  L'exemple suivant illustre une instruction `SELECT` qui génère une erreur de division par zéro. L'erreur entraîne le saut de l'exécution vers le bloc `CATCH` associé.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

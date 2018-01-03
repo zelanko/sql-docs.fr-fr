@@ -3,7 +3,7 @@ title: "Exécuter des cas de Test (SybaseToSQL) | Documents Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 686e7701014a85e141fed9d4f9bbcecdb029f015
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b78d26a492a73964c39b15c678103537cd9abe1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-test-cases-sybasetosql"></a>Cas de Test en cours d’exécution (SybaseToSQL)
 Lorsque le testeur de SSMA s’exécute à un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminé en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -43,7 +43,7 @@ Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur 
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution des cas de test  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Testeur de SSMA vérifie si toutes les conditions préalables sont remplies pour que l’exécution du test avant le début du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
@@ -53,11 +53,11 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 Les objets suivants sont créés au Sybase, dans la base de données SSMATESTER2005db ou SSMATESTER2008db et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans la base de données ssmatesterdb_syb.  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
-|USER_TABLE$ Aud|Table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
-|USER_TABLE$ AudID|Table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
+|USER_TABLE$ Aud|Table de charge de travail|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
+|USER_TABLE$ AudID|Table de charge de travail|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|Affichage|Représentation simplifiée des modifications de la table.|  
 |$ USER_TABLE nouveau|Affichage|Simplifiée de la représentation sous forme de lignes insérées et remplacés.|  
 |USER_TABLE$ new_id|Affichage|Identification des lignes insérées et modifiés.|  
@@ -65,7 +65,7 @@ Les objets suivants sont créés au Sybase, dans la base de données SSMATESTER2
   
 L’objet suivant est créé dans la base de données de table vérifié à Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   

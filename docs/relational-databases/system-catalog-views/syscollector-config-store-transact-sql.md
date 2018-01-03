@@ -24,29 +24,29 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6811c1ab9fef0f15422f1d51ac9b969476e58699
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4bf584c6d467d311223831d180838e6851013830
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne les propriétés qui s'appliquent à l'intégralité du collecteur de données, par opposition à une instance de jeu d'éléments de collection. Chaque ligne de cette vue décrit une propriété du collecteur de données spécifique, telle que le nom de l'entrepôt de données de gestion, et le nom de l'instance où l'entrepôt de données de gestion est situé.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|parameter_name|**nvarchar (128)**|Nom de la propriété. N'accepte pas la valeur NULL.|  
+|parameter_name|**nvarchar(128)**|Nom de la propriété. N'accepte pas la valeur NULL.|  
 |parameter_value|**sql_variant**|Valeur réelle de la propriété. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur la vue ou l'appartenance dans les rôles de base de données fixes dc_operator, dc_proxy ou dc_admin.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La liste des propriétés disponibles est corrigée et leurs valeurs ne peuvent être modifiées qu'à l'aide de la procédure stockée appropriée. La table suivante décrit les propriétés qui sont exposées par cette vue :  
   
-|Nom de la propriété| Description|  
+|Nom de la propriété|Description|  
 |-------------------|-----------------|  
 |CacheDirectory|Nom du répertoire dans le système de fichiers où les packages du type de collecteur stockent les informations temporaires.<br /><br /> NULL = le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporaire par défaut est utilisé.|  
 |CacheWindow|Indique la stratégie de rétention de données du répertoire de cache pour les téléchargements de données non réussis.<br /><br /> -1 = Conservation des données de tous les échecs de téléchargement.<br /><br /> 0 = Ne pas conserver les données après un échec de téléchargement.<br /><br /> *n*= Conserver les données à partir de  *n*  les échecs de téléchargement précédents, où  *n*  > = 1.<br /><br /> Utilisez la procédure stockée sp_syscollector_set_cache_window pour modifier cette valeur.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="examples"></a>Exemples  
  L'exemple suivant interroge la vue syscollector_config_store.  
   
-```tsql  
+```sql  
 SELECT parameter_name, parameter_value  
 FROM msdb.dbo.syscollector_config_store;  
 ```  

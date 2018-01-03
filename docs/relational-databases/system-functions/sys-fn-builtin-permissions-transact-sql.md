@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d36338abefd30103b80a202ebde030d73b6b071
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a52966aaa6bd8cc58c58eeb7fbf16bc6ab31afa
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données|Classement| Description|  
+|Nom de colonne|Type de données|Classement|Description|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar (60)**|Classement du serveur.|Description de la classe sécurisable.|  
 |permission_name|**nvarchar (60)**|Classement du serveur.|Nom de l’autorisation.|  
@@ -191,7 +191,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CORP|CONNECT REPLICATION|DATABASE|  
 |COSQ|CONNECT SQL|SERVER|  
 |CP|CHECKPOINT|DATABASE|  
-|CRAC|CREATE AVAILABILITY GROUP<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
+|CRAC|Créer un groupe de disponibilité<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
 |CRAG|CREATE AGGREGATE|DATABASE|  
 |CRAK|CREATE ASYMMETRIC KEY|DATABASE|  
 |CRAS|CREATE ASSEMBLY|DATABASE|  
@@ -224,9 +224,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **S'applique à**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Suppression|DATABASE|  
+|DL|Suppression|OBJECT|  
+|DL|Suppression|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|Exécutez|DATABASE|  
 |EX|Exécutez|OBJECT|  
@@ -326,7 +326,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  `sys.fn_builtin_permissions` est une fonction table qui émet une copie de la hiérarchie d'autorisations prédéfinies. Cette hiérarchie inclut les autorisations d'accompagnement. Le `DEFAULT` jeu de résultats décrit un graphique dirigé et acyclique de la hiérarchie des autorisations, qui est la racine (classe = SERVER, autorisation = CONTROL SERVER).  
   
  `sys.fn_builtin_permissions` n'accepte pas de paramètres mis en corrélation.  
@@ -341,27 +341,27 @@ Le graphique suivant illustre les autorisations et leurs relations. Certaines de
 > Dans cette rubrique, le poster est trop petit pour être lu correctement. Téléchargez le poster des autorisations du moteur de base de données à partir de [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
    
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. Liste de toutes les autorisations intégrées   
 Utilisez `DEFAULT` ou une chaîne vide pour retourner toutes les autorisations.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
 ### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. Liste des autorisations qui peuvent être définies sur une clé symétrique   
 Spécifiez une classe pour retourner toutes les autorisations possibles pour cette classe.   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
 ### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. Liste des classes sur lesquelles il existe une autorisation SELECT   
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  

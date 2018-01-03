@@ -4,7 +4,7 @@ description: "Installer, mettre à jour et désinstaller SQL Server sur Linux. C
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Aide à l’installation de SQL Server sur Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 Cette rubrique explique comment installer, mettre à jour et désinstaller 2017 du serveur SQL sur Linux. SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) et Ubuntu. Il est également disponible sous une image Docker qui peut s’exécuter sur le moteur Docker sur Linux ou Docker pour Windows/Mac.
 
 > [!TIP]
-> Pour démarrer rapidement, passez à un des didacticiels de démarrage rapide pour [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), ou [Docker](quickstart-install-connect-docker.md).
+> Pour démarrer rapidement, passez à un des Démarrages rapides pour [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), ou [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a>Plateformes prises en charge
 
@@ -40,6 +40,10 @@ SQL Server 2017 est pris en charge sur les plateformes Linux suivantes :
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Obtenir SLES v12 SP2](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Moteur docker** | 1.8+ | [Obtenir Docker](http://www.docker.com/products/overview)
+
+Microsoft prend en charge le déploiement et la gestion des conteneurs de SQL Server à l’aide de OpenShift et Kubernetes.
+
+Pour la dernière stratégie de prise en charge pour SQL Server 2017, consultez [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a>Configuration système requise
 
@@ -62,7 +66,7 @@ Si vous utilisez **système NFS (Network File)** partages distants en production
 
 ## <a id="platforms"></a> Installation de SQL Server
 
-Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Pour obtenir des instructions, consultez les didacticiels de démarrage rapide suivants :
+Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Pour obtenir des instructions, consultez les Démarrages rapides suivants :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ La fin de l’URL du référentiel confirme que le type de référentiel :
 Pour configurer les référentiels CU ou GDR, procédez comme suit :
 
 > [!NOTE]
-> Le [didacticiels de démarrage rapide](#platforms) configurer le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont nécessaires pour la modification de votre référentiel.
+> Le [Démarrages rapides](#platforms) configurer le référentiel CU. Si vous suivez ces didacticiels, il est inutile d’utiliser les étapes ci-dessous pour continuer à utiliser le référentiel CU. Ces étapes ne sont nécessaires pour la modification de votre référentiel.
 
 1. Si nécessaire, supprimez l’espace de stockage configuré précédemment.
 
@@ -202,7 +206,7 @@ Pour configurer les référentiels CU ou GDR, procédez comme suit :
 
 Vous pouvez effectuer une installation sans assistance de la manière suivante :
 
-- Suivez les étapes initial dans le [didacticiels de démarrage rapide](#platforms) pour inscrire les référentiels, installez SQL Server.
+- Suivez les étapes initial dans le [Démarrages rapides](#platforms) pour inscrire les référentiels, installez SQL Server.
 - Lorsque vous exécutez `mssql-conf setup`, définissez [variables d’environnement](sql-server-linux-configure-environment-variables.md) et utiliser le `-n` (sans invite) option.
 
 L’exemple suivant configure l’Édition Developer de SQL Server avec le **MSSQL_PID** variable d’environnement. Elle accepte également le CLUF (**ACCEPT_EULA**) et définit le mot de passe SA (**MSSQL_SA_PASSWORD**). Le `-n` paramètre effectue une installation exemple où les valeurs de configuration sont extraites les variables d’environnement.
@@ -262,11 +266,11 @@ Si l’ordinateur Linux n’a pas d’accès pour les référentiels en ligne ut
 Après l’installation, vous pouvez également installer d’autres packages facultatifs de SQL Server.
 
 - [Outils de ligne de commande de SQL Server](sql-server-linux-setup-tools.md)
-- [Agent SQL Server](sql-server-linux-setup-sql-agent.md)
+- [SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 - [Recherche en texte intégral SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Se connecter à votre instance de SQL Server pour commencer la création et la gestion des bases de données. Pour commencer, consultez les didacticiels de démarrage rapide :
+Se connecter à votre instance de SQL Server pour commencer la création et la gestion des bases de données. Pour commencer, consultez les Démarrages rapides :
 
 - [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

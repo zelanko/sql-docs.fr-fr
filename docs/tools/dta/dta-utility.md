@@ -3,7 +3,7 @@ title: Utilitaire DTA | Documents Microsoft
 ms.custom: 
 ms.date: 01/09/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 21deb8edf30db7281ebacfd7b1176070ce13cc6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Le **dta** utilitaire est la version de l’invite de commandes de l’Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
@@ -133,8 +133,8 @@ dta -D db_name1, db_name2...
 dta -D db_name1, db_name2 -d db_name1  
 ```  
   
- **-d** *database_name*  
- Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Exemple :  
+ **-d** *nom_base_de_données*  
+ Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Exemple :  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -158,7 +158,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* spécifié avec l’option **–D**||  
 |*owner_name*|**dbo**|*owner_name* doit avoir la valeur **dbo**. Si une autre valeur est spécifiée, l'exécution de **dta** échoue et il retourne une erreur.|  
-|*table_name*|Aucune||  
+|*table_name*|None||  
   
  Si un fichier est utilisé, spécifiez .xml comme extension. Par exemple, TuningLog.xml.  
   
@@ -186,7 +186,7 @@ dta -d AdventureWorks2012 ...
 [Recommandations d’index ColumnStore dans base de données Engine Tuning Advisor (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
   
  **-fk** *keep_existing_option*  
@@ -224,7 +224,7 @@ dta -d AdventureWorks2012 ...
  Spécifie que le magasin de requêtes est utilisé comme la charge de travail. Les 1 000 premiers événements du magasin de requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  Consultez [magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [de paramétrage de base de données à l’aide de la charge de travail à partir du magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) pour plus d’informations.
  ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
      
   
  **-if** *workload_file*  
@@ -278,7 +278,7 @@ dta -iq -I 48
 Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de travail et prendre en compte uniquement des requêtes qui ont exécuté avec les dernières 48 heures.  
   ||  
 |-|  
-|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 
 
   
@@ -357,7 +357,7 @@ Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de
   
  Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables (**-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
   
- **-U** *login_id*  
+ **-U** *ID_connexion*  
  Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **-u**  
@@ -366,7 +366,7 @@ Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de
  **-x**  
  Démarre une session de réglage et quitte.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Appuyez sur Ctrl+C pour arrêter la session de réglage et générer des recommandations basées sur l’analyse que **dta** a effectuée jusqu’à ce point. Un message vous demande de déterminer si vous souhaitez générer ou non des recommandations. Appuyez de nouveau sur CTRL+C pour arrêter la session de réglage sans générer de recommandations.  
   
 ## <a name="examples"></a>Exemples  

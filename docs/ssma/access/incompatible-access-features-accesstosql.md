@@ -1,7 +1,7 @@
 ---
 title: "Les fonctions d’accès incompatibles (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 59c6c7d0130c93efb7e5d3136deb0edbd5d05ab9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d981889ef89abab5cbf071557b658ae14ae59402
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Fonctions d’accès incompatibles (AccessToSQL)
 Pas toutes les fonctionnalités de base de données Access sont compatibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et accès contiennent différents ensembles de mots clés réservés. Problèmes tels que ceux-ci peuvent empêcher la migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Utilisez le tableau suivant pour en savoir plus sur les problèmes de migration possibles et ce que vous pouvez faire à leur sujet.  

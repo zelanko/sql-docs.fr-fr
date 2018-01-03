@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87af188936ad4c7b2101760b7b18ca63c90db9b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  [  **@OptionName =**] **'***option_name***'**  
  Nom d'option d'index. *option_name* est **varchar (35)**, sans valeur par défaut. *option_name* peut avoir l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Si la valeur est TRUE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés. Si la valeur est FALSE, les verrous de ligne ne sont pas utilisés. La valeur par défaut est TRUE.|  
 |**AllowPageLocks**|Si la valeur est TRUE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés. Si la valeur est FALSE, les verrous de page ne sont pas utilisés. La valeur par défaut est TRUE.|  
@@ -69,7 +69,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou supérieur à 0 (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les index XML ne sont pas pris en charge. Si un index XML est spécifié ou qu'un nom de table est spécifié sans nom d'index et que la table contient un index XML, l'instruction échoue. Pour définir ces options, utilisez [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) à la place.  
   
  Pour afficher la page Propriétés de verrouillage et ligne actuelle, utilisez [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.  
@@ -86,7 +86,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   Lorsque **AllowPageLocks** option a la valeur FALSE ou **DisAllowPageLocks** est définie sur TRUE, le paramètre est appliqué entièrement aux index non cluster. En d'autres termes, tous les verrous de page sont interdits sur les index non-cluster. Sur le segment de mémoire, seuls les verrous partagés (S), de mise à jour (U) et exclusifs (X) de la page sont interdits. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut toujours acquérir un verrou de page intentionnel (IS, IU ou IX) à des fins internes.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ## <a name="examples"></a>Exemples  
@@ -94,7 +94,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Définition d'une option sur un index spécifique  
  L’exemple suivant interdit les verrous de page sur la `IX_Customer_TerritoryID` d’index sur la `Customer` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -104,7 +104,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>B. Définition d'une option sur tous les index d'une table  
  L'exemple suivant interdit les verrous de ligne sur tous les index associés à la table `Product`. L'interrogation de l'affichage catalogue `sys.indexes` avant et après l'exécution de la procédure `sp_indexoption` permet d'afficher les résultats de l'instruction.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -126,7 +126,7 @@ GO
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Définition d'une option sur une table dépourvue d'index cluster  
  L'exemple suivant interdit les verrous de page sur une table dépourvue d'index cluster (un segment de mémoire). Le `sys.indexes` affichage catalogue est interrogé avant et après le `sp_indexoption` procédure est exécutée pour afficher les résultats de l’instruction.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

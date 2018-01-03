@@ -3,7 +3,7 @@ title: "Définition des Options de l’outil et la disposition | Documents Micro
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc759f4beb67d96abad27dc5bdbe0a4e322f330a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Leçon 1-2-mise en page et les Options de l’outil paramètre
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Vous pouvez définir des options qui configurent ce que l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données (GUI) affiche au démarrage, les polices qu’elle utilise, et d’autres fonctionnalités de l’outil pour mieux prendre en charge l’utilisation. Les exercices pratiques de cette page vous aideront à vous familiariser avec les options qu'il est possible de définir et avec la façon de procéder.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : utilisation de l'Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

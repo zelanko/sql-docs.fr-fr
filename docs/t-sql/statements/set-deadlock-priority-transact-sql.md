@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa43f93003240c41fefdc589392f936c60a2333d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b80f18cb5440560b34924cad619af1f195f49a47
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -70,18 +70,18 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@***deadlock_intvar*  
  Variable de type entier spécifiant la priorité du blocage. Elle doit être définie sur une valeur entière comprise dans la plage (-10 - 10)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un blocage se produit lorsque deux sessions sont en attente d'un accès aux ressources verrouillées par l'autre session. Si une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte le blocage de deux sessions, l'une des sessions est choisie comme victime du blocage afin de résoudre ce problème. La transaction active de la victime est annulée et le message d'erreur 1205 est retourné au client. Tous les verrous détenus par cette session sont libérés et le traitement des autres sessions peut se poursuivre.  
   
  La session choisie comme victime du blocage varie en fonction de la priorité de blocage des deux sessions :  
   
--   Si la valeur de la priorité de blocage des deux sessions est identique, l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit la session pour laquelle l'annulation est la moins onéreuse comme victime du blocage. Par exemple, si la priorité des deux sessions est définie sur HIGH, l'instance choisit comme victime la session pour laquelle l'annulation est la moins coûteuse (estimation).  
+-   Si la valeur de la priorité de blocage des deux sessions est identique, l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisit la session pour laquelle l'annulation est la moins onéreuse comme victime du blocage. Par exemple, si la priorité des deux sessions est définie sur HIGH, l'instance choisit comme victime la session pour laquelle l'annulation est la moins coûteuse (estimation). Le coût est déterminé en comparant le nombre d’octets du journal écrit à ce stade dans chaque transaction. (Vous pouvez voir cette valeur comme « Utilisé du journal » dans un graphique de blocage).
   
 -   Si les priorités de blocage des sessions sont différentes, la session dont la priorité de blocage est inférieure est choisie comme victime du blocage.  
   
  L'option SET DEADLOCK_PRIORITY est définie lors de l'exécution, et non pas durant l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

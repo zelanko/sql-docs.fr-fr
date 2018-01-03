@@ -1,7 +1,7 @@
 ---
 title: uniqueidentifier (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 7/23/2017
+ms.date: 12/1/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.service: 
@@ -25,20 +25,20 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 92d6795e0317930e2235847d5f7373db52812b01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76f7a3c784c0d05e1a6f94da0b33207bfbb1efec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
 GUID sur 16 octets.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Une colonne ou une variable locale de **uniqueidentifier** type de données peut être initialisé à une valeur comme suit :
--   en utilisant la fonction NEWID ;  
+-   À l’aide de la [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) fonctions.    
 -   En convertissant à partir d’une constante de chaîne sous la forme *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, dans lequel chaque *x* est un chiffre hexadécimal dans la plage 0-9 ou a-f. Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est valide **uniqueidentifier** valeur.  
   
 Opérateurs de comparaison peuvent être utilisés avec **uniqueidentifier** valeurs. Toutefois, le classement n'est pas effectué par la comparaison des configurations binaires des deux valeurs. Les seules opérations qui peuvent être effectuées par rapport à un **uniqueidentifier** valeur sont les comparaisons (=, <>, \<, >, \<=, > =) et la vérification de la valeur NULL (IS NULL et IS NOT NULL). Aucun autre opérateur arithmétique n'est admis. Toutes les contraintes de colonne et les propriétés, à l’exception d’identité, peuvent être utilisées sur le **uniqueidentifier** type de données.
@@ -86,8 +86,8 @@ String                                       TruncatedValue
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [NEWID &#40; Transact-SQL &#41;](../../t-sql/functions/newid-transact-sql.md)  
-[NEWSEQUENTIALID &#40; Transact-SQL &#41; ](../../t-sql/functions/newsequentialid-transact-sql.md) 
- [Définir @local_variable &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
+[NEWSEQUENTIALID &#40; Transact-SQL &#41;](../../t-sql/functions/newsequentialid-transact-sql.md)    
+[SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)
   
   

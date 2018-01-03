@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ OPENQUERY ( linked_server ,'query' )
  **'** *requête* **'**  
  Chaîne de requête exécutée dans le serveur lié. La longueur maximale de la chaîne est limitée à 8 Ko.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  OPENQUERY n'accepte pas de variables pour ses arguments.  
   
- Vous ne pouvez pas utiliser OPENQUERY pour exécuter des procédures stockées étendues sur un serveur lié. Par contre, une procédure stockée étendue peut être exécutée sur un serveur lié en utilisant un nom en quatre parties. Exemple :  
+ Vous ne pouvez pas utiliser OPENQUERY pour exécuter des procédures stockées étendues sur un serveur lié. Par contre, une procédure stockée étendue peut être exécutée sur un serveur lié en utilisant un nom en quatre parties. Exemple :  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
  Tout appel à OPENDATASOURCE, OPENQUERY ou OPENROWSET dans la clause FROM est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées sur le résultat de l'un de ces appels n'ont aucun effet sur les résultats de l'autre.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent exécuter OPENQUERY. Les autorisations utilisées pour la connexion au serveur distant sont obtenues à partir des paramètres définis pour le serveur lié.  
   
 ## <a name="examples"></a>Exemples  
@@ -73,7 +73,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Exécution d'une requête UPDATE directe  
  L'exemple suivant exécute une requête `UPDATE` directe sur le serveur lié créé dans l'exemple A.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +81,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>B. Exécution d'une requête INSERT directe  
  L'exemple suivant exécute une requête `INSERT` directe sur le serveur lié créé dans l'exemple A.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +89,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>C. Exécution d'une requête DELETE directe  
  L'exemple suivant exécute une requête `DELETE` directe pour supprimer la ligne insérée dans l'exemple C.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Exécution d'une requête SELECT directe  
  L’exemple suivant utilise direct `SELECT` requête pour sélectionner la ligne insérée dans l’exemple C.  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

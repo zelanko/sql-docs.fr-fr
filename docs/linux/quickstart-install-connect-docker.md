@@ -1,6 +1,6 @@
 ---
 title: Prise en main 2017 du serveur SQL sur Docker | Documents Microsoft
-description: "Ce didacticiel de démarrage rapide montre comment utiliser Docker pour exécuter l’image de conteneur de SQL Server 2017. Vous créez et interrogez une base de données avec sqlcmd."
+description: "Ce démarrage rapide montre comment utiliser Docker pour exécuter l’image de conteneur de SQL Server 2017. Vous créez et interrogez une base de données avec sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,17 +15,17 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Exécuter l’image de SQL Server 2017 conteneur avec Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Dans ce didacticiel de démarrage rapide, vous utilisez Docker pour extraire et exécuter l’image de conteneur de SQL Server 2017 [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Se connecter avec **sqlcmd** à créer votre première base de données et exécuter des requêtes.
+Dans ce démarrage rapide, vous utilisez Docker pour extraire et exécuter l’image de conteneur de SQL Server 2017 [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Se connecter avec **sqlcmd** à créer votre première base de données et exécuter des requêtes.
 
 Cette image se compose de SQL Server est en cours d’exécution sur Linux basé sur Ubuntu 16.04. Il peut être utilisé avec le moteur Docker 1.8 + sur Linux ou sur Docker pour Mac et Windows.
 
@@ -72,7 +72,7 @@ Cette image se compose de SQL Server est en cours d’exécution sur Linux basé
 
    Le tableau suivant fournit une description des paramètres dans la précédente `docker run` exemple :
 
-   | Paramètre |  Description |
+   | Paramètre | Description |
    |-----|-----|
    | **-e ' ACCEPT_EULA = Y'** |  Définir le **ACCEPT_EULA** variable à n’importe quelle valeur pour confirmer votre acceptation de la [contrat de licence utilisateur final](http://go.microsoft.com/fwlink/?LinkId=746388). Paramètre de l’image de SQL Server est requis. |
    | **-e ' MSSQL_SA_PASSWORD =\<YourStrong ! Passw0rd\>'** | Spécifiez votre propre mot de passe fort est d’au moins 8 caractères et respecte le [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre de l’image de SQL Server est requis. |
@@ -240,6 +240,8 @@ Autres outils courants pour vous connecter à SQL Server :
 
 - [Code Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) sur Windows](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Operations Studio (version préliminaire)](../sql-operations-studio/what-is.md)
+- [MSSQL-cli (version préliminaire)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Supprimer le conteneur de votre
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > L’arrêt et la suppression d’un conteneur définitivement supprime toutes les données de SQL Server dans le conteneur. Si vous avez besoin de conserver vos données, [créer et copier un fichier de sauvegarde hors du conteneur](tutorial-restore-backup-in-sql-server-container.md) ou utilisez un [technique de persistance de données de conteneur](sql-server-linux-configure-docker.md#persist).
+
+## <a name="docker-demo"></a>Démonstration de docker
+
+Une fois que vous avez essayé de Docker à l’aide de l’image de conteneur de SQL Server, vous souhaiterez savoir comment Docker est utilisé pour améliorer le développement et test. La vidéo suivante illustre l’utilisation des Docker dans une intégration continue et le scénario de déploiement.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>Étapes suivantes
 

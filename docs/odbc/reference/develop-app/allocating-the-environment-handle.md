@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,18 +25,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c0bbe08b13b45b47fecda5143ca419c31dfe82d5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6ac926c39f1390431b35b49b27e7302fe789ca4a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-the-environment-handle"></a>Allouer le Handle d’environnement
 La première tâche pour une application ODBC consiste à charger le Gestionnaire de pilotes ; Cette opération dépend du système d’exploitation. Par exemple, sur un ordinateur exécutant Microsoft Windows® 95/98, Windows NT Workstation et Windows 2000 Professionnel ou Microsoft® Windows NT® Server et Windows 2000 Server, l’application soit liée à la bibliothèque du Gestionnaire de pilotes ou les appels **LoadLibrary** de charger la DLL du Gestionnaire de pilotes.  
   
  La tâche suivante, qui doit être effectuée avant qu’une application puisse appeler toute autre fonction ODBC, consiste à initialiser l’environnement ODBC et allouer un handle d’environnement, comme suit :  
   
-1.  L’application déclare une variable de type SQLHENV. Il appelle ensuite **SQLAllocHandle** et transmet l’adresse de cette variable et l’option de SQL_HANDLE_ENV. Exemple :  
+1.  L’application déclare une variable de type SQLHENV. Il appelle ensuite **SQLAllocHandle** et transmet l’adresse de cette variable et l’option de SQL_HANDLE_ENV. Exemple :  
   
     ```  
     SQLHENV henv1;  

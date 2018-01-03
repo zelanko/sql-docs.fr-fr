@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ee227f7fab393cdf563daab2aa695cd469281ff
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6bd1a9c9f164c1a745e3ec9baf40a7184600a4b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-driver-manager"></a>Le Gestionnaire de pilotes
 Le *du Gestionnaire de pilotes* est une bibliothèque qui gère la communication entre les applications et des pilotes. Par exemple, sur les plateformes Microsoft® Windows®, le Gestionnaire de pilotes est une bibliothèque de liens dynamiques (DLL) qui est écrit par Microsoft et peut être redistribuée par les utilisateurs du composant redistribuable MDAC 2.8 SP1 SDK.  

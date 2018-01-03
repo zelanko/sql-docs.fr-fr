@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>La fonction TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ Est une expression de n’importe quel type de caractère (`nvarchar`, `varchar`
 ## <a name="return-types"></a>Types de retour   
 Retourne une expression de caractères avec un type d’argument de chaîne dans laquelle le caractère espace `char(32)` ou autres caractères spécifiées sont supprimés des deux côtés. Retourne `NULL` si la chaîne d’entrée est `NULL`.
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes    
 Par défaut `TRIM` fonction supprime le caractère espace `char(32)` des deux côtés. Ceci équivaut à `LTRIM(RTRIM(@string))`. Comportement de `TRIM ` fonction avec des caractères spécifiés est identique au comportement de `REPLACE` fonction où les caractères de début ou de fin sont remplacées par des chaînes vides.
 
 
 ## <a name="examples"></a>Exemples
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Supprime l’espace des deux côtés de la chaîne   
 L’exemple suivant supprime les espaces avant et après le mot `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Supprime caractères spécifiés dans les deux côtés de la chaîne   
 L’exemple suivant supprime un point final et les espaces de fin.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

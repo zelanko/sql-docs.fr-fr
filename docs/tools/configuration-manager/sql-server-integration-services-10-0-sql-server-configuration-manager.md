@@ -3,7 +3,7 @@ title: SQL Server Integration Services 10.0 (Gestionnaire de Configuration SQL S
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ecfe835f304cb685f652e2d78deed1750f9ad3d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c910bce985783da2dfba1ba29c74c8c12e401064
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0 (Gestionnaire de configuration SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il s’agit du service qui prend en charge [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Pour afficher les propriétés du service, cliquez avec le bouton droit sur son nom dans le volet d’informations, puis cliquez sur **Propriétés**.  

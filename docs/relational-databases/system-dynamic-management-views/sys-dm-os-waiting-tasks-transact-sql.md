@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8df7b1a31a649962f4074c936ff4310cf16a942
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 52f867ccc301a710656739bf49ec1a11a50fcee1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,19 +38,19 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary (8)**|Adresse de la tâche en attente.|  
 |**session_id**|**smallint**|ID de la session associée à la tâche.|  
-|**exec_context_id**|**int**|ID du contexte d'exécution associé à la tâche.|  
+|**exec_context_id**|**Int**|ID du contexte d'exécution associé à la tâche.|  
 |**wait_duration_ms**|**bigint**|Temps d'attente total de ce type d'attente (en millisecondes). Ce temps **signal_wait_time**.|  
 |**wait_type**|**nvarchar (60)**|Nom du type d'attente.|  
 |**resource_address**|**varbinary (8)**|Adresse de la ressource que la tâche attend.|  
 |**blocking_task_address**|**varbinary (8)**|Tâche qui mobilise actuellement cette ressource.|  
 |**blocking_session_id**|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé en raison de transitions d'état de verrou interne.|  
-|**blocking_exec_context_id**|**int**|ID du contexte d'exécution de la tâche bloquante.|  
+|**blocking_exec_context_id**|**Int**|ID du contexte d'exécution de la tâche bloquante.|  
 |**resource_description**|**nvarchar(3072)**|Description de la ressource actuellement mobilisée. Pour plus d'informations, consultez la liste ci-dessous.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
   
 ## <a name="resourcedescription-column"></a>Colonne resource_description  
  La colonne resource_description a les valeurs possibles suivantes.  
@@ -137,13 +137,13 @@ ms.lasthandoff: 11/17/2017
   
 -   \<classe de verrous > (\<verrou-address >)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou **administrateur Active Directory de Azure** compte.  
  
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Cet exemple montre comment identifier les sessions bloquées.  Exécutez le [!INCLUDE[tsql](../../includes/tsql-md.md)] de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 

@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ match_expression [ NOT ] LIKE pattern
  *modèle*  
  Chaîne spécifique de caractères à rechercher dans *match_expression*et peut inclure les caractères génériques valides suivants. *modèle* peut comporter un maximum de 8 000 octets.  
   
-|Caractère générique| Description|Exemple|  
+|Caractère générique|Description| Exemple|  
 |------------------------|-----------------|-------------|  
 |%|Toute chaîne de zéro caractère ou plus.|WHERE title LIKE '%computer%' trouve tous les titres de livres comportant le terme « computer ».|  
 |_ (souligné)|N'importe quel caractère.|WHERE au_fname LIKE '_ean' trouve tous les prénoms en quatre lettres terminant par « ean » (Dean, Sean, etc.).|  
@@ -86,12 +86,12 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valeur des résultats  
  LIKE renvoie TRUE si le *match_expression* correspond à l’élément spécifié *modèle*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lors de la comparaison de chaînes à l'aide de l'argument LIKE, tous les caractères de la chaîne modèle sont importants, y compris les espaces de début ou de fin. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc  » (abc suivi d'un seul espace), une ligne dont la valeur pour cette colonne est « abc » (abc sans espace) ne sera pas renvoyée. Les espaces à droite dont le profil correspond à l'expression ne sont pas pris en compte. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc » (abc sans espace), toutes les lignes commençant par la chaîne « abc », qu'elles contiennent ou non des espaces à droite, seront renvoyées.  
   
  Une comparaison de chaînes à l’aide d’un modèle contenant **char** et **varchar** données peuvent échouer lors d’une comparaison LIKE en raison de la façon dont les données sont stockées. Vous devez comprendre le stockage de chaque type de données et la cause possible de l'échec d'une comparaison LIKE. L’exemple suivant passe une variable locale **char** variable à une procédure stockée, puis recherche générique pour trouver tous les employés dont le nom commence avec un jeu de caractères spécifié.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  Toutefois, l’exemple ci-dessous aboutit, car les espaces de fin ne sont pas ajoutés à un **varchar** variable.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  Voici une série d'exemples illustrant les différences dans les lignes renvoyées entre une recherche générique ASCII LIKE et une recherche générique Unicode LIKE.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Par exemple, la requête suivante affiche toutes les vues de gestion dynamique dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], parce qu'elles commencent par les lettres `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Utilisation de LIKE avec le caractère générique %  
  L'exemple suivant renvoie tous les numéros de téléphone comportant l'indicatif `415` dans la table `PersonPhone`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilisation de NOT LIKE avec le caractère générique %  
  L'exemple ci-après renvoie tous les numéros de téléphone de la table `PersonPhone` dont l'indicatif n'est pas `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>C. Utilisation de la clause ESCAPE  
  L'exemple suivant utilise la clause `ESCAPE` et le caractère d'échappement pour trouver la chaîne de caractères exacte `10-15%` dans la colonne `c1` de la table `mytbl2`.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilisation des caractères génériques [ ]  
  L’exemple suivant recherche les employés sur le `Person` table dont le prénom de `Cheryl` ou `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  L'exemple suivant recherche les lignes correspondant aux employés de la table `Person` dont le nom est `Zheng` ou `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilisation de LIKE avec le caractère générique %  
  L’exemple suivant recherche tous les employés de la `DimEmployee` table avec des numéros de téléphone qui commencent par `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -335,7 +335,7 @@ ORDER by LastName;
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. Utilisation de NOT LIKE avec le caractère générique %  
  L’exemple suivant recherche tous les numéros de téléphone dans le `DimEmployee` table qui ne commencent pas par `612`.  .  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. Utilisation de LIKE avec le caractère générique _  
  L’exemple suivant recherche tous les numéros de téléphone qui ont un code de zone en commençant par `6` et se terminant par `2` dans le `DimEmployee` table. Notez que le caractère générique % est également inclus à la fin du modèle de recherche, car le code de région est la première partie du numéro de téléphone et contient des caractères supplémentaires après la valeur de colonne.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

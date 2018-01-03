@@ -1,7 +1,7 @@
 ---
 title: Modifier le mappage de Type (MySQLToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 744612abf33414538b74824b56b280ba635bed6c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8db4278a82968a5bd147f5fcb984af3fa104022e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Modifier le mappage de Type (MySQLToSQL)
 Le **modifier le mappage de Type** boîte de dialogue vous permet de spécifier comment les types sont mappés entre les objets de base de données source et de destination.  
@@ -44,7 +44,7 @@ Sélectionnez le type de données source à mapper à un type de données SQL Se
   
 Si le type de données est de longueur variable, les champs suivants apparaissent sous **Sourcetype**:  
   
-##### <a name="from"></a>De  
+##### <a name="from"></a>From  
 Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 10 pour indiquer que ce mappage est pour une plage commençant à **nchar(10).**  
   
 ##### <a name="to"></a>Pour  

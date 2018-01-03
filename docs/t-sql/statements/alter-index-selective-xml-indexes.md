@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b8ee79d871f207b59ccaf5cc0562d7e125e596a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9f875f7d34c568bc1156c5f8bce60d893fce8039
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (index XML sélectifs)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -142,20 +142,20 @@ identifier
  [Avec **(** \<index_options > **)**]  
  Vous ne pouvez spécifier \<index_options > lorsque vous utilisez ALTER INDEX sans la clause FOR. Lorsque vous utilisez ALTER INDEX pour ajouter ou supprimer des chemins d'accès dans l'index, les options d'index ne sont pas des arguments valides. Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40; Index XML sélectifs &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 > [!IMPORTANT]  
 >  Lorsque vous exécutez une instruction ALTER INDEX, l'index XML sélectif est toujours reconstruit. Assurez-vous de prendre en compte l'impact de ce processus sur les ressources du serveur.  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  L'exécution de ALTER INDEX nécessite une autorisation ALTER sur la table ou la vue.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre une instruction ALTER INDEX. Cette instruction ajoute le chemin `'/a/b/m'` à la partie XQuery de l’index et supprime le chemin `'/a/b/e'` de la partie SQL de l’index créé dans l’exemple de la rubrique [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md). Le chemin d'accès à supprimer est identifié par le nom qui lui a été donné lors de sa création.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -167,7 +167,7 @@ FOR
   
  L'exemple suivant illustre une instruction ALTER INDEX qui spécifie les options d'index. Les options d'index sont autorisées, car l'instruction n'utilise pas de clause FOR pour ajouter ou supprimer des chemins d'accès.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 PAD_INDEX = ON;  

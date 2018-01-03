@@ -3,7 +3,7 @@ title: Utilitaire tablediff | Documents Microsoft
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Le **tablediff** utilitaire est utilisé pour comparer les données dans deux tables à une non-convergence et est particulièrement utile pour la résolution des problèmes de non-convergence dans une topologie de réplication. Cet utilitaire peut être employé à partir de l'invite de commandes ou dans un fichier de commandes pour effectuer les tâches suivantes :  
@@ -176,7 +176,7 @@ tablediff
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Les tables comprenant des colonnes de types de données **sql_variant** ne sont pas prises en charge.  
@@ -187,12 +187,12 @@ tablediff
 |----------------------|---------------------------|  
 |**tinyint**|**smallint**, **int**ou **bigint**|  
 |**smallint**|**int** ou **bigint**|  
-|**int**|**bigint**|  
+|**Int**|**bigint**|  
 |**timestamp**|**varbinary**|  
 |**varchar(max)**|**text**|  
 |**nvarchar(max)**|**ntext**|  
 |**varbinary(max)**|**image**|  
-|**text**|**varchar(max)**|  
+|**texte**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
 |**image**|**varbinary(max)**|  
   
@@ -212,7 +212,7 @@ tablediff
   
 -   **xml**  
   
--   **text**  
+-   **texte**  
   
 -   **ntext**  
   

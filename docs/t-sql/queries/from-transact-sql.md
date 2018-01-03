@@ -39,11 +39,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20363fdc5408fbc79ba833c365bcb118fb1a2846
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -290,7 +290,7 @@ FROM { <table_source> [ ,...n ] }
  ON \<search_condition >  
  Spécifie la condition sur laquelle se base la jointure. Celle-ci peut spécifier n'importe quel prédicat, bien que les colonnes et les opérateurs de comparaison soient souvent utilisés, par exemple :  
   
-```tsql
+```sql
 SELECT p.ProductID, v.BusinessEntityID  
 FROM Production.Product AS p   
 JOIN Purchasing.ProductVendor AS v  
@@ -383,7 +383,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Retourne une table avec les valeurs de toutes les lignes de la table actuelle et la table d’historique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La clause FROM prend en charge la syntaxe SQL-92 pour les tables jointes et les tables dérivées. La syntaxe SQL-92 fournit les opérateurs de jointure INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER et CROSS.  
   
  UNION et JOIN à l'intérieur d'une clause FROM sont pris en charge aussi bien dans les vues que dans les tables dérivées et les sous-requêtes.  
@@ -427,7 +427,7 @@ ON (p.ProductID = v.ProductID);
   
  Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, y compris des exemples, consultez [à l’aide de PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations appropriées pour l'instruction DELETE, SELECT ou UPDATE.  
   
 ## <a name="examples"></a>Exemples  
@@ -435,7 +435,7 @@ ON (p.ProductID = v.ProductID);
 ### <a name="a-using-a-simple-from-clause"></a>A. Utilisation d'une clause FROM simple  
  L'exemple suivant récupère les colonnes `TerritoryID` et `Name` à partir de la table `SalesTerritory` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql    
+```sql    
 SELECT TerritoryID, Name  
 FROM Sales.SalesTerritory  
 ORDER BY TerritoryID ;  
@@ -462,7 +462,7 @@ TerritoryID Name
 ### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Utilisation des indicateurs d'optimiseur TABLOCK et HOLDLOCK  
  La transaction partielle suivante illustre le mode de placement d'un verrou de table partagé explicite sur `Employee` et le mode de lecture de l'index. Le verrou est conservé pendant toute la transaction.  
   
-```tsql    
+```sql    
 BEGIN TRAN  
 SELECT COUNT(*)   
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
@@ -481,7 +481,7 @@ ORDER BY e.BusinessEntityID, d.Name ;
 ### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. Utilisation de la syntaxe SQL-92 FULL OUTER JOIN  
  L'exemple suivant retourne le nom de produit et les commandes correspondantes dans la table `SalesOrderDetail` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Il retourne également les commandes dont les produits ne sont pas répertoriés dans la table `Product`, ainsi que tous les produits dont la commande est différente de celle répertoriée dans la table `Product`.  
   
-```tsql  
+```sql  
 -- The OUTER keyword following the FULL keyword is optional.  
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
@@ -493,7 +493,7 @@ ORDER BY p.Name ;
 ### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. Utilisation de la syntaxe SQL-92 LEFT OUTER JOIN  
  L'exemple suivant joint deux tables sur `ProductID` et conserve les lignes sans correspondance de la table de gauche. La table `Product` correspond à la table `SalesOrderDetail` sur les colonnes `ProductID` de chaque table. Tous les produits, qu'ils soient commandés ou non, apparaissent dans le jeu de résultats.  
   
-```tsql    
+```sql    
 SELECT p.Name, sod.SalesOrderID  
 FROM Production.Product AS p  
 LEFT OUTER JOIN Sales.SalesOrderDetail AS sod  
@@ -504,7 +504,7 @@ ORDER BY p.Name ;
 ### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. Utilisation de la syntaxe SQL-92 INNER JOIN  
  L'exemple suivant retourne tous les noms de produits et tous les ID de commandes.  
   
-```tsql    
+```sql    
 -- By default, SQL Server performs an INNER JOIN if only the JOIN   
 -- keyword is specified.  
 SELECT p.Name, sod.SalesOrderID  
@@ -517,7 +517,7 @@ ORDER BY p.Name ;
 ### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. Utilisation de la syntaxe SQL-92 RIGHT OUTER JOIN  
  L'exemple suivant joint deux tables sur `TerritoryID` et conserve les lignes sans correspondance de la table de droite. La table `SalesTerritory` correspond à la table `SalesPerson` sur la colonne `TerritoryID` de chaque table. Tous les vendeurs apparaissent dans le jeu de résultats, qu'un secteur leur ait été attribué ou non.  
   
-```tsql    
+```sql    
 SELECT st.Name AS Territory, sp.BusinessEntityID  
 FROM Sales.SalesTerritory AS st   
 RIGHT OUTER JOIN Sales.SalesPerson AS sp  
@@ -530,7 +530,7 @@ ON st.TerritoryID = sp.TerritoryID ;
 > [!IMPORTANT]  
 >  Lorsqu'un indicateur de jointure est spécifié, le mot clé INNER n'est plus facultatif et doit être déclaré de manière explicite pour l'exécution d'une jointure INNER JOIN.  
   
-```tsql    
+```sql    
 SELECT p.Name AS ProductName, v.Name AS VendorName  
 FROM Production.Product AS p   
 INNER MERGE JOIN Purchasing.ProductVendor AS pv   
@@ -543,7 +543,7 @@ ORDER BY p.Name, v.Name ;
 ### <a name="i-using-a-derived-table"></a>I. Utilisation d'une table dérivée  
  L'exemple suivant se sert d'une table dérivée, d'une instruction `SELECT` après la clause `FROM`, pour retourner les prénoms et noms de tous les employés ainsi que leur ville de résidence.  
   
-```tsql    
+```sql    
 SELECT RTRIM(p.FirstName) + ' ' + LTRIM(p.LastName) AS Name, d.City  
 FROM Person.Person AS p  
 INNER JOIN HumanResources.Employee e ON p.BusinessEntityID = e.BusinessEntityID   
@@ -559,7 +559,7 @@ ORDER BY p.LastName, p.FirstName;
 ### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. Utilisation de TABLESAMPLE pour lire des données à partir d'un exemple de lignes dans une table  
  L'exemple suivant utilise `TABLESAMPLE` dans la clause `FROM` pour retourner environ `10` % de toutes les lignes de la table `Customer`.  
   
-```tsql    
+```sql    
 SELECT *  
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
@@ -577,14 +577,14 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
  L'exemple utilise `APPLY` pour retourner tous les services et tous les employés qui en font partie. Si un service particulier est dépourvu d'employés, aucune ligne n'est retournée pour celui-ci.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
  Si vous souhaitez que la requête génère des lignes pour ces services sans employés, ce qui produira des valeurs NULL pour les colonnes `EmpID`, `EmpLastName` et `EmpSalary`, utilisez `OUTER APPLY` à la place.  
   
-```tsql
+```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
 FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
@@ -592,7 +592,7 @@ FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ### <a name="l-using-cross-apply"></a>L. Utilisation de l'opérateur CROSS APPLY  
  L'exemple suivant récupère un instantané de tous les plans de requête résidant dans la mémoire cache des plans, en interrogeant la vue de gestion dynamique `sys.dm_exec_cached_plans` pour récupérer les descripteurs de plan de tous les plans de requête dans le cache. L'opérateur `CROSS APPLY` est spécifié pour transmettre les descripteurs de plan à `sys.dm_exec_query_plan`. La sortie du plan d'exécution de requêtes XML pour chaque plan actuellement dans la mémoire cache des plans se trouve dans la colonne `query_plan` de la table retournée.  
   
-```tsql
+```sql
 USE master;  
 GO  
 SELECT dbid, object_id, query_plan   
@@ -607,7 +607,7 @@ GO
   
  L’exemple suivant utilise l’argument de date_time_literal_or_variable FOR SYSTEM_TIME AS OF pour retourner les lignes de la table qui étaient réelles (actuelles) à compter du 1er janvier 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -619,7 +619,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise le FOR SYSTEM_TIME FROM date_time_literal_or_variable date_time_literal_or_variable argument TO renvoie toutes les lignes qui étaient actives pendant la période définie en tant qu’à compter du 1er janvier 2013 et se terminant par le 1er janvier 2014, à l’exclusion de la limite supérieure.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -631,7 +631,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise le date_time_literal_or_variable pour SYSTEM_TIME entre et argument date_time_literal_or_variable pour retourner toutes les lignes qui étaient actives pendant la période définie en tant qu’à compter du 1er janvier 2013 et en terminant par le 1er janvier 2014, qui inclut la limite supérieure.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -643,7 +643,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise le pour argument SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable, date_time_literal_or_variable) pour retourner toutes les lignes qui ont été ouvertes et fermées pendant la période définie en tant qu’à compter du 1er janvier 2013 et se terminant par le 1er janvier 2014.  
   
-```tsql
+```sql
 SELECT DepartmentNumber,   
     DepartmentName,   
     ManagerID,   
@@ -655,7 +655,7 @@ WHERE ManagerID = 5;
   
  L’exemple suivant utilise une variable, plutôt qu’un littéral pour fournir les valeurs limites de date pour la requête.  
   
-```tsql
+```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
 DECLARE @AsOfTo datetime2 = dateadd(month,-6, sysutcdatetime());
   
@@ -673,7 +673,7 @@ WHERE ManagerID = 5;
 ### <a name="n-using-the-inner-join-syntax"></a>N. À l’aide de la syntaxe INNER JOIN  
  L’exemple suivant retourne le `SalesOrderNumber`, `ProductKey`, et `EnglishProductName` colonnes à partir de la `FactInternetSales` et `DimProduct` tables où la clé de jointure, `ProductKey`, correspond à dans les deux tables. Le `SalesOrderNumber` et `EnglishProductName` colonnes chaque existent dans une des tables uniquement, donc il n’est pas nécessaire de spécifier l’alias de table avec ces colonnes, comme le montre ; ces alias sont inclus pour une meilleure lisibilité. Le mot **AS** avant un alias de nom n’est pas obligatoire, mais est recommandé pour une meilleure lisibilité et pour se conformer à la norme ANSI.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
   
  Étant donné que le `INNER` mot clé n’est pas requis pour les jointures internes, cette même requête peut être écrite en tant que :  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -695,7 +695,7 @@ ON dp.ProductKey = fis.ProductKey;
   
  A `WHERE` clause peut également être utilisée avec cette requête pour limiter les résultats. Cet exemple limite les résultats aux `SalesOrderNumber` valeurs supérieures à 'SO5000' :  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -709,7 +709,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. À l’aide de la syntaxe LEFT OUTER JOIN et RIGHT OUTER JOIN  
  L’exemple suivant joint le `FactInternetSales` et `DimProduct` des tables sur la `ProductKey` colonnes. La syntaxe de jointure externe gauche conserve les lignes sans correspondance à partir de la gauche (`FactInternetSales`) table. Étant donné que la `FactInternetSales` table ne contient pas de `ProductKey` les valeurs qui ne correspondent pas à la `DimProduct` table, cette requête renvoie les mêmes lignes que le premier exemple de jointure interne ci-dessus.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -722,7 +722,7 @@ LEFT OUTER JOIN DimProduct AS dp
   
  Dans les jointures externes droites, les lignes sans correspondance à partir de la table de droite sont conservés. L’exemple suivant retourne les mêmes lignes que l’exemple de jointure externe gauche ci-dessus.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT fis.SalesOrderNumber, dp.ProductKey, dp.EnglishProductName  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
   
  La requête suivante utilise le `DimSalesTerritory` table en tant que la table de gauche dans une jointure externe gauche. Il récupère le `SalesOrderNumber` les valeurs à partir de la `FactInternetSales` table. Si aucune commande pour un particulier `SalesTerritoryKey`, la requête retournera une valeur NULL pour le `SalesOrderNumber` pour cette ligne. Cette requête est triée par la `SalesOrderNumber` colonne, afin que les valeurs NULL dans cette colonne s’affiche en haut des résultats.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -745,7 +745,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Cette requête peut être réécrit avec une jointure externe droite pour extraire les mêmes résultats :  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -758,7 +758,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="p-using-the-full-outer-join-syntax"></a>P. À l’aide de la syntaxe FULL OUTER JOIN  
  L’exemple suivant montre une jointure externe complète, qui retourne toutes les lignes des deux tables jointes, mais retourne la valeur NULL pour les valeurs qui ne correspondent pas à partir de l’autre table.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -770,7 +770,7 @@ ORDER BY fis.SalesOrderNumber;
   
  Cette requête peut aussi être écrite sans la `OUTER` (mot clé).  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, dst.SalesTerritoryRegion, fis.SalesOrderNumber  
@@ -783,7 +783,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="q-using-the-cross-join-syntax"></a>Q. À l’aide de la syntaxe CROSS JOIN  
  L’exemple suivant retourne le produit croisé de la `FactInternetSales` et `DimSalesTerritory` tables. Une liste de toutes les combinaisons possibles des `SalesOrderNumber` et `SalesTerritoryKey` sont retournées. Notez l’absence de la `ON` clause dans la requête de jointure croisée.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT dst.SalesTerritoryKey, fis.SalesOrderNumber  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ### <a name="r-using-a-derived-table"></a>R. Utilisation d'une table dérivée  
  L’exemple suivant utilise une table dérivée (un `SELECT` instruction après le `FROM` clause) pour retourner le `CustomerKey` et `LastName` colonnes de tous les clients dans le `DimCustomer` table avec `BirthDate` valeurs au plus tard le 1er janvier 1970 et le dernier nom de « Smith ».  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 SELECT CustomerKey, LastName  
@@ -809,7 +809,7 @@ ORDER BY LastName;
 ### <a name="s-reduce-join-hint-example"></a>S. RÉDUIRE l’exemple d’indicateur de jointure  
  L’exemple suivant utilise le `REDUCE` indicateur de jointure à modifier le traitement de la table dérivée dans la requête. Lorsque vous utilisez la `REDUCE` indicateur de jointure dans cette requête, le `fis.ProductKey` est projetée, répliquées et apportées distinctes, puis attachées à `DimProduct` lors de la lecture aléatoire de `DimProduct` sur `ProductKey`. La table dérivée qui en résulte est distribuée sur `fis.ProductKey`.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -825,7 +825,7 @@ ORDER BY SalesOrderNumber;
 ### <a name="t-replicate-join-hint-example"></a>T. Exemple d’indicateur de jointure de réplication  
  L’exemple suivant montre la même requête que l’exemple précédent, à ceci près qu’un `REPLICATE` indicateur de jointure est utilisée au lieu du `REDUCE` indicateur de jointure. Utiliser le `REPLICATE` indicateur entraîne les valeurs dans le `ProductKey` colonne (jointure) à partir de la `FactInternetSales` table être répliquée vers tous les nœuds. Le `DimProduct` table est jointe à la version dupliquée de ces valeurs.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN SELECT SalesOrderNumber  
@@ -843,7 +843,7 @@ ORDER BY SalesOrderNumber;
   
  Dans l’exemple suivant, l’indicateur REDISTRIBUTE force un déplacement aléatoire sur la table FactInternetSales car ProductKey est la colonne de distribution pour DimProduct et n’est pas la colonne de distribution pour FactInternetSales.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 EXPLAIN  

@@ -3,7 +3,7 @@ title: "Élément de table pour le schéma (DTA) | Documents Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 730783951f15814c4ffd02dba76b8b45d95d61ad
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6ebf5a4a05d02281f7335d7244fc17bbca7e2b3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="table-element-for-schema-dta"></a>Table, élément pour les schémas (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spécifie la table pour le paramétrage.  
@@ -39,9 +39,9 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Attributs des éléments  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|**NumberOfRows**|Ce paramètre est facultatif. Entier qui vous permet de simuler des tables de différentes tailles.|  
+|**NumberOfRows**|Facultatif. Entier qui vous permet de simuler des tables de différentes tailles.|  
   
 ## <a name="element-characteristics"></a>Caractéristiques de l'élément  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
 |--------------------|-----------------|  
 |**Type de données et longueur**|**string**, entre 1 et 255 caractères.|  
 |**Valeur par défaut**|Aucun.|  
-|**Occurrence**|Ce paramètre est facultatif. Répertoriez autant de tables que nécessaire pour votre charge de travail.|  
+|**Occurrence**|Facultatif. Répertoriez autant de tables que nécessaire pour votre charge de travail.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
@@ -58,10 +58,10 @@ ms.lasthandoff: 12/05/2017
 |**Élément parent**|[Schema, élément pour les bases de données &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/schema-element-for-database-dta.md)|  
 |**Éléments enfants**|[Name, élément pour les tables &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si vous ne spécifiez pas d'élément **Table** , l'Assistant Paramétrage du moteur de base de données suppose que toutes les tables sur la base de données spécifiée peuvent être paramétrées.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Pour obtenir un exemple d’utilisation, consultez [Server, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/server-element-dta.md).  
   
 ## <a name="see-also"></a>Voir aussi  

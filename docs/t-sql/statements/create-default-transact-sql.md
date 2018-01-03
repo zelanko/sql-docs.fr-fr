@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc9282956afda2a41751dd57c2447da6314fb528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a51a1045532b9194586d197c6b1b537d795d1996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ AS constant_expression [ ; ]
  *expression_constante*  
  Est un [expression](../../t-sql/language-elements/expressions-transact-sql.md) ne contenant que des valeurs constantes (il ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Toute constante, fonction intégrée ou expression mathématique peut être utilisée, à l'exception de celles contenant des types d'alias. Fonctions définies par l’utilisateur ne peut pas être utilisées... Placez les constantes caractère et date de guillemets simples (**'**) ; monétaires, entières et constantes à virgule flottante ne nécessitent pas entre guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un nom de valeur par défaut ne peut être créé que dans la base de données active. Au sein d'une base de données, les noms de valeurs par défaut doivent être uniques pour chaque schéma. Lorsqu’une valeur par défaut est créé, utilisez **sp_bindefault** pour le lier à une colonne ou à un type de données alias.  
   
  En cas d'incompatibilité entre la valeur par défaut et la colonne à laquelle elle est liée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un message d'erreur lors d'une tentative d'insertion de la valeur par défaut. Par exemple, n/a ne peut pas être utilisé comme valeur par défaut pour un **numérique** colonne.  
@@ -85,11 +85,11 @@ AS constant_expression [ ; ]
 |Définition de la colonne|Pas d'entrée, pas de valeur par défaut|Pas d'entrée, valeur par défaut|Entrée NULL, pas de valeur par défaut|Entrée NULL, valeur par défaut|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
 |**NULL**|NULL|par défaut|NULL|NULL|  
-|**NOT NULL**|Erreur|par défaut|erreur|erreur|  
+|**NOT NULL**|Error|par défaut|erreur|erreur|  
   
  Pour renommer une valeur par défaut, utilisez **sp_rename**. Pour un rapport sur une valeur par défaut, utilisez **sp_help**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter CREATE DEFAULT, un utilisateur doit posséder, au minimum, une autorisation CREATE DEFAULT sur la base de données active et une autorisation ALTER sur le schéma dans lequel la valeur par défaut est créée.  
   
 ## <a name="examples"></a>Exemples  
@@ -97,7 +97,7 @@ AS constant_expression [ ; ]
 ### <a name="a-creating-a-simple-character-default"></a>A. Création d'une valeur par défaut simple de type caractère  
  L'exemple suivant crée une valeur par défaut de type caractère appelée `unknown`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE DEFAULT phonedflt AS 'unknown';  
@@ -108,7 +108,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
   
  Puisqu'il n'existe pas de valeur par défaut nommée `phonedflt`, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante échoue. Cet exemple n'est donné qu'à titre indicatif.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  

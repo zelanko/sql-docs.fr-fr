@@ -3,7 +3,7 @@ title: Utilitaire bcp | Documents Microsoft
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: bcp
 ms.reviewer: 
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 18d7ba613fe4b98adc94bcf099e9576fd0550e6d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1b9fd81237093da7296d85efdbe9472da711315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Vous pouvez aussi spécifier explicitement le nom de la base de données avec **d-**.  
   
- **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
+ **dans** *data_file* | **hors** *data_file* | **queryout**  *data_file* | **format nul**  
  Direction de la copie en bloc :  
   
 -   **in**<a name="in"></a> copie à partir d’un fichier dans une table ou une vue de la base de données.  
@@ -180,7 +180,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-F** ***first_row***<a name="F"></a>  
  Spécifie le numéro de la première ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données. Ce paramètre nécessite une valeur supérieure à (>) 0 mais inférieure (<) ou égale au (=) nombre total de lignes. En l'absence de ce paramètre, la valeur par défaut est la première ligne du fichier.  
   
- *first_row* peut être un entier positif avec une valeur maximale de 2^63-1. **-F** *first_row* est de base 1.  
+ *first_row* peut être un entier positif avec une valeur maximale de 2^63-1. **-F** *first_row* is 1-based.  
   
 **-h** ***« indicateurs de charge***[ ,... *n*]**"**<a name="h"></a> Indicateur ou indicateurs à utiliser lors de l’importation en bloc de données vers une table ou vue.  
   
@@ -281,7 +281,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
  Pour plus d’informations, consultez la section [Notes](#remarks), plus loin dans cette rubrique.  
   
  **-r** ***row_term***<a name="r"></a>  
- Spécifie l’indicateur de fin de ligne. Par défaut, il s’agit du caractère de saut de ligne ( **\n** ). Utilisez ce paramètre pour remplacer l'indicateur de fin de ligne par défaut. Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+ Spécifie l’indicateur de fin de ligne. Par défaut, il s’agit du caractère de saut de ligne ( **\n** ). Utilisez ce paramètre pour remplacer l'indicateur de fin de ligne par défaut. Pour plus d’informations, consultez [Specify Field and Row Terminators &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
  Si vous spécifiez l'indicateur de fin de ligne en notation hexadécimale dans une commande bcp.exe, la valeur sera tronquée à 0x00. Par exemple, si vous spécifiez 0x410041, 0x41 sera utilisé.  
   
@@ -400,7 +400,7 @@ L’utilitaire bcp peut également être téléchargé séparément depuis le [M
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode. L’effet est le même que si vous définissiez le commutateur **-w** sans spécifier de fichier de format.|  
 |SQLBINARY ou SQLVARYBIN|Les données sont envoyées sans être converties.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Une opération **bcp out** nécessite l’autorisation SELECT sur la table source.  
   
  Une opération **bcp in** nécessite au minimum des autorisations SELECT/INSERT sur la table cible. En outre, l'autorisation ALTER TABLE est requise si l'une des conditions suivantes est vraie :  
@@ -592,7 +592,7 @@ bcp WorlWideImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTra
 ```  
   
 > [!NOTE]  
->  Les fichiers de format s'avèrent utiles lorsque les champs des fichiers de données diffèrent des colonnes de table ; par exemple, par leur nombre, leur ordre ou leurs types de données. Pour plus d’informations, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Les fichiers de format s'avèrent utiles lorsque les champs des fichiers de données diffèrent des colonnes de table ; par exemple, par leur nombre, leur ordre ou leurs types de données. Pour plus d’informations, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ### <a name="j-specifying-a-code-page"></a>J. Spécification d’une page de codes  
  L’exemple d’extrait de code suivant illustre l’importation bcp lors de la spécification d’une page de codes 65001 :  

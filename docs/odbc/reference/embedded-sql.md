@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db7c9b02f885c09df1eccbdc27ef2fd895168848
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 La première technique pour l’envoi d’instructions SQL au SGBD est incorporée SQL. Étant donné que SQL n’utilise pas les variables et les instructions de flux de contrôle, il est souvent utilisé comme une sous-langue de base de données qui peut être ajoutée à un programme écrit dans un langage de programmation classique, tels que C ou COBOL. Il s’agit d’une idée centrale SQL incorporée : placer des instructions SQL dans un programme écrit dans un hôte de langage de programmation. En bref, les techniques suivantes sont utilisés pour incorporer des instructions SQL dans un langage hôte :  
   
--   Les instructions SQL incorporées sont traitées par un précompilés SQL spéciale. Toutes les instructions SQL commencent par un dispositif d’introduction et se terminent par une marque de fin, qui indicateur de l’instruction SQL pour le précompilés. Le dispositif d’introduction et le terminateur varient selon le langage hôte. Par exemple, le dispositif d’introduction est « EXEC SQL » dans C et « & SQL (« dans virus ourlien., et la marque de fin est un point-virgule ( ;) en C et une parenthèse fermante dans virus ourlien..  
+-   Les instructions SQL incorporées sont traitées par un précompilés SQL spéciale. Toutes les instructions SQL commencent par un dispositif d’introduction et se terminent par une marque de fin, qui indicateur de l’instruction SQL pour le précompilés. Le dispositif d’introduction et le terminateur varient selon le langage hôte. Par exemple, le dispositif d’introduction est « EXEC SQL » dans C et « & SQL (« dans virus ourlien., et la marque de fin est un point-virgule ( ;) en C et une parenthèse fermante dans virus ourlien.  
   
 -   Variables à partir de l’application, appelées variables de l’hôte, peuvent être utilisées dans les instructions SQL incorporées partout où des constantes sont autorisées. Ils peuvent être utilisés en entrée pour personnaliser une instruction SQL à une situation donnée et de la sortie de recevoir les résultats d’une requête.  
   

@@ -24,34 +24,34 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0b7991dfbe4aee731d436d725aba2081adf87e84
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6270ef7364bfd4d1c599a9feb564e36fc6f217a2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enregistre l'état et l'activité des travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  Cette table est stockée dans le **msdb** base de données.
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID de la session stockée dans le **syssessions** de table dans le **msdb** base de données.|  
+|**session_id**|**Int**|ID de la session stockée dans le **syssessions** de table dans le **msdb** base de données.|  
 |**job_id**|**uniqueidentifier**|ID du travail.|  
 |**run_requested_date**|**datetime**|Date et heure auxquelles le travail devait s'exécuter.|  
 |**run_requested_source**|**sysname(nvarchar(128))**|Demandeur de l'exécution du travail.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Date et heure auxquelles ce travail a intégré une file d'attente. Si le travail est exécuté directement, cette colonne affiche la valeur NULL.|  
 |**start_execution_date**|**datetime**|Date et heure auxquelles l'exécution du travail a été prévue.|  
-|**last_executed_step_id**|**int**|ID de la dernière étape exécutée dans le travail.|  
+|**last_executed_step_id**|**Int**|ID de la dernière étape exécutée dans le travail.|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|Date et heure auxquelles l'exécution de la dernière étape du travail a démarré.|  
 |**stop_execution_date**|**datetime**|Date et heure auxquelles l'exécution du travail s'est terminée.|  
-|**job_history_id**|**int**|Utilisé pour identifier une ligne dans le **sysjobhistory** table.|  
+|**job_history_id**|**Int**|Utilisé pour identifier une ligne dans le **sysjobhistory** table.|  
 |**next_scheduled_run_date**|**datetime**|Prochaines date et heure prévues pour l'exécution du travail.|  
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Cet exemple retourne l’état d’exécution de tous les travaux de l’Agent SQL Server.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
-```tsql
+```sql
 SELECT sj.Name, 
     CASE
         WHEN sja.start_execution_date IS NULL THEN 'Not running'

@@ -3,7 +3,7 @@ title: "Propriétés de l’Agent SQL Server (onglet Ouvrir une session) | Docum
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49b79b7f17c90e3a7a0162142b6032ea82ef3b4a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e73063d89a2557f82fded4a426873c6d27604c9f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Propriétés de l'Agent SQL Server (onglet Ouvrir une session)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilisez le **session** onglet de la **propriétés de l’Agent SQL Server** boîte de dialogue pour spécifier le compte utilisé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service et pour démarrer et arrêter le service d’Agent. La modification du mot de passe d'un compte prend effet immédiatement sans redémarrer le service.  
