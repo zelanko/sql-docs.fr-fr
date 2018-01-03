@@ -3,7 +3,7 @@ title: "DefinedSize, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cdbe12a5aa0f1b9b2eb693b673a9371010a3dc7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1e0b3941e85a40603b9b0d10f935ad128d2a8cd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize, propriété (ADOX)
 Indique la taille maximale définie de la colonne.  
@@ -37,7 +37,7 @@ Indique la taille maximale définie de la colonne.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **Long** valeur qui est la longueur maximale en caractères des valeurs de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur par défaut est zéro (0).  
   
  Cette propriété est en lecture seule pour [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets déjà ajoutés à une collection.  

@@ -3,7 +3,7 @@ title: "Exemple de propriété DefinedSize (VC ++) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06ce1187d14fc18905f179e041a1708e83819ffc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f92507c374f38b9d1128aae569d52c617e083930
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definedsize-property-example-vc"></a>Exemple de propriété DefinedSize (VC ++)
 Cet exemple illustre la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la **employés** table de la *Northwind* base de données. Ensuite, la modification des valeurs du prénom [champ](../../../ado/reference/ado-api/field-object.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur le **employés** table s’affiche. Notez que, par défaut, le champ Prénom est complété avec des espaces après que vous redéfinissez le **DefinedSize** propriété.  

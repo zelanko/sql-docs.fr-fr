@@ -1,7 +1,7 @@
 ---
 title: "L’installation de SQL Server Migration Assistant pour Access (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -33,16 +33,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: dcf419554177a7111317825b70d6fc86dfc9446d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0ed2247057865624d0e365a5cac24e390295975a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>L’installation de SQL Server Migration Assistant pour Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour l’accès est installé à l’aide d’un Assistant basé sur le programme d’installation de Windows. Cette rubrique fournit des informations sur les conditions préalables d’installation, un lien vers la version la plus récente de SSMA et des instructions pour l’installation, la gestion de licences, la désinstallation et la mise à niveau de SSMA.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prerequisites  
 Avant d’installer SSMA, assurez-vous que votre système répond aux exigences suivantes :  
   
 -   Windows 7 ou une version ultérieure, ou Windows Server 2008 ou une version ultérieure.  

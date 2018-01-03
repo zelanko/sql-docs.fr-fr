@@ -3,7 +3,7 @@ title: "Append (méthode) (groupes ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b88abda8492902df0c050cad085e758bf6562fca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f1d71811195f214bc3c25db73dee21779f2b6e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-groups"></a>Append (méthode) (groupes ADOX)
 Ajoute un nouveau [groupe](../../../ado/reference/adox-api/group-object-adox.md) de l’objet à la [groupes](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  
@@ -42,7 +42,7 @@ Groups.Append Group
  *Grouper*  
  Le **groupe** objet à ajouter ou le nom du groupe à créer et à ajouter.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **groupes** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les comptes de groupe du catalogue. Le **groupes** collection pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) représente uniquement le groupe auquel appartient l’utilisateur.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge la création de groupes.  

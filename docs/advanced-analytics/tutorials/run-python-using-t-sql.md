@@ -2,23 +2,25 @@
 title: "Exécuter à l’aide de T-SQL de Python | Documents Microsoft"
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: Python
 caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bcd3fd8e70b2d7b89715c8f0cc1e40e82da25aec
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f584f98f5c30e4ca30b4f75748ee173bb2f1a257
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="run-python-using-t-sql"></a>Exécutez Python à l’aide de T-SQL
 
@@ -129,14 +131,14 @@ La procédure stockée Obtient les données d’origine, s’applique le script 
 |DayOfWeek (avant)| Montant|DayOfWeek (après) |
 |-----|-----|-----|
 |Dimanche|10|7|
-|Lundi|11.1|1|
+|Lundi|11.1| 1|
 |Mardi|12.2|2|
 |Mercredi|13.3|3|
 |Jeudi|14.4|4|
 |Vendredi|15.5|5|
 |Samedi|16.6|6|
 |Vendredi|17.7|5|
-|Lundi|18.8|1|
+|Lundi|18.8| 1|
 |Dimanche|19.9|7|
 
 Messages d’état ou les erreurs renvoyées à la console de Python sont retournées sous forme de messages dans la **requête** fenêtre. Voici un extrait de la sortie que peut s’afficher :

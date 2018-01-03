@@ -2,9 +2,11 @@
 title: Utilisation des fonctions de profilage de code R | Microsoft Docs
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd66ca3db1594b3d2b2fec11698ef3a53b9454e7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 88d8e1c0948a51ab8ed6aaeb5a74e771bba95032
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="using-r-code-profiling-functions"></a>Utilisation des fonctions de profilage de code R
 En plus des ressources et des outils SQL Server permettant de surveiller l’exécution de script R, vous pouvez utiliser les outils de performances fournis par d’autres packages R pour obtenir des informations complémentaires sur les appels de fonctions internes. Cette rubrique vous propose une liste de ressources de base comme point de départ. Pour obtenir des conseils d’expert, nous vous recommandons de lire le chapitre [Performance](http://adv-r.had.co.nz/Performance.html) de l’ouvrage de Hadley Wickham, « Advanced R ».

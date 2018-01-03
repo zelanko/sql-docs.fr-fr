@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,20 +21,20 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5a33c92d5762702f7e309d70ef48f076ecc0b2b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-specification-subkeys"></a>Sous-clés de spécification de Source de données
 Chaque source de données répertorié dans la sous-clé de Sources de données ODBC a une sous-clé qui lui sont propres. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé de Sources de données ODBC. Les valeurs sous cette sous-clé doivent répertorier la DLL du pilote et peuvent contenir une description de la source de données. Si le pilote prend en charge des convertisseurs, les valeurs peuvent répertorier le nom d’un convertisseur de valeur par défaut, la DLL de traduction par défaut et l’option de traduction par défaut. Les valeurs peuvent également répertorier les autres informations requises par le pilote pour se connecter à la source de données. Par exemple, le pilote peut nécessiter un nom du serveur, le nom de la base de données ou le nom de schéma.  
   
  Les formats des valeurs sont comme indiqué dans le tableau suivant. Seule la valeur du pilote est requise.  
   
-|Nom|Type de données|data|  
+|Nom   |Type de données|data|  
 |----------|---------------|----------|  
-| Description|REG_SZ|*Description*|  
+|Description|REG_SZ|*Description*|  
 |Pilote|REG_SZ|*chemin de DLL de pilote*|  
 |TranslationDLL|REG_SZ|*chemin de DLL de traduction*|  
 |TranslationName|REG_SZ|*nom de la traduction*|  

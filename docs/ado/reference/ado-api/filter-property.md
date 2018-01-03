@@ -3,7 +3,7 @@ title: "Propriété filtre | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22b1ee344246c2a21dc143822145ba6ca09060d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3732e0820c0c258074e2a8b76d35c4af94a8c8a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-property"></a>Filter, propriété
 Indique un filtre pour les données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -38,7 +38,7 @@ Indique un filtre pour les données dans un [Recordset](../../../ado/reference/a
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **filtre** propriété à filtrer les enregistrements dans une **Recordset** objet. La liste filtrée **Recordset** devient le curseur actuel. Autres propriétés qui retournent des valeurs basées sur actuel **curseur** sont affectés, tels que [propriété AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [propriété AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), et [PageCount, propriété (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). C’est parce que la définition de la **filtre** propriété à une valeur spécifique se déplace l’enregistrement actif vers le premier enregistrement qui satisfait à la nouvelle valeur.  
   
  La chaîne de critères est composée de clauses sous la forme *NomChamp-Opérateur-valeur* (par exemple, `"LastName = 'Smith'"`). Vous pouvez créer des clauses composées en concaténant des clauses avec **AND** (par exemple, `"LastName = 'Smith' AND FirstName = 'John'"`) ou **OR** (par exemple, `"LastName = 'Smith' OR LastName = 'Jones'"`). Utilisez les instructions suivantes pour les chaînes de critères :  

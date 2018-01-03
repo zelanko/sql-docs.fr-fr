@@ -3,7 +3,7 @@ title: "Collection de paramètres (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9544c12738c3c6f3e4d22a62e26c2654c9ac0edb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cceeccbcca886b151dd505881be25687fd26e37
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameters-collection-ado"></a>Collection de paramètres (ADO)
 Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.md) les objets d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **commande** objet a un **paramètres** collection composée de **paramètre** objets.  
   
  À l’aide de la [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur un **commande** l’objet **paramètres** collection récupère les informations de paramètre de fournisseur pour la procédure stockée ou d’une requête paramétrable spécifié dans le **commande** objet. Certains fournisseurs ne gèrent pas les appels de procédures stockées ou des requêtes paramétrées ; appel de la **Actualiser** méthode sur le **paramètres** collection lors de l’utilisation de ce type de fournisseur retournera une erreur.  

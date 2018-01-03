@@ -3,7 +3,7 @@ title: "Propriétés ADO | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>Propriétés ADO
 |||  
@@ -55,10 +55,10 @@ ms.lasthandoff: 11/17/2017
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indique la capacité de données d’une **champ** objet.|  
 |[Description](../../../ado/reference/ado-api/description-property.md)|Décrit un **erreur** objet.|  
 |[Dialecte](../../../ado/reference/ado-api/dialect-property.md)|Indique la syntaxe et les règles générales que le fournisseur utilise pour analyser les **CommandText** ou **CommandStream** propriétés.|  
-|[Direction](../../../ado/reference/ado-api/direction-property.md)|Indique si le **paramètre** représente un paramètre d’entrée, un paramètre de sortie ou les deux, ou si le paramètre est la valeur de retour d’une procédure stockée.|  
+|[Sens](../../../ado/reference/ado-api/direction-property.md)|Indique si le **paramètre** représente un paramètre d’entrée, un paramètre de sortie ou les deux, ou si le paramètre est la valeur de retour d’une procédure stockée.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indique l’état de modification de l’enregistrement actif.|  
 |[FIN DU SUPPORT](../../../ado/reference/ado-api/eos-property.md)|Indique si la position actuelle est à la fin du flux de données.|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|Indique un filtre pour les données dans un **Recordset**.|  
+|[Filtre](../../../ado/reference/ado-api/filter-property.md)|Indique un filtre pour les données dans un **Recordset**.|  
 |[HelpContext et HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indique le fichier d’aide et de la rubrique associée à un **erreur** objet.<br /><br /> **HelpContextID** retourne un ID de contexte, comme un **Long** valeur, pour une rubrique dans un fichier d’aide.<br /><br /> **HelpFile** retourne un **chaîne** valeur qui correspond à un chemin d’accès entièrement résolu d’un fichier d’aide.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Indique le nom de l’index actuellement en vigueur pour un **Recordset** objet.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indique le niveau d’isolement d’une **connexion** objet.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |[Type](../../../ado/reference/ado-api/type-property-ado.md)|Indique le type de données ou de type opérationnel d’un **paramètre**, **champ**, ou **propriété** objet.|  
 |[Type (flux ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indique le type de données qui sont contenues dans le **flux** (binaire ou texte).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indique la valeur actuelle de la base de données pour un **champ** objet.|  
-|[Valeur](../../../ado/reference/ado-api/value-property-ado.md)|Indique la valeur assignée à un **champ**, **paramètre**, ou **propriété** objet.|  
+|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Indique la valeur assignée à un **champ**, **paramètre**, ou **propriété** objet.|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Indique le numéro de version d’ADO.|  
   
 ## <a name="see-also"></a>Voir aussi  

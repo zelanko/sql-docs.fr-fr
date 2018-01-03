@@ -3,7 +3,7 @@ title: "MoveRecord, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6fdada4b43bb8a32d841cd07541b2355d68eb2f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d15de5adfe707e1fd32a3ce005d865d6bee16da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord, méthode (ADO)
 Déplace l’entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) vers un autre emplacement.  
@@ -40,27 +40,27 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient une URL identifiant le **enregistrement** à déplacer. Si *Source* est omis ou spécifie une chaîne vide, l’objet représenté par ce **enregistrement** est déplacé. Par exemple, si le **enregistrement** représente un fichier, le contenu du fichier est déplacés vers l’emplacement spécifié par *Destination*.  
+ Facultatif. A **chaîne** valeur qui contient une URL identifiant le **enregistrement** à déplacer. Si *Source* est omis ou spécifie une chaîne vide, l’objet représenté par ce **enregistrement** est déplacé. Par exemple, si le **enregistrement** représente un fichier, le contenu du fichier est déplacés vers l’emplacement spécifié par *Destination*.  
   
  *Destination*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient une URL spécifiant l’emplacement où *Source* sera déplacé.  
+ Facultatif. A **chaîne** valeur qui contient une URL spécifiant l’emplacement où *Source* sera déplacé.  
   
  *UserName*  
- Ce paramètre est facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Destination*.  
+ Facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Destination*.  
   
  *Mot de passe*  
- Ce paramètre est facultatif. A **chaîne** qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
+ Facultatif. A **chaîne** qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
   
  *Options*  
- Ce paramètre est facultatif. A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valeur dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
+ Facultatif. A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valeur dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
   
  *Async*  
- Ce paramètre est facultatif. A **booléenne** valeur lorsque **True**, indique cette opération doit être asynchrone.  
+ Facultatif. A **booléenne** valeur lorsque **True**, indique cette opération doit être asynchrone.  
   
 ## <a name="return-value"></a>Valeur retournée  
  A **chaîne** valeur. En règle générale, la valeur de *Destination* est retourné. Toutefois, la valeur exacte retournée dépend du fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les valeurs de *Source* et *Destination* ne doit pas être identiques ; sinon, une erreur d’exécution se produit. Au moins les noms de serveur, chemin d’accès et des ressources doivent être différents.  
   
  Pour les fichiers déplacés à l’aide du fournisseur de publication Internet, cette méthode met à jour tous les liens hypertexte dans les fichiers déplacés sauf spécification contraire par *Options*. Cette méthode échoue si *Destination* identifie un objet existant (par exemple, un fichier ou répertoire), sauf si **adMoveOverWrite** est spécifié.  

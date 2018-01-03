@@ -3,10 +3,10 @@ title: "Configuration du matériel (système de plateforme Analytique)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
 caps.latest.revision: "43"
-ms.openlocfilehash: ebb797e3fdb24bad79857f83c163dbf92a439883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05670f1727691b1abc0fd98dd5970c7697725b8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-configuration"></a>Configuration du matériel
 Fournit des listes de contrôle pour les tâches requises pour configurer le système de plateforme d’Analytique pour votre propre environnement. Ces tâches de configuration sont nécessaires avant de pouvoir utiliser l’application.  
@@ -30,7 +30,7 @@ Fournit des listes de contrôle pour les tâches requises pour configurer le sys
   
 ## <a name="BeforeTasks"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  L’application doit être installée dans le centre de données et sous tension.  
   
@@ -55,7 +55,7 @@ Le serveur SQL Server PDW**Configuration Manager** (PDWCM) est un outil d’admi
   
 Utilisez **Configuration Manager** pour effectuer les tâches de configuration suivantes.  
   
-|Tâche de configuration| Description|  
+|Tâche de configuration|Description|  
 |----------------------|---------------|  
 |Vous familiariser avec les noms des composants physiques|[PDW et les composants physiques de l’infrastructure de matériel &#40; Système de plateforme Analytique &#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Lancez le Gestionnaire de Configuration SQL Server PDW|[Lancez le Gestionnaire de Configuration &#40; Système de plateforme Analytique &#41;](launch-the-configuration-manager.md)|  
@@ -72,7 +72,7 @@ Utilisez **Configuration Manager** pour effectuer les tâches de configuration s
 ## <a name="AddTasks"></a>Effectuer des tâches de Configuration supplémentaires  
 Après avoir effectué la **Configuration Manager** effectuer des tâches, la liste suivante des tâches de configuration supplémentaires. Certaines de ces tâches sont facultatives.  
   
-|Tâche de configuration| Description|  
+|Tâche de configuration|Description|  
 |----------------------|---------------|  
 |Un logiciel antivirus tiers permettre être installé et configuré sur l’appliance SQL Server PDW faisant face à l’extérieur des nœuds.<br /><br />(Facultatif)|Pour plus d’informations, consultez [logiciel Antivirus &#40; Système de plateforme Analytique &#41; ](antivirus-software.md).|  
 |Le mot de passe DSRM peut être modifié.<br /><br />(Facultatif)|Pour plus d’informations, consultez [définir un mot de passe administrateur pour ouvrir une session sur les nœuds AD dans le Mode de restauration des Services d’annuaire &#40; mode DSRM &#41; &#40; Système de plateforme Analytique &#41; ](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  

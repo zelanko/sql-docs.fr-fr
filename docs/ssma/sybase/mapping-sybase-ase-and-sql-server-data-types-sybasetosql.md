@@ -3,7 +3,7 @@ title: "Mappage de Sybase ASE et Types de données SQL Server (SybaseToSQL) | Do
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1e23b31985fac096a05b2735c19abae8e4002a8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11a73d901763591930c485020f52d525a6163a41
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mappage de Sybase ASE et Types de données SQL Server (SybaseToSQL)
 Les types de base de données Sybase Adaptive Server Enterprise (ASE) diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou les types de base de données SQL Azure. Lorsque vous convertissez des objets de base de données ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des objets de SQL Azure, vous devez spécifier le mappage des types de données à partir de ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
@@ -97,7 +97,7 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
         Impossible de supprimer les mappages hérités. Toutefois, héritée de mappages sont remplacés par des mappages personnalisés sur un objet spécifique ou la catégorie d’objet.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 L’étape suivante du processus de migration consiste à [créer un rapport d’évaluation](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) ou [objets de base de données de convertir le ASE Sybase à la syntaxe SQL Server ou SQL Azure](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). Si vous créez un rapport d’évaluation, les objets de Sybase ASE sont automatiquement convertis durant l’évaluation.  
   
 ## <a name="see-also"></a>Voir aussi  

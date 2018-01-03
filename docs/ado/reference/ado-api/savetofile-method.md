@@ -3,7 +3,7 @@ title: "Méthode SaveToFile | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 464742a71244a16b5823c2f85a0ddcbb413c66f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5a515534601696c0ca056f573c179c5e00bac3e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="savetofile-method"></a>SaveToFile, méthode
 Enregistre le contenu binaire d’un [flux](../../../ado/reference/ado-api/stream-object-ado.md) dans un fichier.  
@@ -48,7 +48,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Si vous remplacez un fichier existant (lorsque **valeur adSaveCreateOverwrite** est défini), **SaveToFile** tronque tous les octets à partir du fichier existant d’origine qui suivent la nouvelle [fin du support](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **SaveToFile** peut être utilisé pour copier le contenu d’un **flux** objet dans un fichier local. Il n’existe aucun changement dans le contenu ou les propriétés de la **flux** objet. Le **flux** objet doit être ouvert avant d’appeler **SaveToFile**.  
   
  Cette méthode ne modifie pas l’association de la **flux** objet et sa source sous-jacente. Le **flux** objet sera toujours associé à l’URL d’origine ou **enregistrement** qui était la source de son ouverture.  

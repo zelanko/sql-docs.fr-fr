@@ -3,7 +3,7 @@ title: "WillChangeRecordset et RecordsetChangeComplete, événements (ADO) | Doc
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a103d1710f01403e8e199fc308369b4a9dc82c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 188bdb13879e4229686fb725edbc190db9ea59b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset et RecordsetChangeComplete, événements (ADO)
 Le **WillChangeRecordset** événement est appelé avant qu’une opération en attente modifie la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Le **RecordsetChangeComplete** événement est appelé après le **Recordset** a changé.  
@@ -64,7 +64,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *Connection*  
  A **Recordset** objet. Le **Recordset** pour laquelle cet événement s’est produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **WillChangeRecordset** ou **RecordsetChangeComplete** événement peut survenir en raison de la **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) ou [Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthodes.  
   
  Si le fournisseur ne prend pas en charge les signets, une **RecordsetChange est générée** notification d’événement se produit chaque fois que les nouvelles lignes sont récupérées à partir du fournisseur. La fréquence de cet événement dépend de la **RecordsetCacheSize** propriété.  

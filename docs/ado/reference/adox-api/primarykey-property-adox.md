@@ -3,7 +3,7 @@ title: "PrimaryKey, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76429f1b0f5d17e78231b0ba299cfdde801f315e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fd133ded269b8e39842d3137f8f54481309d0ff8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey, propriété (ADOX)
 Indique si l’index représente la clé primaire sur la table.  
@@ -37,7 +37,7 @@ Indique si l’index représente la clé primaire sur la table.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **booléenne** valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur par défaut est **False**.  
   
  Cette propriété est en lecture seule sur [Index](../../../ado/reference/adox-api/index-object-adox.md) objets déjà ajoutés à une collection.  

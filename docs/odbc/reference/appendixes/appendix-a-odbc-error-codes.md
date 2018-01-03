@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1117eac94fdad6d90fda688f1a324608f0b37dad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Annexe A : codes d'erreur ODBC
 Cette rubrique décrit les valeurs SQLSTATE pour ODBC 3. *x*. Pour plus d’informations sur ODBC 3. *x* valeurs SQLSTATE, consultez [mappages SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
@@ -37,7 +37,7 @@ Cette rubrique décrit les valeurs SQLSTATE pour ODBC 3. *x*. Pour plus d’info
 > [!NOTE]  
 >  Bien que l’exécution réussie d’une fonction est généralement indiquée par une valeur de retour SQL_SUCCESS, la valeur SQLSTATE 00000 indique également la réussite.  
   
-|SQLSTATE|Erreur|Peut être retourné à partir de|  
+|SQLSTATE|Error|Peut être retourné à partir de|  
 |--------------|-----------|--------------------------|  
 |01000|Avertissement général|Toutes les fonctions ODBC à l’exception :<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|Conflit d’opération de curseur|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  

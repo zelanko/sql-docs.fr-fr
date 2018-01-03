@@ -3,7 +3,7 @@ title: "ParentSameAsPrev, propriété (ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c1c8cd042b673c256906035c3a1fcd4ee863a71
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4e33af885d000705596e6c457357b98dbc98255
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev, propriété (ADO MD)
 Indique si le parent de cette position [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) est le même que le parent du membre immédiatement précédent.  
@@ -34,7 +34,7 @@ Indique si le parent de cette position [membre](../../../ado/reference/ado-md-ap
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **booléenne** valeur et est en lecture seule.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété est prise en charge uniquement sur [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets appartenant à un [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objet. Une erreur se produit lorsque cette propriété est référencée à partir de **membre** objets appartenant à un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet.  
   
 ## <a name="applies-to"></a>S'applique à  

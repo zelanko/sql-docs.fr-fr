@@ -2,9 +2,11 @@
 title: "Leçon 2 : Importer des données vers SQL Server à l’aide de PowerShell | Documents Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c62ca99196267262fbeee9c44136a8f8a015ecaa
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 2f88b31305c9c648192d48d071972a787903136d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>Leçon 2 : Importer des données vers SQL Server à l’aide de PowerShell
 
@@ -54,7 +56,7 @@ Parmi les fichiers téléchargés, vous devez voir un script PowerShell que vous
   
     - Les nom d’utilisateur et mot de passe d’un compte sur l’instance. Le compte doit disposer des autorisations nécessaires pour créer des bases de données, créer des tables et procédures stockées et charger des données dans les tables. Si vous ne fournissez pas de nom d’utilisateur et mot de passe, votre identité Windows est utilisée pour se connecter à SQL Server.
   
-    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Par exemple :
+    - Le chemin et le nom du fichier de données exemple que vous venez de télécharger. Exemple :
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   

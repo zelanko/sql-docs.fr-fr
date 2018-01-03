@@ -3,7 +3,7 @@ title: RightsEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ff15518703e8e8ec2d2c3ee67df691abb1974ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 02710ace5ce804a6470212de576a8f1aa6cb430b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rightsenum"></a>RightsEnum
 Spécifie les droits ou autorisations pour un groupe ou utilisateur sur un objet.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (& H4000)|L’utilisateur ou le groupe a l’autorisation de créer des objets de ce type.|  
 |**adRightDelete**|65536 (& H10000)|L’utilisateur ou le groupe a l’autorisation de supprimer des données à partir d’un objet. Pour les objets tels que **Tables**, l’utilisateur est autorisé à supprimer des valeurs de données à partir d’enregistrements.|  

@@ -2,11 +2,11 @@
 title: "Mettre à niveau les composants de la machine learning dans une instance de SQL Server | Documents Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e83922e15c8bea5f26dcc5c1992acc0529daf18c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Mettre à niveau les composants de la machine learning dans une instance de SQL Server
 
@@ -59,7 +59,7 @@ Consultez le tableau suivant pour obtenir la liste des mises à niveau pris en c
 
 | Version de SQL Server| Mise à niveau pris en charge| Remarques|
 |-----|-----|------|
-| SQL Server 2016| Serveur 9.2.1 d’apprentissage| Nécessite au moins Service Pack 1 plus CU3. R Services doit être installés et activés.|
+| SQL Server 2016| Serveur 9.2.1 d’apprentissage| Nécessite au moins Service Pack 1 plus CU3. R Services doit être installés et activés.|
 | SQL Server 2017| Serveur 9.2.1 d’apprentissage| Machine Learning Services (de-de base de données) doit être installés et activés. |
 
 ## <a name="bind-or-upgrade-an-instance"></a>Lier ou mettre à niveau une instance
@@ -189,7 +189,7 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 
 ### <a name="parameters"></a>Paramètres
 
-|Nom|Description|
+|Nom   |Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
@@ -199,7 +199,7 @@ Si vous trouvez des dossiers avec un nom tel que cela, vous pouvez le supprimer 
 
 L’outil retourne les messages d’erreur suivants :
 
-|Erreur|Résolution|
+|Error|Résolution|
 |------|------|
 |Une erreur est survenue lors de la liaison de l’instance| L’instance n’a pas pu être liée. Contactez le support pour obtenir de l’aide.|
 |L’instance est déjà liée| Vous avez exécuté la commande *bind* , mais l’instance spécifiée est déjà liée. Choisissez une autre instance.|

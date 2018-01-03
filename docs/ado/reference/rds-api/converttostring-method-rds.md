@@ -3,7 +3,7 @@ title: "ConvertToString, méthode (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd7be0ef5fae5bd05dfa5f7c1a31b98341f30117
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8d33aeb0fd8aeb93e931da0cec0ca62339df65cc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString, méthode (RDS)
 Convertit un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en chaîne MIME qui représente les données du jeu d’enregistrements.  
@@ -45,7 +45,7 @@ DataFactory.ConvertToString(Recordset)
  *Jeu d’enregistrements*  
  Une variable objet qui représente un **Recordset** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Avec des fichiers .asp, utilisez **ConvertToString** pour incorporer le **Recordset** dans une page HTML générée sur le serveur pour le transfert vers un ordinateur client.  
   
  **ConvertToString** du premier chargement de la **Recordset** dans le Service de curseur des tables, puis génère un flux au format MIME.  

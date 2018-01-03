@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entrées de Registre (Visual FoxPro le pilote ODBC)
 Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installation met à jour le Registre de votre système, dans la clé de Registre HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, pour ajouter une nouvelle clé appelée pilote Microsoft Visual FoxPro. Sous cette clé, les valeurs décrites dans le tableau suivant sont ajoutés.  
@@ -53,7 +53,7 @@ Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installati
 |Nom de la valeur (mot clé)|Type de valeur|Valeur|  
 |----------------------------|----------------|-----------|  
 |Copies assemblées|REG_SQ|Prise en charge l’ordre de tri|  
-| Description|REG_SZ|Description de l’utilisateur de la source de données|  
+|Description|REG_SZ|Description de l’utilisateur de la source de données|  
 |Pilote||Chemin d’accès système au fichier vfpodbc.dll|  
 |Exclusive||Oui ou Non|  
 |BackgroundFetch||Oui ou Non|  

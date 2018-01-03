@@ -3,7 +3,7 @@ title: "Actualiser les procédures, méthode-exemple (VB) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 888f0a69ddcd49efad660dc86e60bc53a3862d85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b8844e9a9dc12477e1cedcc5f257fcd26545c960
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Actualiser les procédures, méthode-exemple (VB)
 Le code suivant montre comment actualiser le [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire avant [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) des objets de la **catalogue** sont accessibles.  

@@ -3,7 +3,7 @@ title: "L’objet utilisateur (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a34d35adf84e32738733184430160613ef8eca45
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7087b8d19a5f9959c15539fb9b84dd14651d2e71
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-object-adox"></a>Objet utilisateur (ADOX)
 Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs du groupe spécifique.  
   
  Avec les propriétés, les collections et les méthodes d’un **utilisateur** de l’objet, vous pouvez :  

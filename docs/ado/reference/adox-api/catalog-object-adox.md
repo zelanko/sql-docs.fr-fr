@@ -3,7 +3,7 @@ title: "Catalogue d’objet (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a7b82a70fadffd904d1da5a84f813c015faf80b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ada10bcb335b3ae9d83019d6fc60f6e23c8f7a38
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catalog-object-adox"></a>Objet catalogue (ADOX)
 Contient des collections ([Tables](../../../ado/reference/adox-api/tables-collection-adox.md), [vues](../../../ado/reference/adox-api/views-collection-adox.md), [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md), [groupes](../../../ado/reference/adox-api/groups-collection-adox.md), et [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md)) qui décrivent le catalogue de schémas d’une source de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous pouvez modifier le **catalogue** objet en ajoutant ou supprimant des objets, ou en modifiant des objets existants. Certains fournisseurs peuvent tous les prend pas en charge la **catalogue** des objets ou peuvent prendre en charge uniquement l’affichage des informations de schéma.  
   
  Avec les propriétés et méthodes d’un **catalogue** de l’objet, vous pouvez :  

@@ -1,11 +1,13 @@
 ---
 title: "URL, propriété (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 85c0e3ee8fe805b0cd8a90651e9de2a0fa7f04c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0181a57f4a76985ef926d2038611c3e6bd864142
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="url-property-rds"></a>URL, propriété (RDS)
 Indique une chaîne qui contient une URL relative ou absolue.  
@@ -45,7 +47,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Une variable objet qui représente un **DataControl** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  En règle générale, l’URL identifie un fichier de Page ASP (.asp) qui peut produire et renvoyer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Par conséquent, l’utilisateur peut obtenir un **Recordset** sans avoir à invoquer le côté serveur [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) de l’objet, ou programmer un objet métier personnalisé.  
   
  Si le **URL** propriété a été définie, [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) soumettra des modifications à l’emplacement spécifié par l’URL.  

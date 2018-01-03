@@ -3,7 +3,7 @@ title: DataTypeEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a50a4efc0c84e3d18fad287ba31a0ebaf0705dd0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70e44dc6ea6eb3622b43f241827ad5cae7a7df44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Spécifie le type de données d’une [champ](../../../ado/reference/ado-api/field-object.md), [paramètre](../../../ado/reference/ado-api/parameter-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md). L’indicateur de type OLE DB correspondant est affichée entre parenthèses dans la colonne description du tableau suivant.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Une valeur d’indicateur, toujours combinée avec une autre constante de type de données, qui indique un tableau de l’autre type de données. Ne s’applique pas à ADOX.|  
 |**adBigInt**|20|Indique un entier signé de 8 octets (DBTYPE_I8).|  

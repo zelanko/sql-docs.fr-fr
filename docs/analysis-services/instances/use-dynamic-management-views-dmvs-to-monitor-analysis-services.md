@@ -1,7 +1,7 @@
 ---
 title: Utilisez les vues de gestion dynamique (DMV) pour surveiller Analysis Services | Documents Microsoft
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 12/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6969869d6f4a7c10303838d2e3e696ae577fe180
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 567945f59ffad3d5662485663a7b212f94d8af56
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Vues de gestion dynamique (DMV) de Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et de l’intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
@@ -37,24 +37,12 @@ SELECT * FROM $System.<schemaRowset>
   
  Les requêtes DMV retournent des informations sur l'état du serveur actif au moment de l'exécution de la requête. Pour surveiller les opérations en temps réel, utilisez plutôt le suivi. Pour plus d’informations, consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
- Cette rubrique comprend les sections suivantes :  
-  
- [Avantages de l'utilisation des requêtes DMV](#bkmk_ben)  
-  
- [Exemples et scénarios](#bkmk_ex)  
-  
- [Syntaxe de la requête](#bkmk_syn)  
-  
- [Outils et autorisations](#bkmk_tools)  
-  
- [Référence DMV](#bkmk_ref)  
-  
-##  <a name="bkmk_ben"></a> Avantages de l'utilisation des requêtes DMV  
+##  <a name="bkmk_ben"></a>Avantages des requêtes à l’aide des DMV  
  Les requêtes DMV retournent des informations sur les opérations et la consommation des ressources qui ne sont pas accessibles par d'autres biais.  
   
  Les requêtes DMV sont une alternative à l'exécution des commandes Discover XML/A. Pour la plupart des administrateurs, l'écriture d'une requête DMV est plus simple car la syntaxe de la requête est basée sur le langage SQL. En outre, le jeu de résultats est retourné dans un format tabulaire qui est plus facile à lire et à copier.  
   
-##  <a name="bkmk_ex"></a> Exemples et scénarios  
+##  <a name="bkmk_ex"></a>Exemples et scénarios  
  Une requête DMV peut vous aider à répondre à des questions sur les sessions et les connexions actives, ainsi que sur les objets qui consomment le plus d'UC ou de mémoire à un moment précis. Cette section fournit des exemples pour les scénarios d'utilisation de requêtes DMV les plus courants. Vous pouvez également consulter le [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) pour plus d’informations sur l’utilisation de requêtes DMV pour surveiller une instance de serveur.  
   
  `Select * from $System.discover_object_activity` /** Cette requête rend compte de l’activité des objets depuis le dernier démarrage du service. Pour obtenir des exemples de requêtes basées sur cette vue DMV, consultez [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
@@ -65,7 +53,7 @@ SELECT * FROM $System.<schemaRowset>
   
  `Select * from $System.discover_locks` /** Cette requête retourne un instantané des verrous utilisés à un moment précis.  
   
-##  <a name="bkmk_syn"></a> Syntaxe de la requête  
+##  <a name="bkmk_syn"></a>Syntaxe de requête  
  Le moteur d'interrogation des vues DMV est l'analyseur d'exploration de données. La syntaxe de requête DMV repose sur l’instruction [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
  Bien que la syntaxe de requête DMV soit basée sur une instruction SQL SELECT, elle ne prend pas en charge la syntaxe complète d'une instruction SELECT. Notez que JOIN, GROUP BY, LIKE, CAST et CONVERT ne sont pas pris en charge.  
@@ -90,14 +78,14 @@ WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
   
-##  <a name="bkmk_tools"></a> Outils et autorisations  
+##  <a name="bkmk_tools"></a>Outils et autorisations  
  Vous devez disposer d'autorisations d'administrateur système sur l'instance Analysis Services pour interroger une vue DMV.  
   
  Vous pouvez utiliser toute application cliente prenant en charge les requêtes MDX ou DMX, notamment SQL Server Management Studio, un rapport Reporting Services ou un tableau de bord PerformancePoint.  
   
  Pour exécuter une requête DMV à partir de Management Studio, connectez-vous à l’instance à interroger, puis cliquez sur **Nouvelle requête**. Vous pouvez exécuter une requête à partir d'une fenêtre de requête MDX ou DMX.  
   
-##  <a name="bkmk_ref"></a> Référence DMV  
+##  <a name="bkmk_ref"></a>Référence de la vue de gestion dynamique  
  Tous les ensembles de lignes de schéma n'ont pas d'interface DMV. Pour retourner la liste de tous les ensembles de lignes de schéma qui peuvent être interrogés à l'aide d'une vue de gestion dynamique, exécutez la requête suivante.  
   
 ```  
@@ -119,7 +107,7 @@ ORDER BY TABLE_NAME ASC
 |[Ensemble de lignes DISCOVER_COMMAND_OBJECTS](../../analysis-services/schema-rowsets/xml/discover-command-objects-rowset.md)|Fournit des informations sur l'activité et l'utilisation des ressources par les objets actuellement utilisés par la commande référencée.|  
 |[Ensemble de lignes DISCOVER_COMMANDS](../../analysis-services/schema-rowsets/xml/discover-commands-rowset.md)|Fournit des informations sur l'activité et l'utilisation des ressources relatives à la commande en cours d'exécution.|  
 |[Ensemble de lignes DISCOVER_CONNECTIONS](../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Fournit à Analysis Services des informations sur l'activité et l'utilisation des ressources relatives aux connexions ouvertes.|  
-|[Ensemble de lignes DISCOVER_CSDL_METADATA](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)|Retourne des informations sur un modèle tabulaire.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
+|[DISCOVER_CSDL_METADATA, ensemble de lignes](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)|Retourne des informations sur un modèle tabulaire.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
 |[Ensemble de lignes DISCOVER_DB_CONNECTIONS](../../analysis-services/schema-rowsets/xml/discover-db-connections-rowset.md)|Échange des informations sur l'activité et l'utilisation des ressources relatives aux connexions ouvertes entre Analysis Services et les sources de données externes, par exemple au cours des opérations de traitement et d'importation.|  
 |[DISCOVER_DIMENSION_STAT, ensemble de lignes](../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|Retourne les attributs d'une dimension ou les colonnes d'une table, selon le type de modèle.|  
 |[Ensemble de lignes DISCOVER_ENUMERATORS](../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Retourne des métadonnées sur les énumérateurs pris en charge pour une source de données spécifique.|  
@@ -171,8 +159,7 @@ ORDER BY TABLE_NAME ASC
 |[Ensemble de lignes MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Retourne le nom complet de chaque propriété, avec le type de propriété, le type de données et d'autres métadonnées.|  
 |[Ensemble de lignes MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Retourne la liste des ensembles qui sont définis dans la connexion actuelle.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
+## <a name="see-also"></a>Voir aussi   
  [Nouveau System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
  [Nouvelle fonction SYSTEMRESTRICTEDSCHEMA pour les ensembles de lignes restreints et les vues de gestion dynamique](http://go.microsoft.com/fwlink/?LinkId=231885)  
   

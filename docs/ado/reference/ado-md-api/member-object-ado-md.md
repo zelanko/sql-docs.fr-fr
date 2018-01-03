@@ -3,7 +3,7 @@ title: Objet de membre (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d8e27f47e871b54aa8e7456956fc18100a5f59e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6624e44343ef680c317338ea1fe32ead2aa0d9d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-object-ado-md"></a>Objet de membre (ADO MD)
 Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les propriétés d’un **membre** diffèrent selon le contexte dans lequel elle est utilisée. A **membre** d’un [au niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) dans un [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) a un [enfants](../../../ado/reference/ado-md-api/children-property-ado-md.md) propriété qui retourne le **membres** du niveau inférieur suivant dans la hiérarchie à partir du **membre**. Pour un **membre** d’un [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md), le **enfants** collection est toujours vide. En outre, le [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriété s’applique uniquement aux **membres** d’un **au niveau**.  
   
  A **membre** de **Position** a deux propriétés qui sont utiles lors de l’affichage du [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) et [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Une erreur se produit si ces propriétés sont accessibles sur un **membre** d’un **niveau**.  
@@ -72,12 +72,12 @@ Représente un membre d’un niveau dans un cube, les enfants d’un membre d’
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |ChildrenCardinality|Nombre d'enfants de ce membre.|  
 |CubeName|Nom du cube.|  
-| Description|Description explicite du membre.|  
+|Description|Description explicite du membre.|  
 |DimensionUniqueName|Le nom non ambigu de la [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |HierarchyUniqueName|Le nom non ambigu de la hiérarchie.|  
 |LevelNumber|La distance entre le niveau et la racine de la hiérarchie.|  

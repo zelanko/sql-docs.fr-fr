@@ -3,7 +3,7 @@ title: Collection de CubeDefs (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc3e8cb29642b4d6c620374852d8059729fa2c33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57d5204651e3c2e0d39c534842d3024eec527ecd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cubedefs-collection-ado-md"></a>Collection de CubeDefs (ADO MD)
 Contient le [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objets qui représentent un cube à partir d’un catalogue multidimensionnel.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **CubeDefs** est une collection ADO standard. Les propriétés et les méthodes d’une collection, vous pouvez effectuer les tâches suivantes :  
   
 -   Obtenir le nombre d’objets dans la collection avec le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété.  

@@ -3,7 +3,7 @@ title: "CreateObject (méthode) (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 587ea0590dbf2a6bed3f8733c2a1c1f4a90adb58
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba9c2d9ee2c2cf0a646155e5d184640d1aa0283b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createobject-method-rds"></a>CreateObject (méthode) (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. Les packages et marshale données proxy pour le stub côté serveur pour les communications avec l’objet métier à envoyer des demandes et des données sur Internet. Pour les objets de composant in-process, aucun proxy ne sont utilisés, seul un pointeur vers l’objet est fourni.  
@@ -54,7 +54,7 @@ Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. L
  *awebsrvr* ou *Nom_Ordinateur*  
  A **chaîne** valeur qui représente une URL qui identifie le serveur Web des Internet Information Services (IIS) sur lequel une instance de l’objet métier du serveur est créée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le *protocole HTTP* est le protocole Web standard ; *HTTPS* est un protocole Web sécurisé. Utilisez le *protocole DCOM* lorsque vous exécutez un réseau local sans protocole HTTP. Le *intra-processus* protocole est une bibliothèque de liens dynamiques (DLL) locale ; il n’utilise pas un réseau.  
   
 ## <a name="applies-to"></a>S'applique à  

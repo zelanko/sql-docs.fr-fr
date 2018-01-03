@@ -2,9 +2,11 @@
 title: "Utilisation des types de données R | Microsoft Docs"
 ms.custom: SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 09ff5069864db36036685c751759cadcf66d6a02
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e72c4a984359230ace9f800e8ac4efbfcfe5f2a1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="r-libraries-and-r-data-types"></a>Bibliothèques R et les Types de données R
 
@@ -62,14 +64,14 @@ Le tableau suivant présente les modifications de types de données et de valeur
 |**date**|`POSIXct`|**datetime**|Représenté au format GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
+|**Int**|`integer`|**Int**||
 |**money**|`numeric`|**float**||
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**smallint**|`integer`|**int**||
+|**smallint**|`integer`|**Int**||
 |**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
+|**tinyint**|`integer`|**Int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
@@ -153,8 +155,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+| 1| 1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+| 1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Notez l’utilisation de la fonction `str` dans R pour obtenir le schéma des données de sortie. Cette fonction retourne les informations suivantes :
 

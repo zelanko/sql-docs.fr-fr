@@ -1,30 +1,35 @@
 ---
-title: "Travailler avec des données SQL Server à l’aide de R | Documents Microsoft"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: "Travailler avec des données de SQL Server à l’aide de R (SQL et R approfondie) | Documents Microsoft"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 0a3d7ba0-4113-4cde-9645-debba45cae8f
 caps.latest.revision: "20"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 2e8e8d4d802e2a940127fff8f6ecd0f831e6711a
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 55eae1d572b8416cafc3774229ddaad91314a61e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="work-with-sql-server-data-using-r"></a>Travailler avec des données SQL Server à l’aide de R
+# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>Travailler avec des données SQL Server à l’aide de R (SQL et R approfondie)
 
-Dans cette leçon, vous allez configurer l’environnement et ajouter les données dont vous avez besoin pour former vos modèles et exécuter des résumés des données. Dans le cadre du processus, vous allez effectuer les tâches suivantes :
+Cet article fait partie du didacticiel de présentation approfondie de science des données, sur l’utilisation de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+
+Dans cette leçon, vous définissez l’environnement et ajoutez les données que vous avez besoin pour vos modèles d’apprentissage et exécutez certaines des résumés rapides des données. Dans le cadre du processus, vous devez effectuer ces tâches :
   
 - Créer une base de données pour stocker les données de formation et d’évaluation de deux modèles R.
   
@@ -38,16 +43,16 @@ Dans cette leçon, vous allez configurer l’environnement et ajouter les donné
   
 - Créer un contexte de calcul pour permettre l’exécution à distance de code R.
   
-- Découvrir comment activer le suivi sur le contexte de calcul à distance.
+- (Facultatif) Activer le suivi sur le contexte de calcul à distance.
   
-## <a name="create-the-database-and-user"></a>Créer la base de données et l’utilisateur
+## <a name="create-the-database-and-user"></a>Créer la base de données utilisateur
 
-Pour cette procédure pas à pas, vous allez créer une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]et ajouter une connexion SQL avec des autorisations d’écriture et de lecture de données, ainsi que d’exécution de scripts R.
+Pour cette procédure pas à pas, créez une nouvelle base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]et ajouter une connexion SQL avec des autorisations pour écrire et lire des données et pour exécuter des scripts R.
 
 > [!NOTE]
-> Si vous lisez uniquement des données, le compte qui exécute des scripts R requiert uniquement des autorisations SELECT (**db_datareader** rôle) sur la base de données spécifié. Toutefois, dans ce didacticiel, vous avez besoin de privilèges d’administrateur DDL pour préparer la base de données et créer des tables pour enregistrer les résultats des évaluations.
+> Si vous lisez uniquement des données, le compte qui exécute des scripts R requiert des autorisations SELECT (**db_datareader** rôle) sur la base de données spécifié. Toutefois, dans ce didacticiel, vous devez disposer des privilèges d’administrateur DDL pour préparer la base de données et créer des tables pour enregistrer les résultats du calcul de score.
 > 
-> En outre, si vous n’êtes pas le propriétaire de la base de données, vous devez l’autorisation EXECUTE ANY EXTERNAL SCRIPT, pour être en mesure d’exécuter des scripts R.
+> En outre, si vous n’êtes pas le propriétaire de la base de données, vous avez besoin de l’autorisation EXECUTE ANY EXTERNAL SCRIPT, afin d’exécuter des scripts R.
 
 1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], sélectionnez l’instance où [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] est activé, cliquez avec le bouton droit sur **Bases de données**, puis sélectionnez **Nouvelle base de données**.
   
@@ -100,23 +105,23 @@ Cette section répertorie quelques problèmes courants que vous pouvez rencontre
   
     Si vous ne souhaitez pas installer des outils de gestion de base de données supplémentaires, vous pouvez créer une connexion de test à l’instance de SQL Server à l’aide de [l’Administrateur de sources de données ODBC](https://msdn.microsoft.com/library/ms714024.aspx) dans le Panneau de configuration. Si la base de données est correctement configurée et que vous entrez les nom d’utilisateur et mot de passe corrects, vous devriez pouvoir voir la base de données que vous venez de créer et la sélectionner comme base de données par défaut.
   
-    Si vous ne pouvez pas vous connecter à la base de données, vérifiez que les connexions à distance sont activées pour le serveur et que le protocole Canaux nommés a été activé. [Cet article](http://social.technet.microsoft.com/wiki/contents/articles/2102.how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)fournit des conseils de dépannage supplémentaires.
+    Si vous ne pouvez pas vous connecter à la base de données, vérifiez que les connexions à distance sont activées pour le serveur et que le protocole Canaux nommés a été activé. Conseils de dépannage supplémentaires sont fournies dans cet article : [problèmes de connexion pour le moteur de base de données SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **Pourquoi le nom de ma table est-il précédé de « datareader » ?**
   
-    Quand vous spécifiez le schéma par défaut pour cet utilisateur en tant que **db_datareader**, toutes les tables et autres objets créés par cet utilisateur sont précédés de ce *schéma*. Un schéma ressemble à un dossier que vous pouvez ajouter à une base de données pour organiser des objets. Le schéma définit également les privilèges d’un utilisateur dans la base de données.
+    Lorsque vous spécifiez le schéma par défaut pour cet utilisateur en tant que **db_datareader**, toutes les tables et autres nouveaux objets créés par cet utilisateur sont précédées du *schéma* nom. Un schéma ressemble à un dossier que vous pouvez ajouter à une base de données pour organiser des objets. Le schéma définit également les privilèges d’un utilisateur dans la base de données.
   
-    Quand le schéma est associé à un nom d’utilisateur, l’utilisateur est appelé le propriétaire du schéma. Quand vous créez un objet, vous le créez toujours dans votre propre schéma, sauf si vous demandez spécifiquement qu’il soit créé dans un autre schéma.
+    Lorsque le schéma est associé à un nom d’utilisateur particulier, l’utilisateur est la _propriétaire du schéma_. Quand vous créez un objet, vous le créez toujours dans votre propre schéma, sauf si vous demandez spécifiquement qu’il soit créé dans un autre schéma.
   
-    Par exemple, si vous créez une table avec le nom *TestData* et que votre schéma par défaut est **db_datareader**, la table est créée avec le nom *<nom_base_de_données>.db_datareader.TestData*.
+    Par exemple, si vous créez une table avec le nom `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< nom_base_de_données > .db_datareader. TestData ».
   
     Pour cette raison, une base de données peut contenir plusieurs tables portant le même nom, tant que les tables appartiennent à des schémas différents.
    
-    Si vous recherchez une table et que vous ne spécifiez pas de schéma, le serveur de base de données recherche un schéma dont vous êtes propriétaire. Ainsi, vous n’avez pas besoin de spécifier le nom de schéma pour accéder à des tables dans un schéma associé à votre compte de connexion.
+    Si vous recherchez une table et que vous ne spécifiez pas un schéma, le serveur de base de données recherche un schéma dont vous êtes propriétaire. Ainsi, vous n’avez pas besoin de spécifier le nom de schéma pour accéder à des tables dans un schéma associé à votre compte de connexion.
   
 - **Je ne dispose pas de privilèges DDL. Puis-je quand même suivre le didacticiel ?**
   
-    Oui. Toutefois, vous devez demander à quelqu’un de précharger les données dans les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et ignorer les sections qui nécessitent la création de tables. Les fonctions qui nécessitent des privilèges DDL sont généralement appelées en dehors du didacticiel.
+    Oui. Toutefois, vous devez demander à quelqu’un de précharger les données dans les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et ignorer les sections qui nécessitent la création de tables. Les fonctions qui requièrent des privilèges DDL sont appelées dans le didacticiel autant que possible.
 
     En outre, demandez à votre administrateur de vous accorder l’autorisation EXECUTE ANY EXTERNAL SCRIPT. Il est nécessaire pour l’exécution du script R, si à distance ou à l’aide de `sp_execute_external_script`.
 

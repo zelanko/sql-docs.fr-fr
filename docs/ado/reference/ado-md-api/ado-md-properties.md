@@ -3,7 +3,7 @@ title: "Propriétés ADO MD | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-properties"></a>Propriétés ADO MD
 |||  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |[État](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indique l’état actuel de l’ensemble de cellules.|  
 |[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indique le type du membre actuel.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indique un nom non ambigu pour l’objet actuel.|  
-|[Valeur](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indique la valeur de la cellule active.|  
+|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indique la valeur de la cellule active.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

@@ -1,7 +1,7 @@
 ---
 title: "Paramètres (Type de mappage) du projet (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 783f169bdc63c8da9d91a321592f9e9fa8788e78
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Paramètres (Type de mappage) du projet (DB2ToSQL)
 La page mappage de Type de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
@@ -71,7 +71,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |BFILE|varbinary(max)|  
 |BINARY_DOUBLE|float [53]|  
 |BINARY_FLOAT|float [53]|  
-|binary_integer|int|  
+|binary_integer|INT|  
 |objet BLOB|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -79,13 +79,13 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |caractère|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
+|Date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
-|decimal|float [53]|  
+|Décimal|float [53]|  
 |double précision|float [53]|  
-|float|float [53]|  
-|int|int|  
-|entier|int|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|entier|INT|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
@@ -95,22 +95,22 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |caractères nationaux|nvarchar(max)|  
 |variable de caractères nationaux<sup>**</sup>|nvarchar(max)|  
 |variable de caractères nationaux<sup>*</sup>|nvarchar(max)|  
-|nchar|nvarchar(max)|  
+|NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |nombre|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |brut|varbinary(max)|  
-|real|float [53]|  
-|ID de ligne|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|ID de ligne|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |chaîne|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|UROWID|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |VARCHAR2|varchar(max)|  
 |XmlType|xml|  
@@ -135,19 +135,19 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |variable de caractères [*.. \*]|varchar [*]|  
 |caractère [*.. \*]|Char [*]|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
+|Date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|decimal|Decimal [38] [0]|  
+|Décimal|Decimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |double précision|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|int|  
-|entier|int|  
+|INT|INT|  
+|entier|INT|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*.. 8000]|varbinary [*]|  
@@ -155,34 +155,34 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |long varchar|varchar(max)|  
 |long [*.. 8000]|varchar [*]|  
 |long [8001.. *]|varchar(max)|  
-|national char|nchar|  
+|national char|NCHAR|  
 |national char varying [*.. \*]|nvarchar [*]|  
 |national char [*.. \*]|NCHAR [*]|  
-|caractères nationaux|nchar|  
+|caractères nationaux|NCHAR|  
 |variable de caractères nationaux [*.. \*]|nvarchar [*]|  
 |les caractères nationaux [*.. \*]|NCHAR [*]|  
-|nchar|nchar|  
+|NCHAR|NCHAR|  
 |NCHAR [*]|NCHAR [*]|  
 |NCLOB|nvarchar(max)|  
 |nombre|float [53]|  
 |nombre [*.. \*]|numérique [*]|  
 |nombre [*.. \*][\*.. \*]|numérique [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numérique [*.. \*]|numérique [*]|  
 |numérique [*.. \*][\*.. \*]|numérique [*] [\*]|  
 |NVARCHAR2 [*.. \*]|nvarchar [*]|  
 |RAW [*.. \*]|varbinary [*]|  
-|real|float [53]|  
-|ID de ligne|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|ID de ligne|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire local [*.. \*]|DateTimeOffset [*]|  
 |horodateur avec fuseau horaire|datetimeoffset|  
 |horodateur avec fuseau horaire [*.. \*]|DateTimeOffset [*]|  
 |timestamp [*.. \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*.. \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. \*]|varchar [*]|  
 |VARCHAR2 [*.. \*]|varchar [*]|  
 |XmlType|xml|  
@@ -195,7 +195,7 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |BFILE|varbinary(max)|  
 |BINARY_DOUBLE|float [53]|  
 |BINARY_FLOAT|float [53]|  
-|binary_interger|int|  
+|binary_interger|INT|  
 |Objet BLOB|varbinary(max)|  
 |Booléen|bit|  
 |Char|char|  
@@ -209,35 +209,35 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |caractère [*.. 8000]|Char [*]|  
 |caractère [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
-|date|datetime2 [0]|  
+|Date|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
 |DEC [*.. \*][\*.. \*]|dec[*][\*]|  
-|decimal|Decimal [38] [0]|  
+|Décimal|Decimal [38] [0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |double précision|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
-|int|int|  
-|Entier|int|  
+|Int|INT|  
+|Entier|INT|  
 |entier [*.. \*]|numérique [*] [0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*.. 8000]|varbinary [*]|  
 |long raw [8001.. *]|varbinary(max)|  
-|national char|nchar|  
+|national char|NCHAR|  
 |national char varying [*.. 4000]|nvarchar [*]|  
 |national char varying [4001.. *]|nvarchar(max)|  
 |national char [*.. 4000]|NCHAR [*]|  
 |national char [4001.. *]|nvarchar(max)|  
-|caractères nationaux|nchar|  
+|caractères nationaux|NCHAR|  
 |les caractères nationaux [*.. 4000]|nvarchar [*]|  
 |les caractères nationaux [4001.. *]|nvarchar(max)|  
 |variable de caractères nationaux [*.. 4000]|nvarchar [*]|  
 |variable de caractères nationaux [4001.. *]|nvarchar(max)|  
-|Nchar|nchar|  
+|Nchar|NCHAR|  
 |NCHAR [*.. 4000]|NCHAR [*]|  
 |NCHAR [4001.. *]|nvarchar(max)|  
 |NCHAR varying [*.. 4000]|nvarchar [*]|  
@@ -251,23 +251,23 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |numérique [*.. \*][\*.. \*]|numérique [*] [\*]|  
 |NVARCHAR2 [*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |RAW [*.. 8000]|varbinary [*]|  
 |RAW [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
-|ID de ligne|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|ID de ligne|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |chaîne [*.. 8000]|varchar [*]|  
 |chaîne [8001.. *]|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire|datetimeoffset|  
 |horodateur avec fuseau horaire local [*.. \*]|DateTimeOffset [*]|  
 |horodateur avec fuseau horaire [*.. \*]|DateTimeOffset [*]|  
 |timestamp [*.. \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*.. \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  

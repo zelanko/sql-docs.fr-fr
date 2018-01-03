@@ -1,7 +1,7 @@
 ---
 title: "Notice légale (SSMA pour Oracle) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 29fc2ca1961f3fce1445ffe60d469a1e0cc1f5f3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e0146e8d82410fa4c30a1217185cf4b551199531
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Notice légale (SSMA pour Oracle)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  

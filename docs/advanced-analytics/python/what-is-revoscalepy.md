@@ -2,20 +2,22 @@
 title: "Présentation de revoscalepy | Documents Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3863cb3ec0c50de9d5189927b01cba3f7f4277df
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="introducing-revoscalepy"></a>Présentation de revoscalepy
 
@@ -79,7 +81,7 @@ Vous créez l’objet de source de données à l’aide des fonctions répertori
 
 Les algorithmes d’apprentissage automatique suivants et les fonctions de synthèse de RevoScaleR sont incluses dans SQL Server 2017, à partir de CTP 2.0.
 
-| Fonction|  Description|Remarques|
+| Fonction| Description|Remarques|
 | ------ | ------ |------ |
 |`rx_btrees` | Ajuster les arbres de décision augmentés de gradient stochastique|`rx_btrees_ex`dans CTP 2.0|
 |`rx_dforest` | Ajuster les forêts décisionnelles classification et de régression|`rx_dforest_ex`dans CTP 2.0|
@@ -91,7 +93,7 @@ Les algorithmes d’apprentissage automatique suivants et les fonctions de synth
 
 Nouveaux algorithmes d’apprentissage automatique sont également fournies par la version Python de [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| Fonction|  Description|
+| Fonction| Description|
 | ------ | ------ |
 |`rx_fast_forest` |Créez un modèle de forêt de décision|
 |`rx_fast_linear` | Régression linéaire avec élévation de coordonnées double stochastique|

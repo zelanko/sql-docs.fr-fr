@@ -3,7 +3,7 @@ title: "À l’aide de référentiels de Test (SybaseToSQL) | Documents Microsof
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fc0391764e4accadb6c333cd554b9ad11a2d806
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-test-repositories-sybasetosql"></a>À l’aide de référentiels de Test (SybaseToSQL)
 Le référentiel de Test de SSMA magasins SSMA testeur des cas de test et les résultats des tests pour une utilisation ultérieure. Les données de référentiel sont enregistrées dans les tables SQL Server **TestCaseRepository** et **RunTestCaseResultRepository** dans le schéma **ssma_sybase_utilities** de **ssmatesterdb_syb** base de données.  

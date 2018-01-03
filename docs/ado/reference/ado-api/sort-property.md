@@ -3,7 +3,7 @@ title: "Propriété de tri | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc2498f80dfc5a057eff9350ed1949ee02ee5f4f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e668f5d2644ece0fa9210bdb492fd37ca8089a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-property"></a>Propriété de tri
 Indique un ou plusieurs noms de champ sur lequel le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est triée, et indique si chaque champ est trié dans l’ordre croissant ou décroissant.  
@@ -40,7 +40,7 @@ Indique un ou plusieurs noms de champ sur lequel le [Recordset](../../../ado/ref
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur qui indique le champ noms dans le **Recordset** sur laquelle effectuer le tri. Chaque nom est séparé par une virgule et peut être suivi d’un espace et le mot clé, **ASC**, laquelle trier le champ dans l’ordre croissant, ou **DESC**, laquelle trier le champ dans l’ordre décroissant. Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété requiert le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété à définir **adUseClient**. Un index temporaire est créé pour chaque champ spécifié dans le **tri** si aucun index n’existe pas déjà une propriété.  
   
  L’opération de tri est efficace, car les données ne sont pas réorganisées physiquement, mais simplement accédées dans l’ordre spécifié par l’index.  

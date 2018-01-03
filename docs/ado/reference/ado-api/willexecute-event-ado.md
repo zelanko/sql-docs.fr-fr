@@ -3,7 +3,7 @@ title: "WillExecute, événement (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5988a43be066f61019223eb6a501d1bc73e8bc23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 66a04a7bf45771c9c6f16b32bfd9c8bac54db4ad
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willexecute-event-ado"></a>WillExecute, événement (ADO)
 Le **WillExecute** événement est appelé juste avant l’exécution d’une commande en attente sur une connexion.  
@@ -63,7 +63,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  Le [connexion Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet pour lequel cette notification d’événement s’applique.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **WillExecute** événement peut se produire en raison d’une connexion.  [Execute (méthode) (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute, méthode (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), ou [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode le *pConnection* paramètre doit toujours contenir une référence valide à un **connexion** objet. Si l’événement est dû à **Connection.Execute**, le *Connection* et *pCommand* paramètres sont définis sur **rien**. Si l’événement est dû à **Recordset.Open**, le *Connection* paramètre référence la **Recordset** objet et la *pCommand* paramètre est défini sur **rien**. Si l’événement est dû à **Command.Execute**, le *pCommand* paramètre référence la **commande** objet et la *Connection* paramètre est défini sur **rien**.  
   
  **WillExecute** vous permet d’examiner et modifier les paramètres d’exécution en attente. Cet événement peut retourner une demande d’annulation de la commande en attente.  

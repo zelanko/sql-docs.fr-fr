@@ -3,7 +3,7 @@ title: "Clustered, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 594c36ab02aed389226909e4737e2421b6b71728
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ca0871272034cb400d15268a99c471ffcbc31d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clustered-property-adox"></a>Clustered, propriété (ADOX)
 Indique si l’index est groupé.  
@@ -37,7 +37,7 @@ Indique si l’index est groupé.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **booléenne** valeur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur par défaut est **False**.  
   
  Cette propriété est en lecture seule sur [Index](../../../ado/reference/adox-api/index-object-adox.md) les objets qui ont déjà été ajoutés à une collection.  

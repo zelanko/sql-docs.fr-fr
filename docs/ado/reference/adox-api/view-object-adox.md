@@ -3,7 +3,7 @@ title: "Afficher l’objet (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74f53494e11f46432b57b07ad0d9f42d6c3773f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63cce5bc12fe78ff57007a5d8531547dc6ff23e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-object-adox"></a>Objet de vue (ADOX)
 Représente un ensemble filtré d’enregistrements ou une table virtuelle. Lorsqu’il est utilisé conjointement avec ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, le **vue** objet peut être utilisé pour l’ajout, la suppression ou la modification des vues.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une vue est une table virtuelle, créée à partir d’autres tables de base de données ou des vues. Le **vue** objet vous permet de créer une vue sans avoir à connaître ou utiliser la syntaxe du fournisseur « CREATE VIEW ».  
   
  Avec les propriétés d’un **vue** de l’objet, vous pouvez :  

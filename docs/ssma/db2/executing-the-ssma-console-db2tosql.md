@@ -1,7 +1,7 @@
 ---
 title: "L’exécution de la Console SSMA (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1346ccef45d9a8de619293da09a3d4a148bc9cf8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 55415d575aac34cdee2ed2acdb8c9ceaade6465c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>L’exécution de la Console SSMA (DB2ToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA. Les sections qui en découlent décrit en détail le même. L’application console utilise certaines commandes de fichier de script standard comme énuméré dans cette section.  
@@ -168,7 +168,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
   metabase="<source/target>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <force-load>  
@@ -281,7 +281,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -353,7 +353,7 @@ convertir le schéma
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -419,7 +419,7 @@ migrer des données : migre les données source à la cible.
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -529,7 +529,7 @@ synchroniser la cible
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -538,7 +538,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -594,7 +594,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -603,7 +603,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -653,7 +653,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  
@@ -729,7 +729,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 </convert-sql-statement>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  
@@ -752,7 +752,7 @@ ou
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  

@@ -3,7 +3,7 @@ title: "Type, propriété (clé) (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63f8939f42b228c0b4084156d4d9962d69dd25c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1aef3aaed8607821b081410701d42dc5a718e0a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-key-adox"></a>Propriété de type (clé) (ADOX)
 Indique le type de la clé.  
@@ -37,7 +37,7 @@ Indique le type de la clé.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Long** valeur peut s’agir de la [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) constantes. La valeur par défaut est **adKeyPrimary**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété est en lecture seule sur [clé](../../../ado/reference/adox-api/key-object-adox.md) objets déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  

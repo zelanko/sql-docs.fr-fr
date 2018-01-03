@@ -3,7 +3,7 @@ title: "L’installation de SSMA pour SAP ASE (SybaseToSQL) | Documents Microsof
 ms.custom: 
 ms.date: 11/29/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb778d7db788a74af4423f7431ab3d5ae2cb37f0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 508af2c209711c6063ee58243a29066323b641f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>L’installation de SSMA pour SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) pour SAP Adaptive Server Enterprise (ASE) se compose d’une application cliente qui vous permet d’effectuer une migration à partir de SAP ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure. Il contient également un Pack d’extension qui prend en charge la migration des données et l’utilisation des fonctions de système ASE dans vos bases de données migrées.  
@@ -38,7 +38,7 @@ Si vous ouvrez un projet à partir d’une version antérieure de SSMA pour SAP 
   
 ## <a name="contents"></a>Sommaire  
   
-|Article| Description|  
+|Article|Description|  
 |---------|---------------|  
 |[L’installation de SSMA pour SAP ASE Client &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|Fournit des informations et des instructions pour l’installation de SSMA pour les clients SAP ASE.|  
 |[Installation des composants SSMA sur SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Fournit des informations et des instructions pour installer le Pack d’extension sur les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  

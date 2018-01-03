@@ -3,7 +3,7 @@ title: "Modifications du contrôle à la Table de Base de l’ensemble d’enreg
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 034f0f577201d3f0b3b4e38e78e11acb8649884e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Table unique, de schéma Unique, Unique catalogue des propriétés dynamiques (ADO)
 Vous permet de contrôle précis des modifications apportées à une table de base de données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui a été formé par une opération de jointure sur plusieurs tables de base.  
@@ -40,7 +40,7 @@ Vous permet de contrôle précis des modifications apportées à une table de ba
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur qui est le nom d’une table, un schéma ou un catalogue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La table de base souhaitée est identifiée par son catalogue, schéma et les noms de table. Lorsque le **Unique Table** propriété est définie, les valeurs de la **schéma Unique** ou **Unique Catalog** propriétés permettent de trouver la table de base. Il est prévu, mais pas obligatoire, qu’une ou les deux le **schéma Unique** et **Unique Catalog** propriétés être définie avant le **Unique Table** est définie.  
   
  La clé primaire de la **Unique Table** est traité comme la clé primaire de l’ensemble du **Recordset**. Il s’agit de la clé qui est utilisée pour toutes les méthodes nécessitant une clé primaire.  

@@ -1,10 +1,10 @@
 ---
 title: "Problèmes connus dans Machine Learning Services | Documents Microsoft"
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 62eeb13d172325d70d4efcbc014a3525fabf4136
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2eeadd5a11f3fd16282164ba6536417e7da515da
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problèmes connus dans les Services de Machine Learning
 
@@ -28,7 +28,7 @@ Cet article décrit les limitations ou des problèmes connus avec les composants
 
 Les informations ici s’applique à tous les éléments suivants, sauf indication contraire :
 
-* SQL Server 2016
+* SQL Server 2016
 
   - R Services (dans la base de données)
   - Microsoft R Server (autonome)
@@ -265,7 +265,7 @@ Par exemple, supposons que vous avez défini deux fonctions, `f` et `g`, dans vo
 
 Si vous rencontrez ce problème, vous pouvez le résoudre en incorporant la définition de `f` dans votre définition de `g`, n’importe où avant l’appel habituel de `g` par `f`.
 
-Exemple :
+Exemple :
 
 ```r
 f <- function(x) { 2*x * 3 }

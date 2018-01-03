@@ -3,7 +3,7 @@ title: "Propriété index | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e7dac3b9494e2c23de547bdf96ba0079a264af9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-property"></a>Propriété index
 Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -32,7 +32,7 @@ Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../..
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur, qui est le nom de l’index.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’index nommé par le **Index** propriété doit avoir été préalablement déclarée sur la table de base sous-jacente la **Recordset** objet. Autrement dit, l’index doit être déclaré par programme comme une ADOX [Index](../../../ado/reference/adox-api/index-object-adox.md) objet, ou lorsque la table de base a été créée.  
   
  Une erreur d’exécution se produit si l’index ne peut pas être défini. Le **Index** propriété ne peut pas être définie dans les conditions suivantes :  

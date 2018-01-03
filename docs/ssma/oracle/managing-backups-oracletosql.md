@@ -1,7 +1,7 @@
 ---
 title: La gestion des sauvegardes (OracleToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: fd9985b00f45933194fe60d805cd2b2f5181ddbb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eba65be518ebd986c6f074a1702ca72945d2fff6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managing-backups-oracletosql"></a>La gestion des sauvegardes (OracleToSQL)
 Gestion des sauvegardes Oracle vous permet de sauvegarde et restauration de données de la table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
@@ -42,7 +42,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu testeur, pointez sur la gestion de sauvegarde Oracle, puis cliquez sur Restaurer... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
@@ -78,7 +78,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restore  
+### <a name="restore"></a>Restaurer  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu testeur point de gestion de sauvegarde SQL Server, la restauration, cliquez sur... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez un ou plusieurs table pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  

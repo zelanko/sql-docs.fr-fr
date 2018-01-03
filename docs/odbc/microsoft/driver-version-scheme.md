@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 35ee21329cabca4e160112887f8c746ad8f44b82
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1151f1ce5c1c8644c448555e25a03a0b455e1a9d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-version-scheme"></a>Schéma de Version de pilote
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 |Version du pilote|Numéro de build|Historique des disponibilités|  
 |--------------------|------------------|--------------------------|  
 |1.0|2.00.6235|Visual C++ 4.2 et Visual Basic 5.0, Enterprise Edition|  
-|2.0|2.73.7269|Visual Studio 97 et MDAC 1,5 a|  
+|2|2.73.7269|Visual Studio 97 et MDAC 1,5 a|  
 |2.0 mis à jour|2.73.7283.01|IIS 4.0|  
 |2.0 mis à jour|2.73.7283.03|MDAC 1.5b et 1.5 c|  
 |2.0 mis à jour|2.73.7356|KIT DE DÉVELOPPEMENT LOGICIEL ODBC 3.5|  

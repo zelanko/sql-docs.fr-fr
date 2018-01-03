@@ -1,7 +1,7 @@
 ---
 title: Travailler avec les fichiers de Script de la Console exemple (DB2ToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13046bbc813a7c508593fc54903850ec8cbb09af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18787dab013e29427743b0712a9d56b28fbddd3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Travailler avec les fichiers de Script de la Console exemple (DB2ToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence de l’utilisateur et son utilisation. Cette section décrit la façon de personnaliser ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -79,7 +79,7 @@ Les fichiers de script de console exemple suivants couvrant les différents scé
   
 5.  **ConversionAndDataMigrationSample.xml :** cet exemple permet à l’utilisateur effectuer une migration de bout en bout à partir de la conversion de la migration des données. Vous trouverez ci-dessous la liste des valeurs d’attribut obligatoires qui ils devront modifier :  
   
-    |Nom de la commande| Description|Attribut|  
+    |Nom de la commande|Description|Attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|Mappage de schéma de base de données source vers le schéma cible.|`source-schema:`Spécifie la base de données source qui nécessite d’être converti.<br /><br />`sql-server-schema`: Spécifie la base de données cible qui doit être migré vers|  
     |`convert-schema`|Effectue une conversion de schéma à partir de la source vers le schéma cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets / bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `convert-schema` 4 d’exemple de la commande de l’exemple de fichier de script de console.|`object-name`: Permet de spécifier la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le`object-name`|  

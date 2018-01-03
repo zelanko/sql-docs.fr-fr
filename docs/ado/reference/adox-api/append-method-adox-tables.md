@@ -3,7 +3,7 @@ title: "Append (méthode) (Tables ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c5ab4e01e7478f1501dc550c8d45a86f5e8a600
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcf41f4e1ad50dc7e698b3f1a7d6eeb241a41dbc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-tables"></a>Append (méthode) (Tables ADOX)
 Ajoute un nouveau [Table](../../../ado/reference/adox-api/table-object-adox.md) de l’objet à la [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection.  
@@ -42,7 +42,7 @@ Tables.Append Table
  *Table*  
  A **Variant** valeur qui contient une référence à la **Table** à ajouter ou le nom de la table à créer et à ajouter.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une erreur se produit si le fournisseur ne prend pas en charge la création de tables.  
   
 ## <a name="applies-to"></a>S'applique à  

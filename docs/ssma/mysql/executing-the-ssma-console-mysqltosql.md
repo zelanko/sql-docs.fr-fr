@@ -1,7 +1,7 @@
 ---
 title: "L’exécution de la Console SSMA (MySQLToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -28,11 +28,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39b41addf566e326174a004a210a2ba2b1cdf311
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6faf8033f2210a68217fe6cf3e7021edc2b29b98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>L’exécution de la Console SSMA (MySQLToSQL)
 Microsoft vous fournit un ensemble robuste de script de commandes du fichier à exécuter et contrôler les activités SSMA.  
@@ -295,7 +295,7 @@ Générer--rapport d’évaluation
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <generate-assessment-report  
@@ -369,7 +369,7 @@ convertir le schéma
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <convert-schema  
@@ -429,7 +429,7 @@ migrer des données
   
 </migrate-data>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <migrate-data  
@@ -517,7 +517,7 @@ synchroniser la cible
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target  
@@ -526,7 +526,7 @@ ou
   
   object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <synchronize-target>  
@@ -582,7 +582,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database  
@@ -591,7 +591,7 @@ ou
   
    object-type="<object-category>"/>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <refresh-from-database>  
@@ -641,7 +641,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```xml  
 <save-as-script  
@@ -717,7 +717,7 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 </convert-sql-statement>  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  
@@ -742,7 +742,7 @@ ou
   
 />  
 ```  
-ou  
+ou Gestionnaire de configuration  
   
 ```  
 <convert-sql-statement  

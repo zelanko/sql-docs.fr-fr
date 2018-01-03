@@ -3,7 +3,7 @@ title: ResyncEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8f7ad5525f2f9e7ce7e915b97d397d3d7d372a27
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 64e65b766600b9da9a721da2ca9ad702dfb05d18
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Indique si les valeurs sous-jacentes sont remplacées par un appel à [Resync](../../../ado/reference/ado-api/resync-method.md).  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|Valeur par défaut. Remplace les données et en attente de mises à jour sont annulées.|  
-|**adResyncUnderlyingValues**|1|Ne remplace pas les données et en attente de mises à jour ne sont pas annulées.|  
+|**adResyncUnderlyingValues**| 1|Ne remplace pas les données et en attente de mises à jour ne sont pas annulées.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
  Package : **com.ms.wfc.data**  

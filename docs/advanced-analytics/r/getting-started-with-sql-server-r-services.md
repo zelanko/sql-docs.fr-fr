@@ -2,9 +2,11 @@
 title: Prise en main de SQL Server apprentissage | Documents Microsoft
 ms.custom: SQL2016_New_Updated
 ms.date: 12/07/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6f211088484178e652cd7ea489490b5654ef50d8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c114d320e71a93ffc6614ae6cfb1b535af2510e1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Prise en main de SQL Server Machine Learning
 
@@ -96,7 +98,7 @@ Une fois le script ou modèle R est prêt pour la production, un développeur de
 
 ![rsql_keyscenario1](media/rsql-keyscenario1.png)
 
-+ **Sécurisé et extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise une nouvelle architecture d’extensibilité qui protège votre moteur de base de données et isole les sessions R. Vous pouvez contrôler les utilisateurs autorisés à exécuter des scripts R, et spécifier les bases de données accessibles au code R. Vous pouvez contrôler la quantité de ressources allouées au runtime R afin d’éviter que des calculs massifs ne mettent en péril les performances globales du serveur.
++ **Sécurisé et extensible**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise une nouvelle architecture d’extensibilité qui protège votre moteur de base de données et isole les sessions R. Vous pouvez contrôler les utilisateurs autorisés à exécuter des scripts R, et spécifier les bases de données accessibles au code R. Vous pouvez contrôler la quantité de ressources allouées au runtime R afin d’éviter que des calculs massifs ne mettent en péril les performances globales du serveur.
 
 + **Planification et d’audit**. Lors de l’exécution des tâches de script externe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez contrôler et auditer les données utilisées par les chercheurs de données. Vous pouvez également planifier des travaux et créer des workflows contenant des scripts R ou Python externes, tout comme vous planifiez tout autre travail T-SQL ou procédure stockée.
 

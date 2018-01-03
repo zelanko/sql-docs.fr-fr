@@ -3,7 +3,7 @@ title: "Propriétés ADOX | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 592fe4aad9025258bda7687a37f641dcc56630b2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 024d824d6fd8e7b11f5ec3ea184a356da84408b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-properties"></a>Propriétés ADOX
 |||  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indique l’ADO **connexion** de l’objet auquel appartient le catalogue.|  
 |[Attributs](../../../ado/reference/adox-api/attributes-property-adox.md)|Décrit les caractéristiques de la colonne.|  
 |[En cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est groupé.|  
-|[Command](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie un ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
+|[Commandee](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie un ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
 |[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indique la date de que création de l’objet.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indique la date de que dernière modification de l’objet.|  

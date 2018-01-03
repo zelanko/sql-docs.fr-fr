@@ -1,11 +1,13 @@
 ---
 title: "Synchronize21, méthode (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 996510799ad3222a40910af3a1d04c9cbb9b30fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2f48789fef088affdfa664ead4da2bd379aa51b7
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21, méthode (RDS)
 Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion pour une utilisation avec ADO 2.1.  
@@ -59,7 +61,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Permet de retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par une variante de synchroniser. Ne pas définie si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le *HandlerString* paramètre peut être null. Que se passe-t-il dans ce cas dépend de la façon dont le serveur de services Bureau à distance est configuré. Une chaîne de gestionnaire de « MSDFMAP.handler » indique que le gestionnaire fourni par Microsoft (Msdfmap.dll) doit être utilisé. Une chaîne de gestionnaire de « MASDFMAP.handler,sample.ini » indique que le Gestionnaire de Msdfmap.dll doit être utilisé et que l’argument « sample.ini » doit être passé au gestionnaire. MSDFMAP.dll puis interprétera l’argument comme une direction à utiliser le sample.ini pour vérifier les chaînes de connexion et la requête.  
   
 > [!NOTE]

@@ -3,7 +3,7 @@ title: "Propriété de gestionnaire (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 15fa49306bf566b27f0d5e688a16050c9656032c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7b2bdaddbbf0d0cb78627567fc1efeed22593ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handler-property-rds"></a>Propriété de gestionnaire (RDS)
 Indique le nom d’un programme de personnalisation côté serveur (gestionnaire) qui étend les fonctionnalités de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)et tous les paramètres utilisés par le *gestionnaire*.  
@@ -47,7 +47,7 @@ DataControl.Handler = String
  *Chaîne*  
  A **chaîne** valeur qui contient le nom du gestionnaire et tous les paramètres, toutes séparées par des virgules (par exemple, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette propriété prend en charge [personnalisation](../../../ado/guide/remote-data-service/datafactory-customization.md), une fonctionnalité qui nécessite le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient**.  
   
  Le nom du gestionnaire et ses paramètres, le cas échéant, sont séparés par des virgules («, »). Génère un comportement imprévisible si un point-virgule (« ; ») apparaît n’importe où dans *chaîne*. Vous pouvez écrire votre propre gestionnaire, sous réserve qu’il prend en charge la **IDataFactoryHandler** interface.  

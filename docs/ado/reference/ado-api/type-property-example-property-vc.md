@@ -3,7 +3,7 @@ title: "Tapez l’exemple de propriété (propriété) (VC ++) | Documents Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6838ae3c98f9dc4c210100e04103c94d5ba0d115
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a283a4b547d5806b18a988684751a53578c5da0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-example-property-vc"></a>Exemple de propriété de type (propriété) (VC ++)
-Cet exemple illustre la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété. Il s’agit d’un modèle d’un utilitaire qui répertorie les noms et types de collection, tel que [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md), [champs](../../../ado/reference/ado-api/fields-collection-ado.md), etc..  
+Cet exemple illustre la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété. Il s’agit d’un modèle d’un utilitaire qui répertorie les noms et types de collection, tel que [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md), [champs](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
   
  Nous n’avez pas besoin d’ouvrir le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour accéder à ses **propriétés** collection ; sont générées lorsque le **Recordset** objet est instancié. Toutefois, la définition du [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient** ajoute plusieurs propriétés dynamiques pour la **Recordset** l’objet **propriétés** collection, ce qui rend l’exemple un peu plus intéressante. Pour les besoins de l’illustration, nous utilisons explicitement la [élément](../../../ado/reference/ado-api/item-property-ado.md) pour accéder à chaque propriété [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.  
   

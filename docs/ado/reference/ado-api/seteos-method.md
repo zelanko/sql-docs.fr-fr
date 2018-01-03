@@ -3,7 +3,7 @@ title: "Méthode SetEOS | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3400be98c29b676235ddf38fcd73d7e2f1693a7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82a80499aff8dbe5344847b34dc6f969eb16ccdc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seteos-method"></a>SetEOS, méthode
 Définit la position qui représente la fin du flux de données.  
@@ -38,7 +38,7 @@ Définit la position qui représente la fin du flux de données.
 Stream.SetEOS  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **SetEOS** met à jour la valeur de la [fin du support](../../../ado/reference/ado-api/eos-property.md) propriété, en rendant actuel [Position](../../../ado/reference/ado-api/position-property-ado.md) la fin du flux de données. Tous les octets ou caractères après la position actuelle sont tronqués.  
   
  Étant donné que [écrire](../../../ado/reference/ado-api/write-method.md), [WriteText](../../../ado/reference/ado-api/writetext-method.md), et [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) ne pas tronquer les valeurs supplémentaires existant **flux** des objets, vous pouvez tronquer ces octets ou caractères en définissant la nouvelle position de fin de flux avec **SetEOS**.  

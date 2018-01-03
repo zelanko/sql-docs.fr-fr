@@ -1,11 +1,13 @@
 ---
 title: "Refresh, méthode (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -20,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bd8ba42c4e1822e5ef1fafd6ec4f3b53c2a9a363
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5730f11f027cf6fb4492f8133f88ce80ac35aee3
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="refresh-method-rds"></a>Refresh, méthode (RDS)
 Actualise la source de données spécifiée dans le [Connect](../../../ado/reference/rds-api/connect-property-rds.md) mises à jour les résultats de requête et la propriété.  
@@ -43,7 +45,7 @@ DataControl.Refresh
  *DataControl*  
  Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous devez définir le [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), et [SQL](../../../ado/reference/rds-api/sql-property.md) propriétés avant d’utiliser le **Actualiser** (méthode). Tous les contrôles liés aux données sur le formulaire associé à un **RDS. DataControl** objet reflète le nouveau jeu d’enregistrements. Toutes les existantes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet est libéré et les modifications non enregistrées sont ignorées. Le **Actualiser** méthode fait automatiquement du premier enregistrement l’enregistrement actif.  
   
  Il est judicieux d’appeler le **Actualiser** méthode régulièrement lorsque vous travaillez avec des données. Si vous récupérez des données et laissez sur un ordinateur client pendant un certain temps, il est susceptible de devenir obsolètes. Il est possible que les modifications que vous apportez échouera, car une autre personne peut avoir modifié l’enregistrement valide les modifications avant vous.  

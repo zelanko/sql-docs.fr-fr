@@ -3,7 +3,7 @@ title: "NumericScale et Precision, propriétés, exemple (VC ++) | Documents Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56b6c51dba3bb8c02f90c1d0af485fd8d150049b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6c8178ec84d1ef1ec14eb5a1472f6599fd6d0f39
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale et Precision, propriétés, exemple (VC ++)
 Cet exemple utilise le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés pour afficher l’échelle numérique et la précision des champs dans le ***remises*** table de la  ***Pubs*** base de données.  

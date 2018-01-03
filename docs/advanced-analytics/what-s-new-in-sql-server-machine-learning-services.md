@@ -1,10 +1,10 @@
 ---
 title: Quel &#39; est nouvelle dans Machine Learning Services | Documents Microsoft
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ff01d46e2ca0aa996d8f582733b24b7560e29b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Quelles sont les nouveautés dans Machine Learning Services dans SQL Server
 
@@ -84,7 +84,7 @@ Cette version contient plusieurs options et fonctionnalités pour vous aider à 
 
     Le **mrsdeploy** package pour [!INCLUDE[rsql-platform-md](../includes/rsql-platformnew-md.md)] et [!INCLUDE[rsql-platformnew-md](../includes/rsql-platformnew-md.md)] prend en charge le déploiement des modèles de Python et des scripts en tant que services web. Pour obtenir un exemple de son fonctionnement, consultez [publier et consommer le code Python](python/publish-consume-python-code.md).
 
-+ Performance
++ Performances
 
     Microsoft a envoyé les limites des performances pour calculer les scores. Avec la base de données de calcul de score, nous avions traité un million de lignes par seconde à l’aide des modèles R. Dans cette version, les nouvelles fonctionnalités pour **en temps réel de calcul de score** et **score native** obtenir de meilleures performances dans une ligne et le calcul du score du lot.
 

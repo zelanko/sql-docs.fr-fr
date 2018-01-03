@@ -3,7 +3,7 @@ title: "Méthode WriteText | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 489e91a0ca9dcaa6c2ca59bba3117c2c409c9799
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2c744551b835ce814f8a6baf9781e04e67b6139d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writetext-method"></a>WriteText, méthode
 Écrit une chaîne de texte spécifiée dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -43,9 +43,9 @@ Stream.WriteText Data, Options
  A **chaîne** valeur qui contient le texte de caractères à écrire.  
   
  *Options*  
- Ce paramètre est facultatif. A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valeur qui spécifie si un caractère séparateur de ligne doit être écrit à la fin de la chaîne spécifiée.  
+ Facultatif. A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valeur qui spécifie si un caractère séparateur de ligne doit être écrit à la fin de la chaîne spécifiée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les chaînes spécifiées sont écrites dans le **flux** objet sans espaces insérés ni caractères entre chaque chaîne.  
   
  En cours [Position](../../../ado/reference/ado-api/position-property-ado.md) est définie sur le caractère suivant les données écrites. Le **WriteText** méthode ne tronque pas le reste des données dans un flux de données. Si vous voulez tronquer ces caractères, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

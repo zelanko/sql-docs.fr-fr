@@ -2,10 +2,10 @@
 title: "Résoudre les problèmes de collecte de données pour l’apprentissage - SQL Server"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ebf53ad0f099fc43ff072de46f443e83086c127
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de6658f5fde0103992175b4dc735fae44a3b25fe
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
 
@@ -91,7 +91,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 En dernier recours, vous pouvez ouvrir des fichiers sur le serveur pour déterminer la version installée. Pour ce faire, recherchez le fichier de rlauncher.config pour obtenir l’emplacement du runtime R et le répertoire de travail actuel. Nous vous recommandons de faire et ouvrir une copie du fichier afin que vous ne modifiez pas accidentellement des propriétés.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name\MSSQL\Binn\rlauncher.config`
 
@@ -101,7 +101,7 @@ En dernier recours, vous pouvez ouvrir des fichiers sur le serveur pour détermi
 
 Pour obtenir la version de R et les versions de RevoScaleR, ouvrez une invite de commandes R, ou ouvrez l’interface RGui qui est associé à l’instance.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64\RGui.exe`
 
@@ -184,7 +184,7 @@ Lorsque vous travaillez avec le service pour la première fois, il peut être di
 
 Obtenir le plus récent journal des erreurs de SQL Server. L’ensemble complet de journaux d’erreurs se compose des fichiers à partir du répertoire de journal par défaut suivant :
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\Log\ExtensibilityLog`
 
@@ -228,7 +228,7 @@ SQL Server génère des journaux distincts pour les exécutions de langage de sc
 
 Vous pouvez obtenir ces journaux à partir d’emplacements par défaut suivants :
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Log\ExtensibilityLog`
 

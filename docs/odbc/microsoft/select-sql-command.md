@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9b8b9b4b5b69d257dccafc2567ebb59eab5bba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select---sql-command"></a>Sélectionnez - commande SQL
 Récupère les données à partir d’une ou plusieurs tables.  
@@ -276,7 +276,7 @@ WHERE customer.cust_id NOT IN ;
   
  Résultats de la requête s’affichent non triées, si vous ne spécifiez pas une commande avec ORDER BY.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Sélectionnez est une commande SQL qui est intégrée à Visual FoxPro comme n’importe quelle autre commande Visual FoxPro. Lorsque vous utilisez, sélectionnez cette option pour présenter une requête, Visual FoxPro interprète la requête et récupère les données spécifiées à partir des tables. Vous pouvez créer une requête SELECT à partir de la fenêtre d’invite de commandes ou un programme Visual FoxPro (comme avec n’importe quelle autre commande Visual FoxPro).  
   
 > [!NOTE]  

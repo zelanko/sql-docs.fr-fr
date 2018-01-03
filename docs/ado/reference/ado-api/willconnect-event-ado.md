@@ -3,7 +3,7 @@ title: "WillConnect, événement (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7113fadf60c58478173287f331822798df9aeb63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 45e9a6fb4dcc55b836195065c279627e50c74511
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willconnect-event-ado"></a>WillConnect, événement (ADO)
 Le **WillConnect** événement est appelé avant le début d’une connexion.  
@@ -63,7 +63,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  Le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet pour lequel cette notification d’événement s’applique. Modifications apportées aux paramètres de la **connexion** par le **WillConnect** Gestionnaire d’événements n’a aucun effet le **connexion**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Lorsque **WillConnect** est appelée, le *ConnectionString*, *UserID*, *mot de passe*, et *Options* les paramètres sont définis aux valeurs établies par l’opération qui a provoqué cet événement (la connexion en attente) et peut être modifiée avant le retour de l’événement. **WillConnect** peut retourner une demande d’annulation de la connexion en attente.  
   
  Lorsque cet événement est annulé, **ConnectComplete** sera appelé avec son *ne* paramètre la valeur **contraire**.  

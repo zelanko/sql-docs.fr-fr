@@ -3,7 +3,7 @@ title: "Créer une nouvelle relation de clé étrangère entre les Tables, exemp
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 81f1326ea6125468f7e236b555fe882a361ac6f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 20b9ad65e6d9f4352db96848e8f096710fcf2db2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VB)
 Le code suivant montre comment créer une nouvelle relation de clé étrangère entre deux tables existants nommé **clients** et **commandes**.  

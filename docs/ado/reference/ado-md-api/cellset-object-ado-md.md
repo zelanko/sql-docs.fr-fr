@@ -3,7 +3,7 @@ title: Cellset, objet (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c860f9b84514cc84c73c52e10978ad76365cc6ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36bd85cb79d48590cb86a865cfd408db878a1b53
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cellset-object-ado-md"></a>Cellset, objet (ADO MD)
 Représente les résultats d’une requête multidimensionnelle. Il est une collection de cellules sélectionnées à partir de cubes ou d’autres ensembles de cellules.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les données dans un **ensemble de cellules** est récupéré à l’aide d’un accès direct de type tableau. Vous pouvez explorer un membre spécifique pour obtenir des données sur ce membre. Par exemple, le code suivant retourne la légende du premier membre dans la première position sur le premier axe d’un ensemble de cellules nommé `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il n’existe pas de notion d’une cellule en cours dans un ensemble de cellules. Au lieu de cela, le [élément](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriété récupère un spécifique [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) objet à partir de l’ensemble de cellules. Les arguments de la **élément** propriété déterminent la cellule à extraire. Vous pouvez spécifier la valeur ordinale unique d’une cellule. Vous pouvez également récupérer des cellules à l’aide de leur numéro de position sur chaque axe de l’ensemble de cellules. Pour plus d’informations sur l’extraction des cellules, consultez le [élément](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) propriété.  
   
  Avec les collections, les méthodes et les propriétés d’un **ensemble de cellules** de l’objet, vous pouvez procédez comme suit :  

@@ -3,7 +3,7 @@ title: "Resync commande propriété dynamique (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 725327b6ef4304b8d8a30c6dd80c6a3a79e7e72d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2545b52883ef01ae0715c7412fdac9b06a559784
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync commande propriété dynamique (ADO)
 Spécifie une commande fournie par l’utilisateur de chaîne qui le [Resync](../../../ado/reference/ado-api/resync-method.md) les problèmes de méthode pour actualiser les données dans la table nommée dans la [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propriété dynamique.  
@@ -31,7 +31,7 @@ Spécifie une commande fournie par l’utilisateur de chaîne qui le [Resync](..
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **chaîne** valeur qui est une chaîne de commande.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet est le résultat d’une opération JOIN exécutée sur plusieurs tables de base. Les lignes affectées dépendent du *AffectRecords* paramètre de la [Resync](../../../ado/reference/ado-api/resync-method.md) (méthode). La norme **Resync** méthode est exécutée si la [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) et **Resync Command** propriétés ne sont pas définies.  
   
  La chaîne de commande de la **Resync Command** propriété est une commande paramétrée ou une procédure stockée qui identifie de façon unique la ligne actualisée et renvoie une seule ligne contenant le même nombre et l’ordre des colonnes en tant que la ligne à actualisé. La chaîne de commande contient un paramètre pour chaque colonne de clé primaire dans le **Unique Table**; sinon, une erreur d’exécution est renvoyée. Les paramètres sont automatiquement renseignés avec les valeurs de clé primaire de la ligne à actualiser.  

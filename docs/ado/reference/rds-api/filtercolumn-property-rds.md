@@ -3,7 +3,7 @@ title: "FilterColumn, propriété (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0220331e62c0e541433c29a65fc34b45d0907d5f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c255767f4dc479d7f5c056725f672016dd3d084f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn, propriété (RDS)
 Indique la colonne sur laquelle évaluer les critères de filtre.  
@@ -45,7 +45,7 @@ DataControl.FilterColumn = String
  *Chaîne*  
  A **chaîne** valeur qui spécifie la colonne sur laquelle évaluer les critères de filtre. Les critères de filtre sont spécifiés dans le [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md) propriété.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), et **FilterColumn** fournissent des propriétés de tri et de filtrage des fonctionnalités sur le cache côté client. La fonctionnalité de tri organise les enregistrements par les valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble des enregistrements selon des critères de recherche, lors de la version complète [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est conservé dans le cache. Le [réinitialiser](../../../ado/reference/rds-api/reset-method-rds.md) méthode exécute les critères et remplace l’actuel **Recordset** avec un texte modifiable **Recordset**.  
   
 ## <a name="applies-to"></a>S'applique à  

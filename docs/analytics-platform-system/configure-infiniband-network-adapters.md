@@ -3,10 +3,10 @@ title: "Configurer des cartes réseau InfiniBand pour le système de plateforme 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurer des cartes réseau InfiniBand pour système de plateforme Analytique
 Décrit comment configurer des cartes réseau InfiniBand sur un serveur autre que l’appliance client pour se connecter au nœud de contrôle sur SQL Server Parallel Data Warehouse (PDW). Utilisez ces instructions pour la connectivité de base et pour la haute disponibilité, afin que le chargement, le processus de sauvegarde et d’autres seront connectent automatiquement au réseau InfiniBand actif.  
@@ -58,7 +58,7 @@ Vous avez besoin d’un compte de domaine du matériel APS pour vous connecter a
   
 Vous avez besoin d’un compte Windows sur le serveur client qui a l’autorisation de configurer les cartes réseau.  
   
-### <a name="prerequisites"></a>Conditions préalables  
+### <a name="prerequisites"></a>Prerequisites  
 Ces instructions supposent que le serveur client est déjà mis en rack et connecté au réseau InfiniBand appliance. Pour le montage en rack et le câblage des instructions, consultez [acquérir et de configurer un serveur de chargement](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Remarques d'ordre général  

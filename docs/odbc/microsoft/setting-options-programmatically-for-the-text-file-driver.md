@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b8127a7249f9f878dcd3d15b9afa874def8c64a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d1a7f971a0ac5d07c451b9a786bdcc563108e3f7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Définition des Options par programmation pour le pilote de fichier texte
-|Option| Description|Méthode|  
+|Option|Description|Méthode|  
 |------------|-----------------|------------|  
 |Nom de la source de données|Un nom qui identifie la source de données, tel que paie ou Personnel.|Pour définir cette option dynamiquement, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Définir le Format|Affiche la **définition du Format texte** boîte de dialogue et vous permet de spécifier le schéma des tables individuelles dans le répertoire de source de données.|Cette option ne peut pas être définie dynamiquement par un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-| Description|Une description facultative des données dans la source de données ; par exemple, « date d’embauche, historique de salaire et examen actuel de tous les employés. »|Pour définir cette option dynamiquement, utilisez le **DESCRIPTION** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Description|Une description facultative des données dans la source de données ; par exemple, « date d’embauche, historique de salaire et examen actuel de tous les employés. »|Pour définir cette option dynamiquement, utilisez le **DESCRIPTION** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Répertoire|Sélectionne le répertoire cible.|Pour définir cette option dynamiquement, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Liste des extensions|Répertorie les extensions de nom de fichier des fichiers texte sur la source de données. Lorsque le pilote de texte est utilisé, un fichier sans extension est créé lors de l’exécution de l’instruction CREATE TABLE avec un nom qui n’a aucune extension. Autres pilotes de créer un fichier avec une extension par défaut lorsque aucune extension n’est fournie. Pour créer un fichier avec une extension .txt, l’extension doit être incluse dans le nom. Pour afficher les fichiers sans extensions dans le **définition du Format texte** boîte de dialogue, « *. » doit être ajouté à la liste d’Extensions.|Pour définir cette option dynamiquement, utilisez le **EXTENSIONS** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Lecture seule|Désigne la base de données en lecture seule.|Pour définir cette option dynamiquement, utilisez le **READONLY** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

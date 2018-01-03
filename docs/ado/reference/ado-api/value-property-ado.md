@@ -3,7 +3,7 @@ title: "Valeur de propriété (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8be64c318d9857f847dfc82c709a7e718d4bb462
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7fe603ac5853d1cc4afa6511ea6568593feebf6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-property-ado"></a>Value (propriété) (ADO)
 Indique la valeur assignée à un [champ](../../../ado/reference/ado-api/field-object.md), [paramètre](../../../ado/reference/ado-api/parameter-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.  
@@ -34,7 +34,7 @@ Indique la valeur assignée à un [champ](../../../ado/reference/ado-api/field-o
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Variant** valeur qui indique la valeur de l’objet. Valeur par défaut varie selon le [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **valeur** propriété pour définir ou retourner les données à partir de **champ** pour définir ou retourner les valeurs de paramètres avec les objets **paramètre** objets, ou pour définir ou retourner les paramètres de propriété avec **Propriété** objets. Si le **valeur** propriété est en lecture/écriture ou en lecture seule dépend de nombreux facteurs ??? consultez les rubriques de l’objet respectifs pour plus d’informations.  
   
  ADO permet de définir et retourner des données binaires longues avec la **valeur** propriété.  

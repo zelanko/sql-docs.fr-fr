@@ -1,11 +1,11 @@
 ---
-title: "Sources de données | Documents Microsoft"
+title: "Sources de données | Microsoft Docs"
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -19,11 +19,11 @@ caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 84c415fd10a757cebfc365759d7fb038f9630ec4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-sources"></a>Sources de données
 A *source de données* est simplement la source de données. Il peut être un fichier, une base de données sur un SGBD, ou même un flux de données actives. Les données peuvent être situées sur le même ordinateur que le programme, ou sur un autre ordinateur situé sur un réseau. Par exemple, une source de données peut être un SGBD Oracle s’exécutant sur un système d’exploitation OS/2®, accédé par Novell® Netware ; un SGBD de DB2 d’IBM accessibles via une passerelle ; une collection de fichiers Xbase dans un répertoire du serveur ; ou un fichier de base de données Microsoft® Access local.  

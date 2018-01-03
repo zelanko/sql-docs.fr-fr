@@ -2,11 +2,11 @@
 title: "Installer Machine Learning Server (autonome) ou Microsoft R Server (autonome) à partir de la ligne de commande | Documents Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 400f743bfbb065a5e271b5ff335d0896bb2ac3ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c10594fdecd48782a80b5d609bb21c6a937f8863
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-microsoft-r-server-standalone-from-the-command-line"></a>Installer Machine Learning Server (autonome) ou Microsoft R Server (autonome) à partir de la ligne de commande
 
@@ -33,7 +33,7 @@ Un **sans assistance** installation nécessite que vous spécifiez l’emplaceme
 
 Pour une installation **silencieuse** , fournissez les mêmes arguments et ajoutez le commutateur **/q** . Aucune invite n’est fournis et aucune intervention est nécessaire. Toutefois, le programme d’installation échoue si tous les arguments requis sont omis.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Vous devez savoir comment effectuer une installation de ligne de commande de SQL Server et de vous familiariser avec ses arguments de scripts.
 

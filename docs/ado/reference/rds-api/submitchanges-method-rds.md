@@ -1,11 +1,13 @@
 ---
 title: "SubmitChanges, méthode (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges, méthode (RDS)
 Soumet les modifications en attente de localement mis en cache et être mise à jour [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à la source de données spécifiée dans le [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriété ou le [URL](../../../ado/reference/rds-api/url-property-rds.md) propriété.  
@@ -48,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Jeu d’enregistrements*  
  Une variable objet qui représente un **Recordset** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), et [SQL](../../../ado/reference/rds-api/sql-property.md) propriétés doivent être définies avant de pouvoir utiliser le **SubmitChanges** méthode avec le **RDS. DataControl** objet.  
   
  Si vous appelez le [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) méthode après avoir appelé **SubmitChanges** pour le même **Recordset** objet, le **CancelUpdate** appel échoue, car les modifications ont déjà été validées.  

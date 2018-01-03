@@ -3,7 +3,7 @@ title: "Append (méthode) (vues ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a30ccf01370b89572697917c4fbbbbf3df11a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: acb0a9ffbf26ccb0f181e19c54ac906ae7d4754f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-views"></a>Append (méthode) (vues ADOX)
 Crée un nouveau [vue](../../../ado/reference/adox-api/view-object-adox.md) de l’objet et l’ajoute à la [vues](../../../ado/reference/adox-api/views-collection-adox.md) collection.  
@@ -42,10 +42,10 @@ Views.Append Name, Command
  *Nom*  
  A **chaîne** valeur qui spécifie le nom de la vue à créer.  
   
- *Command*  
+ *Commandee*  
  ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui représente la vue à créer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Crée une nouvelle vue de source de données avec le nom et les attributs spécifiés dans le **commande** objet.  
   
  Si le texte de commande par l’utilisateur représente une procédure plutôt qu’une vue, le comportement dépend du fournisseur. **Ajouter** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  

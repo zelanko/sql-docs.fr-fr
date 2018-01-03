@@ -1,7 +1,7 @@
 ---
 title: Prise en main de SSMA pour MySQL (MySQLToSQL) | Documents Microsoft
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ea110b9e1b4708dfbd37965d3c7f0de48f1b9f2b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 961ab39ffc76be1ce2bd7dd36234163d3c8229bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Prise en main de SSMA pour MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) pour MySQL vous permet de rapidement convertir des schémas de base de données MySQL en schémas SQL Server ou de la base de données SQL Azure, téléchargez les schémas qui en résulte dans SQL Server ou une base de données SQL Azure et migrer des données de MySQL vers SQL Server ou de la base de données SQL Azure.  
@@ -120,7 +120,7 @@ Le tableau suivant présente les menus SSMA.
 |**Menu**|**Description**|  
 |**Fichier**|Contient des commandes pour travailler avec des projets, de se connecter à MySQL et de se connecter à SQL Server ou de la base de données SQL Azure.|  
 |**Modifier**|Contient des commandes pour la recherche et l’utilisation de texte dans les pages de détails. Pour ouvrir **gérer les signets** boîte de dialogue, dans le menu Edition cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste des signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Qui synchronise les objets entre l’Explorateur de métadonnées MySQL et SQL Server ou Explorateur de métadonnées de base de données SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
+|**Afficher**|Contient le **synchroniser les explorateurs de métadonnées** commande. Qui synchronise les objets entre l’Explorateur de métadonnées MySQL et SQL Server ou Explorateur de métadonnées de base de données SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
 |**Outils**|Contient des commandes pour créer des rapports, convertir le schéma, Actualiser à partir de la base de données, migrer des objets et des données et enregistrer en tant que Script. Permet également d’accéder à la **des paramètres globaux, des paramètres de projet par défaut** et **les paramètres de projet** boîtes de dialogue.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et à la **sur** boîte de dialogue.|  
   

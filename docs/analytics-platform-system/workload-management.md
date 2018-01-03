@@ -3,10 +3,10 @@ title: Gestion de la charge de travail (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/12/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
 caps.latest.revision: "11"
-ms.openlocfilehash: 596fba5031e3183a9278e20384d51852cea0f2b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="workload-management"></a>Gestion de la charge de travail
 Fonctionnalités de gestion de la charge de travail de SQL Server PDW permettent aux utilisateurs et aux administrateurs d’affecter des demandes au préalable définir des configurations de mémoire et d’accès concurrentiel. Utiliser la gestion de la charge de travail pour améliorer les performances de votre charge de travail cohérent ou mixte, en permettant aux demandes pour que les ressources appropriées sans priver les demandes indéfiniment.  
@@ -63,9 +63,9 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Description de classe de ressource  
 Le tableau suivant décrit les classes de ressources et leurs affectations de ressources système.  
   
-|Classe de ressource|Importance de la demande|L’utilisation de mémoire maximale *|Les emplacements d’accès concurrentiel (maximale = 32)| Description|  
+|Classe de ressource|Importance de la demande|L’utilisation de mémoire maximale *|Les emplacements d’accès concurrentiel (maximale = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|par défaut|Moyenne|400 MO|1|Par défaut, chaque connexion est autorisée une petite quantité de mémoire et des ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée à partir de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
+|par défaut|Moyenne|400 MO| 1|Par défaut, chaque connexion est autorisée une petite quantité de mémoire et des ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée à partir de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
 |MediumRC|Moyenne|1 200 MO|3|Exemples de requêtes nécessitant de la classe de ressources de support :<br /><br />Les opérations SACT ayant une grande des jointures de hachage.<br /><br />Sélectionnez les opérations que vous avez besoin de davantage de mémoire pour éviter la mise en cache sur le disque.<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Génération, la reconstruction et la réorganisation des index columnstore en cluster pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
 |largerc|Élevée|2,8 GO|7|Exemples de requêtes nécessitant de la classe de ressources volumineux :<br /><br />Opérations SACT très volumineuses qui ont des jointures de hachage volumineux, ou contient les agrégations importantes, telles que les clauses ORDER BY ou GROUP BY volumineux.<br /><br />Sélectionnez les opérations qui nécessitent de très grandes quantités de mémoire pour des opérations telles que les jointures de hachage ou des agrégations telles que les clauses ORDER BY ou GROUP BY<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Génération, la reconstruction et la réorganisation des index columnstore en cluster pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
 |xlargerc|Élevée|8.4 GO|22|La classe de ressource de très grande taille est pour les demandes qui peuvent nécessiter la consommation des ressources de très grande taille au moment de l’exécution.|  
@@ -136,7 +136,7 @@ Instructions SQL et opérations de classes de ressources :
   
 -   UPDATE  
   
--   DELETE  
+-   Suppression  
   
 -   RESTORE DATABASE lors de la restauration à un dispositif avec plusieurs nœuds de calcul.  
   

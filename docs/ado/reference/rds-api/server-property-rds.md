@@ -1,11 +1,13 @@
 ---
 title: "Propriété du serveur (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -17,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a9225e5184faf0087458a9e3ca3828fa75f259d6
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="server-property-rds"></a>Propriété du serveur (RDS)
 Indique le protocole de nom et la communication Internet Information Services (IIS).  
@@ -112,12 +114,12 @@ DataControl.Server=""
  A **chaîne** valeur contenant un Internet ou le chemin d’accès de l’intranet ou le nom de l’ordinateur, si le serveur se trouve sur un ordinateur distant ; ou une chaîne vide si le serveur se trouve sur l’ordinateur local.  
   
  *port*  
- Ce paramètre est facultatif. Un port qui est utilisé pour se connecter à un serveur qui exécute IIS. Le numéro de port est défini dans Internet Explorer (sur le **vue** menu, cliquez sur **Options**, puis sélectionnez le **connexion** onglet) ou dans IIS.  
+ Facultatif. Un port qui est utilisé pour se connecter à un serveur qui exécute IIS. Le numéro de port est défini dans Internet Explorer (sur le **vue** menu, cliquez sur **Options**, puis sélectionnez le **connexion** onglet) ou dans IIS.  
   
  *DataControl*  
  Une variable objet qui représente un **RDS. DataControl** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le serveur est l’emplacement où le **RDS. DataControl** demande (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par le [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet [MSDFMAP. Gestionnaire](../../../ado/guide/remote-data-service/datafactory-customization.md) composant, et [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) fichier sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour comparer les paramètres des anciennes et nouvelles **MSDFMAP. INI** fichiers. Incompatibilités peuvent entraîner des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie à la chaîne vide « », ces objets seront utilisés sur l’ordinateur local.  
   
 ## <a name="applies-to"></a>S'applique à  

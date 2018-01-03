@@ -3,7 +3,7 @@ title: "Resync, méthode | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8fe3a2a123061cd0fc4de31d2b08ab82d41f7542
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 101e2695a47b2c255aac94aedb6b613c1fca15c6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resync-method"></a>Resync, méthode
 Actualise les données en cours [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, à partir de la base de données sous-jacente.  
@@ -42,12 +42,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- Ce paramètre est facultatif. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui détermine le nombre d’enregistrements le **Resync** méthode affectera. La valeur par défaut est **adAffectAll**. Cette valeur n’est pas disponible avec la **Resync** méthode de la **champs** collection d’un **enregistrement** objet.  
+ Facultatif. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui détermine le nombre d’enregistrements le **Resync** méthode affectera. La valeur par défaut est **adAffectAll**. Cette valeur n’est pas disponible avec la **Resync** méthode de la **champs** collection d’un **enregistrement** objet.  
   
  *ResyncValues*  
- Ce paramètre est facultatif. A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valeur qui indique si les valeurs sous-jacentes sont remplacées. La valeur par défaut est **adResyncAllValues**.  
+ Facultatif. A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valeur qui indique si les valeurs sous-jacentes sont remplacées. La valeur par défaut est **adResyncAllValues**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
   
 ## <a name="recordset"></a>Ensemble d'enregistrements  
  Utilisez le **Resync** méthode pour resynchroniser des enregistrements en cours **Recordset** avec la base de données sous-jacente. Cela est utile si vous utilisez un curseur statique ou avant uniquement, mais que vous souhaitez voir les modifications apportées dans la base de données sous-jacente.  

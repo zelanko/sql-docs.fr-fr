@@ -1,11 +1,13 @@
 ---
 title: "Propriété SQL | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1c6dfe09bf48ca48a9df29d066ef100403f7703
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3488758fb803b33be03a0126b0e514279ea8c4bc
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sql-property"></a>Propriété SQL
 Indique la chaîne de requête utilisée pour récupérer le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -45,7 +47,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Une variable objet qui représente un **RDS. DataControl** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  En règle générale, il s’agit d’une instruction de SQL (à l’aide de dialecte du serveur de base de données), tel que `"Select * from NewTitles"`. Pour vous assurer que les enregistrements sont mis en correspondance et mise à jour, une requête actualisable doit contenir un champ autre qu’un champ Long Binary ou un champ calculé.  
   
  Le **SQL** propriété est facultative si un objet métier côté serveur extrait les données pour le client.  

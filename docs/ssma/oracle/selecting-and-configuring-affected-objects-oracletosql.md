@@ -1,7 +1,7 @@
 ---
 title: "Sélectionner et configurer les objets (OracleToSQL) affectés | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 54b2b1e67a0d7049b14c5f4bdd85c28d427810ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Sélectionner et configurer les objets (OracleToSQL) affectés
 Sur cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparés quand SSMA vérifie les résultats de l’exécution pour les objets sélectionnés dans l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -34,7 +34,7 @@ Dans l’arborescence des objets Oracle situé sur le côté gauche de la fenêt
   
 Si le testeur de SSMA ne peut pas vérifier la valeur d’un de ces objets, vous verrez le lien **certains des objets sélectionnés contiennent des erreurs** sous l’arborescence d’objets. Cliquez sur ce lien pour afficher les raisons pour lesquelles ces objets ne peuvent pas être comparées et pour effacer la sélection d’objets incorrectes.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Table de charge de travail  
 L’onglet de la Table contient l’affichage de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
   
 -   Nom de la colonne  
@@ -64,7 +64,7 @@ Onglet Propriétés affiche les propriétés de la table sélectionnée. Les cha
   
 -   Création ou dernière modification  
   
--   Nom de l'objet  
+-   Nom de l’objet  
   
 ## <a name="columns-comparison-settings"></a>Paramètres de comparaison des colonnes  
 Établissez les règles de comparaison pour les colonnes de table sur **comparaison des colonnes** page. Vous pouvez rendre les paramètres suivants.  

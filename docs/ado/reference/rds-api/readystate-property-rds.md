@@ -1,11 +1,13 @@
 ---
 title: "ReadyState, propriété (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="readystate-property-rds"></a>ReadyState, propriété (RDS)
 Indique la progression d’un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de l’objet lorsqu’il récupère des données dans son [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -31,7 +33,7 @@ Indique la progression d’un [DataControl](../../../ado/reference/rds-api/datac
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La requête actuelle est en cours d’exécution et aucune ligne n’a été extraite. Le **DataControl** l’objet **Recordset** n’est pas disponible pour utilisation.|  
 |**adcReadyStateInteractive**|Un ensemble initial de lignes récupérées par la requête actuelle a été stocké dans le **DataControl** l’objet **Recordset** et peuvent être utilisés. Les lignes restantes sont encore récupérées.|  
@@ -40,7 +42,7 @@ Indique la progression d’un [DataControl](../../../ado/reference/rds-api/datac
 > [!NOTE]
 >  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir les déclarations. Vous pouvez couper et coller les déclarations de constante souhaitées dans le fichier Adcvbs.inc, situé dans le dossier d’installation par défaut pour la bibliothèque de services Bureau à distance.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) événement pour surveiller les modifications dans le **ReadyState** propriété pendant une opération de requête asynchrone. Cela est plus efficace que de vérifier régulièrement la valeur de la propriété.  
   
  Si une erreur se produit pendant une opération asynchrone, le **ReadyState** modifications apportées aux propriétés **adcReadyStateComplete**, le [état](../../../ado/reference/ado-api/state-property-ado.md) propriété passe de **adStateExecuting** à **adStateClosed**et le **Recordset** objet [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété reste *rien*.  

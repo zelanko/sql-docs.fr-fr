@@ -1,7 +1,7 @@
 ---
 title: "Convertir des objets de base de données Access (AccessToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -40,11 +40,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 273aa5bf31ffddc9665531297cbca9b8dbfbbd5a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir des objets de base de données Access (AccessToSQL)
 Après avoir ajouté des bases de données Access et connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, SSMA affiche les métadonnées pour l’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des objets de base de données SQL Azure. Vous pouvez maintenant sélectionner des objets de base de données Access et convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des schémas de SQL Azure.  

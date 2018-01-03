@@ -3,7 +3,7 @@ title: "Size, propriété (paramètre ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2208300a31c141c2092caae62bc11cfe83606cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0c9454da339650414e9ecce6826907240e2cc53
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="size-property-ado-parameter"></a>Propriété Size (paramètre ADO)
 Indique la taille maximale, en octets ou de caractères, d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet.  
@@ -32,7 +32,7 @@ Indique la taille maximale, en octets ou de caractères, d’un [paramètre](../
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un **Long** valeur qui indique la taille maximale en octets ou de caractères d’une valeur dans un **paramètre** objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **taille** propriété pour déterminer la taille maximale des valeurs devant être écrites ou lues à partir la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété d’un **paramètre** objet.  
   
  Si vous spécifiez un type de données de longueur variable pour un **paramètre** objet (par exemple, les **chaîne** type, tel que **adVarChar**), vous devez définir l’objet  **Taille** propriété avant de l’ajouter à la [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection ; sinon, une erreur se produit.  

@@ -3,7 +3,7 @@ title: "CreateRecordset, méthode (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
 Crée un vide, déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,9 +51,9 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  A **Variant** tableau d’attributs qui définit chaque colonne dans la **Recordset** créé. Chaque définition de colonne contient un tableau de quatre attributs obligatoires et un attribut facultatif.  
   
-|Attribut|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
-|Nom|Nom de l’en-tête de colonne.|  
+|Nom   |Nom de l’en-tête de colonne.|  
 |Type|Entier du type de données.|  
 |Taille|Entier de la largeur en caractères, quel que soit le type de données.|  
 |Possibilité de valeurs nulles|Valeur booléenne.|  
@@ -61,7 +61,7 @@ object.CreateRecordset(ColumnInfos)
   
  L’ensemble de tableaux de colonnes est ensuite regroupé dans un tableau, qui définit le **Recordset**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L’objet métier côté serveur peut remplir résultant **Recordset** avec des données à partir d’un fournisseur de données non OLE DB, comme un système d’exploitation fichier cotations boursières qui le contient.  
   
  Le tableau suivant répertorie les [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeurs prises en charge par le **CreateRecordset** (méthode). Le nombre répertorié est le numéro de référence utilisé pour définir des champs.  

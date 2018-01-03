@@ -1,11 +1,13 @@
 ---
 title: "Reset (méthode) (RDS) | Documents Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4762d331c76b1e97d13ffd1dbf926a35468bcaa9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ef5dfc619f39547150d096721da70c0ac715d04d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="reset-method-rds"></a>Reset (méthode) (RDS)
 Exécute le tri ou le filtre sur un côté client **Recordset** basée sur les propriétés de tri et de filtre spécifiées.  
@@ -40,9 +42,9 @@ DataControl.Reset(value)
  Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
  *valeur*  
- Ce paramètre est facultatif. A **booléenne** valeur **True** (par défaut) si vous souhaitez filtrer l’ensemble de lignes « filtré » actuel. **False** effectuer le filtrage sur l’ensemble de lignes d’origine, la suppression de toutes les options de filtre précédentes.  
+ Facultatif. A **booléenne** valeur **True** (par défaut) si vous souhaitez filtrer l’ensemble de lignes « filtré » actuel. **False** effectuer le filtrage sur l’ensemble de lignes d’origine, la suppression de toutes les options de filtre précédentes.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des propriétés de tri et de filtrage des fonctionnalités sur le cache côté client. La fonctionnalité de tri organise les enregistrements par les valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble des enregistrements selon un critère de recherche, lors de la version complète [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est conservé dans le cache. Le **réinitialiser** méthode exécute les critères et remplace l’actuel **Recordset** avec un texte modifiable **Recordset**.  
   
  Si des modifications sont apportées aux données d’origine qui n’ont pas été envoyées, le **réinitialiser** méthode échoue. Tout d’abord, utilisez le [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) méthode pour enregistrer les modifications dans une lecture/écriture **Recordset**, puis utilisez le **réinitialiser** méthode trier ou filtrer les enregistrements.  

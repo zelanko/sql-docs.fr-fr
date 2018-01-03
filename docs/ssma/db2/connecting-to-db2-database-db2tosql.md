@@ -1,7 +1,7 @@
 ---
 title: "Connexion à la base de données DB2 (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 973d8f565fb50815c3e8c01190a08b622fadeb77
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f718f75a750d376bdae9ff7bfab10f298107822d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Connexion à la base de données DB2 (DB2ToSQL)
 Pour migrer des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez vous connecter à la base de données DB2 que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à tous les schémas de DB2, puis l’affiche dans le volet Explorateur de métadonnées de DB2. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  

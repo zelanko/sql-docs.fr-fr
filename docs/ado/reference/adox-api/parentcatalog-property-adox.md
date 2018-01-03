@@ -3,7 +3,7 @@ title: "ParentCatalog, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -46,11 +46,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d0cdd505a30252b603477499c44176957d1dc45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog, propriété (ADOX)
 Spécifie le catalogue parent d’un objet Table, un utilisateur ou colonne pour accéder aux propriétés spécifiques au fournisseur.  
@@ -58,7 +58,7 @@ Spécifie le catalogue parent d’un objet Table, un utilisateur ou colonne pour
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) objet. Paramètre **ParentCatalog** à open **catalogue** permet d’accéder aux propriétés spécifiques au fournisseur avant d’ajouter une table ou une colonne à un **catalogue** collection.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Certains fournisseurs de données autorise les valeurs de propriété spécifique au fournisseur doivent être écrites uniquement lors de la création : autrement dit, lorsqu’une table ou une colonne est ajouté à son **catalogue** collection. Pour accéder à ces propriétés avant d’ajouter ces objets à un **catalogue**, spécifiez la **catalogue** dans les **ParentCatalog** propriété premier.  
   
  Une erreur se produit lorsque la table ou la colonne est ajouté à un autre **catalogue** à la **ParentCatalog**.  

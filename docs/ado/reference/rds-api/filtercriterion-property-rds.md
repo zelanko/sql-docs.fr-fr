@@ -3,7 +3,7 @@ title: "FilterCriterion, propriété (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 24e64adb684435f40c52c55d1c97b1c863551ecb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0ce925c40159b72639f3bf81eb19fbcfc43e4f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion, propriété (RDS)
 Indique l’opérateur d’évaluation à utiliser dans la valeur de filtre.  
@@ -45,7 +45,7 @@ DataControl.FilterCriterion = String
  *Chaîne*  
  A **chaîne** valeur qui spécifie l’opérateur d’évaluation de la [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) les enregistrements. Peut prendre l’une des opérations suivantes : <, \<=, >, > =, =, ou <>.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**, et [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) fournissent des propriétés de tri et de filtrage des fonctionnalités sur le cache côté client. La fonctionnalité de tri organise les enregistrements par les valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble des enregistrements selon des critères de recherche, lors de la version complète [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est conservé dans le cache. Le [réinitialiser](../../../ado/reference/rds-api/reset-method-rds.md) méthode exécute les critères et remplace l’actuel **Recordset** avec un texte modifiable **Recordset**.  
   
  Le « ! = » opérateur n’est pas valide pour **FilterCriterion**; au lieu de cela, utilisez « <> ».  

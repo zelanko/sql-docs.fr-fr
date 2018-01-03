@@ -3,7 +3,7 @@ title: "Objet de l’axe (ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4164cd36a128de91f42f141db4c04aa7d9a2110c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cccb08756fe6459db87bbbc091700ae333400
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axis-object-ado-md"></a>Objet de l’axe (ADO MD)
 Représente une position ou l’axe de filtre d’un ensemble de cellules contenant des membres sélectionnés d’une ou plusieurs dimensions.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un **axe** objet peut être contenu par un [Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) collection, ou retournée par le [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) propriété d’un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
  Les collections et les propriétés d’un **axe** de l’objet, vous pouvez procédez comme suit :  

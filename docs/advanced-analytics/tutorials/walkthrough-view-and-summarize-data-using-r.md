@@ -1,12 +1,14 @@
 ---
 title: "Afficher et synthétiser des données à l’aide de R (procédure pas à pas) | Documents Microsoft"
 ms.date: 11/10/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2016
 dev_langs: R
 ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 534479bf1a473574038da1a24dc1fc06510f4f23
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 37d73022a1e45c5166bec70bb68f6bf3b995345e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="view-and-summarize-data-using-r"></a>Afficher et synthétiser des données à l’aide de R
 
@@ -131,7 +133,7 @@ Version antérieure vous définie par une chaîne de connexion et enregistrer ce
     
     + L’argument  *colClasses* spécifie les types de colonne à utiliser pour le déplacement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et R. Cela est important, car par rapport à R, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des types de données différents et plus nombreux. Pour plus d’informations, consultez [les Types de données et les bibliothèques R](../r/r-libraries-and-data-types.md).
   
-    + L’argument *rowsPerRead* est important pour la gestion de l’utilisation de mémoire et les calculs efficace.  La plupart des fonctions analytiques améliorées dans[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] traitent les données en segments et accumulent les résultats intermédiaires. Elles retournent les calculs finaux une fois que toutes les données ont été lues.  En ajoutant le *rowsPerRead* paramètre, vous pouvez contrôler le nombre de lignes de données est lues dans chaque bloc pour le traitement.  Si la valeur de ce paramètre est trop grande, l’accès aux données peut être lent, car vous n’avez pas suffisamment de mémoire pour traiter efficacement un segment de données aussi volumineux.  Sur certains systèmes, en définissant *rowsPerRead* à une valeur trop petite peut également fournir la baisse des performances.
+    + L’argument *rowsPerRead* est important pour la gestion de l’utilisation de mémoire et les calculs efficace.  La plupart des fonctions analytiques améliorées dans[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] traitent les données en segments et accumulent les résultats intermédiaires. Elles retournent les calculs finaux une fois que toutes les données ont été lues.  En ajoutant le *rowsPerRead* paramètre, vous pouvez contrôler le nombre de lignes de données est lues dans chaque bloc pour le traitement.  Si la valeur de ce paramètre est trop grande, l’accès aux données peut être lent, car vous n’avez pas suffisamment de mémoire pour traiter efficacement un si grand segment de données.  Sur certains systèmes, en définissant *rowsPerRead* à une valeur trop petite peut également fournir la baisse des performances.
 
 3. À ce stade, vous avez créé le *inDataSource* objet, mais il ne contient pas de données. Les données non extraite à partir de la requête SQL dans l’environnement local jusqu'à ce que vous exécutez une fonction comme [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) ou [rxSummary](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsummary).
 

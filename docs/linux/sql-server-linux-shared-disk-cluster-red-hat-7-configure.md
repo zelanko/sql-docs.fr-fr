@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -43,7 +43,7 @@ Pour utiliser une chaîne de connexion qui pointe vers un nom de serveur de cha�
 
 Les sections suivantes les différentes étapes pour configurer une solution de cluster de basculement. 
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prerequisites
 
 Pour terminer le scénario de bout en bout ci-dessous, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour configurer le serveur NFS. Étapes ci-dessous décrivent la configuration de ces serveurs.
 
@@ -134,16 +134,16 @@ Sur le serveur NFS, procédez comme suit :
 1. Activer et démarrer`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. Activer et démarrer`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Exemple : 
+1.  Modifier `/etc/exports` pour exporter le répertoire que vous souhaitez partager. Vous devez 1 ligne pour chaque action que vous souhaitez. Exemple : 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

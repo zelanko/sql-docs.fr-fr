@@ -1,7 +1,7 @@
 ---
 title: "Paramètres (Migration) (AccessToSQL) du projet | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a7fcf9092c57fd07601171003381812de2ed6b12
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-accesstosql"></a>Paramètres du projet (Migration) (AccessToSQL)
 Les paramètres de projet de Migration vous permettent de configurer la façon dont les données sont migrées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  

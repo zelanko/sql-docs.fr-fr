@@ -1,7 +1,7 @@
 ---
 title: "Définition des Options de projet (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33144db25f6e444759cd8dc615106b062d9bc5f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2ffdaea48e85e53a6ba170ab34251a1d26e193f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Définition des Options de projet (DB2ToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options déterminent la conversion de l’objet, lors du chargement de l’objet de paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -50,7 +50,7 @@ Il comprend quatre modes de configuration de ces paramètres :
   
 -   Optimistic  
   
--   Complet  
+-   Complète  
   
 -   Custom  
   
@@ -99,7 +99,7 @@ Vous pouvez également personnaliser les paramètres pour le projet actuel. Ces 
   
 3.  Cliquez sur **OK** pour enregistrer les paramètres.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
 -   Pour personnaliser le mappage des types de données source et cible, consultez [DB2 de mappage et les Types de données SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  

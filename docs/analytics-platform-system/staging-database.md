@@ -3,10 +3,10 @@ title: "Créer la base de données intermédiaire Parallel Data Warehouse"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6d0b2726-4772-4858-b700-885cc12219b2
 caps.latest.revision: "20"
-ms.openlocfilehash: f88e2c45aaed8b6f2b3bfb6fe610a0f228c4449e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 073dbb385d34d67b9274ac46828df5887abfe5a4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-database"></a>Base de données intermédiaire 
 SQL Server Parallel Data Warehouse (PDW) utilise une base de données intermédiaire pour stocker des données temporairement pendant le processus de chargement. Par défaut, SQL Server PDW utilise la base de données de destination en tant que la base de données intermédiaire qui peut causer une fragmentation de la table. Pour réduire la fragmentation de la table, vous pouvez créer une base de données mise en lots défini par l’utilisateur. Ou bien, lors de la restauration à partir d’un échec de chargement n’est pas un problème, vous pouvez utiliser le mode de chargement de fastappend pour améliorer les performances par la non-exécution de la table temporaire et de charger directement dans la table de destination.  

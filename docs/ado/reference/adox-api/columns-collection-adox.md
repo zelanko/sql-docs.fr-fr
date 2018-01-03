@@ -3,7 +3,7 @@ title: Collection de colonnes (ADOX) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,16 +24,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80ba9e948042538bd2b4c31724defdaf20a44aa8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d0d98b31644ef96ac31a1c6bba88d053d677838
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-collection-adox"></a>Collection de colonnes (ADOX)
 Contient tous les [colonne](../../../ado/reference/adox-api/column-object-adox.md) les objets d’une table, un index ou une clé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) méthode pour un **colonnes** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter une nouvelle colonne à la collection avec le **Append** (méthode).  

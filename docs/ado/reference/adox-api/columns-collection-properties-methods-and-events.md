@@ -3,7 +3,7 @@ title: "Propriétés de Collection de colonnes, méthodes et événements | Docu
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a3c387e248f1d431ae26114ef37e39d76b8a44c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be73012b7081c59cf18046b106120e325be8da79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Propriétés de Collection de colonnes, des méthodes et des événements
 ## <a name="properties"></a>Propriétés  

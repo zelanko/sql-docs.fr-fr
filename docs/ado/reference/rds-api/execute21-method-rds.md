@@ -3,7 +3,7 @@ title: "Execute21, méthode (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13b3da0c799b0bc3ce14adb42df8a3d5d79398fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b94d4cdb75cbdcfaa2dfece8d7172e2935d6759d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute21-method-rds"></a>Execute21, méthode (RDS)
 Exécute la requête et crée un jeu d’enregistrements ADO pour une utilisation dans ADO 2.1.  
@@ -74,7 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Argument de type variant qui contient un tableau sécurisé de définitions de paramètres. Si le *GetInfo* option a été spécifiée dans *lExecuteOptions*, ce paramètre est utilisé pour retourner les définitions de paramètres obtenues à partir du fournisseur OLE DB. Dans le cas contraire, ce paramètre peut être vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le *HandlerString* paramètre peut être null. Ce qui se produit dans ce cas dépend de la façon dont le serveur de services Bureau à distance est configuré. Une chaîne de gestionnaire de « MSDFMAP.handler » indique que le gestionnaire fourni par Microsoft (Msdfmap.dll) doit être utilisé. Une chaîne de gestionnaire de « MASDFMAP.handler,sample.ini » indique que le Gestionnaire de Msdfmap.dll doit être utilisé et que l’argument « sample.ini » doit être passé au gestionnaire. MSDFMAP.dll interprète l’argument comme étant une direction à utiliser le sample.ini pour vérifier les chaînes de connexion et la requête.  
   
 > [!NOTE]

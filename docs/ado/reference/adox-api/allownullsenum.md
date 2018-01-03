@@ -3,7 +3,7 @@ title: AllowNullsEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c9bbf4b48843d897003774e75e5148881b020f47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8dd42fbac84831c2b31247ee5b5279c97ba2ba5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Spécifie si les enregistrements avec des valeurs null sont indexés.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|L’index autorise les entrées dans lesquelles les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, l’entrée est insérée dans l’index.|  
-|**adIndexNullsDisallow**|1|Valeur par défaut. L’index n’autorise pas les entrées dans lesquelles les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, une erreur se produit.|  
+|**adIndexNullsDisallow**| 1|Valeur par défaut. L’index n’autorise pas les entrées dans lesquelles les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, une erreur se produit.|  
 |**adIndexNullsIgnore**|2|L’index n’insère pas les entrées contenant des clés null. Si une valeur null est entrée dans une colonne clé, l’entrée est ignorée et aucune erreur ne se produit.|  
 |**adIndexNullsIgnoreAny**|4|L’index n’insère pas d’entrée où une colonne clé a la valeur null. Un index possédant un plusieurs colonnes clés, si une valeur null est entrée dans une colonne, l’entrée est ignorée et aucune erreur ne se produit.|  
   

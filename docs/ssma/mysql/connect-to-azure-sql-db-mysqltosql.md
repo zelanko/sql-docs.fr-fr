@@ -1,7 +1,7 @@
 ---
 title: "Se connecter à la base de données SQL Azure (MySQLToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dadd18eb9f5f2af55b2d68ad69f69fb3c54709fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Se connecter à la base de données SQL Azure (MySQLToSQL)
 Utilisez la connexion à la boîte de dialogue SQL Azure pour se connecter à la base de données SQL Azure que vous souhaitez migrer.  
@@ -36,14 +36,14 @@ Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionn
   
 Sélectionnez ou entrez le nom du serveur pour se connecter à SQL Azure.  
   
-**Base de données**  
+**Sauvegarde de la base de données**  
   
 Sélectionnez, entrez ou **Parcourir** le nom de la base de données.  
   
 > [!IMPORTANT]  
 > SSMA pour MySQL ne prend pas en charge la connexion à la base de données master dans SQL Azure.  
   
-**Nom d'utilisateur**  
+**User name**  
   
 Entrez le nom d’utilisateur SSMA utilisera pour se connecter à la base de données SQL Azure  
   

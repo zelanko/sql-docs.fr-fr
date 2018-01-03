@@ -3,7 +3,7 @@ title: RuleEnum | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbb4cc9f3484c7e71886968645050e59a12f0954
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a66a44d39e8e7ef4b99b668faaf6baa3b60519e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ruleenum"></a>RuleEnum
 Spécifie la règle à appliquer lorsqu’un [clé](../../../ado/reference/adox-api/key-object-adox.md) est supprimé.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**propriété DeleteRule**|1|Modifications en cascade.|  
+|**propriété DeleteRule**| 1|Modifications en cascade.|  
 |**adRINone**|0|Valeur par défaut. Aucune action n'est effectuée.|  
 |**adRISetDefault**|3|Valeur de clé étrangère est définie à la valeur par défaut.|  
 |**adRISetNull**|2|Valeur de clé étrangère est définie avec la valeur null.|  

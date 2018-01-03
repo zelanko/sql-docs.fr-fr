@@ -3,7 +3,7 @@ title: "DELETE, méthode (Collections ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -36,11 +36,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aae45d1d8f6bc5eb2ab6ebf429d48426cceacf20
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea1ef63c7ecf6a9a957542608ec57c057e9b40b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-method-adox-collections"></a>DELETE, méthode (Collections ADOX)
 Supprime un objet d’une collection.  
@@ -56,7 +56,7 @@ Collection.Delete Name
  *Nom*  
  A **Variant** qui spécifie le nom ou la position ordinale (index) de l’objet à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Une erreur se produit si le *nom* n’existe pas dans la collection.  
   
  Pour [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) et [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collections, une erreur se produit si le fournisseur ne prend pas en charge suppression des tables ou des utilisateurs, respectivement. Pour [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) et [vues](../../../ado/reference/adox-api/views-collection-adox.md) collections, **supprimer** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  

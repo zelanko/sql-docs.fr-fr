@@ -3,7 +3,7 @@ title: "LevelDepth, propriété (ADO MD) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6f46c35c6e422e05ebf3ef7d96f19eddaa164cf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a840c446df75f90f2455c59983b4365cb896a70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth, propriété (ADO MD)
 Indique le nombre de niveaux entre la racine de la hiérarchie et un [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
@@ -34,7 +34,7 @@ Indique le nombre de niveaux entre la racine de la hiérarchie et un [membre](..
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **Long** entier et est en lecture seule.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **LevelDepth** propriété pour déterminer la distance de la [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md)objet au niveau racine de la hiérarchie. Le **LevelDepth**d’un membre à la racine du niveau est 0. Cela correspond à la [profondeur](../../../ado/reference/ado-md-api/depth-property-ado-md.md) propriété d’un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet.  
   
 ## <a name="applies-to"></a>S'applique à  

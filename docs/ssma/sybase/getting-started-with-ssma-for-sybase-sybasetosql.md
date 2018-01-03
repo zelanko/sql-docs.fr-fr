@@ -3,7 +3,7 @@ title: Prise en main de SSMA pour SAP ASE (SybaseToSQL) | Documents Microsoft
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e25e89ba868ca867a57bed89b6d85be790280ca7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 065df566ccda835de6ce899f78feb3dcc0d06e4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Prise en main de SSMA pour SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) pour SAP ASE vous permet de rapidement convertir des schémas de base de données SAP Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou schémas de base de données SQL Azure, téléchargez les schémas qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure, et migrer des données à partir de SAP ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure.  
@@ -102,11 +102,11 @@ La barre d’outils de migration comprend les commandes suivantes :
 ### <a name="menus"></a>Menus  
 SSMA contient les menus suivants :  
   
-|Menu| Description|  
+|Menu|Description|  
 |--------|---------------|  
 |**Fichier**|Contient des commandes pour l’utilisation de projets, la connexion à SAP ASE et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure.|  
 |**Modifier**|Contient des commandes pour la recherche et utilisation du texte dans les pages Détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql_md.md)] dans le volet SQL. Contient également la **gérer les signets** option, où vous pouvez consulter une liste des signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Cette opération synchronise les objets entre l’Explorateur de métadonnées Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou de l’Explorateur de métadonnées SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
+|**Afficher**|Contient le **synchroniser les explorateurs de métadonnées** commande. Cette opération synchronise les objets entre l’Explorateur de métadonnées Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou de l’Explorateur de métadonnées SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
 |**Outils**|Contient des commandes pour créer des rapports, exporter des données et migrer des objets et des données. Permet également d’accéder à la **paramètres globaux** et **les paramètres de projet** boîtes de dialogue.|  
 |**Testeur**|Contient des commandes pour créer des cas de test, les afficher les résultats de test et les commandes de gestion de sauvegarde de base de données.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et à la **sur** boîte de dialogue.|  

@@ -3,7 +3,7 @@ title: "ExecuteOptions, propriété (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56e631762097a140f722202a9eba6a304b66c0cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76876c9182ccba3eab0fa8f16171a3dceabd0876
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions, propriété (RDS)
 Indique si l’exécution asynchrone est activée.  
@@ -34,7 +34,7 @@ Indique si l’exécution asynchrone est activée.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne l’une des valeurs suivantes.  
   
-|Constante| Description|  
+|Constante|Description|  
 |--------------|-----------------|  
 |**valeur adcExecSync**|Exécute l’actualisation suivante de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) synchrone.|  
 |**adcExecAsync**|Valeur par défaut. Exécute l’actualisation suivante de la **Recordset** en mode asynchrone.|  
@@ -42,7 +42,7 @@ Indique si l’exécution asynchrone est activée.
 > [!NOTE]
 >  Chaque fichier exécutable qui utilise ces constantes doit fournir les déclarations. Vous pouvez couper et coller les déclarations de constante dans le fichier Adcvbs.inc, situé dans le dossier d’installation par défaut pour la bibliothèque de services Bureau à distance.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si **ExecuteOptions** a la valeur **adcExecAsync**, puis il exécute de manière asynchrone la prochaine **Actualiser** appeler sur le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet **Recordset**.  
   
  Si vous essayez d’appeler [réinitialiser](../../../ado/reference/rds-api/reset-method-rds.md), [Actualiser](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), ou [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) lors d’une autre opération asynchrone susceptible de modifier le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) l’objet **Recordset** s’exécute, une erreur se produit.  

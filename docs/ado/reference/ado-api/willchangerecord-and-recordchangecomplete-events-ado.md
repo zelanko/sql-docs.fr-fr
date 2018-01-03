@@ -3,7 +3,7 @@ title: "WillChangeRecord et RecordChangeComplete, événements (ADO) | Documents
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a421ba630b9cb9eeafaa2087144b765a64f78b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 522d2385cc2670ed940768f7584d3c9eb7942748
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord et RecordChangeComplete, événements (ADO)
 Le **WillChangeRecord** événement est appelé avant qu’un ou plusieurs enregistrements (lignes) le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) modifier. Le **RecordChangeComplete** événement est appelé après un ou plusieurs enregistrements changent.  
@@ -66,7 +66,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *Connection*  
  A **Recordset** objet. Le **Recordset** pour laquelle cet événement s’est produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **WillChangeRecord** ou **RecordChangeComplete** événement peut se produire pour le premier champ modifié dans une ligne en raison de ce qui suit **Recordset** operations : [ Mise à jour](../../../ado/reference/ado-api/update-method.md), [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), et [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). La valeur de la **Recordset** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) détermine les opérations qui déclenchent les événements se produisent.  
   
  Lors de la **WillChangeRecord** événement, le **Recordset** [filtre](../../../ado/reference/ado-api/filter-property.md) est définie sur **adFilterAffectedRecords**. Vous ne pouvez pas modifier cette propriété lors du traitement de l’événement.  

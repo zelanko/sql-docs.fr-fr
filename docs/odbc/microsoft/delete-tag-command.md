@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e31cf41163f512b5450e5452f8e0adff5c0a604
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-tag-command"></a>SUPPRIMER des commandes de balise
 Supprime une ou plusieurs balises à partir d’un fichier d’index composés (.cdx).  
@@ -44,7 +44,7 @@ DELETE TAG ALL [OF CDXFileName]
  Tous les [OF *CDXFileName*]  
  Supprime toutes les balises à partir d’un fichier d’index composés. Si la table actuelle comporte un fichier d’index composés structurelle, toutes les balises sont supprimées du fichier d’index, le fichier d’index est supprimé à partir du disque et l’indicateur dans l’en-tête du tableau indiquant la présence d’un fichier d’index composés structurelle associé est supprimé. Utilisez toutes les données avec de *CDXFileName* pour supprimer toutes les balises d’un fichier ouvert index composé autre que le fichier d’index composés structurel.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Les fichiers d’index composés, créés avec un INDEX, contient des balises correspondant aux entrées d’index. SUPPRIMER la balise est utilisée pour supprimer une ou plusieurs balises à partir des fichiers d’index composé ouvert. Vous pouvez supprimer uniquement les balises à partir des fichiers d’index composé ouverts dans la zone de travail en cours. Si vous supprimez toutes les balises à partir d’un fichier d’index composés, le fichier est supprimé à partir du disque.  
   
  Visual FoxPro recherche d’abord dans une balise dans le fichier d’index composés structurelle (si un est ouvert). Si la balise n’est pas dans le fichier d’index composés structurelle, Visual FoxPro recherche ensuite la balise dans les autres fichiers d’index composé ouvert.  

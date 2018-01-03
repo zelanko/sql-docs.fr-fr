@@ -3,7 +3,7 @@ title: "Collection d’utilisateurs (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ab2952445a0e73b090ab963945f5c3560f6ed2cb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 84e4484d2902913be2cf2afa615a474aeb2b4bf7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="users-collection-adox"></a>Collection d’utilisateurs (ADOX)
 Contient tous les stockées [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) les objets d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) ou [groupe](../../../ado/reference/adox-api/group-object-adox.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le **utilisateurs** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui appartiennent à ce groupe.  
   
  Le [Append](../../../ado/reference/adox-api/append-method-adox-users.md) méthode pour un **utilisateurs** collection est unique pour ADOX. Vous pouvez :  

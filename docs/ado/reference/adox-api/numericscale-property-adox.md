@@ -3,7 +3,7 @@ title: "NumericScale, propriété (ADOX) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 719c0164cd33f3d88f07c77414f7105e17b2477d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 097b0c5c6ce029c0099def07397a6487935c9fef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numericscale-property-adox"></a>NumericScale, propriété (ADOX)
 Indique l’échelle d’une valeur numérique dans la colonne.  
@@ -37,7 +37,7 @@ Indique l’échelle d’une valeur numérique dans la colonne.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **octets** valeur qui correspond à l’échelle des valeurs de données dans la colonne lorsque le [Type](../../../ado/reference/adox-api/type-property-column-adox.md) propriété est **adNumeric** ou **adDecimal**. **NumericScale** est ignoré pour toutes les autres types de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur par défaut est zéro (0).  
   
  **NumericScale** est en lecture seule pour [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets déjà ajoutés à une collection.  

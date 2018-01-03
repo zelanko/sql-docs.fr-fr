@@ -3,7 +3,7 @@ title: "Clone, méthode (ADO) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34f8e0161fa85ec497ec6a1e6b414691161ff7a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b0fa4429b66b8a43bf2eecccca1fbc94597f07a5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
 Crée un doublon [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet d’un existant **Recordset** objet. Si vous le souhaitez, spécifie que le clone doit être en lecture seule.  
@@ -49,9 +49,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Une variable objet qui identifie le **Recordset** objet à dupliquer.  
   
  *LockType*  
- Ce paramètre est facultatif. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui spécifie le type de verrou de l’original **Recordset**, ou en lecture seule **Recordset**. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
+ Facultatif. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui spécifie le type de verrou de l’original **Recordset**, ou en lecture seule **Recordset**. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Utilisez le **Clone** dupliqué de la méthode de création de plusieurs **Recordset** des objets, en particulier si vous voulez conserver plusieurs enregistrements en cours dans un ensemble donné d’enregistrements. À l’aide de la **Clone** méthode est plus efficace que la création et l’ouverture d’un nouvel **Recordset** objet qui utilise la même définition que l’original.  
   
  Le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété de l’original **Recordset**, le cas échéant, ne seront pas appliquées sur le clone. Définir le **filtre** propriété du nouveau **Recordset** pour filtrer les résultats. La méthode la plus simple pour copier tout existant **filtre** valeur consiste à affecter directement, comme suit.  
@@ -74,17 +74,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |Événement|Déclenché dans clones ?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Non|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Non|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Non|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|non|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|non|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|non|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|non|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|non|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|non|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|non|  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

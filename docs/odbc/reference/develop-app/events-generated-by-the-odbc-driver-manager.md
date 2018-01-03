@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5a608887622850c95c4bfae4a459082838f55c31
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98490f41e8e345a6fd3ad8c70e8f7714c2686693
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Événements générés par le Gestionnaire de pilotes ODBC.
 > [!IMPORTANT]  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
  Événements générés par le Gestionnaire de pilotes ODBC sont enregistrés lorsque vous cliquez sur le bouton Démarrer Visual Studio Analyzer. L’outil offre la possibilité de créer des événements personnalisés et les événements définis par le système. Pour plus d’informations sur les événements, consultez la *Guide de référence de Visual Studio Analyzer* au sein de la suite Visual Studio de documentation.  
   
-|Événements de Visual Studio Analyzer| Description|  
+|Événements de Visual Studio Analyzer|Description|  
 |----------------------------------|-----------------|  
 |**Appel**|Généré sur chaque entrée API ODBC.|  
 |**ReturnException**|Généré avec chaque retour API ODBC si le code de retour est SQL_ERROR.|  

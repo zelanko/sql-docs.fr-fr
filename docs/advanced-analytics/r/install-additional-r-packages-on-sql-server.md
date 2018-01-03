@@ -1,11 +1,11 @@
 ---
 title: "Installer des packages R supplémentaires sur SQL Server | Documents Microsoft"
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 996b69b08973805648da329a328e712d5de45660
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installer des packages R supplémentaires sur SQL Server
 
@@ -297,13 +297,13 @@ Packages R dépendent souvent plusieurs packages, certains d'entre eux peuvent �
 
 Si vous avez besoin d’installer plusieurs packages ou souhaitez vous assurer que tous les membres de votre organisation Obtient le type de package approprié et la version, nous recommandons d’utiliser le package miniCRAN pour créer un référentiel local qui peut être partagé entre plusieurs utilisateurs ou ordinateur. Pour plus d’informations, consultez [créer un référentiel de package local à l’aide de miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Si vous êtes un utilisateur expérimenté de R, vous pouvez être habitué à l’installation des packages à partir de la ligne de commande sans autorisations spéciales ou sans les télécharger à l’avance. Toutefois, la plupart des serveurs n’ont pas d’une connexion internet. En outre, l’accès aux partages de fichiers ou de stockage peut-être être limité.
 
 Cette section décrit le différents niveaux d’autorisations requises pour l’installation des packages dans SQL Server 2016 et SQl Server 2017. L’installation peut être réalisée à l’aide des outils R ou SQL Server, mais les processus et les autorisations diffèrent légèrement.
 
--   SQL Server 2016
+-   SQL Server 2016
 
     Dans cette version, seul un administrateur sur l’ordinateur peut installer des packages à l’emplacement requis. Les outils R standard vous permet d’installer des packages, mais vous devez exécuter en tant qu’administrateur et utiliser les outils R associés à l’instance.
 

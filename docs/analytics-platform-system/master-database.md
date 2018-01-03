@@ -3,10 +3,10 @@ title: "base de données master (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -17,11 +17,11 @@ ms.topic: article
 ms.assetid: c71617c0-6689-4f52-81c6-58f4cf7c7377
 caps.latest.revision: "8"
 ms.workload: not set
-ms.openlocfilehash: 59acb3fb8c5c1913e8b4d656e9895b2810e19497
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1fde1a329703ed833a9fdeb6686b1a63c04aea79
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-database"></a>Base de données master
 La base de données master de SQL Server PDW stocke les informations de connexion au niveau du matériel et le catalogue de base de données. Il s’agit d’une base de données master SQL Server qui réside sur le nœud de contrôle. Par conséquent, il fournit des fonctionnalités similaires à SQL Server PDW master fournit à SQL Server.  
@@ -47,9 +47,9 @@ Vous *ne peut pas :*
   
 -   Exécutez **DBCC SHRINKLOG**.  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |--------|---------------|  
 |Créer une sauvegarde complète de master.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
 |Restaurer la base de données master|Pour restaurer la base de données master, utilisez la [restaurer la base de données Master](restore-the-master-database.md) page dans l’outil de Configuration Manager.|  

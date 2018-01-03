@@ -3,7 +3,7 @@ title: Collection de membres (ADO MD) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 662e957488b6d7e61428d6d49179930e0e233a81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc86aad4176a2f5bac9e9fd70331109c89aa445c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="members-collection-ado-md"></a>Collection de membres (ADO MD)
 Contient le [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets à partir d’un niveau ou une position le long d’un axe.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  A **membres** collection est utilisée pour contenir les types de membres suivants :  
   
 -   Les membres qui constituent un niveau dans un cube. Elles se trouvent dans le **membres** collection d’un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet. Par exemple, à l’aide de l’exemple à partir de [vue d’ensemble des schémas et données multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), les quatre membres du niveau pays sont Canada, aux États-Unis, Royaume-Uni et en Allemagne.  

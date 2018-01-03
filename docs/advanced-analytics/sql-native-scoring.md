@@ -2,10 +2,10 @@
 title: Calcul de score native | Documents Microsoft
 ms.custom: 
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -14,11 +14,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 92bb9ad88b884d5104f2fbc716151ce91f3d764e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9fdd033a2e3ad05e06acb64ad38587782153a7c0
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="native-scoring"></a>Calcul de score en natif
 
@@ -88,7 +88,7 @@ Plateformes prises en charge sont les suivantes :
 
     Vous pouvez également effectuer en temps réel de calcul de score à l’aide de sp_rxPredict. Pour utiliser cette procédure stockée nécessite que vous activiez [intégration CLR SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
-+ SQL Server 2016
++ SQL Server 2016
 
    En temps réel de calcul de score à l’aide de sp_rxPredict est possible avec SQL Server 2016 et peut également être exécuté sur Microsoft R Server. Cette option requiert SQLCLR doit être activée et que vous installez la mise à niveau de Microsoft R Server.
    Pour plus d’informations, consultez [calculer les scores en temps réel](Real-time-scoring.md)

@@ -1,7 +1,7 @@
 ---
 title: "Mappage de DB2 et des Types de données SQL Server (DB2ToSQL) | Documents Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce0e2311d040705713b51bf007b9334bccaa69ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 88d98ac264e853a2bc94be002c2c2e4eeadee9ff
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mappage de DB2 et des Types de données SQL Server (DB2ToSQL)
 Les types de base de données DB2 diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de base de données. Lorsque vous convertissez des objets de base de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des objets, vous devez spécifier le mappage des types de données à partir de DB2 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
@@ -94,7 +94,7 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
         Impossible de supprimer les mappages hérités. Toutefois, héritée de mappages sont remplacés par des mappages personnalisés sur un objet spécifique ou la catégorie d’objet.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
 L’étape suivante du processus de migration consiste à [évaluation rapport &#40; DB2ToSQL &#41;](../../ssma/db2/assessment-report-db2tosql.md) ou [conversion de schémas de DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Si vous créez un rapport d’évaluation, les objets DB2 sont automatiquement convertis durant l’évaluation.  
   
 ## <a name="see-also"></a>Voir aussi  

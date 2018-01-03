@@ -3,7 +3,7 @@ title: "FetchOptions, propriété (RDS) | Documents Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eb723da9cfd35101167b3d8618fefd4d55cc8f9d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77ed1de5f9506512e3f7812b2355b1c52d5fa8f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions, propriété (RDS)
 Indique le type de l’extraction asynchrone.  
@@ -34,7 +34,7 @@ Indique le type de l’extraction asynchrone.
 ## <a name="setting-and-return-values"></a>Définition et valeurs de retour  
  Définit ou retourne l’une des valeurs suivantes.  
   
-|Constante| Description|  
+|Constante|Description|  
 |--------------|-----------------|  
 |**valeur adcFetchUpFront**|Tous les enregistrements de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont extraites avant que le contrôle est retourné à l’application. Le texte complet **Recordset** est extrait avant que l’application est autorisée à faire quoi que ce soit avec lui.|  
 |**adcFetchBackground**|Contrôle peut retourner à l’application dès que le premier lot d’enregistrements a été extrait. Suivante de la lecture de la **Recordset** que non extrait dans le premier lot est retardée jusqu'à ce que l’enregistrement recherché est extrait, moment auquel le contrôle retourne à l’application.|  
@@ -43,7 +43,7 @@ Indique le type de l’extraction asynchrone.
 > [!NOTE]
 >  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir les déclarations. Vous pouvez couper et coller les déclarations de constante souhaitées dans le fichier Adcvbs.inc, situé dans le dossier d’installation par défaut pour la bibliothèque de services Bureau à distance.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Dans une application Web, vous devez généralement utiliser **adcFetchAsync** (la valeur par défaut), car elle offre de meilleures performances. Dans une application cliente compilée, vous devez généralement utiliser **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -2,9 +2,11 @@
 title: "Performances pour R Services - résultats et ressources | Documents Microsoft"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et des ressources
 
@@ -95,7 +97,7 @@ Cette section compare avant et après les résultats pour chacun des tests.
 
 Le premier test par rapport à l’utilisation de la compression et une table en colonnes pour réduire la taille des données.
 
-| Nom de la table            | Lignes     | Réservé   | Données       | index_size | Inutilisé  | % gagné (réservé) |
+| Nom de la table            | Lignes     | Réservé   | data       | index_size | Inutilisé  | % gagné (réservé) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 Ko | 2 972 160 Ko | 6 128 Ko    | 528 Ko  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 Ko  | 623 744 Ko  | 1 352 Ko    | 688 Ko  | 79 %                 |
@@ -112,11 +114,11 @@ Ce test de comparer les avantages de la compression de ligne, la compression de 
 
 | Nom de la table            | Nom du test       | numTasks | Temps moyen |
 |-----------------------|-----------------|----------|--------------|
-| *airlineWithIndex*    | NoCompression   | 1        | 5,6775       |
+| *airlineWithIndex*    | NoCompression   |  1        | 5,6775       |
 |                       | NoCompression - parallèle| 4        | 5,1775       |
-| *airlineWithPageComp* | PageCompression | 1        | 6,7875       |
+| *airlineWithPageComp* | PageCompression |  1        | 6,7875       |
 |                       | PageCompression - parallèle | 4        | 5,3225       |
-| *airlineWithRowComp*  | RowCompression  | 1        | 6,1325       |
+| *airlineWithRowComp*  | RowCompression  |  1        | 6,1325       |
 |                       | RowCompression - parallèle  | 4        | 5,2375       |
 
 **Conclusions**
@@ -238,7 +240,7 @@ Dans la table, les facteurs *DayOfWeek* est stocké sous forme de chaîne.
 
 | Nom du test     | Paramètre cube | numTasks | Temps moyen | Ligne unique prédire (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
-| CubeArgEffect | `cube = F`     | 1        | 91,0725      | 9,959204                        |
+| CubeArgEffect | `cube = F`     |  1        | 91,0725      | 9,959204                        |
 |               |                | 4        | 44,09        | 9,959204                        |
 |               | `cube = T`     |  1        | 21,1125      | 9,959204                        |
 |               |                | 4        | 8,08         | 9,959204                        |
@@ -288,7 +290,7 @@ Les packages MicrosoftML et RevoScaleR ont été utilisés pour l’apprentissag
 
 - Tables en mémoire
 - Soft-NUMA
-- Resource Governor
+- gouverneur de ressources
 
 Pour évaluer l’effet de soft-NUMA sur l’exécution du script R, l’équipe de science des données testé la solution sur une machine virtuelle Azure avec 20 cœurs physiques. Sur ces cœurs physiques, les quatre nœuds soft-NUMA ont été créées automatiquement, telle que chaque nœud contenus cinq cœurs.
 

@@ -3,7 +3,7 @@ title: "MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (RDS) | Documen
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22ac6b2d67502e7563cee5338a19b311c71b68c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90615926f18d81d06084c050c73cb2dac8dc2bcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (RDS)
 Se déplace vers le premier, au dernier enregistrement suivant ou précédent dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -46,7 +46,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Une variable objet qui représente un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Vous pouvez utiliser la **déplacer** méthodes avec le **RDS. DataControl** objet pour naviguer dans les enregistrements de données dans les contrôles liés aux données sur une page Web. Par exemple, supposons que vous affichez un **Recordset** dans une grille en le liant à un **RDS. DataControl** objet. Vous pouvez ensuite inclure des boutons premier, dernier, suivant et précédent que les utilisateurs peuvent cliquer pour accéder au premier, dernier, suivant, ou l’enregistrement précédent dans la liste affichée **Recordset**. Pour cela, vous devez appeler la **MoveFirst**, **MoveLast**, **MoveNext**, et **MovePrevious** méthodes de la **RDS. DataControl** de l’objet dans les procédures onClick pour les boutons premier, dernier, suivant et précédent, respectivement. Le [exemple de carnet d’adresses](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) montre comment effectuer cette opération.  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a35d57aaa00f7f2406b779f987c4dd07e694f737
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="positioned-update-and-delete-statements"></a>Mise à jour positionnée et les instructions Delete
 Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un jeu de résultats avec une mise à jour positionnée ou instruction. Positionné mise à jour et supprimer les instructions sont pris en charge par certaines sources de données, mais pas toutes. Pour déterminer si un prend en charge de source de données positionné instructions update et delete, une application appelle **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1, ou SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (selon le type du curseur). Notez que la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer les instructions.  

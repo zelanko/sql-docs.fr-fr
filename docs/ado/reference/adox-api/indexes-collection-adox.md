@@ -3,7 +3,7 @@ title: Index de Collection (ADOX) | Documents Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7a162f0a9d995b0ec374368ffdbbb2592f5b49c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 08ffb7ade832341b9158164e90d7e601668a7dd6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indexes-collection-adox"></a>Collection d’index (ADOX)
 Contient tous les [Index](../../../ado/reference/adox-api/index-object-adox.md) objets d’une table.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) méthode pour un **index** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter un nouvel index à la collection avec le **Append** (méthode).  
