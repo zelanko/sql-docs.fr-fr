@@ -2082,8 +2082,8 @@ ms.lasthandoff: 12/21/2017
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tâche n'a pas réussi à exécuter l'opération « %1 ».|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Le fichier/processus « %1 » n'est pas dans le chemin d'accès.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|Le sujet est vide.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « \@ » est absent ou elle n'est pas valide.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « \@ » est absent ou elle n'est pas valide.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Les deux documents XML sont différents.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validation DTD utilisera le fichier DTD défini dans la ligne DOCTYPE du document XML. Elle n'utilisera pas ce qui est attribué à la propriété « %1 ».|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|La tâche n'a pas réussi à valider « %1 ».|  
