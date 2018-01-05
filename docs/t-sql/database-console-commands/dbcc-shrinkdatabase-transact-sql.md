@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Réduit la taille des fichiers de données et journaux dans la base de données spécifiée.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  Pourcentage d'espace que vous voulez laisser disponible dans le fichier de la base de données après sa réduction.  
   
  NOTRUNCATE  
- Compacte les données des fichiers de données en déplaçant les pages allouées de la fin du fichier vers les pages non allouées du début du fichier. *target_size* est facultatif.  
+ Compacte les données des fichiers de données en déplaçant les pages allouées de la fin du fichier vers les pages non allouées du début du fichier. *target_size* est facultatif. Cette option n’est pas pris en charge avec Azure SQL Data Warehouse. 
   
  L'espace libre à la fin du fichier n'est pas restitué au système d'exploitation et la taille physique du fichier ne change pas. Ainsi, lorsque l'option NOTRUNCATE est spécifiée, la base de données ne paraît pas être réduite.  
   
  NOTRUNCATE n'est applicable qu'aux fichiers de données. Le fichier journal n'est pas affecté.  
   
  TRUNCATEONLY  
- Libère pour le système d'exploitation tout l'espace libre à la fin du fichier, mais n'effectue aucun déplacement de page au sein du fichier. Le fichier de données est réduit seulement jusqu'à la dernière extension allouée. *target_size* est ignorée si spécifiée avec TRUNCATEONLY.  
+ Libère pour le système d'exploitation tout l'espace libre à la fin du fichier, mais n'effectue aucun déplacement de page au sein du fichier. Le fichier de données est réduit seulement jusqu'à la dernière extension allouée. *target_size* est ignorée si spécifiée avec TRUNCATEONLY. Cette option n’est pas pris en charge avec Azure SQL Data Warehouse.
   
  TRUNCATEONLY affecte le fichier journal. Pour tronquer uniquement le fichier de données, utilisez DBCC SHRINKFILE.  
   
@@ -82,7 +82,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Jeux de résultats  
 Le tableau suivant décrit les colonnes du jeu de résultats.
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |**DbId**|Numéro d’identification du fichier de base de données la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduction.|  
 |**FileId**|Numéro d’identification du fichier de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] a tenté de réduction.|  
@@ -94,7 +94,7 @@ Le tableau suivant décrit les colonnes du jeu de résultats.
 >[!NOTE]
 > Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’affiche pas les lignes pour ces fichiers ne pas réduits.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Pour réduire tous les fichiers de données et fichiers journaux d'une base de données particulière, exécutez la commande DBCC SHRINKDATABASE. Pour augmenter ou diminuer les données d’un fichier journal à la fois pour une base de données spécifique, exécutez le [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) commande.
   
 Pour afficher la quantité actuelle de l’espace libre (non alloué) dans la base de données, exécutez [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -108,6 +108,9 @@ Exécuter DBCC SHRINKDATABASE sans spécifier l'option NOTRUNCATE ou TRUNCATEONL
 Il n'est pas nécessaire que la base de données réduite soit mono-utilisateur ; d'autres utilisateurs peuvent travailler sur cette base au cours de l'opération. Ceci inclut également les bases de données système.
   
 Vous ne pouvez pas réduire la taille d'une base de données en cours de sauvegarde. Inversement, vous ne pouvez pas sauvegarder une base de données alors qu'elle fait l'objet d'une opération de réduction.
+
+>[!NOTE]
+> Actuellement, Azure SQL Data Warehouse ne prend pas en charge DBCC SHRINKDATABASE avec chiffrement transparent des données activée.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Fonctionnement de DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE réduit les fichiers de données, fichier par fichier, mais réduit les fichiers journaux comme si tous les fichiers journaux existaient dans un groupe de journaux contigus. Les fichiers sont toujours réduits à partir de la fin.
@@ -147,7 +150,7 @@ Pour résoudre le problème, vous pouvez effectuer l’une des tâches suivantes
 -   Achevez l'opération de réduction. Tout travail achevé sera conservé.  
 -   Laissez simplement l'opération de réduction attendre que la transaction bloquante s'achève.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
   
 ## <a name="examples"></a>Exemples  

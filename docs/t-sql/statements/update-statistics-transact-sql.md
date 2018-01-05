@@ -1,7 +1,7 @@
 ---
 title: "Mise à jour des statistiques (Transact-SQL) | Documents Microsoft"
 ms.custom: 
-ms.date: 11/20/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b619b3cf7ea50fb87e18fd96e8a85a2a231d21f5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 7c69949773ff1dae533c98d087780a2f4b436b62
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +65,8 @@ UPDATE STATISTICS table_or_indexed_view_name
         ]   
         [ [ , ] [ ALL | COLUMNS | INDEX ]   
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ] 
     ] ;  
   
 <update_stats_stream_option> ::=  
@@ -156,28 +157,42 @@ Lorsque **ON**, les statistiques conservera le pourcentage d’échantillonnage 
  Si les statistiques par partition ne sont pas prises en charge, une erreur est générée. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
 -   statistiques créées avec des index qui ne sont pas alignés sur les partitions avec la table de base ;  
-  
 -   statistiques créées sur les bases de données secondaires lisibles Always On ;  
-  
 -   statistiques créées sur les bases de données en lecture seule ;  
-  
 -   statistiques créées sur les index filtrés ;  
-  
 -   statistiques créées sur les vues ;  
-  
 -   statistiques créées sur les tables internes ;  
-  
 -   Statistiques créées avec les index spatiaux ou les index XML.  
   
 **S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+MAXDOP = *max_degree_of_parallelism*  
+**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Remplace le **degré maximal de parallélisme** option de configuration pour la durée de l’opération de statistiques. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
+  
+ *max_degree_of_parallelism* peut être :  
+  
+  1  
+ Supprime la création de plans parallèles.  
+  
+ \>1  
+ Limite le nombre maximal de processeurs utilisés dans une opération de statistiques parallèle pour le nombre spécifié ou inférieur en fonction de la charge système actuelle.  
+  
+ 0 (valeur par défaut)  
+ Utilise le nombre réel de processeurs ou un nombre de processeurs inférieur en fonction de la charge de travail actuelle du système.  
   
  \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
-  
+
 ## <a name="remarks"></a>Notes   
   
 ## <a name="when-to-use-update-statistics"></a>Quand utiliser UPDATE STATISTICS  
  Pour plus d’informations sur l’utilisation des statistiques de mise à jour, consultez [statistiques](../../relational-databases/statistics/statistics.md).  
-  
+
+## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
+* Mise à jour des statistiques n’est pas pris en charge sur les tables externes. Pour mettre à jour des statistiques sur une table externe, supprimez et recréez les statistiques.  
+* L’option MAXDOP n’est pas compatible avec les options STATS_STREAM, nombre de lignes et PAGECOUNT.
+
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Mise à jour de toutes les statistiques avec sp_updatestats  
  Pour plus d’informations sur la mise à jour des statistiques pour toutes les tables définies par l’utilisateur et les tables internes de la base de données, consultez la procédure stockée [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Par exemple, la commande suivante appelle sp_updatestats pour mettre à jour toutes les statistiques de la base de données.  
   

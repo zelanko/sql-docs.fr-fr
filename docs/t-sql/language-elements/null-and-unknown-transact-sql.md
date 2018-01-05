@@ -18,11 +18,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0523877d572bd644fa772713f3c7edb82d645f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6a581045af3d5ed73e9cf9736c60588d87733369
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL et UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -39,23 +39,23 @@ ms.lasthandoff: 11/17/2017
   
 -   Les valeurs NULL ne doit pas servir des informations requises pour distinguer plusieurs lignes dans une table à partir d’une autre ligne d’une table, telles que des clés primaires, ou pour plus d’informations permet de distribuer les lignes, telles que les clés de la distribution.  
   
- Lorsque des valeurs NULL sont présentes dans les données, les opérateurs logiques et les opérateurs de comparaison peuvent renvoyer la valeur UNKNOWN au lieu de TRUE ou de FALSE. Cette logique tri-valuée nécessaire est source de nombreuses erreurs dans les applications. Ces tableaux présentent les effets dus à l'introduction de valeurs NULL dans les comparaisons.  
+ Lorsque des valeurs NULL sont présentes dans les données, les opérateurs logiques et les opérateurs de comparaison peuvent renvoyer la valeur UNKNOWN au lieu de TRUE ou de FALSE. Cette logique tri-valuée nécessaire est source de nombreuses erreurs dans les applications. Les opérateurs logiques dans une expression booléenne qui inclut des inconnues retournera inconnu à moins que le résultat de l’opérateur ne dépend pas de l’expression inconnue. Ces tableaux fournissent des exemples de ce comportement.  
   
- Le tableau suivant présente les résultats de l’application d’un opérateur AND à deux opérandes booléens où un opérande renvoie la valeur NULL.  
+ Le tableau suivant présente les résultats de l’application d’un opérateur AND à deux expressions booléennes où une expression retourne UNKNOWN.  
   
-|Opérande 1|Opérande de 2|Résultat|  
+|Expression 1|Expression 2|Résultats|  
 |---------------|---------------|------------|  
-|TRUE|NULL|FALSE|  
-|NULL|NULL|FALSE|  
-|FALSE|NULL|FALSE|  
+|TRUE|UNKNOWN|UNKNOWN|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|FALSE|  
   
- Le tableau suivant présente les résultats de l’application d’un opérateur OR à deux opérandes booléens où un opérande renvoie la valeur NULL.  
+ Le tableau suivant présente les résultats de l’application d’un opérateur OR à deux expressions booléennes où une expression retourne UNKNOWN.  
   
-|Opérande 1|Opérande de 2|Résultat|  
+|Expression 1|Expression 2|Résultats|  
 |---------------|---------------|------------|  
-|TRUE|NULL|TRUE|  
-|NULL|NULL|UNKNOWN|  
-|FALSE|NULL|UNKNOWN|  
+|TRUE|UNKNOWN|TRUE|  
+|UNKNOWN|UNKNOWN|UNKNOWN|  
+|FALSE|UNKNOWN|UNKNOWN|  
   
 ## <a name="see-also"></a>Voir aussi  
  [ET &#40; Transact-SQL &#41;](../../t-sql/language-elements/and-transact-sql.md)   

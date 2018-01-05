@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Documents Microsoft
 ms.custom: 
-ms.date: 01/19/2016
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7bfb6ca0200095860acec2b275020012e4b96284
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 ALTER WORKLOAD GROUP { group_name | "default" }  
 [ WITH  
     ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
@@ -57,24 +56,22 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Nom d'un groupe de charge de travail existant défini par l'utilisateur ou du groupe de charge de travail par défaut du gouverneur de ressources.  
   
 > [!NOTE]  
->  Le gouverneur de ressources crée les groupes « par défaut » et internes lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé.  
+> Le gouverneur de ressources crée les groupes « par défaut » et internes lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé.  
   
  L'option "default" doit être placée entre des guillemets doubles ("") ou des crochets ([]) lorsqu'elle est utilisée avec l'instruction ALTER WORKLOAD GROUP pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Les groupes de charges de travail et les pools de ressources prédéfinis utilisent tous des noms en minuscule, tels que « default ». Ce facteur doit être pris en considération pour les serveurs qui utilisent un classement qui respecte la casse. Les serveurs avec un classement qui ne respecte pas la casse, tel que SQL_Latin1_General_CP1_CI_AS, traitent "default" et "Default" comme identiques.  
+> Les groupes de charges de travail et les pools de ressources prédéfinis utilisent tous des noms en minuscule, tels que « default ». Ce facteur doit être pris en considération pour les serveurs qui utilisent un classement qui respecte la casse. Les serveurs avec un classement qui ne respecte pas la casse, tel que SQL_Latin1_General_CP1_CI_AS, traitent "default" et "Default" comme identiques.  
   
  IMPORTANCE = { LOW | MEDIUM | HIGH }  
  Spécifie l'importance relative d'une demande dans le groupe de charges de travail. Elle prend l'une des valeurs suivantes :  
   
 -   LOW  
-  
 -   MEDIUM (valeur par défaut)  
-  
 -   HIGH  
   
 > [!NOTE]  
->  En interne, chaque paramètre d'importance est stocké sous la forme d'un nombre utilisé pour les calculs.  
+> En interne, chaque paramètre d'importance est stocké sous la forme d'un nombre utilisé pour les calculs.  
   
  Le paramètre IMPORTANCE est local par rapport au pool de ressources : les groupes de charges de travail d'importance différente à l'intérieur du même pool de ressources s'affectent mutuellement, mais n'affectent pas les groupes de charges de travail dans un autre pool de ressources.  
   
@@ -82,11 +79,11 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Spécifie la quantité de mémoire maximale qu'une requête unique peut prendre du pool. Ce pourcentage est relatif à la taille du pool de ressources spécifiée par MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
->  La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.  
+> La quantité spécifiée fait uniquement référence à la mémoire allouée à l'exécution de la requête.  
   
  *valeur* doit être 0 ou un entier positif. La plage autorisée pour *valeur* est comprise entre 0 et 100. La valeur par défaut *valeur* est 25.  
   
- Notez les points suivants :  
+ Notez les points suivants :  
   
 -   Paramètre *valeur* 0 empêche les requêtes des opérations SORT et HASH JOIN dans les groupes de charges de travail définis par l’utilisateur en cours d’exécution.  
   
@@ -105,7 +102,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Spécifie la quantité maximale de temps processeur, en secondes, qu'une demande peut utiliser. *valeur* doit être 0 ou un entier positif. La valeur par défaut *valeur* est 0, ce qui signifie illimité.  
   
 > [!NOTE]  
->  Le gouverneur de ressources n'empêche pas une demande de continuer si le temps maximal est dépassé. Toutefois, un événement sera généré. Pour plus d’informations, consultez [seuil UC dépassé classe d’événements](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).  
+> Par défaut, le gouverneur de ressources n’empêche pas une demande de se poursuivre si la durée maximale est dépassée. Toutefois, un événement sera généré. Pour plus d’informations, consultez [seuil UC dépassé classe d’événements](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+
+> [!IMPORTANT]
+> En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et à l’aide de [2422 d’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), le gouverneur de ressources va être abandonné une demande lorsque la durée maximale est dépassée.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*valeur*  
  Spécifie la durée maximale, en secondes, pendant laquelle une requête peut attendre que l'allocation de mémoire (mémoire tampon de travail) devienne disponible.  
@@ -147,7 +147,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 >  L'option "default" respecte la casse.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'instruction ALTER WORKLOAD GROUP est autorisée sur le groupe par défaut.  
   
  Les modifications apportées à la configuration du groupe de charge de travail ne sont pas appliquées tant que l'instruction ALTER RESOURCE GOVERNOR RECONFIGURE n'est pas exécutée. Lorsque vous modifiez un plan qui affectent les paramètres, les nouveaux paramètres prendront effet que dans les plans mis en cache précédemment après l’exécution de DBCC FREEPROCCACHE (*pool_name*), où *pool_name* est le nom d’un pool de ressources du gouverneur de ressources sur lequel le groupe de charge de travail est associé.  
@@ -167,7 +167,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées.  Si la mémoire totale requise dépasse la limite par requête (REQUEST_MAX_MEMORY_GRANT_PERCENT) imposée par le paramètre du groupe de charges de travail du Gouverneur de ressources, cette création d'index peut ne pas s'exécuter. Étant donné que le groupe de charge de travail "default" permet à une requête de dépasser la limite par requête avec la mémoire minimale requise pour démarrer la compatibilité [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'utilisateur peut être en mesure d'exécuter la même création d'index dans le groupe de charge de travail "default", si le pool de ressources "default" possède assez de mémoire totale configurée pour exécuter cette requête.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  

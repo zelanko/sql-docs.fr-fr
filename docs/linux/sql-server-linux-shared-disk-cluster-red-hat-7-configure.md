@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -180,7 +180,7 @@ Sur le serveur NFS, procédez comme suit :
 
 Procédez comme suit sur tous les nœuds de cluster.
 
-1.  À partir du serveur NFS, installer`nfs-utils`
+1.  Installation de `nfs-utils`.
 
    ```bash
    sudo yum -y install nfs-utils
@@ -214,7 +214,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 1.  **Sur le nœud principal uniquement**, enregistrer les fichiers de base de données dans un emplacement temporaire. Le script suivant crée un répertoire temporaire, copie les fichiers de base de données vers le nouveau répertoire et supprime les anciens fichiers de base de données. Lorsque SQL Server s’exécute en tant qu’utilisateur local mssql, vous devez vous assurer qu’après le transfert de données pour le partage monté, utilisateur local a accès en lecture-écriture au partage. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -240,9 +240,9 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 1.  Copiez les fichiers journaux et de base de données que vous avez enregistré à `/var/opt/mssql/tmp` au partage qui vient d’être monté `/var/opt/mssql/data`. Cette opération ne doit être effectué **sur le nœud principal**. Assurez-vous que vous accordez des autorisations de lecture/écriture à l’utilisateur local de « mssql ».
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -265,8 +265,8 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```

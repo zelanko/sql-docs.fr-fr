@@ -51,11 +51,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 48926573b515a1f40fa0db983d846b4e801abfd4
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -307,7 +307,8 @@ Pour les index columnstore dans [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 -   Pour les rowgroups dans laquelle au moins 10 % des lignes ont été logiquement supprimé, SQL Server va tenter d’associer ce groupe de lignes avec un ou plusieurs groupes de lignes.    Par exemple, 1 de rowgroup est compressé avec 500 000 lignes et 21 de rowgroup est compressé avec la valeur maximale de 1 048 576 lignes.  Rowgroup 21 a 60 % des lignes supprimées qui laisse 409,830 lignes. SQL Server favorise la combinaison de ces deux groupes de lignes pour compresser un nouveau rowgroup qui a des 909,830 lignes.  
   
 RÉORGANISER AVEC (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de 2016) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le COMPRESS_ALL_ROW_GROUPS offre un moyen pour les rowgroups delta ouvert ou fermé dans le columnstore. Avec cette option, il n’est pas nécessaire de reconstruire l’index pour vider les rowgroups delta.  Ceci, combiné avec les autres supprimer et fusion défragmentation fonctionnalités fait il n’est plus nécessaire de reconstruire l’index dans la plupart des situations.    
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)], le COMPRESS_ALL_ROW_GROUPS offre un moyen pour les rowgroups delta ouvert ou fermé dans le columnstore. Avec cette option, il n’est pas nécessaire de reconstruire l’index pour vider les rowgroups delta.  Ceci, combiné avec les autres supprimer et fusion défragmentation fonctionnalités fait il n’est plus nécessaire de reconstruire l’index dans la plupart des situations.    
+
 -   ON force tous les rowgroups dans le columnstore, quelle que soit la taille et l’état (fermées ou ouvertes).  
   
 -   DÉSACTIVER force tous les rowgroups fermés dans le columnstore.  
@@ -393,17 +394,11 @@ FILLFACTOR = *facteur de remplissage*
  Si les statistiques par partition ne sont pas prises en charge, l'option est ignorée et un avertissement est généré. Les statistiques incrémentielles ne sont pas prises en charge pour les types de statistiques suivants :  
   
 -   statistiques créées avec des index qui ne sont pas alignés sur les partitions avec la table de base ;  
-  
 -   statistiques créées sur les bases de données secondaires lisibles Always On ;  
-  
 -   statistiques créées sur les bases de données en lecture seule ;  
-  
 -   statistiques créées sur les index filtrés ;  
-  
 -   statistiques créées sur les vues ;  
-  
 -   statistiques créées sur les tables internes ;  
-  
 -   Statistiques créées avec les index spatiaux ou les index XML.  
  
 **S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -414,7 +409,7 @@ FILLFACTOR = *facteur de remplissage*
  Pour un index XML ou un index spatial, seul ONLINE = OFF est pris en charge et si ONLINE a la valeur ON, une erreur est générée.  
   
 > [!NOTE]
->  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités qui sont prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [éditions et les fonctionnalités prises en charge pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités qui sont prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [éditions et les fonctionnalités prises en charge pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) et [éditions et les fonctionnalités prises en charge pour SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ON  
  Les verrous de table à long terme ne sont pas maintenus pendant la durée de l'opération d'index. Lors de la principale phase de l'indexation, seul le verrou de partage intentionnel (IS, Intent Share) est maintenu sur la table source. Cela permet aux requêtes ou aux mises à jour effectuées dans la table et les index sous-jacents de continuer. Au début de l'opération, un verrou partagé (S, Shared) est très brièvement maintenu sur l'objet source. À la fin de l'opération, un verrou partagé (S) est très brièvement maintenu sur la source si un index non cluster est en cours de création ou bien un verrou SCH-M (Modification du schéma) est acquis lorsqu'un index cluster est créé ou supprimé en ligne ou lorsqu'un index cluster ou non cluster est en cours de reconstruction. ONLINE ne peut pas prendre la valeur ON si un index est en cours de création sur une table locale temporaire.  

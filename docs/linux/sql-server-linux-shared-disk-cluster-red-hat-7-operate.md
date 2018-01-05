@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
-ms.openlocfilehash: 439f906eaec98fe6b67c15842441f598ee6d8da5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e0a7c5078526b46a8cfa518eeb1d0b5708343115
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -184,7 +184,7 @@ Afficher les journaux de l’agent de ressources dans`/var/log/cluster/corosync.
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    Les publicités exemple suivant, un nœud nommé **vm3** au cluster.
+    L’exemple suivant ajoute un nœud nommé **vm3** au cluster.
 
     ```bash
     sudo pcs    cluster auth  
@@ -214,7 +214,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 Dans la résolution des problèmes de cluster, il peut vous aider à comprendre comment les trois processus fonctionnent ensemble pour gérer les ressources de cluster. 
 
-| Daemon |  Description 
+| Daemon | Description 
 | ----- | -----
 | Corosync | Fournit l’appartenance de quorum et de la messagerie entre les nœuds de cluster.
 | STIMULATEUR | Réside au-dessus Corosync et fournit les machines d’état pour les ressources. 

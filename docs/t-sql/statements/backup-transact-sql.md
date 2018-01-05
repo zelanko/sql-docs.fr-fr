@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Nom logique d'un groupe de fichiers ou variable dont la valeur correspond au nom logique d'un groupe de fichiers à inclure dans la sauvegarde. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.  
   
 > [!NOTE]  
->  Pensez à utiliser des sauvegardes de fichiers lorsque la taille de la base de données et les exigences en matière de performances rendent la sauvegarde de la base de données totalement inadaptée.  
+>  Pensez à utiliser des sauvegardes de fichiers lorsque la taille de la base de données et les exigences en matière de performances rendent la sauvegarde de la base de données totalement inadaptée. NULL peut être utilisé pour tester les performances des sauvegardes, mais ne doit pas être utilisé dans les environnements de production.
   
  *n*  
  Espace réservé indiquant qu'il est possible de spécifier plusieurs fichiers et groupes de fichiers dans une liste séparée par des virgules. Le nombre est illimité. 
@@ -227,8 +227,11 @@ POUR \<backup_device > [ **,**...  *n*  ] Indique l’accompagnant le jeu de [un
  { *logical_device_name* | **@***logical_device_name_var* }  
  Nom logique de l'unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié comme constante de chaîne (@*logical_device_name_var*  **=**  nom de l’unité logique de sauvegarde) ou sous la forme d’une variable de tout type de données de chaîne de caractères à l’exception de la **ntext** ou **texte** des types de données.  
   
- {DISQUE | BANDE | URL}  **=**  { **'***physical_device_name***'** | **@***physical_device_name_var* }  
- Spécifie un fichier de disque ou périphérique à bandes, ou un service de stockage d'objets blob Windows Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Windows Azure. Pour plus d’informations et d’exemples, consultez [SQL Server sauvegarde et restauration avec Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour obtenir un didacticiel, consultez [didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ {DISQUE | BANDE | URL}  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* | NUL}  
+ Spécifie un fichier de disque ou périphérique à bandes, ou un service de stockage d'objets blob Windows Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Windows Azure. Pour plus d’informations et d’exemples, consultez [SQL Server sauvegarde et restauration avec Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour obtenir un didacticiel, consultez [didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+
+[!NOTE] 
+ L’unité de disque NUL supprimera toutes les informations qui lui sont envoyées et doit uniquement être utilisée pour le test. Ce n’est pas pour la production.
   
 > [!IMPORTANT]  
 >  Avec [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 jusqu'à ce que [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez uniquement sauvegarder à un seul périphérique lors de la sauvegarde vers une URL. Pour la sauvegarde sur plusieurs unités pour la sauvegarde vers une URL, vous devez utiliser [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et vous devez utiliser des jetons de Signature d’accès partagé (SAS). Pour des exemples de création d’une Signature d’accès partagé, consultez [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) et [simplification de la création des informations d’identification SQL avec des jetons de Signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -236,6 +239,8 @@ POUR \<backup_device > [ **,**...  *n*  ] Indique l’accompagnant le jeu de [un
 **URL s’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Une unité de disque n'est pas tenue d'exister pour pouvoir être spécifiée dans une instruction BACKUP. Si l'unité physique existe et si l'option INIT n'est pas spécifiée dans l'instruction BACKUP, la sauvegarde est ajoutée à l'unité.  
+ 
+ L’appareil NUL supprimera toutes les entrées sont envoyées à ce fichier, toutefois, la sauvegarde toujours marque toutes les pages sauvegardées.
   
  Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -359,7 +364,7 @@ EXPIREDATE  **=**  { **'***date***'**| **@***var_date* }
 -   A **smalldatetime**  
 -   A **datetime** variable  
   
-Exemple :  
+Exemple :  
   
 -   `'Dec 31, 2020 11:59 PM'`  
 -   `'1/1/2021'`  
@@ -649,7 +654,7 @@ GO
 |Miroir|Famille de supports 1|Famille de supports 2|Famille de supports 3|  
 |------------|--------------------|--------------------|--------------------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+| 1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  Une famille de supports doit toujours être sauvegardée sur la même unité à l'intérieur d'un miroir donné. Par conséquent, à chaque fois que vous utilisez un support de sauvegarde existant, répertoriez les unités de chaque miroir dans l'ordre dans lequel elles ont été spécifiées au moment de la création du support de sauvegarde.  
   
@@ -717,7 +722,7 @@ Lorsqu’une restauration est effectuée, si le jeu de sauvegarde n’est pas en
 ## <a name="security"></a>Sécurité  
  À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le **mot de passe** et **MEDIAPASSWORD** options sont suspendues pour la création de sauvegardes. Il est encore possible de restaurer des sauvegardes créées avec des mots de passe.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de lire et d'écrire sur l'unité ; le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit avoir des autorisations d'écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  

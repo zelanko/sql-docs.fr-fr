@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 747817e69c175e90f119906f8263920bc1851c2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b113e50edcd72ff72717cae44166817478c959b9
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>Filtrer des identificateurs de processus serveur (SPID, Server Process ID) dans une trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Cette rubrique explique comment filtrer les identificateurs de processus serveur (SPID) dans une trace à l’aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -34,18 +34,18 @@ ms.lasthandoff: 12/21/2017
   
 1.  Dans le menu **Fichier** , cliquez sur **Nouvelle trace**, puis connectez-vous à une instance de SQL Server.  
   
-     La boîte de dialogue **Propriétés de la trace**apparaît.  
+     La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
     > [!NOTE]  
-    >  Si la case **Démarrer le suivi juste après avoir établi la connexion**est cochée, la boîte de dialogue **Propriétés de la trace**ne s’affiche pas et le suivi se lance. Pour désactiver ce paramètre, dans le menu **Outils**, cliquez sur **Options**et désactivez la case à cocher **Démarrer le suivi juste après avoir établi la connexion** .  
+    >  Si **démarrer le suivi juste après avoir établi la connexion** est sélectionnée, le **propriétés de la Trace** boîte de dialogue ne s’affiche pas, et la trace se lance. Pour désactiver ce paramètre, dans le **outils** menu, cliquez sur **Options**et désactivez la **démarrer le suivi juste après avoir établi la connexion** case à cocher.  
   
 2.  Dans la zone **Nom de la trace** , tapez un nom pour la trace.  
   
-3.  Dans la liste de noms **Utiliser le modèle**, sélectionnez un modèle de trace.  
+3.  Dans le **utiliser le modèle** liste de noms, sélectionnez un modèle de trace.  
   
 4.  Le cas échéant, spécifiez un fichier ou une table de destination pour y enregistrer les résultats du suivi.  
   
-5.  Sous l’onglet **Sélection des événements**, cliquez sur l’en-tête de la colonne **SPID**pour ouvrir la boîte de dialogue **Modifier le filtre** . Vous pouvez également cliquer avec le bouton droit de la souris sur l’en-tête de colonne et choisir **Modifier le filtre des colonnes**parmi les éléments du menu contextuel. Si la colonne **SPID** n’apparaît pas, cochez la case **Afficher toutes les colonnes** .  
+5.  Sur le **sélection des événements** , cliquez sur le **SPID** en-tête de colonne pour lancer le **modifier le filtre** boîte de dialogue. Vous pouvez également cliquer avec le bouton droit de la souris sur l’en-tête de colonne et choisir **Modifier le filtre des colonnes**parmi les éléments du menu contextuel. Si la colonne **SPID** n’apparaît pas, cochez la case **Afficher toutes les colonnes** .  
   
 6.  Dans la boîte de dialogue **Modifier le filtre** , développez l’opérateur de comparaison voulu et entrez le SPID correspondant à la valeur de comparaison.  
   
