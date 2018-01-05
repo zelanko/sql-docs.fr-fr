@@ -3,23 +3,23 @@ title: "Chargeur de ligne de commande pour l’entrepôt de données parallèle 
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
-description: '** dwloader ** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante.'
+description: '**dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante.'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
 caps.latest.revision: "90"
-ms.openlocfilehash: 0335005e2e0590efe28a0cbf7dff6aaacfea331f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dwloader-command-line-loader"></a>Chargeur de ligne de commande de dwloader
 **dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante. Lors du chargement des lignes, vous pouvez ajouter toutes les lignes à la fin de la table (*mode append* ou *fastappend mode*), ajouter de nouvelles lignes et mettre à jour des lignes existantes (*mode upsert*), ou supprimez tous les lignes avant le chargement existantes et insérez toutes les lignes dans une table vide (*recharger mode*).  
@@ -127,7 +127,7 @@ Affiche des informations d’aide simples sur l’utilisation du chargeur. Aide 
 **-U** *login_name*  
 Une connexion valide de l’authentification SQL Server disposant des autorisations appropriées pour effectuer le chargement.  
   
-**-P** *password*  
+**-P** *mot de passe*  
 Le mot de passe pour une authentification SQL Server *login_name*.  
   
 **-W**  
@@ -226,7 +226,7 @@ Spécifie un type de codage de caractères pour les données doivent être charg
 **-t** *séparateur_de_champs*  
 Le délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces des caractères d’échappement ASCII ou les valeurs hexadécimales de ASCII...  
   
-|Nom|Caractère d’échappement|Caractère hexadécimal|  
+|Nom   |Caractère d’échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
 |Onglet|\t|0 x 09|  
 |Retour chariot (CR)|\r|0x0D|  
@@ -402,7 +402,7 @@ Le chargeur insère des lignes à la fin des lignes existantes dans la table de 
 fastappend  
 Le chargeur insère des lignes directement, sans utiliser une table temporaire, à la fin des lignes existantes dans la table de destination. fastappend requiert la transaction multi (– m) option. Une base de données mise en lots ne peut pas être spécifié lors de l’utilisation de fastappend. Il n’existe aucune restauration avec fastappend, ce qui signifie que la récupération à partir d’un échec ou abandon de charge doit être gérée par votre propre processus de chargement.  
   
-upsert **-K***merge_column* [ ,...*n* ]    
+upsert **-K***merge_column* [,...*n* ]  
 Le chargeur utilise l’instruction de fusion de SQL Server pour mettre à jour les lignes existantes et insérer de nouvelles lignes.  
   
 L’option-K spécifie l’ou les colonnes sur la fusion de base. Ces colonnes forment une clé de fusion, qui doit représenter une ligne unique. Si la clé de fusion existe dans la table de destination, la ligne est mise à jour. Si la clé de fusion n’existe pas dans la table de destination, la ligne est ajoutée.  
@@ -491,7 +491,7 @@ Ignorer le chargement des fichiers vides. Il ignore également décompression de
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
 0 (réussite) ou une autre valeur d’entier (échec)  
   
-Dans un fichier de lot ou de la fenêtre commande, utilisez `errorlevel` pour afficher le code de retour. Exemple :  
+Dans un fichier de lot ou de la fenêtre commande, utilisez `errorlevel` pour afficher le code de retour. Exemple :  
   
 ```  
 dwloader  
@@ -502,7 +502,7 @@ if %errorlevel%==0 echo Success
   
 Lorsque vous utilisez PowerShell, utilisez `$LastExitCode`.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Requiert la charge et des autorisations applicables (INSERT, UPDATE, DELETE) sur la table de destination. Nécessite l’autorisation de créer (pour créer une table temporaire) sur la base de données mise en lots. Si une base de données intermédiaire n’est pas utilisé, autorisation de création est requis sur la base de données de destination. 
 
 <!-- MISSING LINK
@@ -556,13 +556,13 @@ Le mode append charge les données en deux phases. Première phase charge des do
 |Type de table|Transactions multiples<br />Mode (-m)|Table est vide|Prise en charge de concurrence|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Segment de mémoire (heap)|Oui|Oui|Oui|minimale|  
-|Segment de mémoire (heap)|Oui|Non|Oui|minimale|  
-|Segment de mémoire (heap)|Non|Oui|Non|minimale|  
-|Segment de mémoire (heap)|Non|Non|Non|minimale|  
-|CL|Oui|Oui|Non|minimale|  
-|CL|Oui|Non|Oui|Complet|  
-|CL|Non|Oui|Non|minimale|  
-|CL|Non|Non|Oui|Complet|  
+|Segment de mémoire (heap)|Oui|non|Oui|minimale|  
+|Segment de mémoire (heap)|non|Oui|non|minimale|  
+|Segment de mémoire (heap)|non|non|non|minimale|  
+|CL|Oui|Oui|non|minimale|  
+|CL|Oui|non|Oui|Complète|  
+|CL|non|Oui|non|minimale|  
+|CL|non|non|Oui|Complète|  
   
 Le tableau ci-dessus montre **dwloader** en utilisant le mode append charger dans un segment de mémoire ou une table d’index cluster (CI), avec ou sans l’indicateur transactionnel multiples et la charger dans une table vide ou une table non vide. Le verrouillage et la journalisation du comportement de chaque combinaison de ce type de charge s’affiche dans la table. Par exemple, le chargement de phase (2e) avec le mode append en un index cluster sans mode transactionnel multiples, vide table auront PDW créer un verrou exclusif sur la table et la journalisation est minime. Cela signifie qu’un client ne sera pas en mesure de charger simultanément de phase (2) et requête dans une table vide. Toutefois, lors du chargement de la même configuration dans une table non vide, PDW n’émettra pas un verrou exclusif sur la table et l’accès simultané est possible. Malheureusement, une journalisation complète se produit, ce qui ralentit le processus.  
   

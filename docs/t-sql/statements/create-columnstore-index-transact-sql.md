@@ -34,11 +34,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c2c5b9cec465ff1e969df9f657ab66a7e6d5b68f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
+ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,8 +46,11 @@ ms.lasthandoff: 11/17/2017
 Convertir une table rowstore en un index columnstore en cluster ou créer un index non cluster. Utilisez un index columnstore pour exécuter efficacement analytique opérationnelle en temps réel sur une charge de travail OLTP ou pour améliorer les performances de compression et de requête de données pour les charges de travail d’entreposage de données.  
   
 > [!NOTE]  
->  En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer la table en tant qu’un index cluster columnstore.   Il n’est plus nécessaire de créer au préalable une table rowstore, puis le convertir en un index cluster columnstore.  
-  
+> En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez créer la table en tant qu’un index cluster columnstore.   Il n’est plus nécessaire de créer au préalable une table rowstore, puis le convertir en un index cluster columnstore.  
+
+> [!TIP]
+> Pour plus d’informations sur les règles de conception d’index, reportez-vous à la [Guide de conception de SQL Server Index](../../relational-databases/sql-server-index-design-guide.md).
+
 Passez aux exemples :  
 -   [Exemples de conversion d’une table rowstore en columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#convert)  
 -   [Exemples pour les index non cluster columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
@@ -257,7 +260,7 @@ Crée l'index spécifié sur le groupe de fichiers par défaut.
   
 Le terme « default », dans ce contexte, n'est pas un mot clé. Il est un identificateur pour le groupe de fichiers par défaut et doit être délimité, comme dans ON **»**par défaut**»** ou ON **[**par défaut**]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Autorisations  
+##  <a name="Permissions"></a> Permissions  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="GenRemarks"></a>Remarques d’ordre général  
@@ -299,20 +302,20 @@ Les options SET figurant dans la colonne Valeur requise sont requises chaque foi
 **Chaque colonne dans un index columnstore doit être l’un des types de données métier courantes suivantes :** 
 -   DateTimeOffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   datetime  
+-   DATETIME  
 -   smalldatetime  
--   date  
+-   Date  
 -   heure [(  *n*  )]  
 -   float [(  *n*  )]  
 -   Real [(  *n*  )]  
 -   Decimal [( *précision* [ *, échelle* ] **)** ]
 -   numérique [( *précision* [ *, échelle* ] **)** ]    
 -   money  
--   smallmoney  
--   bigint  
--   int  
+-   SMALLMONEY  
+-   BIGINT  
+-   INT  
 -   smallint  
--   tinyint  
+-   TINYINT  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar (max) (s’applique aux [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et de la base de données SQL Azure Premium tarification, dans l’index cluster columnstore uniquement)   
@@ -350,7 +353,7 @@ Si la table sous-jacente possède une colonne de type de données qui n’est pa
  **Index ColumnStore ne peut pas être combinés avec les fonctionnalités suivantes :**  
 -   Colonnes calculées À partir de SQL Server 2017, un index columnstore cluster peut contenir une colonne calculée non persistante. Toutefois, dans SQL Server 2017, les index cluster columnstore ne peut pas contenir de colonnes calculées persistantes, et vous ne pouvez pas créer des index non cluster sur des colonnes calculées. 
 -   La compression de page et de ligne, et **vardecimal** le format de stockage (un index columnstore est déjà compressé dans un format différent.)  
--   Réplication  
+-   REPLICATION  
 -   Filestream
 
 Vous ne pouvez pas utiliser les curseurs ou les déclencheurs sur une table avec un index cluster columnstore. Cette restriction ne s’applique pas aux index de cluster ; Vous pouvez utiliser les curseurs et les déclencheurs sur une table avec un index non cluster.
@@ -619,7 +622,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  Une fois que vous avez créé un index columnstore non cluster sur une table, vous ne pouvez pas modifier directement les données dans cette table. Une requête avec INSERT, UPDATE, DELETE ou MERGE échoue et retourne un message d’erreur. Pour ajouter ou modifier les données de la table, effectuez les tâches suivantes :  
   
--   Désactivez ou supprimez l'index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple :  
+-   Désactivez ou supprimez l'index columnstore. Vous pourrez ensuite mettre à jour les données de la table. Si vous désactivez l'index columnstore, vous pouvez le reconstruire lorsque vous avez fini de mettre à jour les données. Par exemple,  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

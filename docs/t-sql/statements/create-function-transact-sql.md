@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 76b25e852e94ff6a511d8b18adb31f9da883a7fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -366,9 +366,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
   
- *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,... *n*  ]) Définit les données de table de type pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonction). La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
+ *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [,... *n*  ]) Définit les données de table de type pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonction). La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.  
   
- \<clr_table_type_definition > ({ *column_name**data_type* } [ ,... *n*  ]) **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \<clr_table_type_definition > ({ *column_name**data_type* } [,... *n*  ]) **S’applique aux**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne. La table est toujours placée dans le groupe de fichiers primaire.  
   
@@ -392,7 +392,7 @@ RETURNS return_data_type
  Spécifie que la fonction aura une ou plusieurs des options ci-dessous.  
   
  ENCRYPTION  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] se charge de convertir le texte d'origine provenant de l'instruction CREATE FUNCTION dans un format obscurci. La sortie générée par l'obfuscation n'est pas visible directement dans les affichages catalogue. Les utilisateurs n'ayant pas accès aux tables système ou aux fichiers de base de données ne peuvent pas récupérer le texte d'obfuscation. Toutefois, le texte sera disponible pour les utilisateurs disposant de privilèges qui peuvent accéder soit les tables système via la [port DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) ou accéder directement aux fichiers de base de données. Les utilisateurs qui peuvent associer un débogueur au processus serveur peuvent également récupérer la procédure d'origine de la mémoire au moment de l'exécution. Pour plus d’informations sur l’accès aux métadonnées système, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -436,7 +436,7 @@ RETURNS return_data_type
   
  Définit le type de données de la table. La déclaration de table comprend des contraintes et des définitions de colonne. Pour les fonctions CLR, uniquement *column_name* et *data_type* peut être spécifié.  
   
- *nom_colonne*  
+ *column_name*  
  Nom d'une colonne de la table. Les noms de colonnes doivent respecter les règles des identificateurs et doivent être uniques au sein de la table. *column_name* peut comporter entre 1 et 128 caractères.  
   
  *data_type*  
@@ -498,7 +498,7 @@ RETURNS return_data_type
   
  Spécifie une colonne calculée. Pour plus d’informations sur les colonnes calculées, consultez [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).  
   
- *nom_colonne*  
+ *column_name*  
  Nom de la colonne calculée.  
   
  *computed_column_expression*  
@@ -538,7 +538,7 @@ RETURNS return_data_type
   
  Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour faire référence à la méthode adéquate surchargée dans une classe, la méthode indiquée dans \<method_specifier > doit présenter les caractéristiques suivantes : 
   
--   Recevoir le même nombre de paramètres que ceux spécifiés dans [ ,...*n* ].  
+-   Recevoir le même nombre de paramètres que ceux spécifiés dans [,...*n* ].  
   
 -   Recevoir tous les paramètres par valeur, non par référence.  
   
@@ -573,7 +573,7 @@ RETURNS return_data_type
 ### <a name="computed-column-interoperability"></a>Interopérabilité des colonnes calculées  
  Les fonctions ont les propriétés suivantes. Les valeurs de ces propriétés déterminent si les fonctions sont utilisables dans des colonnes calculées pouvant être indexées ou rendues persistantes.  
   
-|Propriété| Description|Remarques|  
+|Propriété|Description|Remarques|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|La fonction est déterministe ou non déterministe.|L'accès local aux données est autorisé dans les fonctions déterministes. Par exemple, une fonction est dite déterministe si elle retourne toujours le même résultat chaque fois qu'elle est appelée à l'aide d'un ensemble spécifique de valeurs d'entrée et que la base de données présente le même état.|  
 |**IsPrecise**|La fonction est précise ou imprécise.|Les fonctions imprécises contiennent des opérations telles que les opérations à virgule flottante.|  
@@ -623,7 +623,7 @@ RETURNS return_data_type
   
 -   SEND  
   
- Les fonctions définies par l'utilisateur peuvent être imbriquées ; en d'autres termes, une fonction définie par l'utilisateur peut en appeler une autre. Le niveau d'imbrication est incrémenté lorsque la fonction appelée commence à s'exécuter, et décrémenté lorsque l'exécution est terminée. Les fonctions définies par l'utilisateur peuvent être imbriquées jusqu'à 32 niveaux. Le dépassement des niveaux d'imbrication maximum autorisés, provoque l'échec de la totalité de la chaîne de fonctions appelantes. Toute référence à du code managé depuis une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur compte pour un niveau parmi les 32 niveaux d'imbrication possibles. Les méthodes appelées à partir du code managé ne comptent pas par rapport à cette limite.  
+ Les fonctions définies par l'utilisateur peuvent être imbriquées ; en d'autres termes, une fonction définie par l'utilisateur peut en appeler une autre. Le niveau d'imbrication est incrémenté lorsque la fonction appelée commence à s'exécuter, et décrémenté lorsque l'exécution est terminée. Les fonctions définies par l'utilisateur peuvent être imbriquées jusqu'à 32 niveaux. Le dépassement des niveaux d'imbrication maximum autorisés, provoque l'échec de la totalité de la chaîne de fonctions appelantes. Toute référence à du code managé depuis une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur compte pour un niveau parmi les 32 niveaux d'imbrication possibles. Les méthodes appelées à partir du code managé ne comptent pas par rapport à cette limite.  
   
 ### <a name="using-sort-order-in-clr-table-valued-functions"></a>Utilisation de l'ordre de tri dans les fonctions table CLR  
  Lorsque vous utilisez la clause ORDER dans des fonctions table CLR, prenez en compte les indications suivantes :  
@@ -649,14 +649,14 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Métadonnées  
  Le tableau suivant répertorie les affichages catalogue système que vous pouvez utiliser pour retourner des métadonnées sur les fonctions définies par l'utilisateur.  
   
-|Affichage système| Description|  
+|Affichage système|Description|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Consultez l’exemple E dans la section exemples ci-dessous.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Affiche des informations sur les fonctions définies par l'utilisateur CLR.|  
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Affiche des informations sur les paramètres définis dans les fonctions définies par l'utilisateur.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Affiche les objets sous-jacents référencés par une fonction.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE FUNCTION dans la base de données et l'autorisation ALTER sur le schéma dans lequel la fonction est en cours de création. Si la fonction spécifie un type défini par l'utilisateur, elle requiert l'autorisation EXECUTE sur le type.  
   
 ## <a name="examples"></a>Exemples  
@@ -668,7 +668,7 @@ RETURNS return_data_type
   
  Voici l'appel de la fonction. Notez que `DATEFIRST` a la valeur `1`.  
   
-```tsql
+```sql
 CREATE FUNCTION dbo.ISOweek (@DATE datetime)  
 RETURNS int  
 WITH EXECUTE AS CALLER  
@@ -703,7 +703,7 @@ ISO Week
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Création d'une fonction table incluse  
  L'exemple suivant retourne une fonction table incluse dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Il retourne trois colonnes `ProductID`, `Name` et l’agrégation des totaux year-to-date par magasin sous `YTD Total` pour chaque produit vendu au magasin.  
   
-```tsql  
+```sql  
 CREATE FUNCTION Sales.ufn_SalesByStore (@storeid int)  
 RETURNS TABLE  
 AS  
@@ -722,14 +722,14 @@ GO
 
  Pour appeler la fonction, exécutez la requête suivante :    
 
-```tsql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>C. Création d'une fonction table à instructions multiples  
  L'exemple suivant crée la fonction table `fn_FindReports(InEmpID)` dans la base de données AdventureWorks2012. Lorsqu'elle est fournie avec un ID d'employé valide, la fonction retourne une table répertoriant tous les employés qui rendent compte à l'employé directement ou indirectement. La fonction utilise une expression de table commune (CTE, Common Table Expression) récursive pour générer la liste hiérarchique des employés. Pour plus d’informations sur CTE récursives, consultez [avec common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
 RETURNS @retFindReports TABLE   
 (  
@@ -777,9 +777,9 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. Création d'une fonction CLR  
  L’exemple crée la fonction CLR `len_s`. Avant que la fonction ne soit créée, l'assembly `SurrogateStringFunction.dll` est inscrit dans la base de données locale.  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```tsql  
+```sql  
 DECLARE @SamplesPath nvarchar(1024);  
 -- You may have to modify the value of this variable if you have  
 -- installed the sample in a location other than the default location.  
@@ -803,7 +803,7 @@ GO
   
 ### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>E. Affichage de la définition de [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions définies par l’utilisateur  
   
-```tsql  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o ON m.object_id = o.object_id   

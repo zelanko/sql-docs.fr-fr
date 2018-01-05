@@ -52,11 +52,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e61305f37dd20279f328dfe57e3de0c22c9b01f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -361,11 +361,11 @@ column_name <data_type>
   
  AS FileTable 
  
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
  
  Crée la table en tant que FileTable. Vous ne spécifiez pas de colonnes car un FileTable dispose d'un schéma fixe. Pour plus d’informations sur les FileTables, consultez [FileTables &#40; SQL Server &#41; ](../../relational-databases/blob/filetables-sql-server.md).  
   
- *nom_colonne*  
+ *column_name*  
  *computed_column_expression*  
  Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. La colonne est calculée à partir d'une expression qui utilise d'autres colonnes dans la même table. Par exemple, une colonne calculée peut avoir la définition : **coût** AS **prix** \* **qty**. L'expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou contenir des types de données d'alias.  
   
@@ -512,7 +512,7 @@ Spécifie pour créer un index sur la table. Il peut s’agir d’un index clust
   
  Spécifie de stocker la table entière sous forme de colonnes avec un index cluster columnstore. Cela inclut toujours toutes les colonnes de la table. Les données ne sont pas triées par ordre alphabétique ou numérique, car les lignes sont organisées pour bénéficier des avantages de la compression de columnstore.  
   
- INDEX *index_name* [NONCLUSTERED] COLUMNSTORE (*column_name* [ ,... *n* ] )  
+ INDEX *index_name* [NONCLUSTERED] COLUMNSTORE (*column_name* [,...*n* ] )  
    
   
 **S’applique aux**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -583,13 +583,13 @@ Spécifie pour créer un index sur la table. Il peut s’agir d’un index clust
   
  Pour plus d’informations, y compris les contraintes de fonctionnalité, consultez [Always Encrypted &#40; moteur de base de données &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
- **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  SPARSE  
  Indique que la nouvelle colonne est une colonne éparse. Le stockage des colonnes éparses est optimisé pour les valeurs Null. Les colonnes éparses ne peuvent pas être désignées comme NOT NULL. Pour plus d’informations sur les colonnes éparses et les restrictions supplémentaires, consultez [utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).  
   
  MASQUÉ avec (fonction = ' *mask_function* ')  
- **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie un masque dynamique des données. *mask_function* est le nom de la fonction de masquage avec les paramètres appropriés. Trois fonctions sont disponibles :  
   
@@ -716,7 +716,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  *Logical_Expression*  
  Expression logique qui retourne TRUE ou FALSE. Les types de données d'alias ne peuvent pas faire partie de l'expression.  
   
- *colonne*  
+ *column*  
  Colonne, ou liste de colonnes, entre parenthèses, utilisée dans des contraintes de table pour indiquer les colonnes utilisées dans la définition de la contrainte.  
   
  [ **ASC** | DESC]  
@@ -848,14 +848,14 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  FILETABLE_DIRECTORY = *directory_name*  
    
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie le nom de répertoire FileTable de compatible avec windows. Ce nom doit être unique parmi tous les noms de répertoire FileTable de la base de données. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement. Si cette valeur n'est pas spécifiée, le nom de la table de fichiers est utilisé.  
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default}  
    
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie le nom du classement à appliquer à la colonne **Name** du FileTable. Le classement ne doit pas être sensible à la casse pour des raisons de conformité à la sémantique d'attribution des noms de fichiers Windows. Si cette valeur n'est pas spécifiée, le classement par défaut de la base de données est utilisé. Si le classement par défaut de la base de données respecte la casse, une erreur est générée et l'opération CREATE TABLE échoue.  
   
@@ -867,21 +867,21 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME = *constraint_name*  
    
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie le nom à utiliser pour la contrainte de clé primaire qui est créée automatiquement sur le FileTable. Si cette valeur n'est pas spécifiée, le système génère un nom pour la contrainte.  
   
  FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie le nom à utiliser pour la contrainte unique est créée automatiquement sur le **stream_id** colonne du FileTable. Si cette valeur n'est pas spécifiée, le système génère un nom pour la contrainte.  
   
  FILETABLE_FULLPATH_UNIQUE_CONSTRAINT_NAME = *constraint_name*  
    
   
-**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Spécifie le nom à utiliser pour la contrainte unique est créée automatiquement sur le **parent_path_locator** et **nom** colonnes dans le FileTable. Si cette valeur n'est pas spécifiée, le système génère un nom pour la contrainte.  
   
@@ -895,7 +895,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  REMOTE_DATA_ARCHIVE = {ON [( *table_stretch_options* [,... n])] | OFF (MIGRATION_STATE = EN PAUSE)}  
    
   
-**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Crée la nouvelle table avec Stretch Database activée ou désactivée. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -910,7 +910,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  [FILTER_PREDICATE = {null | *prédicat* }]  
    
   
-**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie éventuellement un prédicat de filtre pour sélectionner les lignes à migrer à partir d’une table qui contient les données historiques et actuelles. Le prédicat doit appeler une fonction table inline déterministe. Pour plus d’informations, consultez [Enable Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) et [sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). 
    
@@ -980,7 +980,7 @@ Index de table et de colonne peuvent être spécifiés en tant que partie de l�
   
  Les index de hachage sont pris en charge uniquement sur les tables mémoire optimisées.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Pour plus d’informations sur le nombre de tables autorisés, colonnes, contraintes et index, consultez [spécifications des capacités maximales pour SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
  L'espace est généralement alloué aux tables et aux index par incréments d'une valeur d'extension à la fois. Lorsque l’option SET MIXED_PAGE_ALLOCATION d’ALTER DATABASE a la valeur TRUE, ou toujours antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], lorsqu’une table ou un index est créé, les pages sont allouées à partir d’extensions mixtes jusqu'à ce qu’il ait suffisamment de pages pour remplir une extension uniforme. Quand il y a assez de pages pour remplir une extension uniforme, une autre extension est allouée chaque fois que l'extension active est pleine. Pour un rapport sur la quantité d’espace allouée et utilisée par une table, exécutez **sp_spaceused**.  
@@ -1075,7 +1075,7 @@ Les tables temporaires globales pour la base de données SQL Azure suivent la m�
 
 Pour le dépannage de base de données tempdb, consultez [dépannage le manque d’espace dans tempdb](https://technet.microsoft.com/library/ms176029%28v=sql.105%29.aspx?f=255&MSPPError=-2147217396). Pour accéder aux résolution des problèmes DMV dans la base de données SQL Azure, vous devez être un administrateur du serveur.
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
 
  Tout utilisateur peut créer des objets temporaires globaux. Les utilisateurs n'ont accès qu'aux objets qu'ils possèdent, sauf s'ils ont reçu des autorisations supplémentaires. .  
   
@@ -1083,7 +1083,7 @@ Pour le dépannage de base de données tempdb, consultez [dépannage le manque d
 
 - La session A crée une table temporaire globale ##test dans la base de données SQL Azure testdb1 et ajoute la 1 ligne
 
-```tsql
+```sql
 CREATE TABLE ##test ( a int, b int);
 INSERT INTO ##test values (1,1);
 
@@ -1101,7 +1101,7 @@ SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
 ```
 - Session B se connecte à la base de données SQL Azure testdb1 et peut accéder à la table ##test créée par la session A
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 1,1
@@ -1109,7 +1109,7 @@ SELECT * FROM ##test
 
 - Session C se connecte à une autre base de données dans la base de données SQL Azure testdb2 et veut accéder ##test créé dans testdb1. Cette instruction select échoue en raison de l’étendue de la base de données pour les tables temporaires globales 
 
-```tsql
+```sql
 SELECT * FROM ##test
 ---Results
 Msg 208, Level 16, State 0, Line 1
@@ -1118,7 +1118,7 @@ Invalid object name '##test'
 
 - Adressage des objets système dans la base de données SQL Azure tempdb à partir de testdb1 de base de données utilisateur en cours
 
-```tsql
+```sql
 SELECT * FROM tempdb.sys.objects
 SELECT * FROM tempdb.sys.columns
 SELECT * FROM tempdb.sys.database_files
@@ -1255,7 +1255,7 @@ SELECT * FROM tempdb.sys.database_files
   
  Pour évaluer la façon dont la modification de l’état de compression affecte une table, un index ou une partition, utilisez la procédure stockée [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table a été créée.  
   
  Si des colonnes dans l'instruction CREATE TABLE sont définies avec le type de données CLR défini par l'utilisateur, la propriété du type ou une autorisation REFERENCES est nécessaire.  
@@ -1405,7 +1405,7 @@ GO
   
 |Groupe de fichiers|test1fg|test2fg|test3fg|test4fg|  
 |---------------|-------------|-------------|-------------|-------------|  
-|**Partition**|1|2|3|4|  
+|**Partition**| 1|2|3|4|  
 |**Valeurs**|col 1 \<= 1|col1 > 1 AND col1 \<= 100|col1 > 100 AND col1 \<= 1 000|col1 > 1 000|  
   
 ### <a name="i-using-the-uniqueidentifier-data-type-in-a-column"></a>I. Utilisation du type de données uniqueidentifier dans une colonne  

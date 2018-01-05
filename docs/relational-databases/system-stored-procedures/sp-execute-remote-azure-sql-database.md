@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ce5718a35f8411a5333a200d6ea75f2326c79e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (de base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Chaque paramètre inclus dans @stmt doit posséder une entrée correspondante dans la liste des définitions de paramètres @params et dans la liste des valeurs de paramètres.  
   
- [ @params=] N'@*nom_paramètre**data_type* [ ,... *n* ] '  
+ [ @params=] N'@*nom_paramètre**data_type* [,...*n* ] '  
  Chaîne contenant les définitions de tous les paramètres qui ont été incorporés dans @stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n*est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans @stmtmust être défini dans @params. Si le lot ou l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] figurant dans @stmt ne contient aucun paramètre, il est inutile d'utiliser @params. La valeur par défaut de ce paramètre est NULL.  
   
  [ @param1=] '*value1*'  
@@ -76,10 +76,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats de la première instruction SQL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  `sp_execute_remote`paramètres doivent être entrées dans l’ordre spécifique, comme décrit dans la section syntaxe ci-dessus. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
  `sp_execute_remote`a le même comportement que [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) en ce qui concerne les lots et la portée des noms. L’instruction Transact-SQL ou un lot dans le sp_execute_remote  *@stmt*  paramètre n’est pas compilé jusqu'à ce que l’instruction sp_execute_remote est exécutée.  
@@ -92,7 +92,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ### <a name="simple-example"></a>Exemple simple  
  L’exemple suivant crée et exécute une instruction SELECT simple sur une base de données distante.  
   
-```tsql  
+```sql  
 EXEC sp_execute_remote  
     N'MyExtSrc',  
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   

@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs de requête (Transact-SQL) :
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -181,22 +181,22 @@ ms.lasthandoff: 11/17/2017
  Force l'optimiseur de requête à ne pas recompiler une requête en raison de modifications enregistrées au niveau des statistiques. Spécification de KEEPFIXED PLAN permet de s’assurer qu’une requête est recompilée seulement si le schéma des tables sous-jacentes est modifié ou si **sp_recompile** est exécutée sur ces tables.  
   
  IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
- **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Empêche que la requête à l’aide d’un index columnstore optimisé en mémoire non cluster. Si la requête contient l'indicateur de requête pour éviter l'utilisation de l'index columnstore et un indicateur d'index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
   
  MAX_GRANT_PERCENT = *%*  
  Taille en pourcentage d’allocation de la mémoire maximale. La requête est assurée pour ne pas dépasser cette limite. La limite réelle peut être inférieure si le gouverneur de ressources configuration est inférieur à celle-ci. Les valeurs valides sont compris entre 0,0 et 100,0.  
   
-**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  MIN_GRANT_PERCENT = *%*  
  Taille en pourcentage d’allocation de la mémoire minimale = % de la limite par défaut. La requête est assurée de bénéficier de MAX (mémoire requise, min grant), car il est requis au moins la mémoire nécessaire pour démarrer une requête. Les valeurs valides sont compris entre 0,0 et 100,0.  
   
-**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  MAXDOP *nombre*  
- **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Remplace le **degré maximal de parallélisme** option de configuration de **sp_configure** et le gouverneur de ressources pour la spécification de cette option de requête. L'indicateur de requête MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec le gouverneur de ressources, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilise la valeur du gouverneur de ressources MAXDOP, décrite dans [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Toutes les règles sémantiques utilisées avec les **degré maximal de parallélisme** option de configuration s’appliquent lorsque vous utilisez l’indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -213,7 +213,7 @@ ms.lasthandoff: 11/17/2017
  Pour plus d’informations, consultez [avec common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  NO_PERFORMANCE_SPOOL  
- **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Un opérateur spool empêche l’ajout des plans de requête (à l’exception des plans, lors de la mise en attente est nécessaire pour garantir la sémantique de mise à jour valide). Dans certains scénarios, l’opérateur de spool peut réduire les performances. Par exemple, la file d’attente utilise tempdb et les contentions de tempdb peuvent se produire s’il existe plusieurs requêtes simultanées en cours d’exécution avec les opérations de mise en attente.  
   
@@ -291,7 +291,7 @@ ms.lasthandoff: 11/17/2017
  USE PLAN de N**'***xml_plan***'**  
  Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête qui est spécifiée par **'***xml_plan***'**. USE PLAN ne peut pas être spécifié avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
   
-INDICATEUR de TABLE **(***exposed_object_name* [ **,** \<indicateur de table > [[**,** ]...  *n*  ]] **)** Applique l’indicateur de table spécifié à la table ou la vue qui correspond à *exposed_object_name*. Nous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
+INDICATEUR de TABLE **(***exposed_object_name* [ **,** \<indicateur de table > [ [**,** ]...  *n*  ] ] **)** Applique l’indicateur de table spécifié à la table ou la vue qui correspond à *exposed_object_name*. Nous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* peut prendre l’une des références suivantes :  
   
@@ -301,14 +301,14 @@ INDICATEUR de TABLE **(***exposed_object_name* [ **,** \<indicateur de table > [
   
  Lorsque *exposed_object_name* est spécifié sans spécifier également un indicateur de table, tous les index spécifiés dans la requête comme partie d’un indicateur de table pour l’objet sont ignorées et l’utilisation des index est déterminée par l’optimiseur de requête. Vous pouvez utiliser cette technique pour éliminer l'effet d'un indicateur de table INDEX lorsque vous ne pouvez pas modifier la requête d'origine. Voir l'exemple J.  
   
-**\<indicateur de table > :: =** {[NOEXPAND] {INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SÉRIALISABLE | INSTANTANÉ | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} est l’indicateur de table à appliquer à la table ou la vue qui correspond à *exposed_object_name* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<indicateur de table > :: =** {[NOEXPAND] {INDEX ( *index_value* [,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SÉRIALISABLE | INSTANTANÉ | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK} est l’indicateur de table à appliquer à la table ou la vue qui correspond à *exposed_object_name* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [indicateurs de Table &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Pour plus d'informations, consultez la section Notes.  
   
 > [!CAUTION] 
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Il n'est pas possible de spécifier des indicateurs de requête dans une instruction INSERT sauf si celle-ci contient une clause SELECT.  
   
  Les indicateurs de requête ne peuvent être spécifiés que dans une requête de niveau supérieur et non pas dans des sous-requêtes. Lorsqu’un indicateur de table est spécifié comme un indicateur de requête, l’indicateur peut être spécifié dans la requête de niveau supérieur ou dans une sous-requête ; Toutefois, la valeur spécifiée pour *exposed_object_name* dans l’indicateur de TABLE clause doit correspondre exactement au nom exposé dans la requête ou une sous-requête.  
@@ -363,7 +363,7 @@ GO
 ### <a name="c-using-maxrecursion"></a>C. Utilisation de MAXRECURSION  
  MAXRECURSION peut être utilisé pour empêcher une expression de table commune récursive mal rédigée d'entrer dans une boucle infinie. L’exemple suivant crée une boucle infinie intentionnellement et utilise l’indicateur MAXRECURSION pour limiter le nombre de niveaux de récursivité à deux. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 --Creates an infinite loop  
 WITH cte (CustomerID, PersonID, StoreID) AS  
 (  
@@ -414,7 +414,7 @@ GO
 ### <a name="f-using-maxdop"></a>F. Utilisation de MAXDOP  
  L’exemple suivant utilise l’indicateur de requête MAXDOP. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  

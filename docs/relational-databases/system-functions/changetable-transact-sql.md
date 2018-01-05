@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ CHANGETABLE (
  *column_name*  
  Spécifie le nom de la colonne ou des colonnes clés primaires. Plusieurs noms de colonne peuvent être spécifiés dans un ordre quelconque.  
   
- *Valeur*  
+ *Value*  
  Valeur de la clé primaire. S’il existe plusieurs colonnes de clé primaire, les valeurs doivent être spécifiées dans le même ordre que les colonnes apparaissent dans le *column_name* liste.  
   
- [EN] *alias_de_la_table* [(*column_alias* [ ,...*n* ] ) ]  
+ [EN] *alias_de_la_table* [(*column_alias* [,...*n* ] ) ]  
  Fournit des noms pour les résultats retournés par CHANGETABLE.  
   
  *alias_de_table*  
@@ -99,7 +99,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  Lorsque CHANGES est spécifié, zéro, une ou plusieurs lignes contenant les colonnes suivantes sont retournées.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valeur de version associée à la dernière modification apportée à la ligne|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valeurs de version associées à la dernière opération d'insertion.|  
@@ -111,13 +111,13 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Lorsque VERSION est spécifié, une ligne contenant les colonnes suivantes est retournée.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valeur de la version actuelle des modifications associée à la ligne.<br /><br /> La valeur est NULL si aucune modification n'a pas été apportée pendant un délai dépassant la période de rétention de suivi des modifications, ou si la ligne n'a pas été modifiée depuis l'activation du suivi des modifications.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modifiez les informations de contexte que vous pouvez éventuellement spécifier à l'aide de la clause WITH dans le cadre d'une instruction INSERT, UPDATE ou DELETE.|  
 |\<valeur de colonne de clé primaire >|Identique aux colonnes de table utilisateur|Valeurs de clés primaires pour la table faisant l'objet d'un suivi. Ces valeurs identifient de manière unique chaque ligne dans la table utilisateur.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La fonction CHANGETABLE est utilisée en général dans la clause FROM d'une requête comme s'il s'agissait d'une table.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -146,7 +146,7 @@ CHANGETABLE (
   
  La valeur de SYS_CHANGE_VERSION peut être NULL si aucune modification n'a pas été apportée pendant une période plus longue que la période de rétention (par exemple, le nettoyage a supprimé les informations de modification) ou si la ligne n'a jamais été modifiée depuis l'activation du suivi des modifications pour la table.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert les autorisations suivantes sur la table qui est spécifiée par le *table* valeur pour obtenir des informations de suivi des modifications :  
   
 -   Autorisation SELECT sur les colonnes clés primaires  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Retour de lignes pour une synchronisation initiale des données  
  L'exemple suivant montre comment obtenir des données pour une synchronisation initiale des données de table. La requête retourne toutes les données de ligne et leurs versions associées. Vous pouvez ensuite insérer ou ajouter ces données au système qui contiendra les données synchronisées.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Liste de toutes les modifications apportées depuis une version spécifique  
  L'exemple suivant répertorie toutes les modifications apportées à une table depuis la version spécifiée (`@last_sync_version)`. [Emp ID] et SSN sont des colonnes dans une clé primaire composite.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>C. Obtention de toutes les données modifiées pour une synchronisation  
  L'exemple suivant montre comment obtenir toutes les données modifiées. Cette requête joint les informations de suivi des modifications à la table utilisateur afin que les informations de la table utilisateur soient retournées. Un `LEFT OUTER JOIN` est utilisé afin qu'une ligne soit retournée pour les lignes supprimées.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>D. Détection des conflits à l'aide de CHANGETABLE(VERSION...)  
  L'exemple suivant montre comment mettre à jour une ligne uniquement si celle-ci n'a pas changé depuis la dernière synchronisation. Le numéro de version de la ligne spécifique est obtenu à l'aide de `CHANGETABLE`. Si la ligne a été mise à jour, aucune modification n'est appliquée et la requête retourne des informations sur la modification la plus récente apportée à la ligne.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  
