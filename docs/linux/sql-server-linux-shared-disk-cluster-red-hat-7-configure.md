@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 1d2731e55c9add5cfa06d70297793f4f7d5fef48
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer des clusters de disques partagés Red Hat Enterprise Linux pour SQL Server
 
@@ -335,7 +335,6 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 2. Configurer les ressources de cluster de SQL Server, système de fichiers et les ressources IP virtuels et de distribuer la configuration pour le cluster. Vous aurez besoin des informations suivantes :
 
    - **Nom de la ressource SQL Server**: un nom pour la ressource SQL Server en cluster. 
-   - **Valeur de délai d’attente**: la valeur de délai d’attente est la durée pendant laquelle le cluster attend pendant une une ressource est mise en ligne. Pour SQL Server, cela indique l’heure que vous prévoyez de SQL Server à suivre pour mettre le `master` en ligne de base de données.  
    - **Variable de nom de la ressource IP**: un nom pour la ressource d’adresse IP virtuelle.
    - **Adresse IP**: l’adresse IP que les clients utiliseront pour se connecter à l’instance en cluster de SQL Server. 
    - **Nom de la ressource système de fichiers**: un nom pour la ressource du système de fichiers.
@@ -347,7 +346,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 
    ```bash
    sudo pcs cluster cib cfg 
-   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci op defaults timeout=<timeout_in_seconds>
+   sudo pcs -f cfg resource create <sqlServerResourceName> ocf:mssql:fci
    sudo pcs -f cfg resource create <floatingIPResourceName> ocf:heartbeat:IPaddr2 ip=<ip Address>
    sudo pcs -f cfg resource create <fileShareResourceName> Filesystem device=<networkPath> directory=<localPath>         fstype=<fileShareType>
    sudo pcs -f cfg constraint colocation add <virtualIPResourceName> <sqlResourceName>
@@ -359,7 +358,7 @@ Pour plus d’informations sur l’utilisation de NFS, voir les ressources suiva
 
    ```bash
    sudo pcs cluster cib cfg
-   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci op defaults timeout=60s
+   sudo pcs -f cfg resource create mssqlha ocf:mssql:fci
    sudo pcs -f cfg resource create virtualip ocf:heartbeat:IPaddr2 ip=10.0.0.99
    sudo pcs -f cfg resource create fs Filesystem device="10.8.8.0:/mnt/nfs" directory="/var/opt/mssql/data" fstype="nfs"
    sudo pcs -f cfg constraint colocation add virtualip mssqlha
