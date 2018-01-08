@@ -175,7 +175,7 @@ use <cdc-enabled-database-name>
  Sélectionnez la variable de package de chaîne SSIS qui gère l'état de capture de données modifiées pour le contexte de capture de données modifiées actuel. Pour plus d’informations sur la variable d’état CDC, consultez [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md).  
   
  **Inclure la colonne de l'indicateur de retraitement**  
- Cochez cette case pour créer une colonne spéciale de sortie nommée ***** __$reprocessing *****.  
+ Cochez cette case pour créer une colonne spéciale de sortie nommée **__$reprocessing**.  
   
  Cette colonne a la valeur **true** quand la plage de traitement CDC chevauche la plage de traitement initiale (la plage de NSE correspondant à la période de charge initiale) ou lorsqu’une plage de traitement CDC est retraitée suite à une erreur lors d’une exécution précédente. Cette colonne d'indicateur permet au développeur SSIS de gérer les erreurs différemment lors du retraitement des modifications (par exemple, les actions telles que la suppression d'une ligne inexistante et une insertion ayant échoué sur une clé dupliquée peuvent être ignorées).  
   
